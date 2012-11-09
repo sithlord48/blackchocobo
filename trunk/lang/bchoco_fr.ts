@@ -3604,6 +3604,34 @@
         <source>Nibel Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Rocket Town</source>
+        <translation>Fusée Cité</translation>
+    </message>
+    <message>
+        <source>Shanghai Inn</source>
+        <translation>Auberge de Shanghai</translation>
+    </message>
+    <message>
+        <source>House</source>
+        <translation>Maison</translation>
+    </message>
+    <message>
+        <source>Rocket Launching Pad</source>
+        <translation>Pas de tir des fusées</translation>
+    </message>
+    <message>
+        <source>Ship Hallway</source>
+        <translation>Couloir</translation>
+    </message>
+    <message>
+        <source>Rocket Launch Pad Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapon seller</source>
+        <translation>Vendeur d&apos;armes</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

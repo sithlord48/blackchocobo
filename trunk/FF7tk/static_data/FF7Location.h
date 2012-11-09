@@ -335,6 +335,20 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","548","335","64015","17"},
     {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","549","65492","64577","19"},
     {QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","317","667","65035","261"},
+    {QT_TRANSLATE_NOOP("Locations","Rocket Town"),"1","557","65533","64815","2"},
+    {QT_TRANSLATE_NOOP("Locations","Weapons Store"),"1","553","282","187","27"},
+    {QT_TRANSLATE_NOOP("Locations","Shanghai Inn"),"1","555","65364","268","48"},
+    {QT_TRANSLATE_NOOP("Locations","Shanghai Inn"),"1","556","65435","330","40"},
+    {QT_TRANSLATE_NOOP("Locations","House"),"1","559","65467","329","25"},
+    {QT_TRANSLATE_NOOP("Locations","Item Store"),"1","554","182","143","39"},
+    {QT_TRANSLATE_NOOP("Locations","House"),"1","560","65308","299","49"},
+    {QT_TRANSLATE_NOOP("Locations","House"),"1","558","65403","141","96"},
+    {QT_TRANSLATE_NOOP("Locations","House"),"1","552","65251","293","39"},
+    {QT_TRANSLATE_NOOP("Locations","Rocket Launching Pad"),"1","561","63725","3688","120"},
+    {QT_TRANSLATE_NOOP("Locations","Rocket Launching Pad"),"1","562","64529","4947","89"},
+    {QT_TRANSLATE_NOOP("Locations","Ship Hallway"),"1","564","65505","60","15"},
+    {QT_TRANSLATE_NOOP("Locations","Weapon seller"),"1","79","65359","65470","30"},
+
     /**********************************Below The List Is UnFinished   *********/
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","65332","24"},
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},
@@ -378,6 +392,7 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Gongaga Area"),"3","17","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Cosmo Area"),"3","18","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Nibel Area"),"3","19","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Rocket Launch Pad Area"),"3","20","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Nibel Area"),"3","43","0","0","0"}
 };
 #endif //FF7LOCATION_H
