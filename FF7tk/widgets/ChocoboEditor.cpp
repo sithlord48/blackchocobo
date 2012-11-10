@@ -223,6 +223,17 @@ void ChocoboEditor::init_display(void)
     sb_intel->setAlignment(Qt::AlignHCenter);
     sb_personality->setMaximum(255);
     sb_personality->setAlignment(Qt::AlignHCenter);
+    sb_speed->setWrapping(true);
+    sb_mSpeed->setWrapping(true);
+    sb_sprint->setWrapping(true);
+    sb_mSprint->setWrapping(true);
+    sb_stamina->setWrapping(true);
+    sb_coop->setWrapping(true);
+    sb_accel->setWrapping(true);
+    sb_wins->setWrapping(true);
+    sb_pCount->setWrapping(true);
+    sb_intel->setWrapping(true);
+    sb_personality->setWrapping(true);
 
     //Fill Combos.
     combo_sex->addItem(tr("Male"));
