@@ -77,6 +77,7 @@ void CharEditor::init_display()
     lbl_level_next = new QLabel(tr("Next"));
     sb_total_exp = new QSpinBox;
     sb_total_exp->setMaximum(2147483647);
+    sb_total_exp->setWrapping(true);
 
     lcd_tnl = new QLCDNumber;
     lcd_tnl->setNumDigits(8);
@@ -253,6 +254,32 @@ void CharEditor::init_display()
     sb_uses_limit_1_1->setMaximum(32767);
     sb_uses_limit_2_1->setMaximum(32767);
     sb_uses_limit_3_1->setMaximum(32767);
+
+    sb_level->setWrapping(true);
+    sb_curMp->setWrapping(true);
+    sb_curHp->setWrapping(true);
+    sb_maxMp->setWrapping(true);
+    sb_maxHp->setWrapping(true);
+    sb_base_hp->setWrapping(true);
+    sb_base_mp->setWrapping(true);
+    sb_kills->setWrapping(true);
+    sb_str->setWrapping(true);
+    sb_str_bonus->setWrapping(true);
+    sb_vit->setWrapping(true);
+    sb_vit_bonus->setWrapping(true);
+    sb_mag->setWrapping(true);
+    sb_mag_bonus->setWrapping(true);
+    sb_spi->setWrapping(true);
+    sb_spi_bonus->setWrapping(true);
+    sb_dex->setWrapping(true);
+    sb_dex_bonus->setWrapping(true);
+    sb_lck->setWrapping(true);
+    sb_lck_bonus->setWrapping(true);
+    sb_limit_level->setWrapping(true);
+    sb_uses_limit_1_1->setWrapping(true);
+    sb_uses_limit_2_1->setWrapping(true);
+    sb_uses_limit_3_1->setWrapping(true);
+
     line_name->setMaxLength(12);
     line_name->setMaximumWidth(this->font().pointSize()*12);
     bar_tnl->setMaximumWidth(line_name->width()*1.5);
