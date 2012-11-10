@@ -318,6 +318,20 @@
         <file alias="1_547">icon/locations/1_547.jpg</file>
         <file alias="1_548">icon/locations/1_548.jpg</file>
         <file alias="1_549">icon/locations/1_549.jpg</file>
+        <file alias="1_79">icon/locations/1_79.jpg</file>
+        <file alias="1_494">icon/locations/1_494.jpg</file>
+        <file alias="1_552">icon/locations/1_552.jpg</file>
+        <file alias="1_553">icon/locations/1_553.jpg</file>
+        <file alias="1_554">icon/locations/1_554.jpg</file>
+        <file alias="1_555">icon/locations/1_555.jpg</file>
+        <file alias="1_556">icon/locations/1_556.jpg</file>
+        <file alias="1_557">icon/locations/1_557.jpg</file>
+        <file alias="1_558">icon/locations/1_558.jpg</file>
+        <file alias="1_559">icon/locations/1_559.jpg</file>
+        <file alias="1_560">icon/locations/1_560.jpg</file>
+        <file alias="1_561">icon/locations/1_561.jpg</file>
+        <file alias="1_562">icon/locations/1_562.jpg</file>
+        <file alias="1_564">icon/locations/1_564.jpg</file>
         <file alias="2_0">icon/locations/2_0.jpg</file>
     </qresource>
 </RCC>
