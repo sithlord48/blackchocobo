@@ -1725,7 +1725,7 @@ void CharEditor::setDexBonus(int dexterity_bonus)
 }
 void CharEditor::setLckBonus(int luck_bonus)
 {
-    if(data.luck ==luck_bonus){return;}
+    if(data.luck_bonus ==luck_bonus){return;}
     else
     {
         if(luck_bonus<0){data.luck_bonus = 0;}
@@ -2627,12 +2627,12 @@ void CharEditor::MaxStats()
         sb_level->setValue(99);
         sb_base_hp->setValue(32767);
         sb_base_mp->setValue(32767);
-        sb_str->setValue(255);
-        sb_dex->setValue(255);
-        sb_spi->setValue(255);
-        sb_vit->setValue(255);
-        sb_mag->setValue(255);
-        sb_lck->setValue(255);
+        sb_str_bonus->setValue(255);
+        sb_dex_bonus->setValue(255);
+        sb_spi_bonus->setValue(255);
+        sb_vit_bonus->setValue(255);
+        sb_mag_bonus->setValue(255);
+        sb_lck_bonus->setValue(255);
         sb_curHp->setValue(data.maxHP);
         sb_curMp->setValue(data.maxMP);
 
