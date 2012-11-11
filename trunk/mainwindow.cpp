@@ -2979,18 +2979,18 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     else if(index == 4) // The Date Scene
     {
         ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(589);
+        ui->sb_mprogress->setValue(583);
         ff7->slot[s].bm_progress1=120;
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->line_location->setText(tr("Hotel"));
+        ui->line_location->setText(tr("Ropeway Station"));
         ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(494);
-        ui->sb_coordx->setValue(273);
-        ui->sb_coordy->setValue(65320);
-        ui->sb_coordz->setValue(8);
-        ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too."));
+        ui->sb_loc_id->setValue(496);
+        ui->sb_coordx->setValue(64767);
+        ui->sb_coordy->setValue(95);
+        ui->sb_coordz->setValue(26);
+        ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
     }
 
     else if (index == 5)//Aeris Death
