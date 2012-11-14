@@ -4588,7 +4588,7 @@
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
-        <translation>USA (BASLUS-94163)</translation>
+        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -5748,10 +5748,18 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Hotel</source>
-        <translation type="unfinished">Hotel</translation>
+        <translation type="obsolete">Hotel</translation>
     </message>
     <message>
-        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
+        <source>USA (BASCUS-94163)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">Estación de tranvías</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7520,6 +7528,10 @@ Fénix x3 (180pm)</translation>
         <source>Time:%1:%2</source>
         <translation>Tiempo:%1:%2</translation>
     </message>
+    <message>
+        <source>Clear Slot</source>
+        <translation type="unfinished">Borrar Ranura</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7533,7 +7545,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>     Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
+        <translation type="obsolete">     Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
@@ -7616,6 +7628,18 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Slot:15</source>
         <translation>Ranura:15</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

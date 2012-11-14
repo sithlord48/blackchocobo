@@ -1102,6 +1102,19 @@ quint8 FF7Save::psx_block_type(int s)
     }
     else{return 0x00;}
 }
+void FF7Save::setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type)
+{
+    if(type()!="PC")
+    {
+        int index=128+(128*s);
+        if (type() =="PSP"){index+=0x80;}
+        else if (type() =="VGS"){index+=0x40;}
+        else if (type() =="DEX"){index+=0xF40;}
+        else {}
+        file_headerp[index]= block_type;
+    }
+    else{return;}
+}
 quint8 FF7Save::psx_block_next(int s)
 {
     if(type()!="PC")
@@ -1119,17 +1132,12 @@ quint8 FF7Save::psx_block_size(int s)
 {
     if(type() !="PC")
     {
-        QByteArray temp;
-        temp.resize(3);
         int index=128+(128*s);
         if (type() =="PSP"){index+=0x80;}
         else if (type() =="VGS"){index+=0x40;}
         else if (type() =="DEX"){index+=0xF40;}
         else {}
-        temp[0]=file_headerp[index+0x04];
-        temp[1]=file_headerp[index+0x05];
-        temp[2]=file_headerp[index+0x06];
-        qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+        qint32 value = file_headerp[index+0x04] | (file_headerp[index+0x05] << 8) | (file_headerp[index+0x06] <<16);
         return value/0x2000;
      }
     else{return 0;}

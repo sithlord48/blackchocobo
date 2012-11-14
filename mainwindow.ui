@@ -14594,7 +14594,7 @@ Var And Scrolling Synced To Left Table</string>
      <normalon>:/icon/us_sel</normalon>:/icon/us_unsel</iconset>
    </property>
    <property name="text">
-    <string>USA (BASLUS-94163)</string>
+    <string>USA (BASCUS-94163)</string>
    </property>
   </action>
   <action name="action_Region_PAL_Generic">

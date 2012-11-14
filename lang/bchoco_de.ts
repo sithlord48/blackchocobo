@@ -4587,7 +4587,7 @@
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
-        <translation>USA (BASLUS-94163)</translation>
+        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -5752,10 +5752,18 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Hotel</source>
-        <translation type="unfinished">Hotel</translation>
+        <translation type="obsolete">Hotel</translation>
     </message>
     <message>
-        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
+        <source>USA (BASCUS-94163)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">Seilbahnstation</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7523,6 +7531,10 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>Time:%1:%2</source>
         <translation type="unfinished">Zeit:%1:%2</translation>
     </message>
+    <message>
+        <source>Clear Slot</source>
+        <translation type="unfinished">Steckplatz Zurücksetzen</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7536,7 +7548,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>  Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
+        <translation type="obsolete">  Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
@@ -7619,6 +7631,18 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Slot:15</source>
         <translation>Steckplatz:15</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

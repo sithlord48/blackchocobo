@@ -692,8 +692,9 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     else if (ff7->type() == "PSX" || ff7->type() =="PSV"){s=0;guirefresh(0);}
 
     else if (ff7->type() == "MC" || ff7->type() =="PSP" || ff7->type() == "VGS" ||ff7->type()=="DEX")
-        {if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}}
-
+    {
+        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
+    }
     else{/*UNKNOWN FILETYPE*/}
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/

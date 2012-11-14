@@ -4584,10 +4584,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>USA (BASLUS-94163)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00867)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5736,11 +5732,15 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hotel</source>
+        <source>USA (BASCUS-94163)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
+        <source>Ropeway Station</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7508,6 +7508,10 @@ Table Entries are Editable</source>
         <source>Time:%1:%2</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clear Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7517,10 +7521,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7602,6 +7602,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Slot:15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

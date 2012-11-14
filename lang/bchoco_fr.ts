@@ -4587,7 +4587,7 @@
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
-        <translation>USA (BASLUS-94163)</translation>
+        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -5748,10 +5748,18 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Hotel</source>
-        <translation type="unfinished">Hôtel</translation>
+        <translation type="obsolete">Hôtel</translation>
     </message>
     <message>
-        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
+        <source>USA (BASCUS-94163)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">Station de câblage</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7519,6 +7527,10 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>Time:%1:%2</source>
         <translation>Temps:%1:%2</translation>
     </message>
+    <message>
+        <source>Clear Slot</source>
+        <translation type="unfinished">Vider le slot</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7532,7 +7544,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation> Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
+        <translation type="obsolete"> Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
@@ -7615,6 +7627,18 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Slot:15</source>
         <translation>Slot:15</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -69,14 +69,16 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     //assume NOT PC SAVE.
 
     QString Slottext;
-    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53){Slottext= codec->toUnicode(desc);}
-    else if(ff7->psx_block_type(s)==0x52){Slottext = tr("Mid-Linked Block ");}
-    else if(ff7->psx_block_type(s)==0x53){Slottext = tr("End Of Linked Data");}
+    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53 && ff7->psx_block_type(s) != 0xA2 && ff7->psx_block_type(s) !=0xA3){Slottext= codec->toUnicode(desc);}
 
-    if(ff7->psx_block_type(s) == 0xA1){Slottext.append(tr("(Deleted)"));}
+    else if((ff7->psx_block_type(s)==0x52)||(ff7->psx_block_type(s)==0xA2)){Slottext = tr("Mid-Linked Block ");}
+
+    else if((ff7->psx_block_type(s)==0x53)||(ff7->psx_block_type(s)==0xA3)){Slottext = tr("End Of Linked Data");}
+
+    if((ff7->psx_block_type(s)==0xA1)||(ff7->psx_block_type(s)==0xA2)||(ff7->psx_block_type(s)==0xA3)){Slottext.append(tr("(Deleted)"));}
     numslots = ff7->psx_block_size(s);
     nextslot= ff7->psx_block_next(s)+1;
-    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
+    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53 && ff7->psx_block_type(s) != 0xA2 && ff7->psx_block_type(s) !=0xA3){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
     if(numslots !=1)
     {
             if(ff7->psx_block_next(s)!=0xFF)
@@ -85,7 +87,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
                 else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
             }
     }
-    if(ff7->psx_block_type(s) == 0x52 || ff7->psx_block_type(s) == 0x53 || numslots !=1)
+    if(ff7->psx_block_type(s) == 0x52 || ff7->psx_block_type(s) == 0x53 || ff7->psx_block_type(s) ==0xA2 || ff7->psx_block_type(s) == 0xA3 || numslots !=1)
     {
         ui->btn_export->setDisabled(1);
         ui->btn_view->setDisabled(1);

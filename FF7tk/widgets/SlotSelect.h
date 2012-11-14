@@ -17,14 +17,16 @@ public:
 
 private slots:
     void button_clicked(QString);
+    void remove_slot(QString);
 private:
+    void ReIntSlot(int button_number,int mode);
     QFrame *frm_preview;
+    QVBoxLayout *preview_layout;
     QScrollArea *list_preview;
     SlotPreview *preview[15];
     //Private Data
-    //FF7Save *ff7;
+    FF7Save *ff7;
     FF7Char Chars;
-
 };
 
 #endif // SLOTSELECT_H

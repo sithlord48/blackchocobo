@@ -52,7 +52,7 @@ public:
         BTN_SELECT,BTN_UNKNOWN1,BTN_UNKNOWN2,BTN_START,
         BTN_UP,BTN_DOWN,BTN_LEFT,BTN_RIGHT
     };
-
+    enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, BLOCK_MAIN=0x51,BLOCK_DELETED_MAIN=0xA1,BLOCK_MIDLINK=0x52,BLOCK_DELETED_MIDLINK=0xA2,BLOCK_ENDLINK=0x53,BLOCK_DELETED_ENDLINK=0xA3};
     QByteArray slotHeader(int s);
     QByteArray slotFooter(int s);
     QByteArray slotPsxRawData(int s);
@@ -336,6 +336,7 @@ public:
   QByteArray slot_header(int s); //return slot header.
 
   quint8 psx_block_type(int s);//mask of psx slot (used by index)
+  void setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type);
   quint8 psx_block_next(int s);// if using more then one block return location of next block
   quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
