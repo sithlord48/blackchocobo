@@ -24,6 +24,7 @@
 //set path to save icon class
 #include "../static_data/SaveIcon.h"
 
+
 class SlotPreview : public QLabel
 {
     Q_OBJECT
@@ -50,11 +51,13 @@ private slots:
     void set_Party2(QString style);
     void set_Party3(QString style);
     void selected(void);
+    void removed(void);
     void set_ff7_save(void);
     void set_empty(void);
     void set_psx_game(void);
 
 private:
+    void init_display(void);
     QLabel *party1;
     QLabel *party2;
     QLabel *party3;
@@ -64,11 +67,16 @@ private:
     QLabel *location;
     QLabel *lbl_gil;
     QPushButton *btn_select;
+    QPushButton *btn_remove;
     QGroupBox *top_most;
     SaveIcon *icon;
+    QHBoxLayout  * btnLayout;
+    QVBoxLayout *Final;
+    QVBoxLayout *top_layout;
     bool not_pc;
 signals:
-    void button_clicked(QString);
+    void btn_select_clicked(QString);
+    void btn_remove_clicked(QString);
 };
 
 #endif

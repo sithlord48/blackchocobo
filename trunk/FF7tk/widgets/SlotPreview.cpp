@@ -14,18 +14,34 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "SlotPreview.h"
+
+#include "../static_data/icons/Common_Icons/quit.xpm"
 //Slot Preview Widget is for display of the previewed save data.
 SlotPreview::SlotPreview(QWidget *parent):QLabel(parent)
 {
-     btn_select = new QPushButton(this);
-    top_most = new QGroupBox(this);
-    QVBoxLayout *Final = new QVBoxLayout;
-    Final->addWidget(top_most);
+    Final = new QVBoxLayout();
     this->setLayout(Final);
     this->setFixedSize(581,150);
+}
+
+void SlotPreview::init_display(void)
+{
+    Final->removeWidget(top_most);
+
+    btn_select = new QPushButton;
+    btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"");
+    btn_remove->setToolTip(tr("Clear Slot"));
+    btn_remove->setMaximumWidth(22);
+    btnLayout = new QHBoxLayout;
+    btnLayout->addWidget(btn_select);
+    btnLayout->addWidget(btn_remove);
+    btn_remove->setHidden(true);
+    top_most = new QGroupBox;
+    Final->addWidget(top_most);
     if(QT_VERSION<0x050000)
     {//QT4 Style Connect
         connect(btn_select,SIGNAL(clicked()),this,SLOT(selected()));
+        connect(btn_remove,SIGNAL(clicked()),this,SLOT(removed()));
     }
     else
     {//QT5 Style Connect
@@ -43,14 +59,14 @@ void SlotPreview::setMode(int mode)
 }
 void SlotPreview::set_empty(void)
 {
+    init_display();
     QString style="font: 75 14pt \"Verdana\"; color:rgb(255,255,0);";
     location=new QLabel;
     location->setStyleSheet(style);
     QVBoxLayout *empty_layout = new QVBoxLayout;
     empty_layout->setContentsMargins(12,12,12,12);
     empty_layout->addWidget(location);
-
-    QVBoxLayout *top_layout = new QVBoxLayout;
+    top_layout = new QVBoxLayout;
     top_layout->setContentsMargins(0,3,0,0);
     top_layout->addWidget(btn_select);
     top_layout->addItem(empty_layout);
@@ -59,6 +75,8 @@ void SlotPreview::set_empty(void)
 
 void SlotPreview::set_psx_game(void)
 {
+    init_display();
+    btn_remove->setHidden(false);
     icon= new SaveIcon;
     QString style="font-size: 10pt;";
     party1 = new QLabel;
@@ -71,16 +89,17 @@ void SlotPreview::set_psx_game(void)
     layout->setContentsMargins(0,0,0,0);
     layout->addWidget(party1);
     layout->addWidget(location);
-    QVBoxLayout *top_layout= new QVBoxLayout;
+    top_layout= new QVBoxLayout;
     top_layout->setContentsMargins(0,3,0,0);
     top_layout->setSpacing(3);
-    top_layout->addWidget(btn_select);
+    top_layout->addLayout(btnLayout);
     top_layout->addItem(layout);
     top_most->setLayout(top_layout);
 }
 
 void SlotPreview::set_ff7_save(void)
 {
+    init_display();
     QString style="font: 75 14pt \"Verdana\";";
     party1 = new QLabel;
     party1->setFixedSize(84,96);
@@ -138,12 +157,14 @@ void SlotPreview::set_ff7_save(void)
     midbox->addLayout(partybox);
     midbox->addLayout(upperhalf);
 
-    QVBoxLayout *finished = new QVBoxLayout;
-    finished->addWidget(btn_select);
-    finished->addLayout(midbox);
-    finished->setContentsMargins(0,3,0,0);
-    finished->setSpacing(3);
-    top_most->setLayout(finished);
+    btn_remove->setHidden(false);
+
+    top_layout = new QVBoxLayout;
+    top_layout->addLayout(btnLayout);
+    top_layout->addLayout(midbox);
+    top_layout->setContentsMargins(0,3,0,0);
+    top_layout->setSpacing(3);
+    top_most->setLayout(top_layout);
 }
 
 void SlotPreview::setParty(QPixmap p1,QPixmap p2,QPixmap p3)
@@ -172,5 +193,6 @@ void SlotPreview::setLocation(QString loc){location->setText(loc);}
 void SlotPreview::setGil(int gil){lbl_gil->setText(QString(tr("Gil:%1")).arg(QString::number(gil)));}
 void SlotPreview::setTime(int hr,int min){lbl_time->setText(QString(tr("Time:%1:%2")).arg(QString::number(hr),QString::number(min)));}
 void SlotPreview::set_Button_Label(QString lbl){btn_select->setText(lbl);}
-void SlotPreview::selected(void){emit button_clicked(btn_select->text());}
+void SlotPreview::selected(void){emit btn_select_clicked(btn_select->text());}
+void SlotPreview::removed(void){emit btn_remove_clicked(btn_select->text());}
 void SlotPreview::setPsxIcon(QByteArray icon_data,quint8 frames){icon->setAll(icon_data,frames);party1->setPixmap(icon->icon());}
