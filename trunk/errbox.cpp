@@ -69,29 +69,30 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     //assume NOT PC SAVE.
 
     QString Slottext;
-    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53 && ff7->psx_block_type(s) != 0xA2 && ff7->psx_block_type(s) !=0xA3){Slottext= codec->toUnicode(desc);}
+    if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext= codec->toUnicode(desc);}
 
-    else if((ff7->psx_block_type(s)==0x52)||(ff7->psx_block_type(s)==0xA2)){Slottext = tr("Mid-Linked Block ");}
+    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext = tr("Mid-Linked Block ");}
 
-    else if((ff7->psx_block_type(s)==0x53)||(ff7->psx_block_type(s)==0xA3)){Slottext = tr("End Of Linked Data");}
+    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext = tr("End Of Linked Data");}
 
-    if((ff7->psx_block_type(s)==0xA1)||(ff7->psx_block_type(s)==0xA2)||(ff7->psx_block_type(s)==0xA3)){Slottext.append(tr("(Deleted)"));}
+    if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
     numslots = ff7->psx_block_size(s);
     nextslot= ff7->psx_block_next(s)+1;
-    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53 && ff7->psx_block_type(s) != 0xA2 && ff7->psx_block_type(s) !=0xA3){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
+    if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
     if(numslots !=1)
     {
             if(ff7->psx_block_next(s)!=0xFF)
             {
-                if(ff7->psx_block_type(s) != 0x52){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
+                if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
                 else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
             }
     }
-    if(ff7->psx_block_type(s) == 0x52 || ff7->psx_block_type(s) == 0x53 || ff7->psx_block_type(s) ==0xA2 || ff7->psx_block_type(s) == 0xA3 || numslots !=1)
+    if(ff7->psx_block_type(s) == FF7Save::BLOCK_MIDLINK || ff7->psx_block_type(s) == FF7Save::BLOCK_ENDLINK || ff7->psx_block_type(s) ==FF7Save::BLOCK_DELETED_MIDLINK || ff7->psx_block_type(s) == FF7Save::BLOCK_DELETED_ENDLINK)
     {
         ui->btn_export->setDisabled(1);
         ui->btn_view->setDisabled(1);
     }
+    //if(numslots >1){ui->btn_export->setDisabled(1);}
     ui->lbl_regionstring->setText(Slottext);
 }
 

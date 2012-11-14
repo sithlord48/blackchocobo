@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>403</width>
-    <height>389</height>
+    <width>401</width>
+    <height>387</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -454,6 +454,56 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Fixed: Diff Table</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Crash On Clear Slots with no file loaded</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: HexEditor for viewing saves in ff7 or psx mode.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: + View and Export Psx Data (for multi block saves)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: + Remove Slots from slots select Dialog </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: +More Locations</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: + Widgets now have Wrapping spinboxes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: FF7 Pc 2012 Cloud Save Support</string>
           </property>
          </item>
@@ -495,21 +545,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Bug In Stat Calculation For Materia Changes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>

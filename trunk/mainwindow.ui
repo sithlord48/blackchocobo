@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
+    <width>766</width>
     <height>578</height>
    </rect>
   </property>
@@ -2857,8 +2857,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>427</height>
+             <width>758</width>
+             <height>442</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5011,7 +5011,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -8052,7 +8052,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>737</width>
              <height>683</height>
             </rect>
            </property>
@@ -13016,12 +13016,12 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  </property>
                  <item>
                   <property name="text">
-                   <string>Psx Slot (0x2000)</string>
+                   <string>PSX Save Data</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string notr="true">FF7Data (0x10F4)</string>
+                   <string notr="true">FF7 Save Data</string>
                   </property>
                  </item>
                 </widget>
@@ -13906,7 +13906,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
+     <width>766</width>
      <height>22</height>
     </rect>
    </property>

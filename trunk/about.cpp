@@ -21,11 +21,8 @@ about::about(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::about)
 {
-    QString svn_version;
     ui->setupUi(this);
     ui->lbl_svn_lbl->setHidden(1);
-    svn_version=QString::number( int(SVNVERSION));
-    if(!svn_version.isEmpty() && svn_version!="0"){ui->lbl_svn_lbl->setHidden(0); ui->lbl_svn_version->setText(svn_version);}
     ui->lbl_name->setText(QCoreApplication::applicationName().toAscii());
     ui->lbl_bc_version->setText(QCoreApplication::applicationVersion().toAscii());
     ui->lbl_qt_version->setText(qVersion());

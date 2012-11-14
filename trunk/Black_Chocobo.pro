@@ -95,13 +95,13 @@ macx:{
 }
 #all non symbian unix-like
 unix:!symbian{
-    VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
-    {
-    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-    message("Using Svn Revision:$${VERS}")
-    }
-    system(lrelease Black_Chocobo.pro)#release the .qm files
-    system(rcc -binary locations.qrc -o locations.rcc) #make locations resource
+    #VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
+    #{
+    #DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+    #message("Using Svn Revision:$${VERS}")
+    #}
+    system (lrelease Black_Chocobo.pro)#release the .qm files
+    system (rcc -binary locations.qrc -o locations.rcc) #make locations resource
 }
 
 #set up for windows
@@ -110,11 +110,6 @@ win32:{
     RC_FILE = bchoco.rc
     system(lrelease Black_Chocobo.pro)#release the .qm files
     system(rcc -binary locations.qrc -o locations.rcc) #make locations resource
-    #VERS = $$system(svnrev $$PWD)
-    #{
-    #DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-    #message("Using Svn Revision:$${VERS}")
-    #}
 }
 
 #all other *nix (except for symbian)

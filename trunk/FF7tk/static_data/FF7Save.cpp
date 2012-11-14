@@ -116,7 +116,7 @@ bool FF7Save::LoadFile(const QString &fileName)
 QByteArray FF7Save::slotHeader(int s)
 {
     QByteArray temp;
-    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_header),SG_SLOT_HEADER);
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_header),0x0200);
     return temp;
 }
 bool FF7Save::setSlotHeader(int s, QByteArray data)
@@ -129,7 +129,7 @@ bool FF7Save::setSlotHeader(int s, QByteArray data)
 QByteArray FF7Save::slotFooter(int s)
 {
     QByteArray temp;
-    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_footer),SG_SLOT_FOOTER);
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_footer),0xD0C);
     return temp;
 }
 bool FF7Save::setSlotFooter(int s, QByteArray data)
@@ -145,15 +145,35 @@ QByteArray FF7Save::slotPsxRawData(int s)
     else
     {
         QByteArray temp;
-        temp.append(slotHeader(s));
-        temp.append(slotFF7Data(s));
-        temp.append(slotFooter(s));
-        return temp;
+        int blocks = psx_block_size(s);
+        for(int i=0; i<blocks;i++)
+        {
+            temp.append(slotHeader(s));
+            temp.append(slotFF7Data(s));
+            temp.append(slotFooter(s));
+            s= psx_block_next(s);
+        }
+            return temp;
     }
 }
 bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
 {
     if(s<0 || s>14){return false;}
+    int blocks = data.length()/0x2000;
+
+    for(int i=0; i< blocks ; i++)
+    {//done once for each block
+        int offset = (i*0x2000);
+        int next = psx_block_next(s);
+        setSlotHeader(s,data.mid(offset,0x0200));
+        offset +=0x0200;
+        setSlotFF7Data(s,data.mid(offset,0x10F4));
+        offset +=0x10F4;
+        setSlotFooter(s,data.mid(offset,0xD0C));
+        s=next;
+    }
+    return true;
+    /*
     QByteArray temp;
 
     temp.append(data.mid(0,SG_SLOT_HEADER));
@@ -161,16 +181,17 @@ bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
     else{return false;}
 
     temp.clear();
-    temp.append(data.mid(SG_SLOT_HEADER,sizeof(slot[s])));
+    temp.append(data.mid(SG_SLOT_HEADER,0x10F4));
     if(setSlotFF7Data(s,temp)){}
     else{return false;}
 
     temp.clear();
-    temp.append(data.mid((SG_SLOT_HEADER+sizeof(slot[s])),SG_SLOT_FOOTER));
+    temp.append(data.mid((SG_SLOT_HEADER+0x10F4),SG_SLOT_FOOTER));
     if(setSlotFooter(s,temp)){}
     else{return false;}
 
     return true;
+    */
 }
 bool FF7Save::SaveFile(const QString &fileName)
 {
@@ -236,16 +257,15 @@ bool FF7Save::Export_PC(const QString &fileName)
 bool FF7Save::Export_PSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
+    int blocks;
     QString prev_type = SG_TYPE;
     if(SG_TYPE != "PSX")
     {
        if(isFF7(s)){setControlMode(s,CONTROL_NORMAL);}
+       blocks = psx_block_size(s);
        setType("PSX");
     }
-    if(fileName.contains("00867") || fileName.contains("00869") ||
-       fileName.contains("00900") || fileName.contains("94163") ||
-       fileName.contains("00700") || fileName.contains("01057") ||
-       fileName.contains("00868"))
+    if(isFF7(s))
     {
         if(fileName.endsWith("S01")){for(int i=0;i<256;i++)	  {hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
         else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
@@ -264,22 +284,28 @@ bool FF7Save::Export_PSX(int s,const QString &fileName)
         else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
         else{/*user ERROR*/}
         for(int i=0; i<SG_SLOT_FOOTER;i++){hf[s].sl_footer[i] =0x00;} //CLEAN FOOTER
+        fix_psx_header(s);//only fix time for FF7 Slots.
     }
-    fix_psx_header(s);
 
     FILE *pfile;
     pfile = fopen(fileName.toAscii(),"wb");
     if(pfile == NULL){ setType(prev_type); return false;}
     fwrite(file_headerp,SG_HEADER,1,pfile);
-    fwrite(hf[s].sl_header,SG_SLOT_HEADER,1,pfile);
-    fwrite(&slot[s],SG_DATA_SIZE,1,pfile);
-    fwrite(hf[s].sl_footer,SG_SLOT_FOOTER,1,pfile);
+    for(int i=0;i<blocks;i++)
+    {//Loop Slot Data For Each Block of the save
+        int next = psx_block_next(s);
+        fwrite(hf[s].sl_header,SG_SLOT_HEADER,1,pfile);
+        fwrite(&slot[s],SG_DATA_SIZE,1,pfile);
+        fwrite(hf[s].sl_footer,SG_SLOT_FOOTER,1,pfile);
+        s=next;
+    }
     fwrite(file_footerp,SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
     setType(prev_type);
     return true;
 }
+
 bool FF7Save::Export_VMC(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
@@ -1140,7 +1166,7 @@ quint8 FF7Save::psx_block_size(int s)
         qint32 value = file_headerp[index+0x04] | (file_headerp[index+0x05] << 8) | (file_headerp[index+0x06] <<16);
         return value/0x2000;
      }
-    else{return 0;}
+    else{return 0; }
 }
 bool FF7Save::isFileModified(void){return fileChanged;}
 bool FF7Save::isSlotModified(int s){return slotChanged[s];}
@@ -2336,14 +2362,14 @@ QByteArray FF7Save::slotFF7Data(int s)
 {
     if(s<0 || s>14){return QByteArray(0x00);}
     QByteArray temp;
-    temp.setRawData(reinterpret_cast<char *>(&slot[s]),sizeof(slot[s]));
+    temp.setRawData(reinterpret_cast<char *>(&slot[s]),0x10F4);
     return temp;
 }
 bool FF7Save::setSlotFF7Data(int s,QByteArray data)
 {
     if(s<0 || s>14){return false;}
-    if(data.size()!=sizeof(slot[s])){return false;}
-    memcpy(&slot[s],data,sizeof(slot[s]));
+    if(data.size()!=0x10F4){return false;}
+    memcpy(&slot[s],data,0x10F4);
     return true;
 }
 

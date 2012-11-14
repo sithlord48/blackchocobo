@@ -5743,10 +5743,6 @@ Las entradas de la tabla son editables</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Psx Slot (0x2000)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hotel</source>
         <translation type="obsolete">Hotel</translation>
     </message>
@@ -5760,6 +5756,10 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSX Save Data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8190,6 +8190,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
         <translation>Nuevo: Edición de puntuación/tiempo en los minijuegos Snowboard y G-Bike (Gracias a DLPB)</translation>
+    </message>
+    <message>
+        <source>Fixed: Diff Table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Crash On Clear Slots with no file loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: HexEditor for viewing saves in ff7 or psx mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + Remove Slots from slots select Dialog </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: +More Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
