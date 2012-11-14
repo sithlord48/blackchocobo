@@ -17,12 +17,7 @@
 #ifndef ABOUT_H
 #define ABOUT_H
 
-#ifndef SVNVERSION
-#define SVNVERSION 0
-#endif
-
 #include <QDialog>
-#include <QString>
 
 namespace Ui {
     class about;

@@ -18,16 +18,8 @@
 #ifndef VERSION_H
 #define VERSION_H
 
-
 #define VER_MAJOR 1
 #define VER_MINOR 9
-#define VER_SP 71
-
-#ifdef SVNVERSION
-#define VER_BUILDNR SVNVERSION
-#else
-#define VER_BUILDNR 0
-#endif
-
+#define VER_SP 72
 
 #endif // VERSION_H
