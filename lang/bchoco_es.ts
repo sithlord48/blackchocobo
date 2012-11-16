@@ -4714,7 +4714,7 @@
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation>Ignorando partida guardada No-FF7</translation>
+        <translation type="obsolete">Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
         <source>S01</source>
@@ -5736,10 +5736,6 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

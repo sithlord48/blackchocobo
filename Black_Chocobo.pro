@@ -53,6 +53,24 @@ HEADERS += mainwindow.h \
     FF7tk/widgets/ItemSelector.h \
     FF7tk/widgets/ItemList.h \
     FF7tk/widgets/MetadataCreator.h \
+    FF7tk/static_data/Type_materia.h \
+    FF7tk/static_data/Type_FF7CHAR.h \
+    FF7tk/static_data/SaveIcon.h \
+    FF7tk/static_data/FF7Text.h \
+    FF7tk/static_data/FF7Save_Types.h \
+    FF7tk/static_data/FF7Save_Const.h \
+    FF7tk/static_data/FF7Save.h \
+    FF7tk/static_data/FF7Materia.h \
+    FF7tk/static_data/FF7Location.h \
+    FF7tk/static_data/FF7Item.h \
+    FF7tk/static_data/FF7Char.h \
+    FF7tk/widgets/SlotSelect.h \
+    FF7tk/widgets/SlotPreview.h \
+    FF7tk/widgets/MateriaEditor.h \
+    FF7tk/widgets/ItemPreview.h \
+    FF7tk/widgets/DialogPreview.h \
+    FF7tk/widgets/ChocoboEditor.h \
+    FF7tk/widgets/CharEditor.h \
     qhexedit/xbytearray.h \
     qhexedit/qhexedit_p.h \
     qhexedit/qhexedit.h \
@@ -71,7 +89,8 @@ TRANSLATIONS += lang/bchoco_en.ts \
 
 QT +=xml
 
-static { # everything below takes effect with CONFIG += static
+static:
+{ # everything below takes effect with CONFIG += static
     CONFIG += static
     CONFIG += staticlib # this is needed if you create a static library, not a static executable
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
@@ -79,80 +98,40 @@ static { # everything below takes effect with CONFIG += static
     message("Static Build") # this is for information, that the static build is done
     TARGET = $$join(TARGET,,,-static) #this adds an s in the end, so you can seperate static build from non static build
 }
-
 # change the name of the binary, if it is build in debug mode
-CONFIG(debug, debug|release) {
-    TARGET = $$join(TARGET,,,-debug)
-}
+CONFIG(debug, debug|release) {TARGET = $$join(TARGET,,,-debug)}
 
 #Below Is OS Specific Stuff.
-
-#set up for mac os
-macx:{
-    #set program icon on mac os
-    ICON = icon/bchoco_icon_osx.icns
-    CONFIG += x86_64 x86
+win32: {RC_FILE = bchoco.rc} #program icon for windows
+macx:
+{
+    ICON = icon/bchoco_icon_osx.icns     #set program icon
+    CONFIG += x86_64 x86 #Build for use on 32 and 64 bit mac os.
 }
-#all non symbian unix-like
-unix:!symbian{
-    #VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
-    #{
-    #DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-    #message("Using Svn Revision:$${VERS}")
-    #}
-    system (lrelease Black_Chocobo.pro)#release the .qm files
-    system (rcc -binary locations.qrc -o locations.rcc) #make locations resource
-}
+#system calls trigger with any OS
+system (lrelease Black_Chocobo.pro)#release the .qm files
+system (rcc -binary locations.qrc -o locations.rcc) #make locations resource
 
-#set up for windows
-win32:{
-    #set up icon for windows
-    RC_FILE = bchoco.rc
-    system(lrelease Black_Chocobo.pro)#release the .qm files
-    system(rcc -binary locations.qrc -o locations.rcc) #make locations resource
-}
-
-#all other *nix (except for symbian)
-unix:!macx:!symbian {
+unix:!macx:!symbian:
+ {#all other *nix (except for symbian and mac os)
 #base for setting up deb packages(rpm too?).
-#becomes 'make install' when qmake generates the makefile
-target.path = /opt/blackchocobo #set the path to deploy the build target.
+#Below Will Become 'install' in the makefile
+    target.path = /opt/blackchocobo #set the path to deploy the build target.
+    lang.path = /opt/blackchocobo/lang #set path for lang folder
+    lang.files = lang/*.qm  #grab All qm files
 
-lang.path = /opt/blackchocobo/lang #set path for lang folder
-lang.files = lang/*.qm  #grab All qm files
+    locationPreview.path=/opt/blackchocobo/
+    locationPreview.files= locations.rcc
 
-locationPreview.path=/opt/blackchocobo/
-locationPreview.files= locations.rcc
+    icon.path = /usr/share/pixmaps       #system path icon.
+    icon.files = icon/Black_Chocobo.png
 
-icon.path = /usr/share/pixmaps       #system path icon.
-icon.files = icon/Black_Chocobo.png
+    desktop.path =/usr/share/applications/ #system path app dir
+    desktop.files = Black_Chocobo.desktop  #
 
-desktop.path =/usr/share/applications/ #system path app dir
-desktop.files = Black_Chocobo.desktop  #
-
-INSTALLS += target \
-    lang  \
-    locationPreview \
-    icon  \
-    desktop
+    INSTALLS += target \
+        lang  \
+        locationPreview \
+        icon  \
+        desktop
 }
-
-HEADERS += \
-    FF7tk/static_data/Type_materia.h \
-    FF7tk/static_data/Type_FF7CHAR.h \
-    FF7tk/static_data/SaveIcon.h \
-    FF7tk/static_data/FF7Text.h \
-    FF7tk/static_data/FF7Save_Types.h \
-    FF7tk/static_data/FF7Save_Const.h \
-    FF7tk/static_data/FF7Save.h \
-    FF7tk/static_data/FF7Materia.h \
-    FF7tk/static_data/FF7Location.h \
-    FF7tk/static_data/FF7Item.h \
-    FF7tk/static_data/FF7Char.h \
-    FF7tk/widgets/SlotSelect.h \
-    FF7tk/widgets/SlotPreview.h \
-    FF7tk/widgets/MateriaEditor.h \
-    FF7tk/widgets/ItemPreview.h \
-    FF7tk/widgets/DialogPreview.h \
-    FF7tk/widgets/ChocoboEditor.h \
-    FF7tk/widgets/CharEditor.h

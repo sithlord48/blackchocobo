@@ -257,7 +257,7 @@ bool FF7Save::Export_PC(const QString &fileName)
 bool FF7Save::Export_PSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
-    int blocks;
+    int blocks=1;
     QString prev_type = SG_TYPE;
     if(SG_TYPE != "PSX")
     {
