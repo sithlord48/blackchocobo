@@ -22,7 +22,6 @@ about::about(QWidget *parent) :
     ui(new Ui::about)
 {
     ui->setupUi(this);
-    ui->lbl_svn_lbl->setHidden(1);
     ui->lbl_name->setText(QCoreApplication::applicationName().toAscii());
     ui->lbl_bc_version->setText(QCoreApplication::applicationVersion().toAscii());
     ui->lbl_qt_version->setText(qVersion());

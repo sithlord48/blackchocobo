@@ -1508,7 +1508,7 @@ void MainWindow::guirefresh(bool newgame)
         {
 
         case 0://View Anyway..
-            QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using HexEditor To View Save"));
+            //QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using HexEditor To View Save"));
             ui->tabWidget->setCurrentIndex(8);
             ui->tabWidget_3->setCurrentIndex(1);
             ui->tabWidget->setTabEnabled(8,1);

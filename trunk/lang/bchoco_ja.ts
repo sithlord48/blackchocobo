@@ -4787,7 +4787,7 @@
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation>FF7 以外のセーブを無視</translation>
+        <translation type="obsolete">FF7 以外のセーブを無視</translation>
     </message>
     <message>
         <source>S01</source>
@@ -5810,10 +5810,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

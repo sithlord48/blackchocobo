@@ -4705,10 +4705,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>S01</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5721,10 +5717,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

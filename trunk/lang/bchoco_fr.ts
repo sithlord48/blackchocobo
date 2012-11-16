@@ -4713,7 +4713,7 @@
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation>Ignorer sauvegarde non-FF7</translation>
+        <translation type="obsolete">Ignorer sauvegarde non-FF7</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -5736,10 +5736,6 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
