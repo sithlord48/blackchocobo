@@ -19,103 +19,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     {
         preview[i] = new SlotPreview;
         preview_layout->addWidget(preview[i]);
-
-        if(((ff7->type()!="PC") && (((ff7->psx_block_type(i)==FF7Save::BLOCK_MIDLINK) || (ff7->psx_block_type(i) == FF7Save::BLOCK_ENDLINK)) || ((ff7->psx_block_type(i)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(i) == FF7Save::BLOCK_DELETED_ENDLINK)))))
-        {
-            preview[i]->setMode(1);
-            QByteArray icon_data;
-            icon_data= ff7->slot_header(i) ;
-
-            switch((quint8)icon_data.at(2))
-            {
-                case 0x11: preview[i]->setPsxIcon(icon_data.mid(96,160));break;
-                case 0x12: preview[i]->setPsxIcon(icon_data.mid(96,288),2);break;
-                case 0x13: preview[i]->setPsxIcon(icon_data.mid(96,416),3);break;
-                default: //Black Box
-                    QByteArray tmp;
-                    tmp.fill(00,0x200);
-                    preview[i]->setPsxIcon(tmp,1);
-                    break;
-            }
-            QString Slottext;
-            switch (ff7->psx_block_type(i))
-            {
-                case FF7Save::BLOCK_MIDLINK:   Slottext =tr("       Mid-Linked Block, Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(i)+1)); break;
-                case  FF7Save::BLOCK_DELETED_MIDLINK:  Slottext =tr("    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(i)+1)); break;
-                case FF7Save::BLOCK_ENDLINK:  Slottext =tr("      End Of Linked Blocks"); break;
-                case  FF7Save::BLOCK_DELETED_ENDLINK: Slottext =tr("      End Of Linked Blocks (Deleted)"); break;
-                default: Slottext = tr("ERROR"); break;
-            }
-            preview[i]->setLocation(Slottext);
-        }
-
-        else if(ff7->isFF7(i))
-        {
-            preview[i]->setMode(2);
-            //show real Dialog background.
-            QImage image(2, 2, QImage::Format_ARGB32);
-            image.setPixel(0, 0, QColor(ff7->slot[i].colors[0][0],ff7->slot[i].colors[0][1],ff7->slot[i].colors[0][2]).rgb());
-            image.setPixel(1, 0, QColor(ff7->slot[i].colors[1][0],ff7->slot[i].colors[1][1],ff7->slot[i].colors[1][2]).rgb());
-            image.setPixel(0, 1, QColor(ff7->slot[i].colors[2][0],ff7->slot[i].colors[2][1],ff7->slot[i].colors[2][2]).rgb());
-            image.setPixel(1, 1, QColor(ff7->slot[i].colors[3][0],ff7->slot[i].colors[3][1],ff7->slot[i].colors[3][2]).rgb());
-            QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-            preview[i]->setPixmap(QPixmap::fromImage(gradient));
-
-            preview[i]->setParty(Chars.Pixmap(ff7->descParty(i,0)),Chars.Pixmap(ff7->descParty(i,1)),Chars.Pixmap(ff7->descParty(i,2)));
-            preview[i]->setLocation(ff7->descLocation(i));
-            preview[i]->setName(ff7->descName(i));
-            preview[i]->setLevel(ff7->descLevel(i));
-            preview[i]->setGil(ff7->descGil(i));
-            preview[i]->setTime((ff7->descTime(i)/3600),(ff7->descTime(i)/60 %60));
-        }
-        else if(ff7->region(i).isEmpty() || ff7->psx_block_type(i) ==FF7Save::BLOCK_EMPTY ) //&& ff7->psx_block_type(i) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(i) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(i) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(i)!=FF7Save::BLOCK_DELETED_ENDLINK)
-        {
-            preview[i]->setMode(0);
-            preview[i]->setLocation(tr("-Empty-"));
-        }
-        else
-        {// all other psx saves.
-            preview[i]->setMode(1);
-            QByteArray icon_data;
-            icon_data= ff7->slot_header(i);
-
-            switch((quint8)icon_data.at(2))
-            {
-                case 0x11: preview[i]->setPsxIcon(icon_data.mid(96,160)); break;
-                case 0x12: preview[i]->setPsxIcon(icon_data.mid(96,288),2);break;
-                case 0x13: preview[i]->setPsxIcon(icon_data.mid(96,416),3); break;
-                default: //Black Box
-                    QByteArray tmp;
-                    tmp.fill(00,0x200);
-                    preview[i]->setPsxIcon(tmp);
-                    break;
-            }
-            QByteArray desc;
-            QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-            desc = icon_data.mid(4,64);
-            int desc_end;
-            if((desc_end = desc.indexOf('\x00')) != -1) {desc.truncate(desc_end);}
-
-            QString Slottext=codec->toUnicode(desc);
-            Slottext.prepend("      ");
-            if((ff7->psx_block_type(i)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(i)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(i)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
-            Slottext.append(tr("\n\t Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(i))));
-            if(ff7->psx_block_next(i)!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(i)+1)));}
-            preview[i]->setLocation(Slottext);
-        }
-        //more checks after this....
-        //for any item
-        preview[i]->set_Button_Label(QString((tr("Slot:%1"))).arg(QString::number(i+1)));
-        if(QT_VERSION<0x050000)
-        {//QT4 Style Connection
-            connect(preview[i],SIGNAL(btn_select_clicked(QString)),this,SLOT(button_clicked(QString)));
-            connect(preview[i],SIGNAL(btn_remove_clicked(QString)),this,SLOT(remove_slot(QString)));
-        }
-        else
-        {//QT5 Style Connection
-        //    connect(preview[i]::button_clicked(QString),this::button_clicked(QString));
-        }
+        setSlotPreview(i);
     }
+
     list_preview->setWidget(frm_preview);
     list_preview->setContentsMargins(0,0,0,0);
 
@@ -157,30 +63,150 @@ void SlotSelect::remove_slot(QString btn_text)
         {
             int t=ff7->psx_block_next(s);
             ff7->clearslot(s);
-            ReIntSlot(s,0);
-            preview[s]->setLocation(tr("-Empty-"));
+            ReIntSlot(s);
             s=t;
         }
     }
     else
     {
         ff7->clearslot(s);
-        ReIntSlot(s,0);
-        preview[s]->setLocation(tr("-Empty-"));
+        ReIntSlot(s);
     }
 }
-void SlotSelect::ReIntSlot(int button_number, int mode)
+void SlotSelect::copy_slot(QString btn_text)
 {
-    preview[button_number]->~QWidget();
-    preview[button_number]= new SlotPreview;
-    preview[button_number]->setMode(mode);
-    preview[button_number]->set_Button_Label(QString((tr("Slot:%1"))).arg(QString::number(button_number+1)));
-    preview_layout->insertWidget(button_number,preview[button_number]);
+    btn_text.remove(0,5);
+    int s = btn_text.toInt()-1;
+    if(ff7->isFF7(s)){ff7->CopySlot(s);}
+    //Can't Copy Non FF7 Slots Since we don't modify their region data
+    else{/*NOT FF7 SAVE INGORE*/}
+}
+
+void SlotSelect::paste_slot(QString btn_text)
+{
+    btn_text.remove(0,5);
+    int s = btn_text.toInt()-1;
+    if(ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK || ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK){return;}//Don't Overwrite parts of other saves.
+    if( (!ff7->isFF7(s)) && (ff7->type()!="PC") && (ff7->psx_block_size(s)>1))
+    {
+        int old_s = s;
+        int size = ff7->psx_block_size(s);
+        for(int i=0;i<size;i++)
+        {
+            int t=ff7->psx_block_next(s);
+            ff7->clearslot(s);
+            ReIntSlot(s);
+            s=t;
+        }
+       s=old_s;
+    }
+    ff7->PasteSlot(s);
+    ReIntSlot(s);
+}
+
+void SlotSelect::ReIntSlot(int s)
+{
+    preview[s]->~QWidget();
+    preview[s]= new SlotPreview;
+    preview_layout->insertWidget(s,preview[s]);
+    setSlotPreview(s);
+}
+void SlotSelect::setSlotPreview(int s)
+{
+    if(((ff7->type()!="PC") && (((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK) || (ff7->psx_block_type(s) == FF7Save::BLOCK_ENDLINK)) || ((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(s) == FF7Save::BLOCK_DELETED_ENDLINK)))))
+    {
+        preview[s]->setMode(SlotPreview::MODE_PSXGAME);
+        QByteArray icon_data;
+        icon_data= ff7->slot_header(s) ;
+
+        switch((quint8)icon_data.at(2))
+        {
+            case 0x11: preview[s]->setPsxIcon(icon_data.mid(96,160));break;
+            case 0x12: preview[s]->setPsxIcon(icon_data.mid(96,288),2);break;
+            case 0x13: preview[s]->setPsxIcon(icon_data.mid(96,416),3);break;
+            default: //Black Box
+                QByteArray tmp;
+                tmp.fill(80,0x200);
+                preview[s]->setPsxIcon(tmp,1);
+                break;
+        }
+        QString Slottext;
+        switch (ff7->psx_block_type(s))
+        {
+            case FF7Save::BLOCK_MIDLINK:   Slottext =tr("       Mid-Linked Block, Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)); break;
+            case  FF7Save::BLOCK_DELETED_MIDLINK:  Slottext =tr("    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)); break;
+            case FF7Save::BLOCK_ENDLINK:  Slottext =tr("      End Of Linked Blocks"); break;
+            case  FF7Save::BLOCK_DELETED_ENDLINK: Slottext =tr("      End Of Linked Blocks (Deleted)"); break;
+            default: Slottext = tr("ERROR"); break;
+        }
+        preview[s]->setLocation(Slottext);
+    }
+
+    else if(ff7->isFF7(s))
+    {
+        preview[s]->setMode(SlotPreview::MODE_FF7SAVE);
+        //show real Dialog background.
+        QImage image(2, 2, QImage::Format_ARGB32);
+        image.setPixel(0, 0, QColor(ff7->slot[s].colors[0][0],ff7->slot[s].colors[0][1],ff7->slot[s].colors[0][2]).rgb());
+        image.setPixel(1, 0, QColor(ff7->slot[s].colors[1][0],ff7->slot[s].colors[1][1],ff7->slot[s].colors[1][2]).rgb());
+        image.setPixel(0, 1, QColor(ff7->slot[s].colors[2][0],ff7->slot[s].colors[2][1],ff7->slot[s].colors[2][2]).rgb());
+        image.setPixel(1, 1, QColor(ff7->slot[s].colors[3][0],ff7->slot[s].colors[3][1],ff7->slot[s].colors[3][2]).rgb());
+        QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+        preview[s]->setPixmap(QPixmap::fromImage(gradient));
+
+        preview[s]->setParty(Chars.Pixmap(ff7->descParty(s,0)),Chars.Pixmap(ff7->descParty(s,1)),Chars.Pixmap(ff7->descParty(s,2)));
+        preview[s]->setLocation(ff7->descLocation(s));
+        preview[s]->setName(ff7->descName(s));
+        preview[s]->setLevel(ff7->descLevel(s));
+        preview[s]->setGil(ff7->descGil(s));
+        preview[s]->setTime((ff7->descTime(s)/3600),(ff7->descTime(s)/60 %60));
+    }
+    else if(ff7->region(s).isEmpty() || ff7->psx_block_type(s) ==FF7Save::BLOCK_EMPTY )
+    {
+        preview[s]->setMode(SlotPreview::MODE_EMPTY);
+    }
+    else
+    {// all other psx saves.
+        preview[s]->setMode(SlotPreview::MODE_PSXGAME);
+        QByteArray icon_data;
+        icon_data= ff7->slot_header(s);
+
+        switch((quint8)icon_data.at(2))
+        {
+            case 0x11: preview[s]->setPsxIcon(icon_data.mid(96,160)); break;
+            case 0x12: preview[s]->setPsxIcon(icon_data.mid(96,288),2);break;
+            case 0x13: preview[s]->setPsxIcon(icon_data.mid(96,416),3); break;
+            default: //Black Box
+                QByteArray tmp;
+                tmp.fill(00,0x200);
+                preview[s]->setPsxIcon(tmp);
+                break;
+        }
+        QByteArray desc;
+        QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+        desc = icon_data.mid(4,64);
+        int desc_end;
+        if((desc_end = desc.indexOf('\x00')) != -1) {desc.truncate(desc_end);}
+
+        QString Slottext=codec->toUnicode(desc);
+        Slottext.prepend("      ");
+        if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
+        Slottext.append(tr("\n\t Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));
+        if(ff7->psx_block_next(s)!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
+        preview[s]->setLocation(Slottext);
+    }
+    //more checks after this....
+    //for any item
+    preview[s]->set_Button_Label(QString((tr("Slot:%1"))).arg(QString::number(s+1)));
     if(QT_VERSION<0x050000)
     {//QT4 Style Connection
-        connect(preview[button_number],SIGNAL(btn_select_clicked(QString)),this,SLOT(button_clicked(QString)));}
+        connect(preview[s],SIGNAL(btn_select_clicked(QString)),this,SLOT(button_clicked(QString)));
+        connect(preview[s],SIGNAL(btn_remove_clicked(QString)),this,SLOT(remove_slot(QString)));
+        connect(preview[s],SIGNAL(btn_copy_clicked(QString)),this,SLOT(copy_slot(QString)));
+        connect(preview[s],SIGNAL(btn_paste_clicked(QString)),this,SLOT(paste_slot(QString)));
+    }
     else
     {//QT5 Style Connection
-    //    connect(preview[button_number]::button_clicked(QString),this::button_clicked(QString));
+    //    connect(preview[i]::button_clicked(QString),this::button_clicked(QString));
     }
 }

@@ -7528,6 +7528,18 @@ Fénix x3 (180pm)</translation>
         <source>Clear Slot</source>
         <translation type="unfinished">Borrar Ranura</translation>
     </message>
+    <message>
+        <source>Copy Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Into Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Vacío-</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7553,7 +7565,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation>-Vacío-</translation>
+        <translation type="obsolete">-Vacío-</translation>
     </message>
     <message>
         <source>

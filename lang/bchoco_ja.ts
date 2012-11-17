@@ -7601,6 +7601,18 @@ Table Entries are Editable</source>
         <source>Clear Slot</source>
         <translation type="unfinished">スロットのクリア</translation>
     </message>
+    <message>
+        <source>Copy Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Into Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7626,7 +7638,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation>-EMPTY-</translation>
+        <translation type="obsolete">-EMPTY-</translation>
     </message>
     <message>
         <source>

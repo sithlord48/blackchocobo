@@ -18,8 +18,11 @@ public:
 private slots:
     void button_clicked(QString);
     void remove_slot(QString);
+    void copy_slot(QString);
+    void paste_slot(QString);
 private:
-    void ReIntSlot(int button_number,int mode);
+    void setSlotPreview(int s);
+    void ReIntSlot(int s);
     QFrame *frm_preview;
     QVBoxLayout *preview_layout;
     QScrollArea *list_preview;

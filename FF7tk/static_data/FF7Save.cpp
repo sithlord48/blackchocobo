@@ -1088,10 +1088,11 @@ void FF7Save::setRegion(int s ,QString new_region)
     else{SG_Region_String[s]=new_region;}
     FileModified(true,s);
 }
-void FF7Save::CopySlot(int s){memcpy(&buffer_slot,&slot[s],0x10f4); buffer_region = SG_Region_String[s];}
+void FF7Save::CopySlot(int s){buffer_slot=slot[s]; buffer_region = SG_Region_String[s];}
 void FF7Save::PasteSlot(int s)
 {
-    memcpy(&slot[s],&buffer_slot,0x10f4);
+    slot[s]=buffer_slot;
+    //memcpy(&slot[s],&buffer_slot,0x10f4);
     SG_Region_String[s]= buffer_region;
     SG_Region_String[s].chop(2);
     switch(s)
@@ -1112,6 +1113,8 @@ void FF7Save::PasteSlot(int s)
         case 13:SG_Region_String[s].append("14"); break;
         case 14:SG_Region_String[s].append("15"); break;
     }
+    if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){fix_vmc_header();}
+
     FileModified(true,s);
 }
 
@@ -1141,6 +1144,21 @@ void FF7Save::setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type)
     }
     else{return;}
 }
+void FF7Save::setPsx_block_next(int s,int next)
+{
+    if(type()=="PC"){return;}
+    if(next <0 || next >14){return;}
+    if(s <0 || s >14){return;}
+    if(next==s){return;}
+
+    int index=128+(128*s);
+    if (type() =="PSP"){index+=0x80;}
+    else if (type() =="VGS"){index+=0x40;}
+    else if (type() =="DEX"){index+=0xF40;}
+    else {}
+    file_headerp[index+0x08]= next;
+}
+
 quint8 FF7Save::psx_block_next(int s)
 {
     if(type()!="PC")
@@ -1153,6 +1171,23 @@ quint8 FF7Save::psx_block_next(int s)
         return file_headerp[index+0x08];
     }
     else{return 0x00;}
+}
+
+void FF7Save::setPsx_block_size(int s,int blockSize)
+{
+    if(type()=="PC"){return;}
+    if(s <0 || s >14){return;}
+    if(blockSize>15){return;}
+
+    int index=128+(128*s);
+    if (type() =="PSP"){index+=0x80;}
+    else if (type() =="VGS"){index+=0x40;}
+    else if (type() =="DEX"){index+=0xF40;}
+
+    qint32 filesize= blockSize *0x2000;
+    file_headerp[index+0x04] = (filesize & 0xff);
+    file_headerp[index+0x05] = (filesize & 0xff00) >> 8;
+    file_headerp[index+0x06] = (filesize & 0xff0000) >> 16;
 }
 quint8 FF7Save::psx_block_size(int s)
 {

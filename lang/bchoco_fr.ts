@@ -7527,6 +7527,18 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>Clear Slot</source>
         <translation type="unfinished">Vider le slot</translation>
     </message>
+    <message>
+        <source>Copy Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Into Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Vide-</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7552,7 +7564,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation>-Vide-</translation>
+        <translation type="obsolete">-Vide-</translation>
     </message>
     <message>
         <source>
