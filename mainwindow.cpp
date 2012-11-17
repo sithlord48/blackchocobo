@@ -60,17 +60,17 @@ void MainWindow::init_display()
     ui->tbl_location_field->setRowCount(Locations.len());
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
-        newItem = new QTableWidgetItem(Locations.loc_name(i),0);
+        newItem = new QTableWidgetItem(Locations.locationString(i),0);
         if(showLocPreview)
         {//set the tooltip to the needed file if the locations resource is found.
-            QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.map_id(i),Locations.loc_id(i)));
+            QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.mapID(i),Locations.locationID(i)));
             newItem->setToolTip(tooltip);
         }
         ui->tbl_location_field->setItem(i,0,newItem);
-        newItem = new QTableWidgetItem(Locations.map_id(i),0);
+        newItem = new QTableWidgetItem(Locations.mapID(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,1,newItem);
-        newItem = new QTableWidgetItem(Locations.loc_id(i),0);
+        newItem = new QTableWidgetItem(Locations.locationID(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,2,newItem);
         newItem = new QTableWidgetItem(Locations.x(i),0);
@@ -116,29 +116,29 @@ void MainWindow::init_display()
     ui->cb_farm_items_8->setVisible(false);
     load=false;
 
-    ui->lbl_love_barret->setPixmap(Chars.Pixmap(FF7Char::Barret));
-    ui->lbl_love_tifa->setPixmap(Chars.Pixmap(FF7Char::Tifa));
-    ui->lbl_love_aeris->setPixmap(Chars.Pixmap(FF7Char::Aerith));
-    ui->lbl_love_yuffie->setPixmap(Chars.Pixmap(FF7Char::Yuffie));
+    ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
+    ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
+    ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith));
+    ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie));
 
-    ui->lbl_battle_love_barret->setPixmap(Chars.Pixmap(FF7Char::Barret));
-    ui->lbl_battle_love_tifa->setPixmap(Chars.Pixmap(FF7Char::Tifa));
-    ui->lbl_battle_love_aeris->setPixmap(Chars.Pixmap(FF7Char::Aerith));
-    ui->lbl_battle_love_yuffie->setPixmap(Chars.Pixmap(FF7Char::Yuffie));
+    ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
+    ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
+    ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith));
+    ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie));
 
-    for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.Icon(i),Chars.defaultName(i));}
-    for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.Icon(i),Chars.defaultName(i));}
-    for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.Icon(i),Chars.defaultName(i));}
-    ui->combo_party1->addItem(Chars.Icon(0x0B),QString("0x0B"));
-    ui->combo_party1->addItem(Chars.Icon(0xFF),tr("-Empty-"));
-    ui->combo_party2->addItem(Chars.Icon(0x0B),QString("0x0B"));
-    ui->combo_party2->addItem(Chars.Icon(0xFF),tr("-Empty-"));
-    ui->combo_party3->addItem(Chars.Icon(0x0B),QString("0x0B"));
-    ui->combo_party3->addItem(Chars.Icon(0xFF),tr("-Empty-"));
+    for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));}
+    for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.icon(i),Chars.defaultName(i));}
+    for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.icon(i),Chars.defaultName(i));}
+    ui->combo_party1->addItem(Chars.icon(0x0B),QString("0x0B"));
+    ui->combo_party1->addItem(Chars.icon(0xFF),tr("-Empty-"));
+    ui->combo_party2->addItem(Chars.icon(0x0B),QString("0x0B"));
+    ui->combo_party2->addItem(Chars.icon(0xFF),tr("-Empty-"));
+    ui->combo_party3->addItem(Chars.icon(0x0B),QString("0x0B"));
+    ui->combo_party3->addItem(Chars.icon(0xFF),tr("-Empty-"));
 
-    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
-    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
-    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
+    ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
+    ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
+    ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
 
     dialog_preview = new DialogPreview();
@@ -1409,14 +1409,14 @@ void MainWindow::materiaupdate(void)
 
         if(current_id == FF7Materia::EnemySkill)
         {
-            newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
+            newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else if (current_id !=FF7Materia::EmptyId)
         {
-            newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
+            newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia->setItem(mat,1,newItem);}
@@ -1778,7 +1778,7 @@ void MainWindow::guirefresh(bool newgame)
             quint8 current_id = ff7->stolenMateriaId(s,mat);
             if (current_id !=FF7Materia::EmptyId)
             {
-                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(current_id)),Materias.Name(current_id),0);
+                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)),Materias.name(current_id),0);
                 ui->tbl_materia_2->setItem(mat,0,newItem);
                 qint32 current_ap = ff7->stolenMateriaAp(s,mat);
                 if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
@@ -1838,15 +1838,15 @@ void MainWindow::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-    ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
-    ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
-    ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
-    ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
-    ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
-    ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
-    ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
-    ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
-    ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
+    ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,0)));
+    ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,1)));
+    ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,2)));
+    ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,3)));
+    ui->btn_red->setIcon(Chars.icon(ff7->charID(s,4)));
+    ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,5)));
+    ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,6)));
+    ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,7)));
+    ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,8)));
 }
 void MainWindow::progress_update()
 {
@@ -2035,15 +2035,15 @@ void MainWindow::testdata_refresh()
     unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->Char(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->Char(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->Char(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->Char(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->Char(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->Char(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->Char(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->Char(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->Char(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->Char(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->Char(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->Char(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->Char(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->Char(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,curchar)));}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ ff7->setGil(s,value);}}
@@ -3521,7 +3521,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     for(int i=0;i<320;i++)
     {
       //Replaced by new item engine. (Vegeta_Ss4)
-        if(Items.Name(i)!=tr("DON'T USE"))
+        if(Items.name(i)!=tr("DON'T USE"))
         {
             if(i<106)
             {

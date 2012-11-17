@@ -54,7 +54,7 @@ void CharEditor::init_display()
 
     lbl_id = new QLabel(tr("ID"));
     combo_id = new QComboBox;
-    for(int i=0;i<11;i++){combo_id->addItem(Chars.Icon(i),Chars.defaultName(i));}
+    for(int i=0;i<11;i++){combo_id->addItem(Chars.icon(i),Chars.defaultName(i));}
     lbl_base_hp = new QLabel(tr("Base HP"));
     lbl_base_hp_bonus = new QLabel;
     lbl_base_hp->setFixedWidth(this->font().pointSize()*6);
@@ -598,11 +598,11 @@ void CharEditor::init_display()
     weapon_selection = new QComboBox;
 
     armor_selection = new QComboBox;
-    for(int i=256;i<288;i++){armor_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
+    for(int i=256;i<288;i++){armor_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));}
 
     accessory_selection = new QComboBox;
-    for(int i=288;i<320;i++){accessory_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-    accessory_selection->addItem(QPixmap::fromImage(Items.Image(288)),tr("-NONE-"));
+    for(int i=288;i<320;i++){accessory_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));}
+    accessory_selection->addItem(QPixmap::fromImage(Items.image(288)),tr("-NONE-"));
     materia_edit  = new MateriaEditor;
     materia_edit->setStarsSize(32);
 
@@ -646,7 +646,7 @@ void CharEditor::init_display()
     weapon_slot_1 = new QPushButton();
     weapon_slot_1->setFixedSize(32,32);
     weapon_slot_1->setIconSize(QSize(32,32));
-    weapon_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_1->setHidden(1);
 
     QHBoxLayout *weapon_slot_1_layout = new QHBoxLayout;
@@ -665,7 +665,7 @@ void CharEditor::init_display()
     weapon_slot_2 = new QPushButton();
     weapon_slot_2->setFixedSize(32,32);
     weapon_slot_2->setIconSize(QSize(32,32));
-    weapon_slot_2->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_2->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_2->setHidden(1);
 
     QHBoxLayout *weapon_slot_2_layout = new QHBoxLayout;
@@ -690,7 +690,7 @@ void CharEditor::init_display()
     weapon_slot_3->setFlat(true);
     weapon_slot_3->setAutoFillBackground(true);
     weapon_slot_3->setIconSize(QSize(32,32));
-    weapon_slot_3->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_3->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_3->setHidden(1);
 
     QHBoxLayout *weapon_slot_3_layout = new QHBoxLayout;
@@ -709,11 +709,11 @@ void CharEditor::init_display()
 
     weapon_slot_4 = new QPushButton();
     weapon_slot_4->setFixedSize(32,32);
-    weapon_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_4->setFlat(true);
     weapon_slot_4->setAutoFillBackground(true);
     weapon_slot_4->setIconSize(QSize(32,32));
-    weapon_slot_4->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_4->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_4->setHidden(1);
 
     QHBoxLayout *weapon_slot_4_layout = new QHBoxLayout;
@@ -738,7 +738,7 @@ void CharEditor::init_display()
     weapon_slot_5->setFlat(true);
     weapon_slot_5->setAutoFillBackground(true);
     weapon_slot_5->setIconSize(QSize(32,32));
-    weapon_slot_5->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_5->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_5->setHidden(1);
 
     QHBoxLayout *weapon_slot_5_layout = new QHBoxLayout;
@@ -760,7 +760,7 @@ void CharEditor::init_display()
     weapon_slot_6->setFlat(true);
     weapon_slot_6->setAutoFillBackground(true);
     weapon_slot_6->setIconSize(QSize(32,32));
-    weapon_slot_6->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_6->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_6->setHidden(1);
 
     QHBoxLayout *weapon_slot_6_layout = new QHBoxLayout;
@@ -785,7 +785,7 @@ void CharEditor::init_display()
     weapon_slot_7->setFlat(true);
     weapon_slot_7->setAutoFillBackground(true);
     weapon_slot_7->setIconSize(QSize(32,32));
-    weapon_slot_7->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_7->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_7->setHidden(1);
 
     QHBoxLayout *weapon_slot_7_layout = new QHBoxLayout;
@@ -807,7 +807,7 @@ void CharEditor::init_display()
     weapon_slot_8->setFlat(true);
     weapon_slot_8->setAutoFillBackground(true);
     weapon_slot_8->setIconSize(QSize(32,32));
-    weapon_slot_8->setStyleSheet(Items.Style_m_no_grow_slot());
+    weapon_slot_8->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     weapon_slot_8->setHidden(1);
 
     QHBoxLayout *weapon_slot_8_layout = new QHBoxLayout;
@@ -857,7 +857,7 @@ void CharEditor::init_display()
     armor_slot_1 = new QPushButton();
     armor_slot_1->setFixedSize(32,32);
     armor_slot_1->setIconSize(QSize(32,32));
-    armor_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_1->setHidden(1);
 
     QHBoxLayout *armor_slot_1_layout = new QHBoxLayout;
@@ -876,7 +876,7 @@ void CharEditor::init_display()
     armor_slot_2 = new QPushButton();
     armor_slot_2->setFixedSize(32,32);
     armor_slot_2->setIconSize(QSize(32,32));
-    armor_slot_2->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_2->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_2->setHidden(1);
 
     QHBoxLayout *armor_slot_2_layout = new QHBoxLayout;
@@ -901,7 +901,7 @@ void CharEditor::init_display()
     armor_slot_3->setFlat(true);
     armor_slot_3->setAutoFillBackground(true);
     armor_slot_3->setIconSize(QSize(32,32));
-    armor_slot_3->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_3->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_3->setHidden(1);
 
     QHBoxLayout *armor_slot_3_layout = new QHBoxLayout;
@@ -920,11 +920,11 @@ void CharEditor::init_display()
 
     armor_slot_4 = new QPushButton();
     armor_slot_4->setFixedSize(32,32);
-    armor_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_4->setFlat(true);
     armor_slot_4->setAutoFillBackground(true);
     armor_slot_4->setIconSize(QSize(32,32));
-    armor_slot_4->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_4->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_4->setHidden(1);
 
     QHBoxLayout *armor_slot_4_layout = new QHBoxLayout;
@@ -949,7 +949,7 @@ void CharEditor::init_display()
     armor_slot_5->setFlat(true);
     armor_slot_5->setAutoFillBackground(true);
     armor_slot_5->setIconSize(QSize(32,32));
-    armor_slot_5->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_5->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_5->setHidden(1);
 
     QHBoxLayout *armor_slot_5_layout = new QHBoxLayout;
@@ -971,7 +971,7 @@ void CharEditor::init_display()
     armor_slot_6->setFlat(true);
     armor_slot_6->setAutoFillBackground(true);
     armor_slot_6->setIconSize(QSize(32,32));
-    armor_slot_6->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_6->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_6->setHidden(1);
 
     QHBoxLayout *armor_slot_6_layout = new QHBoxLayout;
@@ -996,7 +996,7 @@ void CharEditor::init_display()
     armor_slot_7->setFlat(true);
     armor_slot_7->setAutoFillBackground(true);
     armor_slot_7->setIconSize(QSize(32,32));
-    armor_slot_7->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_7->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_7->setHidden(1);
 
     QHBoxLayout *armor_slot_7_layout = new QHBoxLayout;
@@ -1018,7 +1018,7 @@ void CharEditor::init_display()
     armor_slot_8->setFlat(true);
     armor_slot_8->setAutoFillBackground(true);
     armor_slot_8->setIconSize(QSize(32,32));
-    armor_slot_8->setStyleSheet(Items.Style_m_no_grow_slot());
+    armor_slot_8->setStyleSheet(Items.styleMateriaSlotNoGrowth());
     armor_slot_8->setHidden(1);
 
     QHBoxLayout *armor_slot_8_layout = new QHBoxLayout;
@@ -1098,12 +1098,12 @@ void CharEditor::init_display()
 
     QGroupBox *tabStatus = new QGroupBox;
     tabStatus->setLayout(left_Final);
-    toolbox->addItem(tabStatus,Chars.Icon(0),QString(tr("Status Info")));
+    toolbox->addItem(tabStatus,Chars.icon(0),QString(tr("Status Info")));
 
     QGroupBox *tabEquipment = new QGroupBox;
     tabEquipment->setLayout(right_Final);
     tabEquipment->adjustSize();
-    toolbox->addItem(tabEquipment,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
+    toolbox->addItem(tabEquipment,QIcon(QPixmap::fromImage(Items.image(256))),QString(tr("Equipment")));
 
     QVBoxLayout *toolbox_layout = new QVBoxLayout;
     toolbox_layout->setContentsMargins(0,0,0,0);
@@ -1347,13 +1347,13 @@ void CharEditor::Exp_Changed(int exp)
         setExp(exp);
         if(autolevel)
         {
-            if( (data.exp>=Chars.Total_Exp_For_Level(data.id,data.level)) || (data.exp<=Chars.Total_Exp_For_Level(data.id,data.level-1)) )
+            if( (data.exp>=Chars.totalExpForLevel(data.id,data.level)) || (data.exp<=Chars.totalExpForLevel(data.id,data.level-1)) )
             {
                 int level=0;
                 int prev_level = data.level;
                 for (int i=level;i<99;i++)
                 {
-                    if(data.exp>=Chars.Total_Exp_For_Level(data.id,i)){level++;}
+                    if(data.exp>=Chars.totalExpForLevel(data.id,i)){level++;}
                 }
                 sb_level->blockSignals(true);
                 sb_level->setValue(level);
@@ -1375,7 +1375,7 @@ void CharEditor::Level_Changed(int level)
             int prev_level=data.level;
             setLevel(level);
             if(level<=0){setExp(0);}
-            else{setExp(Chars.Total_Exp_For_Level(data.id,level-1));}
+            else{setExp(Chars.totalExpForLevel(data.id,level-1));}
             sb_total_exp->blockSignals(true);
             sb_total_exp->setValue(data.exp);
             sb_total_exp->blockSignals(false);
@@ -1391,7 +1391,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     data = Chardata;
     _name=Processed_Name;
     //more here like setting the gui stuff.
-    lbl_avatar->setPixmap(Chars.Pixmap(data.id));
+    lbl_avatar->setPixmap(Chars.pixmap(data.id));
     line_name->setText(_name);
     sb_level->setValue(data.level);
     sb_curMp->setValue(data.curMP);
@@ -1455,13 +1455,13 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     quint8 weapon = data.weapon;
     weapon_selection->clear();
 
-    for(int i = Chars.weapon_starting_id(data.id); i < Chars.num_weapons(data.id)+Chars.weapon_starting_id(data.id);i++)
+    for(int i = Chars.weaponStartingId(data.id); i < Chars.numberOfWeapons(data.id)+Chars.weaponStartingId(data.id);i++)
     {
-        weapon_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));
+        weapon_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));
     }
 
     data.weapon = weapon;
-    if(data.id !=FF7Char::Sephiroth){weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));}
+    if(data.id !=FF7Char::Sephiroth){weapon_selection->setCurrentIndex(data.weapon-Chars.weaponOffset(data.id));}
     else{weapon_selection->blockSignals(true);weapon_selection->setCurrentIndex(0);weapon_selection->blockSignals(false);}
 
     armor_selection->setCurrentIndex(data.armor);
@@ -1759,12 +1759,12 @@ void CharEditor::setLimitBar(int limitbar)
 }
 void CharEditor::setWeapon(int weapon)
 {
-    if(weapon == (data.weapon-Chars.weapon_offset(data.id))){return;}
+    if(weapon == (data.weapon-Chars.weaponOffset(data.id))){return;}
     else
     {
-        if(weapon<0){data.weapon=Chars.weapon_offset(data.id);}
-        else if(weapon>Chars.num_weapons(data.id)){data.weapon=Chars.num_weapons(data.id)+Chars.weapon_offset(data.id);}
-        else {data.weapon=weapon+Chars.weapon_offset(data.id);}
+        if(weapon<0){data.weapon=Chars.weaponOffset(data.id);}
+        else if(weapon>Chars.numberOfWeapons(data.id)){data.weapon=Chars.numberOfWeapons(data.id)+Chars.weaponOffset(data.id);}
+        else {data.weapon=weapon+Chars.weaponOffset(data.id);}
         emit weapon_changed(data.weapon);
         //Update the Widget.
         elemental_info();
@@ -1993,138 +1993,138 @@ void CharEditor::calc_stats(void)
     {
         //add equipment bonuses
         //Weapon
-        str_bonus +=Items.Stat_str(data.weapon + 128 );
-        vit_bonus +=Items.Stat_vit(data.weapon + 128);
-        dex_bonus +=Items.Stat_dex(data.weapon + 128);
-        spi_bonus +=Items.Stat_spi(data.weapon + 128);
-        mag_bonus +=Items.Stat_mag(data.weapon + 128);
-        lck_bonus +=Items.Stat_lck(data.weapon + 128);
-        hp_bonus+=Items.Stat_hp(data.weapon + 128);
-        mp_bonus+=Items.Stat_mp(data.weapon + 128);
+        str_bonus +=Items.statSTR(data.weapon + 128 );
+        vit_bonus +=Items.statVIT(data.weapon + 128);
+        dex_bonus +=Items.statDEX(data.weapon + 128);
+        spi_bonus +=Items.statSPI(data.weapon + 128);
+        mag_bonus +=Items.statMAG(data.weapon + 128);
+        lck_bonus +=Items.statLCK(data.weapon + 128);
+        hp_bonus+=Items.statHP(data.weapon + 128);
+        mp_bonus+=Items.statMP(data.weapon + 128);
         QString title;
-        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.weapon + 128))));
+        title.append(tr("AP:x%1").arg(QString::number(Items.materiaGrowthRate(data.weapon + 128))));
 
-        if(Items.Stat_str(data.weapon + 128)!=0)
+        if(Items.statSTR(data.weapon + 128)!=0)
         {
-            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.weapon + 128))));
+            title.append(tr(" Str:+%1").arg(QString::number(Items.statSTR(data.weapon + 128))));
         }
-        if(Items.Stat_vit(data.weapon + 128)!=0)
+        if(Items.statVIT(data.weapon + 128)!=0)
         {
-            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.weapon + 128))));
+            title.append(tr(" Vit:+%1").arg(QString::number(Items.statVIT(data.weapon + 128))));
         }
-        if(Items.Stat_dex(data.weapon + 128)!=0)
+        if(Items.statDEX(data.weapon + 128)!=0)
         {
-            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.weapon + 128))));
+            title.append(tr(" Dex:+%1").arg(QString::number(Items.statDEX(data.weapon + 128))));
         }
-        if(Items.Stat_spi(data.weapon + 128)!=0)
+        if(Items.statSPI(data.weapon + 128)!=0)
         {
-            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.weapon + 128))));
+            title.append(tr(" Spi:+%1").arg(QString::number(Items.statSPI(data.weapon + 128))));
         }
-        if(Items.Stat_mag(data.weapon + 128)!=0)
+        if(Items.statMAG(data.weapon + 128)!=0)
         {
-            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.weapon + 128))));
+            title.append(tr(" Mag:+%1").arg(QString::number(Items.statMAG(data.weapon + 128))));
         }
-        if(Items.Stat_lck(data.weapon + 128)!=0)
+        if(Items.statLCK(data.weapon + 128)!=0)
         {
-            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.weapon + 128))));
+            title.append(tr(" Lck:+%1").arg(QString::number(Items.statLCK(data.weapon + 128))));
         }
-        if(Items.Stat_hp(data.weapon + 128)!=0)
+        if(Items.statHP(data.weapon + 128)!=0)
         {
-            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.weapon + 128))));
+            title.append(tr(" Hp:+%1%").arg(QString::number(Items.statHP(data.weapon + 128))));
         }
-        if(Items.Stat_mp(data.weapon + 128)!=0)
+        if(Items.statMP(data.weapon + 128)!=0)
         {
-            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.weapon + 128))));
+            title.append(tr(" Mp:+%1%").arg(QString::number(Items.statMP(data.weapon + 128))));
         }
         weapon_materia_box->setTitle(title);
         //Armor
-        str_bonus += Items.Stat_str(data.armor + 256);
-        vit_bonus +=Items.Stat_vit(data.armor + 256);
-        dex_bonus +=Items.Stat_dex(data.armor + 256);
-        spi_bonus +=Items.Stat_spi(data.armor + 256);
-        mag_bonus +=Items.Stat_mag(data.armor + 256);
-        lck_bonus +=Items.Stat_lck(data.armor+ 256);
-        hp_bonus+=Items.Stat_hp(data.armor + 256);
-        mp_bonus+=Items.Stat_mp(data.armor + 256);
+        str_bonus += Items.statSTR(data.armor + 256);
+        vit_bonus +=Items.statVIT(data.armor + 256);
+        dex_bonus +=Items.statDEX(data.armor + 256);
+        spi_bonus +=Items.statSPI(data.armor + 256);
+        mag_bonus +=Items.statMAG(data.armor + 256);
+        lck_bonus +=Items.statLCK(data.armor+ 256);
+        hp_bonus+=Items.statHP(data.armor + 256);
+        mp_bonus+=Items.statMP(data.armor + 256);
         title.clear();
-        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.armor + 256))));
-        if(Items.Stat_str(data.armor + 256) != 0)
+        title.append(tr("AP:x%1").arg(QString::number(Items.materiaGrowthRate(data.armor + 256))));
+        if(Items.statSTR(data.armor + 256) != 0)
         {
-            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.armor + 256))));
+            title.append(tr(" Str:+%1").arg(QString::number(Items.statSTR(data.armor + 256))));
         }
-        if(Items.Stat_vit(data.armor + 256) !=0)
+        if(Items.statVIT(data.armor + 256) !=0)
         {
-            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.armor + 256))));
+            title.append(tr(" Vit:+%1").arg(QString::number(Items.statVIT(data.armor + 256))));
         }
-        if(Items.Stat_dex(data.armor + 256)!=0)
+        if(Items.statDEX(data.armor + 256)!=0)
         {
-            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.armor + 256))));
+            title.append(tr(" Dex:+%1").arg(QString::number(Items.statDEX(data.armor + 256))));
         }
-        if(Items.Stat_spi(data.armor + 256)!=0)
+        if(Items.statSPI(data.armor + 256)!=0)
         {
-            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.armor + 256))));
+            title.append(tr(" Spi:+%1").arg(QString::number(Items.statSPI(data.armor + 256))));
         }
-        if(Items.Stat_mag(data.armor + 256)!=0)
+        if(Items.statMAG(data.armor + 256)!=0)
         {
-            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.armor + 256))));
+            title.append(tr(" Mag:+%1").arg(QString::number(Items.statMAG(data.armor + 256))));
         }
-        if(Items.Stat_lck(data.armor + 256)!=0)
+        if(Items.statLCK(data.armor + 256)!=0)
         {
-            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.armor + 256))));
+            title.append(tr(" Lck:+%1").arg(QString::number(Items.statLCK(data.armor + 256))));
         }
-        if(Items.Stat_hp(data.armor + 256)!=0)
+        if(Items.statHP(data.armor + 256)!=0)
         {
-            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.armor + 256))));
+            title.append(tr(" Hp:+%1%").arg(QString::number(Items.statHP(data.armor + 256))));
         }
-        if(Items.Stat_mp(data.armor + 256)!=0)
+        if(Items.statMP(data.armor + 256)!=0)
         {
-            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.armor + 256))));
+            title.append(tr(" Mp:+%1%").arg(QString::number(Items.statMP(data.armor + 256))));
         }
         armor_materia_box->setTitle(title);
         //Accessory
         if(data.accessory <32)
         {
-            str_bonus += Items.Stat_str(data.accessory + 288);
-            vit_bonus +=Items.Stat_vit(data.accessory + 288);
-            dex_bonus +=Items.Stat_dex(data.accessory + 288);
-            spi_bonus +=Items.Stat_spi(data.accessory + 288);
-            mag_bonus +=Items.Stat_mag(data.accessory + 288);
-            lck_bonus +=Items.Stat_lck(data.accessory+ 288);
-            hp_bonus+=Items.Stat_hp(data.accessory + 288);
-            mp_bonus+=Items.Stat_mp(data.accessory + 288);
+            str_bonus += Items.statSTR(data.accessory + 288);
+            vit_bonus +=Items.statVIT(data.accessory + 288);
+            dex_bonus +=Items.statDEX(data.accessory + 288);
+            spi_bonus +=Items.statSPI(data.accessory + 288);
+            mag_bonus +=Items.statMAG(data.accessory + 288);
+            lck_bonus +=Items.statLCK(data.accessory+ 288);
+            hp_bonus+=Items.statHP(data.accessory + 288);
+            mp_bonus+=Items.statMP(data.accessory + 288);
             title.clear();
             title.append(tr("Accessory"));
-            if(Items.Stat_str(data.accessory + 288) != 0)
+            if(Items.statSTR(data.accessory + 288) != 0)
             {
-                title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.accessory + 288))));
+                title.append(tr(" Str:+%1").arg(QString::number(Items.statSTR(data.accessory + 288))));
             }
-            if(Items.Stat_vit(data.accessory + 288) !=0)
+            if(Items.statVIT(data.accessory + 288) !=0)
             {
-                title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.accessory + 288))));
+                title.append(tr(" Vit:+%1").arg(QString::number(Items.statVIT(data.accessory + 288))));
             }
-            if(Items.Stat_dex(data.accessory + 288)!=0)
+            if(Items.statDEX(data.accessory + 288)!=0)
             {
-                title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.accessory + 288))));
+                title.append(tr(" Dex:+%1").arg(QString::number(Items.statDEX(data.accessory + 288))));
             }
-            if(Items.Stat_spi(data.accessory + 288)!=0)
+            if(Items.statSPI(data.accessory + 288)!=0)
             {
-                title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.accessory + 288))));
+                title.append(tr(" Spi:+%1").arg(QString::number(Items.statSPI(data.accessory + 288))));
             }
-            if(Items.Stat_mag(data.accessory + 288)!=0)
+            if(Items.statMAG(data.accessory + 288)!=0)
             {
-                title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.accessory + 288))));
+                title.append(tr(" Mag:+%1").arg(QString::number(Items.statMAG(data.accessory + 288))));
             }
-            if(Items.Stat_lck(data.accessory + 288)!=0)
+            if(Items.statLCK(data.accessory + 288)!=0)
             {
-                title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.accessory + 288))));
+                title.append(tr(" Lck:+%1").arg(QString::number(Items.statLCK(data.accessory + 288))));
             }
-            if(Items.Stat_hp(data.accessory + 288)!=0)
+            if(Items.statHP(data.accessory + 288)!=0)
             {
-                title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.accessory + 288))));
+                title.append(tr(" Hp:+%1%").arg(QString::number(Items.statHP(data.accessory + 288))));
             }
-            if(Items.Stat_mp(data.accessory + 288)!=0)
+            if(Items.statMP(data.accessory + 288)!=0)
             {
-                title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.accessory + 288))));
+                title.append(tr(" Mp:+%1%").arg(QString::number(Items.statMP(data.accessory + 288))));
             }
             accessory_box->setTitle(title);
         }
@@ -2137,7 +2137,7 @@ void CharEditor::calc_stats(void)
                 bool add=true;
                 int level=0;
                 int aptemp = Materias.ap2num(data.materias[i].ap);
-                for(int m=0; m<Materias.Levels(data.materias[i].id);m++){if(aptemp >= Materias.Ap(data.materias[i].id,m)){level++;}}
+                for(int m=0; m<Materias.levels(data.materias[i].id);m++){if(aptemp >= Materias.ap(data.materias[i].id,m)){level++;}}
 
                 switch(i)
                 {
@@ -2161,16 +2161,16 @@ void CharEditor::calc_stats(void)
                 if(add)
                 {
                     // no special materia that affects these stats.
-                    str_bonus +=Materias.Stat_Str(data.materias[i].id);
-                    vit_bonus +=Materias.Stat_Vit(data.materias[i].id);
-                    spi_bonus +=Materias.Stat_Spi(data.materias[i].id);
+                    str_bonus +=Materias.statSTR(data.materias[i].id);
+                    vit_bonus +=Materias.statVIT(data.materias[i].id);
+                    spi_bonus +=Materias.statSPI(data.materias[i].id);
                     //Show in Percentage.
-                    if(data.materias[i].id == 0x00){mp_bonus +=(10*level);}                                                 else{mp_bonus+=Materias.Stat_Mp(data.materias[i].id);}
-                    if(data.materias[i].id == 0x01){hp_bonus += (10*level);}                                                 else{hp_bonus+=Materias.Stat_Hp(data.materias[i].id);}
+                    if(data.materias[i].id == 0x00){mp_bonus +=(10*level);}                                                 else{mp_bonus+=Materias.statMP(data.materias[i].id);}
+                    if(data.materias[i].id == 0x01){hp_bonus += (10*level);}                                                 else{hp_bonus+=Materias.statHP(data.materias[i].id);}
                     //show exact numbers
-                    if(data.materias[i].id == 0x02){dex_bonus += data.dexterity * (0.01*(level*10));}   else{dex_bonus +=Materias.Stat_Dex(data.materias[i].id);}
-                    if(data.materias[i].id ==0x03){ mag_bonus += data.magic * (0.01*(level*10));}        else{mag_bonus +=Materias.Stat_Mag(data.materias[i].id);}
-                    if(data.materias[i].id ==0x04){ lck_bonus += data.luck * (0.01*(level*10));}              else{lck_bonus +=Materias.Stat_Lck(data.materias[i].id);}
+                    if(data.materias[i].id == 0x02){dex_bonus += data.dexterity * (0.01*(level*10));}   else{dex_bonus +=Materias.statDEX(data.materias[i].id);}
+                    if(data.materias[i].id ==0x03){ mag_bonus += data.magic * (0.01*(level*10));}        else{mag_bonus +=Materias.statMAG(data.materias[i].id);}
+                    if(data.materias[i].id ==0x04){ lck_bonus += data.luck * (0.01*(level*10));}              else{lck_bonus +=Materias.statLCK(data.materias[i].id);}
                  }// end of add case.
             }
         }
@@ -2221,29 +2221,29 @@ void CharEditor::level_up(int pre_level)
     if(pre_level < data.level)
     {//level up
         for(int i=pre_level;i<data.level;i++)
-        {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-            sb_str->setValue(data.strength + Chars.stat_gain(data.id,0,data.strength,i,i+1));
-            sb_vit->setValue(data.vitality + Chars.stat_gain(data.id,1,data.vitality,i,i+1));
-            sb_mag->setValue(data.magic + Chars.stat_gain(data.id,2,data.magic,i,i+1));
-            sb_spi->setValue(data.spirit + Chars.stat_gain(data.id,3,data.spirit,i,i+1));
-            sb_dex->setValue(data.dexterity + Chars.stat_gain(data.id,4,data.dexterity,i,i+1));
-            sb_lck->setValue(data.luck + Chars.stat_gain(data.id,5,data.luck,i,i+1));
-            sb_base_hp->setValue(data.baseHP + Chars.stat_gain(data.id,6,data.baseHP,i,i+1));
-            sb_base_mp->setValue(data.baseMP + Chars.stat_gain(data.id,7,data.baseMP,i,i+1));
+        {// for statGain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
+            sb_str->setValue(data.strength + Chars.statGain(data.id,0,data.strength,i,i+1));
+            sb_vit->setValue(data.vitality + Chars.statGain(data.id,1,data.vitality,i,i+1));
+            sb_mag->setValue(data.magic + Chars.statGain(data.id,2,data.magic,i,i+1));
+            sb_spi->setValue(data.spirit + Chars.statGain(data.id,3,data.spirit,i,i+1));
+            sb_dex->setValue(data.dexterity + Chars.statGain(data.id,4,data.dexterity,i,i+1));
+            sb_lck->setValue(data.luck + Chars.statGain(data.id,5,data.luck,i,i+1));
+            sb_base_hp->setValue(data.baseHP + Chars.statGain(data.id,6,data.baseHP,i,i+1));
+            sb_base_mp->setValue(data.baseMP + Chars.statGain(data.id,7,data.baseMP,i,i+1));
          }
     }
     else if(pre_level > data.level)
     {//level down
         for(int i=pre_level;i>data.level;i--)
-        {// for stat_gain stat guide, 0=str; 1=vit; 2=mag; 3=spr; 4=dex; 5=lck; 6=basehp; 7basemp
-            sb_str->setValue(data.strength - Chars.stat_gain(data.id,0,data.strength,i,i-1));
-            sb_vit->setValue(data.vitality - Chars.stat_gain(data.id,1,data.vitality,i,i-1));
-            sb_mag->setValue(data.magic - Chars.stat_gain(data.id,2,data.magic,i,i-1));
-            sb_spi->setValue(data.spirit - Chars.stat_gain(data.id,3,data.spirit,i,i-1));
-            sb_dex->setValue(data.dexterity - Chars.stat_gain(data.id,4,data.dexterity,i,i-1));
-            sb_lck->setValue(data.luck - Chars.stat_gain(data.id,5,data.luck,i,i-1));
-            sb_base_hp->setValue(data.baseHP - Chars.stat_gain(data.id,6,data.baseHP,i,i-1));
-            sb_base_mp->setValue(data.baseMP - Chars.stat_gain(data.id,7,data.baseMP,i,i-1));
+        {// for statGain stat guide, 0=str; 1=vit; 2=mag; 3=spr; 4=dex; 5=lck; 6=basehp; 7basemp
+            sb_str->setValue(data.strength - Chars.statGain(data.id,0,data.strength,i,i-1));
+            sb_vit->setValue(data.vitality - Chars.statGain(data.id,1,data.vitality,i,i-1));
+            sb_mag->setValue(data.magic - Chars.statGain(data.id,2,data.magic,i,i-1));
+            sb_spi->setValue(data.spirit - Chars.statGain(data.id,3,data.spirit,i,i-1));
+            sb_dex->setValue(data.dexterity - Chars.statGain(data.id,4,data.dexterity,i,i-1));
+            sb_lck->setValue(data.luck - Chars.statGain(data.id,5,data.luck,i,i-1));
+            sb_base_hp->setValue(data.baseHP - Chars.statGain(data.id,6,data.baseHP,i,i-1));
+            sb_base_mp->setValue(data.baseMP - Chars.statGain(data.id,7,data.baseMP,i,i-1));
         }
     }
     calc_stats();
@@ -2254,10 +2254,10 @@ void CharEditor::update_tnl_bar(void)
 
     if(data.level!=99)
     {
-        setExpNext(Chars.Total_Exp_For_Level(data.id,data.level)- data.exp);
+        setExpNext(Chars.totalExpForLevel(data.id,data.level)- data.exp);
         if(data.level>0)
         {
-             setLevelProgress(((Chars.Tnl_For_Level(data.id,data.level)-data.expNext)*62)/Chars.Tnl_For_Level(data.id,data.level));
+             setLevelProgress(((Chars.tnlForLevel(data.id,data.level)-data.expNext)*62)/Chars.tnlForLevel(data.id,data.level));
         }
     }
     else
@@ -2295,20 +2295,20 @@ void CharEditor::elemental_info(void)
                 int element=0;
                 switch(i)
                 {
-                    case 0: element=Items.element_restoration(item_id); effect.append(tr("Restoration"));break;
-                    case 1: element=Items.element_fire(item_id); effect.append(tr("Fire")); break;
-                    case 2: element=Items.element_cold(item_id); effect.append(tr("Cold")); break;
-                    case 3: element=Items.element_lightning(item_id); effect.append(tr("Lightning")); break;
-                    case 4: element=Items.element_earth(item_id); effect.append(tr("Earth")); break;
-                    case 5: element=Items.element_wind(item_id); effect.append(tr("Wind")); break;
-                    case 6: element=Items.element_water(item_id); effect.append(tr("Water")); break;
-                    case 7: element=Items.element_gravity(item_id); effect.append(tr("Gravity")); break;
-                    case 8: element=Items.element_holy(item_id); effect.append(tr("Holy")); break;
-                    case 9: element=Items.element_poison(item_id); effect.append(tr("Poison")); break;
-                    case 10: element=Items.element_cut(item_id); effect.append(tr("Cut")); break;
-                    case 11: element=Items.element_shoot(item_id); effect.append(tr("Shoot")); break;
-                    case 12: element=Items.element_punch(item_id); effect.append(tr("Punch")); break;
-                    case 13: element=Items.element_hit(item_id); effect.append(tr("Hit")); break;
+                    case 0: element=Items.elementRestoration(item_id); effect.append(tr("Restoration"));break;
+                    case 1: element=Items.elementFire(item_id); effect.append(tr("Fire")); break;
+                    case 2: element=Items.elementCold(item_id); effect.append(tr("Cold")); break;
+                    case 3: element=Items.elementLightning(item_id); effect.append(tr("Lightning")); break;
+                    case 4: element=Items.elementEarth(item_id); effect.append(tr("Earth")); break;
+                    case 5: element=Items.elementWind(item_id); effect.append(tr("Wind")); break;
+                    case 6: element=Items.elementWater(item_id); effect.append(tr("Water")); break;
+                    case 7: element=Items.elementGravity(item_id); effect.append(tr("Gravity")); break;
+                    case 8: element=Items.elementHoly(item_id); effect.append(tr("Holy")); break;
+                    case 9: element=Items.elementPoison(item_id); effect.append(tr("Poison")); break;
+                    case 10: element=Items.elementCut(item_id); effect.append(tr("Cut")); break;
+                    case 11: element=Items.elementShoot(item_id); effect.append(tr("Shoot")); break;
+                    case 12: element=Items.elementPunch(item_id); effect.append(tr("Punch")); break;
+                    case 13: element=Items.elementHit(item_id); effect.append(tr("Hit")); break;
                 }
                 switch(element)
                 {
@@ -2358,30 +2358,30 @@ void CharEditor::status_info(void)
                 int status=0;
                 switch(i)
                 {
-                    case 0: status=Items.status_death(item_id); effect.append(tr("Death"));break;
-                    case 1: status=Items.status_slow_numb(item_id); effect.append(tr("Slow-Numb"));break;
-                    case 2: status=Items.status_d_sentence(item_id); effect.append(tr("D.Sentence"));break;
-                    case 3: status=Items.status_paralysis(item_id); effect.append(tr("Paralysis"));break;
-                    case 4: status=Items.status_petrify(item_id); effect.append(tr("Petrify"));break;
-                    case 5: status=Items.status_silence(item_id); effect.append(tr("Silence"));break;
-                    case 6: status=Items.status_sleep(item_id); effect.append(tr("Sleep"));break;
-                    case 7: status=Items.status_confusion(item_id); effect.append(tr("Confusion"));break;
-                    case 8: status=Items.status_berserk(item_id); effect.append(tr("Berserk"));break;
-                    case 9: status=Items.status_frog(item_id); effect.append(tr("Frog"));break;
-                    case 10: status=Items.status_mini(item_id); effect.append(tr("Mini"));break;
-                    case 11: status=Items.status_poison(item_id); effect.append(tr("Poison"));break;
-                    case 12: status=Items.status_fury(item_id); effect.append(tr("Fury"));break;
-                    case 13: status=Items.status_sadness(item_id); effect.append(tr("Sadness"));break;
-                    case 14: status=Items.status_darkness(item_id); effect.append(tr("Darkness"));break;
-                    case 15: status=Items.status_haste(item_id); effect.append(tr("Haste"));break;
-                    case 16: status=Items.status_slow(item_id); effect.append(tr("Slow"));break;
-                    case 17: status=Items.status_stop(item_id); effect.append(tr("Stop"));break;
-                    case 18: status=Items.status_barrier(item_id); effect.append(tr("Barrier"));break;
-                    case 19: status=Items.status_m_barrier(item_id); effect.append(tr("M.Barrier"));break;
-                    case 20: status=Items.status_reflect(item_id); effect.append(tr("Reflect"));break;
-                    case 21: status=Items.status_shield(item_id); effect.append(tr("Shield"));break;
-                    case 22: status=Items.status_regen(item_id); effect.append(tr("Regen"));break;
-		    case 23: status=Items.status_resist(item_id); effect.append(tr("Regen"));break;
+                    case 0: status=Items.statusDeath(item_id); effect.append(tr("Death"));break;
+                    case 1: status=Items.statusSlowNumb(item_id); effect.append(tr("Slow-Numb"));break;
+                    case 2: status=Items.statusDeathSentence(item_id); effect.append(tr("D.Sentence"));break;
+                    case 3: status=Items.statusParalysis(item_id); effect.append(tr("Paralysis"));break;
+                    case 4: status=Items.statusPetrify(item_id); effect.append(tr("Petrify"));break;
+                    case 5: status=Items.statusSilence(item_id); effect.append(tr("Silence"));break;
+                    case 6: status=Items.statusSleep(item_id); effect.append(tr("Sleep"));break;
+                    case 7: status=Items.statusConfusion(item_id); effect.append(tr("Confusion"));break;
+                    case 8: status=Items.statusBerserk(item_id); effect.append(tr("Berserk"));break;
+                    case 9: status=Items.statusFrog(item_id); effect.append(tr("Frog"));break;
+                    case 10: status=Items.statusMini(item_id); effect.append(tr("Mini"));break;
+                    case 11: status=Items.statusPoison(item_id); effect.append(tr("Poison"));break;
+                    case 12: status=Items.statusFury(item_id); effect.append(tr("Fury"));break;
+                    case 13: status=Items.statusSadness(item_id); effect.append(tr("Sadness"));break;
+                    case 14: status=Items.statusDarkness(item_id); effect.append(tr("Darkness"));break;
+                    case 15: status=Items.statusHaste(item_id); effect.append(tr("Haste"));break;
+                    case 16: status=Items.statusSlow(item_id); effect.append(tr("Slow"));break;
+                    case 17: status=Items.statusStop(item_id); effect.append(tr("Stop"));break;
+                    case 18: status=Items.statusBarrier(item_id); effect.append(tr("Barrier"));break;
+                    case 19: status=Items.statusMagicBarrier(item_id); effect.append(tr("M.Barrier"));break;
+                    case 20: status=Items.statusReflect(item_id); effect.append(tr("Reflect"));break;
+                    case 21: status=Items.statusShield(item_id); effect.append(tr("Shield"));break;
+                    case 22: status=Items.statusRegen(item_id); effect.append(tr("Regen"));break;
+            case 23: status=Items.statusResist(item_id); effect.append(tr("Regen"));break;
                 }
                 switch(status)
                 {
@@ -2437,43 +2437,43 @@ void CharEditor::update_materia_slots()
 
      //fill the slots.
 
-     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setIcon(Materias.Icon(data.materias[0].id));}else{weapon_slot_1->setIcon(QIcon(QString("")));}
-     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setToolTip(Materias.Name(data.materias[0].id));}else{weapon_slot_1->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setIcon(Materias.Icon(data.materias[1].id));}else{weapon_slot_2->setIcon(QIcon(QString("")));}
-     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setToolTip(Materias.Name(data.materias[1].id));}else{weapon_slot_2->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setIcon(Materias.Icon(data.materias[2].id));}else{weapon_slot_3->setIcon(QIcon(QString("")));}
-     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setToolTip(Materias.Name(data.materias[2].id));}else{weapon_slot_3->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setIcon(Materias.Icon(data.materias[3].id));}else{weapon_slot_4->setIcon(QIcon(QString("")));}
-     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setToolTip(Materias.Name(data.materias[3].id));}else{weapon_slot_4->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setIcon(Materias.Icon(data.materias[4].id));}else{weapon_slot_5->setIcon(QIcon(QString("")));}
-     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setToolTip(Materias.Name(data.materias[4].id));}else{weapon_slot_5->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setIcon(Materias.Icon(data.materias[5].id));}else{weapon_slot_6->setIcon(QIcon(QString("")));}
-     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setToolTip(Materias.Name(data.materias[5].id));}else{weapon_slot_6->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setIcon(Materias.Icon(data.materias[6].id));}else{weapon_slot_7->setIcon(QIcon(QString("")));}
-     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setToolTip(Materias.Name(data.materias[6].id));}else{weapon_slot_7->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setIcon(Materias.Icon(data.materias[7].id));}else{weapon_slot_8->setIcon(QIcon(QString("")));}
-     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setToolTip(Materias.Name(data.materias[7].id));}else{weapon_slot_8->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setIcon(Materias.Icon(data.materias[8].id));}else{armor_slot_1->setIcon(QIcon(QString("")));}
-     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setToolTip(Materias.Name(data.materias[8].id));}else{armor_slot_1->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setIcon(Materias.Icon(data.materias[9].id));}else{armor_slot_2->setIcon(QIcon(QString("")));}
-     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setToolTip(Materias.Name(data.materias[9].id));}else{armor_slot_2->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setIcon(Materias.Icon(data.materias[10].id));}else{armor_slot_3->setIcon(QIcon(QString("")));}
-     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setToolTip(Materias.Name(data.materias[10].id));}else{armor_slot_3->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setIcon(Materias.Icon(data.materias[11].id));}else{armor_slot_4->setIcon(QIcon(QString("")));}
-     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setToolTip(Materias.Name(data.materias[11].id));}else{armor_slot_4->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setIcon(Materias.Icon(data.materias[12].id));}else{armor_slot_5->setIcon(QIcon(QString("")));}
-     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setToolTip(Materias.Name(data.materias[12].id));}else{armor_slot_5->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setIcon(Materias.Icon(data.materias[13].id));}else{armor_slot_6->setIcon(QIcon(QString("")));}
-     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setToolTip(Materias.Name(data.materias[13].id));}else{armor_slot_6->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setIcon(Materias.Icon(data.materias[14].id));}else{armor_slot_7->setIcon(QIcon(QString("")));}
-     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setToolTip(Materias.Name(data.materias[14].id));}else{armor_slot_7->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setIcon(Materias.Icon(data.materias[15].id));}else{armor_slot_8->setIcon(QIcon(QString("")));}
-     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setToolTip(Materias.Name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setIcon(Materias.icon(data.materias[0].id));}else{weapon_slot_1->setIcon(QIcon(QString("")));}
+     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setToolTip(Materias.name(data.materias[0].id));}else{weapon_slot_1->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setIcon(Materias.icon(data.materias[1].id));}else{weapon_slot_2->setIcon(QIcon(QString("")));}
+     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setToolTip(Materias.name(data.materias[1].id));}else{weapon_slot_2->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setIcon(Materias.icon(data.materias[2].id));}else{weapon_slot_3->setIcon(QIcon(QString("")));}
+     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setToolTip(Materias.name(data.materias[2].id));}else{weapon_slot_3->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setIcon(Materias.icon(data.materias[3].id));}else{weapon_slot_4->setIcon(QIcon(QString("")));}
+     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setToolTip(Materias.name(data.materias[3].id));}else{weapon_slot_4->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setIcon(Materias.icon(data.materias[4].id));}else{weapon_slot_5->setIcon(QIcon(QString("")));}
+     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setToolTip(Materias.name(data.materias[4].id));}else{weapon_slot_5->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setIcon(Materias.icon(data.materias[5].id));}else{weapon_slot_6->setIcon(QIcon(QString("")));}
+     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setToolTip(Materias.name(data.materias[5].id));}else{weapon_slot_6->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setIcon(Materias.icon(data.materias[6].id));}else{weapon_slot_7->setIcon(QIcon(QString("")));}
+     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setToolTip(Materias.name(data.materias[6].id));}else{weapon_slot_7->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setIcon(Materias.icon(data.materias[7].id));}else{weapon_slot_8->setIcon(QIcon(QString("")));}
+     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setToolTip(Materias.name(data.materias[7].id));}else{weapon_slot_8->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setIcon(Materias.icon(data.materias[8].id));}else{armor_slot_1->setIcon(QIcon(QString("")));}
+     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setToolTip(Materias.name(data.materias[8].id));}else{armor_slot_1->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setIcon(Materias.icon(data.materias[9].id));}else{armor_slot_2->setIcon(QIcon(QString("")));}
+     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setToolTip(Materias.name(data.materias[9].id));}else{armor_slot_2->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setIcon(Materias.icon(data.materias[10].id));}else{armor_slot_3->setIcon(QIcon(QString("")));}
+     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setToolTip(Materias.name(data.materias[10].id));}else{armor_slot_3->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setIcon(Materias.icon(data.materias[11].id));}else{armor_slot_4->setIcon(QIcon(QString("")));}
+     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setToolTip(Materias.name(data.materias[11].id));}else{armor_slot_4->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setIcon(Materias.icon(data.materias[12].id));}else{armor_slot_5->setIcon(QIcon(QString("")));}
+     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setToolTip(Materias.name(data.materias[12].id));}else{armor_slot_5->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setIcon(Materias.icon(data.materias[13].id));}else{armor_slot_6->setIcon(QIcon(QString("")));}
+     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setToolTip(Materias.name(data.materias[13].id));}else{armor_slot_6->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setIcon(Materias.icon(data.materias[14].id));}else{armor_slot_7->setIcon(QIcon(QString("")));}
+     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setToolTip(Materias.name(data.materias[14].id));}else{armor_slot_7->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setIcon(Materias.icon(data.materias[15].id));}else{armor_slot_8->setIcon(QIcon(QString("")));}
+     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setToolTip(Materias.name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
 
      //set up weapon
-     QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +128));
+     QString ap_rate =tr("AP:x%1").arg(Items.materiaGrowthRate(data.weapon +128));
      weapon_materia_box->setTitle(ap_rate);
-     switch(Items.mslots(data.weapon +128))
+     switch(Items.materiaSlots(data.weapon +128))
      {
         case 8:weapon_slot_8->setHidden(0);
         case 7:weapon_slot_7->setHidden(0);
@@ -2484,17 +2484,17 @@ void CharEditor::update_materia_slots()
         case 2:weapon_slot_2->setHidden(0);
         case 1:weapon_slot_1->setHidden(0);
      };
-     switch(Items.linked((data.weapon +128)))
+     switch(Items.linkedSlots((data.weapon +128)))
       {
-        case 4: weapon_m_link_4->setStyleSheet(Items.Style_mlink());
-        case 3: weapon_m_link_3->setStyleSheet(Items.Style_mlink());
-        case 2: weapon_m_link_2->setStyleSheet(Items.Style_mlink());
-        case 1: weapon_m_link_1->setStyleSheet(Items.Style_mlink());
+        case 4: weapon_m_link_4->setStyleSheet(Items.styleMateriaLink());
+        case 3: weapon_m_link_3->setStyleSheet(Items.styleMateriaLink());
+        case 2: weapon_m_link_2->setStyleSheet(Items.styleMateriaLink());
+        case 1: weapon_m_link_1->setStyleSheet(Items.styleMateriaLink());
       };
      //set up armor
-     ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.armor+256));
+     ap_rate =tr("AP:x%1").arg(Items.materiaGrowthRate(data.armor+256));
      armor_materia_box->setTitle(ap_rate);
-     switch(Items.mslots(data.armor +256))
+     switch(Items.materiaSlots(data.armor +256))
      {
         case 8:armor_slot_8->setHidden(0);
         case 7:armor_slot_7->setHidden(0);
@@ -2505,12 +2505,12 @@ void CharEditor::update_materia_slots()
         case 2:armor_slot_2->setHidden(0);
         case 1:armor_slot_1->setHidden(0);
      };
-     switch(Items.linked((data.armor +256)))
+     switch(Items.linkedSlots((data.armor +256)))
      {
-        case 4: armor_m_link_4->setStyleSheet(Items.Style_mlink());
-        case 3: armor_m_link_3->setStyleSheet(Items.Style_mlink());
-        case 2: armor_m_link_2->setStyleSheet(Items.Style_mlink());
-        case 1: armor_m_link_1->setStyleSheet(Items.Style_mlink());
+        case 4: armor_m_link_4->setStyleSheet(Items.styleMateriaLink());
+        case 3: armor_m_link_3->setStyleSheet(Items.styleMateriaLink());
+        case 2: armor_m_link_2->setStyleSheet(Items.styleMateriaLink());
+        case 1: armor_m_link_1->setStyleSheet(Items.styleMateriaLink());
       };
      calc_stats();
 }
@@ -2660,7 +2660,7 @@ void CharEditor::MaxEquip()
     else
     {
         //set up weapons/ armor
-        weapon_selection->setCurrentIndex(Chars.num_weapons(data.id)-1);
+        weapon_selection->setCurrentIndex(Chars.numberOfWeapons(data.id)-1);
         armor_selection->setCurrentIndex(29);
         accessory_selection->setCurrentIndex(18);
 

@@ -59,21 +59,21 @@ void ItemSelector::init_connections()
 }
 void ItemSelector::init_data()
 {
-    combo_type->addItem(Items.Icon(FF7Item::Potion),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::BronzeBangle),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::Ribbon),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::BusterSword),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::GatlingGun),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::GodsHand),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::AdamanClip),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::StrikingStaff),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::Mop),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::FourPointShuriken),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::CrystalMphone),tr(""));
-    combo_type->addItem(Items.Icon(FF7Item::SupershotST),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::Potion),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::BronzeBangle),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::Ribbon),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::BusterSword),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::GatlingGun),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::GodsHand),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::AdamanClip),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::StrikingStaff),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::Mop),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::FourPointShuriken),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::CrystalMphone),tr(""));
+    combo_type->addItem(Items.icon(FF7Item::SupershotST),tr(""));
     sb_qty->setEnabled(false);
     //Fill Combo_Item (all items type is 0 or no filter defalut)
-    for(int i=0;i<320;i++){combo_item->addItem(Items.Icon(i),Items.Name(i));}
+    for(int i=0;i<320;i++){combo_item->addItem(Items.icon(i),Items.name(i));}
     combo_type->setCurrentIndex(-1);
     combo_item->setCurrentIndex(-1);
     current_item=FF7Item::EmptyItemData;
@@ -96,19 +96,19 @@ void ItemSelector::setFilter(int type)
     combo_item->clear();
     for(int i=0;i<320;i++)
     {
-        if(type !=FF7Item::Unknown){if(Items.Type(i) == type){combo_item->addItem(Items.Icon(i),Items.Name(i));}}
-        else{combo_item->addItem(Items.Icon(i),Items.Name(i));}
+        if(type !=FF7Item::Unknown){if(Items.type(i) == type){combo_item->addItem(Items.icon(i),Items.name(i));}}
+        else{combo_item->addItem(Items.icon(i),Items.name(i));}
     }
 
     current_item = Items.itemEncode(id,Items.itemQty(current_item));
-    if(current_item !=FF7Item::EmptyItemData){combo_item->setCurrentIndex(combo_item->findText(Items.Name(Items.itemId(current_item))));}
+    if(current_item !=FF7Item::EmptyItemData){combo_item->setCurrentIndex(combo_item->findText(Items.name(Items.itemId(current_item))));}
     else{combo_item->setCurrentIndex(-1);}
     this->layout()->update();
     combo_item->blockSignals(false);
 }
 void ItemSelector::comboItem_changed(int index)
 {
-    if(combo_item->currentText()==Items.Name(FF7Item::Masamune)){sb_qty->setMaximum(126);}
+    if(combo_item->currentText()==Items.name(FF7Item::Masamune)){sb_qty->setMaximum(126);}
     else{sb_qty->setMaximum(127);}
     int offset = type_offset(combo_type->currentIndex()+1);
     if(index+offset != Items.itemId(current_item))
@@ -134,8 +134,8 @@ void ItemSelector::setCurrentItem(int id,int qty)
     }
     else
     {
-        combo_type->setCurrentIndex(Items.Type(id)-1);
-        combo_item->setCurrentIndex(id-type_offset(Items.Type(id)));
+        combo_type->setCurrentIndex(Items.type(id)-1);
+        combo_item->setCurrentIndex(id-type_offset(Items.type(id)));
         sb_qty->setValue(qty);
         current_item=Items.itemEncode(id,qty);
     }
@@ -155,8 +155,8 @@ void ItemSelector::setCurrentItem(quint16 ff7item)
     }
     else
     {
-        combo_type->setCurrentIndex(Items.Type(Items.itemId(ff7item))-1);
-        combo_item->setCurrentIndex(Items.itemId(ff7item) - type_offset(Items.Type(Items.itemId(ff7item))));
+        combo_type->setCurrentIndex(Items.type(Items.itemId(ff7item))-1);
+        combo_item->setCurrentIndex(Items.itemId(ff7item) - type_offset(Items.type(Items.itemId(ff7item))));
         sb_qty->setValue(Items.itemQty(ff7item));
         current_item=ff7item;
     }

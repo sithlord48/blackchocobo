@@ -36,18 +36,18 @@ public:
         EmptyAccessory=0xFF
     };
     explicit FF7Char();
-    int stat_gain(int who,int stat,int stat_amout,int current_lvl, int next_lvl);
     quint8 id(int who);
-    int num_weapons(int who);
-    int weapon_starting_id(int who);
-    int weapon_offset(int who);
+    int statGain(int who,int stat,int stat_amout,int current_lvl, int next_lvl);
+    int numberOfWeapons(int who);
+    int weaponStartingId(int who);
+    int weaponOffset(int who);
     QString defaultName(int who);
-    QImage Image(int who);
-    QIcon Icon(int who);
-    QPixmap Pixmap(int who);
+    QImage image(int who);
+    QIcon icon(int who);
+    QPixmap pixmap(int who);
     QStringList limits(int who);
-    quint32 Total_Exp_For_Level(int who,int level);
-    quint32 Tnl_For_Level(int who,int level);
+    quint32 totalExpForLevel(int who,int level);
+    quint32 tnlForLevel(int who,int level);
 private:
     quint8 stat_grade(int who,int stat);
     int mp_base(int who,int lvl_bracket);

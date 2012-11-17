@@ -74,32 +74,32 @@ class FF7Materia
         EmptyId=0xFF,
         MaxMateriaAp =0xFFFFFF
     };
-    QString Name(int id);
-    QImage Image(int id);
-    QImage Image_EmptyStar(int id);
-    QImage Image_FullStar(int id);
-    QIcon Icon(int id);
-    QString Stat_String(int id);
-    qint8 Stat_Str(int id);
-    qint8 Stat_Vit(int id);
-    qint8 Stat_Mag(int id);
-    qint8 Stat_Spi(int id);
-    qint8 Stat_Dex(int id);
-    qint8 Stat_Lck(int id);
-    qint8 Stat_Hp(int id);
-    qint8 Stat_Mp(int id);
-    qint8 Levels(int id);
-    quint8 Type(int id);
-    qint32 Ap(int id,int lvl);
+    QString name(int id);
+    QImage image(int id);
+    QImage imageEmptyStar(int id);
+    QImage imageFullStar(int id);
+    QIcon icon(int id);
+    QString statString(int id);
+    qint8 statSTR(int id);
+    qint8 statVIT(int id);
+    qint8 statMAG(int id);
+    qint8 statSPI(int id);
+    qint8 statDEX(int id);
+    qint8 statLCK(int id);
+    qint8 statHP(int id);
+    qint8 statMP(int id);
+    qint8 levels(int id);
+    quint8 type(int id);
+    qint32 ap(int id,int lvl);
     //Static Icon for all materia..
-    QIcon Icon_AllMateria();
-    QImage Image_AllMateria();
+    QIcon iconAllMateria();
+    QImage imageAllMateria();
     // Return Eskill name;
-    QString Eskill(int i);
-    QString Element(int i);
+    QString enemySkill(int i);
+    QString element(int i);
 
-    QStringList Skills(int id);
-    QStringList Status(int i);
+    QStringList skills(int id);
+    QStringList status(int i);
     quint32 ap2num (quint8 ap[3]);
 };
 

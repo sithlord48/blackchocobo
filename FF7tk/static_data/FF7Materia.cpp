@@ -17,28 +17,28 @@
 #include <QCoreApplication>
 #include "icons/Materia_Icons/all.xpm"
 
-QString FF7Materia::Name(int id){return qApp->translate("Materia_Names",Materias[id].name.toAscii());}
-QString FF7Materia::Stat_String(int id){return qApp->translate("Materia_Stats",Materias[id].stats.toAscii());}
-qint8 FF7Materia::Stat_Str(int id){return Materias[id].str;}
-qint8 FF7Materia::Stat_Vit(int id){return Materias[id].vit;}
-qint8 FF7Materia::Stat_Dex(int id){return Materias[id].dex;}
-qint8 FF7Materia::Stat_Mag(int id){return Materias[id].mag;}
-qint8 FF7Materia::Stat_Spi(int id){return Materias[id].spi;}
-qint8 FF7Materia::Stat_Lck(int id){return Materias[id].lck;}
-qint8 FF7Materia::Stat_Hp(int id){return Materias[id].hp;}
-qint8 FF7Materia::Stat_Mp(int id){return Materias[id].mp;}
-qint8 FF7Materia::Levels(int id){return Materias[id].levels;}
-quint8 FF7Materia::Type(int id){return Materias[id].type;}
-qint32 FF7Materia::Ap(int id,int lvl){return Materias[id].ap[lvl];}
-QIcon FF7Materia::Icon(int id){return QIcon(QPixmap::fromImage(Materias[id].m_image));}
-QImage FF7Materia::Image(int id){return Materias[id].m_image;}
-QImage FF7Materia::Image_EmptyStar(int id){return Materias[id].em_image;}
-QImage FF7Materia::Image_FullStar(int id){return Materias[id].fm_image;}
-QIcon FF7Materia::Icon_AllMateria(){return QIcon(all_xpm);}
-QImage FF7Materia::Image_AllMateria(){return QImage(all_xpm);}
-QString FF7Materia::Eskill(int i){return qApp->translate("E_skills",ESkills[i].toAscii());}
-QString FF7Materia::Element(int i){return qApp->translate("Elements",Materias[i].elemental.toAscii());}
-QStringList FF7Materia::Skills(int i)
+QString FF7Materia::name(int id){return qApp->translate("Materia_Names",Materias[id].name.toAscii());}
+QString FF7Materia::statString(int id){return qApp->translate("Materia_Stats",Materias[id].stats.toAscii());}
+qint8 FF7Materia::statSTR(int id){return Materias[id].str;}
+qint8 FF7Materia::statVIT(int id){return Materias[id].vit;}
+qint8 FF7Materia::statDEX(int id){return Materias[id].dex;}
+qint8 FF7Materia::statMAG(int id){return Materias[id].mag;}
+qint8 FF7Materia::statSPI(int id){return Materias[id].spi;}
+qint8 FF7Materia::statLCK(int id){return Materias[id].lck;}
+qint8 FF7Materia::statHP(int id){return Materias[id].hp;}
+qint8 FF7Materia::statMP(int id){return Materias[id].mp;}
+qint8 FF7Materia::levels(int id){return Materias[id].levels;}
+quint8 FF7Materia::type(int id){return Materias[id].type;}
+qint32 FF7Materia::ap(int id,int lvl){return Materias[id].ap[lvl];}
+QIcon FF7Materia::icon(int id){return QIcon(QPixmap::fromImage(Materias[id].m_image));}
+QImage FF7Materia::image(int id){return Materias[id].m_image;}
+QImage FF7Materia::imageEmptyStar(int id){return Materias[id].em_image;}
+QImage FF7Materia::imageFullStar(int id){return Materias[id].fm_image;}
+QIcon FF7Materia::iconAllMateria(){return QIcon(all_xpm);}
+QImage FF7Materia::imageAllMateria(){return QImage(all_xpm);}
+QString FF7Materia::enemySkill(int i){return qApp->translate("E_skills",ESkills[i].toAscii());}
+QString FF7Materia::element(int i){return qApp->translate("Elements",Materias[i].elemental.toAscii());}
+QStringList FF7Materia::skills(int i)
 {
     QStringList translated_list;
     for(int j=0;j<Materias[i].skills.count();j++)
@@ -47,7 +47,7 @@ QStringList FF7Materia::Skills(int i)
     }
     return translated_list;
 }
-QStringList FF7Materia::Status(int i)
+QStringList FF7Materia::status(int i)
 {
     QStringList translated_list;
     for (int j=0;j<Materias[i].status.count();j++)

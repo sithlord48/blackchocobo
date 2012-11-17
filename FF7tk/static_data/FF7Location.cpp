@@ -16,9 +16,9 @@
 #include "FF7Location.h"
 #include <QCoreApplication>
 
-QString FF7Location::loc_name(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
-QString FF7Location::map_id(int i){return Locations[i].map_id;}
-QString FF7Location::loc_id(int i){return Locations[i].loc_id;}
+QString FF7Location::locationString(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
+QString FF7Location::mapID(int i){return Locations[i].map_id;}
+QString FF7Location::locationID(int i){return Locations[i].loc_id;}
 QString FF7Location::x(int i){return Locations[i].x;}
 QString FF7Location::y(int i){return Locations[i].y;}
 QString FF7Location::z(int i){return Locations[i].z;}

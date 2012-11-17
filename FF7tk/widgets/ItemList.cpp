@@ -179,9 +179,9 @@ void ItemList::itemupdate()
         {
             QString qty;
             //Replaced by new item engine. (Vegeta_Ss4)
-            newItem = new QTableWidgetItem(Items.Icon(Items.itemId(itemlist.at(i))),"",0);
+            newItem = new QTableWidgetItem(Items.icon(Items.itemId(itemlist.at(i))),"",0);
             setItem(i,0,newItem);
-            newItem = new QTableWidgetItem(Items.Name(Items.itemId(itemlist.at(i))),0);
+            newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(i))),0);
             setItem(i,1, newItem);
             setRowHeight(i,22);
             newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(i))),0);
