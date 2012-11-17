@@ -7531,6 +7531,18 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>Clear Slot</source>
         <translation type="unfinished">Steckplatz Zurücksetzen</translation>
     </message>
+    <message>
+        <source>Copy Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Into Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Leer-</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7556,7 +7568,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation>-Leer-</translation>
+        <translation type="obsolete">-Leer-</translation>
     </message>
     <message>
         <source>

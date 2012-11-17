@@ -15,7 +15,9 @@
 /****************************************************************************/
 #include "SlotPreview.h"
 
-#include "../static_data/icons/Common_Icons/quit.xpm"
+#include "../static_data/icons/Common_Icons/delete.xpm"
+#include "../static_data/icons/Common_Icons/copy.xpm"
+#include "../static_data/icons/Common_Icons/paste.xpm"
 //Slot Preview Widget is for display of the previewed save data.
 SlotPreview::SlotPreview(QWidget *parent):QLabel(parent)
 {
@@ -29,19 +31,38 @@ void SlotPreview::init_display(void)
     Final->removeWidget(top_most);
 
     btn_select = new QPushButton;
-    btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"");
+
+    btn_remove = new QPushButton(QIcon(QPixmap(delete_xpm)),"");
+    btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
     btn_remove->setMaximumWidth(22);
+
+    btn_copy = new QPushButton(QIcon(QPixmap(copy_xpm)),"");
+    btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
+    btn_copy->setToolTip(tr("Copy Slot"));
+    btn_copy->setMaximumWidth(22);
+
+    btn_paste = new QPushButton(QIcon(QPixmap(paste_xpm)),"");
+    btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
+    btn_paste->setToolTip(tr("Paste Into Slot"));
+    btn_paste->setMaximumWidth(22);
+
     btnLayout = new QHBoxLayout;
     btnLayout->addWidget(btn_select);
+    btnLayout->addWidget(btn_copy);
+    btnLayout->addWidget(btn_paste);
     btnLayout->addWidget(btn_remove);
     btn_remove->setHidden(true);
+    btn_copy->setHidden(true);
+    btn_paste->setHidden(true);
     top_most = new QGroupBox;
     Final->addWidget(top_most);
     if(QT_VERSION<0x050000)
     {//QT4 Style Connect
         connect(btn_select,SIGNAL(clicked()),this,SLOT(selected()));
         connect(btn_remove,SIGNAL(clicked()),this,SLOT(removed()));
+        connect(btn_copy,SIGNAL(clicked()),this,SLOT(copy()));
+        connect(btn_paste,SIGNAL(clicked()),this,SLOT(paste()));
     }
     else
     {//QT5 Style Connect
@@ -60,15 +81,16 @@ void SlotPreview::setMode(int mode)
 void SlotPreview::set_empty(void)
 {
     init_display();
+    btn_paste->setHidden(false);
     QString style="font: 75 14pt \"Verdana\"; color:rgb(255,255,0);";
-    location=new QLabel;
+    location=new QLabel(tr("-Empty-"));
     location->setStyleSheet(style);
     QVBoxLayout *empty_layout = new QVBoxLayout;
     empty_layout->setContentsMargins(12,12,12,12);
     empty_layout->addWidget(location);
     top_layout = new QVBoxLayout;
     top_layout->setContentsMargins(0,3,0,0);
-    top_layout->addWidget(btn_select);
+    top_layout->addLayout(btnLayout);
     top_layout->addItem(empty_layout);
     top_most->setLayout(top_layout);
 }
@@ -76,7 +98,10 @@ void SlotPreview::set_empty(void)
 void SlotPreview::set_psx_game(void)
 {
     init_display();
+
     btn_remove->setHidden(false);
+    btn_paste->setHidden(false);
+
     icon= new SaveIcon;
     QString style="font-size: 10pt;";
     party1 = new QLabel;
@@ -158,6 +183,8 @@ void SlotPreview::set_ff7_save(void)
     midbox->addLayout(upperhalf);
 
     btn_remove->setHidden(false);
+    btn_paste->setHidden(false);
+    btn_copy->setHidden(false);
 
     top_layout = new QVBoxLayout;
     top_layout->addLayout(btnLayout);
@@ -195,4 +222,6 @@ void SlotPreview::setTime(int hr,int min){lbl_time->setText(QString(tr("Time:%1:
 void SlotPreview::set_Button_Label(QString lbl){btn_select->setText(lbl);}
 void SlotPreview::selected(void){emit btn_select_clicked(btn_select->text());}
 void SlotPreview::removed(void){emit btn_remove_clicked(btn_select->text());}
+void SlotPreview::copy(void){emit btn_copy_clicked(btn_select->text());}
+void SlotPreview::paste(void){emit btn_paste_clicked(btn_select->text());}
 void SlotPreview::setPsxIcon(QByteArray icon_data,quint8 frames){icon->setAll(icon_data,frames);party1->setPixmap(icon->icon());}

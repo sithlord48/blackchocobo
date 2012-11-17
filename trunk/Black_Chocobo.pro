@@ -89,8 +89,7 @@ TRANSLATIONS += lang/bchoco_en.ts \
 
 QT +=xml
 
-static:
-{ # everything below takes effect with CONFIG += static
+static:{ # everything below takes effect with CONFIG += static
     CONFIG += static
     CONFIG += staticlib # this is needed if you create a static library, not a static executable
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
@@ -103,8 +102,7 @@ CONFIG(debug, debug|release) {TARGET = $$join(TARGET,,,-debug)}
 
 #Below Is OS Specific Stuff.
 win32: {RC_FILE = bchoco.rc} #program icon for windows
-macx:
-{
+macx:{
     ICON = icon/bchoco_icon_osx.icns     #set program icon
     CONFIG += x86_64 x86 #Build for use on 32 and 64 bit mac os.
 }
@@ -112,8 +110,8 @@ macx:
 system (lrelease Black_Chocobo.pro)#release the .qm files
 system (rcc -binary locations.qrc -o locations.rcc) #make locations resource
 
-unix:!macx:!symbian:
- {#all other *nix (except for symbian and mac os)
+unix:!macx:!symbian: {
+#all other *nix (except for symbian and mac os)
 #base for setting up deb packages(rpm too?).
 #Below Will Become 'install' in the makefile
     target.path = /opt/blackchocobo #set the path to deploy the build target.

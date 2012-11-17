@@ -338,7 +338,9 @@ public:
   quint8 psx_block_type(int s);//mask of psx slot (used by index)
   void setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type);
   quint8 psx_block_next(int s);// if using more then one block return location of next block
+  void setPsx_block_next(int s,int next);
   quint8 psx_block_size(int s);//how many blocks save uses.
+  void setPsx_block_size(int s,int blockSize);
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
 
   QByteArray slotFF7Data(int s); //Return Raw data from the slot

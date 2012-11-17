@@ -29,6 +29,7 @@ class SlotPreview : public QLabel
 {
     Q_OBJECT
 public:
+    enum MODE{MODE_EMPTY,MODE_PSXGAME,MODE_FF7SAVE};
     SlotPreview(QWidget *parent = 0);
     void setParty(QPixmap p1,QPixmap p2,QPixmap p3);
     void setParty(QString p1_style,QString p2_style,QString p3_style);
@@ -52,6 +53,8 @@ private slots:
     void set_Party3(QString style);
     void selected(void);
     void removed(void);
+    void copy(void);
+    void paste(void);
     void set_ff7_save(void);
     void set_empty(void);
     void set_psx_game(void);
@@ -67,6 +70,8 @@ private:
     QLabel *location;
     QLabel *lbl_gil;
     QPushButton *btn_select;
+    QPushButton *btn_copy;
+    QPushButton *btn_paste;
     QPushButton *btn_remove;
     QGroupBox *top_most;
     SaveIcon *icon;
@@ -77,6 +82,8 @@ private:
 signals:
     void btn_select_clicked(QString);
     void btn_remove_clicked(QString);
+    void btn_copy_clicked(QString);
+    void btn_paste_clicked(QString);
 };
 
 #endif
