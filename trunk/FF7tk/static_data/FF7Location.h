@@ -28,9 +28,9 @@ struct LOCATION {//Location Table Stuff
 class FF7Location
 {
 public:
-    QString loc_name(int);
-    QString map_id(int);
-    QString loc_id(int);
+    QString locationString(int);
+    QString mapID(int);
+    QString locationID(int);
     QString x(int);
     QString y(int);
     QString z(int);

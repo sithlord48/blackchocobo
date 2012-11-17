@@ -3,11 +3,11 @@
 
 FF7Char::FF7Char(){}
 quint8 FF7Char::id(int who){return Chars[who]._id;}
-int FF7Char::weapon_starting_id(int who){return Chars[who]._starting_weapon_id;}
-int FF7Char::weapon_offset(int who){return Chars[who]._weapon_offset;}
-int FF7Char::num_weapons(int who){return Chars[who]._num_weapons;}
+int FF7Char::weaponStartingId(int who){return Chars[who]._starting_weapon_id;}
+int FF7Char::weaponOffset(int who){return Chars[who]._weapon_offset;}
+int FF7Char::numberOfWeapons(int who){return Chars[who]._num_weapons;}
 
-QImage FF7Char::Image(int who)
+QImage FF7Char::image(int who)
 {
   if((who<0x0B))
   {
@@ -18,7 +18,7 @@ QImage FF7Char::Image(int who)
     return QImage();
   }
 }
-QPixmap FF7Char::Pixmap(int who)
+QPixmap FF7Char::pixmap(int who)
 {
   if(who<0x0B)
   {
@@ -29,9 +29,9 @@ QPixmap FF7Char::Pixmap(int who)
       return QPixmap::fromImage(QImage(""));
   }
 }
-QIcon FF7Char::Icon(int who){return QIcon(Pixmap(who));}
-quint32 FF7Char::Total_Exp_For_Level(int who,int level){return Chars[who]._charlvls[level];}
-quint32 FF7Char::Tnl_For_Level(int who,int level){return Chars[who]._chartnls[level];}
+QIcon FF7Char::icon(int who){return QIcon(pixmap(who));}
+quint32 FF7Char::totalExpForLevel(int who,int level){return Chars[who]._charlvls[level];}
+quint32 FF7Char::tnlForLevel(int who,int level){return Chars[who]._chartnls[level];}
 quint8 FF7Char::stat_grade(int who,int stat){return Chars[who]._stat_grade[stat];}
 int FF7Char::mp_base(int who,int lvl_bracket){return Chars[who]._mp_base[lvl_bracket];}
 quint8 FF7Char::mp_gradent (int who, int lvl_bracket){return Chars[who]._mp_gradent[lvl_bracket];}
@@ -54,7 +54,7 @@ QStringList FF7Char::limits(int who)
     return translated_list;
 }
 
-int FF7Char::stat_gain(int who,int stat, int stat_amount, int current_lvl, int next_lvl)
+int FF7Char::statGain(int who,int stat, int stat_amount, int current_lvl, int next_lvl)
 {
   int gain=0;//return this
   int diff=0; //holds our dif

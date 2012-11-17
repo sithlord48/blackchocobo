@@ -207,53 +207,53 @@ void ItemPreview::setItem(int id)
     else
     {
         _id=id;
-        if(data.Name(id) !="")
+        if(data.name(id) !="")
         {
             lbl_name->setHidden(0);
-            setName(data.Name(id));
+            setName(data.name(id));
         }
 
-        if(data.Desc(id)!="")
+        if(data.desc(id)!="")
         {
-            setDesc(data.Desc(id));
+            setDesc(data.desc(id));
             lbl_desc->setHidden(0);
         }
-        if(!data.Image(id).isNull())
+        if(!data.image(id).isNull())
         {
             lbl_icon->setHidden(0);
-            setIcon(QPixmap::fromImage(data.Image(id)));
+            setIcon(QPixmap::fromImage(data.image(id)));
         }
         this->status_info(id);
         this->elemental_info(id);
 
-        if(data.Type(id)>FF7Item::Item && data.Type(id)!=FF7Item::Accessory)
+        if(data.type(id)>FF7Item::Item && data.type(id)!=FF7Item::Accessory)
         {
-            if(data.m_growth_rate(id)==0)
+            if(data.materiaGrowthRate(id)==0)
             {//no growth slots
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.Image_m_no_grow_slot()));
+                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
             }
             else
             {//growth slots.
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.Image_m_grow_slot()));
+                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
             }
-            QString ap_rate =tr("APx%1").arg(data.m_growth_rate(id));
+            QString ap_rate =tr("APx%1").arg(data.materiaGrowthRate(id));
             materia_slot_box->setTitle(ap_rate);
             materia_slot_box->setShown(1);
-            switch(data.mslots(id))
+            switch(data.materiaSlots(id))
             {
                 case 8:lbl_slot_8->setHidden(0);
                 case 7:lbl_slot_7->setHidden(0);
@@ -265,13 +265,13 @@ void ItemPreview::setItem(int id)
                 case 1:lbl_slot_1->setHidden(0);
             };
 
-            switch(data.linked(id))
+            switch(data.linkedSlots(id))
             {
 
-                case 4: lbl_m_link_4->setPixmap(QPixmap::fromImage(data.Image_mlink()));
-                case 3: lbl_m_link_3->setPixmap(QPixmap::fromImage(data.Image_mlink()));
-                case 2: lbl_m_link_2->setPixmap(QPixmap::fromImage(data.Image_mlink()));
-                case 1: lbl_m_link_1->setPixmap(QPixmap::fromImage(data.Image_mlink()));
+                case 4: lbl_m_link_4->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+                case 3: lbl_m_link_3->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+                case 2: lbl_m_link_2->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+                case 1: lbl_m_link_1->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
             };
         }
     }
@@ -291,20 +291,20 @@ void ItemPreview::elemental_info(int id)
             int element=0;
             switch(i)
             {
-                case 0: element=data.element_restoration(id); effect.append(tr("Restoration"));break;
-                case 1: element=data.element_fire(id); effect.append(tr("Fire")); break;
-                case 2: element=data.element_cold(id); effect.append(tr("Cold")); break;
-                case 3: element=data.element_lightning(id); effect.append(tr("Lightning")); break;
-                case 4: element=data.element_earth(id); effect.append(tr("Earth")); break;
-                case 5: element=data.element_wind(id); effect.append(tr("Wind")); break;
-                case 6: element=data.element_water(id); effect.append(tr("Water")); break;
-                case 7: element=data.element_gravity(id); effect.append(tr("Gravity")); break;
-                case 8: element=data.element_holy(id); effect.append(tr("Holy")); break;
-                case 9: element=data.element_poison(id); effect.append(tr("Poison")); break;
-                case 10: element=data.element_cut(id); effect.append(tr("Cut")); break;
-                case 11: element=data.element_shoot(id); effect.append(tr("Shoot")); break;
-                case 12: element=data.element_punch(id); effect.append(tr("Punch")); break;
-                case 13: element=data.element_hit(id); effect.append(tr("Hit")); break;
+                case 0: element=data.elementRestoration(id); effect.append(tr("Restoration"));break;
+                case 1: element=data.elementFire(id); effect.append(tr("Fire")); break;
+                case 2: element=data.elementCold(id); effect.append(tr("Cold")); break;
+                case 3: element=data.elementLightning(id); effect.append(tr("Lightning")); break;
+                case 4: element=data.elementEarth(id); effect.append(tr("Earth")); break;
+                case 5: element=data.elementWind(id); effect.append(tr("Wind")); break;
+                case 6: element=data.elementWater(id); effect.append(tr("Water")); break;
+                case 7: element=data.elementGravity(id); effect.append(tr("Gravity")); break;
+                case 8: element=data.elementHoly(id); effect.append(tr("Holy")); break;
+                case 9: element=data.elementPoison(id); effect.append(tr("Poison")); break;
+                case 10: element=data.elementCut(id); effect.append(tr("Cut")); break;
+                case 11: element=data.elementShoot(id); effect.append(tr("Shoot")); break;
+                case 12: element=data.elementPunch(id); effect.append(tr("Punch")); break;
+                case 13: element=data.elementHit(id); effect.append(tr("Hit")); break;
             }
             switch(element)
             {
@@ -347,30 +347,30 @@ void ItemPreview::status_info(int id)
             int status=0;
             switch(i)
             {
-                case 0: status=data.status_death(id); effect.append(tr("Death"));break;
-                case 1: status=data.status_slow_numb(id); effect.append(tr("Slow-Numb"));break;
-                case 2: status=data.status_d_sentence(id); effect.append(tr("D.Sentence"));break;
-                case 3: status=data.status_paralysis(id); effect.append(tr("Paralysis"));break;
-                case 4: status=data.status_petrify(id); effect.append(tr("Petrify"));break;
-                case 5: status=data.status_silence(id); effect.append(tr("Silence"));break;
-                case 6: status=data.status_sleep(id); effect.append(tr("Sleep"));break;
-                case 7: status=data.status_confusion(id); effect.append(tr("Confusion"));break;
-                case 8: status=data.status_berserk(id); effect.append(tr("Berserk"));break;
-                case 9: status=data.status_frog(id); effect.append(tr("Frog"));break;
-                case 10: status=data.status_mini(id); effect.append(tr("Mini"));break;
-                case 11: status=data.status_poison(id); effect.append(tr("Poison"));break;
-                case 12: status=data.status_fury(id); effect.append(tr("Fury"));break;
-                case 13: status=data.status_sadness(id); effect.append(tr("Sadness"));break;
-                case 14: status=data.status_darkness(id); effect.append(tr("Darkness"));break;
-                case 15: status=data.status_haste(id); effect.append(tr("Haste"));break;
-                case 16: status=data.status_slow(id); effect.append(tr("Slow"));break;
-                case 17: status=data.status_stop(id); effect.append(tr("Stop"));break;
-                case 18: status=data.status_barrier(id); effect.append(tr("Barrier"));break;
-                case 19: status=data.status_m_barrier(id); effect.append(tr("M.Barrier"));break;
-                case 20: status=data.status_reflect(id); effect.append(tr("Reflect"));break;
-                case 21: status=data.status_shield(id); effect.append(tr("Shield"));break;
-                case 22: status=data.status_regen(id); effect.append(tr("Regen"));break;
-                case 23:status=data.status_resist(id); effect.append(tr("Resist"));break;
+                case 0: status=data.statusDeath(id); effect.append(tr("Death"));break;
+                case 1: status=data.statusSlowNumb(id); effect.append(tr("Slow-Numb"));break;
+                case 2: status=data.statusDeathSentence(id); effect.append(tr("D.Sentence"));break;
+                case 3: status=data.statusParalysis(id); effect.append(tr("Paralysis"));break;
+                case 4: status=data.statusPetrify(id); effect.append(tr("Petrify"));break;
+                case 5: status=data.statusSilence(id); effect.append(tr("Silence"));break;
+                case 6: status=data.statusSleep(id); effect.append(tr("Sleep"));break;
+                case 7: status=data.statusConfusion(id); effect.append(tr("Confusion"));break;
+                case 8: status=data.statusBerserk(id); effect.append(tr("Berserk"));break;
+                case 9: status=data.statusFrog(id); effect.append(tr("Frog"));break;
+                case 10: status=data.statusMini(id); effect.append(tr("Mini"));break;
+                case 11: status=data.statusPoison(id); effect.append(tr("Poison"));break;
+                case 12: status=data.statusFury(id); effect.append(tr("Fury"));break;
+                case 13: status=data.statusSadness(id); effect.append(tr("Sadness"));break;
+                case 14: status=data.statusDarkness(id); effect.append(tr("Darkness"));break;
+                case 15: status=data.statusHaste(id); effect.append(tr("Haste"));break;
+                case 16: status=data.statusSlow(id); effect.append(tr("Slow"));break;
+                case 17: status=data.statusStop(id); effect.append(tr("Stop"));break;
+                case 18: status=data.statusBarrier(id); effect.append(tr("Barrier"));break;
+                case 19: status=data.statusMagicBarrier(id); effect.append(tr("M.Barrier"));break;
+                case 20: status=data.statusReflect(id); effect.append(tr("Reflect"));break;
+                case 21: status=data.statusShield(id); effect.append(tr("Shield"));break;
+                case 22: status=data.statusRegen(id); effect.append(tr("Regen"));break;
+                case 23:status=data.statusResist(id); effect.append(tr("Resist"));break;
             }
             switch(status)
             {

@@ -126,7 +126,7 @@ void SlotSelect::setSlotPreview(int s)
             case 0x13: preview[s]->setPsxIcon(icon_data.mid(96,416),3);break;
             default: //Black Box
                 QByteArray tmp;
-                tmp.fill(80,0x200);
+                tmp.fill(00,0x200);
                 preview[s]->setPsxIcon(tmp,1);
                 break;
         }
@@ -154,7 +154,7 @@ void SlotSelect::setSlotPreview(int s)
         QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         preview[s]->setPixmap(QPixmap::fromImage(gradient));
 
-        preview[s]->setParty(Chars.Pixmap(ff7->descParty(s,0)),Chars.Pixmap(ff7->descParty(s,1)),Chars.Pixmap(ff7->descParty(s,2)));
+        preview[s]->setParty(Chars.pixmap(ff7->descParty(s,0)),Chars.pixmap(ff7->descParty(s,1)),Chars.pixmap(ff7->descParty(s,2)));
         preview[s]->setLocation(ff7->descLocation(s));
         preview[s]->setName(ff7->descName(s));
         preview[s]->setLevel(ff7->descLevel(s));

@@ -271,23 +271,23 @@ void MateriaEditor::init_data()
     for(int i=0;i<24;i++)
     {
         newItem = new QListWidgetItem;
-        newItem->setText(data->Eskill(i));
+        newItem->setText(data->enemySkill(i));
         newItem->setCheckState(Qt::Unchecked);
         eskill_list->addItem(newItem);
     }
     eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
     //Fill Combo_type
-    combo_type->addItem(data->Icon_AllMateria(),tr("All Materia"));
-    combo_type->addItem(data->Icon(FF7Materia::MasterMagic),tr("Magic"));
-    combo_type->addItem(data->Icon(FF7Materia::MasterSummon),tr("Summon"));
-    combo_type->addItem(data->Icon(FF7Materia::Underwater),tr("Independent"));
-    combo_type->addItem(data->Icon(0x1D),tr("Support"));
-    combo_type->addItem(data->Icon(FF7Materia::MasterCommand),tr("Command"));
+    combo_type->addItem(data->iconAllMateria(),tr("All Materia"));
+    combo_type->addItem(data->icon(FF7Materia::MasterMagic),tr("Magic"));
+    combo_type->addItem(data->icon(FF7Materia::MasterSummon),tr("Summon"));
+    combo_type->addItem(data->icon(FF7Materia::Underwater),tr("Independent"));
+    combo_type->addItem(data->icon(0x1D),tr("Support"));
+    combo_type->addItem(data->icon(FF7Materia::MasterCommand),tr("Command"));
 
     //Set initial combo_materia info.
     for(int i=0;i<91;i++)
     {
-        if(data->Name(i) !="DON'T USE"){combo_materia->addItem(data->Icon(i),data->Name(i));}
+        if(data->name(i) !="DON'T USE"){combo_materia->addItem(data->icon(i),data->name(i));}
     }
     _id=0;
     _current_ap=0;
@@ -303,14 +303,14 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
         if(_id != materia_id)
         {
             _id = materia_id;
-            _type_icon = QPixmap::fromImage(data->Image(_id));
-            _full_star_icon = QPixmap::fromImage(data->Image_FullStar(_id));
-            _empty_star_icon = QPixmap::fromImage(data->Image_EmptyStar(_id));
-            _name=data->Name(_id);
-            _type = data->Type(_id);
-            _max_level = data->Levels(_id);
-            for(int i=0;i<_max_level;i++){_level_ap[i]=data->Ap(_id,i);}
-            _skill_list = data->Skills(_id);
+            _type_icon = QPixmap::fromImage(data->image(_id));
+            _full_star_icon = QPixmap::fromImage(data->imageFullStar(_id));
+            _empty_star_icon = QPixmap::fromImage(data->imageEmptyStar(_id));
+            _name=data->name(_id);
+            _type = data->type(_id);
+            _max_level = data->levels(_id);
+            for(int i=0;i<_max_level;i++){_level_ap[i]=data->ap(_id,i);}
+            _skill_list = data->skills(_id);
             sb_ap->setEnabled(1);
             emit id_changed(_id);
          }
@@ -387,20 +387,20 @@ void MateriaEditor::setStats()
     QString title = tr("Skills");
     if(_id !=FF7Materia::EmptyId)
     {
-        if(data->Element(_id)!="")
+        if(data->element(_id)!="")
         {
             title.append("-");
-            title.append(data->Element(_id));
+            title.append(data->element(_id));
         }
-        if(data->Stat_String(_id)!="")
+        if(data->statString(_id)!="")
         {
-            lbl_stats->setText(data->Stat_String(_id));
+            lbl_stats->setText(data->statString(_id));
             box_stats->setHidden(false);
         }
         else{box_stats->setHidden(true);}
-        if(data->Status(_id).at(0).toAscii() !="")
+        if(data->status(_id).at(0).toAscii() !="")
         {
-            list_status->addItems(data->Status(_id));
+            list_status->addItems(data->status(_id));
             box_status_effects->setHidden(false);
             box_status_effects->setFixedWidth(this->width()/3);
             box_skills->adjustSize();
@@ -504,7 +504,7 @@ void MateriaEditor::materia_changed(QString new_name)
 {
     for(int i=0;i<91;i++)
     {
-        if(data->Name(i)==new_name){if(_id != i){setMateria(i,_current_ap);}return;}
+        if(data->name(i)==new_name){if(_id != i){setMateria(i,_current_ap);}return;}
     }
 }
 
@@ -512,10 +512,10 @@ void MateriaEditor::type_changed(int new_type)
 {
     combo_materia->clear();
     combo_materia->blockSignals(1);
-    if(new_type ==0)for(int i=0;i<91;i++){if(data->Name(i) !="DON'T USE"){combo_materia->addItem(data->Icon(i),data->Name(i));}}
-    else{for(int i=0;i<91;i++){if(data->Type(i) == new_type){combo_materia->addItem(data->Icon(i),data->Name(i));}}}
+    if(new_type ==0)for(int i=0;i<91;i++){if(data->name(i) !="DON'T USE"){combo_materia->addItem(data->icon(i),data->name(i));}}
+    else{for(int i=0;i<91;i++){if(data->type(i) == new_type){combo_materia->addItem(data->icon(i),data->name(i));}}}
     //look for the current id in the new list if found set it other wise set index -1
-    if(_id !=FF7Materia::EmptyId){combo_materia->setCurrentIndex(combo_materia->findText(data->Name(_id)));}
+    if(_id !=FF7Materia::EmptyId){combo_materia->setCurrentIndex(combo_materia->findText(data->name(_id)));}
 
     else{combo_materia->setCurrentIndex(-1);}
     combo_materia->blockSignals(0);
