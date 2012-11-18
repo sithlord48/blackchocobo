@@ -34,13 +34,14 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 }
 void SlotSelect::button_clicked(QString btn_text)
 {
-    btn_text.remove(0,5);
+
+    btn_text.remove(0,QString(tr("Slot:")).length());
     this->done(btn_text.toInt()-1);
 }
 
 void SlotSelect::remove_slot(QString btn_text)
 {
-    btn_text.remove(0,5);
+    btn_text.remove(0,QString(tr("Slot:")).length());
     int s = btn_text.toInt()-1;
     if(ff7->type()!="PC")
     {
@@ -62,7 +63,7 @@ void SlotSelect::remove_slot(QString btn_text)
 }
 void SlotSelect::copy_slot(QString btn_text)
 {
-    btn_text.remove(0,5);
+    btn_text.remove(0,QString(tr("Slot:")).length());
     int s = btn_text.toInt()-1;
     if(ff7->isFF7(s)){ff7->copySlot(s);}
     //don't Copy Non FF7 Slots Since we don't modify their region data
@@ -71,7 +72,7 @@ void SlotSelect::copy_slot(QString btn_text)
 
 void SlotSelect::paste_slot(QString btn_text)
 {
-    btn_text.remove(0,5);
+    btn_text.remove(0,QString(tr("Slot:")).length());
     int s = btn_text.toInt()-1;
     if(ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK || ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK){return;}//Don't Overwrite parts of other saves.
     if( (!ff7->isFF7(s)) && (ff7->type()!="PC") && (ff7->psx_block_size(s)>1))

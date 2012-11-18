@@ -7652,63 +7652,63 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation>スロット:1</translation>
+        <translation type="obsolete">スロット:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation>スロット:2</translation>
+        <translation type="obsolete">スロット:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation>スロット:3</translation>
+        <translation type="obsolete">スロット:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation>スロット:4</translation>
+        <translation type="obsolete">スロット:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation>スロット:5</translation>
+        <translation type="obsolete">スロット:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation>スロット:6</translation>
+        <translation type="obsolete">スロット:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation>スロット:7</translation>
+        <translation type="obsolete">スロット:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation>スロット:8</translation>
+        <translation type="obsolete">スロット:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation>スロット:9</translation>
+        <translation type="obsolete">スロット:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation>スロット:10</translation>
+        <translation type="obsolete">スロット:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation>スロット:11</translation>
+        <translation type="obsolete">スロット:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation>スロット:12</translation>
+        <translation type="obsolete">スロット:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation>スロット:13</translation>
+        <translation type="obsolete">スロット:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation>スロット:14</translation>
+        <translation type="obsolete">スロット:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation>スロット:15</translation>
+        <translation type="obsolete">スロット:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
@@ -7721,6 +7721,10 @@ Table Entries are Editable</source>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:</source>
+        <translation>スロット:</translation>
     </message>
 </context>
 <context>

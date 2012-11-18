@@ -7545,66 +7545,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Slot:1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:9</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7614,6 +7554,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

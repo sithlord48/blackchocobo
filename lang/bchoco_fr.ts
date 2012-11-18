@@ -7578,63 +7578,63 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation>Slot:1</translation>
+        <translation type="obsolete">Slot:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation>Slot:2</translation>
+        <translation type="obsolete">Slot:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation>Slot:3</translation>
+        <translation type="obsolete">Slot:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation>Slot:4</translation>
+        <translation type="obsolete">Slot:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation>Slot:5</translation>
+        <translation type="obsolete">Slot:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation>Slot:6</translation>
+        <translation type="obsolete">Slot:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation>Slot:7</translation>
+        <translation type="obsolete">Slot:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation>Slot:8</translation>
+        <translation type="obsolete">Slot:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation>Slot:9</translation>
+        <translation type="obsolete">Slot:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation>Slot:10</translation>
+        <translation type="obsolete">Slot:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation>Slot:11</translation>
+        <translation type="obsolete">Slot:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation>Slot:12</translation>
+        <translation type="obsolete">Slot:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation>Slot:13</translation>
+        <translation type="obsolete">Slot:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation>Slot:14</translation>
+        <translation type="obsolete">Slot:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation>Slot:15</translation>
+        <translation type="obsolete">Slot:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
@@ -7647,6 +7647,10 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:</source>
+        <translation>Slot:</translation>
     </message>
 </context>
 <context>
