@@ -34,23 +34,10 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 }
 void SlotSelect::button_clicked(QString btn_text)
 {
-    if(btn_text == QString(tr("Slot:1"))){done(0);}
-    else if(btn_text == QString(tr("Slot:2"))){done(1);}
-    else if(btn_text == QString(tr("Slot:3"))){done(2);}
-    else if(btn_text == QString(tr("Slot:4"))){done(3);}
-    else if(btn_text == QString(tr("Slot:5"))){done(4);}
-    else if(btn_text == QString(tr("Slot:6"))){done(5);}
-    else if(btn_text == QString(tr("Slot:7"))){done(6);}
-    else if(btn_text == QString(tr("Slot:8"))){done(7);}
-    else if(btn_text == QString(tr("Slot:9"))){done(8);}
-    else if(btn_text == QString(tr("Slot:10"))){done(9);}
-    else if(btn_text == QString(tr("Slot:11"))){done(10);}
-    else if(btn_text == QString(tr("Slot:12"))){done(11);}
-    else if(btn_text == QString(tr("Slot:13"))){done(12);}
-    else if(btn_text == QString(tr("Slot:14"))){done(13);}
-    else if(btn_text == QString(tr("Slot:15"))){done(14);}
-    else{this->done(0);}
+    btn_text.remove(0,5);
+    this->done(btn_text.toInt()-1);
 }
+
 void SlotSelect::remove_slot(QString btn_text)
 {
     btn_text.remove(0,5);
@@ -62,14 +49,14 @@ void SlotSelect::remove_slot(QString btn_text)
         for (int i=0;  i<size; i++)
         {
             int t=ff7->psx_block_next(s);
-            ff7->clearslot(s);
+            ff7->clearSlot(s);
             ReIntSlot(s);
             s=t;
         }
     }
     else
     {
-        ff7->clearslot(s);
+        ff7->clearSlot(s);
         ReIntSlot(s);
     }
 }
@@ -77,8 +64,8 @@ void SlotSelect::copy_slot(QString btn_text)
 {
     btn_text.remove(0,5);
     int s = btn_text.toInt()-1;
-    if(ff7->isFF7(s)){ff7->CopySlot(s);}
-    //Can't Copy Non FF7 Slots Since we don't modify their region data
+    if(ff7->isFF7(s)){ff7->copySlot(s);}
+    //don't Copy Non FF7 Slots Since we don't modify their region data
     else{/*NOT FF7 SAVE INGORE*/}
 }
 
@@ -94,13 +81,13 @@ void SlotSelect::paste_slot(QString btn_text)
         for(int i=0;i<size;i++)
         {
             int t=ff7->psx_block_next(s);
-            ff7->clearslot(s);
+            ff7->clearSlot(s);
             ReIntSlot(s);
             s=t;
         }
        s=old_s;
     }
-    ff7->PasteSlot(s);
+    ff7->pasteSlot(s);
     ReIntSlot(s);
 }
 

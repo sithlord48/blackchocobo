@@ -680,7 +680,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 
     if (!file.open(QFile::ReadOnly )){QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName).arg(file.errorString()));  return; }
 
-    if(ff7->LoadFile(fileName))
+    if(ff7->loadFile(fileName))
     {
         _init=false;//we have now loaded a file
         file_modified(false);
@@ -704,7 +704,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->Import_PSX(s,fileName);
+        ff7->importPSX(s,fileName);
         guirefresh(0);
     }
 }
@@ -715,7 +715,7 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
     if (fileName.isEmpty()){return;}
     else
     {
-        ff7->Import_PSV(s,fileName);
+        ff7->importPSV(s,fileName);
         guirefresh(0);
     }
 }
@@ -731,9 +731,9 @@ void MainWindow::on_actionImport_char_triggered()
         if(file.size() !=0x84){QMessageBox::warning(this, tr("Black Chocobo"),tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName).arg(file.errorString()));return;}
         QByteArray new_char;
         new_char = file.readAll();
-        ff7->importChar(s,curchar,new_char);
+        ff7->importCharacter(s,curchar,new_char);
     }
-    char_editor->setChar(ff7->Char(s,curchar),ff7->charName(s,curchar));
+    char_editor->setChar(ff7->character(s,curchar),ff7->charName(s,curchar));
     set_char_buttons();
 }
 
@@ -742,7 +742,7 @@ void MainWindow::on_actionExport_char_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save FF7 Character File"), settings->value("char_stat_folder").toString(),
     tr("FF7 Character Stat File(*.char)"));
-    if (!fileName.isEmpty()){ff7->exportChar(s,curchar,fileName);}
+    if (!fileName.isEmpty()){ff7->exportCharacter(s,curchar,fileName);}
 }
 void MainWindow::on_action_Save_activated()
 {
@@ -851,7 +851,7 @@ void MainWindow::saveFileFull(QString fileName)
 {
     if((ff7->type() =="PC") && !(settings->value("skip_slot_mask").toBool())){ff7->fix_pc_bytemask(s);}//fix starting slot on pc
 
-    if(ff7->SaveFile(fileName))
+    if(ff7->saveFile(fileName))
     {
         if(_init)
         {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
@@ -867,7 +867,7 @@ void MainWindow::on_actionNew_Game_triggered()
 {
     QString save_name ="";
     if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
-    ff7->New_Game(s,save_name);//call the new game function
+    ff7->newGame(s,save_name);//call the new game function
     //detect region and fix names if needed.
     _init=false;
     guirefresh(1);
@@ -879,7 +879,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     QString save_name ="";
     if(settings->value("override_default_save").toBool())
     {save_name = settings->value("default_save_file").toString();}
-    ff7->New_Game_Plus(s,ff7->fileName(),save_name);
+    ff7->newGamePlus(s,ff7->fileName(),save_name);
     guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
@@ -892,7 +892,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     if(fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ff7->Export_PC(fileName);
+        ff7->exportPC(fileName);
         file_modified(false);
     }
 }
@@ -905,7 +905,7 @@ void MainWindow::on_actionExport_PSX_activated()
     if (fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ff7->Export_PSX(s,fileName);
+        ff7->exportPSX(s,fileName);
         file_modified(false);
     }
 }
@@ -919,7 +919,7 @@ void MainWindow::on_actionExport_MC_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->Export_VMC(fileName);
+        ff7->exportVMC(fileName);
         file_modified(false);
     }
 }
@@ -931,7 +931,7 @@ void MainWindow::on_actionExport_VGS_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->Export_VGS(fileName);
+        ff7->exportVGS(fileName);
         file_modified(false);
     }
 }
@@ -943,7 +943,7 @@ void MainWindow::on_actionExport_DEX_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->Export_DEX(fileName);
+        ff7->exportDEX(fileName);
         file_modified(false);
     }
 }
@@ -966,14 +966,14 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh(0);}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
-void MainWindow::on_actionClear_Slot_activated(){ff7->clearslot(s);  guirefresh(0);}
+void MainWindow::on_actionClear_Slot_activated(){ff7->clearSlot(s);  guirefresh(0);}
 
 void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_activated(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_activated(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
-void MainWindow::on_actionCopy_Slot_activated(){ff7->CopySlot(s);}
-void MainWindow::on_actionPaste_Slot_activated(){ff7->PasteSlot(s); guirefresh(0);}
+void MainWindow::on_actionCopy_Slot_activated(){ff7->copySlot(s);}
+void MainWindow::on_actionPaste_Slot_activated(){ff7->pasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
 
@@ -1329,7 +1329,7 @@ void MainWindow::setmenu(bool newgame)
 }
 void MainWindow::file_modified(bool changed)
 {
-    ff7->FileModified(changed,s);
+    ff7->setFileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
 
     if(changed)
@@ -1440,11 +1440,11 @@ void MainWindow::materiaupdate(void)
                 {
                     if(slotTemp[i])
                     {//reset slots marked changed.
-                        ff7->FileModified(true,i);
+                        ff7->setFileModified(true,i);
                     }
                 }
              }
-            else{ff7->FileModified(false,0);}
+            else{ff7->setFileModified(false,0);}
         }
     }
     if(ff7->partyMateriaId(s,j) == FF7Materia::EnemySkill){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}
@@ -1469,10 +1469,10 @@ void MainWindow::itemupdate(void)
 {
     load=true;
     //Field Items Picked up
-    if(ff7->UnknownVar(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
 
     if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
     if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
@@ -1483,14 +1483,14 @@ void MainWindow::itemupdate(void)
     if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
     if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<2)){ui->cb_s7tg_items_3->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<3)){ui->cb_s7tg_items_4->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<4)){ui->cb_s7tg_items_5->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<2)){ui->cb_s7tg_items_3->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<3)){ui->cb_s7tg_items_4->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<4)){ui->cb_s7tg_items_5->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_5->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1540,7 +1540,7 @@ void MainWindow::guirefresh(bool newgame)
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
            && ff7->psx_block_type(s)==0xA0)
         {//if empty region string and a virtual memcard format and dir frame says empty.
-            ff7->clearslot(s); //file_modified(false);//checking only
+            ff7->clearSlot(s); //file_modified(false);//checking only
         }
         //Clear all check boxes and index's
         ui->cb_replay->setCurrentIndex(0);
@@ -1579,7 +1579,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->combo_atb->setCurrentIndex(ff7->atbMode(s));
         ui->combo_magic_order->setCurrentIndex(ff7->magicOrder(s));
         ui->slide_battlespeed->setValue(ff7->battleSpeed(s));
-        ui->slide_battlemspeed->setValue(ff7->battleMSpeed(s));
+        ui->slide_battlemspeed->setValue(ff7->battleMessageSpeed(s));
         ui->slide_fieldmspeed->setValue(ff7->messageSpeed(s));
 
         //CONTROLLER MAPPING
@@ -1734,17 +1734,17 @@ void MainWindow::guirefresh(bool newgame)
             else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
         }
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
-        if (ff7->Party(s,0) >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
-        else{ui->combo_party1->setCurrentIndex(ff7->Party(s,0));}
-        if (ff7->Party(s,1) >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
-        else{ui->combo_party2->setCurrentIndex(ff7->Party(s,1));}
-        if (ff7->Party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
-        else{ui->combo_party3->setCurrentIndex(ff7->Party(s,2));}
+        if (ff7->party(s,0) >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
+        else{ui->combo_party1->setCurrentIndex(ff7->party(s,0));}
+        if (ff7->party(s,1) >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
+        else{ui->combo_party2->setCurrentIndex(ff7->party(s,1));}
+        if (ff7->party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
+        else{ui->combo_party3->setCurrentIndex(ff7->party(s,2));}
 
-        ui->sb_gil->setValue(ff7->Gil(s));
-        ui->sb_gp->setValue(ff7->Gp(s));
-        ui->sb_runs->setValue(ff7->Runs(s));
-        ui->sb_battles->setValue(ff7->Battles(s));
+        ui->sb_gil->setValue(ff7->gil(s));
+        ui->sb_gp->setValue(ff7->gp(s));
+        ui->sb_runs->setValue(ff7->runs(s));
+        ui->sb_battles->setValue(ff7->battles(s));
         ui->sb_steps->setValue(ff7->slot[s].steps);
         ui->sb_love_barret->setValue(ff7->love(s,false,FF7Save::LOVE_BARRET));
         ui->sb_love_tifa->setValue(ff7->love(s,false,FF7Save::LOVE_TIFA));
@@ -1754,10 +1754,10 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_time_min->setValue(ff7->time(s)/60%60);
         ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 
-        dialog_preview->SetULeft (ff7->Dialog_UL(s));
-        dialog_preview->SetURight(ff7->Dialog_UR(s));
-        dialog_preview->SetLLeft (ff7->Dialog_LL(s));
-        dialog_preview->SetLRight(ff7->Dialog_LR(s));
+        dialog_preview->SetULeft (ff7->dialogColorUL(s));
+        dialog_preview->SetURight(ff7->dialogColorUR(s));
+        dialog_preview->SetLLeft (ff7->dialogColorLL(s));
+        dialog_preview->SetLRight(ff7->dialogColorLR(s));
 
         if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
         if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
@@ -1806,7 +1806,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2)%1000);
         ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
 
-        ui->sb_BikeHighScore->setValue(ff7->BikeHighScore(s));
+        ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
         ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
 
         load=false;
@@ -1886,32 +1886,32 @@ void MainWindow::progress_update()
     if((ff7->slot[s].bm_progress3)& (1<<6)){ui->cb_bm3_7->setChecked(Qt::Checked);}     else{ui->cb_bm3_7->setChecked(Qt::Unchecked);}
     if((ff7->slot[s].bm_progress3)& (1<<7)){ui->cb_bm3_8->setChecked(Qt::Checked);}     else{ui->cb_bm3_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}    else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}    else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}    else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}    else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}    else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}    else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}    else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}    else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}    else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}    else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}    else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(0) & (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}    else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,26).at(8) & (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}    else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}    else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}    else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}    else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}    else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}    else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}    else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}    else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}    else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}    else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}    else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}    else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}    else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}    else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}    else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,26).at(8) & (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}    else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,23).at(26) & (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}      else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}      else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}      else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}      else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}      else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}      else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}      else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}      else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}      else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}      else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}      else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}      else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}      else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}      else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
 
     if((ff7->slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
     if((ff7->slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
@@ -1925,24 +1925,24 @@ void MainWindow::progress_update()
     //When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
     //to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
 
-    if( static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) ==0x00 &&
-         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) ==0x00 &&
-         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) ==0x00 &&
-         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) ==0x00 &&
-         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) ==0x00 &&
-         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) ==0x00   )
+    if( static_cast<unsigned char>(ff7->unknown(s,26).at(1)) ==0x00 &&
+         static_cast<unsigned char>(ff7->unknown(s,26).at(2)) ==0x00 &&
+         static_cast<unsigned char>(ff7->unknown(s,26).at(3)) ==0x00 &&
+         static_cast<unsigned char>(ff7->unknown(s,26).at(4)) ==0x00 &&
+         static_cast<unsigned char>(ff7->unknown(s,26).at(5)) ==0x00 &&
+         static_cast<unsigned char>(ff7->unknown(s,26).at(6)) ==0x00   )
          {ui->combo_s7_slums->setCurrentIndex(1);}
 
     else if(
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) == 0xBF) &&
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) == 0x51) &&
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) == 0x05) &&
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) == 0x17) &&
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) == 0x5D) &&
-        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) == 0xEF)   )
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->unknown(s,26).at(1)) == 0xBF) &&
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->unknown(s,26).at(2)) == 0x51) &&
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->unknown(s,26).at(3)) == 0x05) &&
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->unknown(s,26).at(4)) == 0x17) &&
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->unknown(s,26).at(5)) == 0x5D) &&
+        (static_cast<unsigned char>(ff7->unknown(s,26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->unknown(s,26).at(6)) == 0xEF)   )
         {ui->combo_s7_slums->setCurrentIndex(2);}
 
-    else if ( static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2))== 0x13){ui->combo_s7_slums->setCurrentIndex(3);}
+    else if ( static_cast<unsigned char>(ff7->unknown(s,26).at(2))== 0x13){ui->combo_s7_slums->setCurrentIndex(3);}
     else {ui->combo_s7_slums->setCurrentIndex(0);}
     load=false;
 }
@@ -1967,10 +1967,10 @@ void MainWindow::chocobo_refresh()
     chocobo_stable_5->SetChocobo(ff7->chocobo(s,4),ff7->chocoName(s,4),ff7->chocoCantMate(s,4),ff7->chocoStamina(s,4));
     chocobo_stable_6->SetChocobo(ff7->chocobo(s,5),ff7->chocoName(s,5),ff7->chocoCantMate(s,5),ff7->chocoStamina(s,5));
     //set the penned chocobos
-    ui->combo_pen1->setCurrentIndex(ff7->ChocoPen(s,0));
-    ui->combo_pen2->setCurrentIndex(ff7->ChocoPen(s,1));
-    ui->combo_pen3->setCurrentIndex(ff7->ChocoPen(s,2));
-    ui->combo_pen4->setCurrentIndex(ff7->ChocoPen(s,3));
+    ui->combo_pen1->setCurrentIndex(ff7->chocoboPen(s,0));
+    ui->combo_pen2->setCurrentIndex(ff7->chocoboPen(s,1));
+    ui->combo_pen3->setCurrentIndex(ff7->chocoboPen(s,2));
+    ui->combo_pen4->setCurrentIndex(ff7->chocoboPen(s,3));
     load=false;
 }/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
 
@@ -2009,14 +2009,14 @@ void MainWindow::testdata_refresh()
     if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
     ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
 
-    if(ff7->UnknownVar(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
 
 
     if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
@@ -2035,15 +2035,15 @@ void MainWindow::testdata_refresh()
     unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->Char(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->Char(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->Char(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->Char(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->Char(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->Char(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->Char(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->character(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->character(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->character(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->character(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->character(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->character(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->character(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,curchar)));}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ ff7->setGil(s,value);}}
@@ -2056,7 +2056,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
     {
         ff7->setParty(s,0,0xFF);
         //wipe all desc data if noone is there
-        ff7->setDescParty(s,0,ff7->Party(s,0));
+        ff7->setDescParty(s,0,ff7->party(s,0));
         ff7->setDescCurHP(s,0);
         ff7->setDescMaxHP(s,0);
         ff7->setDescCurMP(s,0);
@@ -2067,9 +2067,9 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
     else
     {
         ff7->setParty(s,0,index);
-        ff7->setDescParty(s,0,ff7->Party(s,0));
+        ff7->setDescParty(s,0,ff7->party(s,0));
         // IF ID >8 no char slot so for 9, 10, 11 Use slot 6,7,8 char data.
-        if(ff7->Party(s,0)== FF7Char::YoungCloud)
+        if(ff7->party(s,0)== FF7Char::YoungCloud)
         {
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,6));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,6));
@@ -2078,7 +2078,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             ff7->setDescLevel(s,ff7->charLevel(s,6));
             ff7->setDescName(s,ff7->charName(s,6));
         }
-        else if(ff7->Party(s,0)== FF7Char::Sephiroth)
+        else if(ff7->party(s,0)== FF7Char::Sephiroth)
         {
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,7));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,7));
@@ -2087,7 +2087,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             ff7->setDescLevel(s,ff7->charLevel(s,7));
             ff7->setDescName(s,ff7->charName(s,7));
         }
-        else if(ff7->Party(s,0)== 11)
+        else if(ff7->party(s,0)== 11)
         {//chocobo? that never really works.
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,8));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,8));
@@ -2098,12 +2098,12 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
         }
         else
         {
-            ff7->setDescCurHP(s,ff7->charCurrentHp(s,ff7->Party(s,0)));
-            ff7->setDescMaxHP(s,ff7->charMaxHp(s,ff7->Party(s,0)));
-            ff7->setDescCurMP(s,ff7->charCurrentMp(s,ff7->Party(s,0)));
-            ff7->setDescMaxMP(s,ff7->charMaxMp(s,ff7->Party(s,0)));
-            ff7->setDescLevel(s,ff7->charLevel(s,ff7->Party(s,0)));
-            ff7->setDescName(s,ff7->charName(s,ff7->Party(s,0)));
+            ff7->setDescCurHP(s,ff7->charCurrentHp(s,ff7->party(s,0)));
+            ff7->setDescMaxHP(s,ff7->charMaxHp(s,ff7->party(s,0)));
+            ff7->setDescCurMP(s,ff7->charCurrentMp(s,ff7->party(s,0)));
+            ff7->setDescMaxMP(s,ff7->charMaxMp(s,ff7->party(s,0)));
+            ff7->setDescLevel(s,ff7->charLevel(s,ff7->party(s,0)));
+            ff7->setDescName(s,ff7->charName(s,ff7->party(s,0)));
         }
     }
 }}
@@ -2112,14 +2112,14 @@ void MainWindow::on_combo_party2_currentIndexChanged(int index)
     if(index == 12){ff7->setParty(s,1,FF7Char::Empty);}
     else{ff7->setParty(s,1,index);}
     //either way set the desc
-    ff7->setDescParty(s,1,ff7->Party(s,1));
+    ff7->setDescParty(s,1,ff7->party(s,1));
 }}
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {if(!load){
         if(index == 12){ff7->setParty(s,2,FF7Char::Empty);}
         else{ff7->setParty(s,2,index);}
         //either way set the desc
-        ff7->setDescParty(s,2,ff7->Party(s,2));
+        ff7->setDescParty(s,2,ff7->party(s,2));
 }}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2279,10 +2279,10 @@ void MainWindow::c6_personalityChanged(quint8 value){if(!load){ ff7->setChocoPer
 void MainWindow::c6_mated_toggled(bool checked){if(!load){ff7->setChocoCantMate(s,5,checked);}}
 
 //set data for pens outside
-void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ ff7->setChocoPen(s,0,index);}}
-void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ ff7->setChocoPen(s,1,index);}}
-void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ ff7->setChocoPen(s,2,index);}}
-void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ ff7->setChocoPen(s,3,index);}}
+void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,0,index);}}
+void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,1,index);}}
+void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,2,index);}}
+void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,3,index);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_phs_chars_clicked(const QModelIndex &index)
@@ -2327,211 +2327,211 @@ void MainWindow::on_list_keyitems_clicked(const QModelIndex &index)
 // Field Items Combos
 void MainWindow::on_cb_bm_items_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,38);  char t = temp.at(48);
+        QByteArray temp = ff7->unknown(s,38);  char t = temp.at(48);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[48]=t;
-        ff7->setUnknownVar(s,38,temp);
+        ff7->setUnknown(s,38,temp);
  }}
 void MainWindow::on_cb_bm_items_2_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[48]=t;
-        ff7->setUnknownVar(s,38,temp);
+        ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_3_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[48]=t;
-        ff7->setUnknownVar(s,38,temp);
+        ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_4_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[48]=t;
-        ff7->setUnknownVar(s,38,temp);
+        ff7->setUnknown(s,38,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_2_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_3_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_4_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_5_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_6_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_7_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_s7tg_items_8_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,9);char t = temp.at(4);
+        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
         temp[4]=t;
-        ff7->setUnknownVar(s,9,temp);
+        ff7->setUnknown(s,9,temp);
 }}
 
 void MainWindow::on_cb_farm_items_1_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_2_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_3_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_4_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_5_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_6_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_7_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_cb_farm_items_8_toggled(bool checked)
 {if(!load)
     {
         file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,11); char t = temp.at (3);
+        QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
         temp[3]=t;
-        ff7->setUnknownVar(s,11,temp);
+        ff7->setUnknown(s,11,temp);
     }
-    ui->lcd_farm_items->display(ff7->UnknownVar(s,11).at(3));
+    ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
 }
 
 void MainWindow::on_btn_clear_keyitems_clicked()
@@ -2631,12 +2631,12 @@ void MainWindow::on_line_location_textChanged(QString text)
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
-void MainWindow::set_UL_Color(QColor color){if(!load){ff7->setDialog_UL(s,color);}}
-void MainWindow::set_UR_Color(QColor color){if(!load){ff7->setDialog_UR(s,color);}}
-void MainWindow::set_LL_Color(QColor color){if(!load){ff7->setDialog_LL(s,color);}}
-void MainWindow::set_LR_Color(QColor color){if(!load){ff7->setDialog_LR(s,color);}}
+void MainWindow::set_UL_Color(QColor color){if(!load){ff7->setDialogColorUL(s,color);}}
+void MainWindow::set_UR_Color(QColor color){if(!load){ff7->setDialogColorUR(s,color);}}
+void MainWindow::set_LL_Color(QColor color){if(!load){ff7->setDialogColorLL(s,color);}}
+void MainWindow::set_LR_Color(QColor color){if(!load){ff7->setDialogColorLR(s,color);}}
 void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){file_modified(true);ff7->setBattleSpeed(s,value);}}
-void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setBattleMSpeed(s,value);}}
+void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setBattleMessageSpeed(s,value);}}
 void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setMessageSpeed(s, value);}}
 void MainWindow::on_cb_battle_help_toggled(bool checked){if(!load){file_modified(true); ff7->setBattleHelp(s,checked);}}
 
@@ -2682,211 +2682,211 @@ void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){file_modified(true)
 
 void MainWindow::on_cb_s7pl_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_2_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_3_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_4_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_5_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_6_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_7_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_8_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(0);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
         temp[0]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_2_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_3_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_4_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_5_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_6_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_7_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s7ts_8_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,26); char t=temp.at(8);
+        QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
         temp[8]=t;
-        ff7->setUnknownVar(s,26,temp);
+        ff7->setUnknown(s,26,temp);
 }}
 
 void MainWindow::on_cb_s5_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_2_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_3_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_4_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_5_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_6_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_7_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_s5_8_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,23); char t=temp.at(26);
+        QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
         temp[26]=t;
-        ff7->setUnknownVar(s,23,temp);
+        ff7->setUnknown(s,23,temp);
 }}
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
@@ -2963,7 +2963,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordy->setValue(65429);
         ui->sb_coordz->setValue(15);
         // set up young cloud, Copy Cloud Change ID to young Cloud
-        ff7->setChar(s,6,ff7->Char(s,0));
+        ff7->setCharacter(s,6,ff7->character(s,0));
         ff7->setCharID(s,6,FF7Char::YoungCloud);
         //set up Sephiroth
         ff7->setCharID(s,7,FF7Char::Sephiroth);
@@ -2972,8 +2972,8 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         }
         else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
         set_char_buttons();
-        if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));}
-        else if(curchar ==FF7Char::Vincent){char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));}
+        if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));}
+        else if(curchar ==FF7Char::Vincent){char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 
@@ -3171,7 +3171,7 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
 }}}
 
-void MainWindow::on_cb_field_help_toggled(bool checked){if(!load){file_modified(true);ff7->setfieldHelp(s,checked);}}
+void MainWindow::on_cb_field_help_toggled(bool checked){if(!load){file_modified(true);ff7->setFieldHelp(s,checked);}}
 void MainWindow::on_cb_battle_targets_toggled(bool checked){if(!load){file_modified(true);ff7->setBattleTargets(s,checked);}}
 
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
@@ -3567,7 +3567,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     if(ui->combo_compare_slot->currentIndex()==0){ui->btn_all_z_diffs->setEnabled(0);}
     else {ui->btn_all_z_diffs->setEnabled(1);}
 
-    if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
+    if(z <= unknown_zmax){temp = ff7->unknown(s,z);}
     else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
 
     rows=temp.size();
@@ -3621,7 +3621,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             }
 
             s2 = ui->combo_compare_slot->currentIndex()-1;
-            if(z <= unknown_zmax){temp2 = ff7->UnknownVar(s2,z);}
+            if(z <= unknown_zmax){temp2 = ff7->unknown(s2,z);}
             else if(z == unknown_zmax+1){temp2 = ff7->slotFF7Data(s2);}
 
             //rows=temp2.size();
@@ -3692,7 +3692,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
     QByteArray temp;
 
     int z = ui->combo_z_var->currentIndex();
-    if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
+    if(z <= unknown_zmax){temp = ff7->unknown(s,z);}
     else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
 
     switch(item->column())
@@ -3702,7 +3702,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
     case 3: temp[item->row()] = item->text().toInt(0,2);   break;
     };
 
-    if(z <= unknown_zmax){ff7->setUnknownVar(s,z,temp);}
+    if(z <= unknown_zmax){ff7->setUnknown(s,z,temp);}
     else if(z == unknown_zmax+1){ff7->setSlotFF7Data(s,temp);}
 
     unknown_refresh(z);
@@ -3817,17 +3817,17 @@ void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
         default: break; //do nothing
         case 1: //initial slums setting
             temp.setRawData("\x00\x00\x00\x00\x00\x00",6);
-            ff7->setUnknownVar(s,26,temp);
+            ff7->setUnknown(s,26,temp);
             break;
 
         case 2://after first scene. needs game global progress set to 105
             temp.setRawData("\xBF\x03\x05\x17\x5D\xEF",6);
-            ff7->setUnknownVar(s,26,temp);
+            ff7->setUnknown(s,26,temp);
             break;
 
         case 3://plate falling
             temp.setRawData("\xBF\x13\x05\x17\x5D\xEF",6);
-            ff7->setUnknownVar(s,26,temp);
+            ff7->setUnknown(s,26,temp);
             break;
         }
 }}
@@ -3839,12 +3839,12 @@ void MainWindow::char_baseMp_changed(quint16 mp){ff7->setCharBaseMp(s,curchar,mp
 void MainWindow::char_curHp_changed(quint16 hp)
 {
     ff7->setCharCurrentHp(s,curchar,hp);
-    if(curchar==ff7->Party(s,0)){ff7->setDescCurHP(s,hp);}
+    if(curchar==ff7->party(s,0)){ff7->setDescCurHP(s,hp);}
 }
 void MainWindow::char_curMp_changed(quint16 mp)
 {
     ff7->setCharCurrentMp(s,curchar,mp);
-    if(curchar==ff7->Party(s,0)){ff7->setDescCurMP(s,mp);}
+    if(curchar==ff7->party(s,0)){ff7->setDescCurMP(s,mp);}
 }
 void MainWindow::char_id_changed(qint8 id)
 {
@@ -3854,7 +3854,7 @@ void MainWindow::char_id_changed(qint8 id)
 void MainWindow::char_level_changed(qint8 level)
 {
     ff7->setCharLevel(s,curchar,level);
-    if(curchar==ff7->Party(s,0)){ff7->setDescLevel(s,level);}
+    if(curchar==ff7->party(s,0)){ff7->setDescLevel(s,level);}
 }
 void MainWindow::char_str_changed(quint8 str){ff7->setCharStr(s,curchar,str);}\
 void MainWindow::char_vit_changed(quint8 vit){ff7->setCharVit(s,curchar,vit);}
@@ -3886,18 +3886,18 @@ void MainWindow::char_mslot_changed(int slot){mslotsel=slot;}
 void MainWindow::char_name_changed(QString name)
 {
     ff7->setCharName(s,curchar,name);
-    if(curchar==ff7->Party(s,0)){ff7->setDescName(s,name);}
+    if(curchar==ff7->party(s,0)){ff7->setDescName(s,name);}
 }
 
 void MainWindow::char_maxHp_changed(quint16 value)
 {
     ff7->setCharMaxHp(s,curchar,value);
-    if(curchar==ff7->Party(s,0)){ff7->setDescMaxHP(s,value);}
+    if(curchar==ff7->party(s,0)){ff7->setDescMaxHP(s,value);}
 }
 void MainWindow::char_maxMp_changed(quint16 value)
 {
     ff7->setCharMaxMp(s,curchar,value);
-    if(curchar==ff7->Party(s,0)){ff7->setDescMaxMP(s,value);}
+    if(curchar==ff7->party(s,0)){ff7->setDescMaxMP(s,value);}
 }
 
 void MainWindow::on_btn_maxChar_clicked()
