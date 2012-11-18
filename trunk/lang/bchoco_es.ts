@@ -7579,63 +7579,63 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation>Ranura:1</translation>
+        <translation type="obsolete">Ranura:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation>Ranura:2</translation>
+        <translation type="obsolete">Ranura:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation>Ranura:3</translation>
+        <translation type="obsolete">Ranura:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation>Ranura:4</translation>
+        <translation type="obsolete">Ranura:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation>Ranura:5</translation>
+        <translation type="obsolete">Ranura:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation>Ranura:6</translation>
+        <translation type="obsolete">Ranura:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation>Ranura:7</translation>
+        <translation type="obsolete">Ranura:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation>Ranura:8</translation>
+        <translation type="obsolete">Ranura:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation>Ranura:9</translation>
+        <translation type="obsolete">Ranura:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation>Ranura:10</translation>
+        <translation type="obsolete">Ranura:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation>Ranura:11</translation>
+        <translation type="obsolete">Ranura:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation>Ranura:12</translation>
+        <translation type="obsolete">Ranura:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation>Ranura:13</translation>
+        <translation type="obsolete">Ranura:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation>Ranura:14</translation>
+        <translation type="obsolete">Ranura:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation>Ranura:15</translation>
+        <translation type="obsolete">Ranura:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
@@ -7648,6 +7648,10 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:</source>
+        <translation>Ranura:</translation>
     </message>
 </context>
 <context>

@@ -3925,7 +3925,7 @@
     </message>
     <message>
         <source>Ctrl+O</source>
-        <translation>Strg+O</translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <source>Export PC Save</source>
@@ -7582,63 +7582,63 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation>Steckplatz:1</translation>
+        <translation type="obsolete">Steckplatz:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation>Steckplatz:2</translation>
+        <translation type="obsolete">Steckplatz:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation>Steckplatz:3</translation>
+        <translation type="obsolete">Steckplatz:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation>Steckplatz:4</translation>
+        <translation type="obsolete">Steckplatz:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation>Steckplatz:5</translation>
+        <translation type="obsolete">Steckplatz:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation>Steckplatz:6</translation>
+        <translation type="obsolete">Steckplatz:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation>Steckplatz:7</translation>
+        <translation type="obsolete">Steckplatz:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation>Steckplatz:8</translation>
+        <translation type="obsolete">Steckplatz:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation>Steckplatz:9</translation>
+        <translation type="obsolete">Steckplatz:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation>Steckplatz:10</translation>
+        <translation type="obsolete">Steckplatz:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation>Steckplatz:11</translation>
+        <translation type="obsolete">Steckplatz:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation>Steckplatz:12</translation>
+        <translation type="obsolete">Steckplatz:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation>Steckplatz:13</translation>
+        <translation type="obsolete">Steckplatz:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation>Steckplatz:14</translation>
+        <translation type="obsolete">Steckplatz:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation>Steckplatz:15</translation>
+        <translation type="obsolete">Steckplatz:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
@@ -7651,6 +7651,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:</source>
+        <translation>Steckplatz:</translation>
     </message>
 </context>
 <context>
