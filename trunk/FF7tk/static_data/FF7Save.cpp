@@ -21,7 +21,7 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 
-bool FF7Save::LoadFile(const QString &fileName)
+bool FF7Save::loadFile(const QString &fileName)
 {
     // Return true if File Loaded and false if file not loaded.
     // This Class should contain NO Gui Parts
@@ -84,13 +84,13 @@ bool FF7Save::LoadFile(const QString &fileName)
             SG_Region_String[0]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
         }
         else {SG_Region_String[0].clear();}
-        for(int i=1;i<14;i++){clearslot(i);}
+        for(int i=1;i<14;i++){clearSlot(i);}
     }
 
     else if (SG_TYPE =="PSV")
     {
         SG_Region_String[0] = QString(ff7file.mid(0x64,19));
-        for(int i=1;i<14;i++){clearslot(i);}
+        for(int i=1;i<14;i++){clearSlot(i);}
     }
 
     else if (SG_TYPE == "MC" || SG_TYPE =="PSP" || SG_TYPE == "VGS" ||SG_TYPE=="DEX")
@@ -110,7 +110,7 @@ bool FF7Save::LoadFile(const QString &fileName)
     }
     else{return false;}
     filename=fileName;
-    FileModified(false,0);
+    setFileModified(false,0);
     return true;
 }
 QByteArray FF7Save::slotHeader(int s)
@@ -193,7 +193,7 @@ bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
     return true;
     */
 }
-bool FF7Save::SaveFile(const QString &fileName)
+bool FF7Save::saveFile(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     //fix our headers before saving
@@ -216,11 +216,11 @@ bool FF7Save::SaveFile(const QString &fileName)
     fclose(pfile);
     fix_sum(fileName);
     filename=fileName;
-    if(type()==("PC")){FixMetaData();}
-    FileModified(false,0);
+    if(type()==("PC")){fixMetaData();}
+    setFileModified(false,0);
     return true;
 }
-bool FF7Save::Export_PC(const QString &fileName)
+bool FF7Save::exportPC(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     QString prev_type = SG_TYPE;
@@ -240,12 +240,12 @@ bool FF7Save::Export_PC(const QString &fileName)
         slot[i].time = (slot[i].time*1.2);
         slot[i].desc.time = slot[i].time;
       }
-      else{clearslot(i);}
+      else{clearSlot(i);}
     }
-    if(SaveFile(fileName))
+    if(saveFile(fileName))
     {
         setType(prev_type);
-        FileModified(false,0);
+        setFileModified(false,0);
         return true;
     }
     else
@@ -254,7 +254,7 @@ bool FF7Save::Export_PC(const QString &fileName)
         return false;
     }
 }
-bool FF7Save::Export_PSX(int s,const QString &fileName)
+bool FF7Save::exportPSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     int blocks=1;
@@ -306,7 +306,7 @@ bool FF7Save::Export_PSX(int s,const QString &fileName)
     return true;
 }
 
-bool FF7Save::Export_VMC(const QString &fileName)
+bool FF7Save::exportVMC(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
@@ -316,7 +316,7 @@ bool FF7Save::Export_VMC(const QString &fileName)
     setType("MC");
   }
   fix_vmc_header();
-  if(SaveFile(fileName))
+  if(saveFile(fileName))
   {
       setType(prev_type);
       return true;
@@ -327,7 +327,7 @@ bool FF7Save::Export_VMC(const QString &fileName)
       return false;
   }
 }
-bool FF7Save::Export_VGS(const QString &fileName)
+bool FF7Save::exportVGS(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
@@ -344,7 +344,7 @@ bool FF7Save::Export_VGS(const QString &fileName)
     file_header_vgs[12] =0x01;
   }
   fix_vmc_header();
-  if(SaveFile(fileName))
+  if(saveFile(fileName))
   {
       setType(prev_type);
       return true;
@@ -355,7 +355,7 @@ bool FF7Save::Export_VGS(const QString &fileName)
       return false;
   }
 }
-bool FF7Save::Export_DEX(const QString &fileName)
+bool FF7Save::exportDEX(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
@@ -383,7 +383,7 @@ bool FF7Save::Export_DEX(const QString &fileName)
     file_header_dex[38]=0xFF;
   }
   fix_vmc_header();
-  if(SaveFile(fileName))
+  if(saveFile(fileName))
   {
       setType(prev_type);
       return true;
@@ -394,7 +394,7 @@ bool FF7Save::Export_DEX(const QString &fileName)
       return false;
   }
 }
-void FF7Save::Import_PSX(int s,const QString &fileName)
+void FF7Save::importPSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return;}
     else
@@ -417,12 +417,12 @@ void FF7Save::Import_PSX(int s,const QString &fileName)
                 setRegion(s,string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8));
             }
             else {setRegion(s,"");}
-            FileModified(true,s);
+            setFileModified(true,s);
          }
          else{return;}
      }
 }
-void FF7Save::Import_PSV(int s,const QString &fileName)
+void FF7Save::importPSV(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return;}
     else
@@ -438,12 +438,12 @@ void FF7Save::Import_PSV(int s,const QString &fileName)
             temp = ff7file.mid(index,0x10f4);
             memcpy(&slot[s],temp,0x10f4);
             setRegion(s,QString(ff7file.mid(0x64,19)));
-            FileModified(true,s);
+            setFileModified(true,s);
         }//Parse slot data....
         else{return;}
     }
 }
-void FF7Save::clearslot(int rmslot)
+void FF7Save::clearSlot(int rmslot)
 {
     if(isSlotEmpty(rmslot)){return;}
     QByteArray temp;
@@ -465,10 +465,10 @@ void FF7Save::clearslot(int rmslot)
         temp[9]=0xFF;
         temp[0x7F]=0xA0;
         memcpy(&file_headerp[index],temp,128);
-        FileModified(true,rmslot);
+        setFileModified(true,rmslot);
     }
 }
-bool FF7Save::exportChar(int s,int char_num,QString fileName)
+bool FF7Save::exportCharacter(int s,int char_num,QString fileName)
 {
     if (!fileName.isEmpty())
     {
@@ -480,7 +480,7 @@ bool FF7Save::exportChar(int s,int char_num,QString fileName)
     }
     return false;
 }
-void FF7Save::importChar(int s,int char_num,QByteArray new_char){memcpy(&slot[s].chars[char_num],new_char.data(),132);FileModified(true,s);}
+void FF7Save::importCharacter(int s,int char_num,QByteArray new_char){memcpy(&slot[s].chars[char_num],new_char.data(),132);setFileModified(true,s);}
 
 void FF7Save::fix_sum(const QString &fileName)
 {
@@ -640,7 +640,7 @@ void FF7Save::setItem(int s,int item_num,quint16 rawitem)
     //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
     //Above Is to Check for and fix, since im sure no one wants to lose all their items.
     slot[s].items[item_num]=rawitem;
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
 {
@@ -648,7 +648,7 @@ void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
     //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
     //Above Is to Check for and fix, since im sure no one wants to lose all their items.
     slot[s].items[item_num]= itemEncode(new_id,new_qty);
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 quint16 FF7Save::item(int s,int item_num){return slot[s].items[item_num];}
@@ -658,7 +658,7 @@ QList<quint16> FF7Save::items(int s)
     for (int i=0;i<320;i++){item_list.append(slot[s].items[i]);}
     return item_list;
 }
-void FF7Save::setItems(int s,QList<quint16> items){for(int i=0;i<320;i++){slot[s].items[i]= items.at(i);}FileModified(true,s);}
+void FF7Save::setItems(int s,QList<quint16> items){for(int i=0;i<320;i++){slot[s].items[i]= items.at(i);}setFileModified(true,s);}
 
 quint16 FF7Save::itemId(quint16 rawitem)
 {
@@ -1086,10 +1086,10 @@ void FF7Save::setRegion(int s ,QString new_region)
         }
     }
     else{SG_Region_String[s]=new_region;}
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::CopySlot(int s){buffer_slot=slot[s]; buffer_region = SG_Region_String[s];}
-void FF7Save::PasteSlot(int s)
+void FF7Save::copySlot(int s){buffer_slot=slot[s]; buffer_region = SG_Region_String[s];}
+void FF7Save::pasteSlot(int s)
 {
     slot[s]=buffer_slot;
     //memcpy(&slot[s],&buffer_slot,0x10f4);
@@ -1115,7 +1115,7 @@ void FF7Save::PasteSlot(int s)
     }
     if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){fix_vmc_header();}
 
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 quint8 FF7Save::psx_block_type(int s)
@@ -1239,14 +1239,14 @@ bool FF7Save::isJPN(int s)
     if(region(s).contains("00700") || region(s).contains("01057")){return true;}
     else{return false;}
 }
-int FF7Save::len_file(void){return SG_SIZE;}
-int FF7Save::len_file_header(void){return SG_HEADER;}//Return File Header length
-int FF7Save::len_file_footer(void){return SG_FOOTER;}//Return File Footer length
-int FF7Save::len_core_save(void){return SG_DATA_SIZE;}//Return Slot length (data portion)
-int FF7Save::len_slot_header(void){return SG_SLOT_HEADER;}//Return slot header length
-int FF7Save::len_slot_footer(void){return SG_SLOT_FOOTER;}//Return slot footer length
-int FF7Save::len_slot(void){return SG_SLOT_SIZE;}//Return Slot length
-int FF7Save::number_slots(void){return SG_SLOT_NUMBER;}//Return number of slots in the file_footer_dex
+int FF7Save::lenFile(void){return SG_SIZE;}
+int FF7Save::lenFileHeader(void){return SG_HEADER;}//Return File Header length
+int FF7Save::lenFileFooter(void){return SG_FOOTER;}//Return File Footer length
+int FF7Save::lenCoreSave(void){return SG_DATA_SIZE;}//Return Slot length (data portion)
+int FF7Save::lenSlotHeader(void){return SG_SLOT_HEADER;}//Return slot header length
+int FF7Save::lenSlotFooter(void){return SG_SLOT_FOOTER;}//Return slot footer length
+int FF7Save::lenSlot(void){return SG_SLOT_SIZE;}//Return Slot length
+int FF7Save::numberOfSlots(void){return SG_SLOT_NUMBER;}//Return number of slots in the file_footer_dex
 QString FF7Save::type(void){return SG_TYPE;}// Returns the file type loaded.
 
 void FF7Save::setType(QString type)
@@ -1350,7 +1350,7 @@ void FF7Save::setType(QString type)
         file_footerp     = file_footer_dex;          //pointer to dex file footer
     }
 }
-void FF7Save::New_Game(int s,QString fileName)
+void FF7Save::newGame(int s,QString fileName)
 {
     if(fileName.isEmpty() || fileName.isNull())
     {
@@ -1382,10 +1382,10 @@ void FF7Save::New_Game(int s,QString fileName)
         setCharName(s,8,QString::fromUtf8("シド"));
     }
     else if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");Text.init(0);}
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
-void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
+void FF7Save::newGamePlus(int s,QString CharFileName,QString fileName)
 {
     if(fileName.isEmpty() || fileName.isNull())
     {
@@ -1437,7 +1437,7 @@ void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
                     }
                 }
             outFile.append(".char");
-            exportChar(s,i,outFile);
+            exportCharacter(s,i,outFile);
 
         }
         else{memcpy(&buffer_slot.chars[i],&slot[s].chars[i],0x84);} // normal character
@@ -1465,7 +1465,7 @@ void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
     //~~ buffer now ready to be copied~
     slot[s]=buffer_slot;
     setLocation(s,QT_TRANSLATE_NOOP("FF7Save","New Game +"));
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 quint8 FF7Save::disc(int s){return slot[s].disc;}
 void FF7Save::setDisc(int s, int disc)
@@ -1498,7 +1498,7 @@ void FF7Save::setCharName(int s,int char_num,QString new_name)
     for (int i=0;i<12;i++){slot[s].chars[char_num].name[i] =0xFF;}
     QByteArray temp = Text.toFF7(new_name);
     memcpy(slot[s].chars[char_num].name,temp,temp.length());
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 QString FF7Save::descName(int s)
@@ -1516,7 +1516,7 @@ void FF7Save::setDescName(int s,QString new_name)
     for (int i=0;i<16;i++){slot[s].desc.name[i] =0xFF;}
     QByteArray temp = Text.toFF7(new_name);
     memcpy(slot[s].desc.name,temp,temp.length());
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 QString FF7Save::descLocation(int s)
@@ -1536,7 +1536,7 @@ void FF7Save::setDescLocation(int s, QString new_desc_location)
     for (int i=0;i<32;i++){slot[s].desc.location[i] =0xFF;}
     QByteArray temp = Text.toFF7(new_desc_location);
     memcpy(slot[s].desc.location,temp,temp.length());
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 quint8 FF7Save::descLevel(int s){return slot[s].desc.level;}
@@ -1549,17 +1549,17 @@ quint16 FF7Save::descMaxHP(int s){return slot[s].desc.maxHP;}
 quint16 FF7Save::descCurMP(int s){return slot[s].desc.curMP;}
 quint16 FF7Save::descMaxMP(int s){return slot[s].desc.maxMP;}
 quint32 FF7Save::descGil(int s){return slot[s].desc.gil;}
-void FF7Save::setDescLevel(int s,int new_level){slot[s].desc.level=new_level;FileModified(true,s);}
+void FF7Save::setDescLevel(int s,int new_level){slot[s].desc.level=new_level;setFileModified(true,s);}
 
-void FF7Save::setDescParty(int s,int char_num,quint8 new_id){slot[s].desc.party[char_num]=new_id;FileModified(true,s);}
-void FF7Save::setDescCurHP(int s,quint16 new_curHP){slot[s].desc.curHP=new_curHP;FileModified(true,s);}
-void FF7Save::setDescMaxHP(int s,quint16 new_maxHP){slot[s].desc.maxHP=new_maxHP;FileModified(true,s);}
-void FF7Save::setDescCurMP(int s,quint16 new_curMP){slot[s].desc.curMP=new_curMP;FileModified(true,s);}
-void FF7Save::setDescMaxMP(int s,quint16 new_maxMP){slot[s].desc.maxMP=new_maxMP;FileModified(true,s);}
-void FF7Save::setDescGil(int s,quint32 new_gil){slot[s].desc.gil=new_gil;FileModified(true,s);}
+void FF7Save::setDescParty(int s,int char_num,quint8 new_id){slot[s].desc.party[char_num]=new_id;setFileModified(true,s);}
+void FF7Save::setDescCurHP(int s,quint16 new_curHP){slot[s].desc.curHP=new_curHP;setFileModified(true,s);}
+void FF7Save::setDescMaxHP(int s,quint16 new_maxHP){slot[s].desc.maxHP=new_maxHP;setFileModified(true,s);}
+void FF7Save::setDescCurMP(int s,quint16 new_curMP){slot[s].desc.curMP=new_curMP;setFileModified(true,s);}
+void FF7Save::setDescMaxMP(int s,quint16 new_maxMP){slot[s].desc.maxMP=new_maxMP;setFileModified(true,s);}
+void FF7Save::setDescGil(int s,quint32 new_gil){slot[s].desc.gil=new_gil;setFileModified(true,s);}
 
 quint32 FF7Save::descTime(int s){return slot[s].desc.time;}
-void FF7Save::setDescTime(int s,quint32 new_time){slot[s].desc.time=new_time;FileModified(true,s);}
+void FF7Save::setDescTime(int s,quint32 new_time){slot[s].desc.time=new_time;setFileModified(true,s);}
 
 quint32 FF7Save::time(int s) {return slot[s].time;}
 
@@ -1567,7 +1567,7 @@ void FF7Save::setTime(int s,quint32 new_time)
 {
     slot[s].time=new_time;
     setDescTime(s,new_time);//set Desc also.
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 QString FF7Save::location(int s)
@@ -1589,7 +1589,7 @@ void FF7Save::setLocation(int s, QString new_location)
     memcpy(slot[s].location,temp,temp.length());
     //and the description.
     setDescLocation(s,new_location);
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 quint8 FF7Save::love(int s,bool battle, FF7Save::LOVER who)
 {
@@ -1659,25 +1659,25 @@ void FF7Save::setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool isEmpty)
         case FF7Save::CAVE_MIME:
             if(isEmpty){slot[s].materiacaves |= (1<<0);}
             else{slot[s].materiacaves &= ~(1<<0);}
-            FileModified(true,s);
+            setFileModified(true,s);
             break;
 
         case FF7Save::CAVE_HPMP:
             if(isEmpty){slot[s].materiacaves |= (1<<1);}
             else{slot[s].materiacaves &= ~(1<<1);}
-            FileModified(true,s);
+            setFileModified(true,s);
             break;
 
         case FF7Save::CAVE_QUADMAGIC:
             if(isEmpty){slot[s].materiacaves |= (1<<2);}
             else{slot[s].materiacaves &= ~(1<<2);}
-            FileModified(true,s);
+            setFileModified(true,s);
             break;
 
         case FF7Save::CAVE_KOTR:
             if(isEmpty){slot[s].materiacaves |= (1<<3);}
             else{slot[s].materiacaves &= ~(1<<3);}
-            FileModified(true,s);
+            setFileModified(true,s);
             break;
 
         default: break;
@@ -1719,7 +1719,7 @@ void FF7Save::setChocoName(int s,int choco_num,QString new_name)
     QByteArray temp = Text.toFF7(new_name);
     for (int i=0;i<6;i++){slot[s].chocobonames[choco_num][i] =0xFF;}
     memcpy(slot[s].chocobonames[choco_num],temp,temp.length());
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 void FF7Save::setPartyMateria(int s, int mat_num, quint8 id,qint32 ap)
 {//if invalid set to 0xFF
@@ -1740,7 +1740,7 @@ void FF7Save::setPartyMateria(int s, int mat_num, quint8 id,qint32 ap)
         slot[s].materias[mat_num].ap[1]=0xFF;
         slot[s].materias[mat_num].ap[2]=0xFF;
     }
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 quint8 FF7Save::partyMateriaId(int s,int mat_num){return slot[s].materias[mat_num].id;}
 qint32 FF7Save::partyMateriaAp(int s,int mat_num)
@@ -1767,7 +1767,7 @@ void FF7Save::setStolenMateria(int s, int mat_num, quint8 id,qint32 ap)
         slot[s].stolen[mat_num].ap[1]=0xFF;
         slot[s].stolen[mat_num].ap[2]=0xFF;
     }
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 quint8 FF7Save::stolenMateriaId(int s,int mat_num){return slot[s].stolen[mat_num].id;}
 
@@ -1776,41 +1776,41 @@ qint32 FF7Save::stolenMateriaAp(int s,int mat_num)
     qint32 ap_temp = slot[s].stolen[mat_num].ap[0] |(slot[s].stolen[mat_num].ap[1] << 8) | slot[s].stolen[mat_num].ap[2]<<16;
     return ap_temp;
 }
-QColor FF7Save::Dialog_UL(int s){return QColor(slot[s].colors[0][0],slot[s].colors[0][1],slot[s].colors[0][2]);}
-QColor FF7Save::Dialog_UR(int s){return QColor(slot[s].colors[1][0],slot[s].colors[1][1],slot[s].colors[1][2]);}
-QColor FF7Save::Dialog_LL(int s){return QColor(slot[s].colors[2][0],slot[s].colors[2][1],slot[s].colors[2][2]);}
-QColor FF7Save::Dialog_LR(int s){return QColor(slot[s].colors[3][0],slot[s].colors[3][1],slot[s].colors[3][2]);}
+QColor FF7Save::dialogColorUL(int s){return QColor(slot[s].colors[0][0],slot[s].colors[0][1],slot[s].colors[0][2]);}
+QColor FF7Save::dialogColorUR(int s){return QColor(slot[s].colors[1][0],slot[s].colors[1][1],slot[s].colors[1][2]);}
+QColor FF7Save::dialogColorLL(int s){return QColor(slot[s].colors[2][0],slot[s].colors[2][1],slot[s].colors[2][2]);}
+QColor FF7Save::dialogColorLR(int s){return QColor(slot[s].colors[3][0],slot[s].colors[3][1],slot[s].colors[3][2]);}
 
-void FF7Save::setDialog_UL(int s, QColor color)
+void FF7Save::setDialogColorUL(int s, QColor color)
 {
     slot[s].colors[0][0]=color.red();
     slot[s].colors[0][1]=color.green();
     slot[s].colors[0][2]= color.blue();
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::setDialog_UR(int s, QColor color)
+void FF7Save::setDialogColorUR(int s, QColor color)
 {
     slot[s].colors[1][0]=color.red();
     slot[s].colors[1][1]=color.green();
     slot[s].colors[1][2]= color.blue();
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::setDialog_LL(int s, QColor color)
+void FF7Save::setDialogColorLL(int s, QColor color)
 {
     slot[s].colors[2][0]=color.red();
     slot[s].colors[2][1]=color.green();
     slot[s].colors[2][2]= color.blue();
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::setDialog_LR(int s, QColor color)
+void FF7Save::setDialogColorLR(int s, QColor color)
 {
     slot[s].colors[3][0]=color.red();
     slot[s].colors[3][1]=color.green();
     slot[s].colors[3][2]= color.blue();
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::setChar(int s,int char_num,FF7CHAR new_char){slot[s].chars[char_num] = new_char;}
-FF7CHAR FF7Save::Char(int s,int char_num){return slot[s].chars[char_num];}
+void FF7Save::setCharacter(int s,int char_num,FF7CHAR new_char){slot[s].chars[char_num] = new_char;}
+FF7CHAR FF7Save::character(int s,int char_num){return slot[s].chars[char_num];}
 quint8 FF7Save::charID(int s,int char_num){return slot[s].chars[char_num].id;}
 quint8 FF7Save::charLevel(int s,int char_num){return slot[s].chars[char_num].level;}
 quint8 FF7Save::charStr(int s,int char_num){return slot[s].chars[char_num].strength;}
@@ -1855,46 +1855,46 @@ quint16 FF7Save::charMaxMp(int s,int char_num){return slot[s].chars[char_num].ma
 quint32 FF7Save::charCurrentExp(int s,int char_num){return slot[s].chars[char_num].exp;}
 quint32 FF7Save::charNextExp(int s,int char_num){return slot[s].chars[char_num].expNext;}
 
-void  FF7Save::setCharID(int s,int char_num,qint8 new_id){slot[s].chars[char_num].id=new_id;FileModified(true,s);}
-void  FF7Save::setCharLevel(int s,int char_num,qint8 new_level){slot[s].chars[char_num].level=new_level;FileModified(true,s);}
-void  FF7Save::setCharStr(int s,int char_num,quint8 str){slot[s].chars[char_num].strength=str;FileModified(true,s);}
-void  FF7Save::setCharVit(int s,int char_num,quint8 vit){slot[s].chars[char_num].vitality=vit;FileModified(true,s);}
-void  FF7Save::setCharMag(int s,int char_num,quint8 mag){slot[s].chars[char_num].magic=mag;FileModified(true,s);}
-void  FF7Save::setCharSpi(int s,int char_num,quint8 spi){slot[s].chars[char_num].spirit=spi;FileModified(true,s);}
-void  FF7Save::setCharDex(int s,int char_num,quint8 dex){slot[s].chars[char_num].dexterity=dex;FileModified(true,s);}
-void  FF7Save::setCharLck(int s,int char_num,quint8 lck){slot[s].chars[char_num].luck=lck;FileModified(true,s);}
-void  FF7Save::setCharStrBonus(int s,int char_num,quint8 strbonus){slot[s].chars[char_num].strength_bonus=strbonus;FileModified(true,s);}
-void  FF7Save::setCharVitBonus(int s,int char_num,quint8 vitbonus){slot[s].chars[char_num].vitality_bonus=vitbonus;FileModified(true,s);}
-void  FF7Save::setCharMagBonus(int s,int char_num,quint8 magbonus){slot[s].chars[char_num].magic_bonus=magbonus;FileModified(true,s);}
-void  FF7Save::setCharSpiBonus(int s,int char_num,quint8 spibonus){slot[s].chars[char_num].spirit_bonus=spibonus;FileModified(true,s);}
-void  FF7Save::setCharDexBonus(int s,int char_num,quint8 dexbonus){slot[s].chars[char_num].dexterity_bonus=dexbonus;FileModified(true,s);}
-void  FF7Save::setCharLckBonus(int s,int char_num,quint8 lckbonus){slot[s].chars[char_num].luck_bonus=lckbonus;FileModified(true,s);}
-void  FF7Save::setCharLimitLevel(int s,int char_num,qint8 limitlevel){slot[s].chars[char_num].limitlevel=limitlevel;FileModified(true,s);}
-void  FF7Save::setCharLimitBar(int s,int char_num,quint8 limitbar){slot[s].chars[char_num].limitbar=limitbar;FileModified(true,s);}
-void  FF7Save::setCharWeapon(int s,int char_num,quint8 weapon){slot[s].chars[char_num].weapon=weapon;FileModified(true,s);}
-void  FF7Save::setCharArmor(int s,int char_num,quint8 armor){slot[s].chars[char_num].armor=armor;FileModified(true,s);}
-void  FF7Save::setCharAccessory(int s,int char_num,quint8 accessory){slot[s].chars[char_num].accessory=accessory;FileModified(true,s);}
-void  FF7Save::setCharFlag(int s,int char_num,int flag_num,quint8 flag_value){slot[s].chars[char_num].flags[flag_num]=flag_value;FileModified(true,s);}
-void  FF7Save::setCharLimits(int s,int char_num,quint16 new_limits){slot[s].chars[char_num].limits=new_limits;FileModified(true,s);}
-void  FF7Save::setCharKills(int s,int char_num,quint16 new_level){slot[s].chars[char_num].kills=new_level;FileModified(true,s);}
+void  FF7Save::setCharID(int s,int char_num,qint8 new_id){slot[s].chars[char_num].id=new_id;setFileModified(true,s);}
+void  FF7Save::setCharLevel(int s,int char_num,qint8 new_level){slot[s].chars[char_num].level=new_level;setFileModified(true,s);}
+void  FF7Save::setCharStr(int s,int char_num,quint8 str){slot[s].chars[char_num].strength=str;setFileModified(true,s);}
+void  FF7Save::setCharVit(int s,int char_num,quint8 vit){slot[s].chars[char_num].vitality=vit;setFileModified(true,s);}
+void  FF7Save::setCharMag(int s,int char_num,quint8 mag){slot[s].chars[char_num].magic=mag;setFileModified(true,s);}
+void  FF7Save::setCharSpi(int s,int char_num,quint8 spi){slot[s].chars[char_num].spirit=spi;setFileModified(true,s);}
+void  FF7Save::setCharDex(int s,int char_num,quint8 dex){slot[s].chars[char_num].dexterity=dex;setFileModified(true,s);}
+void  FF7Save::setCharLck(int s,int char_num,quint8 lck){slot[s].chars[char_num].luck=lck;setFileModified(true,s);}
+void  FF7Save::setCharStrBonus(int s,int char_num,quint8 strbonus){slot[s].chars[char_num].strength_bonus=strbonus;setFileModified(true,s);}
+void  FF7Save::setCharVitBonus(int s,int char_num,quint8 vitbonus){slot[s].chars[char_num].vitality_bonus=vitbonus;setFileModified(true,s);}
+void  FF7Save::setCharMagBonus(int s,int char_num,quint8 magbonus){slot[s].chars[char_num].magic_bonus=magbonus;setFileModified(true,s);}
+void  FF7Save::setCharSpiBonus(int s,int char_num,quint8 spibonus){slot[s].chars[char_num].spirit_bonus=spibonus;setFileModified(true,s);}
+void  FF7Save::setCharDexBonus(int s,int char_num,quint8 dexbonus){slot[s].chars[char_num].dexterity_bonus=dexbonus;setFileModified(true,s);}
+void  FF7Save::setCharLckBonus(int s,int char_num,quint8 lckbonus){slot[s].chars[char_num].luck_bonus=lckbonus;setFileModified(true,s);}
+void  FF7Save::setCharLimitLevel(int s,int char_num,qint8 limitlevel){slot[s].chars[char_num].limitlevel=limitlevel;setFileModified(true,s);}
+void  FF7Save::setCharLimitBar(int s,int char_num,quint8 limitbar){slot[s].chars[char_num].limitbar=limitbar;setFileModified(true,s);}
+void  FF7Save::setCharWeapon(int s,int char_num,quint8 weapon){slot[s].chars[char_num].weapon=weapon;setFileModified(true,s);}
+void  FF7Save::setCharArmor(int s,int char_num,quint8 armor){slot[s].chars[char_num].armor=armor;setFileModified(true,s);}
+void  FF7Save::setCharAccessory(int s,int char_num,quint8 accessory){slot[s].chars[char_num].accessory=accessory;setFileModified(true,s);}
+void  FF7Save::setCharFlag(int s,int char_num,int flag_num,quint8 flag_value){slot[s].chars[char_num].flags[flag_num]=flag_value;setFileModified(true,s);}
+void  FF7Save::setCharLimits(int s,int char_num,quint16 new_limits){slot[s].chars[char_num].limits=new_limits;setFileModified(true,s);}
+void  FF7Save::setCharKills(int s,int char_num,quint16 new_level){slot[s].chars[char_num].kills=new_level;setFileModified(true,s);}
 void  FF7Save::setCharTimeLimitUsed(int s,int char_num,int level,quint16 timesused)
 {
     switch(level)
     {
-        case 1:slot[s].chars[char_num].timesused1=timesused;FileModified(true,s);break;
-        case 2:slot[s].chars[char_num].timesused2=timesused;FileModified(true,s);break;
-        case 3:slot[s].chars[char_num].timesused3=timesused;FileModified(true,s);break;
+        case 1:slot[s].chars[char_num].timesused1=timesused;setFileModified(true,s);break;
+        case 2:slot[s].chars[char_num].timesused2=timesused;setFileModified(true,s);break;
+        case 3:slot[s].chars[char_num].timesused3=timesused;setFileModified(true,s);break;
     }
 }
-void  FF7Save::setCharCurrentHp(int s,int char_num,quint16 curHp){slot[s].chars[char_num].curHP=curHp;FileModified(true,s);}
-void  FF7Save::setCharBaseHp(int s,int char_num,quint16 baseHp){slot[s].chars[char_num].baseHP=baseHp;FileModified(true,s);}
-void  FF7Save::setCharCurrentMp(int s,int char_num,quint16 curMp){slot[s].chars[char_num].curMP=curMp;FileModified(true,s);}
-void  FF7Save::setCharBaseMp(int s,int char_num,quint16 baseMp){slot[s].chars[char_num].baseMP=baseMp;FileModified(true,s);}
-void  FF7Save::setCharUnknown(int s,int char_num,int unknown_num,quint8 value){slot[s].chars[char_num].z_4[unknown_num]=value;FileModified(true,s);}
-void  FF7Save::setCharMaxHp(int s,int char_num,quint16 maxHp){slot[s].chars[char_num].maxHP=maxHp;FileModified(true,s);}
-void  FF7Save::setCharMaxMp(int s,int char_num,quint16 maxMp){slot[s].chars[char_num].maxMP=maxMp;FileModified(true,s);}
-void  FF7Save::setCharCurrentExp(int s,int char_num,quint32 exp){slot[s].chars[char_num].exp=exp;FileModified(true,s);}
-void  FF7Save::setCharNextExp(int s,int char_num,quint32 next){slot[s].chars[char_num].expNext=next;FileModified(true,s);}
+void  FF7Save::setCharCurrentHp(int s,int char_num,quint16 curHp){slot[s].chars[char_num].curHP=curHp;setFileModified(true,s);}
+void  FF7Save::setCharBaseHp(int s,int char_num,quint16 baseHp){slot[s].chars[char_num].baseHP=baseHp;setFileModified(true,s);}
+void  FF7Save::setCharCurrentMp(int s,int char_num,quint16 curMp){slot[s].chars[char_num].curMP=curMp;setFileModified(true,s);}
+void  FF7Save::setCharBaseMp(int s,int char_num,quint16 baseMp){slot[s].chars[char_num].baseMP=baseMp;setFileModified(true,s);}
+void  FF7Save::setCharUnknown(int s,int char_num,int unknown_num,quint8 value){slot[s].chars[char_num].z_4[unknown_num]=value;setFileModified(true,s);}
+void  FF7Save::setCharMaxHp(int s,int char_num,quint16 maxHp){slot[s].chars[char_num].maxHP=maxHp;setFileModified(true,s);}
+void  FF7Save::setCharMaxMp(int s,int char_num,quint16 maxMp){slot[s].chars[char_num].maxMP=maxMp;setFileModified(true,s);}
+void  FF7Save::setCharCurrentExp(int s,int char_num,quint32 exp){slot[s].chars[char_num].exp=exp;setFileModified(true,s);}
+void  FF7Save::setCharNextExp(int s,int char_num,quint32 next){slot[s].chars[char_num].expNext=next;setFileModified(true,s);}
 
 void FF7Save::setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap)
 {
@@ -1915,9 +1915,9 @@ void FF7Save::setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap)
         slot[s].chars[who].materias[mat_num].ap[1]=0xFF;
         slot[s].chars[who].materias[mat_num].ap[2]=0xFF;
     }
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-void FF7Save::setCharMateria(int s, int who, int mat_num, materia mat){slot[s].chars[who].materias[mat_num] = mat;FileModified(true,s);}
+void FF7Save::setCharMateria(int s, int who, int mat_num, materia mat){slot[s].chars[who].materias[mat_num] = mat;setFileModified(true,s);}
 quint8 FF7Save::charMateriaId(int s,int who,int mat_num){return slot[s].chars[who].materias[mat_num].id;}
 qint32 FF7Save::charMateriaAp(int s,int who,int mat_num)
 {
@@ -2026,135 +2026,135 @@ quint8 FF7Save::chocoPersonality(int s, int chocoSlot)
 }
 bool FF7Save::chocoCantMate(int s, int chocoSlot){return slot[s].chocomated& (1<<chocoSlot);}
 
-void FF7Save::setChocoStamina(int s,int chocoSlot,quint16 stamina){slot[s].chocostaminas[chocoSlot] = stamina;FileModified(true,s);}
+void FF7Save::setChocoStamina(int s,int chocoSlot,quint16 stamina){slot[s].chocostaminas[chocoSlot] = stamina;setFileModified(true,s);}
 void FF7Save::setChocoSpeed(int s,int chocoSlot,quint16 speed)
 {
-    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].speed = speed;FileModified(true,s);}
-    else if (chocoSlot ==4){slot[s].choco56[0].speed = speed;FileModified(true,s);}
-    else if (chocoSlot ==5){slot[s].choco56[1].speed = speed;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].speed = speed;setFileModified(true,s);}
+    else if (chocoSlot ==4){slot[s].choco56[0].speed = speed;setFileModified(true,s);}
+    else if (chocoSlot ==5){slot[s].choco56[1].speed = speed;setFileModified(true,s);}
 }
 void FF7Save::setChocoMaxSpeed(int s,int chocoSlot,quint16 maxspeed)
 {
-    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxspeed = maxspeed;FileModified(true,s);}
-    else if (chocoSlot ==4){slot[s].choco56[0].maxspeed = maxspeed;FileModified(true,s);}
-    else if (chocoSlot ==5){slot[s].choco56[1].maxspeed = maxspeed;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxspeed = maxspeed;setFileModified(true,s);}
+    else if (chocoSlot ==4){slot[s].choco56[0].maxspeed = maxspeed;setFileModified(true,s);}
+    else if (chocoSlot ==5){slot[s].choco56[1].maxspeed = maxspeed;setFileModified(true,s);}
 }
 void FF7Save::setChocoSprintSpeed(int s,int chocoSlot,quint16 sprintSpeed)
 {
-    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].sprintspd = sprintSpeed;FileModified(true,s);}
-    else if (chocoSlot ==4){slot[s].choco56[0].sprintspd = sprintSpeed;FileModified(true,s);}
-    else if (chocoSlot ==5){slot[s].choco56[1].sprintspd = sprintSpeed;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].sprintspd = sprintSpeed;setFileModified(true,s);}
+    else if (chocoSlot ==4){slot[s].choco56[0].sprintspd = sprintSpeed;setFileModified(true,s);}
+    else if (chocoSlot ==5){slot[s].choco56[1].sprintspd = sprintSpeed;setFileModified(true,s);}
 }
 void FF7Save::setChocoMaxSprintSpeed(int s,int chocoSlot,quint16 maxsprintSpeed)
 {
-    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxsprintspd = maxsprintSpeed;FileModified(true,s);}
-    else if (chocoSlot ==4){slot[s].choco56[0].maxsprintspd = maxsprintSpeed;FileModified(true,s);}
-    else if (chocoSlot ==5){slot[s].choco56[1].maxsprintspd = maxsprintSpeed;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxsprintspd = maxsprintSpeed;setFileModified(true,s);}
+    else if (chocoSlot ==4){slot[s].choco56[0].maxsprintspd = maxsprintSpeed;setFileModified(true,s);}
+    else if (chocoSlot ==5){slot[s].choco56[1].maxsprintspd = maxsprintSpeed;setFileModified(true,s);}
 }
 void FF7Save::setChocoSex(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].sex = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].sex = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].sex = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].sex = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].sex = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].sex = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoType(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].type = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].type = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].type = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].type = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].type = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].type = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoCoop(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].coop = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].coop = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].coop = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].coop = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].coop = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].coop = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoAccel(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].accel = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].accel = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].accel = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].accel = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].accel = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].accel = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoIntelligence(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].intelligence = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].intelligence = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].intelligence = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].intelligence = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].intelligence = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].intelligence = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoRaceswon(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].raceswon = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].raceswon = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].raceswon = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].raceswon = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].raceswon = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].raceswon = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoPCount(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].pcount = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].pcount = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].pcount = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].pcount = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].pcount = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].pcount = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoPersonality(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].personality = value;FileModified(true,s);}
-    else if (chocoSlot ==4){ slot[s].choco56[0].personality = value;FileModified(true,s);}
-    else if (chocoSlot ==5){ slot[s].choco56[1].personality = value;FileModified(true,s);}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].personality = value;setFileModified(true,s);}
+    else if (chocoSlot ==4){ slot[s].choco56[0].personality = value;setFileModified(true,s);}
+    else if (chocoSlot ==5){ slot[s].choco56[1].personality = value;setFileModified(true,s);}
 }
 void FF7Save::setChocoCantMate(int s,int chocoSlot,bool cantMate)
 {
     if(cantMate){slot[s].chocomated |= (1 << chocoSlot);}
     else{slot[s].chocomated &=~(1<< chocoSlot);}
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-quint32 FF7Save::Gil(int s){return slot[s].gil;}
+quint32 FF7Save::gil(int s){return slot[s].gil;}
 void FF7Save::setGil(int s,int gil)
 {
     if(gil<0){gil =0;}
     slot[s].gil = gil;
     setDescGil(s,gil);//Update Desc
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-quint16 FF7Save::Gp (int s){return slot[s].gp;}
+quint16 FF7Save::gp (int s){return slot[s].gp;}
 void FF7Save::setGp(int s,int gp)
 {
     if(gp <0){gp = 0;}
     if(gp >65535){gp = 65535;}
     slot[s].gp = gp;
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-quint16 FF7Save::Battles (int s){return slot[s].battles;}
+quint16 FF7Save::battles (int s){return slot[s].battles;}
 void FF7Save::setBattles(int s,int battles)
 {
     if(battles <0){battles = 0;}
     if(battles >65535){battles = 65535;}
     slot[s].battles = battles;
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-quint16 FF7Save::Runs (int s){return slot[s].runs;}
+quint16 FF7Save::runs (int s){return slot[s].runs;}
 void FF7Save::setRuns(int s,int runs)
 {
     if(runs <0){runs = 0;}
     if(runs >65535){runs = 65535;}
     slot[s].runs = runs;
-    FileModified(true,s);
+    setFileModified(true,s);
 }
-quint8 FF7Save::Party(int s,int pos){return slot[s].party[pos];}
+quint8 FF7Save::party(int s,int pos){return slot[s].party[pos];}
 void FF7Save::setParty(int s,int pos, int new_id)
 {
     if(pos >=0 && pos <4)
     {
         if(new_id >=0 && new_id<12){slot[s].party[pos] = new_id;}
         else{slot[s].party[pos] =0xFF;}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
-qint8 FF7Save::ChocoPen(int s, int pos){return slot[s].pennedchocos[pos];}
-void FF7Save::setChocoPen(int s, int pos, int type)
+qint8 FF7Save::chocoboPen(int s, int pos){return slot[s].pennedchocos[pos];}
+void FF7Save::setChocoboPen(int s, int pos, int type)
 {
     if(pos<5)
     {
         if(type >=0 && type <9){slot[s].pennedchocos[pos]=type;}
         else{slot[s].pennedchocos[pos]=0;}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 quint32 FF7Save::snowboardTime(int s, int course)
@@ -2190,19 +2190,19 @@ void FF7Save::setSnowboardTime(int s, int course,quint32 value)
         slot[s].SnowBegFastTime[1]=a;
         slot[s].SnowBegFastTime[2]=b;
         slot[s].SnowBegFastTime[3]=c;
-        FileModified(true,s);
+        setFileModified(true,s);
         break;
     case 1:
         slot[s].SnowExpFastTime[1]=a;
         slot[s].SnowExpFastTime[2]=b;
         slot[s].SnowExpFastTime[3]=c;
-        FileModified(true,s);
+        setFileModified(true,s);
         break;
     case 2:
         slot[s].SnowCrazyFastTime[1]=a;
         slot[s].SnowCrazyFastTime[2]=b;
         slot[s].SnowCrazyFastTime[3]=c;
-        FileModified(true,s);
+        setFileModified(true,s);
         break;
         default: break;
      }
@@ -2223,15 +2223,15 @@ void FF7Save::setSnowboardScore(int s, int course,quint8 score)
 {
     switch(course)
     {
-        case 0:  slot[s].SnowBegScore=score; FileModified(true,s);break;
-        case 1:  slot[s].SnowExpScore=score; FileModified(true,s);break;
-        case 2:  slot[s].SnowCrazyScore=score; FileModified(true,s);break;
+        case 0:  slot[s].SnowBegScore=score; setFileModified(true,s);break;
+        case 1:  slot[s].SnowExpScore=score; setFileModified(true,s);break;
+        case 2:  slot[s].SnowCrazyScore=score; setFileModified(true,s);break;
         default: break;
      }
 
 }
-quint16 FF7Save::BikeHighScore(int s){return slot[s].BikeHighScore;}
-void FF7Save::setBikeHighScore(int s,quint16 score){slot[s].BikeHighScore = score;FileModified(true,s);}
+quint16 FF7Save::bikeHighScore(int s){return slot[s].BikeHighScore;}
+void FF7Save::setBikeHighScore(int s,quint16 score){slot[s].BikeHighScore = score;setFileModified(true,s);}
 quint16 FF7Save::battlePoints(int s){return (slot[s].z_20[4] | (slot[s].z_20[5] << 8));}
 void FF7Save::setBattlePoints(int s,quint16 bp)
 {
@@ -2239,7 +2239,7 @@ void FF7Save::setBattlePoints(int s,quint16 bp)
     int b = (bp &0xFF00) >>8;
     slot[s].z_20[4]=a;
     slot[s].z_20[5]=b;
-    FileModified(true,s);
+    setFileModified(true,s);
 }
 
 QString FF7Save::md5sum(QString fileName, QString UserID)
@@ -2258,13 +2258,13 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
     md5.addData(ff7file);
     return md5.result().toHex().toLower();
 }
-void FF7Save::FileModified(bool changed,int s)
+void FF7Save::setFileModified(bool changed,int s)
 {
     fileChanged=changed;
     if(changed){slotChanged[s]=true;}
     else{for(int i=0;i<15;i++){slotChanged[i]=false;}}
 }
-QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath, QString UserID)
+QVector< SubContainer > FF7Save::parseXML(QString fileName, QString metadataPath, QString UserID)
 {
     //typedef QVector< QString > SubContainer;
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
@@ -2306,7 +2306,7 @@ QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath
     return vector;
 }
 
-QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID)
+QVector< SubContainer > FF7Save::createMetadata(QString fileName, QString UserID)
 {
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
     QString Md5 = md5sum(fileName,UserID);
@@ -2326,7 +2326,7 @@ QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID
     }
     return vector;
 }
-bool FF7Save::FixMetaData(QString fileName,QString OutPath,QString UserID)
+bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
 {
     QString UserId;//user id is not global for now
     if(fileName==QString("")){fileName=filename;}
@@ -2338,19 +2338,19 @@ bool FF7Save::FixMetaData(QString fileName,QString OutPath,QString UserID)
     QFile Metadata(metadataPath);
     if(!Metadata.exists() && OutPath == ""){return 0;}
 
-    //is a New PC SaveFile then
+    //is a New PC saveFile then
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
     if(Metadata.exists())
     {//get our user id
         Path.remove(0,Path.lastIndexOf("_")+1);
         Path.chop(Path.length()-Path.lastIndexOf("/"));
         UserId = Path;
-        vector = parsexml(fileName, metadataPath, UserID);
+        vector = parseXML(fileName, metadataPath, UserID);
     }
     else
     {
         UserId = UserID;
-        vector = CreateMetadata(fileName, UserID);
+        vector = createMetadata(fileName, UserID);
     }
 
     QFile file3(metadataPath);
@@ -2415,7 +2415,7 @@ bool FF7Save::setSlotFF7Data(int s,FF7SLOT data)
     return true;
 }
 
-QByteArray FF7Save::UnknownVar(int s,int z)
+QByteArray FF7Save::unknown(int s,int z)
 {
     if(s<0 || s>14){return QByteArray(0x00);}
     QByteArray temp;
@@ -2467,7 +2467,7 @@ QByteArray FF7Save::UnknownVar(int s,int z)
     return temp;
 }
 
-bool FF7Save::setUnknownVar(int s,int z,QByteArray data)
+bool FF7Save::setUnknown(int s,int z,QByteArray data)
 {
     if(s<0 || s>14){return false;}
     bool result;
@@ -2610,7 +2610,7 @@ void FF7Save::setSoundMode(int s,int mode)
             case SOUND_STEREO: slot[s].options |= (1<<0);   break;
             default: slot[s].options &= ~(1<<0) ; break;
         }
-        FileModified(true,s);
+        setFileModified(true,s);
      }
 }
 void FF7Save::setSoundMode(int s,bool mode)
@@ -2619,7 +2619,7 @@ void FF7Save::setSoundMode(int s,bool mode)
     {
         if(mode){slot[s].options |= (1<<0);}
         else{slot[s].options &=~(1<<0);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
@@ -2634,7 +2634,7 @@ void FF7Save::setControlMode(int s, int mode)
             case CONTROL_CUSTOM: slot[s].options |= (1<<2);   break;
             default: slot[s].options &= ~(1<<2) ; break;
         }
-        FileModified(true,s);
+        setFileModified(true,s);
      }
 }
 
@@ -2644,7 +2644,7 @@ void FF7Save::setControlMode(int s, bool mode)
     {
         if(mode){slot[s].options |= (1<<2);}
         else{slot[s].options &=~(1<<2);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 bool FF7Save::cursorMode(int s){return (slot[s].options&(1<<4));}
@@ -2659,7 +2659,7 @@ void FF7Save::setCursorMode(int s, int mode)
             case CURSOR_MEMORY: slot[s].options |= (1<<4);   break;
             default: slot[s].options &= ~(1<<2) ; break;
         }
-        FileModified(true,s);
+        setFileModified(true,s);
      }
 }
 void FF7Save::setCursorMode(int s,  bool mode)
@@ -2668,7 +2668,7 @@ void FF7Save::setCursorMode(int s,  bool mode)
     {
         if(mode){slot[s].options |= (1<<4);}
         else{slot[s].options &=~(1<<4);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 int FF7Save::atbMode(int s)
@@ -2689,7 +2689,7 @@ void FF7Save::setAtbMode(int s, int mode)
             case ATB_WAIT: slot[s].options &= ~(1<<6); slot[s].options |= (1<<7); break;
             default:slot[s].options &=~(1<<6); slot[s].options&= ~(1<<7); break;
         };
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 bool FF7Save::cameraMode(int s){return (slot[s].options&(1<<8));}
@@ -2703,7 +2703,7 @@ void FF7Save::setCameraMode(int s, int mode)
             case CAMERA_AUTO: slot[s].options &= ~(1<<8); break;
             case CAMERA_FIXED: slot[s].options |= (1<<8); break;
          }
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 void FF7Save::setCameraMode(int s, bool mode)
@@ -2712,7 +2712,7 @@ void FF7Save::setCameraMode(int s, bool mode)
     {
         if(mode){slot[s].options |= (1<<8);}
         else{slot[s].options &=~(1<<8);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 int FF7Save::magicOrder(int s)
@@ -2737,7 +2737,7 @@ void FF7Save::setMagicOrder(int s, int order)
         case MAGIC_IRA: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
         case MAGIC_IAR: slot[s].options |=(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
         default: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options &= ~(1<<12); break;
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
@@ -2749,7 +2749,7 @@ void FF7Save::setBattleHelp(int s, bool shown)
     {
         if(shown){slot[s].options |=(1<<14);}
         else{slot[s].options &= ~(1<<14);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
@@ -2760,7 +2760,7 @@ void FF7Save::setBattleSpeed(int s, int speed)
     {
         if(speed<0 || speed>255){speed=0;}
         else{slot[s].battlespeed=speed;}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
@@ -2771,28 +2771,28 @@ void FF7Save::setMessageSpeed(int s, int speed)
     {
         if(speed<0 || speed>255){speed=0;}
         else{slot[s].fieldmspeed=speed;}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
-int FF7Save::battleMSpeed(int s){return slot[s].battlemspeed;}
-void FF7Save::setBattleMSpeed(int s, int speed)
+int FF7Save::battleMessageSpeed(int s){return slot[s].battlemspeed;}
+void FF7Save::setBattleMessageSpeed(int s, int speed)
 {
     if(speed != slot[s].battlemspeed)
     {
         if(speed<0 || speed>255){speed=0;}
         else{slot[s].battlemspeed=speed;}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 bool FF7Save::fieldHelp(int s){return ((slot[s].field_help)&(1<<0));}
-void FF7Save::setfieldHelp(int s, bool shown)
+void FF7Save::setFieldHelp(int s, bool shown)
 {
     if(!(shown && fieldHelp(s)))
     {
         if(shown){slot[s].field_help |= (1<<0);}
         else{slot[s].field_help &= ~(1<<0);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 bool FF7Save::battleTargets(int s){return ((slot[s].tut_sub)&(1<<6));}
@@ -2802,7 +2802,7 @@ void FF7Save::setBattleTargets(int s, bool shown)
     {
         if(shown){slot[s].tut_sub |= (1<<6);}
         else{slot[s].tut_sub &= ~(1<<6);}
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 
@@ -2812,7 +2812,7 @@ void FF7Save::setOptions(int s, int opt)
     if(opt != options(s))
     {
         slot[s].options= opt;
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 QByteArray FF7Save::controllerMapping(int s)
@@ -2829,7 +2829,7 @@ void FF7Save::setControllerMapping(int s,QByteArray map)
     if(map != controllerMapping(s))
     {
         memcpy(&slot[s].controller_map,map,16);
-        FileModified(true,s);
+        setFileModified(true,s);
     }
 }
 void FF7Save::setControllerMapping(int s, int action,  int button)
@@ -2840,7 +2840,7 @@ void FF7Save::setControllerMapping(int s, int action,  int button)
         if(slot[s].controller_map[action] != button)
         {
             slot[s].controller_map[action]= button;
-            FileModified(true,s);
+            setFileModified(true,s);
         }
     }
 }

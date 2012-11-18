@@ -123,7 +123,7 @@ void errbox::on_btn_export_clicked()
     if(fileName.isEmpty()){return;}
     else
     {
-        if(ff7->Export_PSX(s,fileName))
+        if(ff7->exportPSX(s,fileName))
         {
             QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
             this->done(3);

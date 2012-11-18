@@ -235,7 +235,7 @@ void MetadataCreator::on_btnSave00_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save00"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(0,temp); lineSave00->setText(InFiles.at(0));}
+    if(ff7->loadFile(temp)){InFiles.replace(0,temp); lineSave00->setText(InFiles.at(0));}
     else{lineSave00->clear();}
     load=false;
 }
@@ -245,7 +245,7 @@ void MetadataCreator::on_btnSave01_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save01"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(1,temp); lineSave01->setText(InFiles.at(1));}
+    if(ff7->loadFile(temp)){InFiles.replace(1,temp); lineSave01->setText(InFiles.at(1));}
     else{lineSave01->clear();}
     load=false;
 }
@@ -255,7 +255,7 @@ void MetadataCreator::on_btnSave02_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save02"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(2,temp); lineSave02->setText(InFiles.at(2));}
+    if(ff7->loadFile(temp)){InFiles.replace(2,temp); lineSave02->setText(InFiles.at(2));}
     else{lineSave02->clear();}
     load=false;
 }
@@ -265,7 +265,7 @@ void MetadataCreator::on_btnSave03_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save03"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(3,temp); lineSave03->setText(InFiles.at(3));}
+    if(ff7->loadFile(temp)){InFiles.replace(3,temp); lineSave03->setText(InFiles.at(3));}
     else{lineSave03->clear();}
     load=false;
 }
@@ -275,7 +275,7 @@ void MetadataCreator::on_btnSave04_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save04"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(4,temp); lineSave04->setText(InFiles.at(4));}
+    if(ff7->loadFile(temp)){InFiles.replace(4,temp); lineSave04->setText(InFiles.at(4));}
     else{lineSave04->clear();}
     load=false;
 }
@@ -285,7 +285,7 @@ void MetadataCreator::on_btnSave05_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save05"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(5,temp); lineSave05->setText(InFiles.at(5));}
+    if(ff7->loadFile(temp)){InFiles.replace(5,temp); lineSave05->setText(InFiles.at(5));}
     else{lineSave05->clear();}
     load=false;
 }
@@ -295,7 +295,7 @@ void MetadataCreator::on_btnSave06_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save06"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(6,temp); lineSave06->setText(InFiles.at(6));}
+    if(ff7->loadFile(temp)){InFiles.replace(6,temp); lineSave06->setText(InFiles.at(6));}
     else{lineSave06->clear();}
     load=false;
 }
@@ -305,7 +305,7 @@ void MetadataCreator::on_btnSave07_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save07"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(7,temp);lineSave07->setText(InFiles.at(7));}
+    if(ff7->loadFile(temp)){InFiles.replace(7,temp);lineSave07->setText(InFiles.at(7));}
      else{lineSave07->clear();}
     load=false;
 }
@@ -315,7 +315,7 @@ void MetadataCreator::on_btnSave08_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save08"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(8,temp); lineSave08->setText(InFiles.at(8));}
+    if(ff7->loadFile(temp)){InFiles.replace(8,temp); lineSave08->setText(InFiles.at(8));}
     else{lineSave08->clear();}
     load=false;
 }
@@ -325,7 +325,7 @@ void MetadataCreator::on_btnSave09_clicked()
 {
     load = true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A File To Use As Save09"),QDir::homePath());
-    if(ff7->LoadFile(temp)){InFiles.replace(9,temp); lineSave09->setText(InFiles.at(9));}
+    if(ff7->loadFile(temp)){InFiles.replace(9,temp); lineSave09->setText(InFiles.at(9));}
     else{lineSave09->clear();}
     load=false;
 }
@@ -342,12 +342,12 @@ void MetadataCreator::on_buttonBox_accepted()
             {//If we find the file put its path in InFiles
                 InFiles.replace(i,OutFile);
             }
-            else{ff7->FixMetaData(OutFile,OutPath,lineUserID->text()); continue;}//empty and not found
+            else{ff7->fixMetaData(OutFile,OutPath,lineUserID->text()); continue;}//empty and not found
         }
-        if(!ff7->LoadFile(InFiles.at(i))){return;}
-        if(ff7->type()!="PC"){ff7->Export_PC(OutFile);}
-        else{ff7->SaveFile(OutFile);}
-        ff7->FixMetaData(OutFile,OutPath,lineUserID->text());
+        if(!ff7->loadFile(InFiles.at(i))){return;}
+        if(ff7->type()!="PC"){ff7->exportPC(OutFile);}
+        else{ff7->saveFile(OutFile);}
+        ff7->fixMetaData(OutFile,OutPath,lineUserID->text());
     }
 
     QString achevement(QString("%1/achievement.dat").arg(OutPath));

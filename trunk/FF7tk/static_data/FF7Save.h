@@ -29,7 +29,7 @@
 class FF7Save{
 
 public:
-    enum  LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
+    enum LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
     enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
     //Options Enums
     enum SOUNDMODE{SOUND_MONO,SOUND_STEREO};
@@ -53,13 +53,17 @@ public:
         BTN_UP,BTN_DOWN,BTN_LEFT,BTN_RIGHT
     };
     enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, BLOCK_MAIN=0x51,BLOCK_DELETED_MAIN=0xA1,BLOCK_MIDLINK=0x52,BLOCK_DELETED_MIDLINK=0xA2,BLOCK_ENDLINK=0x53,BLOCK_DELETED_ENDLINK=0xA3};
-    QByteArray slotHeader(int s);
-    QByteArray slotFooter(int s);
-    QByteArray slotPsxRawData(int s);
 
+
+    QByteArray slotHeader(int s);
     bool setSlotHeader(int s,QByteArray data);
+
+    QByteArray slotFooter(int s);
     bool setSlotFooter(int s,QByteArray data);
+
+    QByteArray slotPsxRawData(int s);
     bool setSlotPsxRawData(int s,QByteArray data);
+
 
     QByteArray controllerMapping(int s);
     quint8 controllerMapping(int s, int action);
@@ -69,12 +73,15 @@ public:
 
     quint16 options(int s);
     void setOptions(int s, int opt);
+
     bool soundMode(int s);
     void setSoundMode(int s, int mode);
     void setSoundMode(int s, bool mode);
+
     bool controlMode(int s);
     void setControlMode(int s, int mode);
     void setControlMode(int s, bool mode);
+
     bool cursorMode(int s);
     void setCursorMode(int s, int mode);
     void setCursorMode(int s, bool mode);
@@ -89,36 +96,38 @@ public:
     void setBattleHelp(int s, bool shown);
     int  battleSpeed(int s);
     void setBattleSpeed(int s,int speed);
-    int battleMSpeed(int s);
-    void setBattleMSpeed(int s, int speed);
+    int battleMessageSpeed(int s);
+    void setBattleMessageSpeed(int s, int speed);
     int messageSpeed(int s);
     void setMessageSpeed(int s, int speed);
     bool fieldHelp(int s);
-    void setfieldHelp(int s, bool shown);
+    void setFieldHelp(int s, bool shown);
     bool battleTargets(int s);
     void setBattleTargets(int s, bool shown);
+
+
   //File Members
-  bool LoadFile(const QString &fileName);
-  bool SaveFile(const QString &fileName);
-  bool Export_PC(const QString &fileName);
-  bool Export_PSX(int s,const QString &fileName);
-  bool Export_VMC(const QString &fileName);
-  bool Export_DEX(const QString &fileName);
-  bool Export_VGS(const QString &fileName);
-  void Import_PSX(int s,const QString &fileName);
-  void Import_PSV(int s,const QString &fileName);
-  void clearslot(int s);
-  void CopySlot(int s);
-  void PasteSlot(int s);
-  void New_Game(int s,QString fileName=""); //new game in slot s (over load default w/ fileName must be RAW PSX)
-  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX
-  bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
-  void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
+  bool loadFile(const QString &fileName);
+  bool saveFile(const QString &fileName);
+  bool exportPC(const QString &fileName);
+  bool exportPSX(int s,const QString &fileName);
+  bool exportVMC(const QString &fileName);
+  bool exportDEX(const QString &fileName);
+  bool exportVGS(const QString &fileName);
+  void importPSX(int s,const QString &fileName);
+  void importPSV(int s,const QString &fileName);
+  void clearSlot(int s);
+  void copySlot(int s);
+  void pasteSlot(int s);
+  void newGame(int s,QString fileName=""); //new game in slot s (over load default w/ fileName must be RAW PSX)
+  void newGamePlus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX
+  bool exportCharacter(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
+  void importCharacter(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   typedef QVector< QString > SubContainer;
-  QVector< SubContainer >  parsexml(QString fileName,QString metadataPath,QString UserID);
-  QVector< SubContainer >  CreateMetadata(QString fileName, QString UserID);
+  QVector< SubContainer >  parseXML(QString fileName,QString metadataPath,QString UserID);
+  QVector< SubContainer >  createMetadata(QString fileName, QString UserID);
   //Set/Get Data Parts.
-  bool FixMetaData(QString fileName="",QString OutPath="",QString UserID="");
+  bool fixMetaData(QString fileName="",QString OutPath="",QString UserID="");
   quint16 battlePoints(int s);
   void setBattlePoints(int s,quint16);
   quint16 item(int s,int item_num); //return raw ff7item
@@ -168,46 +177,46 @@ public:
   quint32 descGil(int s);
   void setDescGil(int s,quint32 new_gil);
   //Dialog Colors
-  QColor Dialog_UL(int s);
-  QColor Dialog_UR(int s);
-  QColor Dialog_LL(int s);
-  QColor Dialog_LR(int s);
+  QColor dialogColorUL(int s);
+  QColor dialogColorUR(int s);
+  QColor dialogColorLL(int s);
+  QColor dialogColorLR(int s);
 
-  void setDialog_UL(int s,QColor color);
-  void setDialog_UR(int s,QColor color);
-  void setDialog_LL(int s,QColor color);
-  void setDialog_LR(int s,QColor color);
+  void setDialogColorUL(int s,QColor color);
+  void setDialogColorUR(int s,QColor color);
+  void setDialogColorLL(int s,QColor color);
+  void setDialogColorLR(int s,QColor color);
   // String Functions.
   QString chocoName(int s,int choco_num);//return choco_num's name.
   void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
   QString location(int s);// return save location string
   void setLocation(int s, QString new_location);//set save location string to new_location
-  quint32 Gil(int s);
+  quint32 gil(int s);
   void setGil(int s,int gil);
-  quint16 Gp (int s);
+  quint16 gp (int s);
   void setGp(int s,int gp);
-  quint16 Battles (int s);
+  quint16 battles (int s);
   void setBattles(int s,int battles);
-  quint16 Runs (int s);
+  quint16 runs (int s);
   void setRuns(int s,int runs);
-  quint8 Party(int s,int pos);
+  quint8 party(int s,int pos);
   void setParty(int s,int pos, int new_id);
-  qint8 ChocoPen(int s, int pos);
-  void setChocoPen(int s, int pos, int type);
+  qint8 chocoboPen(int s, int pos);
+  void setChocoboPen(int s, int pos, int type);
 
   //Mini Game Stuff
   quint8 love(int s,bool battle, LOVER who);
   void setLove(int s,bool battle, LOVER who ,quint8 love);
   quint16 speedScore(int s, int rank);
   void setSpeedScore(int s,int rank,quint16 score);
-  quint16 BikeHighScore(int s);
+  quint16 bikeHighScore(int s);
   void setBikeHighScore(int s,quint16 score);
   quint32 snowboardTime(int s,int course);
   void setSnowboardTime(int s,int course,quint32 time);
   quint8 snowboardScore(int s,int course);
   void setSnowboardScore(int s,int course,quint8 score);
   //Char Releated Functions
-  FF7CHAR Char(int s,int char_num); //Return Full Char
+  FF7CHAR character(int s,int char_num); //Return Full Char
   quint8 charID(int s,int char_num);//Return Char ID
   quint8 charLevel(int s,int char_num);//Return Char Level
   quint8 charStr(int s,int char_num);
@@ -243,13 +252,13 @@ public:
   quint32 charNextExp(int s,int char_num);
   quint8 charMateriaId(int s,int who,int mat_num);
   qint32 charMateriaAp(int s,int who,int mat_num);
-  void setChar(int s,int char_num,FF7CHAR new_char);
-  void  setCharID(int s,int char_num,qint8 new_id);
-  void  setCharLevel(int s,int char_num,qint8 new_level);
-  void  setCharStr(int s,int char_num,quint8 str);
-  void  setCharVit(int s,int char_num,quint8 vit);
-  void  setCharMag(int s,int char_num,quint8 mag);
-  void  setCharSpi(int s,int char_num,quint8 spi);
+  void setCharacter(int s,int char_num,FF7CHAR new_char);
+  void setCharID(int s,int char_num,qint8 new_id);
+  void setCharLevel(int s,int char_num,qint8 new_level);
+  void setCharStr(int s,int char_num,quint8 str);
+  void setCharVit(int s,int char_num,quint8 vit);
+  void setCharMag(int s,int char_num,quint8 mag);
+  void setCharSpi(int s,int char_num,quint8 spi);
   void  setCharDex(int s,int char_num,quint8 dex);
   void  setCharLck(int s,int char_num,quint8 lck);
   void  setCharStrBonus(int s,int char_num,quint8 strbonus);
@@ -261,22 +270,22 @@ public:
   void  setCharLimitLevel(int s,int char_num,qint8 limitlevel);
   void  setCharLimitBar(int s,int char_num,quint8 limitbar);
   void setCharName(int s,int char_num,QString new_name);//write char_num 's new_name to slot s
-  void  setCharWeapon(int s,int char_num,quint8 weapon);
-  void  setCharArmor(int s,int char_num,quint8 armor);
-  void  setCharAccessory(int s,int char_num,quint8 accessory);
-  void  setCharFlag(int s,int char_num,int flag_num,quint8 flag_value);
-  void  setCharLimits(int s,int char_num,quint16 new_limits);
-  void  setCharKills(int s,int char_num,quint16 kills);
-  void  setCharTimeLimitUsed(int s,int char_num,int level,quint16 timesused);
-  void  setCharCurrentHp(int s,int char_num,quint16 curHp);
-  void  setCharBaseHp(int s,int char_num,quint16 baseHp);
-  void  setCharCurrentMp(int s,int char_num,quint16 curMp);
-  void  setCharBaseMp(int s,int char_num,quint16 baseMp);
-  void  setCharUnknown(int s,int char_num,int unknown_num,quint8 value);
-  void  setCharMaxHp(int s,int char_num,quint16 maxHp);
-  void  setCharMaxMp(int s,int char_num,quint16 maxMp);
-  void  setCharCurrentExp(int s,int char_num,quint32 exp);
-  void  setCharNextExp(int s,int char_num,quint32 next);
+  void setCharWeapon(int s,int char_num,quint8 weapon);
+  void setCharArmor(int s,int char_num,quint8 armor);
+  void setCharAccessory(int s,int char_num,quint8 accessory);
+  void setCharFlag(int s,int char_num,int flag_num,quint8 flag_value);
+  void setCharLimits(int s,int char_num,quint16 new_limits);
+  void setCharKills(int s,int char_num,quint16 kills);
+  void setCharTimeLimitUsed(int s,int char_num,int level,quint16 timesused);
+  void setCharCurrentHp(int s,int char_num,quint16 curHp);
+  void setCharBaseHp(int s,int char_num,quint16 baseHp);
+  void setCharCurrentMp(int s,int char_num,quint16 curMp);
+  void setCharBaseMp(int s,int char_num,quint16 baseMp);
+  void setCharUnknown(int s,int char_num,int unknown_num,quint8 value);
+  void setCharMaxHp(int s,int char_num,quint16 maxHp);
+  void setCharMaxMp(int s,int char_num,quint16 maxMp);
+  void setCharCurrentExp(int s,int char_num,quint32 exp);
+  void setCharNextExp(int s,int char_num,quint32 next);
   void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
   void setCharMateria(int s,int who,int mat_num,materia mat);
   //chocobo Stuff.
@@ -311,17 +320,17 @@ public:
   void setChocoCantMate(int s,int chocoSlot,bool cantMate);
   // Return File Info
 
-  int len_file(void);//Return File length.
-  int len_file_header(void);//Return File Header length
-  int len_file_footer(void);//Return File Footer length
-  int len_core_save(void);//Return Slot length (data portion)
-  int len_slot_header(void);//Return slot header length
-  int len_slot_footer(void);//Return slot footer length
-  int len_slot(void);//Return Slot length
-  int number_slots(void);//Return number of slots in the file_footer_dex
+  int lenFile(void);//Return File length.
+  int lenFileHeader(void);//Return File Header length
+  int lenFileFooter(void);//Return File Footer length
+  int lenCoreSave(void);//Return Slot length (data portion)
+  int lenSlotHeader(void);//Return slot header length
+  int lenSlotFooter(void);//Return slot footer length
+  int lenSlot(void);//Return Slot length
+  int numberOfSlots(void);//Return number of slots in the file_footer_dex
   QString fileName(void);//return loaded filename
   QString type(void);// Returns the file type loaded.
-  void FileModified(bool,int s);//file changed toggle, with slot called
+  void setFileModified(bool,int s);//file changed toggle, with slot called
   bool isFileModified(void);//has the file changed since load
   bool isSlotModified(int s);//has slot[s] changed since load.
   bool isSlotEmpty(int s);//is Slot s empty
@@ -347,8 +356,8 @@ public:
   bool setSlotFF7Data(int s, QByteArray data);
   bool setSlotFF7Data(int s, FF7SLOT data);
 
-  QByteArray UnknownVar(int s,int z);
-  bool setUnknownVar(int s,int z,QByteArray data);
+  QByteArray unknown(int s,int z);
+  bool setUnknown(int s,int z,QByteArray data);
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
