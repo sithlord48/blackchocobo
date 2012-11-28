@@ -2412,9 +2412,99 @@ bool FF7Save::setSlotFF7Data(int s,FF7SLOT data)
 {
     if(s<0 || s>14){return false;}
     slot[s] = data;
+    setFileModified(true,s);
     return true;
 }
 
+bool FF7Save::turtleParadiseFlyerSeen(int s, int flyer)
+{
+    if(s<0 || s>14){return false;}
+    else if(flyer <0 || flyer >7){return false;}
+    else{return ((slot[s].turtleflyers) &(1<<flyer));}
+}
+quint8 FF7Save::turtleParadiseFlyersSeen(int s)
+{
+    if(s<0 || s> 14){return 0;}
+    else{return slot[s].turtleflyers;}
+}
+
+void FF7Save::setTurtleParadiseFlyerSeen(int s, int flyer,bool seen)
+{
+    if(s<0 || s>14){return;}
+    else if(flyer <0 || flyer >7){return;}
+    else
+    {
+        if(seen){slot[s].turtleflyers |= (1<<flyer);}
+        else{slot[s].turtleflyers &= ~(1<<flyer);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setTurtleParadiseFlyersSeen(int s,quint8 flyersSeen)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        slot[s].turtleflyers = flyersSeen;
+        setFileModified(true,s);
+    }
+}
+bool FF7Save::itemMask1(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].itemsmask_1)& (1<<bit) );}
+}
+void FF7Save::setItemMask1(int s, int bit, bool pickedUp)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(pickedUp){slot[s].itemsmask_1 |= (1<<bit);}
+        else
+        {
+            slot[s].itemsmask_1 &= ~(1<<bit);
+            setFileModified(true,s);
+        }
+    }
+}
+QByteArray FF7Save::keyItems(int s)
+{
+    if(s<0 || s>14){return QByteArray("\x00");}
+    else
+    {
+        QByteArray temp;
+        temp.setRawData(reinterpret_cast<char *>(&slot[s].keyitems),sizeof(slot[s].keyitems));
+        return temp;
+     }
+}
+bool FF7Save::keyItem(int s, int keyItem)
+{
+    if(s<0 || s>14){return false;}
+    else if(keyItem <0 || keyItem>51){return false;}
+    else{return ((slot[s].keyitems[keyItem/8]) & (1<< (keyItem%8)));}
+}
+void FF7Save::setKeyItem(int s, int keyItem, bool pickedUp)
+{
+    if(s<0 || s>14){return ;}
+    else if(keyItem <0 || keyItem>51){return;}
+    else
+    {
+        if(pickedUp){slot[s].keyitems[keyItem/8] |= (1<< (keyItem%8));}
+        else{slot[s].keyitems[keyItem/8] &= ~(1<< (keyItem%8));}
+        setFileModified(true,s);
+    }
+
+}
+bool FF7Save::setKeyItems(int s,QByteArray data)
+{
+    if(data.size() != sizeof(slot[s].keyitems)) {return false;}
+    else
+    {
+        memcpy(&slot[s].keyitems,data,sizeof(slot[s].keyitems));
+        setFileModified(true,s);
+        return true;
+    }
+}
 QByteArray FF7Save::unknown(int s,int z)
 {
     if(s<0 || s>14){return QByteArray(0x00);}
