@@ -53,7 +53,14 @@ public:
         BTN_UP,BTN_DOWN,BTN_LEFT,BTN_RIGHT
     };
     enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, BLOCK_MAIN=0x51,BLOCK_DELETED_MAIN=0xA1,BLOCK_MIDLINK=0x52,BLOCK_DELETED_MIDLINK=0xA2,BLOCK_ENDLINK=0x53,BLOCK_DELETED_ENDLINK=0xA3};
-
+    enum KEYITEMS
+    {
+        COTTONDRESS,SATINDRESS,SILKDRESS,WIG,DYEDWIG,BLONDEWIG,GLASSTIARA,RUBYTIATA,DIAMONDTIARA,COLOGNE,FLOWERCOLOGNE,SEXYCOLOGNE,MEMBERSCARD,
+        LINGERIE,MYSTERYPANTIES,BIKINIBRIEFS,PHARMACYCOUPON,DISINFECTANT,DEODORANT,DIGESTIVE,HUGEMATERIA_CONDOR,HUGEMATERIA_COREL,HUGEMATERIA_UNDERWATER,
+        HUGEMATERIA_ROCKET,KEYTOANCIENTS,LETTERTOADAUGHTER,LETTERTOAWIFE,LUNARHARP,BASEMENTKEY,KEYTOSECTOR5,KEYCARD60,KEYCARD62,KEYCARD65,KEYCARD66,
+        KEYCARD68,MIDGARPARTS1,MIDGARPARTS2,MIDGARPARTS3,MIDGARPARTS4,MIDGARPARTS5,PHS,GOLDTICKET,KEYSTONE,LEIATHANSCALES,GLACIERMAP,COUPON_A,COUPON_B,
+        COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
+    };
 
     QByteArray slotHeader(int s);
     bool setSlotHeader(int s,QByteArray data);
@@ -358,6 +365,23 @@ public:
 
   QByteArray unknown(int s,int z);
   bool setUnknown(int s,int z,QByteArray data);
+
+
+  QByteArray keyItems(int s);
+  bool setKeyItems(int s,QByteArray data);
+
+  bool keyItem(int s, int keyItem);
+  void setKeyItem(int s, int keyItem,bool pickedUp);
+
+  bool itemMask1(int s, int bit);
+  void setItemMask1(int s, int bit, bool pickedUp);
+
+  bool turtleParadiseFlyerSeen(int s, int flyer);
+  quint8 turtleParadiseFlyersSeen(int s);
+
+  void setTurtleParadiseFlyerSeen(int s, int flyer,bool seen);
+  void setTurtleParadiseFlyersSeen(int s,quint8 flyersSeen);
+
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.

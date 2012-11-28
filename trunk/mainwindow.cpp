@@ -1474,14 +1474,14 @@ void MainWindow::itemupdate(void)
     if(ff7->unknown(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
+    ui->cb_itemmask1_1->setChecked(ff7->itemMask1(s,0));
+    ui->cb_itemmask1_2->setChecked(ff7->itemMask1(s,1));
+    ui->cb_itemmask1_3->setChecked(ff7->itemMask1(s,2));
+    ui->cb_itemmask1_4->setChecked(ff7->itemMask1(s,3));
+    ui->cb_itemmask1_5->setChecked(ff7->itemMask1(s,4));
+    ui->cb_itemmask1_6->setChecked(ff7->itemMask1(s,5));
+    ui->cb_itemmask1_7->setChecked(ff7->itemMask1(s,6));
+    ui->cb_itemmask1_8->setChecked(ff7->itemMask1(s,7));
 
     if(ff7->unknown(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
@@ -1702,9 +1702,9 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
 
 
-        for (int i=0;i<6;i++)//flyers
+        for (int i=0;i<7;i++)//flyers
         {
-            if ((1 << i) & ff7->slot[s].turtleflyers){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
+            if (ff7->turtleParadiseFlyerSeen(s,i)){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
             else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
         }
 
@@ -1730,7 +1730,7 @@ void MainWindow::guirefresh(bool newgame)
         }
         for (int i=0;i<51;i++)// key items
         {
-            if (ff7->slot[s].keyitems[i/8] & (1 << (i%8))){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
+            if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
             else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
         }
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
@@ -2313,15 +2313,12 @@ void MainWindow::on_sb_steps_valueChanged(int value){if(!load){file_modified(tru
 
 void MainWindow::on_list_flyers_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j=index.row();
-    if(ui->list_flyers->item(j)->checkState() ==Qt::Checked){ff7->slot[s].turtleflyers |= (1 << j);}
-    else{ff7->slot[s].turtleflyers &= ~(1<<j);}
+    ff7->setTurtleParadiseFlyerSeen(s,index.row(),ui->list_flyers->item(index.row())->checkState());
 }}
+
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j = index.row();
-    if (ui->list_keyitems->item(j)->checkState() == Qt::Checked){ff7->slot[s].keyitems[j/8] |= (1<<j%8);}
-    else{ff7->slot[s].keyitems[j/8] &= ~(1<<j%8);}
+    ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());
 }}
 
 // Field Items Combos
@@ -3080,53 +3077,15 @@ void MainWindow::on_cb_reg_vinny_toggled(bool checked)
     testdata_refresh();
 }}
 
-void MainWindow::on_cb_itemmask1_1_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<0);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<0);}
-}}
+void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,0,checked);}}
+void MainWindow::on_cb_itemmask1_2_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,1,checked);}}
+void MainWindow::on_cb_itemmask1_3_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,2,checked);}}
+void MainWindow::on_cb_itemmask1_4_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,3,checked);}}
+void MainWindow::on_cb_itemmask1_5_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,4,checked);}}
+void MainWindow::on_cb_itemmask1_6_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,5,checked);}}
+void MainWindow::on_cb_itemmask1_7_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,6,checked);}}
+void MainWindow::on_cb_itemmask1_8_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,7,checked);}}
 
-void MainWindow::on_cb_itemmask1_2_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<1);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<1);}
-}}
-
-void MainWindow::on_cb_itemmask1_3_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<2);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<2);}
-}}
-
-void MainWindow::on_cb_itemmask1_4_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<3);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<3);}
-}}
-
-void MainWindow::on_cb_itemmask1_5_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<4);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<4);}
-}}
-
-void MainWindow::on_cb_itemmask1_6_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<5);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<5);}
-}}
-
-void MainWindow::on_cb_itemmask1_7_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<6);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<6);}
-}}
-
-void MainWindow::on_cb_itemmask1_8_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].itemsmask_1 |= (1<<7);}
-    else{ff7->slot[s].itemsmask_1 &= ~(1<<7);}
-}}
 
 void MainWindow::on_cb_materiacave_1_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_MIME,checked);}}
 void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_HPMP,checked);}}

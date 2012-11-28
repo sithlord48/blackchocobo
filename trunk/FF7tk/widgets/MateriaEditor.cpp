@@ -348,7 +348,11 @@ void MateriaEditor::setAP(qint32 ap)
             }
         }
     }
-    else if(_id ==FF7Materia::EmptyId){frm_ap_stars->setHidden(false);}
+    else if(_id ==FF7Materia::EmptyId)
+    {
+        frm_ap_stars->setHidden(false);
+        lcd_max_ap->display("");
+    }
     else
     {//All Other Materia
         frm_ap_stars->setHidden(false);
