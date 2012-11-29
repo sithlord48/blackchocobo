@@ -3710,6 +3710,62 @@
         <source>Hotel</source>
         <translation>客室</translation>
     </message>
+    <message>
+        <source>Wilderness</source>
+        <translation>荒れ地</translation>
+    </message>
+    <message>
+        <source>Wutai, Old Man&apos;s House</source>
+        <translation>ウータイ・おじじの家</translation>
+    </message>
+    <message>
+        <source>Wutai, Cat&apos;s House</source>
+        <translation>ウータイ・ネコ屋敷</translation>
+    </message>
+    <message>
+        <source>Bar [Turtle Paradise]</source>
+        <translation>のみどころ「かめ道楽」</translation>
+    </message>
+    <message>
+        <source>Wutai, Pagoda</source>
+        <translation>ウータイ五強聖の塔</translation>
+    </message>
+    <message>
+        <source>Wutai, Main Mtn.</source>
+        <translation>ウータイ総本山</translation>
+    </message>
+    <message>
+        <source>Hidden Passage</source>
+        <translation>かくし通路</translation>
+    </message>
+    <message>
+        <source>Wutai, Godo&apos;s Pagoda</source>
+        <translation>ウータイ 五強の塔</translation>
+    </message>
+    <message>
+        <source>Wutai, Da-chao Statue</source>
+        <translation>ウータイ ダチャオ像</translation>
+    </message>
+    <message>
+        <source>Yuffie&apos;s House</source>
+        <translation>ユフィの家</translation>
+    </message>
+    <message>
+        <source>Hidden Room</source>
+        <translation>かくし部屋</translation>
+    </message>
+    <message>
+        <source>Wutai Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Temple of the Ancients</source>
+        <translation>古代種の神殿</translation>
+    </message>
+    <message>
+        <source>Woodlands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

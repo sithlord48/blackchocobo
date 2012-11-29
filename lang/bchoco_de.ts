@@ -3635,6 +3635,62 @@
         <source>Hotel</source>
         <translation>Hotel</translation>
     </message>
+    <message>
+        <source>Wilderness</source>
+        <translation>Wildnis</translation>
+    </message>
+    <message>
+        <source>Wutai, Old Man&apos;s House</source>
+        <translation>Wutai,Haus (alter Mann)</translation>
+    </message>
+    <message>
+        <source>Wutai, Cat&apos;s House</source>
+        <translation>Wutai, Katzenhaus</translation>
+    </message>
+    <message>
+        <source>Bar [Turtle Paradise]</source>
+        <translation>[Schildkrötenparadies]</translation>
+    </message>
+    <message>
+        <source>Wutai, Pagoda</source>
+        <translation>Wutai, Pagode</translation>
+    </message>
+    <message>
+        <source>Wutai, Main Mtn.</source>
+        <translation>Wutai, Hauptberg</translation>
+    </message>
+    <message>
+        <source>Hidden Passage</source>
+        <translation>Versteckter Gang</translation>
+    </message>
+    <message>
+        <source>Wutai, Godo&apos;s Pagoda</source>
+        <translation>Wutai, Godos Pagode</translation>
+    </message>
+    <message>
+        <source>Wutai, Da-chao Statue</source>
+        <translation>Wutai, Da-chao-Statue</translation>
+    </message>
+    <message>
+        <source>Yuffie&apos;s House</source>
+        <translation>Yuffies Haus</translation>
+    </message>
+    <message>
+        <source>Hidden Room</source>
+        <translation>Verborgener Raum</translation>
+    </message>
+    <message>
+        <source>Wutai Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Temple of the Ancients</source>
+        <translation>Tempel des alten Volkes</translation>
+    </message>
+    <message>
+        <source>Woodlands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
