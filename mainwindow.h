@@ -42,6 +42,8 @@
 #include "FF7tk/widgets/CharEditor.h"
 #include "FF7tk/widgets/ItemList.h"
 #include "FF7tk/widgets/MetadataCreator.h"
+#include "FF7tk/widgets/PhsListWidget.h"
+#include "FF7tk/widgets/MenuListWidget.h"
 //QHexedit
 #include "qhexedit/qhexedit.h"
 
@@ -78,6 +80,8 @@ private:
     //ITEM buffer_item; // for use later
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
+    PhsListWidget *phsList;
+    MenuListWidget *menuList;
     ItemPreview *item_preview;
     DialogPreview *dialog_preview;
     MateriaEditor *materia_editor;
@@ -298,8 +302,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
     /* Others Tab */    
-    void on_list_phs_chars_clicked(const QModelIndex &index);
-    void on_list_chars_unlocked_clicked(const QModelIndex &index);
     void on_sb_curdisc_valueChanged(int);
     void on_sb_love_yuffie_valueChanged(int);
     void on_sb_love_tifa_valueChanged(int);
@@ -398,9 +400,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_b_love_yuffie_valueChanged(int);
     void on_sb_b_love_tifa_valueChanged(int);
     void on_sb_b_love_aeris_valueChanged(int);
-
-    void on_list_menu_visible_clicked(const QModelIndex &index);
-    void on_list_menu_locked_clicked(const QModelIndex &index);
 
     void on_sb_turkschruch_valueChanged(int );
 
@@ -643,5 +642,9 @@ private slots://try to keep these in the same order as the .cpp file
     void hexEditorRefresh();
     void on_combo_hexEditor_currentIndexChanged(void);
     void hexEditorChanged(void);
+    void phsList_box_allowed_toggled(int row, bool checked);
+    void phsList_box_visible_toggled(int row, bool checked);
+    void menuList_box_locked_toggled(int row, bool checked);
+    void menuList_box_visible_toggled(int row, bool checked);
 };
 #endif // MAINWINDOW_H

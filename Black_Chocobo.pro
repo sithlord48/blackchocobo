@@ -44,7 +44,10 @@ SOURCES += main.cpp \
     qhexedit/xbytearray.cpp \
     qhexedit/qhexedit_p.cpp \
     qhexedit/qhexedit.cpp \
-    qhexedit/commands.cpp
+    qhexedit/commands.cpp \
+    FF7tk/widgets/PhsListWidget.cpp \
+    FF7tk/widgets/DoubleCheckBox.cpp \
+    FF7tk/widgets/MenuListWidget.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -74,7 +77,10 @@ HEADERS += mainwindow.h \
     qhexedit/xbytearray.h \
     qhexedit/qhexedit_p.h \
     qhexedit/qhexedit.h \
-    qhexedit/commands.h
+    qhexedit/commands.h \
+    FF7tk/widgets/PhsListWidget.h \
+    FF7tk/widgets/DoubleCheckBox.h \
+    FF7tk/widgets/MenuListWidget.h
 
 FORMS += mainwindow.ui \
     about.ui \

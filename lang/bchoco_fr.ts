@@ -3649,19 +3649,19 @@
     </message>
     <message>
         <source>Cloud</source>
-        <translation>Cloud</translation>
+        <translation type="obsolete">Cloud</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>Barret</translation>
+        <translation type="obsolete">Barret</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>Tifa</translation>
+        <translation type="obsolete">Tifa</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>Rouge XIII</translation>
+        <translation type="obsolete">Rouge XIII</translation>
     </message>
     <message>
         <source>Yuffie</source>
@@ -3669,7 +3669,7 @@
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>Cait Sith</translation>
+        <translation type="obsolete">Cait Sith</translation>
     </message>
     <message>
         <source>Vincent</source>
@@ -3677,7 +3677,7 @@
     </message>
     <message>
         <source>Cid</source>
-        <translation>Cid</translation>
+        <translation type="obsolete">Cid</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -3725,7 +3725,7 @@
     </message>
     <message>
         <source>Item</source>
-        <translation>Elément</translation>
+        <translation type="obsolete">Elément</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4065,7 +4065,7 @@
     </message>
     <message>
         <source>Allowed In PHS</source>
-        <translation>Débloqué dans le PHS</translation>
+        <translation type="obsolete">Débloqué dans le PHS</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -4121,7 +4121,7 @@
     </message>
     <message>
         <source>Aerith</source>
-        <translation>Aeris</translation>
+        <translation type="obsolete">Aeris</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -4129,7 +4129,7 @@
     </message>
     <message>
         <source>Magic</source>
-        <translation>Magie</translation>
+        <translation type="obsolete">Magie</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -4439,43 +4439,43 @@
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation>Visible dans le PHS</translation>
+        <translation type="obsolete">Visible dans le PHS</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation>Sous-menus débloqués</translation>
+        <translation type="obsolete">Sous-menus débloqués</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation>Equiper</translation>
+        <translation type="obsolete">Equiper</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Etat</translation>
+        <translation type="obsolete">Etat</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Placer</translation>
+        <translation type="obsolete">Placer</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation>Limite</translation>
+        <translation type="obsolete">Limite</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation>Config</translation>
+        <translation type="obsolete">Config</translation>
     </message>
     <message>
         <source>P.H.S</source>
-        <translation>PHS</translation>
+        <translation type="obsolete">PHS</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Enregistrer</translation>
+        <translation type="obsolete">Enregistrer</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation>Sous-menus verrouillés</translation>
+        <translation type="obsolete">Sous-menus verrouillés</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
@@ -7260,6 +7260,61 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
 </context>
 <context>
+    <name>MenuListWidget</name>
+    <message>
+        <source>Menu Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Item</source>
+        <translation>Elément</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic</source>
+        <translation>Magie</translation>
+    </message>
+    <message>
+        <source>Materia</source>
+        <translation>Matéria</translation>
+    </message>
+    <message>
+        <source>Equip</source>
+        <translation>Equiper</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Etat</translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation>Placer</translation>
+    </message>
+    <message>
+        <source>Limit</source>
+        <translation>Limite</translation>
+    </message>
+    <message>
+        <source>Config</source>
+        <translation>Config</translation>
+    </message>
+    <message>
+        <source>P.H.S</source>
+        <translation>PHS</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+</context>
+<context>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
@@ -7507,6 +7562,57 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
+    </message>
+</context>
+<context>
+    <name>PhsListWidget</name>
+    <message>
+        <source>Phs Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud</source>
+        <translation>Cloud</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>Barret</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>Tifa</translation>
+    </message>
+    <message>
+        <source>Aerith</source>
+        <translation>Aeris</translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>Rouge XIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>Youfie</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>Cait Sith</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>Vincent</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>Cid</translation>
     </message>
 </context>
 <context>

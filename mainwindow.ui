@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
+    <width>764</width>
     <height>578</height>
    </rect>
   </property>
@@ -2857,8 +2857,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>758</width>
-             <height>442</height>
+             <width>749</width>
+             <height>427</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5011,7 +5011,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -6319,7 +6319,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <enum>QLayout::SetDefaultConstraint</enum>
             </property>
             <item>
-             <widget class="QGroupBox" name="groupBox_16">
+             <widget class="QGroupBox" name="Phs_Box">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -6336,165 +6336,21 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <string/>
               </property>
               <property name="title">
-               <string>Allowed In PHS</string>
+               <string/>
               </property>
               <property name="flat">
                <bool>false</bool>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_3">
-               <property name="spacing">
-                <number>0</number>
-               </property>
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>3</number>
-               </property>
-               <property name="bottomMargin">
-                <number>2</number>
-               </property>
-               <item>
-                <widget class="QListWidget" name="list_phs_chars">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>111</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="whatsThis">
-                  <string/>
-                 </property>
-                 <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOff</enum>
-                 </property>
-                 <property name="editTriggers">
-                  <set>QAbstractItemView::NoEditTriggers</set>
-                 </property>
-                 <property name="showDropIndicator" stdset="0">
-                  <bool>false</bool>
-                 </property>
-                 <property name="movement">
-                  <enum>QListView::Static</enum>
-                 </property>
-                 <property name="layoutMode">
-                  <enum>QListView::SinglePass</enum>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Cloud</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Barret</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Tifa</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Aerith</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Red XIII</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Yuffie</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Cait Sith</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Vincent</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Cid</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="groupBox_19">
+             <widget class="QGroupBox" name="Menu_Box">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -6507,174 +6363,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                 <height>16777215</height>
                </size>
               </property>
-              <property name="toolTip">
+              <property name="title">
                <string/>
               </property>
-              <property name="title">
-               <string>Visible In PHS</string>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_13">
-               <property name="spacing">
-                <number>0</number>
-               </property>
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>3</number>
-               </property>
-               <property name="bottomMargin">
-                <number>2</number>
-               </property>
-               <item>
-                <widget class="QListWidget" name="list_chars_unlocked">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>111</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="whatsThis">
-                  <string/>
-                 </property>
-                 <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOff</enum>
-                 </property>
-                 <property name="editTriggers">
-                  <set>QAbstractItemView::NoEditTriggers</set>
-                 </property>
-                 <property name="showDropIndicator" stdset="0">
-                  <bool>false</bool>
-                 </property>
-                 <property name="flow">
-                  <enum>QListView::TopToBottom</enum>
-                 </property>
-                 <property name="layoutMode">
-                  <enum>QListView::SinglePass</enum>
-                 </property>
-                 <property name="viewMode">
-                  <enum>QListView::ListMode</enum>
-                 </property>
-                 <property name="modelColumn">
-                  <number>0</number>
-                 </property>
-                 <property name="uniformItemSizes">
-                  <bool>false</bool>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Cloud</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Barret</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Tifa</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Aerith</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Red XIII</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Yuffie</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Cait Sith</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Vincent</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Cid</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
              </widget>
             </item>
            </layout>
@@ -6688,355 +6379,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <bool>true</bool>
             </property>
            </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_129">
-            <property name="sizeConstraint">
-             <enum>QLayout::SetMaximumSize</enum>
-            </property>
-            <item>
-             <widget class="QGroupBox" name="groupBox_32">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Visible Menu Items</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_29">
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>3</number>
-               </property>
-               <property name="bottomMargin">
-                <number>2</number>
-               </property>
-               <item>
-                <widget class="QListWidget" name="list_menu_visible">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>121</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="editTriggers">
-                  <set>QAbstractItemView::NoEditTriggers</set>
-                 </property>
-                 <property name="showDropIndicator" stdset="0">
-                  <bool>true</bool>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Item</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Magic</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Materia</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Equip</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Status</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Order</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Limit</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Config</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>P.H.S</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Save</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupBox_37">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Locked Menu Items</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_30">
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>3</number>
-               </property>
-               <property name="bottomMargin">
-                <number>2</number>
-               </property>
-               <item>
-                <widget class="QListWidget" name="list_menu_locked">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>121</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="editTriggers">
-                  <set>QAbstractItemView::NoEditTriggers</set>
-                 </property>
-                 <property name="showDropIndicator" stdset="0">
-                  <bool>false</bool>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Item</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Magic</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Materia</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Equip</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Status</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Order</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Limit</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Config</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>P.H.S</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Save</string>
-                  </property>
-                  <property name="checkState">
-                   <enum>Unchecked</enum>
-                  </property>
-                  <property name="flags">
-                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_170">
@@ -8052,7 +7394,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>514</width>
              <height>683</height>
             </rect>
            </property>
@@ -13906,7 +13248,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>764</width>
      <height>22</height>
     </rect>
    </property>
@@ -14908,10 +14250,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_coordz</tabstop>
   <tabstop>cb_replay</tabstop>
   <tabstop>tbl_materia_2</tabstop>
-  <tabstop>list_phs_chars</tabstop>
-  <tabstop>list_chars_unlocked</tabstop>
-  <tabstop>list_menu_visible</tabstop>
-  <tabstop>list_menu_locked</tabstop>
   <tabstop>sb_love_aeris</tabstop>
   <tabstop>sb_love_tifa</tabstop>
   <tabstop>sb_love_yuffie</tabstop>

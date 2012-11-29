@@ -140,6 +140,16 @@ void MainWindow::init_display()
     ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
     ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
+    phsList = new PhsListWidget;
+    QHBoxLayout *phsLayout = new QHBoxLayout;
+    phsLayout->addWidget(phsList);
+    ui->Phs_Box->setLayout(phsLayout);
+
+    menuList = new MenuListWidget;
+    QHBoxLayout *menuLayout = new QHBoxLayout;
+    menuLayout->addWidget(menuList);
+    ui->Menu_Box->setLayout(menuLayout);
+
 
     dialog_preview = new DialogPreview();
     QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
@@ -227,6 +237,13 @@ void MainWindow::init_connections()
         // Connect the unknown and unknown compare scrolling.
         connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
         connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
+
+        connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
+        connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
+
+        connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
+        connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
+
         //connnect the dialogpreview to the data functions.
         connect(dialog_preview,SIGNAL(UL_ColorChanged(QColor)),this,SLOT(set_UL_Color(QColor)));
         connect(dialog_preview,SIGNAL(UR_ColorChanged(QColor)),this,SLOT(set_UR_Color(QColor)));
@@ -1708,25 +1725,25 @@ void MainWindow::guirefresh(bool newgame)
             else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
         }
 
-        for (int i=0;i<9;i++)//phsmask
+        for (int i=0;i<9;i++)//Allowed in Phs
         {
-            if ((1 << i) & ff7->slot[s].phsmask){ui->list_phs_chars->item(i)->setCheckState(Qt::Unchecked);}
-            else{ui->list_phs_chars->item(i)->setCheckState(Qt::Checked);}
+            if(ff7->phsAllowed(s,i)){phsList->setChecked(i,1,false);}
+            else{phsList->setChecked(i,1,true);}
         }
-        for (int i=0;i<9;i++)//unlocked
+        for (int i=0;i<9;i++)//Visible
         {
-            if ((1 << i) & ff7->slot[s].unlockedchars){ui->list_chars_unlocked->item(i)->setCheckState(Qt::Checked);}
-            else{ui->list_chars_unlocked->item(i)->setCheckState(Qt::Unchecked);}
+            if(ff7->phsVisible(s,i)){phsList->setChecked(i,2,true);}
+            else{phsList->setChecked(i,2,false);}
         }
         for (int i=0;i<10;i++)//visible_menu
         {
-            if ((1 << i) & ff7->slot[s].menu_visible){ui->list_menu_visible->item(i)->setCheckState(Qt::Checked);}
-            else{ui->list_menu_visible->item(i)->setCheckState(Qt::Unchecked);}
+            if(ff7->menuVisible(s,i)){menuList->setChecked(i,1,true);}
+            else{menuList->setChecked(i,1,false);}
         }
         for (int i=0;i<10;i++)//menu_locked
         {
-            if ((1 << i) & ff7->slot[s].menu_locked){ui->list_menu_locked->item(i)->setCheckState(Qt::Checked);}
-            else{ui->list_menu_locked->item(i)->setCheckState(Qt::Unchecked);}
+            if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
+            else{menuList->setChecked(i,2,false);}
         }
         for (int i=0;i<51;i++)// key items
         {
@@ -2285,19 +2302,6 @@ void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ ff7->se
 void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,3,index);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_phs_chars_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-        int j = index.row();
-        if(ui->list_phs_chars->item(j)->checkState() ==Qt::Unchecked){ff7->slot[s].phsmask |=(1 <<j);}
-        else{ff7->slot[s].phsmask &= ~(1<<j);}
-}}
-
-void MainWindow::on_list_chars_unlocked_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-    int j = index.row();
-    if(ui->list_chars_unlocked->item(j)->checkState() ==Qt::Checked){ff7->slot[s].unlockedchars |= (1<<j);}
-    else{ff7->slot[s].unlockedchars &= ~(1<<j);}
-}}
 void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_BARRET,value);}}
 void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_AERIS,value);}}
 void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_TIFA,value);}}
@@ -2964,9 +2968,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->setCharID(s,6,FF7Char::YoungCloud);
         //set up Sephiroth
         ff7->setCharID(s,7,FF7Char::Sephiroth);
-        if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
-        {        ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));
-        }
+        if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));}
         else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
         set_char_buttons();
         if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));}
@@ -3005,8 +3007,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordx->setValue(641);
         ui->sb_coordy->setValue(793);
         ui->sb_coordz->setValue(243);
-        ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
-        ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
+        phsList->setChecked(3,1,false);
+        phsList->setChecked(3,2,false);
+        //ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
+        //ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
         ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
     }
 
@@ -3043,20 +3047,6 @@ void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){file_modified(
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[0] = value;}}
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[1] = value;}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[2] = value;}}
-
-void MainWindow::on_list_menu_visible_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-        int j=index.row();
-        if(ui->list_menu_visible->item(j)->checkState() ==Qt::Checked){ff7->slot[s].menu_visible |= (1<<j);}
-        else{ff7->slot[s].menu_visible &= ~(1<<j);}
-}}
-
-void MainWindow::on_list_menu_locked_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-        int j=index.row();
-        if(ui->list_menu_locked->item(j)->checkState() ==Qt::Checked){ff7->slot[s].menu_locked |= (1<<j);}
-        else{ff7->slot[s].menu_locked &= ~(1<<j);}
-}}
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
 {if(!load){file_modified(true);
@@ -3969,3 +3959,8 @@ void MainWindow::hexEditorChanged(void)
         case 1: ff7->setSlotFF7Data(s,hexEditor->data());   break;
     }
 }
+
+void MainWindow::phsList_box_allowed_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setPhsAllowed(s,row,!checked);}}
+void MainWindow::phsList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setPhsVisible(s,row,checked);}}
+void MainWindow::menuList_box_locked_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuLocked(s,row,checked);}}
+void MainWindow::menuList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuVisible(s,row,checked);}}

@@ -13,44 +13,38 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef ITEMSELECTOR_H
-#define ITEMSELECTOR_H
+
+#ifndef DOUBLECHECKBOX_H
+#define DOUBLECHECKBOX_H
 
 #include <QWidget>
-#include <QComboBox>
-#include <QPushButton>
-#include <QSpinBox>
 #include <QHBoxLayout>
-//Include Data class
-#include "../static_data/FF7Item.h"
+#include <QtGui/QCheckBox>
+#include <QtGui/QLabel>
 
-class ItemSelector : public QWidget
+class DoubleCheckBox : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ItemSelector(QWidget *parent = 0);
-    int id();// current id
-    int combo_item_width();//width of the item box.
+    explicit DoubleCheckBox(QWidget *parent = 0);
+    explicit DoubleCheckBox(const QString &text,QWidget *parent = 0);
+    void setText(QString text);
+    void setChecked(int box,bool checked);
+    bool checked(int box);
+    void setBoxToolTip(int box,QString text);
+    void setToolTip(QString text);
 signals:
-    void item_changed(quint16);//return selected rawitem
-public slots:
-    void setCurrentItem(quint16 ff7item);
-    void setCurrentItem(int id,int qty);
+    void box1_toggled(bool checked);
+    void box2_toggled(bool checked);
 private slots:
-    void setFilter(int type);
-    void comboItem_changed(int index);
-    void sb_qty_changed(int qty);
-    void btn_remove_clicked();
+    void cb_one_toggled(bool checked);
+    void cb_two_toggled(bool checked);
 private:
     void init_display();
     void init_connections();
-    void init_data();
-    int type_offset(int type);
-    FF7Item Items;
-    QComboBox *combo_type;
-    QComboBox *combo_item;
-    QSpinBox  *sb_qty;
-    QPushButton *btn_remove;
-    quint16 current_item;
+    QCheckBox *cb_one;
+    QCheckBox *cb_two;
+    QLabel * label;
 };
-#endif // ITEMSELECTOR_H
+
+#endif // DOUBLECHECKBOX_H
