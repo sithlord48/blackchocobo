@@ -112,6 +112,25 @@ public:
     bool battleTargets(int s);
     void setBattleTargets(int s, bool shown);
 
+    bool phsVisible(int s, int who);
+    void setPhsVisible(int s, int who , bool checked);
+    quint16 phsVisible(int s);
+    void setPhsVisible(int s, quint16 phs_visible);
+    bool phsAllowed(int s,int who);
+    quint16 phsAllowed(int s);
+    void setPhsAllowed(int s, int who , bool checked);
+    void setPhsAllowed(int s, quint16 phs_visible);
+
+
+    bool menuVisible(int s, int index);
+    void setMenuVisible(int s, int index , bool checked);
+    quint16 menuVisible(int s);
+    void setMenuVisible(int s, quint16 menu_visible);
+
+    bool menuLocked(int s, int index);
+    void setMenuLocked(int s, int index , bool checked);
+    quint16 menuLocked(int s);
+    void setMenuLocked(int s, quint16 menu_visible);
 
   //File Members
   bool loadFile(const QString &fileName);

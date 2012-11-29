@@ -3647,35 +3647,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cloud</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Barret</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tifa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Red XIII</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cait Sith</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Vincent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3724,10 +3700,6 @@
     </message>
     <message>
         <source>Inventory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4083,10 +4055,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Allowed In PHS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4107,15 +4075,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Aerith</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4433,46 +4393,6 @@
     </message>
     <message>
         <source>Min</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Visible In PHS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Visible Menu Items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Equip</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Limit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Config</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>P.H.S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Locked Menu Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7237,6 +7157,61 @@ Table Entries are Editable</source>
     </message>
 </context>
 <context>
+    <name>MenuListWidget</name>
+    <message>
+        <source>Menu Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Equip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>P.H.S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
@@ -7483,6 +7458,57 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PhsListWidget</name>
+    <message>
+        <source>Phs Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aerith</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cid</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

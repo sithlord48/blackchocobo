@@ -3723,19 +3723,19 @@
     </message>
     <message>
         <source>Cloud</source>
-        <translation>クラウド</translation>
+        <translation type="obsolete">クラウド</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>バレット</translation>
+        <translation type="obsolete">バレット</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>ティファ</translation>
+        <translation type="obsolete">ティファ</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>レッドXIII</translation>
+        <translation type="obsolete">レッドXIII</translation>
     </message>
     <message>
         <source>Yuffie</source>
@@ -3743,7 +3743,7 @@
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>ケット・シー</translation>
+        <translation type="obsolete">ケット・シー</translation>
     </message>
     <message>
         <source>Vincent</source>
@@ -3751,7 +3751,7 @@
     </message>
     <message>
         <source>Cid</source>
-        <translation>シド</translation>
+        <translation type="obsolete">シド</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -3803,7 +3803,7 @@
     </message>
     <message>
         <source>Item</source>
-        <translation>アイテム</translation>
+        <translation type="obsolete">アイテム</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4159,7 +4159,7 @@
     </message>
     <message>
         <source>Allowed In PHS</source>
-        <translation>ＰＨＳで入替え可能</translation>
+        <translation type="obsolete">ＰＨＳで入替え可能</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -4183,7 +4183,7 @@
     </message>
     <message>
         <source>Aerith</source>
-        <translation>エアリス</translation>
+        <translation type="obsolete">エアリス</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -4191,7 +4191,7 @@
     </message>
     <message>
         <source>Magic</source>
-        <translation>まほう</translation>
+        <translation type="obsolete">まほう</translation>
     </message>
     <message>
         <source>map</source>
@@ -4513,43 +4513,43 @@
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation>ＰＨＳに表示</translation>
+        <translation type="obsolete">ＰＨＳに表示</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation>メニュー 項目の表示</translation>
+        <translation type="obsolete">メニュー 項目の表示</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation>そうび</translation>
+        <translation type="obsolete">そうび</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>ステータス</translation>
+        <translation type="obsolete">ステータス</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>たいけい</translation>
+        <translation type="obsolete">たいけい</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation>リミット</translation>
+        <translation type="obsolete">リミット</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation>コンフィグ</translation>
+        <translation type="obsolete">コンフィグ</translation>
     </message>
     <message>
         <source>P.H.S</source>
-        <translation>ＰＨＳ</translation>
+        <translation type="obsolete">ＰＨＳ</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>セーブ</translation>
+        <translation type="obsolete">セーブ</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation>メニュー項目のロック</translation>
+        <translation type="obsolete">メニュー項目のロック</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
@@ -7334,6 +7334,61 @@ Table Entries are Editable</source>
     </message>
 </context>
 <context>
+    <name>MenuListWidget</name>
+    <message>
+        <source>Menu Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Item</source>
+        <translation>アイテム</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic</source>
+        <translation>まほう</translation>
+    </message>
+    <message>
+        <source>Materia</source>
+        <translation>マテリア</translation>
+    </message>
+    <message>
+        <source>Equip</source>
+        <translation>そうび</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>ステータス</translation>
+    </message>
+    <message>
+        <source>Order</source>
+        <translation>たいけい</translation>
+    </message>
+    <message>
+        <source>Limit</source>
+        <translation>リミット</translation>
+    </message>
+    <message>
+        <source>Config</source>
+        <translation>コンフィグ</translation>
+    </message>
+    <message>
+        <source>P.H.S</source>
+        <translation>ＰＨＳ</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>セーブ</translation>
+    </message>
+</context>
+<context>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
@@ -7581,6 +7636,57 @@ Table Entries are Editable</source>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
+    </message>
+</context>
+<context>
+    <name>PhsListWidget</name>
+    <message>
+        <source>Phs Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud</source>
+        <translation>クラウド</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>バレット</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>ティファ</translation>
+    </message>
+    <message>
+        <source>Aerith</source>
+        <translation>エアリス</translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>レッドXIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>ユフィ</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>ケット・シー</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>ヴィンセント</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>シド</translation>
     </message>
 </context>
 <context>

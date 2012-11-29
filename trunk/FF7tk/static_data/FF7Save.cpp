@@ -2934,3 +2934,130 @@ void FF7Save::setControllerMapping(int s, int action,  int button)
         }
     }
 }
+bool FF7Save::phsVisible(int s, int who)
+{
+    if(s<0 || s>14){return false;}
+    if(who<0 || who>8){return false;}
+    else{return ((slot[s].phsvisible) & (1<<who));}
+}
+void FF7Save::setPhsVisible(int s, int who, bool checked)
+{
+    if(s<0 || s>14){return;}
+    else if(who<0 || who >8){return;}
+    else
+    {
+        if(checked){ slot[s].phsvisible |= (1<<who);}
+        else {slot[s].phsvisible &= ~(1<<who);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setPhsVisible(int s, quint16 phs_visible)
+{
+    if(s<0 || s>14){return;}
+    if(phs_visible!=slot[s].phsvisible)
+    {
+        slot[s].phsvisible=phs_visible;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::phsVisible(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].phsvisible;}
+}
+
+bool FF7Save::phsAllowed(int s, int who)
+{
+    if(s<0 || s>14){return false;}
+    if(who<0 || who>8){return false;}
+    else{return ((slot[s].phsallowed) & (1<<who));}
+}
+quint16 FF7Save::phsAllowed(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].phsallowed;}
+}
+
+void FF7Save::setPhsAllowed(int s, int who, bool checked)
+{
+    if(s<0 || s>14){return;}
+    else if(who<0 || who >8){return;}
+    else
+    {
+        if(checked){ slot[s].phsallowed |= (1<<who);}
+        else {slot[s].phsallowed &= ~(1<<who);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setPhsAllowed(int s, quint16 phs_visible)
+{
+    if(s<0 || s>14){return;}
+    if(phs_visible!=slot[s].phsallowed)
+    {
+        slot[s].phsallowed=phs_visible;
+        setFileModified(true,s);
+    }
+}
+bool FF7Save::menuVisible(int s, int index)
+{
+    if(s<0 || s>14){return false;}
+    if(index<0 || index>9){return false;}
+    else{return ((slot[s].menu_visible) & (1<<index));}
+}
+void FF7Save::setMenuVisible(int s, int index, bool checked)
+{
+    if(s<0 || s>14){return;}
+    else if(index<0 || index >9){return;}
+    else
+    {
+        if(checked){ slot[s].menu_visible |= (1<<index);}
+        else {slot[s].menu_visible &= ~(1<<index);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setMenuVisible(int s, quint16 menu_visible)
+{
+    if(s<0 || s>14){return;}
+    if(menu_visible!=slot[s].menu_visible)
+    {
+        slot[s].menu_visible=menu_visible;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::menuVisible(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].menu_visible;}
+}
+
+bool FF7Save::menuLocked(int s, int index)
+{
+    if(s<0 || s>14){return false;}
+    if(index<0 || index>9){return false;}
+    else{return ((slot[s].menu_locked) & (1<<index));}
+}
+void FF7Save::setMenuLocked(int s, int index, bool checked)
+{
+    if(s<0 || s>14){return;}
+    else if(index<0 || index >9){return;}
+    else
+    {
+        if(checked){ slot[s].menu_locked |= (1<<index);}
+        else {slot[s].menu_locked &= ~(1<<index);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setMenuLocked(int s, quint16 menu_locked)
+{
+    if(s<0 || s>14){return;}
+    if(menu_locked!=slot[s].menu_locked)
+    {
+        slot[s].menu_locked=menu_locked;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::menuLocked(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].menu_locked;}
+}
