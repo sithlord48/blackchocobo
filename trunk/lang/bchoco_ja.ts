@@ -3766,6 +3766,30 @@
         <source>Woodlands Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bone Village</source>
+        <translation>ボーンビレッジ</translation>
+    </message>
+    <message>
+        <source>Sleeping Forest</source>
+        <translation>眠りの森</translation>
+    </message>
+    <message>
+        <source>Forgotten Capital</source>
+        <translation>忘らるる都</translation>
+    </message>
+    <message>
+        <source>Water Altar</source>
+        <translation type="unfinished">水の祭壇</translation>
+    </message>
+    <message>
+        <source>Icicle Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Correl Valley</source>
+        <translation>サンゴの谷</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3778,36 +3802,12 @@
         <translation>パーティ メンバー</translation>
     </message>
     <message>
-        <source>Cloud</source>
-        <translation type="obsolete">クラウド</translation>
-    </message>
-    <message>
-        <source>Barret</source>
-        <translation type="obsolete">バレット</translation>
-    </message>
-    <message>
-        <source>Tifa</source>
-        <translation type="obsolete">ティファ</translation>
-    </message>
-    <message>
-        <source>Red XIII</source>
-        <translation type="obsolete">レッドXIII</translation>
-    </message>
-    <message>
         <source>Yuffie</source>
         <translation>ユフィ</translation>
     </message>
     <message>
-        <source>Cait Sith</source>
-        <translation type="obsolete">ケット・シー</translation>
-    </message>
-    <message>
         <source>Vincent</source>
         <translation>ヴィンセント</translation>
-    </message>
-    <message>
-        <source>Cid</source>
-        <translation type="obsolete">シド</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -3856,10 +3856,6 @@
     <message>
         <source>Inventory</source>
         <translation>所持アイテム</translation>
-    </message>
-    <message>
-        <source>Item</source>
-        <translation type="obsolete">アイテム</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4214,10 +4210,6 @@
         <translation>好感度</translation>
     </message>
     <message>
-        <source>Allowed In PHS</source>
-        <translation type="obsolete">ＰＨＳで入替え可能</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>神羅ビル・１階ロビー</translation>
     </message>
@@ -4238,16 +4230,8 @@
         <translation>ウータイ・仕掛け部屋の前</translation>
     </message>
     <message>
-        <source>Aerith</source>
-        <translation type="obsolete">エアリス</translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>選択マテリアのアビリティと装備効果</translation>
-    </message>
-    <message>
-        <source>Magic</source>
-        <translation type="obsolete">まほう</translation>
     </message>
     <message>
         <source>map</source>
@@ -4568,46 +4552,6 @@
         <translation>分</translation>
     </message>
     <message>
-        <source>Visible In PHS</source>
-        <translation type="obsolete">ＰＨＳに表示</translation>
-    </message>
-    <message>
-        <source>Visible Menu Items</source>
-        <translation type="obsolete">メニュー 項目の表示</translation>
-    </message>
-    <message>
-        <source>Equip</source>
-        <translation type="obsolete">そうび</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="obsolete">ステータス</translation>
-    </message>
-    <message>
-        <source>Order</source>
-        <translation type="obsolete">たいけい</translation>
-    </message>
-    <message>
-        <source>Limit</source>
-        <translation type="obsolete">リミット</translation>
-    </message>
-    <message>
-        <source>Config</source>
-        <translation type="obsolete">コンフィグ</translation>
-    </message>
-    <message>
-        <source>P.H.S</source>
-        <translation type="obsolete">ＰＨＳ</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">セーブ</translation>
-    </message>
-    <message>
-        <source>Locked Menu Items</source>
-        <translation type="obsolete">メニュー項目のロック</translation>
-    </message>
-    <message>
         <source>Coaster Shooter High Scores</source>
         <translation>スピードスクェアのハイスコア</translation>
     </message>
@@ -4714,10 +4658,6 @@
     <message>
         <source>Slot Region</source>
         <translation>スロットのリージョン</translation>
-    </message>
-    <message>
-        <source>USA (BASLUS-94163)</source>
-        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -4840,10 +4780,6 @@
     <message>
         <source>Highwind</source>
         <translation>ハイウインド</translation>
-    </message>
-    <message>
-        <source>Ingoring Non FF7 Save</source>
-        <translation type="obsolete">FF7 以外のセーブを無視</translation>
     </message>
     <message>
         <source>S01</source>
@@ -5867,10 +5803,6 @@ Table Entries are Editable</source>
     <message>
         <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hotel</source>
-        <translation type="obsolete">客室</translation>
     </message>
     <message>
         <source>USA (BASCUS-94163)</source>
@@ -7787,20 +7719,12 @@ Table Entries are Editable</source>
         <translation>; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
-        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="obsolete">       第二ブロック; 次のデータ チャンク @ スロット:%1</translation>
-    </message>
-    <message>
         <source>      End Of Linked Blocks</source>
         <translation>      最後のリンク ブロック</translation>
     </message>
     <message>
         <source>ERROR</source>
         <translation>エラー</translation>
-    </message>
-    <message>
-        <source>-Empty-</source>
-        <translation type="obsolete">-EMPTY-</translation>
     </message>
     <message>
         <source>
@@ -7811,66 +7735,6 @@ Table Entries are Editable</source>
     <message>
         <source>Slot:%1</source>
         <translation>スロット:%1</translation>
-    </message>
-    <message>
-        <source>Slot:1</source>
-        <translation type="obsolete">スロット:1</translation>
-    </message>
-    <message>
-        <source>Slot:2</source>
-        <translation type="obsolete">スロット:2</translation>
-    </message>
-    <message>
-        <source>Slot:3</source>
-        <translation type="obsolete">スロット:3</translation>
-    </message>
-    <message>
-        <source>Slot:4</source>
-        <translation type="obsolete">スロット:4</translation>
-    </message>
-    <message>
-        <source>Slot:5</source>
-        <translation type="obsolete">スロット:5</translation>
-    </message>
-    <message>
-        <source>Slot:6</source>
-        <translation type="obsolete">スロット:6</translation>
-    </message>
-    <message>
-        <source>Slot:7</source>
-        <translation type="obsolete">スロット:7</translation>
-    </message>
-    <message>
-        <source>Slot:8</source>
-        <translation type="obsolete">スロット:8</translation>
-    </message>
-    <message>
-        <source>Slot:9</source>
-        <translation type="obsolete">スロット:9</translation>
-    </message>
-    <message>
-        <source>Slot:10</source>
-        <translation type="obsolete">スロット:10</translation>
-    </message>
-    <message>
-        <source>Slot:11</source>
-        <translation type="obsolete">スロット:11</translation>
-    </message>
-    <message>
-        <source>Slot:12</source>
-        <translation type="obsolete">スロット:12</translation>
-    </message>
-    <message>
-        <source>Slot:13</source>
-        <translation type="obsolete">スロット:13</translation>
-    </message>
-    <message>
-        <source>Slot:14</source>
-        <translation type="obsolete">スロット:14</translation>
-    </message>
-    <message>
-        <source>Slot:15</source>
-        <translation type="obsolete">スロット:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>

@@ -3693,6 +3693,30 @@
         <source>Woodlands Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bone Village</source>
+        <translation>Ciudad Huesos</translation>
+    </message>
+    <message>
+        <source>Sleeping Forest</source>
+        <translation>Bosque dormido</translation>
+    </message>
+    <message>
+        <source>Forgotten Capital</source>
+        <translation>Ciudad olvidada</translation>
+    </message>
+    <message>
+        <source>Water Altar</source>
+        <translation>Altar de agua</translation>
+    </message>
+    <message>
+        <source>Icicle Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Correl Valley</source>
+        <translation>Valle Corral</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3705,36 +3729,12 @@
         <translation>En El Grupo</translation>
     </message>
     <message>
-        <source>Cloud</source>
-        <translation type="obsolete">Cloud</translation>
-    </message>
-    <message>
-        <source>Barret</source>
-        <translation type="obsolete">Barret</translation>
-    </message>
-    <message>
-        <source>Tifa</source>
-        <translation type="obsolete">Tifa</translation>
-    </message>
-    <message>
-        <source>Red XIII</source>
-        <translation type="obsolete">Red XIII</translation>
-    </message>
-    <message>
         <source>Yuffie</source>
         <translation>Yuffie</translation>
     </message>
     <message>
-        <source>Cait Sith</source>
-        <translation type="obsolete">Cait Sith</translation>
-    </message>
-    <message>
         <source>Vincent</source>
         <translation>Vincent</translation>
-    </message>
-    <message>
-        <source>Cid</source>
-        <translation type="obsolete">Cid</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -3779,10 +3779,6 @@
     <message>
         <source>Inventory</source>
         <translation>Inventario</translation>
-    </message>
-    <message>
-        <source>Item</source>
-        <translation type="obsolete">Elemento</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4033,10 +4029,6 @@
         <translation>Puntos de Amor</translation>
     </message>
     <message>
-        <source>Allowed In PHS</source>
-        <translation type="obsolete">Permitidos en PHS</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>Edificio Shinra 1er piso</translation>
     </message>
@@ -4089,16 +4081,8 @@
         <translation>Octavillas del Paraíso de las Tortugas Coleccionadas</translation>
     </message>
     <message>
-        <source>Aerith</source>
-        <translation type="obsolete">Aerith</translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>Info de Habilidades y Stats de la Materia Seleccionada</translation>
-    </message>
-    <message>
-        <source>Magic</source>
-        <translation type="obsolete">Magia</translation>
     </message>
     <message>
         <source>map</source>
@@ -4495,46 +4479,6 @@
         <translation>Min</translation>
     </message>
     <message>
-        <source>Visible In PHS</source>
-        <translation type="obsolete">Visible en PHS</translation>
-    </message>
-    <message>
-        <source>Visible Menu Items</source>
-        <translation type="obsolete">Items en el Menú Visibles</translation>
-    </message>
-    <message>
-        <source>Equip</source>
-        <translation type="obsolete">Equipamiento</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="obsolete">Estado</translation>
-    </message>
-    <message>
-        <source>Order</source>
-        <translation type="obsolete">Orden</translation>
-    </message>
-    <message>
-        <source>Limit</source>
-        <translation type="obsolete">Límite</translation>
-    </message>
-    <message>
-        <source>Config</source>
-        <translation type="obsolete">Config</translation>
-    </message>
-    <message>
-        <source>P.H.S</source>
-        <translation type="obsolete">P.H.S</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Guardar</translation>
-    </message>
-    <message>
-        <source>Locked Menu Items</source>
-        <translation type="obsolete">Items del Menú Bloqueados</translation>
-    </message>
-    <message>
         <source>Coaster Shooter High Scores</source>
         <translation>Puntuación Minijuego Montaña Rusa</translation>
     </message>
@@ -4641,10 +4585,6 @@
     <message>
         <source>Slot Region</source>
         <translation>Región de la ranura</translation>
-    </message>
-    <message>
-        <source>USA (BASLUS-94163)</source>
-        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -4767,10 +4707,6 @@
     <message>
         <source>Highwind</source>
         <translation>Gran Viento</translation>
-    </message>
-    <message>
-        <source>Ingoring Non FF7 Save</source>
-        <translation type="obsolete">Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
         <source>S01</source>
@@ -5793,10 +5729,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hotel</source>
-        <translation type="obsolete">Hotel</translation>
     </message>
     <message>
         <source>USA (BASCUS-94163)</source>
@@ -7714,20 +7646,12 @@ Fénix x3 (180pm)</translation>
         <translation>s; Siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
-        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="obsolete">     Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
-    </message>
-    <message>
         <source>      End Of Linked Blocks</source>
         <translation>     Fin de los bloques enlazados</translation>
     </message>
     <message>
         <source>ERROR</source>
         <translation>ERROR</translation>
-    </message>
-    <message>
-        <source>-Empty-</source>
-        <translation type="obsolete">-Vacío-</translation>
     </message>
     <message>
         <source>
@@ -7738,66 +7662,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Slot:%1</source>
         <translation>Ranura:%1</translation>
-    </message>
-    <message>
-        <source>Slot:1</source>
-        <translation type="obsolete">Ranura:1</translation>
-    </message>
-    <message>
-        <source>Slot:2</source>
-        <translation type="obsolete">Ranura:2</translation>
-    </message>
-    <message>
-        <source>Slot:3</source>
-        <translation type="obsolete">Ranura:3</translation>
-    </message>
-    <message>
-        <source>Slot:4</source>
-        <translation type="obsolete">Ranura:4</translation>
-    </message>
-    <message>
-        <source>Slot:5</source>
-        <translation type="obsolete">Ranura:5</translation>
-    </message>
-    <message>
-        <source>Slot:6</source>
-        <translation type="obsolete">Ranura:6</translation>
-    </message>
-    <message>
-        <source>Slot:7</source>
-        <translation type="obsolete">Ranura:7</translation>
-    </message>
-    <message>
-        <source>Slot:8</source>
-        <translation type="obsolete">Ranura:8</translation>
-    </message>
-    <message>
-        <source>Slot:9</source>
-        <translation type="obsolete">Ranura:9</translation>
-    </message>
-    <message>
-        <source>Slot:10</source>
-        <translation type="obsolete">Ranura:10</translation>
-    </message>
-    <message>
-        <source>Slot:11</source>
-        <translation type="obsolete">Ranura:11</translation>
-    </message>
-    <message>
-        <source>Slot:12</source>
-        <translation type="obsolete">Ranura:12</translation>
-    </message>
-    <message>
-        <source>Slot:13</source>
-        <translation type="obsolete">Ranura:13</translation>
-    </message>
-    <message>
-        <source>Slot:14</source>
-        <translation type="obsolete">Ranura:14</translation>
-    </message>
-    <message>
-        <source>Slot:15</source>
-        <translation type="obsolete">Ranura:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>

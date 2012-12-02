@@ -17,6 +17,7 @@
     #define FF7LOCATION_H
 #include <QObject> 
 struct LOCATION {//Location Table Stuff
+    //QString filename;
     QString location;
     QString map_id;
     QString loc_id;
@@ -28,6 +29,7 @@ struct LOCATION {//Location Table Stuff
 class FF7Location
 {
 public:
+    //QString fileName(int);
     QString locationString(int);
     QString mapID(int);
     QString locationID(int);
@@ -386,9 +388,29 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","616","4","65317","30"},
     {QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","610","65191","314","127"},
     {QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","611","65062","86","9"},
-    /**********************************Below The List Is UnFinished   *********/
+
+    {QT_TRANSLATE_NOOP("Locations","Bone Village"),"1","617","65377","65366","65"},
+    {QT_TRANSLATE_NOOP("Locations","Sleeping Forest"),"1","618","2","65410","8"},
+    {QT_TRANSLATE_NOOP("Locations","Sleeping Forest"),"1","619","65533","65205","18"},
+    {QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","625","65424","65191","76"},
+    {QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","626","63620","54216","14"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","630","63941","1142","10"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","635","60070","7108","12"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","637","65027","443","116"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","634","63949","4484","7"},
     {QT_TRANSLATE_NOOP("Locations","Forgotten Captial"),"1","633","65402","65401","40"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","632","192","65446","14"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","636","427","65379","5"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","635","62277","7294","81"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","638","64984","64215","8"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","640","55614","5910","2"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","641","311","64546","40"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","631","216","65352","29"},
+    {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","645","671","64337","13"},
     {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","646","641","793","243"},
+    {QT_TRANSLATE_NOOP("Locations","Water Altar"),"1","647","443","64645","5"},
+
+    /**********************************Below The List Is UnFinished   *********/
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","65332","24"},
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},
     {QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","733","65264","1614","116"},
@@ -431,8 +453,9 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Rocket Launch Pad Area"),"3","20","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Wutai Area"),"3","23","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Nibel Area"),"3","43","0","0","0"},
-    {QT_TRANSLATE_NOOP("Locations","Woodlands Area"),"3","172","0","0","0"}
-
-
+    {QT_TRANSLATE_NOOP("Locations","Woodlands Area"),"3","172","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","25","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","57","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","58","0","0","0"}
 };
 #endif //FF7LOCATION_H
