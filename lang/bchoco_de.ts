@@ -3691,6 +3691,30 @@
         <source>Woodlands Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bone Village</source>
+        <translation>Bone Village</translation>
+    </message>
+    <message>
+        <source>Sleeping Forest</source>
+        <translation>Schlafender Wald</translation>
+    </message>
+    <message>
+        <source>Forgotten Capital</source>
+        <translation>Vergessene Stadt</translation>
+    </message>
+    <message>
+        <source>Water Altar</source>
+        <translation>Wasseraltar</translation>
+    </message>
+    <message>
+        <source>Icicle Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Correl Valley</source>
+        <translation>Correl Valley</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3703,36 +3727,12 @@
         <translation>In Gruppe</translation>
     </message>
     <message>
-        <source>Cloud</source>
-        <translation type="obsolete">Cloud</translation>
-    </message>
-    <message>
-        <source>Barret</source>
-        <translation type="obsolete">Barret</translation>
-    </message>
-    <message>
-        <source>Tifa</source>
-        <translation type="obsolete">Tifa</translation>
-    </message>
-    <message>
-        <source>Red XIII</source>
-        <translation type="obsolete">Red XIII</translation>
-    </message>
-    <message>
         <source>Yuffie</source>
         <translation>Yuffie</translation>
     </message>
     <message>
-        <source>Cait Sith</source>
-        <translation type="obsolete">Cait Sith</translation>
-    </message>
-    <message>
         <source>Vincent</source>
         <translation>Vincent</translation>
-    </message>
-    <message>
-        <source>Cid</source>
-        <translation type="obsolete">Cid</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -3782,10 +3782,6 @@
     <message>
         <source>Inventory</source>
         <translation>Inventar</translation>
-    </message>
-    <message>
-        <source>Item</source>
-        <translation type="obsolete">Item</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4140,10 +4136,6 @@
         <translation>Liebespunkte</translation>
     </message>
     <message>
-        <source>Allowed In PHS</source>
-        <translation type="obsolete">Erlaubt im PHS</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>Shinra HQ Erdgeschoss</translation>
     </message>
@@ -4164,16 +4156,8 @@
         <translation>Wutai - Keller vorm Fallenraum</translation>
     </message>
     <message>
-        <source>Aerith</source>
-        <translation type="obsolete">Aerith</translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>Ausgewählte Materia Fähigkeiten und Stat Info</translation>
-    </message>
-    <message>
-        <source>Magic</source>
-        <translation type="obsolete">Magie</translation>
     </message>
     <message>
         <source>map</source>
@@ -4494,46 +4478,6 @@
         <translation>Min</translation>
     </message>
     <message>
-        <source>Visible In PHS</source>
-        <translation type="obsolete">Sichtbar im PHS</translation>
-    </message>
-    <message>
-        <source>Visible Menu Items</source>
-        <translation type="obsolete">Sichtbare Menü Items</translation>
-    </message>
-    <message>
-        <source>Equip</source>
-        <translation type="obsolete">Ausrüsten</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="obsolete">Status</translation>
-    </message>
-    <message>
-        <source>Order</source>
-        <translation type="obsolete">Reihenfolge</translation>
-    </message>
-    <message>
-        <source>Limit</source>
-        <translation type="obsolete">Limit</translation>
-    </message>
-    <message>
-        <source>Config</source>
-        <translation type="obsolete">Konfig</translation>
-    </message>
-    <message>
-        <source>P.H.S</source>
-        <translation type="obsolete">P.H.S</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Speichern</translation>
-    </message>
-    <message>
-        <source>Locked Menu Items</source>
-        <translation type="obsolete">Gesperrte Menü Items</translation>
-    </message>
-    <message>
         <source>Coaster Shooter High Scores</source>
         <translation>Achterbahn High Scores</translation>
     </message>
@@ -4640,10 +4584,6 @@
     <message>
         <source>Slot Region</source>
         <translation>Steckplatz Region</translation>
-    </message>
-    <message>
-        <source>USA (BASLUS-94163)</source>
-        <translation type="obsolete">USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
@@ -4766,10 +4706,6 @@
     <message>
         <source>Highwind</source>
         <translation>Highwind</translation>
-    </message>
-    <message>
-        <source>Ingoring Non FF7 Save</source>
-        <translation type="obsolete">Ignoriere Nicht FF7 Spielstand</translation>
     </message>
     <message>
         <source>S01</source>
@@ -5797,10 +5733,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hotel</source>
-        <translation type="obsolete">Hotel</translation>
     </message>
     <message>
         <source>USA (BASCUS-94163)</source>
@@ -7717,20 +7649,12 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>s; Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
-        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="obsolete">  Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
-    </message>
-    <message>
         <source>      End Of Linked Blocks</source>
         <translation>  Ende von Linked Blocks</translation>
     </message>
     <message>
         <source>ERROR</source>
         <translation>FEHLER</translation>
-    </message>
-    <message>
-        <source>-Empty-</source>
-        <translation type="obsolete">-Leer-</translation>
     </message>
     <message>
         <source>
@@ -7741,66 +7665,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Slot:%1</source>
         <translation>Steckplatz:%1</translation>
-    </message>
-    <message>
-        <source>Slot:1</source>
-        <translation type="obsolete">Steckplatz:1</translation>
-    </message>
-    <message>
-        <source>Slot:2</source>
-        <translation type="obsolete">Steckplatz:2</translation>
-    </message>
-    <message>
-        <source>Slot:3</source>
-        <translation type="obsolete">Steckplatz:3</translation>
-    </message>
-    <message>
-        <source>Slot:4</source>
-        <translation type="obsolete">Steckplatz:4</translation>
-    </message>
-    <message>
-        <source>Slot:5</source>
-        <translation type="obsolete">Steckplatz:5</translation>
-    </message>
-    <message>
-        <source>Slot:6</source>
-        <translation type="obsolete">Steckplatz:6</translation>
-    </message>
-    <message>
-        <source>Slot:7</source>
-        <translation type="obsolete">Steckplatz:7</translation>
-    </message>
-    <message>
-        <source>Slot:8</source>
-        <translation type="obsolete">Steckplatz:8</translation>
-    </message>
-    <message>
-        <source>Slot:9</source>
-        <translation type="obsolete">Steckplatz:9</translation>
-    </message>
-    <message>
-        <source>Slot:10</source>
-        <translation type="obsolete">Steckplatz:10</translation>
-    </message>
-    <message>
-        <source>Slot:11</source>
-        <translation type="obsolete">Steckplatz:11</translation>
-    </message>
-    <message>
-        <source>Slot:12</source>
-        <translation type="obsolete">Steckplatz:12</translation>
-    </message>
-    <message>
-        <source>Slot:13</source>
-        <translation type="obsolete">Steckplatz:13</translation>
-    </message>
-    <message>
-        <source>Slot:14</source>
-        <translation type="obsolete">Steckplatz:14</translation>
-    </message>
-    <message>
-        <source>Slot:15</source>
-        <translation type="obsolete">Steckplatz:15</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>

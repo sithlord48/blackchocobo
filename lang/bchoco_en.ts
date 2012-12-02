@@ -3691,6 +3691,30 @@
         <source>Woodlands Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bone Village</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sleeping Forest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forgotten Capital</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Water Altar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icicle Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Correl Valley</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

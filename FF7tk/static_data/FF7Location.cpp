@@ -22,4 +22,4 @@ QString FF7Location::locationID(int i){return Locations[i].loc_id;}
 QString FF7Location::x(int i){return Locations[i].x;}
 QString FF7Location::y(int i){return Locations[i].y;}
 QString FF7Location::z(int i){return Locations[i].z;}
-int FF7Location::len(){return 369;}// keep current num locations in list.
+int FF7Location::len(){return 387;}// keep current num locations in list.
