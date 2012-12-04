@@ -4138,10 +4138,6 @@
         <translation>チョコ房 1</translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation type="obsolete">名前</translation>
-    </message>
-    <message>
         <source>Stable 2</source>
         <translation>チョコ房 2</translation>
     </message>
@@ -7715,6 +7711,10 @@ Table Entries are Editable</source>
         <source>-Empty-</source>
         <translation type="unfinished">-なし-</translation>
     </message>
+    <message>
+        <source>Slot: %1</source>
+        <translation>スロット:%1</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7741,10 +7741,6 @@ Table Entries are Editable</source>
 	 ゲームに %1 ブロックを使用</translation>
     </message>
     <message>
-        <source>Slot:%1</source>
-        <translation>スロット:%1</translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7755,10 +7751,6 @@ Table Entries are Editable</source>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:</source>
-        <translation>スロット:</translation>
     </message>
 </context>
 <context>

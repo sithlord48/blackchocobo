@@ -7626,6 +7626,10 @@ Table Entries are Editable</source>
         <source>-Empty-</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Slot: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7651,10 +7655,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Slot:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7664,10 +7664,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

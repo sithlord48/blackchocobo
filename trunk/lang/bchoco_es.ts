@@ -3957,10 +3957,6 @@
         <translation>Establo 1</translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation type="obsolete">Nombre</translation>
-    </message>
-    <message>
         <source>Stable 2</source>
         <translation>Establo 2</translation>
     </message>
@@ -7642,6 +7638,10 @@ Fénix x3 (180pm)</translation>
         <source>-Empty-</source>
         <translation type="unfinished">-Vacío-</translation>
     </message>
+    <message>
+        <source>Slot: %1</source>
+        <translation>Ranura:%1</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7668,10 +7668,6 @@ Fénix x3 (180pm)</translation>
 	El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
-        <source>Slot:%1</source>
-        <translation>Ranura:%1</translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7682,10 +7678,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:</source>
-        <translation>Ranura:</translation>
     </message>
 </context>
 <context>

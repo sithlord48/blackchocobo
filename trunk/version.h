@@ -20,6 +20,6 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 9
-#define VER_SP 72
+#define VER_SP 73
 
 #endif // VERSION_H
