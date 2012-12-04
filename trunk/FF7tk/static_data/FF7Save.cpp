@@ -3061,3 +3061,83 @@ quint16 FF7Save::menuLocked(int s)
     if(s<0 || s>14){return 0;}
     else{return slot[s].menu_locked;}
 }
+quint16 FF7Save::locationId(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].locationid;}
+}
+
+void FF7Save::setLocationId(int s, quint16 locationID)
+{
+    if(s<0 || s>14){return;}
+    else if (locationID == locationId(s)){return;}
+    else
+    {
+        slot[s].locationid = locationID;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::mapId(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].mapid;}
+}
+
+void FF7Save::setMapId(int s, quint16 mapID)
+{
+    if(s<0 || s>14){return;}
+    else if (mapID == mapId(s)){return;}
+    else
+    {
+        slot[s].mapid = mapID;
+        setFileModified(true,s);;
+    }
+}
+quint16 FF7Save::locationX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].coord.x;}
+}
+
+void FF7Save::setLocationX(int s, quint16 x)
+{
+    if(s<0 || s>14){return;}
+    else if (x == locationX(s)){return;}
+    else
+    {
+        slot[s].coord.x = x;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::locationY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].coord.y;}
+}
+
+void FF7Save::setLocationY(int s, quint16 y)
+{
+    if(s<0 || s>14){return;}
+    else if (y == locationY(s)){return;}
+    else
+    {
+        slot[s].coord.y = y;
+        setFileModified(true,s);
+    }
+}
+quint16 FF7Save::locationZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].coord.z;}
+}
+
+void FF7Save::setLocationZ(int s, quint16 z)
+{
+    if(s<0 || s>14){return;}
+    else if (z == locationZ(s)){return;}
+    else
+    {
+        slot[s].coord.z = z;
+        setFileModified(true,s);
+    }
+}

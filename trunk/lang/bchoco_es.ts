@@ -3717,6 +3717,14 @@
         <source>Correl Valley</source>
         <translation>Valle Corral</translation>
     </message>
+    <message>
+        <source>Outside Plates</source>
+        <translation>Planetas exteriores</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 2f. Shop</source>
+        <translation>Edif. Shinra 2P. Tienda</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3950,7 +3958,7 @@
     </message>
     <message>
         <source>Name</source>
-        <translation>Nombre</translation>
+        <translation type="obsolete">Nombre</translation>
     </message>
     <message>
         <source>Stable 2</source>
