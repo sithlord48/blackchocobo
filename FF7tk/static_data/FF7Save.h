@@ -62,6 +62,19 @@ public:
         COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
     };
 
+
+
+    quint16 locationId(int s);
+    void setLocationId(int s, quint16 locationID);
+    quint16 mapId(int s);
+    void setMapId(int s, quint16 mapID);
+    quint16 locationX(int s);
+    void setLocationX(int s, quint16 x);
+    quint16 locationY(int s);
+    void setLocationY(int s, quint16 y);
+    quint16 locationZ(int s);
+    void setLocationZ(int s, quint16 z);
+
     QByteArray slotHeader(int s);
     bool setSlotHeader(int s,QByteArray data);
 

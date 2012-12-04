@@ -2857,8 +2857,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>427</height>
+             <width>758</width>
+             <height>442</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2927,7 +2927,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               </attribute>
               <column>
                <property name="text">
-                <string>Name</string>
+                <string>Location Name</string>
                </property>
               </column>
               <column>
@@ -2959,6 +2959,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </item>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_58">
+              <property name="spacing">
+               <number>3</number>
+              </property>
               <item>
                <spacer name="verticalSpacer_13">
                 <property name="orientation">
@@ -3198,6 +3201,13 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  </layout>
                 </item>
                </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="lbl_fieldFile">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QLabel" name="lbl_locationPreview">
@@ -5011,7 +5021,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7394,7 +7404,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>514</width>
+             <width>737</width>
              <height>683</height>
             </rect>
            </property>

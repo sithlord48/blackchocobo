@@ -63,7 +63,7 @@ void MainWindow::init_display()
         newItem = new QTableWidgetItem(Locations.locationString(i),0);
         if(showLocPreview)
         {//set the tooltip to the needed file if the locations resource is found.
-            QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.mapID(i),Locations.locationID(i)));
+            QString tooltip(QString("<html><head/><body><p><br>%1<br><img src=\":/locations/%2_%3\"/></p></body></html>").arg(Locations.fileName(i),Locations.mapID(i),Locations.locationID(i)));
             newItem->setToolTip(tooltip);
         }
         ui->tbl_location_field->setItem(i,0,newItem);
@@ -1625,16 +1625,17 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_coster_2->setValue(ff7->speedScore(s,2));
         ui->sb_coster_3->setValue(ff7->speedScore(s,3));
         /*~~~~~~~Set up location Data~~~~~~~*/
-        ui->sb_coordx->setValue(ff7->slot[s].coord.x);
-        ui->sb_coordy->setValue(ff7->slot[s].coord.y);
-        ui->sb_coordz->setValue(ff7->slot[s].coord.z);
+        ui->sb_coordx->setValue(ff7->locationX(s));
+        ui->sb_coordy->setValue(ff7->locationY(s));
+        ui->sb_coordz->setValue(ff7->locationZ(s));
         ui->line_location->clear();
-
         ui->line_location->setText(ff7->location(s));
+        ui->sb_map_id->setValue(ff7->mapId(s));
+        ui->sb_loc_id->setValue(ff7->locationId(s));
 
-        ui->sb_map_id->setValue(ff7->slot[s].mapid);
-        ui->sb_loc_id->setValue(ff7->slot[s].locationid);
-        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+
+        ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
+        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
         switch(ui->combo_map_controls->currentIndex())
         {
         case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world & 0x7FFFF);
@@ -2592,21 +2593,24 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
     ui->sb_coordy->setValue(ui->tbl_location_field->currentItem()->text().toInt());
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
     ui->sb_coordz->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+    ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
+    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
 }
 void MainWindow::on_sb_map_id_valueChanged(int value)
 {if(!load){file_modified(true);
-        ff7->slot[s].mapid= value;
-        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+        ff7->setMapId(s, value);
+        ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
+        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
  }}
 void MainWindow::on_sb_loc_id_valueChanged(int value)
 {if(!load){file_modified(true);
-    ff7->slot[s].locationid = value;
-    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+    ff7->setLocationId(s,value);
+    ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
+    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
 }}
-void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.x = value;}}
-void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.y = value;}}
-void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.z = value;}}
+void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
+void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
+void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationZ(s,value);}}
 
 void MainWindow::on_line_location_textChanged(QString text)
 {

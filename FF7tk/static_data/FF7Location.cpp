@@ -16,6 +16,7 @@
 #include "FF7Location.h"
 #include <QCoreApplication>
 
+QString FF7Location::fileName(int i){return Locations[i].filename;}
 QString FF7Location::locationString(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
 QString FF7Location::mapID(int i){return Locations[i].map_id;}
 QString FF7Location::locationID(int i){return Locations[i].loc_id;}
@@ -23,3 +24,12 @@ QString FF7Location::x(int i){return Locations[i].x;}
 QString FF7Location::y(int i){return Locations[i].y;}
 QString FF7Location::z(int i){return Locations[i].z;}
 int FF7Location::len(){return 387;}// keep current num locations in list.
+QString FF7Location::fileName(int MapID,int LocID)
+{
+    QString Name;
+    for(int i =0;i < len(); i++)
+    {
+        if( (MapID==Locations[i].map_id.toInt()) && (LocID ==Locations[i].loc_id.toInt())){Name= Locations[i].filename;}
+    }
+    return Name;
+}

@@ -3780,7 +3780,7 @@
     </message>
     <message>
         <source>Water Altar</source>
-        <translation type="unfinished">水の祭壇</translation>
+        <translation>水の祭壇</translation>
     </message>
     <message>
         <source>Icicle Area</source>
@@ -3789,6 +3789,14 @@
     <message>
         <source>Correl Valley</source>
         <translation>サンゴの谷</translation>
+    </message>
+    <message>
+        <source>Outside Plates</source>
+        <translation>プレート外辺</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 2f. Shop</source>
+        <translation>神羅ビル２階ショップ</translation>
     </message>
 </context>
 <context>
@@ -4131,7 +4139,7 @@
     </message>
     <message>
         <source>Name</source>
-        <translation>名前</translation>
+        <translation type="obsolete">名前</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -7705,7 +7713,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-なし-</translation>
     </message>
 </context>
 <context>
