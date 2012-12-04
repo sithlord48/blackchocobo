@@ -30,11 +30,11 @@ class SlotPreview : public QLabel
     Q_OBJECT
 public:
     enum MODE{MODE_EMPTY,MODE_PSXGAME,MODE_FF7SAVE};
-    SlotPreview(QWidget *parent = 0);
+    SlotPreview(int index=0,QWidget *parent = 0);
+    int index(void);
     void setParty(QPixmap p1,QPixmap p2,QPixmap p3);
     void setParty(QString p1_style,QString p2_style,QString p3_style);
     void setName(QString);
-    void set_Button_Label(QString);
     void setLevel(int);
     void setLocation(QString);
     void setGil(int);
@@ -43,15 +43,14 @@ public:
     void setMode(int mode);
 
 private slots:
+    void setIndex(int index);
     //raw pix map for labels
     void set_Party1(QPixmap);
     void set_Party2(QPixmap);
     void set_Party3(QPixmap);
-
     void set_Party1(QString style);
     void set_Party2(QString style);
     void set_Party3(QString style);
-    void selected(void);
     void removed(void);
     void copy(void);
     void paste(void);
@@ -65,25 +64,26 @@ private:
     QLabel *party2;
     QLabel *party3;
     QLabel *name;
+    QLabel *lbl_Slot;
     QLabel *lbl_time;
     QLabel *lbl_level;
     QLabel *location;
     QLabel *lbl_gil;
-    QPushButton *btn_select;
     QPushButton *btn_copy;
     QPushButton *btn_paste;
     QPushButton *btn_remove;
-    QGroupBox *top_most;
     SaveIcon *icon;
     QHBoxLayout  * btnLayout;
-    QVBoxLayout *Final;
+    QVBoxLayout * Final;
     QVBoxLayout *top_layout;
     bool not_pc;
+protected:
+    void mousePressEvent(QMouseEvent *ev);
 signals:
-    void btn_select_clicked(QString);
-    void btn_remove_clicked(QString);
-    void btn_copy_clicked(QString);
-    void btn_paste_clicked(QString);
+    void clicked(int);
+    void btn_remove_clicked(int);
+    void btn_copy_clicked(int);
+    void btn_paste_clicked(int);
 };
 
 #endif

@@ -4064,10 +4064,6 @@
         <translation>Stall 1</translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation type="obsolete">Name</translation>
-    </message>
-    <message>
         <source>Stable 2</source>
         <translation>Stall 2</translation>
     </message>
@@ -7645,6 +7641,10 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>-Empty-</source>
         <translation type="unfinished">-Leer-</translation>
     </message>
+    <message>
+        <source>Slot: %1</source>
+        <translation>Steckplatz:%1</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7671,10 +7671,6 @@ Tabellen Einträge sind bearbeitbar</translation>
 	 Spiel benutzt %1 Speicherblöcke</translation>
     </message>
     <message>
-        <source>Slot:%1</source>
-        <translation>Steckplatz:%1</translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7685,10 +7681,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:</source>
-        <translation>Steckplatz:</translation>
     </message>
 </context>
 <context>

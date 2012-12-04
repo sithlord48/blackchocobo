@@ -18,9 +18,10 @@
 SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 {
     list_preview = new QScrollArea;
-    this->setMinimumSize(600,460);
-    this->setMaximumWidth(600);
-    this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
+    setMinimumSize(600,420);
+    setMaximumWidth(600);
+    setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
+
 
     preview_layout = new QVBoxLayout;
     frm_preview = new QFrame;
@@ -32,7 +33,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     ff7 = data;
     for(int i=0;i<15;i++)
     {
-        preview[i] = new SlotPreview;
+        preview[i] = new SlotPreview(i);
         preview_layout->addWidget(preview[i]);
         setSlotPreview(i);
     }
@@ -47,17 +48,10 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     this->setLayout(dialog_layout);
     this->setContentsMargins(0,0,0,0);
 }
-void SlotSelect::button_clicked(QString btn_text)
-{
+void SlotSelect::button_clicked(int s){ this->done(s);}
 
-    btn_text.remove(0,QString(tr("Slot:")).length());
-    this->done(btn_text.toInt()-1);
-}
-
-void SlotSelect::remove_slot(QString btn_text)
+void SlotSelect::remove_slot(int s)
 {
-    btn_text.remove(0,QString(tr("Slot:")).length());
-    int s = btn_text.toInt()-1;
     if(ff7->type()!="PC")
     {
         if((ff7->psx_block_type(s)!=FF7Save::BLOCK_MAIN) && (ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MAIN)){return;}//only can remove Main blocks (they will clean up their sub blocks).
@@ -76,19 +70,16 @@ void SlotSelect::remove_slot(QString btn_text)
         ReIntSlot(s);
     }
 }
-void SlotSelect::copy_slot(QString btn_text)
+
+void SlotSelect::copy_slot(int s)
 {
-    btn_text.remove(0,QString(tr("Slot:")).length());
-    int s = btn_text.toInt()-1;
     if(ff7->isFF7(s)){ff7->copySlot(s);}
     //don't Copy Non FF7 Slots Since we don't modify their region data
     else{/*NOT FF7 SAVE INGORE*/}
 }
 
-void SlotSelect::paste_slot(QString btn_text)
+void SlotSelect::paste_slot(int s)
 {
-    btn_text.remove(0,QString(tr("Slot:")).length());
-    int s = btn_text.toInt()-1;
     if(ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK || ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK){return;}//Don't Overwrite parts of other saves.
     if( (!ff7->isFF7(s)) && (ff7->type()!="PC") && (ff7->psx_block_size(s)>1))
     {
@@ -110,10 +101,11 @@ void SlotSelect::paste_slot(QString btn_text)
 void SlotSelect::ReIntSlot(int s)
 {
     preview[s]->~QWidget();
-    preview[s]= new SlotPreview;
+    preview[s]= new SlotPreview(s);
     preview_layout->insertWidget(s,preview[s]);
     setSlotPreview(s);
 }
+
 void SlotSelect::setSlotPreview(int s)
 {
     if(((ff7->type()!="PC") && (((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK) || (ff7->psx_block_type(s) == FF7Save::BLOCK_ENDLINK)) || ((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(s) == FF7Save::BLOCK_DELETED_ENDLINK)))))
@@ -156,7 +148,6 @@ void SlotSelect::setSlotPreview(int s)
         image.setPixel(1, 1, QColor(ff7->slot[s].colors[3][0],ff7->slot[s].colors[3][1],ff7->slot[s].colors[3][2]).rgb());
         QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         preview[s]->setPixmap(QPixmap::fromImage(gradient));
-
         preview[s]->setParty(Chars.pixmap(ff7->descParty(s,0)),Chars.pixmap(ff7->descParty(s,1)),Chars.pixmap(ff7->descParty(s,2)));
         preview[s]->setLocation(ff7->descLocation(s));
         preview[s]->setName(ff7->descName(s));
@@ -200,13 +191,14 @@ void SlotSelect::setSlotPreview(int s)
     }
     //more checks after this....
     //for any item
-    preview[s]->set_Button_Label(QString((tr("Slot:%1"))).arg(QString::number(s+1)));
     if(QT_VERSION<0x050000)
     {//QT4 Style Connection
-        connect(preview[s],SIGNAL(btn_select_clicked(QString)),this,SLOT(button_clicked(QString)));
-        connect(preview[s],SIGNAL(btn_remove_clicked(QString)),this,SLOT(remove_slot(QString)));
-        connect(preview[s],SIGNAL(btn_copy_clicked(QString)),this,SLOT(copy_slot(QString)));
-        connect(preview[s],SIGNAL(btn_paste_clicked(QString)),this,SLOT(paste_slot(QString)));
+        //connect(preview[s],SIGNAL(btn_select_clicked(int)),this,SLOT(button_clicked(int)));
+
+       connect(preview[s],SIGNAL(clicked(int)),this,SLOT(button_clicked(int)));
+        connect(preview[s],SIGNAL(btn_remove_clicked(int)),this,SLOT(remove_slot(int)));
+        connect(preview[s],SIGNAL(btn_copy_clicked(int)),this,SLOT(copy_slot(int)));
+        connect(preview[s],SIGNAL(btn_paste_clicked(int)),this,SLOT(paste_slot(int)));
     }
     else
     {//QT5 Style Connection

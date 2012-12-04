@@ -3956,10 +3956,6 @@
         <translation>Étable 1</translation>
     </message>
     <message>
-        <source>Name</source>
-        <translation type="obsolete">Nom</translation>
-    </message>
-    <message>
         <source>Stable 2</source>
         <translation>Étable 2</translation>
     </message>
@@ -7641,6 +7637,10 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>-Empty-</source>
         <translation type="unfinished">-Vide-</translation>
     </message>
+    <message>
+        <source>Slot: %1</source>
+        <translation>Slot:%1</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -7667,10 +7667,6 @@ Les entrées dans le tableau sont modifiables</translation>
 	 Le jeu utilise %1 sauvegarde</translation>
     </message>
     <message>
-        <source>Slot:%1</source>
-        <translation>Slot:%1</translation>
-    </message>
-    <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7681,10 +7677,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:</source>
-        <translation>Slot:</translation>
     </message>
 </context>
 <context>

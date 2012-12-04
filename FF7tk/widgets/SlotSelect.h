@@ -29,12 +29,11 @@ class SlotSelect : public QDialog
     Q_OBJECT
 public:
     explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0);
-
 private slots:
-    void button_clicked(QString);
-    void remove_slot(QString);
-    void copy_slot(QString);
-    void paste_slot(QString);
+    void button_clicked(int s);
+    void remove_slot(int s);
+    void copy_slot(int s);
+    void paste_slot(int s);
 private:
     void setSlotPreview(int s);
     void ReIntSlot(int s);
