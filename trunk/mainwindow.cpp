@@ -1329,7 +1329,6 @@ void MainWindow::setmenu(bool newgame)
         ui->compare_table->setEnabled(1);   ui->lbl_current_slot_txt->setText(tr("Current Slot:"));
         ui->lbl_current_slot_num->setNum(s+1); ui->actionClear_Slot->setEnabled(1);
     }
-    //if(ff7->type()==""){ui->actionClear_Slot->setEnabled(0);ui->actionShow_Selection_Dialog->setEnabled(0);}
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
     if(ff7->region(s).contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
@@ -1340,8 +1339,13 @@ void MainWindow::setmenu(bool newgame)
     else if(ff7->region(s).contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
     else if(ff7->region(s).contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
     else if(ff7->region(s).isEmpty()){/*do nothing*/}
-    else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Cannot be Automatically Detected, You Must Set it Manually"));}
     /*~~End Detected Region~~*/
+    else
+    {//not FF7 unset some menu options.
+            ui->actionNew_Game_Plus->setEnabled(0); ui->actionCopy_Slot->setEnabled(0);
+            ui->actionExport_PC_Save->setEnabled(0);    ui->actionExport_char->setEnabled(0);
+            ui->actionImport_char->setEnabled(0);
+    }
    load=false;
 }
 void MainWindow::file_modified(bool changed)
@@ -1525,12 +1529,15 @@ void MainWindow::guirefresh(bool newgame)
         {
 
         case 0://View Anyway..
-            //QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using HexEditor To View Save"));
             ui->tabWidget->setCurrentIndex(8);
             ui->tabWidget_3->setCurrentIndex(1);
             ui->tabWidget->setTabEnabled(8,1);
             if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
             hexEditorRefresh();
+
+            ui->lbl_sg_region->setText(ff7->region(s));
+            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
+            setmenu(0);
         break;
 
         case 1://Previous Clicked
@@ -1582,8 +1589,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
         if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
         {
-            SaveIcon ico(ff7->slot_header(s).mid(96,160));
-            ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
+            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
         }
         /*~~~~~Load Game Options~~~~~*/
         if(ff7->fieldHelp(s)){ui->cb_field_help->setChecked(Qt::Checked);} else{ui->cb_field_help->setChecked(Qt::Unchecked);}
