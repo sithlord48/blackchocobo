@@ -27,6 +27,7 @@ SlotPreview::SlotPreview(int index, QWidget *parent):QLabel(parent)
     setLayout(Final);
     setFixedSize(581,135);
     this->setStyleSheet("SlotPreview{border:3px solid;}");
+    this->setCursor(Qt::PointingHandCursor);
 }
 
 void SlotPreview::init_display(void)
@@ -39,16 +40,19 @@ void SlotPreview::init_display(void)
     btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
     btn_remove->setMaximumSize(22,22);
+    btn_remove->setCursor(Qt::BitmapCursor);
 
     btn_copy = new QPushButton(QIcon(QPixmap(copy_xpm)),"");
     btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
     btn_copy->setToolTip(tr("Copy Slot"));
     btn_copy->setMaximumSize(22,22);
+    btn_copy->setCursor(Qt::BitmapCursor);
 
     btn_paste = new QPushButton(QIcon(QPixmap(paste_xpm)),"");
     btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
     btn_paste->setToolTip(tr("Paste Into Slot"));
     btn_paste->setMaximumSize(22,22);
+    btn_paste->setCursor(Qt::BitmapCursor);
 
     btnLayout = new QHBoxLayout;
     btnLayout->setContentsMargins(3,0,3,0);
