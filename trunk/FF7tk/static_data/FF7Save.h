@@ -75,6 +75,13 @@ public:
     quint16 locationZ(int s);
     void setLocationZ(int s, quint16 z);
 
+
+    QByteArray fileHeader(void);
+    bool setFileHeader(QByteArray data);
+
+    QByteArray fileFooter(void);
+    bool setFileFooter(QByteArray data);
+
     QByteArray slotHeader(int s);
     bool setSlotHeader(int s,QByteArray data);
 
@@ -256,6 +263,7 @@ public:
   void setSnowboardScore(int s,int course,quint8 score);
   //Char Releated Functions
   FF7CHAR character(int s,int char_num); //Return Full Char
+  QByteArray rawCharacterData(int s, int char_num);
   quint8 charID(int s,int char_num);//Return Char ID
   quint8 charLevel(int s,int char_num);//Return Char Level
   quint8 charStr(int s,int char_num);
