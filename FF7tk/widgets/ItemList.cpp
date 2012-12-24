@@ -17,7 +17,7 @@
 
 bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 {//Catch toolTip related events and process them(i.e custom tooltips :P)
-    if(obj->isWidgetType())
+    if(obj->isWidgetType() && obj->objectName()== "ItemList")
     {//our object will be the itemlist always in this event.
         int row=-1;//row @ -1 this way we can catch when were not over A QTableWidgetItem
         QTableWidgetItem *tbl_item=itemAt(mapFromGlobal(viewport()->cursor().pos()));
@@ -84,12 +84,11 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
         }
         else{return event(ev);}
     }
-    else{return event(ev);}
+    else{return false;}
 }
 ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
 {
-
-
+    this->setObjectName("ItemList");
     installEventFilter(this);
     createdTooltip=false;
     setRowCount(320);
@@ -103,16 +102,7 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     setCellWidget(0,0,itemSelector);
     setColumnWidth(1,itemSelector->combo_item_width());
     itemSelector->setFixedWidth(itemSelector->combo_item_width()+66+this->font().pointSize()*5+verticalScrollBar()->width()+contentsMargins().left()+contentsMargins().right());
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connections
-        connect(this,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(listSelectionChanged(int,int,int,int)));
-    }
-    else
-    {//QT5 Style Connections
-        /*
-        connect(this::currentCellChanged(int,int,int,int),this::listSelectionChanged(int,int,int,int));
-        */
-    }
+    connect(this,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(listSelectionChanged(int,int,int,int)));
     horizontalHeader()->hide();
     verticalHeader()->hide();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
