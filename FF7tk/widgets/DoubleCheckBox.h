@@ -17,10 +17,12 @@
 #ifndef DOUBLECHECKBOX_H
 #define DOUBLECHECKBOX_H
 
-#include <QWidget>
-#include <QHBoxLayout>
-#include <QtGui/QCheckBox>
-#include <QtGui/QLabel>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 
 class DoubleCheckBox : public QWidget
 {

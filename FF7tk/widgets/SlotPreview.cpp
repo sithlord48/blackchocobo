@@ -36,19 +36,19 @@ void SlotPreview::init_display(void)
     lbl_Slot->setStyleSheet("font: 75 14pt \"Verdana\";");
     lbl_Slot->setText(QString(tr("Slot: %1")).arg(QString::number(index()+1)));
 
-    btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"");
+    btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"",this);
     btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
     btn_remove->setMaximumSize(22,22);
     btn_remove->setCursor(Qt::BitmapCursor);
 
-    btn_copy = new QPushButton(QIcon(QPixmap(copy_xpm)),"");
+    btn_copy = new QPushButton(QIcon(QPixmap(copy_xpm)),"",this);
     btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
     btn_copy->setToolTip(tr("Copy Slot"));
     btn_copy->setMaximumSize(22,22);
     btn_copy->setCursor(Qt::BitmapCursor);
 
-    btn_paste = new QPushButton(QIcon(QPixmap(paste_xpm)),"");
+    btn_paste = new QPushButton(QIcon(QPixmap(paste_xpm)),"",this);
     btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
     btn_paste->setToolTip(tr("Paste Into Slot"));
     btn_paste->setMaximumSize(22,22);
@@ -65,18 +65,9 @@ void SlotPreview::init_display(void)
     btn_copy->setHidden(true);
     btn_paste->setHidden(true);
 
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connect
-        connect(btn_remove,SIGNAL(clicked()),this,SLOT(removed()));
-        connect(btn_copy,SIGNAL(clicked()),this,SLOT(copy()));
-        connect(btn_paste,SIGNAL(clicked()),this,SLOT(paste()));
-    }
-    else
-    {//QT5 Style Connect
-        //connect(btn_remove::clicked(),this::removed());
-        //connect(btn_copy::clicked(),this::copy());
-        //connect(btn_paste::clicked(),this::paste());
-    }
+    connect(btn_remove,SIGNAL(clicked()),this,SLOT(removed()));
+    connect(btn_copy,SIGNAL(clicked()),this,SLOT(copy()));
+    connect(btn_paste,SIGNAL(clicked()),this,SLOT(paste()));
 }
 void SlotPreview::setMode(int mode)
 {

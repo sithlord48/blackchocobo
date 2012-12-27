@@ -57,14 +57,14 @@ quint8 FF7Char::luck_gradent (int who, int lvl_bracket){return Chars[who]._luck_
 quint8 FF7Char::stat_base (int rank,int lvl_bracket){return _stat_base[rank][lvl_bracket];}
 quint8 FF7Char::stat_gradent (int rank,int lvl_bracket){return _stat_gradent[rank][lvl_bracket];}
 
-QString FF7Char::defaultName(int who){return qApp->translate("Char_Names",Chars[who]._def_name.toAscii());}
+QString FF7Char::defaultName(int who){return qApp->translate("Char_Names",Chars[who]._def_name.toLocal8Bit());}
 
 QStringList FF7Char::limits(int who)
 {
     QStringList translated_list;
     for(int j=0;j<Chars[who]._limits.count();j++)
     {
-        translated_list.append(qApp->translate("Char_Limits", Chars[who]._limits.at(j).toAscii()));
+        translated_list.append(qApp->translate("Char_Limits", Chars[who]._limits.at(j).toLocal8Bit()));
     }
     return translated_list;
 }

@@ -20,8 +20,8 @@
 #include "icons/Item_Icons/m_grow_slot.xpm"
 #include <QCoreApplication>
 
-QString FF7Item::name(int i){return qApp->translate("Items",Items[i].name.toAscii());}
-QString FF7Item::desc(int i){return qApp->translate("Item_desc",Items[i].desc.toAscii());}
+QString FF7Item::name(int i){return qApp->translate("Items",Items[i].name.toLocal8Bit());}
+QString FF7Item::desc(int i){return qApp->translate("Item_desc",Items[i].desc.toLocal8Bit());}
 qint8  FF7Item::type(int i){return Items[i].type;}
 QImage FF7Item::image(int i){return Items[i].image;}
 QIcon FF7Item::icon(int i){return QIcon(QPixmap::fromImage(image(i)));}

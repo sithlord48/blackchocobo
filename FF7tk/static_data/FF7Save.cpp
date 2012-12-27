@@ -21,7 +21,6 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 // This Class should contain NO Gui Parts
-
 bool FF7Save::loadFile(const QString &fileName)
 {
     // Return true if File Loaded and false if file not loaded.
@@ -31,7 +30,7 @@ bool FF7Save::loadFile(const QString &fileName)
     int file_size = file.size();
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     //decide the file type
-    if((file_size == FF7_PC_SAVE_GAME_SIZE) && (file.peek(PC_SAVE_GAME_FILE_ID.length()))==PC_SAVE_GAME_FILE_ID){setType("PC");}
+    if((file_size == FF7_PC_SAVE_GAME_SIZE)&& (file.peek(PC_SAVE_GAME_FILE_ID.length()))==PC_SAVE_GAME_FILE_ID){setType("PC");}
     else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& (file.peek(PSX_SAVE_GAME_FILE_ID.length()))==PSX_SAVE_GAME_FILE_ID){setType("PSX");}
     else if((file_size == FF7_MC_SAVE_GAME_SIZE)&& (file.peek(MC_SAVE_GAME_FILE_ID.length()))==MC_SAVE_GAME_FILE_ID){setType("MC");}
     else if((file_size == FF7_PSV_SAVE_GAME_SIZE)&& (file.peek(PSV_SAVE_GAME_FILE_ID.length()))==PSV_SAVE_GAME_FILE_ID){setType("PSV");}
@@ -1272,6 +1271,7 @@ void FF7Save::setType(QString type)
         SG_TYPE          = "PC";
         file_headerp     = file_header_pc;           //pointer to pc file header
         file_footerp     = file_footer_pc;           //pointer to pc file footer
+
     }
     else if(type =="PSX")
     {

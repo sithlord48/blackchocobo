@@ -16,11 +16,13 @@
 #ifndef ITEMSELECTOR_H
 #define ITEMSELECTOR_H
 
-#include <QWidget>
-#include <QComboBox>
-#include <QPushButton>
-#include <QSpinBox>
-#include <QHBoxLayout>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
+
 //Include Data class
 #include "../static_data/FF7Item.h"
 

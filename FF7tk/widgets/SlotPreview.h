@@ -16,10 +16,12 @@
 #ifndef SLOTPREVIEW_H
 #define SLOTPREVIEW_H
 
-#include <QtGui/QGroupBox>
-#include <QtGui/QLabel>
-#include <QtGui/QPushButton>
-#include <QtGui/QHBoxLayout>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 
 //set path to save icon class
 #include "../static_data/SaveIcon.h"

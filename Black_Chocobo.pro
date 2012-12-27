@@ -17,8 +17,11 @@
 # Project created by QtCreator 2010-03-14T14:53:13
 # -------------------------------------------------
 TARGET = Black_Chocobo
-
 TEMPLATE = app
+
+QT       += core gui xml
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 SOURCES += main.cpp \
     mainwindow.cpp \
     about.cpp \
@@ -93,7 +96,6 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_de.ts \
     lang/bchoco_ja.ts
 
-QT +=xml
 
 static:{ # everything below takes effect with CONFIG += static
     CONFIG += static

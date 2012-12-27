@@ -17,13 +17,15 @@
 #ifndef ITEMPREVIEW_H
 #define ITEMPREVIEW_H
 
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
+
 //Besure to set FF7Item Path!
 #include "../static_data/FF7Item.h"
-#include <QtGui/QWidget>
-#include <QtGui/QLabel>
-#include <QtGui/QGroupBox>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QListWidget>
 
 class ItemPreview : public QWidget
 {

@@ -17,8 +17,8 @@
 #include <QCoreApplication>
 #include "icons/Materia_Icons/all.xpm"
 
-QString FF7Materia::name(int id){return qApp->translate("Materia_Names",Materias[id].name.toAscii());}
-QString FF7Materia::statString(int id){return qApp->translate("Materia_Stats",Materias[id].stats.toAscii());}
+QString FF7Materia::name(int id){return qApp->translate("Materia_Names",Materias[id].name.toLocal8Bit());}
+QString FF7Materia::statString(int id){return qApp->translate("Materia_Stats",Materias[id].stats.toLocal8Bit());}
 qint8 FF7Materia::statSTR(int id){return Materias[id].str;}
 qint8 FF7Materia::statVIT(int id){return Materias[id].vit;}
 qint8 FF7Materia::statDEX(int id){return Materias[id].dex;}
@@ -34,16 +34,16 @@ QIcon FF7Materia::icon(int id){return QIcon(QPixmap::fromImage(Materias[id].m_im
 QImage FF7Materia::image(int id){return Materias[id].m_image;}
 QImage FF7Materia::imageEmptyStar(int id){return Materias[id].em_image;}
 QImage FF7Materia::imageFullStar(int id){return Materias[id].fm_image;}
-QIcon FF7Materia::iconAllMateria(){return QIcon(all_xpm);}
+QIcon FF7Materia::iconAllMateria(){return QIcon(QPixmap(all_xpm));}
 QImage FF7Materia::imageAllMateria(){return QImage(all_xpm);}
-QString FF7Materia::enemySkill(int i){return qApp->translate("E_skills",ESkills[i].toAscii());}
-QString FF7Materia::element(int i){return qApp->translate("Elements",Materias[i].elemental.toAscii());}
+QString FF7Materia::enemySkill(int i){return qApp->translate("E_skills",ESkills[i].toLocal8Bit());}
+QString FF7Materia::element(int i){return qApp->translate("Elements",Materias[i].elemental.toLocal8Bit());}
 QStringList FF7Materia::skills(int i)
 {
     QStringList translated_list;
     for(int j=0;j<Materias[i].skills.count();j++)
     {
-        translated_list.append(qApp->translate("Materia_Skills",Materias[i].skills.at(j).toAscii()));
+        translated_list.append(qApp->translate("Materia_Skills",Materias[i].skills.at(j).toLocal8Bit()));
     }
     return translated_list;
 }
@@ -52,7 +52,7 @@ QStringList FF7Materia::status(int i)
     QStringList translated_list;
     for (int j=0;j<Materias[i].status.count();j++)
     {
-        translated_list.append(qApp->translate("Status",Materias[i].status.at(j).toAscii()));
+        translated_list.append(qApp->translate("Status",Materias[i].status.at(j).toLocal8Bit()));
     }
     return translated_list;
 }

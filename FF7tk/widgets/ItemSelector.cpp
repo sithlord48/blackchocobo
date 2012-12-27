@@ -55,22 +55,10 @@ void ItemSelector::init_display()
 }
 void ItemSelector::init_connections()
 {
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connections
-        connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setFilter(int)));
-        connect(combo_item,SIGNAL(currentIndexChanged(int)),this,SLOT(comboItem_changed(int)));
-        connect(sb_qty,SIGNAL(valueChanged(int)),this,SLOT(sb_qty_changed(int)));
-        connect(btn_remove,SIGNAL(clicked()),this,SLOT(btn_remove_clicked()));
-    }
-    else
-    {//QT5 Style Connections
-        /*
-        connect(combo_type::currentIndexChanged(int),this::setFilter(int));
-        connect(combo_item::currentIndexChanged(int),this::comboItem_changed(int));
-        connect(sb_qty::valueChanged(int),this::sb_qty_changed(int));
-        connect(btn_remove::clicked(),this::btn_remove_clicked());
-        */
-    }
+    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setFilter(int)));
+    connect(combo_item,SIGNAL(currentIndexChanged(int)),this,SLOT(comboItem_changed(int)));
+    connect(sb_qty,SIGNAL(valueChanged(int)),this,SLOT(sb_qty_changed(int)));
+    connect(btn_remove,SIGNAL(clicked()),this,SLOT(btn_remove_clicked()));
 }
 void ItemSelector::init_data()
 {

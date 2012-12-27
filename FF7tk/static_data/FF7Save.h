@@ -15,9 +15,7 @@
 /****************************************************************************/
 #ifndef DEF_FF7SAVE
 #define DEF_FF7SAVE
-#include "FF7Save_Const.h" //All consts placed here
-#include "FF7Save_Types.h" //All Custom Types for this class here.
-#include "FF7Text.h"
+
 #include <QObject>
 #include<QColor>
 #include <cstdlib>
@@ -25,6 +23,10 @@
 #include <QDateTime>
 #include <QVector>
 #include <QtXml/QDomDocument>
+
+#include "FF7Save_Const.h" //All consts placed here
+#include "FF7Save_Types.h" //All Custom Types for this class here.
+#include "FF7Text.h"
 
 class FF7Save{
 

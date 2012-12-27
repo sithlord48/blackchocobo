@@ -1,7 +1,12 @@
 #ifndef QHEXEDIT_H
 #define QHEXEDIT_H
 
-#include <QtGui>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 #include "qhexedit_p.h"
 
 /** \mainpage

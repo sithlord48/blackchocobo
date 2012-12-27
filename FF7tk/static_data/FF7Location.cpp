@@ -17,7 +17,7 @@
 #include <QCoreApplication>
 
 QString FF7Location::fileName(int i){return Locations[i].filename;}
-QString FF7Location::locationString(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
+QString FF7Location::locationString(int i){return qApp->translate("Locations",Locations[i].location.toLocal8Bit());}
 QString FF7Location::mapID(int i){return Locations[i].map_id;}
 QString FF7Location::locationID(int i){return Locations[i].loc_id;}
 QString FF7Location::x(int i){return Locations[i].x;}

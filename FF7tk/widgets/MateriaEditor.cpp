@@ -26,15 +26,13 @@ MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
     init_connections();
     setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//Smallest Possible Size. ready for use now.
 }
-/*
-MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_ap):QWidget(parent)
+MateriaEditor::MateriaEditor(quint8 materia_id,qint32 materia_ap,QWidget *parent):QWidget(parent)
 {
-   this->init_display();
-   //we need to initlize the data
-   this->init_data();
-   this->setMateria(materia_id,materia_ap);
+   init_display();
+   init_data();
+   init_connections();
+   setMateria(materia_id,materia_ap);
 }
-*/
 void MateriaEditor::init_display()
 {//Make Widgets and set Properties.
     //Widget Creation.
@@ -73,7 +71,7 @@ void MateriaEditor::init_display()
     //Special Properties Of Above Widgets
     sb_ap->setWrapping(1);
     sb_ap->setAlignment(Qt::AlignCenter);
-    lcd_max_ap->setNumDigits(8);
+    lcd_max_ap->setDigitCount(8);
     lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
     btn_rm_materia->setIcon(QIcon::fromTheme("edit-delete",QIcon(QPixmap(quit_xpm))));
     btn_copy_materia->setIcon(QIcon::fromTheme("edit-copy",QIcon(QPixmap(copy_xpm))));
@@ -226,42 +224,20 @@ void MateriaEditor::init_display()
 
 void MateriaEditor::init_connections(void)
 {
-    if(QT_VERSION<0x050000)
-    {
-        connect(btn_star1,SIGNAL(clicked()),this,SLOT(btn_star1_clicked()));
-        connect(btn_star2,SIGNAL(clicked()),this,SLOT(btn_star2_clicked()));
-        connect(btn_star3,SIGNAL(clicked()),this,SLOT(btn_star3_clicked()));
-        connect(btn_star4,SIGNAL(clicked()),this,SLOT(btn_star4_clicked()));
-        connect(btn_star5,SIGNAL(clicked()),this,SLOT(btn_star5_clicked()));
-        connect(btn_rm_materia,SIGNAL(clicked()),this,SLOT(remove_materia()));
-        connect(btn_copy_materia,SIGNAL(clicked()),this,SLOT(copy_materia()));
-        connect(btn_paste_materia,SIGNAL(clicked()),this,SLOT(paste_materia()));
-        connect(sb_ap,SIGNAL(valueChanged(int)),this,SLOT(sb_ap_changed(int)));
-        connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(type_changed(int)));
-        connect(eskill_list,SIGNAL(clicked(QModelIndex)),this,SLOT(eskill_list_clicked(QModelIndex)));
-        connect(combo_materia,SIGNAL(currentIndexChanged(QString)),this,SLOT(materia_changed(QString)));
-        connect(btn_master_eskills,SIGNAL(clicked()),this,SLOT(btn_master_eskill_clicked()));
-        connect(btn_clear_eskills,SIGNAL(clicked()),this,SLOT(btn_clear_eskill_clicked()));
-    }
-    else
-    {
-        /*
-        connect(btn_star1::clicked(),this::btn_star1_clicked());
-        connect(btn_star2::clicked(),this::btn_star2_clicked());
-        connect(btn_star3::clicked(),this::btn_star3_clicked());
-        connect(btn_star4::clicked(),this::btn_star4_clicked());
-        connect(btn_star5::clicked(),this::btn_star5_clicked());
-        connect(btn_rm_materia::clicked(),this::remove_materia());
-        connect(btn_copy_materia::clicked(),this::copy_materia());
-        connect(btn_paste_materia::clicked(),this::paste_materia());
-        connect(sb_ap::valueChanged(int),this::sb_ap_changed(int));
-        connect(combo_type::currentIndexChanged(int),this::type_changed(int));
-        connect(eskill_list::clicked(QModelIndex),this::eskill_list_clicked(QModelIndex));
-        connect(combo_materia::currentIndexChanged(QString),this::materia_changed(QString));
-        connect(btn_master_eskills::clicked(),this::btn_master_eskill_clicked());
-        connect(btn_clear_eskills::clicked(),this::btn_clear_eskill_clicked());
-        */
-    }
+    connect(btn_star1,SIGNAL(clicked()),this,SLOT(btn_star1_clicked()));
+    connect(btn_star2,SIGNAL(clicked()),this,SLOT(btn_star2_clicked()));
+    connect(btn_star3,SIGNAL(clicked()),this,SLOT(btn_star3_clicked()));
+    connect(btn_star4,SIGNAL(clicked()),this,SLOT(btn_star4_clicked()));
+    connect(btn_star5,SIGNAL(clicked()),this,SLOT(btn_star5_clicked()));
+    connect(btn_rm_materia,SIGNAL(clicked()),this,SLOT(remove_materia()));
+    connect(btn_copy_materia,SIGNAL(clicked()),this,SLOT(copy_materia()));
+    connect(btn_paste_materia,SIGNAL(clicked()),this,SLOT(paste_materia()));
+    connect(sb_ap,SIGNAL(valueChanged(int)),this,SLOT(sb_ap_changed(int)));
+    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(type_changed(int)));
+    connect(eskill_list,SIGNAL(clicked(QModelIndex)),this,SLOT(eskill_list_clicked(QModelIndex)));
+    connect(combo_materia,SIGNAL(currentIndexChanged(QString)),this,SLOT(materia_changed(QString)));
+    connect(btn_master_eskills,SIGNAL(clicked()),this,SLOT(btn_master_eskill_clicked()));
+    connect(btn_clear_eskills,SIGNAL(clicked()),this,SLOT(btn_clear_eskill_clicked()));
 }
 void MateriaEditor::init_data()
 {
@@ -402,7 +378,7 @@ void MateriaEditor::setStats()
             box_stats->setHidden(false);
         }
         else{box_stats->setHidden(true);}
-        if(data->status(_id).at(0).toAscii() !="")
+        if(data->status(_id).at(0).toLocal8Bit() !="")
         {
             list_status->addItems(data->status(_id));
             box_status_effects->setHidden(false);

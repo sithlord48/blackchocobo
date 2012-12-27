@@ -19,6 +19,7 @@
 #include <QFileDialog>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QMessageBox>
 
 MetadataCreator::MetadataCreator(QWidget *parent,FF7Save *ff7save) :    QDialog(parent)
 {
@@ -335,39 +336,44 @@ void MetadataCreator::on_buttonBox_accepted()
     for(int i=0;i<10;i++)
     {
         QString OutFile =QString("%1/save0%2.ff7").arg(OutPath,QString::number(i));
+
         if(InFiles.at(i) =="")
         {//No File Supplied Look in OutPath to see if there is a file.
             QFile tempFile(OutFile);
             if(tempFile.exists())
-            {//If we find the file put its path in InFiles
+            {
+                //If we find the file put its path in InFiles
                 InFiles.replace(i,OutFile);
             }
-            else{ff7->fixMetaData(OutFile,OutPath,lineUserID->text()); continue;}//empty and not found
+
+            else{ff7->fixMetaData(OutFile,OutPath,lineUserID->text());continue;}//empty and not found
         }
         if(!ff7->loadFile(InFiles.at(i))){return;}
         if(ff7->type()!="PC"){ff7->exportPC(OutFile);}
         else{ff7->saveFile(OutFile);}
         ff7->fixMetaData(OutFile,OutPath,lineUserID->text());
     }
-
     QString achevement(QString("%1/achievement.dat").arg(OutPath));
-    FILE *pfile;
-    long size=0;
-
-    pfile = fopen(achevement.toAscii(),"rb");
-    //If file exist, get the size
-    if (pfile!=NULL){fseek(pfile, 0, SEEK_END); size=ftell(pfile); fclose(pfile);}
-
-    pfile = fopen(achevement.toAscii(),"wb");
-    if(pfile != NULL){
-        if(size != 8) {//if size is different, rewrite it
-            unsigned int byte[8] = {0,0,0,0,0,0,0,0};
-            fwrite(&byte,1,8,pfile);
+    QFile file(achevement);
+    qint64 size=0;
+    if(file.exists())
+    {
+        if(!file.open(QIODevice::ReadOnly)){return;}
+        else
+        {
+            size=file.size();
+            file.close();
         }
-        fclose(pfile);
     }
-    else {}//show the write error msg ("Couldn't write achievement.dat")
-
+    if(size!=8)
+    {
+        if(!file.open(QIODevice::WriteOnly)){return;}
+        else
+        {
+            file.write(QByteArray("\x00\x00\x00\x00\x00\x00\x00\x00"));
+            file.close();
+        }
+    }
     this->close();
 }
 void MetadataCreator::on_buttonBox_rejected(){this->close();}

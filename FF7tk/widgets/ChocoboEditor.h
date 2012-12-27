@@ -16,13 +16,13 @@
 #ifndef CHOCOBOEDITOR_H
 #define CHOCOBOEDITOR_H
 
-#include <QWidget>
-#include<QtGui/QComboBox>
-#include <QtGui/QSpinBox>
-#include <QtGui/QLineEdit>
-#include <QtGui/QCheckBox>
-#include <QtGui/QLabel>
-#include <QHBoxLayout>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
+
 //Be sure to set paths correctly for below.
 //ALSO CHECK ChocoboEditor.cpp for icons includes.
 #include "../static_data/FF7Save_Types.h"

@@ -16,6 +16,8 @@
 
 #include "errbox.h"
 #include "ui_errbox.h"
+#include <QMessageBox>
+#include <QFileDialog>
 
 /*~~~~~GLOBALS~~~~~~*/
 errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
@@ -52,14 +54,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     }
 
     ui->lbl_icon->setPixmap(save_icon.icon());
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connection
-        connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
-    }
-    else
-    {//QT5 Style Connection
-    //    connect(&save_icon::nextIcon(QPixmap), ui->lbl_icon::setPixmap(QPixmap));
-    }
+    connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
     // Get the games desc string
     QByteArray desc;
     QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));

@@ -16,7 +16,12 @@
 #ifndef MENULISTWIDGET_H
 #define MENULISTWIDGET_H
 
-#include <QWidget>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 #include "DoubleCheckBox.h"
 
 class MenuListWidget : public QWidget
