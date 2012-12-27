@@ -22,70 +22,33 @@ DialogPreview::DialogPreview(QWidget *parent) : QLabel(parent)
     btn_ur = new QPushButton(this);
     btn_ll = new QPushButton(this);
     btn_lr = new QPushButton(this);
-
     QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,50,50,96);}";
-
     btn_ul->setStyleSheet(style);
     btn_ur->setStyleSheet(style);
     btn_ll->setStyleSheet(style);
     btn_lr->setStyleSheet(style);
-
-    this->draw();
-
-
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connections.
-        connect(btn_ul,SIGNAL(clicked()),this,SLOT(btn_ul_clicked()));
-        connect(btn_ur,SIGNAL(clicked()),this,SLOT(btn_ur_clicked()));
-        connect(btn_ll,SIGNAL(clicked()),this,SLOT(btn_ll_clicked()));
-        connect(btn_lr,SIGNAL(clicked()),this,SLOT(btn_lr_clicked()));
-    }
-    else
-    {//QT5 Style Connections
-        /*
-        connect(btn_ul::clicked(),this::btn_ul_clicked());
-        connect(btn_ur::clicked(),this::btn_ur_clicked());
-        connect(btn_ll::clicked(),this::btn_ll_clicked());
-        connect(btn_lr::clicked(),this::btn_lr_clicked());
-        */
-    }
-
+    setMinimumSize(60,30);
+    draw();
+    connect(btn_ul,SIGNAL(clicked()),this,SLOT(btn_ul_clicked()));
+    connect(btn_ur,SIGNAL(clicked()),this,SLOT(btn_ur_clicked()));
+    connect(btn_ll,SIGNAL(clicked()),this,SLOT(btn_ll_clicked()));
+    connect(btn_lr,SIGNAL(clicked()),this,SLOT(btn_lr_clicked()));
 }
 
-void DialogPreview::SetLLeft(QColor color)  {lower_left=color;  this->draw();   emit LL_ColorChanged(lower_left);}
-void DialogPreview::SetULeft(QColor color)  {upper_left=color;  this->draw();   emit UL_ColorChanged(upper_left);}
-void DialogPreview::SetLRight(QColor color) {lower_right=color; this->draw();   emit LR_ColorChanged(lower_right);}
-void DialogPreview::SetURight(QColor color) {upper_right=color; this->draw();   emit UR_ColorChanged(upper_right);}
+void DialogPreview::SetLLeft(QColor color)  {lower_left=color;  draw(); emit LL_ColorChanged(lower_left);}
+void DialogPreview::SetULeft(QColor color)  {upper_left=color;  draw(); emit UL_ColorChanged(upper_left);}
+void DialogPreview::SetLRight(QColor color) {lower_right=color; draw(); emit LR_ColorChanged(lower_right);}
+void DialogPreview::SetURight(QColor color) {upper_right=color; draw(); emit UR_ColorChanged(upper_right);}
 
 QColor DialogPreview::ll(){return lower_left;}
 QColor DialogPreview::lr(){return lower_right;}
 QColor DialogPreview::ul(){return upper_left;}
 QColor DialogPreview::ur(){return upper_right;}
 
-
-void DialogPreview::btn_ll_clicked()
-{
-    QColor color = QColorDialog::getColor(lower_left,this);
-    if(color.isValid()){this->SetLLeft(color);}
-}
-
-void DialogPreview::btn_lr_clicked()
-{
-    QColor color = QColorDialog::getColor(lower_right,this);
-    if(color.isValid()){this->SetLRight(color);}
-}
-
-void DialogPreview::btn_ul_clicked()
-{
-    QColor color = QColorDialog::getColor(upper_left,this);
-    if(color.isValid()){this->SetULeft(color);}
-}
-
-void DialogPreview::btn_ur_clicked()
-{
-    QColor color = QColorDialog::getColor(upper_right,this);
-    if(color.isValid()){this->SetURight(color);}
-}
+void DialogPreview::btn_ll_clicked(){QColor color = QColorDialog::getColor(lower_left,this);    if(color.isValid()){SetLLeft(color);}}
+void DialogPreview::btn_lr_clicked(){QColor color = QColorDialog::getColor(lower_right,this); if(color.isValid()){SetLRight(color);}}
+void DialogPreview::btn_ul_clicked(){QColor color = QColorDialog::getColor(upper_left,this);  if(color.isValid()){SetULeft(color);}}
+void DialogPreview::btn_ur_clicked(){QColor color = QColorDialog::getColor(upper_right,this);if(color.isValid()){SetURight(color);}}
 
 void DialogPreview::draw()
 {
@@ -94,11 +57,11 @@ void DialogPreview::draw()
     image.setPixel(0, 1, lower_left.rgb());
     image.setPixel(1, 0, upper_right.rgb());
     image.setPixel(1, 1, lower_right.rgb());
-    QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    this->setPixmap(QPixmap::fromImage(gradient));
-    btn_ul->setGeometry(0,0,this->width()/2,this->height()/2);
-    btn_ur->setGeometry(btn_ul->width(),0,this->width()/2,this->height()/2);
-    btn_ll->setGeometry(0,this->height()/2,this->width()/2,this->height()/2);
-    btn_lr->setGeometry(btn_ll->width(),this->height()/2,this->width()/2,this->height()/2);
+    QImage gradient = image.scaled(width(),height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    setPixmap(QPixmap::fromImage(gradient));
+    btn_ul->setGeometry(0,0,width()/2,height()/2);
+    btn_ur->setGeometry(btn_ul->width(),0,width()/2,height()/2);
+    btn_ll->setGeometry(0,height()/2,width()/2,height()/2);
+    btn_lr->setGeometry(btn_ll->width(),height()/2,width()/2,height()/2);
 }
-void DialogPreview::resizeEvent(QResizeEvent*){this->draw();}
+void DialogPreview::resizeEvent(QResizeEvent*){draw();}

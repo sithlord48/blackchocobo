@@ -176,7 +176,6 @@ void ItemList::itemupdate()
             setRowHeight(i,22);
             newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(i))),0);
             setItem(i,2,newItem);
-
         }
     }
     blockSignals(true);
@@ -204,14 +203,5 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     itemSelector->setMinimumWidth(itemSelector->width());
     setCellWidget(row,0,itemSelector);
     itemSelector->setCurrentItem(itemlist.at(row));
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connection
-        connect(itemSelector,SIGNAL(item_changed(quint16)),this,SLOT(itemSelector_changed(quint16)));
-    }
-    else
-    {//QT5 Style Connection
-        /*
-        connect(itemSelector::item_changed(quint16),this::itemSelector_changed(quint16));
-        */
-    }
+    connect(itemSelector,SIGNAL(item_changed(quint16)),this,SLOT(itemSelector_changed(quint16)));
 }

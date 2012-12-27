@@ -28,7 +28,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_1= new QLabel();
   lbl_slot_1->setFixedSize(24,24);
   lbl_slot_1->setScaledContents(1);
-  lbl_slot_1->setHidden(1);
+  lbl_slot_1->setHidden(true);
 
   lbl_m_link_1= new QLabel();
   lbl_m_link_1->setFixedSize(12,24);
@@ -37,7 +37,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_2 = new QLabel();
   lbl_slot_2->setFixedSize(24,24);
   lbl_slot_2->setScaledContents(1);
-  lbl_slot_2->setHidden(1);
+  lbl_slot_2->setHidden(true);
 
   QHBoxLayout *slots_1_and_2 = new QHBoxLayout();
   slots_1_and_2->setContentsMargins(0,0,0,0);
@@ -49,7 +49,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_3 = new QLabel();
   lbl_slot_3->setFixedSize(24,24);
   lbl_slot_3->setScaledContents(1);
-  lbl_slot_3->setHidden(1);
+  lbl_slot_3->setHidden(true);
 
   lbl_m_link_2 = new QLabel();
   lbl_m_link_2->setFixedSize(12,24);
@@ -58,7 +58,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_4 = new QLabel();
   lbl_slot_4->setFixedSize(24,24);
   lbl_slot_4->setScaledContents(1);
-  lbl_slot_4->setHidden(1);
+  lbl_slot_4->setHidden(true);
 
   QHBoxLayout *slots_3_and_4 = new QHBoxLayout();
   slots_3_and_4->setContentsMargins(0,0,0,0);
@@ -70,7 +70,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_5 = new QLabel();
   lbl_slot_5->setFixedSize(24,24);
   lbl_slot_5->setScaledContents(1);
-  lbl_slot_5->setHidden(1);
+  lbl_slot_5->setHidden(true);
 
   lbl_m_link_3 = new QLabel();
   lbl_m_link_3->setFixedSize(12,24);
@@ -79,7 +79,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_6 = new QLabel();
   lbl_slot_6->setFixedSize(24,24);
   lbl_slot_6->setScaledContents(1);
-  lbl_slot_6->setHidden(1);
+  lbl_slot_6->setHidden(true);
 
   QHBoxLayout *slots_5_and_6 = new QHBoxLayout();
   slots_5_and_6->setContentsMargins(0,0,0,0);
@@ -91,7 +91,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_7 = new QLabel();
   lbl_slot_7->setFixedSize(24,24);
   lbl_slot_7->setScaledContents(1);
-  lbl_slot_7->setHidden(1);
+  lbl_slot_7->setHidden(true);
 
   lbl_m_link_4 = new QLabel();
   lbl_m_link_4->setFixedSize(12,24);
@@ -100,7 +100,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_slot_8 = new QLabel();
   lbl_slot_8->setFixedSize(24,24);
   lbl_slot_8->setScaledContents(1);
-  lbl_slot_8->setHidden(1);
+  lbl_slot_8->setHidden(true);
 
   QHBoxLayout *slots_7_and_8 = new QHBoxLayout();
   slots_7_and_8->setContentsMargins(0,0,0,0);
@@ -123,7 +123,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   materia_slots->setSpacing(12);
 
   materia_slot_box->setLayout(materia_slots);
-  materia_slot_box->setShown(0);
+  materia_slot_box->setHidden(true);
 
   elemental_effects = new QListWidget();
   QHBoxLayout *elemental = new QHBoxLayout();
@@ -134,7 +134,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   elemental_box->setContentsMargins(3,3,3,3);
   elemental_box->setLayout(elemental);
   elemental_box->setTitle(tr("Elemental Effects"));
-  elemental_box->setHidden(1);
+  elemental_box->setHidden(true);
 
   status_effects = new QListWidget();
   QHBoxLayout *status =new QHBoxLayout();
@@ -145,7 +145,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   status_box->setContentsMargins(3,3,3,3);
   status_box->setLayout(status);
   status_box->setTitle(tr("Status Effects"));
-  status_box->setHidden(1);
+  status_box->setHidden(true);
 
   QHBoxLayout *effects_layout =new QHBoxLayout();
   effects_layout->setContentsMargins(0,0,0,0);
@@ -182,26 +182,26 @@ void ItemPreview::setItem(quint16 itemraw)
 }
 void ItemPreview::setItem(int id)
 {
-    lbl_slot_8->setHidden(1);
-    lbl_slot_7->setHidden(1);
-    lbl_slot_6->setHidden(1);
-    lbl_slot_5->setHidden(1);
-    lbl_slot_4->setHidden(1);
-    lbl_slot_3->setHidden(1);
-    lbl_slot_2->setHidden(1);
-    lbl_slot_1->setHidden(1);
+    lbl_slot_8->setHidden(true);
+    lbl_slot_7->setHidden(true);
+    lbl_slot_6->setHidden(true);
+    lbl_slot_5->setHidden(true);
+    lbl_slot_4->setHidden(true);
+    lbl_slot_3->setHidden(true);
+    lbl_slot_2->setHidden(true);
+    lbl_slot_1->setHidden(true);
 
     lbl_m_link_1->setPixmap(QPixmap());
     lbl_m_link_2->setPixmap(QPixmap());
     lbl_m_link_3->setPixmap(QPixmap());
     lbl_m_link_4->setPixmap(QPixmap());
 
-    materia_slot_box->setShown(0);
-    lbl_desc->setHidden(1);
-    lbl_name->setHidden(1);
-    lbl_icon->setHidden(1);
-    status_box->setHidden(1);
-    elemental_box->setHidden(1);
+    materia_slot_box->setHidden(true);
+    lbl_desc->setHidden(true);
+    lbl_name->setHidden(true);
+    lbl_icon->setHidden(true);
+    status_box->setHidden(true);
+    elemental_box->setHidden(true);
 
     if(id<0 || id>319){_id=FF7Item::EmptyItem;/*InValid Number..Do Nothing*/}
     else
@@ -209,18 +209,18 @@ void ItemPreview::setItem(int id)
         _id=id;
         if(data.name(id) !="")
         {
-            lbl_name->setHidden(0);
+            lbl_name->setHidden(false);
             setName(data.name(id));
         }
 
         if(data.desc(id)!="")
         {
             setDesc(data.desc(id));
-            lbl_desc->setHidden(0);
+            lbl_desc->setHidden(false);
         }
         if(!data.image(id).isNull())
         {
-            lbl_icon->setHidden(0);
+            lbl_icon->setHidden(false);
             setIcon(QPixmap::fromImage(data.image(id)));
         }
         this->status_info(id);
@@ -252,17 +252,17 @@ void ItemPreview::setItem(int id)
             }
             QString ap_rate =tr("APx%1").arg(data.materiaGrowthRate(id));
             materia_slot_box->setTitle(ap_rate);
-            materia_slot_box->setShown(1);
+            materia_slot_box->setHidden(false);
             switch(data.materiaSlots(id))
             {
-                case 8:lbl_slot_8->setHidden(0);
-                case 7:lbl_slot_7->setHidden(0);
-                case 6:lbl_slot_6->setHidden(0);
-                case 5:lbl_slot_5->setHidden(0);
-                case 4:lbl_slot_4->setHidden(0);
-                case 3:lbl_slot_3->setHidden(0);
-                case 2:lbl_slot_2->setHidden(0);
-                case 1:lbl_slot_1->setHidden(0);
+                case 8:lbl_slot_8->setHidden(false);
+                case 7:lbl_slot_7->setHidden(false);
+                case 6:lbl_slot_6->setHidden(false);
+                case 5:lbl_slot_5->setHidden(false);
+                case 4:lbl_slot_4->setHidden(false);
+                case 3:lbl_slot_3->setHidden(false);
+                case 2:lbl_slot_2->setHidden(false);
+                case 1:lbl_slot_1->setHidden(false);
             };
 
             switch(data.linkedSlots(id))

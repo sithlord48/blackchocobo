@@ -16,10 +16,17 @@
 #ifndef ITEMLIST_H
 #define ITEMLIST_H
 
-#include <QTableWidget>
-#include <QHeaderView>
-#include <QScrollBar>
-#include <QEvent>
+//#include <QTableWidget>
+//#include <QHeaderView>
+//#include <QScrollBar>
+//#include <QEvent>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
+
 #include "ItemPreview.h"
 #include "ItemSelector.h"
 #include "../static_data/FF7Item.h"

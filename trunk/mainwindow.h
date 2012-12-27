@@ -17,14 +17,21 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QFileDialog>              // for file dialogs
-#include <QDataStream>              // for data manip
-#include <QMainWindow>
-#include <QWidget>
-#include <QMessageBox>
-#include <QSettings>
-#include <QtXml/QDomDocument>             // for metadata.xml parse
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets/QMainWindow>
+    #include <QtWidgets/QWidget>
+#else
+    #include <QtGui/QMainWindow>
+    #include <QtGui/QWidget>
+#endif
 
+
+#include <QDataStream>              // for data manip
+#include <QSettings>
+#include <QMessageBox>
+#include <QFileDialog>              // for file dialogs
+#include <QtXml/QDomDocument>             // for metadata.xml parse
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
@@ -105,46 +112,46 @@ private slots://try to keep these in the same order as the .cpp file
     /*Loading and Saving related Functions*/
     int save_changes(void); //return 1 to accept and 0 to ingore the event
     void on_actionNew_Window_triggered();
-    void on_actionOpen_Save_File_activated();
+    void on_actionOpen_Save_File_triggered();
     void on_actionReload_triggered();
     void Items_Changed(QList<quint16>);
-    void on_actionFrom_PSX_Slot_activated();
-    void on_actionFrom_PSV_Slot_activated();
+    void on_actionFrom_PSX_Slot_triggered();
+    void on_actionFrom_PSV_Slot_triggered();
     void on_actionImport_char_triggered();
     void on_actionExport_char_triggered();
-    void on_action_Save_activated();
-    void on_actionSave_File_As_activated();
+    void on_action_Save_triggered();
+    void on_actionSave_File_As_triggered();
     void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
     void on_actionNew_Game_triggered();
     void on_actionNew_Game_Plus_triggered();
-    void on_actionExport_PC_Save_activated();
-    void on_actionExport_PSX_activated();
+    void on_actionExport_PC_Save_triggered();
+    void on_actionExport_PSX_triggered();
     void on_actionExport_MC_triggered();
     void on_actionExport_VGS_triggered();
     void on_actionExport_DEX_triggered();  
   /*Simple Menu Actions */
-    void on_actionSlot_01_activated();
-    void on_actionSlot_02_activated();
-    void on_actionSlot_03_activated();
-    void on_actionSlot_04_activated();
-    void on_actionSlot_05_activated();
-    void on_actionSlot_06_activated();
-    void on_actionSlot_07_activated();
-    void on_actionSlot_08_activated();
-    void on_actionSlot_09_activated();
-    void on_actionSlot_10_activated();
-    void on_actionSlot_11_activated();
-    void on_actionSlot_12_activated();
-    void on_actionSlot_13_activated();
-    void on_actionSlot_14_activated();
-    void on_actionSlot_15_activated();
-    void on_actionShow_Selection_Dialog_activated();
-    void on_actionClear_Slot_activated();
-    void on_actionPrevious_Slot_activated();
-    void on_actionNext_Slot_activated();
-    void on_actionAbout_activated();
-    void on_actionCopy_Slot_activated();
-    void on_actionPaste_Slot_activated();
+    void on_actionSlot_01_triggered();
+    void on_actionSlot_02_triggered();
+    void on_actionSlot_03_triggered();
+    void on_actionSlot_04_triggered();
+    void on_actionSlot_05_triggered();
+    void on_actionSlot_06_triggered();
+    void on_actionSlot_07_triggered();
+    void on_actionSlot_08_triggered();
+    void on_actionSlot_09_triggered();
+    void on_actionSlot_10_triggered();
+    void on_actionSlot_11_triggered();
+    void on_actionSlot_12_triggered();
+    void on_actionSlot_13_triggered();
+    void on_actionSlot_14_triggered();
+    void on_actionSlot_15_triggered();
+    void on_actionShow_Selection_Dialog_triggered();
+    void on_actionClear_Slot_triggered();
+    void on_actionPrevious_Slot_triggered();
+    void on_actionNext_Slot_triggered();
+    void on_actionAbout_triggered();
+    void on_actionCopy_Slot_triggered();
+    void on_actionPaste_Slot_triggered();
     void on_actionShow_Options_triggered();
     void on_action_auto_char_growth_triggered(bool checked);
     void on_action_show_debug_toggled(bool checked);

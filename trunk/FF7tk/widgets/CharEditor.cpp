@@ -80,7 +80,7 @@ void CharEditor::init_display()
     sb_total_exp->setWrapping(true);
 
     lcd_tnl = new QLCDNumber;
-    lcd_tnl->setNumDigits(8);
+    lcd_tnl->setDigitCount(8);
     lcd_tnl->setMaximumHeight(20);
     lcd_tnl->setSegmentStyle(QLCDNumber::Flat);
     lbl_limit_bar = new QLabel (tr("Limit Bar"));
@@ -504,7 +504,7 @@ void CharEditor::init_display()
 
     QLabel *lbl_0x34= new QLabel(QString(tr("0x34")));
     lcd_0x34 = new QLCDNumber;
-    lcd_0x34->setNumDigits(2);
+    lcd_0x34->setDigitCount(2);
     lcd_0x34->setFixedSize(32,20);
     lcd_0x34->setHexMode();
     lcd_0x34->setSegmentStyle(QLCDNumber::Flat);
@@ -516,7 +516,7 @@ void CharEditor::init_display()
 
     QLabel *lbl_0x35= new QLabel(QString(tr("0x35")));
     lcd_0x35 = new QLCDNumber;
-    lcd_0x35->setNumDigits(2);
+    lcd_0x35->setDigitCount(2);
     lcd_0x35->setFixedSize(32,20);
     lcd_0x35->setHexMode();
     lcd_0x35->setSegmentStyle(QLCDNumber::Flat);
@@ -528,7 +528,7 @@ void CharEditor::init_display()
 
     QLabel *lbl_0x36= new QLabel(QString(tr("0x36")));
     lcd_0x36 = new QLCDNumber;
-    lcd_0x36->setNumDigits(2);
+    lcd_0x36->setDigitCount(2);
     lcd_0x36->setFixedSize(32,20);
     lcd_0x36->setHexMode();
     lcd_0x36->setSegmentStyle(QLCDNumber::Flat);
@@ -540,7 +540,7 @@ void CharEditor::init_display()
 
     QLabel *lbl_0x37= new QLabel(QString(tr("0x37")));
     lcd_0x37 = new QLCDNumber;
-    lcd_0x37->setNumDigits(2);
+    lcd_0x37->setDigitCount(2);
     lcd_0x37->setFixedSize(32,20);
     lcd_0x37->setHexMode();
 
@@ -603,7 +603,7 @@ void CharEditor::init_display()
     accessory_selection = new QComboBox;
     for(int i=288;i<320;i++){accessory_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));}
     accessory_selection->addItem(QPixmap::fromImage(Items.image(288)),tr("-NONE-"));
-    materia_edit  = new MateriaEditor;
+    materia_edit  = new MateriaEditor(this);
     materia_edit->setStarsSize(32);
 
     elemental_effects = new QListWidget();
@@ -1125,124 +1125,61 @@ void CharEditor::Slider_Limit_FF7_Style()
 
 void CharEditor::init_connections()
 {
-    if(QT_VERSION<0x050000)
-    {
-        connect(cb_idChanger,SIGNAL(toggled(bool)),this,SLOT(cb_idChanger_toggled(bool)));
-        connect(sb_level,SIGNAL(valueChanged(int)),this,SLOT(Level_Changed(int)));
-        connect(sb_curMp,SIGNAL(valueChanged(int)),this,SLOT(setCurMp(int)));
-        connect(sb_curHp,SIGNAL(valueChanged(int)),this,SLOT(setCurHp(int)));
-        connect(sb_maxMp,SIGNAL(valueChanged(int)),this,SLOT(setMaxMp(int)));
-        connect(sb_maxHp,SIGNAL(valueChanged(int)),this,SLOT(setMaxHp(int)));
-        connect(sb_base_hp,SIGNAL(valueChanged(int)),this,SLOT(setBaseHp(int)));
-        connect(sb_base_mp,SIGNAL(valueChanged(int)),this,SLOT(setBaseMp(int)));
-        connect(sb_kills,SIGNAL(valueChanged(int)),this,SLOT(setKills(int)));
-        connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
-        connect(cb_front_row,SIGNAL(toggled(bool)),this,SLOT(setRow(bool)));
-        connect(cb_fury,SIGNAL(toggled(bool)),this,SLOT(cb_fury_toggled(bool)));
-        connect(cb_sadness,SIGNAL(toggled(bool)),this,SLOT(cb_sadness_toggled(bool)));
-        connect(sb_str,SIGNAL(valueChanged(int)),this,SLOT(setStr(int)));
-        connect(sb_str_bonus,SIGNAL(valueChanged(int)),this,SLOT(setStrBonus(int)));
-        connect(sb_vit,SIGNAL(valueChanged(int)),this,SLOT(setVit(int)));
-        connect(sb_vit_bonus,SIGNAL(valueChanged(int)),this,SLOT(setVitBonus(int)));
-        connect(sb_mag,SIGNAL(valueChanged(int)),this,SLOT(setMag(int)));
-        connect(sb_mag_bonus,SIGNAL(valueChanged(int)),this,SLOT(setMagBonus(int)));
-        connect(sb_spi,SIGNAL(valueChanged(int)),this,SLOT(setSpi(int)));
-        connect(sb_spi_bonus,SIGNAL(valueChanged(int)),this,SLOT(setSpiBonus(int)));
-        connect(sb_dex,SIGNAL(valueChanged(int)),this,SLOT(setDex(int)));
-        connect(sb_dex_bonus,SIGNAL(valueChanged(int)),this,SLOT(setDexBonus(int)));
-        connect(sb_lck,SIGNAL(valueChanged(int)),this,SLOT(setLck(int)));
-        connect(sb_lck_bonus,SIGNAL(valueChanged(int)),this,SLOT(setLckBonus(int)));
-        connect(slider_limit,SIGNAL(valueChanged(int)),this,SLOT(setLimitBar(int)));
-        connect(sb_total_exp,SIGNAL(valueChanged(int)),this,SLOT(Exp_Changed(int)));
-        connect(slider_limit,SIGNAL(valueChanged(int)),lcd_limit_value,SLOT(display(int)));
-        connect(list_limits,SIGNAL(clicked(QModelIndex)),this,SLOT(calc_limit_value(QModelIndex)));
-        connect(sb_uses_limit_1_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused1(int))); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_uses_limit_2_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused2(int))); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_uses_limit_3_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused3(int))); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_limit_level,SIGNAL(valueChanged(int)),this,SLOT(setLimitLevel(int))); //Vegeta_Ss4: Fixed limitlevel GUI
-        connect(combo_id,SIGNAL(currentIndexChanged(int)),this,SLOT(setId(int)));
-        connect(weapon_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setWeapon(int)));
-        connect(armor_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setArmor(int)));
-        connect(accessory_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setAccessory(int)));
-        connect(weapon_slot_1,SIGNAL(clicked()),this,SLOT(weapon_slot_1_clicked()));
-        connect(weapon_slot_2,SIGNAL(clicked()),this,SLOT(weapon_slot_2_clicked()));
-        connect(weapon_slot_3,SIGNAL(clicked()),this,SLOT(weapon_slot_3_clicked()));
-        connect(weapon_slot_4,SIGNAL(clicked()),this,SLOT(weapon_slot_4_clicked()));
-        connect(weapon_slot_5,SIGNAL(clicked()),this,SLOT(weapon_slot_5_clicked()));
-        connect(weapon_slot_6,SIGNAL(clicked()),this,SLOT(weapon_slot_6_clicked()));
-        connect(weapon_slot_7,SIGNAL(clicked()),this,SLOT(weapon_slot_7_clicked()));
-        connect(weapon_slot_8,SIGNAL(clicked()),this,SLOT(weapon_slot_8_clicked()));
-        connect(armor_slot_1,SIGNAL(clicked()),this,SLOT(armor_slot_1_clicked()));
-        connect(armor_slot_2,SIGNAL(clicked()),this,SLOT(armor_slot_2_clicked()));
-        connect(armor_slot_3,SIGNAL(clicked()),this,SLOT(armor_slot_3_clicked()));
-        connect(armor_slot_4,SIGNAL(clicked()),this,SLOT(armor_slot_4_clicked()));
-        connect(armor_slot_5,SIGNAL(clicked()),this,SLOT(armor_slot_5_clicked()));
-        connect(armor_slot_6,SIGNAL(clicked()),this,SLOT(armor_slot_6_clicked()));
-        connect(armor_slot_7,SIGNAL(clicked()),this,SLOT(armor_slot_7_clicked()));
-        connect(armor_slot_8,SIGNAL(clicked()),this,SLOT(armor_slot_8_clicked()));
-        connect(materia_edit,SIGNAL(ap_changed(qint32)),this,SLOT(matAp_changed(qint32)));
-        connect(materia_edit,SIGNAL(id_changed(qint8)),this,SLOT(matId_changed(qint8)));
-    }
-    else
-    {//Qt5 Style Connetions.
-    /*
-        connect(cb_idChanger::toggled(bool),this::cb_idChanger_toggled(bool));
-        connect(sb_level::valueChanged(int),this::Level_Changed(int));
-        connect(sb_curMp::valueChanged(int),this::setCurMp(int));
-        connect(sb_curHp::valueChanged(int),this::setCurHp(int));
-        connect(sb_maxMp::valueChanged(int),this::setMaxMp(int));
-        connect(sb_maxHp::valueChanged(int),this::setMaxHp(int));
-        connect(sb_base_hp::valueChanged(int),this::setBaseHp(int));
-        connect(sb_base_mp::valueChanged(int),this::setBaseMp(int));
-        connect(sb_kills::valueChanged(int),this::setKills(int));
-        connect(line_name::textChanged(QString),this::setName(QString));
-        connect(cb_front_row::toggled(bool),this::setRow(bool));
-        connect(cb_fury::toggled(bool),this::cb_fury_toggled(bool));
-        connect(cb_sadness::toggled(bool),this::cb_sadness_toggled(bool));
-        connect(sb_str::valueChanged(int),this::setStr(int));
-        connect(sb_str_bonus::valueChanged(int),this::setStrBonus(int));
-        connect(sb_vit::valueChanged(int),this::setVit(int));
-        connect(sb_vit_bonus::valueChanged(int),this::setVitBonus(int));
-        connect(sb_mag::valueChanged(int),this::setMag(int));
-        connect(sb_mag_bonus::valueChanged(int),this::setMagBonus(int));
-        connect(sb_spi::valueChanged(int),this::setSpi(int));
-        connect(sb_spi_bonus::valueChanged(int),this::setSpiBonus(int));
-        connect(sb_dex::valueChanged(int),this::setDex(int));
-        connect(sb_dex_bonus::valueChanged(int),this::setDexBonus(int));
-        connect(sb_lck::valueChanged(int),this::setLck(int));
-        connect(sb_lck_bonus::valueChanged(int),this::setLckBonus(int));
-        connect(slider_limit::valueChanged(int),this::setLimitBar(int));
-        connect(sb_total_exp::valueChanged(int),this::Exp_Changed(int));
-        connect(slider_limit::valueChanged(int),lcd_limit_value,::display(int));
-        connect(list_limits::clicked(QModelIndex),this::calc_limit_value(QModelIndex));
-        connect(sb_uses_limit_1_1::valueChanged(int),this::setTimesused1(int)); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_uses_limit_2_1::valueChanged(int),this::setTimesused2(int)); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_uses_limit_3_1::valueChanged(int),this::setTimesused3(int)); //Vegeta_Ss4: Fixed limit timeused GUI
-        connect(sb_limit_level::valueChanged(int),this::setLimitLevel(int)); //Vegeta_Ss4: Fixed limitlevel GUI
-        connect(combo_id::currentIndexChanged(int),this::setId(int));
-        connect(weapon_selection::currentIndexChanged(int),this::setWeapon(int));
-        connect(armor_selection::currentIndexChanged(int),this::setArmor(int));
-        connect(accessory_selection::currentIndexChanged(int),this::setAccessory(int));
-        connect(weapon_slot_1::clicked(),this::weapon_slot_1_clicked());
-        connect(weapon_slot_2::clicked(),this::weapon_slot_2_clicked());
-        connect(weapon_slot_3::clicked(),this::weapon_slot_3_clicked());
-        connect(weapon_slot_4::clicked(),this::weapon_slot_4_clicked());
-        connect(weapon_slot_5::clicked(),this::weapon_slot_5_clicked());
-        connect(weapon_slot_6::clicked(),this::weapon_slot_6_clicked());
-        connect(weapon_slot_7::clicked(),this::weapon_slot_7_clicked());
-        connect(weapon_slot_8::clicked(),this::weapon_slot_8_clicked());
-        connect(armor_slot_1::clicked(),this::armor_slot_1_clicked());
-        connect(armor_slot_2::clicked(),this::armor_slot_2_clicked());
-        connect(armor_slot_3::clicked(),this::armor_slot_3_clicked());
-        connect(armor_slot_4::clicked(),this::armor_slot_4_clicked());
-        connect(armor_slot_5::clicked(),this::armor_slot_5_clicked());
-        connect(armor_slot_6::clicked(),this::armor_slot_6_clicked());
-        connect(armor_slot_7::clicked(),this::armor_slot_7_clicked());
-        connect(armor_slot_8::clicked(),this::armor_slot_8_clicked());
-        connect(materia_edit::ap_changed(qint32),this::matAp_changed(qint32));
-        connect(materia_edit::id_changed(qint8),this::matId_changed(qint8));
-    */
-    }
+    connect(cb_idChanger,SIGNAL(toggled(bool)),this,SLOT(cb_idChanger_toggled(bool)));
+    connect(sb_level,SIGNAL(valueChanged(int)),this,SLOT(Level_Changed(int)));
+    connect(sb_curMp,SIGNAL(valueChanged(int)),this,SLOT(setCurMp(int)));
+    connect(sb_curHp,SIGNAL(valueChanged(int)),this,SLOT(setCurHp(int)));
+    connect(sb_maxMp,SIGNAL(valueChanged(int)),this,SLOT(setMaxMp(int)));
+    connect(sb_maxHp,SIGNAL(valueChanged(int)),this,SLOT(setMaxHp(int)));
+    connect(sb_base_hp,SIGNAL(valueChanged(int)),this,SLOT(setBaseHp(int)));
+    connect(sb_base_mp,SIGNAL(valueChanged(int)),this,SLOT(setBaseMp(int)));
+    connect(sb_kills,SIGNAL(valueChanged(int)),this,SLOT(setKills(int)));
+    connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
+    connect(cb_front_row,SIGNAL(toggled(bool)),this,SLOT(setRow(bool)));
+    connect(cb_fury,SIGNAL(toggled(bool)),this,SLOT(cb_fury_toggled(bool)));
+    connect(cb_sadness,SIGNAL(toggled(bool)),this,SLOT(cb_sadness_toggled(bool)));
+    connect(sb_str,SIGNAL(valueChanged(int)),this,SLOT(setStr(int)));
+    connect(sb_str_bonus,SIGNAL(valueChanged(int)),this,SLOT(setStrBonus(int)));
+    connect(sb_vit,SIGNAL(valueChanged(int)),this,SLOT(setVit(int)));
+    connect(sb_vit_bonus,SIGNAL(valueChanged(int)),this,SLOT(setVitBonus(int)));
+    connect(sb_mag,SIGNAL(valueChanged(int)),this,SLOT(setMag(int)));
+    connect(sb_mag_bonus,SIGNAL(valueChanged(int)),this,SLOT(setMagBonus(int)));
+    connect(sb_spi,SIGNAL(valueChanged(int)),this,SLOT(setSpi(int)));
+    connect(sb_spi_bonus,SIGNAL(valueChanged(int)),this,SLOT(setSpiBonus(int)));
+    connect(sb_dex,SIGNAL(valueChanged(int)),this,SLOT(setDex(int)));
+    connect(sb_dex_bonus,SIGNAL(valueChanged(int)),this,SLOT(setDexBonus(int)));
+    connect(sb_lck,SIGNAL(valueChanged(int)),this,SLOT(setLck(int)));
+    connect(sb_lck_bonus,SIGNAL(valueChanged(int)),this,SLOT(setLckBonus(int)));
+    connect(slider_limit,SIGNAL(valueChanged(int)),this,SLOT(setLimitBar(int)));
+    connect(sb_total_exp,SIGNAL(valueChanged(int)),this,SLOT(Exp_Changed(int)));
+    connect(slider_limit,SIGNAL(valueChanged(int)),lcd_limit_value,SLOT(display(int)));
+    connect(list_limits,SIGNAL(clicked(QModelIndex)),this,SLOT(calc_limit_value(QModelIndex)));
+    connect(sb_uses_limit_1_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused1(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_uses_limit_2_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused2(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_uses_limit_3_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused3(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_limit_level,SIGNAL(valueChanged(int)),this,SLOT(setLimitLevel(int))); //Vegeta_Ss4: Fixed limitlevel GUI
+    connect(combo_id,SIGNAL(currentIndexChanged(int)),this,SLOT(setId(int)));
+    connect(weapon_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setWeapon(int)));
+    connect(armor_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setArmor(int)));
+    connect(accessory_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setAccessory(int)));
+    connect(weapon_slot_1,SIGNAL(clicked()),this,SLOT(weapon_slot_1_clicked()));
+    connect(weapon_slot_2,SIGNAL(clicked()),this,SLOT(weapon_slot_2_clicked()));
+    connect(weapon_slot_3,SIGNAL(clicked()),this,SLOT(weapon_slot_3_clicked()));
+    connect(weapon_slot_4,SIGNAL(clicked()),this,SLOT(weapon_slot_4_clicked()));
+    connect(weapon_slot_5,SIGNAL(clicked()),this,SLOT(weapon_slot_5_clicked()));
+    connect(weapon_slot_6,SIGNAL(clicked()),this,SLOT(weapon_slot_6_clicked()));
+    connect(weapon_slot_7,SIGNAL(clicked()),this,SLOT(weapon_slot_7_clicked()));
+    connect(weapon_slot_8,SIGNAL(clicked()),this,SLOT(weapon_slot_8_clicked()));
+    connect(armor_slot_1,SIGNAL(clicked()),this,SLOT(armor_slot_1_clicked()));
+    connect(armor_slot_2,SIGNAL(clicked()),this,SLOT(armor_slot_2_clicked()));
+    connect(armor_slot_3,SIGNAL(clicked()),this,SLOT(armor_slot_3_clicked()));
+    connect(armor_slot_4,SIGNAL(clicked()),this,SLOT(armor_slot_4_clicked()));
+    connect(armor_slot_5,SIGNAL(clicked()),this,SLOT(armor_slot_5_clicked()));
+    connect(armor_slot_6,SIGNAL(clicked()),this,SLOT(armor_slot_6_clicked()));
+    connect(armor_slot_7,SIGNAL(clicked()),this,SLOT(armor_slot_7_clicked()));
+    connect(armor_slot_8,SIGNAL(clicked()),this,SLOT(armor_slot_8_clicked()));
+    connect(materia_edit,SIGNAL(ap_changed(qint32)),this,SLOT(matAp_changed(qint32)));
+    connect(materia_edit,SIGNAL(id_changed(qint8)),this,SLOT(matId_changed(qint8)));
 }
 void CharEditor::disconnectAll(void)
 {

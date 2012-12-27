@@ -15,21 +15,14 @@
 /****************************************************************************/
 #ifndef CHAREDITOR_H
 #define CHAREDITOR_H
-#include <QWidget>
-#include <QSpinBox>
-#include <QLineEdit>
-#include <QLabel>
-#include <QHBoxLayout>
-#include <QMenu>
-#include <QCheckBox>
-#include <QComboBox>
-#include <QGroupBox>
-#include <QListWidget>
-#include <QProgressBar>
-#include <QSlider>
-#include <QLCDNumber>
-#include <QToolBox>
-#include <QFrame>
+
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
+
 
 //set path to FF7Item FF7Materia and FF7Char
 #include "../static_data/FF7Item.h"

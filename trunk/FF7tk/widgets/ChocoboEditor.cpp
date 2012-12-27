@@ -345,86 +345,39 @@ void ChocoboEditor::init_display(void)
 }
 void ChocoboEditor::init_connections(void)
 {
-    if(QT_VERSION <0x050000)
-    {//QT4 Style Connect Statements
-        connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
-        connect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
-        connect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
-        connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
-        connect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
-        connect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
-        connect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
-        connect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
-        connect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
-        connect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
-        connect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
-        connect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
-        connect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
-        connect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
-        connect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
-    }
-    else
-    {//QT5 Style Connect Statements
-    /*
-        connect(combo_type::currentIndexChanged(int),this::setType(int));
-        connect(combo_sex::currentIndexChanged(int),this::setSex(int));
-        connect(cb_cantMate::toggled(bool),this::setCantMate(bool));
-        connect(line_name::textChanged(QString),this::setName(QString));
-        connect(sb_sprint::valueChanged(int),this::setSprint(int));
-        connect(sb_mSprint::valueChanged(int),this::setMsprint(int));
-        connect(sb_speed::valueChanged(int),this::setSpeed(int));
-        connect(sb_mSpeed::valueChanged(int),this::setMspeed(int));
-        connect(sb_stamina::valueChanged(int),this::setStamina(int));
-        connect(sb_accel::valueChanged(int),this::setAccel(int));
-        connect(sb_coop::valueChanged(int),this::setCoop(int));
-        connect(sb_intel::valueChanged(int),this::setIntelligence(int));
-        connect(sb_personality::valueChanged(int),this::setPersonality(int));
-        connect(sb_pCount::valueChanged(int),this::setPcount(int));
-        connect(sb_wins::valueChanged(int),this::setWins(int));
-    */
-    }
+    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
+    connect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
+    connect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
+    connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
+    connect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
+    connect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
+    connect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
+    connect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
+    connect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
+    connect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
+    connect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
+    connect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
+    connect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
+    connect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
+    connect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
 }
 void ChocoboEditor::disconnectAll(void)
 {
-    if(QT_VERSION <0x050000)
-    {//QT4 Style Connect Statements
-        disconnect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
-        disconnect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
-        disconnect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
-        disconnect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
-        disconnect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
-        disconnect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
-        disconnect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
-        disconnect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
-        disconnect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
-        disconnect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
-        disconnect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
-        disconnect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
-        disconnect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
-        disconnect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
-        disconnect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
-    }
-    else
-    {//QT5 Style Connect Statements
-    /*
-        disconnect(combo_type::currentIndexChanged(int),this::setType(int));
-        disconnect(combo_sex::currentIndexChanged(int),this::setSex(int));
-        disconnect(cb_cantMate::toggled(bool),this::setCantMate(bool));
-        disconnect(line_name::textChanged(QString),this::setName(QString));
-        disconnect(sb_sprint::valueChanged(int),this::setSprint(int));
-        disconnect(sb_mSprint::valueChanged(int),this::setMsprint(int));
-        disconnect(sb_speed::valueChanged(int),this::setSpeed(int));
-        disconnect(sb_mSpeed::valueChanged(int),this::setMspeed(int));
-        disconnect(sb_stamina::valueChanged(int),this::setStamina(int));
-        disconnect(sb_accel::valueChanged(int),this::setAccel(int));
-        disconnect(sb_coop::valueChanged(int),this::setCoop(int));
-        disconnect(sb_intel::valueChanged(int),this::setIntelligence(int));
-        disconnect(sb_personality::valueChanged(int),this::setPersonality(int));
-        disconnect(sb_pCount::valueChanged(int),this::setPcount(int));
-        disconnect(sb_wins::valueChanged(int),this::setWins(int));
-    */
-    }
-
+    disconnect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
+    disconnect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
+    disconnect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
+    disconnect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
+    disconnect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
+    disconnect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
+    disconnect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
+    disconnect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
+    disconnect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
+    disconnect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
+    disconnect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
+    disconnect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
+    disconnect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
+    disconnect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
+    disconnect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
 }
 void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina)
 {
@@ -452,4 +405,3 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
     sb_personality->setValue(choco_data.personality);
     init_connections();
 }
-

@@ -13,15 +13,21 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets/QApplication>
+    #include <QStyleFactory>
+#else
+    #include <QtGui/QApplication>
+    #include <QPlastiqueStyle>
+#endif
 
-#include <QtGui/QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include <QTime>
+#include <QSettings>
 #include "mainwindow.h"
 #include "version.h"                // contains the program version
-#include <QSettings>
-#include <QPlastiqueStyle>
-#include <QTime>
 
 #ifdef STATIC
 #include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
@@ -43,13 +49,14 @@ int main(int argc, char *argv[])
     if(argc >1)
     {//Check for and display help to the console :D
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");return 0;}
-        else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toAscii().constData());return 0;}
+        else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toLocal8Bit().constData());return 0;}
     }
     //Start application init.
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
-    a.setStyle("Plastique");
+    if(QT_VERSION < 0x50000){a.setStyle("Plastique");}
+    else{a.setStyle(QStyleFactory::create("fusion"));}
     a.setApplicationVersion(Version);
 
     #ifdef STATIC

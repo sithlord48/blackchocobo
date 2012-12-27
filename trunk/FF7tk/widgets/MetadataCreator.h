@@ -18,13 +18,12 @@
 #ifndef METADATACREATOR_H
 #define METADATACREATOR_H
 
-#include <QDialog>
-#include <QLineEdit>
-#include<QLabel>
-#include <QDialogButtonBox>
-#include <QPushButton>
-#include <QGroupBox>
-#include<QSpacerItem>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 #include "../static_data/FF7Save.h"
 
 

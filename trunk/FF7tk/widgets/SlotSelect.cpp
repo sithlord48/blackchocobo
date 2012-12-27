@@ -191,17 +191,9 @@ void SlotSelect::setSlotPreview(int s)
     }
     //more checks after this....
     //for any item
-    if(QT_VERSION<0x050000)
-    {//QT4 Style Connection
-        //connect(preview[s],SIGNAL(btn_select_clicked(int)),this,SLOT(button_clicked(int)));
-
-       connect(preview[s],SIGNAL(clicked(int)),this,SLOT(button_clicked(int)));
-        connect(preview[s],SIGNAL(btn_remove_clicked(int)),this,SLOT(remove_slot(int)));
-        connect(preview[s],SIGNAL(btn_copy_clicked(int)),this,SLOT(copy_slot(int)));
-        connect(preview[s],SIGNAL(btn_paste_clicked(int)),this,SLOT(paste_slot(int)));
-    }
-    else
-    {//QT5 Style Connection
-    //    connect(preview[i]::button_clicked(QString),this::button_clicked(QString));
-    }
+    //connect(preview[s],SIGNAL(btn_select_clicked(int)),this,SLOT(button_clicked(int)));
+   connect(preview[s],SIGNAL(clicked(int)),this,SLOT(button_clicked(int)));
+   connect(preview[s],SIGNAL(btn_remove_clicked(int)),this,SLOT(remove_slot(int)));
+   connect(preview[s],SIGNAL(btn_copy_clicked(int)),this,SLOT(copy_slot(int)));
+   connect(preview[s],SIGNAL(btn_paste_clicked(int)),this,SLOT(paste_slot(int)));
 }

@@ -16,7 +16,12 @@
 #ifndef PHSLISTWIDGET_H
 #define PHSLISTWIDGET_H
 
-#include <QWidget>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 #include "DoubleCheckBox.h"
 
 class PhsListWidget : public QWidget

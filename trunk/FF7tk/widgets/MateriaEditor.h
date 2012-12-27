@@ -16,15 +16,12 @@
 #ifndef MateriaEditor_H
   #define MateriaEditor_H
 
-#include <QtGui/QWidget>
-#include <QtGui/QLabel>
-#include <QtGui/QGroupBox>
-#include <QtGui/QHBoxLayout>
-#include <QPushButton>
-#include <QComboBox>
-#include <QSpinBox>
-#include <QListWidget>
-#include <QLCDNumber>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 
 /* SET FF7Materia PATH ACCORDINGLY*/
 #include "../static_data/FF7Materia.h"
@@ -34,7 +31,7 @@ class MateriaEditor : public QWidget
     Q_OBJECT
 public:
     MateriaEditor(QWidget *parent=0);
-    //MateriaEditor(QWidget *parent=0,quint8 materia_id=0,qint32 ap=0);
+    MateriaEditor(quint8 materia_id=0,qint32 ap=0,QWidget *parent=0);
     void setMateria(quint8 materia_id=0,qint32 materia_ap=0);
     void setAP (qint32 current_ap=0);
     void setStarsSize(int);

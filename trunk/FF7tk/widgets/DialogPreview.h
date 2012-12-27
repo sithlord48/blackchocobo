@@ -17,9 +17,12 @@
 #ifndef DIALOGPREVIEW_H
 #define DIALOGPREVIEW_H
 
-#include <QtGui/QLabel>
-#include <QtGui/QPushButton>
-#include <QColorDialog>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets>
+#else
+    #include <QtGui>
+#endif
 
 class DialogPreview : public QLabel
 {

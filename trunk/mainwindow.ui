@@ -2857,8 +2857,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>758</width>
-             <height>442</height>
+             <width>749</width>
+             <height>429</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5021,7 +5021,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7404,7 +7404,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -14299,7 +14299,7 @@ Var And Scrolling Synced To Left Table</string>
  <connections>
   <connection>
    <sender>action_Quit</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
    <hints>

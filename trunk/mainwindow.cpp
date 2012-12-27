@@ -129,12 +129,12 @@ void MainWindow::init_display()
     for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.icon(i),Chars.defaultName(i));}
-    ui->combo_party1->addItem(Chars.icon(0x0B),QString("0x0B"));
-    ui->combo_party1->addItem(Chars.icon(0xFF),tr("-Empty-"));
-    ui->combo_party2->addItem(Chars.icon(0x0B),QString("0x0B"));
-    ui->combo_party2->addItem(Chars.icon(0xFF),tr("-Empty-"));
-    ui->combo_party3->addItem(Chars.icon(0x0B),QString("0x0B"));
-    ui->combo_party3->addItem(Chars.icon(0xFF),tr("-Empty-"));
+    ui->combo_party1->addItem(QString("0x0B"));
+    ui->combo_party1->addItem(tr("-Empty-"));
+    ui->combo_party2->addItem(QString("0x0B"));
+    ui->combo_party2->addItem(tr("-Empty-"));
+    ui->combo_party3->addItem(QString("0x0B"));
+    ui->combo_party3->addItem(tr("-Empty-"));
 
     ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
     ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
@@ -150,7 +150,6 @@ void MainWindow::init_display()
     menuLayout->addWidget(menuList);
     ui->Menu_Box->setLayout(menuLayout);
 
-
     dialog_preview = new DialogPreview();
     QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
     dialog_preview_layout->setContentsMargins(0,0,0,0);
@@ -158,7 +157,7 @@ void MainWindow::init_display()
     ui->dialog_preview_box->setLayout(dialog_preview_layout);
     ui->dialog_preview_box->setContentsMargins(0,0,0,0);
 
-    materia_editor = new MateriaEditor;
+    materia_editor = new MateriaEditor(this);
     materia_editor->setStarsSize(48);
     QVBoxLayout *materia_editor_layout = new QVBoxLayout();
     mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
@@ -232,9 +231,6 @@ void MainWindow::init_display()
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
-    if(QT_VERSION<0x050000)
-    {//QT 4 Style Connect Statements
-        // Connect the unknown and unknown compare scrolling.
         connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
         connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
 
@@ -391,161 +387,6 @@ void MainWindow::init_connections()
         connect(chocobo_stable_6,SIGNAL(pCount_changed(quint8)),this,SLOT(c6_pcountChanged(quint8)));
         connect(chocobo_stable_6,SIGNAL(wins_changed(quint8)),this,SLOT(c6_raceswonChanged(quint8)));
         connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
-    }
-    else
-    {//Qt 5 Style connect Statements
-        /*
-        //Lock Tables on Test Data Tab Same Scroll Pos.
-        connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
-        connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
-        //connnect the dialogpreview to the data functions.
-        connect(dialog_preview::UL_ColorChanged(QColor),this::set_UL_Color(QColor));
-        connect(dialog_preview::UR_ColorChanged(QColor),this::set_UR_Color(QColor));
-        connect(dialog_preview::LL_ColorChanged(QColor),this::set_LL_Color(QColor));
-        connect(dialog_preview::LR_ColorChanged(QColor),this::set_LR_Color(QColor));
-        //ItemList
-        connect(itemlist::itemsChanged(QList<quint16>),this::Items_Changed(QList<quint16>));
-        //Materia_Editor
-        connect(materia_editor::ap_changed(qint32),this::materia_ap_changed(qint32));
-        connect(materia_editor::id_changed(qint8),this::materia_id_changed(qint8));
-        //Char_Editor
-        connect(ui->action_show_debug::toggled(bool),char_editor,(SLOT(setDebug(bool)));
-        connect(char_editor::id_changed(qint8),this::char_id_changed(qint8));
-        connect(char_editor::level_changed(qint8),this::char_level_changed(qint8));
-        connect(char_editor::str_changed(quint8),this::char_str_changed(quint8));
-        connect(char_editor::vit_changed(quint8),this::char_vit_changed(quint8));
-        connect(char_editor::mag_changed(quint8),this::char_mag_changed(quint8));
-        connect(char_editor::spi_changed(quint8),this::char_spi_changed(quint8));
-        connect(char_editor::dex_changed(quint8),this::char_dex_changed(quint8));
-        connect(char_editor::lck_changed(quint8),this::char_lck_changed(quint8));
-        connect(char_editor::strBonus_changed(quint8),this::char_strBonus_changed(quint8));
-        connect(char_editor::vitBonus_changed(quint8),this::char_vitBonus_changed(quint8));
-        connect(char_editor::magBonus_changed(quint8),this::char_magBonus_changed(quint8));
-        connect(char_editor::spiBonus_changed(quint8),this::char_spiBonus_changed(quint8));
-        connect(char_editor::dexBonus_changed(quint8),this::char_dexBonus_changed(quint8));
-        connect(char_editor::lckBonus_changed(quint8),this::char_lckBonus_changed(quint8));
-        connect(char_editor::limitLevel_changed(qint8),this::char_limitLevel_changed(qint8));
-        connect(char_editor::limitBar_changed(quint8),this::char_limitBar_changed(quint8));
-        connect(char_editor::name_changed(QString),this::char_name_changed(QString));
-        connect(char_editor::weapon_changed(quint8),this::char_weapon_changed(quint8));
-        connect(char_editor::armor_changed(quint8),this::char_armor_changed(quint8));
-        connect(char_editor::accessory_changed(quint8),this::char_accessory_changed(quint8));
-        connect(char_editor::curHp_changed(quint16),this::char_curHp_changed(quint16));
-        connect(char_editor::maxHp_changed(quint16),this::char_maxHp_changed(quint16));
-        connect(char_editor::curMp_changed(quint16),this::char_curMp_changed(quint16));
-        connect(char_editor::maxMp_changed(quint16),this::char_maxMp_changed(quint16));
-        connect(char_editor::kills_changed(quint16),this::char_kills_changed(quint16));
-        connect(char_editor::row_changed(quint8),this::char_row_changed(quint8));
-        connect(char_editor::levelProgress_changed(quint8),this::char_levelProgress_changed(quint8));
-        connect(char_editor::sadnessfury_changed(quint8),this::char_sadnessfury_changed(quint8));
-        connect(char_editor::limits_changed(quint16),this::char_limits_changed(quint16));
-        connect(char_editor::timesused1_changed(quint16),this::char_timesused1_changed(quint16));
-        connect(char_editor::timesused2_changed(quint16),this::char_timeused2_changed(quint16));
-        connect(char_editor::timesused3_changed(quint16),this::char_timeused3_changed(quint16));
-        connect(char_editor::baseHp_changed(quint16),this::char_baseHp_changed(quint16));
-        connect(char_editor::baseMp_changed(quint16),this::char_baseMp_changed(quint16));
-        connect(char_editor::exp_changed(quint32),this::char_exp_changed(quint32));
-        connect(char_editor::mslotChanged(int),this::char_mslot_changed(int));
-        connect(char_editor::Materias_changed(materia),this::char_materia_changed(materia));
-        connect(char_editor::expNext_changed(quint32),this::char_expNext_changed(quint32;
-        //Chocobo Editor 1
-        connect(chocobo_stable_1::name_changed(QString),this::c1_nameChanged(QString));
-        connect(chocobo_stable_1::cantMate_changed(bool),this::c1_mated_toggled(bool));
-        connect(chocobo_stable_1::speed_changed(quint16),this::c1_speedChanged(quint16));
-        connect(chocobo_stable_1::mSpeed_changed(quint16),this::c1_maxspeedChanged(quint16));
-        connect(chocobo_stable_1::sprint_changed(quint16),this::c1_sprintChanged(quint16));
-        connect(chocobo_stable_1::mSprint_changed(quint16),this::c1_maxsprintChanged(quint16));
-        connect(chocobo_stable_1::stamina_changed(quint16),this::c1_staminaChanged(quint16));
-        connect(chocobo_stable_1::sex_changed(quint8),this::c1_sexChanged(quint8));
-        connect(chocobo_stable_1::type_changed(quint8),this::c1_typeChanged(quint8));
-        connect(chocobo_stable_1::accel_changed(quint8),this::c1_accelChanged(quint8));
-        connect(chocobo_stable_1::coop_changed(quint8),this::c1_coopChanged(quint8));
-        connect(chocobo_stable_1::intelligence_changed(quint8),this::c1_intelChanged(quint8));
-        connect(chocobo_stable_1::personality_changed(quint8),this::c1_personalityChanged(quint8));
-        connect(chocobo_stable_1::pCount_changed(quint8),this::c1_pcountChanged(quint8));
-        connect(chocobo_stable_1::wins_changed(quint8),this::c1_raceswonChanged(quint8));
-        //Chocobo Editor 2
-        connect(chocobo_stable_2::name_changed(QString),this::c2_nameChanged(QString));
-        connect(chocobo_stable_2::cantMate_changed(bool),this::c2_mated_toggled(bool));
-        connect(chocobo_stable_2::speed_changed(quint16),this::c2_speedChanged(quint16));
-        connect(chocobo_stable_2::mSpeed_changed(quint16),this::c2_maxspeedChanged(quint16));
-        connect(chocobo_stable_2::sprint_changed(quint16),this::c2_sprintChanged(quint16));
-        connect(chocobo_stable_2::mSprint_changed(quint16),this::c2_maxsprintChanged(quint16));
-        connect(chocobo_stable_2::stamina_changed(quint16),this::c2_staminaChanged(quint16));
-        connect(chocobo_stable_2::sex_changed(quint8),this::c2_sexChanged(quint8));
-        connect(chocobo_stable_2::type_changed(quint8),this::c2_typeChanged(quint8));
-        connect(chocobo_stable_2::accel_changed(quint8),this::c2_accelChanged(quint8));
-        connect(chocobo_stable_2::coop_changed(quint8),this::c2_coopChanged(quint8));
-        connect(chocobo_stable_2::intelligence_changed(quint8),this::c2_intelChanged(quint8));
-        connect(chocobo_stable_2::personality_changed(quint8),this::c2_personalityChanged(quint8));
-        connect(chocobo_stable_2::pCount_changed(quint8),this::c2_pcountChanged(quint8));
-        connect(chocobo_stable_2::wins_changed(quint8),this::c2_raceswonChanged(quint8));
-        //Chocobo Editor 3
-        connect(chocobo_stable_3::name_changed(QString),this::c3_nameChanged(QString));
-        connect(chocobo_stable_3::cantMate_changed(bool),this::c3_mated_toggled(bool));
-        connect(chocobo_stable_3::speed_changed(quint16),this::c3_speedChanged(quint16));
-        connect(chocobo_stable_3::mSpeed_changed(quint16),this::c3_maxspeedChanged(quint16));
-        connect(chocobo_stable_3::sprint_changed(quint16),this::c3_sprintChanged(quint16));
-        connect(chocobo_stable_3::mSprint_changed(quint16),this::c3_maxsprintChanged(quint16));
-        connect(chocobo_stable_3::stamina_changed(quint16),this::c3_staminaChanged(quint16));
-        connect(chocobo_stable_3::sex_changed(quint8),this::c3_sexChanged(quint8));
-        connect(chocobo_stable_3::type_changed(quint8),this::c3_typeChanged(quint8));
-        connect(chocobo_stable_3::accel_changed(quint8),this::c3_accelChanged(quint8));
-        connect(chocobo_stable_3::coop_changed(quint8),this::c3_coopChanged(quint8));
-        connect(chocobo_stable_3::intelligence_changed(quint8),this::c3_intelChanged(quint8));
-        connect(chocobo_stable_3::personality_changed(quint8),this::c3_personalityChanged(quint8));
-        connect(chocobo_stable_3::pCount_changed(quint8),this::c3_pcountChanged(quint8));
-        connect(chocobo_stable_3::wins_changed(quint8),this::c3_raceswonChanged(quint8));
-        //Chocobo Editor 4
-        connect(chocobo_stable_4::name_changed(QString),this::c4_nameChanged(QString));
-        connect(chocobo_stable_4::cantMate_changed(bool),this::c4_mated_toggled(bool));
-        connect(chocobo_stable_4::speed_changed(quint16),this::c4_speedChanged(quint16));
-        connect(chocobo_stable_4::mSpeed_changed(quint16),this::c4_maxspeedChanged(quint16));
-        connect(chocobo_stable_4::sprint_changed(quint16),this::c4_sprintChanged(quint16));
-        connect(chocobo_stable_4::mSprint_changed(quint16),this::c4_maxsprintChanged(quint16));
-        connect(chocobo_stable_4::stamina_changed(quint16),this::c4_staminaChanged(quint16));
-        connect(chocobo_stable_4::sex_changed(quint8),this::c4_sexChanged(quint8));
-        connect(chocobo_stable_4::type_changed(quint8),this::c4_typeChanged(quint8));
-        connect(chocobo_stable_4::accel_changed(quint8),this::c4_accelChanged(quint8));
-        connect(chocobo_stable_4::coop_changed(quint8),this::c4_coopChanged(quint8));
-        connect(chocobo_stable_4::intelligence_changed(quint8),this::c4_intelChanged(quint8));
-        connect(chocobo_stable_4::personality_changed(quint8),this::c4_personalityChanged(quint8));
-        connect(chocobo_stable_4::pCount_changed(quint8),this::c4_pcountChanged(quint8));
-        connect(chocobo_stable_4::wins_changed(quint8),this::c4_raceswonChanged(quint8));
-        //Chocobo Editor 5
-        connect(chocobo_stable_5::name_changed(QString),this::c5_nameChanged(QString));
-        connect(chocobo_stable_5::cantMate_changed(bool),this::c5_mated_toggled(bool));
-        connect(chocobo_stable_5::speed_changed(quint16),this::c5_speedChanged(quint16));
-        connect(chocobo_stable_5::mSpeed_changed(quint16),this::c5_maxspeedChanged(quint16));
-        connect(chocobo_stable_5::sprint_changed(quint16),this::c5_sprintChanged(quint16));
-        connect(chocobo_stable_5::mSprint_changed(quint16),this::c5_maxsprintChanged(quint16));
-        connect(chocobo_stable_5::stamina_changed(quint16),this::c5_staminaChanged(quint16));
-        connect(chocobo_stable_5::sex_changed(quint8),this::c5_sexChanged(quint8));
-        connect(chocobo_stable_5::type_changed(quint8),this::c5_typeChanged(quint8));
-        connect(chocobo_stable_5::accel_changed(quint8),this::c5_accelChanged(quint8));
-        connect(chocobo_stable_5::coop_changed(quint8),this::c5_coopChanged(quint8));
-        connect(chocobo_stable_5::intelligence_changed(quint8),this::c5_intelChanged(quint8));
-        connect(chocobo_stable_5::personality_changed(quint8),this::c5_personalityChanged(quint8));
-        connect(chocobo_stable_5::pCount_changed(quint8),this::c5_pcountChanged(quint8));
-        connect(chocobo_stable_5::wins_changed(quint8),this::c5_raceswonChanged(quint8));
-        //Chocobo Editor 6
-        connect(chocobo_stable_6::name_changed(QString),this::c6_nameChanged(QString));
-        connect(chocobo_stable_6::cantMate_changed(bool),this::c6_mated_toggled(bool));
-        connect(chocobo_stable_6::speed_changed(quint16),this::c6_speedChanged(quint16));
-        connect(chocobo_stable_6::mSpeed_changed(quint16),this::c6_maxspeedChanged(quint16));
-        connect(chocobo_stable_6::sprint_changed(quint16),this::c6_sprintChanged(quint16));
-        connect(chocobo_stable_6::mSprint_changed(quint16),this::c6_maxsprintChanged(quint16));
-        connect(chocobo_stable_6::stamina_changed(quint16),this::c6_staminaChanged(quint16));
-        connect(chocobo_stable_6::sex_changed(quint8),this::c6_sexChanged(quint8));
-        connect(chocobo_stable_6::type_changed(quint8),this::c6_typeChanged(quint8));
-        connect(chocobo_stable_6::accel_changed(quint8),this::c6_accelChanged(quint8));
-        connect(chocobo_stable_6::coop_changed(quint8),this::c6_coopChanged(quint8));
-        connect(chocobo_stable_6::intelligence_changed(quint8),this::c6_intelChanged(quint8));
-        connect(chocobo_stable_6::personality_changed(quint8),this::c6_personalityChanged(quint8));
-        connect(chocobo_stable_6::pCount_changed(quint8),this::c6_pcountChanged(quint8));
-        connect(chocobo_stable_6::wins_changed(quint8),this::c6_raceswonChanged(quint8));
-        */
-    }
 }
 void MainWindow::init_settings()
 {
@@ -640,15 +481,15 @@ int MainWindow::save_changes(void)
     switch(result)
     {
         case QMessageBox::Yes:
-                if(ui->action_Save->isEnabled()){on_action_Save_activated();}
+                if(ui->action_Save->isEnabled()){on_action_Save_triggered();}
                 else
                 {//user trying to save a file with no header.
                     QStringList types;
                     types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
                     QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
                     //check the string. and assign a type
-                    if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
-                        else if(result ==types.at(1)){on_actionExport_PSX_activated();}
+                    if(result ==types.at(0)){on_actionExport_PC_Save_triggered();}
+                        else if(result ==types.at(1)){on_actionExport_PSX_triggered();}
                         else if(result ==types.at(2)){on_actionExport_MC_triggered();}
                         else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
                         else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
@@ -674,7 +515,7 @@ void MainWindow::closeEvent(QCloseEvent *e)
 /*~~~~~ New Window ~~~~~*/
 void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreApplication::applicationFilePath());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionOpen_Save_File_activated()
+void MainWindow::on_actionOpen_Save_File_triggered()
 {
     if(ff7->isFileModified())
     {
@@ -704,18 +545,18 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     }
     else{QMessageBox::information(this,tr("Load Failed"),tr("Failed to Load File"));return;}
 
-    if (ff7->type() == "PC"){if(reload){guirefresh(0);}else{on_actionShow_Selection_Dialog_activated();}}
+    if (ff7->type() == "PC"){if(reload){guirefresh(0);}else{on_actionShow_Selection_Dialog_triggered();}}
 
     else if (ff7->type() == "PSX" || ff7->type() =="PSV"){s=0;guirefresh(0);}
 
     else if (ff7->type() == "MC" || ff7->type() =="PSP" || ff7->type() == "VGS" ||ff7->type()=="DEX")
     {
-        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
+        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_triggered();}
     }
     else{/*UNKNOWN FILETYPE*/}
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionFrom_PSX_Slot_activated()
+void MainWindow::on_actionFrom_PSX_Slot_triggered()
 {//should check better to be sure its a raw PSX SAVE. then make file filter *
     QString fileName = QFileDialog::getOpenFileName(this, tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
     if(fileName.isEmpty()){return;}
@@ -726,7 +567,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
     }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionFrom_PSV_Slot_activated()
+void MainWindow::on_actionFrom_PSV_Slot_triggered()
 {//check beter to be sure its the correct PSV type file.
     QString fileName = QFileDialog::getOpenFileName(this,tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSV FF7 SaveGame (*.psv)"));
     if (fileName.isEmpty()){return;}
@@ -761,7 +602,7 @@ void MainWindow::on_actionExport_char_triggered()
     tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()){ff7->exportCharacter(s,curchar,fileName);}
 }
-void MainWindow::on_action_Save_activated()
+void MainWindow::on_action_Save_triggered()
 {
     if(_init)//no file loaded user saving a New Game
     {
@@ -769,8 +610,8 @@ void MainWindow::on_action_Save_activated()
         types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
         QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
         //check the string. and assign a type
-        if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
-            else if(result ==types.at(1)){on_actionExport_PSX_activated();}
+        if(result ==types.at(0)){on_actionExport_PC_Save_triggered();}
+            else if(result ==types.at(1)){on_actionExport_PSX_triggered();}
             else if(result ==types.at(2)){on_actionExport_MC_triggered();}
             else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
             else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
@@ -794,10 +635,10 @@ void MainWindow::on_action_Save_activated()
 
         saveFileFull(ff7->fileName());
     }
-    else{on_actionSave_File_As_activated();return;}//there is no filename we should get one from save as..
+    else{on_actionSave_File_As_triggered();return;}//there is no filename we should get one from save as..
 }
 
-void MainWindow::on_actionSave_File_As_activated()
+void MainWindow::on_actionSave_File_As_triggered()
 {QString fileName;
 // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
     if(ff7->type() == "PC")
@@ -858,7 +699,7 @@ void MainWindow::on_actionSave_File_As_activated()
         else if(result ==types.at(5)){ff7->setType("DEX");}
         else if(result ==types.at(6)){ff7->setType("VGS");}
         else{return;}
-            on_actionSave_File_As_activated(); //now that we have a type do again.
+            on_actionSave_File_As_triggered(); //now that we have a type do again.
     }
     if(fileName.isEmpty()){return;}
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
@@ -901,7 +742,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionExport_PC_Save_activated()
+void MainWindow::on_actionExport_PC_Save_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"),  settings->value("export_pc").toString() ,
@@ -914,7 +755,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     }
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionExport_PSX_activated()
+void MainWindow::on_actionExport_PSX_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), ff7->region(s),
@@ -968,29 +809,29 @@ void MainWindow::on_actionExport_DEX_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh(0);}
-void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh(0);}
-void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh(0);}
-void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh(0);}
-void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh(0);}
-void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh(0);}
-void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh(0);}
-void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh(0);}
-void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh(0);}
-void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh(0);}
-void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh(0);}
-void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh(0);}
-void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
-void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
-void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
-void MainWindow::on_actionClear_Slot_activated(){ff7->clearSlot(s);  guirefresh(0);}
+void MainWindow::on_actionSlot_01_triggered(){s=0; guirefresh(0);}
+void MainWindow::on_actionSlot_02_triggered(){s=1; guirefresh(0);}
+void MainWindow::on_actionSlot_03_triggered(){s=2; guirefresh(0);}
+void MainWindow::on_actionSlot_04_triggered(){s=3; guirefresh(0);}
+void MainWindow::on_actionSlot_05_triggered(){s=4; guirefresh(0);}
+void MainWindow::on_actionSlot_06_triggered(){s=5; guirefresh(0);}
+void MainWindow::on_actionSlot_07_triggered(){s=6; guirefresh(0);}
+void MainWindow::on_actionSlot_08_triggered(){s=7; guirefresh(0);}
+void MainWindow::on_actionSlot_09_triggered(){s=8; guirefresh(0);}
+void MainWindow::on_actionSlot_10_triggered(){s=9; guirefresh(0);}
+void MainWindow::on_actionSlot_11_triggered(){s=10; guirefresh(0);}
+void MainWindow::on_actionSlot_12_triggered(){s=11; guirefresh(0);}
+void MainWindow::on_actionSlot_13_triggered(){s=12; guirefresh(0);}
+void MainWindow::on_actionSlot_14_triggered(){s=13; guirefresh(0);}
+void MainWindow::on_actionSlot_15_triggered(){s=14; guirefresh(0);}
+void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(0);}
 
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_activated(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
-void MainWindow::on_actionNext_Slot_activated(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
-void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
-void MainWindow::on_actionCopy_Slot_activated(){ff7->copySlot(s);}
-void MainWindow::on_actionPaste_Slot_activated(){ff7->pasteSlot(s); guirefresh(0);}
+void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
+void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
+void MainWindow::on_actionAbout_triggered(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
+void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
+void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
 
@@ -1551,7 +1392,7 @@ void MainWindow::guirefresh(bool newgame)
         break;
 
         case 3://exported as psx
-            on_actionShow_Selection_Dialog_activated();
+            on_actionShow_Selection_Dialog_triggered();
         break;
         }
 
@@ -3125,7 +2966,7 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
 {if(!load){file_modified(true); if(!ff7->region(s).isEmpty()){
     QString new_regionString = ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1);
-    new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
+    new_regionString.append(ui->cb_Region_Slot->currentText().toLocal8Bit());
     ff7->setRegion(s,new_regionString);
     if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
 }}}
