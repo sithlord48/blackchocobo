@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>578</height>
+    <height>593</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,15 +24,18 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
-QWidget,QLabel:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
+   <string notr="true">/*QWidget:enabled, */QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox,QScrollArea#scrollArea_3,QCheckBox:enabled,QListWidget:enabled,QFrame:enabled,CharEditor:enabled,QLabel:enabled,QWidet#tab_test{background-color: rgb(10,10,10,16);font:;color:rgb(255,255,255);}
+/*QWidget:enabled,QLabel:enabled{background-color: rgb(64,63,64,255);font:;color:rgb(255,255,255);}*/
+
 QWidget:disabled,QLabel:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
+
 
 QDialog{
 background-color:rgb(48,47,47);
 selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 }
+
 QWidget#tab_party,QWidget#tab_items,QWidget#tab_materia,QWidget#tab_chocobos,QWidget#tab_location,QWidget#tab_progress,QWidget#tab_other,QWidget#tab_config,QWidget#tab_test,QWidget#tab,QWidget#tab_2,QWidget#page_stats,QWidget#page_eq{
 	background-color: qlineargradient(spread:pad, x1:0.404, y1:0, x2:0, y2:1, stop:0 rgba(48, 47, 47, 32), stop:1 rgba(65, 65, 65, 32));
 	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
@@ -392,7 +395,7 @@ background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, s
 	background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
   width:1px;
  }
-/*Button Icons*/
+
 QSlider#slide_world_y::handle{image: url(:/icon/prev);}
 QSlider#slide_world_x::handle{image: url(:/icon/slider_up);}
 QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
@@ -1065,15 +1068,12 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="group_char_editor_box">
+         <widget class="QFrame" name="group_char_editor_box">
           <property name="minimumSize">
            <size>
             <width>450</width>
             <height>0</height>
            </size>
-          </property>
-          <property name="title">
-           <string/>
           </property>
          </widget>
         </item>
@@ -1131,15 +1131,12 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </widget>
            </item>
            <item>
-            <widget class="QGroupBox" name="group_item_options">
+            <widget class="QFrame" name="group_item_options">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="title">
-              <string/>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_95">
               <property name="spacing">
@@ -2458,7 +2455,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <height>20</height>
               </size>
              </property>
-             <property name="numDigits">
+             <property name="digitCount">
               <number>1</number>
              </property>
              <property name="segmentStyle">
@@ -2857,8 +2854,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>429</height>
+             <width>758</width>
+             <height>457</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5021,7 +5018,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -5622,7 +5619,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_118">
           <property name="spacing">
-           <number>-1</number>
+           <number>6</number>
           </property>
           <item>
            <spacer name="verticalSpacer_6">
@@ -6329,7 +6326,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <enum>QLayout::SetDefaultConstraint</enum>
             </property>
             <item>
-             <widget class="QGroupBox" name="Phs_Box">
+             <widget class="QFrame" name="Phs_Box">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -6345,16 +6342,10 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               <property name="toolTip">
                <string/>
               </property>
-              <property name="title">
-               <string/>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="Menu_Box">
+             <widget class="QFrame" name="Menu_Box">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -6372,9 +6363,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                 <width>16777215</width>
                 <height>16777215</height>
                </size>
-              </property>
-              <property name="title">
-               <string/>
               </property>
              </widget>
             </item>
@@ -7404,7 +7392,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>737</width>
              <height>683</height>
             </rect>
            </property>
@@ -11540,6 +11528,145 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_hex">
+       <attribute name="title">
+        <string>Hex Editor</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QFrame" name="unknownGroup">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>35</height>
+           </size>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <property name="leftMargin">
+            <number>6</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>65</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_232">
+             <property name="maximumSize">
+              <size>
+               <width>75</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Show:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="combo_hexEditor">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>PSX Save Data</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">FF7 Save Data</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="group_hexedit">
+             <property name="maximumSize">
+              <size>
+               <width>591</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="tab_test">
        <property name="styleSheet">
         <string notr="true">:disabled{font:;color:rgb(74, 80, 73);}</string>
@@ -12304,111 +12431,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </layout>
               </item>
              </layout>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab">
-           <attribute name="title">
-            <string>Hex Editor</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_15">
-            <item>
-             <widget class="QFrame" name="unknownGroup">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>35</height>
-               </size>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_12">
-               <property name="leftMargin">
-                <number>6</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="label_232">
-                 <property name="maximumSize">
-                  <size>
-                   <width>75</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string>Show:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QComboBox" name="combo_hexEditor">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="frame">
-                  <bool>true</bool>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>PSX Save Data</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string notr="true">FF7 Save Data</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_7">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="group_hexedit">
-              <property name="maximumSize">
-               <size>
-                <width>591</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="title">
-               <string/>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
             </item>
            </layout>
           </widget>

@@ -100,7 +100,7 @@ void MainWindow::init_display()
     ui->box_stable6->setEnabled(false);
     //testing stuff.
 
-    ui->tabWidget->setTabEnabled(8,0);
+    ui->tabWidget->setTabEnabled(9,0);
     ui->cb_Region_Slot->setEnabled(false);
     ui->group_controller_mapping->setVisible(false);
     ui->actionNew_Window->setVisible(0);
@@ -224,8 +224,10 @@ void MainWindow::init_display()
 
     hexEditor = new QHexEdit;
     hexEditor->setHighlighting(false);
+    hexEditor->setAddressAreaColor(QColor(64,65,64));
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
+
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 }
@@ -853,7 +855,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
     if(checked)
     {
         ui->actionNew_Window->setVisible(1);
-        ui->tabWidget->setTabEnabled(8,1);
+        ui->tabWidget->setTabEnabled(9,1);
         ui->cb_Region_Slot->setEnabled(true);
         ui->bm_unknown->setVisible(true);
         ui->bh_id->setVisible(true);
@@ -874,7 +876,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
     else
     {
         ui->actionNew_Window->setVisible(0);
-        ui->tabWidget->setTabEnabled(8,0);
+        ui->tabWidget->setTabEnabled(9,0);
         ui->cb_Region_Slot->setEnabled(false);
         ui->bm_unknown->setVisible(false);
         ui->bh_id->setVisible(false);
@@ -1371,8 +1373,6 @@ void MainWindow::guirefresh(bool newgame)
 
         case 0://View Anyway..
             ui->tabWidget->setCurrentIndex(8);
-            ui->tabWidget_3->setCurrentIndex(1);
-            ui->tabWidget->setTabEnabled(8,1);
             if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
             hexEditorRefresh();
 

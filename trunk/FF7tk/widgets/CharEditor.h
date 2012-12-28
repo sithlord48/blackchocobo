@@ -346,7 +346,7 @@ private:
     QLabel *armor_m_link_3;
     QLabel *armor_m_link_4;
     QToolBox *toolbox;
-    QGroupBox *unknown_box;
+    QFrame *unknown_box;
     QLCDNumber *lcd_0x34;
     QLCDNumber *lcd_0x35;
     QLCDNumber *lcd_0x36;

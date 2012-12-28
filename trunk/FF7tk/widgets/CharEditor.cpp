@@ -497,7 +497,7 @@ void CharEditor::init_display()
     stat_layout->addLayout(lck_layout);
     stat_layout->addLayout(base_hp_mp_layout);
 
-    QGroupBox *stat_box= new QGroupBox;
+    QFrame*stat_box= new QFrame;
     stat_box->setLayout(stat_layout);
     stat_box->adjustSize();
     stat_box->setFixedHeight(this->font().pointSize()*15);
@@ -559,7 +559,7 @@ void CharEditor::init_display()
     unknown_layout->addLayout(_0x36_layout);
     unknown_layout->addLayout(_0x37_layout);
 
-    unknown_box = new QGroupBox;
+    unknown_box = new QFrame;
     unknown_box->setLayout(unknown_layout);
     unknown_box->setFixedHeight(stat_box->height());
     unknown_box->setVisible(false);
@@ -590,7 +590,7 @@ void CharEditor::init_display()
 
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(3,3,3,3);
+    left_Final->setContentsMargins(3,0,3,3);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
@@ -1081,26 +1081,25 @@ void CharEditor::init_display()
     right_top->adjustSize();
     right_top->setFixedHeight(right_top->height());
 
-
-
     QVBoxLayout *right_bottom = new QVBoxLayout;
     right_bottom->setContentsMargins(0,0,0,0);
     right_bottom->addWidget(materia_edit);
     right_bottom->addLayout(effects_layout);
 
     QVBoxLayout *right_Final = new QVBoxLayout;
-    right_Final->setContentsMargins(3,3,3,3);
+    right_Final->setContentsMargins(3,0,3,0);
     right_Final->addWidget(right_top);
     right_Final->setSpacing(3);
     right_Final->addLayout(right_bottom);
 
     toolbox = new QToolBox;
 
-    QGroupBox *tabStatus = new QGroupBox;
+    QFrame *tabStatus = new QFrame;
     tabStatus->setLayout(left_Final);
+    tabStatus->adjustSize();
     toolbox->addItem(tabStatus,Chars.icon(0),QString(tr("Status Info")));
 
-    QGroupBox *tabEquipment = new QGroupBox;
+    QFrame *tabEquipment = new QFrame;
     tabEquipment->setLayout(right_Final);
     tabEquipment->adjustSize();
     toolbox->addItem(tabEquipment,QIcon(QPixmap::fromImage(Items.image(256))),QString(tr("Equipment")));

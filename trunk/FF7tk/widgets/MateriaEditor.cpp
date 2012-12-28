@@ -47,7 +47,7 @@ void MateriaEditor::init_display()
     btn_copy_materia->setShortcut(QKeySequence::Copy);
     btn_paste_materia = new QPushButton;
     btn_paste_materia->setShortcut(QKeySequence::Paste);
-    box_stars = new QGroupBox;
+    box_stars = new QFrame;
     btn_star1 = new QPushButton;
     btn_star2 = new QPushButton;
     btn_star3 = new QPushButton;
