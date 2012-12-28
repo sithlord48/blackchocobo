@@ -71,7 +71,7 @@ private:
     QPushButton *btn_star3;
     QPushButton *btn_star4;
     QPushButton *btn_star5;
-    QGroupBox *box_stars;
+    QFrame *box_stars;
     QGroupBox *box_skills;
     QGroupBox * eskill_group;
     QListWidget * eskill_list;
