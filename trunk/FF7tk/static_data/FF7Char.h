@@ -40,8 +40,8 @@ public:
     enum FF7CharId{Cloud,Barret,Tifa,Aerith,Red,Yuffie,CaitSith,Vincent,Cid,YoungCloud,Sephiroth,Empty=0xFF};
     enum FF7CharStatus
     {
-        Fury = 0x10,
-        Sadness =0x20,
+        Sadness =0x10,
+        Fury = 0x20,
         BackRow = 0xFE,
         FrontRow =0xFF
     };

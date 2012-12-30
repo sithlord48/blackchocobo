@@ -1432,7 +1432,7 @@ void CharEditor::cb_sadness_toggled(bool sad)
 {
     if(sad)
     {
-        setSadnessFury(0x20);
+        setSadnessFury(FF7Char::Sadness);
         cb_fury->blockSignals(true);
         cb_fury->setChecked(Qt::Unchecked);
         cb_fury->blockSignals(false);
@@ -1443,7 +1443,7 @@ void CharEditor::cb_fury_toggled(bool fury)
 {
     if(fury)
     {
-        setSadnessFury(0x10);
+        setSadnessFury(FF7Char::Fury);
         cb_sadness->blockSignals(true);
         cb_sadness->setChecked(Qt::Unchecked);
         cb_sadness->blockSignals(false);
