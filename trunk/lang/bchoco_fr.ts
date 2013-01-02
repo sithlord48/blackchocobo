@@ -4909,7 +4909,7 @@
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation>Région détecter les erreurs</translation>
+        <translation type="obsolete">Région détecter les erreurs</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -5043,10 +5043,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
-    </message>
-    <message>
-        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation></translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -7676,6 +7672,10 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
