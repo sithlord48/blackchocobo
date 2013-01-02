@@ -4887,7 +4887,7 @@
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation>リージョンの検出エラー</translation>
+        <translation type="obsolete">リージョンの検出エラー</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -5119,7 +5119,7 @@
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation>リージョンが検出できません。手動で選択してください</translation>
+        <translation type="obsolete">リージョンが検出できません。手動で選択してください</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -7750,6 +7750,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

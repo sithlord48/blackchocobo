@@ -4809,10 +4809,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Region Detect Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5038,10 +5034,6 @@
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7664,6 +7656,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

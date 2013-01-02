@@ -4814,7 +4814,7 @@
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation>Error en la detección de región</translation>
+        <translation type="obsolete">Error en la detección de región</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -5046,7 +5046,7 @@
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
+        <translation type="obsolete">La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -7677,6 +7677,10 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

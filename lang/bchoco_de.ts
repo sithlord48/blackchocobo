@@ -4813,7 +4813,7 @@
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation>Region Erkennungsfehler</translation>
+        <translation type="obsolete">Region Erkennungsfehler</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -5047,7 +5047,7 @@
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation>Region kann nicht automatisch erkannt werden, Du musst es manuell festlegen</translation>
+        <translation type="obsolete">Region kann nicht automatisch erkannt werden, Du musst es manuell festlegen</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -7680,6 +7680,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -21,8 +21,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     setMinimumSize(600,420);
     setMaximumWidth(600);
     setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
-
-
+    setWindowTitle(tr("Select A Slot"));
     preview_layout = new QVBoxLayout;
     frm_preview = new QFrame;
     frm_preview->setLayout(preview_layout);
