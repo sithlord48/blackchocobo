@@ -24,8 +24,9 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#tab_test,QTabWidget:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox,QScrollArea#scrollArea_3,QCheckBox:enabled,QListWidget:enabled,QFrame:enabled,CharEditor:enabled,QLabel:enabled,QWidet#tab_test{background-color: rgb(10,10,10,16);font:;color:rgb(255,255,255);}
-
+   <string notr="true">/**/
+QFrame#tabStatus,QFrame#tabEquipment,QToolBox:enabled,QScrollArea:enabled,QToolBox:enabled,QTabWidget:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox,QScrollArea#scrollArea_3,QCheckBox:enabled,
+QFrame#group_char_editor_box ,QLabel:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgb(10,10,10,16);font:;color:rgb(255,255,255);}
 QWidget:disabled,QLabel:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
 
 
@@ -425,11 +426,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
       <property name="styleSheet">
        <string notr="true">::tab:hover{
 	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}
-:disbled{font:;color: rgb(74, 80, 73);}
-:enabled{background-color:rgba(10,10,10,16);font:;color:rgb(255,255,255);}
-
-</string>
+}</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1143,6 +1140,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <width>450</width>
             <height>0</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -12020,11 +12020,7 @@ enabled{font:;color: rgb(255, 255, 255);}
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}
-:disbled{font:;color: rgb(74, 80, 73);}
-:enabled{background-color:rgba(10,10,10,16);font:;color:rgb(255,255,255);}</string>
+           <string notr="true"/>
           </property>
           <property name="tabPosition">
            <enum>QTabWidget::West</enum>
