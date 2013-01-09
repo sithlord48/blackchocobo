@@ -161,12 +161,12 @@ void MainWindow::init_display()
     materia_editor->setStarsSize(48);
     QVBoxLayout *materia_editor_layout = new QVBoxLayout();
     mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
-    materia_editor_layout->setContentsMargins(0,0,0,0);
+    materia_editor_layout->setContentsMargins(0,6,0,0);
     materia_editor_layout->setSpacing(0);
     materia_editor_layout->addWidget(materia_editor);
     materia_editor_layout->addSpacerItem(mat_spacer);
     ui->group_materia->setLayout(materia_editor_layout);
-    ui->group_materia->setContentsMargins(0,0,0,0);
+    ui->group_materia->setContentsMargins(0,6,0,0);
 
     char_editor = new CharEditor;
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
