@@ -177,7 +177,6 @@ void MainWindow::init_display()
 
     char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
     char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
-
     itemlist= new ItemList;
     QHBoxLayout *itemlist_layout = new QHBoxLayout;
     itemlist_layout->setSpacing(0);

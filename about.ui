@@ -223,7 +223,7 @@
           </size>
          </property>
          <property name="text">
-          <string notr="true">(C) 2010,2011 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2013 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
