@@ -1281,6 +1281,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>150</height>
+              </size>
+             </property>
              <property name="title">
               <string>Turtle Paradise Flyers Collected</string>
              </property>
@@ -1449,31 +1455,22 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <item>
                <widget class="QScrollArea" name="scrollArea_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <widget class="QWidget" name="scrollAreaWidgetContents_4">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
                    <width>227</width>
-                   <height>319</height>
+                   <height>700</height>
                   </rect>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_111">
-                  <property name="spacing">
-                   <number>1</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>3</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>3</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
                   <item>
                    <widget class="QCheckBox" name="cb_bm_items_1">
                     <property name="sizePolicy">
@@ -1484,45 +1481,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </property>
                     <property name="text">
                      <string>MDSTIN: Potion 1</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_bm_items_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDSTIN: Potion 2</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_bm_items_3">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>NMKIN_3: Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_bm_items_4">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>NMKIN_1: Phoenix Down</string>
                     </property>
                    </widget>
                   </item>
@@ -1540,7 +1498,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_6">
+                   <widget class="QCheckBox" name="cb_bm_items_4">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1548,12 +1506,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST1:Potion.(In Train 2)</string>
+                     <string>NMKIN_1: Phoenix Down</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_5">
+                   <widget class="QCheckBox" name="cb_bm_items_3">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1561,12 +1519,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST1:Hi-Potion.(Roof Train 1)</string>
+                     <string>NMKIN_3: Potion</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_1">
+                   <widget class="QCheckBox" name="cb_bm_items_2">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1574,20 +1532,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST1:Hi-Potion.(Barrel 1)</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Echo Screen</string>
+                     <string>MDSTIN: Potion 2</string>
                     </property>
                    </widget>
                   </item>
@@ -1605,7 +1550,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_8">
+                   <widget class="QCheckBox" name="cb_s7tg_items_2">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1613,12 +1558,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST2:Hi-Potion</string>
+                     <string>MDS7ST1:Echo Screen</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_4">
+                   <widget class="QCheckBox" name="cb_s7tg_items_1">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1626,12 +1571,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST2:Ether</string>
+                     <string>MDS7ST1:Hi-Potion.(Barrel 1)</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_3">
+                   <widget class="QCheckBox" name="cb_s7tg_items_5">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1639,12 +1584,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS7ST2:Potion</string>
+                     <string>MDS7ST1:Hi-Potion.(Roof Train 1)</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_itemmask1_6">
+                   <widget class="QCheckBox" name="cb_s7tg_items_6">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1652,7 +1597,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>MDS6_2: Sense Materia</string>
+                     <string>MDS7ST1:Potion.(In Train 2)</string>
                     </property>
                    </widget>
                   </item>
@@ -1670,7 +1615,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_itemmask1_3">
+                   <widget class="QCheckBox" name="cb_itemmask1_6">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1678,12 +1623,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>EALS_1: Ether</string>
+                     <string>MDS6_2: Sense Materia</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_itemmask1_7">
+                   <widget class="QCheckBox" name="cb_s7tg_items_3">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1691,12 +1636,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>CRCIN_2: Ramuh Materia</string>
+                     <string>MDS7ST2:Potion</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_itemmask1_5">
+                   <widget class="QCheckBox" name="cb_s7tg_items_4">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -1704,7 +1649,20 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </sizepolicy>
                     </property>
                     <property name="text">
-                     <string>FARM: Choco-Mog Materia</string>
+                     <string>MDS7ST2:Ether</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_s7tg_items_8">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>MDS7ST2:Hi-Potion</string>
                     </property>
                    </widget>
                   </item>
@@ -1722,6 +1680,45 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </widget>
                   </item>
                   <item>
+                   <widget class="QCheckBox" name="cb_itemmask1_5">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>FARM: Choco-Mog Materia</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_itemmask1_7">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>CRCIN_2: Ramuh Materia</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_itemmask1_3">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>EALS_1: Ether</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QCheckBox" name="cb_itemmask1_8">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1731,6 +1728,125 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </property>
                     <property name="text">
                      <string>ZZ1:Mythril</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_1Javelin">
+                    <property name="text">
+                     <string>GAIIN_1:Javelin</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_1Ribbon">
+                    <property name="text">
+                     <string>GAIIN_1:Ribbon</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_3Elixir">
+                    <property name="text">
+                     <string>GAIIN_3:Elixir</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_3SpeedSource">
+                    <property name="text">
+                     <string>GAIIN_3:Speed Source</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_4EnhanceSword">
+                    <property name="text">
+                     <string>GAIIN_4:Enhance Sword</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_5FireArmlet">
+                    <property name="text">
+                     <string>GAIIN_5:Fire Armlet</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_gaiin_5Elixir">
+                    <property name="text">
+                     <string>GAIIN_5:Elixir</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_snmayorTurboEther">
+                    <property name="text">
+                     <string>SNMAYOR: Turbo Ether</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_sninn2XPotion">
+                    <property name="text">
+                     <string>SNINN2: X-Potion</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_snmin2Vaccine">
+                    <property name="text">
+                     <string>SNMIN2: Vaccine</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_snmin2HeroDrink">
+                    <property name="text">
+                     <string>SNMIN2:Hero Drink</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_ncoin3Catastrophe">
+                    <property name="text">
+                     <string>NCOIN3:Catastrophe</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_ncoin1Ether">
+                    <property name="text">
+                     <string>NCOIN1:Ether</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_trnad_4PoisonRing">
+                    <property name="text">
+                     <string>TRNAD_4:Poison Ring</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_trnad_4MpTurbo">
+                    <property name="text">
+                     <string>TRNAD_4:MpTurbo</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_trnad_3KaiserKnuckle">
+                    <property name="text">
+                     <string>TRNAD_3:Kaiser Knuckle</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_trnad_2NeoBahmut">
+                    <property name="text">
+                     <string>TRNAD_2:Neo Bahmut</string>
                     </property>
                    </widget>
                   </item>

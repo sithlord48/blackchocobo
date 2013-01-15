@@ -653,5 +653,22 @@ private slots://try to keep these in the same order as the .cpp file
     void phsList_box_visible_toggled(int row, bool checked);
     void menuList_box_locked_toggled(int row, bool checked);
     void menuList_box_visible_toggled(int row, bool checked);
+    void on_cb_gaiin_1Javelin_toggled(bool checked);
+    void on_cb_gaiin_1Ribbon_toggled(bool checked);
+    void on_cb_gaiin_3Elixir_toggled(bool checked);
+    void on_cb_gaiin_3SpeedSource_toggled(bool checked);
+    void on_cb_gaiin_4EnhanceSword_toggled(bool checked);
+    void on_cb_gaiin_5FireArmlet_toggled(bool checked);
+    void on_cb_gaiin_5Elixir_toggled(bool checked);
+    void on_cb_snmayorTurboEther_toggled(bool checked);
+    void on_cb_sninn2XPotion_toggled(bool checked);
+    void on_cb_snmin2Vaccine_toggled(bool checked);
+    void on_cb_snmin2HeroDrink_toggled(bool checked);
+    void on_cb_ncoin3Catastrophe_toggled(bool checked);
+    void on_cb_ncoin1Ether_toggled(bool checked);
+    void on_cb_trnad_4PoisonRing_toggled(bool checked);
+    void on_cb_trnad_4MpTurbo_toggled(bool checked);
+    void on_cb_trnad_3KaiserKnuckle_toggled(bool checked);
+    void on_cb_trnad_2NeoBahmut_toggled(bool checked);
 };
 #endif // MAINWINDOW_H
