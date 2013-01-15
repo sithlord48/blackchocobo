@@ -1344,6 +1344,21 @@ void MainWindow::itemupdate(void)
     ui->cb_itemmask1_6->setChecked(ff7->itemMask1(s,5));
     ui->cb_itemmask1_7->setChecked(ff7->itemMask1(s,6));
     ui->cb_itemmask1_8->setChecked(ff7->itemMask1(s,7));
+    ui->cb_gaiin_1Javelin->setChecked(ff7->gaiin_1Javelin(s));
+    ui->cb_gaiin_1Ribbon->setChecked(ff7->gaiin_1Ribbon(s));
+    ui->cb_gaiin_3Elixir->setChecked(ff7->gaiin_3Elixir(s));
+    ui->cb_gaiin_3SpeedSource->setChecked(ff7->gaiin_3SpeedSource(s));
+    ui->cb_gaiin_4EnhanceSword->setChecked(ff7->gaiin_4EnhanceSword(s));
+    ui->cb_gaiin_5Elixir->setChecked(ff7->gaiin_5Elixir(s));
+    ui->cb_gaiin_5FireArmlet->setChecked(ff7->gaiin_5FireArmlet(s));
+    ui->cb_sninn2XPotion->setChecked(ff7->sninn2XPotion(s));
+    ui->cb_snmayorTurboEther->setChecked(ff7->snmayorTurboEther(s));
+    ui->cb_snmin2HeroDrink->setChecked(ff7->snmin2HeroDrink(s));
+    ui->cb_snmin2Vaccine->setChecked(ff7->snmin2Vaccine(s));
+    ui->cb_trnad_4PoisonRing->setChecked(ff7->trnad_4PoisonRing(s));
+    ui->cb_trnad_4MpTurbo->setChecked(ff7->trnad_4MpTurbo(s));
+    ui->cb_trnad_3KaiserKnuckle->setChecked(ff7->trnad_3KaiserKnuckle(s));
+    ui->cb_trnad_2NeoBahmut->setChecked(ff7->trnad_2NeoBahmut(s));
 
     if(ff7->unknown(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
@@ -2925,6 +2940,23 @@ void MainWindow::on_cb_itemmask1_6_toggled(bool checked){if(!load){file_modified
 void MainWindow::on_cb_itemmask1_7_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,6,checked);}}
 void MainWindow::on_cb_itemmask1_8_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,7,checked);}}
 
+void MainWindow::on_cb_gaiin_1Javelin_toggled(bool checked){if(!load){file_modified(true); ff7->setGaiin_1Javelin(s,checked);}}
+void MainWindow::on_cb_gaiin_1Ribbon_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_1Ribbon(s,checked);}}
+void MainWindow::on_cb_gaiin_3Elixir_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_3Elixir(s,checked);}}
+void MainWindow::on_cb_gaiin_3SpeedSource_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_3SpeedSource(s,checked);}}
+void MainWindow::on_cb_gaiin_4EnhanceSword_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_4EnhanceSword(s,checked);}}
+void MainWindow::on_cb_gaiin_5FireArmlet_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_5FireArmlet(s,checked);}}
+void MainWindow::on_cb_gaiin_5Elixir_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_5Elixir(s,checked);}}
+void MainWindow::on_cb_snmayorTurboEther_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmayorTurboEther(s,checked);}}
+void MainWindow::on_cb_sninn2XPotion_toggled(bool checked){if(!load){file_modified(true);ff7->setSninn2XPotion(s,checked);}}
+void MainWindow::on_cb_snmin2Vaccine_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmin2Vaccine(s,checked);}}
+void MainWindow::on_cb_snmin2HeroDrink_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmin2HeroDrink(s,checked);}}
+void MainWindow::on_cb_ncoin3Catastrophe_toggled(bool checked){if(!load){file_modified(true);ff7->setNcoin3Catastrophe(s,checked);}}
+void MainWindow::on_cb_ncoin1Ether_toggled(bool checked){if(!load){file_modified(true);ff7->setNcoin1Ether(s,checked);}}
+void MainWindow::on_cb_trnad_4PoisonRing_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_4PoisonRing(s,checked);}}
+void MainWindow::on_cb_trnad_4MpTurbo_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_4MpTurbo(s,checked);}}
+void MainWindow::on_cb_trnad_3KaiserKnuckle_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_3KaiserKnuckle(s,checked);}}
+void MainWindow::on_cb_trnad_2NeoBahmut_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_2NeoBahmut(s,checked);}}
 
 void MainWindow::on_cb_materiacave_1_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_MIME,checked);}}
 void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_HPMP,checked);}}
