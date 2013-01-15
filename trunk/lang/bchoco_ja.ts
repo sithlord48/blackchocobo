@@ -5824,6 +5824,74 @@ Table Entries are Editable</source>
         <source>PSX Save Data</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>GAIIN_1:Javelin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_1:Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_3:Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_3:Speed Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_4:Enhance Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_5:Fire Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GAIIN_5:Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SNMAYOR: Turbo Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SNINN2: X-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SNMIN2: Vaccine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SNMIN2:Hero Drink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NCOIN3:Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NCOIN1:Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRNAD_4:Poison Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRNAD_4:MpTurbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRNAD_3:Kaiser Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRNAD_2:Neo Bahmut</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
