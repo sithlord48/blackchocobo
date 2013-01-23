@@ -665,35 +665,26 @@ QList<quint16> FF7Save::items(int s)
     for (int i=0;i<320;i++){item_list.append(slot[s].items[i]);}
     return item_list;
 }
-void FF7Save::setItems(int s,QList<quint16> items){for(int i=0;i<320;i++){slot[s].items[i]= items.at(i);}setFileModified(true,s);}
 
-quint16 FF7Save::itemId(quint16 rawitem)
+void FF7Save::setItems(int s,QList<quint16> items)
 {
-    quint16 item = itemDecode(rawitem);
-    quint16 id = (item & 0x1FF);
-    return id;
-}
-quint16 FF7Save::itemId(int s,int item_num)
-{
-    quint16 item = itemDecode(slot[s].items[item_num]);
-    quint16 id = (item & 0x1FF);
-    return id;
-}
-quint8 FF7Save::itemQty(int s,int item_num)
-{
-    quint16 item = itemDecode(slot[s].items[item_num]);
-    quint8 qty;
-    qty = (item & 0xFE00) >> 9;
-    return qty;
+    if(region(s).contains("SLPS-00700"))
+    {
+        for(int i=0;i<320;i++)
+        {
+            if(itemQty(items.at(i)) >99) {slot[s].items[i]= itemEncode(itemId(items.at(i)),99);}
+            else{slot[s].items[i]= items.at(i);}
+        }
+    }
+    else{for(int i=0;i<320;i++){slot[s].items[i]= items.at(i);}}
+    setFileModified(true,s);
 }
 
-quint8 FF7Save::itemQty(quint16 rawitem)
-{
-    quint16 item = itemDecode(rawitem);
-    quint8 qty;
-    qty = (item & 0xFE00) >> 9;
-    return qty;
-}
+quint16 FF7Save::itemId(quint16 rawitem){return quint16((itemDecode(rawitem)) & 0x1FF);}
+quint16 FF7Save::itemId(int s,int item_num){return quint16((itemDecode(slot[s].items[item_num])) & 0x1FF);}
+quint8 FF7Save::itemQty(int s,int item_num){return quint8(((itemDecode(slot[s].items[item_num]))& 0xFE00) >>9);}
+quint8 FF7Save::itemQty(quint16 rawitem){return quint8(((itemDecode(rawitem))& 0xFE00) >>9);}
+
 void FF7Save::fix_pc_bytemask(int s)
 {
     quint8 mask=0;
@@ -1411,7 +1402,6 @@ void FF7Save::newGamePlus(int s,QString CharFileName,QString fileName)
         memcpy(&buffer_slot,temp,0x10f4);
     }
     buffer_region = region(s);
-
     memcpy(&buffer_slot.desc,&slot[s].desc,0x44); // keep a old preview
     memcpy(&buffer_slot.colors,&slot[s].colors,12); // keep old colors.
 
@@ -1459,15 +1449,15 @@ void FF7Save::newGamePlus(int s,QString CharFileName,QString fileName)
     //copy chocobo info.
     buffer_slot.stables = slot[s].stables;
     buffer_slot.stablesoccupied = slot[s].stablesoccupied;
-    for(int i=0;i<4;i++){memcpy(&buffer_slot.chocobos[i],&slot[s].chocobos[i],0x10);}
+    buffer_slot.chocobomask = slot[s].chocobomask;
+    for(int i=0;i<4;i++){buffer_slot.chocobos[i]=slot[s].chocobos[i];}
     memcpy(&buffer_slot.chocobonames,slot[s].chocobonames,36);
     memcpy(&buffer_slot.chocostaminas,slot[s].chocostaminas,12);
-    for(int i=0;i<2;i++){memcpy(&buffer_slot.choco56,slot[s].choco56,0x10);}
+    for(int i=0;i<2;i++){buffer_slot.choco56[i]=slot[s].choco56[i];}
     // copy options
     buffer_slot.battlespeed =slot[s].battlespeed;
     buffer_slot.battlemspeed =slot[s].battlemspeed;
     buffer_slot.options=slot[s].options;
-
     memcpy(&buffer_slot.controller_map,slot[s].controller_map,16);
     buffer_slot.fieldmspeed = slot[s].fieldmspeed;
     //~~ buffer now ready to be copied~
