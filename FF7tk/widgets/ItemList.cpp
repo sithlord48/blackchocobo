@@ -91,6 +91,7 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     this->setObjectName("ItemList");
     installEventFilter(this);
     createdTooltip=false;
+    itemQtyLimit=127;
     setRowCount(320);
     setColumnCount(3);
     setStyleSheet(QString(";"));//set a style and itemSelector will have a normal size column 1
@@ -107,12 +108,27 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     verticalHeader()->hide();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
     adjustSize();
-    createdSelector = false;
     for(int i=0;i<320;i++){itemlist.append(FF7Item::EmptyItemData);}//initlize the data.
     this->setFixedWidth(itemSelector->size().width());
+    itemSelector->close();
+    createdSelector = false;
     itemupdate();// redraw Display After data init.
 }
 
+void ItemList::setMaximumItemQty(int maxQty)
+{
+    itemQtyLimit = maxQty;
+    //check that any items Qty is not greater then the new Qty. if so fix it.
+    for(int i=0;i<320;i++)
+    {
+        if( (Items.itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i)!=FF7Item::EmptyItemData ) )
+        {//qty not above limit and item is not empty.
+            itemlist.replace(i,Items.itemEncode(Items.itemId(itemlist.at(i)),itemQtyLimit));
+        }
+        else{continue;}
+    }
+    itemupdate();
+}
 
 void ItemList::setItems(QList<quint16> items)
 {
@@ -136,15 +152,16 @@ void ItemList::itemupdate()
     QTableWidgetItem *newItem;
     int j= currentRow();
     int column_one_width =columnWidth(1);
-    reset(); // just incase
+    int selectorLocation=321;
     clearContents();
     setColumnWidth(0,40);
     setColumnWidth(1,column_one_width);
     setColumnWidth(2,(this->font().pointSize()*5)+22);
     setRowCount(320);
-
+    if(createdSelector){selectorLocation = itemSelector->objectName().toInt(); itemSelector->setMaximumQty(itemQtyLimit);}
     for (int i=0;i<320;i++) // set up items
     {
+        if(i == selectorLocation){continue;}
         if (itemlist.at(i) == FF7Item::EmptyItemData)
         {
             newItem = new QTableWidgetItem("",0);
@@ -179,8 +196,22 @@ void ItemList::itemupdate()
         }
     }
     blockSignals(true);
-    setCurrentCell(j,0);
-    if(createdSelector==false){clearSelection();}//if there is no Selector made its because of a new item list.
+    if(createdSelector)
+    {
+        setCurrentCell(j,0);
+        setCellWidget(j,0,itemSelector);
+        if(itemlist.at(j)== FF7Item::EmptyItemData){/*nice empty under the selector*/}
+        else
+        {
+            for(int i=0;i<3;i++)
+            {
+                QTableWidgetItem *newItem = new QTableWidgetItem("",0);
+                setItem(j,i,newItem);
+            }
+        }
+        itemSelector->setCurrentItem(itemlist.at(j));
+    }
+    //if(createdSelector){itemSelector->close();}//if there is a Selector Close it.
     blockSignals(false);
 }
 void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
@@ -192,14 +223,18 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     itemupdate();
     itemSelector = new ItemSelector;
     createdSelector = true;
+    itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
     //Clear the Current Row So the item selector is not over text.
-    QTableWidgetItem *newItem = new QTableWidgetItem("",0);
-    setItem(row,0,newItem);
-    newItem = new QTableWidgetItem("",0);//can't put the same item in two places.
-    setItem(row,1,newItem);
-    newItem = new QTableWidgetItem("",0);//can't put the same item in two places.
-    setItem(row,2,newItem);
+    if(itemlist.at(row)==FF7Item::EmptyItemData){/*nice empty under the selector*/}
+    else
+    {
+        for(int i=0;i<3;i++)
+        {
+            QTableWidgetItem *newItem = new QTableWidgetItem("",0);
+            setItem(row,i,newItem);
+        }
+    }
     itemSelector->setMinimumWidth(itemSelector->width());
     setCellWidget(row,0,itemSelector);
     itemSelector->setCurrentItem(itemlist.at(row));

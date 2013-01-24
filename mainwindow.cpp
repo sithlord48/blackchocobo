@@ -945,11 +945,13 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isPAL(s)){set_ntsc_time();}//Convert Time?
         ff7->setRegion(s,"NTSC-U");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);
         ui->action_Region_PAL_German->setChecked(false);
@@ -967,11 +969,13 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isNTSC(s)){set_pal_time();}//Call RegionTime Convertor
         ff7->setRegion(s,"PAL-E");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);
@@ -990,11 +994,13 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isNTSC(s)){set_pal_time();}//Call RegionTime Convertor
         ff7->setRegion(s,"PAL-DE");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);
@@ -1012,11 +1018,13 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isNTSC(s)){set_pal_time();}//Call RegionTime Convertor
         ff7->setRegion(s,"PAL-ES");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);
@@ -1034,11 +1042,13 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isNTSC(s)){set_pal_time();}//Call RegionTime Convertor
         ff7->setRegion(s,"PAL-FR");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Spanish->setChecked(false);
@@ -1056,11 +1066,13 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {//First Check If Coming From PAL
         if(ff7->isPAL(s)){set_ntsc_time();}//Convert Time?
         ff7->setRegion(s,"NTSC-J");
+        itemlist->setMaximumItemQty(99);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);
@@ -1078,11 +1090,13 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     {
         ff7->setRegion(s,"");
         ui->lbl_sg_region->clear();
+        itemlist->setMaximumItemQty(127);
     }
     else
     {
         if(ff7->isPAL(s)){set_ntsc_time();}//Convert Time?
         ff7->setRegion(s,"NTSC-JI");
+        itemlist->setMaximumItemQty(127);
         ui->action_Region_USA->setChecked(false);
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_French->setChecked(false);

@@ -32,7 +32,6 @@ void ItemSelector::init_display()
     sb_qty = new QSpinBox;
     sb_qty->setFixedWidth(this->font().pointSize()*5);
     sb_qty->setAlignment(Qt::AlignCenter);
-    sb_qty->setMaximum(127);
     sb_qty->setMinimum(1);
     sb_qty->setWrapping(true);
     sb_qty->setToolTip("");
@@ -53,6 +52,8 @@ void ItemSelector::init_display()
     this->layout()->update();
     this->adjustSize();
 }
+void ItemSelector::setMaximumQty(int maxQty){sb_qty->setMaximum(maxQty);}
+
 void ItemSelector::init_connections()
 {
     connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setFilter(int)));
@@ -111,8 +112,12 @@ void ItemSelector::setFilter(int type)
 }
 void ItemSelector::comboItem_changed(int index)
 {
-    if(combo_item->currentText()==Items.name(FF7Item::Masamune)){sb_qty->setMaximum(126);}
-    else{sb_qty->setMaximum(127);}
+    if(sb_qty->maximum()==127)
+    {
+        if(combo_item->currentText()==Items.name(FF7Item::Masamune)){sb_qty->setMaximum(126);}
+        else{sb_qty->setMaximum(127);}
+    }
+
     int offset = type_offset(combo_type->currentIndex()+1);
     if(index+offset != Items.itemId(current_item))
     {
