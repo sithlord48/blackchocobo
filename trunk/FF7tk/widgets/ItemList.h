@@ -42,13 +42,14 @@ signals:
     void itemsChanged(QList<quint16> items);
 public slots:
     void setItems(QList<quint16> items);
-
+    void setMaximumItemQty(int maxQty);
 private slots:
     void listSelectionChanged(int row,int colum,int prevRow,int prevColum);
     void itemSelector_changed(quint16);
 private:
     void itemupdate();
     FF7Item Items;
+    int itemQtyLimit;
     ItemSelector * itemSelector;
     ItemPreview *itemPreview;
     QList<quint16> itemlist;
