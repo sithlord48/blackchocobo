@@ -144,6 +144,24 @@ void ItemList::itemSelector_changed(quint16 item)
         createdTooltip=false;
     }
     itemlist.replace(sender()->objectName().toInt(),item);
+    if(item == FF7Item::EmptyItemData)
+    {
+        QTableWidgetItem *newItem = new QTableWidgetItem("",0);
+        setItem(sender()->objectName().toInt(),0,newItem);
+        newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
+        setItem(sender()->objectName().toInt(),1,newItem);
+        setRowHeight(sender()->objectName().toInt(),22);
+        newItem = new QTableWidgetItem("",0);
+        setItem(sender()->objectName().toInt(),2,newItem);
+    }
+    else if(createdSelector)
+    {
+        for(int i=0;i<3;i++)
+        {
+            QTableWidgetItem* newItem = new QTableWidgetItem("",0);
+            setItem(sender()->objectName().toInt(),i,newItem);
+         }
+    }
     emit(itemsChanged(itemlist));
 }
 
