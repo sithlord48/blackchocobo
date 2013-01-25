@@ -4908,10 +4908,6 @@
         <translation>Enregistrer sauvegarde Final Fantasy 7 DEX</translation>
     </message>
     <message>
-        <source>Region Detect Error</source>
-        <translation type="obsolete">Région détecter les erreurs</translation>
-    </message>
-    <message>
         <source>Place Leader</source>
         <translation>Placer le chef d&apos;équipe</translation>
     </message>
@@ -8334,18 +8330,6 @@ p, li { white-space: pre-wrap; }
         <translation>Aucun slot de Final Fantasy VII détecté</translation>
     </message>
     <message>
-        <source>Please Select An Action To Continue</source>
-        <translation>Veuillez sélectionner une action pour poursuivre</translation>
-    </message>
-    <message>
-        <source>Slot Preview</source>
-        <translation>Prévisionnage du slot</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot</source>
-        <translation>Slot &amp;précédent</translation>
-    </message>
-    <message>
         <source>View Anyway </source>
         <translation>Visionner quand même</translation>
     </message>
@@ -8356,14 +8340,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exporter en tant que Sauvegarde PSX</translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation>Vous êtes au slot 1</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
-        <translation>Désolé, il n&apos;y a pas de slot précédent</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
@@ -8382,34 +8358,6 @@ p, li { white-space: pre-wrap; }
         <translation>Fichier enregistré avec succès, retour à la boîte de sélection</translation>
     </message>
     <message>
-        <source>Your At Slot 15</source>
-        <translation>Vous êtes au slot 15</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation>Désolé, il n&apos;y a pas de slot suivant</translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Gauche</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Droite</translation>
-    </message>
-    <message>
-        <source>Esc</source>
-        <translation>Esc</translation>
-    </message>
-    <message>
-        <source>Mid-Linked Block </source>
-        <translation>Sauvegarde semi-reliée</translation>
-    </message>
-    <message>
-        <source>End Of Linked Data</source>
-        <translation>Fin du lien de sauvegarde</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(Supprimé)</translation>
     </message>
@@ -8418,11 +8366,6 @@ p, li { white-space: pre-wrap; }
  Game Uses %1 Save Block</source>
         <translation>
  Le jeu utilise %1 sauvegarde</translation>
-    </message>
-    <message>
-        <source>s; Next Data Chunk @ Slot:%1</source>
-        <translatorcomment>la prochaine sauvegarde est à l&apos;emplacement %1</translatorcomment>
-        <translation>s; la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
@@ -8435,6 +8378,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>Erreur lors de l&apos;enregistrement du fichier, retour à la fenêtre de sélection</translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot </source>
+        <translation>Slot &amp;précédent </translation>
+    </message>
+    <message>
+        <source>Slot:%1
+</source>
+        <translation>Slot:%1
+</translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation>
+ Sauvegarde semi-reliée</translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation>
+ Fin du lien de sauvegarde</translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
+        <translation>s
+   la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
 </context>
 </TS>

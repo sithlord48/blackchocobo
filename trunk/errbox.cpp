@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,24 +13,72 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #include "errbox.h"
-#include "ui_errbox.h"
 #include <QMessageBox>
 #include <QFileDialog>
 
-/*~~~~~GLOBALS~~~~~~*/
-errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
-    QDialog(parent),
-    ui(new Ui::errbox)
+errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 {
-    ui->setupUi(this);
+    setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+    setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
+    setWindowTitle(tr("Non Final Fantasy VII Slot Detected"));
+    //set up Gui
+    lblRegionString = new QLabel;
+    lblRegionString->setFixedHeight(64);
+    lblRegionString->setAlignment(Qt::AlignTop);
+
+    lblIcon = new QLabel;
+    lblIcon->setFixedSize(64,64);
+    lblIcon->setScaledContents(true);
+
+    btnPrev = new QPushButton(QIcon(":/icon/prev"),tr("&Previous Slot "));
+    btnPrev->setShortcut(QKeySequence::Back);
+    btnPrev->setFixedHeight(24);
+
+    btnView = new QPushButton(QIcon(":/icon/quit"),tr("View Anyway "));
+    btnView->setShortcut(QKeySequence::Close);
+    btnView->setFixedHeight(24);
+
+    btnNext = new QPushButton(QIcon(":/icon/next"),tr("    &Next Slot"));
+    btnNext->setShortcut(QKeySequence::Forward);
+    btnNext->setLayoutDirection(Qt::RightToLeft);
+    btnNext->setFixedHeight(24);
+
+    btnExport = new QPushButton(QIcon(":/icon/psxmc"),tr("&Export As Raw PSX"));
+    btnExport->setFixedHeight(24);
+
+    QHBoxLayout *slotLayout = new QHBoxLayout;
+    slotLayout->setContentsMargins(0,0,3,0);
+    slotLayout->setSpacing(0);
+    slotLayout->addWidget(lblIcon);
+    slotLayout->addWidget(lblRegionString);
+
+    QHBoxLayout *btnLayout = new QHBoxLayout;
+    btnLayout->setSpacing(3);
+    btnLayout->addWidget(btnPrev);
+    btnLayout->addWidget(btnView);
+    btnLayout->addWidget(btnNext);
+
+    QVBoxLayout * finalLayout = new QVBoxLayout;
+    finalLayout->setContentsMargins(3,3,3,3);
+    finalLayout->setSpacing(3);
+    finalLayout->addLayout(slotLayout);
+    finalLayout->addLayout(btnLayout);
+    finalLayout->addWidget(btnExport);
+    setLayout(finalLayout);
+
+    setFixedHeight(finalLayout->sizeHint().height());
+
+    connect(btnPrev,SIGNAL(clicked()),this,SLOT(btnPrevClicked()));
+    connect(btnNext,SIGNAL(clicked()),this,SLOT(btnNextClicked()));
+    connect(btnView,SIGNAL(clicked()),this,SLOT(btnViewClicked()));
+    connect(btnExport,SIGNAL(clicked()),this,SLOT(btnExportClicked()));
+
     QByteArray data;
     s=slot;
     ff7 = ff7data;
     int numslots;
     int nextslot;
-    this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
     data= ff7->slot_header(s);
     switch((quint8)data.at(2))
     {
@@ -53,8 +101,8 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
         break;
     }
 
-    ui->lbl_icon->setPixmap(save_icon.icon());
-    connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
+    lblIcon->setPixmap(save_icon.icon());
+    connect(&save_icon, SIGNAL(nextIcon(QPixmap)), lblIcon, SLOT(setPixmap(QPixmap)));
     // Get the games desc string
     QByteArray desc;
     QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
@@ -63,12 +111,12 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     //assume NOT PC SAVE.
 
-    QString Slottext;
-    if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext= codec->toUnicode(desc);}
+    QString Slottext= QString(tr("Slot:%1\n").arg(QString::number(s+1)));
+    if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(codec->toUnicode(desc));}
 
-    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext = tr("Mid-Linked Block ");}
+    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext.append(tr("\n Mid-Linked Block "));}
 
-    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext = tr("End Of Linked Data");}
+    else if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("\n End Of Linked Data"));}
 
     if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
     numslots = ff7->psx_block_size(s);
@@ -78,43 +126,34 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     {
             if(ff7->psx_block_next(s)!=0xFF)
             {
-                if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
+                if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
                 else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
             }
     }
     if(ff7->psx_block_type(s) == FF7Save::BLOCK_MIDLINK || ff7->psx_block_type(s) == FF7Save::BLOCK_ENDLINK || ff7->psx_block_type(s) ==FF7Save::BLOCK_DELETED_MIDLINK || ff7->psx_block_type(s) == FF7Save::BLOCK_DELETED_ENDLINK)
     {
-        ui->btn_export->setDisabled(1);
-        ui->btn_view->setDisabled(1);
+        btnExport->setDisabled(1);
+        btnView->setDisabled(1);
     }
-    //if(numslots >1){ui->btn_export->setDisabled(1);}
-    ui->lbl_regionstring->setText(Slottext);
+    lblRegionString->setText(Slottext);
+
+    if(s==0){btnPrev->setEnabled(false);}
+    else if(s==14){btnNext->setEnabled(false);}
 }
 
 void errbox::keyPressEvent(QKeyEvent *e)
 {//catch esc press and send it to view button
     if(e->key()!=Qt::Key_Escape) QDialog::keyPressEvent(e);
-    else{ui->btn_view->click();}
-}
-errbox::~errbox(){delete ui;}
-
-void errbox::on_btn_prev_clicked()
-{
-    if(s>0){this->done(1);}
-    else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));}
+    else{btnView->click();}
 }
 
-void errbox::on_btn_next_clicked()
-{
-    if(s<14){this->done(2);}
-    else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
-}
+void errbox::btnViewClicked(){this->done(0);}
+void errbox::btnPrevClicked(){this->done(1);}
+void errbox::btnNextClicked(){this->done(2);}
 
-void errbox::on_btn_export_clicked()
+void errbox::btnExportClicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Raw PSX File"), ff7->region(s),
-    tr("All Files(*)"));
+    QString fileName = QFileDialog::getSaveFileName(this,tr("Save Raw PSX File"), ff7->region(s),tr("All Files(*)"));
     if(fileName.isEmpty()){return;}
     else
     {
@@ -130,5 +169,3 @@ void errbox::on_btn_export_clicked()
         }
     }
 }
-
-void errbox::on_btn_view_clicked(){this->done(0);}

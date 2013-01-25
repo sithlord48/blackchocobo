@@ -4813,10 +4813,6 @@
         <translation>Guardar archivo de guardado Final Fantasy 7 unidad Dex</translation>
     </message>
     <message>
-        <source>Region Detect Error</source>
-        <translation type="obsolete">Error en la detección de región</translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation>Mostrar etiquetas de los objetivos en batalla</translation>
     </message>
@@ -5043,10 +5039,6 @@
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>Arma Diamante / Última / Rubí</translation>
-    </message>
-    <message>
-        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation type="obsolete">La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -8337,18 +8329,6 @@ p, li { white-space: pre-wrap; }
         <translation>Detectada ranura no Final Fantasy VII</translation>
     </message>
     <message>
-        <source>Please Select An Action To Continue</source>
-        <translation>Por favor selecciona una acción para continuar</translation>
-    </message>
-    <message>
-        <source>Slot Preview</source>
-        <translation>Previsualización de ranura</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot</source>
-        <translation>&amp;Ranura Anterior</translation>
-    </message>
-    <message>
         <source>View Anyway </source>
         <translation>Ver de todas formas </translation>
     </message>
@@ -8359,14 +8339,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exportar como PSX Raw</translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation>Estás en la ranura 1</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
-        <translation>Lo siento no hay ranura anterior</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
@@ -8385,34 +8357,6 @@ p, li { white-space: pre-wrap; }
         <translation>Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
     </message>
     <message>
-        <source>Your At Slot 15</source>
-        <translation>Estás en la ranura 15</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation>Lo siento no hay ranura siguiente</translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Izq.</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Derecha</translation>
-    </message>
-    <message>
-        <source>Esc</source>
-        <translation>Esc</translation>
-    </message>
-    <message>
-        <source>Mid-Linked Block </source>
-        <translation>Bloque semi-enlazado</translation>
-    </message>
-    <message>
-        <source>End Of Linked Data</source>
-        <translation>Fin de datos enlazados</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(Borrado)</translation>
     </message>
@@ -8421,10 +8365,6 @@ p, li { white-space: pre-wrap; }
  Game Uses %1 Save Block</source>
         <translation>
 El juego usa el bloque de guardado %1 </translation>
-    </message>
-    <message>
-        <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation>s; Siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
@@ -8437,6 +8377,34 @@ El juego usa el bloque de guardado %1 </translation>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>Error guardando el archivo, volviendo al diálogo de selección</translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot </source>
+        <translation>&amp;Ranura Anterior </translation>
+    </message>
+    <message>
+        <source>Slot:%1
+</source>
+        <translation>Ranura:%1
+</translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation>
+ Bloque semi-enlazado</translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation>
+ Fin de datos enlazados</translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
+        <translation>s
+   Siguiente trozo de datos en la ranura:%1</translation>
     </message>
 </context>
 </TS>
