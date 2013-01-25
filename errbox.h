@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,16 +13,21 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #ifndef ERRBOX_H
 #define ERRBOX_H
 
-#include <QDialog>
+#include "qglobal.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+    #include <QtWidgets/QDialog>
+    #include <QtWidgets/QLabel>
+    #include <QtWidgets/QPushButton>
+    #include <QtWidgets/QHBoxLayout>
+    #include <QtWidgets/QVBoxLayout>
+#else
+    #include <QtGui/QDialog>
+#endif
 #include "FF7tk/static_data/FF7Save.h"
 #include "FF7tk/static_data/SaveIcon.h"
-namespace Ui {
-    class errbox;
-}
 
 class errbox : public QDialog
 {
@@ -30,20 +35,24 @@ class errbox : public QDialog
 
 public:
     explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
-    ~errbox();
 protected:
     void keyPressEvent(QKeyEvent *e);
 private slots:
-    void on_btn_prev_clicked();
-    void on_btn_export_clicked();
-    void on_btn_view_clicked();
-    void on_btn_next_clicked();
-
+    void btnPrevClicked();
+    void btnExportClicked();
+    void btnViewClicked();
+    void btnNextClicked();
 private:
-    Ui::errbox *ui;
-    SaveIcon save_icon;
     int s;
+    SaveIcon save_icon;
     FF7Save *ff7;
+    /* Gui Objects*/
+    QPushButton * btnNext;
+    QPushButton * btnPrev;
+    QPushButton * btnView;
+    QPushButton * btnExport;
+    QLabel *lblRegionString;
+    QLabel *lblIcon;
 };
 
 #endif // ERRBOX_H

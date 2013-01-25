@@ -4886,10 +4886,6 @@
         <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
-        <source>Region Detect Error</source>
-        <translation type="obsolete">リージョンの検出エラー</translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation>バトル ターゲットの表示</translation>
     </message>
@@ -5116,10 +5112,6 @@
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>ダイヤ / アルテマ / ルビー  ウェポン</translation>
-    </message>
-    <message>
-        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation type="obsolete">リージョンが検出できません。手動で選択してください</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -8410,18 +8402,6 @@ p, li { white-space: pre-wrap; }
         <translation>Final Fantasy VII のスロットではありません</translation>
     </message>
     <message>
-        <source>Please Select An Action To Continue</source>
-        <translation>操作を選択してください</translation>
-    </message>
-    <message>
-        <source>Slot Preview</source>
-        <translation>スロットのプレビュー</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot</source>
-        <translation>前のスロット(&amp;P)</translation>
-    </message>
-    <message>
         <source>View Anyway </source>
         <translation>かまわず表示</translation>
     </message>
@@ -8432,14 +8412,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>Raw PSX でエクスポート(&amp;E)</translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation>スロット 1: 最初のスロット</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
-        <translation>これより前のスロットはありません</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
@@ -8458,34 +8430,6 @@ p, li { white-space: pre-wrap; }
         <translation>保存を完了しました。選択ダイアログに戻ります</translation>
     </message>
     <message>
-        <source>Your At Slot 15</source>
-        <translation>スロット 15: 最後のスロット</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation>これより後のスロットはありません</translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Left</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Right</translation>
-    </message>
-    <message>
-        <source>Esc</source>
-        <translation>Esc</translation>
-    </message>
-    <message>
-        <source>Mid-Linked Block </source>
-        <translation>中間リンク ブロック</translation>
-    </message>
-    <message>
-        <source>End Of Linked Data</source>
-        <translation>最終リンク データ</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(削除済み)</translation>
     </message>
@@ -8494,10 +8438,6 @@ p, li { white-space: pre-wrap; }
  Game Uses %1 Save Block</source>
         <translation>
  セーブに %1 ブロックを使用</translation>
-    </message>
-    <message>
-        <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation>; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
@@ -8510,6 +8450,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>ファイルの保存エラー, 選択ダイアログに戻ります</translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot </source>
+        <translation>前のスロット(&amp;P) </translation>
+    </message>
+    <message>
+        <source>Slot:%1
+</source>
+        <translation>スロット:%1
+</translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation>
+ 中間リンク ブロック</translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation>
+ 最終リンク データ</translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
+        <translation>
+   次のデータ チャンク @ スロット:%1</translation>
     </message>
 </context>
 </TS>

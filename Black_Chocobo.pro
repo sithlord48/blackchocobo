@@ -87,8 +87,7 @@ HEADERS += mainwindow.h \
 
 FORMS += mainwindow.ui \
     about.ui \
-    options.ui \
-    errbox.ui
+    options.ui
 RESOURCES += images.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \

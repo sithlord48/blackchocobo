@@ -4812,10 +4812,6 @@
         <translation>Speichere Final Fantasy 7 Dex-Drive Spielstand</translation>
     </message>
     <message>
-        <source>Region Detect Error</source>
-        <translation type="obsolete">Region Erkennungsfehler</translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation>Zeige Schlacht Ziel Kennzeichnungen</translation>
     </message>
@@ -5044,10 +5040,6 @@
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>Diamond / Ultimate / Ruby  Weapon</translation>
-    </message>
-    <message>
-        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation type="obsolete">Region kann nicht automatisch erkannt werden, Du musst es manuell festlegen</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -8341,18 +8333,6 @@ p, li { white-space: pre-wrap; }
         <translation>Nicht-Final Fantasy VII Steckplatz erkannt</translation>
     </message>
     <message>
-        <source>Please Select An Action To Continue</source>
-        <translation>Bitte wähle eine Aktion aus zum Fortfahren</translation>
-    </message>
-    <message>
-        <source>Slot Preview</source>
-        <translation>Steckplatz Vorschau</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot</source>
-        <translation>&amp;Vorheriger Steckplatz</translation>
-    </message>
-    <message>
         <source>View Anyway </source>
         <translation>Zeige trotzdem </translation>
     </message>
@@ -8363,14 +8343,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exportiere als Raw PSX</translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation>Du bist bei Steckplatz 1</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
-        <translation>Sorry, es gibt keinen vorherigen Steckplatz</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
@@ -8389,35 +8361,6 @@ p, li { white-space: pre-wrap; }
         <translation>Datei erfolgreich gespeichert, gehe nun zurück zum Auswahl-Dialog</translation>
     </message>
     <message>
-        <source>Your At Slot 15</source>
-        <translation>Du bist bei Steckplatz 15</translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation>Sorry, es gibt keinen nächsten Steckplatz</translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Links</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Rechts</translation>
-    </message>
-    <message>
-        <source>Esc</source>
-        <translation>Esc</translation>
-    </message>
-    <message>
-        <source>Mid-Linked Block </source>
-        <translatorcomment>Used for psx save &quot;blocks&quot; a mid link block is only seen when a psx save requires more then two save blocks on a memory card. a save that requires 3 blocks would have a &quot;Start Block &quot;, followed by a &quot;Mid link Block&quot; Then a &quot;End of link block&quot;</translatorcomment>
-        <translation>Mid Linked Block </translation>
-    </message>
-    <message>
-        <source>End Of Linked Data</source>
-        <translation>Ende von verlinkten Daten</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(Gelöscht)</translation>
     </message>
@@ -8426,11 +8369,6 @@ p, li { white-space: pre-wrap; }
  Game Uses %1 Save Block</source>
         <translation>
  Spiel benutzt %1 Speicherblöcke</translation>
-    </message>
-    <message>
-        <source>s; Next Data Chunk @ Slot:%1</source>
-        <translatorcomment>this phrase will come up if the save uses more then one block making &quot;Save Block&quot;, &quot;Save Blocks&quot; in the previous line, at run time %1 will be replaced by a number </translatorcomment>
-        <translation>s; Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
@@ -8443,6 +8381,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>Fehler beim Speichern der Datei, zurück zum Auswahl-Dialog</translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot </source>
+        <translation>&amp;Vorheriger Steckplatz</translation>
+    </message>
+    <message>
+        <source>Slot:%1
+</source>
+        <translation>Steckplatz:%1
+</translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation>
+ Mid Linked Block </translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation>
+ Ende von verlinkten Daten</translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
+        <translation>s
+   Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
 </context>
 </TS>

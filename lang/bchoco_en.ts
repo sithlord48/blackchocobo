@@ -8304,18 +8304,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Please Select An Action To Continue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>View Anyway </source>
         <translation type="unfinished"></translation>
     </message>
@@ -8325,14 +8313,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8352,44 +8332,12 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Your At Slot 15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Esc</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mid-Linked Block </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>End Of Linked Data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s; Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8402,6 +8350,30 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
