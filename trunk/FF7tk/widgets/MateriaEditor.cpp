@@ -116,7 +116,8 @@ void MateriaEditor::init_display()
     //size policies
     combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
     combo_type->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
-    sb_ap->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+    sb_ap->setFixedWidth(this->font().pointSize()*7);
+    sb_ap->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
     btn_rm_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_copy_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_paste_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
@@ -133,9 +134,7 @@ void MateriaEditor::init_display()
     type_name_layout->addWidget(btn_rm_materia);
     type_name_layout->setContentsMargins(3,0,0,0);
 
-    QSpacerItem *spacer1 = new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Fixed);
     QHBoxLayout * ap_layout = new QHBoxLayout;
-    ap_layout->addSpacerItem(spacer1);
     ap_layout->addWidget(sb_ap);
     ap_layout->addWidget(lbl_slash);
     lbl_slash->setFixedWidth(this->font().pointSize());

@@ -220,6 +220,8 @@ void CharEditor::init_display()
     used_limits_layout->addSpacerItem(usedSpacer);
 
     list_limits = new QListWidget;
+    list_limits->setMaximumHeight(this->font().pointSize()*13);
+    //list_limits->setContentsMargins(0,6,0,0);
     lbl_limit_level = new QLabel(tr("Limit Level"));
     sb_limit_level = new QSpinBox;
     sb_limit_level->setFixedWidth(this->font().pointSize()*4);
@@ -500,7 +502,7 @@ void CharEditor::init_display()
     QFrame*stat_box= new QFrame;
     stat_box->setLayout(stat_layout);
     stat_box->adjustSize();
-    stat_box->setFixedHeight(this->font().pointSize()*15);
+    //stat_box->setFixedHeight(this->font().pointSize()*16);
 
     QLabel *lbl_0x34= new QLabel(QString(tr("0x34")));
     lcd_0x34 = new QLCDNumber;
@@ -581,7 +583,6 @@ void CharEditor::init_display()
     QVBoxLayout *limit_box = new QVBoxLayout;
     limit_box->addLayout(limit_bar_layout);
     limit_box->addLayout(limit_use_list);
-
 
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
