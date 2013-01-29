@@ -116,8 +116,8 @@ void MateriaEditor::init_display()
     //size policies
     combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
     combo_type->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
-    sb_ap->setFixedWidth(this->font().pointSize()*7);
-    sb_ap->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
+    sb_ap->setMinimumWidth(this->font().pointSize()*7);
+    sb_ap->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
     btn_rm_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_copy_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_paste_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
