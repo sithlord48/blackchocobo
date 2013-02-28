@@ -51,7 +51,6 @@ void ChocoboEditor::setSprint(int sprint_speed)
     else if (sprint_speed > 9999){sprint_speed = 9999;}
     choco_data.sprintspd = sprint_speed;
     emit sprint_changed(choco_data.sprintspd);
-    //QMessageBox::information(this,"Sprint Changed",QString("Sprint: %1").arg(choco_data.sprintspd));
 }
 void ChocoboEditor::setMsprint(int max_sprint_speed)
 {
@@ -59,7 +58,6 @@ void ChocoboEditor::setMsprint(int max_sprint_speed)
     else if (max_sprint_speed > 9999){max_sprint_speed = 9999;}
     choco_data.maxsprintspd = max_sprint_speed;
     emit mSprint_changed(choco_data.maxsprintspd);
-    //QMessageBox::information(this,"Max Sprint Changed",QString("Max Sprint: %1").arg(choco_data.maxsprintspd));
 }
 void ChocoboEditor::setSpeed(int speed)
 {
@@ -67,7 +65,6 @@ void ChocoboEditor::setSpeed(int speed)
     else if (speed > 9999){speed = 9999;}
     choco_data.speed = speed;
     emit speed_changed(choco_data.speed);
-    //QMessageBox::information(this,"Speed Changed",QString("Speed: %1").arg(choco_data.speed));
 }
 void ChocoboEditor::setMspeed(int max_speed)
 {
@@ -75,7 +72,6 @@ void ChocoboEditor::setMspeed(int max_speed)
     else if (max_speed > 9999){max_speed = 9999;}
     choco_data.maxspeed = max_speed;
     emit mSprint_changed(choco_data.maxspeed);
-    //QMessageBox::information(this,"Max Speed Changed",QString("Max Speed: %1").arg(choco_data.maxspeed));
 }
 void ChocoboEditor::setStamina(int stamina)
 {
@@ -83,7 +79,6 @@ void ChocoboEditor::setStamina(int stamina)
     else if (stamina > 9999){stamina = 9999;}
     choco_stamina = stamina;
     emit stamina_changed(choco_stamina);
-    //QMessageBox::information(this,"Stamina Changed",QString("Stamina: %1").arg(choco_stamina));
 }
 void ChocoboEditor::setAccel(int accel)
 {
@@ -91,7 +86,6 @@ void ChocoboEditor::setAccel(int accel)
     else if (accel > 255){accel =255;}
     choco_data.accel = accel;
     emit accel_changed(choco_data.accel);
-    //QMessageBox::information(this,"Accel Changed",QString("Accel: %1").arg(choco_data.accel));
 }
 void ChocoboEditor::setCoop(int coop)
 {
@@ -99,7 +93,6 @@ void ChocoboEditor::setCoop(int coop)
     else if (coop >255){coop =255;}
     choco_data.coop = coop;
     emit coop_changed(choco_data.coop);
-    //QMessageBox::information(this,"Coop Changed",QString("Coop: %1").arg(choco_data.coop));
 }
 void ChocoboEditor::setIntelligence(int intel)
 {
@@ -107,7 +100,6 @@ void ChocoboEditor::setIntelligence(int intel)
     else if(intel >255){intel = 255;}
     choco_data.intelligence = intel;
     emit intelligence_changed(choco_data.intelligence);
-    //QMessageBox::information(this,"Intel Changed",QString("Intel: %1").arg(choco_data.intelligence));
 }
 void ChocoboEditor::setPersonality (int personality)
 {//need to be researched further.
@@ -115,7 +107,6 @@ void ChocoboEditor::setPersonality (int personality)
     else if (personality >255){personality = 255;}
     choco_data.personality = personality;
     emit personality_changed(choco_data.personality);
-    //QMessageBox::information(this,"Personality Changed",QString("Personality: %1").arg(choco_data.personality));
 }
 void ChocoboEditor::setPcount(int pCount)
 {
@@ -123,7 +114,6 @@ void ChocoboEditor::setPcount(int pCount)
     else if (pCount >255){pCount =255;}
     choco_data.pcount=pCount;
     emit pCount_changed(choco_data.pcount);
-    //QMessageBox::information(this,"pCount Changed",QString("pCount: %1").arg(choco_data.pcount));
 }
 void ChocoboEditor::setWins(int wins)
 {
@@ -131,7 +121,6 @@ void ChocoboEditor::setWins(int wins)
     else if (wins>255){wins = 255;}
     choco_data.raceswon = wins;
     emit wins_changed(choco_data.raceswon);
-    //QMessageBox::information(this,"Wins Changed",QString("Wins: %1").arg(choco_data.raceswon));
 }
 void ChocoboEditor::setSex(int sex)
 {
@@ -139,7 +128,6 @@ void ChocoboEditor::setSex(int sex)
     else if(sex > 1){sex = 1;}
     choco_data.sex = sex;
     emit sex_changed(choco_data.sex);
-    //QMessageBox::information(this,"Sex Changed",QString("Sex: %1").arg(choco_data.sex));
 }
 void ChocoboEditor::setType(int type)
 {
@@ -147,26 +135,22 @@ void ChocoboEditor::setType(int type)
     else if(type > 4){type = 4;}
     choco_data.type = type;
     emit type_changed(choco_data.type);
-    //QMessageBox::information(this,"Type Changed",QString("Type: %1").arg(choco_data.type));
 }
 void ChocoboEditor::setName(QString new_name)
 {
     if(new_name.length()>6){new_name.truncate(6);}
     choco_name = new_name;
     emit name_changed(new_name);
-    //QMessageBox::information(this,"Name Changed",QString("Name: %1").arg(choco_name));
 }
 void ChocoboEditor::setCantMate(bool cantMate)
 {
     choco_cant_mate=cantMate;
     emit cantMate_changed(choco_cant_mate);
-    //QMessageBox::information(this,"Cant Mate' Changed",QString("Cant Mate: %1").arg(choco_cant_mate));
 }
 
 void ChocoboEditor::init_display(void)
 {
     //create Gui Widgets.
-    //QSpacerItem *spacer = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Minimum);
     combo_sex = new QComboBox;
     combo_type = new QComboBox;
     line_name = new QLineEdit;
@@ -290,7 +274,6 @@ void ChocoboEditor::init_display(void)
 
     QHBoxLayout *accel_wins_layout = new QHBoxLayout;
     accel_wins_layout->setContentsMargins(0,0,0,0);
-    //accel_wins_layout->setAlignment(Qt::AlignHCenter);
     accel_wins_layout->addLayout(accel_layout);
     accel_wins_layout->addLayout(wins_layout);
 
@@ -382,6 +365,7 @@ void ChocoboEditor::disconnectAll(void)
 void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina)
 {
     choco_data = choco;
+    if(Processed_Name =="      "){Processed_Name ="";}
     choco_name = Processed_Name;
     choco_cant_mate = cant_mate;
     choco_stamina = stamina;

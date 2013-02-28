@@ -24,12 +24,67 @@ QString FF7Location::x(int i){return Locations[i].x;}
 QString FF7Location::y(int i){return Locations[i].y;}
 QString FF7Location::z(int i){return Locations[i].z;}
 int FF7Location::len(){return 387;}// keep current num locations in list.
+
 QString FF7Location::fileName(int MapID,int LocID)
 {
-    QString Name;
+    QString temp;
     for(int i =0;i < len(); i++)
     {
-        if( (MapID==Locations[i].map_id.toInt()) && (LocID ==Locations[i].loc_id.toInt())){Name= Locations[i].filename;}
+        if( (MapID==Locations[i].map_id.toInt()) && (LocID ==Locations[i].loc_id.toInt())){temp= Locations[i].filename;}
     }
-    return Name;
+    return temp;
+}
+QString FF7Location::locationString(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].location;}
+    }
+    return temp;
+}
+QString FF7Location::mapID(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].map_id;}
+    }
+    return temp;
+}
+QString FF7Location::locationID(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].loc_id;}
+    }
+    return temp;
+}
+QString FF7Location::x(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].x;}
+    }
+    return temp;
+}
+QString FF7Location::y(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].y;}
+    }
+    return temp;
+}
+QString FF7Location::z(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].z;}
+    }
+    return temp;
 }

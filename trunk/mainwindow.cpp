@@ -809,26 +809,26 @@ void MainWindow::on_actionExport_DEX_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionSlot_01_triggered(){s=0; guirefresh(0);}
-void MainWindow::on_actionSlot_02_triggered(){s=1; guirefresh(0);}
-void MainWindow::on_actionSlot_03_triggered(){s=2; guirefresh(0);}
-void MainWindow::on_actionSlot_04_triggered(){s=3; guirefresh(0);}
-void MainWindow::on_actionSlot_05_triggered(){s=4; guirefresh(0);}
-void MainWindow::on_actionSlot_06_triggered(){s=5; guirefresh(0);}
-void MainWindow::on_actionSlot_07_triggered(){s=6; guirefresh(0);}
-void MainWindow::on_actionSlot_08_triggered(){s=7; guirefresh(0);}
-void MainWindow::on_actionSlot_09_triggered(){s=8; guirefresh(0);}
-void MainWindow::on_actionSlot_10_triggered(){s=9; guirefresh(0);}
-void MainWindow::on_actionSlot_11_triggered(){s=10; guirefresh(0);}
-void MainWindow::on_actionSlot_12_triggered(){s=11; guirefresh(0);}
-void MainWindow::on_actionSlot_13_triggered(){s=12; guirefresh(0);}
-void MainWindow::on_actionSlot_14_triggered(){s=13; guirefresh(0);}
-void MainWindow::on_actionSlot_15_triggered(){s=14; guirefresh(0);}
+void MainWindow::on_actionSlot_01_triggered(){s=0; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_02_triggered(){s=1; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_03_triggered(){s=2; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_04_triggered(){s=3; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_05_triggered(){s=4; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_06_triggered(){s=5; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_07_triggered(){s=6; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_08_triggered(){s=7; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_09_triggered(){s=8; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_10_triggered(){s=9; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_11_triggered(){s=10; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_12_triggered(){s=11; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_13_triggered(){s=12; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_14_triggered(){s=13; CheckGame(); guirefresh(0);}
+void MainWindow::on_actionSlot_15_triggered(){s=14; CheckGame(); guirefresh(0);}
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(0);}
 
-void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
-void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
+void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();CheckGame(); guirefresh(0);}
+void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionAbout_triggered(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
@@ -1384,11 +1384,8 @@ void MainWindow::itemupdate(void)
     if(ff7->unknown(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
     load=false;
 }
-/*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::guirefresh(bool newgame)
+void MainWindow::CheckGame()
 {
-    load=true;
-    /*~~~~Check for SG type and ff7~~~~*/
     if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
       ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
                        && (ff7->psx_block_type(s) !=0xA0)))
@@ -1397,12 +1394,10 @@ void MainWindow::guirefresh(bool newgame)
         error.setStyleSheet(this->styleSheet());
         switch(error.exec())
         {
-
         case 0://View Anyway..
             ui->tabWidget->setCurrentIndex(8);
             if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
             hexEditorRefresh();
-
             ui->lbl_sg_region->setText(ff7->region(s));
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
             setmenu(0);
@@ -1422,7 +1417,19 @@ void MainWindow::guirefresh(bool newgame)
             on_actionShow_Selection_Dialog_triggered();
         break;
         }
+    }
+}
+/*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
+void MainWindow::guirefresh(bool newgame)
+{
+    load=true;
 
+    /*~~~~Check for SG type and ff7~~~~*/
+    if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
+      ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
+                       && (ff7->psx_block_type(s) !=0xA0)))
+    {
+        // NOT FF7 Do Nothing , Handled By CheckGame()
     }
     else
     {//IS FF7 Slot
@@ -3859,3 +3866,6 @@ void MainWindow::phsList_box_allowed_toggled(int row, bool checked){if(!load){fi
 void MainWindow::phsList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setPhsVisible(s,row,checked);}}
 void MainWindow::menuList_box_locked_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuLocked(s,row,checked);}}
 void MainWindow::menuList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuVisible(s,row,checked);}}
+
+
+void MainWindow::on_tabWidget_currentChanged(){guirefresh(0);}

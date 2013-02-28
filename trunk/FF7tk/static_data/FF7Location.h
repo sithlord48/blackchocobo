@@ -32,17 +32,24 @@ public:
     QString fileName(int);
     QString fileName(int MapID,int LocID);
     QString locationString(int);
+    QString locationString(QString fileName);
     QString mapID(int);
+    QString mapID(QString fileName);
     QString locationID(int);
+    QString locationID(QString fileName);
     QString x(int);
+    QString x(QString fileName);
     QString y(int);
+    QString y(QString fileName);
     QString z(int);
+    QString z(QString fileName);
     int len(void);
 };
 static LOCATION Locations[]=
 {
     /************************Every Location In The Game With Stock Translation******************/
 
+    {"startmap",QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
 /*
     {"fship_1",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","66","125","64275","27"},
     {"fship_12",QT_TRANSLATE_NOOP("Locations","deck"),"1","67","0","0","0"},
@@ -53,7 +60,6 @@ static LOCATION Locations[]=
     {"zz2",QT_TRANSLATE_NOOP("Locations","Weapon seller"),"1","79","65359","65470","30"},
     {"q_1",QT_TRANSLATE_NOOP("Locations","Hallway"),"1","88","65141","34","13"},
     {"blackbg2",QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0"},
-    {"startmap",QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
 
     {"md1stin",QT_TRANSLATE_NOOP("Locations","Platform"),"1","116","3655","27432","25"},
     {"md1_1",QT_TRANSLATE_NOOP("Locations","Sector 1 Station"),"1","117","1433","386","78"},
@@ -492,7 +498,7 @@ static LOCATION Locations[]=
     {"tunnel_4",QT_TRANSLATE_NOOP("Locations","Tunnel"),"1","736","65453","65237","215"},
     {"md8_32",QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},
     {"las0_6",QT_TRANSLATE_NOOP("Locations","North Crater"),"1","749","65344","16","35"},
-    {"",QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"},
+    {"testfight",QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"},
     /****************Dupilcate Field Strings Don't Display************/
     {"",QT_TRANSLATE_NOOP("Locations","Cloud's Past"),"1","332","164","125","8"},
     {"",QT_TRANSLATE_NOOP("Locations","Cloud's Villa"),"1","446","65496","65493","10"},
