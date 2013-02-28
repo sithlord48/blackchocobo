@@ -670,5 +670,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_trnad_4MpTurbo_toggled(bool checked);
     void on_cb_trnad_3KaiserKnuckle_toggled(bool checked);
     void on_cb_trnad_2NeoBahmut_toggled(bool checked);
+    void on_tabWidget_currentChanged();
+    void CheckGame(void);
 };
 #endif // MAINWINDOW_H
