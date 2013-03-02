@@ -42,7 +42,7 @@
 #include "FF7tk/static_data/FF7Char.h"
 #include "FF7tk/static_data/FF7Materia.h"
 #include "FF7tk/static_data/FF7Location.h"
-#include "FF7tk/widgets/DialogPreview.h"
+#include "FF7tk/widgets/OptionsWidget.h"
 #include "FF7tk/widgets/MateriaEditor.h"
 #include "FF7tk/widgets/SlotSelect.h"
 #include "FF7tk/widgets/ChocoboEditor.h"
@@ -90,7 +90,7 @@ private:
     PhsListWidget *phsList;
     MenuListWidget *menuList;
     ItemPreview *item_preview;
-    DialogPreview *dialog_preview;
+    OptionsWidget *optionsWidget;
     MateriaEditor *materia_editor;
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
@@ -482,19 +482,42 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_s5_8_toggled(bool checked);
 
     // game options tab
-    void on_cb_battle_help_toggled(bool checked);
-    void on_cb_battle_targets_toggled(bool checked);
-    void on_cb_field_help_toggled(bool checked);
-    void on_slide_fieldmspeed_valueChanged(int value);
-    void on_slide_battlemspeed_valueChanged(int value);
-    void on_slide_battlespeed_valueChanged(int value);
 
-    void on_combo_magic_order_currentIndexChanged(int order);
-    void on_combo_camera_currentIndexChanged(int mode);
-    void on_combo_atb_currentIndexChanged(int mode);
-    void on_combo_cursor_currentIndexChanged(int mode);
-    void on_combo_control_currentIndexChanged(int mode);
-    void on_combo_sound_currentIndexChanged(int mode);
+    void setDialogColorUL(QColor color);
+    void setDialogColorUR(QColor color);
+    void setDialogColorLL(QColor color);
+    void setDialogColorLR(QColor color);
+
+    void setButtonCamera(int index);
+    void setButtonTarget(int index);
+    void setButtonPageUp(int index);
+    void setButtonPageDown(int index);
+    void setButtonMenu(int index);
+    void setButtonOk(int index);
+    void setButtonCancel(int index);
+    void setButtonSwitch(int index);
+    void setButtonHelp(int index);
+    void setButtonUnknown1(int index);
+    void setButtonUnknown2(int index);
+    void setButtonPause(int index);
+    void setButtonUp(int index);
+    void setButtonDown(int index);
+    void setButtonLeft(int index);
+    void setButtonRight(int index);
+
+    void setBattleHelp(bool checked);
+    void setBattleTargets(bool checked);
+    void setFieldHelp(bool checked);
+    void setFieldMessageSpeed(int value);
+    void setBattleMessageSpeed(int value);
+    void setBattleSpeed(int value);
+
+    void setMagicOrder(int order);
+    void setCameraMode(int mode);
+    void setAtbMode(int mode);
+    void setCursorMode(int mode);
+    void setControlMode(int mode);
+    void setSoundMode(int mode);
 
     //save location tab
     void on_sb_map_id_valueChanged(int);
@@ -595,22 +618,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_compare_slot_currentIndexChanged(void);
     void on_btn_all_z_diffs_clicked();
     void on_sb_steps_valueChanged(int );
-    void on_combo_button_1_currentIndexChanged(int index);
-    void on_combo_button_2_currentIndexChanged(int index);
-    void on_combo_button_3_currentIndexChanged(int index);
-    void on_combo_button_4_currentIndexChanged(int index);
-    void on_combo_button_5_currentIndexChanged(int index);
-    void on_combo_button_6_currentIndexChanged(int index);
-    void on_combo_button_7_currentIndexChanged(int index);
-    void on_combo_button_8_currentIndexChanged(int index);
-    void on_combo_button_9_currentIndexChanged(int index);
-    void on_combo_button_10_currentIndexChanged(int index);
-    void on_combo_button_11_currentIndexChanged(int index);
-    void on_combo_button_12_currentIndexChanged(int index);
-    void on_combo_button_13_currentIndexChanged(int index);
-    void on_combo_button_14_currentIndexChanged(int index);
-    void on_combo_button_15_currentIndexChanged(int index);
-    void on_combo_button_16_currentIndexChanged(int index);
+
 
 
     void on_combo_s7_slums_currentIndexChanged(int index);
@@ -624,10 +632,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_visible_black_chocobo_toggled(bool checked);
     void on_cb_visible_gold_chocobo_toggled(bool checked);
 
-    void set_UL_Color(QColor color);
-    void set_UR_Color(QColor color);
-    void set_LR_Color(QColor color);
-    void set_LL_Color(QColor color);
+
 
     void set_char_buttons();
     void on_btn_maxChar_clicked();

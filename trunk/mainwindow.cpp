@@ -102,7 +102,7 @@ void MainWindow::init_display()
 
     ui->tabWidget->setTabEnabled(9,0);
     ui->cb_Region_Slot->setEnabled(false);
-    ui->group_controller_mapping->setVisible(false);
+    //ui->group_controller_mapping->setVisible(false);
     ui->actionNew_Window->setVisible(0);
 
     // Temp hidden (show only via debug)
@@ -150,12 +150,11 @@ void MainWindow::init_display()
     menuLayout->addWidget(menuList);
     ui->Menu_Box->setLayout(menuLayout);
 
-    dialog_preview = new DialogPreview();
-    QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
-    dialog_preview_layout->setContentsMargins(0,0,0,0);
-    dialog_preview_layout->addWidget(dialog_preview);
-    ui->dialog_preview_box->setLayout(dialog_preview_layout);
-    ui->dialog_preview_box->setContentsMargins(0,0,0,0);
+    optionsWidget = new OptionsWidget;
+    optionsWidget->setStyleSheet(this->styleSheet());
+    ui->tabWidget->removeTab(7);
+    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
+    optionsWidget->adjustSize();
 
     materia_editor = new MateriaEditor(this);
     materia_editor->setStarsSize(48);
@@ -242,11 +241,6 @@ void MainWindow::init_connections()
         connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
         connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
 
-        //connnect the dialogpreview to the data functions.
-        connect(dialog_preview,SIGNAL(UL_ColorChanged(QColor)),this,SLOT(set_UL_Color(QColor)));
-        connect(dialog_preview,SIGNAL(UR_ColorChanged(QColor)),this,SLOT(set_UR_Color(QColor)));
-        connect(dialog_preview,SIGNAL(LL_ColorChanged(QColor)),this,SLOT(set_LL_Color(QColor)));
-        connect(dialog_preview,SIGNAL(LR_ColorChanged(QColor)),this,SLOT(set_LR_Color(QColor)));
         //ItemList
         connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
         //Materia_Editor
@@ -388,6 +382,41 @@ void MainWindow::init_connections()
         connect(chocobo_stable_6,SIGNAL(personality_changed(quint8)),this,SLOT(c6_personalityChanged(quint8)));
         connect(chocobo_stable_6,SIGNAL(pCount_changed(quint8)),this,SLOT(c6_pcountChanged(quint8)));
         connect(chocobo_stable_6,SIGNAL(wins_changed(quint8)),this,SLOT(c6_raceswonChanged(quint8)));
+
+        //options
+        connect(optionsWidget,SIGNAL(dialogColorLLChanged(QColor)),this,SLOT(setDialogColorLL(QColor)));
+        connect(optionsWidget,SIGNAL(dialogColorLRChanged(QColor)),this,SLOT(setDialogColorLR(QColor)));
+        connect(optionsWidget,SIGNAL(dialogColorULChanged(QColor)),this,SLOT(setDialogColorUL(QColor)));
+        connect(optionsWidget,SIGNAL(dialogColorURChanged(QColor)),this,SLOT(setDialogColorUR(QColor)));
+        connect(optionsWidget,SIGNAL(MagicOrderChanged(int)),this,SLOT(setMagicOrder(int)));
+        connect(optionsWidget,SIGNAL(CameraChanged(int)),this,SLOT(setCameraMode(int)));
+        connect(optionsWidget,SIGNAL(AtbChanged(int)),this,SLOT(setAtbMode(int)));
+        connect(optionsWidget,SIGNAL(CursorChanged(int)),this,SLOT(setCursorMode(int)));
+        connect(optionsWidget,SIGNAL(ControllerModeChanged(int)),this,SLOT(setControlMode(int)));
+        connect(optionsWidget,SIGNAL(SoundChanged(int)),this,SLOT(setSoundMode(int)));
+        connect(optionsWidget,SIGNAL(FieldMessageSpeedChanged(int)),this,SLOT(setFieldMessageSpeed(int)));
+        connect(optionsWidget,SIGNAL(BattleMessageSpeedChanged(int)),this,SLOT(setBattleMessageSpeed(int)));
+        connect(optionsWidget,SIGNAL(BattleSpeedChanged(int)),this,SLOT(setBattleSpeed(int)));
+        connect(optionsWidget,SIGNAL(FieldHelpChanged(bool)),this,SLOT(setFieldHelp(bool)));
+        connect(optionsWidget,SIGNAL(BattleTargetsChanged(bool)),this,SLOT(setBattleTargets(bool)));
+        connect(optionsWidget,SIGNAL(BattleHelpChanged(bool)),this,SLOT(setBattleHelp(bool)));
+        connect(optionsWidget,SIGNAL(BtnCameraChanged(int)),this,SLOT(setButtonCamera(int)));
+        connect(optionsWidget,SIGNAL(BtnTargetChanged(int)),this,SLOT(setButtonTarget(int)));
+        connect(optionsWidget,SIGNAL(BtnPgUpChanged(int)),this,SLOT(setButtonPageUp(int)));
+        connect(optionsWidget,SIGNAL(BtnPgDnChanged(int)),this,SLOT(setButtonPageDown(int)));
+        connect(optionsWidget,SIGNAL(BtnMenuChanged(int)),this,SLOT(setButtonMenu(int)));
+        connect(optionsWidget,SIGNAL(BtnOkChanged(int)),this,SLOT(setButtonOk(int)));
+        connect(optionsWidget,SIGNAL(BtnCancelChanged(int)),this,SLOT(setButtonCancel(int)));
+        connect(optionsWidget,SIGNAL(BtnSwitchChanged(int)),this,SLOT(setButtonSwitch(int)));
+        connect(optionsWidget,SIGNAL(BtnHelpChanged(int)),this,SLOT(setButtonHelp(int)));
+        connect(optionsWidget,SIGNAL(Btn9Changed(int)),this,SLOT(setButtonUnknown1(int)));
+        connect(optionsWidget,SIGNAL(Btn10Changed(int)),this,SLOT(setButtonUnknown2(int)));
+        connect(optionsWidget,SIGNAL(BtnPauseChanged(int)),this,SLOT(setButtonCamera(int)));
+        connect(optionsWidget,SIGNAL(BtnUpChanged(int)),this,SLOT(setButtonUp(int)));
+        connect(optionsWidget,SIGNAL(BtnDownChanged(int)),this,SLOT(setButtonDown(int)));
+        connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
+        connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
+        //HexEditor.
         connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::init_settings()
@@ -858,7 +887,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->bm_unknown->setVisible(true);
         ui->bh_id->setVisible(true);
         ui->leader_id->setVisible(true);
-        if(ff7->type() == "PC"){ui->group_controller_mapping->setVisible(true);}
+        if(ff7->type() == "PC"){optionsWidget->setControllerMappingVisible(true);}
         settings->setValue("show_test",1);
         ui->cb_farm_items_1->setVisible(true);
         ui->cb_farm_items_2->setVisible(true);
@@ -879,7 +908,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->bm_unknown->setVisible(false);
         ui->bh_id->setVisible(false);
         ui->leader_id->setVisible(false);
-        if(ff7->type() =="PC"){ui->group_controller_mapping->setVisible(false);}
+        if(ff7->type() =="PC"){optionsWidget->setControllerMappingVisible(false);}
         settings->setValue("show_test",0);
         ui->cb_farm_items_1->setVisible(false);
         ui->cb_farm_items_2->setVisible(false);
@@ -1467,40 +1496,45 @@ void MainWindow::guirefresh(bool newgame)
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
         }
         /*~~~~~Load Game Options~~~~~*/
-        if(ff7->fieldHelp(s)){ui->cb_field_help->setChecked(Qt::Checked);} else{ui->cb_field_help->setChecked(Qt::Unchecked);}
-        if(ff7->battleTargets(s)){ui->cb_battle_targets->setCheckState(Qt::Checked);} else{ui->cb_battle_targets->setCheckState(Qt::Unchecked);}
-        if(ff7->soundMode(s)){ui->combo_sound->setCurrentIndex(1);}        else{ui->combo_sound->setCurrentIndex(0);}
-        if(ff7->controlMode(s)){ui->combo_control->setCurrentIndex(1);}   else{ui->combo_control->setCurrentIndex(0);}
-        if(ff7->cursorMode(s)){ui->combo_cursor->setCurrentIndex(1);}      else{ui->combo_cursor->setCurrentIndex(0);}
-        if(ff7->cameraMode(s)){ui->combo_camera->setCurrentIndex(1);}   else{ui->combo_camera->setCurrentIndex(0);}
-        if(ff7->battleHelp(s)){ui->cb_battle_help->setCheckState(Qt::Checked);}  else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
-        ui->combo_atb->setCurrentIndex(ff7->atbMode(s));
-        ui->combo_magic_order->setCurrentIndex(ff7->magicOrder(s));
-        ui->slide_battlespeed->setValue(ff7->battleSpeed(s));
-        ui->slide_battlemspeed->setValue(ff7->battleMessageSpeed(s));
-        ui->slide_fieldmspeed->setValue(ff7->messageSpeed(s));
+        optionsWidget->setFieldHelp(ff7->fieldHelp(s));
+        optionsWidget->setBattleHelp(ff7->battleHelp(s));
+        optionsWidget->setBattleTargets(ff7->battleTargets(s));
+        optionsWidget->setSoundMode(ff7->soundMode(s));
+
+        optionsWidget->setControllerMode(ff7->controlMode(s));
+        optionsWidget->setCursor(ff7->cursorMode(s));
+        optionsWidget->setCamera(ff7->cameraMode(s));
+        optionsWidget->setAtb(ff7->atbMode(s));
+        optionsWidget->setMagicOrder(ff7->magicOrder(s));
+
+        optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
+        optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
+        optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
+
 
         //CONTROLLER MAPPING
-        ui->combo_button_1->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
-        ui->combo_button_2->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
-        ui->combo_button_3->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
-        ui->combo_button_4->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
-        ui->combo_button_5->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
-        ui->combo_button_6->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_OK));
-        ui->combo_button_7->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
-        ui->combo_button_8->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
-        ui->combo_button_9->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
-        ui->combo_button_10->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
-        ui->combo_button_11->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
-        ui->combo_button_12->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
-        ui->combo_button_13->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UP));
-        ui->combo_button_14->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
-        ui->combo_button_15->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
-        ui->combo_button_16->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
+        optionsWidget->setBtnCamera(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
+        optionsWidget->setBtnTarget(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
+        optionsWidget->setBtnPgUp(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
+        optionsWidget->setBtnPgDn(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
+        optionsWidget->setBtnMenu(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
+        optionsWidget->setBtnOk(ff7->controllerMapping(s,FF7Save::ACTION_OK));
+        optionsWidget->setBtnCancel(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
+        optionsWidget->setBtnSwitch(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
+        optionsWidget->setBtnHelp(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
+        optionsWidget->setBtn9(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
+        optionsWidget->setBtn10(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
+        optionsWidget->setBtnPause(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
+        optionsWidget->setBtnUp(ff7->controllerMapping(s,FF7Save::ACTION_UP));
+        optionsWidget->setBtnDown(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
+        optionsWidget->setBtnLeft(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
+        optionsWidget->setBtnRight(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
         //hide buttons config if not debug or non pc save
-        if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
-        else{ui->group_controller_mapping->setVisible(0);}
+        /*
 
+        if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){optionsWidget->hideControllMapping(false);}
+        else{optonsWidget->hideControllMapping(true);}
+        */
         /*~~~~~End Options Loading~~~~~*/
         ui->sb_coster_1->setValue(ff7->speedScore(s,1));
         ui->sb_coster_2->setValue(ff7->speedScore(s,2));
@@ -1653,10 +1687,8 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_time_min->setValue(ff7->time(s)/60%60);
         ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 
-        dialog_preview->SetULeft (ff7->dialogColorUL(s));
-        dialog_preview->SetURight(ff7->dialogColorUR(s));
-        dialog_preview->SetLLeft (ff7->dialogColorLL(s));
-        dialog_preview->SetLRight(ff7->dialogColorLR(s));
+        optionsWidget->setDialogColors(ff7->dialogColorUL(s),ff7->dialogColorUR(s),ff7->dialogColorLL(s),ff7->dialogColorLR(s));
+
 
         if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
         if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
@@ -2517,21 +2549,42 @@ void MainWindow::on_line_location_textChanged(QString text)
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
-void MainWindow::set_UL_Color(QColor color){if(!load){ff7->setDialogColorUL(s,color);}}
-void MainWindow::set_UR_Color(QColor color){if(!load){ff7->setDialogColorUR(s,color);}}
-void MainWindow::set_LL_Color(QColor color){if(!load){ff7->setDialogColorLL(s,color);}}
-void MainWindow::set_LR_Color(QColor color){if(!load){ff7->setDialogColorLR(s,color);}}
-void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){file_modified(true);ff7->setBattleSpeed(s,value);}}
-void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setBattleMessageSpeed(s,value);}}
-void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setMessageSpeed(s, value);}}
-void MainWindow::on_cb_battle_help_toggled(bool checked){if(!load){file_modified(true); ff7->setBattleHelp(s,checked);}}
+void MainWindow::setDialogColorUL(QColor color){if(!load){ff7->setDialogColorUL(s,color);}}
+void MainWindow::setDialogColorUR(QColor color){if(!load){ff7->setDialogColorUR(s,color);}}
+void MainWindow::setDialogColorLL(QColor color){if(!load){ff7->setDialogColorLL(s,color);}}
+void MainWindow::setDialogColorLR(QColor color){if(!load){ff7->setDialogColorLR(s,color);}}
 
-void MainWindow::on_combo_control_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setControlMode(s,mode);}}
-void MainWindow::on_combo_sound_currentIndexChanged(int mode){if(!load){file_modified(true); ff7->setSoundMode(s,mode);}}
-void MainWindow::on_combo_cursor_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setCursorMode(s,mode);}}
-void MainWindow::on_combo_atb_currentIndexChanged(int mode){if(!load){file_modified(true); ff7->setAtbMode(s,mode);}}
-void MainWindow::on_combo_camera_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setCameraMode(s,mode);}}
-void MainWindow::on_combo_magic_order_currentIndexChanged(int order){if(!load){file_modified(true);ff7->setMagicOrder(s,order);}}
+void MainWindow::setBattleSpeed(int value){if(!load){file_modified(true);ff7->setBattleSpeed(s,value);}}
+void MainWindow::setBattleMessageSpeed(int value){if(!load){file_modified(true); ff7->setBattleMessageSpeed(s,value);}}
+void MainWindow::setFieldMessageSpeed(int value){if(!load){file_modified(true); ff7->setMessageSpeed(s, value);}}
+void MainWindow::setBattleHelp(bool checked){if(!load){file_modified(true); ff7->setBattleHelp(s,checked);}}
+void MainWindow::setFieldHelp(bool checked){if(!load){file_modified(true);ff7->setFieldHelp(s,checked);}}
+void MainWindow::setBattleTargets(bool checked){if(!load){file_modified(true);ff7->setBattleTargets(s,checked);}}
+
+
+void MainWindow::setControlMode(int mode){if(!load){file_modified(true);ff7->setControlMode(s,mode);}}
+void MainWindow::setSoundMode(int mode){if(!load){file_modified(true); ff7->setSoundMode(s,mode);}}
+void MainWindow::setCursorMode(int mode){if(!load){file_modified(true);ff7->setCursorMode(s,mode);}}
+void MainWindow::setAtbMode(int mode){if(!load){file_modified(true); ff7->setAtbMode(s,mode);}}
+void MainWindow::setCameraMode(int mode){if(!load){file_modified(true);ff7->setCameraMode(s,mode);}}
+void MainWindow::setMagicOrder(int order){if(!load){file_modified(true);ff7->setMagicOrder(s,order);}}
+
+void MainWindow::setButtonCamera(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
+void MainWindow::setButtonTarget(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
+void MainWindow::setButtonPageUp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
+void MainWindow::setButtonPageDown(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
+void MainWindow::setButtonMenu(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
+void MainWindow::setButtonOk(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
+void MainWindow::setButtonCancel(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
+void MainWindow::setButtonSwitch(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
+void MainWindow::setButtonHelp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
+void MainWindow::setButtonUnknown1(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
+void MainWindow::setButtonUnknown2(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
+void MainWindow::setButtonPause(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
+void MainWindow::setButtonUp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
+void MainWindow::setButtonDown(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
+void MainWindow::setButtonLeft(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
+void MainWindow::setButtonRight(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){file_modified(true); ff7->setDisc(s,value);}}
@@ -3021,9 +3074,6 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     ff7->setRegion(s,new_regionString);
     if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
 }}}
-
-void MainWindow::on_cb_field_help_toggled(bool checked){if(!load){file_modified(true);ff7->setFieldHelp(s,checked);}}
-void MainWindow::on_cb_battle_targets_toggled(bool checked){if(!load){file_modified(true);ff7->setBattleTargets(s,checked);}}
 
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){file_modified(true);
@@ -3643,22 +3693,6 @@ void MainWindow::on_btn_all_z_diffs_clicked()
     if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
 }
 
-void MainWindow::on_combo_button_1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
-void MainWindow::on_combo_button_2_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
-void MainWindow::on_combo_button_3_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
-void MainWindow::on_combo_button_4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
-void MainWindow::on_combo_button_5_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
-void MainWindow::on_combo_button_6_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
-void MainWindow::on_combo_button_7_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
-void MainWindow::on_combo_button_8_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
-void MainWindow::on_combo_button_9_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
-void MainWindow::on_combo_button_10_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
-void MainWindow::on_combo_button_11_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
-void MainWindow::on_combo_button_12_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
-void MainWindow::on_combo_button_13_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
-void MainWindow::on_combo_button_14_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
-void MainWindow::on_combo_button_15_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
-void MainWindow::on_combo_button_16_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
 {if(!load){file_modified(true);

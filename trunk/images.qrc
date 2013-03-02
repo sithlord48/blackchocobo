@@ -91,20 +91,6 @@
         <file alias="new_window">icon/window-new.png</file>
         <file alias="fix_time">icon/fix_time.png</file>
         <file alias="refresh">icon/refresh.png</file>
-        <file alias="circle_button">icon/circle_button.png</file>
-        <file alias="cross_button">icon/cross_button.png</file>
-        <file alias="square_button">icon/square_button.png</file>
-        <file alias="triangle_button">icon/triangle_button.png</file>
-        <file alias="l1_button">icon/l1_button.png</file>
-        <file alias="l2_button">icon/l2_button.png</file>
-        <file alias="r1_button">icon/r1_button.png</file>
-        <file alias="r2_button">icon/r2_button.png</file>
-        <file alias="start_button">icon/start_button.png</file>
-        <file alias="select_button">icon/select_button.png</file>
-        <file alias="down_button">icon/down_button.png</file>
-        <file alias="left_button">icon/left_button.png</file>
-        <file alias="right_button">icon/right_button.png</file>
-        <file alias="up_button">icon/up_button.png</file>
         <file alias="cloudsave">icon/cloudsave.png</file>
     </qresource>
 </RCC>
