@@ -50,7 +50,8 @@ SOURCES += main.cpp \
     qhexedit/commands.cpp \
     FF7tk/widgets/PhsListWidget.cpp \
     FF7tk/widgets/DoubleCheckBox.cpp \
-    FF7tk/widgets/MenuListWidget.cpp
+    FF7tk/widgets/MenuListWidget.cpp \
+    FF7tk/widgets/OptionsWidget.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -83,7 +84,8 @@ HEADERS += mainwindow.h \
     qhexedit/commands.h \
     FF7tk/widgets/PhsListWidget.h \
     FF7tk/widgets/DoubleCheckBox.h \
-    FF7tk/widgets/MenuListWidget.h
+    FF7tk/widgets/MenuListWidget.h \
+    FF7tk/widgets/OptionsWidget.h
 
 FORMS += mainwindow.ui \
     about.ui \
