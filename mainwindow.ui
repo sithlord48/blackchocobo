@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
-    <height>629</height>
+    <width>766</width>
+    <height>633</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,8 +25,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/**/
-QWidget#optionsDialog::enabled,QWidget#tab_test,QFrame,QToolBox:enabled,QScrollArea:enabled,QToolBox:enabled,QTabWidget:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,
-QFrame#group_char_editor_box ,QLabel:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgb(10,10,10,16);font:;color:rgb(255,255,255);}
+QWidget#optionsWidget:enabled,QWidget#tab_test,QFrame,QToolBox:enabled,QScrollArea:enabled,QToolBox:enabled,QTabWidget:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,
+QFrame#group_char_editor_box ,QLabel[hidden=&quot;false&quot;],QWidet#tab_test,QListWidget:enabled{background-color: rgb(10,10,10,16);font:;color:rgb(255,255,255);}
 QWidget:disabled,QLabel:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
 
 QDialog{
@@ -69,9 +69,7 @@ background-color:rgba(10,10,10,32);
 selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 }
-QLabel:enabled{
-background-color:rgba(255,255,255,0);font:;color:rgb(255,255,255);
-}
+/*QLabel:enabled{background-color:rgba(255,255,255,0);font:;color:rgb(255,255,255);}*/
 /*QMenuBar*/
 QMenuBar {
 	background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgba(65, 65, 65, 255), stop:0.448864 rgba(35, 33, 33, 255), stop:1 rgba(21, 21, 21, 255));font:;color:rgb(255,255,255);
@@ -444,7 +442,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         <string>P&amp;arty</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_89">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
@@ -465,7 +472,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
@@ -504,7 +520,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="spacing">
                   <number>3</number>
                  </property>
-                 <property name="margin">
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
                   <number>3</number>
                  </property>
                  <item>
@@ -576,7 +601,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="spacing">
                   <number>0</number>
                  </property>
-                 <property name="margin">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
                   <number>0</number>
                  </property>
                  <item>
@@ -588,7 +622,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <property name="margin">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
                      <number>0</number>
                     </property>
                     <item>
@@ -693,7 +736,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <property name="margin">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
                      <number>0</number>
                     </property>
                     <item>
@@ -795,7 +847,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <property name="spacing">
@@ -1147,7 +1208,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="spacing">
                <number>3</number>
               </property>
-              <property name="margin">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
                <number>3</number>
               </property>
               <item>
@@ -1188,7 +1258,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <enum>Qt::NoContextMenu</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_18">
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
@@ -1359,7 +1438,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="spacing">
                <number>0</number>
               </property>
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
@@ -1778,7 +1866,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
@@ -2372,7 +2469,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         <string>&amp;Materia</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
@@ -2399,7 +2505,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="margin">
+           <property name="leftMargin">
+            <number>2</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <property name="rightMargin">
+            <number>2</number>
+           </property>
+           <property name="bottomMargin">
             <number>2</number>
            </property>
            <item>
@@ -2738,7 +2853,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <string>Fenced Chocobos</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
-              <property name="margin">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
                <number>3</number>
               </property>
               <item row="0" column="0">
@@ -2960,7 +3084,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         <string>&amp;Location</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_96">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
@@ -2978,8 +3111,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>758</width>
-             <height>493</height>
+             <width>760</width>
+             <height>496</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2990,7 +3123,16 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Save Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_165">
-            <property name="margin">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
              <number>3</number>
             </property>
             <item>
@@ -3383,7 +3525,16 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Worldmap Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_127">
-            <property name="margin">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
              <number>3</number>
             </property>
             <item>
@@ -3422,7 +3573,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <property name="spacing">
                  <number>0</number>
                 </property>
-                <property name="margin">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
                  <number>0</number>
                 </property>
                 <item>
@@ -3446,7 +3606,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>0</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>0</number>
                    </property>
                    <item>
@@ -3472,7 +3641,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <property name="margin">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
                          <number>0</number>
                         </property>
                         <item>
@@ -3530,7 +3708,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <property name="margin">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
                          <number>0</number>
                         </property>
                         <item>
@@ -3597,7 +3784,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -3791,7 +3987,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -3989,7 +4194,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4204,7 +4418,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4396,7 +4619,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4588,7 +4820,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>2</number>
                    </property>
                    <item>
@@ -5016,7 +5257,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <string>Global Progress</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_64">
-             <property name="margin">
+             <property name="leftMargin">
+              <number>2</number>
+             </property>
+             <property name="topMargin">
+              <number>2</number>
+             </property>
+             <property name="rightMargin">
+              <number>2</number>
+             </property>
+             <property name="bottomMargin">
               <number>2</number>
              </property>
              <item>
@@ -5142,12 +5392,21 @@ enabled{font:;color: rgb(255, 255, 255);}
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
-                  <height>1528</height>
+                  <width>353</width>
+                  <height>1677</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
-                 <property name="margin">
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
                   <number>3</number>
                  </property>
                  <item>
@@ -5855,7 +6114,16 @@ enabled{font:;color: rgb(255, 255, 255);}
         <property name="spacing">
          <number>3</number>
         </property>
-        <property name="margin">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
@@ -5884,7 +6152,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
               <number>3</number>
              </property>
              <item>
@@ -6520,7 +6797,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <set>Qt::AlignCenter</set>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_90">
-             <property name="margin">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
               <number>3</number>
              </property>
              <item>
@@ -6752,7 +7038,16 @@ enabled{font:;color: rgb(255, 255, 255);}
           <property name="spacing">
            <number>0</number>
           </property>
-          <property name="margin">
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
            <number>3</number>
           </property>
           <item>
@@ -6782,7 +7077,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>3</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
               <number>3</number>
              </property>
              <item>
@@ -7196,7 +7500,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>3</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
               <number>3</number>
              </property>
              <item>
@@ -7427,7 +7740,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
               <number>0</number>
              </property>
              <item>
@@ -7477,7 +7799,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
               <number>0</number>
              </property>
              <item>
@@ -7524,7 +7855,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="margin">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
               <number>0</number>
              </property>
              <item>
@@ -7558,16 +7898,6 @@ enabled{font:;color: rgb(255, 255, 255);}
           </item>
          </layout>
         </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_config">
-       <attribute name="title">
-        <string>Game Op&amp;tions</string>
-       </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_103">
-        <property name="margin">
-         <number>3</number>
-        </property>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_hex">
@@ -7685,7 +8015,16 @@ enabled{font:;color: rgb(255, 255, 255);}
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item>
@@ -7717,7 +8056,16 @@ enabled{font:;color: rgb(255, 255, 255);}
         <string>Test Data</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_124">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>0</number>
         </property>
         <item>
@@ -7753,7 +8101,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                  <string>Battle Love Points</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_27">
-                 <property name="margin">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
                   <number>0</number>
                  </property>
                  <item>
@@ -8023,7 +8380,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>0</number>
                    </property>
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>0</number>
                    </property>
                    <item>
@@ -8291,7 +8657,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <string>0xC1E tut_sub</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_71">
-                   <property name="margin">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
                     <number>3</number>
                    </property>
                    <item>
@@ -8482,7 +8857,16 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Unknown Vars</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_169">
-            <property name="margin">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
              <number>3</number>
             </property>
             <item>
@@ -8512,7 +8896,16 @@ enabled{font:;color: rgb(255, 255, 255);}
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_92">
-               <property name="margin">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
                 <number>0</number>
                </property>
                <item>
@@ -8971,7 +9364,16 @@ Var And Scrolling Synced To Left Table</string>
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_32">
-               <property name="margin">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
                 <number>0</number>
                </property>
                <item>
@@ -9196,7 +9598,16 @@ Var And Scrolling Synced To Left Table</string>
        <property name="spacing">
         <number>0</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -9323,8 +9734,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
-     <height>22</height>
+     <width>766</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

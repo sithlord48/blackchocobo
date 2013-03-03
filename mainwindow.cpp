@@ -39,6 +39,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     if(QResource::registerResource(QApplication::applicationDirPath().append(QString("/locations.rcc")))){showLocPreview=true;}
     else{showLocPreview=false;}
     init_display();
+    init_style();
     init_connections();
     init_settings();
     //setup locations previews if found
@@ -102,7 +103,6 @@ void MainWindow::init_display()
 
     ui->tabWidget->setTabEnabled(9,0);
     ui->cb_Region_Slot->setEnabled(false);
-    //ui->group_controller_mapping->setVisible(false);
     ui->actionNew_Window->setVisible(0);
 
     // Temp hidden (show only via debug)
@@ -151,8 +151,7 @@ void MainWindow::init_display()
     ui->Menu_Box->setLayout(menuLayout);
 
     optionsWidget = new OptionsWidget;
-    optionsWidget->setStyleSheet(this->styleSheet());
-    ui->tabWidget->removeTab(7);
+    optionsWidget->setControllerMappingVisible(false);
     ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
     optionsWidget->adjustSize();
 
@@ -174,8 +173,6 @@ void MainWindow::init_display()
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
-    char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
-    char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
     itemlist= new ItemList;
     QHBoxLayout *itemlist_layout = new QHBoxLayout;
     itemlist_layout->setSpacing(0);
@@ -227,8 +224,30 @@ void MainWindow::init_display()
     hexLayout->setContentsMargins(0,0,0,0);
 
     hexLayout->addWidget(hexEditor);
-    hexEditor->setStyleSheet("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);");
     ui->group_hexedit->setLayout(hexLayout);
+}
+void MainWindow::init_style()
+{
+    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
+    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
+    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
+
+   QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
+    sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
+    sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
+
+  optionsWidget->setSliderStyle(sliderStyleSheet);
+  char_editor->setSliderStyle(sliderStyleSheet);
+
+  optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);"));
+  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
+  hexEditor->setStyleSheet("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);");
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
@@ -411,7 +430,7 @@ void MainWindow::init_connections()
         connect(optionsWidget,SIGNAL(BtnHelpChanged(int)),this,SLOT(setButtonHelp(int)));
         connect(optionsWidget,SIGNAL(Btn9Changed(int)),this,SLOT(setButtonUnknown1(int)));
         connect(optionsWidget,SIGNAL(Btn10Changed(int)),this,SLOT(setButtonUnknown2(int)));
-        connect(optionsWidget,SIGNAL(BtnPauseChanged(int)),this,SLOT(setButtonCamera(int)));
+        connect(optionsWidget,SIGNAL(BtnPauseChanged(int)),this,SLOT(setButtonPause(int)));
         connect(optionsWidget,SIGNAL(BtnUpChanged(int)),this,SLOT(setButtonUp(int)));
         connect(optionsWidget,SIGNAL(BtnDownChanged(int)),this,SLOT(setButtonDown(int)));
         connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
@@ -451,13 +470,6 @@ void MainWindow::init_settings()
     style.append(settings->value("color3_b").toString());   style.append(", 255));}");
     ui->centralWidget->setStyleSheet(style);
 
-    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
-    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
-    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
-    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
     if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
     else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
 

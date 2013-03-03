@@ -4208,10 +4208,6 @@
         <translation>         INFO FÜR MOMENTAN AUSGEWÄHLTE WIEDERHOLUNGS-MISSION</translation>
     </message>
     <message>
-        <source>Game Op&amp;tions</source>
-        <translation>Spiel Op&amp;tionen</translation>
-    </message>
-    <message>
         <source>&amp;Options</source>
         <translation>&amp;Optionen</translation>
     </message>
@@ -4286,114 +4282,6 @@
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation>Lege Wiederholungsmission überhalb fest, um das Spiel zurück zu dieser Mission zu bringen.  Das wird automatisch deinen Spielstands-Ort speichern # als auch die Quest-Fortschritts-Variablen. ÜBERSCHREIBE NICHT DEINEN JETZIGEN SPIELSTAND, wenn dieses Feature benutzt wird, kann ich nicht versprechen, dass du dazu fähig sein wirst, jede Wiederholung bis zum Ende dieses Spiels zu spielen. Oder dass überhaupt eine Wiederholung in deinem Spielstand funktioniert. Dieser Bereich unterligt schwerwiegender Entwicklung</translation>
-    </message>
-    <message>
-        <source>Sound Mode</source>
-        <translation>Sound Modus</translation>
-    </message>
-    <message>
-        <source>Mono</source>
-        <translation>Mono</translation>
-    </message>
-    <message>
-        <source>Stereo</source>
-        <translation>Stereo</translation>
-    </message>
-    <message>
-        <source>Controller Setting</source>
-        <translation>Controller Einstellung</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation>Eigen</translation>
-    </message>
-    <message>
-        <source>Cursor Type</source>
-        <translation>Cursur Typ</translation>
-    </message>
-    <message>
-        <source>Initial</source>
-        <translation>Initial</translation>
-    </message>
-    <message>
-        <source>Memory</source>
-        <translation>Speicher</translation>
-    </message>
-    <message>
-        <source>ATB Style</source>
-        <translation>ATB Stil</translation>
-    </message>
-    <message>
-        <source>Active</source>
-        <translation>Aktiv</translation>
-    </message>
-    <message>
-        <source>Recommended</source>
-        <translation>Empfohlen</translation>
-    </message>
-    <message>
-        <source>Wait</source>
-        <translation>Warten</translation>
-    </message>
-    <message>
-        <source>Camera</source>
-        <translation>Kamera</translation>
-    </message>
-    <message>
-        <source>Automatic</source>
-        <translation>Automatisch</translation>
-    </message>
-    <message>
-        <source>Fixed View</source>
-        <translation>Festgelegte Ansicht</translation>
-    </message>
-    <message>
-        <source>Magic Order</source>
-        <translation>Magie Reihenfolge</translation>
-    </message>
-    <message>
-        <source>Restore,Attack,Indirect</source>
-        <translation>Wiederherstellen, Attacke, Indirekt</translation>
-    </message>
-    <message>
-        <source>Restore,Indirect,Attack</source>
-        <translation>Wiederherstellen, Indirekt, Attacke</translation>
-    </message>
-    <message>
-        <source>Attack,Indirect,Restore</source>
-        <translation>Attacke, Indirekt, Wiederherstellen</translation>
-    </message>
-    <message>
-        <source>Attack,Restore,Indirect</source>
-        <translation>Attacke, Wiederherstellen, Indirekt</translation>
-    </message>
-    <message>
-        <source>Indirect,Restore,Attack</source>
-        <translation>Indirekt, Wiederherstellen, Attacke</translation>
-    </message>
-    <message>
-        <source>Indirect,Attack,Restore</source>
-        <translation>Indirekt, Attacke, Wiederherstellen</translation>
-    </message>
-    <message>
-        <source>Battle Speed:</source>
-        <translation>Kampf-Geschwindigkeit:</translation>
-    </message>
-    <message>
-        <source>Fast</source>
-        <translation>Schnell</translation>
-    </message>
-    <message>
-        <source>Slow</source>
-        <translation>Langsam</translation>
-    </message>
-    <message>
-        <source>Battle Message Speed:</source>
-        <translation>Kampf-Meldungs-Geschwindigkeit:</translation>
-    </message>
-    <message>
-        <source>Field Message Speed:</source>
-        <translation>Feld-Meldungs-Geschwindigkeit:</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4680,10 +4568,6 @@
         <translation>FF7 Charakter Stat Datei(*.char)</translation>
     </message>
     <message>
-        <source>In-game Dialog Preview</source>
-        <translation>Dialog Vorschau im Spiel</translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation>Exportiere Raw PSX Spielstand</translation>
     </message>
@@ -4810,18 +4694,6 @@
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
         <translation>Speichere Final Fantasy 7 Dex-Drive Spielstand</translation>
-    </message>
-    <message>
-        <source>Show Battle Target Labels</source>
-        <translation>Zeige Schlacht Ziel Kennzeichnungen</translation>
-    </message>
-    <message>
-        <source>Show Battle Help</source>
-        <translation>Zeige Schlacht Hilfe</translation>
-    </message>
-    <message>
-        <source>Show Field Help</source>
-        <translation>Zeige Feld Hilfe</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
@@ -4960,10 +4832,6 @@
     <message>
         <source>Midgar parts</source>
         <translation>Teil von Midgar</translation>
-    </message>
-    <message>
-        <source>Normal</source>
-        <translation>Normal</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5260,70 +5128,6 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
         <source>Post Electrical Effect MD8_3</source>
         <translatorcomment>After The spark shows on field map named &quot;MD8_3&quot;</translatorcomment>
         <translation>Nach Glitzer-Effekt auf Karte MD8_3</translation>
-    </message>
-    <message>
-        <source>Custom Controller Mapping(PSX Only)</source>
-        <translation>Eigenes Controller Mapping(Nur bei PSX)</translation>
-    </message>
-    <message>
-        <source>Up</source>
-        <translation>Hoch</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation>Rechts</translation>
-    </message>
-    <message>
-        <source>Down</source>
-        <translation>Runter</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation>Links</translation>
-    </message>
-    <message>
-        <source>Menu</source>
-        <translation>Menü</translation>
-    </message>
-    <message>
-        <source>Ok</source>
-        <translation>Ok</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>Abbrechen</translation>
-    </message>
-    <message>
-        <source>Switch</source>
-        <translation>Wechseln</translation>
-    </message>
-    <message>
-        <source>Target</source>
-        <translation>Ziel</translation>
-    </message>
-    <message>
-        <source>Page Up</source>
-        <translation>Seite hoch</translation>
-    </message>
-    <message>
-        <source>Page Down</source>
-        <translation>Seite runter</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation>Hilfe</translation>
-    </message>
-    <message>
-        <source>Pause</source>
-        <translation>Pause</translation>
-    </message>
-    <message>
-        <source>Unknown (9)</source>
-        <translation>Unbekannt (9)</translation>
-    </message>
-    <message>
-        <source>Unknown (10)</source>
-        <translation>Unbekannt (10)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
@@ -5812,6 +5616,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>TRNAD_2:Neo Bahmut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7618,6 +7426,201 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>Standard Speichern bei folgender Datei übergehen (nur für RAW PSX Format)</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsWidget</name>
+    <message>
+        <source>In-Game Dialog Preview</source>
+        <translation>Dialog Vorschau im Spiel</translation>
+    </message>
+    <message>
+        <source>ATB Style</source>
+        <translation>ATB Stil</translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation>Aktiv</translation>
+    </message>
+    <message>
+        <source>Recommended</source>
+        <translation>Empfohlen</translation>
+    </message>
+    <message>
+        <source>Wait</source>
+        <translation>Warten</translation>
+    </message>
+    <message>
+        <source>Sound Mode</source>
+        <translation>Sound Modus</translation>
+    </message>
+    <message>
+        <source>Mono</source>
+        <translation>Mono</translation>
+    </message>
+    <message>
+        <source>Stereo</source>
+        <translation>Stereo</translation>
+    </message>
+    <message>
+        <source>Magic Order</source>
+        <translation>Magie Reihenfolge</translation>
+    </message>
+    <message>
+        <source>Restore,Attack,Indirect</source>
+        <translation>Wiederherstellen, Attacke, Indirekt</translation>
+    </message>
+    <message>
+        <source>Restore,Indirect,Attack</source>
+        <translation>Wiederherstellen, Indirekt, Attacke</translation>
+    </message>
+    <message>
+        <source>Attack,Indirect,Restore</source>
+        <translation>Attacke, Indirekt, Wiederherstellen</translation>
+    </message>
+    <message>
+        <source>Attack,Restore,Indirect</source>
+        <translation>Attacke, Wiederherstellen, Indirekt</translation>
+    </message>
+    <message>
+        <source>Indirect,Restore,Attack</source>
+        <translation>Indirekt, Wiederherstellen, Attacke</translation>
+    </message>
+    <message>
+        <source>Indirect,Attack,Restore</source>
+        <translation>Indirekt, Attacke, Wiederherstellen</translation>
+    </message>
+    <message>
+        <source>Cursor Type</source>
+        <translation>Cursur Typ</translation>
+    </message>
+    <message>
+        <source>Initial</source>
+        <translation>Initial</translation>
+    </message>
+    <message>
+        <source>Memory</source>
+        <translation>Speicher</translation>
+    </message>
+    <message>
+        <source>Camera</source>
+        <translation>Kamera</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Eigen</translation>
+    </message>
+    <message>
+        <source>Show Battle Targets Labels</source>
+        <translation>Zeige Schlacht Ziel Kennzeichnungen</translation>
+    </message>
+    <message>
+        <source>Show Battle Help</source>
+        <translation>Zeige Schlacht Hilfe</translation>
+    </message>
+    <message>
+        <source>Show Field Help</source>
+        <translation>Zeige Feld Hilfe</translation>
+    </message>
+    <message>
+        <source>Battle Speed:</source>
+        <translation>Kampf-Geschwindigkeit:</translation>
+    </message>
+    <message>
+        <source>Fast</source>
+        <translation>Schnell</translation>
+    </message>
+    <message>
+        <source>Slow</source>
+        <translation>Langsam</translation>
+    </message>
+    <message>
+        <source>Battle Message Speed:</source>
+        <translation>Kampf-Meldungs-Geschwindigkeit:</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>Hoch</translation>
+    </message>
+    <message>
+        <source>? 9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>? 10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Runter</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menü</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>Wechseln</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>Ziel</translation>
+    </message>
+    <message>
+        <source>Page Up</source>
+        <translation>Seite hoch</translation>
+    </message>
+    <message>
+        <source>Page Down</source>
+        <translation>Seite runter</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Hilfe</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <source>Unknown (9)</source>
+        <translation>Unbekannt (9)</translation>
+    </message>
+    <message>
+        <source>Unknown(10)</source>
+        <translation>Unbekannt (10)</translation>
+    </message>
+    <message>
+        <source>Custom Controller Mapping (PSX Only)</source>
+        <translation>Eigenes Controller Mapping(Nur bei PSX)</translation>
+    </message>
+    <message>
+        <source>Controller Settings</source>
+        <translation>Kontrolliere das U-Boot</translation>
+    </message>
+    <message>
+        <source>Field Message Speed:</source>
+        <translation>Feld-Meldungs-Geschwindigkeit:</translation>
     </message>
 </context>
 <context>

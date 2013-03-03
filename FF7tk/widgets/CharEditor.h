@@ -42,7 +42,7 @@ public:
     bool AutoStatCalc();
     bool Editable();
     bool Debug();
-    void Slider_Limit_FF7_Style();
+    void setSliderStyle(QString style);
     void MaxStats();
     void MaxEquip();
     qint8 id();
@@ -128,7 +128,6 @@ public slots:
     void setAutoStatCalc(bool);
     void setEditable(bool);
     void setDebug(bool);
-    void setSlideLimitStyleSheet(QString);
     void setToolBoxStyle(QString);
 
 private slots:

@@ -103,6 +103,7 @@ private:
     ChocoboEditor *chocobo_stable_6;
     QHexEdit *hexEditor;
     void init_display();
+    void init_style();
     void init_connections();
     void init_settings();
 public slots:

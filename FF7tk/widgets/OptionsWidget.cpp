@@ -42,6 +42,7 @@ OptionsWidget::OptionsWidget(QWidget *parent) :
 void OptionsWidget::init_Display()
 {
     mainArea = new QScrollArea;
+
     dialogBox = new QGroupBox;
     dialogPreview = new DialogPreview;
     QHBoxLayout *dialogLayout = new QHBoxLayout;
@@ -49,7 +50,6 @@ void OptionsWidget::init_Display()
     dialogLayout->setContentsMargins(0,0,0,0);
     dialogBox->setLayout(dialogLayout);
     dialogBox->setTitle(tr("In-Game Dialog Preview"));
-
 
     QLabel* lblAtb = new QLabel(tr("ATB Style"));
     lblAtb->setAlignment(Qt::AlignRight);
@@ -103,7 +103,7 @@ void OptionsWidget::init_Display()
     cameraLayout->addWidget(comboCamera);
 
 
-    QLabel* lblControllerMode = new QLabel(tr("ControllerMode Type"));
+    QLabel* lblControllerMode = new QLabel(tr("Controller Settings"));
     lblControllerMode->setAlignment(Qt::AlignRight);
     comboControllerMode= new QComboBox;
     comboControllerMode->addItem(tr("Normal"));
@@ -155,7 +155,7 @@ void OptionsWidget::init_Display()
     battleMessageSpeedLayout->addWidget(slideBattleMessageSpeed);
     battleMessageSpeedLayout->addWidget(lblBattleMessageSpeedSlow);
 
-    QLabel *lblFieldMessageSpeed = new QLabel(tr("Field MessageSpeed:"));
+    QLabel *lblFieldMessageSpeed = new QLabel(tr("Field Message Speed:"));
     slideFieldMessageSpeed = new QSlider(Qt::Horizontal);
     slideFieldMessageSpeed->setRange(0,256);
     QHBoxLayout *fieldMessageSpeedLayout = new QHBoxLayout;
@@ -165,7 +165,6 @@ void OptionsWidget::init_Display()
     fieldMessageSpeedLayout->addWidget(slideFieldMessageSpeed);
     fieldMessageSpeedLayout->addWidget(lblFieldMessageSpeedSlow);
 
-
     QGridLayout *speedLayout= new QGridLayout;
     speedLayout->addWidget(lblBattleSpeed,0,0);
     speedLayout->addWidget(lblBattleMessageSpeed,1,0);
@@ -174,8 +173,8 @@ void OptionsWidget::init_Display()
     speedLayout->addLayout(battleMessageSpeedLayout,1,1);
     speedLayout->addLayout(fieldMessageSpeedLayout,2,1);
 
-
     QLabel *lblBtnUp = new QLabel(tr("Up"));
+    lblBtnUp->setAlignment(Qt::AlignRight);
     comboBtnUp = new QComboBox;
     comboBtnUp->setMaximumSize(48,32);
     comboBtnUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -199,6 +198,7 @@ void OptionsWidget::init_Display()
     BtnUpLayout->addWidget(comboBtnUp);
 
     QLabel *lblBtnRight = new QLabel(tr("Right"));
+    lblBtnRight->setAlignment(Qt::AlignRight);
     comboBtnRight = new QComboBox;
     comboBtnRight->setMaximumSize(48,32);
     comboBtnRight->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -222,6 +222,7 @@ void OptionsWidget::init_Display()
     BtnRightLayout->addWidget(comboBtnRight);
 
     QLabel *lblBtnDown = new QLabel(tr("Down"));
+    lblBtnDown->setAlignment(Qt::AlignRight);
     comboBtnDown = new QComboBox;
     comboBtnDown->setMaximumSize(48,32);
     comboBtnDown->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -245,6 +246,7 @@ void OptionsWidget::init_Display()
     BtnDownLayout->addWidget(comboBtnDown);
 
     QLabel *lblBtnLeft = new QLabel(tr("Left"));
+    lblBtnLeft->setAlignment(Qt::AlignRight);
     comboBtnLeft = new QComboBox;
     comboBtnLeft->setMaximumSize(48,32);
     comboBtnLeft->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -268,6 +270,7 @@ void OptionsWidget::init_Display()
     BtnLeftLayout->addWidget(comboBtnLeft);
 
     QLabel *lblBtnMenu = new QLabel(tr("Menu"));
+    lblBtnMenu->setAlignment(Qt::AlignRight);
     comboBtnMenu = new QComboBox;
     comboBtnMenu->setMaximumSize(48,32);
     comboBtnMenu->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -291,6 +294,7 @@ void OptionsWidget::init_Display()
     BtnMenuLayout->addWidget(comboBtnMenu);
 
     QLabel *lblBtnOk = new QLabel(tr("Ok"));
+    lblBtnOk->setAlignment(Qt::AlignRight);
     comboBtnOk = new QComboBox;
     comboBtnOk->setMaximumSize(48,32);
     comboBtnOk->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -314,6 +318,7 @@ void OptionsWidget::init_Display()
     BtnOkLayout->addWidget(comboBtnOk);
 
     QLabel *lblBtnCancel = new QLabel(tr("Cancel"));
+    lblBtnCancel->setAlignment(Qt::AlignRight);
     comboBtnCancel = new QComboBox;
     comboBtnCancel->setMaximumSize(48,32);
     comboBtnCancel->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -337,6 +342,7 @@ void OptionsWidget::init_Display()
     BtnCancelLayout->addWidget(comboBtnCancel);
 
     QLabel *lblBtnSwitch = new QLabel(tr("Switch"));
+    lblBtnSwitch->setAlignment(Qt::AlignRight);
     comboBtnSwitch = new QComboBox;
     comboBtnSwitch->setMaximumSize(48,32);
     comboBtnSwitch->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -360,6 +366,7 @@ void OptionsWidget::init_Display()
     BtnSwitchLayout->addWidget(comboBtnSwitch);
 
     QLabel *lblBtnCamera = new QLabel(tr("Camera"));
+    lblBtnCamera->setAlignment(Qt::AlignRight);
     comboBtnCamera = new QComboBox;
     comboBtnCamera->setMaximumSize(48,32);
     comboBtnCamera->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -383,6 +390,7 @@ void OptionsWidget::init_Display()
     BtnCameraLayout->addWidget(comboBtnCamera);
 
     QLabel *lblBtnTarget = new QLabel(tr("Target"));
+    lblBtnTarget->setAlignment(Qt::AlignRight);
     comboBtnTarget = new QComboBox;
     comboBtnTarget->setMaximumSize(48,32);
     comboBtnTarget->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -406,6 +414,7 @@ void OptionsWidget::init_Display()
     BtnTargetLayout->addWidget(comboBtnTarget);
 
     QLabel *lblBtnPgUp = new QLabel(tr("Page Up"));
+    lblBtnPgUp->setAlignment(Qt::AlignRight);
     comboBtnPgUp = new QComboBox;
     comboBtnPgUp->setMaximumSize(48,32);
     comboBtnPgUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -429,6 +438,7 @@ void OptionsWidget::init_Display()
     BtnPgUpLayout->addWidget(comboBtnPgUp);
 
     QLabel *lblBtnPgDn = new QLabel(tr("Page Down"));
+    lblBtnPgDn->setAlignment(Qt::AlignRight);
     comboBtnPgDn = new QComboBox;
     comboBtnPgDn->setMaximumSize(48,32);
     comboBtnPgDn->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -452,6 +462,7 @@ void OptionsWidget::init_Display()
     BtnPgDnLayout->addWidget(comboBtnPgDn);
 
     QLabel *lblBtnHelp = new QLabel(tr("Help"));
+    lblBtnHelp->setAlignment(Qt::AlignRight);
     comboBtnHelp = new QComboBox;
     comboBtnHelp->setMaximumSize(48,32);
     comboBtnHelp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -475,6 +486,7 @@ void OptionsWidget::init_Display()
     BtnHelpLayout->addWidget(comboBtnHelp);
 
     QLabel *lblBtnPause = new QLabel(tr("Pause"));
+    lblBtnPause->setAlignment(Qt::AlignRight);
     comboBtnPause = new QComboBox;
     comboBtnPause->setMaximumSize(48,32);
     comboBtnPause->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -498,6 +510,7 @@ void OptionsWidget::init_Display()
     BtnPauseLayout->addWidget(comboBtnPause);
 
     QLabel *lblBtn9 = new QLabel(tr("Unknown (9)"));
+    lblBtn9->setAlignment(Qt::AlignRight);
     comboBtn9 = new QComboBox;
     comboBtn9->setMaximumSize(48,32);
     comboBtn9->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -521,6 +534,7 @@ void OptionsWidget::init_Display()
     Btn9Layout->addWidget(comboBtn9);
 
     QLabel *lblBtn10 = new QLabel(tr("Unknown(10)"));
+    lblBtn10->setAlignment(Qt::AlignRight);
     comboBtn10 = new QComboBox;
     comboBtn10->setMaximumSize(48,32);
     comboBtn10->addItem(QIcon(QPixmap(l2_button_xpm)),"");
@@ -543,34 +557,45 @@ void OptionsWidget::init_Display()
     Btn10Layout->addWidget(lblBtn10);
     Btn10Layout->addWidget(comboBtn10);
 
-    QGridLayout *controllerMappingLayout = new QGridLayout;
-    controllerMappingLayout->addLayout(BtnUpLayout,0,0);
-    controllerMappingLayout->addLayout(BtnRightLayout,1,0);
-    controllerMappingLayout->addLayout(BtnDownLayout,2,0);
-    controllerMappingLayout->addLayout(BtnLeftLayout,3,0);
 
-    controllerMappingLayout->addLayout(BtnMenuLayout,0,1);
-    controllerMappingLayout->addLayout(BtnOkLayout,1,1);
-    controllerMappingLayout->addLayout(BtnCancelLayout,2,1);
-    controllerMappingLayout->addLayout(BtnSwitchLayout,3,1);
+    QVBoxLayout *btnLayout1 = new QVBoxLayout;
+    btnLayout1->addLayout(BtnUpLayout);
+    btnLayout1->addLayout(BtnRightLayout);
+    btnLayout1->addLayout(BtnDownLayout);
+    btnLayout1->addLayout(BtnLeftLayout);
 
+    QVBoxLayout *btnLayout2 = new QVBoxLayout;
+    btnLayout2->addLayout(BtnMenuLayout);
+    btnLayout2->addLayout(BtnOkLayout);
+    btnLayout2->addLayout(BtnCancelLayout);
+    btnLayout2->addLayout(BtnSwitchLayout);
 
-    controllerMappingLayout->addLayout(BtnCameraLayout,0,2);
-    controllerMappingLayout->addLayout(BtnTargetLayout,1,2);
-    controllerMappingLayout->addLayout(BtnPgUpLayout,2,2);
-    controllerMappingLayout->addLayout(BtnPgDnLayout,3,2);
+    QVBoxLayout *btnLayout3 = new QVBoxLayout;
+    btnLayout3->addLayout(BtnCameraLayout);
+    btnLayout3->addLayout(BtnTargetLayout);
+    btnLayout3->addLayout(BtnPgUpLayout);
+    btnLayout3->addLayout(BtnPgDnLayout);
 
-    controllerMappingLayout->addLayout(BtnHelpLayout,0,3);
-    controllerMappingLayout->addLayout(BtnPauseLayout,1,3);
-    controllerMappingLayout->addLayout(Btn9Layout,2,3);
-    controllerMappingLayout->addLayout(Btn10Layout,3,3);
+    QVBoxLayout *btnLayout4 = new QVBoxLayout;
+    btnLayout4->addLayout(BtnHelpLayout);
+    btnLayout4->addLayout(BtnPauseLayout);
+    btnLayout4->addLayout(Btn9Layout);
+    btnLayout4->addLayout(Btn10Layout);
+
+    QHBoxLayout *controllerMappingLayout = new QHBoxLayout;
+    controllerMappingLayout->addLayout(btnLayout1);
+    controllerMappingLayout->addLayout(btnLayout2);
+    controllerMappingLayout->addLayout(btnLayout3);
+    controllerMappingLayout->addLayout(btnLayout4);
 
     controllerMappingBox = new QGroupBox;
-    controllerMappingBox->setTitle(tr("Custom Controller Mappint (PSX Only)"));
+    controllerMappingBox->setTitle(tr("Custom Controller Mapping (PSX Only)"));
     controllerMappingBox->setLayout(controllerMappingLayout);
 
     centerLayout = new QVBoxLayout;
     centerLayout->addWidget(dialogBox);
+    QSpacerItem *centerSpacer1 = new QSpacerItem (0,6,QSizePolicy::Preferred,QSizePolicy::Preferred);
+    centerLayout->addSpacerItem(centerSpacer1);
     centerLayout->addLayout(atbLayout);
     centerLayout->addLayout(soundLayout);
     centerLayout->addLayout(magicOrderLayout);
@@ -584,8 +609,10 @@ void OptionsWidget::init_Display()
     centerWidget = new QWidget;
     centerWidget->setLayout(centerLayout);
     centerWidget->adjustSize();
+
     mainArea->setWidget(centerWidget);
     mainArea->adjustSize();
+
 
     QVBoxLayout *finalLayout = new QVBoxLayout;
     finalLayout->addWidget(mainArea);
@@ -597,7 +624,8 @@ void OptionsWidget::init_Display()
 
 void OptionsWidget::resizeEvent(QResizeEvent*)
 {
-    dialogBox->setFixedSize((mainArea->viewport()->width()- 10 - mainArea->verticalScrollBar()->width()),(mainArea->viewport()->width()- 10 -mainArea->verticalScrollBar()->width())/4);
+    centerWidget->setFixedWidth(mainArea->width()-18);
+    dialogBox->setFixedSize(centerWidget->width()-6,(centerWidget->width()-6)/4);
     centerWidget->adjustSize();
 }
 
@@ -869,4 +897,12 @@ void OptionsWidget::setBtn10(int btnNumber)
     connect(comboBtn10,SIGNAL(currentIndexChanged(int)),this,SLOT(btn10Changed(int)));
 }
 
-void OptionsWidget::setControllerMappingVisible(bool visible){controllerMappingBox->setVisible(visible);}
+void OptionsWidget::setSliderStyle(QString style)
+{
+    slideBattleSpeed->setStyleSheet(style);
+    slideBattleMessageSpeed->setStyleSheet(style);
+    slideFieldMessageSpeed->setStyleSheet(style);
+}
+
+void OptionsWidget::setControllerMappingVisible(bool visible){controllerMappingBox->setVisible(visible);centerWidget->adjustSize();}
+void OptionsWidget::setScrollAreaStyleSheet(QString styleSheet){centerWidget->setStyleSheet(styleSheet);}

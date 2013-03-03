@@ -4282,10 +4282,6 @@
         <translation>         選択中のミッション リプレイの情報</translation>
     </message>
     <message>
-        <source>Game Op&amp;tions</source>
-        <translation>ゲーム オプション(&amp;T)</translation>
-    </message>
-    <message>
         <source>&amp;Options</source>
         <translation>オプション(&amp;O)</translation>
     </message>
@@ -4360,114 +4356,6 @@
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブ地点とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、選択したリプレイがセーブ上で正しく機能するかどうかは保障できません。 これは、いまだ開発途上の機能です</translation>
-    </message>
-    <message>
-        <source>Sound Mode</source>
-        <translation>サウンド</translation>
-    </message>
-    <message>
-        <source>Mono</source>
-        <translation>モノラル</translation>
-    </message>
-    <message>
-        <source>Stereo</source>
-        <translation>ステレオ</translation>
-    </message>
-    <message>
-        <source>Controller Setting</source>
-        <translation>コントローラ</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation>カスタム</translation>
-    </message>
-    <message>
-        <source>Cursor Type</source>
-        <translation>カーソル</translation>
-    </message>
-    <message>
-        <source>Initial</source>
-        <translation>初期</translation>
-    </message>
-    <message>
-        <source>Memory</source>
-        <translation>記憶</translation>
-    </message>
-    <message>
-        <source>ATB Style</source>
-        <translation>ＡＴＢ</translation>
-    </message>
-    <message>
-        <source>Active</source>
-        <translation>アクティブ</translation>
-    </message>
-    <message>
-        <source>Recommended</source>
-        <translation>おすすめ</translation>
-    </message>
-    <message>
-        <source>Wait</source>
-        <translation>ウェイト</translation>
-    </message>
-    <message>
-        <source>Camera</source>
-        <translation>カメラアングル</translation>
-    </message>
-    <message>
-        <source>Automatic</source>
-        <translation>オート</translation>
-    </message>
-    <message>
-        <source>Fixed View</source>
-        <translation>固定</translation>
-    </message>
-    <message>
-        <source>Magic Order</source>
-        <translation>魔法の並び方</translation>
-    </message>
-    <message>
-        <source>Restore,Attack,Indirect</source>
-        <translation>回復　攻撃　間接</translation>
-    </message>
-    <message>
-        <source>Restore,Indirect,Attack</source>
-        <translation>回復　間接　攻撃</translation>
-    </message>
-    <message>
-        <source>Attack,Indirect,Restore</source>
-        <translation>攻撃　間接　回復</translation>
-    </message>
-    <message>
-        <source>Attack,Restore,Indirect</source>
-        <translation>攻撃　回復　間接</translation>
-    </message>
-    <message>
-        <source>Indirect,Restore,Attack</source>
-        <translation>間接　回復　攻撃</translation>
-    </message>
-    <message>
-        <source>Indirect,Attack,Restore</source>
-        <translation>間接　攻撃　回復</translation>
-    </message>
-    <message>
-        <source>Battle Speed:</source>
-        <translation>バトルスピード:</translation>
-    </message>
-    <message>
-        <source>Fast</source>
-        <translation>速い　</translation>
-    </message>
-    <message>
-        <source>Slow</source>
-        <translation>　遅い</translation>
-    </message>
-    <message>
-        <source>Battle Message Speed:</source>
-        <translation>バトルメッセージ:</translation>
-    </message>
-    <message>
-        <source>Field Message Speed:</source>
-        <translation>フィールドメッセージ:</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4754,10 +4642,6 @@
         <translation>FF7 キャラクター ステータス ファイル (*.char)</translation>
     </message>
     <message>
-        <source>In-game Dialog Preview</source>
-        <translation>ゲーム上のダイアログのプレビュー</translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation>Raw PSX セーブのエクスポート</translation>
     </message>
@@ -4884,18 +4768,6 @@
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
         <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
-    </message>
-    <message>
-        <source>Show Battle Target Labels</source>
-        <translation>バトル ターゲットの表示</translation>
-    </message>
-    <message>
-        <source>Show Battle Help</source>
-        <translation>バトル ヘルプの表示</translation>
-    </message>
-    <message>
-        <source>Show Field Help</source>
-        <translation>フィールド ヘルプの表示</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
@@ -5032,10 +4904,6 @@
     <message>
         <source>Midgar parts</source>
         <translation>ミッドガルパーツ</translation>
-    </message>
-    <message>
-        <source>Normal</source>
-        <translation>ノーマル</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5330,70 +5198,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Electrical Effect MD8_3</source>
         <translation>８番街_3 放電発生後</translation>
-    </message>
-    <message>
-        <source>Custom Controller Mapping(PSX Only)</source>
-        <translation>カスタム コントローラー (PSX のみ)</translation>
-    </message>
-    <message>
-        <source>Up</source>
-        <translation>上</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation>右</translation>
-    </message>
-    <message>
-        <source>Down</source>
-        <translation>下</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation>左</translation>
-    </message>
-    <message>
-        <source>Menu</source>
-        <translation>メニュー</translation>
-    </message>
-    <message>
-        <source>Ok</source>
-        <translation>けってい</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation>キャンセル</translation>
-    </message>
-    <message>
-        <source>Switch</source>
-        <translation>ＥＸＴ</translation>
-    </message>
-    <message>
-        <source>Target</source>
-        <translation>ターゲットマーク</translation>
-    </message>
-    <message>
-        <source>Page Up</source>
-        <translation>ページ順送り</translation>
-    </message>
-    <message>
-        <source>Page Down</source>
-        <translation>ページ逆送り</translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation>ヘルプ</translation>
-    </message>
-    <message>
-        <source>Pause</source>
-        <translation>ポーズ</translation>
-    </message>
-    <message>
-        <source>Unknown (9)</source>
-        <translation>不明 (9)</translation>
-    </message>
-    <message>
-        <source>Unknown (10)</source>
-        <translation>不明 (10)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
@@ -5882,6 +5686,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>TRNAD_2:Neo Bahmut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7688,6 +7496,201 @@ Table Entries are Editable</source>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsWidget</name>
+    <message>
+        <source>In-Game Dialog Preview</source>
+        <translation>ゲーム上のダイアログのプレビュー</translation>
+    </message>
+    <message>
+        <source>ATB Style</source>
+        <translation>ＡＴＢ</translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation>アクティブ</translation>
+    </message>
+    <message>
+        <source>Recommended</source>
+        <translation>おすすめ</translation>
+    </message>
+    <message>
+        <source>Wait</source>
+        <translation>ウェイト</translation>
+    </message>
+    <message>
+        <source>Sound Mode</source>
+        <translation>サウンド</translation>
+    </message>
+    <message>
+        <source>Mono</source>
+        <translation>モノラル</translation>
+    </message>
+    <message>
+        <source>Stereo</source>
+        <translation>ステレオ</translation>
+    </message>
+    <message>
+        <source>Magic Order</source>
+        <translation>魔法の並び方</translation>
+    </message>
+    <message>
+        <source>Restore,Attack,Indirect</source>
+        <translation>回復　攻撃　間接</translation>
+    </message>
+    <message>
+        <source>Restore,Indirect,Attack</source>
+        <translation>回復　間接　攻撃</translation>
+    </message>
+    <message>
+        <source>Attack,Indirect,Restore</source>
+        <translation>攻撃　間接　回復</translation>
+    </message>
+    <message>
+        <source>Attack,Restore,Indirect</source>
+        <translation>攻撃　回復　間接</translation>
+    </message>
+    <message>
+        <source>Indirect,Restore,Attack</source>
+        <translation>間接　回復　攻撃</translation>
+    </message>
+    <message>
+        <source>Indirect,Attack,Restore</source>
+        <translation>間接　攻撃　回復</translation>
+    </message>
+    <message>
+        <source>Cursor Type</source>
+        <translation>カーソル</translation>
+    </message>
+    <message>
+        <source>Initial</source>
+        <translation>初期</translation>
+    </message>
+    <message>
+        <source>Memory</source>
+        <translation>記憶</translation>
+    </message>
+    <message>
+        <source>Camera</source>
+        <translation>カメラアングル</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>ノーマル</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>カスタム</translation>
+    </message>
+    <message>
+        <source>Show Battle Targets Labels</source>
+        <translation>バトル ターゲットの表示</translation>
+    </message>
+    <message>
+        <source>Show Battle Help</source>
+        <translation>バトル ヘルプの表示</translation>
+    </message>
+    <message>
+        <source>Show Field Help</source>
+        <translation>フィールド ヘルプの表示</translation>
+    </message>
+    <message>
+        <source>Battle Speed:</source>
+        <translation>バトルスピード:</translation>
+    </message>
+    <message>
+        <source>Fast</source>
+        <translation>速い　</translation>
+    </message>
+    <message>
+        <source>Slow</source>
+        <translation>　遅い</translation>
+    </message>
+    <message>
+        <source>Battle Message Speed:</source>
+        <translation>バトルメッセージ:</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>上</translation>
+    </message>
+    <message>
+        <source>? 9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>? 10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>右</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>下</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>左</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>メニュー</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>けってい</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>キャンセル</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>ＥＸＴ</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>ターゲットマーク</translation>
+    </message>
+    <message>
+        <source>Page Up</source>
+        <translation>ページ順送り</translation>
+    </message>
+    <message>
+        <source>Page Down</source>
+        <translation>ページ逆送り</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>ヘルプ</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>ポーズ</translation>
+    </message>
+    <message>
+        <source>Unknown (9)</source>
+        <translation>不明 (9)</translation>
+    </message>
+    <message>
+        <source>Unknown(10)</source>
+        <translation>不明 (10)</translation>
+    </message>
+    <message>
+        <source>Custom Controller Mapping (PSX Only)</source>
+        <translation>カスタム コントローラー (PSX のみ)</translation>
+    </message>
+    <message>
+        <source>Controller Settings</source>
+        <translation>コントローラ</translation>
+    </message>
+    <message>
+        <source>Field Message Speed:</source>
+        <translation>フィールドメッセージ:</translation>
     </message>
 </context>
 <context>
