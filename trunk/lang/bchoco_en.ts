@@ -4207,10 +4207,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Game Op&amp;tions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4284,114 +4280,6 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sound Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mono</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stereo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Controller Setting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cursor Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Initial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Memory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ATB Style</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Active</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recommended</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wait</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Camera</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Automatic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Order</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Restore,Attack,Indirect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Restore,Indirect,Attack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Attack,Indirect,Restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Attack,Restore,Indirect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Indirect,Restore,Attack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Indirect,Attack,Restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Battle Speed:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fast</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Battle Message Speed:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Field Message Speed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4677,10 +4565,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>In-game Dialog Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4806,18 +4690,6 @@
     </message>
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Battle Target Labels</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Battle Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Field Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4954,10 +4826,6 @@
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Normal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5249,70 +5117,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Custom Controller Mapping(PSX Only)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Switch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Target</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Page Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Page Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pause</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknown (9)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknown (10)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5797,6 +5601,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>TRNAD_2:Neo Bahmut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7602,6 +7410,201 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OptionsWidget</name>
+    <message>
+        <source>In-Game Dialog Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ATB Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recommended</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wait</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sound Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mono</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stereo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore,Attack,Indirect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore,Indirect,Attack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attack,Indirect,Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attack,Restore,Indirect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Indirect,Restore,Attack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Indirect,Attack,Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cursor Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Camera</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Targets Labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Field Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Speed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fast</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Message Speed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>? 9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>? 10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Page Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Page Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown (9)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown(10)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom Controller Mapping (PSX Only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Controller Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Message Speed:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

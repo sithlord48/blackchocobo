@@ -32,6 +32,8 @@ protected:
     void resizeEvent(QResizeEvent *);
 public:
     explicit OptionsWidget(QWidget *parent = 0);
+    void setSliderStyle(QString style);
+    void setScrollAreaStyleSheet(QString styleSheet);
     void setDialogColors(QColor ul,QColor ur,QColor ll,QColor lr);
     void setAtb(int mode);
     void setSoundMode(int mode);
