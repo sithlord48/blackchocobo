@@ -225,6 +225,7 @@ void MainWindow::init_display()
 
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
+
 }
 void MainWindow::init_style()
 {
@@ -247,7 +248,12 @@ void MainWindow::init_style()
 
   optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);"));
   char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
-  hexEditor->setStyleSheet("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);");
+  hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
+
+  ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
+  ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
+  ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
+
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
