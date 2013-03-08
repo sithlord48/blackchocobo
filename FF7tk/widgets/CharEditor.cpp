@@ -2353,15 +2353,32 @@ void CharEditor::update_materia_slots()
     armor_slot_2->setHidden(1);
     armor_slot_1->setHidden(1);
 
+    //reset style sheet for the outer slot frames and links to ensure they are not visible reguardless of hosts stylesheet.
+    armor_frm_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_5->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_6->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_7->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_frm_8->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_8->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_7->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_6->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_5->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_frm_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
 
-    weapon_m_link_1->setStyleSheet(QString(""));
-    weapon_m_link_2->setStyleSheet(QString(""));
-    weapon_m_link_3->setStyleSheet(QString(""));
-    weapon_m_link_4->setStyleSheet(QString(""));
-    armor_m_link_1->setStyleSheet(QString(""));
-    armor_m_link_2->setStyleSheet(QString(""));
-    armor_m_link_3->setStyleSheet(QString(""));
-    armor_m_link_4->setStyleSheet(QString(""));
+    weapon_m_link_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_m_link_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_m_link_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    weapon_m_link_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_m_link_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_m_link_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_m_link_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    armor_m_link_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
 
      //fill the slots.
 
