@@ -88,7 +88,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 }
 ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
 {
-    this->setObjectName("ItemList");
+    setObjectName("ItemList");
     installEventFilter(this);
     createdTooltip=false;
     itemQtyLimit=127;
@@ -102,14 +102,14 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     createdSelector=true;
     setCellWidget(0,0,itemSelector);
     setColumnWidth(1,itemSelector->combo_item_width());
-    itemSelector->setFixedWidth(itemSelector->combo_item_width()+66+this->font().pointSize()*5+verticalScrollBar()->width()+contentsMargins().left()+contentsMargins().right());
+    itemSelector->setFixedWidth(itemSelector->combo_item_width()+66+font().pointSize()*5+verticalScrollBar()->width()+contentsMargins().left()+contentsMargins().right());
     connect(this,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(listSelectionChanged(int,int,int,int)));
     horizontalHeader()->hide();
     verticalHeader()->hide();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
     adjustSize();
     for(int i=0;i<320;i++){itemlist.append(FF7Item::EmptyItemData);}//initlize the data.
-    this->setFixedWidth(itemSelector->size().width());
+    setFixedWidth(itemSelector->size().width());
     itemSelector->close();
     createdSelector = false;
     itemupdate();// redraw Display After data init.
@@ -167,7 +167,6 @@ void ItemList::itemSelector_changed(quint16 item)
 
 void ItemList::itemupdate()
 {
-    QTableWidgetItem *newItem;
     int j= currentRow();
     int column_one_width =columnWidth(1);
     int selectorLocation=321;
@@ -180,38 +179,8 @@ void ItemList::itemupdate()
     for (int i=0;i<320;i++) // set up items
     {
         if(i == selectorLocation){continue;}
-        if (itemlist.at(i) == FF7Item::EmptyItemData)
-        {
-            newItem = new QTableWidgetItem("",0);
-            setItem(i,0,newItem);
-            newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
-            setItem(i,1,newItem);
-            setRowHeight(i,22);
-            newItem = new QTableWidgetItem("",0);
-            setItem(i,2,newItem);
-        }
-        else if(Items.itemId(itemlist.at(i)) > 319)
-        {
-            newItem = new QTableWidgetItem("",0);
-            setItem(i,0,newItem);
-            newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
-            setItem(i,1,newItem);
-            setRowHeight(i,22);
-            newItem = new QTableWidgetItem("",0);
-            setItem(i,2,newItem);
-        }
-        else
-        {
-            QString qty;
-            //Replaced by new item engine. (Vegeta_Ss4)
-            newItem = new QTableWidgetItem(Items.icon(Items.itemId(itemlist.at(i))),"",0);
-            setItem(i,0,newItem);
-            newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(i))),0);
-            setItem(i,1, newItem);
-            setRowHeight(i,22);
-            newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(i))),0);
-            setItem(i,2,newItem);
-        }
+        else{updateItem(i);}
+
     }
     blockSignals(true);
     if(createdSelector)
@@ -220,7 +189,7 @@ void ItemList::itemupdate()
         setCellWidget(j,0,itemSelector);
         if(itemlist.at(j)== FF7Item::EmptyItemData){/*nice empty under the selector*/}
         else
-        {
+        {//wipe the data under the selector so its easier to read.
             for(int i=0;i<3;i++)
             {
                 QTableWidgetItem *newItem = new QTableWidgetItem("",0);
@@ -229,24 +198,23 @@ void ItemList::itemupdate()
         }
         itemSelector->setCurrentItem(itemlist.at(j));
     }
-    //if(createdSelector){itemSelector->close();}//if there is a Selector Close it.
     blockSignals(false);
 }
 void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
 {
+    if(prevColum>=0 ||prevColum<=0){/*Stop warning about unused var.*/}
+    if(colum<0||row <0){return;}//Ingore if selecting -1 (clearContents)
     if(createdSelector){itemSelector->close();createdSelector=false;}
     if(createdTooltip){itemPreview->close();createdTooltip=false;}
-    if ((colum >=0 || colum <= 0) && (prevRow >=0 || prevRow <= 0) &&(prevColum >=0 || prevColum <= 0))
-    {/*Stop Warning About unused vars*/}
-    itemupdate();
+    if (prevRow>=0){updateItem(prevRow);}//update the previews Row so its filled again.
     itemSelector = new ItemSelector;
     createdSelector = true;
     itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
-    //Clear the Current Row So the item selector is not over text.
-    if(itemlist.at(row)==FF7Item::EmptyItemData){/*nice empty under the selector*/}
+   
+    if(itemlist.at(row)==FF7Item::EmptyItemData){/*nice Empty Item under the selector*/}
     else
-    {
+    {//Clear whats under the selector 
         for(int i=0;i<3;i++)
         {
             QTableWidgetItem *newItem = new QTableWidgetItem("",0);
@@ -257,4 +225,40 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     setCellWidget(row,0,itemSelector);
     itemSelector->setCurrentItem(itemlist.at(row));
     connect(itemSelector,SIGNAL(item_changed(quint16)),this,SLOT(itemSelector_changed(quint16)));
+}
+void ItemList::updateItem(int row)
+{
+    QTableWidgetItem *newItem;
+    if (itemlist.at(row) == FF7Item::EmptyItemData)
+    {
+        newItem = new QTableWidgetItem("",0);
+        setItem(row,0,newItem);
+        newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
+        setItem(row,1,newItem);
+        setRowHeight(row,22);
+        newItem = new QTableWidgetItem("",0);
+        setItem(row,2,newItem);
+    }
+    else if(Items.itemId(itemlist.at(row)) > 319)
+    {
+        newItem = new QTableWidgetItem("",0);
+        setItem(row,0,newItem);
+        newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
+        setItem(row,1,newItem);
+        setRowHeight(row,22);
+        newItem = new QTableWidgetItem("",0);
+        setItem(row,2,newItem);
+    }
+    else
+    {
+        QString qty;
+        //Replaced by new item engine. (Vegeta_Ss4)
+        newItem = new QTableWidgetItem(Items.icon(Items.itemId(itemlist.at(row))),"",0);
+        setItem(row,0,newItem);
+        newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(row))),0);
+        setItem(row,1, newItem);
+        setRowHeight(row,22);
+        newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
+        setItem(row,2,newItem);
+    }
 }

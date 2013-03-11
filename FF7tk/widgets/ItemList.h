@@ -16,10 +16,6 @@
 #ifndef ITEMLIST_H
 #define ITEMLIST_H
 
-//#include <QTableWidget>
-//#include <QHeaderView>
-//#include <QScrollBar>
-//#include <QEvent>
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
     #include <QtWidgets>
@@ -48,6 +44,7 @@ private slots:
     void itemSelector_changed(quint16);
 private:
     void itemupdate();
+    void updateItem(int row);
     FF7Item Items;
     int itemQtyLimit;
     ItemSelector * itemSelector;
@@ -56,5 +53,4 @@ private:
     bool createdSelector;
     bool createdTooltip;
 };
-
 #endif // ITEMLIST_H
