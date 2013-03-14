@@ -26,14 +26,14 @@ SlotPreview::SlotPreview(int index, QWidget *parent):QLabel(parent)
     setIndex(index);
     setLayout(Final);
     setFixedSize(581,135);
-    this->setStyleSheet("SlotPreview{border:3px solid;}");
-    this->setCursor(Qt::PointingHandCursor);
+    setStyleSheet("SlotPreview{border:3px solid;}");
+    setCursor(Qt::PointingHandCursor);
 }
 
 void SlotPreview::init_display(void)
 {
     lbl_Slot = new QLabel;
-    lbl_Slot->setStyleSheet("font: 75 14pt \"Verdana\";");
+    lbl_Slot->setStyleSheet("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";");
     lbl_Slot->setText(QString(tr("Slot: %1")).arg(QString::number(index()+1)));
 
     btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"",this);
@@ -126,16 +126,19 @@ void SlotPreview::set_psx_game(void)
 void SlotPreview::set_ff7_save(void)
 {
     init_display();
-    QString style="font: 75 14pt \"Verdana\";";
+    QString style="background-color:rbga(0,0,0,0);font: 75 14pt \"Verdana\";";
 
     party1 = new QLabel;
     party1->setFixedSize(84,96);
+    party1->setStyleSheet(style);
 
     party2 = new QLabel;
     party2->setFixedSize(84,96);
+    party2->setStyleSheet(style);
 
     party3 = new QLabel;
     party3->setFixedSize(84,96);
+    party3->setStyleSheet(style);
 
     lbl_gil = new QLabel;
     lbl_gil->setStyleSheet(style);
@@ -147,7 +150,7 @@ void SlotPreview::set_ff7_save(void)
 
     lbl_time = new QLabel;
     lbl_time->setStyleSheet(style);
-    lbl_time->setAlignment(Qt::AlignCenter);
+    lbl_time->setAlignment(Qt::AlignCenter);\
 
     lbl_level = new QLabel;
     lbl_level->setStyleSheet(style);

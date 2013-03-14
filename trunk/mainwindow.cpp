@@ -218,7 +218,7 @@ void MainWindow::init_display()
     ui->box_stable6->setLayout(stable_6_layout);
 
     hexEditor = new QHexEdit;
-    hexEditor->setHighlightingColor(QColor(Qt::blue));
+    hexEditor->setHighlightingColor(QColor(98,192,247));
     hexEditor->setAddressAreaColor(QColor(64,65,64));
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
@@ -226,10 +226,12 @@ void MainWindow::init_display()
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 
+    //Set up Status Bar..
+    ui->statusBar->addWidget(ui->frame_status,1);
 }
 void MainWindow::init_style()
 {
-    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98, 192, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
     tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
     tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
     ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
@@ -247,7 +249,7 @@ void MainWindow::init_style()
   char_editor->setSliderStyle(sliderStyleSheet);
 
   optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);"));
-  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
+  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));}"));
   hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
 
   ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
@@ -647,7 +649,11 @@ void MainWindow::on_actionExport_char_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save FF7 Character File"), settings->value("char_stat_folder").toString(),
     tr("FF7 Character Stat File(*.char)"));
-    if (!fileName.isEmpty()){ff7->exportCharacter(s,curchar,fileName);}
+    if (!fileName.isEmpty())
+    {
+        if(ff7->exportCharacter(s,curchar,fileName)){ui->statusBar->showMessage(tr("Character Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Character Export Failed"),2000);}
+    }
 }
 void MainWindow::on_action_Save_triggered()
 {
@@ -773,6 +779,8 @@ void MainWindow::on_actionNew_Game_triggered()
     QString save_name ="";
     if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
     ff7->newGame(s,save_name);//call the new game function
+    if(save_name =="")    {ui->statusBar->showMessage(tr("New Game Created"),2000);}
+    else{ui->statusBar->showMessage(tr("New Game Created - File:%1").arg(save_name,2000));}
     //detect region and fix names if needed.
     _init=false;
     guirefresh(1);
@@ -782,9 +790,10 @@ void MainWindow::on_actionNew_Game_triggered()
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
     QString save_name ="";
-    if(settings->value("override_default_save").toBool())
-    {save_name = settings->value("default_save_file").toString();}
+    if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
     ff7->newGamePlus(s,ff7->fileName(),save_name);
+    if(save_name==""){ui->statusBar->showMessage(tr("New Game Plus Created"),2000);}
+    else{ui->statusBar->showMessage(tr("New Game Created - File:%1").arg(save_name),2000);}
     guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
@@ -797,7 +806,8 @@ void MainWindow::on_actionExport_PC_Save_triggered()
     if(fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ff7->exportPC(fileName);
+        if(ff7->exportPC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
         file_modified(false);
     }
 }
@@ -810,7 +820,8 @@ void MainWindow::on_actionExport_PSX_triggered()
     if (fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ff7->exportPSX(s,fileName);
+        if(ff7->exportPSX(s,fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
         file_modified(false);
     }
 }
@@ -824,7 +835,8 @@ void MainWindow::on_actionExport_MC_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->exportVMC(fileName);
+        if(ff7->exportVMC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
         file_modified(false);
     }
 }
@@ -836,7 +848,8 @@ void MainWindow::on_actionExport_VGS_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->exportVGS(fileName);
+        if(ff7->exportVGS(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
         file_modified(false);
     }
 }
@@ -848,7 +861,8 @@ void MainWindow::on_actionExport_DEX_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ff7->exportDEX(fileName);
+        if(ff7->exportDEX(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
         file_modified(false);
     }
 }

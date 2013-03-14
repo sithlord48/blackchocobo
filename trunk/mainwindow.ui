@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>766</width>
-    <height>631</height>
+    <height>635</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,47 +24,35 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget[visible=&quot;true&quot;],QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
+   <string notr="true">/*QWidget[visible=&quot;true&quot;],*/QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
 
 QWidget[visible=&quot;true&quot;]:disabled,QLabel[visible=&quot;true&quot;]:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
 
 QDialog{
 background-color:rgb(48,47,47);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 }
 
-QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
-QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
-QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
-
-QPushButton[font_size=&quot;true&quot;]:checked{  
-    border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
-	border-bottom-color: rgb(172, 172, 255);
-	border-top-color: rgb(172, 172, 255);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font:;color:rgb(255,255,255);
-}
 QListView,QTreeView,QTableView,QColumnView{
 background-color:rgba(10,10,10,64);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
+selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 }
 QGroupBox:enabled,QMdiArea{
 background-color:rgba(10,10,10,32);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 }
 
 /*QMenuBar*/
 QMenuBar {
 	background-color: rgb(99, 97, 97);
-/*	background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgb(65, 65, 65), stop:0.448864 rgb(35, 33, 33), stop:1 rgb(21, 21, 21));font:;color:rgb(255,255,255);*/
 }
-
-
+QStatusBar{
+   background:rgb(99,97,97);
+	font:;color:rgb(255,255,255);
+}
 QMenuBar:item{
 background-color:rgb(99,97,97);	
 font:;color:rgb(255,255,255);
@@ -82,7 +70,7 @@ QMenu,QWidget.ItemPreview{
 }
 QMenu::item:enabled{
 	background-color: rgba(99, 97, 97,255);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);font:;color:rgb(255,255,255);
+	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);font:;color:rgb(255,255,255);
 }
 
 QMenu::item:disabled{
@@ -96,7 +84,7 @@ QFrame#frame_status{
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
 }
  QToolBox::tab:selected,QTabBar::tab:selected,QMenuBar::item:selected,QMenuBar::item:hover { 
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
  	font:;color: rgb(255,255,255);
  }
 /*End OF Menu*/
@@ -108,7 +96,7 @@ font:;color:rgb(74, 80, 73);
 
 QTableWidget:enabled,QListWidget:enabled{
 background-color: rgba(32, 31, 31,64);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
+selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
 selection-color: rgb(255,255,255);
 gridline-color: rgb(25, 25, 25);
 
@@ -138,7 +126,7 @@ QSpinBox:enabled{
 	border:1px solid; 
 	border-color: rgba(67,67,67,192);
 	background-color: rgba(32,31,31,128);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
+	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
 	selection-color: rgb(255,255,255);
 	border-radius: 5px;
 	font:;color:rgb(255,255,255);
@@ -219,7 +207,7 @@ QAbstractItemView{
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172, 172, 172);
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 	selection-color: rgb(255,255,255);
 	border-radius: 5px; font:;color:rgb(255,255,255);
 }
@@ -233,7 +221,7 @@ QComboBox::down-arrow:disabled{
 QLineEdit:enabled{
 border: 2px solid grey;
 background-color: rgba(32, 31, 31,96);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 selection-color: rgb(255,255,255);
 color:rgb(255,255,255);
 border-radius: 5px;
@@ -245,7 +233,7 @@ QLCDNumber:enabled{
 	border-bottom-color: rgba(172, 172, 172,192);
 	border-top-color: rgba(172, 172, 172,192);
 	background-color: rgba(32, 31, 31,96);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 	selection-color: rgb(255,255,255);
 	border-radius: 5px;
 }
@@ -410,8 +398,9 @@ QTabBar::tab:only-one { margin: 0;  }
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
        <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}</string>
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+}
+</string>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
@@ -1135,6 +1124,165 @@ QTabBar::tab:only-one { margin: 0;  }
           <property name="charbox" stdset="0">
            <bool>true</bool>
           </property>
+          <widget class="QFrame" name="frame_status">
+           <property name="geometry">
+            <rect>
+             <x>-340</x>
+             <y>25</y>
+             <width>766</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>18</height>
+            </size>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_112">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_95">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>14</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_fileName">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_76">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>48</width>
+                <height>0</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_current_slot_txt">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>18</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbl_current_slot_num">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>18</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>18</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_115">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>14</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
        </layout>
@@ -3100,7 +3248,7 @@ QTabBar::tab:only-one { margin: 0;  }
          <widget class="QToolBox" name="toolBox_2">
           <property name="styleSheet">
            <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
 }
 disbled{font:;color: rgb(74, 80, 73);}
 enabled{font:;color: rgb(255, 255, 255);}
@@ -3112,7 +3260,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <x>0</x>
              <y>0</y>
              <width>760</width>
-             <height>496</height>
+             <height>494</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8078,7 +8226,7 @@ enabled{font:;color: rgb(255, 255, 255);}
           </property>
           <property name="styleSheet">
            <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
 }
 ::tab {
     background: rgba(10,10,10,16);
@@ -8093,6 +8241,7 @@ enabled{font:;color: rgb(255, 255, 255);}
  }
 ::tab:selected {
 	border:3px solid;
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
 	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-left-color: rgb(172,172,172);
@@ -9602,159 +9751,6 @@ Var And Scrolling Synced To Left Table</string>
       </widget>
      </widget>
     </item>
-    <item>
-     <widget class="QFrame" name="frame_status">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>18</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>18</height>
-       </size>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_112">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <spacer name="horizontalSpacer_95">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>14</width>
-           <height>18</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QLabel" name="lbl_fileName">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_76">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QLabel" name="lbl_current_slot_txt">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="lbl_current_slot_num">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_115">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>14</width>
-           <height>18</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -9899,6 +9895,7 @@ Var And Scrolling Synced To Left Table</string>
    <addaction name="menuOptions"/>
    <addaction name="menuAbout"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
    <property name="icon">
     <iconset resource="images.qrc">
