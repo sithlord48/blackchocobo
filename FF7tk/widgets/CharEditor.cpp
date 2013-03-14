@@ -1112,6 +1112,7 @@ void CharEditor::init_display()
     this->setLayout(toolbox_layout);
 }
 void CharEditor::setToolBoxStyle(QString stylesheet){toolbox->setStyleSheet(stylesheet);}
+
 void CharEditor::setSliderStyle(QString style){slider_limit->setStyleSheet(style);}
 
 void CharEditor::init_connections()
@@ -2628,10 +2629,11 @@ void CharEditor::MaxEquip()
             data.materias[i].ap[1] = 0xFF;
             data.materias[i].ap[2] = 0xFF;
             mslotsel = i;
-            this->mslotChanged(i);
-            this->matId_changed(new_id);
-            this->matAp_changed(FF7Materia::MaxMateriaAp);
+            mslotChanged(i);
+            matId_changed(new_id);
+            matAp_changed(FF7Materia::MaxMateriaAp);
         }
+        setSlotFrame();
         update_materia_slots();
         cb_front_row->setCheckState(Qt::Unchecked);
     }

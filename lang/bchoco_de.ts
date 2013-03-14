@@ -5622,6 +5622,34 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Character Export Successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Character Export Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Created - File:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Plus Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export Successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
