@@ -24,9 +24,11 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*QWidget[visible=&quot;true&quot;],*/QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
+   <string notr="true">/*QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}*/
+QWidget:enabled{background-color:rgb(80,80,80);font:;color:rgb(255,255,255);}
 
 QWidget[visible=&quot;true&quot;]:disabled,QLabel[visible=&quot;true&quot;]:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
+QLabel:enabled{background-color:rgb(255,255,255,0);font:;color:rgb(255,255,255);}
 
 QDialog{
 background-color:rgb(48,47,47);
@@ -375,6 +377,10 @@ QTabBar::tab:selected{
 QTabBar::tab:first:selected { margin-left: 0; }
 QTabBar::tab:last:selected { margin-right: 0; }
 QTabBar::tab:only-one { margin: 0;  }
+
+QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
+QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
+QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
 </string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -3259,8 +3265,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>494</height>
+             <width>749</width>
+             <height>429</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5540,7 +5546,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>336</width>
                   <height>1677</height>
                  </rect>
                 </property>

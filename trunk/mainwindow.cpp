@@ -248,7 +248,7 @@ void MainWindow::init_style()
   optionsWidget->setSliderStyle(sliderStyleSheet);
   char_editor->setSliderStyle(sliderStyleSheet);
 
-  optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);"));
+  optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgb(97,97,97);font:;color:rgb(255,255,255);"));
   char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));}"));
   hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
 
@@ -452,31 +452,11 @@ void MainWindow::init_settings()
     if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
     if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
     if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-    if(settings->value("color1_r").isNull()){settings->setValue("color1_r","7");}
-    if(settings->value("color1_g").isNull()){settings->setValue("color1_g","6");}
-    if(settings->value("color1_b").isNull()){settings->setValue("color1_b","6");}
-    if(settings->value("color2_r").isNull()){settings->setValue("color2_r","35");}
-    if(settings->value("color2_g").isNull()){settings->setValue("color2_g","33");}
-    if(settings->value("color2_b").isNull()){settings->setValue("color2_b","33");}
-    if(settings->value("color3_r").isNull()){settings->setValue("color3_r","65");}
-    if(settings->value("color3_g").isNull()){settings->setValue("color3_g","65");}
-    if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
+
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 
     if(settings->value("show_test").toBool()){ui->action_show_debug->setChecked(Qt::Checked);}
     else{ui->action_show_debug->setChecked(Qt::Unchecked);}
-
-    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(settings->value("color1_r").toString());   style.append(",");
-    style.append(settings->value("color1_g").toString());   style.append(",");
-    style.append(settings->value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
-    style.append(settings->value("color2_r").toString());   style.append(",");
-    style.append(settings->value("color2_g").toString());   style.append(",");
-    style.append(settings->value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
-    style.append(settings->value("color3_r").toString());   style.append(",");
-    style.append(settings->value("color3_g").toString());   style.append(",");
-    style.append(settings->value("color3_b").toString());   style.append(", 255));}");
-    ui->centralWidget->setStyleSheet(style);
 
     if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
     else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}

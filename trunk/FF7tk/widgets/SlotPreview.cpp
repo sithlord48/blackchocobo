@@ -150,7 +150,7 @@ void SlotPreview::set_ff7_save(void)
 
     lbl_time = new QLabel;
     lbl_time->setStyleSheet(style);
-    lbl_time->setAlignment(Qt::AlignCenter);\
+    lbl_time->setAlignment(Qt::AlignCenter);
 
     lbl_level = new QLabel;
     lbl_level->setStyleSheet(style);
