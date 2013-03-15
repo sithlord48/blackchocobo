@@ -54,16 +54,6 @@ private slots:
     void on_btn_set_save_pc_clicked();
     void on_pushButton_clicked();
     void set_path_lbls();
-    void set_preview();
-    void on_slide_c1_b_valueChanged(int value);
-    void on_slide_c1_g_valueChanged(int value);
-    void on_slide_c1_r_valueChanged(int value);
-    void on_slide_c2_b_valueChanged(int value);
-    void on_slide_c2_g_valueChanged(int value);
-    void on_slide_c2_r_valueChanged(int value);
-    void on_slide_c3_b_valueChanged(int value);
-    void on_slide_c3_g_valueChanged(int value);
-    void on_slide_c3_r_valueChanged(int value);
     void on_reset_default_save_location_clicked();
     void on_reset_char_stat_folder_clicked();
     void on_combo_font_currentIndexChanged(QString );

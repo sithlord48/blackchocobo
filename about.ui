@@ -24,9 +24,7 @@
    <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
-QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
-QLabel[program_name=&quot;true&quot;]{	font-size:12pt }</string>
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -851,7 +849,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>343</width>
+            <width>361</width>
             <height>430</height>
            </rect>
           </property>
@@ -1527,8 +1525,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>124</width>
-            <height>970</height>
+            <width>361</width>
+            <height>438</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1716,8 +1714,7 @@ p, li { white-space: pre-wrap; }
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>&amp;Close</string>
