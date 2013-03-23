@@ -4002,7 +4002,7 @@
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation>Los valores de velocidad son valores directos, la velocidad en km/h se calcula durante el juego</translation>
+        <translation type="obsolete">Los valores de velocidad son valores directos, la velocidad en km/h se calcula durante el juego</translation>
     </message>
     <message>
         <source>Stable 4</source>
@@ -4154,11 +4154,11 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>Click en una Fila Para &quot;Teletransportar&quot; tu partida ahí O fija tu posición en el mapa con x y z manualmente</translation>
+        <translation type="obsolete">Click en una Fila Para &quot;Teletransportar&quot; tu partida ahí O fija tu posición en el mapa con x y z manualmente</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>Diviertete Con Esta Función, Pero No Pongas Los Valores A Lo Loco Ya Que Pueden Causar Algunas Anomalías En El Juego Dependiendo De Los Valores De La Progresión De Tus Misiones.</translation>
+        <translation type="obsolete">Diviertete Con Esta Función, Pero No Pongas Los Valores A Lo Loco Ya Que Pueden Causar Algunas Anomalías En El Juego Dependiendo De Los Valores De La Progresión De Tus Misiones.</translation>
     </message>
     <message>
         <source>Location Name</source>
@@ -4290,7 +4290,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation> Fija la misión rejugable más arriba para poner el juego de vuelta otra vez en esa misión. Esto pondrá automáticamente tu sitio de guardado y el número de disco asi como las variables de progreso de misión. NO SOBREESCRIBAS TU GUARDADO ACTUAL, cuando uses esta función, no puedo prometerte que podrás jugar desde cualquier punto hasta el final del juego. O que una misión rejugable dada funcione con tu partida guardada, este área esta bajo desarrollo intenso</translation>
+        <translation type="obsolete"> Fija la misión rejugable más arriba para poner el juego de vuelta otra vez en esa misión. Esto pondrá automáticamente tu sitio de guardado y el número de disco asi como las variables de progreso de misión. NO SOBREESCRIBAS TU GUARDADO ACTUAL, cuando uses esta función, no puedo prometerte que podrás jugar desde cualquier punto hasta el final del juego. O que una misión rejugable dada funcione con tu partida guardada, este área esta bajo desarrollo intenso</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -4388,23 +4388,23 @@
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation>Cuevas de Materia Vacías</translation>
+        <translation type="obsolete">Cuevas de Materia Vacías</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Gesto</translation>
+        <translation type="obsolete">Gesto</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>PG &lt;-&gt; PM</translation>
+        <translation type="obsolete">PG &lt;-&gt; PM</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>Cuadrimagia</translation>
+        <translation type="obsolete">Cuadrimagia</translation>
     </message>
     <message>
         <source>KOTR</source>
-        <translation>Caballeros de la Tabla Redonda</translation>
+        <translation type="obsolete">Caballeros de la Tabla Redonda</translation>
     </message>
     <message>
         <source>Test Data</source>
@@ -4472,7 +4472,7 @@
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation>Cuando la caja está marcada parcialmente (&quot;-&quot;) se activará el mostrado de ese tutorial</translation>
+        <translation type="obsolete">Cuando la caja está marcada parcialmente (&quot;-&quot;) se activará el mostrado de ese tutorial</translation>
     </message>
     <message>
         <source>Slot Region</source>
@@ -4898,7 +4898,7 @@
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation>Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
+        <translation type="obsolete">Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
@@ -4914,7 +4914,7 @@
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation>Los establos marcados estan ocupados, desmarcar para vaciar el establo</translation>
+        <translation type="obsolete">Los establos marcados estan ocupados, desmarcar para vaciar el establo</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
@@ -5048,7 +5048,7 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation>Reunión de Avalancha despues de la Bombing Mission</translation>
+        <translation type="obsolete">Reunión de Avalancha despues de la Bombing Mission</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
@@ -5412,7 +5412,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation>cb_s5_7 (Éter turbo del niño en la casa 2F 5min1_2)</translation>
+        <translation type="obsolete">cb_s5_7 (Éter turbo del niño en la casa 2F 5min1_2)</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
@@ -5420,7 +5420,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
-        <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
+        <translation type="obsolete">Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -5504,7 +5504,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando cruzas la puerta de Battle Square a &amp;quot;Arena Lobby&amp;quot; para que puedas gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando cruzas la puerta de Battle Square a &amp;quot;Arena Lobby&amp;quot; para que puedas gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
@@ -5644,6 +5644,89 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Export Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ5: Mime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ6: HP &lt;-&gt; MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ7: Quadra Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ8: KOTR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checked Stables Are Occupied Uncheck Stable to Empty 
+Stable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values , the km/h speeds are 
+calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location , x,y,z manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
+Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
+Quest Progression Value(s).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s 
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Team Avalanche Had Meeting after Bombing 
+Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
+5min1_2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> Set Replay Mission above To Set The Game Back To That 
+Mission.  This Will automaticly set your save location and disk # as well as 
+Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
+feature, i can not promise that you will be able to play from any replay untill 
+the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
+Is Under Heavy Development</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>         INFO ON CURRENTLY SELECTED REPLAY 
+MISSION</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
+Disabled in the Party Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
+When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
+Lobby&amp;quot; so you can spend 
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will 
+trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7370,31 +7453,31 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation>Color de fondo de la ventana principal</translation>
+        <translation type="obsolete">Color de fondo de la ventana principal</translation>
     </message>
     <message>
         <source>Color 1</source>
-        <translation>Color 1</translation>
+        <translation type="obsolete">Color 1</translation>
     </message>
     <message>
         <source>R</source>
-        <translation>R</translation>
+        <translation type="obsolete">R</translation>
     </message>
     <message>
         <source>G</source>
-        <translation>G</translation>
+        <translation type="obsolete">G</translation>
     </message>
     <message>
         <source>B</source>
-        <translation>B</translation>
+        <translation type="obsolete">B</translation>
     </message>
     <message>
         <source>Color 2</source>
-        <translation>Color 2</translation>
+        <translation type="obsolete">Color 2</translation>
     </message>
     <message>
         <source>Color 3</source>
-        <translation>Color 3</translation>
+        <translation type="obsolete">Color 3</translation>
     </message>
     <message>
         <source>Reset to Default</source>

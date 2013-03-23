@@ -274,7 +274,7 @@ void MainWindow::init_connections()
         connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
         connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
         //Char_Editor
-        connect(ui->action_show_debug,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
         connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
         connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));
         connect(char_editor,SIGNAL(str_changed(quint8)),this,SLOT(char_str_changed(quint8)));
@@ -455,8 +455,8 @@ void MainWindow::init_settings()
 
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 
-    if(settings->value("show_test").toBool()){ui->action_show_debug->setChecked(Qt::Checked);}
-    else{ui->action_show_debug->setChecked(Qt::Unchecked);}
+    if(settings->value("show_test").toBool()){ui->action_AdvancedMode->setChecked(Qt::Checked);}
+    else{ui->action_AdvancedMode->setChecked(Qt::Unchecked);}
 
     if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
     else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
@@ -889,7 +889,7 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
         char_editor->setAutoLevel(0); char_editor->setAutoStatCalc(0);
     }
 }
-void MainWindow::on_action_show_debug_toggled(bool checked)
+void MainWindow::on_action_AdvancedMode_toggled(bool checked)
 {
     if(checked)
     {
@@ -899,7 +899,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->bm_unknown->setVisible(true);
         ui->bh_id->setVisible(true);
         ui->leader_id->setVisible(true);
-        if(ff7->type() == "PC"){optionsWidget->setControllerMappingVisible(true);}
+        if(ff7->type() == "PC"){setControllerMappingVisible(true);}
         settings->setValue("show_test",1);
         ui->cb_farm_items_1->setVisible(true);
         ui->cb_farm_items_2->setVisible(true);
@@ -909,18 +909,18 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->cb_farm_items_6->setVisible(true);
         ui->cb_farm_items_7->setVisible(true);
         ui->cb_farm_items_8->setVisible(true);
-        testdata_refresh();
     }
 
     else
     {
         ui->actionNew_Window->setVisible(0);
+        if(!ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty()){ui->tabWidget->setCurrentIndex(8);}
         ui->tabWidget->setTabEnabled(9,0);
         ui->cb_Region_Slot->setEnabled(false);
         ui->bm_unknown->setVisible(false);
         ui->bh_id->setVisible(false);
         ui->leader_id->setVisible(false);
-        if(ff7->type() =="PC"){optionsWidget->setControllerMappingVisible(false);}
+        if(ff7->type() =="PC"){setControllerMappingVisible(false);}
         settings->setValue("show_test",0);
         ui->cb_farm_items_1->setVisible(false);
         ui->cb_farm_items_2->setVisible(false);
@@ -1193,6 +1193,23 @@ void MainWindow::setmenu(bool newgame)
     /*~~~~~~~Set Actions By Type~~~~~~~*/
     //For first file load.Don't Bother to disable these again.
     //new game should always be exported. no header...
+
+    //if not FF7 user is stuck in the hex editor tab.
+
+    if ( !ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty())
+    {
+        if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
+        ui->tabWidget->setCurrentIndex(8);
+        for(int i=0;i<8;i++){ui->tabWidget->setTabEnabled(i,false);}
+        ui->tabWidget->setTabEnabled(9,ui->action_AdvancedMode->isChecked());
+    }
+
+    else
+    {
+        for(int i=0;i<9;i++){ui->tabWidget->setTabEnabled(i,true);}
+        ui->tabWidget->setTabEnabled(9,ui->action_AdvancedMode->isChecked());
+    }
+
     if(!newgame)
     {
         ui->actionSave_File_As->setEnabled(1);
@@ -1251,7 +1268,7 @@ void MainWindow::file_modified(bool changed)
 
     if(changed)
     {    
-        hexEditorRefresh();
+        //hexEditorRefresh();
         ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
     }
 }
@@ -1386,6 +1403,8 @@ void MainWindow::itemupdate(void)
 {
     load=true;
     //Field Items Picked up
+    itemlist->setItems(ff7->items(s));
+
     if(ff7->unknown(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
@@ -1423,6 +1442,18 @@ void MainWindow::itemupdate(void)
     if(ff7->unknown(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
+
+    if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
+    if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
+    if(ff7->materiaCave(s,FF7Save::CAVE_QUADMAGIC)){ui->cb_materiacave_3->setChecked(Qt::Checked);}        else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
+    if(ff7->materiaCave(s,FF7Save::CAVE_KOTR)){ui->cb_materiacave_4->setChecked(Qt::Checked);}        else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
+
+    for (int i=0;i<7;i++)//flyers
+    {
+        if (ff7->turtleParadiseFlyerSeen(s,i)){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
+        else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
+    }
+
     load=false;
 }
 void MainWindow::CheckGame()
@@ -1436,22 +1467,17 @@ void MainWindow::CheckGame()
         switch(error.exec())
         {
         case 0://View Anyway..
-            ui->tabWidget->setCurrentIndex(8);
-            if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
-            hexEditorRefresh();
-            ui->lbl_sg_region->setText(ff7->region(s));
-            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
             setmenu(0);
         break;
 
         case 1://Previous Clicked
             s--;
-            guirefresh(0);
+            CheckGame();
         break;
 
         case 2://Next Clicked
             s++;
-            guirefresh(0);
+            CheckGame();
         break;
 
         case 3://exported as psx
@@ -1460,11 +1486,221 @@ void MainWindow::CheckGame()
         }
     }
 }
+void MainWindow::othersUpdate()
+{
+    load=true;
+    ui->cb_replay->setCurrentIndex(0);
+    ui->cb_bombing_int->setChecked(Qt::Unchecked);
+    ui->cb_ruby_dead->setChecked(Qt::Unchecked);
+    ui->cb_emerald_dead->setChecked(Qt::Unchecked);
+    if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
+    if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
+
+    ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
+    ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
+    if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
+    {
+        ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
+    }
+
+    ui->sb_coster_1->setValue(ff7->speedScore(s,1));
+    ui->sb_coster_2->setValue(ff7->speedScore(s,2));
+    ui->sb_coster_3->setValue(ff7->speedScore(s,3));
+
+    for (int i=0;i<9;i++)//Allowed in Phs
+    {
+        if(ff7->phsAllowed(s,i)){phsList->setChecked(i,1,false);}
+        else{phsList->setChecked(i,1,true);}
+    }
+    for (int i=0;i<9;i++)//Visible
+    {
+        if(ff7->phsVisible(s,i)){phsList->setChecked(i,2,true);}
+        else{phsList->setChecked(i,2,false);}
+    }
+    for (int i=0;i<10;i++)//visible_menu
+    {
+        if(ff7->menuVisible(s,i)){menuList->setChecked(i,1,true);}
+        else{menuList->setChecked(i,1,false);}
+    }
+    for (int i=0;i<10;i++)//menu_locked
+    {
+        if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
+        else{menuList->setChecked(i,2,false);}
+    }
+    for (int i=0;i<51;i++)// key items
+    {
+        if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
+        else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
+    }
+
+    ui->sb_steps->setValue(ff7->slot[s].steps);
+    ui->sb_love_barret->setValue(ff7->love(s,false,FF7Save::LOVE_BARRET));
+    ui->sb_love_tifa->setValue(ff7->love(s,false,FF7Save::LOVE_TIFA));
+    ui->sb_love_aeris->setValue(ff7->love(s,false,FF7Save::LOVE_AERIS));
+    ui->sb_love_yuffie->setValue(ff7->love(s,false,FF7Save::LOVE_YUFFIE));
+    ui->sb_time_hour->setValue(ff7->time(s) / 3600);
+    ui->sb_time_min->setValue(ff7->time(s)/60%60);
+    ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+
+    if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
+
+    /*~~~~~Stolen Materia~~~~~~~*/
+    QTableWidgetItem *newItem;
+    ui->tbl_materia_2->reset();
+    ui->tbl_materia_2->clearContents();
+    ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
+    ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
+    ui->tbl_materia_2->setRowCount(48);
+    for(int mat=0;mat<48;mat++) //materias stolen by yuffie
+    {
+        QString ap;
+        quint8 current_id = ff7->stolenMateriaId(s,mat);
+        if (current_id !=FF7Materia::EmptyId)
+        {
+            newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)),Materias.name(current_id),0);
+            ui->tbl_materia_2->setItem(mat,0,newItem);
+            qint32 current_ap = ff7->stolenMateriaAp(s,mat);
+            if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
+            else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
+        }
+        else
+        {
+            newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
+            ui->tbl_materia_2->setItem(mat,0,newItem);
+        }
+    }
+    //SnowBoard Mini Game Data.
+    ui->sbSnowBegMin->setValue((ff7->snowboardTime(s,0)/1000)/60%60);
+    ui->sbSnowBegSec->setValue((ff7->snowboardTime(s,0)/1000)-(ui->sbSnowBegMin->value()*60));
+    ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s,0)%1000);
+    ui->sbSnowBegScore->setValue(ff7->snowboardScore(s,0));
+
+    ui->sbSnowExpMin->setValue((ff7->snowboardTime(s,1)/1000)/60%60);
+    ui->sbSnowExpSec->setValue((ff7->snowboardTime(s,1)/1000)-(ui->sbSnowExpMin->value()*60));
+    ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s,1)%1000);
+    ui->sbSnowExpScore->setValue(ff7->snowboardScore(s,1));
+
+    ui->sbSnowCrazyMin->setValue((ff7->snowboardTime(s,2)/1000)/60%60);
+    ui->sbSnowCrazySec->setValue((ff7->snowboardTime(s,2)/1000)-(ui->sbSnowCrazyMin->value()*60));
+    ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2)%1000);
+    ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
+
+    ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
+    ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
+    load=false;
+}
+void MainWindow::on_tabWidget_currentChanged(int index)
+{//Update the shown tab.
+    load =true;
+    switch (index)
+    {
+        case 0://Party Tab
+            if (ff7->party(s,0) >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
+            else{ui->combo_party1->setCurrentIndex(ff7->party(s,0));}
+            if (ff7->party(s,1) >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
+            else{ui->combo_party2->setCurrentIndex(ff7->party(s,1));}
+            if (ff7->party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
+            else{ui->combo_party3->setCurrentIndex(ff7->party(s,2));}
+            ui->sb_gil->setValue(ff7->gil(s));
+            ui->sb_gp->setValue(ff7->gp(s));
+            ui->sb_runs->setValue(ff7->runs(s));
+            ui->sb_battles->setValue(ff7->battles(s));
+            set_char_buttons();
+            switch(curchar)
+            {
+                case 0: ui->btn_cloud->click();break;
+                case 1: ui->btn_barret->click();break;
+                case 2: ui->btn_tifa->click();break;
+                case 3: ui->btn_aeris->click();break;
+                case 4: ui->btn_red->click();break;
+                case 5: ui->btn_yuffie->click();break;
+                case 6: ui->btn_cait->click();break;
+                case 7: ui->btn_vincent->click();break;
+                case 8: ui->btn_cid->click();break;
+            }
+        break;
+
+        case 1://Item Tab
+            itemupdate();
+        break;
+
+        case 2://Materia
+            materiaupdate();
+        break;
+
+        case 3://Chocobo Tab
+            chocobo_refresh();
+        break;
+
+        case 4://Location Tab
+            on_locationToolBox_currentChanged(ui->locationToolBox->currentIndex());
+        break;
+
+        case 5://Game Progress Tab
+            progress_update();
+        break;
+
+        case 6:// Other Tab
+            othersUpdate();
+        break;
+
+        case 7:// Game Options Tab
+            optionsWidget->setDialogColors(ff7->dialogColorUL(s),ff7->dialogColorUR(s),ff7->dialogColorLL(s),ff7->dialogColorLR(s));
+            optionsWidget->setFieldHelp(ff7->fieldHelp(s));
+            optionsWidget->setBattleHelp(ff7->battleHelp(s));
+            optionsWidget->setBattleTargets(ff7->battleTargets(s));
+            optionsWidget->setSoundMode(ff7->soundMode(s));
+            optionsWidget->setControllerMode(ff7->controlMode(s));
+            optionsWidget->setCursor(ff7->cursorMode(s));
+            optionsWidget->setCamera(ff7->cameraMode(s));
+            optionsWidget->setAtb(ff7->atbMode(s));
+            optionsWidget->setMagicOrder(ff7->magicOrder(s));
+            optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
+            optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
+            optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
+            if(ff7->type() !="PC" || ui->action_AdvancedMode->isChecked()){setControllerMappingVisible(true);}
+            else{setControllerMappingVisible(false);}
+        break;
+
+        case 8://HexEditor Tab
+            hexEditorRefresh();
+        break;
+
+        case 9: //Test Data Tab
+            on_testDataTabWidget_currentChanged(ui->testDataTabWidget->currentIndex());
+        break;
+    }
+    load=false;
+}
+
+void MainWindow::setControllerMappingVisible(bool Visible)
+{
+    if(Visible)
+    {
+        optionsWidget->setControllerMappingVisible(true);
+        optionsWidget->setBtnCamera(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
+        optionsWidget->setBtnTarget(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
+        optionsWidget->setBtnPgUp(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
+        optionsWidget->setBtnPgDn(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
+        optionsWidget->setBtnMenu(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
+        optionsWidget->setBtnOk(ff7->controllerMapping(s,FF7Save::ACTION_OK));
+        optionsWidget->setBtnCancel(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
+        optionsWidget->setBtnSwitch(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
+        optionsWidget->setBtnHelp(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
+        optionsWidget->setBtn9(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
+        optionsWidget->setBtn10(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
+        optionsWidget->setBtnPause(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
+        optionsWidget->setBtnUp(ff7->controllerMapping(s,FF7Save::ACTION_UP));
+        optionsWidget->setBtnDown(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
+        optionsWidget->setBtnLeft(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
+        optionsWidget->setBtnRight(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
+    }
+    else{optionsWidget->setControllerMappingVisible(false);}
+}
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(bool newgame)
 {
     load=true;
-
     /*~~~~Check for SG type and ff7~~~~*/
     if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
       ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
@@ -1482,301 +1718,9 @@ void MainWindow::guirefresh(bool newgame)
         {//if empty region string and a virtual memcard format and dir frame says empty.
             ff7->clearSlot(s); //file_modified(false);//checking only
         }
-        //Clear all check boxes and index's
-        ui->cb_replay->setCurrentIndex(0);
-        ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->cb_ruby_dead->setChecked(Qt::Unchecked);
-        ui->cb_emerald_dead->setChecked(Qt::Unchecked);
-        ui->cb_visible_bronco->setChecked(Qt::Unchecked);
-        ui->cb_visible_buggy->setChecked(Qt::Unchecked);
-        ui->cb_visible_highwind->setChecked(Qt::Unchecked);
-        ui->cb_visible_wild_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
-        if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
-        if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
-        //item_preview->setItem(-1);//reset.
-        /*~~~~Set Region info and icon~~~~*/
-
-        ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
-        ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
-        {
-            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
-        }
-        /*~~~~~Load Game Options~~~~~*/
-        optionsWidget->setFieldHelp(ff7->fieldHelp(s));
-        optionsWidget->setBattleHelp(ff7->battleHelp(s));
-        optionsWidget->setBattleTargets(ff7->battleTargets(s));
-        optionsWidget->setSoundMode(ff7->soundMode(s));
-
-        optionsWidget->setControllerMode(ff7->controlMode(s));
-        optionsWidget->setCursor(ff7->cursorMode(s));
-        optionsWidget->setCamera(ff7->cameraMode(s));
-        optionsWidget->setAtb(ff7->atbMode(s));
-        optionsWidget->setMagicOrder(ff7->magicOrder(s));
-
-        optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
-        optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
-        optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
-
-
-        //CONTROLLER MAPPING
-        optionsWidget->setBtnCamera(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
-        optionsWidget->setBtnTarget(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
-        optionsWidget->setBtnPgUp(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
-        optionsWidget->setBtnPgDn(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
-        optionsWidget->setBtnMenu(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
-        optionsWidget->setBtnOk(ff7->controllerMapping(s,FF7Save::ACTION_OK));
-        optionsWidget->setBtnCancel(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
-        optionsWidget->setBtnSwitch(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
-        optionsWidget->setBtnHelp(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
-        optionsWidget->setBtn9(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
-        optionsWidget->setBtn10(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
-        optionsWidget->setBtnPause(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
-        optionsWidget->setBtnUp(ff7->controllerMapping(s,FF7Save::ACTION_UP));
-        optionsWidget->setBtnDown(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
-        optionsWidget->setBtnLeft(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
-        optionsWidget->setBtnRight(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
-        //hide buttons config if not debug or non pc save
-        /*
-
-        if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){optionsWidget->hideControllMapping(false);}
-        else{optonsWidget->hideControllMapping(true);}
-        */
-        /*~~~~~End Options Loading~~~~~*/
-        ui->sb_coster_1->setValue(ff7->speedScore(s,1));
-        ui->sb_coster_2->setValue(ff7->speedScore(s,2));
-        ui->sb_coster_3->setValue(ff7->speedScore(s,3));
-        /*~~~~~~~Set up location Data~~~~~~~*/
-        ui->sb_coordx->setValue(ff7->locationX(s));
-        ui->sb_coordy->setValue(ff7->locationY(s));
-        ui->sb_coordz->setValue(ff7->locationZ(s));
-        ui->line_location->clear();
-        ui->line_location->setText(ff7->location(s));
-        ui->sb_map_id->setValue(ff7->mapId(s));
-        ui->sb_loc_id->setValue(ff7->locationId(s));
-
-
-        ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
-        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
-        switch(ui->combo_map_controls->currentIndex())
-        {
-        case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].l_world2& 0x3FFFF);
-                break;
-        case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].tc_world2& 0x3FFFF);
-                break;
-        case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].bh_world2& 0x3FFFF);
-                break;
-        case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].sub_world2& 0x3FFFF);
-                break;
-        case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].uw_world2& 0x3FFFF);
-                break;
-        case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].durw_world2& 0x3FFFF);
-                break;
-        case 6: /* Do Nothing. Don't know emerald weapon Coords
-                ui->slide_world_x->setValue(ff7->slot[s].ew_world & 0x7FFFF);
-                ui->slide_world_y->setValue(ff7->slot[s].ew_world2& 0x3FFFF);
-                */
-                break;
-        }
-        //WORLD TAB
-        ui->leader_x->setValue((ff7->slot[s].l_world) & 0x7FFFF);
-        ui->leader_id->setValue((ff7->slot[s].l_world >> 19)&0x1F);
-        ui->leader_angle->setValue((ff7->slot[s].l_world) >> 24);
-        ui->leader_y->setValue((ff7->slot[s].l_world2) & 0x3FFFF);
-        ui->leader_z->setValue((ff7->slot[s].l_world2) >> 18);
-
-        ui->durw_x->setValue((ff7->slot[s].durw_world) & 0x7FFFF);
-        ui->durw_id->setValue((ff7->slot[s].durw_world >> 19)&0x1F);
-        ui->durw_angle->setValue((ff7->slot[s].durw_world) >> 24);
-        ui->durw_y->setValue((ff7->slot[s].durw_world2) & 0x3FFFF);
-        ui->durw_z->setValue((ff7->slot[s].durw_world2) >> 18);
-
-        ui->uw_x->setValue((ff7->slot[s].uw_world) & 0x7FFFF);
-        ui->uw_id->setValue((ff7->slot[s].uw_world >> 19)&0x1F);
-        ui->uw_angle->setValue((ff7->slot[s].uw_world) >> 24);
-        ui->uw_y->setValue((ff7->slot[s].uw_world2) & 0x3FFFF);
-        ui->uw_z->setValue((ff7->slot[s].uw_world2) >> 18);
-
-        ui->tc_x->setValue((ff7->slot[s].tc_world) & 0x7FFFF);
-        ui->tc_id->setValue((ff7->slot[s].tc_world >> 19)&0x1F);
-        ui->tc_angle->setValue((ff7->slot[s].tc_world) >> 24);
-        ui->tc_y->setValue((ff7->slot[s].tc_world2) & 0x3FFFF);
-        ui->tc_z->setValue((ff7->slot[s].tc_world2) >> 18);
-
-        ui->bh_x->setValue((ff7->slot[s].bh_world) & 0x7FFFF);
-        ui->bh_id->setValue((ff7->slot[s].bh_world >> 19)&0x1F);
-
-        switch(ui->bh_id->value())
-        {
-            case 0:ui->combo_highwind_buggy->setCurrentIndex(0);break;//empty
-            case 6:ui->combo_highwind_buggy->setCurrentIndex(1);break;//buggy
-            case 3:ui->combo_highwind_buggy->setCurrentIndex(2);break;//highwind
-            default:QMessageBox::information(this,tr("Black Chocobo"),tr("Unknown Id in Buggy/Highwind Location"));break;
-        }
-        ui->bh_angle->setValue((ff7->slot[s].bh_world) >> 24);
-        ui->bh_y->setValue((ff7->slot[s].bh_world2) & 0x3FFFF);
-        ui->bh_z->setValue((ff7->slot[s].bh_world2) >> 18);
-
-        ui->sub_x->setValue((ff7->slot[s].sub_world) & 0x7FFFF);
-        ui->sub_id->setValue((ff7->slot[s].sub_world >> 19)&0x1F);
-        ui->sub_angle->setValue((ff7->slot[s].sub_world) >> 24);
-        ui->sub_y->setValue((ff7->slot[s].sub_world2) & 0x3FFFF);
-        ui->sub_z->setValue((ff7->slot[s].sub_world2) >> 18);
-
-
-        if((1 << 0) & ff7->slot[s].world_map_vehicles){ui->cb_visible_buggy->setChecked(Qt::Checked);}
-        if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
-        if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
-
-        if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_wild_chocobo->setChecked(Qt::Checked);}
-        if((1 << 2) & ff7->slot[s].world_map_chocobos){ui->cb_visible_yellow_chocobo->setChecked(Qt::Checked);}
-        if((1 << 3) & ff7->slot[s].world_map_chocobos){ui->cb_visible_green_chocobo->setChecked(Qt::Checked);}
-        if((1 << 4) & ff7->slot[s].world_map_chocobos){ui->cb_visible_blue_chocobo->setChecked(Qt::Checked);}
-        if((1 << 5) & ff7->slot[s].world_map_chocobos){ui->cb_visible_black_chocobo->setChecked(Qt::Checked);}
-        if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
-
-
-        for (int i=0;i<7;i++)//flyers
-        {
-            if (ff7->turtleParadiseFlyerSeen(s,i)){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
-            else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
-        }
-
-        for (int i=0;i<9;i++)//Allowed in Phs
-        {
-            if(ff7->phsAllowed(s,i)){phsList->setChecked(i,1,false);}
-            else{phsList->setChecked(i,1,true);}
-        }
-        for (int i=0;i<9;i++)//Visible
-        {
-            if(ff7->phsVisible(s,i)){phsList->setChecked(i,2,true);}
-            else{phsList->setChecked(i,2,false);}
-        }
-        for (int i=0;i<10;i++)//visible_menu
-        {
-            if(ff7->menuVisible(s,i)){menuList->setChecked(i,1,true);}
-            else{menuList->setChecked(i,1,false);}
-        }
-        for (int i=0;i<10;i++)//menu_locked
-        {
-            if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
-            else{menuList->setChecked(i,2,false);}
-        }
-        for (int i=0;i<51;i++)// key items
-        {
-            if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
-            else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
-        }
-        /*~~~~~party combo boxes (checking for empty slots)~~~*/
-        if (ff7->party(s,0) >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
-        else{ui->combo_party1->setCurrentIndex(ff7->party(s,0));}
-        if (ff7->party(s,1) >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
-        else{ui->combo_party2->setCurrentIndex(ff7->party(s,1));}
-        if (ff7->party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
-        else{ui->combo_party3->setCurrentIndex(ff7->party(s,2));}
-
-        ui->sb_gil->setValue(ff7->gil(s));
-        ui->sb_gp->setValue(ff7->gp(s));
-        ui->sb_runs->setValue(ff7->runs(s));
-        ui->sb_battles->setValue(ff7->battles(s));
-        ui->sb_steps->setValue(ff7->slot[s].steps);
-        ui->sb_love_barret->setValue(ff7->love(s,false,FF7Save::LOVE_BARRET));
-        ui->sb_love_tifa->setValue(ff7->love(s,false,FF7Save::LOVE_TIFA));
-        ui->sb_love_aeris->setValue(ff7->love(s,false,FF7Save::LOVE_AERIS));
-        ui->sb_love_yuffie->setValue(ff7->love(s,false,FF7Save::LOVE_YUFFIE));
-        ui->sb_time_hour->setValue(ff7->time(s) / 3600);
-        ui->sb_time_min->setValue(ff7->time(s)/60%60);
-        ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-
-        optionsWidget->setDialogColors(ff7->dialogColorUL(s),ff7->dialogColorUR(s),ff7->dialogColorLL(s),ff7->dialogColorLR(s));
-
-
-        if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_QUADMAGIC)){ui->cb_materiacave_3->setChecked(Qt::Checked);}        else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_KOTR)){ui->cb_materiacave_4->setChecked(Qt::Checked);}        else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
-        if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
-
-        /*~~~~~Stolen Materia~~~~~~~*/
-        QTableWidgetItem *newItem;
-        ui->tbl_materia_2->reset();
-        ui->tbl_materia_2->clearContents();
-        ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
-        ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
-        ui->tbl_materia_2->setRowCount(48);
-        for(int mat=0;mat<48;mat++) //materias stolen by yuffie
-        {
-            QString ap;
-            quint8 current_id = ff7->stolenMateriaId(s,mat);
-            if (current_id !=FF7Materia::EmptyId)
-            {
-                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)),Materias.name(current_id),0);
-                ui->tbl_materia_2->setItem(mat,0,newItem);
-                qint32 current_ap = ff7->stolenMateriaAp(s,mat);
-                if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
-                else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
-            }
-            else
-            {
-                newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
-                ui->tbl_materia_2->setItem(mat,0,newItem);
-            }
-        }
-        //SnowBoard Mini Game Data.
-        ui->sbSnowBegMin->setValue((ff7->snowboardTime(s,0)/1000)/60%60);
-        ui->sbSnowBegSec->setValue((ff7->snowboardTime(s,0)/1000)-(ui->sbSnowBegMin->value()*60));
-        ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s,0)%1000);
-        ui->sbSnowBegScore->setValue(ff7->snowboardScore(s,0));
-
-        ui->sbSnowExpMin->setValue((ff7->snowboardTime(s,1)/1000)/60%60);
-        ui->sbSnowExpSec->setValue((ff7->snowboardTime(s,1)/1000)-(ui->sbSnowExpMin->value()*60));
-        ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s,1)%1000);
-        ui->sbSnowExpScore->setValue(ff7->snowboardScore(s,1));
-
-        ui->sbSnowCrazyMin->setValue((ff7->snowboardTime(s,2)/1000)/60%60);
-        ui->sbSnowCrazySec->setValue((ff7->snowboardTime(s,2)/1000)-(ui->sbSnowCrazyMin->value()*60));
-        ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2)%1000);
-        ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
-
-        ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
-        ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
-
+        on_tabWidget_currentChanged(ui->tabWidget->currentIndex());
         load=false;
-        // all functions should set load on their own.
-        /*~~~~~Call External Functions~~~~~~~*/
-        itemlist->setItems(ff7->items(s));
         setmenu(newgame);
-        itemupdate();
-        chocobo_refresh();
-        materiaupdate();
-        progress_update();
-        set_char_buttons();
-        hexEditorRefresh();
-        if(ui->action_show_debug->isChecked()){testdata_refresh();}
-
-        switch(curchar)
-        {
-            case 0: ui->btn_cloud->click();break;
-            case 1: ui->btn_barret->click();break;
-            case 2: ui->btn_tifa->click();break;
-            case 3: ui->btn_aeris->click();break;
-            case 4: ui->btn_red->click();break;
-            case 5: ui->btn_yuffie->click();break;
-            case 6: ui->btn_cait->click();break;
-            case 7: ui->btn_vincent->click();break;
-            case 8: ui->btn_cid->click();break;
-        }
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
@@ -1915,67 +1859,7 @@ void MainWindow::chocobo_refresh()
     ui->combo_pen3->setCurrentIndex(ff7->chocoboPen(s,2));
     ui->combo_pen4->setCurrentIndex(ff7->chocoboPen(s,3));
     load=false;
-}/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
-
-/*~~~~~~~~~Test Data~~~~~~~~~~~*/
-void MainWindow::testdata_refresh()
-{
-    load=true;
-
-   //TEST TAB
-
-    ui->cb_tut_sub->setChecked(Qt::Unchecked);
-    ui->sb_timer_time_hour->setValue(ff7->slot[s].timer[0]);
-    ui->sb_timer_time_min->setValue(ff7->slot[s].timer[1]);
-    ui->sb_timer_time_sec->setValue(ff7->slot[s].timer[2]);
-
-    ui->sb_b_love_aeris->setValue(ff7->love(s,true,FF7Save::LOVE_AERIS));
-    ui->sb_b_love_tifa->setValue(ff7->love(s,true,FF7Save::LOVE_TIFA));
-    ui->sb_b_love_yuffie->setValue(ff7->love(s,true,FF7Save::LOVE_YUFFIE));
-    ui->sb_b_love_barret->setValue(ff7->love(s,true,FF7Save::LOVE_BARRET));
-    ui->sb_u_weapon_hp->setValue(ff7->slot[s].u_weapon_hp[0] |(ff7->slot[s].u_weapon_hp[1] << 8) | (ff7->slot[s].u_weapon_hp[2] << 16));
-
-    if((ff7->slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
-
-    ui->lcdNumber_6->display(ff7->slot[s].tut_sub);
-
-    if(ff7->slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
-    else if(ff7->slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
-    else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
-    ui->lcdNumber_7->display(ff7->slot[s].tut_save);
-
-    ui->cb_reg_vinny->setChecked(Qt::Unchecked);
-    if(ff7->slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
-    ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
-
-    ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
-    if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
-    ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
-
-    if(ff7->unknown(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
-
-
-    if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
-
-    //Snowboard Times.
-    load=false;
-
-    unknown_refresh(ui->combo_z_var->currentIndex());
+/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
 void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->character(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
@@ -3014,7 +2898,7 @@ void MainWindow::on_cb_reg_vinny_toggled(bool checked)
 {if(!load){file_modified(true);
     if (checked){ff7->slot[s].reg_vinny =0xFF;}
     else{ff7->slot[s].reg_vinny =0xFB;}
-    testdata_refresh();
+    ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
 }}
 
 void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,0,checked);}}
@@ -3053,7 +2937,7 @@ void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
 {if(!load){file_modified(true);
         if (checked){ff7->slot[s].reg_yuffie =0x6F;}
         else{ff7->slot[s].reg_yuffie =0x6E;}
-        testdata_refresh();
+        ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
 }}
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked)
@@ -3076,7 +2960,7 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     if (value == 0){ff7->slot[s].tut_save =0x00;}
     else if(value ==1){ff7->slot[s].tut_save =0x32;}
     else if(value ==2){ff7->slot[s].tut_save=0x3A;}
-    testdata_refresh();
+   ui->lcdNumber_7->display(ff7->slot[s].tut_save);
 }}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
@@ -3091,62 +2975,62 @@ void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<2);}
     else{ff7->slot[s].tut_sub &= ~(1<<2);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<0);}
     else{ff7->slot[s].tut_sub &= ~(1<<0);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<1);}
     else{ff7->slot[s].tut_sub &= ~(1<<1);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<2);}
     else{ff7->slot[s].tut_sub &= ~(1<<2);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<3);}
     else{ff7->slot[s].tut_sub &= ~(1<<3);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<4);}
     else{ff7->slot[s].tut_sub &= ~(1<<4);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<5);}
     else{ff7->slot[s].tut_sub &= ~(1<<5);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<6);}
     else{ff7->slot[s].tut_sub &= ~(1<<6);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<7);}
     else{ff7->slot[s].tut_sub &= ~(1<<7);}
-    testdata_refresh();
+    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_ruby_dead_toggled(bool checked)
@@ -3914,4 +3798,167 @@ void MainWindow::menuList_box_locked_toggled(int row, bool checked){if(!load){fi
 void MainWindow::menuList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuVisible(s,row,checked);}}
 
 
-void MainWindow::on_tabWidget_currentChanged(){guirefresh(0);}
+void MainWindow::on_locationToolBox_currentChanged(int index)
+{//LocationTabs
+    load=true;
+    switch(index)
+    {
+        case 0:
+            ui->sb_coordx->setValue(ff7->locationX(s));
+            ui->sb_coordy->setValue(ff7->locationY(s));
+            ui->sb_coordz->setValue(ff7->locationZ(s));
+            ui->line_location->clear();
+            ui->line_location->setText(ff7->location(s));
+            ui->sb_map_id->setValue(ff7->mapId(s));
+            ui->sb_loc_id->setValue(ff7->locationId(s));
+            ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
+            ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
+        break;
+
+       case 1:
+            ui->cb_visible_bronco->setChecked(Qt::Unchecked);
+            ui->cb_visible_buggy->setChecked(Qt::Unchecked);
+            ui->cb_visible_highwind->setChecked(Qt::Unchecked);
+            ui->cb_visible_wild_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+
+            switch(ui->combo_map_controls->currentIndex())
+            {
+                case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].l_world2& 0x3FFFF);
+                break;
+                case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].tc_world2& 0x3FFFF);
+                break;
+                case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].bh_world2& 0x3FFFF);
+                break;
+                case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].sub_world2& 0x3FFFF);
+                break;
+                case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].uw_world2& 0x3FFFF);
+                break;
+                case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world & 0x7FFFF);
+                    ui->slide_world_y->setValue(ff7->slot[s].durw_world2& 0x3FFFF);
+                break;
+            }
+            //WORLD TAB
+            ui->leader_x->setValue((ff7->slot[s].l_world) & 0x7FFFF);
+            ui->leader_id->setValue((ff7->slot[s].l_world >> 19)&0x1F);
+            ui->leader_angle->setValue((ff7->slot[s].l_world) >> 24);
+            ui->leader_y->setValue((ff7->slot[s].l_world2) & 0x3FFFF);
+            ui->leader_z->setValue((ff7->slot[s].l_world2) >> 18);
+
+            ui->durw_x->setValue((ff7->slot[s].durw_world) & 0x7FFFF);
+            ui->durw_id->setValue((ff7->slot[s].durw_world >> 19)&0x1F);
+            ui->durw_angle->setValue((ff7->slot[s].durw_world) >> 24);
+            ui->durw_y->setValue((ff7->slot[s].durw_world2) & 0x3FFFF);
+            ui->durw_z->setValue((ff7->slot[s].durw_world2) >> 18);
+
+            ui->uw_x->setValue((ff7->slot[s].uw_world) & 0x7FFFF);
+            ui->uw_id->setValue((ff7->slot[s].uw_world >> 19)&0x1F);
+            ui->uw_angle->setValue((ff7->slot[s].uw_world) >> 24);
+            ui->uw_y->setValue((ff7->slot[s].uw_world2) & 0x3FFFF);
+            ui->uw_z->setValue((ff7->slot[s].uw_world2) >> 18);
+
+            ui->tc_x->setValue((ff7->slot[s].tc_world) & 0x7FFFF);
+            ui->tc_id->setValue((ff7->slot[s].tc_world >> 19)&0x1F);
+            ui->tc_angle->setValue((ff7->slot[s].tc_world) >> 24);
+            ui->tc_y->setValue((ff7->slot[s].tc_world2) & 0x3FFFF);
+            ui->tc_z->setValue((ff7->slot[s].tc_world2) >> 18);
+
+            ui->bh_x->setValue((ff7->slot[s].bh_world) & 0x7FFFF);
+            ui->bh_id->setValue((ff7->slot[s].bh_world >> 19)&0x1F);
+
+            switch(ui->bh_id->value())
+            {
+                case 0:ui->combo_highwind_buggy->setCurrentIndex(0);break;//empty
+                case 6:ui->combo_highwind_buggy->setCurrentIndex(1);break;//buggy
+                case 3:ui->combo_highwind_buggy->setCurrentIndex(2);break;//highwind
+                default:QMessageBox::information(this,tr("Black Chocobo"),tr("Unknown Id in Buggy/Highwind Location"));break;
+            }
+            ui->bh_angle->setValue((ff7->slot[s].bh_world) >> 24);
+            ui->bh_y->setValue((ff7->slot[s].bh_world2) & 0x3FFFF);
+            ui->bh_z->setValue((ff7->slot[s].bh_world2) >> 18);
+
+            ui->sub_x->setValue((ff7->slot[s].sub_world) & 0x7FFFF);
+            ui->sub_id->setValue((ff7->slot[s].sub_world >> 19)&0x1F);
+            ui->sub_angle->setValue((ff7->slot[s].sub_world) >> 24);
+            ui->sub_y->setValue((ff7->slot[s].sub_world2) & 0x3FFFF);
+            ui->sub_z->setValue((ff7->slot[s].sub_world2) >> 18);
+
+            if((1 << 0) & ff7->slot[s].world_map_vehicles){ui->cb_visible_buggy->setChecked(Qt::Checked);}
+            if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
+            if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
+
+            if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_wild_chocobo->setChecked(Qt::Checked);}
+            if((1 << 2) & ff7->slot[s].world_map_chocobos){ui->cb_visible_yellow_chocobo->setChecked(Qt::Checked);}
+            if((1 << 3) & ff7->slot[s].world_map_chocobos){ui->cb_visible_green_chocobo->setChecked(Qt::Checked);}
+            if((1 << 4) & ff7->slot[s].world_map_chocobos){ui->cb_visible_blue_chocobo->setChecked(Qt::Checked);}
+            if((1 << 5) & ff7->slot[s].world_map_chocobos){ui->cb_visible_black_chocobo->setChecked(Qt::Checked);}
+            if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
+        break;
+    }
+    load=false;
+}
+
+void MainWindow::on_testDataTabWidget_currentChanged(int index)
+{
+    switch(index)
+    {
+        case 0:
+            load=true;
+            ui->cb_tut_sub->setChecked(Qt::Unchecked);
+            ui->sb_timer_time_hour->setValue(ff7->slot[s].timer[0]);
+            ui->sb_timer_time_min->setValue(ff7->slot[s].timer[1]);
+            ui->sb_timer_time_sec->setValue(ff7->slot[s].timer[2]);
+
+            ui->sb_b_love_aeris->setValue(ff7->love(s,true,FF7Save::LOVE_AERIS));
+            ui->sb_b_love_tifa->setValue(ff7->love(s,true,FF7Save::LOVE_TIFA));
+            ui->sb_b_love_yuffie->setValue(ff7->love(s,true,FF7Save::LOVE_YUFFIE));
+            ui->sb_b_love_barret->setValue(ff7->love(s,true,FF7Save::LOVE_BARRET));
+            ui->sb_u_weapon_hp->setValue(ff7->slot[s].u_weapon_hp[0] |(ff7->slot[s].u_weapon_hp[1] << 8) | (ff7->slot[s].u_weapon_hp[2] << 16));
+            if((ff7->slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
+            ui->lcdNumber_6->display(ff7->slot[s].tut_sub);
+            if(ff7->slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
+            else if(ff7->slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
+            else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
+            ui->lcdNumber_7->display(ff7->slot[s].tut_save);
+
+            ui->cb_reg_vinny->setChecked(Qt::Unchecked);
+            if(ff7->slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
+            ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
+
+            ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
+            if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
+            ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
+
+            if(ff7->unknown(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
+            if(ff7->unknown(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
+
+            if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
+            if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
+            ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+            load=false;
+        break;
+
+        case 1: unknown_refresh(ui->combo_z_var->currentIndex());break;
+    }
+}
