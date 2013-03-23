@@ -4107,10 +4107,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Stable 4</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4247,14 +4243,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Location Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4276,10 +4264,6 @@
     </message>
     <message>
         <source>z</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4384,26 +4368,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Materia Caves Empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quadra Magic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Test Data</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4465,10 +4429,6 @@
     </message>
     <message>
         <source>Countdown Timer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4893,10 +4853,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Meeting Aeris</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4906,10 +4862,6 @@
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5037,10 +4989,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Team Avalanche Had Meeting after Bombing Mission</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5400,15 +5348,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5489,10 +5429,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5633,6 +5569,89 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Export Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ5: Mime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ6: HP &lt;-&gt; MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ7: Quadra Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ8: KOTR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checked Stables Are Occupied Uncheck Stable to Empty 
+Stable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values , the km/h speeds are 
+calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location , x,y,z manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
+Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
+Quest Progression Value(s).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s 
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Team Avalanche Had Meeting after Bombing 
+Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
+5min1_2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> Set Replay Mission above To Set The Game Back To That 
+Mission.  This Will automaticly set your save location and disk # as well as 
+Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
+feature, i can not promise that you will be able to play from any replay untill 
+the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
+Is Under Heavy Development</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>         INFO ON CURRENTLY SELECTED REPLAY 
+MISSION</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
+Disabled in the Party Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
+When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
+Lobby&amp;quot; so you can spend 
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will 
+trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7354,34 +7373,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Main Window Background Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Color 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Color 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Color 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

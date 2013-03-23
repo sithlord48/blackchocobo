@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>766</width>
-    <height>635</height>
+    <height>624</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,7 +24,8 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}*/
+   <string notr="true">
+/*QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}*/
 QWidget:enabled{background-color:rgb(80,80,80);font:;color:rgb(255,255,255);}
 
 QWidget[visible=&quot;true&quot;]:disabled,QLabel[visible=&quot;true&quot;]:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
@@ -94,6 +95,18 @@ QFrame#frame_status{
 QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
 background-color:rgba(48, 47, 47,16);
 font:;color:rgb(74, 80, 73);
+}
+
+QTabBar::tab:disabled
+{
+background:rgba(0,0,0,0);font:;color:rgba(0,0,0,0);
+border: 1px solid;
+border-top-color:rgba(0,0,0,0);
+border-left-color:rgba(0,0,0,0);
+border-right-color:rgba(0,0,0,0);
+
+
+border-bottom-color: rgb(0, 0, 0);
 }
 
 QTableWidget:enabled,QListWidget:enabled{
@@ -184,6 +197,7 @@ QComboBox:enabled{
     background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31, 128));
 	border-radius: 5px; font:;color:rgb(255,255,255);
 }
+
 QComboBox::down-arrow{
 	image: url(:/icon/arrow_down);
 }
@@ -247,6 +261,10 @@ QPushButton:enabled{
 	border-top-color: rgba(172, 172, 172,192);
     background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31,128));
 	border-radius: 5px; font:;color:rgb(255,255,255);
+}
+QPushButton:disabled{
+/*    border:3px solid; */
+	border-radius: 5px; 
 }
 /*Scroll Bars */
 QScrollBar:horizontal{
@@ -349,7 +367,7 @@ background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, s
 
 
 QTabWidget::pane { border-top-color:rgba(0,0,0,0); }
-QTabBar::tab {
+QTabBar::tab:enabled{
     background: rgba(10,10,10,16);
     border: 2px solid;
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
@@ -404,7 +422,9 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
        <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
 }
 </string>
       </property>
@@ -428,16 +448,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <string>P&amp;arty</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_89">
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>3</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>3</number>
         </property>
         <item>
@@ -458,16 +469,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>0</number>
            </property>
            <item>
@@ -506,16 +508,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                  <property name="spacing">
                   <number>3</number>
                  </property>
-                 <property name="leftMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="bottomMargin">
+                 <property name="margin">
                   <number>3</number>
                  </property>
                  <item>
@@ -587,16 +580,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                  <property name="spacing">
                   <number>0</number>
                  </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
+                 <property name="margin">
                   <number>0</number>
                  </property>
                  <item>
@@ -608,16 +592,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
+                    <property name="margin">
                      <number>0</number>
                     </property>
                     <item>
@@ -722,16 +697,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
+                    <property name="margin">
                      <number>0</number>
                     </property>
                     <item>
@@ -833,16 +799,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
+              <property name="margin">
                <number>0</number>
               </property>
               <property name="spacing">
@@ -1161,16 +1118,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
             <property name="spacing">
              <number>0</number>
             </property>
-            <property name="leftMargin">
-             <number>0</number>
-            </property>
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="rightMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
+            <property name="margin">
              <number>0</number>
             </property>
             <item>
@@ -1356,16 +1304,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
               <property name="spacing">
                <number>3</number>
               </property>
-              <property name="leftMargin">
-               <number>3</number>
-              </property>
-              <property name="topMargin">
-               <number>3</number>
-              </property>
-              <property name="rightMargin">
-               <number>3</number>
-              </property>
-              <property name="bottomMargin">
+              <property name="margin">
                <number>3</number>
               </property>
               <item>
@@ -1406,16 +1345,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <enum>Qt::NoContextMenu</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_18">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>0</number>
            </property>
            <item>
@@ -1586,16 +1516,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
               <property name="spacing">
                <number>0</number>
               </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
+              <property name="margin">
                <number>0</number>
               </property>
               <item>
@@ -1607,14 +1528,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                  </sizepolicy>
                 </property>
                 <widget class="QWidget" name="scrollAreaWidgetContents_4">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>227</width>
-                   <height>700</height>
-                  </rect>
-                 </property>
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1867,19 +1780,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="cb_itemmask1_8">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>ZZ1:Mythril</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
                    <widget class="QCheckBox" name="cb_gaiin_1Javelin">
                     <property name="text">
                      <string>GAIIN_1:Javelin</string>
@@ -1998,6 +1898,47 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     </property>
                    </widget>
                   </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_itemmask1_8">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>ZZ1:Mythril</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_materiacave_1">
+                    <property name="text">
+                     <string>ZZ5: Mime</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_materiacave_2">
+                    <property name="text">
+                     <string>ZZ6: HP &lt;-&gt; MP</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_materiacave_3">
+                    <property name="text">
+                     <string>ZZ7: Quadra Magic</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_materiacave_4">
+                    <property name="text">
+                     <string>ZZ8: KOTR</string>
+                    </property>
+                   </widget>
+                  </item>
                  </layout>
                 </widget>
                </widget>
@@ -2017,16 +1958,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>0</number>
            </property>
            <item>
@@ -2620,16 +2552,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <string>&amp;Materia</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>3</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>3</number>
         </property>
         <item>
@@ -2656,16 +2579,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="leftMargin">
-            <number>2</number>
-           </property>
-           <property name="topMargin">
-            <number>2</number>
-           </property>
-           <property name="rightMargin">
-            <number>2</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>2</number>
            </property>
            <item>
@@ -2820,7 +2734,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <item>
             <widget class="QLabel" name="label_142">
              <property name="text">
-              <string>Checked Stables Are Occupied Uncheck Stable to Empty Stable</string>
+              <string>Checked Stables Are Occupied Uncheck Stable to Empty 
+Stable</string>
              </property>
             </widget>
            </item>
@@ -3007,16 +2922,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
               <string>Fenced Chocobos</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
-              <property name="leftMargin">
-               <number>3</number>
-              </property>
-              <property name="topMargin">
-               <number>3</number>
-              </property>
-              <property name="rightMargin">
-               <number>3</number>
-              </property>
-              <property name="bottomMargin">
+              <property name="margin">
                <number>3</number>
               </property>
               <item row="0" column="0">
@@ -3221,7 +3127,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <item>
             <widget class="QLabel" name="label_301">
              <property name="text">
-              <string>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </string>
+              <string>Speed Values Are The Raw Values , the km/h speeds are 
+calculated while playing </string>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -3238,23 +3145,16 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <string>&amp;Location</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_96">
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>3</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>3</number>
         </property>
         <item>
-         <widget class="QToolBox" name="toolBox_2">
+         <widget class="QToolBox" name="locationToolBox">
           <property name="styleSheet">
            <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128));
 }
 disbled{font:;color: rgb(74, 80, 73);}
 enabled{font:;color: rgb(255, 255, 255);}
@@ -3265,8 +3165,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>429</height>
+             <width>760</width>
+             <height>485</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3277,16 +3177,7 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Save Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_165">
-            <property name="leftMargin">
-             <number>3</number>
-            </property>
-            <property name="topMargin">
-             <number>3</number>
-            </property>
-            <property name="rightMargin">
-             <number>3</number>
-            </property>
-            <property name="bottomMargin">
+            <property name="margin">
              <number>3</number>
             </property>
             <item>
@@ -3395,7 +3286,8 @@ enabled{font:;color: rgb(255, 255, 255);}
               <item>
                <widget class="QLabel" name="label_166">
                 <property name="text">
-                 <string>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</string>
+                 <string>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location , x,y,z manually</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -3405,7 +3297,9 @@ enabled{font:;color: rgb(255, 255, 255);}
               <item>
                <widget class="QLabel" name="label_143">
                 <property name="text">
-                 <string>Have Fun With This Feature, But Don't Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</string>
+                 <string>Have Fun With This Feature, But Don't Be Reckless 
+Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
+Quest Progression Value(s).</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -3433,7 +3327,14 @@ enabled{font:;color: rgb(255, 255, 255);}
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="line_location"/>
+                   <widget class="QLineEdit" name="line_location">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </item>
@@ -3668,7 +3569,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <x>0</x>
              <y>0</y>
              <width>747</width>
-             <height>414</height>
+             <height>428</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3679,16 +3580,7 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Worldmap Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_127">
-            <property name="leftMargin">
-             <number>3</number>
-            </property>
-            <property name="topMargin">
-             <number>3</number>
-            </property>
-            <property name="rightMargin">
-             <number>3</number>
-            </property>
-            <property name="bottomMargin">
+            <property name="margin">
              <number>3</number>
             </property>
             <item>
@@ -3727,16 +3619,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <property name="spacing">
                  <number>0</number>
                 </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
+                <property name="margin">
                  <number>0</number>
                 </property>
                 <item>
@@ -3760,16 +3643,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>0</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>0</number>
                    </property>
                    <item>
@@ -3795,16 +3669,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
+                        <property name="margin">
                          <number>0</number>
                         </property>
                         <item>
@@ -3862,16 +3727,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
+                        <property name="margin">
                          <number>0</number>
                         </property>
                         <item>
@@ -3938,16 +3794,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4141,16 +3988,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4348,16 +4186,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4572,16 +4401,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4773,16 +4593,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -4974,16 +4785,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>2</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>2</number>
                    </property>
                    <item>
@@ -5372,7 +5174,8 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <item>
                  <widget class="QLabel" name="label_233">
                   <property name="text">
-                   <string>Right click on map to easily set an item's location.</string>
+                   <string>Right click on map to easily set an item's 
+location.</string>
                   </property>
                   <property name="indent">
                    <number>5</number>
@@ -5411,16 +5214,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <string>Global Progress</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_64">
-             <property name="leftMargin">
-              <number>2</number>
-             </property>
-             <property name="topMargin">
-              <number>2</number>
-             </property>
-             <property name="rightMargin">
-              <number>2</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>2</number>
              </property>
              <item>
@@ -5546,21 +5340,12 @@ enabled{font:;color: rgb(255, 255, 255);}
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>336</width>
-                  <height>1677</height>
+                  <width>350</width>
+                  <height>1556</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
-                 <property name="leftMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="bottomMargin">
+                 <property name="margin">
                   <number>3</number>
                  </property>
                  <item>
@@ -5734,7 +5519,8 @@ enabled{font:;color: rgb(255, 255, 255);}
                     <item>
                      <widget class="QCheckBox" name="cb_s7ts_1">
                       <property name="text">
-                       <string>Team Avalanche Had Meeting after Bombing Mission</string>
+                       <string>Team Avalanche Had Meeting after Bombing 
+Mission</string>
                       </property>
                      </widget>
                     </item>
@@ -6137,7 +5923,8 @@ enabled{font:;color: rgb(255, 255, 255);}
                     <item>
                      <widget class="QCheckBox" name="cb_s5_7">
                       <property name="text">
-                       <string>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</string>
+                       <string>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
+5min1_2)</string>
                       </property>
                      </widget>
                     </item>
@@ -6174,7 +5961,12 @@ enabled{font:;color: rgb(255, 255, 255);}
           <item>
            <widget class="QLabel" name="label_172">
             <property name="text">
-             <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</string>
+             <string> Set Replay Mission above To Set The Game Back To That 
+Mission.  This Will automaticly set your save location and disk # as well as 
+Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
+feature, i can not promise that you will be able to play from any replay untill 
+the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
+Is Under Heavy Development</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -6233,7 +6025,8 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="text">
-                <string>         INFO ON CURRENTLY SELECTED REPLAY MISSION</string>
+                <string>         INFO ON CURRENTLY SELECTED REPLAY 
+MISSION</string>
                </property>
                <property name="wordWrap">
                 <bool>true</bool>
@@ -6268,16 +6061,7 @@ enabled{font:;color: rgb(255, 255, 255);}
         <property name="spacing">
          <number>3</number>
         </property>
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>3</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>3</number>
         </property>
         <item>
@@ -6306,16 +6090,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>3</number>
              </property>
              <item>
@@ -6766,58 +6541,6 @@ enabled{font:;color: rgb(255, 255, 255);}
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_34">
-            <property name="title">
-             <string>Materia Caves Empty</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_36">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QCheckBox" name="cb_materiacave_1">
-               <property name="text">
-                <string>Mime</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_materiacave_2">
-               <property name="text">
-                <string>HP &lt;-&gt; MP</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_materiacave_3">
-               <property name="text">
-                <string>Quadra Magic</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_materiacave_4">
-               <property name="text">
-                <string>KOTR</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -6923,7 +6646,8 @@ enabled{font:;color: rgb(255, 255, 255);}
           <item>
            <widget class="QLabel" name="label_25">
             <property name="text">
-             <string>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</string>
+             <string>Cait Sith And Vincent Should Not Be Enabled If They Are 
+Disabled in the Party Tab.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -6951,16 +6675,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <set>Qt::AlignCenter</set>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_90">
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>3</number>
              </property>
              <item>
@@ -7072,7 +6787,8 @@ enabled{font:;color: rgb(255, 255, 255);}
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">font: 9pt &quot;Ubuntu&quot;; color: rgb(255, 255, 255)</string>
+                   <string notr="true">font: 9pt &quot;Ubuntu&quot;; color: 
+rgb(255, 255, 255)</string>
                   </property>
                   <property name="currentIndex">
                    <number>-1</number>
@@ -7192,16 +6908,7 @@ enabled{font:;color: rgb(255, 255, 255);}
           <property name="spacing">
            <number>0</number>
           </property>
-          <property name="leftMargin">
-           <number>3</number>
-          </property>
-          <property name="topMargin">
-           <number>3</number>
-          </property>
-          <property name="rightMargin">
-           <number>3</number>
-          </property>
-          <property name="bottomMargin">
+          <property name="margin">
            <number>3</number>
           </property>
           <item>
@@ -7231,16 +6938,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>3</number>
              </property>
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>3</number>
              </property>
              <item>
@@ -7654,16 +7352,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>3</number>
              </property>
-             <property name="leftMargin">
-              <number>3</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>3</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>3</number>
              </property>
              <item>
@@ -7894,16 +7583,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>0</number>
              </property>
              <item>
@@ -7953,22 +7633,16 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>0</number>
              </property>
              <item>
               <widget class="QLabel" name="label_16">
                <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
+When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena 
+Lobby&amp;quot; so you can spend 
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
                 <string>Battle Points</string>
@@ -7978,7 +7652,10 @@ enabled{font:;color: rgb(255, 255, 255);}
              <item>
               <widget class="QSpinBox" name="sb_BattlePoints">
                <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
+When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena 
+Lobby&amp;quot; so you can spend 
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="wrapping">
                 <bool>true</bool>
@@ -8009,16 +7686,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <property name="spacing">
               <number>0</number>
              </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
+             <property name="margin">
               <number>0</number>
              </property>
              <item>
@@ -8169,16 +7837,7 @@ enabled{font:;color: rgb(255, 255, 255);}
            <property name="spacing">
             <number>0</number>
            </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
+           <property name="margin">
             <number>0</number>
            </property>
            <item>
@@ -8210,20 +7869,11 @@ enabled{font:;color: rgb(255, 255, 255);}
         <string>Test Data</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_124">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
+        <property name="margin">
          <number>0</number>
         </property>
         <item>
-         <widget class="QTabWidget" name="tabWidget_3">
+         <widget class="QTabWidget" name="testDataTabWidget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -8232,13 +7882,17 @@ enabled{font:;color: rgb(255, 255, 255);}
           </property>
           <property name="styleSheet">
            <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
 }
 ::tab {
     background: rgba(10,10,10,16);
     border: 2px solid;
-	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-right-color: rgb(172, 172, 172);
 	border-left-color: rgb(172,172,172);
     border-radius: 4px;
@@ -8247,9 +7901,13 @@ enabled{font:;color: rgb(255, 255, 255);}
  }
 ::tab:selected {
 	border:3px solid;
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-left-color: rgb(172,172,172);
     border-right-color: rgba(10,10,10,16);
  }
@@ -8284,16 +7942,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                  <string>Battle Love Points</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_27">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
+                 <property name="margin">
                   <number>0</number>
                  </property>
                  <item>
@@ -8447,7 +8096,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <item>
              <widget class="QLabel" name="label_187">
               <property name="text">
-               <string>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</string>
+               <string>When Box is Partally Checked (&quot;-&quot;)it will 
+trigger showing that tutorial</string>
               </property>
               <property name="wordWrap">
                <bool>true</bool>
@@ -8563,16 +8213,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <property name="spacing">
                     <number>0</number>
                    </property>
-                   <property name="leftMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>0</number>
                    </property>
                    <item>
@@ -8840,16 +8481,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <string>0xC1E tut_sub</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_71">
-                   <property name="leftMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>3</number>
                    </property>
                    <item>
@@ -9040,16 +8672,7 @@ enabled{font:;color: rgb(255, 255, 255);}
             <string>Unknown Vars</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_169">
-            <property name="leftMargin">
-             <number>3</number>
-            </property>
-            <property name="topMargin">
-             <number>3</number>
-            </property>
-            <property name="rightMargin">
-             <number>3</number>
-            </property>
-            <property name="bottomMargin">
+            <property name="margin">
              <number>3</number>
             </property>
             <item>
@@ -9079,16 +8702,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_92">
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
+               <property name="margin">
                 <number>0</number>
                </property>
                <item>
@@ -9547,16 +9161,7 @@ Var And Scrolling Synced To Left Table</string>
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_32">
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
+               <property name="margin">
                 <number>0</number>
                </property>
                <item>
@@ -9765,7 +9370,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>766</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -9861,7 +9466,7 @@ Var And Scrolling Synced To Left Table</string>
      <addaction name="action_Lang_jp"/>
     </widget>
     <addaction name="action_auto_char_growth"/>
-    <addaction name="action_show_debug"/>
+    <addaction name="action_AdvancedMode"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -10376,7 +9981,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="action_show_debug">
+  <action name="action_AdvancedMode">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -10777,10 +10382,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_time_hour</tabstop>
   <tabstop>sb_time_min</tabstop>
   <tabstop>sb_time_sec</tabstop>
-  <tabstop>cb_materiacave_1</tabstop>
-  <tabstop>cb_materiacave_2</tabstop>
-  <tabstop>cb_materiacave_3</tabstop>
-  <tabstop>cb_materiacave_4</tabstop>
   <tabstop>sb_b_love_aeris</tabstop>
   <tabstop>sb_b_love_tifa</tabstop>
   <tabstop>sb_b_love_yuffie</tabstop>

@@ -112,6 +112,7 @@ public slots:
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
     int save_changes(void); //return 1 to accept and 0 to ingore the event
+    void setControllerMappingVisible(bool);
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_triggered();
     void on_actionReload_triggered();
@@ -155,7 +156,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionPaste_Slot_triggered();
     void on_actionShow_Options_triggered();
     void on_action_auto_char_growth_triggered(bool checked);
-    void on_action_show_debug_toggled(bool checked);
+    void on_action_AdvancedMode_toggled(bool checked);
     /*Language and Region Data*/
     void on_action_Lang_en_triggered();
     void on_action_Lang_es_triggered();
@@ -176,10 +177,14 @@ private slots://try to keep these in the same order as the .cpp file
     void guirefresh(bool newgame);
     void chocobo_refresh(void);
     void progress_update(void);
-    void testdata_refresh(void);
     void unknown_refresh(int);
     void set_ntsc_time(void);
     void set_pal_time(void);
+    void CheckGame(void);
+    void othersUpdate();
+    void on_tabWidget_currentChanged(int index);
+    void on_locationToolBox_currentChanged(int index);
+    void on_testDataTabWidget_currentChanged(int index);
     //QString avatar_style(int);
 
     /*CharButtons*/
@@ -597,14 +602,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_uw_id_valueChanged(int);
     void on_uw_angle_valueChanged(int);
 
-    /* Do Nothing. Don't know emerald weapon Coords
-    void on_ew_x_valueChanged(int);
-    void on_ew_y_valueChanged(int);
-    void on_ew_z_valueChanged(int);
-    void on_ew_id_valueChanged(int);
-    void on_ew_angle_valueChanged(int);
-    */
-
     void on_combo_map_controls_currentIndexChanged(int index);
     void on_slide_world_x_valueChanged(int value);
     void on_slide_world_y_valueChanged(int value);
@@ -632,9 +629,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_visible_blue_chocobo_toggled(bool checked);
     void on_cb_visible_black_chocobo_toggled(bool checked);
     void on_cb_visible_gold_chocobo_toggled(bool checked);
-
-
-
     void set_char_buttons();
     void on_btn_maxChar_clicked();
     void on_sbSnowBegScore_valueChanged(int value);
@@ -676,7 +670,5 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_trnad_4MpTurbo_toggled(bool checked);
     void on_cb_trnad_3KaiserKnuckle_toggled(bool checked);
     void on_cb_trnad_2NeoBahmut_toggled(bool checked);
-    void on_tabWidget_currentChanged();
-    void CheckGame(void);
 };
 #endif // MAINWINDOW_H
