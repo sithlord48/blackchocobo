@@ -99,7 +99,7 @@ void SlotSelect::paste_slot(int s)
 
 void SlotSelect::ReIntSlot(int s)
 {
-    preview[s]->~QWidget();
+    preview[s]->~SlotPreview();
     preview[s]= new SlotPreview(s);
     preview_layout->insertWidget(s,preview[s]);
     setSlotPreview(s);
