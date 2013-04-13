@@ -68,10 +68,11 @@ struct FF7CHOCOBO {		            // [0x0010] Chocobo - 99% - 1 Personality unkno
     quint8 type;		            // [0x000F] Type (Yellow,Green,Blue,Black,Gold)
 }__attribute__((__packed__));
 
-struct FF7XYZ {                     // size of 6. used for coords
-    quint16 x;
-    quint16 y;
-    quint16 z;
+struct FF7XYT {                     // size of 6. used for coords
+    qint16 x;
+    qint16 y;
+    quint16 t;
+    quint8 d;
 }__attribute__((__packed__));
 
 struct FF7SLOT {		            // Save slot - Length 0x10F4
@@ -93,8 +94,8 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint16 mapid;		            // [0x0B94] Current map
     quint16 locationid;		        // [0x0B96] Current location
     quint8 z_5[2];                  // [0x0B98] UNKNOWN DATA
-    FF7XYZ coord;		            // [0x0B9A] Current coordinates (world map)
-    quint8 z_6[4];                  // [0x0BA0] UNKNOWN DATA
+    FF7XYT coord;		            // [0x0B9A] Current coordinates (world map)
+    quint8 z_6[3];                  // [0x0BA0] UNKNOWN DATA
     quint16 mprogress;              // [0x0BA4] Main Progress var
     quint8 z_7[1];                  // [0x0BA6] UNKNOWN DATA
     LOVE love;                      // [0X0BA7] Main love points.
