@@ -22,8 +22,10 @@ QString FF7Location::mapID(int i){return Locations[i].map_id;}
 QString FF7Location::locationID(int i){return Locations[i].loc_id;}
 QString FF7Location::x(int i){return Locations[i].x;}
 QString FF7Location::y(int i){return Locations[i].y;}
-QString FF7Location::z(int i){return Locations[i].z;}
-int FF7Location::len(){return 387;}// keep current num locations in list.
+QString FF7Location::t(int i){return Locations[i].t;}
+QString FF7Location::d(int i){return Locations[i].d;}
+
+int FF7Location::len(){return 389;}// keep current num locations in list.
 
 QString FF7Location::fileName(int MapID,int LocID)
 {
@@ -79,12 +81,21 @@ QString FF7Location::y(QString fileName)
     }
     return temp;
 }
-QString FF7Location::z(QString fileName)
+QString FF7Location::t(QString fileName)
 {
     QString temp;
     for (int i=0;i<len();i++)
     {
-        if(fileName == Locations[i].filename){temp=Locations[i].z;}
+        if(fileName == Locations[i].filename){temp=Locations[i].t;}
+    }
+    return temp;
+}
+QString FF7Location::d(QString fileName)
+{
+    QString temp;
+    for (int i=0;i<len();i++)
+    {
+        if(fileName == Locations[i].filename){temp=Locations[i].d;}
     }
     return temp;
 }

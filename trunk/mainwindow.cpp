@@ -80,7 +80,7 @@ void MainWindow::init_display()
         newItem = new QTableWidgetItem(Locations.y(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,4,newItem);
-        newItem = new QTableWidgetItem(Locations.z(i),0);
+        newItem = new QTableWidgetItem(Locations.t(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,5,newItem);
     }
@@ -231,6 +231,7 @@ void MainWindow::init_display()
 }
 void MainWindow::init_style()
 {
+    this->centralWidget()->setStyleSheet("background-color: rgb (45,79,158);");
     QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98, 192, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
     tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
     tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
@@ -2397,11 +2398,12 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),2);
     ui->sb_loc_id->setValue(ui->tbl_location_field->currentItem()->text().toInt());
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),3);
-    ui->sb_coordx->setValue(ui->tbl_location_field->currentItem()->text().toInt());
+    ui->sb_coord_x->setValue(ui->tbl_location_field->currentItem()->text().toInt());
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),4);
-    ui->sb_coordy->setValue(ui->tbl_location_field->currentItem()->text().toInt());
+    ui->sb_coord_y->setValue(ui->tbl_location_field->currentItem()->text().toInt());
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
-    ui->sb_coordz->setValue(ui->tbl_location_field->currentItem()->text().toInt());
+    ui->sb_coord_t->setValue(ui->tbl_location_field->currentItem()->text().toInt());
+    ui->sb_coord_d->setValue(Locations.d(Locations.fileName(ff7->mapId(s),ff7->locationId(s))).toInt());
     ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
     ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
 }
@@ -2417,10 +2419,10 @@ void MainWindow::on_sb_loc_id_valueChanged(int value)
     ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
     ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
 }}
-void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
-void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
-void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationZ(s,value);}}
-
+void MainWindow::on_sb_coord_x_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
+void MainWindow::on_sb_coord_y_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
+void MainWindow::on_sb_coord_t_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationT(s,value);}}
+void MainWindow::on_sb_coord_d_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationD(s,value);}}
 void MainWindow::on_line_location_textChanged(QString text)
 {
     if (!load)
@@ -2755,9 +2757,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->line_location->setText(tr("Platform"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(116);
-        ui->sb_coordx->setValue(3655);
-        ui->sb_coordy->setValue(27432);
-        ui->sb_coordz->setValue(25);
+        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,116)).toInt());
+        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,116)).toInt());
+        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,116)).toInt());
+        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,116)).toInt());
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
     }
     else if(index == 2) // The Church In The Slums
@@ -2774,9 +2777,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->line_location->setText(tr("Church in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);
-        ui->sb_coordx->setValue(65463);
-        ui->sb_coordy->setValue(400);
-        ui->sb_coordz->setValue(8);
+        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,183)).toInt());
+        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,183)).toInt());
+        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,183)).toInt());
+        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,183)).toInt());
         ui->combo_party1->setCurrentIndex(0);
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
@@ -2794,9 +2798,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->line_location->setText(tr("Kalm Inn"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(332);
-        ui->sb_coordx->setValue(267);
-        ui->sb_coordy->setValue(65429);
-        ui->sb_coordz->setValue(15);
+        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,332)).toInt());
+        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,332)).toInt());
+        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,332)).toInt());
+        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,332)).toInt());
         // set up young cloud, Copy Cloud Change ID to young Cloud
         ff7->setCharacter(s,6,ff7->character(s,0));
         ff7->setCharID(s,6,FF7Char::YoungCloud);
@@ -2818,12 +2823,13 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->line_location->setText(tr("Ropeway Station"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(496);
-        ui->sb_coordx->setValue(64767);
-        ui->sb_coordy->setValue(95);
-        ui->sb_coordz->setValue(26);
+        ui->line_location->setText(tr("Ropeway Station"));
+        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,496)).toInt());
+        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,496)).toInt());
+        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,496)).toInt());
+        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,496)).toInt());
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
     }
 
@@ -2838,13 +2844,12 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->line_location->setText(tr("Forgotten City"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(646);
-        ui->sb_coordx->setValue(641);
-        ui->sb_coordy->setValue(793);
-        ui->sb_coordz->setValue(243);
+        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,646)).toInt());
+        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,646)).toInt());
+        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,646)).toInt());
+        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,646)).toInt());
         phsList->setChecked(3,1,false);
         phsList->setChecked(3,2,false);
-        //ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
-        //ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
         ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
     }
 
@@ -3804,9 +3809,11 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
     switch(index)
     {
         case 0:
-            ui->sb_coordx->setValue(ff7->locationX(s));
-            ui->sb_coordy->setValue(ff7->locationY(s));
-            ui->sb_coordz->setValue(ff7->locationZ(s));
+            ui->sb_coord_x->setValue(ff7->locationX(s));
+            ui->sb_coord_y->setValue(ff7->locationY(s));
+            ui->sb_coord_t->setValue(ff7->locationT(s));
+            ui->sb_coord_d->setValue(ff7->locationD(s));
+
             ui->line_location->clear();
             ui->line_location->setText(ff7->location(s));
             ui->sb_map_id->setValue(ff7->mapId(s));

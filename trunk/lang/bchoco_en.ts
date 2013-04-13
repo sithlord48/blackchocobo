@@ -3524,10 +3524,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Zach&apos;s Home</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mayor&apos;s Home</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3721,6 +3717,10 @@
     </message>
     <message>
         <source>Shinra Bldg. 2f. Shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zack&apos;s Home</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4260,10 +4260,6 @@
     </message>
     <message>
         <source>y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5652,6 +5648,10 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>t</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

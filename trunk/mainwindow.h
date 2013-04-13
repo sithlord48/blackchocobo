@@ -528,9 +528,10 @@ private slots://try to keep these in the same order as the .cpp file
     //save location tab
     void on_sb_map_id_valueChanged(int);
     void on_sb_loc_id_valueChanged(int);
-    void on_sb_coordx_valueChanged(int);
-    void on_sb_coordy_valueChanged(int);
-    void on_sb_coordz_valueChanged(int);
+    void on_sb_coord_x_valueChanged(int);
+    void on_sb_coord_y_valueChanged(int);
+    void on_sb_coord_t_valueChanged(int);
+    void on_sb_coord_d_valueChanged(int);
     void on_line_location_textChanged(QString);
     void on_tbl_location_field_itemSelectionChanged();
 

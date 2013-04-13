@@ -3526,7 +3526,7 @@
     </message>
     <message>
         <source>Zach&apos;s Home</source>
-        <translation>Maison de Zack</translation>
+        <translation type="obsolete">Maison de Zack</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
@@ -3723,6 +3723,10 @@
     <message>
         <source>Shinra Bldg. 2f. Shop</source>
         <translation>Bât.Shinra Mag. 2è ét.</translation>
+    </message>
+    <message>
+        <source>Zack&apos;s Home</source>
+        <translation type="unfinished">Maison de Zack</translation>
     </message>
 </context>
 <context>
@@ -4277,7 +4281,7 @@
     </message>
     <message>
         <source>z</source>
-        <translation>z</translation>
+        <translation type="obsolete">z</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -5720,6 +5724,10 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>t</source>
+        <translation type="unfinished">t</translation>
     </message>
 </context>
 <context>

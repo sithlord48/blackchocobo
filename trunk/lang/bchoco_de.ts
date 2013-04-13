@@ -3529,7 +3529,7 @@
     </message>
     <message>
         <source>Zach&apos;s Home</source>
-        <translation>Zacks Zuhause</translation>
+        <translation type="obsolete">Zacks Zuhause</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
@@ -3722,6 +3722,10 @@
     <message>
         <source>Shinra Bldg. 2f. Shop</source>
         <translation>Shinra-Gbde,2.St.,Laden</translation>
+    </message>
+    <message>
+        <source>Zack&apos;s Home</source>
+        <translation>Zacks Zuhause</translation>
     </message>
 </context>
 <context>
@@ -4277,7 +4281,7 @@
     </message>
     <message>
         <source>z</source>
-        <translation>z</translation>
+        <translation type="obsolete">z</translation>
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
@@ -5728,6 +5732,10 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>t</source>
+        <translation type="unfinished">t</translation>
     </message>
 </context>
 <context>

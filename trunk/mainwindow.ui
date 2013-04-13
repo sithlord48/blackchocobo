@@ -3317,8 +3317,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>443</height>
+             <width>760</width>
+             <height>496</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3421,7 +3421,7 @@ enabled{font:;color: rgb(255, 255, 255);}
               </column>
               <column>
                <property name="text">
-                <string>z</string>
+                <string>t</string>
                </property>
               </column>
              </widget>
@@ -3439,7 +3439,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>0</height>
+                  <height>13</height>
                  </size>
                 </property>
                </spacer>
@@ -3583,7 +3583,7 @@ Quest Progression Value(s).</string>
                 <item row="2" column="0">
                  <layout class="QHBoxLayout" name="horizontalLayout_56">
                   <item>
-                   <widget class="QSpinBox" name="sb_coordx">
+                   <widget class="QSpinBox" name="sb_coord_x">
                     <property name="minimumSize">
                      <size>
                       <width>96</width>
@@ -3605,8 +3605,14 @@ Quest Progression Value(s).</string>
                     <property name="prefix">
                      <string notr="true">X: </string>
                     </property>
+                    <property name="minimum">
+                     <number>-32767</number>
+                    </property>
                     <property name="maximum">
-                     <number>650000</number>
+                     <number>32768</number>
+                    </property>
+                    <property name="value">
+                     <number>0</number>
                     </property>
                    </widget>
                   </item>
@@ -3615,7 +3621,7 @@ Quest Progression Value(s).</string>
                 <item row="2" column="1" colspan="2">
                  <layout class="QHBoxLayout" name="horizontalLayout_57">
                   <item>
-                   <widget class="QSpinBox" name="sb_coordy">
+                   <widget class="QSpinBox" name="sb_coord_y">
                     <property name="minimumSize">
                      <size>
                       <width>96</width>
@@ -3637,8 +3643,11 @@ Quest Progression Value(s).</string>
                     <property name="prefix">
                      <string notr="true">Y: </string>
                     </property>
+                    <property name="minimum">
+                     <number>-32767</number>
+                    </property>
                     <property name="maximum">
-                     <number>650000</number>
+                     <number>32768</number>
                     </property>
                    </widget>
                   </item>
@@ -3647,7 +3656,7 @@ Quest Progression Value(s).</string>
                 <item row="2" column="3">
                  <layout class="QHBoxLayout" name="horizontalLayout_58">
                   <item>
-                   <widget class="QSpinBox" name="sb_coordz">
+                   <widget class="QSpinBox" name="sb_coord_t">
                     <property name="minimumSize">
                      <size>
                       <width>75</width>
@@ -3667,10 +3676,13 @@ Quest Progression Value(s).</string>
                      <set>Qt::AlignCenter</set>
                     </property>
                     <property name="prefix">
-                     <string notr="true">Z: </string>
+                     <string notr="true">T:</string>
+                    </property>
+                    <property name="minimum">
+                     <number>0</number>
                     </property>
                     <property name="maximum">
-                     <number>650000</number>
+                     <number>65565</number>
                     </property>
                     <property name="value">
                      <number>0</number>
@@ -3678,6 +3690,60 @@ Quest Progression Value(s).</string>
                    </widget>
                   </item>
                  </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Preferred</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="sb_coord_d">
+                  <property name="minimumSize">
+                   <size>
+                    <width>67</width>
+                    <height>18</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>67</width>
+                    <height>18</height>
+                   </size>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="prefix">
+                   <string notr="true">D: </string>
+                  </property>
+                  <property name="minimum">
+                   <number>0</number>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                  <property name="value">
+                   <number>0</number>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -3715,7 +3781,7 @@ Quest Progression Value(s).</string>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>0</height>
+                  <height>13</height>
                  </size>
                 </property>
                </spacer>
@@ -5609,7 +5675,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>285</width>
+                  <width>353</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -10798,9 +10864,9 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>line_location</tabstop>
   <tabstop>sb_map_id</tabstop>
   <tabstop>sb_loc_id</tabstop>
-  <tabstop>sb_coordx</tabstop>
-  <tabstop>sb_coordy</tabstop>
-  <tabstop>sb_coordz</tabstop>
+  <tabstop>sb_coord_x</tabstop>
+  <tabstop>sb_coord_y</tabstop>
+  <tabstop>sb_coord_t</tabstop>
   <tabstop>cb_replay</tabstop>
   <tabstop>tbl_materia_2</tabstop>
   <tabstop>sb_love_aeris</tabstop>

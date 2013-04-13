@@ -107,13 +107,14 @@ public:
     void setLocationId(int s, quint16 locationID);
     quint16 mapId(int s);
     void setMapId(int s, quint16 mapID);
-    quint16 locationX(int s);
-    void setLocationX(int s, quint16 x);
-    quint16 locationY(int s);
-    void setLocationY(int s, quint16 y);
-    quint16 locationZ(int s);
-    void setLocationZ(int s, quint16 z);
-
+    qint16 locationX(int s);
+    void setLocationX(int s, qint16 x);
+    qint16 locationY(int s);
+    void setLocationY(int s, qint16 y);
+    quint16 locationT(int s);
+    void setLocationT(int s, quint16 t);
+    quint8 locationD (int s);
+    void setLocationD(int s,quint8 d);
 
     QByteArray fileHeader(void);
     bool setFileHeader(QByteArray data);
