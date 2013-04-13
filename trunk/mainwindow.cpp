@@ -231,7 +231,6 @@ void MainWindow::init_display()
 }
 void MainWindow::init_style()
 {
-    this->centralWidget()->setStyleSheet("background-color: rgb (45,79,158);");
     QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98, 192, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
     tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
     tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
