@@ -1077,7 +1077,7 @@
     </message>
     <message>
         <source>Resist</source>
-        <translation type="unfinished"></translation>
+        <translation>Résist</translation>
     </message>
 </context>
 <context>
@@ -2837,7 +2837,7 @@
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation type="unfinished">Plate-forme</translation>
+        <translation>Plate-forme</translation>
     </message>
     <message>
         <source>Tunnel</source>
@@ -3234,7 +3234,7 @@
     </message>
     <message>
         <source>Midgar Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Midgar</translation>
     </message>
     <message>
         <source>Kalm</source>
@@ -3410,7 +3410,7 @@
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
-        <translation type="unfinished"></translation>
+        <translation>Passé de Cloud</translation>
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
@@ -3418,15 +3418,15 @@
     </message>
     <message>
         <source>Grasslands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région des prairies</translation>
     </message>
     <message>
         <source>Junon Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Junon</translation>
     </message>
     <message>
         <source>Corel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Corel</translation>
     </message>
     <message>
         <source>Corel Reactor</source>
@@ -3534,15 +3534,15 @@
     </message>
     <message>
         <source>Gold Saucer Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région du Gold Saucer</translation>
     </message>
     <message>
         <source>Gongaga Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Gongaga</translation>
     </message>
     <message>
         <source>Cosmo Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Cosmo</translation>
     </message>
     <message>
         <source>Battle Square</source>
@@ -3602,7 +3602,7 @@
     </message>
     <message>
         <source>Nibel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Nibel</translation>
     </message>
     <message>
         <source>Rocket Town</source>
@@ -3626,7 +3626,7 @@
     </message>
     <message>
         <source>Rocket Launch Pad Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de la fusée</translation>
     </message>
     <message>
         <source>Weapon seller</source>
@@ -3682,7 +3682,7 @@
     </message>
     <message>
         <source>Wutai Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région de Utai</translation>
     </message>
     <message>
         <source>Temple of the Ancients</source>
@@ -3690,7 +3690,7 @@
     </message>
     <message>
         <source>Woodlands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région des forêts</translation>
     </message>
     <message>
         <source>Bone Village</source>
@@ -3710,7 +3710,7 @@
     </message>
     <message>
         <source>Icicle Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Région enneigée</translation>
     </message>
     <message>
         <source>Correl Valley</source>
@@ -3726,7 +3726,7 @@
     </message>
     <message>
         <source>Zack&apos;s Home</source>
-        <translation type="unfinished">Maison de Zack</translation>
+        <translation>Maison de Zack</translation>
     </message>
 </context>
 <context>
@@ -5484,63 +5484,63 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Battre l&apos;Arme de rubis</translation>
     </message>
     <message>
         <source>Beat Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Battre l&apos;Arme d&apos;émeraude</translation>
     </message>
     <message>
         <source>Battle Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Points de combat</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un dossier de sauvegarde dans le cloud</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished"></translation>
+        <translation>Argent</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode avancé</translation>
     </message>
     <message>
         <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier MCR(*.mcr);;Fichier MCD(*.mcd);;Fichier MCI(*.mci);;Fichier MC(*.mc);;Fichier DDF(*.ddf);;Fichier PS(*.ps);;Fichier PSM(*.psm);;Fichier BIN(*.bin);;Carte mémoire virtuelle PS3(*.VM1)</translation>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier VGS(*.vgs);;Fichier MEM(*.mem)</translation>
     </message>
     <message>
         <source>Hex Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Éditeur hexadécimal</translation>
     </message>
     <message>
         <source>Show:</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher :</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation>Variables inconnues</translation>
     </message>
     <message>
         <source>USA (BASCUS-94163)</source>
-        <translation type="unfinished"></translation>
+        <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Station de câblage</translation>
+        <translation>Téléphérique</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejouer la scène de rendez-vous amoureux, vous allez vous retrouver à côté du téléphérique. Parlez à l&apos;homme pour lancer l&apos;événement. Si vous voulez voir un rendez-vous particulier, assurez-vous d&apos;avoir affecté correctement les points d&apos;amour.</translation>
     </message>
     <message>
         <source>PSX Save Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Données de sauvegarde PSX</translation>
     </message>
     <message>
         <source>GAIIN_1:Javelin</source>
@@ -5612,35 +5612,35 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Game Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Options de jeu</translation>
     </message>
     <message>
         <source>Character Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportation de personnage réussi</translation>
     </message>
     <message>
         <source>Character Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportation de personnage échoué</translation>
     </message>
     <message>
         <source>New Game Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle partie créée</translation>
     </message>
     <message>
         <source>New Game Created - File:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle partie créée - Fichier : %1</translation>
     </message>
     <message>
         <source>New Game Plus Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle partie Plus créée</translation>
     </message>
     <message>
         <source>Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportation réussie</translation>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportation échouée</translation>
     </message>
     <message>
         <source>ZZ5: Mime</source>
@@ -5711,7 +5711,8 @@ MISSION</source>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
 Disabled in the Party Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cait Sith et Vincent ne devraient pas être disponibles si ils 
+sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
@@ -7234,7 +7235,7 @@ trigger showing that tutorial</source>
     <name>MenuListWidget</name>
     <message>
         <source>Menu Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire de menu</translation>
     </message>
     <message>
         <source>Item</source>
@@ -7242,11 +7243,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérrouillé</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -7262,7 +7263,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Status</source>
-        <translation>Etat</translation>
+        <translation>État</translation>
     </message>
     <message>
         <source>Order</source>
@@ -7289,123 +7290,123 @@ trigger showing that tutorial</source>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin de sortie :</translation>
     </message>
     <message>
         <source>Folder To Write Files Into</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier où écrire les fichiers</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Signer avec l&apos;identifiant utilisateur</translation>
     </message>
     <message>
         <source>Your SE Id number</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre numéro SE Id</translation>
     </message>
     <message>
         <source>Save00</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.00</translation>
     </message>
     <message>
         <source>Save01</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.01</translation>
     </message>
     <message>
         <source>Save02</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.02</translation>
     </message>
     <message>
         <source>Save03</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.03</translation>
     </message>
     <message>
         <source>Save04</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.04</translation>
     </message>
     <message>
         <source>Save05</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.05</translation>
     </message>
     <message>
         <source>Save06</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.06</translation>
     </message>
     <message>
         <source>Add Files For each Save you want in your cloud data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajoutez des fichiers pour chaque sauv. que vous voulez placer dans le cloud.</translation>
     </message>
     <message>
         <source>Save07</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.07</translation>
     </message>
     <message>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous pouvez utilisez n&apos;importe quel format que Black Chocobo peut ouvrir</translation>
     </message>
     <message>
         <source>Save08</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.08</translation>
     </message>
     <message>
         <source>Unused files will be Looked for in the Save Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Les fichiers inutilisés seront cherchés dans le chemin des sauvegardes</translation>
     </message>
     <message>
         <source>Save09</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauv.09</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="unfinished"></translation>
+        <translation>En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un dossier</translation>
     </message>
     <message>
         <source>Select A File To Use As Save00</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.00</translation>
     </message>
     <message>
         <source>Select A File To Use As Save01</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.01</translation>
     </message>
     <message>
         <source>Select A File To Use As Save02</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.02</translation>
     </message>
     <message>
         <source>Select A File To Use As Save03</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.03</translation>
     </message>
     <message>
         <source>Select A File To Use As Save04</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.04</translation>
     </message>
     <message>
         <source>Select A File To Use As Save05</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.05</translation>
     </message>
     <message>
         <source>Select A File To Use As Save06</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.06</translation>
     </message>
     <message>
         <source>Select A File To Use As Save07</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.07</translation>
     </message>
     <message>
         <source>Select A File To Use As Save08</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.08</translation>
     </message>
     <message>
         <source>Select A File To Use As Save09</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un fichier pour l&apos;utiliser comme Sauv.09</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un dossier de sauvegarde dans le cloud</translation>
     </message>
 </context>
 <context>
@@ -7734,7 +7735,7 @@ trigger showing that tutorial</source>
     <name>PhsListWidget</name>
     <message>
         <source>Phs Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire de PHS</translation>
     </message>
     <message>
         <source>Cloud</source>
@@ -7742,11 +7743,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorisé</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible</translation>
     </message>
     <message>
         <source>Barret</source>
@@ -7797,23 +7798,23 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation type="unfinished">Vider le slot</translation>
+        <translation>Vider le slot</translation>
     </message>
     <message>
         <source>Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier le slot</translation>
     </message>
     <message>
         <source>Paste Into Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Coller dans le slot</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vide-</translation>
+        <translation>-Vide-</translation>
     </message>
     <message>
         <source>Slot: %1</source>
-        <translation>Slot:%1</translation>
+        <translation>Slot : %1</translation>
     </message>
 </context>
 <context>
@@ -7842,19 +7843,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>    Milieu bloc lié , prochaines données @ Slot:%1</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Milieu bloc lié (supprimé), prochaines données @ Slot:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>      Fin des blocs liés (supprimés)</translation>
     </message>
     <message>
         <source>Select A Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un slot</translation>
     </message>
 </context>
 <context>
@@ -8410,31 +8411,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Diff Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : table de différences</translation>
     </message>
     <message>
         <source>Fixed: Crash On Clear Slots with no file loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : plantage en vidant les slots sans aucun fichier chargé</translation>
     </message>
     <message>
         <source>New: HexEditor for viewing saves in ff7 or psx mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : éditeur hexadécimal pour visionner les sauvegardes en mode FF7 ou PSX.</translation>
     </message>
     <message>
         <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + Visionner et exporter les données PSX (pour sauvegardes multi-blocs)</translation>
     </message>
     <message>
         <source>FF7tk: + Remove Slots from slots select Dialog </source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + supprimer les slots à partir de la fenêtre de sélection de slot</translation>
     </message>
     <message>
         <source>FF7tk: +More Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + plus de lieux</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + les widgets ont maintenant des &quot;Wrapping spinboxes&quot;</translation>
     </message>
 </context>
 <context>
