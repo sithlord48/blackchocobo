@@ -63,7 +63,12 @@ public:
         KEYCARD68,MIDGARPARTS1,MIDGARPARTS2,MIDGARPARTS3,MIDGARPARTS4,MIDGARPARTS5,PHS,GOLDTICKET,KEYSTONE,LEIATHANSCALES,GLACIERMAP,COUPON_A,COUPON_B,
         COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
     };
-
+    quint8 condorWins(int s);
+    void setCondorWins(int s,quint8 wins);
+    quint8 condorLoses(int s);
+    void setCondorLoses(int s, quint8 loses);
+    quint16 condorFunds(int s);
+    void setCondorFunds(int s,quint16 value);
     //z_38[12] item flags.
     bool gaiin_1Ribbon(int s);
     void setGaiin_1Ribbon(int s, bool PickedUp);
