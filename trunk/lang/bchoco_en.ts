@@ -5654,6 +5654,22 @@ trigger showing that tutorial</source>
         <source>t</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fort Condor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Funds </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Record </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>/</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>

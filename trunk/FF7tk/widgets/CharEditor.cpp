@@ -177,6 +177,9 @@ void CharEditor::init_display()
     sb_uses_limit_1_1->setFixedWidth(this->font().pointSize()*7);
     sb_uses_limit_2_1->setFixedWidth(this->font().pointSize()*7);
     sb_uses_limit_3_1->setFixedWidth(this->font().pointSize()*7);
+    sb_uses_limit_1_1->setAlignment(Qt::AlignCenter);
+    sb_uses_limit_2_1->setAlignment(Qt::AlignCenter);
+    sb_uses_limit_3_1->setAlignment(Qt::AlignCenter);
 
 
     lbl_uses = new QLabel(tr("Limit Uses"));

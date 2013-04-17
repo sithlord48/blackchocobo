@@ -3416,5 +3416,41 @@ void FF7Save::setTrnad_2NeoBahmut(int s,bool PickedUp)
         setFileModified(true,s);
     }
 }
-
-
+quint16 FF7Save::condorFunds(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        quint16 a = (slot[s].z_16[52] | (slot[s].z_16[53] <<8));
+        return a;
+    }
+}
+void FF7Save::setCondorFunds(int s,quint16 value)
+{
+    if(value==condorFunds(s)){return;}
+    else
+    {
+        slot[s].z_16[52] = (value & 0xff);
+        slot[s].z_16[53]= (value & 0xff00) >> 8;
+    }
+}
+quint8 FF7Save::condorWins(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return  quint8(slot[s].z_16[39]);}
+}
+void FF7Save::setCondorWins(int s,quint8 wins)
+{
+    if(wins ==condorWins(s)){return;}
+    else{slot[s].z_16[39] = wins;}
+}
+quint8 FF7Save::condorLoses(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return  quint8(slot[s].z_16[38]);}
+}
+void FF7Save::setCondorLoses(int s, quint8 loses)
+{
+    if(loses ==condorLoses(s)){return;}
+    else{slot[s].z_16[38] = loses;}
+}

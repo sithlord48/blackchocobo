@@ -1503,6 +1503,10 @@ void MainWindow::othersUpdate()
         ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
 
+    ui->sbCondorWins->setValue(ff7->condorWins(s));
+    ui->sbCondorLoses->setValue(ff7->condorLoses(s));
+    ui->sbCondorFunds->setValue(ff7->condorFunds(s));
+
     ui->sb_coster_1->setValue(ff7->speedScore(s,1));
     ui->sb_coster_2->setValue(ff7->speedScore(s,2));
     ui->sb_coster_3->setValue(ff7->speedScore(s,3));
@@ -3968,3 +3972,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
         case 1: unknown_refresh(ui->combo_z_var->currentIndex());break;
     }
 }
+
+void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorFunds(s,arg1);}}
+void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorWins(s,arg1);}}
+void MainWindow::on_sbCondorLoses_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorLoses(s,arg1);}}
