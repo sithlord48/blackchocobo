@@ -215,6 +215,7 @@ bool FF7Save::saveFile(const QString &fileName)
     else if(type() == "PSX"){fix_psx_header(0);}
     else if(type() =="PSV"){fix_psv_header();}
     else{fix_vmc_header();}
+    checksumSlots();
     // write the file
     QFile file(fileName);
     if(!file.open(QIODevice::ReadWrite)){return false;}
@@ -227,7 +228,6 @@ bool FF7Save::saveFile(const QString &fileName)
     }
     file.write(fileFooter(),SG_FOOTER);
     file.close();
-    fix_sum(fileName);
     filename=fileName;
     if(type()==("PC")){fixMetaData();}
     setFileModified(false,0);
@@ -237,6 +237,7 @@ bool FF7Save::exportPC(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     QString prev_type = SG_TYPE;
+    QString prev_fileName = filename;
     if(SG_TYPE !="PC")
     {
       for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
@@ -259,11 +260,13 @@ bool FF7Save::exportPC(const QString &fileName)
     {
         setType(prev_type);
         setFileModified(false,0);
+        filename=prev_fileName;
         return true;
     }
     else
     {
         setType(prev_type);
+        filename = prev_fileName;
         return false;
     }
 }
@@ -272,6 +275,7 @@ bool FF7Save::exportPSX(int s,const QString &fileName)
     if(fileName.isEmpty()){return false;}
     int blocks=1;
     QString prev_type = SG_TYPE;
+    QString prev_fileName=filename;
     if(SG_TYPE != "PSX")
     {
        if(isFF7(s)){setControlMode(s,CONTROL_NORMAL);}
@@ -299,6 +303,7 @@ bool FF7Save::exportPSX(int s,const QString &fileName)
         for(int i=0; i<SG_SLOT_FOOTER;i++){hf[s].sl_footer[i] =0x00;} //CLEAN FOOTER
         fix_psx_header(s);//only fix time for FF7 Slots.
     }
+    checksumSlots();
     QFile file(fileName);
     if(!file.open(QIODevice::ReadWrite)){return false;}
     file.write(fileHeader(),SG_HEADER);
@@ -312,8 +317,8 @@ bool FF7Save::exportPSX(int s,const QString &fileName)
     }
     file.write(fileFooter(),SG_FOOTER);
     file.close();
-    fix_sum(fileName);
     setType(prev_type);
+    filename=prev_fileName;
     return true;
 }
 
@@ -321,6 +326,7 @@ bool FF7Save::exportVMC(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
+  QString prev_fileName = filename;
   if(SG_TYPE != "MC")
   {
     for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
@@ -330,11 +336,13 @@ bool FF7Save::exportVMC(const QString &fileName)
   if(saveFile(fileName))
   {
       setType(prev_type);
+      filename=prev_fileName;
       return true;
   }
   else
   {
       setType(prev_type);
+      filename=prev_fileName;
       return false;
   }
 }
@@ -342,6 +350,7 @@ bool FF7Save::exportVGS(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
+  QString prev_fileName = filename;
   if(SG_TYPE != "VGS")
   {
      for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
@@ -358,11 +367,13 @@ bool FF7Save::exportVGS(const QString &fileName)
   if(saveFile(fileName))
   {
       setType(prev_type);
+      filename=prev_fileName;
       return true;
   }
   else
   {
       setType(prev_type);
+      filename=prev_fileName;
       return false;
   }
 }
@@ -370,6 +381,7 @@ bool FF7Save::exportDEX(const QString &fileName)
 {
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
+  QString prev_fileName = filename;
   if(SG_TYPE != "DEX")
   {
       for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
@@ -397,11 +409,13 @@ bool FF7Save::exportDEX(const QString &fileName)
   if(saveFile(fileName))
   {
       setType(prev_type);
+      filename=prev_fileName;
       return true;
   }
   else
   {
       setType(prev_type);
+      filename=prev_fileName;
       return false;
   }
 }
@@ -489,55 +503,39 @@ bool FF7Save::exportCharacter(int s,int char_num,QString fileName)
 }
 void FF7Save::importCharacter(int s,int char_num,QByteArray new_char){memcpy(&slot[s].chars[char_num],new_char.data(),132);setFileModified(true,s);}
 
-void FF7Save::fix_sum(const QString &fileName)
+void FF7Save::checksumSlots()
 {
-    void * memory;
-    QFile file(fileName);
-    if (!file.open(QFile::ReadWrite )){return;}
-    QDataStream out (&file);
-    out.setByteOrder(QDataStream::LittleEndian);
-    file.seek(0);//Set pointer to the Beggining
-    QByteArray ff7savefile;
-    ff7savefile = file.readAll(); //put all data in temp raw file
-    memory = (void*) malloc(SG_SIZE);//Memory Allocation
-    if (!memory){return;}
-    file.seek(0);
-    memcpy(memory,ff7savefile.mid(0x00000,SG_SIZE),SG_SIZE);
-    //Do checksum foreach slot
-    for(int i=0, checksum=0; i<SG_SLOT_NUMBER; i++)
+    for (int i=0; i<SG_SLOT_NUMBER;i++)
     {
-        char * data_pointer = ((char*)memory + SG_HEADER + SG_SLOT_SIZE*i + SG_SLOT_HEADER + 0x04);
-        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
+        if(isFF7(i))
         {
-            int index = SG_HEADER + SG_SLOT_SIZE*i + SG_SLOT_HEADER;
-            file.seek(index);
-            out << checksum;
+            quint16 checksum = ff7Checksum(i);
+            if(checksum == 0x4D1D){slot[i].checksum=0x0000; }
+            else{slot[i].checksum = checksum;}
         }
     }
-    file.close();
-    free(memory);
-} 
-int FF7Save::ff7__checksum( void* qw )
-{
-   int i = 0, t, d;
-   long r = 0xFFFF, len = 4336;
-   long pbit = 0x8000;
-   char* b=(char*)qw;
 
-   while( len-- ) {
-      t = b[i++];
-      r ^= t << 8;
-      for(d=0;d<8;d++) {
-         if( r & pbit )
-            r = ( r << 1 ) ^ 0x1021;
-         else
-            r <<= 1;
-      }
-      r &= ( 1 << 16 ) - 1;
-   }
-   return (r^0xFFFF)&0xFFFF;
 }
+quint16 FF7Save::ff7Checksum(int s)
+{
+    QByteArray data = slotFF7Data(s).mid(4,4336);
+    //data.remove(0,4);
+    int i = 0, t, d;
+    quint16 r = 0xFFFF, len =4336, pbit = 0x8000;
+    while(len--)
+    {
+        t=data.at(i++);
+        r ^= t << 8;
+        for(d=0;d<8;d++)
+        {
+           if( r & pbit ){r = ( r << 1 ) ^ 0x1021;}
+           else{ r <<= 1;}
+        }
+        r &= ( 1 << 16 ) - 1;
+     }
+    return ((r^0xFFFF)&0xFFFF);
+}
+
 quint16 FF7Save::itemDecode( quint16 itemraw )
 {
     quint16 item;
@@ -1205,7 +1203,7 @@ bool FF7Save::isFileModified(void){return fileChanged;}
 bool FF7Save::isSlotModified(int s){return slotChanged[s];}
 bool FF7Save::isSlotEmpty(int s)
 {
-    if(ff7__checksum(&slot[s])==0x4D1D){return true;}
+    if(ff7Checksum(s)==0x4D1D){return true;}
     else{return false;}
 }
 bool FF7Save::isFF7(int s)

@@ -1077,7 +1077,7 @@
     </message>
     <message>
         <source>Resist</source>
-        <translation type="unfinished"></translation>
+        <translation>Resiste</translation>
     </message>
 </context>
 <context>
@@ -3234,7 +3234,7 @@
     </message>
     <message>
         <source>Midgar Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Midgar</translation>
     </message>
     <message>
         <source>Kalm</source>
@@ -3271,7 +3271,7 @@
     <message>
         <source>Cloud&apos;s House</source>
         <translatorcomment>another shining example of the care the translations for ff7 got....</translatorcomment>
-        <translation type="unfinished">Nibelhiem</translation>
+        <translation>Casa de Cloud</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
@@ -3411,7 +3411,7 @@
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasado de Cloud</translation>
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
@@ -3419,15 +3419,15 @@
     </message>
     <message>
         <source>Grasslands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de las praderas</translation>
     </message>
     <message>
         <source>Junon Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Junon</translation>
     </message>
     <message>
         <source>Corel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Corel</translation>
     </message>
     <message>
         <source>Corel Reactor</source>
@@ -3535,7 +3535,7 @@
     </message>
     <message>
         <source>Gold Saucer Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Golden Saucer</translation>
     </message>
     <message>
         <source>Gongaga Area</source>
@@ -3603,7 +3603,7 @@
     </message>
     <message>
         <source>Nibel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Nibel</translation>
     </message>
     <message>
         <source>Rocket Town</source>
@@ -3627,7 +3627,7 @@
     </message>
     <message>
         <source>Rocket Launch Pad Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de cohete</translation>
     </message>
     <message>
         <source>Weapon seller</source>
@@ -3683,7 +3683,7 @@
     </message>
     <message>
         <source>Wutai Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Wutai</translation>
     </message>
     <message>
         <source>Temple of the Ancients</source>
@@ -3691,7 +3691,7 @@
     </message>
     <message>
         <source>Woodlands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de bosques</translation>
     </message>
     <message>
         <source>Bone Village</source>
@@ -3711,7 +3711,7 @@
     </message>
     <message>
         <source>Icicle Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de iciclos</translation>
     </message>
     <message>
         <source>Correl Valley</source>
@@ -5516,191 +5516,192 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo MCR(*.mcr);;Archivo MCD(*.mcd);;Archivo MCI(*.mci);;Archivo DDF(*.ddf);;Archivo PS(*.ps);;Archivo PSM(*.psm);;Archivo BIN(*.bin);;Memory Card Virtual PS3(*.VM1)</translation>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo VGS(*.vgs);;Archivo MEM(*.mem)</translation>
     </message>
     <message>
         <source>Hex Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor Hexadecimal</translation>
     </message>
     <message>
         <source>Show:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar:</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation>Variables desconocidas</translation>
     </message>
     <message>
         <source>USA (BASCUS-94163)</source>
-        <translation type="unfinished"></translation>
+        <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Estación de tranvías</translation>
+        <translation>Estación de tranvías</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar la escena de la cita. Tu localización se pondrá en la estación Ropeway. Habla con el hombre del tranvía para iniciar el evento. Si buscas una cita especial, recuerda configurar los puntos de amor.</translation>
     </message>
     <message>
         <source>PSX Save Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos de guardado PSX</translation>
     </message>
     <message>
         <source>GAIIN_1:Javelin</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_1:Javalina</translation>
     </message>
     <message>
         <source>GAIIN_1:Ribbon</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_1:Cinta</translation>
     </message>
     <message>
         <source>GAIIN_3:Elixir</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_3:Elixir</translation>
     </message>
     <message>
         <source>GAIIN_3:Speed Source</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_3:Fuente velocidad</translation>
     </message>
     <message>
         <source>GAIIN_4:Enhance Sword</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_4:Super espada </translation>
     </message>
     <message>
         <source>GAIIN_5:Fire Armlet</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_5:Aro fuego</translation>
     </message>
     <message>
         <source>GAIIN_5:Elixir</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_5:Elixir</translation>
     </message>
     <message>
         <source>SNMAYOR: Turbo Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMAYOR: Éter turbo</translation>
     </message>
     <message>
         <source>SNINN2: X-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>SNINN2: Poción-X</translation>
     </message>
     <message>
         <source>SNMIN2: Vaccine</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMIN2: Vacuna</translation>
     </message>
     <message>
         <source>SNMIN2:Hero Drink</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMIN2:Bebida héroe</translation>
     </message>
     <message>
         <source>NCOIN3:Catastrophe</source>
-        <translation type="unfinished"></translation>
+        <translation>NCOIN3:Catástrofe</translation>
     </message>
     <message>
         <source>NCOIN1:Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>NCOIN1:Éter</translation>
     </message>
     <message>
         <source>TRNAD_4:Poison Ring</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_4:Anillo veneno</translation>
     </message>
     <message>
         <source>TRNAD_4:MpTurbo</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_4:Turbo PM</translation>
     </message>
     <message>
         <source>TRNAD_3:Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_3:Nudillo Kaiser</translation>
     </message>
     <message>
         <source>TRNAD_2:Neo Bahmut</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_2:Neo Bahmut</translation>
     </message>
     <message>
         <source>Game Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de juego</translation>
     </message>
     <message>
         <source>Character Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Personaje exportado con éxito</translation>
     </message>
     <message>
         <source>Character Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallo al exportar personaje</translation>
     </message>
     <message>
         <source>New Game Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo juego creado</translation>
     </message>
     <message>
         <source>New Game Created - File:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo juego creado - Archivo %1</translation>
     </message>
     <message>
         <source>New Game Plus Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo juego plus creado</translation>
     </message>
     <message>
         <source>Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportación exitosa</translation>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportación fallida</translation>
     </message>
     <message>
         <source>ZZ5: Mime</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ5: Mimo</translation>
     </message>
     <message>
         <source>ZZ6: HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ6: PG &lt;-&gt; PM</translation>
     </message>
     <message>
         <source>ZZ7: Quadra Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ7: Cuadrimagia</translation>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ8: KOTR</translation>
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty 
 Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Los establos marcados están ocupados, desmarcar establo para vaciarlo</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are 
 calculated while playing </source>
-        <translation type="unfinished"></translation>
+        <translation>Los valores de velocidad son valores absolutos, las velocidades en km/h son calculadas duratne el juego</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 
 set your map location , x,y,z manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Clickea una fila para transportar tu partida guardada aquí O establece tu localización x,y,z manualmente en el mapa</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
 Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
 Quest Progression Value(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Diviértete con esta función pero ten cuidado. Cambiar los valores de arriba puede causar anomalías en el juego dependiendo de tus valores de progreso de misión.</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz click con el botón derecho en el mapa para establecer la localización de un elemento.</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing 
 Mission</source>
-        <translation type="unfinished"></translation>
+        <translation>Avalancha tuvo la reunión despues de la &apos;Bombing mission&apos;</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (Éter turbe de la casa del niño en el segundo piso 
+5min1_2)</translation>
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That 
@@ -5709,29 +5710,29 @@ Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this
 feature, i can not promise that you will be able to play from any replay untill 
 the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
 Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Establece la misión a rejugar para colocar el juego justo en esa misión. Esto automáticamente establece tu localización, número de disco así como variables de progreso de misión. NO SOBREESCRIBAS TU PARTIDA GUARDADA ACTUAL. Cuando se usa esta función, no se puede prometer que se podrá jugar desde cualquier punto hasta el final del juego. Tampoco que una misión a rejugar funcionará en tu partida guardada. Ésta sección sigue en desarrollo</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY 
 MISSION</source>
-        <translation type="unfinished"></translation>
+        <translation>       INFORMACIÓN DE LA MISIÓN ACTUALMENTE SELECCIONADA</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
 Disabled in the Party Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cait Sith y Vincent no deberían de ser activados si están desactivados en la pestaña de grupo.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
 Lobby&amp;quot; so you can spend 
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando atraviesas la puerta del Battle Square. Establece la localización en &amp;quot;Arena Lobby&amp;quot; para gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuando la casilla está seleccionada parcialmente (&quot;-&quot;) se activará mostrando el tutorial</translation>
     </message>
     <message>
         <source>t</source>
@@ -5739,19 +5740,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fuerte Cóndor</translation>
+        <translation>Fuerte Cóndor</translation>
     </message>
     <message>
         <source>Funds </source>
-        <translation type="unfinished"></translation>
+        <translation>Fondos</translation>
     </message>
     <message>
         <source>Record </source>
-        <translation type="unfinished"></translation>
+        <translation>Record</translation>
     </message>
     <message>
         <source>/</source>
-        <translation type="unfinished"></translation>
+        <translation>/</translation>
     </message>
 </context>
 <context>
@@ -7259,7 +7260,7 @@ Fénix x3 (180pm)</translation>
     <name>MenuListWidget</name>
     <message>
         <source>Menu Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Administrador de menú</translation>
     </message>
     <message>
         <source>Item</source>
@@ -7267,11 +7268,11 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloqueado</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -7680,11 +7681,11 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>? 9</source>
-        <translation type="unfinished"></translation>
+        <translation>? 9</translation>
     </message>
     <message>
         <source>? 10</source>
-        <translation type="unfinished"></translation>
+        <translation>? 10</translation>
     </message>
     <message>
         <source>Right</source>
@@ -7759,7 +7760,7 @@ Fénix x3 (180pm)</translation>
     <name>PhsListWidget</name>
     <message>
         <source>Phs Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Administrador de PHS</translation>
     </message>
     <message>
         <source>Cloud</source>
@@ -7767,11 +7768,11 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Permitido</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible</translation>
     </message>
     <message>
         <source>Barret</source>
@@ -7822,19 +7823,19 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation type="unfinished">Borrar Ranura</translation>
+        <translation>Borrar Ranura</translation>
     </message>
     <message>
         <source>Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar ranura</translation>
     </message>
     <message>
         <source>Paste Into Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pegar en ranura</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vacío-</translation>
+        <translation>-Vacío-</translation>
     </message>
     <message>
         <source>Slot: %1</source>
@@ -7867,19 +7868,19 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>     Bloque semi conectado, siguiente bloque de datos @ ranura:%1</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>     Bloque semi conectado (Borrado), siguiente bloque de datos @ ranura:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>     Fin de bloques conectados (Borrado)</translation>
     </message>
     <message>
         <source>Select A Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona una ranura</translation>
     </message>
 </context>
 <context>
@@ -8433,31 +8434,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Diff Table</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Tabla de diferencias</translation>
     </message>
     <message>
         <source>Fixed: Crash On Clear Slots with no file loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Error al borrar ranuras cuando no se ha cargado un archivo</translation>
     </message>
     <message>
         <source>New: HexEditor for viewing saves in ff7 or psx mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Editor hexadecimal para ver las partidas guardadas en modo ff7 o psx.</translation>
     </message>
     <message>
         <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Ver y exportar datos PSX (para guardados multi bloque</translation>
     </message>
     <message>
         <source>FF7tk: + Remove Slots from slots select Dialog </source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Borrar ranuras desde el diálogo de selección de ranuras</translation>
     </message>
     <message>
         <source>FF7tk: +More Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Más localizaciones</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Las widgets tienen ahora selectores ajustados</translation>
     </message>
 </context>
 <context>
