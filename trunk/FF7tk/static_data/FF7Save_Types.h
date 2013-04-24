@@ -76,7 +76,7 @@ struct FF7XYT {                     // size of 6. used for coords
 }__attribute__((__packed__));
 
 struct FF7SLOT {		            // Save slot - Length 0x10F4
-    qint16 checksum;		        // [0x0000] Checksum
+    quint16 checksum;		        // [0x0000] Checksum
     quint8 z_1[2];                  // [0x0002] UNKNOWN DATA
     FF7DESC desc;		            // [0x0004] Length:0x44] Slot description
     quint8 colors[4][3];        	// [0x0048] Window colors (RGB)
