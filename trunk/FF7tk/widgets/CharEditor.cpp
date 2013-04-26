@@ -25,7 +25,7 @@ CharEditor::CharEditor(QWidget *parent) :
     autolevel=true;
     autostatcalc=true;
     editable=true;
-    debug=false;
+    advancedMode=false;
     mslotsel =-1;
  }
 void CharEditor::init_display()
@@ -1358,7 +1358,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 
     if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth )
     {
-        if(!debug){cb_idChanger->setHidden(false);}
+        if(!advancedMode){cb_idChanger->setHidden(false);}
         else{cb_idChanger->setHidden(true);}
         if(data.id == FF7Char::CaitSith || data.id == FF7Char::YoungCloud){cb_idChanger->setText(tr("Young Cloud"));}
         if(data.id ==FF7Char::Vincent || data.id == FF7Char::Sephiroth){cb_idChanger->setText(tr("Sephiroth"));}
@@ -1872,14 +1872,14 @@ void CharEditor::setAutoLevel(bool ans){autolevel=ans;if(ans){Level_Changed(data
 bool CharEditor::AutoLevel(void){return autolevel;}
 void CharEditor::setAutoStatCalc(bool ans){autostatcalc=ans;calc_stats();}//Toggle stat calculation
 bool CharEditor::AutoStatCalc(void){return autostatcalc;}
-bool CharEditor::Debug(void){return debug;}
-void CharEditor::setDebug(bool new_debug)
+bool CharEditor::AdvancedMode(void){return advancedMode;}
+void CharEditor::setAdvancedMode(bool new_advancedMode)
 {
-    debug = new_debug;
-    unknown_box->setVisible(debug);
-    combo_id_box->setVisible(debug);
+    advancedMode = new_advancedMode;
+    unknown_box->setVisible(advancedMode);
+    combo_id_box->setVisible(advancedMode);
     //if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
-    if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth ){cb_idChanger->setHidden(debug);}
+    if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth ){cb_idChanger->setHidden(advancedMode);}
 
 }
 void CharEditor::setEditable(bool edit)

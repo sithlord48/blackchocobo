@@ -120,6 +120,7 @@ void ChocoboEditor::setWins(int wins)
     if(wins <0){wins = 0;}
     else if (wins>255){wins = 255;}
     choco_data.raceswon = wins;
+    getRank();
     emit wins_changed(choco_data.raceswon);
 }
 void ChocoboEditor::setSex(int sex)
@@ -167,6 +168,8 @@ void ChocoboEditor::init_display(void)
     sb_personality = new QSpinBox;
     cb_cantMate = new QCheckBox(tr("Unable To Mate"));
 
+    lbl_rankLabel = new QLabel(tr("Rank: "));
+    lbl_rank = new QLabel();
     lbl_stamina  = new QLabel(tr("Stamina"));
     lbl_sex  = new QLabel(tr("Sex"));
     lbl_type = new QLabel(tr("Type"));
@@ -235,7 +238,6 @@ void ChocoboEditor::init_display(void)
 
     QHBoxLayout *type_sex_layout = new QHBoxLayout;
     type_sex_layout->setContentsMargins(0,0,0,0);
-
     type_sex_layout->addWidget(lbl_type);
     type_sex_layout->addWidget(combo_type);
     type_sex_layout->addWidget(lbl_sex);
@@ -267,30 +269,30 @@ void ChocoboEditor::init_display(void)
     accel_layout->addWidget(lbl_accel);
     accel_layout->addWidget(sb_accel);
 
-    QHBoxLayout *wins_layout = new QHBoxLayout;
-    wins_layout->setContentsMargins(0,0,0,0);
-    wins_layout->addWidget(lbl_wins);
-    wins_layout->addWidget(sb_wins);
-
-    QHBoxLayout *accel_wins_layout = new QHBoxLayout;
-    accel_wins_layout->setContentsMargins(0,0,0,0);
-    accel_wins_layout->addLayout(accel_layout);
-    accel_wins_layout->addLayout(wins_layout);
-
     QHBoxLayout *stamina_layout = new QHBoxLayout;
     stamina_layout->setContentsMargins(0,0,0,0);
     stamina_layout->addWidget(lbl_stamina);
     stamina_layout->addWidget(sb_stamina);
 
-    QHBoxLayout *pCount_layout = new QHBoxLayout;
-    pCount_layout->setContentsMargins(0,0,0,0);
-    pCount_layout->addWidget(lbl_pCount);
-    pCount_layout->addWidget(sb_pCount);
+    QHBoxLayout *accel_stamina_layout = new QHBoxLayout;
+    accel_stamina_layout->setContentsMargins(0,0,0,0);
+    accel_stamina_layout->addLayout(accel_layout);
+    accel_stamina_layout->addLayout(stamina_layout);
 
-    QHBoxLayout *stamina_pCount_layout = new QHBoxLayout;
-    stamina_pCount_layout->setContentsMargins(0,0,0,0);
-    stamina_pCount_layout->addLayout(stamina_layout);
-    stamina_pCount_layout->addLayout(pCount_layout);
+    QHBoxLayout *wins_layout = new QHBoxLayout;
+    wins_layout->setContentsMargins(0,0,0,0);
+    wins_layout->addWidget(lbl_wins);
+    wins_layout->addWidget(sb_wins);
+
+    QHBoxLayout *rank_layout = new QHBoxLayout;
+    rank_layout->setContentsMargins(0,0,0,0);
+    rank_layout->addWidget(lbl_rankLabel);
+    rank_layout->addWidget(lbl_rank);
+
+    QHBoxLayout *wins_rank_layout = new QHBoxLayout;
+    wins_rank_layout->setContentsMargins(0,0,0,0);
+    wins_rank_layout->addLayout(wins_layout);
+    wins_rank_layout->addLayout(rank_layout);
 
     QHBoxLayout *coop_layout = new QHBoxLayout;
     coop_layout->setContentsMargins(0,0,0,0);
@@ -307,24 +309,42 @@ void ChocoboEditor::init_display(void)
     coop_intel_layout->addLayout(coop_layout);
     coop_intel_layout->addLayout(intel_layout);
 
+    QHBoxLayout *pCount_layout = new QHBoxLayout;
+    pCount_layout->setContentsMargins(0,0,0,0);
+    pCount_layout->addWidget(lbl_pCount);
+    pCount_layout->addWidget(sb_pCount);
+
     QHBoxLayout *personality_layout = new QHBoxLayout;
     personality_layout->setContentsMargins(0,0,0,0);
     personality_layout->addWidget(lbl_personality);
     personality_layout->addWidget(sb_personality);
 
+    QHBoxLayout *pCount_personality_layout = new QHBoxLayout;
+    pCount_personality_layout->setContentsMargins(0,0,0,0);
+    pCount_personality_layout->addLayout(pCount_layout);
+    pCount_personality_layout->addLayout(personality_layout);
+
+    advancedModeBox = new QFrame;
+    advancedModeBox->setStyleSheet("QFrame:enabled{background-color: rgba(0,0,0,0);}");
+    advancedModeBox->setLayout(pCount_personality_layout);
+    advancedModeBox->setHidden(true);
+    QSpacerItem*vSpacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
     //Final Layout
     QVBoxLayout *Final = new QVBoxLayout;
-    Final->setContentsMargins(0,0,0,0);
+    //Final->setContentsMargins(0,0,0,0);
+    //Final->setSpacing(3);
     Final->addLayout(name_layout);
     Final->addLayout(type_sex_layout);
     Final->addLayout(cantMate_layout);
+    Final->addLayout(wins_rank_layout);
     Final->addLayout(speed_layout);
     Final->addLayout(sprint_layout);
-    Final->addLayout(accel_wins_layout);
-    Final->addLayout(stamina_pCount_layout);
+    Final->addLayout(accel_stamina_layout);
     Final->addLayout(coop_intel_layout);
-    Final->addLayout(personality_layout);
+    Final->addSpacerItem(vSpacer);
+    Final->addWidget(advancedModeBox);
     this->setLayout(Final);
+
 }
 void ChocoboEditor::init_connections(void)
 {
@@ -387,5 +407,14 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
     sb_coop->setValue(choco_data.coop);
     sb_intel->setValue(choco_data.intelligence);
     sb_personality->setValue(choco_data.personality);
+    getRank();
     init_connections();
 }
+void ChocoboEditor::getRank(void)
+{
+    if(choco_data.raceswon <3){lbl_rank->setText(tr("C"));}
+    else if(choco_data.raceswon<6){lbl_rank->setText(tr("B"));}
+    else if(choco_data.raceswon<9){lbl_rank->setText(tr("A"));}
+    else{lbl_rank->setText(tr("S"));}
+}
+void ChocoboEditor::setAdvancedMode(bool advancedMode){advancedModeBox->setHidden(!advancedMode);}

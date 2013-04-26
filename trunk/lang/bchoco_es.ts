@@ -728,6 +728,26 @@
         <source>Gold</source>
         <translation>Dorado</translation>
     </message>
+    <message>
+        <source>Rank: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>B</source>
+        <translation type="unfinished">B</translation>
+    </message>
+    <message>
+        <source>A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>E_skills</name>

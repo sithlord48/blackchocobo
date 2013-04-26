@@ -42,6 +42,7 @@ Q_OBJECT
     void setIcon(QPixmap);
     void elemental_info(int);
     void status_info(int);
+    bool eventFilter(QObject *obj, QEvent *ev);
     QLabel *lbl_name;
     QLabel *lbl_desc;
     QLabel *lbl_icon;

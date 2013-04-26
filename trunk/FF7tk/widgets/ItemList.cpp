@@ -84,7 +84,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
         }
         else{return event(ev);}
     }
-    else{return false;}
+    else{return event(ev);}
 }
 ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
 {

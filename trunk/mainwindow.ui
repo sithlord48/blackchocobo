@@ -374,11 +374,12 @@ QTabBar::tab:enabled{
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172,172,172);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-	min-width: 10ex;
     padding: 2px;
+	border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+	min-width: 9ex;
 	font:;color:rgb(255,255,255);
+
  }
 QTabBar::tab:selected {
 	border:3px solid;
@@ -386,15 +387,24 @@ QTabBar::tab:selected {
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-top-color: rgb(172,172,172);
     border-bottom-color: rgba(10,10,10,16);
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
  }
 QTabBar::tab:!selected { margin-top: 2px; }
 QTabBar::tab:selected{
      margin-left: -4px;
      margin-right: -4px;
  }
+
 QTabBar::tab:first:selected { margin-left: 0; }
 QTabBar::tab:last:selected { margin-right: 0; }
 QTabBar::tab:only-one { margin: 0;  }
+QTabBar::tab:hover{
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
+x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+}
 
 QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
 QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
@@ -421,24 +431,13 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
-       <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}
-</string>
-      </property>
-      <property name="tabPosition">
-       <enum>QTabWidget::North</enum>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
-      </property>
-      <property name="documentMode">
-       <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab_party">
        <property name="focusPolicy">
@@ -2905,22 +2904,10 @@ Stable</string>
         <item>
          <widget class="QScrollArea" name="scrollArea_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>350</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
           </property>
           <widget class="QWidget" name="scrollAreaWidgetContents_2">
            <property name="geometry">
@@ -2940,29 +2927,20 @@ Stable</string>
               <property name="enabled">
                <bool>true</bool>
               </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
               <property name="minimumSize">
                <size>
                 <width>0</width>
                 <height>0</height>
                </size>
               </property>
-              <property name="styleSheet">
-               <string notr="true"/>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16677215</height>
+               </size>
               </property>
               <property name="title">
                <string>Stable 1</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -2974,12 +2952,6 @@ Stable</string>
             </item>
             <item>
              <widget class="QGroupBox" name="box_stable2">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
               <property name="title">
                <string>Stable 2</string>
               </property>
@@ -3317,8 +3289,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>496</height>
+             <width>749</width>
+             <height>494</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5675,7 +5647,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>285</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -8475,42 +8447,34 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           <property name="styleSheet">
            <string notr="true">::tab:hover{
 	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
+		x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+		stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
 }
 ::tab {
     background: rgba(10,10,10,16);
-    border: 2px solid;
-	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
-stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
-stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: rgb(172, 172, 172);
-	border-left-color: rgb(172,172,172);
-    border-radius: 4px;
-	min-height: 10ex;
+	min-height: 14ex;
+	min-width: 1ex;
+	max-width:4ex;
 	font:;color:rgb(255,255,255);
+	border:2px solid;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
  }
 ::tab:selected {
-	border:3px solid;
+	border:2px solid;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-	border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
-stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-top-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
-stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-left-color: rgb(172,172,172);
-    border-right-color: rgba(10,10,10,16);
+		x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
+		stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
  }
-::tab:!selected { margin-left: 2px; }
-::tab:selected{
+QTabBar::tab:!selected { margin-left: 2px; }
+QTabBar::tab:selected{
      margin-top: -4px;
      margin-bottom: -4px;
  }
-::tab:first:selected { margin-top: 0; }
-::tab:last:selected { margin-bottom: 0; }
-::tab:only-one { margin: 0;  }</string>
+
+QTabBar::tab:first:selected { margin-top: 0; }
+QTabBar::tab:last:selected { margin-bottom: 0; }
+QTabBar::tab:only-one { margin: 0;  }</string>
           </property>
           <property name="tabPosition">
            <enum>QTabWidget::West</enum>
