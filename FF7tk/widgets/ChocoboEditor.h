@@ -80,12 +80,15 @@ public slots:
    void setType(int);
    void setName(QString);
    void setCantMate(bool);
+   void setAdvancedMode(bool);
 
 private:
     void init_display(void);
     void init_connections(void);
     void disconnectAll(void);
+    void getRank(void);
     //Widgets
+    QFrame *advancedModeBox;
     QComboBox *combo_sex;
     QComboBox *combo_type;
     QCheckBox *cb_cantMate;
@@ -116,6 +119,8 @@ private:
     QLabel *lbl_pCount;
     QLabel *lbl_intel;
     QLabel *lbl_personality;
+    QLabel *lbl_rankLabel;
+    QLabel *lbl_rank;
 
     //Data
     FF7CHOCOBO choco_data;

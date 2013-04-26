@@ -105,7 +105,7 @@ void MainWindow::init_display()
     ui->cb_Region_Slot->setEnabled(false);
     ui->actionNew_Window->setVisible(0);
 
-    // Temp hidden (show only via debug)
+    // Temp hidden (show only via advancedMode)
     ui->cb_farm_items_1->setVisible(false);
     ui->cb_farm_items_2->setVisible(false);
     ui->cb_farm_items_3->setVisible(false);
@@ -274,7 +274,7 @@ void MainWindow::init_connections()
         connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
         connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
         //Char_Editor
-        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),char_editor,(SLOT(setAdvancedMode(bool))));
         connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
         connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));
         connect(char_editor,SIGNAL(str_changed(quint8)),this,SLOT(char_str_changed(quint8)));
@@ -314,6 +314,7 @@ void MainWindow::init_connections()
         connect(char_editor,SIGNAL(Materias_changed(materia)),this,SLOT(char_materia_changed(materia)));
         connect(char_editor,SIGNAL(expNext_changed(quint32)),this,SLOT(char_expNext_changed(quint32)));
         //Chocobo Editor 1
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_1,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_1,SIGNAL(name_changed(QString)),this,SLOT(c1_nameChanged(QString)));
         connect(chocobo_stable_1,SIGNAL(cantMate_changed(bool)),this,SLOT(c1_mated_toggled(bool)));
         connect(chocobo_stable_1,SIGNAL(speed_changed(quint16)),this,SLOT(c1_speedChanged(quint16)));
@@ -330,6 +331,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_1,SIGNAL(pCount_changed(quint8)),this,SLOT(c1_pcountChanged(quint8)));
         connect(chocobo_stable_1,SIGNAL(wins_changed(quint8)),this,SLOT(c1_raceswonChanged(quint8)));
         //Chocobo Editor 2
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_2,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_2,SIGNAL(name_changed(QString)),this,SLOT(c2_nameChanged(QString)));
         connect(chocobo_stable_2,SIGNAL(cantMate_changed(bool)),this,SLOT(c2_mated_toggled(bool)));
         connect(chocobo_stable_2,SIGNAL(speed_changed(quint16)),this,SLOT(c2_speedChanged(quint16)));
@@ -346,6 +348,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_2,SIGNAL(pCount_changed(quint8)),this,SLOT(c2_pcountChanged(quint8)));
         connect(chocobo_stable_2,SIGNAL(wins_changed(quint8)),this,SLOT(c2_raceswonChanged(quint8)));
         //Chocobo Editor 3
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_3,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_3,SIGNAL(name_changed(QString)),this,SLOT(c3_nameChanged(QString)));
         connect(chocobo_stable_3,SIGNAL(cantMate_changed(bool)),this,SLOT(c3_mated_toggled(bool)));
         connect(chocobo_stable_3,SIGNAL(speed_changed(quint16)),this,SLOT(c3_speedChanged(quint16)));
@@ -362,6 +365,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_3,SIGNAL(pCount_changed(quint8)),this,SLOT(c3_pcountChanged(quint8)));
         connect(chocobo_stable_3,SIGNAL(wins_changed(quint8)),this,SLOT(c3_raceswonChanged(quint8)));
         //Chocobo Editor 4
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_4,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_4,SIGNAL(name_changed(QString)),this,SLOT(c4_nameChanged(QString)));
         connect(chocobo_stable_4,SIGNAL(cantMate_changed(bool)),this,SLOT(c4_mated_toggled(bool)));
         connect(chocobo_stable_4,SIGNAL(speed_changed(quint16)),this,SLOT(c4_speedChanged(quint16)));
@@ -378,6 +382,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_4,SIGNAL(pCount_changed(quint8)),this,SLOT(c4_pcountChanged(quint8)));
         connect(chocobo_stable_4,SIGNAL(wins_changed(quint8)),this,SLOT(c4_raceswonChanged(quint8)));
         //Chocobo Editor 5
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_5,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_5,SIGNAL(name_changed(QString)),this,SLOT(c5_nameChanged(QString)));
         connect(chocobo_stable_5,SIGNAL(cantMate_changed(bool)),this,SLOT(c5_mated_toggled(bool)));
         connect(chocobo_stable_5,SIGNAL(speed_changed(quint16)),this,SLOT(c5_speedChanged(quint16)));
@@ -394,6 +399,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_5,SIGNAL(pCount_changed(quint8)),this,SLOT(c5_pcountChanged(quint8)));
         connect(chocobo_stable_5,SIGNAL(wins_changed(quint8)),this,SLOT(c5_raceswonChanged(quint8)));
         //Chocobo Editor 6
+        connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocobo_stable_6,(SLOT(setAdvancedMode(bool))));
         connect(chocobo_stable_6,SIGNAL(name_changed(QString)),this,SLOT(c6_nameChanged(QString)));
         connect(chocobo_stable_6,SIGNAL(cantMate_changed(bool)),this,SLOT(c6_mated_toggled(bool)));
         connect(chocobo_stable_6,SIGNAL(speed_changed(quint16)),this,SLOT(c6_speedChanged(quint16)));
@@ -891,46 +897,29 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 }
 void MainWindow::on_action_AdvancedMode_toggled(bool checked)
 {
-    if(checked)
-    {
-        ui->actionNew_Window->setVisible(1);
-        ui->tabWidget->setTabEnabled(9,1);
-        ui->cb_Region_Slot->setEnabled(true);
-        ui->bm_unknown->setVisible(true);
-        ui->bh_id->setVisible(true);
-        ui->leader_id->setVisible(true);
-        if(ff7->type() == "PC"){setControllerMappingVisible(true);}
-        settings->setValue("show_test",1);
-        ui->cb_farm_items_1->setVisible(true);
-        ui->cb_farm_items_2->setVisible(true);
-        ui->cb_farm_items_3->setVisible(true);
-        ui->cb_farm_items_4->setVisible(true);
-        ui->cb_farm_items_5->setVisible(true);
-        ui->cb_farm_items_6->setVisible(true);
-        ui->cb_farm_items_7->setVisible(true);
-        ui->cb_farm_items_8->setVisible(true);
-    }
-
+    if(checked){settings->setValue("show_test",1);}
     else
     {
-        ui->actionNew_Window->setVisible(0);
-        if(!ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty()){ui->tabWidget->setCurrentIndex(8);}
-        ui->tabWidget->setTabEnabled(9,0);
-        ui->cb_Region_Slot->setEnabled(false);
-        ui->bm_unknown->setVisible(false);
-        ui->bh_id->setVisible(false);
-        ui->leader_id->setVisible(false);
-        if(ff7->type() =="PC"){setControllerMappingVisible(false);}
         settings->setValue("show_test",0);
-        ui->cb_farm_items_1->setVisible(false);
-        ui->cb_farm_items_2->setVisible(false);
-        ui->cb_farm_items_3->setVisible(false);
-        ui->cb_farm_items_4->setVisible(false);
-        ui->cb_farm_items_5->setVisible(false);
-        ui->cb_farm_items_6->setVisible(false);
-        ui->cb_farm_items_7->setVisible(false);
-        ui->cb_farm_items_8->setVisible(false);
+        if(!ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty()){ui->tabWidget->setCurrentIndex(8);}
     }
+
+    ui->tabWidget->setTabEnabled(9,checked);
+    ui->actionNew_Window->setVisible(checked);
+    ui->cb_Region_Slot->setEnabled(checked);
+    ui->bm_unknown->setVisible(checked);
+    ui->bh_id->setVisible(checked);
+    ui->leader_id->setVisible(checked);
+    if(ff7->type() =="PC"){setControllerMappingVisible(checked);}
+    ui->cb_farm_items_1->setVisible(checked);
+    ui->cb_farm_items_2->setVisible(checked);
+    ui->cb_farm_items_3->setVisible(checked);
+    ui->cb_farm_items_4->setVisible(checked);
+    ui->cb_farm_items_5->setVisible(checked);
+    ui->cb_farm_items_6->setVisible(checked);
+    ui->cb_farm_items_7->setVisible(checked);
+    ui->cb_farm_items_8->setVisible(checked);
+    //Widgets are Connected to the Signal see init_connections()
 }
 
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/

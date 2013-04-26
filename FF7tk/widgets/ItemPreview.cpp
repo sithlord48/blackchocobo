@@ -15,9 +15,22 @@
 /****************************************************************************/
 #include "ItemPreview.h"
 
+bool ItemPreview::eventFilter(QObject *obj, QEvent *ev)
+{
+    if(obj != this->parent() && (obj != this)){this->close();return true;}
+    if(ev->type()==QEvent::MouseButtonPress){this->close();return true;}
+    else{return false;}
+
+}
 ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QWidget(parent)
 {
   setWindowFlags(WindowFlags);
+
+  Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
+  if(WidgetType ==Qt::Popup || WidgetType ==Qt::ToolTip)
+  {// if popup or tooltip install the eventFilter
+      installEventFilter(this);
+   }
   _id=FF7Item::EmptyItem;
   lbl_name=new QLabel();
   lbl_desc=new QLabel();
@@ -115,11 +128,11 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
 
   QHBoxLayout *materia_slots = new QHBoxLayout();
   materia_slots->setContentsMargins(0,0,0,0);
-  materia_slots->addSpacerItem(spacer);
-  materia_slots->addLayout(slots_7_and_8);
-  materia_slots->addLayout(slots_5_and_6);
-  materia_slots->addLayout(slots_3_and_4);
   materia_slots->addLayout(slots_1_and_2);
+  materia_slots->addLayout(slots_3_and_4);
+  materia_slots->addLayout(slots_5_and_6);
+  materia_slots->addLayout(slots_7_and_8);
+  materia_slots->addSpacerItem(spacer);
   materia_slots->setSpacing(12);
 
   materia_slot_box->setLayout(materia_slots);

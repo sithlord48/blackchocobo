@@ -41,7 +41,7 @@ public:
     bool AutoLevel();
     bool AutoStatCalc();
     bool Editable();
-    bool Debug();
+    bool AdvancedMode();
     void setSliderStyle(QString style);
     void MaxStats();
     void MaxEquip();
@@ -127,7 +127,7 @@ public slots:
     void setAutoLevel(bool);
     void setAutoStatCalc(bool);
     void setEditable(bool);
-    void setDebug(bool);
+    void setAdvancedMode(bool);
     void setToolBoxStyle(QString);
 
 private slots:
@@ -361,7 +361,7 @@ private:
    bool autolevel;
    bool autostatcalc;
    bool editable;
-   bool debug;
+   bool advancedMode;
    int mslotsel;//select materia slot
    qint32 ap;
 };
