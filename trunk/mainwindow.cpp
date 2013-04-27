@@ -1190,7 +1190,7 @@ void MainWindow::setmenu(bool newgame)
         if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
         ui->tabWidget->setCurrentIndex(8);
         for(int i=0;i<8;i++){ui->tabWidget->setTabEnabled(i,false);}
-        ui->tabWidget->setTabEnabled(9,ui->action_AdvancedMode->isChecked());
+        ui->tabWidget->setTabEnabled(9,false);
     }
 
     else
@@ -1393,7 +1393,11 @@ void MainWindow::itemupdate(void)
     load=true;
     //Field Items Picked up
     itemlist->setItems(ff7->items(s));
-
+    for(int i=0;i<ui->list_keyitems->count();i++)
+    {
+        if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
+        else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
+    }
     if(ff7->unknown(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
@@ -1519,11 +1523,6 @@ void MainWindow::othersUpdate()
     {
         if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
         else{menuList->setChecked(i,2,false);}
-    }
-    for (int i=0;i<51;i++)// key items
-    {
-        if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
-        else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
     }
 
     ui->sb_steps->setValue(ff7->slot[s].steps);
