@@ -100,6 +100,9 @@ private:
     QPixmap _empty_star_icon;//hold current empty star icon
     QPixmap _type_icon; // materia type icon.
     QStringList _skill_list;
+
+    QLabel *lbl_materiaIcon;
+    QLabel *lbl_materiaName;
     bool editable;
 private slots:
     void btn_star1_clicked();

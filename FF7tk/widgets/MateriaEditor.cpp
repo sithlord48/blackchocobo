@@ -67,6 +67,8 @@ void MateriaEditor::init_display()
     frm_name_type =new QFrame;
     frm_ap = new QFrame;
     frm_ap_stars = new QFrame;
+    lbl_materiaIcon = new QLabel;
+    lbl_materiaName= new QLabel;
     v_spacer = new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::Expanding);
     //Special Properties Of Above Widgets
     sb_ap->setWrapping(1);
@@ -102,17 +104,19 @@ void MateriaEditor::init_display()
     eskill_group->setHidden(true);
     box_status_effects->setHidden(true);
     box_stats->setHidden(true);
+
     //set Minimum Sizes.
-    btn_copy_materia->setMinimumSize(24,24);
-    btn_paste_materia->setMinimumSize(24,24);
-    btn_rm_materia->setMinimumSize(24,24);
+    btn_copy_materia->setFixedSize(24,24);
+    btn_paste_materia->setFixedSize(24,24);
+    btn_rm_materia->setFixedSize(24,24);
+    lbl_materiaIcon->setFixedSize(24,24);
     combo_type->setMinimumHeight(24);
     combo_materia->setMinimumHeight(24);
-
     list_skills->setFixedHeight((this->font().pointSize()*10)+6);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
     list_status->setFixedHeight((this->font().pointSize()*10)+6);
     list_status->setSelectionMode(QAbstractItemView::NoSelection);
+
     //size policies
     combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
     combo_type->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
@@ -127,6 +131,8 @@ void MateriaEditor::init_display()
 //Set up display
     this->setContentsMargins(0,0,0,0);
     QHBoxLayout * type_name_layout = new QHBoxLayout;
+    type_name_layout->addWidget(lbl_materiaIcon);
+    type_name_layout->addWidget(lbl_materiaName);
     type_name_layout->addWidget(combo_type);
     type_name_layout->addWidget(combo_materia);
     type_name_layout->addWidget(btn_copy_materia);
@@ -269,6 +275,8 @@ void MateriaEditor::init_data()
     buffer_id=0;
     buffer_ap=0;
     editable=true;
+    lbl_materiaIcon->setHidden(editable);
+    lbl_materiaName->setHidden(editable);
 }
 
 void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
@@ -348,9 +356,11 @@ void MateriaEditor::setAP(qint32 ap)
 
 void MateriaEditor::setName()
 {
-    if(_id==FF7Materia::EmptyId){combo_type->setCurrentIndex(0);combo_materia->setCurrentIndex(-1);}
+    if(_id==FF7Materia::EmptyId){combo_type->setCurrentIndex(0);combo_materia->setCurrentIndex(-1);lbl_materiaName->clear();lbl_materiaIcon->setPixmap(QPixmap());}
     else
     {
+        lbl_materiaIcon->setPixmap(_type_icon.scaled(lbl_materiaIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+        lbl_materiaName->setText(_name);
         if(combo_type->currentIndex()!=FF7Materia::Unknown){combo_type->setCurrentIndex(_type);}
         for(int i=0;i<combo_materia->count();i++)
         {//loop thru type and see if name matches if so set index and stop
@@ -411,19 +421,19 @@ void MateriaEditor::setStars()
         btn_star5->setHidden(true);
         if(_type !=0)
         {
-            btn_star1->setIcon(_empty_star_icon);
-            btn_star2->setIcon(_empty_star_icon);
-            btn_star3->setIcon(_empty_star_icon);
-            btn_star4->setIcon(_empty_star_icon);
-            btn_star5->setIcon(_empty_star_icon);
+            btn_star1->setIcon(_empty_star_icon.scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star2->setIcon(_empty_star_icon.scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star3->setIcon(_empty_star_icon.scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star4->setIcon(_empty_star_icon.scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star5->setIcon(_empty_star_icon.scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         }
         switch(_level)
         {//no break on purpose
-            case 5: btn_star5->setIcon(_full_star_icon);
-            case 4: btn_star4->setIcon(_full_star_icon);
-            case 3: btn_star3->setIcon(_full_star_icon);
-            case 2: btn_star2->setIcon(_full_star_icon);
-            case 1: btn_star1->setIcon(_full_star_icon);
+            case 5: btn_star5->setIcon(_full_star_icon.scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 4: btn_star4->setIcon(_full_star_icon.scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 3: btn_star3->setIcon(_full_star_icon.scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 2: btn_star2->setIcon(_full_star_icon.scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 1: btn_star1->setIcon(_full_star_icon.scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         };
         switch(_max_level)
         {//no break on purpose.
@@ -530,6 +540,7 @@ void MateriaEditor::btn_master_eskill_clicked(){if(_current_ap != FF7Materia::Ma
 
 void MateriaEditor::setStarsSize(int size)
 {
+
     btn_star1->setFixedSize(size,size);
     btn_star2->setFixedSize(size,size);
     btn_star3->setFixedSize(size,size);
@@ -541,6 +552,7 @@ void MateriaEditor::setStarsSize(int size)
     btn_star4->setIconSize(QSize(size,size));
     btn_star5->setIconSize(QSize(size,size));
     box_stars->setFixedHeight(size +(size/8));
+    setStars();
     box_stars->adjustSize();
         
     frm_ap_stars->layout()->removeWidget(box_stars);
@@ -579,10 +591,30 @@ void MateriaEditor::editMode(void)
     btn_star4->blockSignals(!editable);
     btn_star5->blockSignals(!editable);
     //Set Enabled = editable
+
     if(_id != FF7Materia::EmptyId){sb_ap->setEnabled(editable);}
-    btn_paste_materia->setEnabled(editable);
-    btn_rm_materia->setEnabled(editable);
-    combo_materia->setEnabled(editable);
-    //Show combo type if editable
-    combo_type->setVisible(editable);
+    btn_paste_materia->setHidden(!editable);
+    btn_rm_materia->setHidden(!editable);
+    combo_materia->setHidden(!editable);
+    combo_type->setHidden(!editable);
+    //show the materia Icon and Name if not hidden.
+    lbl_materiaIcon->setHidden(editable);
+    lbl_materiaName->setHidden(editable);
+    btn_master_eskills->setHidden(!editable);
+    btn_clear_eskills->setHidden(!editable);
+    if(editable)
+    {
+        for(int i=0;i<eskill_list->count();i++)
+        {
+            eskill_list->item(i)->setFlags(eskill_list->item(i)->flags() |= Qt::ItemIsUserCheckable);
+        }
+    }
+   else
+   {
+       for(int i=0;i<eskill_list->count();i++)
+       {
+           eskill_list->item(i)->setFlags(eskill_list->item(i)->flags() &=~Qt::ItemIsUserCheckable);
+       }
+   }
+
 }

@@ -377,7 +377,7 @@ QTabBar::tab:enabled{
     padding: 2px;
 	border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-	min-width: 9ex;
+	min-width: 10ex;
 	font:;color:rgb(255,255,255);
 
  }

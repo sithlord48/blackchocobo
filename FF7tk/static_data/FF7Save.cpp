@@ -132,7 +132,7 @@ bool FF7Save::setFileHeader(QByteArray data)
 QByteArray FF7Save::slotHeader(int s)
 {
     QByteArray temp;
-    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_header),0x0200);
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_header),SG_SLOT_HEADER);
     return temp;
 }
 bool FF7Save::setSlotHeader(int s, QByteArray data)
@@ -162,7 +162,7 @@ bool FF7Save::setFileFooter(QByteArray data)
 QByteArray FF7Save::slotFooter(int s)
 {
     QByteArray temp;
-    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_footer),0xD0C);
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_footer),SG_SLOT_FOOTER);
     return temp;
 }
 bool FF7Save::setSlotFooter(int s, QByteArray data)
@@ -175,10 +175,12 @@ bool FF7Save::setSlotFooter(int s, QByteArray data)
 QByteArray FF7Save::slotPsxRawData(int s)
 {
     if(filename.isEmpty()){return QByteArray("\x00");}
+    else if (type() == "PC"){return QByteArray("\x00");}
     else
     {
         QByteArray temp;
         int blocks = psx_block_size(s);
+        if((type()=="PSV") || (type() =="PSX")){blocks =1;}
         for(int i=0; i<blocks;i++)
         {
             temp.append(slotHeader(s));
