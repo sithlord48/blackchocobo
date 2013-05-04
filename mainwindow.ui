@@ -3289,8 +3289,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>749</width>
-             <height>494</height>
+             <width>760</width>
+             <height>496</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5647,7 +5647,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>285</width>
+                  <width>353</width>
                   <height>1705</height>
                  </rect>
                 </property>

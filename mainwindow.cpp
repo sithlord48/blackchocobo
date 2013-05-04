@@ -248,7 +248,6 @@ void MainWindow::init_style()
   optionsWidget->setSliderStyle(sliderStyleSheet);
   char_editor->setSliderStyle(sliderStyleSheet);
 
-  optionsWidget->setScrollAreaStyleSheet(QString("background-color: rgb(97,97,97);font:;color:rgb(255,255,255);"));
   char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));}"));
   hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
 
@@ -876,7 +875,7 @@ void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(
 void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
-void MainWindow::on_actionAbout_triggered(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
+void MainWindow::on_actionAbout_triggered(){about adialog; adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }

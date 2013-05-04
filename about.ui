@@ -23,9 +23,6 @@
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -849,7 +846,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>361</width>
+            <width>343</width>
             <height>430</height>
            </rect>
           </property>
@@ -1525,8 +1522,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>361</width>
-            <height>438</height>
+            <width>124</width>
+            <height>970</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
