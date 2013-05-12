@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>766</width>
-    <height>635</height>
+    <height>593</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
+  <property name="minimumSize">
+   <size>
+    <width>766</width>
+    <height>593</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Black Chocobo</string>
@@ -412,9 +412,15 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
 </string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_53">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_17">
     <property name="spacing">
-     <number>0</number>
+     <number>3</number>
     </property>
     <property name="leftMargin">
      <number>0</number>
@@ -446,18 +452,21 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
        <attribute name="title">
         <string>P&amp;arty</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_89">
+       <layout class="QHBoxLayout" name="horizontalLayout_18">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <property name="leftMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="topMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="rightMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="bottomMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <item>
          <widget class="QFrame" name="frmParty">
@@ -465,12 +474,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            <size>
             <width>300</width>
             <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
            </size>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_23">
@@ -2826,11 +2829,38 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <string>C&amp;hocobo</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_57">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QFrame" name="choco_stables_frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <layout class="QHBoxLayout" name="horizontalLayout_51">
            <item>
             <widget class="QLabel" name="label_9">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Stables Owned</string>
              </property>
@@ -2841,6 +2871,12 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            </item>
            <item>
             <widget class="QSpinBox" name="sb_stables_owned">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
                <width>30</width>
@@ -2866,6 +2902,12 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            </item>
            <item>
             <widget class="QLabel" name="label_142">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Checked Stables Are Occupied Uncheck Stable to Empty 
 Stable</string>
@@ -2874,6 +2916,12 @@ Stable</string>
            </item>
            <item>
             <widget class="QLabel" name="label_141">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Stables Occupied</string>
              </property>
@@ -2884,6 +2932,12 @@ Stable</string>
            </item>
            <item>
             <widget class="QLCDNumber" name="lcd_stables_occupied">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="maximumSize">
               <size>
                <width>32</width>
@@ -2904,7 +2958,7 @@ Stable</string>
         <item>
          <widget class="QScrollArea" name="scrollArea_2">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -2917,6 +2971,12 @@ Stable</string>
              <width>1506</width>
              <height>325</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
@@ -3021,6 +3081,12 @@ Stable</string>
         </item>
         <item>
          <widget class="QFrame" name="choco_Pen_frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <layout class="QHBoxLayout" name="horizontalLayout_124">
            <item>
             <widget class="QGroupBox" name="group_choco_pen">
@@ -3260,6 +3326,9 @@ calculated while playing </string>
         <string>&amp;Location</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_96">
+        <property name="spacing">
+         <number>3</number>
+        </property>
         <property name="leftMargin">
          <number>3</number>
         </property>
@@ -3289,8 +3358,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>496</height>
+             <width>759</width>
+             <height>435</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3317,7 +3386,7 @@ enabled{font:;color: rgb(255, 255, 255);}
              <widget class="QTableWidget" name="tbl_location_field">
               <property name="minimumSize">
                <size>
-                <width>415</width>
+                <width>425</width>
                 <height>0</height>
                </size>
               </property>
@@ -3408,10 +3477,13 @@ enabled{font:;color: rgb(255, 255, 255);}
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>13</height>
+                  <height>3</height>
                  </size>
                 </property>
                </spacer>
@@ -3428,14 +3500,28 @@ set your map location , x,y,z manually</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="label_143">
+               <widget class="QLabel" name="lbl_fieldFile">
                 <property name="text">
-                 <string>Have Fun With This Feature, But Don't Be Reckless 
-Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
-Quest Progression Value(s).</string>
+                 <string/>
                 </property>
-                <property name="wordWrap">
-                 <bool>true</bool>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="lbl_locationPreview">
+                <property name="minimumSize">
+                 <size>
+                  <width>320</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>320</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -3720,40 +3806,17 @@ Quest Progression Value(s).</string>
                </layout>
               </item>
               <item>
-               <widget class="QLabel" name="lbl_fieldFile">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="lbl_locationPreview">
-                <property name="minimumSize">
-                 <size>
-                  <width>320</width>
-                  <height>240</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>320</width>
-                  <height>240</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item>
                <spacer name="verticalSpacer_12">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>13</height>
+                  <height>3</height>
                  </size>
                 </property>
                </spacer>
@@ -6266,10 +6329,13 @@ Mission</string>
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>0</width>
-              <height>0</height>
+              <height>1</height>
              </size>
             </property>
            </spacer>
@@ -6341,8 +6407,7 @@ Is Under Heavy Development</string>
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="text">
-                <string>         INFO ON CURRENTLY SELECTED REPLAY 
-MISSION</string>
+                <string/>
                </property>
                <property name="wordWrap">
                 <bool>true</bool>
@@ -6357,10 +6422,13 @@ MISSION</string>
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>0</width>
-              <height>0</height>
+              <height>1</height>
              </size>
             </property>
            </spacer>
@@ -10116,7 +10184,14 @@ Var And Scrolling Synced To Left Table</string>
    <addaction name="menuOptions"/>
    <addaction name="menuAbout"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+  </widget>
   <action name="action_Quit">
    <property name="icon">
     <iconset resource="images.qrc">
