@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+# //    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -90,7 +90,8 @@ HEADERS += mainwindow.h \
 FORMS += mainwindow.ui \
     about.ui \
     options.ui
-RESOURCES += images.qrc
+RESOURCES += images.qrc \
+    locations.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \
     lang/bchoco_fr.ts \
@@ -117,7 +118,6 @@ macx:{
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
-system (rcc -binary locations.qrc -o locations.rcc) #make locations resource
 
 unix:!macx:!symbian: {
 #all other *nix (except for symbian and mac os)
@@ -127,9 +127,6 @@ unix:!macx:!symbian: {
     lang.path = /opt/blackchocobo/lang #set path for lang folder
     lang.files = lang/*.qm  #grab All qm files
 
-    locationPreview.path=/opt/blackchocobo/
-    locationPreview.files= locations.rcc
-
     icon.path = /usr/share/pixmaps       #system path icon.
     icon.files = icon/Black_Chocobo.png
 
@@ -138,7 +135,6 @@ unix:!macx:!symbian: {
 
     INSTALLS += target \
         lang  \
-        locationPreview \
         icon  \
         desktop
 }

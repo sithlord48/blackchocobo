@@ -36,8 +36,8 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     s=0;
     buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
-    if(QResource::registerResource(QApplication::applicationDirPath().append(QString("/locations.rcc")))){showLocPreview=true;}
-    else{showLocPreview=false;}
+    //if(QResource::registerResource(QApplication::applicationDirPath().append(QString("/locations.rcc")))){showLocPreview=true;}
+    //else{showLocPreview=false;}
     init_display();
     init_style();
     init_connections();
@@ -62,11 +62,11 @@ void MainWindow::init_display()
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
         newItem = new QTableWidgetItem(Locations.locationString(i),0);
-        if(showLocPreview)
-        {//set the tooltip to the needed file if the locations resource is found.
+        //if(showLocPreview)
+        //{//set the tooltip to the needed file if the locations resource is found.
             QString tooltip(QString("<html><head/><body><p><br>%1<br><img src=\":/locations/%2_%3\"/></p></body></html>").arg(Locations.fileName(i),Locations.mapID(i),Locations.locationID(i)));
             newItem->setToolTip(tooltip);
-        }
+        //}
         ui->tbl_location_field->setItem(i,0,newItem);
         newItem = new QTableWidgetItem(Locations.mapID(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
