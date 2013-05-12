@@ -71,7 +71,7 @@ void ChocoboEditor::setMspeed(int max_speed)
     if(max_speed <0){max_speed =0;}
     else if (max_speed > 9999){max_speed = 9999;}
     choco_data.maxspeed = max_speed;
-    emit mSprint_changed(choco_data.maxspeed);
+    emit mSpeed_changed(choco_data.maxspeed);
 }
 void ChocoboEditor::setStamina(int stamina)
 {
