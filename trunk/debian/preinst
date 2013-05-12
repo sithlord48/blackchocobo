@@ -5,10 +5,15 @@
     echo "Ok"
     else echo "Not Found"
     fi
-    echo "Checking for removing save0...\c"
+    echo "Checking for removing Obsolete Files..."
     if [ -f /opt/blackchocobo/save0 ];then #check to see if older version installed.
     rm /opt/blackchocobo/save0
-    echo "Ok"
-    else echo "Not Found"
+    echo "save0 - Removed"
+    else echo "save 0 - Not Found"
+    fi
+    if [-f /opt/blackchocobo/locations.rcc ]; then #remove it 
+    rm /opt/blackchocobo/locations.rcc
+    echo "locations.rcc - Removed"
+    else echo "locations.rcc - Not Found"
     fi
     exit 0
