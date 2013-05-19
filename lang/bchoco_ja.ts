@@ -4679,7 +4679,7 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation>このファイルのチェックサムは更新されていません。 PSP では正しく機能しません。</translation>
+        <translation type="obsolete">このファイルのチェックサムは更新されていません。 PSP では正しく機能しません。</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4883,7 +4883,7 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation>このファイルのチェックサムは更新されていません。 PS3 では正しく機能しません。</translation>
+        <translation type="obsolete">このファイルのチェックサムは更新されていません。 PS3 では正しく機能しません。</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
@@ -5772,12 +5772,6 @@ set your map location , x,y,z manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
-Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
-Quest Progression Value(s).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
         <translation type="unfinished"></translation>
@@ -5799,11 +5793,6 @@ Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this
 feature, i can not promise that you will be able to play from any replay untill 
 the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
 Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>         INFO ON CURRENTLY SELECTED REPLAY 
-MISSION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5841,6 +5830,24 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>/</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSV will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PS3 will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

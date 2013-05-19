@@ -4606,7 +4606,7 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PSP.</translation>
+        <translation type="obsolete">Este archivo no tiene un checksum actualizado. No funcionará en tu PSP.</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4810,7 +4810,7 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
+        <translation type="obsolete">Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
@@ -5705,7 +5705,7 @@ set your map location , x,y,z manually</source>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
 Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
 Quest Progression Value(s).</source>
-        <translation>Diviértete con esta función pero ten cuidado. Cambiar los valores de arriba puede causar anomalías en el juego dependiendo de tus valores de progreso de misión.</translation>
+        <translation type="obsolete">Diviértete con esta función pero ten cuidado. Cambiar los valores de arriba puede causar anomalías en el juego dependiendo de tus valores de progreso de misión.</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
@@ -5735,7 +5735,7 @@ Is Under Heavy Development</source>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY 
 MISSION</source>
-        <translation>       INFORMACIÓN DE LA MISIÓN ACTUALMENTE SELECCIONADA</translation>
+        <translation type="obsolete">       INFORMACIÓN DE LA MISIÓN ACTUALMENTE SELECCIONADA</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
@@ -5773,6 +5773,24 @@ trigger showing that tutorial</source>
     <message>
         <source>/</source>
         <translation>/</translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSV will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PS3 will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

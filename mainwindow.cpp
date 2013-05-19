@@ -36,13 +36,10 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     s=0;
     buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
-    //if(QResource::registerResource(QApplication::applicationDirPath().append(QString("/locations.rcc")))){showLocPreview=true;}
-    //else{showLocPreview=false;}
     init_display();
     init_style();
     init_connections();
     init_settings();
-    //setup locations previews if found
     on_actionNew_Game_triggered();
     file_modified(false);
 }
@@ -62,11 +59,8 @@ void MainWindow::init_display()
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
         newItem = new QTableWidgetItem(Locations.locationString(i),0);
-        //if(showLocPreview)
-        //{//set the tooltip to the needed file if the locations resource is found.
-            QString tooltip(QString("<html><head/><body><p><br>%1<br><img src=\":/locations/%2_%3\"/></p></body></html>").arg(Locations.fileName(i),Locations.mapID(i),Locations.locationID(i)));
-            newItem->setToolTip(tooltip);
-        //}
+        QString tooltip(QString("<html><head/><body><p><br>%1<br><img src=\":/locations/%2_%3\"/></p></body></html>").arg(Locations.fileName(i),Locations.mapID(i),Locations.locationID(i)));
+        newItem->setToolTip(tooltip);
         ui->tbl_location_field->setItem(i,0,newItem);
         newItem = new QTableWidgetItem(Locations.mapID(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);
@@ -663,12 +657,12 @@ void MainWindow::on_action_Save_triggered()
     {
         if(ff7->type()=="PSP")
         {
-            if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
+            QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
         }
 
         else if(ff7->type()=="PSV")
         {
-            QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
+            QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSV will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
         }
 
         saveFileFull(ff7->fileName());
@@ -702,14 +696,14 @@ void MainWindow::on_actionSave_File_As_triggered()
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSV SaveGame"), QDir::homePath(),
         tr("FF7 PSV SaveGame(*.psv)"));
-        QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
+        QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
     }
     else if(ff7->type() == "PSP")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  PSP SaveGame"), QDir::homePath(),
         tr("FF7 PSP SaveGame(*.vmp)"));
-        QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
+        QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
     }
     else if(ff7->type() == "VGS")
     {
