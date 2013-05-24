@@ -25,7 +25,7 @@
 
 //Be sure to set paths correctly for below.
 //ALSO CHECK ChocoboEditor.cpp for icons includes.
-#include "../static_data/FF7Save_Types.h"
+#include "../static_data/Type_FF7CHOCOBO.h"
 
 class ChocoboEditor : public QWidget
 {
@@ -49,21 +49,21 @@ public:
     QString name(void);
     bool cantMate(void);
 signals:    
-    void sprint_changed(quint16);
-    void mSprint_changed(quint16);
-    void speed_changed(quint16);
-    void mSpeed_changed(quint16);
-    void stamina_changed(quint16);
-    void accel_changed(quint8);
-    void coop_changed(quint8);
-    void intelligence_changed(quint8);
-    void personality_changed(quint8);
-    void pCount_changed(quint8);
-    void wins_changed(quint8);
-    void sex_changed(quint8);
-    void type_changed(quint8);
-    void name_changed(QString);
-    void cantMate_changed(bool);
+    void sprintChanged(quint16);
+    void mSprintChanged(quint16);
+    void speedChanged(quint16);
+    void mSpeedChanged(quint16);
+    void staminaChanged(quint16);
+    void accelChanged(quint8);
+    void coopChanged(quint8);
+    void intelligenceChanged(quint8);
+    void personalityChanged(quint8);
+    void pCountChanged(quint8);
+    void winsChanged(quint8);
+    void sexChanged(quint8);
+    void typeChanged(quint8);
+    void nameChanged(QString);
+    void cantMateChanged(bool);
 public slots:
    void setSprint(int);
    void setMsprint(int);
@@ -81,7 +81,22 @@ public slots:
    void setName(QString);
    void setCantMate(bool);
    void setAdvancedMode(bool);
-
+private slots:
+   void SprintChanged(int);
+   void MsprintChanged(int);
+   void SpeedChanged(int);
+   void MspeedChanged(int);
+   void StaminaChanged(int);
+   void AccelChanged(int);
+   void CoopChanged(int);
+   void IntelligenceChanged(int);
+   void PersonalityChanged(int);
+   void PcountChanged(int);
+   void WinsChanged(int);
+   void SexChanged(int);
+   void TypeChanged(int);
+   void NameChanged(QString);
+   void CantMateChanged(bool);
 private:
     void init_display(void);
     void init_connections(void);

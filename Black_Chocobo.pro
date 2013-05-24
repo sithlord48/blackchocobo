@@ -51,7 +51,9 @@ SOURCES += main.cpp \
     FF7tk/widgets/PhsListWidget.cpp \
     FF7tk/widgets/DoubleCheckBox.cpp \
     FF7tk/widgets/MenuListWidget.cpp \
-    FF7tk/widgets/OptionsWidget.cpp
+    FF7tk/widgets/OptionsWidget.cpp \
+    FF7tk/widgets/ChocoboManager.cpp \
+    FF7tk/widgets/ChocoboLabel.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -85,7 +87,10 @@ HEADERS += mainwindow.h \
     FF7tk/widgets/PhsListWidget.h \
     FF7tk/widgets/DoubleCheckBox.h \
     FF7tk/widgets/MenuListWidget.h \
-    FF7tk/widgets/OptionsWidget.h
+    FF7tk/widgets/OptionsWidget.h \
+    FF7tk/widgets/ChocoboManager.h \
+    FF7tk/widgets/ChocoboLabel.h \
+    FF7tk/static_data/Type_FF7CHOCOBO.h
 
 FORMS += mainwindow.ui \
     about.ui \

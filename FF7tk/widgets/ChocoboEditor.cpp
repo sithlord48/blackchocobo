@@ -43,112 +43,192 @@ quint8 ChocoboEditor::pCount(void){return choco_data.pcount;}
 quint8 ChocoboEditor::wins(void){return choco_data.raceswon;}
 quint8 ChocoboEditor::sex(void){return choco_data.sex;}
 quint8 ChocoboEditor::type(void){return choco_data.type;}
-//Data Set Functions.
 
+//Data Set Functions.
 void ChocoboEditor::setSprint(int sprint_speed)
 {
     if(sprint_speed <0){sprint_speed =0;}
     else if (sprint_speed > 9999){sprint_speed = 9999;}
+    sb_sprint->setValue(sprint_speed);
     choco_data.sprintspd = sprint_speed;
-    emit sprint_changed(choco_data.sprintspd);
 }
 void ChocoboEditor::setMsprint(int max_sprint_speed)
 {
     if(max_sprint_speed <0){max_sprint_speed =0;}
     else if (max_sprint_speed > 9999){max_sprint_speed = 9999;}
+    sb_mSprint->setValue(max_sprint_speed);
     choco_data.maxsprintspd = max_sprint_speed;
-    emit mSprint_changed(choco_data.maxsprintspd);
 }
 void ChocoboEditor::setSpeed(int speed)
 {
     if(speed <0){speed =0;}
     else if (speed > 9999){speed = 9999;}
+    sb_speed->setValue(speed);
     choco_data.speed = speed;
-    emit speed_changed(choco_data.speed);
 }
 void ChocoboEditor::setMspeed(int max_speed)
 {
     if(max_speed <0){max_speed =0;}
     else if (max_speed > 9999){max_speed = 9999;}
+    sb_mSpeed->setValue(max_speed);
     choco_data.maxspeed = max_speed;
-    emit mSpeed_changed(choco_data.maxspeed);
 }
 void ChocoboEditor::setStamina(int stamina)
 {
     if(stamina <0){stamina =0;}
     else if (stamina > 9999){stamina = 9999;}
+    sb_stamina->setValue(stamina);
     choco_stamina = stamina;
-    emit stamina_changed(choco_stamina);
 }
 void ChocoboEditor::setAccel(int accel)
 {
     if(accel <0){accel =0;}
     else if (accel > 255){accel =255;}
+    sb_accel->setValue(accel);
     choco_data.accel = accel;
-    emit accel_changed(choco_data.accel);
 }
 void ChocoboEditor::setCoop(int coop)
 {
     if(coop < 0){coop =0;}
     else if (coop >255){coop =255;}
+    sb_coop->setValue(coop);
     choco_data.coop = coop;
-    emit coop_changed(choco_data.coop);
 }
 void ChocoboEditor::setIntelligence(int intel)
 {
     if(intel <0){intel =0;}
     else if(intel >255){intel = 255;}
+    sb_intel->setValue(intel);
     choco_data.intelligence = intel;
-    emit intelligence_changed(choco_data.intelligence);
 }
 void ChocoboEditor::setPersonality (int personality)
 {//need to be researched further.
     if(personality <0){personality =0;}
     else if (personality >255){personality = 255;}
+    sb_personality->setValue(personality);
     choco_data.personality = personality;
-    emit personality_changed(choco_data.personality);
 }
 void ChocoboEditor::setPcount(int pCount)
 {
     if(pCount <0){pCount =0;}
     else if (pCount >255){pCount =255;}
+    sb_pCount->setValue(pCount);
     choco_data.pcount=pCount;
-    emit pCount_changed(choco_data.pcount);
 }
 void ChocoboEditor::setWins(int wins)
 {
     if(wins <0){wins = 0;}
     else if (wins>255){wins = 255;}
+    sb_wins->setValue(wins);
     choco_data.raceswon = wins;
     getRank();
-    emit wins_changed(choco_data.raceswon);
 }
 void ChocoboEditor::setSex(int sex)
 {
     if(sex<0){sex=0;}
     else if(sex > 1){sex = 1;}
+    combo_sex->setCurrentIndex(sex);
     choco_data.sex = sex;
-    emit sex_changed(choco_data.sex);
 }
 void ChocoboEditor::setType(int type)
 {
     if(type<0){type=0;}
     else if(type > 4){type = 4;}
+    combo_type->setCurrentIndex(type);
     choco_data.type = type;
-    emit type_changed(choco_data.type);
 }
 void ChocoboEditor::setName(QString new_name)
 {
-    if(new_name.length()>6){new_name.truncate(6);}
-    choco_name = new_name;
-    emit name_changed(new_name);
+    choco_name=new_name.mid(0,6);
+    if(choco_name =="\xff\xff\xff\xff\xff\xff"){line_name->setText("");}
+    else{line_name->setText(choco_name);}
 }
 void ChocoboEditor::setCantMate(bool cantMate)
 {
+    cb_cantMate->setChecked(cantMate);
     choco_cant_mate=cantMate;
-    emit cantMate_changed(choco_cant_mate);
 }
 
+//Same again but with the emits..
+void ChocoboEditor::SprintChanged(int sprint_speed)
+{
+    choco_data.sprintspd = sprint_speed;
+    emit sprintChanged(choco_data.sprintspd);
+}
+void ChocoboEditor::MsprintChanged(int max_sprint_speed)
+{
+    choco_data.maxsprintspd = max_sprint_speed;
+    emit mSprintChanged(choco_data.maxsprintspd);
+}
+void ChocoboEditor::SpeedChanged(int speed)
+{
+    choco_data.speed = speed;
+    emit speedChanged(choco_data.speed);
+}
+void ChocoboEditor::MspeedChanged(int max_speed)
+{
+    choco_data.maxspeed = max_speed;
+    emit mSpeedChanged(choco_data.maxspeed);
+}
+void ChocoboEditor::StaminaChanged(int stamina)
+{
+    choco_stamina = stamina;
+    emit staminaChanged(choco_stamina);
+}
+void ChocoboEditor::AccelChanged(int accel)
+{
+    choco_data.accel = accel;
+    emit accelChanged(choco_data.accel);
+}
+void ChocoboEditor::CoopChanged(int coop)
+{
+    choco_data.coop = coop;
+    emit coopChanged(choco_data.coop);
+}
+void ChocoboEditor::IntelligenceChanged(int intel)
+{
+    choco_data.intelligence = intel;
+    emit intelligenceChanged(choco_data.intelligence);
+}
+void ChocoboEditor::PersonalityChanged (int personality)
+{//need to be researched further.
+    choco_data.personality = personality;
+    emit personalityChanged(choco_data.personality);
+}
+void ChocoboEditor::PcountChanged(int pCount)
+{
+    choco_data.pcount=pCount;
+    emit pCountChanged(choco_data.pcount);
+}
+void ChocoboEditor::WinsChanged(int wins)
+{
+    choco_data.raceswon = wins;
+    getRank();
+    emit winsChanged(choco_data.raceswon);
+}
+void ChocoboEditor::SexChanged(int sex)
+{
+    choco_data.sex = sex;
+    emit sexChanged(choco_data.sex);
+}
+void ChocoboEditor::TypeChanged(int type)
+{
+    choco_data.type = type;
+    emit typeChanged(choco_data.type);
+}
+void ChocoboEditor::NameChanged(QString new_name)
+{
+    if(new_name !=choco_name)
+    {
+        choco_name=new_name.mid(0,6);
+        emit nameChanged(new_name);
+    }
+}
+void ChocoboEditor::CantMateChanged(bool cantMate)
+{
+    choco_cant_mate=cantMate;
+    emit cantMateChanged(choco_cant_mate);
+}
 void ChocoboEditor::init_display(void)
 {
     //create Gui Widgets.
@@ -223,8 +303,8 @@ void ChocoboEditor::init_display(void)
     sb_personality->setWrapping(true);
 
     //Fill Combos.
-    combo_sex->addItem(tr("Male"));
-    combo_sex->addItem(tr("Female"));
+    combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
+    combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
     combo_type->addItem(QIcon(QPixmap(yellow_choco_xpm)),tr("Yellow"));
     combo_type->addItem(QIcon(QPixmap(green_choco_xpm)),tr("Green"));
     combo_type->addItem(QIcon(QPixmap(blue_choco_xpm)),tr("Blue"));
@@ -348,49 +428,31 @@ void ChocoboEditor::init_display(void)
 }
 void ChocoboEditor::init_connections(void)
 {
-    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
-    connect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
-    connect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
-    connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
-    connect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
-    connect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
-    connect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
-    connect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
-    connect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
-    connect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
-    connect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
-    connect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
-    connect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
-    connect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
-    connect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
-}
-void ChocoboEditor::disconnectAll(void)
-{
-    disconnect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setType(int)));
-    disconnect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(setSex(int)));
-    disconnect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(setCantMate(bool)));
-    disconnect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
-    disconnect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(setSprint(int)));
-    disconnect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(setMsprint(int)));
-    disconnect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(setSpeed(int)));
-    disconnect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(setMspeed(int)));
-    disconnect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(setStamina(int)));
-    disconnect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(setAccel(int)));
-    disconnect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(setCoop(int)));
-    disconnect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(setIntelligence(int)));
-    disconnect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(setPersonality(int)));
-    disconnect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(setPcount(int)));
-    disconnect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(setWins(int)));
+    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(TypeChanged(int)));
+    connect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(SexChanged(int)));
+    connect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(CantMateChanged(bool)));
+    connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(NameChanged(QString)));
+    connect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(SprintChanged(int)));
+    connect(sb_mSprint,SIGNAL(valueChanged(int)),this,SLOT(MsprintChanged(int)));
+    connect(sb_speed,SIGNAL(valueChanged(int)),this,SLOT(SpeedChanged(int)));
+    connect(sb_mSpeed,SIGNAL(valueChanged(int)),this,SLOT(MspeedChanged(int)));
+    connect(sb_stamina,SIGNAL(valueChanged(int)),this,SLOT(StaminaChanged(int)));
+    connect(sb_accel,SIGNAL(valueChanged(int)),this,SLOT(AccelChanged(int)));
+    connect(sb_coop,SIGNAL(valueChanged(int)),this,SLOT(CoopChanged(int)));
+    connect(sb_intel,SIGNAL(valueChanged(int)),this,SLOT(IntelligenceChanged(int)));
+    connect(sb_personality,SIGNAL(valueChanged(int)),this,SLOT(PersonalityChanged(int)));
+    connect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(PcountChanged(int)));
+    connect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(WinsChanged(int)));
 }
 void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina)
 {
     choco_data = choco;
     if(Processed_Name =="      "){Processed_Name ="";}
+    else if(Processed_Name =="\xff\xff\xff\xff\xff\xff"){Processed_Name ="";}
     choco_name = Processed_Name;
     choco_cant_mate = cant_mate;
     choco_stamina = stamina;
 
-    disconnectAll();
     line_name->setText(choco_name);
     combo_type->setCurrentIndex(choco_data.type);
     combo_sex->setCurrentIndex(choco_data.sex);
@@ -408,7 +470,6 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
     sb_intel->setValue(choco_data.intelligence);
     sb_personality->setValue(choco_data.personality);
     getRank();
-    init_connections();
 }
 void ChocoboEditor::getRank(void)
 {
@@ -418,3 +479,4 @@ void ChocoboEditor::getRank(void)
     else{lbl_rank->setText(tr("S"));}
 }
 void ChocoboEditor::setAdvancedMode(bool advancedMode){advancedModeBox->setHidden(!advancedMode);}
+

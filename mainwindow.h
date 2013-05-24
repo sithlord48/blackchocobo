@@ -51,6 +51,7 @@
 #include "FF7tk/widgets/MetadataCreator.h"
 #include "FF7tk/widgets/PhsListWidget.h"
 #include "FF7tk/widgets/MenuListWidget.h"
+#include "FF7tk/widgets/ChocoboManager.h"
 //QHexedit
 #include "qhexedit/qhexedit.h"
 
@@ -101,6 +102,7 @@ private:
     ChocoboEditor *chocobo_stable_4;
     ChocoboEditor *chocobo_stable_5;
     ChocoboEditor *chocobo_stable_6;
+    ChocoboManager *chocoboManager;
     QHexEdit *hexEditor;
     void init_display();
     void init_style();
@@ -206,109 +208,25 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_party2_currentIndexChanged(int index);
     void on_combo_party3_currentIndexChanged(int index);
     /*Chocobo Tab*/
-    void on_sb_stables_owned_valueChanged(int);
-    void on_box_stable1_toggled(bool checked);
-    void on_box_stable2_toggled(bool checked);
-    void on_box_stable3_toggled(bool checked);
-    void on_box_stable4_toggled(bool checked);
-    void on_box_stable5_toggled(bool checked);
-    void on_box_stable6_toggled(bool checked);
-    /*Chocobo Stall #1*/
-    void c1_nameChanged(QString);
-    void c1_staminaChanged(quint16);
-    void c1_speedChanged(quint16);
-    void c1_maxspeedChanged(quint16);
-    void c1_sprintChanged(quint16);
-    void c1_maxsprintChanged(quint16);
-    void c1_sexChanged(quint8);
-    void c1_typeChanged(quint8);
-    void c1_coopChanged(quint8);
-    void c1_accelChanged(quint8);
-    void c1_intelChanged(quint8);
-    void c1_raceswonChanged(quint8);
-    void c1_pcountChanged(quint8);
-    void c1_personalityChanged(quint8);
-    void c1_mated_toggled(bool);
-    /*Chocobo Stall #2*/
-    void c2_nameChanged(QString);
-    void c2_staminaChanged(quint16);
-    void c2_speedChanged(quint16);
-    void c2_maxspeedChanged(quint16);
-    void c2_sprintChanged(quint16);
-    void c2_maxsprintChanged(quint16);
-    void c2_sexChanged(quint8);
-    void c2_typeChanged(quint8);
-    void c2_coopChanged(quint8);
-    void c2_accelChanged(quint8);
-    void c2_intelChanged(quint8);
-    void c2_raceswonChanged(quint8);
-    void c2_pcountChanged(quint8);
-    void c2_personalityChanged(quint8);
-    void c2_mated_toggled(bool);
-    /*Chocobo Stall #3*/
-    void c3_nameChanged(QString);
-    void c3_staminaChanged(quint16);
-    void c3_speedChanged(quint16);
-    void c3_maxspeedChanged(quint16);
-    void c3_sprintChanged(quint16);
-    void c3_maxsprintChanged(quint16);
-    void c3_sexChanged(quint8);
-    void c3_typeChanged(quint8);
-    void c3_coopChanged(quint8);
-    void c3_accelChanged(quint8);
-    void c3_intelChanged(quint8);
-    void c3_raceswonChanged(quint8);
-    void c3_pcountChanged(quint8);
-    void c3_personalityChanged(quint8);
-    void c3_mated_toggled(bool);
-    /*Chocobo Stall #4*/
-    void c4_nameChanged(QString);
-    void c4_staminaChanged(quint16);
-    void c4_speedChanged(quint16);
-    void c4_maxspeedChanged(quint16);
-    void c4_sprintChanged(quint16);
-    void c4_maxsprintChanged(quint16);
-    void c4_sexChanged(quint8);
-    void c4_typeChanged(quint8);
-    void c4_coopChanged(quint8);
-    void c4_accelChanged(quint8);
-    void c4_intelChanged(quint8);
-    void c4_raceswonChanged(quint8);
-    void c4_pcountChanged(quint8);
-    void c4_personalityChanged(quint8);
-    void c4_mated_toggled(bool);
-    /*Chocobo Stall #5*/
-    void c5_nameChanged(QString);
-    void c5_staminaChanged(quint16);
-    void c5_speedChanged(quint16);
-    void c5_maxspeedChanged(quint16);
-    void c5_sprintChanged(quint16);
-    void c5_maxsprintChanged(quint16);
-    void c5_sexChanged(quint8);
-    void c5_typeChanged(quint8);
-    void c5_coopChanged(quint8);
-    void c5_accelChanged(quint8);
-    void c5_intelChanged(quint8);
-    void c5_raceswonChanged(quint8);
-    void c5_pcountChanged(quint8);
-    void c5_personalityChanged(quint8);
-    void c5_mated_toggled(bool);
-    /*Chocobo Stall #6*/
-    void c6_nameChanged(QString);
-    void c6_staminaChanged(quint16);
-    void c6_speedChanged(quint16);
-    void c6_maxspeedChanged(quint16);
-    void c6_sprintChanged(quint16);
-    void c6_maxsprintChanged(quint16);
-    void c6_sexChanged(quint8);
-    void c6_typeChanged(quint8);
-    void c6_coopChanged(quint8);
-    void c6_accelChanged(quint8);
-    void c6_intelChanged(quint8);
-    void c6_raceswonChanged(quint8);
-    void c6_pcountChanged(quint8);
-    void c6_personalityChanged(quint8);
-    void c6_mated_toggled(bool);
+    /* ChocoboManager*/
+    void cm_stablesOwnedChanged(qint8);
+    void cm_stablesOccupiedChanged(qint8);
+    void cm_stableMaskChanged(qint8);
+    void cm_nameChanged(int,QString);
+    void cm_staminaChanged(int,quint16);
+    void cm_speedChanged(int,quint16);
+    void cm_maxspeedChanged(int,quint16);
+    void cm_sprintChanged(int,quint16);
+    void cm_maxsprintChanged(int,quint16);
+    void cm_sexChanged(int,quint8);
+    void cm_typeChanged(int,quint8);
+    void cm_coopChanged(int,quint8);
+    void cm_accelChanged(int,quint8);
+    void cm_intelChanged(int,quint8);
+    void cm_raceswonChanged(int,quint8);
+    void cm_pcountChanged(int,quint8);
+    void cm_personalityChanged(int,quint8);
+    void cm_mated_toggled(int,bool);
     //The Chocobo pens.
     void on_combo_pen1_currentIndexChanged(int index);
     void on_combo_pen2_currentIndexChanged(int index);

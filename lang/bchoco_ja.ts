@@ -701,14 +701,6 @@
         <translation>性格</translation>
     </message>
     <message>
-        <source>Male</source>
-        <translation>オス</translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation>メス</translation>
-    </message>
-    <message>
         <source>Yellow</source>
         <translation>チョコボ</translation>
     </message>
@@ -747,6 +739,60 @@
     <message>
         <source>S</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Male %1</source>
+        <translation type="unfinished">オス %1</translation>
+    </message>
+    <message>
+        <source>Female %1</source>
+        <translation type="unfinished">メス %1</translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboLabel</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished">コピー</translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation type="unfinished">貼り付け</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished">解除</translation>
+    </message>
+    <message>
+        <source>Rank:C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:S</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboManager</name>
+    <message>
+        <source>Stables Owned</source>
+        <translation type="unfinished">所有チョコ房</translation>
+    </message>
+    <message>
+        <source>Stables Occupied</source>
+        <translation type="unfinished">使用中のチョコ房</translation>
+    </message>
+    <message>
+        <source>Stable:%1</source>
+        <translation type="unfinished">チョコ房 %1</translation>
     </message>
 </context>
 <context>
@@ -3622,10 +3668,6 @@
         <translation>武器屋</translation>
     </message>
     <message>
-        <source>Zach&apos;s Home</source>
-        <translation type="obsolete">ザックスの実家</translation>
-    </message>
-    <message>
         <source>Mayor&apos;s Home</source>
         <translation>村長の家</translation>
     </message>
@@ -4062,10 +4104,6 @@
         <translation>普通のチョコボ</translation>
     </message>
     <message>
-        <source>Stables Owned</source>
-        <translation>所有チョコ房</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>ユフィに盗まれるマテリア</translation>
     </message>
@@ -4158,18 +4196,6 @@
         <translation>選択ダイアログを表示</translation>
     </message>
     <message>
-        <source>Stable 1</source>
-        <translation>チョコ房 1</translation>
-    </message>
-    <message>
-        <source>Stable 2</source>
-        <translation>チョコ房 2</translation>
-    </message>
-    <message>
-        <source>Stable 3</source>
-        <translation>チョコ房 3</translation>
-    </message>
-    <message>
         <source>Fenced Chocobos</source>
         <translation>サクのチョコボ</translation>
     </message>
@@ -4204,26 +4230,6 @@
     <message>
         <source>Terrible</source>
         <translation>おすすめできないチョコボ</translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation type="obsolete">スピードは未加工の値です。 ゲーム上で表示される速度 (km/h) はプレイ中に算出されます </translation>
-    </message>
-    <message>
-        <source>Stable 4</source>
-        <translation>チョコ房 4</translation>
-    </message>
-    <message>
-        <source>Stable 5</source>
-        <translation>チョコ房 5</translation>
-    </message>
-    <message>
-        <source>Stable 6</source>
-        <translation>チョコ房 6</translation>
-    </message>
-    <message>
-        <source>Stables Occupied</source>
-        <translation>使用中のチョコ房</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -4346,14 +4352,6 @@
         <translation>忘らるる都＊</translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation type="obsolete">リストのクリックでセーブ地点を 『ワープ』 させます。 マップ, 場所, 座標を手動で設定することもできます。</translation>
-    </message>
-    <message>
-        <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation type="obsolete">この機能をお楽しみください。 ただし、選択した設定とストーリーの進捗度やパーティ構成との齟齬により、不具合が引き起こされることがあります。 設定は慎重におこなってください。</translation>
-    </message>
-    <message>
         <source>Location Name</source>
         <translation>場所名</translation>
     </message>
@@ -4372,14 +4370,6 @@
     <message>
         <source>y</source>
         <translation>y</translation>
-    </message>
-    <message>
-        <source>z</source>
-        <translation type="obsolete">z</translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="obsolete">ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブ地点とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、選択したリプレイがセーブ上で正しく機能するかどうかは保障できません。 これは、いまだ開発途上の機能です</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4484,26 +4474,6 @@
         <translation>3</translation>
     </message>
     <message>
-        <source>Materia Caves Empty</source>
-        <translation type="obsolete">マテリアの洞窟を空（から）に</translation>
-    </message>
-    <message>
-        <source>Mime</source>
-        <translation type="obsolete">ものまね</translation>
-    </message>
-    <message>
-        <source>HP &lt;-&gt; MP</source>
-        <translation type="obsolete">ＨＰＭＰいれかえ</translation>
-    </message>
-    <message>
-        <source>Quadra Magic</source>
-        <translation type="obsolete">まほうみだれうち</translation>
-    </message>
-    <message>
-        <source>KOTR</source>
-        <translation type="obsolete">ナイツオブラウンド</translation>
-    </message>
-    <message>
         <source>Test Data</source>
         <translation>テスト データ</translation>
     </message>
@@ -4566,10 +4536,6 @@
     <message>
         <source>Countdown Timer</source>
         <translation>カウントダウン タイマー</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation type="obsolete">半チェック (&quot;-&quot;) の場合はチュートリアルを表示するフラグになります</translation>
     </message>
     <message>
         <source>Slot Region</source>
@@ -4676,10 +4642,6 @@
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
         <translation>FF7 Raw PSX セーブ (*-S*)</translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation type="obsolete">このファイルのチェックサムは更新されていません。 PSP では正しく機能しません。</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4882,10 +4844,6 @@
         <translation>PSV セーブ: 警告</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation type="obsolete">このファイルのチェックサムは更新されていません。 PS3 では正しく機能しません。</translation>
-    </message>
-    <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>ダイヤ / アルテマ / ルビー ウェポン</translation>
     </message>
@@ -4994,10 +4952,6 @@
         <translation>&apos;エアリスの死&apos; をリプレイします。このリプレイはエアリスを PHS から消去します。</translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation type="obsolete">マップ上の右クリック メニューから簡単に配置できます。</translation>
-    </message>
-    <message>
         <source>Meeting Aeris</source>
         <translation>教会でのエアリスとのイベントをリプレイします。</translation>
     </message>
@@ -5008,10 +4962,6 @@
     <message>
         <source>Remove ALL Materia </source>
         <translation>すべてのマテリアを削除</translation>
-    </message>
-    <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation type="obsolete">チェックのあるチョコ房は使用中です。チェックをはずせば空き房に</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
@@ -5142,10 +5092,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Sector 7 Trainstation</source>
         <translation>７番街スラム駅</translation>
-    </message>
-    <message>
-        <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation type="obsolete">爆破ミッション後のアバランチの会話</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
@@ -5513,14 +5459,6 @@ Table Entries are Editable</source>
         <translation>ウータイ・かめ道楽の前</translation>
     </message>
     <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="obsolete">cb_s5_7 (エーテルターボ・５番街民家２階の子供)</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
-        <translation type="obsolete">パーティ タブでケット・シー, ヴィンセントが無効化されている場合、ここで彼らを有効化しないでください。</translation>
-    </message>
-    <message>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>森で謎のニンジャとバトル可能</translation>
     </message>
@@ -5754,11 +5692,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty 
-Stable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7572,34 +7505,6 @@ trigger showing that tutorial</source>
         <translation>PC セ－ブ (.ff7) のエクスポート フォルダ</translation>
     </message>
     <message>
-        <source>Main Window Background Color</source>
-        <translation type="obsolete">メイン ウィンドウの背景色</translation>
-    </message>
-    <message>
-        <source>Color 1</source>
-        <translation type="obsolete">カラー 1</translation>
-    </message>
-    <message>
-        <source>R</source>
-        <translation type="obsolete">R</translation>
-    </message>
-    <message>
-        <source>G</source>
-        <translation type="obsolete">G</translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="obsolete">B</translation>
-    </message>
-    <message>
-        <source>Color 2</source>
-        <translation type="obsolete">カラー 2</translation>
-    </message>
-    <message>
-        <source>Color 3</source>
-        <translation type="obsolete">カラー 3</translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
         <translation>デフォルトにリセット</translation>
     </message>
@@ -8548,11 +8453,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: +More Locations</source>
+        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
+        <source>FF7tk: + More Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + Chocobo Manager Widget.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

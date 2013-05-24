@@ -701,14 +701,6 @@
         <translation>Personalidad</translation>
     </message>
     <message>
-        <source>Male</source>
-        <translation>Macho</translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation>Hembra</translation>
-    </message>
-    <message>
         <source>Yellow</source>
         <translation>Amarillo</translation>
     </message>
@@ -747,6 +739,60 @@
     <message>
         <source>S</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Male %1</source>
+        <translation type="unfinished">Macho %1</translation>
+    </message>
+    <message>
+        <source>Female %1</source>
+        <translation type="unfinished">Hembra %1</translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboLabel</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished">Copiar</translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation type="unfinished">Pegar</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished">Elimina</translation>
+    </message>
+    <message>
+        <source>Rank:C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:S</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboManager</name>
+    <message>
+        <source>Stables Owned</source>
+        <translation type="unfinished">Establos en Posesión</translation>
+    </message>
+    <message>
+        <source>Stables Occupied</source>
+        <translation type="unfinished">Establos Ocupados</translation>
+    </message>
+    <message>
+        <source>Stable:%1</source>
+        <translation>Establo %1</translation>
     </message>
 </context>
 <context>
@@ -3546,10 +3592,6 @@
         <translation>Alm. Armas</translation>
     </message>
     <message>
-        <source>Zach&apos;s Home</source>
-        <translation type="obsolete">Casa Zack</translation>
-    </message>
-    <message>
         <source>Mayor&apos;s Home</source>
         <translation>Alcaldía</translation>
     </message>
@@ -3977,18 +4019,6 @@
         <translation>Snowboard</translation>
     </message>
     <message>
-        <source>Stable 1</source>
-        <translation>Establo 1</translation>
-    </message>
-    <message>
-        <source>Stable 2</source>
-        <translation>Establo 2</translation>
-    </message>
-    <message>
-        <source>Stable 3</source>
-        <translation>Establo 3</translation>
-    </message>
-    <message>
         <source>Fenced Chocobos</source>
         <translation>Chocobos en Corral</translation>
     </message>
@@ -4023,26 +4053,6 @@
     <message>
         <source>Terrible</source>
         <translation>Terrible</translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation type="obsolete">Los valores de velocidad son valores directos, la velocidad en km/h se calcula durante el juego</translation>
-    </message>
-    <message>
-        <source>Stable 4</source>
-        <translation>Establo 4</translation>
-    </message>
-    <message>
-        <source>Stable 5</source>
-        <translation>Establo 5</translation>
-    </message>
-    <message>
-        <source>Stable 6</source>
-        <translation>Establo 6</translation>
-    </message>
-    <message>
-        <source>Stables Occupied</source>
-        <translation>Establos Ocupados</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -4095,10 +4105,6 @@
     <message>
         <source>Average</source>
         <translation>Media</translation>
-    </message>
-    <message>
-        <source>Stables Owned</source>
-        <translation>Establos en Posesión</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4177,14 +4183,6 @@
         <translation>Ciudad Olvidada</translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation type="obsolete">Click en una Fila Para &quot;Teletransportar&quot; tu partida ahí O fija tu posición en el mapa con x y z manualmente</translation>
-    </message>
-    <message>
-        <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation type="obsolete">Diviertete Con Esta Función, Pero No Pongas Los Valores A Lo Loco Ya Que Pueden Causar Algunas Anomalías En El Juego Dependiendo De Los Valores De La Progresión De Tus Misiones.</translation>
-    </message>
-    <message>
         <source>Location Name</source>
         <translation>Nombre del Lugar</translation>
     </message>
@@ -4203,10 +4201,6 @@
     <message>
         <source>y</source>
         <translation>y</translation>
-    </message>
-    <message>
-        <source>z</source>
-        <translation type="obsolete">z</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4313,10 +4307,6 @@
         <translation>Ot&amp;ros</translation>
     </message>
     <message>
-        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="obsolete"> Fija la misión rejugable más arriba para poner el juego de vuelta otra vez en esa misión. Esto pondrá automáticamente tu sitio de guardado y el número de disco asi como las variables de progreso de misión. NO SOBREESCRIBAS TU GUARDADO ACTUAL, cuando uses esta función, no puedo prometerte que podrás jugar desde cualquier punto hasta el final del juego. O que una misión rejugable dada funcione con tu partida guardada, este área esta bajo desarrollo intenso</translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
@@ -4411,26 +4401,6 @@
         <translation>3º</translation>
     </message>
     <message>
-        <source>Materia Caves Empty</source>
-        <translation type="obsolete">Cuevas de Materia Vacías</translation>
-    </message>
-    <message>
-        <source>Mime</source>
-        <translation type="obsolete">Gesto</translation>
-    </message>
-    <message>
-        <source>HP &lt;-&gt; MP</source>
-        <translation type="obsolete">PG &lt;-&gt; PM</translation>
-    </message>
-    <message>
-        <source>Quadra Magic</source>
-        <translation type="obsolete">Cuadrimagia</translation>
-    </message>
-    <message>
-        <source>KOTR</source>
-        <translation type="obsolete">Caballeros de la Tabla Redonda</translation>
-    </message>
-    <message>
         <source>Test Data</source>
         <translation>Datos de Test</translation>
     </message>
@@ -4493,10 +4463,6 @@
     <message>
         <source>Countdown Timer</source>
         <translation>Cronómetro de cuenta atrás</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation type="obsolete">Cuando la caja está marcada parcialmente (&quot;-&quot;) se activará el mostrado de ese tutorial</translation>
     </message>
     <message>
         <source>Slot Region</source>
@@ -4603,10 +4569,6 @@
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
         <translation>Partida guardada FF7 PSX (Raw) (*-S*)</translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation type="obsolete">Este archivo no tiene un checksum actualizado. No funcionará en tu PSP.</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4809,10 +4771,6 @@
         <translation>Aviso de guardado PSV</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation type="obsolete">Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
-    </message>
-    <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Arma Diamante / Última / Rubí</translation>
     </message>
@@ -4921,10 +4879,6 @@
         <translation>Rejugar la escena de la muerte de Aeris. Esta opción quitará a Aeris de tu PHS</translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation type="obsolete">Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
-    </message>
-    <message>
         <source>Meeting Aeris</source>
         <translation>Conociendo a Aeris</translation>
     </message>
@@ -4935,10 +4889,6 @@
     <message>
         <source>Remove ALL Materia </source>
         <translation>Quitar TODA la materia</translation>
-    </message>
-    <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation type="obsolete">Los establos marcados estan ocupados, desmarcar para vaciar el establo</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
@@ -5069,10 +5019,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>Sector 7 Trainstation</source>
         <translation>Estación de tren del Sector 7</translation>
-    </message>
-    <message>
-        <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation type="obsolete">Reunión de Avalancha despues de la Bombing Mission</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
@@ -5435,16 +5381,8 @@ Las entradas de la tabla son editables</translation>
         <translation>Wutai - En frente del paraíso de las tortugas</translation>
     </message>
     <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="obsolete">cb_s5_7 (Éter turbo del niño en la casa 2F 5min1_2)</translation>
-    </message>
-    <message>
         <source>2nd Floor Sector 5 House</source>
         <translation>Segundo piso de casa en Sector 5</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
-        <translation type="obsolete">Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -5525,10 +5463,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Money</source>
         <translation>Dinero</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando cruzas la puerta de Battle Square a &amp;quot;Arena Lobby&amp;quot; para que puedas gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
@@ -5687,11 +5621,6 @@ Las entradas de la tabla son editables</translation>
         <translation>ZZ8: KOTR</translation>
     </message>
     <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty 
-Stable</source>
-        <translation>Los establos marcados están ocupados, desmarcar establo para vaciarlo</translation>
-    </message>
-    <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are 
 calculated while playing </source>
         <translation>Los valores de velocidad son valores absolutos, las velocidades en km/h son calculadas duratne el juego</translation>
@@ -5700,12 +5629,6 @@ calculated while playing </source>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 
 set your map location , x,y,z manually</source>
         <translation>Clickea una fila para transportar tu partida guardada aquí O establece tu localización x,y,z manualmente en el mapa</translation>
-    </message>
-    <message>
-        <source>Have Fun With This Feature, But Don&apos;t Be Reckless 
-Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your 
-Quest Progression Value(s).</source>
-        <translation type="obsolete">Diviértete con esta función pero ten cuidado. Cambiar los valores de arriba puede causar anomalías en el juego dependiendo de tus valores de progreso de misión.</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
@@ -5731,11 +5654,6 @@ feature, i can not promise that you will be able to play from any replay untill
 the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
 Is Under Heavy Development</source>
         <translation>Establece la misión a rejugar para colocar el juego justo en esa misión. Esto automáticamente establece tu localización, número de disco así como variables de progreso de misión. NO SOBREESCRIBAS TU PARTIDA GUARDADA ACTUAL. Cuando se usa esta función, no se puede prometer que se podrá jugar desde cualquier punto hasta el final del juego. Tampoco que una misión a rejugar funcionará en tu partida guardada. Ésta sección sigue en desarrollo</translation>
-    </message>
-    <message>
-        <source>         INFO ON CURRENTLY SELECTED REPLAY 
-MISSION</source>
-        <translation type="obsolete">       INFORMACIÓN DE LA MISIÓN ACTUALMENTE SELECCIONADA</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
@@ -7515,34 +7433,6 @@ Fénix x3 (180pm)</translation>
         <translation>Carpeta para exportar partidas de PC (.ff7)</translation>
     </message>
     <message>
-        <source>Main Window Background Color</source>
-        <translation type="obsolete">Color de fondo de la ventana principal</translation>
-    </message>
-    <message>
-        <source>Color 1</source>
-        <translation type="obsolete">Color 1</translation>
-    </message>
-    <message>
-        <source>R</source>
-        <translation type="obsolete">R</translation>
-    </message>
-    <message>
-        <source>G</source>
-        <translation type="obsolete">G</translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="obsolete">B</translation>
-    </message>
-    <message>
-        <source>Color 2</source>
-        <translation type="obsolete">Color 2</translation>
-    </message>
-    <message>
-        <source>Color 3</source>
-        <translation type="obsolete">Color 3</translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
         <translation>Resetear a lvalores predeterminados</translation>
     </message>
@@ -8492,11 +8382,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: +More Locations</source>
-        <translation>FF7tk: + Más localizaciones</translation>
+        <translation type="obsolete">FF7tk: + Más localizaciones</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
         <translation>FF7tk: + Las widgets tienen ahora selectores ajustados</translation>
+    </message>
+    <message>
+        <source>FF7tk: + More Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + Chocobo Manager Widget.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
