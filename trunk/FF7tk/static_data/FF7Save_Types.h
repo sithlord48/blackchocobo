@@ -19,6 +19,7 @@
 
 #include <QVector>
 #include "Type_FF7CHAR.h"
+#include "Type_FF7CHOCOBO.h"
 //Materia Type is included as part of FF7Char
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~STRUCT TYPES AND SAVE STRUCT~~~~~~~~~~~~~~~~*/
@@ -49,23 +50,6 @@ quint8 x[3];                        //[0x00] x on map
 quint8 angle;                       //[0x03] viewing angle 0-0xff
 quint8 y[3];                        //[0x04] y on map 0-
 qint8  z;                           //[0x05] z min=-127 max=127
-}__attribute__((__packed__));
-
-
-
-struct FF7CHOCOBO {		            // [0x0010] Chocobo - 99% - 1 Personality unknown!
-    quint16 sprintspd;		        // [0x0000] Speed
-    quint16 maxsprintspd;           // [0x0002] Max Speed
-    quint16 speed;		            // [0x0004] Sprint speed
-    quint16 maxspeed;		        // [0x0006] Max Sprint speed
-    quint8 accel;                   // [0x0008] acceleration
-    quint8 coop;                    // [0x0009] cooperation
-    quint8 intelligence;	        // [0x000A] Intelligence
-    quint8 personality;             // [0x000B] personality Type - THIS NEED TO HAVE A RANGE FOUND!
-    quint8 pcount;                  // [0x000C] P count ??
-    quint8 raceswon;		        // [0x000D] Number of races won
-    quint8 sex;			            // [0x000E] Sex (0=male,1=female)
-    quint8 type;		            // [0x000F] Type (Yellow,Green,Blue,Black,Gold)
 }__attribute__((__packed__));
 
 struct FF7XYT {                     // size of 6. used for coords

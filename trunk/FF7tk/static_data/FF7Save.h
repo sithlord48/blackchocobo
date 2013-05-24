@@ -381,6 +381,17 @@ public:
   void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
   void setCharMateria(int s,int who,int mat_num,materia mat);
   //chocobo Stuff.
+  QList<FF7CHOCOBO> chocobos(int s);
+  QList<quint16> chocobosStaminas(int s);
+  QList<QString> chocobosNames(int s);
+  QList<bool> chocoboCantMates(int s);
+  qint8 stablesOwned(int s);
+  qint8 stablesOccupied(int s);
+  qint8 stableMask(int s);
+  void setStablesOwned(int s,qint8 value);
+  void setStablesOccupied(int s,qint8 value);
+  void setStableMask(int s,qint8 value);
+
   FF7CHOCOBO chocobo(int s,int chocoSlot);
   quint16 chocoStamina(int s,int chocoSlot);
   quint16 chocoSpeed(int s,int chocoSlot);

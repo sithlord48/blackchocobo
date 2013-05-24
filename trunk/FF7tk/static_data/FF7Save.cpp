@@ -3454,3 +3454,65 @@ void FF7Save::setCondorLoses(int s, quint8 loses)
     if(loses ==condorLoses(s)){return;}
     else{slot[s].z_16[38] = loses;}
 }
+
+QList<FF7CHOCOBO> FF7Save::chocobos(int s)
+{
+    QList<FF7CHOCOBO> chocos;
+    for(int i=0;i<6;i++){chocos.append(chocobo(s,i));}
+    return chocos;
+}
+
+QList<quint16> FF7Save::chocobosStaminas(int s)
+{
+    QList<quint16> stamina;
+    for(int i=0;i<6;i++){stamina.append(this->chocoStamina(s,i));}
+    return stamina;
+}
+
+QList<QString> FF7Save::chocobosNames (int s)
+{
+    QList<QString> names;
+    for(int i=0;i<6;i++){names.append(chocoName(s,i));}
+    return names;
+}
+QList<bool> FF7Save::chocoboCantMates(int s)
+{
+    QList<bool> mates;
+    for(int i=0;i<6;i++){mates.append(chocoCantMate(s,i));}
+    return mates;
+}
+qint8 FF7Save::stablesOwned(int s)
+{
+    if(s<0 ||s>14){return 0;}
+    else{return slot[s].stables;}
+}
+void FF7Save::setStablesOwned(int s,qint8 value)
+{
+    if(s<0 ||s>14){return;}
+    else if(value<0 || value>6){return;}
+    else{slot[s].stables =value;}
+}
+
+qint8 FF7Save::stablesOccupied(int s)
+{
+    if(s<0 ||s>14){return 0;}
+    else{return slot[s].stablesoccupied;}
+}
+void FF7Save::setStablesOccupied(int s,qint8 value)
+{
+    if(s<0 ||s>14){return;}
+    else if(value<0 || value>6){return;}
+    else{slot[s].stablesoccupied =value;}
+}
+
+qint8 FF7Save::stableMask(int s)
+{
+    if(s<0 ||s>14){return 0;}
+    else{return slot[s].chocobomask;}
+}
+
+void FF7Save::setStableMask(int s,qint8 value)
+{
+    if(s<0 ||s>14){return;}
+    else{slot[s].chocobomask =value;}
+}

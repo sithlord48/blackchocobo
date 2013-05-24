@@ -701,14 +701,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Male</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Yellow</source>
         <translation type="unfinished"></translation>
     </message>
@@ -746,6 +738,60 @@
     </message>
     <message>
         <source>S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Male %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Female %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboLabel</name>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank:S</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ChocoboManager</name>
+    <message>
+        <source>Stables Owned</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stables Occupied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stable:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3983,10 +4029,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Stables Owned</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4079,18 +4121,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Stable 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stable 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stable 3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fenced Chocobos</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4124,22 +4154,6 @@
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stable 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stable 5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stable 6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stables Occupied</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5593,11 +5607,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Checked Stables Are Occupied Uncheck Stable to Empty 
-Stable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8346,11 +8355,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: +More Locations</source>
+        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
+        <source>FF7tk: + More Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + Chocobo Manager Widget.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
