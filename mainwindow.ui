@@ -418,18 +418,18 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_17">
+   <layout class="QVBoxLayout" name="verticalLayout_20">
     <property name="spacing">
      <number>3</number>
     </property>
     <property name="leftMargin">
-     <number>0</number>
+     <number>3</number>
     </property>
     <property name="topMargin">
      <number>3</number>
     </property>
     <property name="rightMargin">
-     <number>0</number>
+     <number>3</number>
     </property>
     <property name="bottomMargin">
      <number>3</number>
@@ -438,9 +438,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
        <string notr="true"/>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -2829,248 +2826,62 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <string>C&amp;hocobo</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_19">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
-         <widget class="QFrame" name="chocoboManagerBox"/>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>751</width>
+            <height>29</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
-         <widget class="QFrame" name="choco_Pen_frame">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+         <widget class="QFrame" name="chocoboManagerBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>450</height>
+           </size>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_124">
-           <item>
-            <widget class="QGroupBox" name="group_choco_pen">
-             <property name="title">
-              <string>Fenced Chocobos</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_5">
-              <property name="leftMargin">
-               <number>3</number>
-              </property>
-              <property name="topMargin">
-               <number>3</number>
-              </property>
-              <property name="rightMargin">
-               <number>3</number>
-              </property>
-              <property name="bottomMargin">
-               <number>3</number>
-              </property>
-              <item row="0" column="0">
-               <widget class="QComboBox" name="combo_pen1">
-                <item>
-                 <property name="text">
-                  <string>Empty</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wonderful</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Great</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Good</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Fair</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Average</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Poor</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Bad</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Terrible</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QComboBox" name="combo_pen3">
-                <item>
-                 <property name="text">
-                  <string>Empty</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wonderful</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Great</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Good</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Fair</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Average</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Poor</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Bad</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Terrible</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QComboBox" name="combo_pen4">
-                <item>
-                 <property name="text">
-                  <string>Empty</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wonderful</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Great</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Good</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Fair</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Average</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Poor</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Bad</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Terrible</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QComboBox" name="combo_pen2">
-                <item>
-                 <property name="text">
-                  <string>Empty</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wonderful</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Great</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Good</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Fair</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Average</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Poor</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Bad</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Terrible</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_301">
-             <property name="text">
-              <string>Speed Values Are The Raw Values , the km/h speeds are 
-calculated while playing </string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-          </layout>
          </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>751</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -3083,13 +2894,13 @@ calculated while playing </string>
          <number>3</number>
         </property>
         <property name="leftMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="topMargin">
          <number>3</number>
         </property>
         <property name="rightMargin">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="bottomMargin">
          <number>3</number>
@@ -3111,8 +2922,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>759</width>
-             <height>414</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5463,7 +5274,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>311</width>
+                  <width>353</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -10797,10 +10608,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>cb_Region_Slot</tabstop>
   <tabstop>list_keyitems</tabstop>
   <tabstop>tbl_materia</tabstop>
-  <tabstop>combo_pen1</tabstop>
-  <tabstop>combo_pen3</tabstop>
-  <tabstop>combo_pen2</tabstop>
-  <tabstop>combo_pen4</tabstop>
   <tabstop>line_location</tabstop>
   <tabstop>sb_map_id</tabstop>
   <tabstop>sb_loc_id</tabstop>

@@ -686,7 +686,7 @@
     </message>
     <message>
         <source>Coop</source>
-        <translation>Cooperación</translation>
+        <translation type="obsolete">Cooperación</translation>
     </message>
     <message>
         <source>pCount</source>
@@ -721,24 +721,8 @@
         <translation>Dorado</translation>
     </message>
     <message>
-        <source>Rank: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>B</source>
-        <translation type="unfinished">B</translation>
-    </message>
-    <message>
-        <source>A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">B</translation>
     </message>
     <message>
         <source>Male %1</source>
@@ -747,6 +731,31 @@
     <message>
         <source>Female %1</source>
         <translation type="unfinished">Hembra %1</translation>
+    </message>
+    <message>
+        <source>Co-Op</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values
+The km/h speeds are calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: S</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -793,6 +802,46 @@
     <message>
         <source>Stable:%1</source>
         <translation>Establo %1</translation>
+    </message>
+    <message>
+        <source>Fenced Chocobos</source>
+        <translation type="unfinished">Chocobos en Corral</translation>
+    </message>
+    <message>
+        <source>Empty</source>
+        <translation type="unfinished">Vacío</translation>
+    </message>
+    <message>
+        <source>Wonderful</source>
+        <translation type="unfinished">Maravilloso</translation>
+    </message>
+    <message>
+        <source>Great</source>
+        <translation type="unfinished">Fantástico</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">Bueno</translation>
+    </message>
+    <message>
+        <source>Fair</source>
+        <translation type="unfinished">Pasable</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="unfinished">Media</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation type="unfinished">Pobre</translation>
+    </message>
+    <message>
+        <source>Bad</source>
+        <translation type="unfinished">Malo</translation>
+    </message>
+    <message>
+        <source>Terrible</source>
+        <translation type="unfinished">Terrible</translation>
     </message>
 </context>
 <context>
@@ -4020,39 +4069,39 @@
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>Chocobos en Corral</translation>
+        <translation type="obsolete">Chocobos en Corral</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Vacío</translation>
+        <translation type="obsolete">Vacío</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>Maravilloso</translation>
+        <translation type="obsolete">Maravilloso</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>Fantástico</translation>
+        <translation type="obsolete">Fantástico</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>Bueno</translation>
+        <translation type="obsolete">Bueno</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>Pasable</translation>
+        <translation type="obsolete">Pasable</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>Pobre</translation>
+        <translation type="obsolete">Pobre</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>Malo</translation>
+        <translation type="obsolete">Malo</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>Terrible</translation>
+        <translation type="obsolete">Terrible</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -4104,7 +4153,7 @@
     </message>
     <message>
         <source>Average</source>
-        <translation>Media</translation>
+        <translation type="obsolete">Media</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -5623,7 +5672,7 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are 
 calculated while playing </source>
-        <translation>Los valores de velocidad son valores absolutos, las velocidades en km/h son calculadas duratne el juego</translation>
+        <translation type="obsolete">Los valores de velocidad son valores absolutos, las velocidades en km/h son calculadas duratne el juego</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 

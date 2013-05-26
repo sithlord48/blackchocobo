@@ -136,7 +136,7 @@ private:
     QLabel *lbl_personality;
     QLabel *lbl_rankLabel;
     QLabel *lbl_rank;
-
+    QLabel *lblSpeedWarning;
     //Data
     FF7CHOCOBO choco_data;
     QString choco_name;

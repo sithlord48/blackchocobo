@@ -48,6 +48,7 @@ void ChocoboManager::initDisplay(void)
     occupiedLayout->addWidget(lblStablesOccupied);
     occupiedLayout->addWidget(lcdStablesOccupied);
 
+
     QHBoxLayout *topLayout = new QHBoxLayout();
     topLayout->setContentsMargins(0,0,0,0);
     QSpacerItem *topSpacer1 = new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Preferred);
@@ -68,9 +69,35 @@ void ChocoboManager::initDisplay(void)
         chocoboLabel[i]->setSelected(false);
     }
     chocoboEditor = new ChocoboEditor;
-    stableGridLayout->addWidget(chocoboEditor,0,3,3,2);
+    stableGridLayout->addWidget(chocoboEditor,0,3,2,2);
     chocoboEditor->setHidden(true);
+
+    QGroupBox *penBox = new QGroupBox(tr("Fenced Chocobos"));
+    QGridLayout *comboGrid = new QGridLayout;
+    comboGrid->setContentsMargins(0,0,0,0);
+    penBox->setLayout(comboGrid);
+
+    QStringList typeList;
+    typeList.append(tr("Empty"));
+    typeList.append(tr("Wonderful"));
+    typeList.append(tr("Great"));
+    typeList.append(tr("Good"));
+    typeList.append(tr("Fair"));
+    typeList.append(tr("Average"));
+    typeList.append(tr("Poor"));
+    typeList.append(tr("Bad"));
+    typeList.append(tr("Terrible"));
+
+    for(int i=0;i<4;i++)
+    {
+        comboChocoPen[i]= new QComboBox;
+        comboChocoPen[i]->addItems(typeList);
+        comboChocoPen[i]->setObjectName(QString::number(i));
+        comboGrid->addWidget(comboChocoPen[i],i/2,i%2,1,1);
+    }
     QVBoxLayout *finalLayout = new QVBoxLayout();
+
+    stableGridLayout->addWidget(penBox,2,3,1,2);
     finalLayout->addLayout(topLayout);
     finalLayout->addLayout(stableGridLayout);
     this->setLayout(finalLayout);
@@ -85,6 +112,7 @@ void ChocoboManager::initConnections()
         connect(chocoboLabel[i],SIGNAL(occupiedToggled(bool)),this,SLOT(occupiedToggled(bool)));
         connect(chocoboLabel[i],SIGNAL(clicked()),this,SLOT(clicked()));
     }
+    for(int i=0;i<4;i++){connect(comboChocoPen[i],SIGNAL(currentIndexChanged(int)),this,SLOT(ChocoPenIndexChanged(int)));}
     connect(sbStablesOwned,SIGNAL(valueChanged(int)),this,SLOT(sbOwnedChanged(int)));
     connect(this,SIGNAL(setMode(bool)),chocoboEditor,SLOT(setAdvancedMode(bool)));
     connect(chocoboEditor,SIGNAL(nameChanged(QString)),this,SLOT(NameChange(QString)));
@@ -352,7 +380,7 @@ void ChocoboManager::CantMateChanged(bool cantmate)
         emit(cantMateChanged(selectedStable,cantmate));
     }
 }
-void ChocoboManager::setData(FF7CHOCOBO chocos[6],QString names[6],quint16 staminas[6],bool cMate[6],qint8 owned,qint8 occupied,qint8 mask)
+void ChocoboManager::setData(FF7CHOCOBO chocos[6],QString names[6],quint16 staminas[6],bool cMate[6],qint8 owned,qint8 occupied,qint8 mask,qint8 chocoPens[4])
 {
     for(int i=0;i<6;i++)
     {
@@ -364,8 +392,9 @@ void ChocoboManager::setData(FF7CHOCOBO chocos[6],QString names[6],quint16 stami
     setOccupied(occupied,mask);
     selectedStable=-1;//reset
     chocoboEditor->setHidden(true);
+    for(int i=0;i<4;i++){setChocoboPen(i,chocoPens[i]);}
 }
-void ChocoboManager::setData(QList<FF7CHOCOBO> chocos,QList<QString> names,QList<quint16> staminas,QList<bool> cMate,qint8 owned,qint8 occupied,qint8 mask)
+void ChocoboManager::setData(QList<FF7CHOCOBO> chocos,QList<QString> names,QList<quint16> staminas,QList<bool> cMate,qint8 owned,qint8 occupied,qint8 mask,QList<qint8> chocoPens)
 {
     setOwned(owned);
     setOccupied(occupied,mask);
@@ -379,6 +408,7 @@ void ChocoboManager::setData(QList<FF7CHOCOBO> chocos,QList<QString> names,QList
         if(!chocoboLabel[i]->isOccupied()){chocoboLabel[i]->clearLabel();}
         chocoboLabel[i]->setSelected(false);
     }
+    for(int i=0;i<4;i++){setChocoboPen(i,chocoPens[i]);}
 }
 void ChocoboManager::setChocobo(int s,FF7CHOCOBO chocoData,QString chocoName,quint16 chocoStamina,bool chocoCmate)
 {
@@ -389,6 +419,11 @@ void ChocoboManager::setChocobo(int s,FF7CHOCOBO chocoData,QString chocoName,qui
     cantMate[s] = chocoCmate;
     if(chocoboLabel[s]->isOccupied()){labelUpdate(s);}
     else{chocoboLabel[s]->clearLabel();}
+}
+void ChocoboManager::setChocoboPen(int pen, int value)
+{
+    if(pen<0 || pen>4 || value<0 || value>8){return;}
+    else{comboChocoPen[pen]->setCurrentIndex(value);}
 }
 void ChocoboManager::setOwned(int owned)
 {
@@ -472,4 +507,9 @@ bool ChocoboManager::isEmpty(FF7CHOCOBO choco)
 void ChocoboManager::setHoverStyle(QString backgroundColor)
 {
     for(int i=0;i<6;i++){chocoboLabel[i]->setHoverColorStyle(backgroundColor);}
+}
+void ChocoboManager::ChocoPenIndexChanged(int index)
+{
+    int s =sender()->objectName().toInt();
+    emit(penChanged(s,index));
 }

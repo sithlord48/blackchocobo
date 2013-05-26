@@ -96,12 +96,6 @@ private:
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
     ItemList *itemlist;
-    ChocoboEditor *chocobo_stable_1;
-    ChocoboEditor *chocobo_stable_2;
-    ChocoboEditor *chocobo_stable_3;
-    ChocoboEditor *chocobo_stable_4;
-    ChocoboEditor *chocobo_stable_5;
-    ChocoboEditor *chocobo_stable_6;
     ChocoboManager *chocoboManager;
     QHexEdit *hexEditor;
     void init_display();
@@ -177,7 +171,6 @@ private slots://try to keep these in the same order as the .cpp file
     void materiaupdate(void);
     void itemupdate(void);
     void guirefresh(bool newgame);
-    void chocobo_refresh(void);
     void progress_update(void);
     void unknown_refresh(int);
     void set_ntsc_time(void);
@@ -227,11 +220,10 @@ private slots://try to keep these in the same order as the .cpp file
     void cm_pcountChanged(int,quint8);
     void cm_personalityChanged(int,quint8);
     void cm_mated_toggled(int,bool);
+    void cm_pensChanged(int pen,int index);
+
     //The Chocobo pens.
-    void on_combo_pen1_currentIndexChanged(int index);
-    void on_combo_pen2_currentIndexChanged(int index);
-    void on_combo_pen3_currentIndexChanged(int index);
-    void on_combo_pen4_currentIndexChanged(int index);
+
     /* Others Tab */    
     void on_sb_curdisc_valueChanged(int);
     void on_sb_love_yuffie_valueChanged(int);
@@ -496,7 +488,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tc_id_valueChanged(int);
     void on_tc_angle_valueChanged(int);
 
-
     void on_bh_x_valueChanged(int);
     void on_bh_y_valueChanged(int);
     void on_bh_z_valueChanged(int);
@@ -535,8 +526,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_compare_slot_currentIndexChanged(void);
     void on_btn_all_z_diffs_clicked();
     void on_sb_steps_valueChanged(int );
-
-
 
     void on_combo_s7_slums_currentIndexChanged(int index);
     void on_cb_visible_buggy_toggled(bool checked);

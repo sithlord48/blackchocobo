@@ -248,21 +248,24 @@ void ChocoboEditor::init_display(void)
     sb_personality = new QSpinBox;
     cb_cantMate = new QCheckBox(tr("Unable To Mate"));
 
-    lbl_rankLabel = new QLabel(tr("Rank: "));
     lbl_rank = new QLabel();
     lbl_stamina  = new QLabel(tr("Stamina"));
     lbl_sex  = new QLabel(tr("Sex"));
     lbl_type = new QLabel(tr("Type"));
+    lbl_type->setAlignment(Qt::AlignRight);
     lbl_name = new QLabel(tr("Name"));
+    lbl_name->setAlignment(Qt::AlignRight);
     lbl_speed = new QLabel(tr("Run Speed"));
     lbl_div_speed = new QLabel("/");
     lbl_div_speed->setAlignment(Qt::AlignHCenter);
+    lbl_div_speed->setMaximumWidth(font().pointSize());
     lbl_sprint = new QLabel(tr("Sprint Speed"));
     lbl_div_sprint = new QLabel("/");
     lbl_div_sprint->setAlignment(Qt::AlignHCenter);
+    lbl_div_sprint->setMaximumWidth(font().pointSize());
     lbl_accel = new QLabel(tr("Accel"));
     lbl_wins = new QLabel(tr("Wins"));
-    lbl_coop = new QLabel(tr("Coop"));
+    lbl_coop = new QLabel(tr("Co-Op"));
     lbl_pCount = new QLabel(tr("pCount"));
     lbl_intel = new QLabel(tr("Intel"));
     lbl_personality = new QLabel(tr("Personality"));
@@ -311,21 +314,19 @@ void ChocoboEditor::init_display(void)
     combo_type->addItem(QIcon(QPixmap(black_choco_xpm)),tr("Black"));
     combo_type->addItem(QIcon(QPixmap(gold_choco_xpm)),tr("Gold"));
     //Make Layouts
-    QHBoxLayout *name_layout = new QHBoxLayout;
-    name_layout->setContentsMargins(0,0,0,0);
-    name_layout->addWidget(lbl_name);
-    name_layout->addWidget(line_name);
 
-    QHBoxLayout *type_sex_layout = new QHBoxLayout;
-    type_sex_layout->setContentsMargins(0,0,0,0);
-    type_sex_layout->addWidget(lbl_type);
-    type_sex_layout->addWidget(combo_type);
-    type_sex_layout->addWidget(lbl_sex);
-    type_sex_layout->addWidget(combo_sex);
+    QHBoxLayout *name_type_sex_layout = new QHBoxLayout;
+    name_type_sex_layout->setContentsMargins(0,0,0,0);
+    name_type_sex_layout->setAlignment(Qt::AlignHCenter);
+    name_type_sex_layout->addWidget(lbl_name);
+    name_type_sex_layout->addWidget(line_name);
+    name_type_sex_layout->addWidget(lbl_type);
+    name_type_sex_layout->addWidget(combo_type);
+    name_type_sex_layout->addWidget(lbl_sex);
+    name_type_sex_layout->addWidget(combo_sex);
 
     QHBoxLayout *speed_layout = new QHBoxLayout;
     speed_layout->setContentsMargins(0,0,0,0);
-    //speed_layout->setAlignment(Qt::AlignHCenter);
     speed_layout->addWidget(lbl_speed);
     speed_layout->addWidget(sb_speed);
     speed_layout->addWidget(lbl_div_speed);
@@ -333,7 +334,6 @@ void ChocoboEditor::init_display(void)
 
     QHBoxLayout *sprint_layout = new QHBoxLayout;
     sprint_layout->setContentsMargins(0,0,0,0);
-    //sprint_layout->setAlignment(Qt::AlignHCenter);
     sprint_layout->addWidget(lbl_sprint);
     sprint_layout->addWidget(sb_sprint);
     sprint_layout->addWidget(lbl_div_sprint);
@@ -341,7 +341,6 @@ void ChocoboEditor::init_display(void)
 
     QHBoxLayout *cantMate_layout = new QHBoxLayout;
     cantMate_layout->setContentsMargins(0,0,0,0);
-    //cantMate_layout->setAlignment(Qt::AlignHCenter);
     cantMate_layout->addWidget(cb_cantMate);
 
     QHBoxLayout *accel_layout = new QHBoxLayout;
@@ -364,15 +363,14 @@ void ChocoboEditor::init_display(void)
     wins_layout->addWidget(lbl_wins);
     wins_layout->addWidget(sb_wins);
 
-    QHBoxLayout *rank_layout = new QHBoxLayout;
-    rank_layout->setContentsMargins(0,0,0,0);
-    rank_layout->addWidget(lbl_rankLabel);
-    rank_layout->addWidget(lbl_rank);
 
     QHBoxLayout *wins_rank_layout = new QHBoxLayout;
     wins_rank_layout->setContentsMargins(0,0,0,0);
+    wins_rank_layout->setAlignment(Qt::AlignHCenter);
+    wins_rank_layout->addLayout(cantMate_layout);
+    wins_rank_layout->addSpacerItem(new QSpacerItem(50,0,QSizePolicy::Fixed,QSizePolicy::Fixed));
     wins_rank_layout->addLayout(wins_layout);
-    wins_rank_layout->addLayout(rank_layout);
+    wins_rank_layout->addWidget(lbl_rank);
 
     QHBoxLayout *coop_layout = new QHBoxLayout;
     coop_layout->setContentsMargins(0,0,0,0);
@@ -404,27 +402,24 @@ void ChocoboEditor::init_display(void)
     pCount_personality_layout->addLayout(pCount_layout);
     pCount_personality_layout->addLayout(personality_layout);
 
+    lblSpeedWarning = new QLabel(tr("Speed Values Are The Raw Values\nThe km/h speeds are calculated while playing "));
     advancedModeBox = new QFrame;
     advancedModeBox->setStyleSheet("QFrame:enabled{background-color: rgba(0,0,0,0);}");
     advancedModeBox->setLayout(pCount_personality_layout);
     advancedModeBox->setHidden(true);
-    QSpacerItem*vSpacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
+
     //Final Layout
     QVBoxLayout *Final = new QVBoxLayout;
-    //Final->setContentsMargins(0,0,0,0);
-    //Final->setSpacing(3);
-    Final->addLayout(name_layout);
-    Final->addLayout(type_sex_layout);
-    Final->addLayout(cantMate_layout);
+    Final->addLayout(name_type_sex_layout);
     Final->addLayout(wins_rank_layout);
     Final->addLayout(speed_layout);
     Final->addLayout(sprint_layout);
     Final->addLayout(accel_stamina_layout);
     Final->addLayout(coop_intel_layout);
-    Final->addSpacerItem(vSpacer);
     Final->addWidget(advancedModeBox);
+    Final->addWidget(lblSpeedWarning,0,Qt::AlignHCenter);
+    Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
     this->setLayout(Final);
-
 }
 void ChocoboEditor::init_connections(void)
 {
@@ -473,10 +468,10 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
 }
 void ChocoboEditor::getRank(void)
 {
-    if(choco_data.raceswon <3){lbl_rank->setText(tr("C"));}
-    else if(choco_data.raceswon<6){lbl_rank->setText(tr("B"));}
-    else if(choco_data.raceswon<9){lbl_rank->setText(tr("A"));}
-    else{lbl_rank->setText(tr("S"));}
+    if(choco_data.raceswon <3){lbl_rank->setText(tr("Rank: C"));}
+    else if(choco_data.raceswon<6){lbl_rank->setText(tr("Rank: B"));}
+    else if(choco_data.raceswon<9){lbl_rank->setText(tr("Rank: A"));}
+    else{lbl_rank->setText(tr("Rank: S"));}
 }
 void ChocoboEditor::setAdvancedMode(bool advancedMode){advancedModeBox->setHidden(!advancedMode);}
 

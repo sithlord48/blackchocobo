@@ -685,10 +685,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Coop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>pCount</source>
         <translation type="unfinished"></translation>
     </message>
@@ -721,31 +717,36 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Rank: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Male %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Female %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Co-Op</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values
+The km/h speeds are calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: S</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -792,6 +793,46 @@
     </message>
     <message>
         <source>Stable:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fenced Chocobos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wonderful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Great</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fair</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Terrible</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4025,10 +4066,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Average</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4118,42 +4155,6 @@
     </message>
     <message>
         <source>Show Selection Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fenced Chocobos</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wonderful</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Great</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fair</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bad</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Terrible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5607,11 +5608,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are 
-calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>

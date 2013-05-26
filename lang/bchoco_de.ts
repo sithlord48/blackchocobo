@@ -686,7 +686,7 @@
     </message>
     <message>
         <source>Coop</source>
-        <translation>Koop</translation>
+        <translation type="obsolete">Koop</translation>
     </message>
     <message>
         <source>pCount</source>
@@ -721,32 +721,37 @@
         <translation>Gold</translation>
     </message>
     <message>
-        <source>Rank: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Male %1</source>
         <translation>Männlich %1</translation>
     </message>
     <message>
         <source>Female %1</source>
         <translation>Weiblich %1</translation>
+    </message>
+    <message>
+        <source>Co-Op</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values
+The km/h speeds are calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: S</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -793,6 +798,46 @@
     <message>
         <source>Stable:%1</source>
         <translation>Stall %1</translation>
+    </message>
+    <message>
+        <source>Fenced Chocobos</source>
+        <translation type="unfinished">Eingezäunte Chocobos</translation>
+    </message>
+    <message>
+        <source>Empty</source>
+        <translation type="unfinished">Leer</translation>
+    </message>
+    <message>
+        <source>Wonderful</source>
+        <translation type="unfinished">Fabelhaft</translation>
+    </message>
+    <message>
+        <source>Great</source>
+        <translation type="unfinished">Großartig</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">Gut</translation>
+    </message>
+    <message>
+        <source>Fair</source>
+        <translation type="unfinished">Ganz brauchbar</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="unfinished">Durchschnitt</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation type="unfinished">Nicht übel</translation>
+    </message>
+    <message>
+        <source>Bad</source>
+        <translation type="unfinished">Nichts besonderes</translation>
+    </message>
+    <message>
+        <source>Terrible</source>
+        <translation type="unfinished">Nicht empfehlenswert</translation>
     </message>
 </context>
 <context>
@@ -4027,7 +4072,7 @@
     </message>
     <message>
         <source>Average</source>
-        <translation>Durchschnitt</translation>
+        <translation type="obsolete">Durchschnitt</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4123,39 +4168,39 @@
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>Eingezäunte Chocobos</translation>
+        <translation type="obsolete">Eingezäunte Chocobos</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Leer</translation>
+        <translation type="obsolete">Leer</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>Fabelhaft</translation>
+        <translation type="obsolete">Fabelhaft</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>Großartig</translation>
+        <translation type="obsolete">Großartig</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>Gut</translation>
+        <translation type="obsolete">Gut</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>Ganz brauchbar</translation>
+        <translation type="obsolete">Ganz brauchbar</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>Nicht übel</translation>
+        <translation type="obsolete">Nicht übel</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>Nichts besonderes</translation>
+        <translation type="obsolete">Nichts besonderes</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>Nicht empfehlenswert</translation>
+        <translation type="obsolete">Nicht empfehlenswert</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5622,11 +5667,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are 
-calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>

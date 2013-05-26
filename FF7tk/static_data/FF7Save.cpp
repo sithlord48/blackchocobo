@@ -2153,16 +2153,6 @@ void FF7Save::setParty(int s,int pos, int new_id)
         setFileModified(true,s);
     }
 }
-qint8 FF7Save::chocoboPen(int s, int pos){return slot[s].pennedchocos[pos];}
-void FF7Save::setChocoboPen(int s, int pos, int type)
-{
-    if(pos<5)
-    {
-        if(type >=0 && type <9){slot[s].pennedchocos[pos]=type;}
-        else{slot[s].pennedchocos[pos]=0;}
-        setFileModified(true,s);
-    }
-}
 quint32 FF7Save::snowboardTime(int s, int course)
 {
     quint32 time=0;
@@ -3432,6 +3422,7 @@ void FF7Save::setCondorFunds(int s,quint16 value)
     {
         slot[s].z_16[52] = (value & 0xff);
         slot[s].z_16[53]= (value & 0xff00) >> 8;
+        setFileModified(true,s);
     }
 }
 quint8 FF7Save::condorWins(int s)
@@ -3442,7 +3433,7 @@ quint8 FF7Save::condorWins(int s)
 void FF7Save::setCondorWins(int s,quint8 wins)
 {
     if(wins ==condorWins(s)){return;}
-    else{slot[s].z_16[39] = wins;}
+    else{slot[s].z_16[39] = wins;setFileModified(true,s);}
 }
 quint8 FF7Save::condorLoses(int s)
 {
@@ -3452,7 +3443,7 @@ quint8 FF7Save::condorLoses(int s)
 void FF7Save::setCondorLoses(int s, quint8 loses)
 {
     if(loses ==condorLoses(s)){return;}
-    else{slot[s].z_16[38] = loses;}
+    else{slot[s].z_16[38] = loses;setFileModified(true,s);}
 }
 
 QList<FF7CHOCOBO> FF7Save::chocobos(int s)
@@ -3490,7 +3481,7 @@ void FF7Save::setStablesOwned(int s,qint8 value)
 {
     if(s<0 ||s>14){return;}
     else if(value<0 || value>6){return;}
-    else{slot[s].stables =value;}
+    else{slot[s].stables =value;setFileModified(true,s);}
 }
 
 qint8 FF7Save::stablesOccupied(int s)
@@ -3502,7 +3493,7 @@ void FF7Save::setStablesOccupied(int s,qint8 value)
 {
     if(s<0 ||s>14){return;}
     else if(value<0 || value>6){return;}
-    else{slot[s].stablesoccupied =value;}
+    else{slot[s].stablesoccupied =value;setFileModified(true,s);}
 }
 
 qint8 FF7Save::stableMask(int s)
@@ -3514,5 +3505,24 @@ qint8 FF7Save::stableMask(int s)
 void FF7Save::setStableMask(int s,qint8 value)
 {
     if(s<0 ||s>14){return;}
-    else{slot[s].chocobomask =value;}
+    else{slot[s].chocobomask =value;setFileModified(true,s);
+}
+}
+
+QList<qint8> FF7Save::chocoboPens(int s)
+{
+    QList<qint8> pens;
+    for(int i=0;i<4;i++){pens.append(slot[s].pennedchocos[i]);}
+    return pens;
+}
+qint8 FF7Save::chocoboPen(int s,int pen)
+{
+    if(s<0 || s>14 || pen<0 || pen>3){return 0;}
+    else{return slot[s].pennedchocos[pen];}
+}
+void FF7Save::setChocoboPen(int s,int pen,int value)
+{
+    if(s<0 || s>14 || pen<0 || pen>3 || value<0 || value>8){return;}
+    else{slot[s].pennedchocos[pen]=value;setFileModified(true,s);
+}
 }
