@@ -686,7 +686,7 @@
     </message>
     <message>
         <source>Coop</source>
-        <translation>仲の良さ</translation>
+        <translation type="obsolete">仲の良さ</translation>
     </message>
     <message>
         <source>pCount</source>
@@ -721,24 +721,8 @@
         <translation>海チョコボ</translation>
     </message>
     <message>
-        <source>Rank: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>B</source>
-        <translation type="unfinished">B</translation>
-    </message>
-    <message>
-        <source>A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">B</translation>
     </message>
     <message>
         <source>Male %1</source>
@@ -747,6 +731,31 @@
     <message>
         <source>Female %1</source>
         <translation type="unfinished">メス %1</translation>
+    </message>
+    <message>
+        <source>Co-Op</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Values Are The Raw Values
+The km/h speeds are calculated while playing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank: S</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -793,6 +802,46 @@
     <message>
         <source>Stable:%1</source>
         <translation type="unfinished">チョコ房 %1</translation>
+    </message>
+    <message>
+        <source>Fenced Chocobos</source>
+        <translation type="unfinished">サクのチョコボ</translation>
+    </message>
+    <message>
+        <source>Empty</source>
+        <translation type="unfinished">なし</translation>
+    </message>
+    <message>
+        <source>Wonderful</source>
+        <translation type="unfinished">す、すごいチョコボ！</translation>
+    </message>
+    <message>
+        <source>Great</source>
+        <translation type="unfinished">すごくいいチョコボ</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">いい感じのチョコボ</translation>
+    </message>
+    <message>
+        <source>Fair</source>
+        <translation type="unfinished">まあまあのチョコボ</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="unfinished">普通のチョコボ</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation type="unfinished">わるくはないチョコボ</translation>
+    </message>
+    <message>
+        <source>Bad</source>
+        <translation type="unfinished">いい感じじゃないチョコボ</translation>
+    </message>
+    <message>
+        <source>Terrible</source>
+        <translation type="unfinished">おすすめできないチョコボ</translation>
     </message>
 </context>
 <context>
@@ -4101,7 +4150,7 @@
     </message>
     <message>
         <source>Average</source>
-        <translation>普通のチョコボ</translation>
+        <translation type="obsolete">普通のチョコボ</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4197,39 +4246,39 @@
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>サクのチョコボ</translation>
+        <translation type="obsolete">サクのチョコボ</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>なし</translation>
+        <translation type="obsolete">なし</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>す、すごいチョコボ！</translation>
+        <translation type="obsolete">す、すごいチョコボ！</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>すごくいいチョコボ</translation>
+        <translation type="obsolete">すごくいいチョコボ</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>いい感じのチョコボ</translation>
+        <translation type="obsolete">いい感じのチョコボ</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>まあまあのチョコボ</translation>
+        <translation type="obsolete">まあまあのチョコボ</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>わるくはないチョコボ</translation>
+        <translation type="obsolete">わるくはないチョコボ</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>いい感じじゃないチョコボ</translation>
+        <translation type="obsolete">いい感じじゃないチョコボ</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>おすすめできないチョコボ</translation>
+        <translation type="obsolete">おすすめできないチョコボ</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5692,11 +5741,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are 
-calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>

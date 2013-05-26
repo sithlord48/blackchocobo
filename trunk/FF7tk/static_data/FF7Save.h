@@ -63,6 +63,9 @@ public:
         KEYCARD68,MIDGARPARTS1,MIDGARPARTS2,MIDGARPARTS3,MIDGARPARTS4,MIDGARPARTS5,PHS,GOLDTICKET,KEYSTONE,LEIATHANSCALES,GLACIERMAP,COUPON_A,COUPON_B,
         COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
     };
+
+    QList<qint8> chocoboPens(int s);
+    void setChocoboPen(int s,int pen,qint8 value);
     quint8 condorWins(int s);
     void setCondorWins(int s,quint8 wins);
     quint8 condorLoses(int s);

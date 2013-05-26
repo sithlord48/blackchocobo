@@ -290,6 +290,7 @@ void MainWindow::init_connections()
         connect(chocoboManager,SIGNAL(personalityChanged(int,quint8)),this,SLOT(cm_personalityChanged(int,quint8)));
         connect(chocoboManager,SIGNAL(pCountChanged(int,quint8)),this,SLOT(cm_pcountChanged(int,quint8)));
         connect(chocoboManager,SIGNAL(winsChanged(int,quint8)),this,SLOT(cm_raceswonChanged(int,quint8)));
+        connect(chocoboManager,SIGNAL(penChanged(int,int)),this,SLOT(cm_pensChanged(int,int)));
 
         //options
         connect(optionsWidget,SIGNAL(dialogColorLLChanged(QColor)),this,SLOT(setDialogColorLL(QColor)));
@@ -1496,8 +1497,8 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         break;
 
         case 3://Chocobo Tab
-            chocobo_refresh();
-        break;
+            chocoboManager->setData(ff7->chocobos(s),ff7->chocobosNames(s),ff7->chocobosStaminas(s),ff7->chocoboCantMates(s),ff7->stablesOwned(s),ff7->stablesOccupied(s),ff7->stableMask(s),ff7->chocoboPens(s));
+            break;
 
         case 4://Location Tab
             on_locationToolBox_currentChanged(ui->locationToolBox->currentIndex());
@@ -1578,7 +1579,7 @@ void MainWindow::guirefresh(bool newgame)
     else
     {//IS FF7 Slot
         if((ff7->type()=="PC") || (ff7->type()=="")){if(ui->combo_hexEditor->currentIndex()!=1){ui->combo_hexEditor->setCurrentIndex(1);}}
-        QByteArray text;
+        //QByteArray text;
         if(ff7->region(s).isEmpty()
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
            && ff7->psx_block_type(s)==0xA0)
@@ -1700,20 +1701,6 @@ void MainWindow::progress_update()
     else {ui->combo_s7_slums->setCurrentIndex(0);}
     load=false;
 }
-/*~~~~~~~~~~~~~~~~~~~~Chocobo Refresh~~~~~~~~~~~~~~~~*/
-void MainWindow::chocobo_refresh()
-{
-    load=true;
-
-    chocoboManager->setData(ff7->chocobos(s),ff7->chocobosNames(s),ff7->chocobosStaminas(s),ff7->chocoboCantMates(s),ff7->stablesOwned(s),ff7->stablesOccupied(s),ff7->stableMask(s));
-    //set the penned chocobos
-    ui->combo_pen1->setCurrentIndex(ff7->chocoboPen(s,0));
-    ui->combo_pen2->setCurrentIndex(ff7->chocoboPen(s,1));
-    ui->combo_pen3->setCurrentIndex(ff7->chocoboPen(s,2));
-    ui->combo_pen4->setCurrentIndex(ff7->chocoboPen(s,3));
-    load=false;
-/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
-}
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
 void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->character(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
 void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->character(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,curchar)));}
@@ -1824,10 +1811,7 @@ void MainWindow::cm_pcountChanged(int stable,quint8 value){if(!load){ ff7->setCh
 void MainWindow::cm_personalityChanged(int stable,quint8 value){if(!load){ ff7->setChocoPersonality(s,stable,value);file_modified(true);}}
 void MainWindow::cm_mated_toggled(int stable,bool checked){if(!load){ff7->setChocoCantMate(s,stable,checked);file_modified(true);}}
 //set data for pens outside
-void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,0,index);file_modified(true);}}
-void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,1,index);file_modified(true);}}
-void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,2,index);file_modified(true);}}
-void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ ff7->setChocoboPen(s,3,index);file_modified(true);}}
+void MainWindow::cm_pensChanged(int pen,int index){if(!load){ff7->setChocoboPen(s,pen,index);file_modified(true);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_BARRET,value);}}
