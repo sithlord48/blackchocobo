@@ -657,14 +657,6 @@
         <translation>Ausdauer</translation>
     </message>
     <message>
-        <source>Sex</source>
-        <translation>Geschlecht</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Typ</translation>
-    </message>
-    <message>
         <source>Name</source>
         <translation>Name</translation>
     </message>
@@ -677,24 +669,8 @@
         <translation type="unfinished">Sprint Geschw.</translation>
     </message>
     <message>
-        <source>Accel</source>
-        <translation>Beschleunigung</translation>
-    </message>
-    <message>
-        <source>Wins</source>
-        <translation>Siege</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">Koop</translation>
-    </message>
-    <message>
         <source>pCount</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation>Intel</translation>
     </message>
     <message>
         <source>Personality</source>
@@ -729,10 +705,6 @@
         <translation>Weiblich %1</translation>
     </message>
     <message>
-        <source>Co-Op</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
@@ -751,6 +723,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank: S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Acceleration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Races Won</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intelligence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4071,10 +4059,6 @@ The km/h speeds are calculated while playing </source>
         <translation>C&amp;hocobo</translation>
     </message>
     <message>
-        <source>Average</source>
-        <translation type="obsolete">Durchschnitt</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia gestohlen von Yuffie</translation>
     </message>
@@ -4165,42 +4149,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Show Selection Dialog</source>
         <translation>Zeige Auswahl-Dialog</translation>
-    </message>
-    <message>
-        <source>Fenced Chocobos</source>
-        <translation type="obsolete">Eingezäunte Chocobos</translation>
-    </message>
-    <message>
-        <source>Empty</source>
-        <translation type="obsolete">Leer</translation>
-    </message>
-    <message>
-        <source>Wonderful</source>
-        <translation type="obsolete">Fabelhaft</translation>
-    </message>
-    <message>
-        <source>Great</source>
-        <translation type="obsolete">Großartig</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="obsolete">Gut</translation>
-    </message>
-    <message>
-        <source>Fair</source>
-        <translation type="obsolete">Ganz brauchbar</translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <translation type="obsolete">Nicht übel</translation>
-    </message>
-    <message>
-        <source>Bad</source>
-        <translation type="obsolete">Nichts besonderes</translation>
-    </message>
-    <message>
-        <source>Terrible</source>
-        <translation type="obsolete">Nicht empfehlenswert</translation>
     </message>
     <message>
         <source>Time Played</source>

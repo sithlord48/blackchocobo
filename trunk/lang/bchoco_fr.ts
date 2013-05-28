@@ -657,14 +657,6 @@
         <translation>Résistance</translation>
     </message>
     <message>
-        <source>Sex</source>
-        <translation>Sexe</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -677,24 +669,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Accel</source>
-        <translation>Accélération</translation>
-    </message>
-    <message>
-        <source>Wins</source>
-        <translation>Victoires</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">Maniabilité</translation>
-    </message>
-    <message>
         <source>pCount</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation>Intelligence</translation>
     </message>
     <message>
         <source>Personality</source>
@@ -721,20 +697,12 @@
         <translation>Doré</translation>
     </message>
     <message>
-        <source>B</source>
-        <translation type="obsolete">B</translation>
-    </message>
-    <message>
         <source>Male %1</source>
         <translation type="unfinished">Mâle %1</translation>
     </message>
     <message>
         <source>Female %1</source>
         <translation type="unfinished">Femelle %1</translation>
-    </message>
-    <message>
-        <source>Co-Op</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
@@ -755,6 +723,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank: S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Acceleration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Races Won</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intelligence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4067,42 +4051,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Surf des neiges</translation>
     </message>
     <message>
-        <source>Fenced Chocobos</source>
-        <translation type="obsolete">Chocobos dans l&apos;enclos</translation>
-    </message>
-    <message>
-        <source>Empty</source>
-        <translation type="obsolete">Vide</translation>
-    </message>
-    <message>
-        <source>Wonderful</source>
-        <translation type="obsolete">Grand</translation>
-    </message>
-    <message>
-        <source>Great</source>
-        <translation type="obsolete">Magnifique</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="obsolete">Gentil</translation>
-    </message>
-    <message>
-        <source>Fair</source>
-        <translation type="obsolete">Moyen</translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <translation type="obsolete">Pas mal</translation>
-    </message>
-    <message>
-        <source>Bad</source>
-        <translation type="obsolete">Pas très en forme</translation>
-    </message>
-    <message>
-        <source>Terrible</source>
-        <translation type="obsolete">Non recommandé</translation>
-    </message>
-    <message>
         <source>&amp;Export From Current Slot</source>
         <translation>&amp;Exporter le slot sous</translation>
     </message>
@@ -4233,10 +4181,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>C&amp;hocobo</source>
         <translation>C&amp;hocobos</translation>
-    </message>
-    <message>
-        <source>Average</source>
-        <translation type="obsolete">Relativement moyen</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -8424,10 +8368,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>FF7tk: + Remove Slots from slots select Dialog </source>
         <translation>FF7tk : + supprimer les slots à partir de la fenêtre de sélection de slot</translation>
-    </message>
-    <message>
-        <source>FF7tk: +More Locations</source>
-        <translation type="obsolete">FF7tk : + plus de lieux</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>

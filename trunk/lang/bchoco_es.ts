@@ -657,14 +657,6 @@
         <translation>Resistencia</translation>
     </message>
     <message>
-        <source>Sex</source>
-        <translation>Sexo</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -677,24 +669,8 @@
         <translation>Velocidad máxima</translation>
     </message>
     <message>
-        <source>Accel</source>
-        <translation>Aceleración</translation>
-    </message>
-    <message>
-        <source>Wins</source>
-        <translation>Ganados</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">Cooperación</translation>
-    </message>
-    <message>
         <source>pCount</source>
         <translation>pCount</translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation>Intel</translation>
     </message>
     <message>
         <source>Personality</source>
@@ -721,20 +697,12 @@
         <translation>Dorado</translation>
     </message>
     <message>
-        <source>B</source>
-        <translation type="obsolete">B</translation>
-    </message>
-    <message>
         <source>Male %1</source>
         <translation type="unfinished">Macho %1</translation>
     </message>
     <message>
         <source>Female %1</source>
         <translation type="unfinished">Hembra %1</translation>
-    </message>
-    <message>
-        <source>Co-Op</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
@@ -755,6 +723,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank: S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Acceleration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Races Won</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intelligence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -801,7 +785,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Stable:%1</source>
-        <translation>Establo %1</translation>
+        <translation type="unfinished">Establo %1</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
@@ -4068,42 +4052,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Snowboard</translation>
     </message>
     <message>
-        <source>Fenced Chocobos</source>
-        <translation type="obsolete">Chocobos en Corral</translation>
-    </message>
-    <message>
-        <source>Empty</source>
-        <translation type="obsolete">Vacío</translation>
-    </message>
-    <message>
-        <source>Wonderful</source>
-        <translation type="obsolete">Maravilloso</translation>
-    </message>
-    <message>
-        <source>Great</source>
-        <translation type="obsolete">Fantástico</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="obsolete">Bueno</translation>
-    </message>
-    <message>
-        <source>Fair</source>
-        <translation type="obsolete">Pasable</translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <translation type="obsolete">Pobre</translation>
-    </message>
-    <message>
-        <source>Bad</source>
-        <translation type="obsolete">Malo</translation>
-    </message>
-    <message>
-        <source>Terrible</source>
-        <translation type="obsolete">Terrible</translation>
-    </message>
-    <message>
         <source>Time Played</source>
         <translation>Tiempo de Juego</translation>
     </message>
@@ -4150,10 +4098,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>C&amp;hocobo</source>
         <translation>C&amp;hocobo</translation>
-    </message>
-    <message>
-        <source>Average</source>
-        <translation type="obsolete">Media</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -5668,11 +5612,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>ZZ8: KOTR</source>
         <translation>ZZ8: KOTR</translation>
-    </message>
-    <message>
-        <source>Speed Values Are The Raw Values , the km/h speeds are 
-calculated while playing </source>
-        <translation type="obsolete">Los valores de velocidad son valores absolutos, las velocidades en km/h son calculadas duratne el juego</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 
@@ -8428,10 +8367,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>FF7tk: + Remove Slots from slots select Dialog </source>
         <translation>FF7tk: + Borrar ranuras desde el diálogo de selección de ranuras</translation>
-    </message>
-    <message>
-        <source>FF7tk: +More Locations</source>
-        <translation type="obsolete">FF7tk: + Más localizaciones</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>

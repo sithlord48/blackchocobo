@@ -30,6 +30,8 @@
 class ChocoboEditor : public QWidget
 {
     Q_OBJECT
+protected:
+    void resizeEvent(QResizeEvent *ev);
 public:
     explicit ChocoboEditor(QWidget *parent = 0);
     void SetChocobo(FF7CHOCOBO choco,QString Processed_Name="",bool cant_mate=false, quint16 stamina=0);
@@ -120,9 +122,6 @@ private:
     QSpinBox *sb_intel;
     QSpinBox *sb_personality;
 
-    QLabel *lbl_sex;
-    QLabel *lbl_type;
-    QLabel *lbl_name;
     QLabel *lbl_speed;
     QLabel *lbl_div_speed;
     QLabel *lbl_stamina;
@@ -134,9 +133,9 @@ private:
     QLabel *lbl_pCount;
     QLabel *lbl_intel;
     QLabel *lbl_personality;
-    QLabel *lbl_rankLabel;
     QLabel *lbl_rank;
     QLabel *lblSpeedWarning;
+    QGridLayout *Final;
     //Data
     FF7CHOCOBO choco_data;
     QString choco_name;
