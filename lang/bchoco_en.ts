@@ -657,14 +657,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -677,19 +669,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Accel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>pCount</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Intel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -725,10 +705,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Co-Op</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
@@ -747,6 +723,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank: S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Acceleration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Races Won</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intelligence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

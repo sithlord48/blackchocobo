@@ -657,14 +657,6 @@
         <translation>スタミナ</translation>
     </message>
     <message>
-        <source>Sex</source>
-        <translation>性別</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation>タイプ</translation>
-    </message>
-    <message>
         <source>Name</source>
         <translation>名前</translation>
     </message>
@@ -677,24 +669,8 @@
         <translation>ラストスパート</translation>
     </message>
     <message>
-        <source>Accel</source>
-        <translation>ダッシュ</translation>
-    </message>
-    <message>
-        <source>Wins</source>
-        <translation>優勝回数</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">仲の良さ</translation>
-    </message>
-    <message>
         <source>pCount</source>
         <translation>給餌</translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation>かしこさ</translation>
     </message>
     <message>
         <source>Personality</source>
@@ -721,20 +697,12 @@
         <translation>海チョコボ</translation>
     </message>
     <message>
-        <source>B</source>
-        <translation type="obsolete">B</translation>
-    </message>
-    <message>
         <source>Male %1</source>
         <translation type="unfinished">オス %1</translation>
     </message>
     <message>
         <source>Female %1</source>
         <translation type="unfinished">メス %1</translation>
-    </message>
-    <message>
-        <source>Co-Op</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
@@ -755,6 +723,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank: S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Acceleration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Races Won</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cooperation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intelligence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4149,10 +4133,6 @@ The km/h speeds are calculated while playing </source>
         <translation>チョコボ(&amp;C)</translation>
     </message>
     <message>
-        <source>Average</source>
-        <translation type="obsolete">普通のチョコボ</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>ユフィに盗まれるマテリア</translation>
     </message>
@@ -4243,42 +4223,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Show Selection Dialog</source>
         <translation>選択ダイアログを表示</translation>
-    </message>
-    <message>
-        <source>Fenced Chocobos</source>
-        <translation type="obsolete">サクのチョコボ</translation>
-    </message>
-    <message>
-        <source>Empty</source>
-        <translation type="obsolete">なし</translation>
-    </message>
-    <message>
-        <source>Wonderful</source>
-        <translation type="obsolete">す、すごいチョコボ！</translation>
-    </message>
-    <message>
-        <source>Great</source>
-        <translation type="obsolete">すごくいいチョコボ</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="obsolete">いい感じのチョコボ</translation>
-    </message>
-    <message>
-        <source>Fair</source>
-        <translation type="obsolete">まあまあのチョコボ</translation>
-    </message>
-    <message>
-        <source>Poor</source>
-        <translation type="obsolete">わるくはないチョコボ</translation>
-    </message>
-    <message>
-        <source>Bad</source>
-        <translation type="obsolete">いい感じじゃないチョコボ</translation>
-    </message>
-    <message>
-        <source>Terrible</source>
-        <translation type="obsolete">おすすめできないチョコボ</translation>
     </message>
     <message>
         <source>Time Played</source>

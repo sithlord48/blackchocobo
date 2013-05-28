@@ -21,6 +21,16 @@
 #include"../static_data/icons/Chocobo_Icons/yellow_choco.xpm"
 #include"../static_data/icons/Chocobo_Icons/gold_choco.xpm"
 
+void ChocoboEditor::resizeEvent(QResizeEvent *ev)
+{
+    if(ev->type()==QEvent::Resize)
+    {
+        Final->setColumnMinimumWidth(0,width()/4);
+        Final->setColumnMinimumWidth(1,width()/4);
+        Final->setColumnStretch(0,width()/4);
+        Final->setColumnStretch(1,width()/4);
+    }
+}
 ChocoboEditor::ChocoboEditor(QWidget *parent) :
     QWidget(parent)
 {
@@ -250,11 +260,6 @@ void ChocoboEditor::init_display(void)
 
     lbl_rank = new QLabel();
     lbl_stamina  = new QLabel(tr("Stamina"));
-    lbl_sex  = new QLabel(tr("Sex"));
-    lbl_type = new QLabel(tr("Type"));
-    lbl_type->setAlignment(Qt::AlignRight);
-    lbl_name = new QLabel(tr("Name"));
-    lbl_name->setAlignment(Qt::AlignRight);
     lbl_speed = new QLabel(tr("Run Speed"));
     lbl_div_speed = new QLabel("/");
     lbl_div_speed->setAlignment(Qt::AlignHCenter);
@@ -263,14 +268,15 @@ void ChocoboEditor::init_display(void)
     lbl_div_sprint = new QLabel("/");
     lbl_div_sprint->setAlignment(Qt::AlignHCenter);
     lbl_div_sprint->setMaximumWidth(font().pointSize());
-    lbl_accel = new QLabel(tr("Accel"));
-    lbl_wins = new QLabel(tr("Wins"));
-    lbl_coop = new QLabel(tr("Co-Op"));
+    lbl_accel = new QLabel(tr("Acceleration"));
+    lbl_wins = new QLabel(tr("Races Won"));
+    lbl_coop = new QLabel(tr("Cooperation"));
     lbl_pCount = new QLabel(tr("pCount"));
-    lbl_intel = new QLabel(tr("Intel"));
+    lbl_intel = new QLabel(tr("Intelligence"));
     lbl_personality = new QLabel(tr("Personality"));
     //Set Widgets up
     line_name->setMaxLength(6);
+    line_name->setPlaceholderText(tr("Name"));
     sb_speed->setMaximum(9999);
     sb_speed->setAlignment(Qt::AlignHCenter);
     sb_mSpeed->setMaximum(9999);
@@ -308,6 +314,7 @@ void ChocoboEditor::init_display(void)
     //Fill Combos.
     combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
     combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
+
     combo_type->addItem(QIcon(QPixmap(yellow_choco_xpm)),tr("Yellow"));
     combo_type->addItem(QIcon(QPixmap(green_choco_xpm)),tr("Green"));
     combo_type->addItem(QIcon(QPixmap(blue_choco_xpm)),tr("Blue"));
@@ -315,90 +322,47 @@ void ChocoboEditor::init_display(void)
     combo_type->addItem(QIcon(QPixmap(gold_choco_xpm)),tr("Gold"));
     //Make Layouts
 
-    QHBoxLayout *name_type_sex_layout = new QHBoxLayout;
-    name_type_sex_layout->setContentsMargins(0,0,0,0);
-    name_type_sex_layout->setAlignment(Qt::AlignHCenter);
-    name_type_sex_layout->addWidget(lbl_name);
-    name_type_sex_layout->addWidget(line_name);
-    name_type_sex_layout->addWidget(lbl_type);
-    name_type_sex_layout->addWidget(combo_type);
-    name_type_sex_layout->addWidget(lbl_sex);
-    name_type_sex_layout->addWidget(combo_sex);
-
     QHBoxLayout *speed_layout = new QHBoxLayout;
-    speed_layout->setContentsMargins(0,0,0,0);
     speed_layout->addWidget(lbl_speed);
     speed_layout->addWidget(sb_speed);
     speed_layout->addWidget(lbl_div_speed);
     speed_layout->addWidget(sb_mSpeed);
 
     QHBoxLayout *sprint_layout = new QHBoxLayout;
-    sprint_layout->setContentsMargins(0,0,0,0);
     sprint_layout->addWidget(lbl_sprint);
     sprint_layout->addWidget(sb_sprint);
     sprint_layout->addWidget(lbl_div_sprint);
     sprint_layout->addWidget(sb_mSprint);
 
-    QHBoxLayout *cantMate_layout = new QHBoxLayout;
-    cantMate_layout->setContentsMargins(0,0,0,0);
-    cantMate_layout->addWidget(cb_cantMate);
-
     QHBoxLayout *accel_layout = new QHBoxLayout;
-    accel_layout->setContentsMargins(0,0,0,0);
     accel_layout->addWidget(lbl_accel);
     accel_layout->addWidget(sb_accel);
 
     QHBoxLayout *stamina_layout = new QHBoxLayout;
-    stamina_layout->setContentsMargins(0,0,0,0);
     stamina_layout->addWidget(lbl_stamina);
     stamina_layout->addWidget(sb_stamina);
 
-    QHBoxLayout *accel_stamina_layout = new QHBoxLayout;
-    accel_stamina_layout->setContentsMargins(0,0,0,0);
-    accel_stamina_layout->addLayout(accel_layout);
-    accel_stamina_layout->addLayout(stamina_layout);
-
     QHBoxLayout *wins_layout = new QHBoxLayout;
-    wins_layout->setContentsMargins(0,0,0,0);
     wins_layout->addWidget(lbl_wins);
     wins_layout->addWidget(sb_wins);
 
-
-    QHBoxLayout *wins_rank_layout = new QHBoxLayout;
-    wins_rank_layout->setContentsMargins(0,0,0,0);
-    wins_rank_layout->setAlignment(Qt::AlignHCenter);
-    wins_rank_layout->addLayout(cantMate_layout);
-    wins_rank_layout->addSpacerItem(new QSpacerItem(50,0,QSizePolicy::Fixed,QSizePolicy::Fixed));
-    wins_rank_layout->addLayout(wins_layout);
-    wins_rank_layout->addWidget(lbl_rank);
-
     QHBoxLayout *coop_layout = new QHBoxLayout;
-    coop_layout->setContentsMargins(0,0,0,0);
     coop_layout->addWidget(lbl_coop);
     coop_layout->addWidget(sb_coop);
 
     QHBoxLayout *intel_layout = new QHBoxLayout;
-    intel_layout->setContentsMargins(0,0,0,0);
     intel_layout->addWidget(lbl_intel);
     intel_layout->addWidget(sb_intel);
 
-    QHBoxLayout *coop_intel_layout = new QHBoxLayout;
-    coop_intel_layout->setContentsMargins(0,0,0,0);
-    coop_intel_layout->addLayout(coop_layout);
-    coop_intel_layout->addLayout(intel_layout);
-
     QHBoxLayout *pCount_layout = new QHBoxLayout;
-    pCount_layout->setContentsMargins(0,0,0,0);
     pCount_layout->addWidget(lbl_pCount);
     pCount_layout->addWidget(sb_pCount);
 
     QHBoxLayout *personality_layout = new QHBoxLayout;
-    personality_layout->setContentsMargins(0,0,0,0);
     personality_layout->addWidget(lbl_personality);
     personality_layout->addWidget(sb_personality);
 
     QHBoxLayout *pCount_personality_layout = new QHBoxLayout;
-    pCount_personality_layout->setContentsMargins(0,0,0,0);
     pCount_personality_layout->addLayout(pCount_layout);
     pCount_personality_layout->addLayout(personality_layout);
 
@@ -408,17 +372,29 @@ void ChocoboEditor::init_display(void)
     advancedModeBox->setLayout(pCount_personality_layout);
     advancedModeBox->setHidden(true);
 
-    //Final Layout
-    QVBoxLayout *Final = new QVBoxLayout;
-    Final->addLayout(name_type_sex_layout);
-    Final->addLayout(wins_rank_layout);
-    Final->addLayout(speed_layout);
-    Final->addLayout(sprint_layout);
-    Final->addLayout(accel_stamina_layout);
-    Final->addLayout(coop_intel_layout);
-    Final->addWidget(advancedModeBox);
-    Final->addWidget(lblSpeedWarning,0,Qt::AlignHCenter);
-    Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
+    Final = new QGridLayout;
+    Final->setContentsMargins(0,0,0,0);
+    Final->setAlignment(Qt::AlignCenter);
+    Final->setColumnMinimumWidth(0,width()/4);
+    Final->setColumnMinimumWidth(1,width()/4);
+    Final->setColumnStretch(0,width()/4);
+    Final->setColumnStretch(1,width()/4);
+
+    Final->addWidget(line_name,0,0);
+    Final->addWidget(combo_sex,0,1);
+    Final->addWidget(lbl_rank,2,0);
+    Final->addWidget(combo_type,1,0);
+    Final->addWidget(cb_cantMate,1,1);
+    Final->addLayout(wins_layout,2,1);
+    Final->addLayout(accel_layout,3,0);
+    Final->addLayout(stamina_layout,3,1);
+    Final->addLayout(coop_layout,4,0);
+    Final->addLayout(intel_layout,4,1);
+    Final->addWidget(advancedModeBox,9,0,1,2);
+    Final->addLayout(speed_layout,5,0,1,2);
+    Final->addLayout(sprint_layout,6,0,1,2);
+    Final->addWidget(lblSpeedWarning,7,0,2,2,Qt::AlignCenter);
+    Final->addItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding),10,0,1,2);
     this->setLayout(Final);
 }
 void ChocoboEditor::init_connections(void)

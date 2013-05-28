@@ -69,10 +69,12 @@ void ChocoboManager::initDisplay(void)
         chocoboLabel[i]->setSelected(false);
     }
     chocoboEditor = new ChocoboEditor;
+
     stableGridLayout->addWidget(chocoboEditor,0,3,2,2);
     chocoboEditor->setHidden(true);
 
     QGroupBox *penBox = new QGroupBox(tr("Fenced Chocobos"));
+    penBox->setMaximumHeight(80);
     QGridLayout *comboGrid = new QGridLayout;
     comboGrid->setContentsMargins(0,0,0,0);
     penBox->setLayout(comboGrid);
