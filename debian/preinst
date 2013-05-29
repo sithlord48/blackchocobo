@@ -11,7 +11,7 @@
     echo "save0 - Removed"
     else echo "save 0 - Not Found"
     fi
-    if [-f /opt/blackchocobo/locations.rcc ]; then #remove it 
+    if [ -f /opt/blackchocobo/locations.rcc ]; then #remove it 
     rm /opt/blackchocobo/locations.rcc
     echo "locations.rcc - Removed"
     else echo "locations.rcc - Not Found"
