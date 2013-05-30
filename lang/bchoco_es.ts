@@ -2989,11 +2989,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation>Acantilado de Gaea</translation>
+        <translation type="obsolete">Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>Base del Acantilado de Gaea</translation>
+        <translation type="obsolete">Base del Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -3824,6 +3824,110 @@ The km/h speeds are calculated while playing </source>
         <source>Zack&apos;s Home</source>
         <translation>Casa Zack</translation>
     </message>
+    <message>
+        <source>Path 2</source>
+        <translation>Ruta 2</translation>
+    </message>
+    <message>
+        <source>Junon Branch, 1f.</source>
+        <translation>Oficina Junon, p1.</translation>
+    </message>
+    <message>
+        <source>Office</source>
+        <translation>Oficina</translation>
+    </message>
+    <message>
+        <source>Dr.&apos;s Office</source>
+        <translation>Oficina del Dr.</translation>
+    </message>
+    <message>
+        <source>Press Room</source>
+        <translation>Sala de conferencias</translation>
+    </message>
+    <message>
+        <source>Gas Room</source>
+        <translation>Caldera</translation>
+    </message>
+    <message>
+        <source>Canon</source>
+        <translation>Cañón</translation>
+    </message>
+    <message>
+        <source>Junon branch,(ext.)</source>
+        <translation>Oficina Junon,(ext.)</translation>
+    </message>
+    <message>
+        <source>Correl Valley Cave</source>
+        <translation>Cueva del valle Corral</translation>
+    </message>
+    <message>
+        <source>Icicle Inn</source>
+        <translation>Posada del iciclo</translation>
+    </message>
+    <message>
+        <source>Icicle Inn Bar</source>
+        <translation>Bar</translation>
+    </message>
+    <message>
+        <source>Gast&apos;s House</source>
+        <translation>Casa de Gast</translation>
+    </message>
+    <message>
+        <source>Great Glacier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Frostbite Cave</source>
+        <translation>Cueva congelada</translation>
+    </message>
+    <message>
+        <source>Cave</source>
+        <translation>Cueva</translation>
+    </message>
+    <message>
+        <source>Great Glacier Map</source>
+        <translation>Mapa Glaciar</translation>
+    </message>
+    <message>
+        <source>Base of Gaea&apos;s Cliff</source>
+        <translation>Base acantilado de Gaea</translation>
+    </message>
+    <message>
+        <source>Gaea&apos;s Cliff</source>
+        <translation>Acantilado de Gaea</translation>
+    </message>
+    <message>
+        <source>Inside of Gaea&apos;s Cliff</source>
+        <translation>En acantilado de Gaea</translation>
+    </message>
+    <message>
+        <source>Crater</source>
+        <translation>Cráter</translation>
+    </message>
+    <message>
+        <source>Mideel</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Weapon Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Item Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Materia Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,House1</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Coal Train</source>
+        <translation>Tren de carbón</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4491,7 +4595,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation> Bandera de comienzo de&apos; Bombing Mission&apos;</translation>
+        <translation type="obsolete"> Bandera de comienzo de&apos; Bombing Mission&apos;</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5616,7 +5720,7 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 
 set your map location , x,y,z manually</source>
-        <translation>Clickea una fila para transportar tu partida guardada aquí O establece tu localización x,y,z manualmente en el mapa</translation>
+        <translation type="obsolete">Clickea una fila para transportar tu partida guardada aquí O establece tu localización x,y,z manualmente en el mapa</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
@@ -5696,6 +5800,15 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location data manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

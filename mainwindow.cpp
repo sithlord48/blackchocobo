@@ -1362,6 +1362,7 @@ void MainWindow::othersUpdate()
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
     ui->cb_ruby_dead->setChecked(Qt::Unchecked);
     ui->cb_emerald_dead->setChecked(Qt::Unchecked);
+
     if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
     if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
 
@@ -1406,9 +1407,14 @@ void MainWindow::othersUpdate()
     ui->sb_love_tifa->setValue(ff7->love(s,false,FF7Save::LOVE_TIFA));
     ui->sb_love_aeris->setValue(ff7->love(s,false,FF7Save::LOVE_AERIS));
     ui->sb_love_yuffie->setValue(ff7->love(s,false,FF7Save::LOVE_YUFFIE));
+
     ui->sb_time_hour->setValue(ff7->time(s) / 3600);
     ui->sb_time_min->setValue(ff7->time(s)/60%60);
     ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+
+    ui->sb_timer_time_hour->setValue(ff7->countdownTimer(s) / 3600);
+    ui->sb_timer_time_min->setValue(ff7->countdownTimer(s)/60%60);
+    ui->sb_timer_time_sec->setValue(ff7->countdownTimer(s) -((ui->sb_timer_time_hour->value()*3600)+ui->sb_timer_time_min->value()*60));
 
     if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
 
@@ -2584,9 +2590,9 @@ void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){file_modi
 void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,1,value);}}
 void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,2,value);}}
 void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,3,value);}}
-void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[0] = value;}}
-void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[1] = value;}}
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[2] = value;}}
+void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
 {if(!load){file_modified(true);
@@ -3622,10 +3628,6 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
         case 0:
             load=true;
             ui->cb_tut_sub->setChecked(Qt::Unchecked);
-            ui->sb_timer_time_hour->setValue(ff7->slot[s].timer[0]);
-            ui->sb_timer_time_min->setValue(ff7->slot[s].timer[1]);
-            ui->sb_timer_time_sec->setValue(ff7->slot[s].timer[2]);
-
             ui->sb_b_love_aeris->setValue(ff7->love(s,true,FF7Save::LOVE_AERIS));
             ui->sb_b_love_tifa->setValue(ff7->love(s,true,FF7Save::LOVE_TIFA));
             ui->sb_b_love_yuffie->setValue(ff7->love(s,true,FF7Save::LOVE_YUFFIE));

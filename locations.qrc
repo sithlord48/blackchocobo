@@ -333,5 +333,7 @@
         <file alias="1_562">icon/locations/1_562.jpg</file>
         <file alias="1_564">icon/locations/1_564.jpg</file>
         <file alias="2_0">icon/locations/2_0.jpg</file>
+        <file alias="1_296">icon/locations/1_296.jpg</file>
+        <file alias="1_669">icon/locations/1_669.jpg</file>
     </qresource>
 </RCC>

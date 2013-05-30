@@ -2987,14 +2987,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Gaeas Cliff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Corel Prison</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3822,6 +3814,110 @@ The km/h speeds are calculated while playing </source>
         <source>Zack&apos;s Home</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Path 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Branch, 1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Office</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dr.&apos;s Office</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Press Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gas Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Canon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon branch,(ext.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Correl Valley Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icicle Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icicle Inn Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gast&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Great Glacier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Frostbite Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Great Glacier Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base of Gaea&apos;s Cliff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gaea&apos;s Cliff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside of Gaea&apos;s Cliff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel,Weapon Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel,Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel,Materia Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel,House1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coal Train</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4484,10 +4580,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Export MC File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5603,11 +5695,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location , x,y,z manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
         <translation type="unfinished"></translation>
@@ -5684,6 +5771,15 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location data manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

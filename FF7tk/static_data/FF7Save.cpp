@@ -3505,8 +3505,7 @@ qint8 FF7Save::stableMask(int s)
 void FF7Save::setStableMask(int s,qint8 value)
 {
     if(s<0 ||s>14){return;}
-    else{slot[s].chocobomask =value;setFileModified(true,s);
-}
+    else{slot[s].chocobomask =value;setFileModified(true,s);}
 }
 
 QList<qint8> FF7Save::chocoboPens(int s)
@@ -3525,4 +3524,23 @@ void FF7Save::setChocoboPen(int s,int pen,int value)
     if(s<0 || s>14 || pen<0 || pen>3 || value<0 || value>8){return;}
     else{slot[s].pennedchocos[pen]=value;setFileModified(true,s);
 }
+}
+quint32 FF7Save::countdownTimer(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{
+        qint32 seconds = slot[s].timer[0] |(slot[s].timer[1] << 8) | (slot[s].timer[2]<<16);
+        return seconds;
+    }
+}
+void FF7Save::setCountdownTimer(int s, quint32 time)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        slot[s].timer[0]=(time & 0xff);
+        slot[s].timer[1]=((time & 0xff00) >> 8);
+        slot[s].timer[2]=((time & 0xff0000) >> 16);
+        setFileModified(true,s);
+    }
 }
