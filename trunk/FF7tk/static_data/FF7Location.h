@@ -60,6 +60,10 @@ static LOCATION Locations[]=
     {"fship_22",QT_TRANSLATE_NOOP("Locations",""),"1","69","0","0","0","32"},
 */
     {"fship_25",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","72","-3","-2587","99","0"},
+    {"fship_3",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","73","-168","-247","0","192"},
+    {"fship_4",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","74","213","-324","65","0"},
+    {"fship_5",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","76","-67","-123","11","96"},
+    
     {"zz2",QT_TRANSLATE_NOOP("Locations","Weapon seller"),"1","79","-70","-124","28","128"},
     {"q_1",QT_TRANSLATE_NOOP("Locations","Hallway"),"1","88","-395","34","13","32"},
     {"blackbg2",QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0","32"},
@@ -218,6 +222,9 @@ static LOCATION Locations[]=
     {"nivinn_1",QT_TRANSLATE_NOOP("Locations","Nibelheim Inn"),"1","273","22","-413","34","32"},
     {"nivinn_2",QT_TRANSLATE_NOOP("Locations","Nibelheim Inn"),"1","274","126","158","14","32"},
     {"niv_cl",QT_TRANSLATE_NOOP("Locations","Cloud's House"),"1","276","-238","48","9","32"},
+    
+    {"nivgate",QT_TRANSLATE_NOOP("Locations",""),"1","279","12","-1274","0","120"},
+    
 
     {"nivl",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","282","591","-73","35","32"},
     {"nivl_3",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","284","161","-480","7","28"},
@@ -225,6 +232,10 @@ static LOCATION Locations[]=
     {"niv_ti2",QT_TRANSLATE_NOOP("Locations","Tifa's House"),"1","287","134","-255","46","32"},
 
     {"nivl_b1",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","290","-130","1144","66","32"},
+    
+    {"nivl_b22",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","293","302","-43","19","117"},
+    
+    {"nivl_e3",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","296","0","0","0","0"}, 
     {"sinin1_1",QT_TRANSLATE_NOOP("Locations","Mansion, 1f."),"1","297","0","255","109","32"},
     {"sinin1_2",QT_TRANSLATE_NOOP("Locations","Mansion, 1f."),"1","298","-873","507","92","32"},
     {"sinin2_1",QT_TRANSLATE_NOOP("Locations","Mansion, 2f."),"1","299","-646","749","157","32"},
@@ -304,13 +315,30 @@ static LOCATION Locations[]=
     {"junair2",QT_TRANSLATE_NOOP("Locations","Airport"),"1","385","-4077","-1403","93","32"},
     {"junin1",QT_TRANSLATE_NOOP("Locations","Junon Airport Path"),"1","386","-634","-333","31","32"},
     {"junin1a",QT_TRANSLATE_NOOP("Locations","Locker Room"),"1","387","-1554","-786","22","32"},
+    
+    {"junin2",QT_TRANSLATE_NOOP("Locations","Path 2"),"1","389","-48","74","3","0"},
+    
 
     {"junin3",QT_TRANSLATE_NOOP("Locations","Junon Path"),"1","390","-1365","3390","27","32"},
     {"junin6",QT_TRANSLATE_NOOP("Locations","Junon Way"),"1","394","2184","-589","24","32"},
+    {"junbin1",QT_TRANSLATE_NOOP("Locations","Junon Branch, 1f."),"1","396","333","-165","133","0"},
+    
     {"junbin12",QT_TRANSLATE_NOOP("Locations","Junon Office F2"),"1","397","-364","-303","8","32"},
-
+    {"junbin21",QT_TRANSLATE_NOOP("Locations","Office"),"1","398","601","-758","125","0"},
+    
+    {"junbin3",QT_TRANSLATE_NOOP("Locations","Dr.'s Office"),"1","400","674","-1408","52","128"},
+    {"junbin4",QT_TRANSLATE_NOOP("Locations","Press Room"),"1","401","-18","0","103","0"},
+    {"junbin5",QT_TRANSLATE_NOOP("Locations","Gas Room"),"1","402","-57","-137","58","32"},
+    
     {"subin_2b",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","408","-52","433","7","128"},
 
+    {"junone2",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","411","13911","-2494","15","251"},
+    {"junone4",QT_TRANSLATE_NOOP("Locations","Canon"),"1","413","180","-15763","8","0"},
+    {"junone5",QT_TRANSLATE_NOOP("Locations","Junon branch,(ext.)"),"1","414","441","2966","1","128"},
+    {"junone6",QT_TRANSLATE_NOOP("Locations","Canon"),"1","415","353","-7477","114","0"},
+    {"junone7",QT_TRANSLATE_NOOP("Locations","Canon"),"1","416","-54","839","4","0"},
+    
+    
     {"semkin_8",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","422","34","426","14","32"},
     {"ujunon1",QT_TRANSLATE_NOOP("Locations","Under Junon"),"1","428","565","680","29","32"},
     {"ujunon3",QT_TRANSLATE_NOOP("Locations","Dolphin Offing"),"1","429","-656","1735","138","32"},
@@ -474,6 +502,10 @@ static LOCATION Locations[]=
 
     {"sango1",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","625","-112","-345","76","32"},
     {"sango2",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","626","-1916","-11320","14","32"},
+    {"sango3",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","627","-65","431","135","84"},
+    {"sandun_1",QT_TRANSLATE_NOOP("Locations","Correl Valley Cave"),"1","628","635","-599","164","192"},
+    {"sandun_2",QT_TRANSLATE_NOOP("Locations","Correl Valley Cave"),"1","629","29","-1053","29","128"},
+
 
     {"lost1",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","630","-1595","1142","10","32"},
     {"losin1",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","631","216","-184","29","32"},
@@ -491,13 +523,84 @@ static LOCATION Locations[]=
     {"ancnt1",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","646","641","793","243","32"},
     {"ancnt2",QT_TRANSLATE_NOOP("Locations","Water Altar"),"1","647","443","-891","5","32"},
 
-    /**********************************Below The List Is UnFinished   *********/
-    {"gaiin_2",QT_TRANSLATE_NOOP("Locations","Gaeas Cliff"),"1","693","-109","1123","65","32"},
-    {"gainn_7",QT_TRANSLATE_NOOP("Locations","Gaeas Cliff"),"1","699","-116","265","17","32"},
-    {"holu_1",QT_TRANSLATE_NOOP("Locations","Gaeas Cliff Base"),"1","687","165","51","5","32"},
-    {"trnad_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","703","-358","-1056","44","32"},
+    {"snw_w",QT_TRANSLATE_NOOP("Locations","Weapon Store"),"1","650","-11","33","7","128"},
+    {"sninn_1",QT_TRANSLATE_NOOP("Locations","Icicle Inn"),"1","651","44","164","37","128"},
+    {"sninn_2",QT_TRANSLATE_NOOP("Locations","Icicle Inn"),"1","652","95","229","25","192"},
+    {"sninn_b1",QT_TRANSLATE_NOOP("Locations","Icicle Inn Bar"),"1","653","68","328","79","64"},
+    {"snow",QT_TRANSLATE_NOOP("Locations","Icicle Inn"),"1","654","-146","-904","96","128"},
+    {"snmin1",QT_TRANSLATE_NOOP("Locations","Icicle Inn"),"1","655","13","84","26","128"},
+    {"snmin2",QT_TRANSLATE_NOOP("Locations","Icicle Inn"),"1","656","-481","-421","61","128"},
+    {"snmayor",QT_TRANSLATE_NOOP("Locations","Gast's House"),"1","657","-221","926","60","64"},
+    {"hyou1",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","658","-12","765","69","128"},
+    {"hyou2",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","659","-877","566","8","64"},
+
+    {"hyou3",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","660","-316","1809","28","64"},
+    {"icedun_1",QT_TRANSLATE_NOOP("Locations","Frostbite Cave"),"1","661","-66","-721","66","64"},
+    {"icedun_2",QT_TRANSLATE_NOOP("Locations","Frostbite Cave"),"1","662","-523","-121","1","192"},
+    {"hyou4",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","663","-76","-477","30","128"},
+    {"hyou5_1",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","664","697","1965","104","192"},
+    {"hyou5_2",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","665","183","-802","96","128"},
+    {"hyou5_3",QT_TRANSLATE_NOOP("Locations","Cave"),"1","666","-62","121","87","192"},
+    {"hyou5_4",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","667","158","329","4","128"},
+    {"hyou6",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","668","-591","-79","188","64"},
+    {"hyoumap",QT_TRANSLATE_NOOP("Locations","Great Glacier Map"),"1","669","0","-0","0","0"},
+
+    {"move_s",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","670","996","-49","59","192"},
+    {"move_i",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","671","1152","-5446","210","192"},
+    {"move_f",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","672","1148","63","61","192"},
+    {"move_r",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","673","-1224","-162","14","64"},
+    {"move_u",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","674","-443","-906","140","112"},
+    {"move_d",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","675","752","-371","92","160"},
+    {"hyou7",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","676","238","-308","410","132"},
+    {"hyou8_1",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","677","-242","2345","112","128"},
+    {"hyou8_2",QT_TRANSLATE_NOOP("Locations","Cave"),"1","678","-16","422","14","192"},
+    {"hyou9",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","679","1421","4048","10","0"},
+
+    {"hyou10",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","680","373","-426","259","120"},
+    {"hyou11",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","681","-719","-14","96","76"},
+    {"hyou12",QT_TRANSLATE_NOOP("Locations","Cave"),"1","682","256","742","0","184"},
+    {"hyou13_1",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","683","-805","2884","27","0"},
+    {"hyou13_2",QT_TRANSLATE_NOOP("Locations","Cave"),"1","684","-53","423","40","64"},
+    {"gaiafoot",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","687","165","51","5","32"},
+    {"holu_1",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","687","165","51","5","32"},
+    {"holu_2",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","688","159","-62","10","128"},
+    {"gaia_1",QT_TRANSLATE_NOOP("Locations","Gaea's Cliff"),"1","689","-203","-814","1","128"},
+
+    {"gaiin_1",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","690","-664","-864","151","128"},
+    {"gaiin_2",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","691","11","-535","160","128"},
+    {"gaia_2",QT_TRANSLATE_NOOP("Locations","Gaea's Cliff"),"1","692","-477","-132","19","128"},
+    {"gaiin_3",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","693","-109","1123","65","32"},
+    {"gaia_31",QT_TRANSLATE_NOOP("Locations","Gaea's Cliff"),"1","694","-631","1107","27","128"},
+    {"gaia_32",QT_TRANSLATE_NOOP("Locations","Gaea's Cliff"),"1","695","-990","-28017","31","64"},
+    {"gaiin_4",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","696","255","-4160","3","128"},
+    {"gaiin_5",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","697","664","1099","38","192"},
+    {"gaiin_6",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","698","-11","2455","8","0"},
+    {"gainn_7",QT_TRANSLATE_NOOP("Locations","Inside of Gaea's Cliff"),"1","699","-116","265","17","32"},
+
+    {"crater_1",QT_TRANSLATE_NOOP("Locations","Crater"),"1","700","910","-321","54","192"},
+    {"crater_2",QT_TRANSLATE_NOOP("Locations","Crater"),"1","701","650","79","65","192"},
+    {"trnad_1",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","702","-72","43","32","128"},    
+    {"trnad_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","703","-358","-1056","44","32"},    
+    {"trnad_3",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","704","619","-3548","3","176"},    
     {"trnad_4",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","705","94","1168","173","32"},
+    
+    {"woa_1",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","709","121","-536","3","128"},
+    
+    {"woa_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","710","123","-503","41","128"},
+    {"woa_3",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","711","170","-339","68","128"},
+    {"itown1a",QT_TRANSLATE_NOOP("Locations","Mideel"),"1","712","-64","-2225","63","128"},
+
+    {"itown_w",QT_TRANSLATE_NOOP("Locations","Mideel,Weapon Store"),"1","717","36","-236","32","128"},
+    {"itown_i",QT_TRANSLATE_NOOP("Locations","Mideel,Item Store"),"1","718","-90","-159","3","128"},
+    {"itown_m",QT_TRANSLATE_NOOP("Locations","Mideel,Materia Store"),"1","719","34","-211","3","128"},
+
+    
     {"ithos",QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","-156","19","32"},
+    {"itmin1",QT_TRANSLATE_NOOP("Locations","Mideel,House1"),"1","721","-158","-183","17","96"},
+    
+    {"zcoal_2",QT_TRANSLATE_NOOP("Locations","Coal Train"),"1","729","789","200","0","0"},
+    
+    /**********************************Below The List Is UnFinished   *********/
     {"md8_6",QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","-204","24","32"},
     {"md8_b1",QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","733","-272","1614","116","32"},
     {"tunnel_4",QT_TRANSLATE_NOOP("Locations","Tunnel"),"1","736","-83","-229","215","32"},
@@ -529,6 +632,10 @@ static LOCATION Locations[]=
     {"",QT_TRANSLATE_NOOP("Locations","Woodlands Area"),"3","172","0","0","0","32"},
     {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","25","0","0","0","32"},
     {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","57","0","0","0","32"},
-    {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","58","0","0","0","32"}
+    {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","58","0","0","0","32"},
+    {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","26","0","0","0","32"},
+    {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","27","0","0","0","32"},
+    {"",QT_TRANSLATE_NOOP("Locations","Icicle Area"),"3","48","0","0","0","32"}
+
 };
 #endif //FF7LOCATION_H

@@ -110,7 +110,8 @@ public:
     bool trnad_2NeoBahmut(int s);
     void setTrnad_2NeoBahmut(int s,bool PickedUp);
 
-
+    quint32 countdownTimer(int s);
+    void setCountdownTimer(int s,quint32 time);
     quint16 locationId(int s);
     void setLocationId(int s, quint16 locationID);
     quint16 mapId(int s);

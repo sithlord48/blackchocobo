@@ -2989,11 +2989,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation>Dans la falaise de Gaea</translation>
+        <translation type="obsolete">Dans la falaise de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>Dans la falaise de Gaea</translation>
+        <translation type="obsolete">Dans la falaise de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -3823,6 +3823,110 @@ The km/h speeds are calculated while playing </source>
         <source>Zack&apos;s Home</source>
         <translation>Maison de Zack</translation>
     </message>
+    <message>
+        <source>Path 2</source>
+        <translation>Chemin 2</translation>
+    </message>
+    <message>
+        <source>Junon Branch, 1f.</source>
+        <translation>Dpt. Junon, 1er ét.</translation>
+    </message>
+    <message>
+        <source>Office</source>
+        <translation>Bureau</translation>
+    </message>
+    <message>
+        <source>Dr.&apos;s Office</source>
+        <translation type="unfinished">Bureau du Dr.</translation>
+    </message>
+    <message>
+        <source>Press Room</source>
+        <translation>Salle de presse</translation>
+    </message>
+    <message>
+        <source>Gas Room</source>
+        <translation>Chambre à gaz</translation>
+    </message>
+    <message>
+        <source>Canon</source>
+        <translation>Canon</translation>
+    </message>
+    <message>
+        <source>Junon branch,(ext.)</source>
+        <translation>Dpt. Junon,(ext.)</translation>
+    </message>
+    <message>
+        <source>Correl Valley Cave</source>
+        <translation>Val de Corral (Grotte)</translation>
+    </message>
+    <message>
+        <source>Icicle Inn</source>
+        <translation>Auberge du Glaçon</translation>
+    </message>
+    <message>
+        <source>Icicle Inn Bar</source>
+        <translation>Auberge du Glaçon - Bar</translation>
+    </message>
+    <message>
+        <source>Gast&apos;s House</source>
+        <translation>Maison de Gast</translation>
+    </message>
+    <message>
+        <source>Great Glacier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Frostbite Cave</source>
+        <translation>Grotte aux engelures</translation>
+    </message>
+    <message>
+        <source>Cave</source>
+        <translation>Grotte</translation>
+    </message>
+    <message>
+        <source>Great Glacier Map</source>
+        <translation>Carte-glacier</translation>
+    </message>
+    <message>
+        <source>Base of Gaea&apos;s Cliff</source>
+        <translation>Falaise de Gaea-abords</translation>
+    </message>
+    <message>
+        <source>Gaea&apos;s Cliff</source>
+        <translation>Falaise de Gaea</translation>
+    </message>
+    <message>
+        <source>Inside of Gaea&apos;s Cliff</source>
+        <translation>Dans la falaise de Gaea</translation>
+    </message>
+    <message>
+        <source>Crater</source>
+        <translation>Cratère</translation>
+    </message>
+    <message>
+        <source>Mideel</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Weapon Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Item Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,Materia Store</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Mideel,House1</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>Coal Train</source>
+        <translation>Train à charbon</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4490,7 +4594,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation>Variable de démarrage de la mission n°1</translation>
+        <translation type="obsolete">Variable de démarrage de la mission n°1</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5614,11 +5718,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location , x,y,z manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
         <translation type="unfinished"></translation>
@@ -5696,6 +5795,15 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location data manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

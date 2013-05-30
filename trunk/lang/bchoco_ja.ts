@@ -2988,11 +2988,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation>絶壁内部</translation>
+        <translation type="obsolete">絶壁内部</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>絶壁のふもと</translation>
+        <translation type="obsolete">絶壁のふもと</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -3895,7 +3895,111 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Zack&apos;s Home</source>
-        <translation type="unfinished">ザックスの実家</translation>
+        <translation>ザックスの実家</translation>
+    </message>
+    <message>
+        <source>Path 2</source>
+        <translation>通路２</translation>
+    </message>
+    <message>
+        <source>Junon Branch, 1f.</source>
+        <translation>ジュノン支社１階</translation>
+    </message>
+    <message>
+        <source>Office</source>
+        <translation>オフィス</translation>
+    </message>
+    <message>
+        <source>Dr.&apos;s Office</source>
+        <translation>医務室</translation>
+    </message>
+    <message>
+        <source>Press Room</source>
+        <translation>報道室</translation>
+    </message>
+    <message>
+        <source>Gas Room</source>
+        <translation>ガス室</translation>
+    </message>
+    <message>
+        <source>Canon</source>
+        <translation>キャノン</translation>
+    </message>
+    <message>
+        <source>Junon branch,(ext.)</source>
+        <translation>ジュノン支社外観</translation>
+    </message>
+    <message>
+        <source>Correl Valley Cave</source>
+        <translation>サンゴの谷洞窟</translation>
+    </message>
+    <message>
+        <source>Icicle Inn</source>
+        <translation>アイシクルロッジ</translation>
+    </message>
+    <message>
+        <source>Icicle Inn Bar</source>
+        <translation>バブ</translation>
+    </message>
+    <message>
+        <source>Gast&apos;s House</source>
+        <translation>ガストの家</translation>
+    </message>
+    <message>
+        <source>Great Glacier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Frostbite Cave</source>
+        <translation>千年霜柱の洞窟</translation>
+    </message>
+    <message>
+        <source>Cave</source>
+        <translation>ほら穴&quot;</translation>
+    </message>
+    <message>
+        <source>Great Glacier Map</source>
+        <translation>大氷河の地図</translation>
+    </message>
+    <message>
+        <source>Base of Gaea&apos;s Cliff</source>
+        <translation>絶壁のふもと</translation>
+    </message>
+    <message>
+        <source>Gaea&apos;s Cliff</source>
+        <translation>ガイアの絶壁</translation>
+    </message>
+    <message>
+        <source>Inside of Gaea&apos;s Cliff</source>
+        <translation>絶壁内部</translation>
+    </message>
+    <message>
+        <source>Crater</source>
+        <translation>クレーター</translation>
+    </message>
+    <message>
+        <source>Mideel</source>
+        <translation>海流の村 ミディール</translation>
+    </message>
+    <message>
+        <source>Mideel,Weapon Store</source>
+        <translation>ミディール 武器屋</translation>
+    </message>
+    <message>
+        <source>Mideel,Item Store</source>
+        <translation>ミディール アイテム屋</translation>
+    </message>
+    <message>
+        <source>Mideel,Materia Store</source>
+        <translation>ミディール マテリア屋</translation>
+    </message>
+    <message>
+        <source>Mideel,House1</source>
+        <translation>ミディール 民家</translation>
+    </message>
+    <message>
+        <source>Coal Train</source>
+        <translation>炭鉱列車</translation>
     </message>
 </context>
 <context>
@@ -4564,7 +4668,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation>魔晄炉爆破ミッション開始フラグ</translation>
+        <translation type="obsolete">魔晄炉爆破ミッション開始フラグ</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5688,11 +5792,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location , x,y,z manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
         <translation type="unfinished"></translation>
@@ -5769,6 +5868,15 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
+set your map location data manually</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

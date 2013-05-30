@@ -176,7 +176,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnUp = new QLabel(tr("Up"));
     lblBtnUp->setAlignment(Qt::AlignRight);
     comboBtnUp = new QComboBox;
-    comboBtnUp->setMaximumSize(48,32);
+    comboBtnUp->setFixedSize(52,32);
+    comboBtnUp->setIconSize(QSize(24,24));
     comboBtnUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnUp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnUp->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -200,7 +201,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnRight = new QLabel(tr("Right"));
     lblBtnRight->setAlignment(Qt::AlignRight);
     comboBtnRight = new QComboBox;
-    comboBtnRight->setMaximumSize(48,32);
+    comboBtnRight->setIconSize(QSize(24,24));
+    comboBtnRight->setFixedSize(52,32);
     comboBtnRight->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnRight->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnRight->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -224,7 +226,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnDown = new QLabel(tr("Down"));
     lblBtnDown->setAlignment(Qt::AlignRight);
     comboBtnDown = new QComboBox;
-    comboBtnDown->setMaximumSize(48,32);
+    comboBtnDown->setIconSize(QSize(24,24));
+    comboBtnDown->setFixedSize(52,32);
     comboBtnDown->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnDown->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnDown->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -248,7 +251,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnLeft = new QLabel(tr("Left"));
     lblBtnLeft->setAlignment(Qt::AlignRight);
     comboBtnLeft = new QComboBox;
-    comboBtnLeft->setMaximumSize(48,32);
+    comboBtnLeft->setIconSize(QSize(24,24));
+    comboBtnLeft->setFixedSize(52,32);
     comboBtnLeft->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnLeft->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnLeft->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -272,7 +276,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnMenu = new QLabel(tr("Menu"));
     lblBtnMenu->setAlignment(Qt::AlignRight);
     comboBtnMenu = new QComboBox;
-    comboBtnMenu->setMaximumSize(48,32);
+    comboBtnMenu->setIconSize(QSize(24,24));
+    comboBtnMenu->setFixedSize(52,32);
     comboBtnMenu->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnMenu->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnMenu->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -296,7 +301,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnOk = new QLabel(tr("Ok"));
     lblBtnOk->setAlignment(Qt::AlignRight);
     comboBtnOk = new QComboBox;
-    comboBtnOk->setMaximumSize(48,32);
+    comboBtnOk->setIconSize(QSize(24,24));
+    comboBtnOk->setFixedSize(52,32);
     comboBtnOk->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnOk->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnOk->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -320,7 +326,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnCancel = new QLabel(tr("Cancel"));
     lblBtnCancel->setAlignment(Qt::AlignRight);
     comboBtnCancel = new QComboBox;
-    comboBtnCancel->setMaximumSize(48,32);
+    comboBtnCancel->setIconSize(QSize(24,24));
+    comboBtnCancel->setFixedSize(52,32);
     comboBtnCancel->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnCancel->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnCancel->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -344,7 +351,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnSwitch = new QLabel(tr("Switch"));
     lblBtnSwitch->setAlignment(Qt::AlignRight);
     comboBtnSwitch = new QComboBox;
-    comboBtnSwitch->setMaximumSize(48,32);
+    comboBtnSwitch->setIconSize(QSize(24,24));
+    comboBtnSwitch->setFixedSize(52,32);
     comboBtnSwitch->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnSwitch->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnSwitch->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -368,7 +376,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnCamera = new QLabel(tr("Camera"));
     lblBtnCamera->setAlignment(Qt::AlignRight);
     comboBtnCamera = new QComboBox;
-    comboBtnCamera->setMaximumSize(48,32);
+    comboBtnCamera->setIconSize(QSize(24,24));
+    comboBtnCamera->setFixedSize(52,32);
     comboBtnCamera->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnCamera->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnCamera->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -392,7 +401,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnTarget = new QLabel(tr("Target"));
     lblBtnTarget->setAlignment(Qt::AlignRight);
     comboBtnTarget = new QComboBox;
-    comboBtnTarget->setMaximumSize(48,32);
+    comboBtnTarget->setIconSize(QSize(24,24));
+    comboBtnTarget->setFixedSize(52,32);
     comboBtnTarget->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnTarget->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnTarget->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -416,7 +426,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnPgUp = new QLabel(tr("Page Up"));
     lblBtnPgUp->setAlignment(Qt::AlignRight);
     comboBtnPgUp = new QComboBox;
-    comboBtnPgUp->setMaximumSize(48,32);
+    comboBtnPgUp->setIconSize(QSize(24,24));
+    comboBtnPgUp->setFixedSize(52,32);
     comboBtnPgUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPgUp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPgUp->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -440,7 +451,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnPgDn = new QLabel(tr("Page Down"));
     lblBtnPgDn->setAlignment(Qt::AlignRight);
     comboBtnPgDn = new QComboBox;
-    comboBtnPgDn->setMaximumSize(48,32);
+    comboBtnPgDn->setIconSize(QSize(24,24));
+    comboBtnPgDn->setFixedSize(52,32);
     comboBtnPgDn->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPgDn->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPgDn->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -464,7 +476,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnHelp = new QLabel(tr("Help"));
     lblBtnHelp->setAlignment(Qt::AlignRight);
     comboBtnHelp = new QComboBox;
-    comboBtnHelp->setMaximumSize(48,32);
+    comboBtnHelp->setIconSize(QSize(24,24));
+    comboBtnHelp->setFixedSize(52,32);
     comboBtnHelp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnHelp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnHelp->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -488,7 +501,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnPause = new QLabel(tr("Pause"));
     lblBtnPause->setAlignment(Qt::AlignRight);
     comboBtnPause = new QComboBox;
-    comboBtnPause->setMaximumSize(48,32);
+    comboBtnPause->setIconSize(QSize(24,24));
+    comboBtnPause->setFixedSize(52,32);
     comboBtnPause->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPause->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPause->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -512,7 +526,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtn9 = new QLabel(tr("Unknown (9)"));
     lblBtn9->setAlignment(Qt::AlignRight);
     comboBtn9 = new QComboBox;
-    comboBtn9->setMaximumSize(48,32);
+    comboBtn9->setIconSize(QSize(24,24));
+    comboBtn9->setFixedSize(52,32);
     comboBtn9->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtn9->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtn9->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -536,7 +551,8 @@ void OptionsWidget::init_Display()
     QLabel *lblBtn10 = new QLabel(tr("Unknown(10)"));
     lblBtn10->setAlignment(Qt::AlignRight);
     comboBtn10 = new QComboBox;
-    comboBtn10->setMaximumSize(48,32);
+    comboBtn10->setIconSize(QSize(24,24));
+    comboBtn10->setFixedSize(52,32);
     comboBtn10->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtn10->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtn10->addItem(QIcon(QPixmap(l1_button_xpm)),"");
