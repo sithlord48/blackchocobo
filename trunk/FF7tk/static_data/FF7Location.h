@@ -332,7 +332,7 @@ static LOCATION Locations[]=
     
     {"subin_2b",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","408","-52","433","7","128"},
 
-    {"junone2",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","411","13911","-2494","15","251"},
+    {"junone2",QT_TRANSLATE_NOOP("Locations","Aljunon"),"1","411","13911","-2494","15","251"},
     {"junone4",QT_TRANSLATE_NOOP("Locations","Canon"),"1","413","180","-15763","8","0"},
     {"junone5",QT_TRANSLATE_NOOP("Locations","Junon branch,(ext.)"),"1","414","441","2966","1","128"},
     {"junone6",QT_TRANSLATE_NOOP("Locations","Canon"),"1","415","353","-7477","114","0"},
@@ -561,7 +561,7 @@ static LOCATION Locations[]=
     {"hyou12",QT_TRANSLATE_NOOP("Locations","Cave"),"1","682","256","742","0","184"},
     {"hyou13_1",QT_TRANSLATE_NOOP("Locations","Great Glacier"),"1","683","-805","2884","27","0"},
     {"hyou13_2",QT_TRANSLATE_NOOP("Locations","Cave"),"1","684","-53","423","40","64"},
-    {"gaiafoot",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","687","165","51","5","32"},
+    {"gaiafoot",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","686","80","-364","24","192"},
     {"holu_1",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","687","165","51","5","32"},
     {"holu_2",QT_TRANSLATE_NOOP("Locations","Base of Gaea's Cliff"),"1","688","159","-62","10","128"},
     {"gaia_1",QT_TRANSLATE_NOOP("Locations","Gaea's Cliff"),"1","689","-203","-814","1","128"},
