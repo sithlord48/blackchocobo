@@ -4001,6 +4001,10 @@ The km/h speeds are calculated while playing </source>
         <source>Coal Train</source>
         <translation>炭鉱列車</translation>
     </message>
+    <message>
+        <source>Aljunon</source>
+        <translation type="unfinished">アルジュノン</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
