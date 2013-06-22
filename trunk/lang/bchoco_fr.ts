@@ -5687,15 +5687,15 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>New Game Created</source>
-        <translation>Nouvelle partie créée</translation>
+        <translation type="obsolete">Nouvelle partie créée</translation>
     </message>
     <message>
         <source>New Game Created - File:%1</source>
-        <translation>Nouvelle partie créée - Fichier : %1</translation>
+        <translation type="obsolete">Nouvelle partie créée - Fichier : %1</translation>
     </message>
     <message>
         <source>New Game Plus Created</source>
-        <translation>Nouvelle partie Plus créée</translation>
+        <translation type="obsolete">Nouvelle partie Plus créée</translation>
     </message>
     <message>
         <source>Export Successful</source>
@@ -5808,6 +5808,18 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Builtin Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Created - Using: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Plus Created - Using: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7505,7 +7517,7 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation>Sélectionnez un répertoire pour sauvegarder les sauvegardes FF7 PC</translation>
+        <translation type="obsolete">Sélectionnez un répertoire pour sauvegarder les sauvegardes FF7 PC</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
@@ -7513,7 +7525,7 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation>Emplacement pour enregistrer les fichiers de stats de personnages</translation>
+        <translation type="obsolete">Emplacement pour enregistrer les fichiers de stats de personnages</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
@@ -7521,15 +7533,15 @@ set your map location data manually</source>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation>Dossier d&apos;importation de sauvegardes FF7 (tous types)</translation>
+        <translation type="obsolete">Dossier d&apos;importation de sauvegardes FF7 (tous types)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation>Dossier d&apos;importation de sauvegardes PC (.ff7)</translation>
+        <translation type="obsolete">Dossier d&apos;importation de sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation>Dossier d&apos;exportation de sauvegardes PC (.ff7)</translation>
+        <translation type="obsolete">Dossier d&apos;exportation de sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Reset to Default</source>
@@ -7537,7 +7549,7 @@ set your map location data manually</source>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation>Dossier de cartes mémoires d&apos;émulateurs</translation>
+        <translation type="obsolete">Dossier de cartes mémoires d&apos;émulateurs</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -7549,7 +7561,7 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation>Choisir les emplacements de chargement et d&apos;enregistrement des sauvegardes</translation>
+        <translation type="obsolete">Choisir les emplacements de chargement et d&apos;enregistrement des sauvegardes</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -7585,7 +7597,35 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation>Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
+        <translation type="obsolete">Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
+    </message>
+    <message>
+        <source>Set File Paths For Saving and Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Path For Loading All Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Emulator Memory Cards  </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For PC (.ff7) Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Builtin New Game Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Only Raw Psx Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

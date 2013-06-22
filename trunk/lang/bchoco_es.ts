@@ -5687,15 +5687,15 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>New Game Created</source>
-        <translation>Nuevo juego creado</translation>
+        <translation type="obsolete">Nuevo juego creado</translation>
     </message>
     <message>
         <source>New Game Created - File:%1</source>
-        <translation>Nuevo juego creado - Archivo %1</translation>
+        <translation type="obsolete">Nuevo juego creado - Archivo %1</translation>
     </message>
     <message>
         <source>New Game Plus Created</source>
-        <translation>Nuevo juego plus creado</translation>
+        <translation type="obsolete">Nuevo juego plus creado</translation>
     </message>
     <message>
         <source>Export Successful</source>
@@ -5813,6 +5813,18 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Builtin Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Created - Using: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Plus Created - Using: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7511,7 +7523,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation>Selecciona un directorio para exportar las partidas de FF7 PC</translation>
+        <translation type="obsolete">Selecciona un directorio para exportar las partidas de FF7 PC</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
@@ -7519,7 +7531,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation>Lugar para guardar los archivos de stat de personaje</translation>
+        <translation type="obsolete">Lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
@@ -7527,15 +7539,15 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
+        <translation type="obsolete"> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation>Carpeta para guardar partidas de PC (.ff7)</translation>
+        <translation type="obsolete">Carpeta para guardar partidas de PC (.ff7)</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation>Carpeta para exportar partidas de PC (.ff7)</translation>
+        <translation type="obsolete">Carpeta para exportar partidas de PC (.ff7)</translation>
     </message>
     <message>
         <source>Reset to Default</source>
@@ -7543,7 +7555,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation> Carpeta donde cargar/guardar Memory Cards del emulador  </translation>
+        <translation type="obsolete"> Carpeta donde cargar/guardar Memory Cards del emulador  </translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -7555,7 +7567,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation>Configurar rutas de guardado y carga</translation>
+        <translation type="obsolete">Configurar rutas de guardado y carga</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -7591,7 +7603,35 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation>Anular el guardado por defecto con el siguiente archivo (sólo PSX raw)</translation>
+        <translation type="obsolete">Anular el guardado por defecto con el siguiente archivo (sólo PSX raw)</translation>
+    </message>
+    <message>
+        <source>Set File Paths For Saving and Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Path For Loading All Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Emulator Memory Cards  </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For PC (.ff7) Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Builtin New Game Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Only Raw Psx Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
