@@ -24,8 +24,10 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     ui->setupUi(this);
     load=false;
     //Disable the defaut_save line and selector button unless override is checked
-    ui->line_default_save->setEnabled(false);
-    ui->btn_set_default_save->setEnabled(false);
+    ui->line_default_save->setVisible(false);
+    ui->btn_set_default_save->setVisible(false);
+    ui->reset_default_save_location->setVisible(false);
+
     settings = config_data;
     set_path_lbls();
     load=true;
@@ -69,7 +71,6 @@ void Options::set_path_lbls()
     if (!settings->value("save_pc_path").isNull()){ui->line_save_pc->setText(settings->value("save_pc_path").toString());}
     if (!settings->value("save_emu_path").isNull()){ui->line_save_emu->setText(settings->value("save_emu_path").toString());}
     if (!settings->value("load_path").isNull()){ui->line_load_path->setText(settings->value("load_path").toString());}
-    if (!settings->value("export_pc").isNull()){ui->line_export_pc->setText(settings->value("export_pc").toString());}
 }
 
 void Options::on_line_save_pc_editingFinished(){settings->setValue("save_pc",ui->line_save_pc->text());}
@@ -103,17 +104,6 @@ void Options::on_btn_set_load_path_clicked()
     load=false;
 }
 
-
-void Options::on_line_export_pc_editingFinished(){settings->setValue("export_pc",ui->line_export_pc->text());}
-void Options::on_btn_set_export_pc_clicked()
-{
-    load=true;
-    QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Export FF7 PC Saves"),settings->value("export_pc").toString());
-    if(!temp.isNull()){settings->setValue("export_pc",temp);}
-    set_path_lbls();
-    load=false;
-}
-
 void Options::on_line_default_save_editingFinished(){settings->setValue("default_save_file",ui->line_default_save->text());}
 void Options::on_btn_set_default_save_clicked()
 {
@@ -131,6 +121,7 @@ void Options::on_btn_set_char_stat_folder_clicked()
     load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Location To Save Character Stat Files"),settings->value("char_stat_folder").toString());
     if(!temp.isNull()){settings->setValue("char_stat_folder",temp);}
+    else{settings->setValue("char_stat_folder",QString(QDir::homePath()));}
     set_path_lbls();
     load=false;
 }
@@ -160,12 +151,6 @@ void Options::on_reset_default_save_location_clicked()
     ui->line_default_save->clear();
 }
 
-void Options::on_reset_char_stat_folder_clicked()
-{
-    settings->setValue("char_stat_folder",QString(QDir::homePath()));
-    set_path_lbls();
-}
-
 void Options::on_reset_font_clicked()
 {
     ui->combo_font->setCurrentFont(QFont("ubuntu",9,-1,false));
@@ -179,13 +164,15 @@ void Options::on_cb_override_def_save_toggled(bool checked)
     if(!load){settings->setValue("override_default_save",checked);}
     if(checked)
     {
-        ui->line_default_save->setEnabled(true);
-        ui->btn_set_default_save->setEnabled(true);
+        ui->line_default_save->setVisible(true);
+        ui->btn_set_default_save->setVisible(true);
+        ui->reset_default_save_location->setVisible(true);
     }
     else
     {
-        ui->line_default_save->setEnabled(false);
-        ui->btn_set_default_save->setEnabled(false);
+        ui->line_default_save->setVisible(false);
+        ui->btn_set_default_save->setVisible(false);
+        ui->reset_default_save_location->setVisible(false);
     }
 }
 /*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/

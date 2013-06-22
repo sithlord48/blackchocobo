@@ -5663,18 +5663,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New Game Created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Game Created - File:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Game Plus Created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Successful</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5784,6 +5772,18 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Builtin Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Created - Using: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game Plus Created - Using: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7480,15 +7480,7 @@ set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Location To Save Character Stat Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7496,23 +7488,7 @@ set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Folder To Load/Save Emulator Memory Cards  </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7521,10 +7497,6 @@ set your map location data manually</source>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7560,7 +7532,31 @@ set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Override Default Save with Following File (raw psx only)</source>
+        <source>Set File Paths For Saving and Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Path For Loading All Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Emulator Memory Cards  </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For PC (.ff7) Saves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Builtin New Game Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Only Raw Psx Files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

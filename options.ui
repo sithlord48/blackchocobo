@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
-    <height>296</height>
+    <width>570</width>
+    <height>280</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -30,16 +30,31 @@
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>3</number>
+   </property>
+   <property name="topMargin">
+    <number>3</number>
+   </property>
+   <property name="rightMargin">
+    <number>3</number>
+   </property>
+   <property name="bottomMargin">
     <number>3</number>
    </property>
    <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Set Load And Save Paths</string>
+      <string>Set File Paths For Saving and Loading</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
       <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
        <number>3</number>
       </property>
       <property name="bottomMargin">
@@ -62,7 +77,7 @@
            </size>
           </property>
           <property name="text">
-           <string> Folder To Load FF7 Saves (all types) from</string>
+           <string>Default Path For Loading All Saves</string>
           </property>
          </widget>
         </item>
@@ -87,13 +102,13 @@
           <property name="minimumSize">
            <size>
             <width>24</width>
-            <height>22</height>
+            <height>24</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>16777215</width>
-            <height>22</height>
+            <width>24</width>
+            <height>24</height>
            </size>
           </property>
           <property name="text">
@@ -108,7 +123,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string> Folder To Load/Save Emulator Memory Cards  </string>
+           <string>Path For Emulator Memory Cards  </string>
           </property>
          </widget>
         </item>
@@ -136,13 +151,13 @@
           <property name="minimumSize">
            <size>
             <width>24</width>
-            <height>22</height>
+            <height>24</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>16777215</width>
-            <height>22</height>
+            <width>24</width>
+            <height>24</height>
            </size>
           </property>
           <property name="text">
@@ -157,7 +172,7 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Folder To Save Pc (.ff7) Save Games</string>
+           <string>Path For PC (.ff7) Saves</string>
           </property>
          </widget>
         </item>
@@ -176,120 +191,17 @@
           <property name="minimumSize">
            <size>
             <width>24</width>
-            <height>22</height>
+            <height>24</height>
            </size>
           </property>
           <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="text">
-           <string notr="true">...</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Folder To Export Pc (.ff7) Save Games</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="line_export_pc">
-          <property name="baseSize">
-           <size>
-            <width>375</width>
-            <height>0</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_set_export_pc">
-          <property name="minimumSize">
            <size>
             <width>24</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>22</height>
+            <height>24</height>
            </size>
           </property>
           <property name="text">
            <string notr="true">...</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="save_over_ride_layout">
-        <item>
-         <widget class="QCheckBox" name="cb_override_def_save">
-          <property name="text">
-           <string>Override Default Save with Following File (raw psx only)</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="line_default_save">
-          <property name="baseSize">
-           <size>
-            <width>375</width>
-            <height>0</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_set_default_save">
-          <property name="minimumSize">
-           <size>
-            <width>24</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="text">
-           <string notr="true">...</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="reset_default_save_location">
-          <property name="minimumSize">
-           <size>
-            <width>22</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>22</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Reset to Default</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/default_setting</normaloff>:/icon/default_setting</iconset>
           </property>
          </widget>
         </item>
@@ -300,7 +212,7 @@
         <item>
          <widget class="QLabel" name="label_6">
           <property name="text">
-           <string>Location To Save Character Stat Files</string>
+           <string>Path For Character Stat Files</string>
           </property>
          </widget>
         </item>
@@ -319,46 +231,17 @@
           <property name="minimumSize">
            <size>
             <width>24</width>
-            <height>22</height>
+            <height>24</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>16777215</width>
-            <height>22</height>
+            <width>24</width>
+            <height>24</height>
            </size>
           </property>
           <property name="text">
            <string notr="true">...</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="reset_char_stat_folder">
-          <property name="minimumSize">
-           <size>
-            <width>22</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>22</width>
-            <height>22</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Reset to Default</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/default_setting</normaloff>:/icon/default_setting</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>16</width>
-            <height>16</height>
-           </size>
           </property>
          </widget>
         </item>
@@ -368,11 +251,101 @@
     </widget>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="save_over_ride_layout">
+     <item>
+      <widget class="QCheckBox" name="cb_override_def_save">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Override Builtin New Game Data</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="line_default_save">
+       <property name="baseSize">
+        <size>
+         <width>375</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Use Only Raw Psx Files</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_set_default_save">
+       <property name="minimumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string notr="true">...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="reset_default_save_location">
+       <property name="minimumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Reset to Default</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/icon/default_setting</normaloff>:/icon/default_setting</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_5">
      <property name="title">
       <string>Set Applications Font</string>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
       <item>
        <widget class="QCheckBox" name="cb_skip_slot_mask">
         <property name="text">
@@ -461,14 +434,14 @@
        <widget class="QPushButton" name="reset_font">
         <property name="minimumSize">
          <size>
-          <width>22</width>
-          <height>22</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>22</width>
-          <height>22</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="toolTip">

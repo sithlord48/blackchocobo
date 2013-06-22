@@ -641,8 +641,8 @@ void MainWindow::on_actionNew_Game_triggered()
     QString save_name ="";
     if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
     ff7->newGame(s,save_name);//call the new game function
-    if(save_name =="")    {ui->statusBar->showMessage(tr("New Game Created"),2000);}
-    else{ui->statusBar->showMessage(tr("New Game Created - File:%1").arg(save_name,2000));}
+    if(save_name==""){save_name = QString(tr("Builtin Data"));}
+    ui->statusBar->showMessage(tr("New Game Created - Using: %1").arg(save_name),2000);
     //detect region and fix names if needed.
     _init=false;
     guirefresh(1);
@@ -654,8 +654,8 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     QString save_name ="";
     if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
     ff7->newGamePlus(s,ff7->fileName(),save_name);
-    if(save_name==""){ui->statusBar->showMessage(tr("New Game Plus Created"),2000);}
-    else{ui->statusBar->showMessage(tr("New Game Created - File:%1").arg(save_name),2000);}
+    if(save_name==""){save_name = QString(tr("Builtin Data"));}
+    ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1").arg(save_name),2000);
     guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
@@ -663,7 +663,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 void MainWindow::on_actionExport_PC_Save_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 SaveGame"),  settings->value("export_pc").toString() ,
+    tr("Save Final Fantasy 7 SaveGame"),  settings->value("save_pc_path").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
     if(fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
