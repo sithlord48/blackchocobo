@@ -698,134 +698,135 @@
     </message>
     <message>
         <source>Male %1</source>
-        <translation type="unfinished">Macho %1</translation>
+        <translation>Macho %1</translation>
     </message>
     <message>
         <source>Female %1</source>
-        <translation type="unfinished">Hembra %1</translation>
+        <translation>Hembra %1</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
-        <translation type="unfinished"></translation>
+        <translation>Los valores de velocidad son valores sin calcular 
+Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Rank: C</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango: C</translation>
     </message>
     <message>
         <source>Rank: B</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango: B</translation>
     </message>
     <message>
         <source>Rank: A</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango: A</translation>
     </message>
     <message>
         <source>Rank: S</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango: S</translation>
     </message>
     <message>
         <source>Acceleration</source>
-        <translation type="unfinished"></translation>
+        <translation>Aceleración</translation>
     </message>
     <message>
         <source>Races Won</source>
-        <translation type="unfinished"></translation>
+        <translation>Carreras Ganadas</translation>
     </message>
     <message>
         <source>Cooperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Cooperación</translation>
     </message>
     <message>
         <source>Intelligence</source>
-        <translation type="unfinished"></translation>
+        <translation>Inteligencia</translation>
     </message>
 </context>
 <context>
     <name>ChocoboLabel</name>
     <message>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished">Pegar</translation>
+        <translation>Pegar</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished">Elimina</translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <source>Rank:C</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango:C</translation>
     </message>
     <message>
         <source>Rank:B</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango:B</translation>
     </message>
     <message>
         <source>Rank:A</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango:A</translation>
     </message>
     <message>
         <source>Rank:S</source>
-        <translation type="unfinished"></translation>
+        <translation>Rango:S</translation>
     </message>
 </context>
 <context>
     <name>ChocoboManager</name>
     <message>
         <source>Stables Owned</source>
-        <translation type="unfinished">Establos en Posesión</translation>
+        <translation>Establos en Posesión</translation>
     </message>
     <message>
         <source>Stables Occupied</source>
-        <translation type="unfinished">Establos Ocupados</translation>
+        <translation>Establos Ocupados</translation>
     </message>
     <message>
         <source>Stable:%1</source>
-        <translation type="unfinished">Establo %1</translation>
+        <translation>Establo %1</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation type="unfinished">Chocobos en Corral</translation>
+        <translation>Chocobos en Corral</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="unfinished">Vacío</translation>
+        <translation>Vacío</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">Maravilloso</translation>
+        <translation>Maravilloso</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">Fantástico</translation>
+        <translation>Fantástico</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">Bueno</translation>
+        <translation>Bueno</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">Pasable</translation>
+        <translation>Pasable</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">Media</translation>
+        <translation>Media</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">Pobre</translation>
+        <translation>Pobre</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">Malo</translation>
+        <translation>Malo</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">Terrible</translation>
+        <translation>Terrible</translation>
     </message>
 </context>
 <context>
@@ -3874,7 +3875,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Great Glacier</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Glaciar</translation>
     </message>
     <message>
         <source>Frostbite Cave</source>
@@ -5792,40 +5793,47 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este archivo no tiene una firma actualizada
+Debido a esto tu PSP rechazará este archivo y lo tomará como corrupto
+Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSV will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este archivo no tiene una firma actualizada
+Debido a esto tu PSV rechazará este archivo y lo tomará como corrupto
+Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este archivo no tiene una firma actualizada
+Debido a esto tu PS3 rechazará este archivo y lo tomará como corrupto
+Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. 
 set your map location data manually</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz click en una fila para &apos;teletransportar&apos; tu guardado ahí O
+establecer tu localización del mapa automáticamente</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
-        <translation type="unfinished"></translation>
+        <translation>Bandera de comienzo de &apos;Bombing Mission&apos;</translation>
     </message>
     <message>
         <source>Builtin Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos incluídos</translation>
     </message>
     <message>
         <source>New Game Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Juego Creado - Usando: %1</translation>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Juego Plus Creado - Usando: %1</translation>
     </message>
 </context>
 <context>
@@ -7607,31 +7615,31 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Establecer rutas de archivo para guardar y cargar</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta por defecto para cargar todas las partidas guardadas</translation>
     </message>
     <message>
         <source>Path For Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta para memory cards de emuladores</translation>
     </message>
     <message>
         <source>Path For PC (.ff7) Saves</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta para partidas guardadas de PC (.ff7)</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta para archivos de stats de personajes</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltarse los datos incluídos para Nuevo Juego</translation>
     </message>
     <message>
         <source>Use Only Raw Psx Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar sólo archivos PSX Raw</translation>
     </message>
 </context>
 <context>
@@ -8531,11 +8539,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: + More Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Más localizaciones</translation>
     </message>
     <message>
         <source>FF7tk: + Chocobo Manager Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk: + Widget para gestionar chocobos.</translation>
     </message>
 </context>
 <context>
