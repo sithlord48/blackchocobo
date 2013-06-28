@@ -34,6 +34,7 @@ void CharEditor::init_display()
     lbl_avatar->setFixedSize(86,98);
     //lbl_avatar->setContextMenuPolicy(Qt::CustomContextMenu);
     line_name = new QLineEdit;
+    line_name->setPlaceholderText(tr("Name"));
     lbl_level = new QLabel(tr("Level"));
     lbl_kills = new QLabel(tr("Kills"));
     lbl_hp = new QLabel(tr("HP"));
@@ -595,6 +596,7 @@ void CharEditor::init_display()
 
     QVBoxLayout *left_Final = new QVBoxLayout;
     left_Final->setContentsMargins(3,0,3,3);
+    left_Final->setSpacing(3);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
@@ -1324,6 +1326,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     _name=Processed_Name;
     //more here like setting the gui stuff.
     lbl_avatar->setPixmap(Chars.pixmap(data.id));
+    //if(_name=="")
     line_name->setText(_name);
     sb_level->setValue(data.level);
     sb_curMp->setValue(data.curMP);
@@ -1506,8 +1509,9 @@ void CharEditor::setName(QString name)
     if(_name==name){return;}
     else
     {
-        if(name==""){_name = QByteArray(12,0xFF);}
-        else{_name = name;}
+        //if(name==""){_name = QByteArray(12,0xFF);}
+        //else{_name = name;}
+        _name=name;
         emit name_changed(_name);
     }
 }
