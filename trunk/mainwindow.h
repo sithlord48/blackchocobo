@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -19,19 +19,17 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets/QMainWindow>
-    #include <QtWidgets/QWidget>
+    #include <QtWidgets>
 #else
     #include <QtGui/QMainWindow>
     #include <QtGui/QWidget>
+    #include <QMessageBox>
+    #include <QFileDialog>              // for file dialogs
 #endif
-
 
 #include <QDataStream>              // for data manip
 #include <QSettings>
-#include <QMessageBox>
-#include <QFileDialog>              // for file dialogs
-#include <QtXml/QDomDocument>             // for metadata.xml parse
+#include <QtXml/QDomDocument>       // for metadata.xml parse
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
