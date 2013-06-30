@@ -45,39 +45,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 }
 void MainWindow::init_display()
 {
-    //set up tables..
-    ui->tbl_location_field->setColumnWidth(0,160);
-    ui->tbl_location_field->setColumnWidth(1,50);
-    ui->tbl_location_field->setColumnWidth(2,50);
-    ui->tbl_location_field->setColumnWidth(3,50);
-    ui->tbl_location_field->setColumnWidth(4,50);
-    ui->tbl_location_field->setColumnWidth(5,50);
-
-    QTableWidgetItem *newItem;
-    FF7Location Locations;
-    ui->tbl_location_field->setRowCount(Locations.len());
-    for (int i=0;i<ui->tbl_location_field->rowCount();i++)
-    {
-        newItem = new QTableWidgetItem(Locations.locationString(i),0);
-        QString tooltip(QString("<html><head/><body><p><br>%1<br><img src=\":/locations/%2_%3\"/></p></body></html>").arg(Locations.fileName(i),Locations.mapID(i),Locations.locationID(i)));
-        newItem->setToolTip(tooltip);
-        ui->tbl_location_field->setItem(i,0,newItem);
-        newItem = new QTableWidgetItem(Locations.mapID(i),0);
-        newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_location_field->setItem(i,1,newItem);
-        newItem = new QTableWidgetItem(Locations.locationID(i),0);
-        newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_location_field->setItem(i,2,newItem);
-        newItem = new QTableWidgetItem(Locations.x(i),0);
-        newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_location_field->setItem(i,3,newItem);
-        newItem = new QTableWidgetItem(Locations.y(i),0);
-        newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_location_field->setItem(i,4,newItem);
-        newItem = new QTableWidgetItem(Locations.t(i),0);
-        newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_location_field->setItem(i,5,newItem);
-    }
 
     //Hide the stuff that needs to be hidden.
     ui->compare_table->setEnabled(false);
@@ -87,7 +54,6 @@ void MainWindow::init_display()
     ui->leader_id->setVisible(false);
 
     //testing stuff.
-
     ui->tabWidget->setTabEnabled(9,0);
     ui->cb_Region_Slot->setEnabled(false);
     ui->actionNew_Window->setVisible(0);
@@ -179,9 +145,14 @@ void MainWindow::init_display()
     hexEditor->setAddressAreaColor(QColor(64,65,64));
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
-
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
+
+    locationViewer = new LocationViewer;
+    QVBoxLayout *locLayout = new QVBoxLayout;
+    locLayout->setContentsMargins(0,0,0,0);
+    locLayout->addWidget(locationViewer);
+    ui->fieldFrame->setLayout(locLayout);
 
     //Set up Status Bar..
     ui->statusBar->addWidget(ui->frame_status,1);
@@ -191,7 +162,7 @@ void MainWindow::init_style()
     QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98, 192, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
     tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
     tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
-    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
+    locationViewer->setHorizontalHeaderStyle(tablestyle);
     ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
@@ -291,6 +262,16 @@ void MainWindow::init_connections()
         connect(chocoboManager,SIGNAL(pCountChanged(int,quint8)),this,SLOT(cm_pcountChanged(int,quint8)));
         connect(chocoboManager,SIGNAL(winsChanged(int,quint8)),this,SLOT(cm_raceswonChanged(int,quint8)));
         connect(chocoboManager,SIGNAL(penChanged(int,int)),this,SLOT(cm_pensChanged(int,int)));
+
+        //locations
+        connect(locationViewer,SIGNAL(locationStringChanged(QString)),this,SLOT(location_textChanged(QString)));
+        connect(locationViewer,SIGNAL(locIdChanged(int)),this,SLOT(loc_id_valueChanged(int)));
+        connect(locationViewer,SIGNAL(mapIdChanged(int)),this,SLOT(map_id_valueChanged(int)));
+        connect(locationViewer,SIGNAL(xChanged(int)),this,SLOT(coord_x_valueChanged(int)));
+        connect(locationViewer,SIGNAL(yChanged(int)),this,SLOT(coord_y_valueChanged(int)));
+        connect(locationViewer,SIGNAL(tChanged(int)),this,SLOT(coord_t_valueChanged(int)));
+        connect(locationViewer,SIGNAL(dChanged(int)),this,SLOT(coord_d_valueChanged(int)));
+        connect(locationViewer,SIGNAL(locationChanged(QString)),this,SLOT(locationSelectionChanged(QString)));
 
         //options
         connect(optionsWidget,SIGNAL(dialogColorLLChanged(QColor)),this,SLOT(setDialogColorLL(QColor)));
@@ -2096,41 +2077,24 @@ void MainWindow::on_btn_add_all_materia_clicked()
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_tbl_location_field_itemSelectionChanged()
+void MainWindow::locationSelectionChanged(QString fieldName)
 {
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),0);
-    ui->line_location->setText(ui->tbl_location_field->currentItem()->text());
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),1);
-    ui->sb_map_id->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),2);
-    ui->sb_loc_id->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),3);
-    ui->sb_coord_x->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),4);
-    ui->sb_coord_y->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
-    ui->sb_coord_t->setValue(ui->tbl_location_field->currentItem()->text().toInt());
-    ui->sb_coord_d->setValue(Locations.d(Locations.fileName(ff7->mapId(s),ff7->locationId(s))).toInt());
-    ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
-    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
-}
-void MainWindow::on_sb_map_id_valueChanged(int value)
-{if(!load){file_modified(true);
-        ff7->setMapId(s, value);
-        ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
-        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
- }}
-void MainWindow::on_sb_loc_id_valueChanged(int value)
-{if(!load){file_modified(true);
-    ff7->setLocationId(s,value);
-    ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
-    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
+    if(!load){file_modified(true);
+    ff7->setMapId(s,Locations.mapID(fieldName).toInt());
+    ff7->setLocationId(s,Locations.locationID(fieldName).toInt());
+    ff7->setLocationX(s,Locations.x(fieldName).toInt());
+    ff7->setLocationY(s,Locations.y(fieldName).toInt());
+    ff7->setLocationT(s,Locations.t(fieldName).toInt());
+    ff7->setLocationD(s,Locations.d(fieldName).toInt());
+    ff7->setLocation(s,Locations.locationString(fieldName));
 }}
-void MainWindow::on_sb_coord_x_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
-void MainWindow::on_sb_coord_y_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
-void MainWindow::on_sb_coord_t_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationT(s,value);}}
-void MainWindow::on_sb_coord_d_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationD(s,value);}}
-void MainWindow::on_line_location_textChanged(QString text)
+void MainWindow::map_id_valueChanged(int value){if(!load){file_modified(true); ff7->setMapId(s, value);}}
+void MainWindow::loc_id_valueChanged(int value){if(!load){file_modified(true);ff7->setLocationId(s,value);}}
+void MainWindow::coord_x_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
+void MainWindow::coord_y_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
+void MainWindow::coord_t_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationT(s,value);}}
+void MainWindow::coord_d_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationD(s,value);}}
+void MainWindow::location_textChanged(QString text)
 {
     if (!load)
     {
@@ -2461,13 +2425,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
         ui->sb_turkschruch->setValue(0); // reset turks.
-        ui->line_location->setText(tr("Platform"));
-        ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(116);
-        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,116)).toInt());
-        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,116)).toInt());
-        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,116)).toInt());
-        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,116)).toInt());
+        locationViewer->setSelected(Locations.fileName(1,116));
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
     }
     else if(index == 2) // The Church In The Slums
@@ -2481,13 +2439,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
-        ui->line_location->setText(tr("Church in the Slums"));
-        ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(183);
-        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,183)).toInt());
-        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,183)).toInt());
-        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,183)).toInt());
-        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,183)).toInt());
+        locationViewer->setSelected(Locations.fileName(1,183));
         ui->combo_party1->setCurrentIndex(0);
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
@@ -2502,13 +2454,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->line_location->setText(tr("Kalm Inn"));
-        ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(332);
-        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,332)).toInt());
-        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,332)).toInt());
-        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,332)).toInt());
-        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,332)).toInt());
+        locationViewer->setSelected(Locations.fileName(1,332));
         // set up young cloud, Copy Cloud Change ID to young Cloud
         ff7->setCharacter(s,6,ff7->character(s,0));
         ff7->setCharID(s,6,FF7Char::YoungCloud);
@@ -2530,13 +2476,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(496);
-        ui->line_location->setText(tr("Ropeway Station"));
-        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,496)).toInt());
-        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,496)).toInt());
-        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,496)).toInt());
-        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,496)).toInt());
+        locationViewer->setSelected(Locations.fileName(1,496));
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
     }
 
@@ -2548,13 +2488,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->line_location->setText(tr("Forgotten City"));
-        ui->sb_map_id->setValue(1);
-        ui->sb_loc_id->setValue(646);
-        ui->sb_coord_x->setValue(Locations.x(Locations.fileName(1,646)).toInt());
-        ui->sb_coord_y->setValue(Locations.y(Locations.fileName(1,646)).toInt());
-        ui->sb_coord_t->setValue(Locations.t(Locations.fileName(1,646)).toInt());
-        ui->sb_coord_d->setValue(Locations.d(Locations.fileName(1,646)).toInt());
+        locationViewer->setSelected(Locations.fileName(1,646));
         phsList->setChecked(3,1,false);
         phsList->setChecked(3,2,false);
         ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
@@ -3516,18 +3450,14 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
     switch(index)
     {
         case 0:
-            ui->sb_coord_x->setValue(ff7->locationX(s));
-            ui->sb_coord_y->setValue(ff7->locationY(s));
-            ui->sb_coord_t->setValue(ff7->locationT(s));
-            ui->sb_coord_d->setValue(ff7->locationD(s));
-
-            ui->line_location->clear();
-            ui->line_location->setText(ff7->location(s));
-            ui->sb_map_id->setValue(ff7->mapId(s));
-            ui->sb_loc_id->setValue(ff7->locationId(s));
-            ui->lbl_fieldFile->setText(QString("%1").arg(Locations.fileName(ff7->mapId(s),ff7->locationId(s))));
-            ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->mapId(s)),QString::number(ff7->locationId(s))));
-        break;
+            locationViewer->setX(ff7->locationX(s));
+            locationViewer->setY(ff7->locationY(s));
+            locationViewer->setT(ff7->locationT(s));
+            locationViewer->setD(ff7->locationD(s));
+            locationViewer->setMapId(ff7->mapId(s));
+            locationViewer->setLocationId(ff7->locationId(s));
+            locationViewer->setLocationString(ff7->location(s));
+       break;
 
        case 1:
             ui->cb_visible_bronco->setChecked(Qt::Unchecked);

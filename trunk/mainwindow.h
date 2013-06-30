@@ -50,6 +50,7 @@
 #include "FF7tk/widgets/PhsListWidget.h"
 #include "FF7tk/widgets/MenuListWidget.h"
 #include "FF7tk/widgets/ChocoboManager.h"
+#include "FF7tk/widgets/LocationViewer.h"
 //QHexedit
 #include "qhexedit/qhexedit.h"
 
@@ -95,6 +96,7 @@ private:
     CharEditor * char_editor;
     ItemList *itemlist;
     ChocoboManager *chocoboManager;
+    LocationViewer *locationViewer;
     QHexEdit *hexEditor;
     void init_display();
     void init_style();
@@ -434,14 +436,15 @@ private slots://try to keep these in the same order as the .cpp file
     void setSoundMode(int mode);
 
     //save location tab
-    void on_sb_map_id_valueChanged(int);
-    void on_sb_loc_id_valueChanged(int);
-    void on_sb_coord_x_valueChanged(int);
-    void on_sb_coord_y_valueChanged(int);
-    void on_sb_coord_t_valueChanged(int);
-    void on_sb_coord_d_valueChanged(int);
-    void on_line_location_textChanged(QString);
-    void on_tbl_location_field_itemSelectionChanged();
+    void map_id_valueChanged(int);
+    void loc_id_valueChanged(int);
+    void coord_x_valueChanged(int);
+    void coord_y_valueChanged(int);
+    void coord_t_valueChanged(int);
+    void coord_d_valueChanged(int);
+
+    void locationSelectionChanged(QString);
+    void location_textChanged(QString);
 
 
     //items tab

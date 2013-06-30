@@ -53,7 +53,8 @@ SOURCES += main.cpp \
     FF7tk/widgets/MenuListWidget.cpp \
     FF7tk/widgets/OptionsWidget.cpp \
     FF7tk/widgets/ChocoboManager.cpp \
-    FF7tk/widgets/ChocoboLabel.cpp
+    FF7tk/widgets/ChocoboLabel.cpp \
+    FF7tk/widgets/LocationViewer.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -90,13 +91,14 @@ HEADERS += mainwindow.h \
     FF7tk/widgets/OptionsWidget.h \
     FF7tk/widgets/ChocoboManager.h \
     FF7tk/widgets/ChocoboLabel.h \
-    FF7tk/static_data/Type_FF7CHOCOBO.h
+    FF7tk/static_data/Type_FF7CHOCOBO.h \
+    FF7tk/widgets/LocationViewer.h
 
 FORMS += mainwindow.ui \
     about.ui \
     options.ui
 RESOURCES += images.qrc \
-    locations.qrc
+    FF7tk/static_data/icons/Location_Icons/locations.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \
     lang/bchoco_fr.ts \

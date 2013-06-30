@@ -375,6 +375,10 @@
         <source>Sephiroth</source>
         <translation>Sephiroth</translation>
     </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nom</translation>
+    </message>
 </context>
 <context>
     <name>Char_Limits</name>
@@ -2933,6 +2937,45 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>LocationViewer</name>
+    <message>
+        <source>filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Name</source>
+        <translation>Nom du lieu</translation>
+    </message>
+    <message>
+        <source>MapID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation>X: </translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation>Y: </translation>
+    </message>
+    <message>
+        <source>T: </source>
+        <translation>T: </translation>
+    </message>
+    <message>
+        <source>D: </source>
+        <translation>D: </translation>
+    </message>
+    <message>
+        <source>LocID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LocID</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
@@ -2986,14 +3029,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Mt. Nibel</source>
         <translation>Mt. Nibel</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translation type="obsolete">Dans la falaise de Gaea</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation type="obsolete">Dans la falaise de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -4307,22 +4342,6 @@ The km/h speeds are calculated while playing </source>
         <translation>&amp;Autres</translation>
     </message>
     <message>
-        <source>map</source>
-        <translation>écran</translation>
-    </message>
-    <message>
-        <source>loc</source>
-        <translation>zone</translation>
-    </message>
-    <message>
-        <source>Platform</source>
-        <translation>Plate-forme</translation>
-    </message>
-    <message>
-        <source>Kalm Inn</source>
-        <translation>Auberge de Kalm</translation>
-    </message>
-    <message>
         <source>&amp;Game Progress</source>
         <translation>Pro&amp;gression du jeu</translation>
     </message>
@@ -4369,30 +4388,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Next Slot</source>
         <translation>Slot suivant</translation>
-    </message>
-    <message>
-        <source>Forgotten City</source>
-        <translation>Cité perdue</translation>
-    </message>
-    <message>
-        <source>Location Name</source>
-        <translation>Nom du lieu</translation>
-    </message>
-    <message>
-        <source>Map ID</source>
-        <translation>ID.écran</translation>
-    </message>
-    <message>
-        <source>Location ID</source>
-        <translation>ID du lieu</translation>
-    </message>
-    <message>
-        <source>x</source>
-        <translation>x</translation>
-    </message>
-    <message>
-        <source>y</source>
-        <translation>y</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4595,10 +4590,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Export MC File</source>
         <translation>Exporter Sauvegarde MC</translation>
-    </message>
-    <message>
-        <source> Bombing Mission Start Flag</source>
-        <translation type="obsolete">Variable de démarrage de la mission n°1</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5372,10 +5363,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Sauvegarde FF7 PSV (*.psv)</translation>
     </message>
     <message>
-        <source>Church in the Slums</source>
-        <translation>Église - Taudis</translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translation>PAL (BESCES-00868)</translation>
     </message>
@@ -5594,10 +5581,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>Téléphérique</translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Rejouer la scène de rendez-vous amoureux, vous allez vous retrouver à côté du téléphérique. Parlez à l&apos;homme pour lancer l&apos;événement. Si vous voulez voir un rendez-vous particulier, assurez-vous d&apos;avoir affecté correctement les points d&apos;amour.</translation>
     </message>
@@ -5686,18 +5669,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Exportation de personnage échoué</translation>
     </message>
     <message>
-        <source>New Game Created</source>
-        <translation type="obsolete">Nouvelle partie créée</translation>
-    </message>
-    <message>
-        <source>New Game Created - File:%1</source>
-        <translation type="obsolete">Nouvelle partie créée - Fichier : %1</translation>
-    </message>
-    <message>
-        <source>New Game Plus Created</source>
-        <translation type="obsolete">Nouvelle partie Plus créée</translation>
-    </message>
-    <message>
         <source>Export Successful</source>
         <translation>Exportation réussie</translation>
     </message>
@@ -5764,10 +5735,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>t</source>
-        <translation type="unfinished">t</translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation type="unfinished">Fort Condor</translation>
     </message>
@@ -5799,11 +5766,6 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7516,40 +7478,16 @@ set your map location data manually</source>
         <translation>Sélectionnez un répertoire pour charger les sauvegardes FF7 PC</translation>
     </message>
     <message>
-        <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="obsolete">Sélectionnez un répertoire pour sauvegarder les sauvegardes FF7 PC</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>Sélectionnez une sauvegarde par défaut (Doit être PSX non-identifiée)</translation>
-    </message>
-    <message>
-        <source>Location To Save Character Stat Files</source>
-        <translation type="obsolete">Emplacement pour enregistrer les fichiers de stats de personnages</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Sélectionnez un emplacement pour charger les fichiers de stats de personnages</translation>
     </message>
     <message>
-        <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="obsolete">Dossier d&apos;importation de sauvegardes FF7 (tous types)</translation>
-    </message>
-    <message>
-        <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="obsolete">Dossier d&apos;importation de sauvegardes PC (.ff7)</translation>
-    </message>
-    <message>
-        <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="obsolete">Dossier d&apos;exportation de sauvegardes PC (.ff7)</translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
         <translation>Réinitialiser</translation>
-    </message>
-    <message>
-        <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="obsolete">Dossier de cartes mémoires d&apos;émulateurs</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -7558,10 +7496,6 @@ set your map location data manually</source>
     <message>
         <source>Options</source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths</source>
-        <translation type="obsolete">Choisir les emplacements de chargement et d&apos;enregistrement des sauvegardes</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -7594,10 +7528,6 @@ set your map location data manually</source>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
-    </message>
-    <message>
-        <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="obsolete">Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
