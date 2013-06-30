@@ -366,7 +366,7 @@ static LOCATION Locations[]=
     {"ncoinn",QT_TRANSLATE_NOOP("Locations","North Corel Inn"),"1","456","190","-261","36","32"},
     {"ropest",QT_TRANSLATE_NOOP("Locations","Ropeway Station"),"1","457","504","-208 ","39","32"},
     {"mtcrl_0",QT_TRANSLATE_NOOP("Locations","Mt. Corel"),"1","458","9","-258","103","32"},
-    {"",QT_TRANSLATE_NOOP("Locations","Mt. Corel"),"1","459","-94","733","88","32"},
+    {"mtcrl_1",QT_TRANSLATE_NOOP("Locations","Mt. Corel"),"1","459","-94","733","88","32"},
 
     {"mtcrl_2",QT_TRANSLATE_NOOP("Locations","Corel Reactor"),"1","460","1538","1674","36","32"},
     {"mtcrl_3",QT_TRANSLATE_NOOP("Locations","Mt. Corel"),"1","461","534","9","182","32"},
