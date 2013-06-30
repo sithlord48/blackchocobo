@@ -375,6 +375,10 @@
         <source>Sephiroth</source>
         <translation>Sefirot</translation>
     </message>
+    <message>
+        <source>Name</source>
+        <translation>Nombre</translation>
+    </message>
 </context>
 <context>
     <name>Char_Limits</name>
@@ -2935,6 +2939,45 @@ Los km/h son calculados mientras se juega</translation>
     </message>
 </context>
 <context>
+    <name>LocationViewer</name>
+    <message>
+        <source>filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Name</source>
+        <translation>Nombre del Lugar</translation>
+    </message>
+    <message>
+        <source>MapID: </source>
+        <translation>ID Mapa: </translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation>X:</translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation>Y:</translation>
+    </message>
+    <message>
+        <source>T: </source>
+        <translation>T:</translation>
+    </message>
+    <message>
+        <source>D: </source>
+        <translation>D:</translation>
+    </message>
+    <message>
+        <source>LocID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LocID</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
@@ -2987,14 +3030,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Mt. Nibel</source>
         <translation>Monte Nibel</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translation type="obsolete">Acantilado de Gaea</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation type="obsolete">Base del Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -4221,22 +4256,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Info de Habilidades y Stats de la Materia Seleccionada</translation>
     </message>
     <message>
-        <source>map</source>
-        <translation>Mapa</translation>
-    </message>
-    <message>
-        <source>loc</source>
-        <translation>Ubic</translation>
-    </message>
-    <message>
-        <source>Platform</source>
-        <translation>Plataforma</translation>
-    </message>
-    <message>
-        <source>Kalm Inn</source>
-        <translation>Posada Kalm</translation>
-    </message>
-    <message>
         <source>&amp;Game Progress</source>
         <translation>&amp;Progreso en el Juego</translation>
     </message>
@@ -4279,30 +4298,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Next Slot</source>
         <translation>Ranura Siguente</translation>
-    </message>
-    <message>
-        <source>Forgotten City</source>
-        <translation>Ciudad Olvidada</translation>
-    </message>
-    <message>
-        <source>Location Name</source>
-        <translation>Nombre del Lugar</translation>
-    </message>
-    <message>
-        <source>Map ID</source>
-        <translation>ID Mapa</translation>
-    </message>
-    <message>
-        <source>Location ID</source>
-        <translation>ID Ubicación</translation>
-    </message>
-    <message>
-        <source>x</source>
-        <translation>x</translation>
-    </message>
-    <message>
-        <source>y</source>
-        <translation>y</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4597,10 +4592,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Export MC File</source>
         <translation>Exportar archivo MC</translation>
-    </message>
-    <message>
-        <source> Bombing Mission Start Flag</source>
-        <translation type="obsolete"> Bandera de comienzo de&apos; Bombing Mission&apos;</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5373,10 +5364,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Partida Guardada FF7 PSV (*.psv)</translation>
     </message>
     <message>
-        <source>Church in the Slums</source>
-        <translation>Iglesia en los suburbios</translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translation>PAL (BESCES-00868)</translation>
     </message>
@@ -5595,10 +5582,6 @@ Las entradas de la tabla son editables</translation>
         <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>Estación de tranvías</translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Rejugar la escena de la cita. Tu localización se pondrá en la estación Ropeway. Habla con el hombre del tranvía para iniciar el evento. Si buscas una cita especial, recuerda configurar los puntos de amor.</translation>
     </message>
@@ -5687,18 +5670,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Fallo al exportar personaje</translation>
     </message>
     <message>
-        <source>New Game Created</source>
-        <translation type="obsolete">Nuevo juego creado</translation>
-    </message>
-    <message>
-        <source>New Game Created - File:%1</source>
-        <translation type="obsolete">Nuevo juego creado - Archivo %1</translation>
-    </message>
-    <message>
-        <source>New Game Plus Created</source>
-        <translation type="obsolete">Nuevo juego plus creado</translation>
-    </message>
-    <message>
         <source>Export Successful</source>
         <translation>Exportación exitosa</translation>
     </message>
@@ -5721,11 +5692,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>ZZ8: KOTR</source>
         <translation>ZZ8: KOTR</translation>
-    </message>
-    <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location , x,y,z manually</source>
-        <translation type="obsolete">Clickea una fila para transportar tu partida guardada aquí O establece tu localización x,y,z manualmente en el mapa</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
@@ -5770,10 +5736,6 @@ trigger showing that tutorial</source>
         <translation>Cuando la casilla está seleccionada parcialmente (&quot;-&quot;) se activará mostrando el tutorial</translation>
     </message>
     <message>
-        <source>t</source>
-        <translation>t</translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation>Fuerte Cóndor</translation>
     </message>
@@ -5812,12 +5774,6 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
         <translation>Este archivo no tiene una firma actualizada
 Debido a esto tu PS3 rechazará este archivo y lo tomará como corrupto
 Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
-    </message>
-    <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location data manually</source>
-        <translation>Haz click en una fila para &apos;teletransportar&apos; tu guardado ahí O
-establecer tu localización del mapa automáticamente</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
@@ -7530,40 +7486,16 @@ Fénix x3 (180pm)</translation>
         <translation>Selecciona un directorio para cargar las partidas de FF7 PC</translation>
     </message>
     <message>
-        <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="obsolete">Selecciona un directorio para exportar las partidas de FF7 PC</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>Seleccionar una partida guardada por defecto (Debe ser Raw PSX)</translation>
-    </message>
-    <message>
-        <source>Location To Save Character Stat Files</source>
-        <translation type="obsolete">Lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Selecciona un lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
-        <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="obsolete"> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
-    </message>
-    <message>
-        <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="obsolete">Carpeta para guardar partidas de PC (.ff7)</translation>
-    </message>
-    <message>
-        <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="obsolete">Carpeta para exportar partidas de PC (.ff7)</translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
         <translation>Resetear a lvalores predeterminados</translation>
-    </message>
-    <message>
-        <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="obsolete"> Carpeta donde cargar/guardar Memory Cards del emulador  </translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -7572,10 +7504,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Options</source>
         <translation>Opciones</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths</source>
-        <translation type="obsolete">Configurar rutas de guardado y carga</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -7608,10 +7536,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
-    </message>
-    <message>
-        <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="obsolete">Anular el guardado por defecto con el siguiente archivo (sólo PSX raw)</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>

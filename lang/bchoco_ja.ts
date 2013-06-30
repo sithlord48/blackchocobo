@@ -375,6 +375,10 @@
         <source>Sephiroth</source>
         <translation type="unfinished">セフィロス</translation>
     </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">名前</translation>
+    </message>
 </context>
 <context>
     <name>Char_Limits</name>
@@ -2933,6 +2937,45 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>LocationViewer</name>
+    <message>
+        <source>filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Name</source>
+        <translation>場所名</translation>
+    </message>
+    <message>
+        <source>MapID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation type="unfinished">X: </translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation>Y: </translation>
+    </message>
+    <message>
+        <source>T: </source>
+        <translation type="unfinished">T: </translation>
+    </message>
+    <message>
+        <source>D: </source>
+        <translation type="unfinished">D: </translation>
+    </message>
+    <message>
+        <source>LocID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LocID</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
@@ -2985,14 +3028,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Mt. Nibel</source>
         <translation>ニブル山</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translation type="obsolete">絶壁内部</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation type="obsolete">絶壁のふもと</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -4369,22 +4404,6 @@ The km/h speeds are calculated while playing </source>
         <translation>選択マテリアのアビリティと装備効果</translation>
     </message>
     <message>
-        <source>map</source>
-        <translation>マップ</translation>
-    </message>
-    <message>
-        <source>loc</source>
-        <translation>場所</translation>
-    </message>
-    <message>
-        <source>Platform</source>
-        <translation>１番街駅ホーム</translation>
-    </message>
-    <message>
-        <source>Kalm Inn</source>
-        <translation>カーム・宿屋２階</translation>
-    </message>
-    <message>
         <source>&amp;Game Progress</source>
         <translation>ゲームの進捗(&amp;G)</translation>
     </message>
@@ -4447,30 +4466,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Othe&amp;r</source>
         <translation>その他(&amp;R)</translation>
-    </message>
-    <message>
-        <source>Forgotten City</source>
-        <translation>忘らるる都＊</translation>
-    </message>
-    <message>
-        <source>Location Name</source>
-        <translation>場所名</translation>
-    </message>
-    <message>
-        <source>Map ID</source>
-        <translation>マップ ID</translation>
-    </message>
-    <message>
-        <source>Location ID</source>
-        <translation>場所の ID</translation>
-    </message>
-    <message>
-        <source>x</source>
-        <translation>x</translation>
-    </message>
-    <message>
-        <source>y</source>
-        <translation>y</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4669,10 +4664,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Export MC File</source>
         <translation>MC ファイルのエクスポート</translation>
-    </message>
-    <message>
-        <source> Bombing Mission Start Flag</source>
-        <translation type="obsolete">魔晄炉爆破ミッション開始フラグ</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -5445,10 +5436,6 @@ Table Entries are Editable</source>
         <translation>PSV FF7 セーブ (*.psv)</translation>
     </message>
     <message>
-        <source>Church in the Slums</source>
-        <translation>スラムの教会</translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translatorcomment>PAL (BESCES-00900) {00868)?}</translatorcomment>
         <translation>PAL (BESCES-00868)</translation>
@@ -5668,10 +5655,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation type="unfinished">ロープウェイ乗り場</translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5825,10 +5808,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>t</source>
-        <translation type="unfinished">t</translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation type="unfinished">コンドルフォート</translation>
     </message>
@@ -5860,11 +5839,6 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7577,40 +7551,16 @@ set your map location data manually</source>
         <translation>FF7 セーブをロードするディレクトリの選択</translation>
     </message>
     <message>
-        <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="obsolete">FF7 PC セーブのエクスポート先ディレクトリを選択</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>デフォルトのゲーム セーブを選択 (Raw PSX 必須)</translation>
-    </message>
-    <message>
-        <source>Location To Save Character Stat Files</source>
-        <translation type="obsolete">キャラクター ステータス ファイルの保存フォルダ</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>キャラクター ステータス ファイルの保存フォルダを選択</translation>
     </message>
     <message>
-        <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="obsolete">すべての FF7 セーブのロード用フォルダ</translation>
-    </message>
-    <message>
-        <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="obsolete">PC セ－ブ (.ff7) の保存フォルダ</translation>
-    </message>
-    <message>
-        <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="obsolete">PC セ－ブ (.ff7) のエクスポート フォルダ</translation>
-    </message>
-    <message>
         <source>Reset to Default</source>
         <translation>デフォルトにリセット</translation>
-    </message>
-    <message>
-        <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="obsolete">エミュレーター メモリー カードの保存フォルダ</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -7619,10 +7569,6 @@ set your map location data manually</source>
     <message>
         <source>Options</source>
         <translation>オプション</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths</source>
-        <translation type="obsolete">ロード / 保存パスの設定</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -7655,10 +7601,6 @@ set your map location data manually</source>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
-    </message>
-    <message>
-        <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="obsolete">デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>

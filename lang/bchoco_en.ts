@@ -375,6 +375,10 @@
         <source>Sephiroth</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Char_Limits</name>
@@ -2933,6 +2937,45 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>LocationViewer</name>
+    <message>
+        <source>filename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MapID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>T: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>D: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LocID: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LocID</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
@@ -4286,22 +4329,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>loc</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Platform</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Kalm Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Game Progress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4363,30 +4390,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Othe&amp;r</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Forgotten City</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Location Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Map ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Location ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>x</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5350,10 +5353,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Church in the Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5571,10 +5570,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5728,10 +5723,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>t</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5763,11 +5754,6 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Click A Row To &quot;Warp&quot; your save there  OR. 
-set your map location data manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
