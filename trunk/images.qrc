@@ -12,7 +12,6 @@
         <file alias="next">icon/next.png</file>
         <file alias="psn">icon/psn.png</file>
         <file alias="import">icon/import.png</file>
-        <file alias="export">icon/export.png</file>
         <file alias="us_sel">icon/us.png</file>
         <file alias="fr_sel">icon/fr.png</file>
         <file alias="de_sel">icon/de.png</file>
@@ -26,8 +25,6 @@
         <file alias="us_unsel">icon/us_unsel.png</file>
         <file alias="eu_unsel">icon/eu_unsel.png</file>
         <file alias="config">icon/config.png</file>
-        <file alias="exportmc">icon/exportmc.png</file>
-        <file alias="exportpc">icon/exportpc.png</file>
         <file alias="slot_sel">icon/slot_sel.png</file>
         <file alias="def_save">icon/default_save.png</file>
         <file alias="1_sel">icon/1.png</file>
@@ -84,8 +81,6 @@
         <file alias="default_setting">icon/default_setting.png</file>
         <file alias="save_as">icon/save_as.png</file>
         <file alias="save">icon/save.png</file>
-        <file alias="vgs">icon/vgs.png</file>
-        <file alias="dex">icon/dex.png</file>
         <file alias="world_map">icon/world_map.png</file>
         <file alias="slider_up">icon/slider_up.png</file>
         <file alias="new_window">icon/window-new.png</file>

@@ -71,7 +71,6 @@ protected:
     void closeEvent(QCloseEvent *e);
 private:
     Ui::MainWindow *ui;
-    void file_modified(bool);
     bool skip_slot_mask;
     bool _init; //set true then false after a file load.
     bool load; // are we loading data? if so don't save it to the file.
@@ -122,11 +121,6 @@ private slots://try to keep these in the same order as the .cpp file
     void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
     void on_actionNew_Game_triggered();
     void on_actionNew_Game_Plus_triggered();
-    void on_actionExport_PC_Save_triggered();
-    void on_actionExport_PSX_triggered();
-    void on_actionExport_MC_triggered();
-    void on_actionExport_VGS_triggered();
-    void on_actionExport_DEX_triggered();  
   /*Simple Menu Actions */
     void on_actionSlot_01_triggered();
     void on_actionSlot_02_triggered();
@@ -180,6 +174,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tabWidget_currentChanged(int index);
     void on_locationToolBox_currentChanged(int index);
     void on_testDataTabWidget_currentChanged(int index);
+    void fileModified(bool changed);
     //QString avatar_style(int);
 
     /*CharButtons*/

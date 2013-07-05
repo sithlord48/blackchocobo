@@ -4846,8 +4846,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>313</width>
-                  <height>1697</height>
+                  <width>353</width>
+                  <height>1705</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -9172,22 +9172,6 @@ Var And Scrolling Synced To Left Table</string>
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <widget class="QMenu" name="menuExport">
-     <property name="title">
-      <string>&amp;Export From Current Slot</string>
-     </property>
-     <property name="icon">
-      <iconset resource="images.qrc">
-       <normaloff>:/icon/export</normaloff>:/icon/export</iconset>
-     </property>
-     <addaction name="actionExport_PC_Save"/>
-     <addaction name="actionExport_PSX"/>
-     <addaction name="actionExport_MC"/>
-     <addaction name="actionExport_VGS"/>
-     <addaction name="actionExport_DEX"/>
-     <addaction name="separator"/>
-     <addaction name="actionExport_char"/>
-    </widget>
     <widget class="QMenu" name="menuImport">
      <property name="title">
       <string>&amp;Import To Current Slot</string>
@@ -9208,7 +9192,7 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="actionSave_File_As"/>
     <addaction name="separator"/>
     <addaction name="menuImport"/>
-    <addaction name="menuExport"/>
+    <addaction name="actionExport_char"/>
     <addaction name="separator"/>
     <addaction name="actionCreateNewMetadata"/>
     <addaction name="separator"/>
@@ -9375,36 +9359,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
-   </property>
-  </action>
-  <action name="actionExport_PC_Save">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/exportpc</normaloff>:/icon/exportpc</iconset>
-   </property>
-   <property name="text">
-    <string>Export PC Save</string>
-   </property>
-   <property name="toolTip">
-    <string>Export PSX or MCR Save As a PC Save</string>
-   </property>
-  </action>
-  <action name="actionExport_PSX">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
-   </property>
-   <property name="text">
-    <string>Export Raw PSX Save</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>true</bool>
    </property>
   </action>
   <action name="actionSlot_01">
@@ -9921,18 +9875,6 @@ Var And Scrolling Synced To Left Table</string>
     <string>JPN (BISLPS-01057)</string>
    </property>
   </action>
-  <action name="actionExport_MC">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/exportmc</normaloff>:/icon/exportmc</iconset>
-   </property>
-   <property name="text">
-    <string>Export MC File</string>
-   </property>
-  </action>
   <action name="actionNew_Game">
    <property name="icon">
     <iconset resource="images.qrc">
@@ -10006,30 +9948,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
-   </property>
-  </action>
-  <action name="actionExport_VGS">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/vgs</normaloff>:/icon/vgs</iconset>
-   </property>
-   <property name="text">
-    <string>Export VGS File</string>
-   </property>
-  </action>
-  <action name="actionExport_DEX">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/dex</normaloff>:/icon/dex</iconset>
-   </property>
-   <property name="text">
-    <string>Export Dex-Drive File</string>
    </property>
   </action>
   <action name="action_auto_char_growth">
