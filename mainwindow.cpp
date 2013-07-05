@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     if(!settings->value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings->value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
     ui->setupUi(this);
     _init=true;
-    ff7 =ff7data;
+    ff7 = ff7data;
     load=true;
     curchar =0;
     mslotsel=-1;
@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     init_connections();
     init_settings();
     on_actionNew_Game_triggered();
-    file_modified(false);
+    fileModified(false);
 }
 void MainWindow::init_display()
 {
@@ -372,26 +372,8 @@ int MainWindow::save_changes(void)
     result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(ff7->fileName()),QMessageBox::Yes,QMessageBox::No,QMessageBox::Cancel);
     switch(result)
     {
-        case QMessageBox::Yes:
-                if(ui->action_Save->isEnabled()){on_action_Save_triggered();}
-                else
-                {//user trying to save a file with no header.
-                    QStringList types;
-                    types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
-                    QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
-                    //check the string. and assign a type
-                    if(result ==types.at(0)){on_actionExport_PC_Save_triggered();}
-                        else if(result ==types.at(1)){on_actionExport_PSX_triggered();}
-                        else if(result ==types.at(2)){on_actionExport_MC_triggered();}
-                        else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-                        else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-                        else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
-                        else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
-                        else{return rtn;}
-                    }
-                    rtn=1;
-                    break;
-         case QMessageBox::Cancel: rtn=0; break;
+        case QMessageBox::Yes: on_action_Save_triggered();rtn=1;break;
+        case QMessageBox::Cancel: rtn=0; break;
         case QMessageBox::No:rtn=1;break;
      }
     return rtn;
@@ -433,7 +415,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     if(ff7->loadFile(fileName))
     {
         _init=false;//we have now loaded a file
-        file_modified(false);
+        fileModified(false);
     }
     else{QMessageBox::information(this,tr("Load Failed"),tr("Failed to Load File"));return;}
 
@@ -500,105 +482,98 @@ void MainWindow::on_actionExport_char_triggered()
 }
 void MainWindow::on_action_Save_triggered()
 {
-    if(_init)//no file loaded user saving a New Game
+    if(_init || ff7->fileName().isEmpty()){on_actionSave_File_As_triggered();}
+    else
     {
-        QStringList types;
-        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
-        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
-        //check the string. and assign a type
-        if(result ==types.at(0)){on_actionExport_PC_Save_triggered();}
-            else if(result ==types.at(1)){on_actionExport_PSX_triggered();}
-            else if(result ==types.at(2)){on_actionExport_MC_triggered();}
-            else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-            else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-            else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
-            else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
-            else{}
-    return;//leave this function.
-    }
-
-    if(!ff7->fileName().isEmpty())
-    {
-        if(ff7->type()=="PSP")
-        {
-            QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
-        }
-
-        else if(ff7->type()=="PSV")
-        {
-            QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSV will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
-        }
-
+        if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+        else if(ff7->type()=="PSV"){QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSV will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
         saveFileFull(ff7->fileName());
     }
-    else{on_actionSave_File_As_triggered();return;}//there is no filename we should get one from save as..
 }
 
 void MainWindow::on_actionSave_File_As_triggered()
-{QString fileName;
-// check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
+{
+    QString selectedType;
+    QString pc = tr("FF7 PC (*.ff7)");
+    QString psx= tr("Raw PSX Save(*FF7-S*)");
+    QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)");
+    QString vgs= tr("Virtual Game Station(*.vgs *.mem)");
+    QString dex= tr("DEX (*.dex)");
+    QString psv= tr("PSV (*.psv)");
+    QString vmp= tr("PSP (*.vmp)");
+    QString types = pc+";;"+mc+";;"+psx+";;"+vgs+";;"+dex+";;"+psv+";;"+vmp;
+    QString fileName;
+    QString path = QDir::homePath();
+
+    // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
     if(ff7->type() == "PC")
     {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PC SaveGame"), settings->value("save_pc_path").toString(),
-        tr("FF7 PC SaveGame(*.ff7)"));
+        selectedType = pc;
+        if(!settings->value("save_pc_path").isNull()){path=settings->value("save_pc_path").toString();}
     }
-    else if(ff7->type() == "PSX")
-    {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PSX SaveGame"), QDir::homePath(),
-        tr("FF7 Raw PSX SaveGame(*-S*)"));
-    }
+    else if(ff7->type() == "PSX"){selectedType = psx;}
     else if(ff7->type() == "MC")
     {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
-        tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)"));
+        selectedType = mc;
+        if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
     }
-    else if(ff7->type() == "PSV")
-    {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PSV SaveGame"), QDir::homePath(),
-        tr("FF7 PSV SaveGame(*.psv)"));
-        QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
-    }
-    else if(ff7->type() == "PSP")
-    {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  PSP SaveGame"), QDir::homePath(),
-        tr("FF7 PSP SaveGame(*.vmp)"));
-        QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));
-    }
+    else if(ff7->type() == "PSV"){selectedType=psv;}
+    else if(ff7->type() == "PSP"){selectedType=vmp;}
     else if(ff7->type() == "VGS")
     {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  VGS SaveGame"), settings->value("save_emu_path").toString(),
-        tr("FF7 VGS SaveGame(*.vgs *.mem)"));
+        selectedType=vgs;
+        if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
     }
     else if(ff7->type() == "DEX")
     {
-        fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),
-        tr("FF7 Dex SaveGame(*.gme)"));
+        selectedType=dex;
+        if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
     }
-    else
-    {//mystery type. make the user tell us user maybe used new game or made save manually.
-        QStringList types;
-        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
-        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
-        //check the string. and assign a type
-        if(result ==types.at(0)){ff7->setType("PC");}
-        else if(result ==types.at(1)){ff7->setType("PSX");}
-        else if(result ==types.at(2)){ff7->setType("MC");}
-        else if(result ==types.at(3)){ff7->setType("PSP");}
-        else if(result ==types.at(4)){ff7->setType("PSV");}
-        else if(result ==types.at(5)){ff7->setType("DEX");}
-        else if(result ==types.at(6)){ff7->setType("VGS");}
-        else{return;}
-            on_actionSave_File_As_triggered(); //now that we have a type do again.
-    }
+
+    fileName = QFileDialog::getSaveFileName(this,"Select A File To Save",path,types,&selectedType);
     if(fileName.isEmpty()){return;}
-    saveFileFull(fileName); //reguardless save the file of course if its has a string.
+    QString newType;
+    if(selectedType ==pc){newType = "PC";}
+    else if(selectedType ==psx){newType ="PSX";}
+    else if(selectedType ==mc){newType = "MC";}
+    else if(selectedType ==vgs){newType = "VGS";}
+    else if(selectedType ==dex){newType = "DEX";}
+    else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+    else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+    else{newType =="";}
+
+    if(ff7->type()!=newType)
+    {//Type Changed.
+        if(newType =="PC")
+        {
+            if(ff7->exportPC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        }
+        else if(newType =="PSX")
+        {
+            if(ff7->exportPSX(s,fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        }
+        else if(newType =="MC")
+        {
+            if(ff7->exportVMC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        }
+        else if(newType =="VGS")
+        {
+            if(ff7->exportVGS(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        }
+        else if(newType =="DEX")
+        {
+            if(ff7->exportDEX(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        }
+        else if(newType =="PSV"){QMessageBox::information(this,tr("PSV Export Attempted"),tr("PSV Exports Are Not Allowed."));}
+        else if(newType =="VMP"){QMessageBox::information(this,tr("VMP Export Attempted"),tr("VMP Exports Are Not Allowed."));}
+        else{return;}
+    }
+    else{saveFileFull(fileName);} //reguardless save the file of course if its has a string.
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
@@ -611,7 +586,7 @@ void MainWindow::saveFileFull(QString fileName)
         {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
             _init=false;
         }
-        file_modified(false);
+        fileModified(false);
         guirefresh(0);
     }
     else{QMessageBox::information(this,tr("Save Error"),tr("Failed to save file\n%1").arg(fileName));}
@@ -640,76 +615,6 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionExport_PC_Save_triggered()
-{
-    QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 SaveGame"),  settings->value("save_pc_path").toString() ,
-    tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
-    if(fileName.isEmpty()){return;}// catch if Cancel is pressed
-    else
-    {
-        if(ff7->exportPC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
-        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        file_modified(false);
-    }
-}
-/*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionExport_PSX_triggered()
-{
-    QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 SaveGame"), ff7->region(s),
-    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
-    if (fileName.isEmpty()){return;}// catch if Cancel is pressed
-    else
-    {
-        if(ff7->exportPSX(s,fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
-        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        file_modified(false);
-    }
-}
-/*~~~~~Export Mcr/Mcd~~~~~~*/
-void MainWindow::on_actionExport_MC_triggered()
-{
-
-    QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
-    tr("MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)"));
-    if(fileName.isEmpty()){return;}
-    else
-    {
-        if(ff7->exportVMC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
-        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        file_modified(false);
-    }
-}
-void MainWindow::on_actionExport_VGS_triggered()
-{
-    QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 VGS SaveGame"), settings->value("save_emu_path").toString(),
-    tr("VGS File(*.vgs);;MEM File(*.mem)"));
-    if(fileName.isEmpty()){return;}
-    else
-    {
-        if(ff7->exportVGS(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
-        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        file_modified(false);
-    }
-}
-void MainWindow::on_actionExport_DEX_triggered()
-{
-
-    QString fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),tr("FF7 Dex SaveGame(*.gme)"));
-    if(fileName.isEmpty()){return;}
-    else
-    {
-        if(ff7->exportDEX(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);}
-        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        file_modified(false);
-    }
-}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
@@ -729,7 +634,6 @@ void MainWindow::on_actionSlot_13_triggered(){s=12; CheckGame(); guirefresh(0);}
 void MainWindow::on_actionSlot_14_triggered(){s=13; CheckGame(); guirefresh(0);}
 void MainWindow::on_actionSlot_15_triggered(){s=14; CheckGame(); guirefresh(0);}
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(0);}
-
 void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
@@ -1061,9 +965,6 @@ void MainWindow::setmenu(bool newgame)
         ui->actionSave_File_As->setEnabled(1);
         ui->actionReload->setEnabled(1);
     }
-    ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
-    ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
-    ui->actionExport_DEX->setEnabled(1);        ui->actionExport_char->setEnabled(1);
     ui->actionImport_char->setEnabled(1);       ui->action_Save->setEnabled(1);
 
     if(!_init)
@@ -1102,23 +1003,20 @@ void MainWindow::setmenu(bool newgame)
     else
     {//not FF7 unset some menu options.
             ui->actionNew_Game_Plus->setEnabled(0); ui->actionCopy_Slot->setEnabled(0);
-            ui->actionExport_PC_Save->setEnabled(0);    ui->actionExport_char->setEnabled(0);
-            ui->actionImport_char->setEnabled(0);
+            ui->actionExport_char->setEnabled(0);   ui->actionImport_char->setEnabled(0);
     }
    load=false;
 }
-void MainWindow::file_modified(bool changed)
+void MainWindow::fileModified(bool changed)
 {
     ff7->setFileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
-
     if(changed)
     {    
         //hexEditorRefresh();
         ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
     }
 }
-
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
 {
@@ -1571,7 +1469,7 @@ void MainWindow::guirefresh(bool newgame)
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
            && ff7->psx_block_type(s)==0xA0)
         {//if empty region string and a virtual memcard format and dir frame says empty.
-            ff7->clearSlot(s); //file_modified(false);//checking only
+            ff7->clearSlot(s); //fileModified(false);//checking only
         }
         on_tabWidget_currentChanged(ui->tabWidget->currentIndex());
         load=false;
@@ -1700,7 +1598,7 @@ void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7
 void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->character(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,curchar)));}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ ff7->setGil(s,value);}}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7->setGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
 void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
 void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
@@ -1778,55 +1676,55 @@ void MainWindow::on_combo_party3_currentIndexChanged(int index)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::cm_stablesOwnedChanged(qint8 owned){if(!load){ff7->setStablesOwned(s,owned);file_modified(true);}}
-void MainWindow::cm_stableMaskChanged(qint8 mask){if(!load){ff7->setStableMask(s,mask);file_modified(true);}}
-void MainWindow::cm_stablesOccupiedChanged(qint8 occupied){if(!load){ff7->setStablesOccupied(s,occupied);file_modified(true);}}
+void MainWindow::cm_stablesOwnedChanged(qint8 owned){if(!load){ff7->setStablesOwned(s,owned);fileModified(true);}}
+void MainWindow::cm_stableMaskChanged(qint8 mask){if(!load){ff7->setStableMask(s,mask);fileModified(true);}}
+void MainWindow::cm_stablesOccupiedChanged(qint8 occupied){if(!load){ff7->setStablesOccupied(s,occupied);fileModified(true);}}
 //set data for stables inside
-void MainWindow::cm_nameChanged(int stable,QString text){if(!load){ff7->setChocoName(s,stable,text);file_modified(true);}}
-void MainWindow::cm_staminaChanged(int stable,quint16 value){if(!load){ ff7->setChocoStamina(s,stable,value);file_modified(true);}}
-void MainWindow::cm_speedChanged(int stable,quint16 value){if(!load){ ff7->setChocoSpeed(s,stable,value);file_modified(true);}}
-void MainWindow::cm_maxspeedChanged(int stable,quint16 value){if(!load){ ff7->setChocoMaxSpeed(s,stable,value);file_modified(true);}}
-void MainWindow::cm_sprintChanged(int stable,quint16 value){if(!load){ ff7->setChocoSprintSpeed(s,stable,value);file_modified(true);}}
-void MainWindow::cm_maxsprintChanged(int stable,quint16 value){if(!load){ ff7->setChocoMaxSprintSpeed(s,stable,value);file_modified(true);}}
-void MainWindow::cm_sexChanged(int stable,quint8 index){if(!load){ ff7->setChocoSex(s,stable,index);file_modified(true);}}
-void MainWindow::cm_typeChanged(int stable,quint8 index){if(!load){ ff7->setChocoType(s,stable,index);file_modified(true);}}
-void MainWindow::cm_coopChanged(int stable,quint8 value){if(!load){ ff7->setChocoCoop(s,stable,value);file_modified(true);}}
-void MainWindow::cm_accelChanged(int stable,quint8 value){if(!load){ ff7->setChocoAccel(s,stable,value);file_modified(true);}}
-void MainWindow::cm_intelChanged(int stable,quint8 value){if(!load){ ff7->setChocoIntelligence(s,stable,value);file_modified(true);}}
-void MainWindow::cm_raceswonChanged(int stable,quint8 value){if(!load){ ff7->setChocoRaceswon(s,stable,value);file_modified(true);}}
-void MainWindow::cm_pcountChanged(int stable,quint8 value){if(!load){ ff7->setChocoPCount(s,stable,value);file_modified(true);}}
-void MainWindow::cm_personalityChanged(int stable,quint8 value){if(!load){ ff7->setChocoPersonality(s,stable,value);file_modified(true);}}
-void MainWindow::cm_mated_toggled(int stable,bool checked){if(!load){ff7->setChocoCantMate(s,stable,checked);file_modified(true);}}
+void MainWindow::cm_nameChanged(int stable,QString text){if(!load){ff7->setChocoName(s,stable,text);fileModified(true);}}
+void MainWindow::cm_staminaChanged(int stable,quint16 value){if(!load){ ff7->setChocoStamina(s,stable,value);fileModified(true);}}
+void MainWindow::cm_speedChanged(int stable,quint16 value){if(!load){ ff7->setChocoSpeed(s,stable,value);fileModified(true);}}
+void MainWindow::cm_maxspeedChanged(int stable,quint16 value){if(!load){ ff7->setChocoMaxSpeed(s,stable,value);fileModified(true);}}
+void MainWindow::cm_sprintChanged(int stable,quint16 value){if(!load){ ff7->setChocoSprintSpeed(s,stable,value);fileModified(true);}}
+void MainWindow::cm_maxsprintChanged(int stable,quint16 value){if(!load){ ff7->setChocoMaxSprintSpeed(s,stable,value);fileModified(true);}}
+void MainWindow::cm_sexChanged(int stable,quint8 index){if(!load){ ff7->setChocoSex(s,stable,index);fileModified(true);}}
+void MainWindow::cm_typeChanged(int stable,quint8 index){if(!load){ ff7->setChocoType(s,stable,index);fileModified(true);}}
+void MainWindow::cm_coopChanged(int stable,quint8 value){if(!load){ ff7->setChocoCoop(s,stable,value);fileModified(true);}}
+void MainWindow::cm_accelChanged(int stable,quint8 value){if(!load){ ff7->setChocoAccel(s,stable,value);fileModified(true);}}
+void MainWindow::cm_intelChanged(int stable,quint8 value){if(!load){ ff7->setChocoIntelligence(s,stable,value);fileModified(true);}}
+void MainWindow::cm_raceswonChanged(int stable,quint8 value){if(!load){ ff7->setChocoRaceswon(s,stable,value);fileModified(true);}}
+void MainWindow::cm_pcountChanged(int stable,quint8 value){if(!load){ ff7->setChocoPCount(s,stable,value);fileModified(true);}}
+void MainWindow::cm_personalityChanged(int stable,quint8 value){if(!load){ ff7->setChocoPersonality(s,stable,value);fileModified(true);}}
+void MainWindow::cm_mated_toggled(int stable,bool checked){if(!load){ff7->setChocoCantMate(s,stable,checked);fileModified(true);}}
 //set data for pens outside
-void MainWindow::cm_pensChanged(int pen,int index){if(!load){ff7->setChocoboPen(s,pen,index);file_modified(true);}}
+void MainWindow::cm_pensChanged(int pen,int index){if(!load){ff7->setChocoboPen(s,pen,index);fileModified(true);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_BARRET,value);}}
-void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_AERIS,value);}}
-void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_TIFA,value);}}
-void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,false,FF7Save::LOVE_YUFFIE,value);}}
+void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,false,FF7Save::LOVE_BARRET,value);}}
+void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,false,FF7Save::LOVE_AERIS,value);}}
+void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,false,FF7Save::LOVE_TIFA,value);}}
+void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,false,FF7Save::LOVE_YUFFIE,value);}}
 
 void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(s,((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())));}}
 void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s,( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
 void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s,((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
 
-void MainWindow::on_sb_steps_valueChanged(int value){if(!load){file_modified(true);  ff7->slot[s].steps = value;}}
+void MainWindow::on_sb_steps_valueChanged(int value){if(!load){fileModified(true);  ff7->slot[s].steps = value;}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_flyers_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->setTurtleParadiseFlyerSeen(s,index.row(),ui->list_flyers->item(index.row())->checkState());
 }}
 
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());
 }}
 
 // Field Items Combos
 void MainWindow::on_cb_bm_items_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,38);  char t = temp.at(48);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -1834,7 +1732,7 @@ void MainWindow::on_cb_bm_items_1_toggled(bool checked)
         ff7->setUnknown(s,38,temp);
  }}
 void MainWindow::on_cb_bm_items_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -1842,7 +1740,7 @@ void MainWindow::on_cb_bm_items_2_toggled(bool checked)
         ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -1850,7 +1748,7 @@ void MainWindow::on_cb_bm_items_3_toggled(bool checked)
         ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -1859,7 +1757,7 @@ void MainWindow::on_cb_bm_items_4_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -1868,7 +1766,7 @@ void MainWindow::on_cb_s7tg_items_1_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -1877,7 +1775,7 @@ void MainWindow::on_cb_s7tg_items_2_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -1886,7 +1784,7 @@ void MainWindow::on_cb_s7tg_items_3_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -1895,7 +1793,7 @@ void MainWindow::on_cb_s7tg_items_4_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_5_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
@@ -1904,7 +1802,7 @@ void MainWindow::on_cb_s7tg_items_5_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_6_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
@@ -1913,7 +1811,7 @@ void MainWindow::on_cb_s7tg_items_6_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_7_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
@@ -1922,7 +1820,7 @@ void MainWindow::on_cb_s7tg_items_7_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7tg_items_8_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
@@ -1933,7 +1831,7 @@ void MainWindow::on_cb_s7tg_items_8_toggled(bool checked)
 void MainWindow::on_cb_farm_items_1_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -1946,7 +1844,7 @@ void MainWindow::on_cb_farm_items_1_toggled(bool checked)
 void MainWindow::on_cb_farm_items_2_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -1959,7 +1857,7 @@ void MainWindow::on_cb_farm_items_2_toggled(bool checked)
 void MainWindow::on_cb_farm_items_3_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -1972,7 +1870,7 @@ void MainWindow::on_cb_farm_items_3_toggled(bool checked)
 void MainWindow::on_cb_farm_items_4_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -1985,7 +1883,7 @@ void MainWindow::on_cb_farm_items_4_toggled(bool checked)
 void MainWindow::on_cb_farm_items_5_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
@@ -1998,7 +1896,7 @@ void MainWindow::on_cb_farm_items_5_toggled(bool checked)
 void MainWindow::on_cb_farm_items_6_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
@@ -2011,7 +1909,7 @@ void MainWindow::on_cb_farm_items_6_toggled(bool checked)
 void MainWindow::on_cb_farm_items_7_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
@@ -2024,7 +1922,7 @@ void MainWindow::on_cb_farm_items_7_toggled(bool checked)
 void MainWindow::on_cb_farm_items_8_toggled(bool checked)
 {if(!load)
     {
-        file_modified(true);
+        fileModified(true);
         QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
@@ -2035,7 +1933,7 @@ void MainWindow::on_cb_farm_items_8_toggled(bool checked)
 }
 
 void MainWindow::on_btn_clear_keyitems_clicked()
-{if(!load){file_modified(true);}//used in other functions
+{if(!load){fileModified(true);}//used in other functions
     for(int i=0;i<51;i++)
     {
         ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
@@ -2079,7 +1977,7 @@ void MainWindow::on_btn_add_all_materia_clicked()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::locationSelectionChanged(QString fieldName)
 {
-    if(!load){file_modified(true);
+    if(!load){fileModified(true);
     ff7->setMapId(s,Locations.mapID(fieldName).toInt());
     ff7->setLocationId(s,Locations.locationID(fieldName).toInt());
     ff7->setLocationX(s,Locations.x(fieldName).toInt());
@@ -2088,12 +1986,12 @@ void MainWindow::locationSelectionChanged(QString fieldName)
     ff7->setLocationD(s,Locations.d(fieldName).toInt());
     ff7->setLocation(s,Locations.locationString(fieldName));
 }}
-void MainWindow::map_id_valueChanged(int value){if(!load){file_modified(true); ff7->setMapId(s, value);}}
-void MainWindow::loc_id_valueChanged(int value){if(!load){file_modified(true);ff7->setLocationId(s,value);}}
-void MainWindow::coord_x_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationX(s,value);}}
-void MainWindow::coord_y_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationY(s,value);}}
-void MainWindow::coord_t_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationT(s,value);}}
-void MainWindow::coord_d_valueChanged(int value){if(!load){file_modified(true); ff7->setLocationD(s,value);}}
+void MainWindow::map_id_valueChanged(int value){if(!load){fileModified(true); ff7->setMapId(s, value);}}
+void MainWindow::loc_id_valueChanged(int value){if(!load){fileModified(true);ff7->setLocationId(s,value);}}
+void MainWindow::coord_x_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationX(s,value);}}
+void MainWindow::coord_y_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationY(s,value);}}
+void MainWindow::coord_t_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationT(s,value);}}
+void MainWindow::coord_d_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationD(s,value);}}
 void MainWindow::location_textChanged(QString text)
 {
     if (!load)
@@ -2123,73 +2021,73 @@ void MainWindow::setDialogColorUR(QColor color){if(!load){ff7->setDialogColorUR(
 void MainWindow::setDialogColorLL(QColor color){if(!load){ff7->setDialogColorLL(s,color);}}
 void MainWindow::setDialogColorLR(QColor color){if(!load){ff7->setDialogColorLR(s,color);}}
 
-void MainWindow::setBattleSpeed(int value){if(!load){file_modified(true);ff7->setBattleSpeed(s,value);}}
-void MainWindow::setBattleMessageSpeed(int value){if(!load){file_modified(true); ff7->setBattleMessageSpeed(s,value);}}
-void MainWindow::setFieldMessageSpeed(int value){if(!load){file_modified(true); ff7->setMessageSpeed(s, value);}}
-void MainWindow::setBattleHelp(bool checked){if(!load){file_modified(true); ff7->setBattleHelp(s,checked);}}
-void MainWindow::setFieldHelp(bool checked){if(!load){file_modified(true);ff7->setFieldHelp(s,checked);}}
-void MainWindow::setBattleTargets(bool checked){if(!load){file_modified(true);ff7->setBattleTargets(s,checked);}}
+void MainWindow::setBattleSpeed(int value){if(!load){fileModified(true);ff7->setBattleSpeed(s,value);}}
+void MainWindow::setBattleMessageSpeed(int value){if(!load){fileModified(true); ff7->setBattleMessageSpeed(s,value);}}
+void MainWindow::setFieldMessageSpeed(int value){if(!load){fileModified(true); ff7->setMessageSpeed(s, value);}}
+void MainWindow::setBattleHelp(bool checked){if(!load){fileModified(true); ff7->setBattleHelp(s,checked);}}
+void MainWindow::setFieldHelp(bool checked){if(!load){fileModified(true);ff7->setFieldHelp(s,checked);}}
+void MainWindow::setBattleTargets(bool checked){if(!load){fileModified(true);ff7->setBattleTargets(s,checked);}}
 
 
-void MainWindow::setControlMode(int mode){if(!load){file_modified(true);ff7->setControlMode(s,mode);}}
-void MainWindow::setSoundMode(int mode){if(!load){file_modified(true); ff7->setSoundMode(s,mode);}}
-void MainWindow::setCursorMode(int mode){if(!load){file_modified(true);ff7->setCursorMode(s,mode);}}
-void MainWindow::setAtbMode(int mode){if(!load){file_modified(true); ff7->setAtbMode(s,mode);}}
-void MainWindow::setCameraMode(int mode){if(!load){file_modified(true);ff7->setCameraMode(s,mode);}}
-void MainWindow::setMagicOrder(int order){if(!load){file_modified(true);ff7->setMagicOrder(s,order);}}
+void MainWindow::setControlMode(int mode){if(!load){fileModified(true);ff7->setControlMode(s,mode);}}
+void MainWindow::setSoundMode(int mode){if(!load){fileModified(true); ff7->setSoundMode(s,mode);}}
+void MainWindow::setCursorMode(int mode){if(!load){fileModified(true);ff7->setCursorMode(s,mode);}}
+void MainWindow::setAtbMode(int mode){if(!load){fileModified(true); ff7->setAtbMode(s,mode);}}
+void MainWindow::setCameraMode(int mode){if(!load){fileModified(true);ff7->setCameraMode(s,mode);}}
+void MainWindow::setMagicOrder(int order){if(!load){fileModified(true);ff7->setMagicOrder(s,order);}}
 
-void MainWindow::setButtonCamera(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
-void MainWindow::setButtonTarget(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
-void MainWindow::setButtonPageUp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
-void MainWindow::setButtonPageDown(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
-void MainWindow::setButtonMenu(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
-void MainWindow::setButtonOk(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
-void MainWindow::setButtonCancel(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
-void MainWindow::setButtonSwitch(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
-void MainWindow::setButtonHelp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
-void MainWindow::setButtonUnknown1(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
-void MainWindow::setButtonUnknown2(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
-void MainWindow::setButtonPause(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
-void MainWindow::setButtonUp(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
-void MainWindow::setButtonDown(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
-void MainWindow::setButtonLeft(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
-void MainWindow::setButtonRight(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
+void MainWindow::setButtonCamera(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
+void MainWindow::setButtonTarget(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
+void MainWindow::setButtonPageUp(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
+void MainWindow::setButtonPageDown(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
+void MainWindow::setButtonMenu(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
+void MainWindow::setButtonOk(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
+void MainWindow::setButtonCancel(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
+void MainWindow::setButtonSwitch(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
+void MainWindow::setButtonHelp(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
+void MainWindow::setButtonUnknown1(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
+void MainWindow::setButtonUnknown2(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
+void MainWindow::setButtonPause(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
+void MainWindow::setButtonUp(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
+void MainWindow::setButtonDown(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
+void MainWindow::setButtonLeft(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
+void MainWindow::setButtonRight(int index){if(!load){fileModified(true); ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 /*--------GAME PROGRESS-------*/
-void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){file_modified(true); ff7->setDisc(s,value);}}
-void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].mprogress = value;}}
-void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].aeris_chruch=value;}}
-void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].donprogress=value;}}
+void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){fileModified(true); ff7->setDisc(s,value);}}
+void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].mprogress = value;}}
+void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].aeris_chruch=value;}}
+void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].donprogress=value;}}
 
-void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<0);}else{ff7->slot[s].bm_progress1 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<1);}else{ff7->slot[s].bm_progress1 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm1_3_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<2);}else{ff7->slot[s].bm_progress1 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm1_4_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<3);}else{ff7->slot[s].bm_progress1 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm1_5_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<4);}else{ff7->slot[s].bm_progress1 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm1_6_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<5);}else{ff7->slot[s].bm_progress1 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm1_7_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<6);}else{ff7->slot[s].bm_progress1 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm1_8_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<7);}else{ff7->slot[s].bm_progress1 &= ~(1<<7);}}}
+void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<0);}else{ff7->slot[s].bm_progress1 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<1);}else{ff7->slot[s].bm_progress1 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm1_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<2);}else{ff7->slot[s].bm_progress1 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm1_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<3);}else{ff7->slot[s].bm_progress1 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm1_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<4);}else{ff7->slot[s].bm_progress1 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm1_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<5);}else{ff7->slot[s].bm_progress1 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm1_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<6);}else{ff7->slot[s].bm_progress1 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm1_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<7);}else{ff7->slot[s].bm_progress1 &= ~(1<<7);}}}
 
-void MainWindow::on_cb_bm2_1_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<0);}else{ff7->slot[s].bm_progress2 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm2_2_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<1);}else{ff7->slot[s].bm_progress2 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm2_3_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<2);}else{ff7->slot[s].bm_progress2 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm2_4_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<3);}else{ff7->slot[s].bm_progress2 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<4);}else{ff7->slot[s].bm_progress2 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<5);}else{ff7->slot[s].bm_progress2 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<6);}else{ff7->slot[s].bm_progress2 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<7);}else{ff7->slot[s].bm_progress2 &= ~(1<<7);}}}
+void MainWindow::on_cb_bm2_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<0);}else{ff7->slot[s].bm_progress2 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm2_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<1);}else{ff7->slot[s].bm_progress2 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm2_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<2);}else{ff7->slot[s].bm_progress2 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm2_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<3);}else{ff7->slot[s].bm_progress2 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<4);}else{ff7->slot[s].bm_progress2 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<5);}else{ff7->slot[s].bm_progress2 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<6);}else{ff7->slot[s].bm_progress2 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<7);}else{ff7->slot[s].bm_progress2 &= ~(1<<7);}}}
 
-void MainWindow::on_cb_bm3_1_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<0);}else{ff7->slot[s].bm_progress3 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm3_2_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<1);}else{ff7->slot[s].bm_progress3 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm3_3_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<2);}else{ff7->slot[s].bm_progress3 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm3_4_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<3);}else{ff7->slot[s].bm_progress3 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<4);}else{ff7->slot[s].bm_progress3 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<5);}else{ff7->slot[s].bm_progress3 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<6);}else{ff7->slot[s].bm_progress3 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<7);}else{ff7->slot[s].bm_progress3 &= ~(1<<7);}}}
+void MainWindow::on_cb_bm3_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<0);}else{ff7->slot[s].bm_progress3 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm3_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<1);}else{ff7->slot[s].bm_progress3 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm3_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<2);}else{ff7->slot[s].bm_progress3 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm3_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<3);}else{ff7->slot[s].bm_progress3 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<4);}else{ff7->slot[s].bm_progress3 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<5);}else{ff7->slot[s].bm_progress3 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<6);}else{ff7->slot[s].bm_progress3 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<7);}else{ff7->slot[s].bm_progress3 &= ~(1<<7);}}}
 
 void MainWindow::on_cb_s7pl_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -2197,7 +2095,7 @@ void MainWindow::on_cb_s7pl_1_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -2205,7 +2103,7 @@ void MainWindow::on_cb_s7pl_2_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -2213,7 +2111,7 @@ void MainWindow::on_cb_s7pl_3_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -2221,7 +2119,7 @@ void MainWindow::on_cb_s7pl_4_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_5_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
@@ -2229,7 +2127,7 @@ void MainWindow::on_cb_s7pl_5_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_6_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
@@ -2237,7 +2135,7 @@ void MainWindow::on_cb_s7pl_6_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_7_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
@@ -2245,7 +2143,7 @@ void MainWindow::on_cb_s7pl_7_toggled(bool checked)
         ff7->setUnknown(s,26,temp);
 }}
 void MainWindow::on_cb_s7pl_8_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(0);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
@@ -2254,7 +2152,7 @@ void MainWindow::on_cb_s7pl_8_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -2263,7 +2161,7 @@ void MainWindow::on_cb_s7ts_1_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -2272,7 +2170,7 @@ void MainWindow::on_cb_s7ts_2_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -2281,7 +2179,7 @@ void MainWindow::on_cb_s7ts_3_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -2290,7 +2188,7 @@ void MainWindow::on_cb_s7ts_4_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_5_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
@@ -2299,7 +2197,7 @@ void MainWindow::on_cb_s7ts_5_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_6_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
@@ -2308,7 +2206,7 @@ void MainWindow::on_cb_s7ts_6_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_7_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
@@ -2317,7 +2215,7 @@ void MainWindow::on_cb_s7ts_7_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s7ts_8_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,26); char t=temp.at(8);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
@@ -2326,7 +2224,7 @@ void MainWindow::on_cb_s7ts_8_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
@@ -2335,7 +2233,7 @@ void MainWindow::on_cb_s5_1_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
@@ -2344,7 +2242,7 @@ void MainWindow::on_cb_s5_2_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
@@ -2353,7 +2251,7 @@ void MainWindow::on_cb_s5_3_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
@@ -2362,7 +2260,7 @@ void MainWindow::on_cb_s5_4_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_5_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<4);}
         else{t &= ~(1<<4);}
@@ -2371,7 +2269,7 @@ void MainWindow::on_cb_s5_5_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_6_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<5);}
         else{t &= ~(1<<5);}
@@ -2380,7 +2278,7 @@ void MainWindow::on_cb_s5_6_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_7_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<6);}
         else{t &= ~(1<<6);}
@@ -2389,7 +2287,7 @@ void MainWindow::on_cb_s5_7_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_s5_8_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
         if(checked){t |= (1<<7);}
         else{t &= ~(1<<7);}
@@ -2398,7 +2296,7 @@ void MainWindow::on_cb_s5_8_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked == Qt::Checked){ff7->slot[s].intbombing =0x14;}
     else{ff7->slot[s].intbombing =0x56;}
 }}
@@ -2495,7 +2393,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     }
 
     else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
-    if(!load){file_modified(true); progress_update();}
+    if(!load){fileModified(true); progress_update();}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2517,19 +2415,19 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
     guirefresh(0);
 }
 
-void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,true,FF7Save::LOVE_AERIS,value);}}
-void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,true,FF7Save::LOVE_TIFA,value);}}
-void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,true,FF7Save::LOVE_YUFFIE,value);}}
-void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){file_modified(true); ff7->setLove(s,true,FF7Save::LOVE_BARRET,value);}}
-void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,1,value);}}
-void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,2,value);}}
-void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){file_modified(true); ff7->setSpeedScore(s,3,value);}}
-void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
-void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true);ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
+void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,true,FF7Save::LOVE_AERIS,value);}}
+void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,true,FF7Save::LOVE_TIFA,value);}}
+void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,true,FF7Save::LOVE_YUFFIE,value);}}
+void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){fileModified(true); ff7->setLove(s,true,FF7Save::LOVE_BARRET,value);}}
+void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){fileModified(true); ff7->setSpeedScore(s,1,value);}}
+void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){fileModified(true); ff7->setSpeedScore(s,2,value);}}
+void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){fileModified(true); ff7->setSpeedScore(s,3,value);}}
+void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){fileModified(true);ff7->setCountdownTimer(s,((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){fileModified(true);ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){fileModified(true);ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     load=true;
     int a = (value & 0xff);
     int b = (value & 0xff00) >> 8;
@@ -2541,68 +2439,68 @@ void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
 }}
 
 void MainWindow::on_cb_reg_vinny_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if (checked){ff7->slot[s].reg_vinny =0xFF;}
     else{ff7->slot[s].reg_vinny =0xFB;}
     ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
 }}
 
-void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,0,checked);}}
-void MainWindow::on_cb_itemmask1_2_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,1,checked);}}
-void MainWindow::on_cb_itemmask1_3_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,2,checked);}}
-void MainWindow::on_cb_itemmask1_4_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,3,checked);}}
-void MainWindow::on_cb_itemmask1_5_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,4,checked);}}
-void MainWindow::on_cb_itemmask1_6_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,5,checked);}}
-void MainWindow::on_cb_itemmask1_7_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,6,checked);}}
-void MainWindow::on_cb_itemmask1_8_toggled(bool checked){if(!load){file_modified(true);   ff7->setItemMask1(s,7,checked);}}
+void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,0,checked);}}
+void MainWindow::on_cb_itemmask1_2_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,1,checked);}}
+void MainWindow::on_cb_itemmask1_3_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,2,checked);}}
+void MainWindow::on_cb_itemmask1_4_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,3,checked);}}
+void MainWindow::on_cb_itemmask1_5_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,4,checked);}}
+void MainWindow::on_cb_itemmask1_6_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,5,checked);}}
+void MainWindow::on_cb_itemmask1_7_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,6,checked);}}
+void MainWindow::on_cb_itemmask1_8_toggled(bool checked){if(!load){fileModified(true);   ff7->setItemMask1(s,7,checked);}}
 
-void MainWindow::on_cb_gaiin_1Javelin_toggled(bool checked){if(!load){file_modified(true); ff7->setGaiin_1Javelin(s,checked);}}
-void MainWindow::on_cb_gaiin_1Ribbon_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_1Ribbon(s,checked);}}
-void MainWindow::on_cb_gaiin_3Elixir_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_3Elixir(s,checked);}}
-void MainWindow::on_cb_gaiin_3SpeedSource_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_3SpeedSource(s,checked);}}
-void MainWindow::on_cb_gaiin_4EnhanceSword_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_4EnhanceSword(s,checked);}}
-void MainWindow::on_cb_gaiin_5FireArmlet_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_5FireArmlet(s,checked);}}
-void MainWindow::on_cb_gaiin_5Elixir_toggled(bool checked){if(!load){file_modified(true);ff7->setGaiin_5Elixir(s,checked);}}
-void MainWindow::on_cb_snmayorTurboEther_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmayorTurboEther(s,checked);}}
-void MainWindow::on_cb_sninn2XPotion_toggled(bool checked){if(!load){file_modified(true);ff7->setSninn2XPotion(s,checked);}}
-void MainWindow::on_cb_snmin2Vaccine_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmin2Vaccine(s,checked);}}
-void MainWindow::on_cb_snmin2HeroDrink_toggled(bool checked){if(!load){file_modified(true);ff7->setSnmin2HeroDrink(s,checked);}}
-void MainWindow::on_cb_ncoin3Catastrophe_toggled(bool checked){if(!load){file_modified(true);ff7->setNcoin3Catastrophe(s,checked);}}
-void MainWindow::on_cb_ncoin1Ether_toggled(bool checked){if(!load){file_modified(true);ff7->setNcoin1Ether(s,checked);}}
-void MainWindow::on_cb_trnad_4PoisonRing_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_4PoisonRing(s,checked);}}
-void MainWindow::on_cb_trnad_4MpTurbo_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_4MpTurbo(s,checked);}}
-void MainWindow::on_cb_trnad_3KaiserKnuckle_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_3KaiserKnuckle(s,checked);}}
-void MainWindow::on_cb_trnad_2NeoBahmut_toggled(bool checked){if(!load){file_modified(true);ff7->setTrnad_2NeoBahmut(s,checked);}}
+void MainWindow::on_cb_gaiin_1Javelin_toggled(bool checked){if(!load){fileModified(true); ff7->setGaiin_1Javelin(s,checked);}}
+void MainWindow::on_cb_gaiin_1Ribbon_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_1Ribbon(s,checked);}}
+void MainWindow::on_cb_gaiin_3Elixir_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_3Elixir(s,checked);}}
+void MainWindow::on_cb_gaiin_3SpeedSource_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_3SpeedSource(s,checked);}}
+void MainWindow::on_cb_gaiin_4EnhanceSword_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_4EnhanceSword(s,checked);}}
+void MainWindow::on_cb_gaiin_5FireArmlet_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_5FireArmlet(s,checked);}}
+void MainWindow::on_cb_gaiin_5Elixir_toggled(bool checked){if(!load){fileModified(true);ff7->setGaiin_5Elixir(s,checked);}}
+void MainWindow::on_cb_snmayorTurboEther_toggled(bool checked){if(!load){fileModified(true);ff7->setSnmayorTurboEther(s,checked);}}
+void MainWindow::on_cb_sninn2XPotion_toggled(bool checked){if(!load){fileModified(true);ff7->setSninn2XPotion(s,checked);}}
+void MainWindow::on_cb_snmin2Vaccine_toggled(bool checked){if(!load){fileModified(true);ff7->setSnmin2Vaccine(s,checked);}}
+void MainWindow::on_cb_snmin2HeroDrink_toggled(bool checked){if(!load){fileModified(true);ff7->setSnmin2HeroDrink(s,checked);}}
+void MainWindow::on_cb_ncoin3Catastrophe_toggled(bool checked){if(!load){fileModified(true);ff7->setNcoin3Catastrophe(s,checked);}}
+void MainWindow::on_cb_ncoin1Ether_toggled(bool checked){if(!load){fileModified(true);ff7->setNcoin1Ether(s,checked);}}
+void MainWindow::on_cb_trnad_4PoisonRing_toggled(bool checked){if(!load){fileModified(true);ff7->setTrnad_4PoisonRing(s,checked);}}
+void MainWindow::on_cb_trnad_4MpTurbo_toggled(bool checked){if(!load){fileModified(true);ff7->setTrnad_4MpTurbo(s,checked);}}
+void MainWindow::on_cb_trnad_3KaiserKnuckle_toggled(bool checked){if(!load){fileModified(true);ff7->setTrnad_3KaiserKnuckle(s,checked);}}
+void MainWindow::on_cb_trnad_2NeoBahmut_toggled(bool checked){if(!load){fileModified(true);ff7->setTrnad_2NeoBahmut(s,checked);}}
 
-void MainWindow::on_cb_materiacave_1_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_MIME,checked);}}
-void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_HPMP,checked);}}
-void MainWindow::on_cb_materiacave_3_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_QUADMAGIC,checked);}}
-void MainWindow::on_cb_materiacave_4_toggled(bool checked){if(!load){file_modified(true);ff7->setMateriaCave(s,FF7Save::CAVE_KOTR,checked);}}
+void MainWindow::on_cb_materiacave_1_toggled(bool checked){if(!load){fileModified(true);ff7->setMateriaCave(s,FF7Save::CAVE_MIME,checked);}}
+void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){fileModified(true);ff7->setMateriaCave(s,FF7Save::CAVE_HPMP,checked);}}
+void MainWindow::on_cb_materiacave_3_toggled(bool checked){if(!load){fileModified(true);ff7->setMateriaCave(s,FF7Save::CAVE_QUADMAGIC,checked);}}
+void MainWindow::on_cb_materiacave_4_toggled(bool checked){if(!load){fileModified(true);ff7->setMateriaCave(s,FF7Save::CAVE_KOTR,checked);}}
 
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if (checked){ff7->slot[s].reg_yuffie =0x6F;}
         else{ff7->slot[s].reg_yuffie =0x6E;}
         ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
 }}
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].yuffieforest |= (1<<0);}
     else{ff7->slot[s].yuffieforest &= ~(1<<0);}
 }}
 
-void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<0);}else{ff7->slot[s].midgartrainflags &= ~(1<<0);}}}
-void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<1);}else{ff7->slot[s].midgartrainflags &= ~(1<<1);}}}
-void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<2);}else{ff7->slot[s].midgartrainflags &= ~(1<<2);}}}
-void MainWindow::on_cb_midgartrain_4_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<3);}else{ff7->slot[s].midgartrainflags &= ~(1<<3);}}}
-void MainWindow::on_cb_midgartrain_5_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<4);}else{ff7->slot[s].midgartrainflags &= ~(1<<4);}}}
-void MainWindow::on_cb_midgartrain_6_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<5);}else{ff7->slot[s].midgartrainflags &= ~(1<<5);}}}
-void MainWindow::on_cb_midgartrain_7_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<6);}else{ff7->slot[s].midgartrainflags &= ~(1<<6);}}}
-void MainWindow::on_cb_midgartrain_8_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<7);}else{ff7->slot[s].midgartrainflags &= ~(1<<7);}}}
+void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<0);}else{ff7->slot[s].midgartrainflags &= ~(1<<0);}}}
+void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<1);}else{ff7->slot[s].midgartrainflags &= ~(1<<1);}}}
+void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<2);}else{ff7->slot[s].midgartrainflags &= ~(1<<2);}}}
+void MainWindow::on_cb_midgartrain_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<3);}else{ff7->slot[s].midgartrainflags &= ~(1<<3);}}}
+void MainWindow::on_cb_midgartrain_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<4);}else{ff7->slot[s].midgartrainflags &= ~(1<<4);}}}
+void MainWindow::on_cb_midgartrain_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<5);}else{ff7->slot[s].midgartrainflags &= ~(1<<5);}}}
+void MainWindow::on_cb_midgartrain_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<6);}else{ff7->slot[s].midgartrainflags &= ~(1<<6);}}}
+void MainWindow::on_cb_midgartrain_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<7);}else{ff7->slot[s].midgartrainflags &= ~(1<<7);}}}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if (value == 0){ff7->slot[s].tut_save =0x00;}
     else if(value ==1){ff7->slot[s].tut_save =0x32;}
     else if(value ==2){ff7->slot[s].tut_save=0x3A;}
@@ -2610,7 +2508,7 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 }}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
-{if(!load){file_modified(true); if(!ff7->region(s).isEmpty()){
+{if(!load){fileModified(true); if(!ff7->region(s).isEmpty()){
     QString new_regionString = ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1);
     new_regionString.append(ui->cb_Region_Slot->currentText().toLocal8Bit());
     ff7->setRegion(s,new_regionString);
@@ -2618,81 +2516,81 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
 }}}
 
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<2);}
     else{ff7->slot[s].tut_sub &= ~(1<<2);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<0);}
     else{ff7->slot[s].tut_sub &= ~(1<<0);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<1);}
     else{ff7->slot[s].tut_sub &= ~(1<<1);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<2);}
     else{ff7->slot[s].tut_sub &= ~(1<<2);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<3);}
     else{ff7->slot[s].tut_sub &= ~(1<<3);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<4);}
     else{ff7->slot[s].tut_sub &= ~(1<<4);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<5);}
     else{ff7->slot[s].tut_sub &= ~(1<<5);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<6);}
     else{ff7->slot[s].tut_sub &= ~(1<<6);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<7);}
     else{ff7->slot[s].tut_sub &= ~(1<<7);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 }}
 
 void MainWindow::on_cb_ruby_dead_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].ruby_emerald |= (1<<3);}
     else{ff7->slot[s].ruby_emerald &= ~(1<<3);}
 }}
 
 void MainWindow::on_cb_emerald_dead_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     if(checked){ff7->slot[s].ruby_emerald |= (1<<4);}
     else{ff7->slot[s].ruby_emerald &= ~(1<<4);}
 }}
 
 void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
   switch(index)
   {
   case 1: ui->bh_id->setValue(0x06);ui->cb_visible_buggy->setChecked(Qt::Checked);break;//buggy
@@ -2701,27 +2599,27 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
   }
 }}
 void MainWindow::on_cb_visible_buggy_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){ff7->slot[s].world_map_vehicles |= (1<<0);}
         else{ff7->slot[s].world_map_vehicles &= ~(1<<0);}
 }}
 void MainWindow::on_cb_visible_bronco_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){ff7->slot[s].world_map_vehicles |= (1<<2);}
         else{ff7->slot[s].world_map_vehicles &= ~(1<<2);}
 }}
 void MainWindow::on_cb_visible_highwind_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){ff7->slot[s].world_map_vehicles |= (1<<4);}
         else{ff7->slot[s].world_map_vehicles &= ~(1<<4);}
 }}
 void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){ff7->slot[s].world_map_chocobos |= (1<<0);}
         else{ff7->slot[s].world_map_chocobos &= ~(1<<0);}
 }}
 void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){
             ff7->slot[s].world_map_chocobos |= (1<<2);
             ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
@@ -2732,7 +2630,7 @@ void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
         else{ff7->slot[s].world_map_chocobos &= ~(1<<2);}
 }}
 void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){
             ff7->slot[s].world_map_chocobos |= (1<<3);
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
@@ -2743,7 +2641,7 @@ void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
         else{ff7->slot[s].world_map_chocobos &= ~(1<<3);}
 }}
 void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){
             ff7->slot[s].world_map_chocobos |= (1<<4);
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
@@ -2755,7 +2653,7 @@ void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){
             ff7->slot[s].world_map_chocobos |= (1<<5);
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
@@ -2767,7 +2665,7 @@ void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
 }}
 
 void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         if(checked){
             ff7->slot[s].world_map_chocobos |= (1<<6);
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
@@ -2778,90 +2676,90 @@ void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
         else{ff7->slot[s].world_map_chocobos &= ~(1<<6);}
 }}
 // Leader's world map stuff. 0
-void MainWindow::on_leader_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}
-void MainWindow::on_leader_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | ui->leader_id->value() << 19 | value <<24);}}
-void MainWindow::on_leader_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].l_world2 = (ui->leader_y->value() | value << 18);}}
+void MainWindow::on_leader_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}
+void MainWindow::on_leader_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | ui->leader_id->value() << 19 | value <<24);}}
+void MainWindow::on_leader_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world2 = (ui->leader_y->value() | value << 18);}}
 void MainWindow::on_leader_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].l_world = (value | ui->leader_id->value() << 19 | ui->leader_angle->value() << 24);
     if(ui->combo_map_controls->currentIndex()==0){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 
 void MainWindow::on_leader_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].l_world2 = (value | ui->leader_z->value() << 18);
     if(ui->combo_map_controls->currentIndex()==0){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
 //Tiny bronco / chocobo world 1
-void MainWindow::on_tc_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | value << 19 | ui->tc_angle->value() <<24);}}
-void MainWindow::on_tc_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | ui->tc_id->value() << 19 | value <<24);}}
-void MainWindow::on_tc_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].tc_world2 = (ui->tc_y->value() | value << 18);}}
+void MainWindow::on_tc_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | value << 19 | ui->tc_angle->value() <<24);}}
+void MainWindow::on_tc_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | ui->tc_id->value() << 19 | value <<24);}}
+void MainWindow::on_tc_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world2 = (ui->tc_y->value() | value << 18);}}
 void MainWindow::on_tc_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].tc_world = (value | ui->tc_id->value() << 19 | ui->tc_angle->value() << 24);
     if(ui->combo_map_controls->currentIndex()==1){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_tc_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].tc_world2 = (value | ui->tc_z->value() << 18);
     if(ui->combo_map_controls->currentIndex()==1){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
 //buggy / highwind world 2
-void MainWindow::on_bh_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | value << 19 | ui->bh_angle->value() <<24);}}
-void MainWindow::on_bh_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | ui->bh_id->value() << 19 | value <<24);}}
-void MainWindow::on_bh_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].bh_world2 = (ui->bh_y->value() | value << 18);}}
+void MainWindow::on_bh_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | value << 19 | ui->bh_angle->value() <<24);}}
+void MainWindow::on_bh_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | ui->bh_id->value() << 19 | value <<24);}}
+void MainWindow::on_bh_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world2 = (ui->bh_y->value() | value << 18);}}
 void MainWindow::on_bh_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].bh_world = (value | ui->bh_id->value() << 19 | ui->bh_angle->value() << 24);
     if(ui->combo_map_controls->currentIndex()==2){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_bh_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         ff7->slot[s].bh_world2 = (value | ui->bh_z->value() << 18);
         if(ui->combo_map_controls->currentIndex()==2){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 // sub world 3
-void MainWindow::on_sub_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | value << 19 | ui->sub_angle->value() <<24);}}
-void MainWindow::on_sub_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | ui->sub_id->value() << 19 | value <<24);}}
-void MainWindow::on_sub_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].sub_world2 = (ui->sub_y->value() | value << 18);}}
+void MainWindow::on_sub_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | value << 19 | ui->sub_angle->value() <<24);}}
+void MainWindow::on_sub_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | ui->sub_id->value() << 19 | value <<24);}}
+void MainWindow::on_sub_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world2 = (ui->sub_y->value() | value << 18);}}
 void MainWindow::on_sub_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].sub_world = (value | ui->sub_id->value() << 19 | ui->sub_angle->value() << 24);
      if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_sub_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].sub_world2 = (value | ui->sub_z->value() << 18);
     if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
 //Ruby world stuff 4
-void MainWindow::on_durw_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | value << 19 | ui->durw_angle->value() <<24);}}
-void MainWindow::on_durw_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | ui->durw_id->value() << 19 | value <<24);}}
-void MainWindow::on_durw_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].durw_world2 = (ui->durw_y->value() | value << 18);}}
+void MainWindow::on_durw_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | value << 19 | ui->durw_angle->value() <<24);}}
+void MainWindow::on_durw_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | ui->durw_id->value() << 19 | value <<24);}}
+void MainWindow::on_durw_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world2 = (ui->durw_y->value() | value << 18);}}
 void MainWindow::on_durw_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].durw_world = (value | ui->durw_id->value() << 19 | ui->durw_angle->value() << 24);
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_durw_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].durw_world2 = (value | ui->durw_z->value() << 18);
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 //ultimate weapon 5?
-void MainWindow::on_uw_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
-void MainWindow::on_uw_angle_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
-void MainWindow::on_uw_z_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].uw_world2 = (ui->uw_y->value() | value << 18);}}
+void MainWindow::on_uw_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
+void MainWindow::on_uw_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
+void MainWindow::on_uw_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world2 = (ui->uw_y->value() | value << 18);}}
 void MainWindow::on_uw_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].uw_world = (value | ui->uw_id->value() << 19 | ui->uw_angle->value() << 24);
      if(ui->combo_map_controls->currentIndex()==6){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_uw_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     ff7->slot[s].uw_world2 = (value | ui->uw_z->value() << 18);
     if(ui->combo_map_controls->currentIndex()==6){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
@@ -2882,7 +2780,7 @@ void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
 }
 
 void MainWindow::on_slide_world_x_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     switch(ui->combo_map_controls->currentIndex())
     {
         case 0: ui->leader_x->setValue(value);  break;
@@ -2895,7 +2793,7 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
 }}
 
 void MainWindow::on_slide_world_y_valueChanged(int value)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     switch(ui->combo_map_controls->currentIndex())
     {
         case 0: ui->leader_y->setValue(value);  break;
@@ -2923,7 +2821,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     */
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
     if(sel==0){return;}
-    file_modified(true);
+    fileModified(true);
     if(sel->text()==tr("Place Leader"))
     {
         ui->leader_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
@@ -2959,7 +2857,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
 
 void MainWindow::on_btn_item_add_each_item_clicked()
 {
-    if(!load){file_modified(true); }
+    if(!load){fileModified(true); }
     ui->btn_remove_all_items->click();
     for(int i=0;i<320;i++)
     {
@@ -3131,7 +3029,7 @@ void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
     ui->tbl_diff->setVisible(0);
 }
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
     QByteArray temp;
 
     int z = ui->combo_z_var->currentIndex();
@@ -3237,7 +3135,7 @@ void MainWindow::on_btn_all_z_diffs_clicked()
 
 
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
-{if(!load){file_modified(true);
+{if(!load){fileModified(true);
         QByteArray temp;
         switch(index)
         {
@@ -3414,10 +3312,11 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 {if(!load){
         quint32 time;
         time = ((ui->sbSnowCrazyMin->value()*60)*1000) + (ui->sbSnowCrazySec->value()*1000) + value;
+        fileModified(true);
         ff7->setSnowboardTime(s,2,time);
 }}
-void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}
-void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s,arg1);}}
+void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){fileModified(true);ff7->setBikeHighScore(s,arg1);}}
+void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){fileModified(true);ff7->setBattlePoints(s,arg1);}}
 
 void MainWindow::hexEditorRefresh()
 {
@@ -3438,10 +3337,10 @@ void MainWindow::hexEditorChanged(void)
     }
 }
 
-void MainWindow::phsList_box_allowed_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setPhsAllowed(s,row,!checked);}}
-void MainWindow::phsList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setPhsVisible(s,row,checked);}}
-void MainWindow::menuList_box_locked_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuLocked(s,row,checked);}}
-void MainWindow::menuList_box_visible_toggled(int row, bool checked){if(!load){file_modified(true);ff7->setMenuVisible(s,row,checked);}}
+void MainWindow::phsList_box_allowed_toggled(int row, bool checked){if(!load){fileModified(true);ff7->setPhsAllowed(s,row,!checked);}}
+void MainWindow::phsList_box_visible_toggled(int row, bool checked){if(!load){fileModified(true);ff7->setPhsVisible(s,row,checked);}}
+void MainWindow::menuList_box_locked_toggled(int row, bool checked){if(!load){fileModified(true);ff7->setMenuLocked(s,row,checked);}}
+void MainWindow::menuList_box_visible_toggled(int row, bool checked){if(!load){fileModified(true);ff7->setMenuVisible(s,row,checked);}}
 
 
 void MainWindow::on_locationToolBox_currentChanged(int index)
@@ -3603,6 +3502,6 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
     }
 }
 
-void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorFunds(s,arg1);}}
-void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorWins(s,arg1);}}
-void MainWindow::on_sbCondorLoses_valueChanged(int arg1){if(!load){file_modified(true);ff7->setCondorLoses(s,arg1);}}
+void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorFunds(s,arg1);}}
+void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorWins(s,arg1);}}
+void MainWindow::on_sbCondorLoses_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorLoses(s,arg1);}}

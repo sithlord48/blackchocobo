@@ -213,8 +213,8 @@ void LocationViewer::setSelected(QString locFilename)
         }
     }
 }
-void LocationViewer::sbMapIdChanged(int mapId){setLocation(mapId,sbLocID->value());emit(mapIdChanged(mapId));}
-void LocationViewer::sbLocIdChanged(int locId){setLocation(sbMapID->value(),locId);emit(locIdChanged(locId));}
+void LocationViewer::sbMapIdChanged(int mapId){setLocation(mapId,sbLocID->value());emit(locationChanged(Locations->fileName(mapId,sbLocID->value())));}
+void LocationViewer::sbLocIdChanged(int locId){setLocation(sbMapID->value(),locId);emit(locationChanged(Locations->fileName(sbMapID->value(),locId)));}
 void LocationViewer::sbXChanged(int x){emit(xChanged(x));}
 void LocationViewer::sbYChanged(int y){emit(yChanged(y));}
 void LocationViewer::sbTChanged(int t){emit(tChanged(t));}

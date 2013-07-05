@@ -140,6 +140,7 @@ bool FF7Save::setSlotHeader(int s, QByteArray data)
     if(s<0 || s>14){return false;}
     if(data.size()!=SG_SLOT_HEADER){return false;}
     memcpy(&hf[s].sl_header,data,SG_SLOT_HEADER);
+    setFileModified(true,s);
     return true;
 }
 
@@ -170,6 +171,7 @@ bool FF7Save::setSlotFooter(int s, QByteArray data)
     if(s<0 || s>14){return false;}
     if(data.size()!=SG_SLOT_FOOTER){return false;}
     memcpy(&hf[s].sl_footer,data,SG_SLOT_FOOTER);
+    setFileModified(true,s);
     return true;
 }
 QByteArray FF7Save::slotPsxRawData(int s)
@@ -207,6 +209,7 @@ bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
         setSlotFooter(s,data.mid(offset,0xD0C));
         s=next;
     }
+    setFileModified(true,s);
     return true;
 }
 bool FF7Save::saveFile(const QString &fileName)
@@ -1112,7 +1115,6 @@ void FF7Save::pasteSlot(int s)
         case 14:SG_Region_String[s].append("15"); break;
     }
     if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){fix_vmc_header();}
-
     setFileModified(true,s);
 }
 
@@ -1469,7 +1471,7 @@ quint8 FF7Save::disc(int s){return slot[s].disc;}
 void FF7Save::setDisc(int s, int disc)
 {
     if(disc<1 || disc>3){return;}
-    else{slot[s].disc=disc;}
+    else{slot[s].disc=disc;setFileModified(true,s);}
 }
 QByteArray FF7Save::slot_header(int s)
 {
@@ -1620,10 +1622,10 @@ void FF7Save::setLove(int s,bool battle, FF7Save::LOVER who ,quint8 love)
     {
         switch(who)
         {
-            case FF7Save::LOVE_BARRET: slot[s].b_love.barret = love; break;
-            case FF7Save::LOVE_TIFA: slot[s].b_love.tifa=love; break;
-            case FF7Save::LOVE_AERIS:  slot[s].b_love.aeris=love; break;
-            case FF7Save::LOVE_YUFFIE:  slot[s].b_love.yuffie=love; break;
+            case FF7Save::LOVE_BARRET: slot[s].b_love.barret = love;setFileModified(true,s); break;
+            case FF7Save::LOVE_TIFA: slot[s].b_love.tifa=love;setFileModified(true,s); break;
+            case FF7Save::LOVE_AERIS:  slot[s].b_love.aeris=love;setFileModified(true,s); break;
+            case FF7Save::LOVE_YUFFIE:  slot[s].b_love.yuffie=love;setFileModified(true,s); break;
             default: break;
         }
     }
@@ -1631,10 +1633,10 @@ void FF7Save::setLove(int s,bool battle, FF7Save::LOVER who ,quint8 love)
     {
         switch(who)
         {
-            case FF7Save::LOVE_BARRET: slot[s].love.barret = love; break;
-            case FF7Save::LOVE_TIFA: slot[s].love.tifa=love; break;
-            case FF7Save::LOVE_AERIS:  slot[s].love.aeris=love; break;
-            case FF7Save::LOVE_YUFFIE:  slot[s].love.yuffie=love; break;
+            case FF7Save::LOVE_BARRET: slot[s].love.barret = love;setFileModified(true,s); break;
+            case FF7Save::LOVE_TIFA: slot[s].love.tifa=love;setFileModified(true,s); break;
+            case FF7Save::LOVE_AERIS:  slot[s].love.aeris=love;setFileModified(true,s); break;
+            case FF7Save::LOVE_YUFFIE:  slot[s].love.yuffie=love;setFileModified(true,s); break;
             default: break;
         }
     }
@@ -1695,9 +1697,9 @@ void FF7Save::setSpeedScore(int s, int rank,quint16 score)
 {
     switch(rank)
     {
-        case 1: slot[s].coster_1=score; break;
-        case 2: slot[s].coster_2=score; break;
-        case 3: slot[s].coster_3=score; break;
+        case 1: slot[s].coster_1=score;setFileModified(true,s); break;
+        case 2: slot[s].coster_2=score;setFileModified(true,s); break;
+        case 3: slot[s].coster_3=score;setFileModified(true,s); break;
         default: break;
      }
 }
@@ -2326,13 +2328,19 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
 {
     QString UserId;//user id is not global for now
     if(fileName==QString("")){fileName=filename;}
+    if(OutPath==QString(""))
+    {
+        QString temp= filename;
+        temp.truncate(temp.lastIndexOf("/"));
+        OutPath== temp;
+    }
     QString Path =fileName;
     Path.chop(Path.length()-Path.lastIndexOf("/"));
     QString metadataPath = Path;
     metadataPath.append("/metadata.xml");
 
     QFile Metadata(metadataPath);
-    if(!Metadata.exists() && OutPath == ""){return 0;}
+    if(!Metadata.exists()){return 0;}
 
     //is a New PC saveFile then
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
@@ -2401,6 +2409,7 @@ bool FF7Save::setSlotFF7Data(int s,QByteArray data)
     if(s<0 || s>14){return false;}
     if(data.size()!=0x10F4){return false;}
     memcpy(&slot[s],data,0x10F4);
+    setFileModified(true,s);
     return true;
 }
 
