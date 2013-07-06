@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
     Version.append(QString::number(VER_MINOR));
     Version.append(QString("."));
     Version.append(QString::number(VER_SP));
+    if(VER_BUILDNR>0){Version.append(QString("."));Version.append(QString::number(VER_BUILDNR));}
 
     if(argc >1)
     {//Check for and display help to the console :D

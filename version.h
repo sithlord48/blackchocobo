@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
 //                        Black Chocobo Dev Team                            //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
@@ -21,6 +21,10 @@
 #define VER_MAJOR 1
 #define VER_MINOR 9
 #define VER_SP 78
+#ifdef SVNVERSION
+#define VER_BUILDNR SVNVERSION
+#else
 #define VER_BUILDNR 0
+#endif
 
 #endif // VERSION_H
