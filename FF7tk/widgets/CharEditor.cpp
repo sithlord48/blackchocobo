@@ -15,8 +15,7 @@
 /****************************************************************************/
 #include "CharEditor.h"
 
-CharEditor::CharEditor(QWidget *parent) :
-    QWidget(parent)
+CharEditor::CharEditor(QWidget *parent) : QWidget(parent)
 {
     init_display();
     init_connections();
@@ -24,6 +23,7 @@ CharEditor::CharEditor(QWidget *parent) :
     //always check them when doing these actions.
     autolevel=true;
     autostatcalc=true;
+    load=false;
     editable=true;
     advancedMode=false;
     mslotsel =-1;
@@ -32,7 +32,6 @@ void CharEditor::init_display()
 {
     lbl_avatar = new QLabel;
     lbl_avatar->setFixedSize(86,98);
-    //lbl_avatar->setContextMenuPolicy(Qt::CustomContextMenu);
     line_name = new QLineEdit;
     line_name->setPlaceholderText(tr("Name"));
     lbl_level = new QLabel(tr("Level"));
@@ -358,8 +357,6 @@ void CharEditor::init_display()
     combo_id_box->setLayout(id_layout);
     combo_id_box->setHidden(true);
 
-
-
     QVBoxLayout *sadness_row_id_layout =new QVBoxLayout;
     sadness_row_id_layout->addWidget(frm_fury_sadness);
     sadness_row_id_layout->addWidget(cb_front_row);
@@ -371,7 +368,6 @@ void CharEditor::init_display()
     avatar_name_layout->addWidget(lbl_avatar);
     avatar_name_layout->addLayout(name_hp_mp_kills_layout);
     avatar_name_layout->addLayout(sadness_row_id_layout);
-
 
     QVBoxLayout *level_bar_layout = new QVBoxLayout;
     level_bar_layout->setContentsMargins(0,0,0,0);
@@ -2472,7 +2468,7 @@ void CharEditor::matId_changed(qint8 id)
     if(id>=0 &&id<91){data.materias[mslotsel].id = id;}
     else{data.materias[mslotsel].id = FF7Materia::EmptyId;}
     update_materia_slots();
-    emit Materias_changed(data.materias[mslotsel]);
+    if(!load){emit Materias_changed(data.materias[mslotsel]);}
     calc_stats();
 }
 void CharEditor::matAp_changed(qint32 ap)
@@ -2493,7 +2489,7 @@ void CharEditor::matAp_changed(qint32 ap)
         data.materias[mslotsel].ap[2]=0xFF;
     }
     update_materia_slots();
-    emit Materias_changed(data.materias[mslotsel]);
+    if(!load){emit Materias_changed(data.materias[mslotsel]);}
 }
 void CharEditor::weapon_slot_1_clicked(void){mButtonPress(0);}
 void CharEditor::weapon_slot_2_clicked(void){mButtonPress(1);}
@@ -2514,15 +2510,17 @@ void CharEditor::armor_slot_8_clicked(void){mButtonPress(15);}
 
 void CharEditor::mButtonPress(int Mslot)
 {
+    load=true;
     if(Mslot<0){return;}
     if(Mslot != mslotsel)
     {
         mslotsel = Mslot;
-        emit mslotChanged(mslotsel);
         materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));
         setSlotFrame();
+        //emit mslotChanged(mslotsel);
     }
    else{materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));}
+   load=false;
 }
 
 void CharEditor::setSlotFrame(void)
@@ -2554,8 +2552,8 @@ void CharEditor::setSlotFrame(void)
         case 5: weapon_frm_6->setFrameShape(QFrame::Box);break;
         case 6: weapon_frm_7->setFrameShape(QFrame::Box);break;
         case 7: weapon_frm_8->setFrameShape(QFrame::Box);break;
-        case 8:   armor_frm_1->setFrameShape(QFrame::Box);break;
-        case 9:   armor_frm_2->setFrameShape(QFrame::Box);break;
+        case 8:  armor_frm_1->setFrameShape(QFrame::Box);break;
+        case 9:  armor_frm_2->setFrameShape(QFrame::Box);break;
         case 10: armor_frm_3->setFrameShape(QFrame::Box);break;
         case 11: armor_frm_4->setFrameShape(QFrame::Box);break;
         case 12: armor_frm_5->setFrameShape(QFrame::Box);break;

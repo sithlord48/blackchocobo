@@ -2939,10 +2939,6 @@ The km/h speeds are calculated while playing </source>
 <context>
     <name>LocationViewer</name>
     <message>
-        <source>filename</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Location Name</source>
         <translation>場所名</translation>
     </message>
@@ -2972,6 +2968,10 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>LocID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filename</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4285,7 +4285,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Export From Current Slot</source>
-        <translation>現在のスロットをエクスポート(&amp;E)</translation>
+        <translation type="obsolete">現在のスロットをエクスポート(&amp;E)</translation>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
@@ -4297,11 +4297,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Export PC Save</source>
-        <translation>PC セーブのエクスポート</translation>
+        <translation type="obsolete">PC セーブのエクスポート</translation>
     </message>
     <message>
         <source>Export PSX or MCR Save As a PC Save</source>
-        <translation>PSX, MCR セーブを PC セーブでエクスポート</translation>
+        <translation type="obsolete">PSX, MCR セーブを PC セーブでエクスポート</translation>
     </message>
     <message>
         <source>Slot-01</source>
@@ -4493,19 +4493,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation>Final Fantasy 7 PSV セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 PSV セーブの保存</translation>
     </message>
     <message>
         <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation>FF7 PSV セーブ (*.psv) の保存</translation>
+        <translation type="obsolete">FF7 PSV セーブ (*.psv) の保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation>Final Fantasy 7 PSP セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 PSP セーブの保存</translation>
     </message>
     <message>
         <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation>FF7 PSP セーブ (*.vmp)</translation>
+        <translation type="obsolete">FF7 PSP セーブ (*.vmp)</translation>
     </message>
     <message>
         <source>Cannot read file %1:
@@ -4515,19 +4515,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save Final Fantasy 7 PC SaveGame</source>
-        <translation>Final Fantasy 7 PC セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 PC セーブの保存</translation>
     </message>
     <message>
         <source>FF7 PC SaveGame(*.ff7)</source>
-        <translation>FF7 PC セーブ (*.ff7)</translation>
+        <translation type="obsolete">FF7 PC セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 PSX SaveGame</source>
-        <translation>Final Fantasy 7 PSX セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 PSX セーブの保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 MC SaveGame</source>
-        <translation>Final Fantasy 7 MC セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 MC セーブの保存</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -4539,11 +4539,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
-        <translation>Final Fantasy 7 セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 セーブの保存</translation>
     </message>
     <message>
         <source>FF7 SaveGame(*.ff7)</source>
-        <translation>FF7 セーブ (*.ff7)</translation>
+        <translation type="obsolete">FF7 セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -4659,11 +4659,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>PSP Save Notice</source>
-        <translation>PSP セーブの警告</translation>
+        <translation type="obsolete">PSP セーブの警告</translation>
     </message>
     <message>
         <source>Export MC File</source>
-        <translation>MC ファイルのエクスポート</translation>
+        <translation type="obsolete">MC ファイルのエクスポート</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -4725,7 +4725,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Export Raw PSX Save</source>
-        <translation>Raw PSX セーブのエクスポート</translation>
+        <translation type="obsolete">Raw PSX セーブのエクスポート</translation>
     </message>
     <message>
         <source>Import  Raw PSX Save</source>
@@ -4733,7 +4733,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation>FF7 Raw PSX セーブ (*-S*)</translation>
+        <translation type="obsolete">FF7 Raw PSX セーブ (*-S*)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4821,31 +4821,31 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Export VGS File</source>
-        <translation>VGS ファイルのエクスポート</translation>
+        <translation type="obsolete">VGS ファイルのエクスポート</translation>
     </message>
     <message>
         <source>Export Dex-Drive File</source>
-        <translation>Dex-Drive ファイルのエクスポート</translation>
+        <translation type="obsolete">Dex-Drive ファイルのエクスポート</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation>Final Fantasy 7  VGS セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7  VGS セーブの保存</translation>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation>FF7 VGS セーブ (*.vgs *.mem)</translation>
+        <translation type="obsolete">FF7 VGS セーブ (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation>Final Fantasy 7 VGS セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 VGS セーブの保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
+        <translation type="obsolete">Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
@@ -4953,7 +4953,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
-        <translation>FF7 Dex Drive セーブ (*.gme)</translation>
+        <translation type="obsolete">FF7 Dex Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5389,31 +5389,31 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PC</source>
-        <translation>PC</translation>
+        <translation type="obsolete">PC</translation>
     </message>
     <message>
         <source>Raw Psx Save</source>
-        <translation>Raw Psx セーブ</translation>
+        <translation type="obsolete">Raw Psx セーブ</translation>
     </message>
     <message>
         <source>Generic Emulator Memorycard</source>
-        <translation>エミューレーター用メモリーカード全般</translation>
+        <translation type="obsolete">エミューレーター用メモリーカード全般</translation>
     </message>
     <message>
         <source>PSP</source>
-        <translation>PSP</translation>
+        <translation type="obsolete">PSP</translation>
     </message>
     <message>
         <source>PS3</source>
-        <translation>PS3</translation>
+        <translation type="obsolete">PS3</translation>
     </message>
     <message>
         <source>Dex Drive Memorycard</source>
-        <translation>Dex Drive メモリーカード</translation>
+        <translation type="obsolete">Dex Drive メモリーカード</translation>
     </message>
     <message>
         <source>VGS Memorycard</source>
-        <translation>VGS メモリーカード</translation>
+        <translation type="obsolete">VGS メモリーカード</translation>
     </message>
     <message>
         <source>Save Error</source>
@@ -5421,7 +5421,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Please Select A File Type To Save</source>
-        <translation>保存するファイルの種類を選択してください</translation>
+        <translation type="obsolete">保存するファイルの種類を選択してください</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
@@ -5429,7 +5429,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Can Not Export This Format</source>
-        <translation>このフォーマットはエクスポートできません</translation>
+        <translation type="obsolete">このフォーマットはエクスポートできません</translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
@@ -5442,7 +5442,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
+        <translation type="obsolete">BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -5518,11 +5518,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
+        <translation type="obsolete">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation>FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Load Failed</source>
@@ -5556,10 +5556,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replace %1&apos;s Materia and Equipment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5628,14 +5624,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Advanced Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VGS File(*.vgs);;MEM File(*.mem)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5825,18 +5813,6 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
- Because of this your PSP will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PSV will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
         <translation type="unfinished"></translation>
@@ -5855,6 +5831,72 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSP/PsVita Save Notice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP/PsVita will reject this save as corrupted
+ This is normal please see the User Guide for more infomation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 PC (*.ff7)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw PSX Save(*FF7-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Game Station(*.vgs *.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.dex)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV (*.psv)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSP (*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS3 Save Notice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV Export Attempted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV Exports Are Not Allowed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VMP Export Attempted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VMP Exports Are Not Allowed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
