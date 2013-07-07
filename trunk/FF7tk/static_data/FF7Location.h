@@ -68,6 +68,7 @@ static LOCATION Locations[]=
     {"q_1",QT_TRANSLATE_NOOP("Locations","Hallway"),"1","88","-395","34","13","32"},
     {"blackbg2",QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0","32"},
 
+    {"whitebg3",QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","115","-61","-726","16","0"},
     {"md1stin",QT_TRANSLATE_NOOP("Locations","Platform"),"1","116","3655","27432","25","96"},
     {"md1_1",QT_TRANSLATE_NOOP("Locations","Sector 1 Station"),"1","117","1433","386","78","32"},
     {"md1_2",QT_TRANSLATE_NOOP("Locations","Sector 1"),"1","118","3568","30777","55","32"},
@@ -224,7 +225,8 @@ static LOCATION Locations[]=
     {"niv_cl",QT_TRANSLATE_NOOP("Locations","Cloud's House"),"1","276","-238","48","9","32"},
     
     {"nivgate",QT_TRANSLATE_NOOP("Locations",""),"1","279","12","-1274","0","120"},
-    
+
+    {"nivgate2",QT_TRANSLATE_NOOP("Locations",""),"1","280","-2","-1345","0","120"},
 
     {"nivl",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","282","591","-73","35","32"},
     {"nivl_3",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","284","161","-480","7","28"},
@@ -232,7 +234,7 @@ static LOCATION Locations[]=
     {"niv_ti2",QT_TRANSLATE_NOOP("Locations","Tifa's House"),"1","287","134","-255","46","32"},
 
     {"nivl_b1",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","290","-130","1144","66","32"},
-    
+    {"nivl_b12",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","291","-0","0","0","0"},
     {"nivl_b22",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","293","302","-43","19","117"},
     
     {"nivl_e3",QT_TRANSLATE_NOOP("Locations","Nibelheim"),"1","296","0","0","0","0"}, 
@@ -255,6 +257,8 @@ static LOCATION Locations[]=
     {"mtnvl6",QT_TRANSLATE_NOOP("Locations","Nibel Reactor"),"1","315","-683","-794","16","32"},
     {"nvdun1",QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","317","667","-501","261","32"},
     {"nvdun2",QT_TRANSLATE_NOOP("Locations","Mt. Nibel Cave"),"1","318","237","-320","16","32"},
+    {"nvdun3",QT_TRANSLATE_NOOP("Locations","Mt. Nibel Cave"),"1","319","-251","942","158","0"},
+
 
     {"nvmkin1",QT_TRANSLATE_NOOP("Locations","Nibel Reactor(Int.)"),"1","322","-9","362","23","32"},
     {"nvmkin21",QT_TRANSLATE_NOOP("Locations","Nibel Reactor(Int.)"),"1","323","3","-114","11","32"},
@@ -597,6 +601,10 @@ static LOCATION Locations[]=
     
     {"ithos",QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","-156","19","32"},
     {"itmin1",QT_TRANSLATE_NOOP("Locations","Mideel,House1"),"1","721","-158","-183","17","96"},
+    {"zmind1",QT_TRANSLATE_NOOP("Locations",""),"1","725","170","-9200","92","96"},
+    {"zmind2",QT_TRANSLATE_NOOP("Locations",""),"1","726","3826","-3110","22","96"},
+    {"zmind3",QT_TRANSLATE_NOOP("Locations",""),"1","727","-4725","-344","85","96"},
+
     
     {"zcoal_2",QT_TRANSLATE_NOOP("Locations","Coal Train"),"1","729","789","200","0","0"},
     

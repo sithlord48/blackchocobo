@@ -353,8 +353,8 @@ void MetadataCreator::on_buttonBox_accepted()
         else{ff7->saveFile(OutFile);}
         ff7->fixMetaData(OutFile,OutPath,lineUserID->text());
     }
-    QString achevement(QString("%1/achievement.dat").arg(OutPath));
-    QFile file(achevement);
+    QString achievement(QString("%1/achievement.dat").arg(OutPath));
+    QFile file(achievement);
     qint64 size=0;
     if(file.exists())
     {

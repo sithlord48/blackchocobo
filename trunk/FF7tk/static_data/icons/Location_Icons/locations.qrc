@@ -468,5 +468,8 @@
         <file alias="1_396">1_396.jpg</file>
         <file alias="1_389">1_389.jpg</file>
         <file alias="1_305">1_305.jpg</file>
+	<file alias="1_725">1_725.jpg</file>
+	<file alias="1_726">1_726.jpg</file>
+	<file alias="1_727">1_727.jpg</file>
     </qresource>
 </RCC>
