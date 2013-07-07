@@ -196,8 +196,11 @@ void LocationViewer::init_disconnect(void)
 
 void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow, int prevColumn)
 {
+
     if(currentColumn == prevColumn){/*do nothing*/} //stop non use warning
+    if(currentRow ==0 and currentColumn ==0){return;}//return on selection cleared.
     if(currentRow ==prevRow){return;}
+
     else
     {
         int mapID = Locations->mapID(locationTable->item(currentRow,0)->text()).toInt();
@@ -219,8 +222,20 @@ void LocationViewer::setSelected(QString locFilename)
         }
     }
 }
-void LocationViewer::sbMapIdChanged(int mapId){setLocation(mapId,sbLocID->value());emit(locationChanged(Locations->fileName(mapId,sbLocID->value())));}
-void LocationViewer::sbLocIdChanged(int locId){setLocation(sbMapID->value(),locId);emit(locationChanged(Locations->fileName(sbMapID->value(),locId)));}
+void LocationViewer::sbMapIdChanged(int mapId)
+{
+    setLocation(mapId,sbLocID->value());
+    QString fileName = Locations->fileName(mapId,sbLocID->value());
+    if(fileName.isEmpty()){emit(mapIdChanged(mapId));}
+    else{emit(locationChanged(fileName));}
+}
+void LocationViewer::sbLocIdChanged(int locId)
+{
+    setLocation(sbMapID->value(),locId);
+    QString fileName = Locations->fileName(sbMapID->value(),locId);
+    if(fileName.isEmpty()){emit(locIdChanged(locId));}
+    else{emit(locationChanged(fileName));}
+}
 void LocationViewer::sbXChanged(int x){emit(xChanged(x));}
 void LocationViewer::sbYChanged(int y){emit(yChanged(y));}
 void LocationViewer::sbTChanged(int t){emit(tChanged(t));}
