@@ -48,6 +48,7 @@ void LocationViewer::init_display(void)
     QTableWidgetItem *newItem;
 
     //create and fill location list.
+
     locationTable = new QTableWidget;
     locationTable->setColumnCount(3);
     locationTable->setRowCount(Locations->len());
@@ -94,11 +95,13 @@ void LocationViewer::init_display(void)
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()-6);
 
+    locationTable->setCurrentCell(0,0);
+
     lineLocationName = new QLineEdit;
     lineLocationName->setPlaceholderText(tr("Location Name"));
 
     sbMapID = new QSpinBox;
-    sbMapID->setMaximum(9);
+    //sbMapID->setMaximum(3);
     //setMax when varified
     sbMapID->setWrapping(true);
     sbMapID->setPrefix(tr("MapID: "));
@@ -204,6 +207,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
     }
     lblLocationPreview->adjustSize();
 }
+
 void LocationViewer::setSelected(QString locFilename)
 {
     locationTable->clearSelection();
