@@ -3076,7 +3076,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Chemin de Junon</translation>
+        <translation type="obsolete">Chemin de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -3965,6 +3965,74 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aljunon</source>
         <translation>Aljunon</translation>
+    </message>
+    <message>
+        <source>Research Room</source>
+        <translation>Salle de recherche</translation>
+    </message>
+    <message>
+        <source>Cargo Room</source>
+        <translation>Salle des marchandises</translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation>Sommet de la montagne</translation>
+    </message>
+    <message>
+        <source>Submarine Dock</source>
+        <translation>Bassin sous-marin</translation>
+    </message>
+    <message>
+        <source>Submarine Bridge</source>
+        <translation>Passerelle de sous-marin</translation>
+    </message>
+    <message>
+        <source>Duct</source>
+        <translation>Conduit</translation>
+    </message>
+    <message>
+        <source>Materia Room</source>
+        <translation>Pièce des Materia</translation>
+    </message>
+    <message>
+        <source>Cockpit</source>
+        <translation>Cockpit</translation>
+    </message>
+    <message>
+        <source>Engine Room</source>
+        <translation>Salle des moteurs</translation>
+    </message>
+    <message>
+        <source>Escape Pod</source>
+        <translation>Nacelle de secours</translation>
+    </message>
+    <message>
+        <source>deck</source>
+        <translation>deck</translation>
+    </message>
+    <message>
+        <source>Bridge</source>
+        <translation>Bridge</translation>
+    </message>
+    <message>
+        <source>Inside airship</source>
+        <translation>Dans l&apos;aérostat</translation>
+    </message>
+    <message>
+        <source>Old man&apos;s house</source>
+        <translation>Maison de vieil homme</translation>
+    </message>
+    <message>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation>Maison de Chocobo Sage</translation>
+    </message>
+    <message>
+        <source>???</source>
+        <translation>???</translation>
+    </message>
+    <message>
+        <source>Materia Cave</source>
+        <translation>Grotte à materia</translation>
     </message>
 </context>
 <context>
