@@ -56,7 +56,7 @@ void LocationViewer::init_display(void)
     locationTable->setSelectionMode(QAbstractItemView::SingleSelection);
     locationTable->setSortingEnabled(true);
 
-    newItem = new QTableWidgetItem(tr("filename"),0);
+    newItem = new QTableWidgetItem(tr("Filename"),0);
     locationTable->setHorizontalHeaderItem(0,newItem);
     locationTable->setColumnWidth(0,font().pointSize()*8);
 
@@ -65,7 +65,7 @@ void LocationViewer::init_display(void)
     locationTable->setColumnWidth(1,font().pointSize()*24);
     newItem = new QTableWidgetItem(tr("LocID"),0);
     locationTable->setHorizontalHeaderItem(2,newItem);
-    locationTable->setColumnWidth(2,font().pointSize()*5);
+    locationTable->setColumnWidth(2,font().pointSize()*6);
 
     for (int i=0;i<locationTable->rowCount();i++)
     {
@@ -84,14 +84,15 @@ void LocationViewer::init_display(void)
         newItem->setToolTip(tooltip);
         locationTable->setItem(i,1,newItem);
 
-        newItem = new QTableWidgetItem(Locations->locationID(i),0);
+        //To Assure proper numerical sorting of location IDs they should all contain the same number of characters.
+        newItem = new QTableWidgetItem(QString("%1").arg(Locations->locationID(i).toInt(),3,10,QChar('0')).toUpper());//Pad so at least 3 chars. Leading 0's
         newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);
         newItem->setTextAlignment(Qt::AlignHCenter);
         locationTable->setItem(i,2,newItem);
         locationTable->setRowHeight(i,font().pointSizeF()*2+2);
     }
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
-    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM());
+    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()-6);
 
     lineLocationName = new QLineEdit;
     lineLocationName->setPlaceholderText(tr("Location Name"));
@@ -205,6 +206,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
 }
 void LocationViewer::setSelected(QString locFilename)
 {
+    locationTable->clearSelection();
     for(int i=0;i<Locations->len();i++)
     {
         if(locationTable->item(i,0)->text()== locFilename)
@@ -223,6 +225,7 @@ void LocationViewer::setLocation(int mapId,int locId)
 {
     init_disconnect();
     QString fileName = Locations->fileName(mapId,locId);
+    setSelected(fileName);
     if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
     else
     {

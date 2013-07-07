@@ -203,7 +203,7 @@ private:
     void status_info();
     void update_materia_slots();
     void setSlotFrame(void);
-
+    bool load;
     QLabel *lbl_avatar;
     QLineEdit *line_name;
     QSpinBox *sb_level;
