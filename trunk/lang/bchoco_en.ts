@@ -3074,10 +3074,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Junon Way</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Junon Airport Path</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3963,6 +3959,74 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Aljunon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Research Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cargo Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Submarine Dock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Submarine Bridge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cockpit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Engine Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escape Pod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>deck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bridge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside airship</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Old man&apos;s house</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>???</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Cave</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

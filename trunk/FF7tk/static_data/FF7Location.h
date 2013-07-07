@@ -51,21 +51,35 @@ public:
 static LOCATION Locations[]=
 {
     /************************Every Location In The Game With Stock Translation******************/
-
     {"startmap",QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0","32"},
-/*
     {"fship_1",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","66","125","64275","27","32"},
-    {"fship_12",QT_TRANSLATE_NOOP("Locations","deck"),"1","67","0","0","0","32"},
-    {"fship_2",QT_TRANSLATE_NOOP("Locations",""),"1","68","0","0","0","32"},
-    {"fship_22",QT_TRANSLATE_NOOP("Locations",""),"1","69","0","0","0","32"},
-*/
+    {"fship_12",QT_TRANSLATE_NOOP("Locations","deck"),"1","67","-149","-1026","23","192"},
+    {"fship_2",QT_TRANSLATE_NOOP("Locations",""),"1","68","-256","-3635","33","32"},
+    {"fship_22",QT_TRANSLATE_NOOP("Locations",""),"1","69","-256","-3635","33","32"},
+
+    {"fship_23",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","70","-256","-3635","33","32"},
+    {"fship_24",QT_TRANSLATE_NOOP("Locations","Bridge"),"1","71","-44","-2487","101","128"},
     {"fship_25",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","72","-3","-2587","99","0"},
     {"fship_3",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","73","-168","-247","0","192"},
     {"fship_4",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","74","213","-324","65","0"},
+    {"fship_42",QT_TRANSLATE_NOOP("Locations","Inside airship"),"1","75","-652","-540","36","0"},
     {"fship_5",QT_TRANSLATE_NOOP("Locations","Highwind"),"1","76","-67","-123","11","96"},
-    
+    {"hill",QT_TRANSLATE_NOOP("Locations",""),"1","77","43","-285","277","96"},
+    {"zz1",QT_TRANSLATE_NOOP("Locations","Old man's house"),"1","78","-7","157","5","128"},
     {"zz2",QT_TRANSLATE_NOOP("Locations","Weapon seller"),"1","79","-70","-124","28","128"},
+
+    {"zz3",QT_TRANSLATE_NOOP("Locations","Chocobo Sage's house"),"1","80","116","-189","2","160"},
+    {"zz4",QT_TRANSLATE_NOOP("Locations","???"),"1","81","35","-1306","7","128"},
+    {"zz5",QT_TRANSLATE_NOOP("Locations","Materia Cave"),"1","82","-625","-1644","8","128"},
+    {"zz6",QT_TRANSLATE_NOOP("Locations","Materia Cave"),"1","83","-453","-1334","134","128"},
+    {"zz7",QT_TRANSLATE_NOOP("Locations","Materia Cave"),"1","84","-610","-1649","16","128"},
+    {"zz8",QT_TRANSLATE_NOOP("Locations","Materia Cave"),"1","85","-630","-1585","16","128"},
+
     {"q_1",QT_TRANSLATE_NOOP("Locations","Hallway"),"1","88","-395","34","13","32"},
+    {"q_2",QT_TRANSLATE_NOOP("Locations","Hallway"),"1","89","89","-73","1","128"},
+
+    {"q_3",QT_TRANSLATE_NOOP("Locations","Research Room"),"1","90","-239","-392","41","128"},
+    {"q_4",QT_TRANSLATE_NOOP("Locations","Cargo Room"),"1","91","-856","-707","23","128"},
     {"blackbg2",QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0","32"},
 
     {"whitebg3",QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","115","-61","-726","16","0"},
@@ -293,6 +307,7 @@ static LOCATION Locations[]=
     {"condor2",QT_TRANSLATE_NOOP("Locations","Entrance to Fort Condor"),"1","354","9","44","9","32"},
     {"convil_1",QT_TRANSLATE_NOOP("Locations","Fort Condor"),"1","355","1118","391","12","32"},
     {"convil_2",QT_TRANSLATE_NOOP("Locations","Watch Room"),"1","356","-52","-13","10","32"},
+    {"convil_4",QT_TRANSLATE_NOOP("Locations","top of the mountian"),"1","358","662","-545","21","96"},
 
     {"junonr1",QT_TRANSLATE_NOOP("Locations","Upper Junon"),"1","360","1377","-783","106","32"},
     {"junonr2",QT_TRANSLATE_NOOP("Locations","Upper Junon"),"1","361","5934","-4665","47","32"},
@@ -315,41 +330,60 @@ static LOCATION Locations[]=
     {"junmin4",QT_TRANSLATE_NOOP("Locations","Barracks"),"1","380","182","-170","2","32"},
     {"junmin5",QT_TRANSLATE_NOOP("Locations","Barracks"),"1","381","74","-101","41","32"},
     {"jundoc1a",QT_TRANSLATE_NOOP("Locations","Junon Dock"),"1","382","-85","1237","10","32"},
+    {"jundoc1b",QT_TRANSLATE_NOOP("Locations","Junon Dock"),"1","383","-503","712","18","108"},
     {"junair",QT_TRANSLATE_NOOP("Locations","Airport"),"1","384","13770","14517","108","32"},
     {"junair2",QT_TRANSLATE_NOOP("Locations","Airport"),"1","385","-4077","-1403","93","32"},
     {"junin1",QT_TRANSLATE_NOOP("Locations","Junon Airport Path"),"1","386","-634","-333","31","32"},
     {"junin1a",QT_TRANSLATE_NOOP("Locations","Locker Room"),"1","387","-1554","-786","22","32"},
-    
+    {"junele1",QT_TRANSLATE_NOOP("Locations","Elevator"),"1","388","-439","-527","2","64"},
     {"junin2",QT_TRANSLATE_NOOP("Locations","Path 2"),"1","389","-48","74","3","0"},
     
 
     {"junin3",QT_TRANSLATE_NOOP("Locations","Junon Path"),"1","390","-1365","3390","27","32"},
-    {"junin6",QT_TRANSLATE_NOOP("Locations","Junon Way"),"1","394","2184","-589","24","32"},
+    {"junele2",QT_TRANSLATE_NOOP("Locations","Elevator"),"1","391","-295","13","1","64"},
+    {"junin4",QT_TRANSLATE_NOOP("Locations","Junon Path"),"1","392","-1469","1107","39","64"},
+    {"junin5",QT_TRANSLATE_NOOP("Locations","Junon Path"),"1","393","351","958","24","32"},
+    {"junin6",QT_TRANSLATE_NOOP("Locations","Junon Path"),"1","394","2184","-589","24","32"},
+    {"junin7",QT_TRANSLATE_NOOP("Locations","Elevator"),"1","395","-289","-10","3","0"},
     {"junbin1",QT_TRANSLATE_NOOP("Locations","Junon Branch, 1f."),"1","396","333","-165","133","0"},
-    
     {"junbin12",QT_TRANSLATE_NOOP("Locations","Junon Office F2"),"1","397","-364","-303","8","32"},
     {"junbin21",QT_TRANSLATE_NOOP("Locations","Office"),"1","398","601","-758","125","0"},
     
     {"junbin3",QT_TRANSLATE_NOOP("Locations","Dr.'s Office"),"1","400","674","-1408","52","128"},
     {"junbin4",QT_TRANSLATE_NOOP("Locations","Press Room"),"1","401","-18","0","103","0"},
     {"junbin5",QT_TRANSLATE_NOOP("Locations","Gas Room"),"1","402","-57","-137","58","32"},
-    
+    {"jumsbd1",QT_TRANSLATE_NOOP("Locations","Submarine Dock"),"1","404","463","-1211","81","192"},
+    {"subin_1a",QT_TRANSLATE_NOOP("Locations",""),"1","405","-91","-173","0","128"},
+    {"subin_1b",QT_TRANSLATE_NOOP("Locations","Submarine Bridge"),"1","406","2","125","13","128"},
+    {"subin_2a",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","407","27","97","10","128"},
     {"subin_2b",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","408","-52","433","7","128"},
+    {"subin_3",QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","409","-85","-307","42","128"},
 
     {"junone2",QT_TRANSLATE_NOOP("Locations","Aljunon"),"1","411","13911","-2494","15","251"},
     {"junone4",QT_TRANSLATE_NOOP("Locations","Canon"),"1","413","180","-15763","8","0"},
     {"junone5",QT_TRANSLATE_NOOP("Locations","Junon branch,(ext.)"),"1","414","441","2966","1","128"},
     {"junone6",QT_TRANSLATE_NOOP("Locations","Canon"),"1","415","353","-7477","114","0"},
     {"junone7",QT_TRANSLATE_NOOP("Locations","Canon"),"1","416","-54","839","4","0"},
+    {"spgate",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","417","10","270","10","128"},
+    {"spipe_1",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","418","6","-1362","19","128"},
+    {"spipe_2",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","419","-1","-1146","4","128"},
     
-    
+    {"semkin_1",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","420","127","8","6","192"},
+    {"semkin_2",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","421","4909","-1856","23","192"},
     {"semkin_8",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","422","34","426","14","32"},
+    {"semkin_3",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","423","-866","2380","0","192"},
+    {"semkin_4",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","424","7","-420","8","128"},
+    {"semkin_5",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","425","-1513","-1173","1","64"},
+    {"semkin_6",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","426","-1526","-1161","1","64"},
+    {"semkin_7",QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","427","2231","-1015","9","128"},
     {"ujunon1",QT_TRANSLATE_NOOP("Locations","Under Junon"),"1","428","565","680","29","32"},
     {"ujunon3",QT_TRANSLATE_NOOP("Locations","Dolphin Offing"),"1","429","-656","1735","138","32"},
 
     {"prisila",QT_TRANSLATE_NOOP("Locations","Priscilla's House"),"1","431","35","-100","60","32"},
     {"ujun_w",QT_TRANSLATE_NOOP("Locations","Weapon Store"),"1","432","263","200","3","32"},
     {"jumin",QT_TRANSLATE_NOOP("Locations","Under Junon"),"1","433","-236","-205","4","32"},
+    {"ujunon5",QT_TRANSLATE_NOOP("Locations",""),"1","435","-300","1871","25","149"},
+
     {"ship_1",QT_TRANSLATE_NOOP("Locations","Cargo Ship"),"1","436","-106","-1168","46","32"},
     {"ship_2",QT_TRANSLATE_NOOP("Locations","Cargo Ship"),"1","437","357","-524","32","32"},
     {"shpin_2",QT_TRANSLATE_NOOP("Locations","Cargo Ship"),"1","439","32","-245","63","32"},
@@ -456,8 +490,15 @@ static LOCATION Locations[]=
     {"rktmin2",QT_TRANSLATE_NOOP("Locations","House"),"1","560","-228","299","49","32"},
     {"rcktbas1",QT_TRANSLATE_NOOP("Locations","Rocket Launching Pad"),"1","561","-1607","3688","120","32"},
     {"rcktbas2",QT_TRANSLATE_NOOP("Locations","Rocket Launching Pad"),"1","562","-1007","4947","89","32"},
+    {"rcktin1",QT_TRANSLATE_NOOP("Locations","Duct"),"1","563","12","88","6","128"},
     {"rcktin2",QT_TRANSLATE_NOOP("Locations","Ship Hallway"),"1","564","-31","60","15","32"},
+    {"rcktin3",QT_TRANSLATE_NOOP("Locations","Ship Hallway"),"1","565","12","-37","6","0"},
+    {"rcktin4",QT_TRANSLATE_NOOP("Locations","Materia Room"),"1","566","1","-311","9","128"},
+    {"rcktin5",QT_TRANSLATE_NOOP("Locations","Cockpit"),"1","567","4","-32","7","128"},
+    {"rcktin6",QT_TRANSLATE_NOOP("Locations","Engine Room"),"1","568","0","437","9","0"},
+    {"rcktin7",QT_TRANSLATE_NOOP("Locations","Escape Pod"),"1","569","-51","263","19","32"},
 
+    {"rcktin8",QT_TRANSLATE_NOOP("Locations","Duct"),"1","570","5","99","11","0"},
     {"yougan",QT_TRANSLATE_NOOP("Locations","Wilderness"),"1","572","-7","73","3","32"},
     {"yougan2",QT_TRANSLATE_NOOP("Locations","Plains"),"1","573","-72","28","265","32"},
     {"uta_wa",QT_TRANSLATE_NOOP("Locations","Wutai"),"1","575","-4","-13","2","32"},
@@ -523,6 +564,9 @@ static LOCATION Locations[]=
 
     {"blue_1",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","640","-9922","5910","2","32"},
     {"blue_2",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","641","311","-990","40","32"},
+    {"white1",QT_TRANSLATE_NOOP("Locations",""),"1","642","-342","-760","13","112"},
+    {"white2",QT_TRANSLATE_NOOP("Locations",""),"1","643","-241","-517","25","112"},
+    {"hekiga",QT_TRANSLATE_NOOP("Locations",""),"1","644","-146","-321","1","112"},
     {"whitein",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","645","671","-1199","13","32"},
     {"ancnt1",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","646","641","793","243","32"},
     {"ancnt2",QT_TRANSLATE_NOOP("Locations","Water Altar"),"1","647","443","-891","5","32"},
@@ -593,6 +637,7 @@ static LOCATION Locations[]=
     {"woa_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","710","123","-503","41","128"},
     {"woa_3",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","711","170","-339","68","128"},
     {"itown1a",QT_TRANSLATE_NOOP("Locations","Mideel"),"1","712","-64","-2225","63","128"},
+    {"itown1b",QT_TRANSLATE_NOOP("Locations","Mideel"),"1","714","-67","-885","123","0"},
 
     {"itown_w",QT_TRANSLATE_NOOP("Locations","Mideel,Weapon Store"),"1","717","36","-236","32","128"},
     {"itown_i",QT_TRANSLATE_NOOP("Locations","Mideel,Item Store"),"1","718","-90","-159","3","128"},
@@ -616,8 +661,8 @@ static LOCATION Locations[]=
     {"las0_6",QT_TRANSLATE_NOOP("Locations","North Crater"),"1","749","-192","16","35","32"},
     {"testfight",QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0","32"},
     /****************Dupilcate Field Strings Don't Display************/
-    {"",QT_TRANSLATE_NOOP("Locations","Cloud's Past"),"1","332","164","125","8","32"},
-    {"",QT_TRANSLATE_NOOP("Locations","Cloud's Villa"),"1","446","-40","-43","10","32"},
+    {"elminn_2",QT_TRANSLATE_NOOP("Locations","Cloud's Past"),"1","332","164","125","8","32"},
+    {"delmin1",QT_TRANSLATE_NOOP("Locations","Cloud's Villa"),"1","446","-40","-43","10","32"},
     /****************World Map Places  Don't Display For Text Only***********/
     {"",QT_TRANSLATE_NOOP("Locations","Midgar Area"),"3","1","0","0","0","32"},
     {"",QT_TRANSLATE_NOOP("Locations","Midgar Area"),"3","2","0","0","0","32"},

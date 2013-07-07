@@ -3077,7 +3077,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Camino de Junon</translation>
+        <translation type="obsolete">Camino de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -3967,6 +3967,74 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Aljunon</source>
         <translation>Aljunon</translation>
+    </message>
+    <message>
+        <source>Research Room</source>
+        <translation>Sala de investigación</translation>
+    </message>
+    <message>
+        <source>Cargo Room</source>
+        <translation>Sala de cargamento</translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation>cima de la montaña</translation>
+    </message>
+    <message>
+        <source>Submarine Dock</source>
+        <translation>Muelle Submarino</translation>
+    </message>
+    <message>
+        <source>Submarine Bridge</source>
+        <translation>Puente Submarino</translation>
+    </message>
+    <message>
+        <source>Duct</source>
+        <translation>Conducto</translation>
+    </message>
+    <message>
+        <source>Materia Room</source>
+        <translation>Sala de Materia</translation>
+    </message>
+    <message>
+        <source>Cockpit</source>
+        <translation>Cabina</translation>
+    </message>
+    <message>
+        <source>Engine Room</source>
+        <translation>Sala de motores</translation>
+    </message>
+    <message>
+        <source>Escape Pod</source>
+        <translation>Cápsula de emergencia</translation>
+    </message>
+    <message>
+        <source>deck</source>
+        <translation>Cubierta</translation>
+    </message>
+    <message>
+        <source>Bridge</source>
+        <translation>Puente</translation>
+    </message>
+    <message>
+        <source>Inside airship</source>
+        <translation>Dentro de la nave aérea</translation>
+    </message>
+    <message>
+        <source>Old man&apos;s house</source>
+        <translation>Casa del viejo</translation>
+    </message>
+    <message>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation>Casa del Sabio Chocobo</translation>
+    </message>
+    <message>
+        <source>???</source>
+        <translation>???</translation>
+    </message>
+    <message>
+        <source>Materia Cave</source>
+        <translation>Cueva de la Materia</translation>
     </message>
 </context>
 <context>

@@ -3075,7 +3075,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Weg nach Junon</translation>
+        <translation type="obsolete">Weg nach Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -3965,6 +3965,74 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aljunon</source>
         <translation>Aljunon</translation>
+    </message>
+    <message>
+        <source>Research Room</source>
+        <translation>Forschungsraum</translation>
+    </message>
+    <message>
+        <source>Cargo Room</source>
+        <translation>Frachtraum</translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation>Bergspitze</translation>
+    </message>
+    <message>
+        <source>Submarine Dock</source>
+        <translation>U-Bootdock</translation>
+    </message>
+    <message>
+        <source>Submarine Bridge</source>
+        <translation>U-Bootbrücke</translation>
+    </message>
+    <message>
+        <source>Duct</source>
+        <translation>Leitungskanal</translation>
+    </message>
+    <message>
+        <source>Materia Room</source>
+        <translation>Substanzraum</translation>
+    </message>
+    <message>
+        <source>Cockpit</source>
+        <translation>Cockpit</translation>
+    </message>
+    <message>
+        <source>Engine Room</source>
+        <translation>Maschinenraum</translation>
+    </message>
+    <message>
+        <source>Escape Pod</source>
+        <translation>Notmechanismus</translation>
+    </message>
+    <message>
+        <source>deck</source>
+        <translation>Deck</translation>
+    </message>
+    <message>
+        <source>Bridge</source>
+        <translation>Brücke</translation>
+    </message>
+    <message>
+        <source>Inside airship</source>
+        <translation>Im Luftschiff</translation>
+    </message>
+    <message>
+        <source>Old man&apos;s house</source>
+        <translation>Haus des alten Mannes</translation>
+    </message>
+    <message>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation>Haus des Chocobo-Weisen</translation>
+    </message>
+    <message>
+        <source>???</source>
+        <translation>???</translation>
+    </message>
+    <message>
+        <source>Materia Cave</source>
+        <translation>Substanzhöhle</translation>
     </message>
 </context>
 <context>

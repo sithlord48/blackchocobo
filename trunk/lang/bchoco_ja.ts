@@ -3075,7 +3075,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>海底魔晄炉への通路</translation>
+        <translation type="obsolete">海底魔晄炉への通路</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -4038,7 +4038,75 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Aljunon</source>
-        <translation type="unfinished">アルジュノン</translation>
+        <translation>アルジュノン</translation>
+    </message>
+    <message>
+        <source>Research Room</source>
+        <translation>神羅飛空艇・研究室</translation>
+    </message>
+    <message>
+        <source>Cargo Room</source>
+        <translation>神羅飛空艇・カーゴルーム</translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Submarine Dock</source>
+        <translation>ジュノン潜水艦ドック</translation>
+    </message>
+    <message>
+        <source>Submarine Bridge</source>
+        <translation>潜水艦・ブリッジ</translation>
+    </message>
+    <message>
+        <source>Duct</source>
+        <translation>ダクト</translation>
+    </message>
+    <message>
+        <source>Materia Room</source>
+        <translation>マテリアルーム</translation>
+    </message>
+    <message>
+        <source>Cockpit</source>
+        <translation>コクピット</translation>
+    </message>
+    <message>
+        <source>Engine Room</source>
+        <translation>エンジンルーム</translation>
+    </message>
+    <message>
+        <source>Escape Pod</source>
+        <translation>脱出ポッド</translation>
+    </message>
+    <message>
+        <source>deck</source>
+        <translation>甲板</translation>
+    </message>
+    <message>
+        <source>Bridge</source>
+        <translation>ブリッジ</translation>
+    </message>
+    <message>
+        <source>Inside airship</source>
+        <translation>飛空てい内部</translation>
+    </message>
+    <message>
+        <source>Old man&apos;s house</source>
+        <translation>オヤジ小屋</translation>
+    </message>
+    <message>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation>チョコボせんにんの家</translation>
+    </message>
+    <message>
+        <source>???</source>
+        <translation>？？？</translation>
+    </message>
+    <message>
+        <source>Materia Cave</source>
+        <translation>マテリアの洞窟</translation>
     </message>
 </context>
 <context>
