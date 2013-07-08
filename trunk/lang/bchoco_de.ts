@@ -2983,7 +2983,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>Tunnel</translation>
+        <translation type="obsolete">Tunnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
@@ -2991,7 +2991,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar Sektor 8</translation>
+        <translation type="obsolete">Midgar Sektor 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3011,7 +3011,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Nordkrater</translation>
+        <translation type="obsolete">Nordkrater</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -4033,6 +4033,54 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Materia Cave</source>
         <translation>Substanzhöhle</translation>
+    </message>
+    <message>
+        <source>Ancient Forest</source>
+        <translation>Alter Wald</translation>
+    </message>
+    <message>
+        <source>Mideel,House2</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>8th Street</source>
+        <translation>8. Straße</translation>
+    </message>
+    <message>
+        <source>Midgar, Sector 8</source>
+        <translation>Midgar Sektor 8</translation>
+    </message>
+    <message>
+        <source>Mako Cannon</source>
+        <translation>Mako-Kanone</translation>
+    </message>
+    <message>
+        <source>Highwind, on deck</source>
+        <translation>Highwind, Deck</translation>
+    </message>
+    <message>
+        <source>Nothern Cave Crater</source>
+        <translation>Nordhöhle, Krater</translation>
+    </message>
+    <message>
+        <source>Nothern Cave</source>
+        <translation>Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Inside Nothern Cave</source>
+        <translation>In der Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Bottom of Nothern Cave</source>
+        <translation>Grund der Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Inside the Planet</source>
+        <translation>im Planeten</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>????</translation>
     </message>
 </context>
 <context>

@@ -544,6 +544,12 @@ static LOCATION Locations[]=
     {"bonevil",QT_TRANSLATE_NOOP("Locations","Bone Village"),"1","617","-159","-170","65","32"},
     {"slfrst_1",QT_TRANSLATE_NOOP("Locations","Sleeping Forest"),"1","618","2","-126","8","32"},
     {"slfrst_2",QT_TRANSLATE_NOOP("Locations","Sleeping Forest"),"1","619","-3","-331","18","32"},
+    {"anfrst_1",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","620","-1755","-586","56","64"},
+    {"anfrst_2",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","621","-544","-122","61","64"},
+    {"anfrst_3",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","622","-1943","-748","104","64"},
+    {"anfrst_4",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","623","102","-856","31","64"},
+    {"anfrst_5",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","624","118","1045","2","64"},
+
 
     {"sango1",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","625","-112","-345","76","32"},
     {"sango2",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","626","-1916","-11320","14","32"},
@@ -631,35 +637,72 @@ static LOCATION Locations[]=
     {"trnad_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","703","-358","-1056","44","32"},    
     {"trnad_3",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","704","619","-3548","3","176"},    
     {"trnad_4",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","705","94","1168","173","32"},
-    
     {"woa_1",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","709","121","-536","3","128"},
     
     {"woa_2",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","710","123","-503","41","128"},
     {"woa_3",QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","711","170","-339","68","128"},
     {"itown1a",QT_TRANSLATE_NOOP("Locations","Mideel"),"1","712","-64","-2225","63","128"},
     {"itown1b",QT_TRANSLATE_NOOP("Locations","Mideel"),"1","714","-67","-885","123","0"},
-
     {"itown_w",QT_TRANSLATE_NOOP("Locations","Mideel,Weapon Store"),"1","717","36","-236","32","128"},
     {"itown_i",QT_TRANSLATE_NOOP("Locations","Mideel,Item Store"),"1","718","-90","-159","3","128"},
     {"itown_m",QT_TRANSLATE_NOOP("Locations","Mideel,Materia Store"),"1","719","34","-211","3","128"},
 
-    
     {"ithos",QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","-156","19","32"},
     {"itmin1",QT_TRANSLATE_NOOP("Locations","Mideel,House1"),"1","721","-158","-183","17","96"},
+    {"itmin2",QT_TRANSLATE_NOOP("Locations","Mideel,House2"),"1","722","-53","-110","19","96"},
     {"zmind1",QT_TRANSLATE_NOOP("Locations",""),"1","725","170","-9200","92","96"},
     {"zmind2",QT_TRANSLATE_NOOP("Locations",""),"1","726","3826","-3110","22","96"},
     {"zmind3",QT_TRANSLATE_NOOP("Locations",""),"1","727","-4725","-344","85","96"},
-
-    
     {"zcoal_2",QT_TRANSLATE_NOOP("Locations","Coal Train"),"1","729","789","200","0","0"},
-    
-    /**********************************Below The List Is UnFinished   *********/
-    {"md8_6",QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","-204","24","32"},
+
+    {"md8_5",QT_TRANSLATE_NOOP("Locations","8th Street"),"1","731","-274","-93","40","0"},
+    {"md8_6",QT_TRANSLATE_NOOP("Locations","Midgar, Sector 8"),"1","732","265","-204","24","32"},
     {"md8_b1",QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","733","-272","1614","116","32"},
-    {"tunnel_4",QT_TRANSLATE_NOOP("Locations","Tunnel"),"1","736","-83","-229","215","32"},
-    {"md8_32",QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","-4097","18394","34","32"},
-    {"las0_6",QT_TRANSLATE_NOOP("Locations","North Crater"),"1","749","-192","16","35","32"},
+    {"md8_b2",QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","734","-2860","-371","126","192"},
+    {"4sbwy_22",QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","735","0","-57","9","128"},
+    {"tunnel_4",QT_TRANSLATE_NOOP("Locations","Winding Tunnel"),"1","736","-83","-229","215","32"},
+    {"tunnel_5",QT_TRANSLATE_NOOP("Locations","Winding Tunnel"),"1","737","42","1369","41","0"},
+    {"md8brdg2",QT_TRANSLATE_NOOP("Locations","Midgar, Sector 8"),"1","738","-526","-995","92","128"},
+    {"md8_32",QT_TRANSLATE_NOOP("Locations","Midgar, Sector 8"),"1","739","-4097","18394","34","32"},
+
+    {"canon_1",QT_TRANSLATE_NOOP("Locations","Mako Cannon"),"1","740","877","-2016","31","192"},
+    {"canon_2",QT_TRANSLATE_NOOP("Locations","Mako Cannon"),"1","741","0","-601","80","160"},
+    {"las0_1",QT_TRANSLATE_NOOP("Locations","Highwind, on deck"),"1","744","-33","-1419","277","100"},
+    {"las0_2",QT_TRANSLATE_NOOP("Locations","Nothern Cave Crater"),"1","745","-496","-959","51","168"},
+    {"las0_3",QT_TRANSLATE_NOOP("Locations","Nothern Cave"),"1","746","681","1212","115","0"},
+    {"las0_4",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","747","-33","1030","190","212"},
+    {"las0_5",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","748","-47","-64","24","32"},
+    {"las0_6",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","749","-192","16","35","32"},
+
+    {"las0_7",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","750","-711","315","190","64"},
+    {"las0_8",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","751","-1953","-422","31","32"},
+    {"las1_1",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","752","-419","-75","40","16"},
+    {"las1_2",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","753","54","-165","9","72"},
+    {"las1_3",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","754","664","800","72","112"},
+    {"las1_4",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","755","314","5","0","112"},
+    {"las2_1",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","756","646","48","86","192"},
+    {"las2_2",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","757","123","-732","124","192"},
+    {"las2_3",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","758","120","-650","17","144"},
+    {"las2_4",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","759","1187","162","12","212"},
+
+    {"las3_1",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","760","523","-702","51","16"},
+    {"las3_2",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","761","467","-459","308","16"},
+    {"las3_3",QT_TRANSLATE_NOOP("Locations","Inside Nothern Cave"),"1","762","447","-243","28","64"},
+    {"las4_0",QT_TRANSLATE_NOOP("Locations","Bottom of Nothern Cave"),"1","763","102","-856","31","32"},
+    {"las4_1",QT_TRANSLATE_NOOP("Locations","Bottom of Nothern Cave"),"1","764","208","-481","103","128"},
+    {"las4_2",QT_TRANSLATE_NOOP("Locations","Inside the Planet"),"1","765","-69","562","96","64"},
+    {"las4_3",QT_TRANSLATE_NOOP("Locations","Inside the Planet"),"1","766","-808","-56","81","96"},
+    {"las4_4",QT_TRANSLATE_NOOP("Locations",""),"1","767","406","944","43","96"},
+    {"lastmap",QT_TRANSLATE_NOOP("Locations","????"),"1","768","61","-386","179","116"},
+
+
+    {"hill2",QT_TRANSLATE_NOOP("Locations",""),"1","771","-50","-24","284","56"},
+    {"las4_42",QT_TRANSLATE_NOOP("Locations",""),"1","777","406","945","43","96"},
+    {"tunnel_6",QT_TRANSLATE_NOOP("Locations","Winding Tunnel"),"1","778","166","-376","106","128"},
+
+    /**********************************Map 2 Entries  *********/
     {"testfight",QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0","32"},
+
     /****************Dupilcate Field Strings Don't Display************/
     {"elminn_2",QT_TRANSLATE_NOOP("Locations","Cloud's Past"),"1","332","164","125","8","32"},
     {"delmin1",QT_TRANSLATE_NOOP("Locations","Cloud's Villa"),"1","446","-40","-43","10","32"},

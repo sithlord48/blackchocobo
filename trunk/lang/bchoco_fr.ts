@@ -2983,7 +2983,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>Tunnel</translation>
+        <translation type="obsolete">Tunnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
@@ -2991,7 +2991,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar, Secteur 8</translation>
+        <translation type="obsolete">Midgar, Secteur 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3011,7 +3011,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Dans la Grotte Nord</translation>
+        <translation type="obsolete">Dans la Grotte Nord</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -4033,6 +4033,54 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Materia Cave</source>
         <translation>Grotte à materia</translation>
+    </message>
+    <message>
+        <source>Ancient Forest</source>
+        <translation>Forêt Ancienne</translation>
+    </message>
+    <message>
+        <source>Mideel,House2</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>8th Street</source>
+        <translation>8ème rue</translation>
+    </message>
+    <message>
+        <source>Midgar, Sector 8</source>
+        <translation>Midgar, Secteur 8</translation>
+    </message>
+    <message>
+        <source>Mako Cannon</source>
+        <translation>Canon Mako</translation>
+    </message>
+    <message>
+        <source>Highwind, on deck</source>
+        <translation>Hauvent, sur le pont</translation>
+    </message>
+    <message>
+        <source>Nothern Cave Crater</source>
+        <translation>Dans la Grotte Nord</translation>
+    </message>
+    <message>
+        <source>Nothern Cave</source>
+        <translation>Grotte Nord</translation>
+    </message>
+    <message>
+        <source>Inside Nothern Cave</source>
+        <translation>Intérieur de la Grotte Nord</translation>
+    </message>
+    <message>
+        <source>Bottom of Nothern Cave</source>
+        <translation>Fond de la Grotte Nord</translation>
+    </message>
+    <message>
+        <source>Inside the Planet</source>
+        <translation>A l&apos;intérieur de la planète</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>????</translation>
     </message>
 </context>
 <context>

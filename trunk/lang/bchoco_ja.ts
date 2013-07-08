@@ -2983,7 +2983,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>螺旋トンネル</translation>
+        <translation type="obsolete">螺旋トンネル</translation>
     </message>
     <message>
         <source>Junon Inn</source>
@@ -2991,7 +2991,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>ミッドガル８番街</translation>
+        <translation type="obsolete">ミッドガル８番街</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3011,7 +3011,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>North Crater</source>
-        <translation>大空洞内部</translation>
+        <translation type="obsolete">大空洞内部</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -4107,6 +4107,55 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Materia Cave</source>
         <translation>マテリアの洞窟</translation>
+    </message>
+    <message>
+        <source>Ancient Forest</source>
+        <translation>古えの森</translation>
+    </message>
+    <message>
+        <source>Mideel,House2</source>
+        <translation>ミディール 民家</translation>
+    </message>
+    <message>
+        <source>8th Street</source>
+        <translation>８番街</translation>
+    </message>
+    <message>
+        <source>Midgar, Sector 8</source>
+        <translation>ミッドガル８番街</translation>
+    </message>
+    <message>
+        <source>Mako Cannon</source>
+        <translation>魔晄キャノン</translation>
+    </message>
+    <message>
+        <source>Highwind, on deck</source>
+        <translation>ハイウインド・甲板</translation>
+    </message>
+    <message>
+        <source>Nothern Cave Crater</source>
+        <translation>大空洞火口</translation>
+    </message>
+    <message>
+        <source>Nothern Cave</source>
+        <translatorcomment>Empty in Game</translatorcomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Nothern Cave</source>
+        <translation>大空洞内部</translation>
+    </message>
+    <message>
+        <source>Bottom of Nothern Cave</source>
+        <translation>大空洞最下部</translation>
+    </message>
+    <message>
+        <source>Inside the Planet</source>
+        <translation>星の体内</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>？？？？</translation>
     </message>
 </context>
 <context>

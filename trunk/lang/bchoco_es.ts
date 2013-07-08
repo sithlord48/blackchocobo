@@ -2985,7 +2985,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>Túnel</translation>
+        <translation type="obsolete">Túnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
@@ -2993,7 +2993,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar, Sector 8</translation>
+        <translation type="obsolete">Midgar, Sector 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3013,7 +3013,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>North Crater</source>
-        <translation>En Cueva del Norte</translation>
+        <translation type="obsolete">En Cueva del Norte</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -4035,6 +4035,54 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Materia Cave</source>
         <translation>Cueva de la Materia</translation>
+    </message>
+    <message>
+        <source>Ancient Forest</source>
+        <translation type="unfinished">Bosque antiguo</translation>
+    </message>
+    <message>
+        <source>Mideel,House2</source>
+        <translation>Mideel</translation>
+    </message>
+    <message>
+        <source>8th Street</source>
+        <translation>Calle 8</translation>
+    </message>
+    <message>
+        <source>Midgar, Sector 8</source>
+        <translation>Midgar, Sector 8</translation>
+    </message>
+    <message>
+        <source>Mako Cannon</source>
+        <translation>Cañón Mako</translation>
+    </message>
+    <message>
+        <source>Highwind, on deck</source>
+        <translation>V. fuerte, a bordo</translation>
+    </message>
+    <message>
+        <source>Nothern Cave Crater</source>
+        <translation>Cráter cueva N</translation>
+    </message>
+    <message>
+        <source>Nothern Cave</source>
+        <translation>Cueva norte</translation>
+    </message>
+    <message>
+        <source>Inside Nothern Cave</source>
+        <translation type="unfinished">En Cueva N.</translation>
+    </message>
+    <message>
+        <source>Bottom of Nothern Cave</source>
+        <translation>Fondo de la Cueva del Norte</translation>
+    </message>
+    <message>
+        <source>Inside the Planet</source>
+        <translation>dentro del planeta</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>¿¿??</translation>
     </message>
 </context>
 <context>
