@@ -2982,15 +2982,7 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Junon Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3007,10 +2999,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>North Crater</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4027,6 +4015,54 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Materia Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ancient Forest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mideel,House2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>8th Street</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar, Sector 8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mako Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind, on deck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothern Cave Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nothern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Nothern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom of Nothern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside the Planet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>????</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
