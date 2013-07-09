@@ -133,16 +133,14 @@ void ItemList::setMaximumItemQty(int maxQty)
 void ItemList::setItems(QList<quint16> items)
 {
     itemlist = items;
-    createdSelector=false;
+    if(createdSelector){itemSelector->close();createdSelector=false;}
+    if(createdTooltip){itemPreview->close();createdTooltip=false;}
     itemupdate();
 }
 void ItemList::itemSelector_changed(quint16 item)
 {
-    if(createdTooltip)
-    {
-        itemPreview->close();
-        createdTooltip=false;
-    }
+    if(createdTooltip){itemPreview->close();createdTooltip=false;}
+
     itemlist.replace(sender()->objectName().toInt(),item);
     if(item == FF7Item::EmptyItemData)
     {

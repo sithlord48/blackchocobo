@@ -646,7 +646,7 @@ quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
 }
 void FF7Save::setItem(int s,int item_num,quint16 rawitem)
 {
-    if(region(s).contains("SLPS-00700")){if(itemQty(rawitem)>99){if(itemId(rawitem) != 0x1FF){rawitem = itemEncode(itemId(rawitem),99);}}}
+    if(region(s).contains("SLPS-00700") && (itemQty(rawitem)>99) && (itemId(rawitem != 0x1FF))){rawitem = itemEncode(itemId(rawitem),99);}
     //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
     //Above Is to Check for and fix, since im sure no one wants to lose all their items.
     slot[s].items[item_num]=rawitem;
@@ -654,7 +654,7 @@ void FF7Save::setItem(int s,int item_num,quint16 rawitem)
 }
 void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
 {
-    if(region(s).contains("SLPS-00700")){if(new_qty>99){if(new_id != 0x1FF){new_qty = 99;}}}
+    if(region(s).contains("SLPS-00700") &&(new_qty>99) &&(new_id != 0x1FF)){new_qty = 99;}
     //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
     //Above Is to Check for and fix, since im sure no one wants to lose all their items.
     slot[s].items[item_num]= itemEncode(new_id,new_qty);
@@ -675,7 +675,7 @@ void FF7Save::setItems(int s,QList<quint16> items)
     {
         for(int i=0;i<320;i++)
         {
-            if(itemQty(items.at(i)) >99) {slot[s].items[i]= itemEncode(itemId(items.at(i)),99);}
+            if((itemQty(items.at(i)) >99) && (itemId(items.at(i))!=0x1FF)){slot[s].items[i]= itemEncode(itemId(items.at(i)),99);}
             else{slot[s].items[i]= items.at(i);}
         }
     }
@@ -1378,9 +1378,12 @@ void FF7Save::newGame(int s,QString fileName)
         setCharName(s,3,QString::fromUtf8("エアリス"));
         setCharName(s,4,QString::fromUtf8("レッド⑬"));
         setCharName(s,5,QString::fromUtf8("ユフィ"));
-        setCharName(s,6,QString::fromUtf8(""));
+        setCharName(s,6,QString::fromUtf8("昔のクラウド"));
         setCharName(s,7,QString::fromUtf8("セフィロス"));
         setCharName(s,8,QString::fromUtf8("シド"));
+        setDescName(s,QString::fromUtf8("元ソルジャー"));
+        setDescLocation(s,QString::fromUtf8("１番街駅ホーム"));
+        setLocation(s,QString::fromUtf8("１番街駅ホーム"));
     }
     else if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");Text.init(0);}
     setFileModified(true,s);

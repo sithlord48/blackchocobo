@@ -42,7 +42,8 @@ signals:
 
 public slots:
     void setSelected(QString);
-    void setAdvancedMode(bool AdvancedMode);    
+    void setRegion(QString region);
+    void setTranslationBaseFile(QString);
     void setX(int x);
     void setY(int y);
     void setT(int t);
@@ -69,6 +70,7 @@ private:
     void init_display(void);
     void init_connections(void);
     void init_disconnect(void);
+    QString translate(QString text);
     QTableWidget *locationTable;
     FF7Location *Locations;
     QLabel * lblLocationPreview;
@@ -79,7 +81,8 @@ private:
     QSpinBox *sbY;
     QSpinBox *sbT;
     QSpinBox *sbD;
-    bool advancedMode;
+    QString region;
+    QString transBasePath;
     bool showPreview;
 };
 
