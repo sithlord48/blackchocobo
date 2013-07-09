@@ -149,6 +149,8 @@ void MainWindow::init_display()
     ui->group_hexedit->setLayout(hexLayout);
 
     locationViewer = new LocationViewer;
+    locationViewer->setTranslationBaseFile(QString(QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_"));
+    locationViewer->setRegion("BASCUS-94163FF7-S00");
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0,0,0,0);
     locLayout->addWidget(locationViewer);
@@ -598,8 +600,7 @@ void MainWindow::on_actionNew_Game_triggered()
     if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
     ff7->newGame(s,save_name);//call the new game function
     if(save_name==""){save_name = QString(tr("Builtin Data"));}
-    ui->statusBar->showMessage(tr("New Game Created - Using: %1").arg(save_name),2000);
-    //detect region and fix names if needed.
+    ui->statusBar->showMessage(tr("New Game Created - Using: %1").arg(save_name),2000);   
     _init=false;
     guirefresh(1);
 }
@@ -752,7 +753,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
 {if(!load){
@@ -777,7 +778,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
         //Text.init(0);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
 {if(!load){
@@ -801,7 +802,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
 {if(!load){
@@ -825,7 +826,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
 {if(!load){
@@ -849,7 +850,7 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_triggered(bool checked)
 {if(!load){
@@ -873,7 +874,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 {if(!load){
@@ -897,7 +898,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
     }
-}}
+}locationViewer->setRegion(ff7->region(s));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
@@ -1472,9 +1473,10 @@ void MainWindow::guirefresh(bool newgame)
         {//if empty region string and a virtual memcard format and dir frame says empty.
             ff7->clearSlot(s); //fileModified(false);//checking only
         }
+        locationViewer->setRegion(ff7->region(s));
+        setmenu(newgame);
         on_tabWidget_currentChanged(ui->tabWidget->currentIndex());
         load=false;
-        setmenu(newgame);
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
@@ -1980,26 +1982,7 @@ void MainWindow::coord_x_valueChanged(int value){if(!load){fileModified(true); f
 void MainWindow::coord_y_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationY(s,value);}}
 void MainWindow::coord_t_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationT(s,value);}}
 void MainWindow::coord_d_valueChanged(int value){if(!load){fileModified(true); ff7->setLocationD(s,value);}}
-void MainWindow::location_textChanged(QString text)
-{if (!load){fileModified(true);
-        QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";// base path and name for translation files.
-        QTranslator Translator;// will do the translating.
-        QString region = ff7->region(s);//get region
-        region.chop(7);// remove trailing  FF7-SXX
-        if(region =="BASLUS-94163" || region =="BESLES-00867"){lang.append("en.qm");}
-        else if(region =="BESCES-00868"){lang.append("fr.qm");}
-        else if(region =="BESCES-00869"){lang.append("de.qm");}
-        else if(region =="BESCES-00900"){lang.append("es.qm");}
-        else if(region =="BISLPS-00700" || region =="BISLPS-01057"){lang.append("ja.qm");}
-        else{}//unknown language.
-        Translator.load(lang);
-        QString newText = Translator.translate("Locations",text.toUtf8());
-        if(newText.isEmpty()){ff7->setLocation(s,text);}
-        else{ff7->setLocation(s,newText);}
-    }
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
+void MainWindow::location_textChanged(QString text){if (!load){fileModified(true);ff7->setLocation(s,text);}}
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void MainWindow::setDialogColorUL(QColor color){if(!load){fileModified(true);ff7->setDialogColorUL(s,color);}}

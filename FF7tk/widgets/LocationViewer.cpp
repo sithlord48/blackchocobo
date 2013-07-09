@@ -14,9 +14,12 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
+#include <QDebug>
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
+    region="";
+    transBasePath="";
     Locations = new FF7Location();
     init_display();
     init_connections();
@@ -28,18 +31,7 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
     if(pix.isNull()){return;}
     else{lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 }
-void LocationViewer::setAdvancedMode(bool AdvancedMode)
-{
-    advancedMode = AdvancedMode;
-    if(advancedMode)
-    {
-        //Show Advanced Items and data..
-    }
-    else
-    {
-        //Hide Advanced Items and data
-    }
-}
+
 void LocationViewer::init_display(void)
 {
     lblLocationPreview = new QLabel;
@@ -196,7 +188,6 @@ void LocationViewer::init_disconnect(void)
 
 void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow, int prevColumn)
 {
-
     if(currentColumn == prevColumn){/*do nothing*/} //stop non use warning
     if(currentRow ==0 and currentColumn ==0){return;}//return on selection cleared.
     if(currentRow ==prevRow){return;}
@@ -249,7 +240,12 @@ void LocationViewer::setLocation(int mapId,int locId)
     else
     {
         lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-        lineLocationName->setText(Locations->locationString(fileName));
+
+        QString oldStr = Locations->locationString(fileName);
+        QString newStr = translate(oldStr);
+        if(oldStr !=newStr){emit(locationStringChanged(newStr));}
+        lineLocationName->setText(newStr);
+
         sbMapID->setValue(Locations->mapID(fileName).toInt());
         sbLocID->setValue(Locations->locationID(fileName).toInt());
         sbX->setValue(Locations->x(fileName).toInt());
@@ -266,5 +262,37 @@ void LocationViewer::setT(int t){init_disconnect();sbT->setValue(t);init_connect
 void LocationViewer::setD(int d){init_disconnect();sbD->setValue(d);init_connections();}
 void LocationViewer::setMapId(int mapId){sbMapID->setValue(mapId);}
 void LocationViewer::setLocationId(int locId){sbLocID->setValue(locId);}
-void LocationViewer::setLocationString(QString locString){init_disconnect();lineLocationName->setText(locString);init_connections();}
+void LocationViewer::setLocationString(QString locString)
+{
+    init_disconnect();
+    QString newStr = translate(locString);
+    if(locString !=newStr){emit(locationStringChanged(newStr));}
+    lineLocationName->setText(newStr);
+    init_connections();
+}
 void LocationViewer::setHorizontalHeaderStyle(QString styleSheet){locationTable->horizontalHeader()->setStyleSheet(styleSheet);}
+
+void LocationViewer::setRegion(QString newRegion){region=newRegion;setLocation(sbMapID->value(),sbLocID->value());}
+void LocationViewer::setTranslationBaseFile(QString basePathName){transBasePath= basePathName;}
+QString LocationViewer::translate(QString text)
+{
+    if(region ==""){qWarning()<<"Locations Translate Called With No Region";return text;}
+    if(transBasePath==""){qWarning()<<"No Base Path/FileName for translations";return text;}
+    else
+    {
+        QString lang = transBasePath;
+        QTranslator Translator;// will do the translating.
+        QString reg = region;// remove trailing  FF7-SXX
+        reg.chop(7);
+        if(reg =="BASCUS-94163" || reg =="BESCES-00867"){lang.append("en.qm");}
+        else if(reg =="BESCES-00868"){lang.append("fr.qm");}
+        else if(reg =="BESCES-00869"){lang.append("de.qm");}
+        else if(reg =="BESCES-00900"){lang.append("es.qm");}
+        else if(reg =="BISLPS-00700" || reg =="BISLPS-01057"){lang.append("ja.qm");}
+        else{qWarning()<<QString("Unknown Region:%1").arg(reg);return text;}//unknown language.
+        Translator.load(lang);
+        QString newText = Translator.translate("Locations",text.toUtf8());
+        if(newText.isEmpty()){return text;}
+        else{return newText;}
+    }
+}
