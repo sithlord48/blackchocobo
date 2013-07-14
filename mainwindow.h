@@ -577,5 +577,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sbCondorFunds_valueChanged(int arg1);
     void on_sbCondorWins_valueChanged(int arg1);
     void on_sbCondorLoses_valueChanged(int arg1);
+    void on_cbPandorasBox_toggled(bool checked);
 };
 #endif // MAINWINDOW_H
