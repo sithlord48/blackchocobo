@@ -238,6 +238,21 @@ bool FF7Save::saveFile(const QString &fileName)
     setFileModified(false,0);
     return true;
 }
+bool FF7Save::exportFile(const QString &fileName,QString newType,int s)
+{
+    if(fileName.isEmpty()){return false;}
+    else
+    {
+        if(newType =="PC"){return exportPC(fileName);}
+        else if(newType =="PSX"){return exportPSX(s,fileName);}
+        else if(newType =="MC"){return exportVMC(fileName);}
+        else if(newType =="VGS"){return exportVGS(fileName);}
+        else if(newType =="DEX"){return exportDEX(fileName);}
+        else if(newType =="PSV"){return false;}
+        else if(newType =="VMP"){return false;}
+        else{return false;}
+    }
+}
 bool FF7Save::exportPC(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
@@ -336,6 +351,10 @@ bool FF7Save::exportVMC(const QString &fileName)
   {
     for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
     setType("MC");
+    //Check if from another kind of VMC and copy the header
+    if(prev_type =="PSP"){for(int i=0;i<0x2000;i++){file_headerp[i] = file_header_psp[i+0x080];}}
+    if(prev_type =="VGS"){for(int i=0;i<0x2000;i++){file_headerp[i] = file_header_vgs[i+0x040];}}
+    if(prev_type =="DEX"){for(int i=0;i<0x2000;i++){file_headerp[i] = file_header_dex[i+0xF40];}}
   }
   fix_vmc_header();
   if(saveFile(fileName))
@@ -356,7 +375,7 @@ bool FF7Save::exportVGS(const QString &fileName)
   if(fileName.isEmpty()){return false;}
   QString prev_type = SG_TYPE;
   QString prev_fileName = filename;
-  if(SG_TYPE != "VGS")
+  if(prev_type != "VGS")
   {
      for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
     setType("VGS");//fill the Header With The Needed Default
@@ -367,8 +386,13 @@ bool FF7Save::exportVGS(const QString &fileName)
     file_header_vgs[4] =0x01;
     file_header_vgs[8] =0x01;
     file_header_vgs[12] =0x01;
+    //Check if from another kind of VMC and copy the header
+    if(prev_type =="PSP"){for(int i=0;i<0x2040;i++){file_headerp[i] = file_header_psp[i+0x040];}}
+    if(prev_type =="DEX"){for(int i=0;i<0x2040;i++){file_headerp[i] = file_header_dex[i+0xF00];}}
+    if(prev_type =="MC"){for(int i=0x40;i<0x2040;i++){file_headerp[i] = file_header_mc[i-0x40];}}
   }
   fix_vmc_header();
+
   if(saveFile(fileName))
   {
       setType(prev_type);
@@ -409,6 +433,10 @@ bool FF7Save::exportDEX(const QString &fileName)
     file_header_dex[22]=0x51;
     for(int i=0x17;i<0x25;i++){file_header_dex[i]=0xA0;}
     file_header_dex[38]=0xFF;
+    //Check if from another kind of VMC and copy the header
+    if(prev_type =="MC"){for(int i=0xF40;i<0x2F40;i++){file_headerp[i] = file_header_mc[i-0xF40];}}
+    if(prev_type =="VGS"){for(int i=0xF00;i<0x2F40;i++){file_headerp[i] = file_header_vgs[i-0xF00];}}
+    if(prev_type =="PSP"){for(int i=0xEC0;i<0x2F40;i++){file_headerp[i] = file_header_psp[i-0xEC0];}}
   }
   fix_vmc_header();
   if(saveFile(fileName))
@@ -715,7 +743,8 @@ void FF7Save::fix_pc_bytemask(int s)
     memcpy(file_headerp,newheader,9);
 }
 void FF7Save::fix_psx_header(int s)
-{   //Time Has to be fixed in the header part of description string.
+{if(isFF7(s)){
+    //Time Has to be fixed in the header part of description string.
     if((slot[s].time/3600)>99){hf[s].sl_header[27]=0x58;hf[s].sl_header[29]=0x58;}
     else
     {
@@ -724,7 +753,7 @@ void FF7Save::fix_psx_header(int s)
     }
     hf[s].sl_header[33] = ((slot[s].time/60%60)/10)+0x4F;
     hf[s].sl_header[35] = ((slot[s].time/60%60)%10)+0x4F;
-}
+}}
 void FF7Save::fix_psv_header(void)
 {
  /*do signing stuff*/
@@ -3555,4 +3584,15 @@ void FF7Save::setCountdownTimer(int s, quint32 time)
         slot[s].timer[2]=((time & 0xff0000) >> 16);
         setFileModified(true,s);
     }
+}
+bool FF7Save::seenPandorasBox(int s)
+{
+    if(s<0 ||s>14){return false;}
+    else{return (slot[s].z_14[0]&(1<<0));}
+}
+void FF7Save::setSeenPandorasBox(int s,bool seen)
+{
+    if(seen){slot[s].z_14[0] |= (1<<0);}
+    else{slot[s].z_14[0] &= ~(1<<0);}
+    setFileModified(true,s);
 }

@@ -2922,8 +2922,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>100</width>
-             <height>30</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4846,8 +4846,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>313</width>
-                  <height>1697</height>
+                  <width>353</width>
+                  <height>1705</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -6088,6 +6088,13 @@ Is Under Heavy Development</string>
             </property>
             <property name="text">
              <string>Can Fight Mystery Ninja in Forests</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cbPandorasBox">
+            <property name="text">
+             <string>Have Seen Pandora's Box</string>
             </property>
            </widget>
           </item>
@@ -9191,6 +9198,7 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="action_Save"/>
     <addaction name="actionSave_File_As"/>
     <addaction name="separator"/>
+    <addaction name="separator"/>
     <addaction name="menuImport"/>
     <addaction name="actionExport_char"/>
     <addaction name="separator"/>
@@ -10050,6 +10058,15 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>Create Cloud Save Folder</string>
+   </property>
+  </action>
+  <action name="actionImport_Slot_From">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
+   </property>
+   <property name="text">
+    <string>Import Slot From...</string>
    </property>
   </action>
  </widget>

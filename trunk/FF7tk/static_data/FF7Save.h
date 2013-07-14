@@ -27,7 +27,7 @@
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
-
+#include <QDebug>
 class FF7Save{
 
 public:
@@ -204,6 +204,7 @@ public:
   //File Members
   bool loadFile(const QString &fileName);
   bool saveFile(const QString &fileName);
+  bool exportFile(const QString &fileName,QString newType="",int s=0);
   bool exportPC(const QString &fileName);
   bool exportPSX(int s,const QString &fileName);
   bool exportVMC(const QString &fileName);
@@ -298,7 +299,8 @@ public:
   void setParty(int s,int pos, int new_id);
   qint8 chocoboPen(int s, int pos);
   void setChocoboPen(int s, int pos, int type);
-
+  bool seenPandorasBox(int s);
+  void setSeenPandorasBox(int s,bool seen);
   //Mini Game Stuff
   quint8 love(int s,bool battle, LOVER who);
   void setLove(int s,bool battle, LOVER who ,quint8 love);

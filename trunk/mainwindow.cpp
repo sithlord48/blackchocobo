@@ -545,35 +545,11 @@ void MainWindow::on_actionSave_File_As_triggered()
     else{newType =="";}
 
     if(ff7->type()!=newType)
-    {//Type Changed.
-        if(newType =="PC")
-        {
-            if(ff7->exportPC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
-            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        }
-        else if(newType =="PSX")
-        {
-            if(ff7->exportPSX(s,fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
-            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        }
-        else if(newType =="MC")
-        {
-            if(ff7->exportVMC(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
-            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        }
-        else if(newType =="VGS")
-        {
-            if(ff7->exportVGS(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
-            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        }
-        else if(newType =="DEX")
-        {
-            if(ff7->exportDEX(fileName)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
-            else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-        }
-        else if(newType =="PSV"){QMessageBox::information(this,tr("PSV Export Attempted"),tr("PSV Exports Are Not Allowed."));}
-        else if(newType =="VMP"){QMessageBox::information(this,tr("VMP Export Attempted"),tr("VMP Exports Are Not Allowed."));}
-        else{return;}
+    {//Type Changed lets Export instead
+        if(ff7->exportFile(fileName,newType,s)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+        else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
+        if(newType =="PSV"){QMessageBox::information(this,tr("PSV Export Attempted"),tr("PSV Exports Are Not Allowed."));}
+        if(newType =="VMP"){QMessageBox::information(this,tr("VMP Export Attempted"),tr("VMP Exports Are Not Allowed."));}
     }
     else{saveFileFull(fileName);} //reguardless save the file of course if its has a string.
 }
@@ -1253,7 +1229,7 @@ void MainWindow::othersUpdate()
     {
         ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
-
+    ui->cbPandorasBox->setChecked(ff7->seenPandorasBox(s));
     ui->sbCondorWins->setValue(ff7->condorWins(s));
     ui->sbCondorLoses->setValue(ff7->condorLoses(s));
     ui->sbCondorFunds->setValue(ff7->condorFunds(s));
@@ -3209,7 +3185,7 @@ void MainWindow::on_btn_maxChar_clicked()
     int result = QMessageBox::question(this,tr("Black Chococbo"),tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(ff7->charName(s,curchar)),QMessageBox::Yes,QMessageBox::No);
     switch(result)
     {
-        case QMessageBox::Yes:char_editor->MaxStats();char_editor->MaxEquip();break;
+        case QMessageBox::Yes:char_editor->MaxEquip();char_editor->MaxStats();break;
         case QMessageBox::No: char_editor->MaxStats();break;
     }
     switch(curchar)
@@ -3486,3 +3462,4 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorFunds(s,arg1);}}
 void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorWins(s,arg1);}}
 void MainWindow::on_sbCondorLoses_valueChanged(int arg1){if(!load){fileModified(true);ff7->setCondorLoses(s,arg1);}}
+void MainWindow::on_cbPandorasBox_toggled(bool checked){if(!load){fileModified(true);ff7->setSeenPandorasBox(s,checked);}}
