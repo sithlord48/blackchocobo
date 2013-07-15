@@ -2927,7 +2927,7 @@ enabled{font:;color: rgb(255, 255, 255);}
             </rect>
            </property>
            <attribute name="icon">
-            <iconset resource="images.qrc">
+            <iconset>
              <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
            </attribute>
            <attribute name="label">
@@ -9179,27 +9179,13 @@ Var And Scrolling Synced To Left Table</string>
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <widget class="QMenu" name="menuImport">
-     <property name="title">
-      <string>&amp;Import To Current Slot</string>
-     </property>
-     <property name="icon">
-      <iconset resource="images.qrc">
-       <normaloff>:/icon/import</normaloff>:/icon/import</iconset>
-     </property>
-     <addaction name="actionFrom_PSX_Slot"/>
-     <addaction name="actionFrom_PSV_Slot"/>
-     <addaction name="separator"/>
-     <addaction name="actionImport_char"/>
-    </widget>
-    <addaction name="actionNew_Window"/>
     <addaction name="actionOpen_Save_File"/>
-    <addaction name="actionReload"/>
     <addaction name="action_Save"/>
     <addaction name="actionSave_File_As"/>
     <addaction name="separator"/>
+    <addaction name="actionImport_Slot_From_File"/>
     <addaction name="separator"/>
-    <addaction name="menuImport"/>
+    <addaction name="actionImport_char"/>
     <addaction name="actionExport_char"/>
     <addaction name="separator"/>
     <addaction name="actionCreateNewMetadata"/>
@@ -9210,25 +9196,28 @@ Var And Scrolling Synced To Left Table</string>
     <property name="title">
      <string>Vie&amp;w</string>
     </property>
-    <addaction name="actionPrevious_Slot"/>
+    <addaction name="actionReload"/>
+    <addaction name="separator"/>
     <addaction name="actionNext_Slot"/>
+    <addaction name="actionPrevious_Slot"/>
     <addaction name="separator"/>
     <addaction name="actionShow_Selection_Dialog"/>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
     <addaction name="actionSlot_02"/>
+    <addaction name="actionSlot_05"/>
     <addaction name="actionSlot_03"/>
     <addaction name="actionSlot_04"/>
-    <addaction name="actionSlot_05"/>
+    <addaction name="actionSlot_12"/>
     <addaction name="actionSlot_06"/>
     <addaction name="actionSlot_07"/>
+    <addaction name="actionSlot_11"/>
     <addaction name="actionSlot_08"/>
     <addaction name="actionSlot_09"/>
     <addaction name="actionSlot_10"/>
-    <addaction name="actionSlot_11"/>
-    <addaction name="actionSlot_12"/>
     <addaction name="actionSlot_13"/>
     <addaction name="actionSlot_14"/>
+    <addaction name="separator"/>
     <addaction name="actionSlot_15"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
@@ -9629,7 +9618,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
    </property>
    <property name="text">
@@ -9641,7 +9630,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/psn</normaloff>:/icon/psn</iconset>
    </property>
    <property name="text">
@@ -9657,7 +9646,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
-    <string>Copy Current Slot</string>
+    <string>&amp;Copy Current Slot</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+C</string>
@@ -9675,7 +9664,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/paste</normaloff>:/icon/paste</iconset>
    </property>
    <property name="text">
-    <string>Paste Slot</string>
+    <string>&amp;Paste Slot</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+V</string>
@@ -9693,7 +9682,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/delete</normaloff>:/icon/delete</iconset>
    </property>
    <property name="text">
-    <string>Clear Slot</string>
+    <string>Clea&amp;r Slot</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Del</string>
@@ -9889,7 +9878,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
    </property>
    <property name="text">
-    <string>New Game</string>
+    <string>&amp;New Game</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Ins</string>
@@ -9917,27 +9906,21 @@ Var And Scrolling Synced To Left Table</string>
    </property>
   </action>
   <action name="actionExport_char">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/export_char</normaloff>:/icon/export_char</iconset>
    </property>
    <property name="text">
-    <string>Export Current Character</string>
+    <string>E&amp;xport Current Character</string>
    </property>
   </action>
   <action name="actionImport_char">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/import_char</normaloff>:/icon/import_char</iconset>
    </property>
    <property name="text">
-    <string>Import Current Character</string>
+    <string>I&amp;mport Current Character</string>
    </property>
   </action>
   <action name="action_Save">
@@ -9971,18 +9954,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>Calculate Stats</string>
-   </property>
-  </action>
-  <action name="actionNew_Window">
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/new_window</normaloff>:/icon/new_window</iconset>
-   </property>
-   <property name="text">
-    <string>New Window</string>
-   </property>
-   <property name="shortcutContext">
-    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionReload">
@@ -10043,15 +10014,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
   </action>
   <action name="actionCreateNewMetadata">
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="checked">
-    <bool>false</bool>
-   </property>
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
@@ -10060,13 +10022,16 @@ Var And Scrolling Synced To Left Table</string>
     <string>Create Cloud Save Folder</string>
    </property>
   </action>
-  <action name="actionImport_Slot_From">
+  <action name="actionImport_Slot_From_File">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
-    <string>Import Slot From...</string>
+    <string>&amp;Import Slot From File...</string>
    </property>
   </action>
  </widget>
