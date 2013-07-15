@@ -2922,8 +2922,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>454</height>
+             <width>100</width>
+             <height>30</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4846,7 +4846,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>313</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -9205,19 +9205,18 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
     <addaction name="actionSlot_02"/>
-    <addaction name="actionSlot_05"/>
     <addaction name="actionSlot_03"/>
     <addaction name="actionSlot_04"/>
-    <addaction name="actionSlot_12"/>
+    <addaction name="actionSlot_05"/>
     <addaction name="actionSlot_06"/>
     <addaction name="actionSlot_07"/>
-    <addaction name="actionSlot_11"/>
     <addaction name="actionSlot_08"/>
     <addaction name="actionSlot_09"/>
     <addaction name="actionSlot_10"/>
+    <addaction name="actionSlot_11"/>
+    <addaction name="actionSlot_12"/>
     <addaction name="actionSlot_13"/>
     <addaction name="actionSlot_14"/>
-    <addaction name="separator"/>
     <addaction name="actionSlot_15"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
