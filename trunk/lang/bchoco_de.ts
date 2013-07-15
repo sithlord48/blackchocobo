@@ -4332,7 +4332,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation>&amp;Importiere zu jetzigem Steckplatz</translation>
+        <translation type="obsolete">&amp;Importiere zu jetzigem Steckplatz</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -4484,11 +4484,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Copy Current Slot</source>
-        <translation>Kopiere jetzigen Steckplatz</translation>
+        <translation type="obsolete">Kopiere jetzigen Steckplatz</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>Steckplatz Zurücksetzen</translation>
+        <translation type="obsolete">Steckplatz Zurücksetzen</translation>
     </message>
     <message>
         <source>Previous Slot</source>
@@ -4574,11 +4574,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
-        <translation>Wähle Final Fantasy 7 PSX Spielstand</translation>
+        <translation type="obsolete">Wähle Final Fantasy 7 PSX Spielstand</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSV Save</source>
-        <translation>Wähle Final Fantasy 7 PSV Spielstand</translation>
+        <translation type="obsolete">Wähle Final Fantasy 7 PSV Spielstand</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
@@ -4722,7 +4722,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>Füge Steckplatz ein</translation>
+        <translation type="obsolete">Füge Steckplatz ein</translation>
     </message>
     <message>
         <source>More Options...</source>
@@ -4730,7 +4730,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>New Game</source>
-        <translation>Neues Spiel</translation>
+        <translation type="obsolete">Neues Spiel</translation>
     </message>
     <message>
         <source>New Game+ </source>
@@ -4738,11 +4738,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation>Exportiere jetzigen Charakter</translation>
+        <translation type="obsolete">Exportiere jetzigen Charakter</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation>Importiere jetzigen Charakter</translation>
+        <translation type="obsolete">Importiere jetzigen Charakter</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5074,7 +5074,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>New Window</source>
-        <translation>Neues Fenster</translation>
+        <translation type="obsolete">Neues Fenster</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
@@ -5433,7 +5433,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation>Raw PSX FF7 Spielstand (*)</translation>
+        <translation type="obsolete">Raw PSX FF7 Spielstand (*)</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5481,7 +5481,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
-        <translation>PSV FF7 Spielstand (*.psv)</translation>
+        <translation type="obsolete">PSV FF7 Spielstand (*.psv)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
@@ -5948,6 +5948,46 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Seen Pandora&apos;s Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import:: %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Paste Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clea&amp;r Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;New Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E&amp;xport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>I&amp;mport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Import Slot From File...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

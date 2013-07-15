@@ -4309,10 +4309,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Import To Current Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4453,14 +4449,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copy Current Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Clear Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4507,14 +4495,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Cannot read file %1:
 %2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSV Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4642,27 +4622,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paste Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>More Options...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New Game</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New Game+ </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export Current Character</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import Current Character</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4948,10 +4912,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Buggy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5301,19 +5261,11 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV FF7 SaveGame (*.psv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5764,6 +5716,46 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Seen Pandora&apos;s Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import:: %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Paste Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clea&amp;r Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;New Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E&amp;xport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>I&amp;mport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Import Slot From File...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

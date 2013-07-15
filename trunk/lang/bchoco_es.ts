@@ -4401,11 +4401,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Copy Current Slot</source>
-        <translation>Copiar Ranura Actual</translation>
+        <translation type="obsolete">Copiar Ranura Actual</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>Borrar Ranura</translation>
+        <translation type="obsolete">Borrar Ranura</translation>
     </message>
     <message>
         <source>Previous Slot</source>
@@ -4429,7 +4429,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation>&amp;Importar A La Ranura Actual</translation>
+        <translation type="obsolete">&amp;Importar A La Ranura Actual</translation>
     </message>
     <message>
         <source>&amp;Options</source>
@@ -4569,11 +4569,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
-        <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSX</translation>
+        <translation type="obsolete">Selecciona Una Partida Guardada de Final Fantasy 7 PSX</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSV Save</source>
-        <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSV</translation>
+        <translation type="obsolete">Selecciona Una Partida Guardada de Final Fantasy 7 PSV</translation>
     </message>
     <message>
         <source>Cannot read file %1:
@@ -4723,7 +4723,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>Pegar Ranura</translation>
+        <translation type="obsolete">Pegar Ranura</translation>
     </message>
     <message>
         <source>More Options...</source>
@@ -4731,7 +4731,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation>Nuevo Juego</translation>
+        <translation type="obsolete">Nuevo Juego</translation>
     </message>
     <message>
         <source>New Game+ </source>
@@ -4739,11 +4739,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation>Exportar personaje actual</translation>
+        <translation type="obsolete">Exportar personaje actual</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation>Importar personaje actual</translation>
+        <translation type="obsolete">Importar personaje actual</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5073,7 +5073,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>New Window</source>
-        <translation>Nueva ventana</translation>
+        <translation type="obsolete">Nueva ventana</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
@@ -5429,7 +5429,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation>Partida Guardada FF7 PSX Raw (*)</translation>
+        <translation type="obsolete">Partida Guardada FF7 PSX Raw (*)</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5477,7 +5477,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
-        <translation>Partida Guardada FF7 PSV (*.psv)</translation>
+        <translation type="obsolete">Partida Guardada FF7 PSV (*.psv)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
@@ -5971,6 +5971,46 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Seen Pandora&apos;s Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import:: %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Paste Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clea&amp;r Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;New Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>E&amp;xport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>I&amp;mport Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Import Slot From File...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

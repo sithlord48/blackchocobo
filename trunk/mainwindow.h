@@ -108,12 +108,9 @@ private slots://try to keep these in the same order as the .cpp file
     /*Loading and Saving related Functions*/
     int save_changes(void); //return 1 to accept and 0 to ingore the event
     void setControllerMappingVisible(bool);
-    void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_triggered();
     void on_actionReload_triggered();
     void Items_Changed(QList<quint16>);
-    void on_actionFrom_PSX_Slot_triggered();
-    void on_actionFrom_PSV_Slot_triggered();
     void on_actionImport_char_triggered();
     void on_actionExport_char_triggered();
     void on_action_Save_triggered();
@@ -578,5 +575,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sbCondorWins_valueChanged(int arg1);
     void on_sbCondorLoses_valueChanged(int arg1);
     void on_cbPandorasBox_toggled(bool checked);
+    void on_actionImport_Slot_From_File_triggered();
 };
 #endif // MAINWINDOW_H

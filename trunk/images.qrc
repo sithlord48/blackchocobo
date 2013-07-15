@@ -4,14 +4,11 @@
         <file alias="quit">icon/quit.png</file>
         <file alias="bchoco">icon/bchoco.png</file>
         <file alias="qt_logo">icon/qt_logo.png</file>
-        <file alias="psxmc">icon/psxmc.png</file>
         <file alias="copy">icon/copy.png</file>
         <file alias="paste">icon/paste.png</file>
         <file alias="delete">icon/delete.png</file>
         <file alias="prev">icon/previous.png</file>
         <file alias="next">icon/next.png</file>
-        <file alias="psn">icon/psn.png</file>
-        <file alias="import">icon/import.png</file>
         <file alias="us_sel">icon/us.png</file>
         <file alias="fr_sel">icon/fr.png</file>
         <file alias="de_sel">icon/de.png</file>
@@ -83,7 +80,6 @@
         <file alias="save">icon/save.png</file>
         <file alias="world_map">icon/world_map.png</file>
         <file alias="slider_up">icon/slider_up.png</file>
-        <file alias="new_window">icon/window-new.png</file>
         <file alias="fix_time">icon/fix_time.png</file>
         <file alias="refresh">icon/refresh.png</file>
         <file alias="cloudsave">icon/cloudsave.png</file>

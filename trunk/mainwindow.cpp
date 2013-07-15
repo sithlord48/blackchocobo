@@ -56,7 +56,6 @@ void MainWindow::init_display()
     //testing stuff.
     ui->tabWidget->setTabEnabled(9,0);
     ui->cb_Region_Slot->setEnabled(false);
-    ui->actionNew_Window->setVisible(0);
 
     // Temp hidden (show only via advancedMode)
     ui->cb_farm_items_1->setVisible(false);
@@ -388,8 +387,6 @@ void MainWindow::closeEvent(QCloseEvent *e)
         case 1: e->accept(); break;
     }
 }}
-/*~~~~~ New Window ~~~~~*/
-void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreApplication::applicationFilePath());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_triggered()
 {
@@ -432,24 +429,25 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     else{/*UNKNOWN FILETYPE*/}
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionFrom_PSX_Slot_triggered()
-{//should check better to be sure its a raw PSX SAVE. then make file filter *
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
-    if(fileName.isEmpty()){return;}
-    else
+void MainWindow::on_actionImport_Slot_From_File_triggered()
+{
+
+    QString fileName = QFileDialog::getOpenFileName(this,
+    tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+    if(!fileName.isEmpty())
     {
-        ff7->importPSX(s,fileName);
-        guirefresh(0);
-    }
-}
-/*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionFrom_PSV_Slot_triggered()
-{//check beter to be sure its the correct PSV type file.
-    QString fileName = QFileDialog::getOpenFileName(this,tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSV FF7 SaveGame (*.psv)"));
-    if (fileName.isEmpty()){return;}
-    else
-    {
-        ff7->importPSV(s,fileName);
+        int fileSlot=0;
+        FF7Save * tempSave = new FF7Save();
+        tempSave->loadFile(fileName);
+        if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
+        {
+            SlotSelect * SSelect= new SlotSelect(this,tempSave);
+            fileSlot = SSelect->exec();
+            ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot),QString::number(s)),2000);
+        }
+        else{ui->statusBar->showMessage(QString(tr("Import:: %1 -> Slot:%2")).arg(fileName,QString::number(s)),2000);}
+        ff7->importFromFileToSlot(s,fileName,fileSlot);
         guirefresh(0);
     }
 }
@@ -641,9 +639,7 @@ void MainWindow::on_action_AdvancedMode_toggled(bool checked)
         settings->setValue("show_test",0);
         if(!ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty()){ui->tabWidget->setCurrentIndex(8);}
     }
-
     ui->tabWidget->setTabEnabled(9,checked);
-    ui->actionNew_Window->setVisible(checked);
     ui->cb_Region_Slot->setEnabled(checked);
     ui->bm_unknown->setVisible(checked);
     ui->bh_id->setVisible(checked);
@@ -895,7 +891,7 @@ void MainWindow::setmenu(bool newgame)
     ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
     ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
     ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compare_table->setEnabled(0);
-    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();
+    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();ui->actionImport_char->setEnabled(1);ui->actionExport_char->setEnabled(1);
     /*~~End Clear Menu Items~~*/
     /*~~~~~~Current Slot~~~~~~*/
     switch(s)
@@ -946,9 +942,8 @@ void MainWindow::setmenu(bool newgame)
 
     if(!_init)
     {//we haven't loaded a file yet.
-        ui->actionNew_Game_Plus->setEnabled(1); ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1); ui->actionCopy_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1); ui->actionImport_Slot_From_File->setEnabled(1);
+        ui->actionCopy_Slot->setEnabled(1);     ui->actionPaste_Slot->setEnabled(1);
     }
 
     if ( (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) && (ff7->type()!="") ) //more then one slot, or unknown Type

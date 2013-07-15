@@ -452,6 +452,92 @@ bool FF7Save::exportDEX(const QString &fileName)
       return false;
   }
 }
+void FF7Save::importFromFileToSlot(int s, QString fileName,int fileSlot)
+{
+    QString inType="";
+    int offset=0;
+    if(s<0 || s>14){return;}
+    if(fileName.isEmpty()){return;}
+    QFile file(fileName);
+    if(!file.open(QIODevice::ReadOnly)){return;}
+    int file_size = file.size();
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    //decide the file type
+
+    if((file_size == FF7_PC_SAVE_GAME_SIZE)&& (file.peek(PC_SAVE_GAME_FILE_ID.length()))==PC_SAVE_GAME_FILE_ID)
+    {
+        inType="PC";
+        offset = FF7_PC_SAVE_GAME_HEADER;
+        offset+=((FF7_PC_SAVE_GAME_SLOT_HEADER + FF7_PC_SAVE_GAME_SLOT_SIZE + FF7_PC_SAVE_GAME_SLOT_FOOTER) *fileSlot);
+    }
+    else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& (file.peek(PSX_SAVE_GAME_FILE_ID.length()))==PSX_SAVE_GAME_FILE_ID)
+    {
+        file.close();
+        importPSX(s,fileName);
+        return;
+    }
+    else if((file_size == FF7_MC_SAVE_GAME_SIZE)&& (file.peek(MC_SAVE_GAME_FILE_ID.length()))==MC_SAVE_GAME_FILE_ID)
+    {
+        inType="MC";
+        offset = FF7_MC_SAVE_GAME_HEADER + FF7_MC_SAVE_GAME_SLOT_HEADER;
+        offset += ((FF7_MC_SAVE_GAME_SLOT_SIZE) *fileSlot);
+    }
+    else if((file_size == FF7_PSV_SAVE_GAME_SIZE)&& (file.peek(PSV_SAVE_GAME_FILE_ID.length()))==PSV_SAVE_GAME_FILE_ID)
+    {
+        file.close();
+        importPSV(s,fileName);
+        return;
+    }
+    else if((file_size ==FF7_PSP_SAVE_GAME_SIZE)&& (file.peek(PSP_SAVE_GAME_FILE_ID.length()))==PSP_SAVE_GAME_FILE_ID)
+    {
+        inType="PSP";
+        offset = FF7_PSP_SAVE_GAME_HEADER + FF7_PSP_SAVE_GAME_SLOT_HEADER;
+        offset += ((FF7_PSP_SAVE_GAME_SLOT_SIZE) *fileSlot);
+    }
+    else if((file_size ==FF7_VGS_SAVE_GAME_SIZE)&& (file.peek(VGS_SAVE_GAME_FILE_ID.length()))==VGS_SAVE_GAME_FILE_ID)
+    {
+        inType="VGS";
+        offset = FF7_VGS_SAVE_GAME_HEADER + FF7_VGS_SAVE_GAME_SLOT_HEADER;
+        offset += ((FF7_VGS_SAVE_GAME_SLOT_SIZE) *fileSlot);
+    }
+    else if((file_size ==FF7_DEX_SAVE_GAME_SIZE)&& (file.peek(DEX_SAVE_GAME_FILE_ID.length()))==DEX_SAVE_GAME_FILE_ID)
+    {
+        inType="DEX";
+        offset = FF7_DEX_SAVE_GAME_HEADER + FF7_DEX_SAVE_GAME_SLOT_HEADER;
+        offset += ((FF7_DEX_SAVE_GAME_SLOT_SIZE) *fileSlot);
+    }
+    else{file.close();return;}
+    file.seek(offset);
+    setSlotFF7Data(s,file.read(0x10F4));
+    /*~~~~~~~End Load~~~~~~~~~~~~~~*/
+
+    if (inType == "PC")
+    {
+        if(slot[s].checksum != 0x0000 && slot[s].checksum != 0x4D1D)
+        {
+            setRegion(s,QString("BASCUS-94163FF7-S%1").arg(QString::number(s).toInt(),2,10,QChar('0').toUpper()));
+        }
+        else{setRegion(s,"");}
+    }
+    else if (inType == "MC" || inType =="PSP" || inType == "VGS" ||inType=="DEX")
+    {
+
+        QByteArray mc_header;
+        offset = 0;//raw psx card types
+        int headerSize=FF7_MC_SAVE_GAME_HEADER;
+        if(inType =="PSP"){offset = 0x80; headerSize=FF7_PSP_SAVE_GAME_HEADER;}
+        if(inType =="VGS"){offset = 0x40; headerSize=FF7_VGS_SAVE_GAME_HEADER;}
+        if(inType =="DEX"){offset = 0xF40;headerSize=FF7_DEX_SAVE_GAME_HEADER;}
+        file.seek(offset);
+        mc_header = file.read(headerSize);
+        int index=0;
+        index = (128*fileSlot) +138;
+        setRegion(s,QString(mc_header.mid(index,19)));
+    }
+    else{return;}
+    file.close();
+    setFileModified(true,s);
+}
 void FF7Save::importPSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return;}

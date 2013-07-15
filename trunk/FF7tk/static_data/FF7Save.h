@@ -73,6 +73,7 @@ public:
     quint16 condorFunds(int s);
     void setCondorFunds(int s,quint16 value);
     //z_38[12] item flags.
+
     bool gaiin_1Ribbon(int s);
     void setGaiin_1Ribbon(int s, bool PickedUp);
     bool gaiin_5Elixir(int s);
@@ -210,6 +211,7 @@ public:
   bool exportVMC(const QString &fileName);
   bool exportDEX(const QString &fileName);
   bool exportVGS(const QString &fileName);
+  void importFromFileToSlot(int s=0, QString fileName="",int fileSlot=0);
   void importPSX(int s,const QString &fileName);
   void importPSV(int s,const QString &fileName);
   void clearSlot(int s);
