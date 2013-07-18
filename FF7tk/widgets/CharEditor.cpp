@@ -44,7 +44,21 @@ void CharEditor::init_display()
     sb_curMp = new QSpinBox;
     sb_curHp = new QSpinBox;
     sb_maxMp = new QSpinBox;
+    sb_maxMp->setToolTip(tr("value calculated ingame; edit BaseMp"));
+    sb_maxMp->setVisible(false);
     sb_maxHp = new QSpinBox;
+    sb_maxHp->setToolTip(tr("value calculated ingame; edit BaseHp"));
+    sb_maxHp->setVisible(false);
+    lcdMaxHp = new QLCDNumber;
+    lcdMaxMp = new QLCDNumber;
+    lcdMaxMp->setSegmentStyle(QLCDNumber::Flat);
+    lcdMaxHp->setSegmentStyle(QLCDNumber::Flat);
+    lcdMaxHp->setDigitCount(5);
+    lcdMaxMp->setDigitCount(5);
+    lcdMaxHp->setMaximumHeight(24);
+    lcdMaxMp->setMaximumHeight(24);
+    //lcdMaxHp->set
+
     sb_kills = new QSpinBox;
     cb_fury=new QCheckBox(tr("Fury"));
     cb_sadness = new QCheckBox(tr("Sadness"));
@@ -300,6 +314,7 @@ void CharEditor::init_display()
     hp_layout->addWidget(sb_curHp);
     hp_layout->addWidget(lbl_hp_slash);
     hp_layout->addWidget(sb_maxHp);
+    hp_layout->addWidget(lcdMaxHp);
     QSpacerItem *hp_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     hp_layout->addSpacerItem(hp_spacer1);
     QSpacerItem *hp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
@@ -310,6 +325,7 @@ void CharEditor::init_display()
     mp_layout->addWidget(sb_curMp);
     mp_layout->addWidget(lbl_mp_slash);
     mp_layout->addWidget(sb_maxMp);
+    mp_layout->addWidget(lcdMaxMp);
     QSpacerItem *mp_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     mp_layout->addSpacerItem(mp_spacer1);
     QSpacerItem *mp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
@@ -1052,8 +1068,6 @@ void CharEditor::init_display()
     armor_materia_box->setLayout(armor_materia_slots);
     armor_materia_box->setFixedHeight(54);
 
-
-
     QVBoxLayout *armor_layout = new QVBoxLayout;
     armor_layout->setContentsMargins(0,0,0,0);
     armor_layout->addWidget(armor_selection);
@@ -1113,7 +1127,6 @@ void CharEditor::init_display()
     this->setLayout(toolbox_layout);
 }
 void CharEditor::setToolBoxStyle(QString stylesheet){toolbox->setStyleSheet(stylesheet);}
-
 void CharEditor::setSliderStyle(QString style){slider_limit->setStyleSheet(style);}
 
 void CharEditor::init_connections()
@@ -1327,8 +1340,10 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_level->setValue(data.level);
     sb_curMp->setValue(data.curMP);
     sb_curHp->setValue(data.curHP);
-    sb_maxMp->setValue(data.maxMP);
     sb_maxHp->setValue(data.maxHP);
+    lcdMaxHp->display(data.maxHP);
+    sb_maxMp->setValue(data.maxMP);
+    lcdMaxMp->display(data.maxMP);
     sb_kills->setValue(data.kills);
     combo_id->setCurrentIndex(data.id);
     if(data.flags[0]==FF7Char::Fury){cb_fury->setChecked(Qt::Checked);}
@@ -1876,9 +1891,12 @@ void CharEditor::setAdvancedMode(bool new_advancedMode)
     advancedMode = new_advancedMode;
     unknown_box->setVisible(advancedMode);
     combo_id_box->setVisible(advancedMode);
+    sb_maxHp->setVisible(advancedMode);
+    sb_maxMp->setVisible(advancedMode);
+    lcdMaxHp->setVisible(!advancedMode);
+    lcdMaxMp->setVisible(!advancedMode);
     //if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
     if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth ){cb_idChanger->setHidden(advancedMode);}
-
 }
 void CharEditor::setEditable(bool edit)
 {
@@ -2143,7 +2161,9 @@ void CharEditor::calc_stats(void)
     if(mp_bonus!=0){lbl_base_mp_bonus->setText(QString("%1%").arg(QString::number(mp_bonus)));} else{lbl_base_mp_bonus->setText(QString(""));}
 
     sb_maxHp->setValue(data.baseHP + (data.baseHP * (hp_bonus*.01)));
+    lcdMaxHp->display(sb_maxHp->value());
     sb_maxMp->setValue(data.baseMP + (data.baseMP *(mp_bonus *.01)));
+    lcdMaxMp->display(sb_maxMp->value());
 }
 
 void CharEditor::level_up(int pre_level)
@@ -2463,9 +2483,9 @@ void CharEditor::update_materia_slots()
 }
 void CharEditor::matId_changed(qint8 id)
 {
-    if(id>=0 &&id<91){data.materias[mslotsel].id = id;}
+    if(id>=0 &&id<91){data.materias[mslotsel].id = id;}    
     else{data.materias[mslotsel].id = FF7Materia::EmptyId;}
-    if(!load){emit Materias_changed(data.materias[mslotsel]);}
+    if(!load){emit(Materias_changed(data.materias[mslotsel]));}
     update_materia_slots();
     calc_stats();
 }
@@ -2486,7 +2506,7 @@ void CharEditor::matAp_changed(qint32 ap)
         data.materias[mslotsel].ap[1]=0xFF;
         data.materias[mslotsel].ap[2]=0xFF;
     }
-    if(!load){emit Materias_changed(data.materias[mslotsel]);}
+    if(!load){emit(Materias_changed(data.materias[mslotsel]));}
     update_materia_slots();
 }
 void CharEditor::weapon_slot_1_clicked(void){mButtonPress(0);}
@@ -2515,7 +2535,7 @@ void CharEditor::mButtonPress(int Mslot)
         mslotsel = Mslot;
         materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));
         setSlotFrame();
-        //emit mslotChanged(mslotsel);
+        emit(mslotChanged(mslotsel));
     }
    else{materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));}
    load=false;
