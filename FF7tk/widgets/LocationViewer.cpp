@@ -87,7 +87,7 @@ void LocationViewer::init_display(void)
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()-6);
 
-    locationTable->setCurrentCell(0,0);
+    locationTable->setCurrentCell(-1,-1);
 
     lineLocationName = new QLineEdit;
     lineLocationName->setPlaceholderText(tr("Location Name"));
