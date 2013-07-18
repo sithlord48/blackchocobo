@@ -27,7 +27,7 @@
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
-#include <QDebug>
+
 class FF7Save{
 
 public:

@@ -983,11 +983,7 @@ void MainWindow::fileModified(bool changed)
 {
     ff7->setFileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
-    if(changed)
-    {    
-        //hexEditorRefresh();
-        ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
-    }
+    if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)

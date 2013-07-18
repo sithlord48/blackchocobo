@@ -379,6 +379,14 @@
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
+    <message>
+        <source>value calculated ingame; edit BaseMp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>value calculated ingame; edit BaseHp</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Char_Limits</name>
