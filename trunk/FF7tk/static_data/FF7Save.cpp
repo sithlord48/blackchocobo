@@ -1318,7 +1318,7 @@ quint8 FF7Save::psx_block_size(int s)
      }
     else{return 0; }
 }
-bool FF7Save::isFileModified(void){return fileChanged;}
+bool FF7Save::isFileModified(void){return fileHasChanged;}
 bool FF7Save::isSlotModified(int s){return slotChanged[s];}
 bool FF7Save::isSlotEmpty(int s)
 {
@@ -2376,9 +2376,10 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
 }
 void FF7Save::setFileModified(bool changed,int s)
 {
-    fileChanged=changed;
+    fileHasChanged=changed;
     if(changed){slotChanged[s]=true;}
     else{for(int i=0;i<15;i++){slotChanged[i]=false;}}
+    emit(fileChanged(changed));
 }
 QVector< SubContainer > FF7Save::parseXML(QString fileName, QString metadataPath, QString UserID)
 {
@@ -2583,11 +2584,8 @@ void FF7Save::setItemMask1(int s, int bit, bool pickedUp)
     else
     {
         if(pickedUp){slot[s].itemsmask_1 |= (1<<bit);}
-        else
-        {
-            slot[s].itemsmask_1 &= ~(1<<bit);
-            setFileModified(true,s);
-        }
+        else{slot[s].itemsmask_1 &= ~(1<<bit);}
+        setFileModified(true,s);
     }
 }
 QByteArray FF7Save::keyItems(int s)
@@ -2809,6 +2807,7 @@ bool FF7Save::setUnknown(int s,int z,QByteArray data)
                     else{memcpy(&slot[s].z_40,data,sizeof(slot[s].z_40)); result=true;break;}
         default: result=false; break;
     }
+    setFileModified(true,s);
     return result;
 }
 bool FF7Save::soundMode(int s){return (slot[s].options & (1<<0));}
@@ -2950,8 +2949,8 @@ void FF7Save::setMagicOrder(int s, int order)
         case MAGIC_IRA: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
         case MAGIC_IAR: slot[s].options |=(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
         default: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options &= ~(1<<12); break;
-        setFileModified(true,s);
     }
+    setFileModified(true,s);
 }
 
 bool FF7Save::battleHelp(int s){return ((slot[s].options)&(1<<14));}

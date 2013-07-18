@@ -28,8 +28,8 @@
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
 
-class FF7Save{
-
+class FF7Save: public QObject{
+    Q_OBJECT
 public:
     enum LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
     enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
@@ -489,6 +489,8 @@ public:
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
+signals:
+  void fileChanged(bool);
 private:
   //data members
   //FF7SLOT slot[15];
@@ -515,7 +517,7 @@ private:
   QString SG_Region_String[15];
   QString filename;//opened file;
   FF7TEXT Text;
-  bool fileChanged;
+  bool fileHasChanged;
   bool slotChanged[15];
   int SG_SIZE;
   int SG_HEADER;
@@ -526,14 +528,13 @@ private:
   int SG_SLOT_SIZE;
   int SG_SLOT_NUMBER;
   QString SG_TYPE;
+
   //private functions
   QString md5sum(QString fileName,QString UserID);
   QString fileblock(QString fileName);
   QString filetimestamp(QString fileName);
-
   void checksumSlots();
   quint16 ff7Checksum(int s);
-
   void fix_psv_header(void);
   void fix_psx_header(int s);
   void fix_vmc_header(void);

@@ -1652,6 +1652,19 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                    </widget>
                   </item>
                   <item>
+                   <widget class="QCheckBox" name="cb_bm_items_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>MDSTIN: Potion 2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QCheckBox" name="cb_itemmask1_1">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1687,19 +1700,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     </property>
                     <property name="text">
                      <string>NMKIN_3: Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_bm_items_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDSTIN: Potion 2</string>
                     </property>
                    </widget>
                   </item>
@@ -2922,8 +2922,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>100</width>
-             <height>30</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2966,8 +2966,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>428</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3117,9 +3117,6 @@ enabled{font:;color: rgb(255, 255, 255);}
                           <property name="text">
                            <string>Buggy</string>
                           </property>
-                          <property name="autoExclusive">
-                           <bool>true</bool>
-                          </property>
                          </widget>
                         </item>
                         <item>
@@ -3133,9 +3130,6 @@ enabled{font:;color: rgb(255, 255, 255);}
                          <widget class="QCheckBox" name="cb_visible_highwind">
                           <property name="text">
                            <string>Highwind</string>
-                          </property>
-                          <property name="autoExclusive">
-                           <bool>true</bool>
                           </property>
                          </widget>
                         </item>
@@ -4846,8 +4840,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>313</width>
-                  <height>1705</height>
+                  <width>287</width>
+                  <height>1697</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">

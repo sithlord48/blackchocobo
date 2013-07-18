@@ -1346,11 +1346,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     lcdMaxMp->display(data.maxMP);
     sb_kills->setValue(data.kills);
     combo_id->setCurrentIndex(data.id);
-    if(data.flags[0]==FF7Char::Fury){cb_fury->setChecked(Qt::Checked);}
-    else if(data.flags[0]==FF7Char::Sadness ){cb_sadness->setChecked(Qt::Checked);}
-    else{cb_fury->setChecked(Qt::Unchecked);cb_sadness->setChecked(Qt::Unchecked);}
-    if(data.flags[1] ==FF7Char::FrontRow){cb_front_row->setChecked(Qt::Checked);}
-    else{cb_front_row->setChecked(Qt::Unchecked);}
+    if(data.flags[0]==FF7Char::Fury){cb_fury->setChecked(Qt::Checked);}else{cb_fury->setChecked(Qt::Unchecked);}
+    if(data.flags[0]==FF7Char::Sadness ){cb_sadness->setChecked(Qt::Checked);}else{cb_sadness->setChecked(Qt::Unchecked);}
+    if(data.flags[1] ==FF7Char::FrontRow){cb_front_row->setChecked(Qt::Checked);}else{cb_front_row->setChecked(Qt::Unchecked);}
     sb_total_exp->setValue(data.exp);
     lcd_tnl->display(int(data.expNext));
     slider_limit->setValue(data.limitbar);
