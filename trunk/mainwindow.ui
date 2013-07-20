@@ -4081,7 +4081,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_73">
                      <item>
-                      <widget class="QSpinBox" name="uw_x">
+                      <widget class="QSpinBox" name="wc_x">
                        <property name="minimumSize">
                         <size>
                          <width>96</width>
@@ -4109,7 +4109,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="uw_y">
+                      <widget class="QSpinBox" name="wc_y">
                        <property name="minimumSize">
                         <size>
                          <width>96</width>
@@ -4137,7 +4137,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="uw_z">
+                      <widget class="QSpinBox" name="wc_z">
                        <property name="minimumSize">
                         <size>
                          <width>48</width>
@@ -4189,7 +4189,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="uw_angle">
+                      <widget class="QSpinBox" name="wc_angle">
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -4225,7 +4225,7 @@ enabled{font:;color: rgb(255, 255, 255);}
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="uw_id">
+                      <widget class="QSpinBox" name="wc_id">
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -4840,8 +4840,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>287</width>
-                  <height>1697</height>
+                  <width>353</width>
+                  <height>1705</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -5206,7 +5206,7 @@ Mission</string>
                       <item>
                        <widget class="QLabel" name="label_229">
                         <property name="text">
-                         <string>Aeris Turks</string>
+                         <string>ChruchProgress</string>
                         </property>
                        </widget>
                       </item>
@@ -5220,7 +5220,7 @@ Mission</string>
                       <item>
                        <widget class="QLabel" name="label_230">
                         <property name="text">
-                         <string>Don_prog</string>
+                         <string>DonProgress</string>
                         </property>
                        </widget>
                       </item>
@@ -8069,7 +8069,7 @@ trigger showing that tutorial</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLCDNumber" name="lcdNumber_6">
+                      <widget class="QLCDNumber" name="lcdTutSub">
                        <property name="maximumSize">
                         <size>
                          <width>64</width>
@@ -8262,6 +8262,9 @@ trigger showing that tutorial</string>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_tut_sub_3">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="text">
                       <string>0x04 - Played Sub Tutorial</string>
                      </property>

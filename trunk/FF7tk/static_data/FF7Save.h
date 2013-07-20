@@ -15,7 +15,7 @@
 /****************************************************************************/
 #ifndef DEF_FF7SAVE
 #define DEF_FF7SAVE
-
+//QtI Includes
 #include <QObject>
 #include<QColor>
 #include <cstdlib>
@@ -23,7 +23,7 @@
 #include <QDateTime>
 #include <QVector>
 #include <QtXml/QDomDocument>
-
+//FF7tk Includes
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
@@ -31,177 +31,151 @@
 class FF7Save: public QObject{
     Q_OBJECT
 public:
-    enum LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
-    enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
-    //Options Enums
-    enum SOUNDMODE{SOUND_MONO,SOUND_STEREO};
-    enum CONTROLMODE {CONTROL_NORMAL,CONTROL_CUSTOM};
-    enum CURSORMODE{CURSOR_INITIAL, CURSOR_MEMORY};
-    enum ATBMODE{ATB_ACTIVE,ATB_RECOMMENED,ATB_WAIT};
-    enum CAMERAMODE {CAMERA_AUTO,CAMERA_FIXED};
-    enum MAGICORDER {MAGIC_RAI,MAGIC_RIA,MAGIC_AIR,MAGIC_ARI,MAGIC_IRA,MAGIC_IAR};
-    enum CONTROLACTION
-    {
-        ACTION_CAMERA,ACTION_TARGET,ACTION_PAGEUP,ACTION_PAGEDOWN,
-        ACTION_MENU,ACTION_OK,ACTION_CANCEL,ACTION_SWITCH,
-        ACTION_HELP,ACTION_UNKNOWN1,ACTION_UNKNOWN2,
-        ACTION_PAUSE,ACTION_UP,ACTION_RIGHT,ACTION_DOWN,ACTION_LEFT
-    };
-    enum PSXBUTTONS
-    {
-        BTN_L2,BTN_R2,BTN_L1,BTN_R1,
-        BTN_TRIANGLE,BTN_CIRCLE,BTN_X,BTN_SQUARE,
-        BTN_SELECT,BTN_UNKNOWN1,BTN_UNKNOWN2,BTN_START,
-        BTN_UP,BTN_RIGHT,BTN_DOWN,BTN_LEFT
-    };
-    enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, BLOCK_MAIN=0x51,BLOCK_DELETED_MAIN=0xA1,BLOCK_MIDLINK=0x52,BLOCK_DELETED_MIDLINK=0xA2,BLOCK_ENDLINK=0x53,BLOCK_DELETED_ENDLINK=0xA3};
-    enum KEYITEMS
-    {
-        COTTONDRESS,SATINDRESS,SILKDRESS,WIG,DYEDWIG,BLONDEWIG,GLASSTIARA,RUBYTIATA,DIAMONDTIARA,COLOGNE,FLOWERCOLOGNE,SEXYCOLOGNE,MEMBERSCARD,
-        LINGERIE,MYSTERYPANTIES,BIKINIBRIEFS,PHARMACYCOUPON,DISINFECTANT,DEODORANT,DIGESTIVE,HUGEMATERIA_CONDOR,HUGEMATERIA_COREL,HUGEMATERIA_UNDERWATER,
-        HUGEMATERIA_ROCKET,KEYTOANCIENTS,LETTERTOADAUGHTER,LETTERTOAWIFE,LUNARHARP,BASEMENTKEY,KEYTOSECTOR5,KEYCARD60,KEYCARD62,KEYCARD65,KEYCARD66,
-        KEYCARD68,MIDGARPARTS1,MIDGARPARTS2,MIDGARPARTS3,MIDGARPARTS4,MIDGARPARTS5,PHS,GOLDTICKET,KEYSTONE,LEIATHANSCALES,GLACIERMAP,COUPON_A,COUPON_B,
-        COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
-    };
-
-    QList<qint8> chocoboPens(int s);
-    void setChocoboPen(int s,int pen,qint8 value);
-    quint8 condorWins(int s);
-    void setCondorWins(int s,quint8 wins);
-    quint8 condorLoses(int s);
-    void setCondorLoses(int s, quint8 loses);
-    quint16 condorFunds(int s);
-    void setCondorFunds(int s,quint16 value);
-    //z_38[12] item flags.
-
-    bool gaiin_1Ribbon(int s);
-    void setGaiin_1Ribbon(int s, bool PickedUp);
-    bool gaiin_5Elixir(int s);
-    void setGaiin_5Elixir(int s, bool PickedUp);
-    bool gaiin_1Javelin(int s);
-    void setGaiin_1Javelin(int s, bool PickedUp);
-    bool gaiin_3SpeedSource(int s);
-    void setGaiin_3SpeedSource(int s, bool PickedUp);
-    bool gaiin_3Elixir(int s);
-    void setGaiin_3Elixir(int s, bool PickedUp);
-    bool gaiin_5FireArmlet(int s);
-    void setGaiin_5FireArmlet(int s, bool PickedUp);
-    bool gaiin_4EnhanceSword(int s);
-    void setGaiin_4EnhanceSword(int s, bool PickedUp);
-    //z_38[13] item flags'
-    bool snmayorTurboEther(int s);
-    void setSnmayorTurboEther(int s,bool PickedUp);
-    bool sninn2XPotion(int s);
-    void setSninn2XPotion(int s,bool PickedUp);
-    bool snmin2Vaccine(int s);
-    void setSnmin2Vaccine(int s,bool PickedUp);
-    bool snmin2HeroDrink(int s);
-    void setSnmin2HeroDrink(int s,bool PickedUp);
-    bool ncoin3Catastrophe(int s);
-    void setNcoin3Catastrophe(int s,bool PickedUp);
-    bool ncoin1Ether(int s);
-    void setNcoin1Ether(int s,bool PickedUp);
-    //z_38[14] item flags'
-    bool trnad_4MpTurbo(int s);
-    void setTrnad_4MpTurbo(int s,bool PickedUp);
-    bool trnad_3KaiserKnuckle(int s);
-    void setTrnad_3KaiserKnuckle(int s,bool PickedUp);
-    bool trnad_4PoisonRing(int s);
-    void setTrnad_4PoisonRing(int s,bool PickedUp);
-    bool trnad_2NeoBahmut(int s);
-    void setTrnad_2NeoBahmut(int s,bool PickedUp);
-
-    quint32 countdownTimer(int s);
-    void setCountdownTimer(int s,quint32 time);
-    quint16 locationId(int s);
-    void setLocationId(int s, quint16 locationID);
-    quint16 mapId(int s);
-    void setMapId(int s, quint16 mapID);
-    qint16 locationX(int s);
-    void setLocationX(int s, qint16 x);
-    qint16 locationY(int s);
-    void setLocationY(int s, qint16 y);
-    quint16 locationT(int s);
-    void setLocationT(int s, quint16 t);
-    quint8 locationD (int s);
-    void setLocationD(int s,quint8 d);
-
-    QByteArray fileHeader(void);
-    bool setFileHeader(QByteArray data);
-
-    QByteArray fileFooter(void);
-    bool setFileFooter(QByteArray data);
-
-    QByteArray slotHeader(int s);
-    bool setSlotHeader(int s,QByteArray data);
-
-    QByteArray slotFooter(int s);
-    bool setSlotFooter(int s,QByteArray data);
-
-    QByteArray slotPsxRawData(int s);
-    bool setSlotPsxRawData(int s,QByteArray data);
-
-
-    QByteArray controllerMapping(int s);
-    quint8 controllerMapping(int s, int action);
-
-    void setControllerMapping(int s,QByteArray map);
-    void setControllerMapping(int s, int action,  int button);
-
-    quint16 options(int s);
-    void setOptions(int s, int opt);
-
-    bool soundMode(int s);
-    void setSoundMode(int s, int mode);
-    void setSoundMode(int s, bool mode);
-
-    bool controlMode(int s);
-    void setControlMode(int s, int mode);
-    void setControlMode(int s, bool mode);
-
-    bool cursorMode(int s);
-    void setCursorMode(int s, int mode);
-    void setCursorMode(int s, bool mode);
-    int atbMode(int s);
-    void setAtbMode(int s, int mode);
-    bool cameraMode(int s);
-    void setCameraMode(int s, int mode);
-    void setCameraMode(int s, bool mode);
-    int magicOrder(int s);
-    void setMagicOrder(int s , int order);
-    bool battleHelp(int s);
-    void setBattleHelp(int s, bool shown);
-    int  battleSpeed(int s);
-    void setBattleSpeed(int s,int speed);
-    int battleMessageSpeed(int s);
-    void setBattleMessageSpeed(int s, int speed);
-    int messageSpeed(int s);
-    void setMessageSpeed(int s, int speed);
-    bool fieldHelp(int s);
-    void setFieldHelp(int s, bool shown);
-    bool battleTargets(int s);
-    void setBattleTargets(int s, bool shown);
-
-    bool phsVisible(int s, int who);
-    void setPhsVisible(int s, int who , bool checked);
-    quint16 phsVisible(int s);
-    void setPhsVisible(int s, quint16 phs_visible);
-    bool phsAllowed(int s,int who);
-    quint16 phsAllowed(int s);
-    void setPhsAllowed(int s, int who , bool checked);
-    void setPhsAllowed(int s, quint16 phs_visible);
-
-
-    bool menuVisible(int s, int index);
-    void setMenuVisible(int s, int index , bool checked);
-    quint16 menuVisible(int s);
-    void setMenuVisible(int s, quint16 menu_visible);
-
-    bool menuLocked(int s, int index);
-    void setMenuLocked(int s, int index , bool checked);
-    quint16 menuLocked(int s);
-    void setMenuLocked(int s, quint16 menu_visible);
-
+  //Enums
+  enum WORLDVEHICLE {WVEHCILE_BUGGY=0,WVEHCILE_TBRONCO=2,WVEHCILE_HIGHWIND=4};
+  enum WORLDCHOCOBO {WCHOCO_WILD,WCHOCO_YELLOW=2,WCHOCO_GREEN=3,WCHOCO_BLUE=4,WCHOCO_BLACK=5,WCHOCO_GOLD=6};
+  enum LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
+  enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
+  enum SOUNDMODE{SOUND_MONO,SOUND_STEREO};
+  enum CONTROLMODE {CONTROL_NORMAL,CONTROL_CUSTOM};
+  enum CURSORMODE{CURSOR_INITIAL, CURSOR_MEMORY};
+  enum ATBMODE{ATB_ACTIVE,ATB_RECOMMENED,ATB_WAIT};
+  enum CAMERAMODE {CAMERA_AUTO,CAMERA_FIXED};
+  enum MAGICORDER {MAGIC_RAI,MAGIC_RIA,MAGIC_AIR,MAGIC_ARI,MAGIC_IRA,MAGIC_IAR};
+  enum CONTROLACTION
+  {
+      ACTION_CAMERA,ACTION_TARGET,ACTION_PAGEUP,ACTION_PAGEDOWN,
+      ACTION_MENU,ACTION_OK,ACTION_CANCEL,ACTION_SWITCH,
+      ACTION_HELP,ACTION_UNKNOWN1,ACTION_UNKNOWN2,
+      ACTION_PAUSE,ACTION_UP,ACTION_RIGHT,ACTION_DOWN,ACTION_LEFT
+  };
+  enum PSXBUTTONS
+  {
+      BTN_L2,BTN_R2,BTN_L1,BTN_R1,
+      BTN_TRIANGLE,BTN_CIRCLE,BTN_X,BTN_SQUARE,
+      BTN_SELECT,BTN_UNKNOWN1,BTN_UNKNOWN2,BTN_START,
+      BTN_UP,BTN_RIGHT,BTN_DOWN,BTN_LEFT
+  };
+  enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, BLOCK_MAIN=0x51,BLOCK_DELETED_MAIN=0xA1,BLOCK_MIDLINK=0x52,BLOCK_DELETED_MIDLINK=0xA2,BLOCK_ENDLINK=0x53,BLOCK_DELETED_ENDLINK=0xA3};
+  enum KEYITEMS
+  {
+      COTTONDRESS,SATINDRESS,SILKDRESS,WIG,DYEDWIG,BLONDEWIG,GLASSTIARA,RUBYTIATA,DIAMONDTIARA,COLOGNE,FLOWERCOLOGNE,SEXYCOLOGNE,MEMBERSCARD,
+      LINGERIE,MYSTERYPANTIES,BIKINIBRIEFS,PHARMACYCOUPON,DISINFECTANT,DEODORANT,DIGESTIVE,HUGEMATERIA_CONDOR,HUGEMATERIA_COREL,HUGEMATERIA_UNDERWATER,
+      HUGEMATERIA_ROCKET,KEYTOANCIENTS,LETTERTOADAUGHTER,LETTERTOAWIFE,LUNARHARP,BASEMENTKEY,KEYTOSECTOR5,KEYCARD60,KEYCARD62,KEYCARD65,KEYCARD66,
+      KEYCARD68,MIDGARPARTS1,MIDGARPARTS2,MIDGARPARTS3,MIDGARPARTS4,MIDGARPARTS5,PHS,GOLDTICKET,KEYSTONE,LEIATHANSCALES,GLACIERMAP,COUPON_A,COUPON_B,
+      COUPON_C,BLACKMATERIA,MYTHRIL,SNOWBOARD
+  };
+  //Functions
+  QList<qint8> chocoboPens(int s);
+  void setChocoboPen(int s,int pen,qint8 value);
+  quint8 condorWins(int s);
+  void setCondorWins(int s,quint8 wins);
+  quint8 condorLoses(int s);
+  void setCondorLoses(int s, quint8 loses);
+  quint16 condorFunds(int s);
+  void setCondorFunds(int s,quint16 value);
+  //z_38[12] item flags.
+  bool gaiin_1Ribbon(int s);
+  void setGaiin_1Ribbon(int s, bool PickedUp);
+  bool gaiin_5Elixir(int s);
+  void setGaiin_5Elixir(int s, bool PickedUp);
+  bool gaiin_1Javelin(int s);
+  void setGaiin_1Javelin(int s, bool PickedUp);
+  bool gaiin_3SpeedSource(int s);
+  void setGaiin_3SpeedSource(int s, bool PickedUp);
+  bool gaiin_3Elixir(int s);
+  void setGaiin_3Elixir(int s, bool PickedUp);
+  bool gaiin_5FireArmlet(int s);
+  void setGaiin_5FireArmlet(int s, bool PickedUp);
+  bool gaiin_4EnhanceSword(int s);
+  void setGaiin_4EnhanceSword(int s, bool PickedUp);
+  //z_38[13] item flags
+  bool snmayorTurboEther(int s);
+  void setSnmayorTurboEther(int s,bool PickedUp);
+  bool sninn2XPotion(int s);
+  void setSninn2XPotion(int s,bool PickedUp);
+  bool snmin2Vaccine(int s);
+  void setSnmin2Vaccine(int s,bool PickedUp);
+  bool snmin2HeroDrink(int s);
+  void setSnmin2HeroDrink(int s,bool PickedUp);
+  bool ncoin3Catastrophe(int s);
+  void setNcoin3Catastrophe(int s,bool PickedUp);
+  bool ncoin1Ether(int s);
+  void setNcoin1Ether(int s,bool PickedUp);
+  //z_38[14] item flags
+  bool trnad_4MpTurbo(int s);
+  void setTrnad_4MpTurbo(int s,bool PickedUp);
+  bool trnad_3KaiserKnuckle(int s);
+  void setTrnad_3KaiserKnuckle(int s,bool PickedUp);
+  bool trnad_4PoisonRing(int s);
+  void setTrnad_4PoisonRing(int s,bool PickedUp);
+  bool trnad_2NeoBahmut(int s);
+  void setTrnad_2NeoBahmut(int s,bool PickedUp);
+  //Field Location
+  quint16 locationId(int s);
+  void setLocationId(int s, quint16 locationID);
+  quint16 mapId(int s);
+  void setMapId(int s, quint16 mapID);
+  qint16 locationX(int s);
+  void setLocationX(int s, qint16 x);
+  qint16 locationY(int s);
+  void setLocationY(int s, qint16 y);
+  quint16 locationT(int s);
+  void setLocationT(int s, quint16 t);
+  quint8 locationD (int s);
+  void setLocationD(int s,quint8 d);
+  //options
+  QByteArray controllerMapping(int s);
+  quint8 controllerMapping(int s, int action);
+  void setControllerMapping(int s,QByteArray map);
+  void setControllerMapping(int s, int action,  int button);
+  quint16 options(int s);
+  void setOptions(int s, int opt);
+  bool soundMode(int s);
+  void setSoundMode(int s, int mode);
+  void setSoundMode(int s, bool mode);
+  bool controlMode(int s);
+  void setControlMode(int s, int mode);
+  void setControlMode(int s, bool mode);
+  bool cursorMode(int s);
+  void setCursorMode(int s, int mode);
+  void setCursorMode(int s, bool mode);
+  int atbMode(int s);
+  void setAtbMode(int s, int mode);
+  bool cameraMode(int s);
+  void setCameraMode(int s, int mode);
+  void setCameraMode(int s, bool mode);
+  int magicOrder(int s);
+  void setMagicOrder(int s , int order);
+  bool battleHelp(int s);
+  void setBattleHelp(int s, bool shown);
+  int  battleSpeed(int s);
+  void setBattleSpeed(int s,int speed);
+  int battleMessageSpeed(int s);
+  void setBattleMessageSpeed(int s, int speed);
+  int messageSpeed(int s);
+  void setMessageSpeed(int s, int speed);
+  bool fieldHelp(int s);
+  void setFieldHelp(int s, bool shown);
+  bool battleTargets(int s);
+  void setBattleTargets(int s, bool shown);
+  //Phs/Menu
+  bool phsVisible(int s, int who);
+  void setPhsVisible(int s, int who , bool checked);
+  quint16 phsVisible(int s);
+  void setPhsVisible(int s, quint16 phs_visible);
+  bool phsAllowed(int s,int who);
+  quint16 phsAllowed(int s);
+  void setPhsAllowed(int s, int who , bool checked);
+  void setPhsAllowed(int s, quint16 phs_visible);
+  bool menuVisible(int s, int index);
+  void setMenuVisible(int s, int index , bool checked);
+  quint16 menuVisible(int s);
+  void setMenuVisible(int s, quint16 menu_visible);
+  bool menuLocked(int s, int index);
+  void setMenuLocked(int s, int index , bool checked);
+  quint16 menuLocked(int s);
+  void setMenuLocked(int s, quint16 menu_visible);
   //File Members
   bool loadFile(const QString &fileName);
   bool saveFile(const QString &fileName);
@@ -224,35 +198,36 @@ public:
   typedef QVector< QString > SubContainer;
   QVector< SubContainer >  parseXML(QString fileName,QString metadataPath,QString UserID);
   QVector< SubContainer >  createMetadata(QString fileName, QString UserID);
-  //Set/Get Data Parts.
   bool fixMetaData(QString fileName="",QString OutPath="",QString UserID="");
-  quint16 battlePoints(int s);
-  void setBattlePoints(int s,quint16);
+  QByteArray fileHeader(void);
+  bool setFileHeader(QByteArray data);
+  QByteArray fileFooter(void);
+  bool setFileFooter(QByteArray data);
+  QByteArray slotHeader(int s);
+  bool setSlotHeader(int s,QByteArray data);
+  QByteArray slotFooter(int s);
+  bool setSlotFooter(int s,QByteArray data);
+  QByteArray slotPsxRawData(int s);
+  bool setSlotPsxRawData(int s,QByteArray data);
+  //item info
   quint16 item(int s,int item_num); //return raw ff7item
   QList<quint16> items(int s);// return all items
   quint16 itemId(int s,int item_num);
   quint16 itemId(quint16 rawitem);
   quint8 itemQty(int s,int item_num);
   quint8 itemQty(quint16 rawitem);
-
   void setItems(int s,QList<quint16> items);
   void setItem(int s,int item_num,quint16 rawitem);
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
-
   //materia get/set
   bool  materiaCave(int s,MATERIACAVE cave);
   void setMateriaCave(int s, MATERIACAVE cave, bool hasMateria);
-
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
   quint8 stolenMateriaId(int s,int mat_num);
   qint32 stolenMateriaAp(int s,int mat_num);
   void setPartyMateria(int s,int mat_num,quint8 id,qint32 ap);
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
-  quint32 time(int s);
-  void setTime(int s,quint32 new_time);
-  void setDisc(int s,int disc);
-  quint8 disc(int s);
   //Description Stuff.
   quint32 descTime(int s);
   void setDescTime(int s,quint32 new_time);
@@ -279,7 +254,6 @@ public:
   QColor dialogColorUR(int s);
   QColor dialogColorLL(int s);
   QColor dialogColorLR(int s);
-
   void setDialogColorUL(int s,QColor color);
   void setDialogColorUR(int s,QColor color);
   void setDialogColorLL(int s,QColor color);
@@ -314,6 +288,8 @@ public:
   void setSnowboardTime(int s,int course,quint32 time);
   quint8 snowboardScore(int s,int course);
   void setSnowboardScore(int s,int course,quint8 score);
+  quint32 countdownTimer(int s);
+  void setCountdownTimer(int s,quint32 time);
   //Char Releated Functions
   FF7CHAR character(int s,int char_num); //Return Full Char
   QByteArray rawCharacterData(int s, int char_num);
@@ -359,16 +335,16 @@ public:
   void setCharVit(int s,int char_num,quint8 vit);
   void setCharMag(int s,int char_num,quint8 mag);
   void setCharSpi(int s,int char_num,quint8 spi);
-  void  setCharDex(int s,int char_num,quint8 dex);
-  void  setCharLck(int s,int char_num,quint8 lck);
-  void  setCharStrBonus(int s,int char_num,quint8 strbonus);
-  void  setCharVitBonus(int s,int char_num,quint8 vitbonus);
-  void  setCharMagBonus(int s,int char_num,quint8 magbonus);
-  void  setCharSpiBonus(int s,int char_num,quint8 spibonus);
-  void  setCharDexBonus(int s,int char_num,quint8 dexbonus);
-  void  setCharLckBonus(int s,int char_num,quint8 lckbonus);
-  void  setCharLimitLevel(int s,int char_num,qint8 limitlevel);
-  void  setCharLimitBar(int s,int char_num,quint8 limitbar);
+  void setCharDex(int s,int char_num,quint8 dex);
+  void setCharLck(int s,int char_num,quint8 lck);
+  void setCharStrBonus(int s,int char_num,quint8 strbonus);
+  void setCharVitBonus(int s,int char_num,quint8 vitbonus);
+  void setCharMagBonus(int s,int char_num,quint8 magbonus);
+  void setCharSpiBonus(int s,int char_num,quint8 spibonus);
+  void setCharDexBonus(int s,int char_num,quint8 dexbonus);
+  void setCharLckBonus(int s,int char_num,quint8 lckbonus);
+  void setCharLimitLevel(int s,int char_num,qint8 limitlevel);
+  void setCharLimitBar(int s,int char_num,quint8 limitbar);
   void setCharName(int s,int char_num,QString new_name);//write char_num 's new_name to slot s
   void setCharWeapon(int s,int char_num,quint8 weapon);
   void setCharArmor(int s,int char_num,quint8 armor);
@@ -399,7 +375,6 @@ public:
   void setStablesOwned(int s,qint8 value);
   void setStablesOccupied(int s,qint8 value);
   void setStableMask(int s,qint8 value);
-
   FF7CHOCOBO chocobo(int s,int chocoSlot);
   quint16 chocoStamina(int s,int chocoSlot);
   quint16 chocoSpeed(int s,int chocoSlot);
@@ -430,7 +405,6 @@ public:
   void setChocoPersonality(int s, int chocoSlot,quint8 value);
   void setChocoCantMate(int s,int chocoSlot,bool cantMate);
   // Return File Info
-
   int lenFile(void);//Return File length.
   int lenFileHeader(void);//Return File Header length
   int lenFileFooter(void);//Return File Footer length
@@ -454,7 +428,6 @@ public:
   void setType(QString);//allows for slot change.
   void setRegion(int s ,QString region);
   QByteArray slot_header(int s); //return slot header.
-
   quint8 psx_block_type(int s);//mask of psx slot (used by index)
   void setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type);
   quint8 psx_block_next(int s);// if using more then one block return location of next block
@@ -462,38 +435,154 @@ public:
   quint8 psx_block_size(int s);//how many blocks save uses.
   void setPsx_block_size(int s,int blockSize);
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
-
   QByteArray slotFF7Data(int s); //Return Raw data from the slot
   bool setSlotFF7Data(int s, QByteArray data);
   bool setSlotFF7Data(int s, FF7SLOT data);
-
+  //more data members
   QByteArray unknown(int s,int z);
   bool setUnknown(int s,int z,QByteArray data);
-
-
+  quint16 steps(int s);
+  void setSteps(int s,int steps);
+  quint8 chruchProgress(int s);
+  void setChurchProgress(int s,int progress);
+  quint8 donProgress(int s);
+  void setDonProgress(int s,int progress);
+  quint16 battlePoints(int s);
+  void setBattlePoints(int s,quint16);
+  quint32 time(int s);
+  void setTime(int s,quint32 new_time);
+  void setDisc(int s,int disc);
+  quint8 disc(int s);
+  quint16 mainProgress(int s);
+  void setMainProgress(int s,int mProgress);
   QByteArray keyItems(int s);
   bool setKeyItems(int s,QByteArray data);
-
   bool keyItem(int s, int keyItem);
   void setKeyItem(int s, int keyItem,bool pickedUp);
-
   bool itemMask1(int s, int bit);
   void setItemMask1(int s, int bit, bool pickedUp);
-
+  bool bmProgress1(int s, int bit);
+  void setBmProgress1(int s, int bit, bool isTrue);
+  void setBmProgress1(int s, int value);
+  bool bmProgress2(int s, int bit);
+  void setBmProgress2(int s, int bit, bool isTrue);
+  void setBmProgress2(int s, int value);
+  bool bmProgress3(int s, int bit);
+  void setBmProgress3(int s, int bit, bool isTrue);
+  void setBmProgress3(int s, int value);
+  bool midgarTrainFlags(int s, int bit);
+  void setMidgarTrainFlags(int s, int bit, bool isTrue);
+  void setMidgarTrainFlags(int s, int value);
   bool turtleParadiseFlyerSeen(int s, int flyer);
   quint8 turtleParadiseFlyersSeen(int s);
-
   void setTurtleParadiseFlyerSeen(int s, int flyer,bool seen);
   void setTurtleParadiseFlyersSeen(int s,quint8 flyersSeen);
-
-
-  //publicly accessable core data(for now)
-  FF7SLOT slot[15]; //core slot data.
+  bool startBombingMission(int s);
+  void setStartBombingMission(int s,bool isTrue);
+  quint32 uWeaponHp(int s);
+  void setUWeaponHp(int s,int hp);
+  bool killedEmeraldWeapon(int s);
+  void setKilledEmeraldWeapon(int s,bool isTrue);
+  bool killedRubyWeapon(int s);
+  void setKilledRubyWeapon(int s,bool isTrue);
+  quint8 tutSave(int s);
+  void setTutSave(int s, int value);
+  bool canFightNinjaInForest(int s);
+  void setCanFightNinjaInForest(int s,bool isTrue);
+  quint8 tutSub(int s);
+  bool tutSub(int s, int bit);
+  void setTutSub(int s, int bit, bool isTrue);
+  void setTutSub(int s, int value);
+  bool yuffieAquired(int s);
+  quint8 regYuffie(int s);
+  void setYuffieAquired(int s,bool isTrue);
+  void setRegYuffie(int s , int value);
+  bool vincentAquired(int s);
+  quint8 regVincent(int s);
+  void setVincentAquired(int s,bool isTrue);
+  void setRegVincent(int s , int value);
+  bool worldChocobo(int s, int bit);
+  void setWorldChocobo(int s, int bit, bool isTrue);
+  bool worldVehicle(int s, int bit);
+  void setWorldVehicle(int s, int bit, bool isTrue);
+  //World Coords
+  quint32 worldCoordsLeader(int s, bool firstChunk);
+  int worldCoordsLeaderX(int s);
+  int worldCoordsLeaderID(int s);
+  int worldCoordsLeaderAngle(int s);
+  int worldCoordsLeaderY(int s);
+  int worldCoordsLeaderZ(int s);
+  void setWorldCoordsLeader(int s,bool firstChunk,int value);
+  void setWorldCoordsLeaderX(int s,int value);
+  void setWorldCoordsLeaderID(int s,int value);
+  void setWorldCoordsLeaderAngle(int s,int value);
+  void setWorldCoordsLeaderY(int s,int value);
+  void setWorldCoordsLeaderZ(int s,int value);
+  quint32 worldCoordsTc(int s, bool firstChunk);
+  int worldCoordsTcX(int s);
+  int worldCoordsTcID(int s);
+  int worldCoordsTcAngle(int s);
+  int worldCoordsTcY(int s);
+  int worldCoordsTcZ(int s);
+  void setWorldCoordsTc(int s,bool firstChunk,int value);
+  void setWorldCoordsTcX(int s,int value);
+  void setWorldCoordsTcID(int s,int value);
+  void setWorldCoordsTcAngle(int s,int value);
+  void setWorldCoordsTcY(int s,int value);
+  void setWorldCoordsTcZ(int s,int value);
+  quint32 worldCoordsBh(int s, bool firstChunk);
+  int worldCoordsBhX(int s);
+  int worldCoordsBhID(int s);
+  int worldCoordsBhAngle(int s);
+  int worldCoordsBhY(int s);
+  int worldCoordsBhZ(int s);
+  void setWorldCoordsBh(int s,bool firstChunk,int value);
+  void setWorldCoordsBhX(int s,int value);
+  void setWorldCoordsBhID(int s,int value);
+  void setWorldCoordsBhAngle(int s,int value);
+  void setWorldCoordsBhY(int s,int value);
+  void setWorldCoordsBhZ(int s,int value);
+  quint32 worldCoordsSub(int s, bool firstChunk);
+  int worldCoordsSubX(int s);
+  int worldCoordsSubID(int s);
+  int worldCoordsSubAngle(int s);
+  int worldCoordsSubY(int s);
+  int worldCoordsSubZ(int s);
+  void setWorldCoordsSub(int s,bool firstChunk,int value);
+  void setWorldCoordsSubX(int s,int value);
+  void setWorldCoordsSubID(int s,int value);
+  void setWorldCoordsSubAngle(int s,int value);
+  void setWorldCoordsSubY(int s,int value);
+  void setWorldCoordsSubZ(int s,int value);
+  quint32 worldCoordsWchoco(int s, bool firstChunk);
+  int worldCoordsWchocoX(int s);
+  int worldCoordsWchocoID(int s);
+  int worldCoordsWchocoAngle(int s);
+  int worldCoordsWchocoY(int s);
+  int worldCoordsWchocoZ(int s);
+  void setWorldCoordsWchoco(int s,bool firstChunk,int value);
+  void setWorldCoordsWchocoX(int s,int value);
+  void setWorldCoordsWchocoID(int s,int value);
+  void setWorldCoordsWchocoAngle(int s,int value);
+  void setWorldCoordsWchocoY(int s,int value);
+  void setWorldCoordsWchocoZ(int s,int value);
+  quint32 worldCoordsDurw(int s, bool firstChunk);
+  int worldCoordsDurwX(int s);
+  int worldCoordsDurwID(int s);
+  int worldCoordsDurwAngle(int s);
+  int worldCoordsDurwY(int s);
+  int worldCoordsDurwZ(int s);
+  void setWorldCoordsDurw(int s,bool firstChunk,int value);
+  void setWorldCoordsDurwX(int s,int value);
+  void setWorldCoordsDurwID(int s,int value);
+  void setWorldCoordsDurwAngle(int s,int value);
+  void setWorldCoordsDurwY(int s,int value);
+  void setWorldCoordsDurwZ(int s,int value);
 signals:
   void fileChanged(bool);
 private:
   //data members
-  //FF7SLOT slot[15];
+  FF7SLOT slot[15]; //core slot data.
   FF7HEADFOOT hf[15]; //slot header and footer.
   quint8 * file_headerp;              //pointer to file header
   quint8 * file_footerp;              //pointer to file footer
@@ -511,7 +600,6 @@ private:
   quint8 file_footer_dex[0x0000];
   quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
   quint8 file_footer_psp[0x0000];
-
   FF7SLOT buffer_slot;// hold a buffer slot
   QString buffer_region; // hold the buffers region data.
   QString SG_Region_String[15];
@@ -528,7 +616,6 @@ private:
   int SG_SLOT_SIZE;
   int SG_SLOT_NUMBER;
   QString SG_TYPE;
-
   //private functions
   QString md5sum(QString fileName,QString UserID);
   QString fileblock(QString fileName);
@@ -541,5 +628,4 @@ private:
   quint16 itemDecode( quint16 itemraw );
   quint16 itemEncode( quint16 id, quint8 qty );
 };
-
 #endif //FF7Save

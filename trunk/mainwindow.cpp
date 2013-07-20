@@ -1207,13 +1207,9 @@ void MainWindow::CheckGame()
 void MainWindow::othersUpdate()
 {
     load=true;
-    ui->cb_replay->setCurrentIndex(0);
-    ui->cb_bombing_int->setChecked(Qt::Unchecked);
-    ui->cb_ruby_dead->setChecked(Qt::Unchecked);
-    ui->cb_emerald_dead->setChecked(Qt::Unchecked);
 
-    if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
-    if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
+    ui->cb_ruby_dead->setChecked(ff7->killedRubyWeapon(s));
+    ui->cb_emerald_dead->setChecked(ff7->killedEmeraldWeapon(s));
 
     ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
     ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
@@ -1250,8 +1246,8 @@ void MainWindow::othersUpdate()
         if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
         else{menuList->setChecked(i,2,false);}
     }
+    ui->sb_steps->setValue(ff7->steps(s));
 
-    ui->sb_steps->setValue(ff7->slot[s].steps);
     ui->sb_love_barret->setValue(ff7->love(s,false,FF7Save::LOVE_BARRET));
     ui->sb_love_tifa->setValue(ff7->love(s,false,FF7Save::LOVE_TIFA));
     ui->sb_love_aeris->setValue(ff7->love(s,false,FF7Save::LOVE_AERIS));
@@ -1264,8 +1260,8 @@ void MainWindow::othersUpdate()
     ui->sb_timer_time_hour->setValue(ff7->countdownTimer(s) / 3600);
     ui->sb_timer_time_min->setValue(ff7->countdownTimer(s)/60%60);
     ui->sb_timer_time_sec->setValue(ff7->countdownTimer(s) -((ui->sb_timer_time_hour->value()*3600)+ui->sb_timer_time_min->value()*60));
+    ui->cb_yuffieforest->setChecked(ff7->canFightNinjaInForest(s));
 
-    if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
 
     /*~~~~~Stolen Materia~~~~~~~*/
     QTableWidgetItem *newItem;
@@ -1463,37 +1459,45 @@ void MainWindow::progress_update()
 {
     load=true;
     ui->sb_curdisc->setValue(ff7->disc(s));
-    ui->sb_turkschruch->setValue(ff7->slot[s].aeris_chruch);
-    ui->sb_donprog->setValue(ff7->slot[s].donprogress);
-    ui->sb_mprogress->setValue(ff7->slot[s].mprogress);
+    ui->sb_mprogress->setValue(ff7->mainProgress(s));
+
+    ui->sb_turkschruch->setValue(ff7->chruchProgress(s));
+    ui->sb_donprog->setValue(ff7->donProgress(s));
     ui->combo_s7_slums->setCurrentIndex(0);
-    if(ff7->slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}   else{ui->cb_bombing_int->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<0)){ui->cb_bm1_1->setChecked(Qt::Checked);}     else{ui->cb_bm1_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<1)){ui->cb_bm1_2->setChecked(Qt::Checked);}     else{ui->cb_bm1_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<2)){ui->cb_bm1_3->setChecked(Qt::Checked);}     else{ui->cb_bm1_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<3)){ui->cb_bm1_4->setChecked(Qt::Checked);}     else{ui->cb_bm1_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<4)){ui->cb_bm1_5->setChecked(Qt::Checked);}     else{ui->cb_bm1_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<5)){ui->cb_bm1_6->setChecked(Qt::Checked);}     else{ui->cb_bm1_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<6)){ui->cb_bm1_7->setChecked(Qt::Checked);}     else{ui->cb_bm1_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<7)){ui->cb_bm1_8->setChecked(Qt::Checked);}     else{ui->cb_bm1_8->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].bm_progress2)& (1<<0)){ui->cb_bm2_1->setChecked(Qt::Checked);}     else{ui->cb_bm2_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<1)){ui->cb_bm2_2->setChecked(Qt::Checked);}     else{ui->cb_bm2_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<2)){ui->cb_bm2_3->setChecked(Qt::Checked);}     else{ui->cb_bm2_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<3)){ui->cb_bm2_4->setChecked(Qt::Checked);}     else{ui->cb_bm2_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<4)){ui->cb_bm2_5->setChecked(Qt::Checked);}     else{ui->cb_bm2_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<5)){ui->cb_bm2_6->setChecked(Qt::Checked);}     else{ui->cb_bm2_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<6)){ui->cb_bm2_7->setChecked(Qt::Checked);}     else{ui->cb_bm2_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<7)){ui->cb_bm2_8->setChecked(Qt::Checked);}     else{ui->cb_bm2_8->setChecked(Qt::Unchecked);}
-
-    if((ff7->slot[s].bm_progress3)& (1<<0)){ui->cb_bm3_1->setChecked(Qt::Checked);}     else{ui->cb_bm3_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<1)){ui->cb_bm3_2->setChecked(Qt::Checked);}     else{ui->cb_bm3_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<2)){ui->cb_bm3_3->setChecked(Qt::Checked);}     else{ui->cb_bm3_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<3)){ui->cb_bm3_4->setChecked(Qt::Checked);}     else{ui->cb_bm3_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<4)){ui->cb_bm3_5->setChecked(Qt::Checked);}     else{ui->cb_bm3_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<5)){ui->cb_bm3_6->setChecked(Qt::Checked);}     else{ui->cb_bm3_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<6)){ui->cb_bm3_7->setChecked(Qt::Checked);}     else{ui->cb_bm3_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<7)){ui->cb_bm3_8->setChecked(Qt::Checked);}     else{ui->cb_bm3_8->setChecked(Qt::Unchecked);}
+    ui->cb_bm1_1->setChecked(ff7->bmProgress1(s,0));
+    ui->cb_bm1_2->setChecked(ff7->bmProgress1(s,1));
+    ui->cb_bm1_3->setChecked(ff7->bmProgress1(s,2));
+    ui->cb_bm1_4->setChecked(ff7->bmProgress1(s,3));
+    ui->cb_bm1_5->setChecked(ff7->bmProgress1(s,4));
+    ui->cb_bm1_6->setChecked(ff7->bmProgress1(s,5));
+    ui->cb_bm1_7->setChecked(ff7->bmProgress1(s,6));
+    ui->cb_bm1_8->setChecked(ff7->bmProgress1(s,7));
+    ui->cb_bm2_1->setChecked(ff7->bmProgress2(s,0));
+    ui->cb_bm2_2->setChecked(ff7->bmProgress2(s,1));
+    ui->cb_bm2_3->setChecked(ff7->bmProgress2(s,2));
+    ui->cb_bm2_4->setChecked(ff7->bmProgress2(s,3));
+    ui->cb_bm2_5->setChecked(ff7->bmProgress2(s,4));
+    ui->cb_bm2_6->setChecked(ff7->bmProgress2(s,5));
+    ui->cb_bm2_7->setChecked(ff7->bmProgress2(s,6));
+    ui->cb_bm2_8->setChecked(ff7->bmProgress2(s,7));
+    ui->cb_bm3_1->setChecked(ff7->bmProgress3(s,0));
+    ui->cb_bm3_2->setChecked(ff7->bmProgress3(s,1));
+    ui->cb_bm3_3->setChecked(ff7->bmProgress3(s,2));
+    ui->cb_bm3_4->setChecked(ff7->bmProgress3(s,3));
+    ui->cb_bm3_5->setChecked(ff7->bmProgress3(s,4));
+    ui->cb_bm3_6->setChecked(ff7->bmProgress3(s,5));
+    ui->cb_bm3_7->setChecked(ff7->bmProgress3(s,6));
+    ui->cb_bm3_8->setChecked(ff7->bmProgress3(s,7));
+    ui->cb_midgartrain_1->setChecked(ff7->midgarTrainFlags(s,0));
+    ui->cb_midgartrain_2->setChecked(ff7->midgarTrainFlags(s,1));
+    ui->cb_midgartrain_3->setChecked(ff7->midgarTrainFlags(s,2));
+    ui->cb_midgartrain_4->setChecked(ff7->midgarTrainFlags(s,3));
+    ui->cb_midgartrain_5->setChecked(ff7->midgarTrainFlags(s,4));
+    ui->cb_midgartrain_6->setChecked(ff7->midgarTrainFlags(s,5));
+    ui->cb_midgartrain_7->setChecked(ff7->midgarTrainFlags(s,6));
+    ui->cb_midgartrain_8->setChecked(ff7->midgarTrainFlags(s,7));
+    ui->cb_bombing_int->setChecked(ff7->startBombingMission(s));
 
     if(ff7->unknown(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
@@ -1521,15 +1525,6 @@ void MainWindow::progress_update()
     if(ff7->unknown(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}      else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}      else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
-
-    if((ff7->slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
 
     //When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
     //to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
@@ -1680,8 +1675,7 @@ void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(
 void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s,( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
 void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s,((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
 
-void MainWindow::on_sb_steps_valueChanged(int value){if(!load){fileModified(true);  ff7->slot[s].steps = value;}}
-
+void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,value);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_flyers_clicked(const QModelIndex &index){if(!load){ff7->setTurtleParadiseFlyerSeen(s,index.row(),ui->list_flyers->item(index.row())->checkState());}}
@@ -1882,7 +1876,7 @@ void MainWindow::on_cb_farm_items_8_toggled(bool checked)
 }
 
 void MainWindow::on_btn_clear_keyitems_clicked()
-{if(!load){}//used in other functions
+{if(!load){fileModified(true);}//used in other functions
     for(int i=0;i<51;i++)
     {
         ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
@@ -1891,7 +1885,6 @@ void MainWindow::on_btn_clear_keyitems_clicked()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row){if(!load){load=true;materia_editor->setMateria(ff7->partyMateriaId(s,row),ff7->partyMateriaAp(s,row));load=false;}}
-
 
 void MainWindow::on_btn_add_all_materia_clicked()
 {
@@ -1935,12 +1928,12 @@ void MainWindow::locationSelectionChanged(QString fieldName)
     ff7->setLocationD(s,Locations.d(fieldName).toInt());
     ff7->setLocation(s,Locations.locationString(fieldName));
 }}
-void MainWindow::map_id_valueChanged(int value){if(!load){ ff7->setMapId(s, value);}}
+void MainWindow::map_id_valueChanged(int value){if(!load){ff7->setMapId(s, value);}}
 void MainWindow::loc_id_valueChanged(int value){if(!load){ff7->setLocationId(s,value);}}
-void MainWindow::coord_x_valueChanged(int value){if(!load){ ff7->setLocationX(s,value);}}
-void MainWindow::coord_y_valueChanged(int value){if(!load){ ff7->setLocationY(s,value);}}
-void MainWindow::coord_t_valueChanged(int value){if(!load){ ff7->setLocationT(s,value);}}
-void MainWindow::coord_d_valueChanged(int value){if(!load){ ff7->setLocationD(s,value);}}
+void MainWindow::coord_x_valueChanged(int value){if(!load){ff7->setLocationX(s,value);}}
+void MainWindow::coord_y_valueChanged(int value){if(!load){ff7->setLocationY(s,value);}}
+void MainWindow::coord_t_valueChanged(int value){if(!load){ff7->setLocationT(s,value);}}
+void MainWindow::coord_d_valueChanged(int value){if(!load){ff7->setLocationD(s,value);}}
 void MainWindow::location_textChanged(QString text){if (!load){ff7->setLocation(s,text);}}
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
@@ -1950,69 +1943,67 @@ void MainWindow::setDialogColorLL(QColor color){if(!load){ff7->setDialogColorLL(
 void MainWindow::setDialogColorLR(QColor color){if(!load){ff7->setDialogColorLR(s,color);}}
 
 void MainWindow::setBattleSpeed(int value){if(!load){ff7->setBattleSpeed(s,value);}}
-void MainWindow::setBattleMessageSpeed(int value){if(!load){ ff7->setBattleMessageSpeed(s,value);}}
-void MainWindow::setFieldMessageSpeed(int value){if(!load){ ff7->setMessageSpeed(s, value);}}
+void MainWindow::setBattleMessageSpeed(int value){if(!load){ff7->setBattleMessageSpeed(s,value);}}
+void MainWindow::setFieldMessageSpeed(int value){if(!load){ff7->setMessageSpeed(s, value);}}
 void MainWindow::setBattleHelp(bool checked){if(!load){ ff7->setBattleHelp(s,checked);}}
 void MainWindow::setFieldHelp(bool checked){if(!load){ff7->setFieldHelp(s,checked);}}
 void MainWindow::setBattleTargets(bool checked){if(!load){ff7->setBattleTargets(s,checked);}}
 
 
 void MainWindow::setControlMode(int mode){if(!load){ff7->setControlMode(s,mode);}}
-void MainWindow::setSoundMode(int mode){if(!load){ ff7->setSoundMode(s,mode);}}
+void MainWindow::setSoundMode(int mode){if(!load){ff7->setSoundMode(s,mode);}}
 void MainWindow::setCursorMode(int mode){if(!load){ff7->setCursorMode(s,mode);}}
-void MainWindow::setAtbMode(int mode){if(!load){ ff7->setAtbMode(s,mode);}}
+void MainWindow::setAtbMode(int mode){if(!load){ff7->setAtbMode(s,mode);}}
 void MainWindow::setCameraMode(int mode){if(!load){ff7->setCameraMode(s,mode);}}
 void MainWindow::setMagicOrder(int order){if(!load){ff7->setMagicOrder(s,order);}}
 
-void MainWindow::setButtonCamera(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
-void MainWindow::setButtonTarget(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
-void MainWindow::setButtonPageUp(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
-void MainWindow::setButtonPageDown(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
-void MainWindow::setButtonMenu(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
-void MainWindow::setButtonOk(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
-void MainWindow::setButtonCancel(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
-void MainWindow::setButtonSwitch(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
-void MainWindow::setButtonHelp(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
-void MainWindow::setButtonUnknown1(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
-void MainWindow::setButtonUnknown2(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
-void MainWindow::setButtonPause(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
-void MainWindow::setButtonUp(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
-void MainWindow::setButtonDown(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
-void MainWindow::setButtonLeft(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
-void MainWindow::setButtonRight(int index){if(!load){ ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
+void MainWindow::setButtonCamera(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
+void MainWindow::setButtonTarget(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
+void MainWindow::setButtonPageUp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
+void MainWindow::setButtonPageDown(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
+void MainWindow::setButtonMenu(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
+void MainWindow::setButtonOk(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
+void MainWindow::setButtonCancel(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
+void MainWindow::setButtonSwitch(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
+void MainWindow::setButtonHelp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
+void MainWindow::setButtonUnknown1(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
+void MainWindow::setButtonUnknown2(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
+void MainWindow::setButtonPause(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
+void MainWindow::setButtonUp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
+void MainWindow::setButtonDown(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
+void MainWindow::setButtonLeft(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
+void MainWindow::setButtonRight(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ ff7->setDisc(s,value);}}
-void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].mprogress = value;}}
-void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].aeris_chruch=value;}}
-void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].donprogress=value;}}
+void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){ff7->setMainProgress(s,value);}}
+void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7->setChurchProgress(s,value);}}
+void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7->setDonProgress(s,value);}}
+void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){ff7->setBmProgress1(s,0,checked);}}
+void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){ff7->setBmProgress1(s,1,checked);}}
+void MainWindow::on_cb_bm1_3_toggled(bool checked){if(!load){ff7->setBmProgress1(s,2,checked);}}
+void MainWindow::on_cb_bm1_4_toggled(bool checked){if(!load){ff7->setBmProgress1(s,3,checked);}}
+void MainWindow::on_cb_bm1_5_toggled(bool checked){if(!load){ff7->setBmProgress1(s,4,checked);}}
+void MainWindow::on_cb_bm1_6_toggled(bool checked){if(!load){ff7->setBmProgress1(s,5,checked);}}
+void MainWindow::on_cb_bm1_7_toggled(bool checked){if(!load){ff7->setBmProgress1(s,6,checked);}}
+void MainWindow::on_cb_bm1_8_toggled(bool checked){if(!load){ff7->setBmProgress1(s,7,checked);}}
+void MainWindow::on_cb_bm2_1_toggled(bool checked){if(!load){ff7->setBmProgress2(s,0,checked);}}
+void MainWindow::on_cb_bm2_2_toggled(bool checked){if(!load){ff7->setBmProgress2(s,1,checked);}}
+void MainWindow::on_cb_bm2_3_toggled(bool checked){if(!load){ff7->setBmProgress2(s,2,checked);}}
+void MainWindow::on_cb_bm2_4_toggled(bool checked){if(!load){ff7->setBmProgress2(s,3,checked);}}
+void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){ff7->setBmProgress2(s,4,checked);}}
+void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){ff7->setBmProgress2(s,5,checked);}}
+void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){ff7->setBmProgress2(s,6,checked);}}
+void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){ff7->setBmProgress2(s,7,checked);}}
+void MainWindow::on_cb_bm3_1_toggled(bool checked){if(!load){ff7->setBmProgress3(s,0,checked);}}
+void MainWindow::on_cb_bm3_2_toggled(bool checked){if(!load){ff7->setBmProgress3(s,1,checked);}}
+void MainWindow::on_cb_bm3_3_toggled(bool checked){if(!load){ff7->setBmProgress3(s,2,checked);}}
+void MainWindow::on_cb_bm3_4_toggled(bool checked){if(!load){ff7->setBmProgress3(s,3,checked);}}
+void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){ff7->setBmProgress3(s,4,checked);}}
+void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){ff7->setBmProgress3(s,5,checked);}}
+void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){ff7->setBmProgress3(s,6,checked);}}
+void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){ff7->setBmProgress3(s,7,checked);}}
 
-void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<0);}else{ff7->slot[s].bm_progress1 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<1);}else{ff7->slot[s].bm_progress1 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm1_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<2);}else{ff7->slot[s].bm_progress1 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm1_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<3);}else{ff7->slot[s].bm_progress1 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm1_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<4);}else{ff7->slot[s].bm_progress1 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm1_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<5);}else{ff7->slot[s].bm_progress1 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm1_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<6);}else{ff7->slot[s].bm_progress1 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm1_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress1 |= (1<<7);}else{ff7->slot[s].bm_progress1 &= ~(1<<7);}}}
-
-void MainWindow::on_cb_bm2_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<0);}else{ff7->slot[s].bm_progress2 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm2_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<1);}else{ff7->slot[s].bm_progress2 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm2_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<2);}else{ff7->slot[s].bm_progress2 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm2_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<3);}else{ff7->slot[s].bm_progress2 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<4);}else{ff7->slot[s].bm_progress2 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<5);}else{ff7->slot[s].bm_progress2 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<6);}else{ff7->slot[s].bm_progress2 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress2 |= (1<<7);}else{ff7->slot[s].bm_progress2 &= ~(1<<7);}}}
-
-void MainWindow::on_cb_bm3_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<0);}else{ff7->slot[s].bm_progress3 &= ~(1<<0);}}}
-void MainWindow::on_cb_bm3_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<1);}else{ff7->slot[s].bm_progress3 &= ~(1<<1);}}}
-void MainWindow::on_cb_bm3_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<2);}else{ff7->slot[s].bm_progress3 &= ~(1<<2);}}}
-void MainWindow::on_cb_bm3_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<3);}else{ff7->slot[s].bm_progress3 &= ~(1<<3);}}}
-void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<4);}else{ff7->slot[s].bm_progress3 &= ~(1<<4);}}}
-void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<5);}else{ff7->slot[s].bm_progress3 &= ~(1<<5);}}}
-void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<6);}else{ff7->slot[s].bm_progress3 &= ~(1<<6);}}}
-void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].bm_progress3 |= (1<<7);}else{ff7->slot[s].bm_progress3 &= ~(1<<7);}}}
 
 void MainWindow::on_cb_s7pl_1_toggled(bool checked)
 {if(!load){
@@ -2223,30 +2214,19 @@ void MainWindow::on_cb_s5_8_toggled(bool checked)
         ff7->setUnknown(s,23,temp);
 }}
 
-void MainWindow::on_cb_bombing_int_stateChanged(int checked)
-{if(!load){
-    if(checked == Qt::Checked){ff7->slot[s].intbombing =0x14;}
-    else{ff7->slot[s].intbombing =0x56;}
-}}
+void MainWindow::on_cb_bombing_int_stateChanged(int checked){if(!load){ff7->setStartBombingMission(s,checked);}}
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
     if(index == 1) // bombing mission
     {
         ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(1);
-        ff7->slot[s].bm_progress1=0;
-        ff7->slot[s].bm_progress2=0;
-        ff7->slot[s].bm_progress3=0;
+        ui->sb_mprogress->setValue(1);        
+        ff7->setBmProgress1(s,0);
+        ff7->setBmProgress2(s,0);
+        ff7->setBmProgress3(s,0);
+        ff7->setMidgarTrainFlags(s,0);
         ui->cb_bombing_int->setChecked(Qt::Checked);
-        ui->cb_midgartrain_1->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_2->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_3->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_4->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_5->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_6->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_7->setChecked(Qt::Unchecked);
-        ui->cb_midgartrain_8->setChecked(Qt::Unchecked);
         ui->combo_s7_slums->setCurrentIndex(1);
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
@@ -2259,9 +2239,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(130);
         ui->sb_turkschruch->setValue(0);
-        ff7->slot[s].bm_progress1=120;
-        ff7->slot[s].bm_progress2=198;
-        ff7->slot[s].bm_progress3=3;
+        ff7->setBmProgress1(s,120);
+        ff7->setBmProgress2(s,198);
+        ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
@@ -2270,15 +2250,14 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
         ui->label_replaynote->setText(tr("Meeting Aeris"));
-
     }
     else if (index ==3)// Flash back
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(341);
-        ff7->slot[s].bm_progress1=120;
-        ff7->slot[s].bm_progress2=198;
-        ff7->slot[s].bm_progress3=3;
+        ff7->setBmProgress1(s,120);
+        ff7->setBmProgress2(s,198);
+        ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         locationViewer->setSelected(Locations.fileName(1,332));
         // set up young cloud, Copy Cloud Change ID to young Cloud
@@ -2298,9 +2277,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(583);
-        ff7->slot[s].bm_progress1=120;
-        ff7->slot[s].bm_progress2=198;
-        ff7->slot[s].bm_progress3=3;
+        ff7->setBmProgress1(s,120);
+        ff7->setBmProgress2(s,198);
+        ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         locationViewer->setSelected(Locations.fileName(1,496));
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
@@ -2310,9 +2289,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(664);
-        ff7->slot[s].bm_progress1=120;
-        ff7->slot[s].bm_progress2=198;
-        ff7->slot[s].bm_progress3=3;
+        ff7->setBmProgress1(s,120);
+        ff7->setBmProgress2(s,198);
+        ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         locationViewer->setSelected(Locations.fileName(1,646));
         phsList->setChecked(3,1,false);
@@ -2321,7 +2300,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     }
 
     else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
-    if(!load){fileModified(true); progress_update();}
+    if(!load){progress_update();}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2357,23 +2336,18 @@ void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7->se
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
 
-void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
-{if(!load){fileModified(true);
-    load=true;
-    int a = (value & 0xff);
-    int b = (value & 0xff00) >> 8;
-    int c = (value & 0xff0000) >> 16;
-    ff7->slot[s].u_weapon_hp[0] = a;
-    ff7->slot[s].u_weapon_hp[1] = b;
-    ff7->slot[s].u_weapon_hp[2] = c;
-    load=false;
-}}
+void MainWindow::on_sb_u_weapon_hp_valueChanged(int value){if(!load){ff7->setUWeaponHp(s,value);}}
 
 void MainWindow::on_cb_reg_vinny_toggled(bool checked)
-{if(!load){fileModified(true);
-    if (checked){ff7->slot[s].reg_vinny =0xFF;}
-    else{ff7->slot[s].reg_vinny =0xFB;}
-    ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
+{if(!load){
+        ff7->setVincentAquired(s,checked);
+        ui->lcdNumber_8->display(ff7->regVincent(s));
+}}
+
+void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
+{if(!load){
+        ff7->setYuffieAquired(s,checked);
+        ui->lcdNumber_9->display(ff7->regYuffie(s));
 }}
 
 void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){   ff7->setItemMask1(s,0,checked);}}
@@ -2408,34 +2382,23 @@ void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){ff7->setMat
 void MainWindow::on_cb_materiacave_3_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_QUADMAGIC,checked);}}
 void MainWindow::on_cb_materiacave_4_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_KOTR,checked);}}
 
-void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
-{if(!load){fileModified(true);
-        if (checked){ff7->slot[s].reg_yuffie =0x6F;}
-        else{ff7->slot[s].reg_yuffie =0x6E;}
-        ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
-}}
 
-void MainWindow::on_cb_yuffieforest_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].yuffieforest |= (1<<0);}
-    else{ff7->slot[s].yuffieforest &= ~(1<<0);}
-}}
-
-void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<0);}else{ff7->slot[s].midgartrainflags &= ~(1<<0);}}}
-void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<1);}else{ff7->slot[s].midgartrainflags &= ~(1<<1);}}}
-void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<2);}else{ff7->slot[s].midgartrainflags &= ~(1<<2);}}}
-void MainWindow::on_cb_midgartrain_4_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<3);}else{ff7->slot[s].midgartrainflags &= ~(1<<3);}}}
-void MainWindow::on_cb_midgartrain_5_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<4);}else{ff7->slot[s].midgartrainflags &= ~(1<<4);}}}
-void MainWindow::on_cb_midgartrain_6_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<5);}else{ff7->slot[s].midgartrainflags &= ~(1<<5);}}}
-void MainWindow::on_cb_midgartrain_7_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<6);}else{ff7->slot[s].midgartrainflags &= ~(1<<6);}}}
-void MainWindow::on_cb_midgartrain_8_toggled(bool checked){if(!load){fileModified(true); if(checked){ff7->slot[s].midgartrainflags |= (1<<7);}else{ff7->slot[s].midgartrainflags &= ~(1<<7);}}}
+void MainWindow::on_cb_yuffieforest_toggled(bool checked){if(!load){ff7->setCanFightNinjaInForest(s,checked);}}
+void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,0,checked);}}
+void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,1,checked);}}
+void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,2,checked);}}
+void MainWindow::on_cb_midgartrain_4_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,3,checked);}}
+void MainWindow::on_cb_midgartrain_5_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,4,checked);}}
+void MainWindow::on_cb_midgartrain_6_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,5,checked);}}
+void MainWindow::on_cb_midgartrain_7_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,6,checked);}}
+void MainWindow::on_cb_midgartrain_8_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,7,checked);}}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
-{if(!load){fileModified(true);
-    if (value == 0){ff7->slot[s].tut_save =0x00;}
-    else if(value ==1){ff7->slot[s].tut_save =0x32;}
-    else if(value ==2){ff7->slot[s].tut_save=0x3A;}
-   ui->lcdNumber_7->display(ff7->slot[s].tut_save);
+{if(!load){
+    if (value == 0){ff7->setTutSave(s,0x00);}
+    else if(value ==1){ff7->setTutSave(s,0x32);}
+    else if(value ==2){ff7->setTutSave(s,0x3A);}
+    ui->lcdNumber_7->display(ff7->tutSave(s));
 }}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
@@ -2447,78 +2410,62 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
 }}}
 
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<2);}
-    else{ff7->slot[s].tut_sub &= ~(1<<2);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,2,checked);
+    load=true;ui->cb_tut_sub_3->setChecked(checked);load=false;
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
 void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<0);}
-    else{ff7->slot[s].tut_sub &= ~(1<<0);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,0,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<1);}
-    else{ff7->slot[s].tut_sub &= ~(1<<1);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,1,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<2);}
-    else{ff7->slot[s].tut_sub &= ~(1<<2);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,2,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<3);}
-    else{ff7->slot[s].tut_sub &= ~(1<<3);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,3,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<4);}
-    else{ff7->slot[s].tut_sub &= ~(1<<4);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,4,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<5);}
-    else{ff7->slot[s].tut_sub &= ~(1<<5);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,5,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<6);}
-    else{ff7->slot[s].tut_sub &= ~(1<<6);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,6,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
 void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<7);}
-    else{ff7->slot[s].tut_sub &= ~(1<<7);}
-    ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+{if(!load){
+    ff7->setTutSub(s,7,checked);
+    ui->lcdTutSub->display(ff7->tutSub(s));
+    ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-
-void MainWindow::on_cb_ruby_dead_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].ruby_emerald |= (1<<3);}
-    else{ff7->slot[s].ruby_emerald &= ~(1<<3);}
-}}
-
-void MainWindow::on_cb_emerald_dead_toggled(bool checked)
-{if(!load){fileModified(true);
-    if(checked){ff7->slot[s].ruby_emerald |= (1<<4);}
-    else{ff7->slot[s].ruby_emerald &= ~(1<<4);}
-}}
+void MainWindow::on_cb_ruby_dead_toggled(bool checked){if(!load){ff7->setKilledRubyWeapon(s,checked);}}
+void MainWindow::on_cb_emerald_dead_toggled(bool checked){if(!load){ff7->setKilledEmeraldWeapon(s,checked);}}
 
 void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
 {if(!load){
@@ -2531,10 +2478,10 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
   }
 }}
 void MainWindow::on_cb_visible_buggy_toggled(bool checked)
-{if(!load){fileModified(true);
+{if(!load){
+        ff7->setWorldVehicle(s,FF7Save::WVEHCILE_BUGGY,checked);
         if(checked)
         {
-            ff7->slot[s].world_map_vehicles |= (1<<0);
             if(ui->cb_visible_highwind->isChecked())
             {
                 ui->cb_visible_highwind->setChecked(Qt::Unchecked);
@@ -2546,7 +2493,6 @@ void MainWindow::on_cb_visible_buggy_toggled(bool checked)
         }
         else
         {
-            ff7->slot[s].world_map_vehicles &= ~(1<<0);
             if(!ui->cb_visible_buggy->isChecked())
             {
                 load=true;
@@ -2557,16 +2503,12 @@ void MainWindow::on_cb_visible_buggy_toggled(bool checked)
         }
 
 }}
-void MainWindow::on_cb_visible_bronco_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){ff7->slot[s].world_map_vehicles |= (1<<2);}
-        else{ff7->slot[s].world_map_vehicles &= ~(1<<2);}
-}}
+void MainWindow::on_cb_visible_bronco_toggled(bool checked){if(!load){ff7->setWorldVehicle(s,FF7Save::WVEHCILE_TBRONCO,checked);}}
 void MainWindow::on_cb_visible_highwind_toggled(bool checked)
-{if(!load){fileModified(true);
+{if(!load){
+        ff7->setWorldVehicle(s,FF7Save::WVEHCILE_HIGHWIND,checked);
         if(checked)
         {
-            ff7->slot[s].world_map_vehicles |= (1<<4);
             if(ui->cb_visible_buggy->isChecked())
             {
                 ui->cb_visible_buggy->setChecked(Qt::Unchecked);
@@ -2578,7 +2520,6 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
         }
         else
         {
-            ff7->slot[s].world_map_vehicles &= ~(1<<4);
             if(!ui->cb_visible_highwind->isChecked())
             {
                 load=true;
@@ -2588,168 +2529,167 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
             }
         }
 }}
-void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){ff7->slot[s].world_map_chocobos |= (1<<0);}
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<0);}
-}}
+void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked){if(!load){ff7->setWorldChocobo(s,FF7Save::WCHOCO_WILD,checked);}}
+
 void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){
-            ff7->slot[s].world_map_chocobos |= (1<<2);
+{if(!load){
+        ff7->setWorldChocobo(s,FF7Save::WCHOCO_YELLOW,checked);
+        if(checked)
+        {
             ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
         }
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<2);}
 }}
 void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){
-            ff7->slot[s].world_map_chocobos |= (1<<3);
+{if(!load){
+        ff7->setWorldChocobo(s,FF7Save::WCHOCO_GREEN,checked);
+        if(checked)
+        {
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
         }
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<3);}
 }}
 void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){
-            ff7->slot[s].world_map_chocobos |= (1<<4);
+{if(!load){
+        ff7->setWorldChocobo(s,FF7Save::WCHOCO_BLUE,checked);
+        if(checked)
+        {
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
         }
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<4);}
 }}
 
 void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){
-            ff7->slot[s].world_map_chocobos |= (1<<5);
+{if(!load){
+        ff7->setWorldChocobo(s,FF7Save::WCHOCO_BLACK,checked);
+        if(checked)
+        {
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
         }
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<5);}
 }}
 
 void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
-{if(!load){fileModified(true);
-        if(checked){
-            ff7->slot[s].world_map_chocobos |= (1<<6);
+{if(!load){
+        ff7->setWorldChocobo(s,FF7Save::WCHOCO_GOLD,checked);
+        if(checked)
+        {
             ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
             ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
         }
-        else{ff7->slot[s].world_map_chocobos &= ~(1<<6);}
 }}
 // Leader's world map stuff. 0
-void MainWindow::on_leader_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}
-void MainWindow::on_leader_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world = (ui->leader_x->value()  | ui->leader_id->value() << 19 | value <<24);}}
-void MainWindow::on_leader_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].l_world2 = (ui->leader_y->value() | value << 18);}}
+void MainWindow::on_leader_id_valueChanged(int value){if(!load){ff7->setWorldCoordsLeaderID(s,value);}}
+void MainWindow::on_leader_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsLeaderAngle(s,value);}}
+void MainWindow::on_leader_z_valueChanged(int value){if(!load){ff7->setWorldCoordsLeaderZ(s,value);}}
 void MainWindow::on_leader_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].l_world = (value | ui->leader_id->value() << 19 | ui->leader_angle->value() << 24);
+{if(!load){
+    ff7->setWorldCoordsLeaderX(s,value);
     if(ui->combo_map_controls->currentIndex()==0){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 
 void MainWindow::on_leader_y_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].l_world2 = (value | ui->leader_z->value() << 18);
+{if(!load){
+    ff7->setWorldCoordsLeaderY(s,value);
     if(ui->combo_map_controls->currentIndex()==0){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
 //Tiny bronco / chocobo world 1
-void MainWindow::on_tc_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | value << 19 | ui->tc_angle->value() <<24);}}
-void MainWindow::on_tc_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world = (ui->tc_x->value()  | ui->tc_id->value() << 19 | value <<24);}}
-void MainWindow::on_tc_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].tc_world2 = (ui->tc_y->value() | value << 18);}}
+void MainWindow::on_tc_id_valueChanged(int value){if(!load){ff7->setWorldCoordsTcID(s,value);}}
+void MainWindow::on_tc_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsTcAngle(s,value);}}
+void MainWindow::on_tc_z_valueChanged(int value){if(!load){ff7->setWorldCoordsTcZ(s,value);}}
 void MainWindow::on_tc_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].tc_world = (value | ui->tc_id->value() << 19 | ui->tc_angle->value() << 24);
+{if(!load){
+    ff7->setWorldCoordsTcX(s,value);
     if(ui->combo_map_controls->currentIndex()==1){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_tc_y_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].tc_world2 = (value | ui->tc_z->value() << 18);
+{if(!load){
+    ff7->setWorldCoordsTcY(s,value);
     if(ui->combo_map_controls->currentIndex()==1){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
 //buggy / highwind world 2
-void MainWindow::on_bh_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | value << 19 | ui->bh_angle->value() <<24);}}
-void MainWindow::on_bh_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world = (ui->bh_x->value()  | ui->bh_id->value() << 19 | value <<24);}}
-void MainWindow::on_bh_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].bh_world2 = (ui->bh_y->value() | value << 18);}}
+void MainWindow::on_bh_id_valueChanged(int value){if(!load){ff7->setWorldCoordsBhID(s,value);}}
+void MainWindow::on_bh_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsBhAngle(s,value);}}
+void MainWindow::on_bh_z_valueChanged(int value){if(!load){ff7->setWorldCoordsBhZ(s,value);}}
 void MainWindow::on_bh_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].bh_world = (value | ui->bh_id->value() << 19 | ui->bh_angle->value() << 24);
+{if(!load){
+    ff7->setWorldCoordsBhX(s,value);
     if(ui->combo_map_controls->currentIndex()==2){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_bh_y_valueChanged(int value)
-{if(!load){fileModified(true);
-        ff7->slot[s].bh_world2 = (value | ui->bh_z->value() << 18);
+{if(!load){
+        ff7->setWorldCoordsBhY(s,value);
         if(ui->combo_map_controls->currentIndex()==2){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 // sub world 3
-void MainWindow::on_sub_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | value << 19 | ui->sub_angle->value() <<24);}}
-void MainWindow::on_sub_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world = (ui->sub_x->value()  | ui->sub_id->value() << 19 | value <<24);}}
-void MainWindow::on_sub_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].sub_world2 = (ui->sub_y->value() | value << 18);}}
+void MainWindow::on_sub_id_valueChanged(int value){if(!load){ff7->setWorldCoordsSubID(s,value);}}
+void MainWindow::on_sub_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsSubAngle(s,value);}}
+void MainWindow::on_sub_z_valueChanged(int value){if(!load){ff7->setWorldCoordsSubZ(s,value);}}
 void MainWindow::on_sub_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].sub_world = (value | ui->sub_id->value() << 19 | ui->sub_angle->value() << 24);
-     if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_x->setValue(value);load=false;}
+{if(!load){
+    ff7->setWorldCoordsSubX(s,value);
+    if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_sub_y_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].sub_world2 = (value | ui->sub_z->value() << 18);
-    if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_y->setValue(value);load=false;}
+{if(!load){
+        ff7->setWorldCoordsSubY(s,value);
+        if(ui->combo_map_controls->currentIndex()==3){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 
-//Ruby world stuff 4
-void MainWindow::on_durw_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | value << 19 | ui->durw_angle->value() <<24);}}
-void MainWindow::on_durw_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world = (ui->durw_x->value()  | ui->durw_id->value() << 19 | value <<24);}}
-void MainWindow::on_durw_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].durw_world2 = (ui->durw_y->value() | value << 18);}}
+
+//Wild Chocobo 4
+void MainWindow::on_wc_id_valueChanged(int value){if(!load){ff7->setWorldCoordsWchocoID(s,value);}}
+void MainWindow::on_wc_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsWchocoAngle(s,value);}}
+void MainWindow::on_wc_z_valueChanged(int value){if(!load){ff7->setWorldCoordsWchocoZ(s,value);}}
+void MainWindow::on_wc_x_valueChanged(int value)
+{if(!load){
+    ff7->setWorldCoordsWchocoX(s,value);
+    if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_x->setValue(value);load=false;}
+}}
+void MainWindow::on_wc_y_valueChanged(int value)
+{if(!load){
+        ff7->setWorldCoordsWchocoY(s,value);
+        if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
+}}
+
+
+//Ruby world stuff 5
+void MainWindow::on_durw_id_valueChanged(int value){if(!load){ff7->setWorldCoordsDurwID(s,value);}}
+void MainWindow::on_durw_angle_valueChanged(int value){if(!load){ff7->setWorldCoordsDurwAngle(s,value);}}
+void MainWindow::on_durw_z_valueChanged(int value){if(!load){ff7->setWorldCoordsDurwZ(s,value);}}
 void MainWindow::on_durw_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].durw_world = (value | ui->durw_id->value() << 19 | ui->durw_angle->value() << 24);
-     if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_x->setValue(value);load=false;}
+{if(!load){
+    ff7->setWorldCoordsDurwX(s,value);
+    if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_durw_y_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].durw_world2 = (value | ui->durw_z->value() << 18);
-     if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
+{if(!load){
+        ff7->setWorldCoordsDurwY(s,value);
+        if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
-//ultimate weapon 5?
-void MainWindow::on_uw_id_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
-void MainWindow::on_uw_angle_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
-void MainWindow::on_uw_z_valueChanged(int value){if(!load){fileModified(true); ff7->slot[s].uw_world2 = (ui->uw_y->value() | value << 18);}}
-void MainWindow::on_uw_x_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].uw_world = (value | ui->uw_id->value() << 19 | ui->uw_angle->value() << 24);
-     if(ui->combo_map_controls->currentIndex()==6){load=true;ui->slide_world_x->setValue(value);load=false;}
-}}
-void MainWindow::on_uw_y_valueChanged(int value)
-{if(!load){fileModified(true);
-    ff7->slot[s].uw_world2 = (value | ui->uw_z->value() << 18);
-    if(ui->combo_map_controls->currentIndex()==6){load=true;ui->slide_world_y->setValue(value);load=false;}
-}}
-
 void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
 {
     load=true;
     switch(index)
     {
-        case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world  & 0x7FFFF);            ui->slide_world_y->setValue(ff7->slot[s].l_world2 & 0x3FFFF);           break;
-        case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world  & 0x7FFFF);         ui->slide_world_y->setValue(ff7->slot[s].tc_world2 & 0x3FFFF);       break;
-        case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world  & 0x7FFFF);         ui->slide_world_y->setValue(ff7->slot[s].bh_world2 & 0x3FFFF);      break;
-        case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world  & 0x7FFFF);       ui->slide_world_y->setValue(ff7->slot[s].sub_world2 & 0x3FFFF);    break;
-        case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world  & 0x7FFFF);        ui->slide_world_y->setValue(ff7->slot[s].uw_world2 & 0x3FFFF);      break;
-        case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world  & 0x7FFFF);    ui->slide_world_y->setValue(ff7->slot[s].durw_world2 & 0x3FFFF);  break;
+        case 0: ui->slide_world_x->setValue(ff7->worldCoordsLeaderX(s)); ui->slide_world_y->setValue(ff7->worldCoordsLeaderY(s));   break;
+        case 1: ui->slide_world_x->setValue(ff7->worldCoordsTcX(s));     ui->slide_world_y->setValue(ff7->worldCoordsTcY(s));       break;
+        case 2: ui->slide_world_x->setValue(ff7->worldCoordsBhX(s));     ui->slide_world_y->setValue(ff7->worldCoordsBhY(s));       break;
+        case 3: ui->slide_world_x->setValue(ff7->worldCoordsSubX(s));    ui->slide_world_y->setValue(ff7->worldCoordsSubY(s));      break;
+        case 4: ui->slide_world_x->setValue(ff7->worldCoordsWchocoX(s));  ui->slide_world_y->setValue(ff7->worldCoordsWchocoY(s));   break;
+        case 5: ui->slide_world_x->setValue(ff7->worldCoordsDurwX(s));   ui->slide_world_y->setValue(ff7->worldCoordsDurwY(s));     break;
     }
     load=false;
 }
@@ -2762,7 +2702,7 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
         case 1: ui->tc_x->setValue(value);      break;
         case 2: ui->bh_x->setValue(value);      break;
         case 3: ui->sub_x->setValue(value);     break;
-        case 4: ui->uw_x->setValue(value);      break;
+        case 4: ui->wc_x->setValue(value);      break;
         case 5: ui->durw_x->setValue(value);    break;
     }
 }}
@@ -2775,10 +2715,9 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
         case 1: ui->tc_y->setValue(value);      break;
         case 2: ui->bh_y->setValue(value);      break;
         case 3: ui->sub_y->setValue(value);     break;
-        case 4: ui->uw_y->setValue(value);      break;
+        case 4: ui->wc_y->setValue(value);      break;
         case 5: ui->durw_y->setValue(value);    break;
     }
-
 }}
 
 void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
@@ -2819,8 +2758,8 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     }
     else if(sel->text()==tr("Place Wild Chocobo"))
     {
-         ui->uw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
-         ui->uw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+         ui->wc_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->wc_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
     else if(sel->text()==tr("Place Diamond/Ultimate/Ruby Weapon"))
     {
@@ -3343,64 +3282,67 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
        break;
 
        case 1:
-            ui->cb_visible_bronco->setChecked(Qt::Unchecked);
-            ui->cb_visible_buggy->setChecked(Qt::Unchecked);
-            ui->cb_visible_highwind->setChecked(Qt::Unchecked);
-            ui->cb_visible_wild_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_buggy->setChecked(ff7->worldVehicle(s,FF7Save::WVEHCILE_BUGGY));
+            ui->cb_visible_bronco->setChecked(ff7->worldVehicle(s,FF7Save::WVEHCILE_TBRONCO));
+            ui->cb_visible_highwind->setChecked(ff7->worldVehicle(s,FF7Save::WVEHCILE_HIGHWIND));
+            ui->cb_visible_wild_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_WILD));
+            ui->cb_visible_yellow_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_YELLOW));
+            ui->cb_visible_green_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_GREEN));
+            ui->cb_visible_blue_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_BLUE));
+            ui->cb_visible_black_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_BLACK));
+            ui->cb_visible_gold_chocobo->setChecked(ff7->worldChocobo(s,FF7Save::WCHOCO_GOLD));
+
+
 
             switch(ui->combo_map_controls->currentIndex())
             {
-                case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].l_world2& 0x3FFFF);
+                case 0: ui->slide_world_x->setValue(ff7->worldCoordsLeaderX(s));
+                    ui->slide_world_y->setValue(ff7->worldCoordsLeaderY(s));
                 break;
-                case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].tc_world2& 0x3FFFF);
+                case 1: ui->slide_world_x->setValue(ff7->worldCoordsTcX(s));
+                ui->slide_world_y->setValue(ff7->worldCoordsTcY(s));
                 break;
-                case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].bh_world2& 0x3FFFF);
+                case 2:  ui->slide_world_x->setValue(ff7->worldCoordsBhX(s));
+                ui->slide_world_y->setValue(ff7->worldCoordsBhY(s));
                 break;
-                case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].sub_world2& 0x3FFFF);
+                case 3: ui->slide_world_x->setValue(ff7->worldCoordsSubX(s));
+                ui->slide_world_y->setValue(ff7->worldCoordsSubY(s));
                 break;
-                case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].uw_world2& 0x3FFFF);
+                case 4: ui->slide_world_x->setValue(ff7->worldCoordsWchocoX(s));
+                ui->slide_world_y->setValue(ff7->worldCoordsWchocoY(s));
                 break;
-                case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world & 0x7FFFF);
-                    ui->slide_world_y->setValue(ff7->slot[s].durw_world2& 0x3FFFF);
+                case 5: ui->slide_world_x->setValue(ff7->worldCoordsDurwX(s));
+                ui->slide_world_y->setValue(ff7->worldCoordsDurwY(s));
                 break;
             }
             //WORLD TAB
-            ui->leader_x->setValue((ff7->slot[s].l_world) & 0x7FFFF);
-            ui->leader_id->setValue((ff7->slot[s].l_world >> 19)&0x1F);
-            ui->leader_angle->setValue((ff7->slot[s].l_world) >> 24);
-            ui->leader_y->setValue((ff7->slot[s].l_world2) & 0x3FFFF);
-            ui->leader_z->setValue((ff7->slot[s].l_world2) >> 18);
+            ui->leader_x->setValue(ff7->worldCoordsLeaderX(s));
+            ui->leader_id->setValue(ff7->worldCoordsLeaderID(s));
+            ui->leader_angle->setValue(ff7->worldCoordsLeaderAngle(s));
+            ui->leader_y->setValue(ff7->worldCoordsLeaderY(s));
+            ui->leader_z->setValue(ff7->worldCoordsLeaderZ(s));
 
-            ui->durw_x->setValue((ff7->slot[s].durw_world) & 0x7FFFF);
-            ui->durw_id->setValue((ff7->slot[s].durw_world >> 19)&0x1F);
-            ui->durw_angle->setValue((ff7->slot[s].durw_world) >> 24);
-            ui->durw_y->setValue((ff7->slot[s].durw_world2) & 0x3FFFF);
-            ui->durw_z->setValue((ff7->slot[s].durw_world2) >> 18);
+            ui->durw_x->setValue(ff7->worldCoordsDurwX(s));
+            ui->durw_id->setValue(ff7->worldCoordsDurwID(s));
+            ui->durw_angle->setValue(ff7->worldCoordsDurwAngle(s));
+            ui->durw_y->setValue(ff7->worldCoordsDurwY(s));
+            ui->durw_z->setValue(ff7->worldCoordsDurwZ(s));
 
-            ui->uw_x->setValue((ff7->slot[s].uw_world) & 0x7FFFF);
-            ui->uw_id->setValue((ff7->slot[s].uw_world >> 19)&0x1F);
-            ui->uw_angle->setValue((ff7->slot[s].uw_world) >> 24);
-            ui->uw_y->setValue((ff7->slot[s].uw_world2) & 0x3FFFF);
-            ui->uw_z->setValue((ff7->slot[s].uw_world2) >> 18);
+            ui->wc_x->setValue(ff7->worldCoordsWchocoX(s));
+            ui->wc_id->setValue(ff7->worldCoordsWchocoID(s));
+            ui->wc_angle->setValue(ff7->worldCoordsWchocoAngle(s));
+            ui->wc_y->setValue(ff7->worldCoordsWchocoY(s));
+            ui->wc_z->setValue(ff7->worldCoordsWchocoZ(s));
 
-            ui->tc_x->setValue((ff7->slot[s].tc_world) & 0x7FFFF);
-            ui->tc_id->setValue((ff7->slot[s].tc_world >> 19)&0x1F);
-            ui->tc_angle->setValue((ff7->slot[s].tc_world) >> 24);
-            ui->tc_y->setValue((ff7->slot[s].tc_world2) & 0x3FFFF);
-            ui->tc_z->setValue((ff7->slot[s].tc_world2) >> 18);
+            ui->tc_x->setValue(ff7->worldCoordsTcX(s));
+            ui->tc_id->setValue(ff7->worldCoordsTcID(s));
+            ui->tc_angle->setValue(ff7->worldCoordsTcAngle(s));
+            ui->tc_y->setValue(ff7->worldCoordsTcY(s));
+            ui->tc_z->setValue(ff7->worldCoordsTcZ(s));
 
-            ui->bh_x->setValue((ff7->slot[s].bh_world) & 0x7FFFF);
-            ui->bh_id->setValue((ff7->slot[s].bh_world >> 19)&0x1F);
+
+            ui->bh_x->setValue(ff7->worldCoordsBhX(s));
+            ui->bh_id->setValue(ff7->worldCoordsBhID(s));
 
             switch(ui->bh_id->value())
             {
@@ -3409,26 +3351,16 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
                 case 3:ui->combo_highwind_buggy->setCurrentIndex(2);break;//highwind
                 default:QMessageBox::information(this,tr("Black Chocobo"),tr("Unknown Id in Buggy/Highwind Location"));break;
             }
-            ui->bh_angle->setValue((ff7->slot[s].bh_world) >> 24);
-            ui->bh_y->setValue((ff7->slot[s].bh_world2) & 0x3FFFF);
-            ui->bh_z->setValue((ff7->slot[s].bh_world2) >> 18);
 
-            ui->sub_x->setValue((ff7->slot[s].sub_world) & 0x7FFFF);
-            ui->sub_id->setValue((ff7->slot[s].sub_world >> 19)&0x1F);
-            ui->sub_angle->setValue((ff7->slot[s].sub_world) >> 24);
-            ui->sub_y->setValue((ff7->slot[s].sub_world2) & 0x3FFFF);
-            ui->sub_z->setValue((ff7->slot[s].sub_world2) >> 18);
+            ui->bh_angle->setValue(ff7->worldCoordsBhAngle(s));;
+            ui->bh_y->setValue(ff7->worldCoordsBhY(s));
+            ui->bh_z->setValue(ff7->worldCoordsBhZ(s));
 
-            if((1 << 0) & ff7->slot[s].world_map_vehicles){ui->cb_visible_buggy->setChecked(Qt::Checked);}
-            if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
-            if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
-
-            if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_wild_chocobo->setChecked(Qt::Checked);}
-            if((1 << 2) & ff7->slot[s].world_map_chocobos){ui->cb_visible_yellow_chocobo->setChecked(Qt::Checked);}
-            if((1 << 3) & ff7->slot[s].world_map_chocobos){ui->cb_visible_green_chocobo->setChecked(Qt::Checked);}
-            if((1 << 4) & ff7->slot[s].world_map_chocobos){ui->cb_visible_blue_chocobo->setChecked(Qt::Checked);}
-            if((1 << 5) & ff7->slot[s].world_map_chocobos){ui->cb_visible_black_chocobo->setChecked(Qt::Checked);}
-            if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
+            ui->sub_x->setValue(ff7->worldCoordsSubX(s));
+            ui->sub_id->setValue(ff7->worldCoordsSubID(s));
+            ui->sub_angle->setValue(ff7->worldCoordsSubAngle(s));
+            ui->sub_y->setValue(ff7->worldCoordsSubY(s));
+            ui->sub_z->setValue(ff7->worldCoordsSubZ(s));
         break;
     }
     load=false;
@@ -3439,27 +3371,26 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
     switch(index)
     {
         case 0:
-            load=true;
-            ui->cb_tut_sub->setChecked(Qt::Unchecked);
+            load=true;           
             ui->sb_b_love_aeris->setValue(ff7->love(s,true,FF7Save::LOVE_AERIS));
             ui->sb_b_love_tifa->setValue(ff7->love(s,true,FF7Save::LOVE_TIFA));
             ui->sb_b_love_yuffie->setValue(ff7->love(s,true,FF7Save::LOVE_YUFFIE));
             ui->sb_b_love_barret->setValue(ff7->love(s,true,FF7Save::LOVE_BARRET));
-            ui->sb_u_weapon_hp->setValue(ff7->slot[s].u_weapon_hp[0] |(ff7->slot[s].u_weapon_hp[1] << 8) | (ff7->slot[s].u_weapon_hp[2] << 16));
-            if((ff7->slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
-            ui->lcdNumber_6->display(ff7->slot[s].tut_sub);
-            if(ff7->slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
-            else if(ff7->slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
+            ui->sb_u_weapon_hp->setValue(ff7->uWeaponHp(s));
+            ui->cb_tut_sub->setChecked(ff7->tutSub(s,2));
+
+            ui->lcdTutSub->display(ff7->tutSub(s));
+
+            if(ff7->tutSave(s) == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
+            else if(ff7->tutSave(s) ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
             else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
-            ui->lcdNumber_7->display(ff7->slot[s].tut_save);
+            ui->lcdNumber_7->display(ff7->tutSave(s));
 
-            ui->cb_reg_vinny->setChecked(Qt::Unchecked);
-            if(ff7->slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
-            ui->lcdNumber_8->display(ff7->slot[s].reg_vinny);
+            ui->cb_reg_yuffie->setChecked(ff7->yuffieAquired(s));
+            ui->lcdNumber_9->display(ff7->regYuffie(s));
 
-            ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
-            if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
-            ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
+            ui->cb_reg_vinny->setChecked(ff7->vincentAquired(s));
+            ui->lcdNumber_8->display(ff7->regVincent(s));
 
             if(ff7->unknown(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
             if(ff7->unknown(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
@@ -3470,15 +3401,15 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
             if(ff7->unknown(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
             if(ff7->unknown(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
 
-            if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
-            if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
-            ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+            ui->cb_tut_sub_1->setChecked(ff7->tutSub(s,0));
+            ui->cb_tut_sub_2->setChecked(ff7->tutSub(s,1));
+            ui->cb_tut_sub_3->setChecked(ff7->tutSub(s,2));
+            ui->cb_tut_sub_4->setChecked(ff7->tutSub(s,3));
+            ui->cb_tut_sub_5->setChecked(ff7->tutSub(s,4));
+            ui->cb_tut_sub_6->setChecked(ff7->tutSub(s,5));
+            ui->cb_tut_sub_7->setChecked(ff7->tutSub(s,6));
+            ui->cb_tut_sub_8->setChecked(ff7->tutSub(s,7));
+            ui->lcd_tut_sub->display(ff7->tutSub(s));
             load=false;
         break;
 

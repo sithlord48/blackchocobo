@@ -4887,19 +4887,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Aeris Turks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Don_prog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5764,6 +5756,14 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;Import Slot From File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ChruchProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DonProgress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -141,10 +141,10 @@ void SlotSelect::setSlotPreview(int s)
         preview[s]->setMode(SlotPreview::MODE_FF7SAVE);
         //show real Dialog background.
         QImage image(2, 2, QImage::Format_ARGB32);
-        image.setPixel(0, 0, QColor(ff7->slot[s].colors[0][0],ff7->slot[s].colors[0][1],ff7->slot[s].colors[0][2]).rgb());
-        image.setPixel(1, 0, QColor(ff7->slot[s].colors[1][0],ff7->slot[s].colors[1][1],ff7->slot[s].colors[1][2]).rgb());
-        image.setPixel(0, 1, QColor(ff7->slot[s].colors[2][0],ff7->slot[s].colors[2][1],ff7->slot[s].colors[2][2]).rgb());
-        image.setPixel(1, 1, QColor(ff7->slot[s].colors[3][0],ff7->slot[s].colors[3][1],ff7->slot[s].colors[3][2]).rgb());
+        image.setPixel(0, 0, ff7->dialogColorUL(s).rgb());
+        image.setPixel(1, 0, ff7->dialogColorUR(s).rgb());
+        image.setPixel(0, 1, ff7->dialogColorLL(s).rgb());
+        image.setPixel(1, 1, ff7->dialogColorLR(s).rgb());
         QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         preview[s]->setPixmap(QPixmap::fromImage(gradient));
         preview[s]->setParty(Chars.pixmap(ff7->descParty(s,0)),Chars.pixmap(ff7->descParty(s,1)),Chars.pixmap(ff7->descParty(s,2)));

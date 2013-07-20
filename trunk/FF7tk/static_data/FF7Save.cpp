@@ -1591,6 +1591,26 @@ void FF7Save::setDisc(int s, int disc)
     if(disc<1 || disc>3){return;}
     else{slot[s].disc=disc;setFileModified(true,s);}
 }
+quint16 FF7Save::mainProgress(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].mprogress;}
+}
+void FF7Save::setMainProgress(int s,int mProgress)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(mProgress<0){mProgress =0;}
+        else if(mProgress>0xFFFF){mProgress=0xFFFF;}
+        if(mProgress != slot[s].mprogress)
+        {
+            slot[s].mprogress = mProgress;
+            setFileModified(true,s);
+        }
+    }
+}
+
 QByteArray FF7Save::slot_header(int s)
 {
     QByteArray icon;
@@ -2588,6 +2608,129 @@ void FF7Save::setItemMask1(int s, int bit, bool pickedUp)
         setFileModified(true,s);
     }
 }
+
+bool FF7Save::bmProgress1(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].bm_progress1)& (1<<bit) );}
+}
+void FF7Save::setBmProgress1(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].bm_progress1 |= (1<<bit);}
+        else{slot[s].bm_progress1 &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setBmProgress1(int s, int value)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(value<0){value=0;}
+        else if(value>0xFF){value=0xFF;}
+        if(value != slot[s].bm_progress1)
+        {
+            slot[s].bm_progress1 = value;
+            setFileModified(true,s);
+        }
+    }
+}
+bool FF7Save::bmProgress2(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].bm_progress2)& (1<<bit) );}
+}
+void FF7Save::setBmProgress2(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].bm_progress2 |= (1<<bit);}
+        else{slot[s].bm_progress2 &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setBmProgress2(int s, int value)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(value<0){value=0;}
+        else if(value>0xFF){value=0xFF;}
+        if(value != slot[s].bm_progress1)
+        {
+            slot[s].bm_progress1 = value;
+            setFileModified(true,s);
+        }
+    }
+}
+bool FF7Save::bmProgress3(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].bm_progress3)& (1<<bit) );}
+}
+void FF7Save::setBmProgress3(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].bm_progress3 |= (1<<bit);}
+        else{slot[s].bm_progress3 &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setBmProgress3(int s, int value)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(value<0){value=0;}
+        else if(value>0xFF){value=0xFF;}
+        if(value != slot[s].bm_progress1)
+        {
+            slot[s].bm_progress1 = value;
+            setFileModified(true,s);
+        }
+    }
+}
+
+bool FF7Save::midgarTrainFlags(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].midgartrainflags)& (1<<bit) );}
+}
+void FF7Save::setMidgarTrainFlags(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].midgartrainflags |= (1<<bit);}
+        else{slot[s].midgartrainflags &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setMidgarTrainFlags(int s, int value)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(value<0){value=0;}
+        else if(value>0xFF){value=0xFF;}
+        if(value != slot[s].midgartrainflags)
+        {
+            slot[s].midgartrainflags = value;
+            setFileModified(true,s);
+        }
+    }
+}
+
 QByteArray FF7Save::keyItems(int s)
 {
     if(s<0 || s>14){return QByteArray("\x00");}
@@ -3279,7 +3422,6 @@ void FF7Save::setLocationD(int s, quint8 d)
         setFileModified(true,s);
     }
 }
-
 // Z_38[12] Item Flags.
 bool FF7Save::gaiin_1Ribbon(int s)
 {
@@ -3680,4 +3822,1016 @@ void FF7Save::setSeenPandorasBox(int s,bool seen)
     if(seen){slot[s].z_14[0] |= (1<<0);}
     else{slot[s].z_14[0] &= ~(1<<0);}
     setFileModified(true,s);
+}
+quint16 FF7Save::steps(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].steps;}
+}
+void FF7Save::setSteps(int s,int steps)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(steps<0){steps=0;}
+        else if(steps>0xFFFF){steps=0xFFFF;}
+        if(steps != slot[s].mprogress)
+        {
+            slot[s].steps = steps;
+            setFileModified(true,s);
+        }
+    }
+}
+quint8 FF7Save::chruchProgress(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].aeris_chruch;}
+}
+void FF7Save::setChurchProgress(int s,int progress)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(progress<0){progress=0;}
+        if(progress>0xFF){progress=0xFF;}
+        if(progress != slot[s].aeris_chruch)
+        {
+            slot[s].aeris_chruch = progress;
+            setFileModified(true,s);
+        }
+    }
+}
+
+quint8 FF7Save::donProgress(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].donprogress;}
+}
+void FF7Save::setDonProgress(int s,int progress)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(progress<0){progress=0;}
+        if(progress>0xFF){progress=0xFF;}
+        if(progress != slot[s].donprogress)
+        {
+            slot[s].donprogress = progress;
+            setFileModified(true,s);
+        }
+    }
+}
+bool FF7Save::startBombingMission(int s)
+{
+    if(s<0 || s>14){return false;}
+    else
+    {
+        if(slot[s].intbombing == 0x14){return true;}
+        else{return false;}
+    }
+}
+void FF7Save::setStartBombingMission(int s,bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+
+        if(isTrue && slot[s].intbombing !=0x14)
+        {
+            slot[s].intbombing = 0x14;
+            setFileModified(true,s);
+        }
+        else
+        {
+            if(slot[s].intbombing!=0x56)
+            {
+                slot[s].intbombing = 0x56;
+                setFileModified(true,s);
+            }
+        }
+    }
+}
+quint32 FF7Save::uWeaponHp(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].u_weapon_hp[0] |(slot[s].u_weapon_hp[1] << 8) | (slot[s].u_weapon_hp[2] << 16));}
+}
+void FF7Save::setUWeaponHp(int s,int hp)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(quint32(hp) != uWeaponHp(s))
+        {
+            int a = (hp & 0xff);
+            int b = (hp & 0xff00) >> 8;
+            int c = (hp & 0xff0000) >> 16;
+            slot[s].u_weapon_hp[0] = a;
+            slot[s].u_weapon_hp[1] = b;
+            slot[s].u_weapon_hp[2] = c;
+            setFileModified(true,s);
+        }
+    }
+}
+bool FF7Save::killedEmeraldWeapon(int s)
+{
+    if(s<0 || s>14){return false;}
+    else
+    {
+        if((slot[s].ruby_emerald)&(1<<4)){return true;}
+        else{return false;}
+    }
+}
+void FF7Save::setKilledEmeraldWeapon(int s,bool isTrue)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(isTrue !=killedEmeraldWeapon(s))
+        {
+            if(isTrue){slot[s].ruby_emerald |= (1<<4);}
+            else{slot[s].ruby_emerald &= ~(1<<4);}
+            setFileModified(true,s);
+        }
+    }
+}
+
+bool FF7Save::killedRubyWeapon(int s)
+{
+    if(s<0 || s>14){return false;}
+    else
+    {
+        if((slot[s].ruby_emerald)&(1<<3)){return true;}
+        else{return false;}
+    }
+}
+
+void FF7Save::setKilledRubyWeapon(int s,bool isTrue)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(isTrue !=killedRubyWeapon(s))
+        {
+            if(isTrue){slot[s].ruby_emerald |= (1<<3);}
+            else{slot[s].ruby_emerald &= ~(1<<3);}
+            setFileModified(true,s);
+        }
+    }
+}
+quint8 FF7Save::tutSave(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].tut_save;}
+}
+void FF7Save::setTutSave(int s, int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFF){value =0xFF;}
+    if(value != slot[s].tut_save)
+    {
+        slot[s].tut_save=value;
+        setFileModified(true,s);
+    }
+}
+bool FF7Save::canFightNinjaInForest(int s)
+{
+    if(s<0 || s>14){return false;}
+    else{return (slot[s].yuffieforest) & (1<<0);}
+}
+void FF7Save::setCanFightNinjaInForest(int s,bool isTrue)
+{
+    if(s<0 ||s>14){return;}
+    else
+    {
+        if(isTrue !=canFightNinjaInForest(s))
+        {
+            if(isTrue){slot[s].yuffieforest |= (1<<0);}
+            else{slot[s].yuffieforest &= ~(1<<0);}
+            setFileModified(true,s);
+        }
+    }
+}
+quint8 FF7Save::tutSub(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return slot[s].tut_sub;}
+}
+bool FF7Save::tutSub(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].tut_sub)& (1<<bit) );}
+}
+void FF7Save::setTutSub(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else if(bit ==6){setBattleTargets(s,isTrue);}
+    else
+    {
+        if(isTrue){slot[s].tut_sub |= (1<<bit);}
+        else{slot[s].tut_sub &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setTutSub(int s, int value)
+{
+    if(s<0||s>14){return;}
+    else
+    {
+        if(value<0){value=0;}
+        else if(value>0xFF){value=0xFF;}
+        if(value != slot[s].tut_sub)
+        {
+            slot[s].tut_sub = value;
+            setFileModified(true,s);
+        }
+    }
+}
+bool FF7Save::yuffieAquired(int s)
+{
+    if(s<0 || s>14){return false;}
+    else
+    {
+        if(regYuffie(s) ==0x6F){return true;}
+        else{return false;}
+    }
+}
+void FF7Save::setYuffieAquired(int s,bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(isTrue && regYuffie(s) !=0x6F)
+        {
+            setRegYuffie(s,0x6F);
+            setFileModified(true,s);
+        }
+        else
+        {
+            if(regYuffie(s) !=0x6E)
+            {
+                setRegYuffie(s,0x6E);
+                setFileModified(true,s);
+            }
+        }
+    }
+}
+quint8 FF7Save::regYuffie(int s)
+{
+    if(s<0 || s>14){return false;}
+    else{return slot[s].reg_yuffie;}
+}
+void FF7Save::setRegYuffie(int s , int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>0xFF){value=0xFF;}
+    if(slot[s].reg_yuffie!=value)
+    {
+        slot[s].reg_yuffie=value;
+        setFileModified(true,s);
+    }
+}
+
+bool FF7Save::vincentAquired(int s)
+{
+    if(s<0 || s>14){return false;}
+    else
+    {
+        if(regVincent(s)==0xFF){return true;}
+        else{return false;}
+    }
+}
+
+void FF7Save::setVincentAquired(int s,bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else
+    {
+        if(isTrue && regVincent(s) !=0xFF)
+        {
+            setRegVincent(s,0xFF);
+            setFileModified(true,s);
+        }
+        else
+        {
+            if(regVincent(s) !=0xFB)
+            {
+                setRegVincent(s,0xFB);
+                setFileModified(true,s);
+            }
+        }
+    }
+}
+
+quint8 FF7Save::regVincent(int s)
+{
+    if(s<0 || s>14){return false;}
+    else{return slot[s].reg_vinny;}
+}
+void FF7Save::setRegVincent(int s , int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>0xFF){value=0xFF;}
+    if(slot[s].reg_vinny!=value)
+    {
+        slot[s].reg_vinny=value;
+        setFileModified(true,s);
+    }
+}
+bool FF7Save::worldChocobo(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].world_map_chocobos)& (1<<bit) );}
+}
+
+void FF7Save::setWorldChocobo(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].world_map_chocobos |= (1<<bit);}
+        else{slot[s].world_map_chocobos &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+
+bool FF7Save::worldVehicle(int s, int bit)
+{//the Bit Number to offset.
+    if(bit <0 || bit> 7){return false;}
+    else{return ((slot[s].world_map_vehicles)& (1<<bit) );}
+}
+
+void FF7Save::setWorldVehicle(int s, int bit, bool isTrue)
+{
+    if(s<0 || s>14){return;}
+    else if(bit<0 || bit >7){return;}
+    else
+    {
+        if(isTrue){slot[s].world_map_vehicles |= (1<<bit);}
+        else{slot[s].world_map_vehicles &= ~(1<<bit);}
+        setFileModified(true,s);
+    }
+}
+quint32 FF7Save::worldCoordsLeader(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].l_world;}
+        else{return slot[s].l_world2;}
+    }
+}
+int FF7Save::worldCoordsLeaderX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].l_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsLeaderID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].l_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsLeaderAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].l_world) >> 24);}
+}
+int FF7Save::worldCoordsLeaderY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].l_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsLeaderZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].l_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsLeader(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsLeader(s,true))
+    {
+        slot[s].l_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsLeader(s,false))
+        {
+            slot[s].l_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsLeaderX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsLeaderX(s))
+    {
+        slot[s].l_world = (value | worldCoordsLeaderID(s) << 19 | worldCoordsLeaderAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsLeaderID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsLeaderID(s))
+    {
+        slot[s].l_world = (worldCoordsLeaderX(s) | value << 19 | worldCoordsLeaderAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsLeaderAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsLeaderAngle(s))
+    {
+        slot[s].l_world = (worldCoordsLeaderX(s) | worldCoordsLeaderID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsLeaderY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsLeaderY(s))
+    {
+        slot[s].l_world2 = (value | worldCoordsLeaderZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsLeaderZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsLeaderZ(s))
+    {
+        slot[s].l_world2 = (worldCoordsLeaderY(s) | value << 18);
+        setFileModified(true,s);
+    }
+}
+quint32 FF7Save::worldCoordsTc(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].tc_world;}
+        else{return slot[s].tc_world2;}
+    }
+}
+int FF7Save::worldCoordsTcX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].tc_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsTcID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].tc_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsTcAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].tc_world) >> 24);}
+}
+int FF7Save::worldCoordsTcY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].tc_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsTcZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].tc_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsTc(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsTc(s,true))
+    {
+        slot[s].tc_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsTc(s,false))
+        {
+            slot[s].tc_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsTcX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsTcX(s))
+    {
+        slot[s].tc_world = (value | worldCoordsTcID(s) << 19 | worldCoordsTcAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsTcID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsTcID(s))
+    {
+        slot[s].tc_world = (worldCoordsTcX(s) | value << 19 | worldCoordsTcAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsTcAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsTcAngle(s))
+    {
+        slot[s].tc_world = (worldCoordsTcX(s) | worldCoordsTcID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsTcY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsTcY(s))
+    {
+        slot[s].tc_world2 = (value | worldCoordsTcZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsTcZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsTcZ(s))
+    {
+        slot[s].tc_world2 = (worldCoordsTcY(s) | value << 18);
+        setFileModified(true,s);
+    }
+}
+quint32 FF7Save::worldCoordsBh(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].bh_world;}
+        else{return slot[s].bh_world2;}
+    }
+}
+int FF7Save::worldCoordsBhX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].bh_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsBhID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].bh_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsBhAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].bh_world) >> 24);}
+}
+int FF7Save::worldCoordsBhY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].bh_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsBhZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].bh_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsBh(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsBh(s,true))
+    {
+        slot[s].bh_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsBh(s,false))
+        {
+            slot[s].bh_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsBhX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsBhX(s))
+    {
+        slot[s].bh_world = (value | worldCoordsBhID(s) << 19 | worldCoordsBhAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsBhID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsBhID(s))
+    {
+        slot[s].bh_world = (worldCoordsBhX(s) | value << 19 | worldCoordsBhAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsBhAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsBhAngle(s))
+    {
+        slot[s].bh_world = (worldCoordsBhX(s) | worldCoordsBhID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsBhY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsBhY(s))
+    {
+        slot[s].bh_world2 = (value | worldCoordsBhZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsBhZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsBhZ(s))
+    {
+        slot[s].bh_world2 = (worldCoordsBhY(s) | value << 18);
+        setFileModified(true,s);
+    }
+}
+
+quint32 FF7Save::worldCoordsSub(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].sub_world;}
+        else{return slot[s].sub_world2;}
+    }
+}
+int FF7Save::worldCoordsSubX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].sub_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsSubID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].sub_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsSubAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].sub_world) >> 24);}
+}
+int FF7Save::worldCoordsSubY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].sub_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsSubZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].sub_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsSub(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsSub(s,true))
+    {
+        slot[s].sub_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsSub(s,false))
+        {
+            slot[s].sub_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsSubX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsSubX(s))
+    {
+        slot[s].sub_world = (value | worldCoordsSubID(s) << 19 | worldCoordsSubAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsSubID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsSubID(s))
+    {
+        slot[s].sub_world = (worldCoordsSubX(s) | value << 19 | worldCoordsSubAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsSubAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsSubAngle(s))
+    {
+        slot[s].sub_world = (worldCoordsSubX(s) | worldCoordsSubID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsSubY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsSubY(s))
+    {
+        slot[s].sub_world2 = (value | worldCoordsSubZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsSubZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsSubZ(s))
+    {
+        slot[s].sub_world2 = (worldCoordsSubY(s) | value << 18);
+        setFileModified(true,s);
+    }
+}
+
+quint32 FF7Save::worldCoordsWchoco(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].wc_world;}
+        else{return slot[s].wc_world2;}
+    }
+}
+int FF7Save::worldCoordsWchocoX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].wc_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsWchocoID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].wc_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsWchocoAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].wc_world) >> 24);}
+}
+int FF7Save::worldCoordsWchocoY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].wc_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsWchocoZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].wc_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsWchoco(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsWchoco(s,true))
+    {
+        slot[s].wc_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsWchoco(s,false))
+        {
+            slot[s].wc_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsWchocoX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsWchocoX(s))
+    {
+        slot[s].wc_world = (value | worldCoordsWchocoID(s) << 19 | worldCoordsWchocoAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsWchocoID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsWchocoID(s))
+    {
+        slot[s].wc_world = (worldCoordsWchocoX(s) | value << 19 | worldCoordsWchocoAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsWchocoAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsWchocoAngle(s))
+    {
+        slot[s].wc_world = (worldCoordsWchocoX(s) | worldCoordsWchocoID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsWchocoY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsWchocoY(s))
+    {
+        slot[s].wc_world2 = (value | worldCoordsWchocoZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsWchocoZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsWchocoZ(s))
+    {
+        slot[s].wc_world2 = (worldCoordsWchocoY(s) | value << 18);
+        setFileModified(true,s);
+    }
+}
+
+
+quint32 FF7Save::worldCoordsDurw(int s, bool firstChunk)
+{
+    if(s<0 || s>14){return 0;}
+    else
+    {
+        if(firstChunk){return slot[s].durw_world;}
+        else{return slot[s].durw_world2;}
+    }
+}
+int FF7Save::worldCoordsDurwX(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return (slot[s].durw_world &0x7FFFF);}
+}
+int FF7Save::worldCoordsDurwID(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].durw_world >> 19)&0x1F);}
+}
+int FF7Save::worldCoordsDurwAngle(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].durw_world) >> 24);}
+}
+int FF7Save::worldCoordsDurwY(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].durw_world2) & 0x3FFFF);}
+}
+int FF7Save::worldCoordsDurwZ(int s)
+{
+    if(s<0 || s>14){return 0;}
+    else{return ((slot[s].durw_world2) >> 18);}
+}
+void FF7Save::setWorldCoordsDurw(int s,bool firstChunk,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value =0;}
+    if(value>0xFFFF){value =0xFFFF;}
+    if(firstChunk && quint32(value) != worldCoordsDurw(s,true))
+    {
+        slot[s].durw_world=value;
+        setFileModified(true,s);
+    }
+    else
+    {
+        if(quint32(value) != worldCoordsDurw(s,false))
+        {
+            slot[s].durw_world2=value;
+            setFileModified(true,s);
+        }
+    }
+}
+void FF7Save::setWorldCoordsDurwX(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>295000){value=295000;}
+    if(value != worldCoordsDurwX(s))
+    {
+        slot[s].durw_world = (value | worldCoordsDurwID(s) << 19 | worldCoordsDurwAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsDurwID(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsDurwID(s))
+    {
+        slot[s].durw_world = (worldCoordsDurwX(s) | value << 19 | worldCoordsDurwAngle(s) << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsDurwAngle(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>360){value=360;}
+    if(value != worldCoordsDurwAngle(s))
+    {
+        slot[s].durw_world = (worldCoordsDurwX(s) | worldCoordsDurwID(s) << 19 | value << 24);
+        setFileModified(true,s);
+    }
+}
+void FF7Save::setWorldCoordsDurwY(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>230000){value=230000;}
+    if(value != worldCoordsDurwY(s))
+    {
+        slot[s].durw_world2 = (value | worldCoordsDurwZ(s) << 18);
+        setFileModified(true,s);
+    }
+
+}
+void FF7Save::setWorldCoordsDurwZ(int s,int value)
+{
+    if(s<0 || s>14){return;}
+    if(value<0){value=0;}
+    if(value>255){value=255;}
+    if(value != worldCoordsDurwZ(s))
+    {
+        slot[s].durw_world2 = (worldCoordsDurwY(s) | value << 18);
+        setFileModified(true,s);
+    }
 }

@@ -165,8 +165,8 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint8 z_37[50];                // [0x0F2A] UNKNOWN DATA
     quint32 l_world;                // [0x0F5C] coords of the leader on the world map part 1 (X, id, angle)
     quint32 l_world2;               // [0x0F60] leader coords part 2 (Y,Z)
-    quint32 uw_world;               // [0x0F64] Caught Wild Chocobo coords part 1
-    quint32 uw_world2;              // [0x0F68] Caught Wild Chocobo coords part 2
+    quint32 wc_world;               // [0x0F64] Caught Wild Chocobo coords part 1
+    quint32 wc_world2;              // [0x0F68] Caught Wild Chocobo coords part 2
     quint32 tc_world;               // [0x0F6C] Tiny Bronco/Chocobo coords part 1
     quint32 tc_world2;              // [0x0F70] Tiny Bronco/Chocobo coords part 2
     quint32 bh_world;               // [0x0F74] Buggy/Highwind coords 1

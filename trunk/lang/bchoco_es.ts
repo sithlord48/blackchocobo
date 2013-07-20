@@ -5045,7 +5045,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translation>Aeris turcos</translation>
+        <translation type="obsolete">Aeris turcos</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -5057,7 +5057,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation>Don_prog</translation>
+        <translation type="obsolete">Don_prog</translation>
     </message>
     <message>
         <source>&amp;Location</source>
@@ -6019,6 +6019,14 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>&amp;Import Slot From File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ChruchProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DonProgress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
