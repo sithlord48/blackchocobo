@@ -499,11 +499,11 @@ private slots://try to keep these in the same order as the .cpp file
     void on_durw_id_valueChanged(int);
     void on_durw_angle_valueChanged(int);
 
-    void on_uw_x_valueChanged(int);
-    void on_uw_y_valueChanged(int);
-    void on_uw_z_valueChanged(int);
-    void on_uw_id_valueChanged(int);
-    void on_uw_angle_valueChanged(int);
+    void on_wc_x_valueChanged(int);
+    void on_wc_y_valueChanged(int);
+    void on_wc_z_valueChanged(int);
+    void on_wc_id_valueChanged(int);
+    void on_wc_angle_valueChanged(int);
 
     void on_combo_map_controls_currentIndexChanged(int index);
     void on_slide_world_x_valueChanged(int value);
