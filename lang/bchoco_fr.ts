@@ -7757,31 +7757,31 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Changer les chemins de fichier pour sauver et charger</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chemin par défaut pour charger toutes les sauvegardes</translation>
     </message>
     <message>
         <source>Path For Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chemin des cartes mémoire d&apos;émulateur</translation>
     </message>
     <message>
         <source>Path For PC (.ff7) Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chemin des sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chemin pour les fichiers de statistiques de personnage</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Écraser les données &quot;Nouvelle Partie&quot;</translation>
     </message>
     <message>
         <source>Use Only Raw Psx Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utilisez uniquement les fichier PSX bruts</translation>
     </message>
 </context>
 <context>
@@ -8683,11 +8683,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: + More Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + plus de lieux</translation>
     </message>
     <message>
         <source>FF7tk: + Chocobo Manager Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + widget de gestion de chocobo.</translation>
     </message>
 </context>
 <context>
