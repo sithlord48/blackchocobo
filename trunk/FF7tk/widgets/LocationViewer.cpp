@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
-#include "../FF7tk/static_data/icons/Common_Icons/delete.xpm"
+#include "../static_data/icons/Common_Icons/delete.xpm"
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
@@ -97,6 +97,7 @@ void LocationViewer::init_display(void)
 
     actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);
     actionRegExpSearch->setCheckable(true);
+
     actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
     actionCaseSensitive->setCheckable(true);
 
@@ -177,7 +178,6 @@ void LocationViewer::init_display(void)
     FilterLayout->addWidget(btnSearchOptions);
     FilterLayout->addWidget(lineTableFilter);
 
-
     QVBoxLayout *LeftSideLayout = new QVBoxLayout;
     LeftSideLayout->setSpacing(0);
     LeftSideLayout->addWidget(locationTable);
@@ -209,7 +209,6 @@ void LocationViewer::init_connections(void)
     connect(sbD,SIGNAL(valueChanged(int)),this,SLOT(sbDChanged(int)));
     connect(lineLocationName,SIGNAL(textChanged(QString)),this,SLOT(lineLocationNameChanged(QString)));
 }
-
 void LocationViewer::init_disconnect(void)
 {
     disconnect(locationTable,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(itemChanged(int,int,int,int)));
@@ -230,7 +229,6 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
     if(currentColumn == prevColumn){/*do nothing*/} //stop non use warning
     if(currentRow ==0 and currentColumn ==0){return;}//return on selection cleared.
     if(currentRow ==prevRow){return;}
-
     else
     {
         int mapID = Locations->mapID(locationTable->item(currentRow,0)->text()).toInt();
@@ -284,14 +282,13 @@ void LocationViewer::setLocation(int mapId,int locId)
         QString oldStr = Locations->locationString(fileName);
         QString newStr = translate(oldStr);
         if(oldStr !=newStr){emit(locationStringChanged(newStr));}
-        lineLocationName->setText(newStr);
-
         sbMapID->setValue(Locations->mapID(fileName).toInt());
         sbLocID->setValue(Locations->locationID(fileName).toInt());
         sbX->setValue(Locations->x(fileName).toInt());
         sbY->setValue(Locations->y(fileName).toInt());
         sbT->setValue(Locations->t(fileName).toInt());
         sbD->setValue(Locations->d(fileName).toInt());
+        lineLocationName->setText(newStr);
     }
     init_connections();
 }
@@ -311,7 +308,6 @@ void LocationViewer::setLocationString(QString locString)
     init_connections();
 }
 void LocationViewer::setHorizontalHeaderStyle(QString styleSheet){locationTable->horizontalHeader()->setStyleSheet(styleSheet);}
-
 void LocationViewer::setRegion(QString newRegion){region=newRegion;setLocation(sbMapID->value(),sbLocID->value());}
 void LocationViewer::setTranslationBaseFile(QString basePathName){transBasePath= basePathName;}
 QString LocationViewer::translate(QString text)
@@ -339,6 +335,7 @@ QString LocationViewer::translate(QString text)
 void LocationViewer::filterLocations(QString filter)
 {
     QRegExp exp(filter);
+
     if(regExpSearch){exp.setPatternSyntax(QRegExp::Wildcard);}
     else{exp.setPatternSyntax(QRegExp::FixedString);}
     if(caseSensitive){exp.setCaseSensitivity(Qt::CaseSensitive);}
@@ -354,7 +351,16 @@ void LocationViewer::filterLocations(QString filter)
         locationTable->setRowHidden(i,hidden);
     }
 }
-
-void LocationViewer::actionRegExpSearchToggled(bool checked){regExpSearch=checked;}
-void LocationViewer::actionCaseSensitiveToggled(bool checked){caseSensitive=checked;}
 void LocationViewer::btnSearchOptionsClicked(){lineTableFilter->clear();}
+void LocationViewer::actionRegExpSearchToggled(bool checked)
+{   
+    regExpSearch=checked;
+    if(lineTableFilter->text().isEmpty()){return;}
+    else{filterLocations(lineTableFilter->text());}
+}
+void LocationViewer::actionCaseSensitiveToggled(bool checked)
+{
+    caseSensitive=checked;
+    if(lineTableFilter->text().isEmpty()){return;}
+    else{filterLocations(lineTableFilter->text());}
+}
