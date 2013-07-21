@@ -4414,7 +4414,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation type="obsolete">現在のスロットにインポート(&amp;I)</translation>
+        <translation>現在のスロットにインポート(&amp;I)</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -5934,7 +5934,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>/</source>
-        <translation type="unfinished"></translation>
+        <translation>/</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5960,11 +5960,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>PSP/PsVita セーブの警告</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5974,35 +5974,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 PC セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 Raw PSX セーブ (*-S*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 VGS セーブ (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>DEX (*.dex)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Dex-Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSV FF7 セーブ (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 PSP セーブ (*.vmp)</translation>
     </message>
     <message>
         <source>PS3 Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PS3 セーブ: 警告</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -6038,31 +6038,27 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のスロットをコピー(&amp;C)</translation>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スロットの貼り付け(&amp;P)</translation>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スロットのクリア (&amp;r)</translation>
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新規ゲーム (&amp;N)</translation>
     </message>
     <message>
         <source>E&amp;xport Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のキャラクターをエクスポート (&amp;x)</translation>
     </message>
     <message>
         <source>I&amp;mport Current Character</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Import Slot From File...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のキャラクターにインポート(&amp;m)</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
@@ -6071,6 +6067,10 @@ trigger showing that tutorial</source>
     <message>
         <source>DonProgress</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.gme)</source>
+        <translation type="unfinished">FF7 Dex Drive セーブ (*.gme)</translation>
     </message>
 </context>
 <context>
@@ -7966,11 +7966,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>? 9</source>
-        <translation type="unfinished"></translation>
+        <translation>? 9</translation>
     </message>
     <message>
         <source>? 10</source>
-        <translation type="unfinished"></translation>
+        <translation>? 10</translation>
     </message>
     <message>
         <source>Right</source>

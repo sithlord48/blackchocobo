@@ -75,11 +75,11 @@ void MateriaEditor::init_display()
     sb_ap->setAlignment(Qt::AlignCenter);
     lcd_max_ap->setDigitCount(8);
     lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
-    btn_rm_materia->setIcon(QIcon::fromTheme("edit-delete",QIcon(QPixmap(quit_xpm))));
-    btn_copy_materia->setIcon(QIcon::fromTheme("edit-copy",QIcon(QPixmap(copy_xpm))));
-    btn_paste_materia->setIcon(QIcon::fromTheme("edit-paste",QIcon(QPixmap(paste_xpm))));
+    btn_rm_materia->setIcon(QIcon(QPixmap(quit_xpm)));
+    btn_copy_materia->setIcon(QIcon(QPixmap(copy_xpm)));
+    btn_paste_materia->setIcon(QIcon(QPixmap(paste_xpm)));
 
-    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,50,50,96);}";
+    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,128,192,96);}";
     btn_star1->setStyleSheet(style);
     btn_star2->setStyleSheet(style);
     btn_star3->setStyleSheet(style);
@@ -97,8 +97,14 @@ void MateriaEditor::init_display()
     box_skills->setTitle(tr("Skills"));
     box_stats->setTitle(tr("Stat Changes"));
     btn_rm_materia->setToolTip(tr("Delete"));
+    btn_rm_materia->setStyleSheet(style);
+    btn_rm_materia->setFlat(true);
     btn_copy_materia->setToolTip(tr("Copy"));
+    btn_copy_materia->setStyleSheet(style);
+    btn_copy_materia->setFlat(true);
     btn_paste_materia->setToolTip(tr("Paste"));
+    btn_paste_materia->setStyleSheet(style);
+    btn_paste_materia->setFlat(true);
     box_status_effects->setTitle(tr("Added Effect"));
     //set Hidden
     eskill_group->setHidden(true);

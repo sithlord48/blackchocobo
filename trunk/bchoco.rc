@@ -62,7 +62,7 @@ BEGIN
             VALUE "FileDescription", "FF7 Save Game Editor"
             VALUE "FileVersion", GETSTR(VER_MAJOR) "." GETSTR(VER_MINOR) "." GETSTR(VER_SP) "." GETSTR(VER_BUILDNR) "\0"
             VALUE "InternalName", "BlackChocobo"
-            VALUE "LegalCopyright", "(C) 2010-2012 Chris Rizzitello"
+            VALUE "LegalCopyright", "(C) 2010-2013 Chris Rizzitello"
             VALUE "OriginalFilename", "Black_Chocobo.exe"
             VALUE "ProductName",      "Black Chocobo"
             VALUE "ProductVersion",  GETSTR(VER_MAJOR) "." GETSTR(VER_MINOR) "." GETSTR(VER_SP) "\0"

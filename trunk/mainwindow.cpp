@@ -499,7 +499,7 @@ void MainWindow::on_actionSave_File_As_triggered()
     QString psx= tr("Raw PSX Save(*FF7-S*)");
     QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)");
     QString vgs= tr("Virtual Game Station(*.vgs *.mem)");
-    QString dex= tr("DEX (*.dex)");
+    QString dex= tr("DEX (*.gme)");
     QString psv= tr("PSV (*.psv)");
     QString vmp= tr("PSP (*.vmp)");
     QString types = pc+";;"+mc+";;"+psx+";;"+vgs+";;"+dex+";;"+psv+";;"+vmp;

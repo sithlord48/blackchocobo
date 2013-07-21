@@ -1188,7 +1188,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Resist</source>
-        <translation type="unfinished"></translation>
+        <translation>Widerstand</translation>
     </message>
 </context>
 <context>
@@ -1746,7 +1746,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation type="unfinished">Hebt [Klein] auf</translation>
+        <translation>Hebt [Klein] auf</translation>
     </message>
 </context>
 <context>
@@ -2956,19 +2956,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>X: </source>
-        <translation type="unfinished">X: </translation>
+        <translation>X: </translation>
     </message>
     <message>
         <source>Y: </source>
-        <translation type="unfinished">Y: </translation>
+        <translation>Y: </translation>
     </message>
     <message>
         <source>T: </source>
-        <translation type="unfinished">T: </translation>
+        <translation>T: </translation>
     </message>
     <message>
         <source>D: </source>
-        <translation type="unfinished">D: </translation>
+        <translation>D: </translation>
     </message>
     <message>
         <source>LocID: </source>
@@ -4340,7 +4340,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation type="obsolete">&amp;Importiere zu jetzigem Steckplatz</translation>
+        <translation>&amp;Importiere zu jetzigem Steckplatz</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -5856,7 +5856,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fort Condor</translation>
+        <translation>Fort Condor</translation>
     </message>
     <message>
         <source>Funds </source>
@@ -5868,7 +5868,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>/</source>
-        <translation type="unfinished"></translation>
+        <translation>/</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5894,11 +5894,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>PSP/PsVita Speicher Notiz</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5908,35 +5908,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7 PC Spielstand(*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7 Raw PSX Spielstand(*-S*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 VGS Spielstand(*.vgs *.mem)</translation>
     </message>
     <message>
         <source>DEX (*.dex)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Dex-Drive Spielstand(*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSV FF7 Spielstand (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 PSP Spielstand(*.vmp)</translation>
     </message>
     <message>
         <source>PS3 Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>PS3 Speicher Notiz</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -5972,31 +5972,27 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiere jetzigen Ste&amp;ckplatz</translation>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Füge Steck&amp;platz ein</translation>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Steckplatz Zu&amp;rücksetzen</translation>
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Neues Spiel</translation>
     </message>
     <message>
         <source>E&amp;xport Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;xportiere jetzigen Charakter</translation>
     </message>
     <message>
         <source>I&amp;mport Current Character</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Import Slot From File...</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;mportiere jetzigen Charakter</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
@@ -6005,6 +6001,10 @@ trigger showing that tutorial</source>
     <message>
         <source>DonProgress</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.gme)</source>
+        <translation type="unfinished">Dex-Drive Spielstand(*.gme)</translation>
     </message>
 </context>
 <context>
@@ -7900,11 +7900,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>? 9</source>
-        <translation type="unfinished"></translation>
+        <translation>? 9</translation>
     </message>
     <message>
         <source>? 10</source>
-        <translation type="unfinished"></translation>
+        <translation>? 10</translation>
     </message>
     <message>
         <source>Right</source>
@@ -8146,7 +8146,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>[Mini]</source>
-        <translation type="unfinished">[Klein]</translation>
+        <translation>[Klein]</translation>
     </message>
 </context>
 <context>

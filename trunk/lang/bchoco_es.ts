@@ -4437,7 +4437,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation type="obsolete">&amp;Importar A La Ranura Actual</translation>
+        <translation>&amp;Importar A La Ranura Actual</translation>
     </message>
     <message>
         <source>&amp;Options</source>
@@ -5917,49 +5917,51 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP/PsVita (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Advertencia de guardado de PSP/PsVita</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este archivo no tiene una firma actualizada
+Debido a esto tu PSP/PsVita rechazará este archivo y lo tomará como corrupto
+Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Juego Guardado de FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Partida guardada FF7 PSX (Raw) (*-S*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Archivo de guardado FF7 VGS (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>DEX (*.dex)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Partida Guardada Dex-Drive (*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Partida Guardada FF7 PSV (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Partida Guardada de FF7 PSP/PsVita(*.vmp)</translation>
     </message>
     <message>
         <source>PS3 Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aviso de guardado PS3</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -5995,11 +5997,11 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar Ranura Actual</translation>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pegar Ranura</translation>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
@@ -6007,19 +6009,15 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nuevo Juego</translation>
     </message>
     <message>
         <source>E&amp;xport Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;xportar personaje actual</translation>
     </message>
     <message>
         <source>I&amp;mport Current Character</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Import Slot From File...</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;mportar personaje actual</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
@@ -6028,6 +6026,10 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>DonProgress</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.gme)</source>
+        <translation type="unfinished">Archivo de guardado FF7 Dex(*.gme)</translation>
     </message>
 </context>
 <context>

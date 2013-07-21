@@ -36,6 +36,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     lblType->setFixedSize(48,48);
     lblType->setScaledContents(true);
 
+    QString style="QPushButton:enabled{border:0px solid;}";
     lblName = new QLabel("");
     lblSex = new QLabel("");
     lblRank = new QLabel("");
@@ -44,22 +45,30 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     chkOccupied->setText(titleText);
     chkOccupied->setMaximumHeight(20);
     chkOccupied->setProperty("HoverStyled",QVariant(true));
-
     btnCopy = new QPushButton();
-    btnCopy->setFixedSize(16,16);
+    btnCopy->setStyleSheet(style);
+    btnCopy->setFlat(true);
+    btnCopy->setProperty("HoverStyled",QVariant(true));
+    btnCopy->setFixedSize(20,20);
     btnCopy->setIconSize(QSize(16,16));
     btnCopy->setToolTip(QString(tr("Copy")));
     btnCopy->setIcon(QIcon(QPixmap(copy_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
 
     btnPaste = new QPushButton();
+    btnPaste->setStyleSheet(style);
+    btnPaste->setFlat(true);
+    btnPaste->setProperty("HoverStyled",QVariant(true));
+    btnPaste->setFixedSize(20,20);
     btnPaste->setIconSize(QSize(16,16));
-    btnPaste->setFixedSize(16,16);
     btnPaste->setToolTip(QString(tr("Paste")));
     btnPaste->setIcon(QIcon(QPixmap(paste_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
 
     btnRemove = new QPushButton();
+    btnRemove->setStyleSheet(style);
+    btnRemove->setFlat(true);
+    btnRemove->setProperty("HoverStyled",QVariant(true));
+    btnRemove->setFixedSize(20,20);
     btnRemove->setIconSize(QSize(16,16));
-    btnRemove->setFixedSize(16,16);
     btnRemove->setToolTip(QString(tr("Remove")));
     btnRemove->setIcon(QIcon(QPixmap(delete_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
 
@@ -233,5 +242,4 @@ void ChocoboLabel::setHoverColorStyle(QString backgroundColor)
     backgroundColor.prepend("QWidget[HoverStyled=\"true\"]:enabled:hover{background-color:");
     backgroundColor.append("}");
     this->setStyleSheet(backgroundColor);
-
 }

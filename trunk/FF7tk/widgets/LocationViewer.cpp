@@ -14,12 +14,15 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
+#include "FF7tk/static_data/icons/Common_Icons/delete.xpm"
 #include <QDebug>
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
     region="";
     transBasePath="";
+    regExpSearch=false;
+    caseSensitive=false;
     Locations = new FF7Location();
     init_display();
     init_connections();
@@ -86,8 +89,26 @@ void LocationViewer::init_display(void)
     }
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()-6);
-
+    locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setCurrentCell(-1,-1);
+
+    actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);
+    actionRegExpSearch->setCheckable(true);
+
+    actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
+    actionCaseSensitive->setCheckable(true);
+
+    btnSearchOptions = new QToolButton;
+    btnSearchOptions->setIcon(QIcon(QPixmap(delete_xpm)));
+    btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
+    QMenu * newMenu=new QMenu;
+    newMenu->addAction(actionRegExpSearch);
+    newMenu->addAction(actionCaseSensitive);
+    btnSearchOptions->setMenu(newMenu);
+    btnSearchOptions->setFixedWidth(36);
+    lineTableFilter = new QLineEdit;
+    lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());
+    lineTableFilter->setPlaceholderText(tr("Location Filter..."));
 
     lineLocationName = new QLineEdit;
     lineLocationName->setPlaceholderText(tr("Location Name"));
@@ -151,13 +172,23 @@ void LocationViewer::init_display(void)
     PreviewLayout->setAlignment(Qt::AlignCenter);
     PreviewLayout->addWidget(lblLocationPreview);
 
+    QHBoxLayout *FilterLayout = new QHBoxLayout;
+    FilterLayout->addWidget(btnSearchOptions);
+    FilterLayout->addWidget(lineTableFilter);
+
+
+    QVBoxLayout *LeftSideLayout = new QVBoxLayout;
+    LeftSideLayout->setSpacing(0);
+    LeftSideLayout->addWidget(locationTable);
+    LeftSideLayout->addLayout(FilterLayout);
+
     QVBoxLayout *RightSideLayout = new QVBoxLayout;
     RightSideLayout->addLayout(CoordsLayout);
     RightSideLayout->addLayout(PreviewLayout);
 
     QHBoxLayout *FinalLayout = new QHBoxLayout;
     FinalLayout->setContentsMargins(6,6,6,6);
-    FinalLayout->addWidget(locationTable);
+    FinalLayout->addLayout(LeftSideLayout);
     FinalLayout->addLayout(RightSideLayout);
     this->setLayout(FinalLayout);
     this->adjustSize();
@@ -165,6 +196,10 @@ void LocationViewer::init_display(void)
 void LocationViewer::init_connections(void)
 {
     connect(locationTable,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(itemChanged(int,int,int,int)));
+    connect(lineTableFilter,SIGNAL(textChanged(QString)),this,SLOT(filterLocations(QString)));
+    connect(btnSearchOptions,SIGNAL(clicked()),this,SLOT(btnSearchOptionsClicked()));
+    connect(actionRegExpSearch,SIGNAL(toggled(bool)),this,SLOT(actionRegExpSearchToggled(bool)));
+    connect(actionCaseSensitive,SIGNAL(toggled(bool)),this,SLOT(actionCaseSensitiveToggled(bool)));
     connect(sbMapID,SIGNAL(valueChanged(int)),this,SLOT(sbMapIdChanged(int)));
     connect(sbLocID,SIGNAL(valueChanged(int)),this,SLOT(sbLocIdChanged(int)));
     connect(sbX,SIGNAL(valueChanged(int)),this,SLOT(sbXChanged(int)));
@@ -177,6 +212,9 @@ void LocationViewer::init_connections(void)
 void LocationViewer::init_disconnect(void)
 {
     disconnect(locationTable,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(itemChanged(int,int,int,int)));
+    disconnect(lineTableFilter,SIGNAL(textChanged(QString)),this,SLOT(filterLocations(QString)));
+    disconnect(actionRegExpSearch,SIGNAL(toggled(bool)),this,SLOT(actionRegExpSearchToggled(bool)));
+    disconnect(actionCaseSensitive,SIGNAL(toggled(bool)),this,SLOT(actionCaseSensitiveToggled(bool)));
     disconnect(sbMapID,SIGNAL(valueChanged(int)),this,SLOT(sbMapIdChanged(int)));
     disconnect(sbLocID,SIGNAL(valueChanged(int)),this,SLOT(sbLocIdChanged(int)));
     disconnect(sbX,SIGNAL(valueChanged(int)),this,SLOT(sbXChanged(int)));
@@ -210,6 +248,7 @@ void LocationViewer::setSelected(QString locFilename)
         if(locationTable->item(i,0)->text()== locFilename)
         {
             locationTable->setCurrentItem(locationTable->item(i,0));
+            break;
         }
     }
 }
@@ -296,3 +335,25 @@ QString LocationViewer::translate(QString text)
         else{return newText;}
     }
 }
+void LocationViewer::filterLocations(QString filter)
+{
+    QRegExp exp(filter);
+    if(regExpSearch){exp.setPatternSyntax(QRegExp::Wildcard);}
+    else{exp.setPatternSyntax(QRegExp::FixedString);}
+    if(caseSensitive){exp.setCaseSensitivity(Qt::CaseSensitive);}
+    else{exp.setCaseSensitivity(Qt::CaseInsensitive);}
+
+    for(int i=0;i<locationTable->rowCount();i++)
+    {
+        bool hidden=true;
+        for (int j=0;j<locationTable->columnCount();j++)
+        {
+            if(locationTable->item(i,j)->text().contains(exp)){hidden=false;break;}
+        }
+        locationTable->setRowHidden(i,hidden);
+    }
+}
+
+void LocationViewer::actionRegExpSearchToggled(bool checked){regExpSearch=checked;}
+void LocationViewer::actionCaseSensitiveToggled(bool checked){caseSensitive=checked;}
+void LocationViewer::btnSearchOptionsClicked(){lineTableFilter->clear();}

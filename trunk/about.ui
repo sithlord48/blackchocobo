@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>397</width>
-    <height>383</height>
+    <width>426</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -345,7 +345,32 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New Error Box Dialog</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Better Handling Of Japanese PSX hard Item Qty Limit</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Optimized Refresh Code</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cleaned Up Menus - Only one Import and Export (save as)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Fixed: Diff Table</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</string>
           </property>
          </item>
          <item>
@@ -355,7 +380,32 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>New: HexEditor for viewing saves in ff7 or psx mode.</string>
+           <string>Fixed:Sadness/Fury value were backwards</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Use Same Format as FF7 For Location Data (XYTD)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: HexEditor for full psxslot or ff7slot Editing</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Edit Condor Funds , Condor Wins/Losses</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Pandora Box Flags , Item Flags to Edit</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: + LocationViewer</string>
           </property>
          </item>
          <item>
@@ -365,12 +415,12 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>FF7tk: + Remove Slots from slots select Dialog </string>
+           <string>FF7tk: + SlotSelect Improvements</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>FF7tk: + More Locations</string>
+           <string>FF7tk: + More Locations And Viewer</string>
           </property>
          </item>
          <item>
@@ -851,7 +901,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>378</width>
+            <width>395</width>
             <height>430</height>
            </rect>
           </property>
@@ -1527,8 +1577,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>134</width>
-            <height>942</height>
+            <width>395</width>
+            <height>438</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

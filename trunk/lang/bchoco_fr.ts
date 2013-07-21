@@ -377,7 +377,7 @@
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
@@ -710,11 +710,11 @@
     </message>
     <message>
         <source>Male %1</source>
-        <translation type="unfinished">Mâle %1</translation>
+        <translation>Mâle %1</translation>
     </message>
     <message>
         <source>Female %1</source>
-        <translation type="unfinished">Femelle %1</translation>
+        <translation>Femelle %1</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
@@ -789,55 +789,55 @@ The km/h speeds are calculated while playing </source>
     <name>ChocoboManager</name>
     <message>
         <source>Stables Owned</source>
-        <translation type="unfinished">Étables possédées</translation>
+        <translation>Étables possédées</translation>
     </message>
     <message>
         <source>Stables Occupied</source>
-        <translation type="unfinished">Étables occupées</translation>
+        <translation>Étables occupées</translation>
     </message>
     <message>
         <source>Stable:%1</source>
-        <translation type="unfinished">Étable %1</translation>
+        <translation>Étable %1</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation type="unfinished">Chocobos dans l&apos;enclos</translation>
+        <translation>Chocobos dans l&apos;enclos</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="unfinished">Vide</translation>
+        <translation>Vide</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">Grand</translation>
+        <translation>Grand</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">Magnifique</translation>
+        <translation>Magnifique</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">Gentil</translation>
+        <translation>Gentil</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">Moyen</translation>
+        <translation>Moyen</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">Relativement moyen</translation>
+        <translation>Relativement moyen</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">Pas mal</translation>
+        <translation>Pas mal</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">Pas très en forme</translation>
+        <translation>Pas très en forme</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">Non recommandé</translation>
+        <translation>Non recommandé</translation>
     </message>
 </context>
 <context>
@@ -4323,7 +4323,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation type="obsolete">&amp;Importer un slot</translation>
+        <translation>&amp;Importer un slot</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -5860,7 +5860,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fort Condor</translation>
+        <translation>Fort Condor</translation>
     </message>
     <message>
         <source>Funds </source>
@@ -5872,7 +5872,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>/</source>
-        <translation type="unfinished"></translation>
+        <translation>/</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5898,11 +5898,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegardes FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Sauvegarde PSV (*.psv);;Sauvegarde PSP/PsVita (*.vmp);;Sauvegarde VGS(*.vgs *.mem);;Sauvegarde Dex-Drive(*.gme);;Tous les fichiers(*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Note de sauvegarde PSP/PsVita</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
@@ -5912,31 +5912,31 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 sauvegarde non-identifiée PSX (*-S*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauvegarde FF7 VGS (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>DEX (*.dex)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Sauvegarde Dex-Drive(*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauvegarde FF7 PSV (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauvegarde FF7 PSP (*.vmp)</translation>
     </message>
     <message>
         <source>PS3 Save Notice</source>
@@ -5976,7 +5976,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copier slot actuel</translation>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
@@ -5984,23 +5984,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Vide&amp;r le slot</translation>
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nouvelle partie</translation>
     </message>
     <message>
         <source>E&amp;xport Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;xporter le personnage actuel</translation>
     </message>
     <message>
         <source>I&amp;mport Current Character</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Import Slot From File...</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;mporter le personnage actuel</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
@@ -6009,6 +6005,10 @@ trigger showing that tutorial</source>
     <message>
         <source>DonProgress</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.gme)</source>
+        <translation type="unfinished">Sauvegarde FF7 Dex(*.gme)</translation>
     </message>
 </context>
 <context>

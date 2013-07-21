@@ -21,7 +21,6 @@
 #include "Type_FF7CHAR.h"
 #include "Type_FF7CHOCOBO.h"
 //Materia Type is included as part of FF7Char
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~STRUCT TYPES AND SAVE STRUCT~~~~~~~~~~~~~~~~*/
 
 struct LOVE
@@ -43,13 +42,6 @@ struct FF7DESC {                    // [0x0044] Descriptions; no actual game dat
     quint32 gil;                    // [0x001C] Amount of gil
     quint32 time;                   // [0x0020] Total number of seconds played
     quint8 location[32];	        // [0x0024] Save location (ff7 string)
-}__attribute__((__packed__));
-struct FF7WORLD_COORDS
-{
-quint8 x[3];                        //[0x00] x on map
-quint8 angle;                       //[0x03] viewing angle 0-0xff
-quint8 y[3];                        //[0x04] y on map 0-
-qint8  z;                           //[0x05] z min=-127 max=127
 }__attribute__((__packed__));
 
 struct FF7XYT {                     // size of 6. used for coords
@@ -133,7 +125,7 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint8 z_27[64];                // [0x0D84] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];         // [0x0DC4] Chocobo slots
     quint8 z_28[13];	            // [0x0E04] UNKNOWN DATA
-    quint16 BikeHighScore;	    // [0x0E11] Bike Mini Game High Score
+    quint16 BikeHighScore;          // [0x0E11] Bike Mini Game High Score
     quint8 SnowBegFastTime[4];      // [0x0E13] Fastest Time For Snowboard Beginner Course stored in Msec 3bytes byte[0] unused
     quint8 SnowExpFastTime[4];      // [0x0E17] Fastest Time For Snowboard Expert Course Stored in Msec 3bytes byte[0] unused
     quint8 SnowCrazyFastTime[4];    // [0x0E1B] Fastest Time For Snowboard Crazy Course Stored in Msec 3bytes byte[0] unused
@@ -183,8 +175,8 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint16 pole3_y;                // [0x0F96] 3ed Snow Pole Y Coordinate.
     quint8 z_38[236];               // [0x0F98] UNKNOWN DATA
     FF7CHOCOBO choco56[2];          // [0x1084] Chocobo slots 5-6
-    quint16 phsallowed;                // [0x10A4] who is allowed in the phs
-    quint16 phsvisible;          // [0x10A6] who is visible in the phs
+    quint16 phsallowed;             // [0x10A4] who is allowed in the phs
+    quint16 phsvisible;             // [0x10A6] who is visible in the phs
     quint8 z_39[48];                // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;             // [0x10D8] Battle Speed
     quint8 battlemspeed;            // [0x10D9] Battle Message Speed
