@@ -180,11 +180,13 @@ void ChocoboManager::paste(void)
     setChocobo(s,chocoboData[6],chocoboName[6],chocoboStamina[6],cantMate[6]);
     //emit the changes
     ChocoboChanged(s);
-    chocoboLabel[s]->setOccupied(true);
-    setOccupied(stablesOccupied+1,stableMask |=(1<<s));
-    emit(occupiedChanged(stablesOccupied));
-    emit(stableMaskChanged(stableMask));
-
+    if(!chocoboLabel[s]->isOccupied())
+    {
+        chocoboLabel[s]->setOccupied(true);
+        setOccupied(stablesOccupied+1,stableMask |=(1<<s));
+        emit(occupiedChanged(stablesOccupied));
+        emit(stableMaskChanged(stableMask));
+    }
 }
 
 void ChocoboManager::remove(void)

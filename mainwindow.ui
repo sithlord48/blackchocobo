@@ -2922,8 +2922,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>454</height>
+             <width>100</width>
+             <height>30</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2966,8 +2966,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>454</height>
+             <width>747</width>
+             <height>428</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4840,7 +4840,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>313</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -10027,7 +10027,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
-    <string>&amp;Import Slot From File...</string>
+    <string>&amp;Import To Current Slot</string>
    </property>
   </action>
  </widget>

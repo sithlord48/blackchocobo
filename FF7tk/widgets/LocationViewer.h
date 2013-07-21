@@ -53,7 +53,6 @@ public slots:
     void setLocationString(QString);
     void setHorizontalHeaderStyle(QString styleSheet);
 
-
 private slots:
     void itemChanged(int currentRow,int currentColumn,int prevRow, int prevColumn);
     void sbMapIdChanged(int mapId);
@@ -64,6 +63,10 @@ private slots:
     void sbDChanged(int d);
     void lineLocationNameChanged(QString);
     void setLocation(int mapId,int locId);
+    void filterLocations(QString filter);
+    void actionRegExpSearchToggled(bool checked);
+    void actionCaseSensitiveToggled(bool checked);
+    void btnSearchOptionsClicked(void);
 protected:
     void resizeEvent(QResizeEvent *ev);
 private:
@@ -72,6 +75,10 @@ private:
     void init_disconnect(void);
     QString translate(QString text);
     QTableWidget *locationTable;
+    QLineEdit *lineTableFilter;
+    QAction *actionRegExpSearch;
+    QAction *actionCaseSensitive;
+    QToolButton *btnSearchOptions;
     FF7Location *Locations;
     QLabel * lblLocationPreview;
     QLineEdit *lineLocationName;
@@ -83,7 +90,8 @@ private:
     QSpinBox *sbD;
     QString region;
     QString transBasePath;
-    bool showPreview;
+    bool regExpSearch;
+    bool caseSensitive;
 };
 
 #endif // LOCATIONVIEWER_H

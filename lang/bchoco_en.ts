@@ -5683,10 +5683,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DEX (*.dex)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PSV (*.psv)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5755,15 +5751,19 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Import Slot From File...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>ChruchProgress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>DonProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Import To Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEX (*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
