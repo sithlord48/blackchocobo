@@ -14,8 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
-#include "FF7tk/static_data/icons/Common_Icons/delete.xpm"
-#include <QDebug>
+#include "../FF7tk/static_data/icons/Common_Icons/delete.xpm"
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
@@ -92,20 +91,22 @@ void LocationViewer::init_display(void)
     locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setCurrentCell(-1,-1);
 
-    actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);
-    actionRegExpSearch->setCheckable(true);
-
-    actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
-    actionCaseSensitive->setCheckable(true);
-
     btnSearchOptions = new QToolButton;
     btnSearchOptions->setIcon(QIcon(QPixmap(delete_xpm)));
     btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
+
+    actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);
+    actionRegExpSearch->setCheckable(true);
+    actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
+    actionCaseSensitive->setCheckable(true);
+
     QMenu * newMenu=new QMenu;
     newMenu->addAction(actionRegExpSearch);
     newMenu->addAction(actionCaseSensitive);
+
     btnSearchOptions->setMenu(newMenu);
     btnSearchOptions->setFixedWidth(36);
+
     lineTableFilter = new QLineEdit;
     lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());
     lineTableFilter->setPlaceholderText(tr("Location Filter..."));
