@@ -71,17 +71,15 @@ void CharEditor::init_display()
     for(int i=0;i<11;i++){combo_id->addItem(Chars.icon(i),Chars.defaultName(i));}
     lbl_base_hp = new QLabel(tr("Base HP"));
     lbl_base_hp_bonus = new QLabel;
-    lbl_base_hp->setFixedWidth(this->font().pointSize()*6);
-    lbl_base_hp_bonus->setFixedWidth(this->font().pointSize()*5);
+    //lbl_base_hp_bonus->setFixedWidth(this->font().pointSize()*11);
     sb_base_hp = new QSpinBox;
-    sb_base_hp->setFixedWidth(this->font().pointSize()*7);
+    sb_base_hp->setFixedWidth(this->font().pointSize()*6);
 
     lbl_base_mp = new QLabel(tr("Base MP"));
     lbl_base_mp_bonus = new QLabel;
     sb_base_mp = new QSpinBox;
-    lbl_base_mp->setFixedWidth(this->font().pointSize()*6);
-    lbl_base_mp_bonus->setFixedWidth(this->font().pointSize()*5);
-    sb_base_mp->setFixedWidth(this->font().pointSize()*7);
+    //lbl_base_mp_bonus->setFixedWidth(this->font().pointSize()*11);
+    sb_base_mp->setFixedWidth(this->font().pointSize()*6);
 
     lbl_total_xp = new QLabel(tr("Total Exp"));
     lbl_level_progress = new QLabel(tr("Level Progress"));
@@ -277,8 +275,6 @@ void CharEditor::init_display()
     sb_level->setWrapping(true);
     sb_curMp->setWrapping(true);
     sb_curHp->setWrapping(true);
-    sb_maxMp->setWrapping(true);
-    sb_maxHp->setWrapping(true);
     sb_base_hp->setWrapping(true);
     sb_base_mp->setWrapping(true);
     sb_kills->setWrapping(true);
@@ -482,21 +478,19 @@ void CharEditor::init_display()
     lck_layout->addWidget(lbl_lck_equals);
     lck_layout->addWidget(lbl_lck_total);
 
-    QSpacerItem *base_hp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     QHBoxLayout *base_hp_layout = new QHBoxLayout;
     base_hp_layout->setContentsMargins(0,0,0,0);
     base_hp_layout->addWidget(lbl_base_hp);
     base_hp_layout->addWidget(sb_base_hp);
     base_hp_layout->addWidget(lbl_base_hp_bonus);
-    base_hp_layout->addSpacerItem(base_hp_spacer);
+    base_hp_layout->addSpacerItem(new QSpacerItem(3,0,QSizePolicy::Expanding,QSizePolicy::Fixed));
 
-    QSpacerItem *base_mp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     QHBoxLayout *base_mp_layout = new QHBoxLayout;
     base_mp_layout->setContentsMargins(0,0,0,0);
     base_mp_layout->addWidget(lbl_base_mp);
     base_mp_layout->addWidget(sb_base_mp);
     base_mp_layout->addWidget(lbl_base_mp_bonus);
-    base_mp_layout->addSpacerItem(base_mp_spacer);
+    base_mp_layout->addSpacerItem(new QSpacerItem(3,0,QSizePolicy::Expanding,QSizePolicy::Fixed));
 
     QHBoxLayout *base_hp_mp_layout = new QHBoxLayout;
     base_hp_mp_layout->setContentsMargins(0,0,0,0);
@@ -605,9 +599,8 @@ void CharEditor::init_display()
     lower_section->addLayout(stat_layout_2);
     lower_section->addLayout(limit_box);
 
-
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(3,0,3,3);
+    left_Final->setContentsMargins(2,0,2,3);
     left_Final->setSpacing(3);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
@@ -2155,8 +2148,13 @@ void CharEditor::calc_stats(void)
     if(lck_total < 256)lbl_lck_total->setText(QString::number(lck_total));
     else{lbl_lck_total->setText(QString::number(255));}
 
-    if(hp_bonus !=0){lbl_base_hp_bonus->setText(QString("%1%").arg(QString::number(hp_bonus)));} else{lbl_base_hp_bonus->setText(QString(""));}
-    if(mp_bonus!=0){lbl_base_mp_bonus->setText(QString("%1%").arg(QString::number(mp_bonus)));} else{lbl_base_mp_bonus->setText(QString(""));}
+    if(hp_bonus>0){lbl_base_hp_bonus->setText(QString(" +%2 (+%1%)").arg(QString::number(hp_bonus),QString::number(int(data.baseHP *(hp_bonus*0.01)))));}
+    else if(hp_bonus<0){lbl_base_hp_bonus->setText(QString(" %2 (%1%)").arg(QString::number(hp_bonus),QString::number(int(data.baseHP *(hp_bonus*0.01)))));}
+    else{lbl_base_hp_bonus->setText(QString(""));}
+
+    if(mp_bonus>0){lbl_base_mp_bonus->setText(QString(" +%2 (+%1%)").arg(QString::number(mp_bonus),QString::number(int(data.baseMP *(mp_bonus*0.01)))));}
+    else if(mp_bonus<0){lbl_base_mp_bonus->setText(QString(" %2 (%1%)").arg(QString::number(mp_bonus),QString::number(int(data.baseMP *(mp_bonus*0.01)))));}
+    else{lbl_base_mp_bonus->setText(QString(""));}
 
     sb_maxHp->setValue(data.baseHP + (data.baseHP * (hp_bonus*.01)));
     lcdMaxHp->display(sb_maxHp->value());
