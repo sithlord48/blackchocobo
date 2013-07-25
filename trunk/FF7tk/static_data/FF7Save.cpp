@@ -2471,7 +2471,7 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
     {
         QString temp= filename;
         temp.truncate(temp.lastIndexOf("/"));
-        OutPath== temp;
+        OutPath=temp;
     }
     QString Path =fileName;
     Path.chop(Path.length()-Path.lastIndexOf("/"));

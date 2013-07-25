@@ -541,7 +541,7 @@ void MainWindow::on_actionSave_File_As_triggered()
     else if(selectedType ==dex){newType = "DEX";}
     else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PS3 Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
     else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
-    else{newType =="";}
+    else{newType ="";}
 
     if(ff7->type()!=newType)
     {//Type Changed lets Export instead
