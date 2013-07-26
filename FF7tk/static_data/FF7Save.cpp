@@ -2662,9 +2662,9 @@ void FF7Save::setBmProgress2(int s, int value)
     {
         if(value<0){value=0;}
         else if(value>0xFF){value=0xFF;}
-        if(value != slot[s].bm_progress1)
+        if(value != slot[s].bm_progress3)
         {
-            slot[s].bm_progress1 = value;
+            slot[s].bm_progress2 = value;
             setFileModified(true,s);
         }
     }
@@ -2692,9 +2692,9 @@ void FF7Save::setBmProgress3(int s, int value)
     {
         if(value<0){value=0;}
         else if(value>0xFF){value=0xFF;}
-        if(value != slot[s].bm_progress1)
+        if(value != slot[s].bm_progress3)
         {
-            slot[s].bm_progress1 = value;
+            slot[s].bm_progress3 = value;
             setFileModified(true,s);
         }
     }

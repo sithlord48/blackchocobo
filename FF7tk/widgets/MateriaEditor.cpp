@@ -118,7 +118,7 @@ void MateriaEditor::init_display()
     lbl_materiaIcon->setFixedSize(24,24);
     combo_type->setMinimumHeight(24);
     combo_materia->setMinimumHeight(24);
-    list_skills->setFixedHeight((this->font().pointSize()*10)+6);
+    list_skills->setFixedHeight((this->fontMetrics().height()*5)+6);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
     list_status->setFixedHeight((this->font().pointSize()*10)+6);
     list_status->setSelectionMode(QAbstractItemView::NoSelection);
@@ -268,7 +268,7 @@ void MateriaEditor::init_data()
     combo_type->addItem(data->icon(FF7Materia::MasterMagic),tr("Magic"));
     combo_type->addItem(data->icon(FF7Materia::MasterSummon),tr("Summon"));
     combo_type->addItem(data->icon(FF7Materia::Underwater),tr("Independent"));
-    combo_type->addItem(data->icon(0x1D),tr("Support"));
+    combo_type->addItem(data->icon(FF7Materia::StealAsWell),tr("Support"));
     combo_type->addItem(data->icon(FF7Materia::MasterCommand),tr("Command"));
 
     //Set initial combo_materia info.
@@ -292,14 +292,6 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
         if(_id != materia_id)
         {
             _id = materia_id;
-            _type_icon = QPixmap::fromImage(data->image(_id));
-            _full_star_icon = QPixmap::fromImage(data->imageFullStar(_id));
-            _empty_star_icon = QPixmap::fromImage(data->imageEmptyStar(_id));
-            _name=data->name(_id);
-            _type = data->type(_id);
-            _max_level = data->levels(_id);
-            for(int i=0;i<_max_level;i++){_level_ap[i]=data->ap(_id,i);}
-            _skill_list = data->skills(_id);
             sb_ap->setEnabled(1);
             emit id_changed(_id);
          }
@@ -345,7 +337,7 @@ void MateriaEditor::setAP(qint32 ap)
     else
     {//All Other Materia
         frm_ap_stars->setHidden(false);
-        if( (ap <FF7Materia::MaxMateriaAp) && (ap<_level_ap[_max_level-1]) )
+        if( (ap <FF7Materia::MaxMateriaAp) && (ap< data->ap(_id,data->levels(_id)-1)) )
         {
             _current_ap = ap;
             sb_ap->setValue(_current_ap);
@@ -353,7 +345,7 @@ void MateriaEditor::setAP(qint32 ap)
         else
         {
             _current_ap = FF7Materia::MaxMateriaAp;
-            sb_ap->setValue(_level_ap[_max_level-1]);
+            sb_ap->setValue(data->ap(_id,data->levels(_id)-1));
         }
         emit ap_changed(_current_ap);
     }
@@ -365,12 +357,12 @@ void MateriaEditor::setName()
     if(_id==FF7Materia::EmptyId){combo_type->setCurrentIndex(0);combo_materia->setCurrentIndex(-1);lbl_materiaName->clear();lbl_materiaIcon->setPixmap(QPixmap());}
     else
     {
-        lbl_materiaIcon->setPixmap(_type_icon.scaled(lbl_materiaIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-        lbl_materiaName->setText(_name);
-        if(combo_type->currentIndex()!=FF7Materia::Unknown){combo_type->setCurrentIndex(_type);}
+        lbl_materiaIcon->setPixmap(QPixmap::fromImage(data->image(_id)).scaled(lbl_materiaIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+        lbl_materiaName->setText(data->name(_id));
+        if(combo_type->currentIndex()!=FF7Materia::Unknown){combo_type->setCurrentIndex(data->type(_id));}
         for(int i=0;i<combo_materia->count();i++)
         {//loop thru type and see if name matches if so set index and stop
-            if(_name == combo_materia->itemText(i)){combo_materia->setCurrentIndex(i);return;}
+            if(data->name(_id) == combo_materia->itemText(i)){combo_materia->setCurrentIndex(i);return;}
         }
     }
 }
@@ -408,7 +400,7 @@ void MateriaEditor::setLevel()
 {
     _level=0;
     if( (_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)){_level=1;}
-    else{for(int i=0;i<_max_level;i++){if(_current_ap >= _level_ap[i]){_level++;}}}
+    else{for(int i=0;i<data->levels(_id);i++){if(_current_ap >= data->ap(_id,i)){_level++;}}}
     setStars();
     setSkills();
 }
@@ -425,23 +417,23 @@ void MateriaEditor::setStars()
         btn_star3->setHidden(true);
         btn_star4->setHidden(true);
         btn_star5->setHidden(true);
-        if(_type !=0)
+        if(data->type(_id) !=0)
         {
-            btn_star1->setIcon(_empty_star_icon.scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            btn_star2->setIcon(_empty_star_icon.scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            btn_star3->setIcon(_empty_star_icon.scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            btn_star4->setIcon(_empty_star_icon.scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            btn_star5->setIcon(_empty_star_icon.scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star1->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star2->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star3->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star4->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            btn_star5->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         }
         switch(_level)
         {//no break on purpose
-            case 5: btn_star5->setIcon(_full_star_icon.scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            case 4: btn_star4->setIcon(_full_star_icon.scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            case 3: btn_star3->setIcon(_full_star_icon.scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            case 2: btn_star2->setIcon(_full_star_icon.scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-            case 1: btn_star1->setIcon(_full_star_icon.scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 5: btn_star5->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_star5->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 4: btn_star4->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_star4->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 3: btn_star3->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_star3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 2: btn_star2->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_star2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+            case 1: btn_star1->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_star1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         };
-        switch(_max_level)
+        switch(data->levels(_id))
         {//no break on purpose.
             case 5: btn_star5->setHidden(false);
             case 4: btn_star4->setHidden(false);
@@ -478,21 +470,21 @@ void MateriaEditor::setSkills()
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
         switch (_level)
         {// no breaks on purpose
-            case 5:if(_skill_list.count()>4){list_skills->insertItem(0,_skill_list.at(4));}
-            case 4:if(_skill_list.count()>3){list_skills->insertItem(0,_skill_list.at(3));}
-            case 3:if(_skill_list.count()>2){list_skills->insertItem(0,_skill_list.at(2));}
-            case 2:if(_skill_list.count()>1){list_skills->insertItem(0,_skill_list.at(1));}
-            case 1:if(_skill_list.count()>0){list_skills->insertItem(0,_skill_list.at(0));}
+            case 5:if(data->skills(_id).count()>4){list_skills->insertItem(0,data->skills(_id).at(4));}
+            case 4:if(data->skills(_id).count()>3){list_skills->insertItem(0,data->skills(_id).at(3));}
+            case 3:if(data->skills(_id).count()>2){list_skills->insertItem(0,data->skills(_id).at(2));}
+            case 2:if(data->skills(_id).count()>1){list_skills->insertItem(0,data->skills(_id).at(1));}
+            case 1:if(data->skills(_id).count()>0){list_skills->insertItem(0,data->skills(_id).at(0));}
         }
         frm_skill_status->adjustSize();
     }
     this->layout()->update();
 }
 
-void MateriaEditor::btn_star1_clicked(){setAP(_level_ap[0]);setLevel();}
-void MateriaEditor::btn_star2_clicked(){setAP(_level_ap[1]);setLevel();}
-void MateriaEditor::btn_star3_clicked(){setAP(_level_ap[2]);setLevel();}
-void MateriaEditor::btn_star4_clicked(){setAP(_level_ap[3]);setLevel();}
+void MateriaEditor::btn_star1_clicked(){setAP(data->ap(_id,0));setLevel();}
+void MateriaEditor::btn_star2_clicked(){setAP(data->ap(_id,1));setLevel();}
+void MateriaEditor::btn_star3_clicked(){setAP(data->ap(_id,2));setLevel();}
+void MateriaEditor::btn_star4_clicked(){setAP(data->ap(_id,3));setLevel();}
 void MateriaEditor::btn_star5_clicked(){setAP(FF7Materia::MaxMateriaAp);setLevel();}
 
 void MateriaEditor::materia_changed(QString new_name)
@@ -516,8 +508,6 @@ void MateriaEditor::type_changed(int new_type)
     combo_materia->blockSignals(0);
 }
 
-void MateriaEditor::remove_materia(void){setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
-
 qint32 MateriaEditor::ap(void){return _current_ap;}
 qint8 MateriaEditor::id(void){return _id;}
 void MateriaEditor::sb_ap_changed(qint32 ap){setAP(ap);}
@@ -533,14 +523,14 @@ qint32 MateriaEditor::MaxAP(void)
 {
     if( (_id!=FF7Materia::Underwater) || (_id !=FF7Materia::MasterCommand) || (_id!=FF7Materia::MasterMagic) ||(_id!=FF7Materia::MasterSummon) || (_id!=FF7Materia::EnemySkill))
     {
-        return _level_ap[_max_level-1];
+        return data->ap(_id,data->levels(_id)-1);
     }
     else{return FF7Materia::MaxMateriaAp;}
 }
 
+void MateriaEditor::remove_materia(void){setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
 void MateriaEditor::copy_materia(){buffer_id= _id; buffer_ap = _current_ap;}
 void MateriaEditor::paste_materia(){setMateria(buffer_id,buffer_ap);}
-
 void MateriaEditor::btn_clear_eskill_clicked(){if(_current_ap!=0){setAP(0);}}
 void MateriaEditor::btn_master_eskill_clicked(){if(_current_ap != FF7Materia::MaxMateriaAp){setAP(FF7Materia::MaxMateriaAp);}}
 

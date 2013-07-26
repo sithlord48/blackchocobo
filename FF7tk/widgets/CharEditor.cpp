@@ -235,8 +235,7 @@ void CharEditor::init_display()
     used_limits_layout->addSpacerItem(usedSpacer);
 
     list_limits = new QListWidget;
-    list_limits->setMaximumHeight(this->font().pointSize()*13);
-    //list_limits->setContentsMargins(0,6,0,0);
+    list_limits->setMaximumHeight((this->fontMetrics().height()*7)+6);
     lbl_limit_level = new QLabel(tr("Limit Level"));
     sb_limit_level = new QSpinBox;
     sb_limit_level->setFixedWidth(this->font().pointSize()*4);
@@ -512,7 +511,6 @@ void CharEditor::init_display()
     QFrame*stat_box= new QFrame;
     stat_box->setLayout(stat_layout);
     stat_box->adjustSize();
-    //stat_box->setFixedHeight(this->font().pointSize()*16);
 
     QLabel *lbl_0x34= new QLabel(QString(tr("0x34")));
     lcd_0x34 = new QLCDNumber;
@@ -628,6 +626,11 @@ void CharEditor::init_display()
     elemental_box->setTitle(tr("Elemental Effects"));
     elemental_box->setHidden(1);
 
+    QVBoxLayout *elemental_layout = new QVBoxLayout();
+    elemental_layout->setContentsMargins(0,0,0,0);
+    elemental_layout->addWidget(elemental_box);
+    elemental_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::MinimumExpanding,QSizePolicy::MinimumExpanding));
+
     status_effects = new QListWidget();
     QHBoxLayout *status =new QHBoxLayout();
     status->setContentsMargins(0,0,0,0);
@@ -639,10 +642,15 @@ void CharEditor::init_display()
     status_box->setTitle(tr("Status Effects"));
     status_box->setHidden(1);
 
+    QVBoxLayout *status_layout = new QVBoxLayout();
+    status_layout->setContentsMargins(0,0,0,0);
+    status_layout->addWidget(status_box);
+    status_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::MinimumExpanding,QSizePolicy::MinimumExpanding));
+
     QHBoxLayout *effects_layout =new QHBoxLayout();
     effects_layout->setContentsMargins(0,0,0,0);
-    effects_layout->addWidget(elemental_box);
-    effects_layout->addWidget(status_box);
+    effects_layout->addLayout(elemental_layout);
+    effects_layout->addLayout(status_layout);
     QSpacerItem *spacer2 = new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
     effects_layout->addSpacerItem(spacer2);
     effects_layout->setSpacing(0);

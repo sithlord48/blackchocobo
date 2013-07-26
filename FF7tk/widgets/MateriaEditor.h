@@ -90,16 +90,16 @@ private:
     quint8 _id;// current id
     qint8 buffer_id;
     qint32 buffer_ap;
-    QString _name;
-    quint8 _type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
     qint8 _level;//current level
-    qint8 _max_level;// max level of materia
     qint32 _current_ap;// current ap amount
-    qint32 _level_ap[5];// hold ap requirement for each level.
-    QPixmap _full_star_icon;// hold current full star icon
-    QPixmap _empty_star_icon;//hold current empty star icon
-    QPixmap _type_icon; // materia type icon.
-    QStringList _skill_list;
+    //quint8 _type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
+    //qint8 _max_level;// max level of materia
+    //qint32 _level_ap[5];// hold ap requirement for each level.
+    //QString _name;
+    //QPixmap _full_star_icon;// hold current full star icon
+    //QPixmap _empty_star_icon;//hold current empty star icon
+    //QPixmap _type_icon; // materia type icon.
+    //QStringList _skill_list;
 
     QLabel *lbl_materiaIcon;
     QLabel *lbl_materiaName;
