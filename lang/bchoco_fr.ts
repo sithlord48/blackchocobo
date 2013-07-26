@@ -381,11 +381,11 @@
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
-        <translation type="unfinished"></translation>
+        <translation>valeur calculée en jeu ; modifie BaseMp</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
-        <translation type="unfinished"></translation>
+        <translation>valeur calculée en jeu ; modifie BaseHp</translation>
     </message>
 </context>
 <context>
@@ -674,11 +674,11 @@
     </message>
     <message>
         <source>Run Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse</translation>
     </message>
     <message>
         <source>Sprint Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse en sprint</translation>
     </message>
     <message>
         <source>pCount</source>
@@ -719,70 +719,71 @@
     <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
-        <translation type="unfinished"></translation>
+        <translation>Les valeurs de vitesse sont des valeurs brutes
+Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Rank: C</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang : C</translation>
     </message>
     <message>
         <source>Rank: B</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang : B</translation>
     </message>
     <message>
         <source>Rank: A</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang : A</translation>
     </message>
     <message>
         <source>Rank: S</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang : Â</translation>
     </message>
     <message>
         <source>Acceleration</source>
-        <translation type="unfinished"></translation>
+        <translation>Accélération</translation>
     </message>
     <message>
         <source>Races Won</source>
-        <translation type="unfinished"></translation>
+        <translation>Courses gagnées</translation>
     </message>
     <message>
         <source>Cooperation</source>
-        <translation type="unfinished"></translation>
+        <translation>Coopération</translation>
     </message>
     <message>
         <source>Intelligence</source>
-        <translation type="unfinished"></translation>
+        <translation>Intelligence</translation>
     </message>
 </context>
 <context>
     <name>ChocoboLabel</name>
     <message>
         <source>Copy</source>
-        <translation type="unfinished">Copier</translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished">Coller</translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished">Enlève</translation>
+        <translation>Retirer</translation>
     </message>
     <message>
         <source>Rank:C</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang:C</translation>
     </message>
     <message>
         <source>Rank:B</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang:B</translation>
     </message>
     <message>
         <source>Rank:A</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang:A</translation>
     </message>
     <message>
         <source>Rank:S</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang:Â</translation>
     </message>
 </context>
 <context>
@@ -2952,35 +2953,35 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>MapID: </source>
-        <translation type="unfinished"></translation>
+        <translation>MapID : </translation>
     </message>
     <message>
         <source>X: </source>
-        <translation>X: </translation>
+        <translation>X : </translation>
     </message>
     <message>
         <source>Y: </source>
-        <translation>Y: </translation>
+        <translation>Y : </translation>
     </message>
     <message>
         <source>T: </source>
-        <translation>T: </translation>
+        <translation>T : </translation>
     </message>
     <message>
         <source>D: </source>
-        <translation>D: </translation>
+        <translation>D : </translation>
     </message>
     <message>
         <source>LocID: </source>
-        <translation type="unfinished"></translation>
+        <translation>LocID : </translation>
     </message>
     <message>
         <source>LocID</source>
-        <translation type="unfinished"></translation>
+        <translation>LocID</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nom de fichier</translation>
     </message>
 </context>
 <context>
@@ -3880,7 +3881,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Dr.&apos;s Office</source>
-        <translation type="unfinished">Bureau du Dr.</translation>
+        <translation>Bureau du Dr.</translation>
     </message>
     <message>
         <source>Press Room</source>
@@ -3916,7 +3917,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Great Glacier</source>
-        <translation type="unfinished"></translation>
+        <translation>Grand Glacier</translation>
     </message>
     <message>
         <source>Frostbite Cave</source>
@@ -5326,7 +5327,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation>MDS7ST1: Potion</translation>
+        <translation>MDS7ST1:Potion</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
@@ -5722,63 +5723,63 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>GAIIN_3:Elixir</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_3:Elixir</translation>
     </message>
     <message>
         <source>GAIIN_3:Speed Source</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_3:Source de vitesse</translation>
     </message>
     <message>
         <source>GAIIN_4:Enhance Sword</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_4:Super épée</translation>
     </message>
     <message>
         <source>GAIIN_5:Fire Armlet</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_5:Bracelet feu</translation>
     </message>
     <message>
         <source>GAIIN_5:Elixir</source>
-        <translation type="unfinished"></translation>
+        <translation>GAIIN_5:Elixir</translation>
     </message>
     <message>
         <source>SNMAYOR: Turbo Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMAYOR:Ether turbo</translation>
     </message>
     <message>
         <source>SNINN2: X-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>SNINN2:Potion-X</translation>
     </message>
     <message>
         <source>SNMIN2: Vaccine</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMIN2:Vaccin</translation>
     </message>
     <message>
         <source>SNMIN2:Hero Drink</source>
-        <translation type="unfinished"></translation>
+        <translation>SNMIN2:Boisson de Héros</translation>
     </message>
     <message>
         <source>NCOIN3:Catastrophe</source>
-        <translation type="unfinished"></translation>
+        <translation>NCOIN3:Catastrophe</translation>
     </message>
     <message>
         <source>NCOIN1:Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>NCOIN1:Ether</translation>
     </message>
     <message>
         <source>TRNAD_4:Poison Ring</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_4:Anneau poison</translation>
     </message>
     <message>
         <source>TRNAD_4:MpTurbo</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_4:Ether turbo</translation>
     </message>
     <message>
         <source>TRNAD_3:Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_3:Poing de Kaiser</translation>
     </message>
     <message>
         <source>TRNAD_2:Neo Bahmut</source>
-        <translation type="unfinished"></translation>
+        <translation>TRNAD_2:Neo Bahamut</translation>
     </message>
     <message>
         <source>Game Options</source>
@@ -5802,29 +5803,29 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>ZZ5: Mime</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ5:Mime</translation>
     </message>
     <message>
         <source>ZZ6: HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ6:HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>ZZ7: Quadra Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ7:Quadruple magie</translation>
     </message>
     <message>
         <source>ZZ8: KOTR</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ZZ8:KOTR</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites un clic droit sur la map pour placer un personnage ou un moyen de transport facilement.</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing 
 Mission</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
@@ -5912,19 +5913,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished">FF7 PC (*.ff7)</translation>
+        <translation>FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished">FF7 sauvegarde non-identifiée PSX (*-S*)</translation>
+        <translation>Sauvegarde PSX brute (*FF7-S*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished">Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+        <translation>Virtual Memory Card (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished">Sauvegarde FF7 VGS (*.vgs *.mem)</translation>
+        <translation>Virtual Game Station (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>DEX (*.dex)</source>
@@ -5932,15 +5933,15 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished">Sauvegarde FF7 PSV (*.psv)</translation>
+        <translation>PSV (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished">Sauvegarde FF7 PSP (*.vmp)</translation>
+        <translation>PSP (*.vmp)</translation>
     </message>
     <message>
         <source>PS3 Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Note de sauvegarde PS3</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -5980,7 +5981,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>C&amp;oller slot</translation>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
@@ -6008,7 +6009,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>DEX (*.gme)</source>
-        <translation type="unfinished">Sauvegarde FF7 Dex(*.gme)</translation>
+        <translation>DEX (*.gme)</translation>
     </message>
 </context>
 <context>
@@ -7757,31 +7758,31 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
-        <translation type="unfinished">Changer les chemins de fichier pour sauver et charger</translation>
+        <translation>Changer les chemins de fichier pour enregistrer et charger</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
-        <translation type="unfinished">Chemin par défaut pour charger toutes les sauvegardes</translation>
+        <translation>Chemin par défaut pour charger toutes les sauvegardes</translation>
     </message>
     <message>
         <source>Path For Emulator Memory Cards  </source>
-        <translation type="unfinished">Chemin des cartes mémoire d&apos;émulateur</translation>
+        <translation>Chemin des cartes mémoire d&apos;émulateur</translation>
     </message>
     <message>
         <source>Path For PC (.ff7) Saves</source>
-        <translation type="unfinished">Chemin des sauvegardes PC (.ff7)</translation>
+        <translation>Chemin des sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished">Chemin pour les fichiers de statistiques de personnage</translation>
+        <translation>Chemin pour les fichiers de stats de personnage</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation type="unfinished">Écraser les données &quot;Nouvelle Partie&quot;</translation>
+        <translation>Écraser les données &quot;Nouvelle Partie&quot;</translation>
     </message>
     <message>
         <source>Use Only Raw Psx Files</source>
-        <translation type="unfinished">Utilisez uniquement les fichier PSX bruts</translation>
+        <translation>Utilisez uniquement les fichier PSX bruts</translation>
     </message>
 </context>
 <context>
