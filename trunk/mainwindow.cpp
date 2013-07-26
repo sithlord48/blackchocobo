@@ -982,7 +982,6 @@ void MainWindow::setmenu(bool newgame)
 }
 void MainWindow::fileModified(bool changed)
 {
-    //ff7->setFileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
     if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
@@ -1059,7 +1058,14 @@ void MainWindow::materiaupdate(void)
             newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
-            else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
+            else{newItem =new QTableWidgetItem(QString(""),0);ui->tbl_materia->setItem(mat,1,newItem);}
+        }
+
+        else if(current_id==FF7Materia::MasterCommand || current_id==FF7Materia::MasterMagic || current_id==FF7Materia::MasterSummon || current_id==FF7Materia::Underwater)
+        {
+            newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
+            ui->tbl_materia->setItem(mat,0,newItem);
+            newItem =new QTableWidgetItem(QString(""),0);ui->tbl_materia->setItem(mat,1,newItem);
         }
         else if (current_id !=FF7Materia::EmptyId)
         {
@@ -1072,26 +1078,12 @@ void MainWindow::materiaupdate(void)
         {
             //We need to clear invalid to prevent data issues. to keep file changes correct we back up our change vars and replace later.
             bool fileTemp=ff7->isFileModified();
-            bool slotTemp[15];
-            for(int i=0;i<15;i++){slotTemp[i] = ff7->isSlotModified(i);}
-
             ff7->setPartyMateria(s,mat,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//invalid insure its clear.
             newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
-
-            if(fileTemp)
-            {//file was changed need to set what slots changed.
-                for(int i=0;i<15;i++)
-                {
-                    if(slotTemp[i])
-                    {//reset slots marked changed.
-                        fileModified(true);
-                    }
-                }
-             }
-            else{fileModified(false);}
+            ff7->setFileModified(fileTemp,s);
         }
     }
     if(ff7->partyMateriaId(s,j) == FF7Materia::EnemySkill){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}
