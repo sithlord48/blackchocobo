@@ -2982,6 +2982,18 @@ The km/h speeds are calculated while playing </source>
         <source>Filename</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Process Regular Expressions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Case Sensitive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -8661,15 +8673,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: HexEditor for viewing saves in ff7 or psx mode.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + Remove Slots from slots select Dialog </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8677,11 +8681,59 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: + More Locations</source>
+        <source>FF7tk: + Chocobo Manager Widget.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7tk: + Chocobo Manager Widget.</source>
+        <source>New Error Box Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimized Refresh Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Sadness/Fury value were backwards</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: HexEditor for full psxslot or ff7slot Editing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Edit Condor Funds , Condor Wins/Losses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Pandora Box Flags , Item Flags to Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + LocationViewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + SlotSelect Improvements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + More Locations And Viewer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
