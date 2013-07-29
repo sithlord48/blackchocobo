@@ -2984,6 +2984,18 @@ Los km/h son calculados mientras se juega</translation>
         <source>Filename</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Process Regular Expressions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Case Sensitive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -8687,7 +8699,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: HexEditor for viewing saves in ff7 or psx mode.</source>
-        <translation>Nuevo: Editor hexadecimal para ver las partidas guardadas en modo ff7 o psx.</translation>
+        <translation type="obsolete">Nuevo: Editor hexadecimal para ver las partidas guardadas en modo ff7 o psx.</translation>
     </message>
     <message>
         <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
@@ -8695,7 +8707,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: + Remove Slots from slots select Dialog </source>
-        <translation>FF7tk: + Borrar ranuras desde el diálogo de selección de ranuras</translation>
+        <translation type="obsolete">FF7tk: + Borrar ranuras desde el diálogo de selección de ranuras</translation>
     </message>
     <message>
         <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
@@ -8703,11 +8715,63 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: + More Locations</source>
-        <translation>FF7tk: + Más localizaciones</translation>
+        <translation type="obsolete">FF7tk: + Más localizaciones</translation>
     </message>
     <message>
         <source>FF7tk: + Chocobo Manager Widget.</source>
         <translation>FF7tk: + Widget para gestionar chocobos.</translation>
+    </message>
+    <message>
+        <source>New Error Box Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Optimized Refresh Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Sadness/Fury value were backwards</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: HexEditor for full psxslot or ff7slot Editing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Edit Condor Funds , Condor Wins/Losses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Pandora Box Flags , Item Flags to Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + LocationViewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + SlotSelect Improvements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: + More Locations And Viewer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
