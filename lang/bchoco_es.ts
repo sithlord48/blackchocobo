@@ -381,11 +381,11 @@
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
-        <translation type="unfinished"></translation>
+        <translation>valor calculado dentro del juego; editar PM Base</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
-        <translation type="unfinished"></translation>
+        <translation>valor calculado dentro del juego; editar PG Base</translation>
     </message>
 </context>
 <context>
@@ -2974,27 +2974,27 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>LocID: </source>
-        <translation type="unfinished"></translation>
+        <translation>ID Lugar:</translation>
     </message>
     <message>
         <source>LocID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID Lugar</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de Archivo</translation>
     </message>
     <message>
         <source>Process Regular Expressions</source>
-        <translation type="unfinished"></translation>
+        <translation>Procesar Expresiones Regulares</translation>
     </message>
     <message>
         <source>Case Sensitive</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensible a mayúsculas y minúsculas</translation>
     </message>
     <message>
         <source>Location Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro de Lugar</translation>
     </message>
 </context>
 <context>
@@ -5977,35 +5977,35 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Intento de exportar PSV</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportar PSV no esta permitido.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Intento de exportar VMP</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportar VMP no esta permitido.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tambien Desea Reemplazar el Equipamiento y Materia de %1?</translation>
     </message>
     <message>
         <source>Have Seen Pandora&apos;s Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Has visto la Caja de Pandora</translation>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ranura Importada:%2 de %1 -&gt; Ranura:%3</translation>
     </message>
     <message>
         <source>Import:: %1 -&gt; Slot:%2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importar:: %1 -&gt; Ranura:%2</translation>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
@@ -6017,7 +6017,7 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar Ranura</translation>
     </message>
     <message>
         <source>&amp;New Game</source>
@@ -6033,11 +6033,11 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>ChruchProgress</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ProgresoIglesia</translation>
     </message>
     <message>
         <source>DonProgress</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ProgresoDon</translation>
     </message>
     <message>
         <source>DEX (*.gme)</source>
@@ -8723,55 +8723,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New Error Box Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Ventana de error</translation>
     </message>
     <message>
         <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mejor manejo del límite de cantidad de item en la versión japonesa de PSX</translation>
     </message>
     <message>
         <source>Optimized Refresh Code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Código de actualización optimizado</translation>
     </message>
     <message>
         <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Limpieza de Menus - Solo Importar y Exportar (Guardar como)</translation>
     </message>
     <message>
         <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado: Algunas Ranuras de Materia y Modificadores de Stats erróneos</translation>
     </message>
     <message>
         <source>Fixed:Sadness/Fury value were backwards</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado: Valores de Tristeza/Furia invertidos</translation>
     </message>
     <message>
         <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Usar el mismo formato de FF7 para los Datos de Lugar (XYTD)</translation>
     </message>
     <message>
         <source>New: HexEditor for full psxslot or ff7slot Editing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: EditorHex para ranura de psx completa / edición de ranura de ff7</translation>
     </message>
     <message>
         <source>New: Edit Condor Funds , Condor Wins/Losses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Editar Fondos de Condor , Victorias/Derrotas de Condor</translation>
     </message>
     <message>
         <source>New: Pandora Box Flags , Item Flags to Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Banderas de Caja de Pandora, Banderas de items para editar</translation>
     </message>
     <message>
         <source>FF7tk: + LocationViewer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7tk: + Visor de Lugares</translation>
     </message>
     <message>
         <source>FF7tk: + SlotSelect Improvements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7tk: + Mejoras en el Dialogo de selección</translation>
     </message>
     <message>
         <source>FF7tk: + More Locations And Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7tk: + Más localizaciones y Visor</translation>
     </message>
 </context>
 <context>
