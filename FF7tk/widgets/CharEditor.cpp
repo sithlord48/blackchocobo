@@ -294,7 +294,7 @@ void CharEditor::init_display()
     sb_uses_limit_2_1->setWrapping(true);
     sb_uses_limit_3_1->setWrapping(true);
 
-    line_name->setMaxLength(12);
+    line_name->setMaxLength(11);
     line_name->setMaximumWidth(this->font().pointSize()*12);
     bar_tnl->setMaximumWidth(line_name->width()*1.5);
     QHBoxLayout * name_level_layout= new QHBoxLayout;
