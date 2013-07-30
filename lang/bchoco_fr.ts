@@ -2981,19 +2981,19 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished">Nom de fichier</translation>
+        <translation>Nom de fichier</translation>
     </message>
     <message>
         <source>Process Regular Expressions</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser des expressions régulières</translation>
     </message>
     <message>
         <source>Case Sensitive</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensible à la casse</translation>
     </message>
     <message>
         <source>Location Filter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre sur le lieu...</translation>
     </message>
 </context>
 <context>
@@ -5837,12 +5837,13 @@ location.</source>
     <message>
         <source>Team Avalanche Had Meeting after Bombing 
 Mission</source>
-        <translation type="unfinished">L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
+        <translation>L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">cb_s5_7 (Ether turbo du gamin dans la maison au second 
+5min1_2)</translation>
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That 
@@ -5869,7 +5870,8 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation>Quand la case est cochée partiellement (&quot;-&quot;) cela 
+déclenchera ce tutoriel</translation>
     </message>
     <message>
         <source>Fort Condor</source>
@@ -5877,7 +5879,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Funds </source>
-        <translation type="unfinished"></translation>
+        <translation>Fonds </translation>
     </message>
     <message>
         <source>Record </source>
@@ -5891,23 +5893,25 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PS3 will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier n&apos;a pas une signature à jour,
+votre PS3 va donc rejeter cette sauvegarde comme si elle était corrompue.
+Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
-        <translation type="unfinished"></translation>
+        <translation>Marqueur du début de la mission du réacteur</translation>
     </message>
     <message>
         <source>Builtin Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Données intégrées</translation>
     </message>
     <message>
         <source>New Game Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle partie créée - Utilisant : %1</translation>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle partie + créée - Utilisant : %1</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -5921,7 +5925,9 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier n&apos;a pas une signature à jour,
+votre PSP/PSVita va donc rejeter cette sauvegarde comme si elle était corrompue.
+Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
@@ -5957,35 +5963,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentative d&apos;export vers PSV</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les exportations vers PSV ne sont pas permises.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentative d&apos;export vers VMP</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les exportations vers VMP ne sont pas permises.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous remplacer l&apos;équipement et la matéria de %1 ?</translation>
     </message>
     <message>
         <source>Have Seen Pandora&apos;s Box</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Boite de Pandore&quot; vue</translation>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
+        <translation>Fente importée : %2 à partir de %1 -&gt; fente : %3</translation>
     </message>
     <message>
         <source>Import:: %1 -&gt; Slot:%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Importation:: %1 -&gt; Fente : %2</translation>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
@@ -8704,55 +8710,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New Error Box Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle boite de dialogue pour les erreurs</translation>
     </message>
     <message>
         <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Meilleure gestion de la limiter de la qté des objets sur la version japonaise PSX</translation>
     </message>
     <message>
         <source>Optimized Refresh Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Code de rafraichissement optimisé</translation>
     </message>
     <message>
         <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
-        <translation type="unfinished"></translation>
+        <translation>Menus plus propres - Seulement un importer et exporter (enregistrer sous)</translation>
     </message>
     <message>
         <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : quelques nombre d&apos;emplacements et modificateurs de stats faux</translation>
     </message>
     <message>
         <source>Fixed:Sadness/Fury value were backwards</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : les valeurs tristesse et fureur étaient à l&apos;envers</translation>
     </message>
     <message>
         <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Utilisation du même format que dans FF7 pour les données de lieu (XYTD)</translation>
     </message>
     <message>
         <source>New: HexEditor for full psxslot or ff7slot Editing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : éditeur hexadécimal pour éditer la totalité d&apos;un slot psx ou ff7</translation>
     </message>
     <message>
         <source>New: Edit Condor Funds , Condor Wins/Losses</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveaut : éditer les fonds, les combats gagnés/perdus au fort Condor</translation>
     </message>
     <message>
         <source>New: Pandora Box Flags , Item Flags to Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Boite de Pandore, édition des objets trouvés</translation>
     </message>
     <message>
         <source>FF7tk: + LocationViewer</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + Visualisateur de lieux</translation>
     </message>
     <message>
         <source>FF7tk: + SlotSelect Improvements</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + Améliorations du sélecteur de slot</translation>
     </message>
     <message>
         <source>FF7tk: + More Locations And Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7tk : + Plus de lieux et visualisateur</translation>
     </message>
 </context>
 <context>
