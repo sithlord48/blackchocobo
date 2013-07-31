@@ -36,7 +36,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     lblType->setFixedSize(48,48);
     lblType->setScaledContents(true);
 
-    QString style="QPushButton:enabled{border:0px solid;}";
+    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,128,192,96);}";
     lblName = new QLabel("");
     lblSex = new QLabel("");
     lblRank = new QLabel("");
@@ -45,10 +45,10 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     chkOccupied->setText(titleText);
     chkOccupied->setMaximumHeight(20);
     chkOccupied->setProperty("HoverStyled",QVariant(true));
+    
     btnCopy = new QPushButton();
     btnCopy->setStyleSheet(style);
     btnCopy->setFlat(true);
-    btnCopy->setProperty("HoverStyled",QVariant(true));
     btnCopy->setFixedSize(20,20);
     btnCopy->setIconSize(QSize(16,16));
     btnCopy->setToolTip(QString(tr("Copy")));
@@ -57,7 +57,6 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnPaste = new QPushButton();
     btnPaste->setStyleSheet(style);
     btnPaste->setFlat(true);
-    btnPaste->setProperty("HoverStyled",QVariant(true));
     btnPaste->setFixedSize(20,20);
     btnPaste->setIconSize(QSize(16,16));
     btnPaste->setToolTip(QString(tr("Paste")));
@@ -66,7 +65,6 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnRemove = new QPushButton();
     btnRemove->setStyleSheet(style);
     btnRemove->setFlat(true);
-    btnRemove->setProperty("HoverStyled",QVariant(true));
     btnRemove->setFixedSize(20,20);
     btnRemove->setIconSize(QSize(16,16));
     btnRemove->setToolTip(QString(tr("Remove")));

@@ -34,13 +34,12 @@ void CharEditor::init_display()
     lbl_avatar->setFixedSize(86,98);
     line_name = new QLineEdit;
     line_name->setPlaceholderText(tr("Name"));
-    lbl_level = new QLabel(tr("Level"));
-    lbl_kills = new QLabel(tr("Kills"));
     lbl_hp = new QLabel(tr("HP"));
     lbl_mp = new QLabel(tr("MP"));
     lbl_mp_slash = new QLabel("/");
     lbl_hp_slash = new QLabel("/");
     sb_level = new QSpinBox;
+    sb_level->setPrefix(tr("Level").append(": "));
     sb_curMp = new QSpinBox;
     sb_curHp = new QSpinBox;
     sb_maxMp = new QSpinBox;
@@ -57,9 +56,8 @@ void CharEditor::init_display()
     lcdMaxMp->setDigitCount(5);
     lcdMaxHp->setMaximumHeight(24);
     lcdMaxMp->setMaximumHeight(24);
-    //lcdMaxHp->set
-
     sb_kills = new QSpinBox;
+    sb_kills->setPrefix(tr("Kills").append(": "));
     cb_fury=new QCheckBox(tr("Fury"));
     cb_sadness = new QCheckBox(tr("Sadness"));
     cb_front_row = new QCheckBox(tr("Front Row"));
@@ -71,14 +69,12 @@ void CharEditor::init_display()
     for(int i=0;i<11;i++){combo_id->addItem(Chars.icon(i),Chars.defaultName(i));}
     lbl_base_hp = new QLabel(tr("Base HP"));
     lbl_base_hp_bonus = new QLabel;
-    //lbl_base_hp_bonus->setFixedWidth(this->font().pointSize()*11);
     sb_base_hp = new QSpinBox;
     sb_base_hp->setFixedWidth(this->font().pointSize()*6);
 
     lbl_base_mp = new QLabel(tr("Base MP"));
     lbl_base_mp_bonus = new QLabel;
     sb_base_mp = new QSpinBox;
-    //lbl_base_mp_bonus->setFixedWidth(this->font().pointSize()*11);
     sb_base_mp->setFixedWidth(this->font().pointSize()*6);
 
     lbl_total_xp = new QLabel(tr("Total Exp"));
@@ -227,12 +223,12 @@ void CharEditor::init_display()
     QVBoxLayout *used_limits_layout = new QVBoxLayout;
     used_limits_layout->setContentsMargins(0,0,0,0);
     used_limits_layout->setSpacing(3);
+    used_limits_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
     used_limits_layout->addWidget(lbl_uses);
     used_limits_layout->addLayout(layout_1_1);
     used_limits_layout->addLayout(layout_2_1);
     used_limits_layout->addLayout(layout_3_1);
-    QSpacerItem *usedSpacer = new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
-    used_limits_layout->addSpacerItem(usedSpacer);
+    used_limits_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
 
     list_limits = new QListWidget;
     list_limits->setMaximumHeight((this->fontMetrics().height()*7)+6);
@@ -244,7 +240,6 @@ void CharEditor::init_display()
     limit_level_layout->setContentsMargins(0,0,0,0);
     limit_level_layout->addWidget(lbl_limit_level);
     limit_level_layout->addWidget(sb_limit_level);
-
 
     sb_level->setMaximum(99);
     sb_curMp->setMaximum(32767);
@@ -271,7 +266,6 @@ void CharEditor::init_display()
     sb_uses_limit_2_1->setMaximum(32767);
     sb_uses_limit_3_1->setMaximum(32767);
 
-    sb_level->setWrapping(true);
     sb_curMp->setWrapping(true);
     sb_curHp->setWrapping(true);
     sb_base_hp->setWrapping(true);
@@ -297,11 +291,11 @@ void CharEditor::init_display()
     line_name->setMaxLength(11);
     line_name->setMaximumWidth(this->font().pointSize()*12);
     bar_tnl->setMaximumWidth(line_name->width()*1.5);
+
     QHBoxLayout * name_level_layout= new QHBoxLayout;
     name_level_layout->addWidget(line_name);
     QSpacerItem *name_spacer = new QSpacerItem(20,0,QSizePolicy::Fixed,QSizePolicy::Fixed);
     name_level_layout->addSpacerItem(name_spacer);
-    name_level_layout->addWidget(lbl_level);
     name_level_layout->addWidget(sb_level);
 
     QHBoxLayout *hp_layout = new QHBoxLayout;
@@ -326,7 +320,6 @@ void CharEditor::init_display()
     QSpacerItem *mp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     mp_layout->addSpacerItem(mp_spacer);
 
-
     QVBoxLayout *exp_layout = new QVBoxLayout;
     exp_layout->setContentsMargins(0,0,0,0);
     exp_layout->setSpacing(0);
@@ -334,13 +327,11 @@ void CharEditor::init_display()
     exp_layout->addWidget(sb_total_exp);
 
     QHBoxLayout *kills_layout = new QHBoxLayout;
-    kills_layout->addWidget(lbl_kills);
     kills_layout->addWidget(sb_kills);
     QSpacerItem *kills_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     kills_layout->addSpacerItem(kills_spacer1);
     QSpacerItem *kills_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     kills_layout->addSpacerItem(kills_spacer);
-
 
     QVBoxLayout *name_hp_mp_kills_layout = new QVBoxLayout;
     name_hp_mp_kills_layout->addLayout(name_level_layout);
@@ -348,16 +339,11 @@ void CharEditor::init_display()
     name_hp_mp_kills_layout->addLayout(mp_layout);
     name_hp_mp_kills_layout->addLayout(kills_layout);
 
-
     QVBoxLayout *fury_sadness_layout = new QVBoxLayout;
     fury_sadness_layout->setContentsMargins(0,0,0,0);
     fury_sadness_layout->setSpacing(2);
     fury_sadness_layout->addWidget(cb_fury);
     fury_sadness_layout->addWidget(cb_sadness);
-
-
-    QFrame *frm_fury_sadness =new QFrame;
-    frm_fury_sadness->setLayout(fury_sadness_layout);
 
     QHBoxLayout *id_layout = new QHBoxLayout;
     id_layout->setContentsMargins(0,0,0,0);
@@ -369,9 +355,11 @@ void CharEditor::init_display()
     combo_id_box->setHidden(true);
 
     QVBoxLayout *sadness_row_id_layout =new QVBoxLayout;
-    sadness_row_id_layout->addWidget(frm_fury_sadness);
+    sadness_row_id_layout->addLayout(fury_sadness_layout);
+    sadness_row_id_layout->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Preferred,QSizePolicy::Preferred));
     sadness_row_id_layout->addWidget(cb_front_row);
     sadness_row_id_layout->addWidget(cb_idChanger);
+    sadness_row_id_layout->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Preferred,QSizePolicy::Preferred));
     sadness_row_id_layout->addWidget(combo_id_box);
 
     QHBoxLayout *avatar_name_layout = new QHBoxLayout;
@@ -395,7 +383,6 @@ void CharEditor::init_display()
     QHBoxLayout *level_progress_layout = new QHBoxLayout;
     level_progress_layout->addLayout(level_bar_layout);
     level_progress_layout->addLayout(level_next_layout);
-
 
     QHBoxLayout *limit_bar_layout = new QHBoxLayout;
     limit_bar_layout->setContentsMargins(0,0,0,0);
@@ -491,7 +478,7 @@ void CharEditor::init_display()
     base_mp_layout->addWidget(lbl_base_mp_bonus);
     base_mp_layout->addSpacerItem(new QSpacerItem(3,0,QSizePolicy::Expanding,QSizePolicy::Fixed));
 
-    QHBoxLayout *base_hp_mp_layout = new QHBoxLayout;
+    QVBoxLayout *base_hp_mp_layout = new QVBoxLayout;
     base_hp_mp_layout->setContentsMargins(0,0,0,0);
     base_hp_mp_layout->setSpacing(3);
     base_hp_mp_layout->addLayout(base_hp_layout);
@@ -579,13 +566,8 @@ void CharEditor::init_display()
     stat_layout_2->addWidget(stat_box);
     stat_layout_2->addWidget(unknown_box);
 
-    QVBoxLayout *limit_uses_level_layout = new QVBoxLayout;
-    limit_uses_level_layout->setContentsMargins(0,0,0,0);
-    limit_uses_level_layout->setSpacing(0);
-    limit_uses_level_layout->addLayout(used_limits_layout);
-
     QHBoxLayout *limit_use_list = new QHBoxLayout;
-    limit_use_list->addLayout(limit_uses_level_layout);
+    limit_use_list->addLayout(used_limits_layout);
     limit_use_list->addWidget(list_limits);
 
     QVBoxLayout *limit_box = new QVBoxLayout;
@@ -595,14 +577,17 @@ void CharEditor::init_display()
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
     lower_section->addLayout(stat_layout_2);
+    lower_section->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
     lower_section->addLayout(limit_box);
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(2,0,2,3);
-    left_Final->setSpacing(3);
+    //left_Final->setContentsMargins(2,0,2,3);
     left_Final->addLayout(avatar_name_layout);
+    //left_Final->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(level_exp_limit_layout);
+    //left_Final->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(lower_section);
+    left_Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
 
     weapon_selection = new QComboBox;
 
