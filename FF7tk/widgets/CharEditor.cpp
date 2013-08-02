@@ -478,7 +478,7 @@ void CharEditor::init_display()
     base_mp_layout->addWidget(lbl_base_mp_bonus);
     base_mp_layout->addSpacerItem(new QSpacerItem(3,0,QSizePolicy::Expanding,QSizePolicy::Fixed));
 
-    QVBoxLayout *base_hp_mp_layout = new QVBoxLayout;
+    QHBoxLayout *base_hp_mp_layout = new QHBoxLayout;
     base_hp_mp_layout->setContentsMargins(0,0,0,0);
     base_hp_mp_layout->setSpacing(3);
     base_hp_mp_layout->addLayout(base_hp_layout);
@@ -577,15 +577,15 @@ void CharEditor::init_display()
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
     lower_section->addLayout(stat_layout_2);
-    lower_section->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
+    lower_section->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     lower_section->addLayout(limit_box);
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    //left_Final->setContentsMargins(2,0,2,3);
+    left_Final->setContentsMargins(2,0,2,3);
     left_Final->addLayout(avatar_name_layout);
-    //left_Final->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
+    left_Final->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(level_exp_limit_layout);
-    //left_Final->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Fixed,QSizePolicy::Fixed));
+    left_Final->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(lower_section);
     left_Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
 
