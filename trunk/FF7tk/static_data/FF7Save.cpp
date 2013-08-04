@@ -2478,28 +2478,25 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
     QString metadataPath = Path;
     metadataPath.append("/metadata.xml");
 
-    QFile Metadata(metadataPath);
-    if(!Metadata.exists()){return 0;}
 
+    QFile Metadata(metadataPath);
     //is a New PC saveFile then
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
+
     if(Metadata.exists())
-    {//get our user id
+    {//get our user id no trailing / (removed above)
         Path.remove(0,Path.lastIndexOf("_")+1);
-        Path.chop(Path.length()-Path.lastIndexOf("/"));
         UserId = Path;
-        vector = parseXML(fileName, metadataPath, UserID);
+        vector = parseXML(fileName, metadataPath, UserId);
     }
     else
     {
         UserId = UserID;
         vector = createMetadata(fileName, UserID);
     }
-
-    QFile file3(metadataPath);
-    if (!file3.open(QIODevice::ReadWrite)){return 0;}
-    QTextStream out (&file3);
-    file3.seek(0);//Set pointer to the Beggining
+    if (!Metadata.open(QIODevice::ReadWrite)){return 0;}
+    QTextStream out (&Metadata);
+    Metadata.seek(0);//Set pointer to the Beggining
     out << QString ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
     out << QString("<gamestatus>\n");
     //Do foreach block
@@ -2515,8 +2512,8 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
         out << QString("  </savefiles>\n");
     }
     out << QString("</gamestatus>\n");
-    file3.resize(file3.pos());
-    file3.close();
+    Metadata.resize(Metadata.pos());
+    Metadata.close();
     return 1;
 }
 QString FF7Save::fileName(void){return filename;}

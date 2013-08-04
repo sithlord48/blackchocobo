@@ -1,3 +1,23 @@
+blackchocobo (1.9.800) precise; urgency=low
+  *New Error Box Dialog
+  *Better Handling of Japanese PSX versions hard item qty limit
+  *Optimized Refresh Code.
+  *Cleaned Up Menus - Only one Import and Export (save as) Function
+  *locations.rcc no longer needed pictures are built in 
+  *Fixed:Diff Table
+  *Fixed:Few Wrong Materia Slot Counts and Stat Modifiers
+  *Fixed:Crash On Clear Slots with no file loaded.
+  *Fixed:Sadness/Fury value were backwards
+  *New: Use Same Format as FF7 For Location Data (XYTD)
+  *New: HexEditor for full psxslot or ff7slot Editing
+  *New: CountDown Timer, condor Funds condor Wins Loses
+  *FF7tk: + View and Export Psx Data (even multi block saves)
+  *FF7tk: + Remove Slots From Slot Select Dialog (multiblocks will clean up sub blocks)
+  *FF7tk: + Almost All Locations And New Viewer.
+  *FF7tk: + CharEditor and ChocoboEditor Widgets now have wrapping spinboxes
+  *FF7tk: + More ENUMS for Char/Item/and Save.
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sun, 21 Jul 2013 17:19:22 -0400
+
 blackchocobo (1.9.701) precise; urgency=low
   *Fix:Package Error not Deploying locations.rcc
  -- Chris Rizzitello <sithlord48@gmail.com>  Tue, 9 Oct 2012 02:34:48 -0400
