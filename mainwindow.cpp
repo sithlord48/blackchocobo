@@ -1113,10 +1113,10 @@ void MainWindow::itemupdate(void)
         if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
         else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
     }
-    if(ff7->unknown(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(44) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(44) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(44) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->unknown(s,38).at(44) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
 
     ui->cb_itemmask1_1->setChecked(ff7->itemMask1(s,0));
     ui->cb_itemmask1_2->setChecked(ff7->itemMask1(s,1));
@@ -1676,34 +1676,34 @@ void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff
 // Field Items Combos
 void MainWindow::on_cb_bm_items_1_toggled(bool checked)
 {if(!load){
-        QByteArray temp = ff7->unknown(s,38);  char t = temp.at(48);
+        QByteArray temp = ff7->unknown(s,38);  char t = temp.at(44);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
-        temp[48]=t;
+        temp[44]=t;
         ff7->setUnknown(s,38,temp);
  }}
 void MainWindow::on_cb_bm_items_2_toggled(bool checked)
 {if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
         if(checked){t |= (1<<1);}
         else{t &= ~(1<<1);}
-        temp[48]=t;
+        temp[44]=t;
         ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_3_toggled(bool checked)
 {if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
         if(checked){t |= (1<<2);}
         else{t &= ~(1<<2);}
-        temp[48]=t;
+        temp[44]=t;
         ff7->setUnknown(s,38,temp);
 }}
 void MainWindow::on_cb_bm_items_4_toggled(bool checked)
 {if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(48);
+        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
         if(checked){t |= (1<<3);}
         else{t &= ~(1<<3);}
-        temp[48]=t;
+        temp[44]=t;
         ff7->setUnknown(s,38,temp);
 }}
 
