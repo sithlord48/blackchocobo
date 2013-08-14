@@ -1178,6 +1178,7 @@ void MainWindow::CheckGame()
         {
         case 0://View Anyway..
             setmenu(0);
+            hexEditorRefresh();
         break;
 
         case 1://Previous Clicked
@@ -1417,7 +1418,7 @@ void MainWindow::guirefresh(bool newgame)
       ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
                        && (ff7->psx_block_type(s) !=0xA0)))
     {
-        // NOT FF7 Do Nothing , Handled By CheckGame()
+        //Not FF7! Handled By CheckGame()
     }
     else
     {//IS FF7 Slot
