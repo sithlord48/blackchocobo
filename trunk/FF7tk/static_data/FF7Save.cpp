@@ -234,7 +234,13 @@ bool FF7Save::saveFile(const QString &fileName)
     file.write(fileFooter(),SG_FOOTER);
     file.close();
     filename=fileName;
-    if(type()==("PC")){fixMetaData();}
+    if(type()==("PC"))
+    {
+        QString metadata =fileName;
+        metadata.chop(metadata.length()-metadata.lastIndexOf("/"));
+        metadata.append("/metadata.xml");
+        if((QFile(metadata).exists())){fixMetaData();}
+    }
     setFileModified(false,0);
     return true;
 }
@@ -296,10 +302,11 @@ bool FF7Save::exportPSX(int s,const QString &fileName)
     int blocks=1;
     QString prev_type = SG_TYPE;
     QString prev_fileName=filename;
+
     if(SG_TYPE != "PSX")
     {
        if(isFF7(s)){setControlMode(s,CONTROL_NORMAL);}
-       blocks = psx_block_size(s);
+       else{blocks = psx_block_size(s);}
        setType("PSX");
     }
     if(isFF7(s))
@@ -322,8 +329,8 @@ bool FF7Save::exportPSX(int s,const QString &fileName)
         else{/*user ERROR*/}
         for(int i=0; i<SG_SLOT_FOOTER;i++){hf[s].sl_footer[i] =0x00;} //CLEAN FOOTER
         fix_psx_header(s);//only fix time for FF7 Slots.
-    }
-    checksumSlots();
+        checksumSlots();
+    }   
     QFile file(fileName);
     if(!file.open(QIODevice::ReadWrite)){return false;}
     file.write(fileHeader(),SG_HEADER);
