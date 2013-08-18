@@ -273,7 +273,7 @@ static LOCATION Locations[]=
     {"nvdun2",QT_TRANSLATE_NOOP("Locations","Mt. Nibel Cave"),"1","318","237","-320","16","32"},
     {"nvdun3",QT_TRANSLATE_NOOP("Locations","Mt. Nibel Cave"),"1","319","-251","942","158","0"},
 
-
+    {"nvdun4",QT_TRANSLATE_NOOP("Locations","Mt. Nibel Cave"),"1","321","446","-271","1","0"},
     {"nvmkin1",QT_TRANSLATE_NOOP("Locations","Nibel Reactor(Int.)"),"1","322","-9","362","23","32"},
     {"nvmkin21",QT_TRANSLATE_NOOP("Locations","Nibel Reactor(Int.)"),"1","323","3","-114","11","32"},
     {"elm_wa",QT_TRANSLATE_NOOP("Locations","Weapon Store"),"1","328","38","114","15","32"},
