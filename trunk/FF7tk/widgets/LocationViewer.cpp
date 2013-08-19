@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
+
 #include "../static_data/icons/Common_Icons/delete.xpm"
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
@@ -23,6 +24,7 @@ LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
     regExpSearch=false;
     caseSensitive=false;
     Locations = new FF7Location();
+    fieldItems= new FF7FieldItemList();
     init_display();
     init_connections();
 }
@@ -154,6 +156,11 @@ void LocationViewer::init_display(void)
     sbD->setWrapping(true);
     sbD->setAlignment(Qt::AlignCenter);
 
+    fieldItemList = new QListWidget();
+    fieldItemList->setFixedHeight(0);
+    fieldItemList->setUniformItemSizes(true);
+    fieldItemList->setSelectionMode(QAbstractItemView::NoSelection);
+
     QHBoxLayout *nameIDs = new QHBoxLayout;
     nameIDs->addWidget(lineLocationName);
     nameIDs->addWidget(sbMapID);
@@ -186,6 +193,7 @@ void LocationViewer::init_display(void)
     QVBoxLayout *RightSideLayout = new QVBoxLayout;
     RightSideLayout->addLayout(CoordsLayout);
     RightSideLayout->addLayout(PreviewLayout);
+    RightSideLayout->addWidget(fieldItemList);
 
     QHBoxLayout *FinalLayout = new QHBoxLayout;
     FinalLayout->setContentsMargins(6,6,6,6);
@@ -208,6 +216,7 @@ void LocationViewer::init_connections(void)
     connect(sbT,SIGNAL(valueChanged(int)),this,SLOT(sbTChanged(int)));
     connect(sbD,SIGNAL(valueChanged(int)),this,SLOT(sbDChanged(int)));
     connect(lineLocationName,SIGNAL(textChanged(QString)),this,SLOT(lineLocationNameChanged(QString)));
+    connect(fieldItemList,SIGNAL(clicked(QModelIndex)),this,SLOT(fieldItemListItemChanged(QModelIndex)));
 }
 void LocationViewer::init_disconnect(void)
 {
@@ -222,6 +231,7 @@ void LocationViewer::init_disconnect(void)
     disconnect(sbT,SIGNAL(valueChanged(int)),this,SLOT(sbTChanged(int)));
     disconnect(sbD,SIGNAL(valueChanged(int)),this,SLOT(sbDChanged(int)));
     disconnect(lineLocationName,SIGNAL(textChanged(QString)),this,SLOT(lineLocationNameChanged(QString)));
+    disconnect(fieldItemList,SIGNAL(clicked(QModelIndex)),this,SLOT(fieldItemListItemChanged(QModelIndex)));
 }
 
 void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow, int prevColumn)
@@ -274,11 +284,12 @@ void LocationViewer::setLocation(int mapId,int locId)
     init_disconnect();
     QString fileName = Locations->fileName(mapId,locId);
     setSelected(fileName);
+
     if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
     else
     {
+        qWarning()<<"Loading Map:"<<fileName;
         lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-
         QString oldStr = Locations->locationString(fileName);
         QString newStr = translate(oldStr);
         if(oldStr !=newStr){emit(locationStringChanged(newStr));}
@@ -289,6 +300,7 @@ void LocationViewer::setLocation(int mapId,int locId)
         sbT->setValue(Locations->t(fileName).toInt());
         sbD->setValue(Locations->d(fileName).toInt());
         lineLocationName->setText(newStr);
+        init_fieldItems();
     }
     init_connections();
 }
@@ -312,8 +324,8 @@ void LocationViewer::setRegion(QString newRegion){region=newRegion;setLocation(s
 void LocationViewer::setTranslationBaseFile(QString basePathName){transBasePath= basePathName;}
 QString LocationViewer::translate(QString text)
 {
-    if(region ==""){qWarning()<<"Locations Translate Called With No Region";return text;}
-    if(transBasePath==""){qWarning()<<"No Base Path/FileName for translations";return text;}
+    if(region ==""){qWarning()<<"Translate: No Region";return text;}
+    if(transBasePath==""){qWarning()<<"Translate: No Base Path";return text;}
     else
     {
         QString lang = transBasePath;
@@ -363,4 +375,61 @@ void LocationViewer::actionCaseSensitiveToggled(bool checked)
     caseSensitive=checked;
     if(lineTableFilter->text().isEmpty()){return;}
     else{filterLocations(lineTableFilter->text());}
+}
+
+void LocationViewer::init_fieldItems(void)
+{
+    fieldItemList->clear();
+    for(int i=0;i<fieldItems->count();i++)
+    {
+        for(int j=0;j<fieldItems->maps(i).count();j++)
+        {
+            if(fieldItems->maps(i).at(j)== Locations->fileName(sbMapID->value(),sbLocID->value()))
+            {
+                QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
+                newItem->setCheckState(Qt::Unchecked);
+                fieldItemList->addItem(newItem);
+                emit fieldItemConnectRequest(fieldItemList->count()-1,fieldItems->offset(i),fieldItems->bit(i));
+                //emit to check the item
+                emit fieldItemCheck(fieldItemList->count()-1);
+            }
+        }        
+    }
+    if(fieldItemList->count()<=0){fieldItemList->setFixedHeight(0);}
+    else if(fieldItemList->count()<5)
+    {
+        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
+        fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
+    }
+    else if(fieldItemList->count()==5)
+    {
+        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
+        fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
+    }
+    else
+    {
+        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);
+        fieldItemList->viewport()->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count()));
+    }
+}
+void LocationViewer::fieldItemListItemChanged(QModelIndex index)
+{
+    bool checked;
+    if(fieldItemList->item(index.row())->checkState() ==Qt::Checked){checked=true;}
+    else{checked=false;}
+    emit fieldItemChanged(index.row(),checked);
+
+}
+void LocationViewer::setFieldItemChecked(int row,bool checked)
+{
+    init_disconnect();
+    if(fieldItemList->count()>row)
+    {
+        if(checked){fieldItemList->item(row)->setCheckState(Qt::Checked);}
+        else{fieldItemList->item(row)->setCheckState(Qt::Unchecked);}
+    }
+    init_connections();
 }

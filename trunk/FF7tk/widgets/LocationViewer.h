@@ -24,6 +24,7 @@
 #endif
 // Include FF7tk Items.
 #include "../static_data/FF7Location.h"
+#include "../static_data/FF7FieldItemList.h"
 class LocationViewer : public QWidget
 {
     Q_OBJECT
@@ -39,6 +40,9 @@ signals:
     void mapIdChanged(int mapId);
     void locIdChanged(int locId);
     void locationStringChanged(QString);
+    void fieldItemConnectRequest(quint8 index,QList<quint16> offset,QList<quint8>bit);
+    void fieldItemCheck(int index);
+    void fieldItemChanged(int index,bool checked);
 
 public slots:
     void setSelected(QString);
@@ -52,6 +56,8 @@ public slots:
     void setLocationId(int locId);
     void setLocationString(QString);
     void setHorizontalHeaderStyle(QString styleSheet);
+    void setFieldItemChecked(int row,bool checked);
+    void init_fieldItems(void);
 
 private slots:
     void itemChanged(int currentRow,int currentColumn,int prevRow, int prevColumn);
@@ -67,6 +73,7 @@ private slots:
     void actionRegExpSearchToggled(bool checked);
     void actionCaseSensitiveToggled(bool checked);
     void btnSearchOptionsClicked(void);
+    void fieldItemListItemChanged(QModelIndex index);
 protected:
     void resizeEvent(QResizeEvent *ev);
 private:
@@ -80,6 +87,7 @@ private:
     QAction *actionCaseSensitive;
     QToolButton *btnSearchOptions;
     FF7Location *Locations;
+    FF7FieldItemList *fieldItems;
     QLabel * lblLocationPreview;
     QLineEdit *lineLocationName;
     QSpinBox *sbMapID;
@@ -90,6 +98,7 @@ private:
     QSpinBox *sbD;
     QString region;
     QString transBasePath;
+    QListWidget *fieldItemList;
     bool regExpSearch;
     bool caseSensitive;
 };

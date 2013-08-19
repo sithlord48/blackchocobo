@@ -274,6 +274,9 @@ void MainWindow::init_connections()
         connect(locationViewer,SIGNAL(tChanged(int)),this,SLOT(coord_t_valueChanged(int)));
         connect(locationViewer,SIGNAL(dChanged(int)),this,SLOT(coord_d_valueChanged(int)));
         connect(locationViewer,SIGNAL(locationChanged(QString)),this,SLOT(locationSelectionChanged(QString)));
+        connect(locationViewer,SIGNAL(fieldItemConnectRequest(quint8,QList<quint16>,QList<quint8>)),this,SLOT(connectFieldItem(quint8,QList<quint16>,QList<quint8>)));
+        connect(locationViewer,SIGNAL(fieldItemCheck(int)),this,SLOT(checkFieldItem(int)));
+        connect(locationViewer,SIGNAL(fieldItemChanged(int,bool)),this,SLOT(fieldItemStateChanged(int,bool)));
 
         //options
         connect(optionsWidget,SIGNAL(dialogColorLLChanged(QColor)),this,SLOT(setDialogColorLL(QColor)));
@@ -1113,19 +1116,8 @@ void MainWindow::itemupdate(void)
         if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
         else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
     }
-    if(ff7->unknown(s,38).at(44) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(44) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(44) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,38).at(44) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
 
-    ui->cb_itemmask1_1->setChecked(ff7->itemMask1(s,0));
-    ui->cb_itemmask1_2->setChecked(ff7->itemMask1(s,1));
-    ui->cb_itemmask1_3->setChecked(ff7->itemMask1(s,2));
-    ui->cb_itemmask1_4->setChecked(ff7->itemMask1(s,3));
-    ui->cb_itemmask1_5->setChecked(ff7->itemMask1(s,4));
-    ui->cb_itemmask1_6->setChecked(ff7->itemMask1(s,5));
-    ui->cb_itemmask1_7->setChecked(ff7->itemMask1(s,6));
-    ui->cb_itemmask1_8->setChecked(ff7->itemMask1(s,7));
+
     ui->cb_gaiin_1Javelin->setChecked(ff7->gaiin_1Javelin(s));
     ui->cb_gaiin_1Ribbon->setChecked(ff7->gaiin_1Ribbon(s));
     ui->cb_gaiin_3Elixir->setChecked(ff7->gaiin_3Elixir(s));
@@ -1152,11 +1144,6 @@ void MainWindow::itemupdate(void)
     if(ff7->unknown(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
     if(ff7->unknown(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
-
-    if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
-    if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
-    if(ff7->materiaCave(s,FF7Save::CAVE_QUADMAGIC)){ui->cb_materiacave_3->setChecked(Qt::Checked);}        else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
-    if(ff7->materiaCave(s,FF7Save::CAVE_KOTR)){ui->cb_materiacave_4->setChecked(Qt::Checked);}        else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
 
     for (int i=0;i<7;i++)//flyers
     {
@@ -1675,38 +1662,6 @@ void MainWindow::on_list_flyers_clicked(const QModelIndex &index){if(!load){ff7-
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());}}
 
 // Field Items Combos
-void MainWindow::on_cb_bm_items_1_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,38);  char t = temp.at(44);
-        if(checked){t |= (1<<0);}
-        else{t &= ~(1<<0);}
-        temp[44]=t;
-        ff7->setUnknown(s,38,temp);
- }}
-void MainWindow::on_cb_bm_items_2_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
-        if(checked){t |= (1<<1);}
-        else{t &= ~(1<<1);}
-        temp[44]=t;
-        ff7->setUnknown(s,38,temp);
-}}
-void MainWindow::on_cb_bm_items_3_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
-        if(checked){t |= (1<<2);}
-        else{t &= ~(1<<2);}
-        temp[44]=t;
-        ff7->setUnknown(s,38,temp);
-}}
-void MainWindow::on_cb_bm_items_4_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,38); char t = temp .at(44);
-        if(checked){t |= (1<<3);}
-        else{t &= ~(1<<3);}
-        temp[44]=t;
-        ff7->setUnknown(s,38,temp);
-}}
 
 void MainWindow::on_cb_s7tg_items_1_toggled(bool checked)
 {if(!load){
@@ -2343,14 +2298,6 @@ void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
         ui->lcdNumber_9->display(ff7->regYuffie(s));
 }}
 
-void MainWindow::on_cb_itemmask1_1_toggled(bool checked){if(!load){   ff7->setItemMask1(s,0,checked);}}
-void MainWindow::on_cb_itemmask1_2_toggled(bool checked){if(!load){   ff7->setItemMask1(s,1,checked);}}
-void MainWindow::on_cb_itemmask1_3_toggled(bool checked){if(!load){   ff7->setItemMask1(s,2,checked);}}
-void MainWindow::on_cb_itemmask1_4_toggled(bool checked){if(!load){   ff7->setItemMask1(s,3,checked);}}
-void MainWindow::on_cb_itemmask1_5_toggled(bool checked){if(!load){   ff7->setItemMask1(s,4,checked);}}
-void MainWindow::on_cb_itemmask1_6_toggled(bool checked){if(!load){   ff7->setItemMask1(s,5,checked);}}
-void MainWindow::on_cb_itemmask1_7_toggled(bool checked){if(!load){   ff7->setItemMask1(s,6,checked);}}
-void MainWindow::on_cb_itemmask1_8_toggled(bool checked){if(!load){   ff7->setItemMask1(s,7,checked);}}
 
 void MainWindow::on_cb_gaiin_1Javelin_toggled(bool checked){if(!load){ ff7->setGaiin_1Javelin(s,checked);}}
 void MainWindow::on_cb_gaiin_1Ribbon_toggled(bool checked){if(!load){ff7->setGaiin_1Ribbon(s,checked);}}
@@ -2369,11 +2316,6 @@ void MainWindow::on_cb_trnad_4PoisonRing_toggled(bool checked){if(!load){ff7->se
 void MainWindow::on_cb_trnad_4MpTurbo_toggled(bool checked){if(!load){ff7->setTrnad_4MpTurbo(s,checked);}}
 void MainWindow::on_cb_trnad_3KaiserKnuckle_toggled(bool checked){if(!load){ff7->setTrnad_3KaiserKnuckle(s,checked);}}
 void MainWindow::on_cb_trnad_2NeoBahmut_toggled(bool checked){if(!load){ff7->setTrnad_2NeoBahmut(s,checked);}}
-
-void MainWindow::on_cb_materiacave_1_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_MIME,checked);}}
-void MainWindow::on_cb_materiacave_2_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_HPMP,checked);}}
-void MainWindow::on_cb_materiacave_3_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_QUADMAGIC,checked);}}
-void MainWindow::on_cb_materiacave_4_toggled(bool checked){if(!load){ff7->setMateriaCave(s,FF7Save::CAVE_KOTR,checked);}}
 
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked){if(!load){ff7->setCanFightNinjaInForest(s,checked);}}
@@ -3272,6 +3214,7 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
             locationViewer->setMapId(ff7->mapId(s));
             locationViewer->setLocationId(ff7->locationId(s));
             locationViewer->setLocationString(ff7->location(s));
+            locationViewer->init_fieldItems();
        break;
 
        case 1:
@@ -3414,3 +3357,58 @@ void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){ff7->setCondo
 void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){ff7->setCondorWins(s,arg1);}}
 void MainWindow::on_sbCondorLoses_valueChanged(int arg1){if(!load){ff7->setCondorLoses(s,arg1);}}
 void MainWindow::on_cbPandorasBox_toggled(bool checked){if(!load){ff7->setSeenPandorasBox(s,checked);}}
+
+void MainWindow::connectFieldItem(quint8 boxID,QList<quint16>Offset,QList<quint8> Bit)
+{
+    //Will always be called in numerical Order
+    //this output does not account for items that set more then one bit (on same of different offsets)
+    //Items that set multibit will only look at last entry. (this needs to be fixed here possibly on write)
+    if(boxID ==0)
+    {//if box is 0 then new list.
+        fieldItemOffset = new QList<fieldItemOffsetList>;
+        fieldItemBit = new QList<fieldItemBitList>;
+    }
+    fieldItemOffset->append(Offset);
+    fieldItemBit->append(Bit);
+}
+void MainWindow::checkFieldItem(int boxID)
+{
+    if(fieldItemOffset->count() == fieldItemBit->count())
+    {
+        fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
+        fieldItemBitList bitList = fieldItemBit->at(boxID);
+        bool checked=false;
+        bool check1=false;
+        for(int i=0;i<fieldItemOffset->count();i++)
+        {
+            int offset = offsetList.at(i);
+            int bit = bitList.at(i);
+            if((ff7->slotFF7Data(s).at(offset)&(1<<bit))){check1=true;}
+            else{check1=false;}
+
+            if(i==0){checked=check1;}
+            else{checked=(check1&checked);}
+        }
+        locationViewer->setFieldItemChecked(boxID,checked);
+    }
+    else {/*????*/}
+}
+void MainWindow::fieldItemStateChanged(int boxID,bool checked)
+{
+    if(fieldItemOffset->count() == fieldItemBit->count())
+    {
+        fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
+        fieldItemBitList bitList = fieldItemBit->at(boxID);
+        for(int i=0;i<fieldItemOffset->count();i++)
+        {
+            int offset = offsetList.at(i);
+            int bit = bitList.at(i);
+            QByteArray temp = ff7->slotFF7Data(s); char t=temp.at(offset);
+
+            if(checked){t |= (1<<bit);}
+            else{t &= ~(1<<bit);}
+            temp[offset]=t;
+            ff7->setSlotFF7Data(s,temp);
+        }
+    }
+}
