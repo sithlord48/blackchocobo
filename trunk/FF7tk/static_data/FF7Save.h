@@ -74,43 +74,6 @@ public:
   void setCondorLoses(int s, quint8 loses);
   quint16 condorFunds(int s);
   void setCondorFunds(int s,quint16 value);
-  //z_38[12] item flags.
-  bool gaiin_1Ribbon(int s);
-  void setGaiin_1Ribbon(int s, bool PickedUp);
-  bool gaiin_5Elixir(int s);
-  void setGaiin_5Elixir(int s, bool PickedUp);
-  bool gaiin_1Javelin(int s);
-  void setGaiin_1Javelin(int s, bool PickedUp);
-  bool gaiin_3SpeedSource(int s);
-  void setGaiin_3SpeedSource(int s, bool PickedUp);
-  bool gaiin_3Elixir(int s);
-  void setGaiin_3Elixir(int s, bool PickedUp);
-  bool gaiin_5FireArmlet(int s);
-  void setGaiin_5FireArmlet(int s, bool PickedUp);
-  bool gaiin_4EnhanceSword(int s);
-  void setGaiin_4EnhanceSword(int s, bool PickedUp);
-  //z_38[13] item flags
-  bool snmayorTurboEther(int s);
-  void setSnmayorTurboEther(int s,bool PickedUp);
-  bool sninn2XPotion(int s);
-  void setSninn2XPotion(int s,bool PickedUp);
-  bool snmin2Vaccine(int s);
-  void setSnmin2Vaccine(int s,bool PickedUp);
-  bool snmin2HeroDrink(int s);
-  void setSnmin2HeroDrink(int s,bool PickedUp);
-  bool ncoin3Catastrophe(int s);
-  void setNcoin3Catastrophe(int s,bool PickedUp);
-  bool ncoin1Ether(int s);
-  void setNcoin1Ether(int s,bool PickedUp);
-  //z_38[14] item flags
-  bool trnad_4MpTurbo(int s);
-  void setTrnad_4MpTurbo(int s,bool PickedUp);
-  bool trnad_3KaiserKnuckle(int s);
-  void setTrnad_3KaiserKnuckle(int s,bool PickedUp);
-  bool trnad_4PoisonRing(int s);
-  void setTrnad_4PoisonRing(int s,bool PickedUp);
-  bool trnad_2NeoBahmut(int s);
-  void setTrnad_2NeoBahmut(int s,bool PickedUp);
   //Field Location
   quint16 locationId(int s);
   void setLocationId(int s, quint16 locationID);

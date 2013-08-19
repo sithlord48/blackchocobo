@@ -155,6 +155,7 @@ void MainWindow::init_display()
     locLayout->addWidget(locationViewer);
     ui->fieldFrame->setLayout(locLayout);
 
+    ui->list_flyers->setFixedHeight(ui->list_flyers->sizeHintForRow(0)*8);
     //Set up Status Bar..
     ui->statusBar->addWidget(ui->frame_status,1);
 }
@@ -1117,34 +1118,6 @@ void MainWindow::itemupdate(void)
         else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
     }
 
-
-    ui->cb_gaiin_1Javelin->setChecked(ff7->gaiin_1Javelin(s));
-    ui->cb_gaiin_1Ribbon->setChecked(ff7->gaiin_1Ribbon(s));
-    ui->cb_gaiin_3Elixir->setChecked(ff7->gaiin_3Elixir(s));
-    ui->cb_gaiin_3SpeedSource->setChecked(ff7->gaiin_3SpeedSource(s));
-    ui->cb_gaiin_4EnhanceSword->setChecked(ff7->gaiin_4EnhanceSword(s));
-    ui->cb_gaiin_5Elixir->setChecked(ff7->gaiin_5Elixir(s));
-    ui->cb_gaiin_5FireArmlet->setChecked(ff7->gaiin_5FireArmlet(s));
-    ui->cb_sninn2XPotion->setChecked(ff7->sninn2XPotion(s));
-    ui->cb_snmayorTurboEther->setChecked(ff7->snmayorTurboEther(s));
-    ui->cb_snmin2HeroDrink->setChecked(ff7->snmin2HeroDrink(s));
-    ui->cb_snmin2Vaccine->setChecked(ff7->snmin2Vaccine(s));
-    ui->cb_trnad_4PoisonRing->setChecked(ff7->trnad_4PoisonRing(s));
-    ui->cb_trnad_4MpTurbo->setChecked(ff7->trnad_4MpTurbo(s));
-    ui->cb_trnad_3KaiserKnuckle->setChecked(ff7->trnad_3KaiserKnuckle(s));
-    ui->cb_trnad_2NeoBahmut->setChecked(ff7->trnad_2NeoBahmut(s));
-    ui->cb_ncoin1Ether->setChecked(ff7->ncoin1Ether(s));
-    ui->cb_ncoin3Catastrophe->setChecked(ff7->ncoin3Catastrophe(s));
-
-    if(ff7->unknown(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<2)){ui->cb_s7tg_items_3->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_3->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<3)){ui->cb_s7tg_items_4->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_4->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<4)){ui->cb_s7tg_items_5->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_5->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
-    if(ff7->unknown(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
-
     for (int i=0;i<7;i++)//flyers
     {
         if (ff7->turtleParadiseFlyerSeen(s,i)){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
@@ -1662,78 +1635,6 @@ void MainWindow::on_list_flyers_clicked(const QModelIndex &index){if(!load){ff7-
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());}}
 
 // Field Items Combos
-
-void MainWindow::on_cb_s7tg_items_1_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<0);}
-        else{t &= ~(1<<0);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_2_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<1);}
-        else{t &= ~(1<<1);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_3_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<2);}
-        else{t &= ~(1<<2);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_4_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<3);}
-        else{t &= ~(1<<3);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_5_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<4);}
-        else{t &= ~(1<<4);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_6_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<5);}
-        else{t &= ~(1<<5);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_7_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<6);}
-        else{t &= ~(1<<6);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
-
-void MainWindow::on_cb_s7tg_items_8_toggled(bool checked)
-{if(!load){
-        QByteArray temp = ff7->unknown(s,9);char t = temp.at(4);
-        if(checked){t |= (1<<7);}
-        else{t &= ~(1<<7);}
-        temp[4]=t;
-        ff7->setUnknown(s,9,temp);
-}}
 
 void MainWindow::on_cb_farm_items_1_toggled(bool checked)
 {if(!load){
@@ -2297,26 +2198,6 @@ void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
         ff7->setYuffieAquired(s,checked);
         ui->lcdNumber_9->display(ff7->regYuffie(s));
 }}
-
-
-void MainWindow::on_cb_gaiin_1Javelin_toggled(bool checked){if(!load){ ff7->setGaiin_1Javelin(s,checked);}}
-void MainWindow::on_cb_gaiin_1Ribbon_toggled(bool checked){if(!load){ff7->setGaiin_1Ribbon(s,checked);}}
-void MainWindow::on_cb_gaiin_3Elixir_toggled(bool checked){if(!load){ff7->setGaiin_3Elixir(s,checked);}}
-void MainWindow::on_cb_gaiin_3SpeedSource_toggled(bool checked){if(!load){ff7->setGaiin_3SpeedSource(s,checked);}}
-void MainWindow::on_cb_gaiin_4EnhanceSword_toggled(bool checked){if(!load){ff7->setGaiin_4EnhanceSword(s,checked);}}
-void MainWindow::on_cb_gaiin_5FireArmlet_toggled(bool checked){if(!load){ff7->setGaiin_5FireArmlet(s,checked);}}
-void MainWindow::on_cb_gaiin_5Elixir_toggled(bool checked){if(!load){ff7->setGaiin_5Elixir(s,checked);}}
-void MainWindow::on_cb_snmayorTurboEther_toggled(bool checked){if(!load){ff7->setSnmayorTurboEther(s,checked);}}
-void MainWindow::on_cb_sninn2XPotion_toggled(bool checked){if(!load){ff7->setSninn2XPotion(s,checked);}}
-void MainWindow::on_cb_snmin2Vaccine_toggled(bool checked){if(!load){ff7->setSnmin2Vaccine(s,checked);}}
-void MainWindow::on_cb_snmin2HeroDrink_toggled(bool checked){if(!load){ff7->setSnmin2HeroDrink(s,checked);}}
-void MainWindow::on_cb_ncoin3Catastrophe_toggled(bool checked){if(!load){ff7->setNcoin3Catastrophe(s,checked);}}
-void MainWindow::on_cb_ncoin1Ether_toggled(bool checked){if(!load){ff7->setNcoin1Ether(s,checked);}}
-void MainWindow::on_cb_trnad_4PoisonRing_toggled(bool checked){if(!load){ff7->setTrnad_4PoisonRing(s,checked);}}
-void MainWindow::on_cb_trnad_4MpTurbo_toggled(bool checked){if(!load){ff7->setTrnad_4MpTurbo(s,checked);}}
-void MainWindow::on_cb_trnad_3KaiserKnuckle_toggled(bool checked){if(!load){ff7->setTrnad_3KaiserKnuckle(s,checked);}}
-void MainWindow::on_cb_trnad_2NeoBahmut_toggled(bool checked){if(!load){ff7->setTrnad_2NeoBahmut(s,checked);}}
-
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked){if(!load){ff7->setCanFightNinjaInForest(s,checked);}}
 void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,0,checked);}}
@@ -3373,13 +3254,14 @@ void MainWindow::connectFieldItem(quint8 boxID,QList<quint16>Offset,QList<quint8
 }
 void MainWindow::checkFieldItem(int boxID)
 {
-    if(fieldItemOffset->count() == fieldItemBit->count())
+    fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
+    fieldItemBitList bitList = fieldItemBit->at(boxID);
+
+    if(offsetList.count() == bitList.count())
     {
-        fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
-        fieldItemBitList bitList = fieldItemBit->at(boxID);
         bool checked=false;
         bool check1=false;
-        for(int i=0;i<fieldItemOffset->count();i++)
+        for(int i=0;i<offsetList.count();i++)
         {
             int offset = offsetList.at(i);
             int bit = bitList.at(i);
@@ -3395,11 +3277,11 @@ void MainWindow::checkFieldItem(int boxID)
 }
 void MainWindow::fieldItemStateChanged(int boxID,bool checked)
 {
-    if(fieldItemOffset->count() == fieldItemBit->count())
+    fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
+    fieldItemBitList bitList = fieldItemBit->at(boxID);
+    if(offsetList.count() == bitList.count())
     {
-        fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
-        fieldItemBitList bitList = fieldItemBit->at(boxID);
-        for(int i=0;i<fieldItemOffset->count();i++)
+        for(int i=0;i<offsetList.count();i++)
         {
             int offset = offsetList.at(i);
             int bit = bitList.at(i);
