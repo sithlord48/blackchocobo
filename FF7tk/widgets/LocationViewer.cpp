@@ -288,7 +288,6 @@ void LocationViewer::setLocation(int mapId,int locId)
     if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
     else
     {
-        qWarning()<<"Loading Map:"<<fileName;
         lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         QString oldStr = Locations->locationString(fileName);
         QString newStr = translate(oldStr);
@@ -410,9 +409,9 @@ void LocationViewer::init_fieldItems(void)
     }
     else
     {
-        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);
-        fieldItemList->viewport()->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count()));
+        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);      
+        fieldItemList->viewport()->setFixedHeight(fieldItemList->contentsRect().height());
     }
 }
 void LocationViewer::fieldItemListItemChanged(QModelIndex index)

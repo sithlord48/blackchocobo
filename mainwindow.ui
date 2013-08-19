@@ -1591,17 +1591,11 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
             </widget>
            </item>
            <item>
-            <widget class="QGroupBox" name="box_field_item">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
+            <widget class="QGroupBox" name="group_keyitems">
              <property name="title">
-              <string>Field Items Picked Up</string>
+              <string>Key Items</string>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_110">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -1618,859 +1612,587 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                <number>0</number>
               </property>
               <item>
-               <widget class="QScrollArea" name="scrollArea_4">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
+               <widget class="QListWidget" name="list_keyitems">
+                <property name="editTriggers">
+                 <set>QAbstractItemView::NoEditTriggers</set>
                 </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents_4">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>227</width>
-                   <height>914</height>
-                  </rect>
+                <property name="showDropIndicator" stdset="0">
+                 <bool>false</bool>
+                </property>
+                <property name="dragDropMode">
+                 <enum>QAbstractItemView::DropOnly</enum>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Cotton Dress</string>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_15">
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_7">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Echo Screen</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_1">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Hi-Potion.(Barrel 1)</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_5">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Hi-Potion.(Roof Train 1)</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_6">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST1:Potion.(In Train 2)</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_3">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST2:Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_4">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST2:Ether</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_s7tg_items_8">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="text">
-                     <string>MDS7ST2:Hi-Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_1Javelin">
-                    <property name="text">
-                     <string>GAIIN_1:Javelin</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_1Ribbon">
-                    <property name="text">
-                     <string>GAIIN_1:Ribbon</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_3Elixir">
-                    <property name="text">
-                     <string>GAIIN_3:Elixir</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_3SpeedSource">
-                    <property name="text">
-                     <string>GAIIN_3:Speed Source</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_4EnhanceSword">
-                    <property name="text">
-                     <string>GAIIN_4:Enhance Sword</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_5FireArmlet">
-                    <property name="text">
-                     <string>GAIIN_5:Fire Armlet</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_gaiin_5Elixir">
-                    <property name="text">
-                     <string>GAIIN_5:Elixir</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_snmayorTurboEther">
-                    <property name="text">
-                     <string>SNMAYOR: Turbo Ether</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_sninn2XPotion">
-                    <property name="text">
-                     <string>SNINN2: X-Potion</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_snmin2Vaccine">
-                    <property name="text">
-                     <string>SNMIN2: Vaccine</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_snmin2HeroDrink">
-                    <property name="text">
-                     <string>SNMIN2:Hero Drink</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_ncoin3Catastrophe">
-                    <property name="text">
-                     <string>NCOIN3:Catastrophe</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_ncoin1Ether">
-                    <property name="text">
-                     <string>NCOIN1:Ether</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_trnad_4PoisonRing">
-                    <property name="text">
-                     <string>TRNAD_4:Poison Ring</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_trnad_4MpTurbo">
-                    <property name="text">
-                     <string>TRNAD_4:MpTurbo</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_trnad_3KaiserKnuckle">
-                    <property name="text">
-                     <string>TRNAD_3:Kaiser Knuckle</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_trnad_2NeoBahmut">
-                    <property name="text">
-                     <string>TRNAD_2:Neo Bahmut</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Satin Dress</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Silk Dress</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Wig</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Dyed Wig</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Blonde Wig</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Glass Tiara</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Ruby Tiara</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Diamond Tiara</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cologne</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Flower Cologne</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Sexy Cologne</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Member's Card</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Lingerie</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Mystery panties</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Bikini briefs</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Pharmacy Coupons</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Disinfectant</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Deodorant</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Digestive</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Huge Materia:Fort Condor</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Huge Materia:Corel</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Huge Materia:Underwater</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Huge Materia:Rocket</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Key to Ancients</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Letter to a Daughter</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Letter to a Wife</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Lunar Harp</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basement Key</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Key To Sector 5</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keycard 60</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keycard 62</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keycard 65</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keycard 66</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keycard 68</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Midgar parts</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Midgar parts</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Midgar parts</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Midgar parts</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Midgar parts</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>PHS</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Gold Ticket</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Keystone</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Leviathan Scales</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Glacier Map</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>A Coupon</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>B Coupon</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>C Coupon</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Black Materia</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Mythril</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Snowboard</string>
+                 </property>
+                 <property name="checkState">
+                  <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_clear_keyitems">
+                <property name="text">
+                 <string>Clear Key Items</string>
+                </property>
                </widget>
               </item>
              </layout>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QGroupBox" name="group_keyitems">
-          <property name="title">
-           <string>Key Items</string>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QListWidget" name="list_keyitems">
-             <property name="editTriggers">
-              <set>QAbstractItemView::NoEditTriggers</set>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>false</bool>
-             </property>
-             <property name="dragDropMode">
-              <enum>QAbstractItemView::DropOnly</enum>
-             </property>
-             <item>
-              <property name="text">
-               <string>Cotton Dress</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Satin Dress</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Silk Dress</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Wig</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Dyed Wig</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Blonde Wig</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Glass Tiara</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Ruby Tiara</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Diamond Tiara</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Cologne</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Flower Cologne</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Sexy Cologne</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Member's Card</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Lingerie</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Mystery panties</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Bikini briefs</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Pharmacy Coupons</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Disinfectant</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Deodorant</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Digestive</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Huge Materia:Fort Condor</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Huge Materia:Corel</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Huge Materia:Underwater</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Huge Materia:Rocket</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Key to Ancients</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Letter to a Daughter</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Letter to a Wife</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Lunar Harp</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Basement Key</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Key To Sector 5</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keycard 60</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keycard 62</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keycard 65</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keycard 66</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keycard 68</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>PHS</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Gold Ticket</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Keystone</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Leviathan Scales</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Glacier Map</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>A Coupon</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>B Coupon</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>C Coupon</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Black Materia</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Mythril</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Snowboard</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_clear_keyitems">
-             <property name="text">
-              <string>Clear Key Items</string>
-             </property>
             </widget>
            </item>
           </layout>
@@ -2738,8 +2460,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>100</width>
-             <height>30</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4656,7 +4378,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>311</width>
+                  <width>353</width>
                   <height>1705</height>
                  </rect>
                 </property>

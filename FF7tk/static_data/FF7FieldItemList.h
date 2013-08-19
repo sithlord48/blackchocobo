@@ -41,6 +41,15 @@ public:
 
 static FieldItemList FILIST[]=
 {//don't forget to update count on entry
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<0,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("Items","Hi-Potion")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<1,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("Items","Echo Screen")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<2,QStringList()<<"mds7st2",QT_TRANSLATE_NOOP("Items","Potion")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<3,QStringList()<<"mds7st2",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<4,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("Items","Hi-Potion")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<5,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("Items","Potion")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<6,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("Items","Potion")},
+    {QList<quint16>()<<0x0BC8,QList<quint8>()<<7,QStringList()<<"mds7st2",QT_TRANSLATE_NOOP("Items","Hi-Potion")},
+
     {QList<quint16>()<<0x0BD4,QList<quint8>()<<0,QStringList()<<"md8_3",QT_TRANSLATE_NOOP("Items","Potion")},
     {QList<quint16>()<<0x0BD4,QList<quint8>()<<1,QStringList()<<"ealin_1",QT_TRANSLATE_NOOP("Items","Phoenix Down")},
     {QList<quint16>()<<0x0BD4,QList<quint8>()<<2,QStringList()<<"eals_1",QT_TRANSLATE_NOOP("Items","Ether")},
@@ -54,6 +63,34 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<1,QStringList()<<"zz6",QT_TRANSLATE_NOOP("Materia_Names","HP <-> MP")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<2,QStringList()<<"zz7",QT_TRANSLATE_NOOP("Materia_Names","Quadra Magic")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<3,QStringList()<<"zz8",QT_TRANSLATE_NOOP("Materia_Names","Knights Of the Round")},
+
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<0,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("Items","Enhance Sword")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("Items","Fire Armlet")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<3,QStringList()<<"gaiin_3",QT_TRANSLATE_NOOP("Items","Elixir")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<4,QStringList()<<"gaiin_3",QT_TRANSLATE_NOOP("Items","Speed Source")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<5,QStringList()<<"gaiin_1",QT_TRANSLATE_NOOP("Items","Javelin")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<6,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("Items","Elixir")},
+    {QList<quint16>()<<0x0FA4,QList<quint8>()<<7,QStringList()<<"gaiin_1",QT_TRANSLATE_NOOP("Items","Ribbon")},
+
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<0,QStringList()<<"ncoin1",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<1,QStringList()<<"ncoin3",QT_TRANSLATE_NOOP("Items","Catastrophe")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<2,QStringList()<<"snmin2",QT_TRANSLATE_NOOP("Items","Hero Drink")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<3,QStringList()<<"snmin2",QT_TRANSLATE_NOOP("Items","Vaccine")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<4,QStringList()<<"sninn",QT_TRANSLATE_NOOP("Items","X Potion")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<5,QStringList()<<"snmayor",QT_TRANSLATE_NOOP("Items","Turbo Eather")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<6,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<7,QStringList()<<"",""},
+
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<0,QStringList()<<"trnad_2",QT_TRANSLATE_NOOP("Materia_Names","Neo Bahmut")},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<1,QStringList()<<"trnad_4",QT_TRANSLATE_NOOP("Items","Poison Ring")},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<2,QStringList()<<"trnad_3",QT_TRANSLATE_NOOP("Items","Hero Drink")},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<3,QStringList()<<"trnad_4",QT_TRANSLATE_NOOP("Materia_Names","Mp Turbo")},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<4,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<5,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<6,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FA6,QList<quint8>()<<7,QStringList()<<"",""},
+
 
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<0,QStringList()<<"md1stin",QT_TRANSLATE_NOOP("Items","Potion")},
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<1,QStringList()<<"md1stin",QT_TRANSLATE_NOOP("Items","Potion")},
