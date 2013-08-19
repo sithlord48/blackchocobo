@@ -96,6 +96,12 @@ private:
     ItemList *itemlist;
     ChocoboManager *chocoboManager;
     LocationViewer *locationViewer;
+
+    typedef QList<quint16> fieldItemOffsetList;
+    typedef QList<quint8> fieldItemBitList;
+
+    QList<fieldItemOffsetList> *fieldItemOffset;
+    QList<fieldItemBitList> *fieldItemBit;
     QHexEdit *hexEditor;
     void init_display();
     void init_style();
@@ -291,19 +297,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_midgartrain_1_toggled(bool);
     void on_cb_yuffieforest_toggled(bool);
     void on_cb_reg_yuffie_toggled(bool);
-    void on_cb_materiacave_1_toggled(bool);
-    void on_cb_materiacave_2_toggled(bool);
-    void on_cb_materiacave_3_toggled(bool);
-    void on_cb_materiacave_4_toggled(bool);
-
-    void on_cb_itemmask1_1_toggled(bool);
-    void on_cb_itemmask1_2_toggled(bool);
-    void on_cb_itemmask1_3_toggled(bool);
-    void on_cb_itemmask1_4_toggled(bool);
-    void on_cb_itemmask1_5_toggled(bool);
-    void on_cb_itemmask1_6_toggled(bool);
-    void on_cb_itemmask1_7_toggled(bool);
-    void on_cb_itemmask1_8_toggled(bool);
 
     void on_cb_reg_vinny_toggled(bool);
 
@@ -325,7 +318,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     void on_cb_replay_currentIndexChanged(int index);
     void on_sb_mprogress_valueChanged(int value);
-
     void on_cb_bm1_1_toggled(bool checked);
     void on_cb_bm1_2_toggled(bool checked);
     void on_cb_bm1_3_toggled(bool checked);
@@ -444,10 +436,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_list_keyitems_clicked(const QModelIndex &index);
     void on_btn_item_add_each_item_clicked();
     void on_btn_remove_all_items_clicked();
-    void on_cb_bm_items_1_toggled(bool checked);
-    void on_cb_bm_items_2_toggled(bool checked);
-    void on_cb_bm_items_3_toggled(bool checked);
-    void on_cb_bm_items_4_toggled(bool checked);
 
     void on_cb_s7tg_items_1_toggled(bool checked);
     void on_cb_s7tg_items_2_toggled(bool checked);
@@ -576,5 +564,9 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sbCondorLoses_valueChanged(int arg1);
     void on_cbPandorasBox_toggled(bool checked);
     void on_actionImport_Slot_From_File_triggered();
+    //new feildItem Stuff
+    void connectFieldItem(quint8,QList<quint16>,QList<quint8>);
+    void checkFieldItem(int);
+    void fieldItemStateChanged(int ID,bool checked);
 };
 #endif // MAINWINDOW_H

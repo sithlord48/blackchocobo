@@ -221,7 +221,7 @@ public:
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
   //materia get/set
   bool  materiaCave(int s,MATERIACAVE cave);
-  void setMateriaCave(int s, MATERIACAVE cave, bool hasMateria);
+  void setMateriaCave(int s, MATERIACAVE cave, bool isEmpty);
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
   quint8 stolenMateriaId(int s,int mat_num);
