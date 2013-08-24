@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
-
 #include "../static_data/icons/Common_Icons/delete.xpm"
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
@@ -237,7 +236,7 @@ void LocationViewer::init_disconnect(void)
 void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow, int prevColumn)
 {
     if(currentColumn == prevColumn){/*do nothing*/} //stop non use warning
-    if(currentRow ==0 and currentColumn ==0){return;}//return on selection cleared.
+
     if(currentRow ==prevRow){return;}
     else
     {
@@ -251,7 +250,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
 
 void LocationViewer::setSelected(QString locFilename)
 {
-    locationTable->clearSelection();
+    locationTable->setCurrentItem(locationTable->item(-1,-1));
     for(int i=0;i<Locations->len();i++)
     {
         if(locationTable->item(i,0)->text()== locFilename)
@@ -379,39 +378,43 @@ void LocationViewer::actionCaseSensitiveToggled(bool checked)
 void LocationViewer::init_fieldItems(void)
 {
     fieldItemList->clear();
-    for(int i=0;i<fieldItems->count();i++)
-    {
-        for(int j=0;j<fieldItems->maps(i).count();j++)
-        {
-            if(fieldItems->maps(i).at(j)== Locations->fileName(sbMapID->value(),sbLocID->value()))
-            {
-                QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
-                newItem->setCheckState(Qt::Unchecked);
-                fieldItemList->addItem(newItem);
-                emit fieldItemConnectRequest(fieldItemList->count()-1,fieldItems->offset(i),fieldItems->bit(i));
-                //emit to check the item
-                emit fieldItemCheck(fieldItemList->count()-1);
-            }
-        }        
-    }
-    if(fieldItemList->count()<=0){fieldItemList->setFixedHeight(0);}
-    else if(fieldItemList->count()<5)
-    {
-        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
-        fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
-    }
-    else if(fieldItemList->count()==5)
-    {
-        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
-        fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
-    }
+    if(Locations->fileName(sbMapID->value(),sbLocID->value()).isEmpty()){fieldItemList->setFixedHeight(0);return;}
     else
     {
-        fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);      
-        fieldItemList->viewport()->setFixedHeight(fieldItemList->contentsRect().height());
+        for(int i=0;i<fieldItems->count();i++)
+        {
+            for(int j=0;j<fieldItems->maps(i).count();j++)
+            {
+                if(fieldItems->maps(i).at(j)== Locations->fileName(sbMapID->value(),sbLocID->value()))
+                {
+                    QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
+                    newItem->setCheckState(Qt::Unchecked);
+                    fieldItemList->addItem(newItem);
+                    emit fieldItemConnectRequest(fieldItemList->count()-1,fieldItems->offset(i),fieldItems->bit(i));
+                    //emit to check the item
+                    emit fieldItemCheck(fieldItemList->count()-1);
+                }
+            }
+        }
+        if(fieldItemList->count()<=0){fieldItemList->setFixedHeight(0);}
+        else if(fieldItemList->count()<5)
+        {
+            fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
+            fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
+        }
+        else if(fieldItemList->count()==5)
+        {
+            fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
+            fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
+        }
+        else
+        {
+            fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);
+            fieldItemList->viewport()->setFixedHeight(fieldItemList->contentsRect().height());
+        }
     }
 }
 void LocationViewer::fieldItemListItemChanged(QModelIndex index)
