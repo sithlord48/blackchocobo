@@ -146,6 +146,70 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0FCA,QList<quint8>()<<0,QStringList()<<"anfrst_3",QT_TRANSLATE_NOOP("Items","Spring Gun Clip")},
     {QList<quint16>()<<0x0FCA,QList<quint8>()<<1,QStringList()<<"bonevil",QT_TRANSLATE_NOOP("Items","Mop")},
     {QList<quint16>()<<0x0FCA,QList<quint8>()<<2,QStringList()<<"bonevil",QT_TRANSLATE_NOOP("Items","Megalixir")},
-    {QList<quint16>()<<0x0FCA,QList<quint8>()<<3,QStringList()<<"blackbg1"<<"mds5_5"<<"bonevil",QT_TRANSLATE_NOOP("KeyItems","Key To Sector 5")}
+    {QList<quint16>()<<0x0FCA,QList<quint8>()<<3,QStringList()<<"blackbg1"<<"mds5_5"<<"bonevil",QT_TRANSLATE_NOOP("KeyItems","Key To Sector 5")},
+
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<0,QStringList()<<"4sbwy_6",QT_TRANSLATE_NOOP("Items","Tent")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<1,QStringList()<<"4sbwy_3",QT_TRANSLATE_NOOP("Items","Potion")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<2,QStringList()<<"4sbwy_1",QT_TRANSLATE_NOOP("Itmes","Ether")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<3,QStringList()<<"psdun_3",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<4,QStringList()<<"psdun_4",QT_TRANSLATE_NOOP("Items","Hi-Potion")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<5,QStringList()<<"psdun_4",QT_TRANSLATE_NOOP("Items","Elixir")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<6,QStringList()<<"psdun_3",QT_TRANSLATE_NOOP("Materia_Names","Long Range")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<7,QStringList()<<"gnmk",QT_TRANSLATE_NOOP("Materia_Names","Titan")},
+
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<0,QStringList()<<"elmin2_2",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<1,QStringList()<<"losin1",QT_TRANSLATE_NOOP("Materia_Names","Comet")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<2,QStringList()<<"gonjun1",QT_TRANSLATE_NOOP("Materia_Names","Deathblow")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<3,QStringList()<<"q_4",QT_TRANSLATE_NOOP("Materia_Names","Hades")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<4,QStringList()<<"q_4",QT_TRANSLATE_NOOP("Items","Outsider")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<5,QStringList()<<"q_3",QT_TRANSLATE_NOOP("Items","Escourt Guard")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<6,QStringList()<<"q_3",QT_TRANSLATE_NOOP("Items","Conformer")},
+    {QList<quint16>()<<0x0FF5,QList<quint8>()<<7,QStringList()<<"q_4",QT_TRANSLATE_NOOP("Items","Spirit Lance")},
+
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<0,QStringList()<<"q_1",QT_TRANSLATE_NOOP("Items","Heaven's Cloud")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<1,QStringList()<<"q_3",QT_TRANSLATE_NOOP("Items","Megalixir")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<2,QStringList()<<"q_4",QT_TRANSLATE_NOOP("Items","Megalixir")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<3,QStringList()<<"losinn",QT_TRANSLATE_NOOP("Items","Elixir")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<4,QStringList()<<"losin2",QT_TRANSLATE_NOOP("Items","Guard Source")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<5,QStringList()<<"losin3",QT_TRANSLATE_NOOP("Items","Magic Source")},
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<6,QStringList()<<"las1_2"<<"las4_0",QT_TRANSLATE_NOOP("Items","Elixir")}, //also needs to edit 11[142]:4 (field var) on las4_0
+    {QList<quint16>()<<0x0FF6,QList<quint8>()<<7,QStringList()<<"las1_2"<<"las4_0",QT_TRANSLATE_NOOP("Items","Mystle")}, //also needs to edit 11[142]:1 (field var) on las4_0
+ //Below Should Be Tested.
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<0,QStringList()<<"las1_2"<<"las1_3"<<"las0_4",QT_TRANSLATE_NOOP("Items","Speed Source")}, //also needs to edit 11[142]:3 on las4_0
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<1,QStringList()<<"las1_3",QT_TRANSLATE_NOOP("Items","Tetra Elemental")},
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<2,QStringList()<<"las1_3"<<"las4_0",QT_TRANSLATE_NOOP("Items","Megalixir")},// also needs to edit 11[142]:6 on las4_0
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<3,QStringList()<<"las1_3"<<"las4_0",QT_TRANSLATE_NOOP("Items","Megalixir")}, // also needs to edit 11[142]:2 on las4_0
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<4,QStringList()<<"las0_5",QT_TRANSLATE_NOOP("Items","Power Source")},
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<5,QStringList()<<"las0_5",QT_TRANSLATE_NOOP("Items","Elixir")},
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<6,QStringList()<<"las0_4"<<"las4_0",QT_TRANSLATE_NOOP("Items","Guard Source")}, //also needs to edit 11[142]:0 (field var) on las4_0
+    {QList<quint16>()<<0x0FF7,QList<quint8>()<<7,QStringList()<<"las0_5"<<"las4_0",QT_TRANSLATE_NOOP("Items","Mind Source")}, //also needs to edit 11[142]:2 (field var) on las4_0
+
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<0,QStringList()<<"goson",QT_TRANSLATE_NOOP("Items","White M-Phone")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<1,QStringList()<<"gninn",QT_TRANSLATE_NOOP("Items","X-Potion")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<2,QStringList()<<"rktsid",QT_TRANSLATE_NOOP("Items","Drill Arm")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<3,QStringList()<<"rktmin2",QT_TRANSLATE_NOOP("Items","Power Source")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<4,QStringList()<<"rckt",QT_TRANSLATE_NOOP("Items","Yoshiyuki")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<5,QStringList()<<"rckt2",QT_TRANSLATE_NOOP("Items","Venus Gospel")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<6,QStringList()<<"las0_4",QT_TRANSLATE_NOOP("Items","Save Crystal")},
+    {QList<quint16>()<<0x0FF8,QList<quint8>()<<7,QStringList()<<"elmtow",QT_TRANSLATE_NOOP("Items","Peacemaker")},
+
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<0,QStringList()<<"losinn",QT_TRANSLATE_NOOP("Materia_Names","Enemy Skill")},
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<1,QStringList()<<"elmin1_1",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<2,QStringList()<<"las0_5",QT_TRANSLATE_NOOP("Items","Magic Source")},
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<3,QStringList()<<"elmin3_2",QT_TRANSLATE_NOOP("Items","Guard Source")},
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<4,QStringList()<<"elmin4_1",QT_TRANSLATE_NOOP("Items","Ether")}, // shown if(5[9] ==0)
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<5,QStringList()<<"rkt_w",QT_TRANSLATE_NOOP("Items","Forth Bracelet")}, // shown if gamemoment >999
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<6,QStringList()<<"rkt_i",QT_TRANSLATE_NOOP("Items","Guard Source")}, // shown if gamemoment >999
+    {QList<quint16>()<<0x0FF9,QList<quint8>()<<7,QStringList()<<"elminn_2",QT_TRANSLATE_NOOP("Items","Megalixir")},
+
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<0,QStringList()<<"las0_5",QT_TRANSLATE_NOOP("Items","Guard Source")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<1,QStringList()<<"q_3",QT_TRANSLATE_NOOP("Materia_Names","Double Cut")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<2,QStringList()<<"q_4",QT_TRANSLATE_NOOP("Items","Highwind")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<3,QStringList()<<"las0_5",QT_TRANSLATE_NOOP("Materia_Names","Hp Absorb")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<4,QStringList()<<"psdun_2",QT_TRANSLATE_NOOP("Items","Mind Source")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<5,QStringList()<<"psdun_3",QT_TRANSLATE_NOOP("Items","Tent")},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<6,QStringList()<<"",""},
+    {QList<quint16>()<<0x0FFA,QList<quint8>()<<7,QStringList()<<"",""}
+
 };
 #endif // FF7FIELDITEMLIST_H

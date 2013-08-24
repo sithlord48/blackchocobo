@@ -130,7 +130,7 @@ static LOCATION Locations[]=
     {"pillar_3",QT_TRANSLATE_NOOP("Locations","Plate Support"),"1","160","-461","-274","31","32"},
     {"tunnel_1",QT_TRANSLATE_NOOP("Locations","Winding Tunnel"),"1","161","25","89","145","32"},
     {"tunnel_2",QT_TRANSLATE_NOOP("Locations","Winding Tunnel"),"1","162","1","555","11","32"},
-    {"4sbwy_1",QT_TRANSLATE_NOOP("Locations","4th Street Plate Int."),"1","164","-6","-340","4","32"},
+    {"4sbwy_1",QT_TRANSLATE_NOOP("Locations","4th Street Plate Int."),"1","164","6","-728","3","128"},
     {"4sbwy_2",QT_TRANSLATE_NOOP("Locations","4th Street Plate Int."),"1","165","0","-46","9","32"},
     {"4sbwy_3",QT_TRANSLATE_NOOP("Locations","4th Street Plate Int."),"1","166","-139","574","21","32"},
     {"4sbwy_4",QT_TRANSLATE_NOOP("Locations","Lower Sector 4 Plate"),"1","167","17","1","7","32"},
