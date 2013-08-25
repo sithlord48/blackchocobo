@@ -986,6 +986,357 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>FieldItems</name>
+    <message>
+        <source>Hi-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Echo Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quadra Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enhance Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Javelin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hero Drink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vaccine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Poison Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HypnoCrown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Megalixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Destruct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enemy Skill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Twin Viper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enemy Launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buntline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Viper Halberd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rune Blade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Powersoul</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sniper CR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elemental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Water Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Supershot ST</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slash-All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Minerva Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apocalypse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key To Sector 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Long Range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Comet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deathblow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outsider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Conformer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spirit Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guard Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tetra Elemental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drill Arm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Venus Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peacemaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Double Cut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choco/Mog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escort Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sense</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turbo Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Turbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mystile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>White M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -1797,10 +2148,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Echo screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2941,6 +3288,10 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>A M Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Echo Screen</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5114,30 +5465,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NMKIN_3: Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NMKIN_1: Phoenix Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MD8_3: Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Elevator On 2nd Floor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5154,41 +5481,9 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Echo Screen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Hi-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion.(In Train 2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5318,34 +5613,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALS_1: Cover Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALS_1: Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CRCIN_2: Ramuh Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FARM: Choco-Mog Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ1:Mythril</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5482,74 +5749,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GAIIN_1:Javelin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_1:Ribbon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Speed Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_4:Enhance Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Fire Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMAYOR: Turbo Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNINN2: X-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2: Vaccine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2:Hero Drink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN3:Catastrophe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN1:Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:Poison Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:MpTurbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_3:Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_2:Neo Bahmut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5567,22 +5766,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ5: Mime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ6: HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ7: Quadra Magic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ8: KOTR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6157,10 +6340,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Knights of Round</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6174,6 +6353,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Typhon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

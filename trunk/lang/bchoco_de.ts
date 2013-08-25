@@ -986,6 +986,357 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>FieldItems</name>
+    <message>
+        <source>Hi-Potion</source>
+        <translation type="unfinished">Hi-Trank</translation>
+    </message>
+    <message>
+        <source>Echo Screen</source>
+        <translation>Echoschirm</translation>
+    </message>
+    <message>
+        <source>Potion</source>
+        <translation type="unfinished">Trank</translation>
+    </message>
+    <message>
+        <source>Ether</source>
+        <translation type="unfinished">Äther</translation>
+    </message>
+    <message>
+        <source>Phoenix Down</source>
+        <translation type="unfinished">Phönix-Feder</translation>
+    </message>
+    <message>
+        <source>Cover</source>
+        <translation type="unfinished">Schutz</translation>
+    </message>
+    <message>
+        <source>Ramuh</source>
+        <translation type="unfinished">Ramuh</translation>
+    </message>
+    <message>
+        <source>Mythril</source>
+        <translation type="unfinished">Mythril</translation>
+    </message>
+    <message>
+        <source>Mime</source>
+        <translation type="unfinished">Mimik</translation>
+    </message>
+    <message>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished">HP&lt;-&gt;MP</translation>
+    </message>
+    <message>
+        <source>Quadra Magic</source>
+        <translation type="unfinished">Quadra-Zauber</translation>
+    </message>
+    <message>
+        <source>Enhance Sword</source>
+        <translation type="unfinished">Superschwert</translation>
+    </message>
+    <message>
+        <source>Fire Armlet</source>
+        <translation type="unfinished">Feuerarmband</translation>
+    </message>
+    <message>
+        <source>Elixir</source>
+        <translation type="unfinished">Elixier</translation>
+    </message>
+    <message>
+        <source>Speed Source</source>
+        <translation type="unfinished">Geschwindigkeit</translation>
+    </message>
+    <message>
+        <source>Javelin</source>
+        <translation type="unfinished">Speer</translation>
+    </message>
+    <message>
+        <source>Ribbon</source>
+        <translation type="unfinished">Schleife</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished">Katastrophe</translation>
+    </message>
+    <message>
+        <source>Hero Drink</source>
+        <translation type="unfinished">Heldentrank</translation>
+    </message>
+    <message>
+        <source>Vaccine</source>
+        <translation type="unfinished">Impfstoff</translation>
+    </message>
+    <message>
+        <source>Poison Ring</source>
+        <translation type="unfinished">Giftring</translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation type="unfinished">Gift</translation>
+    </message>
+    <message>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished">Blitzarmband</translation>
+    </message>
+    <message>
+        <source>HypnoCrown</source>
+        <translation type="unfinished">Hypnokrone</translation>
+    </message>
+    <message>
+        <source>Megalixir</source>
+        <translation type="unfinished">Megalixier</translation>
+    </message>
+    <message>
+        <source>Kujata</source>
+        <translation type="unfinished">Kujata</translation>
+    </message>
+    <message>
+        <source>Destruct</source>
+        <translation type="unfinished">Zerstörung</translation>
+    </message>
+    <message>
+        <source>Enemy Skill</source>
+        <translation type="unfinished">Feindtechnick</translation>
+    </message>
+    <message>
+        <source>Odin</source>
+        <translation type="unfinished">Odin</translation>
+    </message>
+    <message>
+        <source>Counter</source>
+        <translation type="unfinished">Konter</translation>
+    </message>
+    <message>
+        <source>Magic Plus</source>
+        <translation type="unfinished">Zauber-Plus</translation>
+    </message>
+    <message>
+        <source>Steal</source>
+        <translation type="unfinished">Raub</translation>
+    </message>
+    <message>
+        <source>Twin Viper</source>
+        <translation type="unfinished">Doppelviper</translation>
+    </message>
+    <message>
+        <source>Enemy Launcher</source>
+        <translation type="unfinished">Feindeswerfer</translation>
+    </message>
+    <message>
+        <source>Magic Source</source>
+        <translation type="unfinished">Zauber</translation>
+    </message>
+    <message>
+        <source>Buntline</source>
+        <translation type="unfinished">Mistragewehr</translation>
+    </message>
+    <message>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished">Aurora-Armband</translation>
+    </message>
+    <message>
+        <source>Viper Halberd</source>
+        <translation type="unfinished">Vipern-Hellebarde</translation>
+    </message>
+    <message>
+        <source>Rune Blade</source>
+        <translation type="unfinished">Runenschwert</translation>
+    </message>
+    <message>
+        <source>Plus Barrette</source>
+        <translation type="unfinished">Platinbarrett</translation>
+    </message>
+    <message>
+        <source>Powersoul</source>
+        <translation type="unfinished">Powersoul</translation>
+    </message>
+    <message>
+        <source>Sniper CR</source>
+        <translation type="unfinished">Heckenschütz-CR</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished">Alle</translation>
+    </message>
+    <message>
+        <source>Elemental</source>
+        <translation type="unfinished">Nebenwirkung</translation>
+    </message>
+    <message>
+        <source>Power Source</source>
+        <translation type="unfinished">Kraft</translation>
+    </message>
+    <message>
+        <source>Water Ring</source>
+        <translation type="unfinished">Wasserring</translation>
+    </message>
+    <message>
+        <source>Supershot ST</source>
+        <translation type="unfinished">Superschuβ-ST</translation>
+    </message>
+    <message>
+        <source>Slash-All</source>
+        <translation type="unfinished">Generalangriff</translation>
+    </message>
+    <message>
+        <source>Minerva Band</source>
+        <translation type="unfinished">Minerva-Band</translation>
+    </message>
+    <message>
+        <source>Apocalypse</source>
+        <translation type="unfinished">Apokalypse</translation>
+    </message>
+    <message>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished">Spriggewehr-Clip</translation>
+    </message>
+    <message>
+        <source>Mop</source>
+        <translation type="unfinished">Mop</translation>
+    </message>
+    <message>
+        <source>Key To Sector 5</source>
+        <translation type="unfinished">Schlüssel für Sektor 5</translation>
+    </message>
+    <message>
+        <source>Tent</source>
+        <translation type="unfinished">Zelt</translation>
+    </message>
+    <message>
+        <source>Long Range</source>
+        <translation type="unfinished">Fernangriff</translation>
+    </message>
+    <message>
+        <source>Titan</source>
+        <translation type="unfinished">Titan</translation>
+    </message>
+    <message>
+        <source>Comet</source>
+        <translation type="unfinished">Asteroid</translation>
+    </message>
+    <message>
+        <source>Deathblow</source>
+        <translation type="unfinished">Todesstoß</translation>
+    </message>
+    <message>
+        <source>Hades</source>
+        <translation type="unfinished">Hades</translation>
+    </message>
+    <message>
+        <source>Outsider</source>
+        <translation type="unfinished">Outsider</translation>
+    </message>
+    <message>
+        <source>Conformer</source>
+        <translation type="unfinished">Konformer</translation>
+    </message>
+    <message>
+        <source>Spirit Lance</source>
+        <translation type="unfinished">Geisteslanze</translation>
+    </message>
+    <message>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished">Himmelswolke</translation>
+    </message>
+    <message>
+        <source>Guard Source</source>
+        <translation type="unfinished">Wachsamkeit</translation>
+    </message>
+    <message>
+        <source>Tetra Elemental</source>
+        <translation type="unfinished">Tetra-Element</translation>
+    </message>
+    <message>
+        <source>Mind Source</source>
+        <translation type="unfinished">Geist</translation>
+    </message>
+    <message>
+        <source>X-Potion</source>
+        <translation type="unfinished">X-Trank</translation>
+    </message>
+    <message>
+        <source>Drill Arm</source>
+        <translation type="unfinished">Bohrarm</translation>
+    </message>
+    <message>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished">Yoshiyuki</translation>
+    </message>
+    <message>
+        <source>Venus Gospel</source>
+        <translation type="unfinished">Venuslehre</translation>
+    </message>
+    <message>
+        <source>Save Crystal</source>
+        <translation type="unfinished">Speicherkristall</translation>
+    </message>
+    <message>
+        <source>Peacemaker</source>
+        <translation type="unfinished">Friedensstifter</translation>
+    </message>
+    <message>
+        <source>Double Cut</source>
+        <translation type="unfinished">Multiangriff</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">Highwind</translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation>Ritter der Runde</translation>
+    </message>
+    <message>
+        <source>Choco/Mog</source>
+        <translation type="unfinished">Choco/Mog</translation>
+    </message>
+    <message>
+        <source>Escort Guard</source>
+        <translation type="unfinished">Geleitwache</translation>
+    </message>
+    <message>
+        <source>Sense</source>
+        <translation type="unfinished">Analyse</translation>
+    </message>
+    <message>
+        <source>Turbo Ether</source>
+        <translation type="unfinished">Turbo-Äther</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut</source>
+        <translation type="unfinished">Neo-Bahamut</translation>
+    </message>
+    <message>
+        <source>MP Turbo</source>
+        <translation type="unfinished">MP-Turbo</translation>
+    </message>
+    <message>
+        <source>Silver M-phone</source>
+        <translation type="unfinished">Silbernes Mphon</translation>
+    </message>
+    <message>
+        <source>Typhon</source>
+        <translation type="unfinished">Typhon</translation>
+    </message>
+    <message>
+        <source>Mystile</source>
+        <translation type="unfinished">Mystil</translation>
+    </message>
+    <message>
+        <source>White M-phone</source>
+        <translation type="unfinished">Weißes Mphon</translation>
+    </message>
+    <message>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished">Viertes Armband</translation>
+    </message>
+    <message>
+        <source>HP Absorb</source>
+        <translation type="unfinished">HP-Absorption</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -1798,10 +2149,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Cornucopia</source>
         <translation>Füllhorn</translation>
-    </message>
-    <message>
-        <source>Echo screen</source>
-        <translation>Echoschirm</translation>
     </message>
     <message>
         <source>Hyper</source>
@@ -2943,6 +3290,10 @@ The km/h speeds are calculated while playing </source>
         <source>A M Cannon</source>
         <translation>A M-Kanone</translation>
     </message>
+    <message>
+        <source>Echo Screen</source>
+        <translation>Echoschirm</translation>
+    </message>
 </context>
 <context>
     <name>LocationViewer</name>
@@ -3002,16 +3353,8 @@ The km/h speeds are calculated while playing </source>
         <translation>Platform</translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation type="obsolete">Tunnel</translation>
-    </message>
-    <message>
         <source>Junon Inn</source>
         <translation>Junon Inn</translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
-        <translation type="obsolete">Midgar Sektor 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3028,10 +3371,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aerith&apos;s House</source>
         <translation>Aeriths&apos; Haus</translation>
-    </message>
-    <message>
-        <source>North Crater</source>
-        <translation type="obsolete">Nordkrater</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -3092,10 +3431,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Ropeway Station</source>
         <translation>Seilbahnstation</translation>
-    </message>
-    <message>
-        <source>Junon Way</source>
-        <translation type="obsolete">Weg nach Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -4347,24 +4682,12 @@ The km/h speeds are calculated while playing </source>
         <translation>Schildkrötenparadies Zettel gesammelt</translation>
     </message>
     <message>
-        <source>&amp;Export From Current Slot</source>
-        <translation type="obsolete">&amp;Exportiere von jetzigem Steckplatz</translation>
-    </message>
-    <message>
         <source>&amp;Import To Current Slot</source>
         <translation>&amp;Importiere zu jetzigem Steckplatz</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
-    </message>
-    <message>
-        <source>Export PC Save</source>
-        <translation type="obsolete">Exportiere PC Spielstand</translation>
-    </message>
-    <message>
-        <source>Export PSX or MCR Save As a PC Save</source>
-        <translation type="obsolete">Exportiere PSX- oder MCR-Spielstand als PC-Spielstand</translation>
     </message>
     <message>
         <source>Slot-01</source>
@@ -4503,14 +4826,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <source>Copy Current Slot</source>
-        <translation type="obsolete">Kopiere jetzigen Steckplatz</translation>
-    </message>
-    <message>
-        <source>Clear Slot</source>
-        <translation type="obsolete">Steckplatz Zurücksetzen</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>Vorheriger Steckplatz</translation>
     </message>
@@ -4555,58 +4870,10 @@ The km/h speeds are calculated while playing </source>
         <translation>Öffne Final Fantasy 7 Spielstand</translation>
     </message>
     <message>
-        <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 PSV Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation type="obsolete">FF7 PSV Spielstand(*.psv)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 PSP Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation type="obsolete">FF7 PSP Spielstand(*.vmp)</translation>
-    </message>
-    <message>
         <source>Cannot read file %1:
 %2.</source>
         <translation>Kann Datei nicht lesen %1:
 %2.</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PC SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 PC Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 PC SaveGame(*.ff7)</source>
-        <translation type="obsolete">FF7 PC Spielstand(*.ff7)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PSX SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 PSX Spielstand</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 MC SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 MC Spielstand</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSX Save</source>
-        <translation type="obsolete">Wähle Final Fantasy 7 PSX Spielstand</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSV Save</source>
-        <translation type="obsolete">Wähle Final Fantasy 7 PSV Spielstand</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 SaveGame(*.ff7)</source>
-        <translation type="obsolete">FF7 Spielstand(*.ff7)</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -4721,14 +4988,6 @@ The km/h speeds are calculated while playing </source>
         <translation>JPN (BISLPS-01057)</translation>
     </message>
     <message>
-        <source>PSP Save Notice</source>
-        <translation type="obsolete">PSP Speicher Notiz</translation>
-    </message>
-    <message>
-        <source>Export MC File</source>
-        <translation type="obsolete">Exportiere MC Spielstand</translation>
-    </message>
-    <message>
         <source>Hel&amp;p</source>
         <translation>Hilf&amp;e</translation>
     </message>
@@ -4741,28 +5000,12 @@ The km/h speeds are calculated while playing </source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <source>Paste Slot</source>
-        <translation type="obsolete">Füge Steckplatz ein</translation>
-    </message>
-    <message>
         <source>More Options...</source>
         <translation>Mehr Optionen...</translation>
     </message>
     <message>
-        <source>New Game</source>
-        <translation type="obsolete">Neues Spiel</translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation>Neues Spiel+ </translation>
-    </message>
-    <message>
-        <source>Export Current Character</source>
-        <translation type="obsolete">Exportiere jetzigen Charakter</translation>
-    </message>
-    <message>
-        <source>Import Current Character</source>
-        <translation type="obsolete">Importiere jetzigen Charakter</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -4787,16 +5030,8 @@ The km/h speeds are calculated while playing </source>
         <translation>FF7 Charakter Stat Datei(*.char)</translation>
     </message>
     <message>
-        <source>Export Raw PSX Save</source>
-        <translation type="obsolete">Exportiere Raw PSX Spielstand</translation>
-    </message>
-    <message>
         <source>Import  Raw PSX Save</source>
         <translation>Importiere Raw PSX Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation type="obsolete">FF7 Raw PSX Spielstand(*-S*)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4881,34 +5116,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
-    </message>
-    <message>
-        <source>Export VGS File</source>
-        <translation type="obsolete">Exportiere VGS Datei</translation>
-    </message>
-    <message>
-        <source>Export Dex-Drive File</source>
-        <translation type="obsolete">Exportiere Dex-Drive Datei</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 VGS Spielstand</translation>
-    </message>
-    <message>
-        <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation type="obsolete">FF7 VGS Spielstand(*.vgs *.mem)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7  Dex-Drive Spielstand</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 VGS Spielstand</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="obsolete">Speichere Final Fantasy 7 Dex-Drive Spielstand</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
@@ -5017,10 +5224,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Code-Karte 66</translation>
     </message>
     <message>
-        <source>FF7 Dex SaveGame(*.gme)</source>
-        <translation type="obsolete">FF7 Dex Spielstand(*.gme)</translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
         <translation>Geheimnisvolles Höschen</translation>
     </message>
@@ -5057,20 +5260,12 @@ The km/h speeds are calculated while playing </source>
         <translation>Setze Schlüsselobjekte zurück</translation>
     </message>
     <message>
-        <source>Aeris Turks</source>
-        <translation type="obsolete">Aeris Turks</translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation>Kirche in den Slums</translation>
     </message>
     <message>
         <source>Aeris Death</source>
         <translation>Aeris Tod</translation>
-    </message>
-    <message>
-        <source>Don_prog</source>
-        <translation type="obsolete">Don_prog</translation>
     </message>
     <message>
         <source>&amp;Location</source>
@@ -5091,10 +5286,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Buggy</source>
         <translation>Buggy</translation>
-    </message>
-    <message>
-        <source>New Window</source>
-        <translation type="obsolete">Neues Fenster</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
@@ -5287,30 +5478,6 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
         <translation>Mit Soldat zwei mal geredet</translation>
     </message>
     <message>
-        <source>Field Items Picked Up</source>
-        <translation>Feld Items aufgehoben</translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 1</source>
-        <translation>MDSTIN: Trank 1</translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 2</source>
-        <translation>MDSTIN: Trank 2</translation>
-    </message>
-    <message>
-        <source>NMKIN_3: Potion</source>
-        <translation>NMKIN_3: Potion</translation>
-    </message>
-    <message>
-        <source>NMKIN_1: Phoenix Down</source>
-        <translation>NMKIN_1: Phönix Feder</translation>
-    </message>
-    <message>
-        <source>MD8_3: Potion</source>
-        <translation>MD8_3: Trank</translation>
-    </message>
-    <message>
         <source>Elevator On 2nd Floor</source>
         <translation>Aufzug im 1. Stock</translation>
     </message>
@@ -5329,34 +5496,6 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
         <translation>Nach Glitzer-Effekt auf Karte MD8_3</translation>
     </message>
     <message>
-        <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation>MDS7ST1:Hi-Trank.(Zug Dach 1)</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation>MDS7ST1:Hi-Trank.(Tonne 1)</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Echo Screen</source>
-        <translation>MDS7ST1:Echoschirm</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion</source>
-        <translation>MDS7ST1:Trank</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Hi-Potion</source>
-        <translation>MDS7ST2:Hi-Trank</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Ether</source>
-        <translation>MDS7ST2:Äther</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Potion</source>
-        <translation>MDS7ST2:Trank</translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
@@ -5364,10 +5503,6 @@ Table Entries are Editable</source>
         <translation>&lt;------Linke Tabelle------
 Wähle unbekannte Var zum Anzeigen aus
 Tabellen Einträge sind bearbeitbar</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation>MDS7ST1:Trank.(Im Zug 2)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
@@ -5452,64 +5587,16 @@ Tabellen Einträge sind bearbeitbar</translation>
 %1</translation>
     </message>
     <message>
-        <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation type="obsolete">Raw PSX FF7 Spielstand (*)</translation>
-    </message>
-    <message>
-        <source>PC</source>
-        <translation type="obsolete">PC</translation>
-    </message>
-    <message>
-        <source>Raw Psx Save</source>
-        <translation type="obsolete">Raw PSX Spielstand</translation>
-    </message>
-    <message>
-        <source>Generic Emulator Memorycard</source>
-        <translation type="obsolete">Generic Emulator Memorycard</translation>
-    </message>
-    <message>
-        <source>PSP</source>
-        <translation type="obsolete">PSP</translation>
-    </message>
-    <message>
-        <source>PS3</source>
-        <translation type="obsolete">PS3</translation>
-    </message>
-    <message>
-        <source>Dex Drive Memorycard</source>
-        <translation type="obsolete">Dex Drive Memorycard</translation>
-    </message>
-    <message>
-        <source>VGS Memorycard</source>
-        <translation type="obsolete">VGS Memorycard</translation>
-    </message>
-    <message>
         <source>Save Error</source>
         <translation>Speicher Fehler</translation>
-    </message>
-    <message>
-        <source>Please Select A File Type To Save</source>
-        <translation type="obsolete">Bitte wähle einen Dateityp zum Speichern</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
         <translation>Berechne Stats</translation>
     </message>
     <message>
-        <source>Can Not Export This Format</source>
-        <translation type="obsolete">Kann nicht in diesem Format exportieren</translation>
-    </message>
-    <message>
-        <source>PSV FF7 SaveGame (*.psv)</source>
-        <translation type="obsolete">PSV FF7 Spielstand (*.psv)</translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translation>PAL (BESCES-00868)</translation>
-    </message>
-    <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="obsolete">BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -5548,48 +5635,12 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Goldener Chocobo</translation>
     </message>
     <message>
-        <source>MDS6_2: Sense Materia</source>
-        <translation>MDS6_2:Analyse Materia</translation>
-    </message>
-    <message>
-        <source>EALS_1: Cover Materia</source>
-        <translation>EALS_1:Schutz Materia</translation>
-    </message>
-    <message>
-        <source>EALS_1: Ether</source>
-        <translation>EALS_1:Äther</translation>
-    </message>
-    <message>
-        <source>CRCIN_2: Ramuh Materia</source>
-        <translation>CRCIN_2:Ramuh Materia</translation>
-    </message>
-    <message>
-        <source>FARM: Choco-Mog Materia</source>
-        <translation>FARM:Choco/Mog Materia</translation>
-    </message>
-    <message>
-        <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation>EALIN_1:Trank + Phönix Feder</translation>
-    </message>
-    <message>
-        <source>ZZ1:Mythril</source>
-        <translation>ZZ1:Mythril</translation>
-    </message>
-    <message>
         <source>0xBEF (farmitems)</source>
         <translation>0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation>0x01 - Nachdem Choco/Mog erhalten wurde (noch einmal) ?</translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="obsolete">Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV Spielstand (*.psv);;PSP Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="obsolete">FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
@@ -5624,10 +5675,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Black Chococbo</source>
         <translation type="unfinished">Schwarzer Chocobo</translation>
-    </message>
-    <message>
-        <source>Replace %1&apos;s Materia and Equipment</source>
-        <translation type="obsolete">Ersetzen Sie%1 Materia und Ausrüstung</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
@@ -5722,74 +5769,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GAIIN_1:Javelin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_1:Ribbon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Speed Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_4:Enhance Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Fire Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMAYOR: Turbo Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNINN2: X-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2: Vaccine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2:Hero Drink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN3:Catastrophe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN1:Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:Poison Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:MpTurbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_3:Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_2:Neo Bahmut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5807,22 +5786,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ5: Mime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ6: HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ7: Quadra Magic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ8: KOTR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5933,10 +5896,6 @@ trigger showing that tutorial</source>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
         <translation type="unfinished">FF7 VGS Spielstand(*.vgs *.mem)</translation>
-    </message>
-    <message>
-        <source>DEX (*.dex)</source>
-        <translation type="obsolete">Dex-Drive Spielstand(*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
@@ -6397,10 +6356,6 @@ trigger showing that tutorial</source>
         <translation>Bahamut ZERO</translation>
     </message>
     <message>
-        <source>Knights of Round</source>
-        <translation>Ritter der Runde</translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation>Premium-Beschwörung</translation>
     </message>
@@ -6415,6 +6370,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Typhon</source>
         <translation>Typhon</translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Ritter der Runde</translation>
     </message>
 </context>
 <context>
