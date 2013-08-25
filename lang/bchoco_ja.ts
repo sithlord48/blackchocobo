@@ -986,6 +986,357 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>FieldItems</name>
+    <message>
+        <source>Hi-Potion</source>
+        <translation type="unfinished">ハイポーション</translation>
+    </message>
+    <message>
+        <source>Echo Screen</source>
+        <translation type="unfinished">やまびこえんまく</translation>
+    </message>
+    <message>
+        <source>Potion</source>
+        <translation type="unfinished">ポーション</translation>
+    </message>
+    <message>
+        <source>Ether</source>
+        <translation type="unfinished">エーテル</translation>
+    </message>
+    <message>
+        <source>Phoenix Down</source>
+        <translation type="unfinished">フェニックスの尾</translation>
+    </message>
+    <message>
+        <source>Cover</source>
+        <translation type="unfinished">かばう</translation>
+    </message>
+    <message>
+        <source>Ramuh</source>
+        <translation type="unfinished">ラムウ</translation>
+    </message>
+    <message>
+        <source>Mythril</source>
+        <translation type="unfinished">ミスリル</translation>
+    </message>
+    <message>
+        <source>Mime</source>
+        <translation type="unfinished">ものまね</translation>
+    </message>
+    <message>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished">ＨＰＭＰいれかえ</translation>
+    </message>
+    <message>
+        <source>Quadra Magic</source>
+        <translation type="unfinished">まほうみだれうち</translation>
+    </message>
+    <message>
+        <source>Enhance Sword</source>
+        <translation type="unfinished">エンハンスソード</translation>
+    </message>
+    <message>
+        <source>Fire Armlet</source>
+        <translation type="unfinished">烈火の腕輪</translation>
+    </message>
+    <message>
+        <source>Elixir</source>
+        <translation type="unfinished">エリクサー</translation>
+    </message>
+    <message>
+        <source>Speed Source</source>
+        <translation type="unfinished">スピードアップ</translation>
+    </message>
+    <message>
+        <source>Javelin</source>
+        <translation type="unfinished">ジャベリン</translation>
+    </message>
+    <message>
+        <source>Ribbon</source>
+        <translation type="unfinished">リボン</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished">カタストロフィ</translation>
+    </message>
+    <message>
+        <source>Hero Drink</source>
+        <translation type="unfinished">英雄の薬</translation>
+    </message>
+    <message>
+        <source>Vaccine</source>
+        <translation type="unfinished">ワクチン</translation>
+    </message>
+    <message>
+        <source>Poison Ring</source>
+        <translation type="unfinished">ポイズンリング</translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation type="unfinished">どく</translation>
+    </message>
+    <message>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished">天雷の腕輪</translation>
+    </message>
+    <message>
+        <source>HypnoCrown</source>
+        <translation type="unfinished">ヒュプノクラウン</translation>
+    </message>
+    <message>
+        <source>Megalixir</source>
+        <translation type="unfinished">ラストエリクサー</translation>
+    </message>
+    <message>
+        <source>Kujata</source>
+        <translation type="unfinished">クジャタ</translation>
+    </message>
+    <message>
+        <source>Destruct</source>
+        <translation type="unfinished">しょうめつ</translation>
+    </message>
+    <message>
+        <source>Enemy Skill</source>
+        <translation type="unfinished">てきのわざ</translation>
+    </message>
+    <message>
+        <source>Odin</source>
+        <translation type="unfinished">オーディーン</translation>
+    </message>
+    <message>
+        <source>Counter</source>
+        <translation type="unfinished">コマンドカウンター</translation>
+    </message>
+    <message>
+        <source>Magic Plus</source>
+        <translation type="unfinished">マジカル</translation>
+    </message>
+    <message>
+        <source>Steal</source>
+        <translation type="unfinished">ぬすむ</translation>
+    </message>
+    <message>
+        <source>Twin Viper</source>
+        <translation type="unfinished">ツインヴァイパー</translation>
+    </message>
+    <message>
+        <source>Enemy Launcher</source>
+        <translation type="unfinished">エネミーランチャ</translation>
+    </message>
+    <message>
+        <source>Magic Source</source>
+        <translation type="unfinished">マジックアップ</translation>
+    </message>
+    <message>
+        <source>Buntline</source>
+        <translation type="unfinished">バントライン</translation>
+    </message>
+    <message>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished">極光の腕輪</translation>
+    </message>
+    <message>
+        <source>Viper Halberd</source>
+        <translation type="unfinished">蛇矛</translation>
+    </message>
+    <message>
+        <source>Rune Blade</source>
+        <translation type="unfinished">ルーンブレイド</translation>
+    </message>
+    <message>
+        <source>Plus Barrette</source>
+        <translation type="unfinished">プラチナバレッタ</translation>
+    </message>
+    <message>
+        <source>Powersoul</source>
+        <translation type="unfinished">オーバーソウル</translation>
+    </message>
+    <message>
+        <source>Sniper CR</source>
+        <translation type="unfinished">スナイパーCR</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished">ぜんたいか</translation>
+    </message>
+    <message>
+        <source>Elemental</source>
+        <translation type="unfinished">ぞくせい</translation>
+    </message>
+    <message>
+        <source>Power Source</source>
+        <translation type="unfinished">パワーアップ</translation>
+    </message>
+    <message>
+        <source>Water Ring</source>
+        <translation type="unfinished">水の指輪</translation>
+    </message>
+    <message>
+        <source>Supershot ST</source>
+        <translation type="unfinished">ハイブロウST</translation>
+    </message>
+    <message>
+        <source>Slash-All</source>
+        <translation type="unfinished">ぜんたいぎり</translation>
+    </message>
+    <message>
+        <source>Minerva Band</source>
+        <translation type="unfinished">ミネルバブレス</translation>
+    </message>
+    <message>
+        <source>Apocalypse</source>
+        <translation type="unfinished">アポカリプス</translation>
+    </message>
+    <message>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished">スプリガンクリップ</translation>
+    </message>
+    <message>
+        <source>Mop</source>
+        <translation type="unfinished">モップ</translation>
+    </message>
+    <message>
+        <source>Key To Sector 5</source>
+        <translation type="unfinished">５番街ゲートの鍵</translation>
+    </message>
+    <message>
+        <source>Tent</source>
+        <translation type="unfinished">テント</translation>
+    </message>
+    <message>
+        <source>Long Range</source>
+        <translation type="unfinished">えんきょりこうげき</translation>
+    </message>
+    <message>
+        <source>Titan</source>
+        <translation type="unfinished">タイタン</translation>
+    </message>
+    <message>
+        <source>Comet</source>
+        <translation type="unfinished">いんせき</translation>
+    </message>
+    <message>
+        <source>Deathblow</source>
+        <translation type="unfinished">ひっさつ</translation>
+    </message>
+    <message>
+        <source>Hades</source>
+        <translation type="unfinished">ハーデス</translation>
+    </message>
+    <message>
+        <source>Outsider</source>
+        <translation type="unfinished">アウトサイダー</translation>
+    </message>
+    <message>
+        <source>Conformer</source>
+        <translation type="unfinished">不倶戴天</translation>
+    </message>
+    <message>
+        <source>Spirit Lance</source>
+        <translation type="unfinished">ロンギヌス</translation>
+    </message>
+    <message>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished">天の叢雲</translation>
+    </message>
+    <message>
+        <source>Guard Source</source>
+        <translation type="unfinished">ガードアップ</translation>
+    </message>
+    <message>
+        <source>Tetra Elemental</source>
+        <translation type="unfinished">テトラエレメンタル</translation>
+    </message>
+    <message>
+        <source>Mind Source</source>
+        <translation type="unfinished">マインドアップ</translation>
+    </message>
+    <message>
+        <source>X-Potion</source>
+        <translation type="unfinished">エクスポーション</translation>
+    </message>
+    <message>
+        <source>Drill Arm</source>
+        <translation type="unfinished">ドリルアーム</translation>
+    </message>
+    <message>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished">陸奥守吉行</translation>
+    </message>
+    <message>
+        <source>Venus Gospel</source>
+        <translation type="unfinished">ビーナスゴスペル</translation>
+    </message>
+    <message>
+        <source>Save Crystal</source>
+        <translation type="unfinished">セーブクリスタル</translation>
+    </message>
+    <message>
+        <source>Peacemaker</source>
+        <translation type="unfinished">ピースメーカー</translation>
+    </message>
+    <message>
+        <source>Double Cut</source>
+        <translation type="unfinished">れんぞくぎり</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">ハイウインド</translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">ナイツオブラウンド</translation>
+    </message>
+    <message>
+        <source>Choco/Mog</source>
+        <translation type="unfinished">チョコボ＆モーグリ</translation>
+    </message>
+    <message>
+        <source>Escort Guard</source>
+        <translation type="unfinished">エスコートガード</translation>
+    </message>
+    <message>
+        <source>Sense</source>
+        <translation type="unfinished">みやぶる</translation>
+    </message>
+    <message>
+        <source>Turbo Ether</source>
+        <translation type="unfinished">エーテルターボ</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut</source>
+        <translation type="unfinished">バハムート改</translation>
+    </message>
+    <message>
+        <source>MP Turbo</source>
+        <translation type="unfinished">ＭＰターボ</translation>
+    </message>
+    <message>
+        <source>Silver M-phone</source>
+        <translation type="unfinished">シルバーメガホン</translation>
+    </message>
+    <message>
+        <source>Typhon</source>
+        <translation type="unfinished">テュポーン</translation>
+    </message>
+    <message>
+        <source>Mystile</source>
+        <translation type="unfinished">ミスティール</translation>
+    </message>
+    <message>
+        <source>White M-phone</source>
+        <translation type="unfinished">ホワイトメガホン</translation>
+    </message>
+    <message>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished">フォースブレス</translation>
+    </message>
+    <message>
+        <source>HP Absorb</source>
+        <translation type="unfinished">ＨＰきゅうしゅう</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -1798,10 +2149,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Cornucopia</source>
         <translation>うちでのこづち</translation>
-    </message>
-    <message>
-        <source>Echo screen</source>
-        <translation>やまびこえんまく</translation>
     </message>
     <message>
         <source>Hyper</source>
@@ -2943,6 +3290,10 @@ The km/h speeds are calculated while playing </source>
         <source>A M Cannon</source>
         <translation>Ａ・Ｍキャノン</translation>
     </message>
+    <message>
+        <source>Echo Screen</source>
+        <translation type="unfinished">やまびこえんまく</translation>
+    </message>
 </context>
 <context>
     <name>LocationViewer</name>
@@ -3002,16 +3353,8 @@ The km/h speeds are calculated while playing </source>
         <translation>１番街駅ホーム</translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation type="obsolete">螺旋トンネル</translation>
-    </message>
-    <message>
         <source>Junon Inn</source>
         <translation>ジュノン・場末の宿屋</translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
-        <translation type="obsolete">ミッドガル８番街</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -3028,10 +3371,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aerith&apos;s House</source>
         <translation>エアリスの家</translation>
-    </message>
-    <message>
-        <source>North Crater</source>
-        <translation type="obsolete">大空洞内部</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -3092,10 +3431,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Ropeway Station</source>
         <translation>ロープウェイ乗り場</translation>
-    </message>
-    <message>
-        <source>Junon Way</source>
-        <translation type="obsolete">海底魔晄炉への通路</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -4421,24 +4756,12 @@ The km/h speeds are calculated while playing </source>
         <translation>&apos;かめ道楽 通信&apos; の閲読</translation>
     </message>
     <message>
-        <source>&amp;Export From Current Slot</source>
-        <translation type="obsolete">現在のスロットをエクスポート(&amp;E)</translation>
-    </message>
-    <message>
         <source>&amp;Import To Current Slot</source>
         <translation>現在のスロットにインポート(&amp;I)</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
-    </message>
-    <message>
-        <source>Export PC Save</source>
-        <translation type="obsolete">PC セーブのエクスポート</translation>
-    </message>
-    <message>
-        <source>Export PSX or MCR Save As a PC Save</source>
-        <translation type="obsolete">PSX, MCR セーブを PC セーブでエクスポート</translation>
     </message>
     <message>
         <source>Slot-01</source>
@@ -4577,14 +4900,6 @@ The km/h speeds are calculated while playing </source>
         <translation>言語</translation>
     </message>
     <message>
-        <source>Copy Current Slot</source>
-        <translation type="obsolete">現在のスロットをコピー</translation>
-    </message>
-    <message>
-        <source>Clear Slot</source>
-        <translation type="obsolete">スロットのクリア</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>前のスロット</translation>
     </message>
@@ -4629,58 +4944,10 @@ The km/h speeds are calculated while playing </source>
         <translation>Final Fantasy 7 セーブを開く</translation>
     </message>
     <message>
-        <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 PSV セーブの保存</translation>
-    </message>
-    <message>
-        <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation type="obsolete">FF7 PSV セーブ (*.psv) の保存</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 PSP セーブの保存</translation>
-    </message>
-    <message>
-        <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation type="obsolete">FF7 PSP セーブ (*.vmp)</translation>
-    </message>
-    <message>
         <source>Cannot read file %1:
 %2.</source>
         <translation>ファイル %1 が読み込めません:
 %2.</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PC SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 PC セーブの保存</translation>
-    </message>
-    <message>
-        <source>FF7 PC SaveGame(*.ff7)</source>
-        <translation type="obsolete">FF7 PC セーブ (*.ff7)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PSX SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 PSX セーブの保存</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 MC SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 MC セーブの保存</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSX Save</source>
-        <translation type="obsolete">Final Fantasy 7 PSX セーブの選択</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSV Save</source>
-        <translation type="obsolete">Final Fantasy 7 PSV セーブの選択</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 セーブの保存</translation>
-    </message>
-    <message>
-        <source>FF7 SaveGame(*.ff7)</source>
-        <translation type="obsolete">FF7 セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -4795,14 +5062,6 @@ The km/h speeds are calculated while playing </source>
         <translation>JPN (BISLPS-01057)</translation>
     </message>
     <message>
-        <source>PSP Save Notice</source>
-        <translation type="obsolete">PSP セーブの警告</translation>
-    </message>
-    <message>
-        <source>Export MC File</source>
-        <translation type="obsolete">MC ファイルのエクスポート</translation>
-    </message>
-    <message>
         <source>Hel&amp;p</source>
         <translation>ヘルプ(&amp;H)</translation>
     </message>
@@ -4815,28 +5074,12 @@ The km/h speeds are calculated while playing </source>
         <translation>編集(&amp;E)</translation>
     </message>
     <message>
-        <source>Paste Slot</source>
-        <translation type="obsolete">スロットの貼り付け</translation>
-    </message>
-    <message>
         <source>More Options...</source>
         <translation>拡張オプション...</translation>
     </message>
     <message>
-        <source>New Game</source>
-        <translation type="obsolete">新規ゲーム</translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation>新規ゲーム＋</translation>
-    </message>
-    <message>
-        <source>Export Current Character</source>
-        <translation type="obsolete">現在のキャラクターをエクスポート</translation>
-    </message>
-    <message>
-        <source>Import Current Character</source>
-        <translation type="obsolete">現在のキャラクターにインポート</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -4861,16 +5104,8 @@ The km/h speeds are calculated while playing </source>
         <translation>FF7 キャラクター ステータス ファイル (*.char)</translation>
     </message>
     <message>
-        <source>Export Raw PSX Save</source>
-        <translation type="obsolete">Raw PSX セーブのエクスポート</translation>
-    </message>
-    <message>
         <source>Import  Raw PSX Save</source>
         <translation>Raw PSX セーブのインポート</translation>
-    </message>
-    <message>
-        <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation type="obsolete">FF7 Raw PSX セーブ (*-S*)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4955,34 +5190,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
-    </message>
-    <message>
-        <source>Export VGS File</source>
-        <translation type="obsolete">VGS ファイルのエクスポート</translation>
-    </message>
-    <message>
-        <source>Export Dex-Drive File</source>
-        <translation type="obsolete">Dex-Drive ファイルのエクスポート</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7  VGS セーブの保存</translation>
-    </message>
-    <message>
-        <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation type="obsolete">FF7 VGS セーブ (*.vgs *.mem)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 Dex-Drive セーブの保存</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 VGS セーブの保存</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="obsolete">Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
@@ -5089,10 +5296,6 @@ The km/h speeds are calculated while playing </source>
         <translation>カードキー６６</translation>
     </message>
     <message>
-        <source>FF7 Dex SaveGame(*.gme)</source>
-        <translation type="obsolete">FF7 Dex Drive セーブ (*.gme)</translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
         <translation>入手先不明パンツ</translation>
     </message>
@@ -5129,20 +5332,12 @@ The km/h speeds are calculated while playing </source>
         <translation>キーアイテムをクリア</translation>
     </message>
     <message>
-        <source>Aeris Turks</source>
-        <translation type="obsolete">エアリス_タークス_教会フラグ</translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation>スラムの教会</translation>
     </message>
     <message>
         <source>Aeris Death</source>
         <translation>エアリスの死</translation>
-    </message>
-    <message>
-        <source>Don_prog</source>
-        <translation type="obsolete">コルネオの館_イベント進捗</translation>
     </message>
     <message>
         <source>&amp;Location</source>
@@ -5163,10 +5358,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Buggy</source>
         <translation>バギー</translation>
-    </message>
-    <message>
-        <source>New Window</source>
-        <translation type="obsolete">新規ウィンドウ</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
@@ -5359,30 +5550,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>警備兵と二回会話</translation>
     </message>
     <message>
-        <source>Field Items Picked Up</source>
-        <translation>フィールド アイテムの入手</translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 1</source>
-        <translation>１番街駅ホーム: ポーション1</translation>
-    </message>
-    <message>
-        <source>MDSTIN: Potion 2</source>
-        <translation>１番街駅ホーム: ポーション2</translation>
-    </message>
-    <message>
-        <source>NMKIN_3: Potion</source>
-        <translation>１番魔晄炉_3: ポーション</translation>
-    </message>
-    <message>
-        <source>NMKIN_1: Phoenix Down</source>
-        <translation>１番魔晄炉_1: フェニックスの尾</translation>
-    </message>
-    <message>
-        <source>MD8_3: Potion</source>
-        <translation>８番街_3: ポーション</translation>
-    </message>
-    <message>
         <source>Elevator On 2nd Floor</source>
         <translation>エレベーターが上階にある</translation>
     </message>
@@ -5399,44 +5566,12 @@ Var And Scrolling Synced To Left Table</source>
         <translation>８番街_3 放電発生後</translation>
     </message>
     <message>
-        <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation>列車墓場1: ハイポーション (列車1 屋根)</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation>列車墓場1: ハイポーション (ドラム缶1)</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Echo Screen</source>
-        <translation>列車墓場1: やまびこえんまく</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion</source>
-        <translation>列車墓場1: ポーション</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Hi-Potion</source>
-        <translation>列車墓場2: ハイポーション</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Ether</source>
-        <translation>列車墓場2: エーテル</translation>
-    </message>
-    <message>
-        <source>MDS7ST2:Potion</source>
-        <translation>列車墓場2: ポーション</translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
         <translation>&lt;------左のテーブル------
 表示する変数を選択
 テーブルの値は編集可能</translation>
-    </message>
-    <message>
-        <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation>列車墓場1: ポーション (列車2 内部)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
@@ -5521,65 +5656,17 @@ Table Entries are Editable</source>
 %1</translation>
     </message>
     <message>
-        <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation type="obsolete">Raw PSX FF7 セーブ (*)</translation>
-    </message>
-    <message>
-        <source>PC</source>
-        <translation type="obsolete">PC</translation>
-    </message>
-    <message>
-        <source>Raw Psx Save</source>
-        <translation type="obsolete">Raw Psx セーブ</translation>
-    </message>
-    <message>
-        <source>Generic Emulator Memorycard</source>
-        <translation type="obsolete">エミューレーター用メモリーカード全般</translation>
-    </message>
-    <message>
-        <source>PSP</source>
-        <translation type="obsolete">PSP</translation>
-    </message>
-    <message>
-        <source>PS3</source>
-        <translation type="obsolete">PS3</translation>
-    </message>
-    <message>
-        <source>Dex Drive Memorycard</source>
-        <translation type="obsolete">Dex Drive メモリーカード</translation>
-    </message>
-    <message>
-        <source>VGS Memorycard</source>
-        <translation type="obsolete">VGS メモリーカード</translation>
-    </message>
-    <message>
         <source>Save Error</source>
         <translation>保存エラー</translation>
-    </message>
-    <message>
-        <source>Please Select A File Type To Save</source>
-        <translation type="obsolete">保存するファイルの種類を選択してください</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
         <translation>能力値を算出</translation>
     </message>
     <message>
-        <source>Can Not Export This Format</source>
-        <translation type="obsolete">このフォーマットはエクスポートできません</translation>
-    </message>
-    <message>
-        <source>PSV FF7 SaveGame (*.psv)</source>
-        <translation type="obsolete">PSV FF7 セーブ (*.psv)</translation>
-    </message>
-    <message>
         <source>PAL (BESCES-00868)</source>
         <translatorcomment>PAL (BESCES-00900) {00868)?}</translatorcomment>
         <translation>PAL (BESCES-00868)</translation>
-    </message>
-    <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="obsolete">BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -5618,48 +5705,12 @@ Table Entries are Editable</source>
         <translation>海チョコボ</translation>
     </message>
     <message>
-        <source>MDS6_2: Sense Materia</source>
-        <translation>６番街公園: マテリア みやぶる</translation>
-    </message>
-    <message>
-        <source>EALS_1: Cover Materia</source>
-        <translation>エアリスの家: マテリア かばう</translation>
-    </message>
-    <message>
-        <source>EALS_1: Ether</source>
-        <translation>エアリスの家: エーテル</translation>
-    </message>
-    <message>
-        <source>CRCIN_2: Ramuh Materia</source>
-        <translation>ひかえ室: マテリア ラムウ</translation>
-    </message>
-    <message>
-        <source>FARM: Choco-Mog Materia</source>
-        <translation>チョコボファーム: マテリア チョコボ＆モーグリ</translation>
-    </message>
-    <message>
-        <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation>エアリスの家２Ｆ: ポーション, フェニックスの尾</translation>
-    </message>
-    <message>
-        <source>ZZ1:Mythril</source>
-        <translation>オヤジ小屋: ミスリル</translation>
-    </message>
-    <message>
         <source>0xBEF (farmitems)</source>
         <translation>0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation>0x01 - チョコボ＆モーグリ入手後 （再入手？）</translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="obsolete">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Load Failed</source>
@@ -5788,74 +5839,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GAIIN_1:Javelin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_1:Ribbon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_3:Speed Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_4:Enhance Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Fire Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>GAIIN_5:Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMAYOR: Turbo Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNINN2: X-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2: Vaccine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SNMIN2:Hero Drink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN3:Catastrophe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>NCOIN1:Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:Poison Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_4:MpTurbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_3:Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TRNAD_2:Neo Bahmut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Game Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5873,22 +5856,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ5: Mime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ6: HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ7: Quadra Magic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ8: KOTR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5999,10 +5966,6 @@ trigger showing that tutorial</source>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
         <translation type="unfinished">FF7 VGS セーブ (*.vgs *.mem)</translation>
-    </message>
-    <message>
-        <source>DEX (*.dex)</source>
-        <translation type="obsolete">Dex-Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>PSV (*.psv)</source>
@@ -6463,10 +6426,6 @@ trigger showing that tutorial</source>
         <translation>バハムート零式</translation>
     </message>
     <message>
-        <source>Knights of Round</source>
-        <translation>ナイツオブラウンド</translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation>マスターしょうかん</translation>
     </message>
@@ -6481,6 +6440,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Typhon</source>
         <translation>テュポーン</translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation>ナイツオブラウンド</translation>
     </message>
 </context>
 <context>

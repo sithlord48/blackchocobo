@@ -131,7 +131,8 @@ void MainWindow::init_display()
     itemlist_layout->setContentsMargins(0,0,0,0);
     itemlist_layout->addWidget(itemlist);
     ui->frm_itemlist->setLayout(itemlist_layout);
-    ui->frm_itemlist->adjustSize();
+    ui->group_items->setFixedWidth(itemlist->width()+6);
+
 
     chocoboManager = new ChocoboManager;
     QHBoxLayout *cmLayout = new QHBoxLayout;
