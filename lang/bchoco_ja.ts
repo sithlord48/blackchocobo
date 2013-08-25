@@ -1335,6 +1335,86 @@ The km/h speeds are calculated while playing </source>
         <source>HP Absorb</source>
         <translation type="unfinished">ＨＰきゅうしゅう</translation>
     </message>
+    <message>
+        <source>Underwater</source>
+        <translation type="unfinished">せんすい</translation>
+    </message>
+    <message>
+        <source>Master Command</source>
+        <translation type="unfinished">マスターコマンド</translation>
+    </message>
+    <message>
+        <source>Master Magic</source>
+        <translation type="unfinished">マスターまほう</translation>
+    </message>
+    <message>
+        <source>Master Summon</source>
+        <translation type="unfinished">マスターしょうかん</translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished">海チョコボ</translation>
+    </message>
+    <message>
+        <source>Morph</source>
+        <translation type="unfinished">へんか</translation>
+    </message>
+    <message>
+        <source>Luck Plus</source>
+        <translation type="unfinished">ラッキー</translation>
+    </message>
+    <message>
+        <source>Princess Guard</source>
+        <translation type="unfinished">プリンセスガード</translation>
+    </message>
+    <message>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished">法螺貝</translation>
+    </message>
+    <message>
+        <source>Bahamut</source>
+        <translation type="unfinished">バハムート</translation>
+    </message>
+    <message>
+        <source>Trident</source>
+        <translation type="unfinished">トライデント</translation>
+    </message>
+    <message>
+        <source>Rocket Punch</source>
+        <translation type="unfinished">ロケットパンチ</translation>
+    </message>
+    <message>
+        <source>Silver Rifle</source>
+        <translation type="unfinished">銀玉鉄砲</translation>
+    </message>
+    <message>
+        <source>Motor Drive</source>
+        <translation type="unfinished">モータードライブ</translation>
+    </message>
+    <message>
+        <source>Fire Ring</source>
+        <translation type="unfinished">炎の指輪</translation>
+    </message>
+    <message>
+        <source>Purchased The House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W Machine Gun</source>
+        <translation type="unfinished">Wマシンガン</translation>
+    </message>
+    <message>
+        <source>Transform</source>
+        <translation type="unfinished">へんしん</translation>
+    </message>
+    <message>
+        <source>Luck Source</source>
+        <translation type="unfinished">ラックアップ</translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation type="unfinished">1/35神羅兵</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3292,7 +3372,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation type="unfinished">やまびこえんまく</translation>
+        <translation>やまびこえんまく</translation>
     </message>
 </context>
 <context>

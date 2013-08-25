@@ -292,8 +292,8 @@ static LOCATION Locations[]=
     {"elmin3_2",QT_TRANSLATE_NOOP("Locations","House: 2f"),"1","339","334","-151","34","32"},
 
     {"elmtow",QT_TRANSLATE_NOOP("Locations","Rear Tower (Pagoda)"),"1","340","61","-55","8","32"},
-    {"elmmin4_1",QT_TRANSLATE_NOOP("Locations","House: 1f"),"1","341","33","108","27","32"},
-    {"elmmin4_2",QT_TRANSLATE_NOOP("Locations","House: 2f"),"1","342","73","310","26","32"},
+    {"elmin4_1",QT_TRANSLATE_NOOP("Locations","House: 1f"),"1","341","33","108","27","32"},
+    {"elmin4_2",QT_TRANSLATE_NOOP("Locations","House: 2f"),"1","342","73","310","26","32"},
     {"farm",QT_TRANSLATE_NOOP("Locations","Chocobo farm"),"1","343","-207","-126","13","32"},
     {"frmin",QT_TRANSLATE_NOOP("Locations","Chocobo farm"),"1","344","65","-58","62","32"},
     {"frcyo",QT_TRANSLATE_NOOP("Locations","Chocobo Ranch"),"1","345","-134","-150","73","32"},
