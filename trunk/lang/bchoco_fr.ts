@@ -1098,7 +1098,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Talent de l&apos;ennemi</translation>
     </message>
     <message>
         <source>Odin</source>
@@ -1335,6 +1335,86 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>HP Absorb</source>
         <translation type="unfinished">Absorption HP</translation>
+    </message>
+    <message>
+        <source>Underwater</source>
+        <translation type="unfinished">Sous-marin</translation>
+    </message>
+    <message>
+        <source>Master Command</source>
+        <translation type="unfinished">Commande maître</translation>
+    </message>
+    <message>
+        <source>Master Magic</source>
+        <translation type="unfinished">Magie maîtresse</translation>
+    </message>
+    <message>
+        <source>Master Summon</source>
+        <translation type="unfinished">Invocation maître</translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished">Chocobo or</translation>
+    </message>
+    <message>
+        <source>Morph</source>
+        <translation type="unfinished">Trans</translation>
+    </message>
+    <message>
+        <source>Luck Plus</source>
+        <translation type="unfinished">Super chance</translation>
+    </message>
+    <message>
+        <source>Princess Guard</source>
+        <translation type="unfinished">Garde de princesse</translation>
+    </message>
+    <message>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished">Conque</translation>
+    </message>
+    <message>
+        <source>Bahamut</source>
+        <translation type="unfinished">Bahamut</translation>
+    </message>
+    <message>
+        <source>Trident</source>
+        <translation type="unfinished">Trident</translation>
+    </message>
+    <message>
+        <source>Rocket Punch</source>
+        <translation type="unfinished">Punch foudroyant</translation>
+    </message>
+    <message>
+        <source>Silver Rifle</source>
+        <translation type="unfinished">Fusil argent</translation>
+    </message>
+    <message>
+        <source>Motor Drive</source>
+        <translation type="unfinished">Moteur</translation>
+    </message>
+    <message>
+        <source>Fire Ring</source>
+        <translation type="unfinished">Anneau feu</translation>
+    </message>
+    <message>
+        <source>Purchased The House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W Machine Gun</source>
+        <translation type="unfinished">Mitrailleuse W</translation>
+    </message>
+    <message>
+        <source>Transform</source>
+        <translation type="unfinished">Transformation</translation>
+    </message>
+    <message>
+        <source>Luck Source</source>
+        <translation type="unfinished">Source de chance</translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation type="unfinished">Soldat 1/35</translation>
     </message>
 </context>
 <context>

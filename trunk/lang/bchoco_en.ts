@@ -1335,6 +1335,86 @@ The km/h speeds are calculated while playing </source>
         <source>HP Absorb</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Underwater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Morph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Princess Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trident</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rocket Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver Rifle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motor Drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Purchased The House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W Machine Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>

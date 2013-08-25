@@ -1022,7 +1022,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gesticular</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
@@ -1335,6 +1335,86 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>HP Absorb</source>
         <translation type="unfinished">Absorber PG</translation>
+    </message>
+    <message>
+        <source>Underwater</source>
+        <translation type="unfinished">Subacuática</translation>
+    </message>
+    <message>
+        <source>Master Command</source>
+        <translation type="unfinished">Comando maestro</translation>
+    </message>
+    <message>
+        <source>Master Magic</source>
+        <translation type="unfinished">Magia maestra</translation>
+    </message>
+    <message>
+        <source>Master Summon</source>
+        <translation type="unfinished">Invocación mestra</translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished">Chocobo dorado</translation>
+    </message>
+    <message>
+        <source>Morph</source>
+        <translation type="unfinished">Morfo</translation>
+    </message>
+    <message>
+        <source>Luck Plus</source>
+        <translation type="unfinished">Super suerte</translation>
+    </message>
+    <message>
+        <source>Princess Guard</source>
+        <translation type="unfinished">Guardia Princesa</translation>
+    </message>
+    <message>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished">Armazón</translation>
+    </message>
+    <message>
+        <source>Bahamut</source>
+        <translation type="unfinished">Bahamut</translation>
+    </message>
+    <message>
+        <source>Trident</source>
+        <translation type="unfinished">Tridente</translation>
+    </message>
+    <message>
+        <source>Rocket Punch</source>
+        <translation type="unfinished">Golpe Cohete</translation>
+    </message>
+    <message>
+        <source>Silver Rifle</source>
+        <translation type="unfinished">Rifle</translation>
+    </message>
+    <message>
+        <source>Motor Drive</source>
+        <translation type="unfinished">Fuerza Motor</translation>
+    </message>
+    <message>
+        <source>Fire Ring</source>
+        <translation type="unfinished">Anillo Fuego</translation>
+    </message>
+    <message>
+        <source>Purchased The House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W Machine Gun</source>
+        <translation type="unfinished">Metralleta W</translation>
+    </message>
+    <message>
+        <source>Transform</source>
+        <translation type="unfinished">Transformar</translation>
+    </message>
+    <message>
+        <source>Luck Source</source>
+        <translation type="unfinished">Fuente Suerte</translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation type="unfinished">Soldado 1/35</translation>
     </message>
 </context>
 <context>
