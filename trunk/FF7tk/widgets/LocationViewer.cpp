@@ -20,6 +20,7 @@ LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
     region="";
     transBasePath="";
+    autoUpdate=false;
     regExpSearch=false;
     caseSensitive=false;
     Locations = new FF7Location();
@@ -80,7 +81,7 @@ void LocationViewer::init_display(void)
         newItem->setToolTip(tooltip);
         locationTable->setItem(i,1,newItem);
 
-        //To Assure proper numerical sorting of location IDs they should all contain the same number of characters.
+        //To assure proper numerical sorting of location IDs they should all contain the same number of characters.
         newItem = new QTableWidgetItem(QString("%1").arg(Locations->locationID(i).toInt(),3,10,QChar('0')).toUpper());//Pad so at least 3 chars. Leading 0's
         newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);
         newItem->setTextAlignment(Qt::AlignHCenter);
@@ -88,7 +89,7 @@ void LocationViewer::init_display(void)
         locationTable->setRowHeight(i,font().pointSizeF()*2+2);
     }
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
-    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()-6);
+    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM());
     locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setCurrentCell(-1,-1);
 
@@ -155,6 +156,12 @@ void LocationViewer::init_display(void)
     sbD->setWrapping(true);
     sbD->setAlignment(Qt::AlignCenter);
 
+    chkAutoUpdate = new QCheckBox;
+    chkAutoUpdate->setText(tr("Save New Coordnates When Table Se&lection Changes"));
+    //connect now and forget it
+    connect(chkAutoUpdate,SIGNAL(clicked(bool)),this,SLOT(chkAutoUpdateChanged(bool)));
+
+
     fieldItemList = new QListWidget();
     fieldItemList->setFixedHeight(0);
     fieldItemList->setUniformItemSizes(true);
@@ -171,8 +178,10 @@ void LocationViewer::init_display(void)
     XYTD->addWidget(sbT);
     XYTD->addWidget(sbD);
 
+
     QVBoxLayout *CoordsLayout = new QVBoxLayout;
     CoordsLayout->setContentsMargins(6,6,6,6);
+    CoordsLayout->addWidget(chkAutoUpdate);
     CoordsLayout->addLayout(nameIDs);
     CoordsLayout->addLayout(XYTD);
 
@@ -195,7 +204,7 @@ void LocationViewer::init_display(void)
     RightSideLayout->addWidget(fieldItemList);
 
     QHBoxLayout *FinalLayout = new QHBoxLayout;
-    FinalLayout->setContentsMargins(6,6,6,6);
+    FinalLayout->setContentsMargins(3,3,3,3);
     FinalLayout->addLayout(LeftSideLayout);
     FinalLayout->addLayout(RightSideLayout);
     this->setLayout(FinalLayout);
@@ -243,19 +252,22 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
         int mapID = Locations->mapID(locationTable->item(currentRow,0)->text()).toInt();
         int locID= Locations->locationID(locationTable->item(currentRow,0)->text()).toInt();
         setLocation(mapID,locID);
-        emit(locationChanged(Locations->fileName(mapID,locID)));
+        if(autoUpdate){emit(locationChanged(Locations->fileName(mapID,locID)));}
     }
     lblLocationPreview->adjustSize();
 }
 
 void LocationViewer::setSelected(QString locFilename)
 {
+    //if(locFilename == locationTable->item(locationTable->currentRow(),0)->text()){return;}
     locationTable->setCurrentItem(locationTable->item(-1,-1));
     for(int i=0;i<Locations->len();i++)
     {
         if(locationTable->item(i,0)->text()== locFilename)
         {
+            bool u = autoUpdate; autoUpdate=true;
             locationTable->setCurrentItem(locationTable->item(i,0));
+            autoUpdate=u;
             break;
         }
     }
@@ -290,7 +302,11 @@ void LocationViewer::setLocation(int mapId,int locId)
         lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
         QString oldStr = Locations->locationString(fileName);
         QString newStr = translate(oldStr);
-        if(oldStr !=newStr){emit(locationStringChanged(newStr));}
+        if(oldStr !=newStr && autoUpdate)
+        {
+            emit(locationStringChanged(newStr));
+            qWarning()<<QString("LocationString Changed: %1").arg(newStr);
+        }
         sbMapID->setValue(Locations->mapID(fileName).toInt());
         sbLocID->setValue(Locations->locationID(fileName).toInt());
         sbX->setValue(Locations->x(fileName).toInt());
@@ -302,7 +318,7 @@ void LocationViewer::setLocation(int mapId,int locId)
     }
     init_connections();
 }
-void LocationViewer::lineLocationNameChanged(QString locName){emit(locationStringChanged(locName));}
+void LocationViewer::lineLocationNameChanged(QString locName){emit(locationStringChanged(locName));qWarning()<<QString("LocationString Changed: %1").arg(locName);}
 void LocationViewer::setX(int x){init_disconnect();sbX->setValue(x);init_connections();}
 void LocationViewer::setY(int y){init_disconnect();sbY->setValue(y);init_connections();}
 void LocationViewer::setT(int t){init_disconnect();sbT->setValue(t);init_connections();}
@@ -313,9 +329,14 @@ void LocationViewer::setLocationString(QString locString)
 {
     init_disconnect();
     QString newStr = translate(locString);
-    if(locString !=newStr){emit(locationStringChanged(newStr));}
     lineLocationName->setText(newStr);
+    if(locString !=newStr && autoUpdate){emit(locationStringChanged(newStr));qWarning()<<QString("LocationString Changed: %1").arg(newStr);}
     init_connections();
+}
+void LocationViewer::chkAutoUpdateChanged(bool checked)
+{
+    autoUpdate=checked;
+    if(checked){emit locationChanged(Locations->fileName(sbMapID->value(),sbLocID->value()));}
 }
 void LocationViewer::setHorizontalHeaderStyle(QString styleSheet){locationTable->horizontalHeader()->setStyleSheet(styleSheet);}
 void LocationViewer::setRegion(QString newRegion){region=newRegion;setLocation(sbMapID->value(),sbLocID->value());}

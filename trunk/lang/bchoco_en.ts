@@ -3425,6 +3425,10 @@ The km/h speeds are calculated while playing </source>
         <source>Location Filter...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -4544,10 +4548,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>-Empty-</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4748,10 +4748,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>C&amp;hocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4864,10 +4860,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Game Progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bombing Mission Progress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4905,18 +4897,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5335,10 +5315,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6039,6 +6015,46 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>DEX (*.gme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Materia Added!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Save Location: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progression Reset Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Items Added</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

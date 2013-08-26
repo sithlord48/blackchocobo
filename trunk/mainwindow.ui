@@ -447,7 +447,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <enum>Qt::NoFocus</enum>
        </property>
        <attribute name="title">
-        <string>P&amp;arty</string>
+        <string>Party</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_18">
         <property name="spacing">
@@ -1314,7 +1314,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
       </widget>
       <widget class="QWidget" name="tab_items">
        <attribute name="title">
-        <string>&amp;Items</string>
+        <string>Items</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_113">
         <property name="leftMargin">
@@ -2202,7 +2202,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
       </widget>
       <widget class="QWidget" name="tab_materia">
        <attribute name="title">
-        <string>&amp;Materia</string>
+        <string>Materia</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <property name="leftMargin">
@@ -2361,7 +2361,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
       </widget>
       <widget class="QWidget" name="tab_chocobos">
        <attribute name="title">
-        <string>C&amp;hocobo</string>
+        <string>Chocobo</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_19">
         <property name="spacing">
@@ -2425,7 +2425,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
       </widget>
       <widget class="QWidget" name="tab_location">
        <attribute name="title">
-        <string>&amp;Location</string>
+        <string>Location</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_96">
         <property name="spacing">
@@ -4223,7 +4223,7 @@ location.</string>
       </widget>
       <widget class="QWidget" name="tab_progress">
        <attribute name="title">
-        <string>&amp;Game Progress</string>
+        <string>Game Progress</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_102">
         <item>
@@ -5107,7 +5107,7 @@ Is Under Heavy Development</string>
       </widget>
       <widget class="QWidget" name="tab_other">
        <attribute name="title">
-        <string>Othe&amp;r</string>
+        <string>Other</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">

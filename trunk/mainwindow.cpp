@@ -1763,8 +1763,8 @@ void MainWindow::on_btn_add_all_materia_clicked()
     }
     //Finish With Summons
     for(int i=183;i<200;i++){ff7->setPartyMateria(s,i,(i-109),FF7Materia::MaxMateriaAp);}
-
     materiaupdate();
+    statusBar()->showMessage(tr("All Materia Added!"),750);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1777,6 +1777,7 @@ void MainWindow::locationSelectionChanged(QString fieldName)
     ff7->setLocationT(s,Locations.t(fieldName).toInt());
     ff7->setLocationD(s,Locations.d(fieldName).toInt());
     ff7->setLocation(s,Locations.locationString(fieldName));
+    statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName),750);
 }}
 void MainWindow::map_id_valueChanged(int value){if(!load){ff7->setMapId(s, value);}}
 void MainWindow::loc_id_valueChanged(int value){if(!load){ff7->setLocationId(s,value);}}
@@ -2081,8 +2082,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
         ui->sb_turkschruch->setValue(0); // reset turks.
-        locationViewer->setSelected(Locations.fileName(1,116));
+        locationViewer->setMapId(1);
+        locationViewer->setLocationId(116);
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
+        statusBar()->showMessage(tr("Progression Reset Complete"),750);
     }
     else if(index == 2) // The Church In The Slums
     {
@@ -2095,11 +2098,13 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
-        locationViewer->setSelected(Locations.fileName(1,183));
+        locationViewer->setMapId(1);
+        locationViewer->setLocationId(183);
         ui->combo_party1->setCurrentIndex(0);
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
         ui->label_replaynote->setText(tr("Meeting Aeris"));
+        statusBar()->showMessage(tr("Progression Reset Complete"),750);
     }
     else if (index ==3)// Flash back
     {
@@ -2109,7 +2114,8 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->setBmProgress2(s,198);
         ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        locationViewer->setSelected(Locations.fileName(1,332));
+        locationViewer->setMapId(1);
+        locationViewer->setLocationId(332);
         // set up young cloud, Copy Cloud Change ID to young Cloud
         ff7->setCharacter(s,6,ff7->character(s,0));
         ff7->setCharID(s,6,FF7Char::YoungCloud);
@@ -2121,6 +2127,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));}
         else if(curchar ==FF7Char::Vincent){char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
+        statusBar()->showMessage(tr("Progression Reset Complete"),750);
     }
 
     else if(index == 4) // The Date Scene
@@ -2131,8 +2138,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->setBmProgress2(s,198);
         ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        locationViewer->setSelected(Locations.fileName(1,496));
+        locationViewer->setMapId(1);
+        locationViewer->setLocationId(496);
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
+        statusBar()->showMessage(tr("Progression Reset Complete"),750);
     }
 
     else if (index == 5)//Aeris Death
@@ -2143,10 +2152,12 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->setBmProgress2(s,198);
         ff7->setBmProgress3(s,3);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        locationViewer->setSelected(Locations.fileName(1,646));
+        locationViewer->setMapId(1);
+        locationViewer->setLocationId(646);
         phsList->setChecked(3,1,false);
         phsList->setChecked(3,2,false);
         ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
+        statusBar()->showMessage(tr("Progression Reset Complete"),750);
     }
 
     else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
@@ -2157,14 +2168,12 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
     for(int i=0;i<320;i++){ff7->setItem(s,i,FF7Item::EmptyItemData);}
-
     itemlist->setItems(ff7->items(s));
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
 {
     for (int i=0;i<200;i++){ff7->setPartyMateria(s,i,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
-
     materiaupdate();
 }
 
@@ -2608,6 +2617,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     }
     //guirefresh(0)
     itemlist->setItems(ff7->items(s));
+    statusBar()->showMessage(tr("All Items Added"),750);
 }
 
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
