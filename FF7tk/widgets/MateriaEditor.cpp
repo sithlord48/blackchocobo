@@ -120,7 +120,7 @@ void MateriaEditor::init_display()
     combo_materia->setMinimumHeight(24);
     list_skills->setFixedHeight((this->fontMetrics().height()*5)+6);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
-    list_status->setFixedHeight((this->font().pointSize()*10)+6);
+    list_status->setFixedHeight((this->fontMetrics().height()*5)+6);
     list_status->setSelectionMode(QAbstractItemView::NoSelection);
 
     //size policies

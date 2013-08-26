@@ -3426,6 +3426,10 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>Location Filter...</source>
         <translation>Filtre sur le lieu...</translation>
     </message>
+    <message>
+        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -4543,7 +4547,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>P&amp;arty</source>
-        <translation>É&amp;quipe</translation>
+        <translation type="obsolete">É&amp;quipe</translation>
     </message>
     <message>
         <source>AP</source>
@@ -4567,7 +4571,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>&amp;Items</source>
-        <translation>Obje&amp;ts</translation>
+        <translation type="obsolete">Obje&amp;ts</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
@@ -4859,11 +4863,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
-        <translation>&amp;Matéria</translation>
+        <translation type="obsolete">&amp;Matéria</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
-        <translation>C&amp;hocobos</translation>
+        <translation type="obsolete">C&amp;hocobos</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4879,11 +4883,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
-        <translation>&amp;Autres</translation>
+        <translation type="obsolete">&amp;Autres</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation>Pro&amp;gression du jeu</translation>
+        <translation type="obsolete">Pro&amp;gression du jeu</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -5347,7 +5351,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>&amp;Lieu</translation>
+        <translation type="obsolete">&amp;Lieu</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -6059,6 +6063,46 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>DEX (*.gme)</source>
         <translation>DEX (*.gme)</translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation>Équipe</translation>
+    </message>
+    <message>
+        <source>Items</source>
+        <translation>Objets</translation>
+    </message>
+    <message>
+        <source>Chocobo</source>
+        <translation>Chocobos</translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation>Lieu</translation>
+    </message>
+    <message>
+        <source>Game Progress</source>
+        <translation>Progression du jeu</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation>Autres</translation>
+    </message>
+    <message>
+        <source>All Materia Added!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Save Location: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progression Reset Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Items Added</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

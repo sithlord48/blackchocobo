@@ -74,6 +74,7 @@ private slots:
     void actionCaseSensitiveToggled(bool checked);
     void btnSearchOptionsClicked(void);
     void fieldItemListItemChanged(QModelIndex index);
+    void chkAutoUpdateChanged(bool checked);
 protected:
     void resizeEvent(QResizeEvent *ev);
 private:
@@ -99,8 +100,10 @@ private:
     QString region;
     QString transBasePath;
     QListWidget *fieldItemList;
+    QCheckBox *chkAutoUpdate;
     bool regExpSearch;
     bool caseSensitive;
+    bool autoUpdate;
 };
 
 #endif // LOCATIONVIEWER_H

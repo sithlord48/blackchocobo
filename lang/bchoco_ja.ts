@@ -3425,6 +3425,10 @@ The km/h speeds are calculated while playing </source>
         <source>Location Filter...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -4621,7 +4625,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>P&amp;arty</source>
-        <translation>パーティ(&amp;A)</translation>
+        <translation type="obsolete">パーティ(&amp;A)</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -4825,7 +4829,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>C&amp;hocobo</source>
-        <translation>チョコボ(&amp;C)</translation>
+        <translation type="obsolete">チョコボ(&amp;C)</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4945,7 +4949,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation>ゲームの進捗(&amp;G)</translation>
+        <translation type="obsolete">ゲームの進捗(&amp;G)</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -4989,15 +4993,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Items</source>
-        <translation>アイテム(&amp;I)</translation>
+        <translation type="obsolete">アイテム(&amp;I)</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
-        <translation>マテリア(&amp;M)</translation>
+        <translation type="obsolete">マテリア(&amp;M)</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
-        <translation>その他(&amp;R)</translation>
+        <translation type="obsolete">その他(&amp;R)</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -5421,7 +5425,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>セーブ地点(&amp;L)</translation>
+        <translation type="obsolete">セーブ地点(&amp;L)</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -6126,6 +6130,46 @@ trigger showing that tutorial</source>
     <message>
         <source>DEX (*.gme)</source>
         <translation type="unfinished">FF7 Dex Drive セーブ (*.gme)</translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation>パーティ</translation>
+    </message>
+    <message>
+        <source>Items</source>
+        <translation>アイテム</translation>
+    </message>
+    <message>
+        <source>Chocobo</source>
+        <translation>チョコボ</translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation>セーブ地点</translation>
+    </message>
+    <message>
+        <source>Game Progress</source>
+        <translation>ゲームの進捗</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation>その他</translation>
+    </message>
+    <message>
+        <source>All Materia Added!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Save Location: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progression Reset Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Items Added</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

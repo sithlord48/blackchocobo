@@ -3427,6 +3427,10 @@ Los km/h son calculados mientras se juega</translation>
         <source>Location Filter...</source>
         <translation>Filtro de Lugar</translation>
     </message>
+    <message>
+        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -4544,7 +4548,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>P&amp;arty</source>
-        <translation>G&amp;rupo</translation>
+        <translation type="obsolete">G&amp;rupo</translation>
     </message>
     <message>
         <source>AP</source>
@@ -4568,7 +4572,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Items</source>
-        <translation>&amp;Objetos</translation>
+        <translation type="obsolete">&amp;Objetos</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
@@ -4788,11 +4792,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
-        <translation>&amp;Materia</translation>
+        <translation type="obsolete">&amp;Materia</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
-        <translation>C&amp;hocobo</translation>
+        <translation type="obsolete">C&amp;hocobo</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4808,7 +4812,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation>&amp;Progreso en el Juego</translation>
+        <translation type="obsolete">&amp;Progreso en el Juego</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -4932,7 +4936,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
-        <translation>Ot&amp;ros</translation>
+        <translation type="obsolete">Ot&amp;ros</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -5348,7 +5352,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>&amp;Localización</translation>
+        <translation type="obsolete">&amp;Localización</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -6057,6 +6061,46 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>DEX (*.gme)</source>
         <translation type="unfinished">Archivo de guardado FF7 Dex(*.gme)</translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation>Grupo</translation>
+    </message>
+    <message>
+        <source>Items</source>
+        <translation>Objetos</translation>
+    </message>
+    <message>
+        <source>Chocobo</source>
+        <translation>Chocobo</translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation>Localización</translation>
+    </message>
+    <message>
+        <source>Game Progress</source>
+        <translation>Progreso en el Juego</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation>Otros</translation>
+    </message>
+    <message>
+        <source>All Materia Added!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Save Location: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progression Reset Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Items Added</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -3425,6 +3425,10 @@ The km/h speeds are calculated while playing </source>
         <source>Location Filter...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -4546,7 +4550,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>P&amp;arty</source>
-        <translation>P&amp;arty</translation>
+        <translation type="obsolete">P&amp;arty</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -4751,7 +4755,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>C&amp;hocobo</source>
-        <translation>C&amp;hocobo</translation>
+        <translation type="obsolete">C&amp;hocobo</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -4871,7 +4875,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation>&amp;Spiel Fortschritt</translation>
+        <translation type="obsolete">&amp;Spiel Fortschritt</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -4915,15 +4919,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Items</source>
-        <translation>&amp;Items</translation>
+        <translation type="obsolete">&amp;Items</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
-        <translation>&amp;Materia</translation>
+        <translation type="obsolete">&amp;Materia</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
-        <translation>&amp;Othe&amp;r</translation>
+        <translation type="obsolete">&amp;Othe&amp;r</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -5349,7 +5353,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>&amp;Ort</translation>
+        <translation type="obsolete">&amp;Ort</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -6056,6 +6060,46 @@ trigger showing that tutorial</source>
     <message>
         <source>DEX (*.gme)</source>
         <translation type="unfinished">Dex-Drive Spielstand(*.gme)</translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation>Party</translation>
+    </message>
+    <message>
+        <source>Items</source>
+        <translation>Items</translation>
+    </message>
+    <message>
+        <source>Chocobo</source>
+        <translation>Chocobo</translation>
+    </message>
+    <message>
+        <source>Location</source>
+        <translation>Ort</translation>
+    </message>
+    <message>
+        <source>Game Progress</source>
+        <translation>Spiel Fortschritt</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation>Other</translation>
+    </message>
+    <message>
+        <source>All Materia Added!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Save Location: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progression Reset Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Items Added</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
