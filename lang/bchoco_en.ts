@@ -1415,6 +1415,78 @@ The km/h speeds are calculated while playing </source>
         <source>1/35 soldier</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Leviathan Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Huge Materia:Rocket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>

@@ -1415,6 +1415,78 @@ The km/h speeds are calculated while playing </source>
         <source>1/35 soldier</source>
         <translation type="unfinished">1/35 - Soldat</translation>
     </message>
+    <message>
+        <source>Leviathan Scales</source>
+        <translation type="unfinished">Leviathanschuppen</translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished">Dragonerlanze</translation>
+    </message>
+    <message>
+        <source>W-Item</source>
+        <translation type="unfinished">2xObjekt</translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished">Maxistrahl</translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">Aegis-Armband</translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished">Krummschwert</translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished">Schlachtrompete</translation>
+    </message>
+    <message>
+        <source>Leviathan</source>
+        <translation type="unfinished">Leviathan</translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished">Oritsuru</translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">Sternenmphon</translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished">Dragohieb</translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished">Schild</translation>
+    </message>
+    <message>
+        <source>W-Magic</source>
+        <translation type="unfinished">2xZauber</translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished">Kaiserwache</translation>
+    </message>
+    <message>
+        <source>Contain</source>
+        <translation type="unfinished">Eindämmung</translation>
+    </message>
+    <message>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">Auch Stehlen</translation>
+    </message>
+    <message>
+        <source>Huge Materia:Rocket</source>
+        <translation type="unfinished">Große Materia:Rakete</translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished">Heilmittel</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4549,10 +4621,6 @@ The km/h speeds are calculated while playing </source>
         <translation>AP</translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation type="obsolete">P&amp;arty</translation>
-    </message>
-    <message>
         <source>-Empty-</source>
         <translation>-Leer-</translation>
     </message>
@@ -4754,10 +4822,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Snowboard</translation>
     </message>
     <message>
-        <source>C&amp;hocobo</source>
-        <translation type="obsolete">C&amp;hocobo</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia gestohlen von Yuffie</translation>
     </message>
@@ -4874,10 +4938,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Ausgewählte Materia Fähigkeiten und Stat Info</translation>
     </message>
     <message>
-        <source>&amp;Game Progress</source>
-        <translation type="obsolete">&amp;Spiel Fortschritt</translation>
-    </message>
-    <message>
         <source>Bombing Mission Progress</source>
         <translation>Bomben Mission Fortschritt</translation>
     </message>
@@ -4916,18 +4976,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Next Slot</source>
         <translation>Nächster Steckplatz</translation>
-    </message>
-    <message>
-        <source>&amp;Items</source>
-        <translation type="obsolete">&amp;Items</translation>
-    </message>
-    <message>
-        <source>&amp;Materia</source>
-        <translation type="obsolete">&amp;Materia</translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
-        <translation type="obsolete">&amp;Othe&amp;r</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -5350,10 +5398,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aeris Death</source>
         <translation>Aeris Tod</translation>
-    </message>
-    <message>
-        <source>&amp;Location</source>
-        <translation type="obsolete">&amp;Ort</translation>
     </message>
     <message>
         <source>Save Location</source>

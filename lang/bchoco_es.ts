@@ -1416,6 +1416,78 @@ Los km/h son calculados mientras se juega</translation>
         <source>1/35 soldier</source>
         <translation type="unfinished">Soldado 1/35</translation>
     </message>
+    <message>
+        <source>Leviathan Scales</source>
+        <translation type="unfinished">Escamas Leviatán</translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished">Lanza Dragón</translation>
+    </message>
+    <message>
+        <source>W-Item</source>
+        <translation type="unfinished">Objeto W</translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished">Rayo Máximo</translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">Aro de Aegis</translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished">Cimitarra</translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished">Trompeta</translation>
+    </message>
+    <message>
+        <source>Leviathan</source>
+        <translation type="unfinished">Leviatán</translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished">Oritsuru</translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">Fono de Luz</translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished">Punto Errado</translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished">Escudo</translation>
+    </message>
+    <message>
+        <source>W-Magic</source>
+        <translation type="unfinished">Magia W</translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished">Guardia Imperial</translation>
+    </message>
+    <message>
+        <source>Contain</source>
+        <translation type="unfinished">Contener</translation>
+    </message>
+    <message>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">Robo simultáneo</translation>
+    </message>
+    <message>
+        <source>Huge Materia:Rocket</source>
+        <translation type="unfinished">Materia Enorme:Cohete</translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished">Remedio</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4547,10 +4619,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Click En Un Personaje Para editar =====&gt;</translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation type="obsolete">G&amp;rupo</translation>
-    </message>
-    <message>
         <source>AP</source>
         <translation>AP</translation>
     </message>
@@ -4569,10 +4637,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>GP</source>
         <translation>GP</translation>
-    </message>
-    <message>
-        <source>&amp;Items</source>
-        <translation type="obsolete">&amp;Objetos</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
@@ -4791,14 +4855,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Maestro</translation>
     </message>
     <message>
-        <source>&amp;Materia</source>
-        <translation type="obsolete">&amp;Materia</translation>
-    </message>
-    <message>
-        <source>C&amp;hocobo</source>
-        <translation type="obsolete">C&amp;hocobo</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia Robada por Yuffie</translation>
     </message>
@@ -4809,10 +4865,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>Info de Habilidades y Stats de la Materia Seleccionada</translation>
-    </message>
-    <message>
-        <source>&amp;Game Progress</source>
-        <translation type="obsolete">&amp;Progreso en el Juego</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -4933,10 +4985,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Show Selection Dialog</source>
         <translation>Mostrar Menú de Selección</translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
-        <translation type="obsolete">Ot&amp;ros</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -5349,10 +5397,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Aeris Death</source>
         <translation>Muerte de Aeris</translation>
-    </message>
-    <message>
-        <source>&amp;Location</source>
-        <translation type="obsolete">&amp;Localización</translation>
     </message>
     <message>
         <source>Save Location</source>
