@@ -1415,6 +1415,78 @@ The km/h speeds are calculated while playing </source>
         <source>1/35 soldier</source>
         <translation type="unfinished">1/35神羅兵</translation>
     </message>
+    <message>
+        <source>Leviathan Scales</source>
+        <translation type="unfinished">水神様のうろこ</translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished">ドラグーンランス</translation>
+    </message>
+    <message>
+        <source>W-Item</source>
+        <translation type="unfinished">Ｗアイテム</translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished">マキシマムレイ</translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">エイジスの腕輪</translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished">青龍偃月刀</translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished">突撃ラッパ</translation>
+    </message>
+    <message>
+        <source>Leviathan</source>
+        <translation type="unfinished">リヴァイアサン</translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished">折り鶴</translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">スターライトホン</translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished">ミッシングスコア</translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Magic</source>
+        <translation type="unfinished">Ｗまほう</translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished">インペリアルガード</translation>
+    </message>
+    <message>
+        <source>Contain</source>
+        <translation type="unfinished">ふういん</translation>
+    </message>
+    <message>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">ついでにぬすむ</translation>
+    </message>
+    <message>
+        <source>Huge Materia:Rocket</source>
+        <translation type="unfinished">ヒュージマテリア (ロケット)</translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished">万能薬</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4624,10 +4696,6 @@ The km/h speeds are calculated while playing </source>
         <translation>AP</translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation type="obsolete">パーティ(&amp;A)</translation>
-    </message>
-    <message>
         <source>-Empty-</source>
         <translation>-なし-</translation>
     </message>
@@ -4828,10 +4896,6 @@ The km/h speeds are calculated while playing </source>
         <translation>スノーボード</translation>
     </message>
     <message>
-        <source>C&amp;hocobo</source>
-        <translation type="obsolete">チョコボ(&amp;C)</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>ユフィに盗まれるマテリア</translation>
     </message>
@@ -4948,10 +5012,6 @@ The km/h speeds are calculated while playing </source>
         <translation>選択マテリアのアビリティと装備効果</translation>
     </message>
     <message>
-        <source>&amp;Game Progress</source>
-        <translation type="obsolete">ゲームの進捗(&amp;G)</translation>
-    </message>
-    <message>
         <source>Bombing Mission Progress</source>
         <translation>魔晄炉爆破ミッションの進捗</translation>
     </message>
@@ -4990,18 +5050,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Next Slot</source>
         <translation>次のスロット</translation>
-    </message>
-    <message>
-        <source>&amp;Items</source>
-        <translation type="obsolete">アイテム(&amp;I)</translation>
-    </message>
-    <message>
-        <source>&amp;Materia</source>
-        <translation type="obsolete">マテリア(&amp;M)</translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
-        <translation type="obsolete">その他(&amp;R)</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -5422,10 +5470,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Aeris Death</source>
         <translation>エアリスの死</translation>
-    </message>
-    <message>
-        <source>&amp;Location</source>
-        <translation type="obsolete">セーブ地点(&amp;L)</translation>
     </message>
     <message>
         <source>Save Location</source>

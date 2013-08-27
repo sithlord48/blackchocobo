@@ -1416,6 +1416,78 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>1/35 soldier</source>
         <translation type="unfinished">Soldat 1/35</translation>
     </message>
+    <message>
+        <source>Leviathan Scales</source>
+        <translation type="unfinished">Ecailles-Léviathan</translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished">Lance de dragon</translation>
+    </message>
+    <message>
+        <source>W-Item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished">Rayon maximum</translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">Bracelet Aégis</translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished">Cimeterre</translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished">Bugle de combat</translation>
+    </message>
+    <message>
+        <source>Leviathan</source>
+        <translation type="unfinished">Léviathan</translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished">Oritsuru</translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">Téléphone d&apos;étoiles</translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished">Manuscrit absent</translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished">Bouclier</translation>
+    </message>
+    <message>
+        <source>W-Magic</source>
+        <translation type="unfinished">Magie-W</translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished">Garde impérial</translation>
+    </message>
+    <message>
+        <source>Contain</source>
+        <translation type="unfinished">Contenir</translation>
+    </message>
+    <message>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">Vol simultané</translation>
+    </message>
+    <message>
+        <source>Huge Materia:Rocket</source>
+        <translation type="unfinished">Méga-Matéria : Fusée</translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished">Remède</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4546,10 +4618,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Cliquez sur un perso pour l&apos;éditer =====&gt;</translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation type="obsolete">É&amp;quipe</translation>
-    </message>
-    <message>
         <source>AP</source>
         <translation>AP</translation>
     </message>
@@ -4568,10 +4636,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>GP</source>
         <translation>GP</translation>
-    </message>
-    <message>
-        <source>&amp;Items</source>
-        <translation type="obsolete">Obje&amp;ts</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
@@ -4862,14 +4926,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Maître</translation>
     </message>
     <message>
-        <source>&amp;Materia</source>
-        <translation type="obsolete">&amp;Matéria</translation>
-    </message>
-    <message>
-        <source>C&amp;hocobo</source>
-        <translation type="obsolete">C&amp;hocobos</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Matérias volées par Youfie</translation>
     </message>
@@ -4880,14 +4936,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>Niveau et compétences de la Matéria sélectionnée</translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
-        <translation type="obsolete">&amp;Autres</translation>
-    </message>
-    <message>
-        <source>&amp;Game Progress</source>
-        <translation type="obsolete">Pro&amp;gression du jeu</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -5348,10 +5396,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Aeris Death</source>
         <translation>Mort d&apos;Aeris</translation>
-    </message>
-    <message>
-        <source>&amp;Location</source>
-        <translation type="obsolete">&amp;Lieu</translation>
     </message>
     <message>
         <source>Save Location</source>
