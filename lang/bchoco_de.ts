@@ -1487,6 +1487,110 @@ The km/h speeds are calculated while playing </source>
         <source>Remedy</source>
         <translation type="unfinished">Heilmittel</translation>
     </message>
+    <message>
+        <source>Sneak Glove</source>
+        <translation type="unfinished">Stehlhandschuh</translation>
+    </message>
+    <message>
+        <source>Premium Heart</source>
+        <translation type="unfinished">Preminum-Herz</translation>
+    </message>
+    <message>
+        <source>Magic Counter</source>
+        <translation type="unfinished">Zauberkonter</translation>
+    </message>
+    <message>
+        <source>Bolt Ring</source>
+        <translation type="unfinished">Blitzring</translation>
+    </message>
+    <message>
+        <source>Gold Armlet</source>
+        <translation type="unfinished">Goldarmband</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Umbrella</source>
+        <translation type="unfinished">Schirm</translation>
+    </message>
+    <message>
+        <source>Flayer</source>
+        <translation type="unfinished">Peitsche</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">Chaos</translation>
+    </message>
+    <message>
+        <source>Hyper</source>
+        <translation type="unfinished">Hyper</translation>
+    </message>
+    <message>
+        <source>Keycard 66</source>
+        <translation type="unfinished">Code-Karte 66</translation>
+    </message>
+    <message>
+        <source>Wind Slash</source>
+        <translation type="unfinished">Windschwert</translation>
+    </message>
+    <message>
+        <source>Fairy Ring</source>
+        <translation type="unfinished">Elfenring</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished">Zusatzwirkung</translation>
+    </message>
+    <message>
+        <source>Black M-phone</source>
+        <translation type="unfinished">Schwarzes Mphon</translation>
+    </message>
+    <message>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished">Zauber-Schuriken</translation>
+    </message>
+    <message>
+        <source>Hairpin</source>
+        <translation type="unfinished">Haarnadel</translation>
+    </message>
+    <message>
+        <source>Safety Bit</source>
+        <translation type="unfinished">Schutzbit</translation>
+    </message>
+    <message>
+        <source>Midgar parts</source>
+        <translation type="unfinished">Teil von Midgar</translation>
+    </message>
+    <message>
+        <source>Mega All</source>
+        <translation type="unfinished">Mega-Alle</translation>
+    </message>
+    <message>
+        <source>Keycard 62</source>
+        <translation type="unfinished">Code-Karte 62</translation>
+    </message>
+    <message>
+        <source>Swift Bolt</source>
+        <translation type="unfinished">Blitzwind</translation>
+    </message>
+    <message>
+        <source>Master Fist</source>
+        <translation type="unfinished">Meister-Faust</translation>
+    </message>
+    <message>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished">Behemoth-Horn</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation type="unfinished">Komplettheilung</translation>
+    </message>
+    <message>
+        <source>Pile Banger</source>
+        <translation type="unfinished">Stapelschläger</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -6452,10 +6556,6 @@ trigger showing that tutorial</source>
         <translation>Eindämmung</translation>
     </message>
     <message>
-        <source>FullCure</source>
-        <translation>Komplettheilung</translation>
-    </message>
-    <message>
         <source>Shield</source>
         <translation>Schild</translation>
     </message>
@@ -6542,6 +6642,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Knights of the Round</source>
         <translation type="unfinished">Ritter der Runde</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation>Komplettheilung</translation>
     </message>
 </context>
 <context>

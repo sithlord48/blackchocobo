@@ -1488,6 +1488,110 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>Remedy</source>
         <translation type="unfinished">Remède</translation>
     </message>
+    <message>
+        <source>Sneak Glove</source>
+        <translation type="unfinished">Gant de voleur</translation>
+    </message>
+    <message>
+        <source>Premium Heart</source>
+        <translation type="unfinished">Super cœur</translation>
+    </message>
+    <message>
+        <source>Magic Counter</source>
+        <translation type="unfinished">Opposition Magie</translation>
+    </message>
+    <message>
+        <source>Bolt Ring</source>
+        <translation type="unfinished">Anneau éclair</translation>
+    </message>
+    <message>
+        <source>Gold Armlet</source>
+        <translation type="unfinished">Bracelet or</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished">Grand évangile</translation>
+    </message>
+    <message>
+        <source>Umbrella</source>
+        <translation type="unfinished">Parapluie</translation>
+    </message>
+    <message>
+        <source>Flayer</source>
+        <translation type="unfinished">Fouet</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">Chaos</translation>
+    </message>
+    <message>
+        <source>Hyper</source>
+        <translation type="unfinished">Hyper</translation>
+    </message>
+    <message>
+        <source>Keycard 66</source>
+        <translation type="unfinished">Carte 66</translation>
+    </message>
+    <message>
+        <source>Wind Slash</source>
+        <translation type="unfinished">Tailleur de vent</translation>
+    </message>
+    <message>
+        <source>Fairy Ring</source>
+        <translation type="unfinished">Anneau fée</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black M-phone</source>
+        <translation type="unfinished">Mégaphone noir</translation>
+    </message>
+    <message>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished">Shuriken magique</translation>
+    </message>
+    <message>
+        <source>Hairpin</source>
+        <translation type="unfinished">Epingle cheveux</translation>
+    </message>
+    <message>
+        <source>Safety Bit</source>
+        <translation type="unfinished">Bit de sûreté</translation>
+    </message>
+    <message>
+        <source>Midgar parts</source>
+        <translation type="unfinished">Secteur de Midgar</translation>
+    </message>
+    <message>
+        <source>Mega All</source>
+        <translation type="unfinished">Méga tous</translation>
+    </message>
+    <message>
+        <source>Keycard 62</source>
+        <translation type="unfinished">Carte 62</translation>
+    </message>
+    <message>
+        <source>Swift Bolt</source>
+        <translation type="unfinished">Eclair furtif</translation>
+    </message>
+    <message>
+        <source>Master Fist</source>
+        <translation type="unfinished">Poing maître</translation>
+    </message>
+    <message>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished">Corne béhémoth</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation type="unfinished">Guérison Max</translation>
+    </message>
+    <message>
+        <source>Pile Banger</source>
+        <translation type="unfinished">Bunker</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -6455,10 +6559,6 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <translation>Contenir</translation>
     </message>
     <message>
-        <source>FullCure</source>
-        <translation>Guérison Max</translation>
-    </message>
-    <message>
         <source>Shield</source>
         <translation>Bouclier</translation>
     </message>
@@ -6545,6 +6645,10 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>Knights of the Round</source>
         <translation>Chevaliers de la Table Ronde</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation type="unfinished">Guérison Max</translation>
     </message>
 </context>
 <context>
