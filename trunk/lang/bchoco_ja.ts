@@ -1487,6 +1487,110 @@ The km/h speeds are calculated while playing </source>
         <source>Remedy</source>
         <translation type="unfinished">万能薬</translation>
     </message>
+    <message>
+        <source>Sneak Glove</source>
+        <translation type="unfinished">盗族の小手</translation>
+    </message>
+    <message>
+        <source>Premium Heart</source>
+        <translation type="unfinished">プレミアムハート</translation>
+    </message>
+    <message>
+        <source>Magic Counter</source>
+        <translation type="unfinished">まほうカウンター</translation>
+    </message>
+    <message>
+        <source>Bolt Ring</source>
+        <translation type="unfinished">雷の指輪</translation>
+    </message>
+    <message>
+        <source>Gold Armlet</source>
+        <translation type="unfinished">金の腕輪</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished">大いなる福音</translation>
+    </message>
+    <message>
+        <source>Umbrella</source>
+        <translation type="unfinished">アンブレラ</translation>
+    </message>
+    <message>
+        <source>Flayer</source>
+        <translation type="unfinished">方天画戟</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">カオス</translation>
+    </message>
+    <message>
+        <source>Hyper</source>
+        <translation type="unfinished">興奮剤</translation>
+    </message>
+    <message>
+        <source>Keycard 66</source>
+        <translation type="unfinished">カードキー６６</translation>
+    </message>
+    <message>
+        <source>Wind Slash</source>
+        <translation type="unfinished">風斬り</translation>
+    </message>
+    <message>
+        <source>Fairy Ring</source>
+        <translation type="unfinished">フェアリーリング</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished">ついかこうか</translation>
+    </message>
+    <message>
+        <source>Black M-phone</source>
+        <translation type="unfinished">ブラックメガホン</translation>
+    </message>
+    <message>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished">風魔手裏剣</translation>
+    </message>
+    <message>
+        <source>Hairpin</source>
+        <translation type="unfinished">かんざし</translation>
+    </message>
+    <message>
+        <source>Safety Bit</source>
+        <translation type="unfinished">セーフティビット</translation>
+    </message>
+    <message>
+        <source>Midgar parts</source>
+        <translation type="unfinished">ミッドガルパーツ</translation>
+    </message>
+    <message>
+        <source>Mega All</source>
+        <translation type="unfinished">すべてぜんたいか</translation>
+    </message>
+    <message>
+        <source>Keycard 62</source>
+        <translation type="unfinished">カードキー６２</translation>
+    </message>
+    <message>
+        <source>Swift Bolt</source>
+        <translation type="unfinished">雷迅</translation>
+    </message>
+    <message>
+        <source>Master Fist</source>
+        <translation type="unfinished">マスターフィスト</translation>
+    </message>
+    <message>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished">ベヒーモスホーン</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation type="unfinished">フルケア</translation>
+    </message>
+    <message>
+        <source>Pile Banger</source>
+        <translation type="unfinished">パイルバンカー</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -6522,10 +6626,6 @@ trigger showing that tutorial</source>
         <translation>ふういん</translation>
     </message>
     <message>
-        <source>FullCure</source>
-        <translation>フルケア</translation>
-    </message>
-    <message>
         <source>Shield</source>
         <translation>シールド</translation>
     </message>
@@ -6612,6 +6712,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Knights of the Round</source>
         <translation>ナイツオブラウンド</translation>
+    </message>
+    <message>
+        <source>Full Cure</source>
+        <translation type="unfinished">フルケア</translation>
     </message>
 </context>
 <context>

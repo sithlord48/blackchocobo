@@ -88,7 +88,7 @@ static LOCATION Locations[]=
     {"md1_2",QT_TRANSLATE_NOOP("Locations","Sector 1"),"1","118","3568","30777","55","32"},
     {"nrthmk",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","119","-12","-2743","0","32"},
 
-    {"nrthmk_1",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","120","-736","1612","16","32"},
+    {"nmkin_1",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","120","-736","1612","16","32"},
     {"elevtr1",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","121","30","40","7","32"},
     {"nmkin_2",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","122","-205","235","90","32"},
     {"nmkin_3",QT_TRANSLATE_NOOP("Locations","No.1 Reactor"),"1","123","-174","1692","35","32"},
