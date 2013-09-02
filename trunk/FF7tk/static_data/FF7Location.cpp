@@ -25,7 +25,7 @@ QString FF7Location::y(int i){return Locations[i].y;}
 QString FF7Location::t(int i){return Locations[i].t;}
 QString FF7Location::d(int i){return Locations[i].d;}
 
-int FF7Location::len(){return 568;}// keep current num locations in list.
+int FF7Location::len(){return 570;}// keep current num locations in list.
 
 QString FF7Location::fileName(int MapID,int LocID)
 {
