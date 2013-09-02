@@ -398,6 +398,8 @@ static LOCATION Locations[]=
     {"del3",QT_TRANSLATE_NOOP("Locations","Costa del Sol"),"1","449","-65","229","118","192"},
 
     {"ncorel",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","450","590","-458","64","32"},
+    {"ncorel2",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","451","627","-397","49","32"},
+    {"ncorel3",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","452","490","-383","54","32"},
     {"ncoin1",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","453","-33","-158","2","32"},
     {"ncoin2",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","454","7","-239","17","32"},
     {"ncoin3",QT_TRANSLATE_NOOP("Locations","North Corel"),"1","455","232","1","16","32"},

@@ -13,7 +13,6 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #include "FF7Save.h"
 #include <QObject>
 #include <QFile>
@@ -3311,7 +3310,7 @@ void FF7Save::setMenuLocked(int s, int index, bool checked)
     else if(index<0 || index >9){return;}
     else
     {
-        if(checked){ slot[s].menu_locked |= (1<<index);}
+        if(checked){slot[s].menu_locked |= (1<<index);}
         else {slot[s].menu_locked &= ~(1<<index);}
         setFileModified(true,s);
     }

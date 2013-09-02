@@ -196,8 +196,8 @@ void MainWindow::init_connections()
         connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
         connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
 
-        connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
-        connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
+        connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
+        connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
 
         //ItemList
         connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
