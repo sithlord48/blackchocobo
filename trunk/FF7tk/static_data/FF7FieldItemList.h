@@ -95,8 +95,7 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0BDC,QList<quint8>()<<1,QStringList()<<"colne_6",QT_TRANSLATE_NOOP("FieldItems","Hyper")},
     {QList<quint16>()<<0x0BDC,QList<quint8>()<<2,QStringList()<<"colne_3",QT_TRANSLATE_NOOP("FieldItems","Phoenix Down")},
     {QList<quint16>()<<0x0BDC,QList<quint8>()<<3,QStringList()<<"blinst_2",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
-    //{QList<quint16>()<<0x0BDC,QList<quint8>()<<4,QStringList()<<"las3_3",QT_TRANSLATE_NOOP("FieldItems","Mega All")},
-    {QList<quint16>()<<0x0BDC,QList<quint8>()<<5,QStringList()<<"cosmin7",QString("%1\n%2").arg(QT_TRANSLATE_NOOP("FieldItems","Elixir"),QT_TRANSLATE_NOOP("FieldItems","Magic Source"))},
+    {QList<quint16>()<<0x0BDC,QList<quint8>()<<5,QStringList()<<"cosmin7",QString("%1 & %2").arg(QT_TRANSLATE_NOOP("FieldItems","Elixir"),QT_TRANSLATE_NOOP("FieldItems","Magic Source"))},
     {QList<quint16>()<<0x0BDC<<0XBE8,QList<quint8>()<<6<<3,QStringList()<<"blin65_1",QT_TRANSLATE_NOOP("FieldItems","Midgar parts")},
     {QList<quint16>()<<0x0BDC<<0XBE8,QList<quint8>()<<7<<4,QStringList()<<"blin65_1",QT_TRANSLATE_NOOP("FieldItems","Midgar parts")},
 
@@ -127,6 +126,46 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0BDF,QList<quint8>()<<6,QStringList()<<"blinst_2",QT_TRANSLATE_NOOP("FieldItems","Behemoth Horn")},
     {QList<quint16>()<<0x0BDF,QList<quint8>()<<7,QStringList()<<"cosmin7",QT_TRANSLATE_NOOP("FieldItems","Full Cure")},
 
+    {QList<quint16>()<<0x0C24<<0xBE6,QList<quint8>()<<6<<5,QStringList()<<"ncorel3",QT_TRANSLATE_NOOP("FieldItems","Huge Materia:Corel")},
+    {QList<quint16>()<<0x0C24,QList<quint8>()<<7,QStringList()<<"ncorel2"<<"ncorel3",QT_TRANSLATE_NOOP("FieldItems","Ultima")},
+
+    {QList<quint16>()<<0x0C26<<0x0C26<<0x0BEA,QList<quint8>()<<1<<5<<2,QStringList()<<"snmin1",QT_TRANSLATE_NOOP("FieldItems","Snowboard")},
+    {QList<quint16>()<<0x0C26<<0x0BE9,QList<quint8>()<<6<<4,QStringList()<<"snmin2",QT_TRANSLATE_NOOP("FieldItems","Glacier Map")},
+
+    {QList<quint16>()<<0x0C2A,QList<quint8>()<<3,QStringList()<<"ujunon1"<<"prisila",QT_TRANSLATE_NOOP("FieldItems","Shiva")},
+
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<0<<1,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Colonge")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<1<<2,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Flower Colone")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<2<<3,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Sexy Colonge")},//Mutually Exclucive
+
+    {QList<quint16>()<<0x0C44<<0x0BE6,QList<quint8>()<<6<<0,QStringList()<<"mkt_s2",QT_TRANSLATE_NOOP("FieldItems","Pharmacy Coupon")},
+
+    {QList<quint16>()<<0x0C44<<0x0BE4,QList<quint8>()<<7<<3,QStringList()<<"mkt_mens",QT_TRANSLATE_NOOP("FieldItems","Wig")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE4,QList<quint8>()<<7<<4,QStringList()<<"mkt_mens",QT_TRANSLATE_NOOP("FieldItems","Dyed Wig")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE4,QList<quint8>()<<7<<5,QStringList()<<"mkt_mens",QT_TRANSLATE_NOOP("FieldItems","Blonde Wig")},//Mutually Exclucive
+
+    {QList<quint16>()<<0x0C45<<0x0C45<<0x0BE4,QList<quint8>()<<3<<5<<0,QStringList()<<"mkt_s1",QT_TRANSLATE_NOOP("FieldItems","Cotton Dress")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C45<<0x0C45<<0x0BE4,QList<quint8>()<<3<<6<<1,QStringList()<<"mkt_s1",QT_TRANSLATE_NOOP("FieldItems","Satin Dress")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C45<<0x0C45<<0x0BE4,QList<quint8>()<<3<<7<<2,QStringList()<<"mkt_s1",QT_TRANSLATE_NOOP("FieldItems","Silk Dress")},//Mutually Exclucive
+
+    {QList<quint16>()<<0x0C46<<0x0BE6,QList<quint8>()<<0<<1,QStringList()<<"mkt_s3",QT_TRANSLATE_NOOP("FieldItems","Disinfectant")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C46<<0x0BE6,QList<quint8>()<<1<<2,QStringList()<<"mkt_s3",QT_TRANSLATE_NOOP("FieldItems","Deodorant")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C46<<0x0BE6,QList<quint8>()<<2<<3,QStringList()<<"mkt_s3",QT_TRANSLATE_NOOP("FieldItems","Digestive")},//Mutually Exclucive
+
+    {QList<quint16>()<<0x0C46<<0x0BE4,QList<quint8>()<<6<<6,QStringList()<<"mkt_m",QT_TRANSLATE_NOOP("FieldItems","Glass Tiara")}, //Mutally Exclucive
+    {QList<quint16>()<<0x0C46<<0x0BE4,QList<quint8>()<<5<<7,QStringList()<<"mkt_m",QT_TRANSLATE_NOOP("FieldItems","Ruby Tiara")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C46<<0x0BE5,QList<quint8>()<<4<<0,QStringList()<<"mkt_m",QT_TRANSLATE_NOOP("FieldItems","Diamond Tiara")},//Mutually Exclucive
+/*
+    {QList<quint16>()<<0x0C49<<0x0C49<<0x0C49,QList<quint8>()<<5<<6<<7,QStringList()<<"mkt_w",QT_TRANSLATE_NOOP("FieldItems","Batteries")},
+
+    {QList<quint16>()<<0x0C54,QList<quint8>()<<5,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Peace Ring")},
+    {QList<quint16>()<<0x0C54,QList<quint8>()<<6,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Megalixir")},
+    {QList<quint16>()<<0x0C54,QList<quint8>()<<7,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Super Ball")},
+
+    {QList<quint16>()<<0x0C6A,QList<quint8>()<<4,QStringList()<<"hyou13_2",QT_TRANSLATE_NOOP("FieldItems","Alexander")},
+    {QList<quint16>()<<0x0C6A,QList<quint8>()<<5,QStringList()<<"move_d",QT_TRANSLATE_NOOP("FieldItems","Added Cut")},
+    {QList<quint16>()<<0x0C6A,QList<quint8>()<<6,QStringList()<<"hyou12",QT_TRANSLATE_NOOP("FieldItems","All")},
+*/
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("FieldItems","Fire Armlet")},
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<3,QStringList()<<"gaiin_3",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
@@ -153,7 +192,6 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<3,QStringList()<<"nmkin_1",QT_TRANSLATE_NOOP("FieldItems","Phoenix Down")},
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<4,QStringList()<<"blin67_1",QT_TRANSLATE_NOOP("FieldItems","Poison")},
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<5,QStringList()<<"colne_b1",QT_TRANSLATE_NOOP("FieldItems","Potion")},
-    {QList<quint16>()<<0x0FC4,QList<quint8>()<<6,QStringList()<<"",""},
     {QList<quint16>()<<0x0FC4,QList<quint8>()<<7,QStringList()<<"blin68_1",QT_TRANSLATE_NOOP("FieldItems","Potion")},
 
     {QList<quint16>()<<0x0FC5,QList<quint8>()<<0,QStringList()<<"blin68_1",QT_TRANSLATE_NOOP("FieldItems","Potion")},
@@ -323,7 +361,7 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x1032,QList<quint8>()<<6,QStringList()<<"md8_b1",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
     {QList<quint16>()<<0x1032,QList<quint8>()<<7,QStringList()<<"tunnel_5",QT_TRANSLATE_NOOP("FieldItems","Magic Source")},
 
-    {QList<quint16>()<<0x1035,QList<quint8>()<<3,QStringList()<<"rcktin4",QT_TRANSLATE_NOOP("FieldItems","Huge Materia:Rocket")},//needs to set KeyItem
+    {QList<quint16>()<<0x1035<<0x0BE6,QList<quint8>()<<3<<7,QStringList()<<"rcktin4",QT_TRANSLATE_NOOP("FieldItems","Huge Materia:Rocket")},
 
     {QList<quint16>()<<0x1036,QList<quint8>()<<0,QStringList()<<"tunnel_5",QT_TRANSLATE_NOOP("FieldItems","Mind Source")},
     {QList<quint16>()<<0x1036,QList<quint8>()<<1,QStringList()<<"tunnel_5",QT_TRANSLATE_NOOP("FieldItems","Power Source")},

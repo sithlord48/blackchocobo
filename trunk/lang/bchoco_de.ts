@@ -1591,6 +1591,90 @@ The km/h speeds are calculated while playing </source>
         <source>Pile Banger</source>
         <translation type="unfinished">Stapelschläger</translation>
     </message>
+    <message>
+        <source>Huge Materia:Corel</source>
+        <translation type="unfinished">Große Materia:Corel</translation>
+    </message>
+    <message>
+        <source>Ultima</source>
+        <translation type="unfinished">Ultima</translation>
+    </message>
+    <message>
+        <source>Snowboard</source>
+        <translation type="unfinished">Snowboard</translation>
+    </message>
+    <message>
+        <source>Glacier Map</source>
+        <translation type="unfinished">Gletscherkarte</translation>
+    </message>
+    <message>
+        <source>Shiva</source>
+        <translation type="unfinished">Shiva</translation>
+    </message>
+    <message>
+        <source>Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower Colone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sexy Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wig</source>
+        <translation type="unfinished">Perücke</translation>
+    </message>
+    <message>
+        <source>Dyed Wig</source>
+        <translation type="unfinished">Gefärbte Perücke</translation>
+    </message>
+    <message>
+        <source>Blonde Wig</source>
+        <translation type="unfinished">Blonde Perücke</translation>
+    </message>
+    <message>
+        <source>Cotton Dress</source>
+        <translation type="unfinished">Baumwollkleid</translation>
+    </message>
+    <message>
+        <source>Satin Dress</source>
+        <translation type="unfinished">Satinkleid</translation>
+    </message>
+    <message>
+        <source>Silk Dress</source>
+        <translation type="unfinished">Seidenkleid</translation>
+    </message>
+    <message>
+        <source>Disinfectant</source>
+        <translation type="unfinished">Desinfektionsmittel</translation>
+    </message>
+    <message>
+        <source>Deodorant</source>
+        <translation type="unfinished">Deodorant</translation>
+    </message>
+    <message>
+        <source>Digestive</source>
+        <translation type="unfinished">Abführmittel</translation>
+    </message>
+    <message>
+        <source>Glass Tiara</source>
+        <translation type="unfinished">Glasdiadem</translation>
+    </message>
+    <message>
+        <source>Ruby Tiara</source>
+        <translation type="unfinished">Rubindiadem</translation>
+    </message>
+    <message>
+        <source>Diamond Tiara</source>
+        <translation type="unfinished">Diamantendiadem</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4674,28 +4758,28 @@ The km/h speeds are calculated while playing </source>
         <translation>Highwind, Deck</translation>
     </message>
     <message>
-        <source>Nothern Cave Crater</source>
-        <translation>Nordhöhle, Krater</translation>
-    </message>
-    <message>
-        <source>Nothern Cave</source>
-        <translation>Nordhöhle</translation>
-    </message>
-    <message>
-        <source>Inside Nothern Cave</source>
-        <translation>In der Nordhöhle</translation>
-    </message>
-    <message>
-        <source>Bottom of Nothern Cave</source>
-        <translation>Grund der Nordhöhle</translation>
-    </message>
-    <message>
         <source>Inside the Planet</source>
         <translation>im Planeten</translation>
     </message>
     <message>
         <source>????</source>
         <translation>????</translation>
+    </message>
+    <message>
+        <source>Northern Cave Crater</source>
+        <translation>Nordhöhle, Krater</translation>
+    </message>
+    <message>
+        <source>Northern Cave</source>
+        <translation>Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Inside Northern Cave</source>
+        <translation>In der Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Bottom of Northern Cave</source>
+        <translation>Grund der Nordhöhle</translation>
     </message>
 </context>
 <context>
