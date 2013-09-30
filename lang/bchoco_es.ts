@@ -1592,6 +1592,90 @@ Los km/h son calculados mientras se juega</translation>
         <source>Pile Banger</source>
         <translation type="unfinished">Pila Banger</translation>
     </message>
+    <message>
+        <source>Huge Materia:Corel</source>
+        <translation type="unfinished">Materia Enorme:Corel</translation>
+    </message>
+    <message>
+        <source>Ultima</source>
+        <translation type="unfinished">Última</translation>
+    </message>
+    <message>
+        <source>Snowboard</source>
+        <translation type="unfinished">Snowboard</translation>
+    </message>
+    <message>
+        <source>Glacier Map</source>
+        <translation type="unfinished">Mapa Glaciar</translation>
+    </message>
+    <message>
+        <source>Shiva</source>
+        <translation type="unfinished">Shiva</translation>
+    </message>
+    <message>
+        <source>Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower Colone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sexy Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wig</source>
+        <translation type="unfinished">Peluca</translation>
+    </message>
+    <message>
+        <source>Dyed Wig</source>
+        <translation type="unfinished">Peluca Teñida</translation>
+    </message>
+    <message>
+        <source>Blonde Wig</source>
+        <translation type="unfinished">Peluca Rubia</translation>
+    </message>
+    <message>
+        <source>Cotton Dress</source>
+        <translation type="unfinished">Vestido de Algodón</translation>
+    </message>
+    <message>
+        <source>Satin Dress</source>
+        <translation type="unfinished">Vestido Satén</translation>
+    </message>
+    <message>
+        <source>Silk Dress</source>
+        <translation type="unfinished">Vestido de Seda</translation>
+    </message>
+    <message>
+        <source>Disinfectant</source>
+        <translation type="unfinished">Desinfectante</translation>
+    </message>
+    <message>
+        <source>Deodorant</source>
+        <translation type="unfinished">Desodorante</translation>
+    </message>
+    <message>
+        <source>Digestive</source>
+        <translation type="unfinished">Digestivo</translation>
+    </message>
+    <message>
+        <source>Glass Tiara</source>
+        <translation type="unfinished">Diadema Cristal</translation>
+    </message>
+    <message>
+        <source>Ruby Tiara</source>
+        <translation type="unfinished">Diadema Rubí</translation>
+    </message>
+    <message>
+        <source>Diamond Tiara</source>
+        <translation type="unfinished">Diadema Diamante</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4676,28 +4760,28 @@ Los km/h son calculados mientras se juega</translation>
         <translation>V. fuerte, a bordo</translation>
     </message>
     <message>
-        <source>Nothern Cave Crater</source>
-        <translation>Cráter cueva N</translation>
-    </message>
-    <message>
-        <source>Nothern Cave</source>
-        <translation>Cueva norte</translation>
-    </message>
-    <message>
-        <source>Inside Nothern Cave</source>
-        <translation type="unfinished">En Cueva N.</translation>
-    </message>
-    <message>
-        <source>Bottom of Nothern Cave</source>
-        <translation>Fondo de la Cueva del Norte</translation>
-    </message>
-    <message>
         <source>Inside the Planet</source>
         <translation>dentro del planeta</translation>
     </message>
     <message>
         <source>????</source>
         <translation>¿¿??</translation>
+    </message>
+    <message>
+        <source>Northern Cave Crater</source>
+        <translation>Cráter cueva N</translation>
+    </message>
+    <message>
+        <source>Northern Cave</source>
+        <translation>Cueva norte</translation>
+    </message>
+    <message>
+        <source>Inside Northern Cave</source>
+        <translation>En Cueva N.</translation>
+    </message>
+    <message>
+        <source>Bottom of Northern Cave</source>
+        <translation>Fondo de la Cueva del Norte</translation>
     </message>
 </context>
 <context>

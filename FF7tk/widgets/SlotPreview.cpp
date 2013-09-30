@@ -224,7 +224,7 @@ void SlotPreview::setName(QString Name){name->setText(Name);}
 void SlotPreview::setLevel(int lvl){lbl_level->setText(QString(tr("Level:%1")).arg(QString::number(lvl)));}
 void SlotPreview::setLocation(QString loc){location->setText(loc);}
 void SlotPreview::setGil(int gil){lbl_gil->setText(QString(tr("Gil:%1")).arg(QString::number(gil)));}
-void SlotPreview::setTime(int hr,int min){lbl_time->setText(QString(tr("Time:%1:%2")).arg(QString::number(hr),QString::number(min)));}
+void SlotPreview::setTime(int hr,int min){lbl_time->setText(QString(tr("Time:%1:%2")).arg(QString::number(hr),QString("%1").arg(QString::number(min),2,QChar('0'))));}
 void SlotPreview::removed(void){emit btn_remove_clicked(index());}
 void SlotPreview::copy(void){emit btn_copy_clicked(index());}
 void SlotPreview::paste(void){emit btn_paste_clicked(index());}

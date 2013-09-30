@@ -1591,6 +1591,90 @@ The km/h speeds are calculated while playing </source>
         <source>Pile Banger</source>
         <translation type="unfinished">パイルバンカー</translation>
     </message>
+    <message>
+        <source>Huge Materia:Corel</source>
+        <translation type="unfinished">ヒュージマテリア (コレル)</translation>
+    </message>
+    <message>
+        <source>Ultima</source>
+        <translation type="unfinished">アルテマ</translation>
+    </message>
+    <message>
+        <source>Snowboard</source>
+        <translation type="unfinished">スノーボード</translation>
+    </message>
+    <message>
+        <source>Glacier Map</source>
+        <translation type="unfinished">大氷河の地図</translation>
+    </message>
+    <message>
+        <source>Shiva</source>
+        <translation type="unfinished">シヴァ</translation>
+    </message>
+    <message>
+        <source>Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower Colone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sexy Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wig</source>
+        <translation type="unfinished">クセゲのかつら</translation>
+    </message>
+    <message>
+        <source>Dyed Wig</source>
+        <translation type="unfinished">チャパツのかつら</translation>
+    </message>
+    <message>
+        <source>Blonde Wig</source>
+        <translation type="unfinished">ブロンドのかつら</translation>
+    </message>
+    <message>
+        <source>Cotton Dress</source>
+        <translation type="unfinished">コットンのドレス</translation>
+    </message>
+    <message>
+        <source>Satin Dress</source>
+        <translation type="unfinished">サテンのドレス</translation>
+    </message>
+    <message>
+        <source>Silk Dress</source>
+        <translation type="unfinished">シルクのドレス</translation>
+    </message>
+    <message>
+        <source>Disinfectant</source>
+        <translation type="unfinished">消毒薬</translation>
+    </message>
+    <message>
+        <source>Deodorant</source>
+        <translation type="unfinished">消臭薬</translation>
+    </message>
+    <message>
+        <source>Digestive</source>
+        <translation type="unfinished">消化薬</translation>
+    </message>
+    <message>
+        <source>Glass Tiara</source>
+        <translation type="unfinished">ガラスのティアラ</translation>
+    </message>
+    <message>
+        <source>Ruby Tiara</source>
+        <translation type="unfinished">ルビーのティアラ</translation>
+    </message>
+    <message>
+        <source>Diamond Tiara</source>
+        <translation type="unfinished">ダイヤのティアラ</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4748,29 +4832,28 @@ The km/h speeds are calculated while playing </source>
         <translation>ハイウインド・甲板</translation>
     </message>
     <message>
-        <source>Nothern Cave Crater</source>
-        <translation>大空洞火口</translation>
-    </message>
-    <message>
-        <source>Nothern Cave</source>
-        <translatorcomment>Empty in Game</translatorcomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inside Nothern Cave</source>
-        <translation>大空洞内部</translation>
-    </message>
-    <message>
-        <source>Bottom of Nothern Cave</source>
-        <translation>大空洞最下部</translation>
-    </message>
-    <message>
         <source>Inside the Planet</source>
         <translation>星の体内</translation>
     </message>
     <message>
         <source>????</source>
         <translation>？？？？</translation>
+    </message>
+    <message>
+        <source>Northern Cave Crater</source>
+        <translation>大空洞火口</translation>
+    </message>
+    <message>
+        <source>Northern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Northern Cave</source>
+        <translation>大空洞内部</translation>
+    </message>
+    <message>
+        <source>Bottom of Northern Cave</source>
+        <translation>大空洞最下部</translation>
     </message>
 </context>
 <context>

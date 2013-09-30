@@ -1591,6 +1591,90 @@ The km/h speeds are calculated while playing </source>
         <source>Pile Banger</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Huge Materia:Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultima</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snowboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Glacier Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower Colone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sexy Colonge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dyed Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blonde Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cotton Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Satin Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silk Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disinfectant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deodorant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Digestive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Glass Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -4673,27 +4757,27 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nothern Cave Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nothern Cave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inside Nothern Cave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bottom of Nothern Cave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Inside the Planet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>????</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Northern Cave Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Northern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Northern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom of Northern Cave</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
