@@ -542,5 +542,9 @@ private slots://try to keep these in the same order as the .cpp file
     void connectFieldItem(quint8,QList<quint16>,QList<quint8>);
     void checkFieldItem(int);
     void fieldItemStateChanged(int ID,bool checked);
+    void on_sb_saveMapId_valueChanged(int arg1);
+    void on_sb_saveX_valueChanged(int arg1);
+    void on_sb_saveY_valueChanged(int arg1);
+    void on_sb_saveZ_valueChanged(int arg1);
 };
 #endif // MAINWINDOW_H

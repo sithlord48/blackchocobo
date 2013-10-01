@@ -87,6 +87,15 @@ public:
   void setLocationT(int s, quint16 t);
   quint8 locationD (int s);
   void setLocationD(int s,quint8 d);
+
+  quint16 craterSavePointMapID(int s);
+  qint16 craterSavePointX(int s);
+  qint16 craterSavePointY(int s);
+  qint16 craterSavePointZ(int s);
+  void setCraterSavePointMapID(int s,int value);
+  void setCraterSavePointX(int s,int value);
+  void setCraterSavePointY(int s,int value);
+  void setCraterSavePointZ(int s,int value);
   //options
   QByteArray controllerMapping(int s);
   quint8 controllerMapping(int s, int action);

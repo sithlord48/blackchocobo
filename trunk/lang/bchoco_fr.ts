@@ -6336,6 +6336,22 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <source>All Items Added</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Save Pont Location In North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map Id: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation type="unfinished">X : </translation>
+    </message>
+    <message>
+        <source>Z:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>

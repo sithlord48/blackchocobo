@@ -3196,6 +3196,7 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
 
 void MainWindow::on_testDataTabWidget_currentChanged(int index)
 {
+
     switch(index)
     {
         case 0:
@@ -3238,6 +3239,12 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
             ui->cb_tut_sub_7->setChecked(ff7->tutSub(s,6));
             ui->cb_tut_sub_8->setChecked(ff7->tutSub(s,7));
             ui->lcd_tut_sub->display(ff7->tutSub(s));
+
+
+            ui->sb_saveMapId->setValue(ff7->craterSavePointMapID(s));
+            ui->sb_saveX->setValue(ff7->craterSavePointX(s));
+            ui->sb_saveY->setValue(ff7->craterSavePointY(s));
+            ui->sb_saveZ->setValue(ff7->craterSavePointZ(s));
             load=false;
         break;
 
@@ -3305,3 +3312,8 @@ void MainWindow::fieldItemStateChanged(int boxID,bool checked)
         }
     }
 }
+
+void MainWindow::on_sb_saveMapId_valueChanged(int arg1){if(!load){ff7->setCraterSavePointMapID(s,arg1);}}
+void MainWindow::on_sb_saveX_valueChanged(int arg1){if(!load){ff7->setCraterSavePointX(s,arg1);}}
+void MainWindow::on_sb_saveY_valueChanged(int arg1){if(!load){ff7->setCraterSavePointY(s,arg1);}}
+void MainWindow::on_sb_saveZ_valueChanged(int arg1){if(!load){ff7->setCraterSavePointZ(s,arg1);}}
