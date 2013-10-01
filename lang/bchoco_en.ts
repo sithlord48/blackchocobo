@@ -6317,6 +6317,22 @@ trigger showing that tutorial</source>
         <source>All Items Added</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Save Pont Location In North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map Id: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Z:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>

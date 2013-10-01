@@ -7765,6 +7765,70 @@ trigger showing that tutorial</string>
                </layout>
               </item>
               <item>
+               <widget class="QGroupBox" name="groupBox_14">
+                <property name="title">
+                 <string>Save Pont Location In North Crater</string>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QSpinBox" name="sb_saveMapId">
+                   <property name="prefix">
+                    <string>Map Id: </string>
+                   </property>
+                   <property name="minimum">
+                    <number>-32767</number>
+                   </property>
+                   <property name="maximum">
+                    <number>32767</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_saveX">
+                   <property name="prefix">
+                    <string>X: </string>
+                   </property>
+                   <property name="minimum">
+                    <number>-32767</number>
+                   </property>
+                   <property name="maximum">
+                    <number>32767</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_saveY">
+                   <property name="prefix">
+                    <string>Y: </string>
+                   </property>
+                   <property name="minimum">
+                    <number>-32767</number>
+                   </property>
+                   <property name="maximum">
+                    <number>32767</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_saveZ">
+                   <property name="prefix">
+                    <string>Z:</string>
+                   </property>
+                   <property name="minimum">
+                    <number>-32767</number>
+                   </property>
+                   <property name="maximum">
+                    <number>32767</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
                <layout class="QHBoxLayout" name="horizontalLayout_152">
                 <item>
                  <widget class="QGroupBox" name="groupBox_38">
@@ -7772,18 +7836,6 @@ trigger showing that tutorial</string>
                    <string>0xC1E tut_sub</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_71">
-                   <property name="leftMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>3</number>
-                   </property>
                    <item>
                     <widget class="QCheckBox" name="cb_tut_sub_1">
                      <property name="text">
