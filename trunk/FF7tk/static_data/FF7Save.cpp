@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "FF7Save.h"
+#include <QDebug>
 #include <QObject>
 #include <QFile>
 #include <QDataStream>
@@ -2394,7 +2395,15 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
     }
     if(UserID!="")
     {
-        ff7file.append(UserID.toLatin1());//append the user's ID
+        int digitcount=0;
+        for(int i=0;i<UserID.length();i++)
+        {
+            if(UserID.at(i).isDigit()){digitcount ++;}
+        }
+        if (digitcount ==UserID.length())
+        {//make sure the id is all digits.
+            ff7file.append(UserID.toLatin1());//append the user's ID
+        }
     }
     QCryptographicHash md5(QCryptographicHash::Md5);
     md5.addData(ff7file);
@@ -2453,6 +2462,7 @@ QVector< SubContainer > FF7Save::createMetadata(QString fileName, QString UserID
 {
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
     QString Md5 = md5sum(fileName,UserID);
+
     QString timestamp = filetimestamp(fileName);
     QString number = fileblock(fileName);//Get file block number
     if(number == "-1"){return vector;}
@@ -2485,6 +2495,7 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
     metadataPath.append("/metadata.xml");
 
 
+
     QFile Metadata(metadataPath);
     //is a New PC saveFile then
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
@@ -2492,7 +2503,7 @@ bool FF7Save::fixMetaData(QString fileName,QString OutPath,QString UserID)
     if(Metadata.exists())
     {//get our user id no trailing / (removed above)
         Path.remove(0,Path.lastIndexOf("_")+1);
-        UserId = Path;
+        UserId = Path;       
         vector = parseXML(fileName, metadataPath, UserId);
     }
     else
