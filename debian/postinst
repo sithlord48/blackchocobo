@@ -1,5 +1,0 @@
-#!/bin/sh
-if [ -f /usr/bin/blackchocobo ];then
-  exit 0
-  else ln -s /opt/blackchocobo/Black_Chocobo /usr/bin/blackchocobo
-fi
