@@ -1,4 +1,4 @@
-Black_Chocobo /opt/blackchocobo
+Black_Chocobo /usr/share/blackchocobo
 Black_Chocobo.desktop /usr/share/applications
 icon/Black_Chocobo.png /usr/share/pixmaps
 lang/*.qm /opt/blackchocobo/lang
