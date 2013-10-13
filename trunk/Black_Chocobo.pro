@@ -127,23 +127,3 @@ macx:{
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
-
-unix:!macx:!symbian: {
-#all other *nix (except for symbian and mac os)
-#base for setting up deb packages(rpm too?).
-#Below Will Become 'install' in the makefile
-    target.path = /opt/blackchocobo #set the path to deploy the build target.
-    lang.path = /opt/blackchocobo/lang #set path for lang folder
-    lang.files = lang/*.qm  #grab All qm files
-
-    icon.path = /usr/share/pixmaps       #system path icon.
-    icon.files = icon/Black_Chocobo.png
-
-    desktop.path =/usr/share/applications/ #system path app dir
-    desktop.files = Black_Chocobo.desktop  #
-
-    INSTALLS += target \
-        lang  \
-        icon  \
-        desktop
-}
