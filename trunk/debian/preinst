@@ -1,4 +1,5 @@
-#! /bin/sh
+#! /bin/bash
+#DEBHELPER#
 echo "Checking for and removing old install...\c"
 if [ -d /usr/bin/blackchocobo ];then #check to see if older version installed.
   rm -r /usr/bin/blackchocobo/
@@ -7,4 +8,8 @@ elif [ -d /opt/blackchocobo ];then
   rm -r /opt/blackchocobo
   echo "RM: /opt/blackchocobo"
 else echo 'Not Found'
+fi
+
+if [ -f /usr/share/blackchocobo/Black_Chocobo ];then 
+  rm /usr/share/blackchocobo/Black_Chocobo
 fi
