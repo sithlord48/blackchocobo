@@ -67,10 +67,28 @@ int main(int argc, char *argv[])
     #endif //STATIC
 
     QTranslator translator;
-    QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
+    if(settings.value("langPath").isNull())
+    {
+        #ifdef Q_OS_UNIX
+            #ifndef Q_OS_MAC
+                settings.setValue("langPath",QString("/usr/share/blackchocobo"));
+            #endif
+        #else
+            settings.setValue("langPath",QCoreApplication::applicationDirPath());
+        #endif
+    }
+    QString lang = settings.value("langPath").toString() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
     lang.append(settings.value("lang").toString());
-    translator.load(lang);
+    if(!translator.load(lang))
+    {
+        lang = QCoreApplication::applicationDirPath() +"/" +"lang/bchoco_";
+        lang.append(settings.value("lang").toString());
+        if(translator.load(lang))
+        {//if we do load from here reset the path so it can be used by widgets later for autotranslated
+            settings.setValue("langPath",QCoreApplication::applicationDirPath());
+        }
+    }
     a.installTranslator(&translator);
     FF7Save ff7; //main ff7 data
     qsrand(QTime::currentTime().msec());

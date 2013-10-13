@@ -1,7 +1,5 @@
 [Desktop Entry]
 Categories=Application;Game;
-Comment[en_US]=
-Comment=
 Encoding=UTF-8
 Exec=/usr/bin/blackchocobo
 GenericName=FF7 Save Game Editor
@@ -16,13 +14,8 @@ Name[en]=Black Chocobo
 Name[es]=Black Chocobo
 Name[fr]=Black Chocobo
 Name[de]=Black Chocobo
-Path=
-StartupNotify=false
+StartupNotify=true
 Terminal=false
-TerminalOptions=
 Type=Application
 Version=1.9.8
-X-DBUS-ServiceName=
-X-DBUS-StartupType=
 X-KDE-SubstituteUID=false
-X-KDE-Username=

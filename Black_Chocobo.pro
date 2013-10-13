@@ -16,7 +16,7 @@
 # -------------------------------------------------
 # Project created by QtCreator 2010-03-14T14:53:13
 # -------------------------------------------------
-TARGET = Black_Chocobo
+TARGET = blackchocobo
 TEMPLATE = app
 
 QT       += core gui xml
@@ -127,3 +127,8 @@ macx:{
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
+
+unix:!macx:!symbian: {
+  target.path = /usr/bin #place our binary in /usr/bin
+  INSTALLS +=target
+}

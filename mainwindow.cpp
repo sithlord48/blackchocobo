@@ -149,7 +149,7 @@ void MainWindow::init_display()
     ui->group_hexedit->setLayout(hexLayout);
 
     locationViewer = new LocationViewer;
-    locationViewer->setTranslationBaseFile(QString(QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_"));
+    locationViewer->setTranslationBaseFile(settings->value("langPath").toString() +"/"+ "lang/bchoco_");
     locationViewer->setRegion("BASCUS-94163FF7-S00");
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0,0,0,0);
