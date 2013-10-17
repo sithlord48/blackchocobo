@@ -624,6 +624,23 @@ void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
 
+
+void MainWindow::on_actionOpen_Achievement_File_triggered()
+{
+    QString temp = ff7->fileName();
+    temp.chop(temp.length()-(temp.lastIndexOf("/")));
+    temp.append(QString("%1achievement.dat").arg(QDir::separator()));
+    QFile tmp(temp);
+    if(!tmp.exists())
+    {
+        temp = QFileDialog::getOpenFileName(this,tr("Select Achievement File"),QDir::homePath(),tr("Dat File (*.dat);"));
+    }
+    achievementDialog achDialog(this,temp);
+    achDialog.setStyleSheet(this->styleSheet());
+    achDialog.exec();
+}
+
+
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
     if(checked)

@@ -2,6 +2,153 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
+    <name>Achievement_Names</name>
+    <message>
+        <source>End of Part I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End of Part II</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End of Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master of Gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top Level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Chevaliers de la Table Ronde</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished">Catastrophe</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">Chaos</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished">Grand évangile</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">Hautvent</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation type="unfinished">Dernier paradis</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="unfinished">Tout création</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished">Mémoire Cosmos</translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation type="unfinished">Roulette</translation>
+    </message>
+    <message>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultimate Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation type="unfinished">Vincent</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation type="unfinished">Youfie</translation>
+    </message>
+    <message>
+        <source>Materia Overlord</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Square</source>
+        <translation type="unfinished">Battle Square</translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished">Chocobo or</translation>
+    </message>
+    <message>
+        <source>First Battle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Braver</source>
+        <translation type="unfinished">Bravoure</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation type="unfinished">Grand coup</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation type="unfinished">Bête galienne</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation type="unfinished">Vent guérisseur</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation type="unfinished">Propulsion</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation type="unfinished">Coup vif</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation type="unfinished">Eclair d&apos;huile</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation type="unfinished">Coups de griffe</translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation type="unfinished">Dé</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation type="unfinished">Omnislash</translation>
+    </message>
+</context>
+<context>
     <name>CharEditor</name>
     <message>
         <source>Level</source>
@@ -6352,6 +6499,18 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <source>Z:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Open Achievement File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Achievement File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dat File (*.dat);</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
@@ -9070,6 +9229,21 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>FF7tk: + More Locations And Viewer</source>
         <translation>FF7tk : + Plus de lieux et visualisateur</translation>
+    </message>
+</context>
+<context>
+    <name>achievementDialog</name>
+    <message>
+        <source>Achievement Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>  &amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>  &amp;Cancel</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

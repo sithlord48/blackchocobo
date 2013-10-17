@@ -8776,6 +8776,7 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="actionExport_char"/>
     <addaction name="separator"/>
     <addaction name="actionCreateNewMetadata"/>
+    <addaction name="actionOpen_Achievement_File"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
@@ -9618,6 +9619,15 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>&amp;Import To Current Slot</string>
+   </property>
+  </action>
+  <action name="actionOpen_Achievement_File">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/icon/achievements.png</normaloff>:/icon/icon/achievements.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Achievement File</string>
    </property>
   </action>
  </widget>

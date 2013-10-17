@@ -33,6 +33,7 @@
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
+#include "achievementdialog.h"      // Dialog for editing achievement files
 //FF7tk Items
 #include "FF7tk/static_data/SaveIcon.h"
 #include "FF7tk/static_data/FF7Item.h"
@@ -546,5 +547,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_saveX_valueChanged(int arg1);
     void on_sb_saveY_valueChanged(int arg1);
     void on_sb_saveZ_valueChanged(int arg1);
+    void on_actionOpen_Achievement_File_triggered();
 };
 #endif // MAINWINDOW_H

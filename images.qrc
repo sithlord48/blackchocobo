@@ -83,5 +83,6 @@
         <file alias="fix_time">icon/fix_time.png</file>
         <file alias="refresh">icon/refresh.png</file>
         <file alias="cloudsave">icon/cloudsave.png</file>
+        <file>icon/achievements.png</file>
     </qresource>
 </RCC>
