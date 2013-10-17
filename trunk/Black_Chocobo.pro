@@ -55,7 +55,10 @@ SOURCES += main.cpp \
     FF7tk/widgets/ChocoboManager.cpp \
     FF7tk/widgets/ChocoboLabel.cpp \
     FF7tk/widgets/LocationViewer.cpp \
-    FF7tk/static_data/FF7FieldItemList.cpp
+    FF7tk/static_data/FF7FieldItemList.cpp \
+    FF7tk/widgets/AchievementEditor.cpp \
+    FF7tk/static_data/FF7Achievements.cpp \
+    achievementdialog.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -94,13 +97,18 @@ HEADERS += mainwindow.h \
     FF7tk/widgets/ChocoboLabel.h \
     FF7tk/static_data/Type_FF7CHOCOBO.h \
     FF7tk/widgets/LocationViewer.h \
-    FF7tk/static_data/FF7FieldItemList.h
+    FF7tk/static_data/FF7FieldItemList.h \
+    FF7tk/widgets/AchievementEditor.h \
+    FF7tk/static_data/FF7Achievements.h \
+    achievementdialog.h
 
 FORMS += mainwindow.ui \
     about.ui \
     options.ui
 RESOURCES += images.qrc \
-    FF7tk/static_data/icons/Location_Icons/locations.qrc
+    FF7tk/static_data/icons/Location_Icons/locations.qrc \
+    FF7tk/static_data/icons/Achievement_Icons/achievements.qrc
+
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \
     lang/bchoco_fr.ts \

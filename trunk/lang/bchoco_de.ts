@@ -2,6 +2,153 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de">
 <context>
+    <name>Achievement_Names</name>
+    <message>
+        <source>End of Part I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End of Part II</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End of Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master of Gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top Level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Ritter der Runde</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished">Katastrophe</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">Chaos</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">Highwind</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation type="unfinished">Räder</translation>
+    </message>
+    <message>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultimate Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation type="unfinished">Vincent</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation type="unfinished">Yuffie</translation>
+    </message>
+    <message>
+        <source>Materia Overlord</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Square</source>
+        <translation type="unfinished">Battle Square</translation>
+    </message>
+    <message>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished">Goldener Chocobo</translation>
+    </message>
+    <message>
+        <source>First Battle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Braver</source>
+        <translation type="unfinished">Mutattacke</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation type="unfinished">Feuerball</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation type="unfinished">Galianische Bestie</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation type="unfinished">Heilender Wind</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation type="unfinished">Megasprung</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation type="unfinished">Fausthagel</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation type="unfinished">Geölter Blitz</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation type="unfinished">Reißzahn</translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation type="unfinished">Würfel</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation type="unfinished">Omnischlag</translation>
+    </message>
+</context>
+<context>
     <name>CharEditor</name>
     <message>
         <source>Level</source>
@@ -6349,6 +6496,18 @@ trigger showing that tutorial</source>
         <source>Z:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Open Achievement File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Achievement File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dat File (*.dat);</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
@@ -9065,6 +9224,21 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: + More Locations And Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>achievementDialog</name>
+    <message>
+        <source>Achievement Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>  &amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>  &amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
