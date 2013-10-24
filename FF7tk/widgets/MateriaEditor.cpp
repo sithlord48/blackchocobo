@@ -331,7 +331,7 @@ void MateriaEditor::setAP(qint32 ap)
     }
     else if(_id ==FF7Materia::EmptyId)
     {
-        frm_ap_stars->setHidden(false);
+        frm_ap_stars->setHidden(true);
         lcd_max_ap->display("");
     }
     else
@@ -453,7 +453,8 @@ void MateriaEditor::setSkills()
         list_skills->setHidden(true);
         eskill_group->setHidden(false);
         frm_skill_status->adjustSize();
-        v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Fixed);
+        v_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);
+        v_spacer->invalidate();
     }
     else if(_id ==FF7Materia::EmptyId)
     {
@@ -461,6 +462,7 @@ void MateriaEditor::setSkills()
         list_skills->setHidden(true);
         eskill_group->setHidden(true);
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
+        v_spacer->invalidate();
     }
     else
     {
@@ -468,6 +470,7 @@ void MateriaEditor::setSkills()
         list_skills->setHidden(false);
         eskill_group->setHidden(true);
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
+        v_spacer->invalidate();
         switch (_level)
         {// no breaks on purpose
             case 5:if(data->skills(_id).count()>4){list_skills->insertItem(0,data->skills(_id).at(4));}
@@ -587,7 +590,6 @@ void MateriaEditor::editMode(void)
     btn_star4->blockSignals(!editable);
     btn_star5->blockSignals(!editable);
     //Set Enabled = editable
-
     if(_id != FF7Materia::EmptyId){sb_ap->setEnabled(editable);}
     btn_paste_materia->setHidden(!editable);
     btn_rm_materia->setHidden(!editable);
