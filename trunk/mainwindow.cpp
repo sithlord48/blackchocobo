@@ -450,9 +450,9 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
         {
             SlotSelect * SSelect= new SlotSelect(this,tempSave);
             fileSlot = SSelect->exec();
-            ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot),QString::number(s)),2000);
+            ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot+1),QString::number(s+1)),2000);
         }
-        else{ui->statusBar->showMessage(QString(tr("Import:: %1 -> Slot:%2")).arg(fileName,QString::number(s)),2000);}
+        else{ui->statusBar->showMessage(QString(tr("Import:: %1 -> Slot:%2")).arg(fileName,QString::number(s+1)),2000);}
         ff7->importFromFileToSlot(s,fileName,fileSlot);
         guirefresh(0);
     }

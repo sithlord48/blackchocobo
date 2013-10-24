@@ -9226,6 +9226,18 @@ p, li { white-space: pre-wrap; }
         <source>FF7tk: + More Locations And Viewer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: Menu Editor Backward Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Achievement Editor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>

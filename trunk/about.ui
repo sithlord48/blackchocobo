@@ -345,6 +345,36 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Fixed: Menu Editor Backward Columns</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Achievement Editor.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FF7tk: LocationViewer Contains Field Items (WIP)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New Error Box Dialog</string>
           </property>
          </item>
@@ -431,21 +461,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>FF7tk: + Chocobo Manager Widget.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -901,7 +916,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>395</width>
+            <width>378</width>
             <height>430</height>
            </rect>
           </property>
@@ -1577,8 +1592,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>395</width>
-            <height>438</height>
+            <width>134</width>
+            <height>942</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
