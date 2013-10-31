@@ -32,7 +32,7 @@ class achievementDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit achievementDialog(QWidget *parent = 0,QString fileName="");
+    explicit achievementDialog(QWidget *parent = 0,QString FileName="");
     
 signals:
     
@@ -42,6 +42,7 @@ private:
    AchievementEditor *achEditor;
    QPushButton *btnSave;
    QPushButton *btnNo;
+   QString fileName;
 };
 
 #endif // ACHIEVEMENTDIALOG_H

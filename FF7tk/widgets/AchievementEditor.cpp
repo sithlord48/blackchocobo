@@ -46,10 +46,9 @@ void AchievementEditor::initDisplay(void)
     this->setLayout(layout);
 
 }
-void AchievementEditor::openFile(QString fileName)
+bool AchievementEditor::openFile(QString fileName)
 {
-
-    achievements.openFile(fileName);
+    bool open = achievements.openFile(fileName);
     initDisconnect();
     for(int i=0;i<36;++i)
     {
@@ -57,6 +56,7 @@ void AchievementEditor::openFile(QString fileName)
         else{achievementList->item(i)->setCheckState(Qt::Unchecked);}
     }
     initConnect();
+    return open;
 }
 void AchievementEditor::itemToggled(QModelIndex index)
 {
@@ -66,7 +66,7 @@ void AchievementEditor::itemToggled(QModelIndex index)
     }
     else{achievements.setAchievementUnlocked(63- index.row(),false);}
 }
-void AchievementEditor::saveFile(QString fileName)
+bool AchievementEditor::saveFile(QString fileName)
 {
-    achievements.saveFile(fileName);
+    return achievements.saveFile(fileName);
 }

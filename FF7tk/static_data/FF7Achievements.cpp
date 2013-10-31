@@ -33,7 +33,6 @@ bool FF7Achievements::openFile(QString fileName)
             data.close();
         }
         else{return false;}
-        FileName=fileName;
         return true;
     }
     return false;
@@ -50,11 +49,6 @@ bool FF7Achievements::saveFile(QString fileName)
             data.close();
         }
         else{return false;}
-        return true;
-    }
-    else
-    {
-        saveFile(FileName);
         return true;
     }
     return false;

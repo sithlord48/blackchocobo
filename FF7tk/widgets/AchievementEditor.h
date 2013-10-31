@@ -31,8 +31,8 @@ class AchievementEditor : public QWidget
 public:
     explicit AchievementEditor(QWidget *parent = 0);
 public slots:
-    void openFile(QString fileName="");
-    void saveFile(QString fileName="");
+    bool openFile(QString fileName="");
+    bool saveFile(QString fileName="");
 private slots:
     void itemToggled(QModelIndex index);
 private:
