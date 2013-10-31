@@ -15,23 +15,18 @@
 /****************************************************************************/
 #ifndef FF7ACHIEVEMENTS_H
 #define FF7ACHIEVEMENTS_H
-
 #include <QObject>
-
 class FF7Achievements : public QObject
 {
     Q_OBJECT
-public:
-    bool achievmentUnlocked(int bit);
-    void setAchievementUnlocked(int bit,bool unlocked);
-    explicit FF7Achievements(QObject *parent = 0);  
-    bool openFile(QString fileName="");
-    bool saveFile(QString fileName="");
-    QString name(int bit);
-private:
- QByteArray Achievements;
- QString FileName;
+    public:
+        bool achievmentUnlocked(int bit);
+        void setAchievementUnlocked(int bit,bool unlocked);
+        explicit FF7Achievements(QObject *parent = 0);
+        bool openFile(QString fileName="");
+        bool saveFile(QString fileName="");
+        QString name(int bit);
+    private:
+        QByteArray Achievements;
 };
-
-
 #endif // FF7ACHIEVEMENTS_H

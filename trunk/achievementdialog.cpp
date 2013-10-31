@@ -15,9 +15,10 @@
 /****************************************************************************/
 #include "achievementdialog.h"
 
-achievementDialog::achievementDialog(QWidget *parent,QString fileName) :
+achievementDialog::achievementDialog(QWidget *parent,QString FileName) :
     QDialog(parent)
 {   
+    fileName=FileName;
     this->setWindowTitle(tr("Achievement Editor"));
     achEditor = new AchievementEditor;
     achEditor->openFile(fileName);
@@ -39,4 +40,18 @@ achievementDialog::achievementDialog(QWidget *parent,QString fileName) :
     connect(btnSave,SIGNAL(clicked()),this,SLOT(accept()));
     connect(btnNo,SIGNAL(clicked()),this,SLOT(close()));
 }
-void achievementDialog::accept(void){achEditor->saveFile();}
+void achievementDialog::accept(void)
+{
+    if(fileName.isEmpty())
+    {
+        fileName = QFileDialog::getSaveFileName(this,tr("Save As"),QDir::homePath(),tr("Dat Files (*.dat)"));
+    }
+    if(fileName.isEmpty()){return;}
+    else
+    {
+        if(achEditor->saveFile(fileName)){this->close();}
+        else{QMessageBox::critical(this,tr("Failed To Save File"),QString(tr("Failed To Write File\nFile:%1")).arg(fileName));}
+    }
+
+
+}

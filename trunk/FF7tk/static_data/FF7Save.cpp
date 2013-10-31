@@ -645,7 +645,6 @@ void FF7Save::checksumSlots()
 quint16 FF7Save::ff7Checksum(int s)
 {
     QByteArray data = slotFF7Data(s).mid(4,4336);
-    //data.remove(0,4);
     int i = 0, t, d;
     quint16 r = 0xFFFF, len =4336, pbit = 0x8000;
     while(len--)

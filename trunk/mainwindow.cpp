@@ -193,12 +193,6 @@ void MainWindow::init_connections()
         connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
         connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
 
-        connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
-        connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
-
-        connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
-        connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
-
         //ItemList
         connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
         //Materia_Editor
@@ -314,6 +308,11 @@ void MainWindow::init_connections()
         connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
         connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
         //HexEditor.
+
+        connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
+        connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
+        connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
+        connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
         connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::init_settings()
@@ -626,7 +625,8 @@ void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(t
 
 
 void MainWindow::on_actionOpen_Achievement_File_triggered()
-{
+{   
+    bool c2=ff7->isFileModified();
     QString temp = ff7->fileName();
     temp.chop(temp.length()-(temp.lastIndexOf("/")));
     temp.append(QString("%1achievement.dat").arg(QDir::separator()));
@@ -634,12 +634,17 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     if(!tmp.exists())
     {
         temp = QFileDialog::getOpenFileName(this,tr("Select Achievement File"),QDir::homePath(),tr("Dat File (*.dat);"));
-    }
-    achievementDialog achDialog(this,temp);
-    achDialog.setStyleSheet(this->styleSheet());
-    achDialog.exec();
-}
 
+    }
+    if(temp.isEmpty()){ff7->setFileModified(c2,s);return;}
+    else
+    {
+        achievementDialog achDialog(this,temp);
+        achDialog.setStyleSheet(this->styleSheet());
+        achDialog.exec();
+    }
+    ff7->setFileModified(c2,s);
+}
 
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
@@ -967,6 +972,7 @@ void MainWindow::setmenu(bool newgame)
     {//we haven't loaded a file yet.
         ui->actionNew_Game_Plus->setEnabled(1); ui->actionImport_Slot_From_File->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);     ui->actionPaste_Slot->setEnabled(1);
+        ui->actionNew_Game->setEnabled(1);
     }
 
     if ( (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) && (ff7->type()!="") ) //more then one slot, or unknown Type
