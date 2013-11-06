@@ -21,4 +21,4 @@ QList<quint16> FF7FieldItemList::offset(int index){return FILIST[index].Offset;}
 QList<quint8> FF7FieldItemList::bit(int index){return FILIST[index].Bit;}
 QStringList FF7FieldItemList::maps(int index){return FILIST[index].Maps;}
 QString FF7FieldItemList::text(int index){return qApp->translate("FieldItems",FILIST[index].Text.toLocal8Bit());}
-int FF7FieldItemList::count(){return 286;/*return 293;*/}//sync w/ item count
+int FF7FieldItemList::count(){return 296;}//sync w/ item count
