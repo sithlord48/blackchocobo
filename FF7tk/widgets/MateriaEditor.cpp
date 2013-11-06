@@ -388,9 +388,8 @@ void MateriaEditor::setStats()
         if(data->status(_id).at(0).toLocal8Bit() !="")
         {
             list_status->addItems(data->status(_id));
-            box_status_effects->setHidden(false);
             box_status_effects->setFixedWidth(this->width()/3);
-            box_skills->adjustSize();
+            box_status_effects->setHidden(false);
         }
         else{box_status_effects->setHidden(true);}
         box_skills->setTitle(title);

@@ -2618,31 +2618,31 @@ void CharEditor::MaxEquip()
     else
     {
         //set up weapons/ armor
-        //weapon_slot_1_clicked();//for some reason we fail to set materia unless a slot was clicked before
         weapon_selection->setCurrentIndex(Chars.numberOfWeapons(data.id)-1);
         armor_selection->setCurrentIndex(29);
         accessory_selection->setCurrentIndex(18);
         for(int i=15;i>=0;i--)
         {
-            mslotsel = i;
+            mslotsel = i;            
             quint8 new_id = FF7Materia::EmptyId;
             switch(mslotsel)
             {
-                case 6: weapon_slot_7_clicked();new_id = FF7Materia::MegaAll; break;
-                case 5: weapon_slot_6_clicked();new_id = FF7Materia::LongRange; break;
-                case 4: weapon_slot_5_clicked();new_id = FF7Materia::PreEmptive; break;
-                case 3: weapon_slot_4_clicked();new_id = FF7Materia::MasterSummon; break;
-                case 2: weapon_slot_3_clicked();new_id = FF7Materia::EnemySkill; break;
-                case 1: weapon_slot_2_clicked();new_id = FF7Materia::MasterCommand; break;
+                case 6: new_id = FF7Materia::MegaAll; break;
+                case 5: new_id = FF7Materia::LongRange; break;
+                case 4: new_id = FF7Materia::PreEmptive; break;
+                case 3: new_id = FF7Materia::MasterSummon; break;
+                case 2: new_id = FF7Materia::EnemySkill; break;
+                case 1: new_id = FF7Materia::MasterCommand; break;
                 case 0: weapon_slot_1_clicked();new_id = FF7Materia::MasterMagic; break;
             }
-            mslotChanged(mslotsel);
 
             data.materias[mslotsel].id = new_id;
             data.materias[mslotsel].ap[0] = 0xFF;
             data.materias[mslotsel].ap[1] = 0xFF;
             data.materias[mslotsel].ap[2] = 0xFF;
-            matAp_changed(FF7Materia::MaxMateriaAp);
+
+            emit(mslotChanged(mslotsel));
+            emit(Materias_changed(data.materias[mslotsel]));
         }
         setSlotFrame();
         update_materia_slots();
