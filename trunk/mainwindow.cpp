@@ -159,6 +159,32 @@ void MainWindow::init_display()
     ui->list_flyers->setFixedHeight(ui->list_flyers->sizeHintForRow(0)*8);
     //Set up Status Bar..
     ui->statusBar->addWidget(ui->frame_status,1);
+    //Dynamicly Populate The List of languages
+    QIcon langIcon;
+    langIcon.addFile(":/icon/checkbox_unchecked",QSize(22,22),QIcon::Normal,QIcon::Off);
+    langIcon.addFile(":/icon/checkbox_checked",QSize(22,22),QIcon::Normal,QIcon::On);
+
+    QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
+    QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
+    QAction *langAction = ui->menuLang->addAction("English");
+    langAction->setIcon(langIcon);
+    langAction->setData("en");
+    langAction->setCheckable(true);
+    langAction->setChecked(settings->value("lang").toString()=="en");
+
+
+    for(int i=0;i<langList.length();i++)
+    {
+        if(langList.at(i).mid(7,2)=="en"){continue;}
+        QTranslator translator;
+        translator.load(langList.at(i),dir.absolutePath());
+        QString lang = langList.at(i).mid(7,2);
+        langAction = ui->menuLang->addAction(translator.translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
+        langAction->setIcon(langIcon);
+        langAction->setData(lang);
+        langAction->setCheckable(true);
+        langAction->setChecked(settings->value("lang").toString()==lang);
+    }
 }
 void MainWindow::init_style()
 {
@@ -189,6 +215,8 @@ void MainWindow::init_style()
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
+        //connect language menu
+        connect(ui->menuLang,SIGNAL(triggered(QAction*)),this,SLOT(changeLanguage(QAction *)));
         connect(ff7,SIGNAL(fileChanged(bool)),this,SLOT(fileModified(bool)));
         connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
         connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
@@ -308,7 +336,6 @@ void MainWindow::init_connections()
         connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
         connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
         //HexEditor.
-
         connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
         connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
         connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
@@ -321,7 +348,6 @@ void MainWindow::init_settings()
     if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
     if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
     if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 
     if(settings->value("show_test").toBool()){ui->action_AdvancedMode->setChecked(Qt::Checked);}
@@ -329,13 +355,6 @@ void MainWindow::init_settings()
 
     if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
     else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
-
-    /* LANGUAGE SELECT */
-    if(settings->value("lang").toString() == "en"){ui->action_Lang_en->setChecked(Qt::Checked);}
-    else if(settings->value("lang").toString() == "es"){ui->action_Lang_es->setChecked(Qt::Checked);}
-    else if(settings->value("lang").toString() == "fr"){ui->action_Lang_fr->setChecked(Qt::Checked);}
-    else if(settings->value("lang").toString() == "ja"){ui->action_Lang_jp->setChecked(Qt::Checked);}
-    else if(settings->value("lang").toString() == "de"){ui->action_Lang_de->setChecked(Qt::Checked);}
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow(){delete ui;}
@@ -685,50 +704,23 @@ void MainWindow::on_action_AdvancedMode_toggled(bool checked)
 }
 
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Lang_en_triggered()
+
+void MainWindow::changeLanguage(QAction *action)
 {
-    //clear other lang
-    ui->action_Lang_es->setChecked(Qt::Unchecked);
-    ui->action_Lang_fr->setChecked(Qt::Unchecked);
-    ui->action_Lang_jp->setChecked(Qt::Unchecked);
-    ui->action_Lang_de->setChecked(Qt::Unchecked);
-    settings->setValue("lang","en");
-    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
-}
-void MainWindow::on_action_Lang_es_triggered()
-{
-    ui->action_Lang_en->setChecked(Qt::Unchecked);
-    ui->action_Lang_fr->setChecked(Qt::Unchecked);
-    ui->action_Lang_jp->setChecked(Qt::Unchecked);
-    ui->action_Lang_de->setChecked(Qt::Unchecked);
-    settings->setValue("lang","es");
-    QMessageBox::information(this,QString::fromUtf8("Idioma Cambiado"),QString::fromUtf8("Debe reiniciar Para el cambio de idioma"));
-}
-void MainWindow::on_action_Lang_fr_triggered()
-{
-    ui->action_Lang_en->setChecked(Qt::Unchecked);
-    ui->action_Lang_es->setChecked(Qt::Unchecked);
-    ui->action_Lang_jp->setChecked(Qt::Unchecked);
-    ui->action_Lang_de->setChecked(Qt::Unchecked);
-    settings->setValue("lang","fr");
-    QMessageBox::information(this,QString::fromUtf8("Langue Modifiée"),QString::fromUtf8("Vous Devez Redemarrer Pour Changer la Langue"));
-}
-void MainWindow::on_action_Lang_de_triggered()
-{
-    ui->action_Lang_en->setChecked(Qt::Unchecked);
-    ui->action_Lang_es->setChecked(Qt::Unchecked);
-    ui->action_Lang_fr->setChecked(Qt::Unchecked);
-    settings->setValue("lang","de");
-    QMessageBox::information(this,QString::fromUtf8("Sprache geändert"),QString::fromUtf8("Neustarten um Sprache zu ändern"));
-}
-void MainWindow::on_action_Lang_jp_triggered()
-{
-    ui->action_Lang_en->setChecked(Qt::Unchecked);
-    ui->action_Lang_es->setChecked(Qt::Unchecked);
-    ui->action_Lang_fr->setChecked(Qt::Unchecked);
-    ui->action_Lang_de->setChecked(Qt::Unchecked);
-    settings->setValue("lang","ja");
-    QMessageBox::information(this,QString::fromUtf8("言語の変更"),QString::fromUtf8("プログラムを再起動して言語の変更を適用してください"));
+    settings->setValue("lang",action->data());
+    for(int i=0;i<ui->menuLang->actions().length();i++)
+    {
+        ui->menuLang->actions().at(i)->setChecked(false);
+    }
+    action->setChecked(true);
+    QTranslator translator;
+    QString title,message;
+    translator.load(QString("bchoco_%1.qm").arg(settings->value("lang").toString()),QString("%1%2lang").arg(settings->value("langPath").toString(),QDir::separator()));
+    title= translator.translate("MainWindow","Language Changed");
+    if(title.isEmpty()){title = "Language Changed";}
+    message = translator.translate("MainWindow","You must restart for the language to change.");
+    if(message.isEmpty()){message = "You must restart for the language to change.";}
+    QMessageBox::information(this,title,message);
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)

@@ -1822,6 +1822,38 @@ The km/h speeds are calculated while playing </source>
         <source>Diamond Tiara</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Batteries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peace Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Super Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Added Cut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunar Harp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -5295,10 +5327,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Lang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5320,10 +5348,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5481,15 +5505,7 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import  PSV Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import  Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6490,6 +6506,22 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Dat File (*.dat);</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language Changed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You must restart for the language to change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9221,6 +9253,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>  &amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dat Files (*.dat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Write File
+File:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1823,6 +1823,38 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>Diamond Tiara</source>
         <translation type="unfinished">Diadème diamants</translation>
     </message>
+    <message>
+        <source>Batteries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peace Ring</source>
+        <translation type="unfinished">Anneau de paix</translation>
+    </message>
+    <message>
+        <source>Super Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander</source>
+        <translation type="unfinished">Alexandre</translation>
+    </message>
+    <message>
+        <source>Added Cut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunar Harp</source>
+        <translation type="unfinished">Harpe lunaire</translation>
+    </message>
+    <message>
+        <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -5317,20 +5349,12 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <source>Lang</source>
-        <translation>Langue</translation>
-    </message>
-    <message>
         <source>&amp;Quit</source>
         <translation>&amp;Quitter</translation>
     </message>
     <message>
         <source>About Black Chocobo</source>
         <translation>À propos de Black Chocobo</translation>
-    </message>
-    <message>
-        <source>About Qt</source>
-        <translation>À propos de Qt</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -5489,16 +5513,8 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Sauvegarder le fichier de stats personnages FF7</translation>
     </message>
     <message>
-        <source>Import  PSV Save</source>
-        <translation>Importer sauvegarde PSV</translation>
-    </message>
-    <message>
         <source>FF7 Character Stat File(*.char)</source>
         <translation>Fichier de stat personnage FF7 (*.char)</translation>
-    </message>
-    <message>
-        <source>Import  Raw PSX Save</source>
-        <translation>Importer Sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -6510,6 +6526,22 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>Dat File (*.dat);</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>Francais</translation>
+    </message>
+    <message>
+        <source>Language Changed</source>
+        <translation>Langue Modifiée</translation>
+    </message>
+    <message>
+        <source>You must restart for the language to change.</source>
+        <translation>Vous Devez Redemarrer Pour Changer la Langue.</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation type="unfinished">Langue</translation>
     </message>
 </context>
 <context>
@@ -9255,6 +9287,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>  &amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation type="unfinished">Enregistrer sous</translation>
+    </message>
+    <message>
+        <source>Dat Files (*.dat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Write File
+File:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

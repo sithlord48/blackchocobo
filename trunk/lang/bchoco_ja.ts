@@ -1822,6 +1822,38 @@ The km/h speeds are calculated while playing </source>
         <source>Diamond Tiara</source>
         <translation type="unfinished">ダイヤのティアラ</translation>
     </message>
+    <message>
+        <source>Batteries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peace Ring</source>
+        <translation type="unfinished">安らぎの指輪</translation>
+    </message>
+    <message>
+        <source>Super Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander</source>
+        <translation type="unfinished">アレクサンダー</translation>
+    </message>
+    <message>
+        <source>Added Cut</source>
+        <translation type="unfinished">ついかぎり</translation>
+    </message>
+    <message>
+        <source>KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunar Harp</source>
+        <translation type="unfinished">ルナハープ</translation>
+    </message>
+    <message>
+        <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -5374,10 +5406,6 @@ The km/h speeds are calculated while playing </source>
         <translation>オプション(&amp;O)</translation>
     </message>
     <message>
-        <source>Lang</source>
-        <translation>言語</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>前のスロット</translation>
     </message>
@@ -5400,10 +5428,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>About Black Chocobo</source>
         <translation>Black Chocobo について</translation>
-    </message>
-    <message>
-        <source>About Qt</source>
-        <translation>Qt について</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -5562,16 +5586,8 @@ The km/h speeds are calculated while playing </source>
         <translation>FF7 キャラクター ステータス ファイルの保存</translation>
     </message>
     <message>
-        <source>Import  PSV Save</source>
-        <translation>PSV セーブのインポート</translation>
-    </message>
-    <message>
         <source>FF7 Character Stat File(*.char)</source>
         <translation>FF7 キャラクター ステータス ファイル (*.char)</translation>
-    </message>
-    <message>
-        <source>Import  Raw PSX Save</source>
-        <translation>Raw PSX セーブのインポート</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -6576,6 +6592,22 @@ trigger showing that tutorial</source>
     <message>
         <source>Dat File (*.dat);</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>日本語</translation>
+    </message>
+    <message>
+        <source>Language Changed</source>
+        <translation>言語の変更</translation>
+    </message>
+    <message>
+        <source>You must restart for the language to change.</source>
+        <translation>プログラムを再起動して言語の変更を適用してください</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>言語</translation>
     </message>
 </context>
 <context>
@@ -9319,6 +9351,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>  &amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation type="unfinished">名前を付けて保存</translation>
+    </message>
+    <message>
+        <source>Dat Files (*.dat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Write File
+File:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1823,6 +1823,38 @@ Los km/h son calculados mientras se juega</translation>
         <source>Diamond Tiara</source>
         <translation type="unfinished">Diadema Diamante</translation>
     </message>
+    <message>
+        <source>Batteries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peace Ring</source>
+        <translation type="unfinished">Anillo Paz</translation>
+    </message>
+    <message>
+        <source>Super Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander</source>
+        <translation type="unfinished">Alejandro</translation>
+    </message>
+    <message>
+        <source>Added Cut</source>
+        <translation type="unfinished">Corte añadido</translation>
+    </message>
+    <message>
+        <source>KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunar Harp</source>
+        <translation type="unfinished">Harpa Lunar</translation>
+    </message>
+    <message>
+        <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -5250,10 +5282,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>&amp;Opciones</translation>
     </message>
     <message>
-        <source>Lang</source>
-        <translation>Idioma</translation>
-    </message>
-    <message>
         <source>&amp;Quit</source>
         <translation>&amp;Salir</translation>
     </message>
@@ -5328,10 +5356,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>About Black Chocobo</source>
         <translation>Acerca de Chocobo Negro</translation>
-    </message>
-    <message>
-        <source>About Qt</source>
-        <translation>Acerca de Qt</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -5490,16 +5514,8 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Guardar archivo de personaje de FF7</translation>
     </message>
     <message>
-        <source>Import  PSV Save</source>
-        <translation>Importar partida guardada PSV</translation>
-    </message>
-    <message>
         <source>FF7 Character Stat File(*.char)</source>
         <translation>Archivo de stats de personaje de FF7(*.char)</translation>
-    </message>
-    <message>
-        <source>Import  Raw PSX Save</source>
-        <translation>Importar archivo de guardado PSX (Raw)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -6508,6 +6524,22 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>Dat File (*.dat);</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>Español</translation>
+    </message>
+    <message>
+        <source>Language Changed</source>
+        <translation>Idioma Cambiado</translation>
+    </message>
+    <message>
+        <source>You must restart for the language to change.</source>
+        <translation>Debe reiniciar Para el cambio de idioma.</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Idioma</translation>
     </message>
 </context>
 <context>
@@ -9252,6 +9284,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>  &amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation type="unfinished">Guardar Como</translation>
+    </message>
+    <message>
+        <source>Dat Files (*.dat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed To Write File
+File:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
