@@ -107,7 +107,7 @@ private:
     void init_display();
     void init_style();
     void init_connections();
-    void init_settings();
+    void init_settings();    
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 
@@ -152,11 +152,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_action_auto_char_growth_triggered(bool checked);
     void on_action_AdvancedMode_toggled(bool checked);
     /*Language and Region Data*/
-    void on_action_Lang_en_triggered();
-    void on_action_Lang_es_triggered();
-    void on_action_Lang_fr_triggered();
-    void on_action_Lang_de_triggered();
-    void on_action_Lang_jp_triggered();
+    void changeLanguage(QAction *);
     void on_action_Region_USA_triggered(bool checked);
     void on_action_Region_PAL_Generic_triggered(bool checked);
     void on_action_Region_PAL_French_triggered(bool checked);
