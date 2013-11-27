@@ -169,6 +169,16 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0C86<<0x0BE8,QList<quint8>()<<5<<2,QStringList()<<"blin68_1",QT_TRANSLATE_NOOP("FieldItems","KeyCard 68")},
     {QList<quint16>()<<0x0C8B<<0x0BE7,QList<quint8>()<<3<<3,QStringList()<<"bonevil",QT_TRANSLATE_NOOP("FieldItems","Lunar Harp")},
     {QList<quint16>()<<0x0C8C<<0x0BE7,QList<quint8>()<<1<<4,QStringList()<<"sinin2_1",QT_TRANSLATE_NOOP("FieldItems","Key To Basement")},
+    /*Below share same bit you can only get one possible error in the field script*/
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<1,QStringList()<<"nivl_3",QT_TRANSLATE_NOOP("FieldItems","Mind Plus")},
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<1,QStringList()<<"nivinn_1",QT_TRANSLATE_NOOP("FieldItems","Luck Source")},
+
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<2,QStringList()<<"niv_w",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<3,QStringList()<<"niv_ti1",QT_TRANSLATE_NOOP("FieldItems","Turbo Ether")},
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<4,QStringList()<<"niv_ti2",QT_TRANSLATE_NOOP("FieldItems","Platinum Fist")},
+    {QList<quint16>()<<0x0CBD,QList<quint8>()<<5,QStringList()<<"nvmin1_2",QT_TRANSLATE_NOOP("FieldItems","Luck Source")},
+
+    {QList<quint16>()<<0x0CEC<<0x0BE9,QList<quint8>()<<7<<1,QStringList()<<"gldst"<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Gold Ticket")},
 
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("FieldItems","Fire Armlet")},
