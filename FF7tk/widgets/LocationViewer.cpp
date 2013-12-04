@@ -399,13 +399,15 @@ void LocationViewer::actionCaseSensitiveToggled(bool checked)
 void LocationViewer::init_fieldItems(void)
 {
     fieldItemList->clear();
+    fieldItemList->setVisible(false);
     if(Locations->fileName(sbMapID->value(),sbLocID->value()).isEmpty()){fieldItemList->setFixedHeight(0);return;}
+
     else
     {
         for(int i=0;i<fieldItems->count();i++)
         {
             for(int j=0;j<fieldItems->maps(i).count();j++)
-            {
+            {                
                 if(fieldItems->maps(i).at(j)== Locations->fileName(sbMapID->value(),sbLocID->value()))
                 {
                     QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
@@ -415,10 +417,12 @@ void LocationViewer::init_fieldItems(void)
                     //emit to check the item
                     emit fieldItemCheck(fieldItemList->count()-1);
                 }
+
             }
         }
-        if(fieldItemList->count()<=0){fieldItemList->setFixedHeight(0);}
-        else if(fieldItemList->count()<5)
+        if(fieldItemList->count()>0){fieldItemList->setVisible(true);}
+
+        if(fieldItemList->count()<5)
         {
             fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
             fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
