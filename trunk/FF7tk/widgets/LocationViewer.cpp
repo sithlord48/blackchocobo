@@ -330,7 +330,11 @@ void LocationViewer::setLocationString(QString locString)
     init_disconnect();
     QString newStr = translate(locString);
     lineLocationName->setText(newStr);
-    if(locString !=newStr && autoUpdate){emit(locationStringChanged(newStr));qWarning()<<QString("LocationString Changed: %1").arg(newStr);}
+    if(locString !=newStr && autoUpdate)
+    {
+        emit(locationStringChanged(newStr));
+        qWarning()<<QString("LocationString Changed: %1").arg(newStr);
+    }
     init_connections();
 }
 void LocationViewer::chkAutoUpdateChanged(bool checked)
@@ -400,15 +404,15 @@ void LocationViewer::init_fieldItems(void)
 {
     fieldItemList->clear();
     fieldItemList->setVisible(false);
-    if(Locations->fileName(sbMapID->value(),sbLocID->value()).isEmpty()){fieldItemList->setFixedHeight(0);return;}
-
+    QString fieldFileName = Locations->fileName(sbMapID->value(),sbLocID->value()); //store our current field's FileName
+    if(fieldFileName.isEmpty()){fieldItemList->setFixedHeight(0);return;}
     else
     {
         for(int i=0;i<fieldItems->count();i++)
         {
             for(int j=0;j<fieldItems->maps(i).count();j++)
             {                
-                if(fieldItems->maps(i).at(j)== Locations->fileName(sbMapID->value(),sbLocID->value()))
+                if(fieldItems->maps(i).at(j)== fieldFileName)
                 {
                     QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
                     newItem->setCheckState(Qt::Unchecked);
@@ -417,7 +421,6 @@ void LocationViewer::init_fieldItems(void)
                     //emit to check the item
                     emit fieldItemCheck(fieldItemList->count()-1);
                 }
-
             }
         }
         if(fieldItemList->count()>0){fieldItemList->setVisible(true);}
