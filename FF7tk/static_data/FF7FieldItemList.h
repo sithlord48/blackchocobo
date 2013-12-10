@@ -179,6 +179,11 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0CBD,QList<quint8>()<<5,QStringList()<<"nvmin1_2",QT_TRANSLATE_NOOP("FieldItems","Luck Source")},
 
     {QList<quint16>()<<0x0CEC<<0x0BE9,QList<quint8>()<<7<<1,QStringList()<<"gldst"<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Gold Ticket")},
+    {QList<quint16>()<<0x0CF1,QList<quint8>()<<0,QStringList()<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Gil Plus")},
+    {QList<quint16>()<<0x0CF1,QList<quint8>()<<1,QStringList()<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Exp Plus")},
+    {QList<quint16>()<<0x0CF2,QList<quint8>()<<6,QStringList()<<"coloss",QT_TRANSLATE_NOOP("FieldItems","Sprint Shoes")},
+    {QList<quint16>()<<0x0CF3,QList<quint8>()<<5,QStringList()<<"coloin1",QT_TRANSLATE_NOOP("FieldItems","Onmislash")},
+    {QList<quint16>()<<0x0CF3,QList<quint8>()<<6,QStringList()<<"coloin1",QT_TRANSLATE_NOOP("FieldItems","W-Summon")},
 
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("FieldItems","Fire Armlet")},
@@ -315,11 +320,11 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0FFA,QList<quint8>()<<4,QStringList()<<"psdun_2",QT_TRANSLATE_NOOP("FieldItems","Mind Source")},
     {QList<quint16>()<<0x0FFA,QList<quint8>()<<5,QStringList()<<"psdun_3",QT_TRANSLATE_NOOP("FieldItems","Tent")},
 
-    {QList<quint16>()<<0x0FFB,QList<quint8>()<<0,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Underwater")},
-    {QList<quint16>()<<0x0FFB,QList<quint8>()<<1,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Master Command")},
-    {QList<quint16>()<<0x0FFB,QList<quint8>()<<2,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Master Magic")},
-    {QList<quint16>()<<0x0FFB,QList<quint8>()<<3,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Master Summon")},
-    {QList<quint16>()<<0x0FFB,QList<quint8>()<<4,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Gold Chocobo")},
+    {QList<quint16>()<<0x0FFB,QList<quint8>()<<0,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Show Underwater")},
+    {QList<quint16>()<<0x0FFB,QList<quint8>()<<1,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Show Master Command")},
+    {QList<quint16>()<<0x0FFB,QList<quint8>()<<2,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Show Master Magic")},
+    {QList<quint16>()<<0x0FFB,QList<quint8>()<<3,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Show Master Summon")},
+    {QList<quint16>()<<0x0FFB,QList<quint8>()<<4,QStringList()<<"elmin4_2",QT_TRANSLATE_NOOP("FieldItems","Show Gold Chocobo")},
 
     {QList<quint16>()<<0x1014,QList<quint8>()<<0,QStringList()<<"kuro_3",QT_TRANSLATE_NOOP("FieldItems","Morph")},
     {QList<quint16>()<<0x1014,QList<quint8>()<<1,QStringList()<<"kuro_1",QT_TRANSLATE_NOOP("FieldItems","Luck Plus")},
