@@ -1484,23 +1484,23 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished">せんすい</translation>
+        <translation type="obsolete">せんすい</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished">マスターコマンド</translation>
+        <translation type="obsolete">マスターコマンド</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished">マスターまほう</translation>
+        <translation type="obsolete">マスターまほう</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished">マスターしょうかん</translation>
+        <translation type="obsolete">マスターしょうかん</translation>
     </message>
     <message>
         <source>Gold Chocobo</source>
-        <translation type="unfinished">海チョコボ</translation>
+        <translation type="obsolete">海チョコボ</translation>
     </message>
     <message>
         <source>Morph</source>
@@ -1852,6 +1852,58 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platinum Fist</source>
+        <translation type="unfinished">プラチナフィスト</translation>
+    </message>
+    <message>
+        <source>Gold Ticket</source>
+        <translation type="unfinished">ゴールドチケット</translation>
+    </message>
+    <message>
+        <source>Gil Plus</source>
+        <translation type="unfinished">ギルアップ</translation>
+    </message>
+    <message>
+        <source>Exp Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished">エルメスのくつ</translation>
+    </message>
+    <message>
+        <source>Onmislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Summon</source>
+        <translation type="unfinished">Ｗしょうかん</translation>
+    </message>
+    <message>
+        <source>Show Underwater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
