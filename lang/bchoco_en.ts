@@ -1483,26 +1483,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Underwater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master Command</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master Magic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master Summon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Morph</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1852,6 +1832,58 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platinum Fist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Ticket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exp Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Onmislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Underwater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1484,23 +1484,23 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished">Unterwasser</translation>
+        <translation type="obsolete">Unterwasser</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished">Premium-Befehl</translation>
+        <translation type="obsolete">Premium-Befehl</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished">Premium-Zauber</translation>
+        <translation type="obsolete">Premium-Zauber</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished">Premium-Beschwörung</translation>
+        <translation type="obsolete">Premium-Beschwörung</translation>
     </message>
     <message>
         <source>Gold Chocobo</source>
-        <translation type="unfinished">Goldener Chocobo</translation>
+        <translation type="obsolete">Goldener Chocobo</translation>
     </message>
     <message>
         <source>Morph</source>
@@ -1852,6 +1852,58 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platinum Fist</source>
+        <translation type="unfinished">Platinfaust</translation>
+    </message>
+    <message>
+        <source>Gold Ticket</source>
+        <translation type="unfinished">Goldticket</translation>
+    </message>
+    <message>
+        <source>Gil Plus</source>
+        <translation type="unfinished">Extra Gil</translation>
+    </message>
+    <message>
+        <source>Exp Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished">Sprintschuhe</translation>
+    </message>
+    <message>
+        <source>Onmislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W-Summon</source>
+        <translation type="unfinished">2xBeschwörung</translation>
+    </message>
+    <message>
+        <source>Show Underwater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

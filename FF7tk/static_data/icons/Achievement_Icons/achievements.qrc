@@ -8,5 +8,6 @@
 	<file alias="58">58.png</file>
 	<file alias="57">57.png</file>
 	<file alias="56">56.png</file>	
+	<file alias="50">50.png</file>		
       </qresource>
 </RCC>
