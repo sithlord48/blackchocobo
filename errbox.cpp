@@ -111,7 +111,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     //assume NOT PC SAVE.
 
-    QString Slottext= QString(tr("Slot:%1\n").arg(QString::number(s+1)));
+    QString Slottext= QString(tr("Slot:%1\n").arg(QString::number(s+1),2,QChar('0')));
     if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(codec->toUnicode(desc));}
 
     else if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext.append(tr("\n Mid-Linked Block "));}
