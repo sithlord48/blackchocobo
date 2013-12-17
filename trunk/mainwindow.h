@@ -126,21 +126,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionNew_Game_triggered();
     void on_actionNew_Game_Plus_triggered();
   /*Simple Menu Actions */
-    void on_actionSlot_01_triggered();
-    void on_actionSlot_02_triggered();
-    void on_actionSlot_03_triggered();
-    void on_actionSlot_04_triggered();
-    void on_actionSlot_05_triggered();
-    void on_actionSlot_06_triggered();
-    void on_actionSlot_07_triggered();
-    void on_actionSlot_08_triggered();
-    void on_actionSlot_09_triggered();
-    void on_actionSlot_10_triggered();
-    void on_actionSlot_11_triggered();
-    void on_actionSlot_12_triggered();
-    void on_actionSlot_13_triggered();
-    void on_actionSlot_14_triggered();
-    void on_actionSlot_15_triggered();
     void on_actionShow_Selection_Dialog_triggered();
     void on_actionClear_Slot_triggered();
     void on_actionPrevious_Slot_triggered();

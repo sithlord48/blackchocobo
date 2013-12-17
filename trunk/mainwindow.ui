@@ -20,7 +20,7 @@
    <string>Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset>
+   <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
@@ -1269,28 +1269,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="lbl_current_slot_num">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>18</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>18</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
              <spacer name="horizontalSpacer_115">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -2460,8 +2438,8 @@ enabled{font:;color: rgb(255, 255, 255);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>454</height>
+             <width>100</width>
+             <height>30</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2509,7 +2487,7 @@ enabled{font:;color: rgb(255, 255, 255);}
             </rect>
            </property>
            <attribute name="icon">
-            <iconset>
+            <iconset resource="images.qrc">
              <normaloff>:/icon/world_map</normaloff>:/icon/world_map</iconset>
            </attribute>
            <attribute name="label">
@@ -4378,7 +4356,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>313</width>
                   <height>1705</height>
                  </rect>
                 </property>
@@ -8791,21 +8769,6 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="separator"/>
     <addaction name="actionShow_Selection_Dialog"/>
     <addaction name="separator"/>
-    <addaction name="actionSlot_01"/>
-    <addaction name="actionSlot_02"/>
-    <addaction name="actionSlot_03"/>
-    <addaction name="actionSlot_04"/>
-    <addaction name="actionSlot_05"/>
-    <addaction name="actionSlot_06"/>
-    <addaction name="actionSlot_07"/>
-    <addaction name="actionSlot_08"/>
-    <addaction name="actionSlot_09"/>
-    <addaction name="actionSlot_10"/>
-    <addaction name="actionSlot_11"/>
-    <addaction name="actionSlot_12"/>
-    <addaction name="actionSlot_13"/>
-    <addaction name="actionSlot_14"/>
-    <addaction name="actionSlot_15"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
@@ -8867,7 +8830,7 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="action_Quit">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
    </property>
    <property name="text">
@@ -8879,7 +8842,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpen_Save_File">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/open</normaloff>:/icon/open</iconset>
    </property>
    <property name="text">
@@ -8897,7 +8860,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/save_as</normaloff>:/icon/save_as</iconset>
    </property>
    <property name="text">
@@ -8912,7 +8875,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
    </property>
    <property name="text">
@@ -8925,255 +8888,12 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionSlot_01">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/1_unsel</normaloff>
-     <normalon>:/icon/1_sel</normalon>:/icon/1_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-01</string>
-   </property>
-   <property name="visible">
-    <bool>true</bool>
-   </property>
-  </action>
-  <action name="actionSlot_02">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/2_unsel</normaloff>
-     <normalon>:/icon/2_sel</normalon>:/icon/2_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-02</string>
-   </property>
-  </action>
-  <action name="actionSlot_03">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/3_unsel</normaloff>
-     <normalon>:/icon/3_sel</normalon>:/icon/3_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-03</string>
-   </property>
-  </action>
-  <action name="actionSlot_04">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/4_unsel</normaloff>
-     <normalon>:/icon/4_sel</normalon>:/icon/4_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-04</string>
-   </property>
-  </action>
-  <action name="actionSlot_05">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/5_unsel</normaloff>
-     <normalon>:/icon/5_sel</normalon>:/icon/5_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-05</string>
-   </property>
-  </action>
-  <action name="actionSlot_06">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/6_unsel</normaloff>
-     <normalon>:/icon/6_sel</normalon>:/icon/6_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-06</string>
-   </property>
-  </action>
-  <action name="actionSlot_07">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/7_unsel</normaloff>
-     <normalon>:/icon/7_sel</normalon>:/icon/7_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-07</string>
-   </property>
-  </action>
-  <action name="actionSlot_08">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/8_unsel</normaloff>
-     <normalon>:/icon/8_sel</normalon>:/icon/8_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-08</string>
-   </property>
-  </action>
-  <action name="actionSlot_09">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/9_unsel</normaloff>
-     <normalon>:/icon/9_sel</normalon>:/icon/9_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-09</string>
-   </property>
-  </action>
-  <action name="actionSlot_10">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/10_unsel</normaloff>
-     <normalon>:/icon/10_sel</normalon>:/icon/10_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-10</string>
-   </property>
-  </action>
-  <action name="actionSlot_11">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/11_unsel</normaloff>
-     <normalon>:/icon/11_sel</normalon>:/icon/11_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-11</string>
-   </property>
-  </action>
-  <action name="actionSlot_12">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/12_unsel</normaloff>
-     <normalon>:/icon/12_sel</normalon>:/icon/12_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-12</string>
-   </property>
-  </action>
-  <action name="actionSlot_13">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/13_unsel</normaloff>
-     <normalon>:/icon/13_sel</normalon>:/icon/13_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-13</string>
-   </property>
-  </action>
-  <action name="actionSlot_14">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/14_unsel</normaloff>
-     <normalon>:/icon/14_sel</normalon>:/icon/14_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-14</string>
-   </property>
-  </action>
-  <action name="actionSlot_15">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/icon/15_unsel</normaloff>
-     <normalon>:/icon/15_sel</normalon>:/icon/15_unsel</iconset>
-   </property>
-   <property name="text">
-    <string>Slot-15</string>
-   </property>
-  </action>
   <action name="actionShow_Selection_Dialog">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/slot_sel</normaloff>:/icon/slot_sel</iconset>
    </property>
    <property name="text">
@@ -9185,7 +8905,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
@@ -9203,7 +8923,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/paste</normaloff>:/icon/paste</iconset>
    </property>
    <property name="text">
@@ -9221,7 +8941,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/delete</normaloff>:/icon/delete</iconset>
    </property>
    <property name="text">
@@ -9239,7 +8959,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
    </property>
    <property name="text">
@@ -9257,7 +8977,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
    </property>
    <property name="text">
@@ -9275,7 +8995,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/checkbox_unchecked</normaloff>
      <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
    </property>
@@ -9285,7 +9005,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionShow_Options">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
    </property>
    <property name="text">
@@ -9297,7 +9017,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/us_unsel</normaloff>
      <normalon>:/icon/us_sel</normalon>:/icon/us_unsel</iconset>
    </property>
@@ -9310,7 +9030,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/eu_unsel</normaloff>
      <normalon>:/icon/eu_sel</normalon>:/icon/eu_unsel</iconset>
    </property>
@@ -9323,7 +9043,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/de_unsel</normaloff>
      <normalon>:/icon/de_sel</normalon>:/icon/de_unsel</iconset>
    </property>
@@ -9336,7 +9056,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/es_unsel</normaloff>
      <normalon>:/icon/es_sel</normalon>:/icon/es_unsel</iconset>
    </property>
@@ -9349,7 +9069,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/jp_unsel</normaloff>
      <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
    </property>
@@ -9362,7 +9082,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/jp_unsel</normaloff>
      <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
    </property>
@@ -9372,7 +9092,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionNew_Game">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
    </property>
    <property name="text">
@@ -9390,7 +9110,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/new_plus</normaloff>:/icon/new_plus</iconset>
    </property>
    <property name="text">
@@ -9405,7 +9125,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionExport_char">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/export_char</normaloff>:/icon/export_char</iconset>
    </property>
    <property name="text">
@@ -9414,7 +9134,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionImport_char">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/import_char</normaloff>:/icon/import_char</iconset>
    </property>
    <property name="text">
@@ -9426,7 +9146,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/save</normaloff>:/icon/save</iconset>
    </property>
    <property name="text">
@@ -9444,7 +9164,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/checkbox_unchecked</normaloff>
      <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
    </property>
@@ -9457,7 +9177,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/refresh</normaloff>:/icon/refresh</iconset>
    </property>
    <property name="text">
@@ -9475,7 +9195,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/fr_unsel</normaloff>
      <normalon>:/icon/fr_sel</normalon>:/icon/fr_unsel</iconset>
    </property>
@@ -9485,7 +9205,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionCreateNewMetadata">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
    </property>
    <property name="text">
@@ -9497,7 +9217,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
@@ -9506,7 +9226,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpen_Achievement_File">
    <property name="icon">
-    <iconset>
+    <iconset resource="images.qrc">
      <normaloff>:/icon/icon/achievements.png</normaloff>:/icon/icon/achievements.png</iconset>
    </property>
    <property name="text">
@@ -9557,7 +9277,9 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>cb_reg_vinny</tabstop>
   <tabstop>cb_reg_yuffie</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>action_Quit</sender>

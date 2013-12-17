@@ -617,21 +617,6 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionSlot_01_triggered(){s=0; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_02_triggered(){s=1; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_03_triggered(){s=2; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_04_triggered(){s=3; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_05_triggered(){s=4; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_06_triggered(){s=5; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_07_triggered(){s=6; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_08_triggered(){s=7; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_09_triggered(){s=8; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_10_triggered(){s=9; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_11_triggered(){s=10; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_12_triggered(){s=11; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_13_triggered(){s=12; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_14_triggered(){s=13; CheckGame(); guirefresh(0);}
-void MainWindow::on_actionSlot_15_triggered(){s=14; CheckGame(); guirefresh(0);}
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(0);}
 void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
@@ -898,41 +883,13 @@ void MainWindow::setmenu(bool newgame)
 {
     load=true;
     /*~~Disable All Items that are dependent on File Type~~*/
-    ui->actionSlot_01->setChecked(Qt::Unchecked);    ui->actionSlot_02->setChecked(Qt::Unchecked);    ui->actionSlot_03->setChecked(Qt::Unchecked);    ui->actionSlot_04->setChecked(Qt::Unchecked);
-    ui->actionSlot_05->setChecked(Qt::Unchecked);    ui->actionSlot_06->setChecked(Qt::Unchecked);    ui->actionSlot_07->setChecked(Qt::Unchecked);    ui->actionSlot_08->setChecked(Qt::Unchecked);
-    ui->actionSlot_09->setChecked(Qt::Unchecked);    ui->actionSlot_10->setChecked(Qt::Unchecked);    ui->actionSlot_11->setChecked(Qt::Unchecked);    ui->actionSlot_12->setChecked(Qt::Unchecked);
-    ui->actionSlot_13->setChecked(Qt::Unchecked);    ui->actionSlot_14->setChecked(Qt::Unchecked);    ui->actionSlot_15->setChecked(Qt::Unchecked);     ui->actionClear_Slot->setEnabled(0);
+    ui->actionClear_Slot->setEnabled(0);
     ui->action_Region_USA->setChecked(Qt::Unchecked);    ui->action_Region_PAL_Generic->setChecked(Qt::Unchecked);  ui->action_Region_PAL_German->setChecked(Qt::Unchecked);
     ui->action_Region_PAL_French->setChecked(Qt::Unchecked);ui->action_Region_PAL_Spanish->setChecked(Qt::Unchecked);    ui->action_Region_JPN->setChecked(Qt::Unchecked);
     ui->action_Region_JPN_International->setChecked(Qt::Unchecked);    ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
-    ui->actionShow_Selection_Dialog->setEnabled(0);ui->actionSlot_01->setEnabled(0);ui->actionSlot_02->setEnabled(0);
-    ui->actionSlot_03->setEnabled(0);ui->actionSlot_04->setEnabled(0);ui->actionSlot_05->setEnabled(0);
-    ui->actionSlot_06->setEnabled(0);ui->actionSlot_07->setEnabled(0);ui->actionSlot_08->setEnabled(0);
-    ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
-    ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
-    ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compare_table->setEnabled(0);
-    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();ui->actionImport_char->setEnabled(1);ui->actionExport_char->setEnabled(1);
+    ui->actionShow_Selection_Dialog->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compare_table->setEnabled(0);
+    ui->lbl_current_slot_txt->clear();ui->actionImport_char->setEnabled(1);ui->actionExport_char->setEnabled(1);
     /*~~End Clear Menu Items~~*/
-    /*~~~~~~Current Slot~~~~~~*/
-    switch(s)
-    {
-        case 0:ui->actionSlot_01->setChecked(Qt::Checked);break;
-        case 1:ui->actionSlot_02->setChecked(Qt::Checked);break;
-        case 2:ui->actionSlot_03->setChecked(Qt::Checked);break;
-        case 3:ui->actionSlot_04->setChecked(Qt::Checked);break;
-        case 4:ui->actionSlot_05->setChecked(Qt::Checked);break;
-        case 5:ui->actionSlot_06->setChecked(Qt::Checked);break;
-        case 6:ui->actionSlot_07->setChecked(Qt::Checked);break;
-        case 7:ui->actionSlot_08->setChecked(Qt::Checked);break;
-        case 8:ui->actionSlot_09->setChecked(Qt::Checked);break;
-        case 9:ui->actionSlot_10->setChecked(Qt::Checked);break;
-        case 10:ui->actionSlot_11->setChecked(Qt::Checked);break;
-        case 11:ui->actionSlot_12->setChecked(Qt::Checked);break;
-        case 12:ui->actionSlot_13->setChecked(Qt::Checked);break;
-        case 13:ui->actionSlot_14->setChecked(Qt::Checked);break;
-        case 14:ui->actionSlot_15->setChecked(Qt::Checked);break;
-    }
-    /*~~~~End Current Slot~~~~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
     //For first file load.Don't Bother to disable these again.
     //new game should always be exported. no header...
@@ -969,18 +926,13 @@ void MainWindow::setmenu(bool newgame)
 
     if ( (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) && (ff7->type()!="") ) //more then one slot, or unknown Type
     {
-        ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);   ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);   ui->actionClear_Slot->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);   ui->actionNew_Game->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);   ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);   ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);   ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);   ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);   ui->actionSlot_15->setEnabled(1);
-        ui->compare_table->setEnabled(1);   ui->lbl_current_slot_txt->setText(tr("Current Slot:"));
-        ui->lbl_current_slot_num->setNum(s+1); ui->actionClear_Slot->setEnabled(1);
+        ui->actionNext_Slot->setEnabled(1);
+        ui->actionPrevious_Slot->setEnabled(1);
+        ui->actionShow_Selection_Dialog->setEnabled(1);
+        ui->actionClear_Slot->setEnabled(1);
+        ui->actionNew_Game->setEnabled(1);
+        ui->compare_table->setEnabled(1);
+        ui->lbl_current_slot_txt->setText(tr("Current Slot:%1").arg(QString::number(s+1),2,QChar('0')));
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
