@@ -103,7 +103,7 @@ class FF7Materia
     quint32 ap2num (quint8 ap[3]);
 };
 
-static MATERIA Materias[]=
+static const MATERIA Materias[]=
 {
     {QT_TRANSLATE_NOOP("Materia_Names","MP Plus"),         QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +10%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +20%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +30%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +40%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +50%"),QT_TRANSLATE_NOOP("Materia_Stats","MaxMp:+% depending on level"), QImage(independent_xpm),QImage(independent_star_empty_xpm),QImage(independent_star_full_xpm), 0x00,0,0,0,0,0,0,0,0,{0,10000,20000,30000,50000},3,5,"",QStringList("")},
     {QT_TRANSLATE_NOOP("Materia_Names","HP Plus"),         QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +10%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +20%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +30%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +40%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +50%"),QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:+% depending on level"), QImage(independent_xpm),QImage(independent_star_empty_xpm),QImage(independent_star_full_xpm), 0x01,0,0,0,0,0,0,0,0,{0,10000,20000,30000,50000},3,5,"",QStringList("")},

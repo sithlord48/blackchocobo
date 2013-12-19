@@ -38,7 +38,7 @@ public:
     int count();
 };
 
-static FieldItemList FILIST[]=
+static const FieldItemList FILIST[]=
 {//don't forget to update count on entry
     {QList<quint16>()<<0x0BC8,QList<quint8>()<<0,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("FieldItems","Hi-Potion")},
     {QList<quint16>()<<0x0BC8,QList<quint8>()<<1,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("FieldItems","Echo Screen")},
@@ -70,7 +70,7 @@ static FieldItemList FILIST[]=
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<2,QStringList()<<"zz7",QT_TRANSLATE_NOOP("FieldItems","Quadra Magic")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<3,QStringList()<<"zz8",QT_TRANSLATE_NOOP("FieldItems","Knights of the Round")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<4,QStringList()<<"las3_1"<<"las4_0",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
-    {QList<quint16>()<<0x0BD5,QList<quint8>()<<5,QStringList()<<"las3_1",QT_TRANSLATE_NOOP("FieldItems","x-Potion")},
+    {QList<quint16>()<<0x0BD5,QList<quint8>()<<5,QStringList()<<"las3_1",QT_TRANSLATE_NOOP("FieldItems","X-Potion")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<6,QStringList()<<"las3_2"<<"las4_0",QT_TRANSLATE_NOOP("FieldItems","Turbo Ether")},
     {QList<quint16>()<<0x0BD5,QList<quint8>()<<7,QStringList()<<"las3_2"<<"las4_0",QT_TRANSLATE_NOOP("FieldItems","Vaccine")},
 

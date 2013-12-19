@@ -61,8 +61,8 @@ void LocationViewer::init_display(void)
     locationTable->setHorizontalHeaderItem(1,newItem);
     locationTable->setColumnWidth(1,font().pointSize()*24);
     newItem = new QTableWidgetItem(tr("LocID"),0);
-    locationTable->setHorizontalHeaderItem(2,newItem);
     locationTable->setColumnWidth(2,font().pointSize()*6);
+    locationTable->setHorizontalHeaderItem(2,newItem);
 
     for (int i=0;i<locationTable->rowCount();i++)
     {
@@ -88,9 +88,9 @@ void LocationViewer::init_display(void)
         locationTable->setItem(i,2,newItem);
         locationTable->setRowHeight(i,font().pointSizeF()*2+2);
     }
+    locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM());
-    locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setCurrentCell(-1,-1);
 
     btnSearchOptions = new QToolButton;
@@ -104,6 +104,7 @@ void LocationViewer::init_display(void)
     actionCaseSensitive->setCheckable(true);
 
     QMenu * newMenu=new QMenu;
+    newMenu->setStyleSheet(this->styleSheet());
     newMenu->addAction(actionRegExpSearch);
     newMenu->addAction(actionCaseSensitive);
 
@@ -167,6 +168,14 @@ void LocationViewer::init_display(void)
     fieldItemList->setUniformItemSizes(true);
     fieldItemList->setSelectionMode(QAbstractItemView::NoSelection);
 
+    QVBoxLayout *fitemLayout = new QVBoxLayout();
+    fitemLayout->setContentsMargins(0,0,0,0);
+    fitemLayout->setSpacing(0);
+    fitemLayout->addWidget(fieldItemList);
+    groupFieldItems = new QGroupBox(tr("Field Items"));
+    groupFieldItems->setLayout(fitemLayout);
+    groupFieldItems->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Minimum);
+
     QHBoxLayout *nameIDs = new QHBoxLayout;
     nameIDs->addWidget(lineLocationName);
     nameIDs->addWidget(sbMapID);
@@ -201,7 +210,7 @@ void LocationViewer::init_display(void)
     QVBoxLayout *RightSideLayout = new QVBoxLayout;
     RightSideLayout->addLayout(CoordsLayout);
     RightSideLayout->addLayout(PreviewLayout);
-    RightSideLayout->addWidget(fieldItemList);
+    RightSideLayout->addWidget(groupFieldItems);
 
     QHBoxLayout *FinalLayout = new QHBoxLayout;
     FinalLayout->setContentsMargins(3,3,3,3);
@@ -402,8 +411,8 @@ void LocationViewer::actionCaseSensitiveToggled(bool checked)
 
 void LocationViewer::init_fieldItems(void)
 {
+    groupFieldItems->setVisible(false);
     fieldItemList->clear();
-    fieldItemList->setVisible(false);
     QString fieldFileName = Locations->fileName(sbMapID->value(),sbLocID->value()); //store our current field's FileName
     if(fieldFileName.isEmpty()){fieldItemList->setFixedHeight(0);return;}
     else
@@ -423,7 +432,7 @@ void LocationViewer::init_fieldItems(void)
                 }
             }
         }
-        if(fieldItemList->count()>0){fieldItemList->setVisible(true);}
+        if(fieldItemList->count()>0){groupFieldItems->setVisible(true);}
 
         if(fieldItemList->count()<5)
         {
@@ -443,6 +452,7 @@ void LocationViewer::init_fieldItems(void)
             fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);
             fieldItemList->viewport()->setFixedHeight(fieldItemList->contentsRect().height());
         }
+        groupFieldItems->setFixedHeight(fieldItemList->contentsRect().height() + groupFieldItems->contentsMargins().bottom() + groupFieldItems->contentsMargins().top());
     }
 }
 void LocationViewer::fieldItemListItemChanged(QModelIndex index)
