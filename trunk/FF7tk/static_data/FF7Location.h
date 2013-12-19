@@ -48,7 +48,7 @@ public:
     QString d(QString fileName);
     int len(void);
 };
-static LOCATION Locations[]=
+static const LOCATION Locations[]=
 {
     /************************Every Location In The Game With Stock Translation******************/
     {"startmap",QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0","32"},

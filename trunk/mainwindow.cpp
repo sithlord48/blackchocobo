@@ -1472,16 +1472,15 @@ void MainWindow::progress_update()
     load=false;
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->character(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->character(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->character(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->character(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->character(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->character(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->character(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,curchar)));}
-
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->character(s,0),ff7->charName(s,0));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->character(s,1),ff7->charName(s,1));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->character(s,2),ff7->charName(s,2));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->character(s,3),ff7->charName(s,3));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->character(s,4),ff7->charName(s,4));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->character(s,5),ff7->charName(s,5));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->character(s,8),ff7->charName(s,8));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7->setGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
@@ -1543,27 +1542,24 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             ff7->setDescName(s,ff7->charName(s,ff7->party(s,0)));
         }
     }
-
 }}
+
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
 {if(!load){
     if(index == 12){ff7->setParty(s,1,FF7Char::Empty);}
     else{ff7->setParty(s,1,index);}
     //either way set the desc
     ff7->setDescParty(s,1,ff7->party(s,1));
-
 }}
+
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {if(!load){
         if(index == 12){ff7->setParty(s,2,FF7Char::Empty);}
         else{ff7->setParty(s,2,index);}
         //either way set the desc
         ff7->setDescParty(s,2,ff7->party(s,2));
-
 }}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 void MainWindow::cm_stablesOwnedChanged(qint8 owned){if(!load){ff7->setStablesOwned(s,owned);}}
 void MainWindow::cm_stableMaskChanged(qint8 mask){if(!load){ff7->setStableMask(s,mask);}}
 void MainWindow::cm_stablesOccupiedChanged(qint8 occupied){if(!load){ff7->setStablesOccupied(s,occupied);}}
@@ -1821,7 +1817,6 @@ void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){ff7->setBmProgress3
 void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){ff7->setBmProgress3(s,5,checked);}}
 void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){ff7->setBmProgress3(s,6,checked);}}
 void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){ff7->setBmProgress3(s,7,checked);}}
-
 
 void MainWindow::on_cb_s7pl_1_toggled(bool checked)
 {if(!load){

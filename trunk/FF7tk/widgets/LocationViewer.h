@@ -100,6 +100,7 @@ private:
     QString region;
     QString transBasePath;
     QListWidget *fieldItemList;
+    QGroupBox *groupFieldItems;
     QCheckBox *chkAutoUpdate;
     bool regExpSearch;
     bool caseSensitive;
