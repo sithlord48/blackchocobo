@@ -1483,26 +1483,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">HP-Absorption</translation>
     </message>
     <message>
-        <source>Underwater</source>
-        <translation type="obsolete">Unterwasser</translation>
-    </message>
-    <message>
-        <source>Master Command</source>
-        <translation type="obsolete">Premium-Befehl</translation>
-    </message>
-    <message>
-        <source>Master Magic</source>
-        <translation type="obsolete">Premium-Zauber</translation>
-    </message>
-    <message>
-        <source>Master Summon</source>
-        <translation type="obsolete">Premium-Beschwörung</translation>
-    </message>
-    <message>
-        <source>Gold Chocobo</source>
-        <translation type="obsolete">Goldener Chocobo</translation>
-    </message>
-    <message>
         <source>Morph</source>
         <translation type="unfinished">Morph</translation>
     </message>
@@ -1759,18 +1739,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Shiva</translation>
     </message>
     <message>
-        <source>Colonge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flower Colone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sexy Colonge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Pharmacy Coupon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1879,10 +1847,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Sprintschuhe</translation>
     </message>
     <message>
-        <source>Onmislash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>W-Summon</source>
         <translation type="unfinished">2xBeschwörung</translation>
     </message>
@@ -1909,6 +1873,22 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>x-Potion</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cologne</source>
+        <translation type="unfinished">Eau de Cologne</translation>
+    </message>
+    <message>
+        <source>Flower Cologne</source>
+        <translation type="unfinished">Rosenparfüm</translation>
+    </message>
+    <message>
+        <source>Sexy Cologne</source>
+        <translation type="unfinished">Sexy Parfüm</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation type="unfinished">Omnischlag</translation>
     </message>
 </context>
 <context>
@@ -3921,11 +3901,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <source>Field Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Field Items</source>
+        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5265,66 +5245,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <source>Slot-01</source>
-        <translation type="obsolete">Steckplatz-01</translation>
-    </message>
-    <message>
-        <source>Slot-02</source>
-        <translation type="obsolete">Steckplatz-02</translation>
-    </message>
-    <message>
-        <source>Slot-03</source>
-        <translation type="obsolete">Steckplatz-03</translation>
-    </message>
-    <message>
-        <source>Slot-04</source>
-        <translation type="obsolete">Steckplatz-04</translation>
-    </message>
-    <message>
-        <source>Slot-05</source>
-        <translation type="obsolete">Steckplatz-05</translation>
-    </message>
-    <message>
-        <source>Slot-06</source>
-        <translation type="obsolete">Steckplatz-06</translation>
-    </message>
-    <message>
-        <source>Slot-07</source>
-        <translation type="obsolete">Steckplatz-07</translation>
-    </message>
-    <message>
-        <source>Slot-08</source>
-        <translation type="obsolete">Steckplatz-08</translation>
-    </message>
-    <message>
-        <source>Slot-09</source>
-        <translation type="obsolete">Steckplatz-09</translation>
-    </message>
-    <message>
-        <source>Slot-10</source>
-        <translation type="obsolete">Steckplatz-10</translation>
-    </message>
-    <message>
-        <source>Slot-11</source>
-        <translation type="obsolete">Steckplatz-11</translation>
-    </message>
-    <message>
-        <source>Slot-12</source>
-        <translation type="obsolete">Steckplatz-12</translation>
-    </message>
-    <message>
-        <source>Slot-13</source>
-        <translation type="obsolete">Steckplatz-13</translation>
-    </message>
-    <message>
-        <source>Slot-14</source>
-        <translation type="obsolete">Steckplatz-14</translation>
-    </message>
-    <message>
-        <source>Slot-15</source>
-        <translation type="obsolete">Steckplatz-15</translation>
-    </message>
-    <message>
         <source>Show Selection Dialog</source>
         <translation>Zeige Auswahl-Dialog</translation>
     </message>
@@ -5399,10 +5319,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Next Slot</source>
         <translation>Nächster Steckplatz</translation>
-    </message>
-    <message>
-        <source>Current Slot:</source>
-        <translation type="obsolete">Jetziger Steckaplatz:</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -8758,10 +8674,6 @@ trigger showing that tutorial</source>
         <translation>Black Chocobo</translation>
     </message>
     <message>
-        <source>Version:</source>
-        <translation type="obsolete">Version:</translation>
-    </message>
-    <message>
         <source>&amp;About</source>
         <translation>&amp;Über</translation>
     </message>
@@ -8840,10 +8752,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Schliessen</translation>
-    </message>
-    <message>
-        <source>Using Qt:</source>
-        <translation type="obsolete">Benutze Qt:</translation>
     </message>
     <message>
         <source>Credits</source>

@@ -1739,18 +1739,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Colonge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flower Colone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sexy Colonge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Pharmacy Coupon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1859,10 +1847,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Onmislash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>W-Summon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1888,6 +1872,22 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flower Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sexy Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3901,11 +3901,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
+        <source>Field Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Field Items</source>
+        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

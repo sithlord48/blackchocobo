@@ -158,7 +158,7 @@ void LocationViewer::init_display(void)
     sbD->setAlignment(Qt::AlignCenter);
 
     chkAutoUpdate = new QCheckBox;
-    chkAutoUpdate->setText(tr("Save New Coordnates When Table Se&lection Changes"));
+    chkAutoUpdate->setText(tr("Save New Coordinates When Table Se&lection Changes"));
     //connect now and forget it
     connect(chkAutoUpdate,SIGNAL(clicked(bool)),this,SLOT(chkAutoUpdateChanged(bool)));
 
