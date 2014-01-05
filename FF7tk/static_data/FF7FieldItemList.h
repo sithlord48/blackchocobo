@@ -134,9 +134,9 @@ static const FieldItemList FILIST[]=
 
     {QList<quint16>()<<0x0C2A,QList<quint8>()<<3,QStringList()<<"ujunon1"<<"prisila",QT_TRANSLATE_NOOP("FieldItems","Shiva")},
 
-    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<0<<1,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Colonge")},//Mutually Exclucive
-    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<1<<2,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Flower Colone")},//Mutually Exclucive
-    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<2<<3,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Sexy Colonge")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<0<<1,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Cologne")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<1<<2,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Flower Cologne")},//Mutually Exclucive
+    {QList<quint16>()<<0x0C44<<0x0BE5,QList<quint8>()<<2<<3,QStringList()<<"mktpb",QT_TRANSLATE_NOOP("FieldItems","Sexy Cologne")},//Mutually Exclucive
 
     {QList<quint16>()<<0x0C44<<0x0BE6,QList<quint8>()<<6<<0,QStringList()<<"mkt_s2",QT_TRANSLATE_NOOP("FieldItems","Pharmacy Coupon")},
 
@@ -182,7 +182,7 @@ static const FieldItemList FILIST[]=
     {QList<quint16>()<<0x0CF1,QList<quint8>()<<0,QStringList()<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Gil Plus")},
     {QList<quint16>()<<0x0CF1,QList<quint8>()<<1,QStringList()<<"games_1",QT_TRANSLATE_NOOP("FieldItems","Exp Plus")},
     {QList<quint16>()<<0x0CF2,QList<quint8>()<<6,QStringList()<<"coloss",QT_TRANSLATE_NOOP("FieldItems","Sprint Shoes")},
-    {QList<quint16>()<<0x0CF3,QList<quint8>()<<5,QStringList()<<"coloin1",QT_TRANSLATE_NOOP("FieldItems","Onmislash")},
+    {QList<quint16>()<<0x0CF3,QList<quint8>()<<5,QStringList()<<"coloin1",QT_TRANSLATE_NOOP("FieldItems","Omnislash")},
     {QList<quint16>()<<0x0CF3,QList<quint8>()<<6,QStringList()<<"coloin1",QT_TRANSLATE_NOOP("FieldItems","W-Summon")},
 
     {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
@@ -197,7 +197,7 @@ static const FieldItemList FILIST[]=
     {QList<quint16>()<<0x0FA5,QList<quint8>()<<1,QStringList()<<"ncoin3",QT_TRANSLATE_NOOP("FieldItems","Catastrophe")},
     {QList<quint16>()<<0x0FA5,QList<quint8>()<<2,QStringList()<<"snmin2",QT_TRANSLATE_NOOP("FieldItems","Hero Drink")},
     {QList<quint16>()<<0x0FA5,QList<quint8>()<<3,QStringList()<<"snmin2",QT_TRANSLATE_NOOP("FieldItems","Vaccine")},
-    {QList<quint16>()<<0x0FA5,QList<quint8>()<<4,QStringList()<<"sninn",QT_TRANSLATE_NOOP("FieldItems","x-Potion")},
+    {QList<quint16>()<<0x0FA5,QList<quint8>()<<4,QStringList()<<"sninn",QT_TRANSLATE_NOOP("FieldItems","X-Potion")},
     {QList<quint16>()<<0x0FA5,QList<quint8>()<<5,QStringList()<<"snmayor",QT_TRANSLATE_NOOP("FieldItems","Turbo Ether")},
 
     {QList<quint16>()<<0x0FA6,QList<quint8>()<<0,QStringList()<<"trnad_2",QT_TRANSLATE_NOOP("FieldItems","Neo Bahamut")},

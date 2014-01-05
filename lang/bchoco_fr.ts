@@ -1484,26 +1484,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Absorption HP</translation>
     </message>
     <message>
-        <source>Underwater</source>
-        <translation type="obsolete">Sous-marin</translation>
-    </message>
-    <message>
-        <source>Master Command</source>
-        <translation type="obsolete">Commande maître</translation>
-    </message>
-    <message>
-        <source>Master Magic</source>
-        <translation type="obsolete">Magie maîtresse</translation>
-    </message>
-    <message>
-        <source>Master Summon</source>
-        <translation type="obsolete">Invocation maître</translation>
-    </message>
-    <message>
-        <source>Gold Chocobo</source>
-        <translation type="obsolete">Chocobo or</translation>
-    </message>
-    <message>
         <source>Morph</source>
         <translation>Trans</translation>
     </message>
@@ -1760,18 +1740,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Shiva</translation>
     </message>
     <message>
-        <source>Colonge</source>
-        <translation>Parfum</translation>
-    </message>
-    <message>
-        <source>Flower Colone</source>
-        <translation>Parfum fleur</translation>
-    </message>
-    <message>
-        <source>Sexy Colonge</source>
-        <translation>Parfum sexy</translation>
-    </message>
-    <message>
         <source>Pharmacy Coupon</source>
         <translation>Coupon pharmacie</translation>
     </message>
@@ -1880,36 +1848,48 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Baskets</translation>
     </message>
     <message>
-        <source>Onmislash</source>
-        <translation>Omnislash</translation>
-    </message>
-    <message>
         <source>W-Summon</source>
         <translation>Invocation-W</translation>
     </message>
     <message>
         <source>Show Underwater</source>
-        <translation type="unfinished">Montrer sous-marin</translation>
+        <translation>Montrer sous-marin</translation>
     </message>
     <message>
         <source>Show Master Command</source>
-        <translation type="unfinished">Montrer commande maître</translation>
+        <translation>Montrer commande maître</translation>
     </message>
     <message>
         <source>Show Master Magic</source>
-        <translation type="unfinished">Montrer magie maîtresse</translation>
+        <translation>Montrer magie maîtresse</translation>
     </message>
     <message>
         <source>Show Master Summon</source>
-        <translation type="unfinished">Montrer invocation maître</translation>
+        <translation>Montrer invocation maître</translation>
     </message>
     <message>
         <source>Show Gold Chocobo</source>
-        <translation type="unfinished">Montrer chocobo or</translation>
+        <translation>Montrer chocobo or</translation>
     </message>
     <message>
         <source>x-Potion</source>
         <translation>Potion-X</translation>
+    </message>
+    <message>
+        <source>Cologne</source>
+        <translation>Parfum</translation>
+    </message>
+    <message>
+        <source>Flower Cologne</source>
+        <translation>Parfum fleur</translation>
+    </message>
+    <message>
+        <source>Sexy Cologne</source>
+        <translation>Parfum sexy</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>Omnislash</translation>
     </message>
 </context>
 <context>
@@ -3922,12 +3902,12 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Filtre sur le lieu...</translation>
     </message>
     <message>
-        <source>Save New Coordnates When Table Se&amp;lection Changes</source>
-        <translation>Sauver les nouvelles coordonnées quand la sé&amp;lection dans le tableau change</translation>
-    </message>
-    <message>
         <source>Field Items</source>
         <translation>Objets de terrain</translation>
+    </message>
+    <message>
+        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
+        <translation>Sauver les nouvelles coordonnées quand la sé&amp;lection dans le tableau change</translation>
     </message>
 </context>
 <context>
@@ -5249,66 +5229,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <source>Slot-01</source>
-        <translation type="obsolete">Slot 01</translation>
-    </message>
-    <message>
-        <source>Slot-02</source>
-        <translation type="obsolete">Slot 02</translation>
-    </message>
-    <message>
-        <source>Slot-03</source>
-        <translation type="obsolete">Slot 03</translation>
-    </message>
-    <message>
-        <source>Slot-04</source>
-        <translation type="obsolete">Slot 04</translation>
-    </message>
-    <message>
-        <source>Slot-05</source>
-        <translation type="obsolete">Slot 05</translation>
-    </message>
-    <message>
-        <source>Slot-06</source>
-        <translation type="obsolete">Slot 06</translation>
-    </message>
-    <message>
-        <source>Slot-07</source>
-        <translation type="obsolete">Slot 07</translation>
-    </message>
-    <message>
-        <source>Slot-08</source>
-        <translation type="obsolete">Slot 08</translation>
-    </message>
-    <message>
-        <source>Slot-09</source>
-        <translation type="obsolete">Slot 09</translation>
-    </message>
-    <message>
-        <source>Slot-10</source>
-        <translation type="obsolete">Slot 10</translation>
-    </message>
-    <message>
-        <source>Slot-11</source>
-        <translation type="obsolete">Slot 11</translation>
-    </message>
-    <message>
-        <source>Slot-12</source>
-        <translation type="obsolete">Slot 12</translation>
-    </message>
-    <message>
-        <source>Slot-13</source>
-        <translation type="obsolete">Slot 13</translation>
-    </message>
-    <message>
-        <source>Slot-14</source>
-        <translation type="obsolete">Slot 14</translation>
-    </message>
-    <message>
-        <source>Slot-15</source>
-        <translation type="obsolete">Slot 15</translation>
-    </message>
-    <message>
         <source>Show Selection Dialog</source>
         <translation>Afficher la fenêtre de sélection</translation>
     </message>
@@ -5399,10 +5319,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Next Slot</source>
         <translation>Slot suivant</translation>
-    </message>
-    <message>
-        <source>Current Slot:</source>
-        <translation type="obsolete">Slot actuel :</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -8761,10 +8677,6 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <translation>Black Chocobo</translation>
     </message>
     <message>
-        <source>Version:</source>
-        <translation type="obsolete">Version:</translation>
-    </message>
-    <message>
         <source>&amp;About</source>
         <translation>&amp;À propos</translation>
     </message>
@@ -8843,10 +8755,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
-    </message>
-    <message>
-        <source>Using Qt:</source>
-        <translation type="obsolete">Utilisation de Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
