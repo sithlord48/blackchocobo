@@ -1906,6 +1906,10 @@ The km/h speeds are calculated while playing </source>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3920,6 +3924,10 @@ The km/h speeds are calculated while playing </source>
         <source>Save New Coordnates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Field Items</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -5258,63 +5266,63 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Slot-01</source>
-        <translation>Steckplatz-01</translation>
+        <translation type="obsolete">Steckplatz-01</translation>
     </message>
     <message>
         <source>Slot-02</source>
-        <translation>Steckplatz-02</translation>
+        <translation type="obsolete">Steckplatz-02</translation>
     </message>
     <message>
         <source>Slot-03</source>
-        <translation>Steckplatz-03</translation>
+        <translation type="obsolete">Steckplatz-03</translation>
     </message>
     <message>
         <source>Slot-04</source>
-        <translation>Steckplatz-04</translation>
+        <translation type="obsolete">Steckplatz-04</translation>
     </message>
     <message>
         <source>Slot-05</source>
-        <translation>Steckplatz-05</translation>
+        <translation type="obsolete">Steckplatz-05</translation>
     </message>
     <message>
         <source>Slot-06</source>
-        <translation>Steckplatz-06</translation>
+        <translation type="obsolete">Steckplatz-06</translation>
     </message>
     <message>
         <source>Slot-07</source>
-        <translation>Steckplatz-07</translation>
+        <translation type="obsolete">Steckplatz-07</translation>
     </message>
     <message>
         <source>Slot-08</source>
-        <translation>Steckplatz-08</translation>
+        <translation type="obsolete">Steckplatz-08</translation>
     </message>
     <message>
         <source>Slot-09</source>
-        <translation>Steckplatz-09</translation>
+        <translation type="obsolete">Steckplatz-09</translation>
     </message>
     <message>
         <source>Slot-10</source>
-        <translation>Steckplatz-10</translation>
+        <translation type="obsolete">Steckplatz-10</translation>
     </message>
     <message>
         <source>Slot-11</source>
-        <translation>Steckplatz-11</translation>
+        <translation type="obsolete">Steckplatz-11</translation>
     </message>
     <message>
         <source>Slot-12</source>
-        <translation>Steckplatz-12</translation>
+        <translation type="obsolete">Steckplatz-12</translation>
     </message>
     <message>
         <source>Slot-13</source>
-        <translation>Steckplatz-13</translation>
+        <translation type="obsolete">Steckplatz-13</translation>
     </message>
     <message>
         <source>Slot-14</source>
-        <translation>Steckplatz-14</translation>
+        <translation type="obsolete">Steckplatz-14</translation>
     </message>
     <message>
         <source>Slot-15</source>
-        <translation>Steckplatz-15</translation>
+        <translation type="obsolete">Steckplatz-15</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
@@ -5394,7 +5402,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>Jetziger Steckaplatz:</translation>
+        <translation type="obsolete">Jetziger Steckaplatz:</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6591,6 +6599,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Language</source>
         <translation>Sprache</translation>
+    </message>
+    <message>
+        <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8747,7 +8759,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Version:</source>
-        <translation>Version:</translation>
+        <translation type="obsolete">Version:</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -8831,7 +8843,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>Benutze Qt:</translation>
+        <translation type="obsolete">Benutze Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -9320,6 +9332,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

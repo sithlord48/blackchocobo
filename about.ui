@@ -20,9 +20,6 @@
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
-  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -79,20 +76,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
-          <widget class="QLabel" name="label1">
-           <property name="text">
-            <string>Version:</string>
-           </property>
-           <property name="smaller_text" stdset="0">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLabel" name="lbl_bc_version">
-           <property name="text">
-            <string notr="true">##</string>
-           </property>
            <property name="smaller_text" stdset="0">
             <bool>true</bool>
            </property>
@@ -119,20 +103,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QLabel" name="label2">
-           <property name="text">
-            <string>Using Qt:</string>
-           </property>
-           <property name="smaller_text" stdset="0">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLabel" name="lbl_qt_version">
-           <property name="text">
-            <string notr="true">##</string>
-           </property>
            <property name="smaller_text" stdset="0">
             <bool>true</bool>
            </property>
@@ -177,9 +148,6 @@
      </property>
      <property name="styleSheet">
       <string notr="true"/>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_about">
       <attribute name="title">
@@ -916,7 +884,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>378</width>
+            <width>390</width>
             <height>430</height>
            </rect>
           </property>
@@ -1592,8 +1560,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>134</width>
-            <height>942</height>
+            <width>390</width>
+            <height>452</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

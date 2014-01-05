@@ -16,10 +16,8 @@
 # -------------------------------------------------
 # Project created by QtCreator 2010-03-14T14:53:13
 # -------------------------------------------------
-TARGET = blackchocobo
 TEMPLATE = app
-
-QT       += core gui xml
+QT += core gui xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += main.cpp \
@@ -27,6 +25,7 @@ SOURCES += main.cpp \
     about.cpp \
     options.cpp \
     errbox.cpp \
+    achievementdialog.cpp \
     FF7tk/widgets/SlotSelect.cpp \
     FF7tk/widgets/SlotPreview.cpp \
     FF7tk/widgets/MateriaEditor.cpp \
@@ -57,13 +56,14 @@ SOURCES += main.cpp \
     FF7tk/widgets/LocationViewer.cpp \
     FF7tk/static_data/FF7FieldItemList.cpp \
     FF7tk/widgets/AchievementEditor.cpp \
-    FF7tk/static_data/FF7Achievements.cpp \
-    achievementdialog.cpp
+    FF7tk/static_data/FF7Achievements.cpp
+
 HEADERS += mainwindow.h \
     about.h \
     options.h \
     errbox.h \
     version.h \
+    achievementdialog.h \
     FF7tk/widgets/ItemSelector.h \
     FF7tk/widgets/ItemList.h \
     FF7tk/widgets/MetadataCreator.h \
@@ -99,8 +99,7 @@ HEADERS += mainwindow.h \
     FF7tk/widgets/LocationViewer.h \
     FF7tk/static_data/FF7FieldItemList.h \
     FF7tk/widgets/AchievementEditor.h \
-    FF7tk/static_data/FF7Achievements.h \
-    achievementdialog.h
+    FF7tk/static_data/FF7Achievements.h
 
 FORMS += mainwindow.ui \
     about.ui \
@@ -115,6 +114,24 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_de.ts \
     lang/bchoco_ja.ts
 
+#Below Is OS Specific Stuff.
+win32: {
+    RC_FILE = bchoco.rc #program icon for windows
+    TARGET = Black_Chocobo
+}
+macx:{
+    TARGET = Black_Chocobo
+    ICON = icon/bchoco_icon_osx.icns     #set program icon
+    CONFIG += x86_64 x86 #Build for use on 32 and 64 bit mac os.
+}
+#system calls trigger with any OS
+system (lrelease Black_Chocobo.pro)#release the .qm files
+
+unix:!macx:!symbian: {
+    TARGET = blackchocobo
+    target.path = /usr/bin #place our binary in /usr/bin
+    INSTALLS +=target
+}
 
 static:{ # everything below takes effect with CONFIG += static
     CONFIG += static
@@ -127,16 +144,4 @@ static:{ # everything below takes effect with CONFIG += static
 # change the name of the binary, if it is build in debug mode
 CONFIG(debug, debug|release) {TARGET = $$join(TARGET,,,-debug)}
 
-#Below Is OS Specific Stuff.
-win32: {RC_FILE = bchoco.rc} #program icon for windows
-macx:{
-    ICON = icon/bchoco_icon_osx.icns     #set program icon
-    CONFIG += x86_64 x86 #Build for use on 32 and 64 bit mac os.
-}
-#system calls trigger with any OS
-system (lrelease Black_Chocobo.pro)#release the .qm files
 
-unix:!macx:!symbian: {
-  target.path = /usr/bin #place our binary in /usr/bin
-  INSTALLS +=target
-}

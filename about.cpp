@@ -23,8 +23,8 @@ about::about(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->lbl_name->setText(QCoreApplication::applicationName().toLatin1());
-    ui->lbl_bc_version->setText(QCoreApplication::applicationVersion().toLatin1());
-    ui->lbl_qt_version->setText(qVersion());
+    ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
+    ui->lbl_qt_version->setText(QString(tr("Using Qt: %1")).arg(qVersion()));
 }
 
 about::~about()

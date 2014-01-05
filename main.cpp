@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     if(QT_VERSION < 0x50000){a.setStyle("Plastique");}
-    else{a.setStyle(QStyleFactory::create("fusion"));}
+    //else{a.setStyle(QStyleFactory::create("windows"));}
     a.setApplicationVersion(Version);
 
     #ifdef STATIC
