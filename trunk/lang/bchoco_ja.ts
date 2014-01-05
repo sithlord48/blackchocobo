@@ -1906,6 +1906,10 @@ The km/h speeds are calculated while playing </source>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3920,6 +3924,10 @@ The km/h speeds are calculated while playing </source>
         <source>Save New Coordnates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Field Items</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -5331,63 +5339,63 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Slot-01</source>
-        <translation>スロット-01</translation>
+        <translation type="obsolete">スロット-01</translation>
     </message>
     <message>
         <source>Slot-02</source>
-        <translation>スロット-02</translation>
+        <translation type="obsolete">スロット-02</translation>
     </message>
     <message>
         <source>Slot-03</source>
-        <translation>スロット-03</translation>
+        <translation type="obsolete">スロット-03</translation>
     </message>
     <message>
         <source>Slot-04</source>
-        <translation>スロット-04</translation>
+        <translation type="obsolete">スロット-04</translation>
     </message>
     <message>
         <source>Slot-05</source>
-        <translation>スロット-05</translation>
+        <translation type="obsolete">スロット-05</translation>
     </message>
     <message>
         <source>Slot-06</source>
-        <translation>スロット-06</translation>
+        <translation type="obsolete">スロット-06</translation>
     </message>
     <message>
         <source>Slot-07</source>
-        <translation>スロット-07</translation>
+        <translation type="obsolete">スロット-07</translation>
     </message>
     <message>
         <source>Slot-08</source>
-        <translation>スロット-08</translation>
+        <translation type="obsolete">スロット-08</translation>
     </message>
     <message>
         <source>Slot-09</source>
-        <translation>スロット-09</translation>
+        <translation type="obsolete">スロット-09</translation>
     </message>
     <message>
         <source>Slot-10</source>
-        <translation>スロット-10</translation>
+        <translation type="obsolete">スロット-10</translation>
     </message>
     <message>
         <source>Slot-11</source>
-        <translation>スロット-11</translation>
+        <translation type="obsolete">スロット-11</translation>
     </message>
     <message>
         <source>Slot-12</source>
-        <translation>スロット-12</translation>
+        <translation type="obsolete">スロット-12</translation>
     </message>
     <message>
         <source>Slot-13</source>
-        <translation>スロット-13</translation>
+        <translation type="obsolete">スロット-13</translation>
     </message>
     <message>
         <source>Slot-14</source>
-        <translation>スロット-14</translation>
+        <translation type="obsolete">スロット-14</translation>
     </message>
     <message>
         <source>Slot-15</source>
-        <translation>スロット-15</translation>
+        <translation type="obsolete">スロット-15</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
@@ -5467,7 +5475,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>現在のスロット:</translation>
+        <translation type="obsolete">現在のスロット:</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6660,6 +6668,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Language</source>
         <translation>言語</translation>
+    </message>
+    <message>
+        <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8816,7 +8828,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Version:</source>
-        <translation>バージョン:</translation>
+        <translation type="obsolete">バージョン:</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -8900,7 +8912,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>開発環境・Qt:</translation>
+        <translation type="obsolete">開発環境・Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -9388,6 +9400,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

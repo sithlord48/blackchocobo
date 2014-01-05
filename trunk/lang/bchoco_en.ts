@@ -1886,6 +1886,10 @@ The km/h speeds are calculated while playing </source>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3900,6 +3904,10 @@ The km/h speeds are calculated while playing </source>
         <source>Save New Coordnates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Field Items</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -5231,66 +5239,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Slot-01</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-02</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-03</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-04</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-05</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-06</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-07</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-08</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-09</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot-15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5364,10 +5312,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Current Slot:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6554,6 +6498,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current Slot:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8709,10 +8657,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Version:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8778,10 +8722,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using Qt:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9270,6 +9210,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

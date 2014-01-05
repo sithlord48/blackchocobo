@@ -1907,6 +1907,10 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3921,6 +3925,10 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <source>Save New Coordnates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Field Items</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -5242,63 +5250,63 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Slot-01</source>
-        <translation>Slot 01</translation>
+        <translation type="obsolete">Slot 01</translation>
     </message>
     <message>
         <source>Slot-02</source>
-        <translation>Slot 02</translation>
+        <translation type="obsolete">Slot 02</translation>
     </message>
     <message>
         <source>Slot-03</source>
-        <translation>Slot 03</translation>
+        <translation type="obsolete">Slot 03</translation>
     </message>
     <message>
         <source>Slot-04</source>
-        <translation>Slot 04</translation>
+        <translation type="obsolete">Slot 04</translation>
     </message>
     <message>
         <source>Slot-05</source>
-        <translation>Slot 05</translation>
+        <translation type="obsolete">Slot 05</translation>
     </message>
     <message>
         <source>Slot-06</source>
-        <translation>Slot 06</translation>
+        <translation type="obsolete">Slot 06</translation>
     </message>
     <message>
         <source>Slot-07</source>
-        <translation>Slot 07</translation>
+        <translation type="obsolete">Slot 07</translation>
     </message>
     <message>
         <source>Slot-08</source>
-        <translation>Slot 08</translation>
+        <translation type="obsolete">Slot 08</translation>
     </message>
     <message>
         <source>Slot-09</source>
-        <translation>Slot 09</translation>
+        <translation type="obsolete">Slot 09</translation>
     </message>
     <message>
         <source>Slot-10</source>
-        <translation>Slot 10</translation>
+        <translation type="obsolete">Slot 10</translation>
     </message>
     <message>
         <source>Slot-11</source>
-        <translation>Slot 11</translation>
+        <translation type="obsolete">Slot 11</translation>
     </message>
     <message>
         <source>Slot-12</source>
-        <translation>Slot 12</translation>
+        <translation type="obsolete">Slot 12</translation>
     </message>
     <message>
         <source>Slot-13</source>
-        <translation>Slot 13</translation>
+        <translation type="obsolete">Slot 13</translation>
     </message>
     <message>
         <source>Slot-14</source>
-        <translation>Slot 14</translation>
+        <translation type="obsolete">Slot 14</translation>
     </message>
     <message>
         <source>Slot-15</source>
-        <translation>Slot 15</translation>
+        <translation type="obsolete">Slot 15</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
@@ -5394,7 +5402,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>Slot actuel :</translation>
+        <translation type="obsolete">Slot actuel :</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -6594,6 +6602,10 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>Language</source>
         <translation type="unfinished">Langue</translation>
+    </message>
+    <message>
+        <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8750,7 +8762,7 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     </message>
     <message>
         <source>Version:</source>
-        <translation>Version:</translation>
+        <translation type="obsolete">Version:</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -8834,7 +8846,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>Utilisation de Qt:</translation>
+        <translation type="obsolete">Utilisation de Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -9324,6 +9336,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

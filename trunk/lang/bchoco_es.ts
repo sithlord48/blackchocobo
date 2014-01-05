@@ -1907,6 +1907,10 @@ Los km/h son calculados mientras se juega</translation>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>x-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3922,6 +3926,10 @@ Los km/h son calculados mientras se juega</translation>
         <source>Save New Coordnates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Field Items</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Locations</name>
@@ -5319,7 +5327,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>Ranura Actual:</translation>
+        <translation type="obsolete">Ranura Actual:</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5339,63 +5347,63 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Slot-01</source>
-        <translation>Ranura-01</translation>
+        <translation type="obsolete">Ranura-01</translation>
     </message>
     <message>
         <source>Slot-02</source>
-        <translation>Ranura-02</translation>
+        <translation type="obsolete">Ranura-02</translation>
     </message>
     <message>
         <source>Slot-03</source>
-        <translation>Ranura-03</translation>
+        <translation type="obsolete">Ranura-03</translation>
     </message>
     <message>
         <source>Slot-04</source>
-        <translation>Ranura-04</translation>
+        <translation type="obsolete">Ranura-04</translation>
     </message>
     <message>
         <source>Slot-05</source>
-        <translation>Ranura-05</translation>
+        <translation type="obsolete">Ranura-05</translation>
     </message>
     <message>
         <source>Slot-06</source>
-        <translation>Ranura-06</translation>
+        <translation type="obsolete">Ranura-06</translation>
     </message>
     <message>
         <source>Slot-07</source>
-        <translation>Ranura-07</translation>
+        <translation type="obsolete">Ranura-07</translation>
     </message>
     <message>
         <source>Slot-08</source>
-        <translation>Ranura-08</translation>
+        <translation type="obsolete">Ranura-08</translation>
     </message>
     <message>
         <source>Slot-09</source>
-        <translation>Ranura-09</translation>
+        <translation type="obsolete">Ranura-09</translation>
     </message>
     <message>
         <source>Slot-10</source>
-        <translation>Ranura-10</translation>
+        <translation type="obsolete">Ranura-10</translation>
     </message>
     <message>
         <source>Slot-11</source>
-        <translation>Ranura-11</translation>
+        <translation type="obsolete">Ranura-11</translation>
     </message>
     <message>
         <source>Slot-12</source>
-        <translation>Ranura-12</translation>
+        <translation type="obsolete">Ranura-12</translation>
     </message>
     <message>
         <source>Slot-13</source>
-        <translation>Ranura-13</translation>
+        <translation type="obsolete">Ranura-13</translation>
     </message>
     <message>
         <source>Slot-14</source>
-        <translation>Ranura-14</translation>
+        <translation type="obsolete">Ranura-14</translation>
     </message>
     <message>
         <source>Slot-15</source>
-        <translation>Ranura-15</translation>
+        <translation type="obsolete">Ranura-15</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
@@ -6592,6 +6600,10 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>Language</source>
         <translation>Idioma</translation>
+    </message>
+    <message>
+        <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8749,7 +8761,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation>Versión:</translation>
+        <translation type="obsolete">Versión:</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -8833,7 +8845,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>Usando Qt:</translation>
+        <translation type="obsolete">Usando Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -9321,6 +9333,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
