@@ -94,7 +94,7 @@ void LocationViewer::init_display(void)
     locationTable->setCurrentCell(-1,-1);
 
     btnSearchOptions = new QToolButton;
-    btnSearchOptions->setIcon(QIcon(QPixmap(delete_xpm)));
+    btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(delete_xpm)));
     btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
 
     actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);

@@ -141,8 +141,8 @@ void MainWindow::init_display()
     ui->chocoboManagerBox->setLayout(cmLayout);
 
     hexEditor = new QHexEdit;
-    hexEditor->setHighlightingColor(QColor(98,192,247));
-    hexEditor->setAddressAreaColor(QColor(64,65,64));
+
+
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
     hexLayout->addWidget(hexEditor);
@@ -188,26 +188,38 @@ void MainWindow::init_display()
 }
 void MainWindow::init_style()
 {
-    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98, 192, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+    QString hoverStyle = QString("qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));");
+
+    QString tablestyle = QString("::section{background-color:%1;color: white;padding-left:4px;border:1px solid #6c6c6c;}").arg(hoverStyle);
     tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
     tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
+
     locationViewer->setHorizontalHeaderStyle(tablestyle);
     ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
 
-   QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
+
+    QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
     sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
     sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
     sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
     sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
 
-  chocoboManager->setHoverStyle(QString("qlineargradient(spread:pad, x1:0.5, y1:0.00568182,x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128),stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);"));
   optionsWidget->setSliderStyle(sliderStyleSheet);
   char_editor->setSliderStyle(sliderStyleSheet);
 
-  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));}"));
+  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:%1}").arg(hoverStyle));
+  ui->locationToolBox->setStyleSheet(QString("::tab:hover{background-color:%1}").arg(hoverStyle));
+
+  char_editor->setMateriaHoverStyle(hoverStyle);
+  materia_editor->setHoverStyle(hoverStyle);
+  chocoboManager->setHoverStyle(hoverStyle);
+
   hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
+  hexEditor->setHighlightingColor(Qt::yellow);
+  hexEditor->setSelectionColor(QColor(82,120,142));
+  hexEditor->setAddressAreaColor(QColor(64,65,64));
 
   ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
   ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));

@@ -129,6 +129,7 @@ public slots:
     void setEditable(bool);
     void setAdvancedMode(bool);
     void setToolBoxStyle(QString);
+    void setMateriaHoverStyle(QString);
 
 private slots:
     void setId(int);
@@ -288,7 +289,8 @@ private:
     QLabel *lbl_1_1;
     QLabel *lbl_2_1;
     QLabel *lbl_3_1;
-
+    QLabel *lblWeaponStats;
+    QLabel *lblArmorStats;
     QComboBox*weapon_selection;
     QComboBox *armor_selection;
     QComboBox *accessory_selection;
@@ -297,8 +299,8 @@ private:
     QGroupBox *status_box;
     QListWidget *elemental_effects;
     QListWidget *status_effects;
-    QGroupBox * weapon_materia_box;
-    QGroupBox *armor_materia_box;
+    QFrame * weapon_materia_box;
+    QFrame *armor_materia_box;
     QGroupBox *weapon_box;
     QGroupBox *armor_box;
     QGroupBox *accessory_box;
