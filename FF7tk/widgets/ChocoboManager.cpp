@@ -21,6 +21,7 @@ ChocoboManager::ChocoboManager(QWidget *parent) :
     initDisplay();
     initData();
     initConnections();
+    setHoverStyle();
 }
 void ChocoboManager::initDisplay(void)
 {
@@ -510,6 +511,11 @@ bool ChocoboManager::isEmpty(FF7CHOCOBO choco)
 }
 void ChocoboManager::setHoverStyle(QString backgroundColor)
 {
+    for(int i=0;i<6;i++){chocoboLabel[i]->setHoverColorStyle(backgroundColor);}
+}
+void ChocoboManager::setHoverStyle()
+{
+    QString backgroundColor = QString("rgb(%1,%2,%3,128);").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
     for(int i=0;i<6;i++){chocoboLabel[i]->setHoverColorStyle(backgroundColor);}
 }
 void ChocoboManager::ChocoPenIndexChanged(int index)

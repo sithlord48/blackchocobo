@@ -20,9 +20,12 @@ QHexEditPrivate::QHexEditPrivate(QScrollArea *parent) : QWidget(parent)
     setHighlighting(true);
     setOverwriteMode(true);
     setReadOnly(false);
-    setAddressAreaColor(QColor(0xd4, 0xd4, 0xd4, 0xff));
-    setHighlightingColor(QColor(0xff, 0xff, 0x99, 0xff));
-    setSelectionColor(QColor(0x6d, 0x9e, 0xff, 0xff));
+    //setAddressAreaColor(QColor(0xd4, 0xd4, 0xd4, 0xff));
+    //setHighlightingColor(QColor(0xff, 0xff, 0x99, 0xff));
+    //setSelectionColor(QColor(0x6d, 0x9e, 0xff, 0xff));
+    setAddressAreaColor(this->palette().background().color());
+    setSelectionColor(this->palette().highlight().color());
+    setHighlightingColor(this->palette().alternateBase().color());
     setFont(QFont("Courier", 10));
 
     _size = 0;

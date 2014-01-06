@@ -22,7 +22,7 @@ DialogPreview::DialogPreview(QWidget *parent) : QLabel(parent)
     btn_ur = new QPushButton(this);
     btn_ll = new QPushButton(this);
     btn_lr = new QPushButton(this);
-    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,50,50,96);}";
+    QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(%1,%2,%3,96);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
     btn_ul->setStyleSheet(style);
     btn_ur->setStyleSheet(style);
     btn_ll->setStyleSheet(style);

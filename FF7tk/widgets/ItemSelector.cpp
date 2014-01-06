@@ -26,7 +26,6 @@ void ItemSelector::init_display()
 {
     combo_type = new QComboBox;
     combo_type->setFixedWidth(40);
-
     combo_item = new QComboBox;
 
     sb_qty = new QSpinBox;
@@ -36,7 +35,7 @@ void ItemSelector::init_display()
     sb_qty->setWrapping(true);
     sb_qty->setToolTip("");
     btn_remove = new QPushButton;
-    btn_remove->setIcon(QIcon(QPixmap(quit_xpm)));
+    btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)));
     btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedSize(22,22);
     btn_remove->setShortcut(QKeySequence::Delete);

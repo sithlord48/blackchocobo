@@ -231,7 +231,6 @@ void CharEditor::init_display()
     used_limits_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
 
     list_limits = new QListWidget;
-    list_limits->setMaximumHeight((this->fontMetrics().height()*7)+6);
     lbl_limit_level = new QLabel(tr("Limit Level"));
     sb_limit_level = new QSpinBox;
     sb_limit_level->setFixedWidth(this->font().pointSize()*4);
@@ -485,7 +484,7 @@ void CharEditor::init_display()
     base_hp_mp_layout->addLayout(base_mp_layout);
 
     QVBoxLayout *stat_layout = new QVBoxLayout;
-    stat_layout->setContentsMargins(0,3,0,0);
+    stat_layout->setContentsMargins(0,2,0,0);
     stat_layout->setSpacing(0);
     stat_layout->addLayout(str_layout);
     stat_layout->addLayout(vit_layout);
@@ -571,23 +570,22 @@ void CharEditor::init_display()
     limit_use_list->addWidget(list_limits);
 
     QVBoxLayout *limit_box = new QVBoxLayout;
+    limit_box->setSpacing(0);
     limit_box->addLayout(limit_bar_layout);
     limit_box->addLayout(limit_use_list);
 
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
     lower_section->addLayout(stat_layout_2);
-    lower_section->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     lower_section->addLayout(limit_box);
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(2,0,2,3);
+    left_Final->setContentsMargins(2,0,2,2);
     left_Final->addLayout(avatar_name_layout);
-    left_Final->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(level_exp_limit_layout);
-    left_Final->addSpacerItem(new QSpacerItem(0,3,QSizePolicy::Fixed,QSizePolicy::Fixed));
     left_Final->addLayout(lower_section);
     left_Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
+
 
     weapon_selection = new QComboBox;
 
@@ -641,8 +639,9 @@ void CharEditor::init_display()
     effects_layout->setSpacing(0);
 
     //set up materia slots and box for weapon.
-    weapon_materia_box = new QGroupBox;
-    weapon_materia_box->setFixedHeight(50);
+    weapon_materia_box = new QFrame;
+    weapon_materia_box->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+    //weapon_materia_box->setFixedHeight(45);
     QSpacerItem *weapon_spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
     //I Like the No Growth Slots They Look Better so i always use them
     // you can use FF7Item::Style_m_grow_slot() to get the style of that slot
@@ -709,7 +708,6 @@ void CharEditor::init_display()
 
     weapon_m_link_2 = new QLabel();
     weapon_m_link_2->setFixedSize(12,16);
-    weapon_m_link_2->setScaledContents(1);
 
     weapon_slot_4 = new QPushButton();
     weapon_slot_4->setFixedSize(32,32);
@@ -757,7 +755,6 @@ void CharEditor::init_display()
 
     weapon_m_link_3 = new QLabel();
     weapon_m_link_3->setFixedSize(12,16);
-    weapon_m_link_3->setScaledContents(1);
 
     weapon_slot_6 = new QPushButton();
     weapon_slot_6->setFixedSize(32,32);
@@ -804,7 +801,6 @@ void CharEditor::init_display()
 
     weapon_m_link_4 = new QLabel();
     weapon_m_link_4->setFixedSize(12,16);
-    weapon_m_link_4->setScaledContents(1);
 
     weapon_slot_8 = new QPushButton();
     weapon_slot_8->setFixedSize(32,32);
@@ -841,19 +837,23 @@ void CharEditor::init_display()
     weapon_materia_slots->setSpacing(12);
 
     weapon_materia_box->setLayout(weapon_materia_slots);
-    weapon_materia_box->setFixedHeight(54);
+
+    lblWeaponStats = new QLabel();
 
     QVBoxLayout *weapon_layout = new QVBoxLayout;
     weapon_layout->setContentsMargins(0,0,0,0);
     weapon_layout->addWidget(weapon_selection);
+    weapon_layout->addWidget(lblWeaponStats);
     weapon_layout->addWidget(weapon_materia_box);
 
     weapon_box = new QGroupBox(tr("Weapon"));
     weapon_box->setLayout(weapon_layout);
-
+    weapon_box->adjustSize();
     //set up materia slots and box for armor.
-    armor_materia_box = new QGroupBox;
-    armor_materia_box->setFixedHeight(50);
+    armor_materia_box = new QFrame;
+
+    lblArmorStats = new QLabel();
+
     QSpacerItem *armor_spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
     //I Like the No Growth Slots They Look Better so i always use them
     // you can use FF7Item::Style_m_grow_slot() to get the style of that slot
@@ -1052,16 +1052,15 @@ void CharEditor::init_display()
     armor_materia_slots->setSpacing(12);
 
     armor_materia_box->setLayout(armor_materia_slots);
-    armor_materia_box->setFixedHeight(54);
 
     QVBoxLayout *armor_layout = new QVBoxLayout;
     armor_layout->setContentsMargins(0,0,0,0);
     armor_layout->addWidget(armor_selection);
+    armor_layout->addWidget(lblArmorStats);
     armor_layout->addWidget(armor_materia_box);
 
     armor_box = new QGroupBox(tr("Armor"));
     armor_box->setLayout(armor_layout);
-    armor_box->setMinimumHeight(110);
 
     QVBoxLayout *accessory_layout = new QVBoxLayout;
     accessory_layout->setContentsMargins(0,0,0,0);
@@ -1069,7 +1068,6 @@ void CharEditor::init_display()
 
     accessory_box = new QGroupBox(tr("Accessory"));
     accessory_box->setLayout(accessory_layout);
-    accessory_box->setMinimumHeight(40);
 
     QVBoxLayout *right_Top = new QVBoxLayout;
     right_Top->setContentsMargins(0,0,0,0);
@@ -1080,8 +1078,6 @@ void CharEditor::init_display()
     QWidget *right_top = new QWidget;
     right_top->setContentsMargins(0,0,0,0);
     right_top->setLayout(right_Top);
-    right_top->adjustSize();
-    right_top->setFixedHeight(right_top->height());
 
     QVBoxLayout *right_bottom = new QVBoxLayout;
     right_bottom->setContentsMargins(0,0,0,0);
@@ -1113,6 +1109,7 @@ void CharEditor::init_display()
     this->setLayout(toolbox_layout);
 }
 void CharEditor::setToolBoxStyle(QString stylesheet){toolbox->setStyleSheet(stylesheet);}
+void CharEditor::setMateriaHoverStyle(QString hoverColor){materia_edit->setHoverStyle(hoverColor);}
 void CharEditor::setSliderStyle(QString style){slider_limit->setStyleSheet(style);}
 
 void CharEditor::init_connections()
@@ -1375,8 +1372,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 
         if(data.limits & (1<< _limitbitarray[i])){list_limits->item(i)->setCheckState(Qt::Checked);} //Vegeta_Ss4: Fixed list_limits GUI
         else{list_limits->item(i)->setCheckState(Qt::Unchecked);}
-    }
-
+    }   
     sb_uses_limit_1_1->setValue(data.timesused1); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_2_1->setValue(data.timesused2); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
@@ -1968,7 +1964,7 @@ void CharEditor::calc_stats(void)
         {
             title.append(tr(" Mp:+%1%").arg(QString::number(Items.statMP(data.weapon + 128))));
         }
-        weapon_materia_box->setTitle(title);
+        lblWeaponStats->setText(title);
         //Armor
         str_bonus += Items.statSTR(data.armor + 256);
         vit_bonus +=Items.statVIT(data.armor + 256);
@@ -2012,7 +2008,7 @@ void CharEditor::calc_stats(void)
         {
             title.append(tr(" Mp:+%1%").arg(QString::number(Items.statMP(data.armor + 256))));
         }
-        armor_materia_box->setTitle(title);
+        lblArmorStats->setText(title);
         //Accessory
         if(data.accessory <32)
         {
@@ -2212,7 +2208,7 @@ void CharEditor::update_tnl_bar(void)
 
 void CharEditor::elemental_info(void)
 {
-    int y=6+this->font().pointSize()*2;
+    int y= this->fontMetrics().height() *2.25;
     bool show=false;
     int item_id = 0;
     QString m_effect;
@@ -2261,12 +2257,11 @@ void CharEditor::elemental_info(void)
                 {
                         m_effect.append(effect);
                         elemental_effects->addItem(effect);
-                        show=true; y+=this->font().pointSize()*5/3;
-                 }
+                        show=true; y+=this->fontMetrics().height();
+                }
              }//end of for Loop
-            elemental_box->setFixedSize(212,y);
-            //if(elemental_effects->count()<6){elemental_box->setFixedSize(212,y);}
-            //else{elemental_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
+            elemental_effects->setFixedHeight(y);
+            elemental_box->setFixedSize(205,y);
         }//end of else.
     }//end of other loop.
    elemental_box->setVisible(show);
@@ -2275,11 +2270,12 @@ void CharEditor::elemental_info(void)
 
 void CharEditor::status_info(void)
 {
-    int y=6+this->font().pointSize()*2;
+    int y=this->fontMetrics().height()*2.25;
     bool show=false;
     int item_id =0;
     QString m_status;
     status_effects->clear();
+    status_effects->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     for(int r=0;r<3;r++)
     {
         switch (r)
@@ -2334,12 +2330,11 @@ void CharEditor::status_info(void)
                 {
                     m_status.append(effect);
                     status_effects->addItem(effect);
-                    show=true; y+=this->font().pointSize()*5/3;
-                 }
+                    show=true; y+=this->fontMetrics().height();
+                }
             }//end of for Loop
-            status_box->setFixedSize(212,y);
-            //if(status_effects->count()<6){status_box->setFixedSize(212,y);}
-            //else{status_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
+            status_effects->setFixedHeight(y);
+            status_box->setFixedSize(205,y);
         }//end of else.
      }//end of loop
     status_box->setVisible(show);
@@ -2428,7 +2423,7 @@ void CharEditor::update_materia_slots()
 
      //set up weapon
      QString ap_rate =tr("AP:x%1").arg(Items.materiaGrowthRate(data.weapon +128));
-     weapon_materia_box->setTitle(ap_rate);
+     lblWeaponStats->setText(ap_rate);
      switch(Items.materiaSlots(data.weapon +128))
      {
         case 8:weapon_slot_8->setHidden(0);
@@ -2449,7 +2444,7 @@ void CharEditor::update_materia_slots()
       };
      //set up armor
      ap_rate =tr("AP:x%1").arg(Items.materiaGrowthRate(data.armor+256));
-     armor_materia_box->setTitle(ap_rate);
+     lblArmorStats->setText(ap_rate);
      switch(Items.materiaSlots(data.armor +256))
      {
         case 8:armor_slot_8->setHidden(0);

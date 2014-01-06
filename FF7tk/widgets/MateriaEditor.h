@@ -40,6 +40,7 @@ public:
     qint8 id(void);
     bool isEditable(void);
     void setEditable(bool);
+    void setHoverStyle(QString hoverColor);
 //    qint32 raw_data(void);
 private:
     //Private Functions

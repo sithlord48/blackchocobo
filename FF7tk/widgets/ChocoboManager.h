@@ -60,6 +60,7 @@ public slots:
     void setOwned(int owned);
     void setOccupied(int occupied,int mask);
     void setHoverStyle(QString backgroundColor);
+    void setHoverStyle();
 private slots:
     void sbOwnedChanged(int);
     void copy();

@@ -33,22 +33,21 @@ SlotPreview::SlotPreview(int index, QWidget *parent):QLabel(parent)
 void SlotPreview::init_display(void)
 {
     lbl_Slot = new QLabel;
-    lbl_Slot->setStyleSheet("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";");
     lbl_Slot->setText(QString(tr("Slot: %1")).arg(QString::number(index()+1)));
 
-    btn_remove = new QPushButton(QIcon(QPixmap(quit_xpm)),"",this);
+    btn_remove = new QPushButton(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)),"",this);
     btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
     btn_remove->setMaximumSize(22,22);
     btn_remove->setCursor(Qt::BitmapCursor);
 
-    btn_copy = new QPushButton(QIcon(QPixmap(copy_xpm)),"",this);
+    btn_copy = new QPushButton(QIcon::fromTheme(QString("edit-copy"),QPixmap(copy_xpm)),"",this);
     btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
     btn_copy->setToolTip(tr("Copy Slot"));
     btn_copy->setMaximumSize(22,22);
     btn_copy->setCursor(Qt::BitmapCursor);
 
-    btn_paste = new QPushButton(QIcon(QPixmap(paste_xpm)),"",this);
+    btn_paste = new QPushButton(QIcon::fromTheme(QString("edit-paste"),QPixmap(paste_xpm)),"",this);
     btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
     btn_paste->setToolTip(tr("Paste Into Slot"));
     btn_paste->setMaximumSize(22,22);
@@ -82,8 +81,8 @@ void SlotPreview::set_empty(void)
 {
     init_display();
     btn_paste->setHidden(false);
-
-    QString style="font: 75 14pt \"Verdana\"; color:rgb(255,255,0);";
+    lbl_Slot->setStyleSheet(QString("font: 75 14pt \"Verdana\";"));
+    QString style="font: 75 14pt \"Verdana\"; color:yellow;";
     location=new QLabel(tr("-Empty-"));
     location->setStyleSheet(style);
     QVBoxLayout *empty_layout = new QVBoxLayout;
@@ -99,11 +98,10 @@ void SlotPreview::set_empty(void)
 void SlotPreview::set_psx_game(void)
 {
     init_display();
-
+    lbl_Slot->setStyleSheet(QString("font: 75 14pt \"Verdana\";"));
     btn_remove->setHidden(false);
     btn_paste->setHidden(false);
     icon= new SaveIcon;
-
     QString style="font-size: 10pt;";
     party1 = new QLabel;
     party1->setFixedSize(90,100);
@@ -126,7 +124,8 @@ void SlotPreview::set_psx_game(void)
 void SlotPreview::set_ff7_save(void)
 {
     init_display();
-    QString style="background-color:rbga(0,0,0,0);font: 75 14pt \"Verdana\";";
+    lbl_Slot->setStyleSheet("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";color:white");
+    QString style="background-color:rbga(0,0,0,0);font: 75 14pt \"Verdana\"; color:white;";
 
     party1 = new QLabel;
     party1->setFixedSize(84,96);

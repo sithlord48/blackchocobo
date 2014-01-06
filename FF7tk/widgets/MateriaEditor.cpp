@@ -75,11 +75,11 @@ void MateriaEditor::init_display()
     sb_ap->setAlignment(Qt::AlignCenter);
     lcd_max_ap->setDigitCount(8);
     lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
-    btn_rm_materia->setIcon(QIcon(QPixmap(quit_xpm)));
-    btn_copy_materia->setIcon(QIcon(QPixmap(copy_xpm)));
-    btn_paste_materia->setIcon(QIcon(QPixmap(paste_xpm)));
+    btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)));
+    btn_copy_materia->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(copy_xpm)));
+    btn_paste_materia->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(paste_xpm)));
 
-    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,128,192,96);}";
+    QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(%1,%2,%3,96);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
     btn_star1->setStyleSheet(style);
     btn_star2->setStyleSheet(style);
     btn_star3->setStyleSheet(style);
@@ -614,4 +614,16 @@ void MateriaEditor::editMode(void)
        }
    }
 
+}
+void MateriaEditor::setHoverStyle(QString hoverColor)
+{
+        QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:%1}").arg(hoverColor);
+        btn_rm_materia->setStyleSheet(style);
+        btn_copy_materia->setStyleSheet(style);
+        btn_paste_materia->setStyleSheet(style);
+        btn_star1->setStyleSheet(style);
+        btn_star2->setStyleSheet(style);
+        btn_star3->setStyleSheet(style);
+        btn_star4->setStyleSheet(style);
+        btn_star5->setStyleSheet(style);
 }
