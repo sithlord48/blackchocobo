@@ -468,7 +468,7 @@
       <string>&amp;Close</string>
      </property>
      <property name="icon">
-      <iconset resource="images.qrc">
+      <iconset theme="window-close" resource="images.qrc">
        <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
      </property>
     </widget>
