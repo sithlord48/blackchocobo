@@ -9220,7 +9220,7 @@ Var And Scrolling Synced To Left Table</string>
   <action name="actionOpen_Achievement_File">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/achievements.png</normaloff>:/icon/icon/achievements.png</iconset>
+     <normaloff>:/icon/achievements</normaloff>:/icon/achievements</iconset>
    </property>
    <property name="text">
     <string>Open Achievement File</string>

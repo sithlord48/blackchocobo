@@ -884,7 +884,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>390</width>
+            <width>378</width>
             <height>430</height>
            </rect>
           </property>
@@ -1560,8 +1560,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>390</width>
-            <height>452</height>
+            <width>134</width>
+            <height>942</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1755,7 +1755,7 @@ p, li { white-space: pre-wrap; }
         <string>&amp;Close</string>
        </property>
        <property name="icon">
-        <iconset resource="images.qrc">
+        <iconset theme="window-close" resource="images.qrc">
          <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
        </property>
       </widget>
