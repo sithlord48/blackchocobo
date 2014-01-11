@@ -25,7 +25,7 @@
 #include "DialogPreview.h"
 /*~~~~~~~~~Icons~~~~~~~~~~~~~~~*/
 
-class OptionsWidget : public QWidget
+class OptionsWidget : public QScrollArea
 {
     Q_OBJECT
 protected:
@@ -142,7 +142,7 @@ private:
     void init_Display();
    void init_Connections();
 
-   QScrollArea *mainArea;
+   //QScrollArea *mainArea;
    DialogPreview* dialogPreview;
    QGroupBox *dialogBox;
    QVBoxLayout *centerLayout;

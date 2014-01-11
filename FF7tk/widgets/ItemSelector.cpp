@@ -27,14 +27,13 @@ void ItemSelector::init_display()
     combo_type = new QComboBox;
     combo_type->setFixedWidth(40);
     combo_item = new QComboBox;
-
     sb_qty = new QSpinBox;
-    sb_qty->setFixedWidth(this->font().pointSize()*5);
+    sb_qty->setFixedSize(this->font().pointSize()*5,22);
     sb_qty->setAlignment(Qt::AlignCenter);
     sb_qty->setMinimum(1);
     sb_qty->setWrapping(true);
     sb_qty->setToolTip("");
-    btn_remove = new QPushButton;
+    btn_remove = new QPushButton();
     btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)));
     btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedSize(22,22);
@@ -42,13 +41,12 @@ void ItemSelector::init_display()
     init_data(); //before setting layout set dat
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setContentsMargins(0,0,0,0);
-    layout->setSpacing(0);
+    layout->setSpacing(0);    
     layout->addWidget(combo_type);
     layout->addWidget(combo_item);
     layout->addWidget(sb_qty);
     layout->addWidget(btn_remove);
     this->setLayout(layout);
-    this->layout()->update();
     this->adjustSize();
 }
 void ItemSelector::setMaximumQty(int maxQty){sb_qty->setMaximum(maxQty);}

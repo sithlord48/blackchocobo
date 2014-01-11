@@ -21,6 +21,22 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 // This Class should contain NO Gui Parts
+FF7Save::FF7Save()
+{
+    fileHasChanged = false;
+    for(int i=0;i<15;i++){slotChanged[i]=false;}
+    SG_SIZE=0;
+    SG_HEADER=0;
+    SG_FOOTER=0;
+    SG_DATA_SIZE=0;
+    SG_SLOT_HEADER=0;
+    SG_SLOT_FOOTER=0;
+    SG_SLOT_SIZE=0;
+    SG_SLOT_NUMBER=0;
+    SG_TYPE="";
+    file_footerp=0;
+    file_headerp=0;
+}
 bool FF7Save::loadFile(const QString &fileName)
 {
     // Return true if File Loaded and false if file not loaded.
@@ -96,11 +112,10 @@ bool FF7Save::loadFile(const QString &fileName)
         if(SG_TYPE =="VGS"){offset = 0x40;}
         if(SG_TYPE =="DEX"){offset = 0xF40;}
         file.seek(offset);
-        mc_header = file.read(SG_HEADER);
-        int index=0;
+        mc_header = file.read(SG_HEADER);        
         for(int i=0; i<15;i++)
         {
-            index = (128*i) +138;
+            int index = (128*i) +138;
             setRegion(i,QString(mc_header.mid(index,19)));
         }
 
@@ -254,9 +269,9 @@ bool FF7Save::exportFile(const QString &fileName,QString newType,int s)
         else if(newType =="MC"){return exportVMC(fileName);}
         else if(newType =="VGS"){return exportVGS(fileName);}
         else if(newType =="DEX"){return exportDEX(fileName);}
-        else if(newType =="PSV"){return false;}
-        else if(newType =="VMP"){return false;}
         else{return false;}
+        //else if(newType =="PSV"){return false;}
+        //else if(newType =="VMP"){return false;}
     }
 }
 bool FF7Save::exportPC(const QString &fileName)
@@ -645,13 +660,13 @@ void FF7Save::checksumSlots()
 quint16 FF7Save::ff7Checksum(int s)
 {
     QByteArray data = slotFF7Data(s).mid(4,4336);
-    int i = 0, t, d;
+    int i = 0;
     quint16 r = 0xFFFF, len =4336, pbit = 0x8000;
     while(len--)
     {
-        t=data.at(i++);
+        int t=data.at(i++);
         r ^= t << 8;
-        for(d=0;d<8;d++)
+        for(int d=0;d<8;d++)
         {
            if( r & pbit ){r = ( r << 1 ) ^ 0x1021;}
            else{ r <<= 1;}
@@ -4633,7 +4648,7 @@ qint16 FF7Save::craterSavePointX(int s)
 void FF7Save::setCraterSavePointX(int s,int value)
 {
     if(s<0 || s>14){return;}
-    else if(value<-32767 || value< 32767){return;}
+    else if(value<-32767 || value > 32767){return;}
     else
     {
         slot[s].z_30[35]=(value & 0xFF);
@@ -4656,7 +4671,7 @@ qint16 FF7Save::craterSavePointY(int s)
 void FF7Save::setCraterSavePointY(int s,int value)
 {
     if(s<0 || s>14){return;}
-    else if(value<-32767 || value< 32767){return;}
+    else if(value<-32767 || value > 32767){return;}
     else
     {
         slot[s].z_30[37]=(value & 0xFF);
@@ -4678,7 +4693,7 @@ qint16 FF7Save::craterSavePointZ(int s)
 void FF7Save::setCraterSavePointZ(int s,int value)
 {
     if(s<0 || s>14){return;}
-    else if(value<-32767 || value< 32767){return;}
+    else if(value<-32767 || value > 32767){return;}
     else
     {
         slot[s].z_30[39]=(value & 0xFF);
