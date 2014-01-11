@@ -45,7 +45,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 }
 void MainWindow::init_display()
 {
-
     //Hide the stuff that needs to be hidden.
     ui->compare_table->setEnabled(false);
     ui->tbl_diff->setVisible(0);
@@ -104,8 +103,7 @@ void MainWindow::init_display()
 
     optionsWidget = new OptionsWidget;
     optionsWidget->setControllerMappingVisible(false);
-    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
-    optionsWidget->adjustSize();
+    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));   
 
     materia_editor = new MateriaEditor(this);
     materia_editor->setStarsSize(48);
@@ -133,7 +131,6 @@ void MainWindow::init_display()
     ui->frm_itemlist->setLayout(itemlist_layout);
     ui->group_items->setFixedWidth(itemlist->width()+6);
 
-
     chocoboManager = new ChocoboManager;
     QHBoxLayout *cmLayout = new QHBoxLayout;
     cmLayout->setContentsMargins(0,0,0,0);
@@ -141,7 +138,6 @@ void MainWindow::init_display()
     ui->chocoboManagerBox->setLayout(cmLayout);
 
     hexEditor = new QHexEdit;
-
 
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
@@ -171,7 +167,6 @@ void MainWindow::init_display()
     langAction->setData("en");
     langAction->setCheckable(true);
     langAction->setChecked(settings->value("lang").toString()=="en");
-
 
     for(int i=0;i<langList.length();i++)
     {
@@ -1310,7 +1305,11 @@ void MainWindow::on_tabWidget_currentChanged(int index)
             optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
             optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
             optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
-            if(ff7->type() !="PC" || ui->action_AdvancedMode->isChecked()){setControllerMappingVisible(true);}
+            if(ff7->type() !="PC" || ui->action_AdvancedMode->isChecked())
+            {
+                setControllerMappingVisible(true);
+                optionsWidget->setFixedWidth(ui->tabWidget->width()- optionsWidget->verticalScrollBar()->width());
+            }
             else{setControllerMappingVisible(false);}
         break;
 

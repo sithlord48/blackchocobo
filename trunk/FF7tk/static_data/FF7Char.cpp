@@ -75,7 +75,6 @@ int FF7Char::statGain(int who,int stat, int stat_amount, int current_lvl, int ne
   int diff=0; //holds our dif
   int lvl_bracket=0; //track what bracket in the gradent/base were looking at.
   //0:str; 1:vit; 2:mag; 3:spi; 4:dex; 5:luck; 6:hp; 7:mp
-  int grade=0;// whats our grade in the stat only used for str/vit/mag/spi/dex
   int baseline_stat=0; // holds our baseline_stat calculation.
   //first find out the level bracket
   if(stat_amount==0){stat_amount = 1;}
@@ -90,7 +89,7 @@ int FF7Char::statGain(int who,int stat, int stat_amount, int current_lvl, int ne
   //calculate the baseline to use.
   if(stat<5)
   {//calculating str,vit,mag,spi or dex
-    grade = stat_grade(who,stat);
+    int grade = stat_grade(who,stat);
     baseline_stat = stat_base(grade,lvl_bracket)+((stat_gradent(grade,lvl_bracket)*next_lvl)/100);
   }
   else if(stat==5){baseline_stat = luck_base(who,lvl_bracket)+((luck_gradent(who,lvl_bracket))/100);}//

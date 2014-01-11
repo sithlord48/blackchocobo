@@ -30,10 +30,8 @@
 #include "../static_data/icons/Psx_Button_Icons/start_button.xpm"
 #include "../static_data/icons/Psx_Button_Icons/select_button.xpm"
 
-
-
 OptionsWidget::OptionsWidget(QWidget *parent) :
-    QWidget(parent)
+    QScrollArea(parent)
 {
     init_Display();
     init_Connections();
@@ -41,8 +39,6 @@ OptionsWidget::OptionsWidget(QWidget *parent) :
 
 void OptionsWidget::init_Display()
 {
-    mainArea = new QScrollArea;
-
     dialogBox = new QGroupBox;
     dialogPreview = new DialogPreview;
     QHBoxLayout *dialogLayout = new QHBoxLayout;
@@ -60,7 +56,6 @@ void OptionsWidget::init_Display()
     QHBoxLayout * atbLayout = new QHBoxLayout;
     atbLayout->addWidget(lblAtb);
     atbLayout->addWidget(comboAtb);
-
 
     QLabel* lblSound = new QLabel(tr("Sound Mode"));
     lblSound->setAlignment(Qt::AlignRight);
@@ -102,7 +97,6 @@ void OptionsWidget::init_Display()
     cameraLayout->addWidget(lblCamera);
     cameraLayout->addWidget(comboCamera);
 
-
     QLabel* lblControllerMode = new QLabel(tr("Controller Settings"));
     lblControllerMode->setAlignment(Qt::AlignRight);
     comboControllerMode= new QComboBox;
@@ -111,7 +105,6 @@ void OptionsWidget::init_Display()
     QHBoxLayout * controllerModeLayout = new QHBoxLayout;
     controllerModeLayout->addWidget(lblControllerMode);
     controllerModeLayout->addWidget(comboControllerMode);
-
 
     cbBattleTargets = new QCheckBox;
     cbBattleTargets->setText(tr("Show Battle Targets Labels"));
@@ -132,7 +125,6 @@ void OptionsWidget::init_Display()
     helpLayout->addWidget(cbFieldHelp);
     QSpacerItem * helpSpacer4= new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred);
     helpLayout->addSpacerItem(helpSpacer4);
-
 
     QLabel *lblBattleSpeed = new  QLabel(tr("Battle Speed:"));
     slideBattleSpeed = new QSlider(Qt::Horizontal);
@@ -176,7 +168,7 @@ void OptionsWidget::init_Display()
     QLabel *lblBtnUp = new QLabel(tr("Up"));
     lblBtnUp->setAlignment(Qt::AlignRight);
     comboBtnUp = new QComboBox;
-    comboBtnUp->setFixedSize(52,32);
+    comboBtnUp->setMinimumSize(52,32);
     comboBtnUp->setIconSize(QSize(24,24));
     comboBtnUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnUp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
@@ -202,7 +194,7 @@ void OptionsWidget::init_Display()
     lblBtnRight->setAlignment(Qt::AlignRight);
     comboBtnRight = new QComboBox;
     comboBtnRight->setIconSize(QSize(24,24));
-    comboBtnRight->setFixedSize(52,32);
+    comboBtnRight->setMinimumSize(52,32);
     comboBtnRight->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnRight->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnRight->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -227,7 +219,7 @@ void OptionsWidget::init_Display()
     lblBtnDown->setAlignment(Qt::AlignRight);
     comboBtnDown = new QComboBox;
     comboBtnDown->setIconSize(QSize(24,24));
-    comboBtnDown->setFixedSize(52,32);
+    comboBtnDown->setMinimumSize(52,32);
     comboBtnDown->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnDown->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnDown->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -252,7 +244,7 @@ void OptionsWidget::init_Display()
     lblBtnLeft->setAlignment(Qt::AlignRight);
     comboBtnLeft = new QComboBox;
     comboBtnLeft->setIconSize(QSize(24,24));
-    comboBtnLeft->setFixedSize(52,32);
+    comboBtnLeft->setMinimumSize(52,32);
     comboBtnLeft->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnLeft->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnLeft->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -277,7 +269,7 @@ void OptionsWidget::init_Display()
     lblBtnMenu->setAlignment(Qt::AlignRight);
     comboBtnMenu = new QComboBox;
     comboBtnMenu->setIconSize(QSize(24,24));
-    comboBtnMenu->setFixedSize(52,32);
+    comboBtnMenu->setMinimumSize(52,32);
     comboBtnMenu->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnMenu->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnMenu->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -302,7 +294,7 @@ void OptionsWidget::init_Display()
     lblBtnOk->setAlignment(Qt::AlignRight);
     comboBtnOk = new QComboBox;
     comboBtnOk->setIconSize(QSize(24,24));
-    comboBtnOk->setFixedSize(52,32);
+    comboBtnOk->setMinimumSize(52,32);
     comboBtnOk->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnOk->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnOk->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -327,7 +319,7 @@ void OptionsWidget::init_Display()
     lblBtnCancel->setAlignment(Qt::AlignRight);
     comboBtnCancel = new QComboBox;
     comboBtnCancel->setIconSize(QSize(24,24));
-    comboBtnCancel->setFixedSize(52,32);
+    comboBtnCancel->setMinimumSize(52,32);
     comboBtnCancel->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnCancel->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnCancel->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -352,7 +344,7 @@ void OptionsWidget::init_Display()
     lblBtnSwitch->setAlignment(Qt::AlignRight);
     comboBtnSwitch = new QComboBox;
     comboBtnSwitch->setIconSize(QSize(24,24));
-    comboBtnSwitch->setFixedSize(52,32);
+    comboBtnSwitch->setMinimumSize(52,32);
     comboBtnSwitch->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnSwitch->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnSwitch->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -377,7 +369,7 @@ void OptionsWidget::init_Display()
     lblBtnCamera->setAlignment(Qt::AlignRight);
     comboBtnCamera = new QComboBox;
     comboBtnCamera->setIconSize(QSize(24,24));
-    comboBtnCamera->setFixedSize(52,32);
+    comboBtnCamera->setMinimumSize(52,32);
     comboBtnCamera->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnCamera->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnCamera->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -402,7 +394,7 @@ void OptionsWidget::init_Display()
     lblBtnTarget->setAlignment(Qt::AlignRight);
     comboBtnTarget = new QComboBox;
     comboBtnTarget->setIconSize(QSize(24,24));
-    comboBtnTarget->setFixedSize(52,32);
+    comboBtnTarget->setMinimumSize(52,32);
     comboBtnTarget->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnTarget->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnTarget->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -427,7 +419,7 @@ void OptionsWidget::init_Display()
     lblBtnPgUp->setAlignment(Qt::AlignRight);
     comboBtnPgUp = new QComboBox;
     comboBtnPgUp->setIconSize(QSize(24,24));
-    comboBtnPgUp->setFixedSize(52,32);
+    comboBtnPgUp->setMinimumSize(52,32);
     comboBtnPgUp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPgUp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPgUp->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -452,7 +444,7 @@ void OptionsWidget::init_Display()
     lblBtnPgDn->setAlignment(Qt::AlignRight);
     comboBtnPgDn = new QComboBox;
     comboBtnPgDn->setIconSize(QSize(24,24));
-    comboBtnPgDn->setFixedSize(52,32);
+    comboBtnPgDn->setMinimumSize(52,32);
     comboBtnPgDn->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPgDn->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPgDn->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -477,7 +469,7 @@ void OptionsWidget::init_Display()
     lblBtnHelp->setAlignment(Qt::AlignRight);
     comboBtnHelp = new QComboBox;
     comboBtnHelp->setIconSize(QSize(24,24));
-    comboBtnHelp->setFixedSize(52,32);
+    comboBtnHelp->setMinimumSize(52,32);
     comboBtnHelp->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnHelp->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnHelp->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -502,7 +494,7 @@ void OptionsWidget::init_Display()
     lblBtnPause->setAlignment(Qt::AlignRight);
     comboBtnPause = new QComboBox;
     comboBtnPause->setIconSize(QSize(24,24));
-    comboBtnPause->setFixedSize(52,32);
+    comboBtnPause->setMinimumSize(52,32);
     comboBtnPause->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtnPause->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtnPause->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -527,7 +519,7 @@ void OptionsWidget::init_Display()
     lblBtn9->setAlignment(Qt::AlignRight);
     comboBtn9 = new QComboBox;
     comboBtn9->setIconSize(QSize(24,24));
-    comboBtn9->setFixedSize(52,32);
+    comboBtn9->setMinimumSize(52,32);
     comboBtn9->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtn9->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtn9->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -552,7 +544,7 @@ void OptionsWidget::init_Display()
     lblBtn10->setAlignment(Qt::AlignRight);
     comboBtn10 = new QComboBox;
     comboBtn10->setIconSize(QSize(24,24));
-    comboBtn10->setFixedSize(52,32);
+    comboBtn10->setMinimumSize(52,32);
     comboBtn10->addItem(QIcon(QPixmap(l2_button_xpm)),"");
     comboBtn10->addItem(QIcon(QPixmap(r2_button_xpm)),"");
     comboBtn10->addItem(QIcon(QPixmap(l1_button_xpm)),"");
@@ -572,7 +564,6 @@ void OptionsWidget::init_Display()
     QHBoxLayout *Btn10Layout = new QHBoxLayout;
     Btn10Layout->addWidget(lblBtn10);
     Btn10Layout->addWidget(comboBtn10);
-
 
     QVBoxLayout *btnLayout1 = new QVBoxLayout;
     btnLayout1->addLayout(BtnUpLayout);
@@ -626,22 +617,16 @@ void OptionsWidget::init_Display()
     centerWidget->setLayout(centerLayout);
     centerWidget->adjustSize();
 
-    mainArea->setWidget(centerWidget);
-    mainArea->adjustSize();
-
-
-    QVBoxLayout *finalLayout = new QVBoxLayout;
-    finalLayout->addWidget(mainArea);
-    finalLayout->setContentsMargins(0,0,0,0);
-    this->setLayout(finalLayout);
-    this->adjustSize();
+    setWidget(centerWidget);
+    adjustSize();    
 }
-
 
 void OptionsWidget::resizeEvent(QResizeEvent*)
 {
-    centerWidget->setFixedWidth(mainArea->width()-18);
-    dialogBox->setFixedSize(centerWidget->width()-6,(centerWidget->width()-6)/4);
+    int margins =contentsMargins().right() + contentsMargins().left();
+    if(!verticalScrollBar()->isVisible()){centerWidget->setFixedWidth( width() - margins);}
+    else{centerWidget->setFixedWidth(width()- (margins + verticalScrollBar()->width()));}
+    dialogBox->setFixedSize(centerWidget->width()-20,centerWidget->width()/4);
     centerWidget->adjustSize();
 }
 
@@ -697,7 +682,6 @@ void OptionsWidget::fieldHelpChanged(bool checked){emit FieldHelpChanged(checked
 void OptionsWidget::battleSpeedChanged(int speed){emit BattleSpeedChanged(speed);}
 void OptionsWidget::battleMessageSpeedChanged(int speed){emit BattleMessageSpeedChanged(speed);}
 void OptionsWidget::fieldMessageSpeedChanged(int speed){emit FieldMessageSpeedChanged(speed);}
-
 
 void OptionsWidget::btnUpChanged(int btnNumber){emit BtnUpChanged(btnNumber);}
 void OptionsWidget::btnRightChanged(int btnNumber){emit BtnRightChanged(btnNumber);}

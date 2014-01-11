@@ -96,7 +96,7 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     setColumnCount(3);
     setStyleSheet(QString(";"));//set a style and itemSelector will have a normal size column 1
     setEditTriggers(QAbstractItemView::NoEditTriggers);// thats a long 0
-    setContextMenuPolicy(Qt::CustomContextMenu);
+    setContextMenuPolicy(Qt::NoContextMenu);
     setSelectionMode(QAbstractItemView::NoSelection);
     itemSelector = new ItemSelector();
     createdSelector=true;

@@ -254,10 +254,10 @@ void MateriaEditor::init_data()
 {
     data = new FF7Materia;
     //Fill Eskill List.
-    QListWidgetItem *newItem;
+    //QListWidgetItem *newItem;
     for(int i=0;i<24;i++)
     {
-        newItem = new QListWidgetItem;
+        QListWidgetItem *newItem = new QListWidgetItem();
         newItem->setText(data->enemySkill(i));
         newItem->setCheckState(Qt::Unchecked);
         eskill_list->addItem(newItem);
@@ -523,11 +523,11 @@ void MateriaEditor::eskill_list_clicked(QModelIndex index)
 }
 qint32 MateriaEditor::MaxAP(void)
 {
-    if( (_id!=FF7Materia::Underwater) || (_id !=FF7Materia::MasterCommand) || (_id!=FF7Materia::MasterMagic) ||(_id!=FF7Materia::MasterSummon) || (_id!=FF7Materia::EnemySkill))
+    if( (_id==FF7Materia::Underwater) || (_id ==FF7Materia::MasterCommand) || (_id==FF7Materia::MasterMagic) ||(_id==FF7Materia::MasterSummon) || (_id==FF7Materia::EnemySkill))
     {
-        return data->ap(_id,data->levels(_id)-1);
+        return FF7Materia::MaxMateriaAp;
     }
-    else{return FF7Materia::MaxMateriaAp;}
+    else{return data->ap(_id,data->levels(_id)-1);}
 }
 
 void MateriaEditor::remove_materia(void){setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
