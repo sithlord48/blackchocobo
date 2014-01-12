@@ -5436,26 +5436,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Región de la ranura</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00867)</source>
-        <translation>PAL (BESCES-00867)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00869)</source>
-        <translation>PAL (BESCES-00869)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00900)</source>
-        <translation>PAL (BESCES-00900)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-00700)</source>
-        <translation>JPN (BISLPS-00700)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-01057)</source>
-        <translation>JPN (BISLPS-01057)</translation>
-    </message>
-    <message>
         <source>Hel&amp;p</source>
         <translation>Ayud&amp;a</translation>
     </message>
@@ -6042,10 +6022,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Calcular Stats</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00868)</source>
-        <translation>PAL (BESCES-00868)</translation>
-    </message>
-    <message>
         <source>Visible On World Map</source>
         <translation>Visible en el Mapa del Mundo</translation>
     </message>
@@ -6202,10 +6178,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Unknown Vars</source>
         <translation>Variables desconocidas</translation>
-    </message>
-    <message>
-        <source>USA (BASCUS-94163)</source>
-        <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
@@ -6513,6 +6485,34 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation>Cait Sith y Vincent no deberían de ser activados si están desactivados en la pestaña de grupo.</translation>
+    </message>
+    <message>
+        <source>Us English (Ntsc-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uk English (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spanish (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>International (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>French (PAL)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

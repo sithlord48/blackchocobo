@@ -34,7 +34,9 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-
+    void closeEvent(QCloseEvent *);
+    void resizeEvent(QResizeEvent *);
+    void moveEvent(QMoveEvent *);
 private:
     Ui::Options *ui;
     bool load;

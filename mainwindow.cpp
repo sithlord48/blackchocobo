@@ -178,6 +178,7 @@ void MainWindow::init_display()
     }
 
     ui->box_t_paradise->setMaximumHeight( (ui->list_flyers->sizeHintForRow(0)*ui->list_flyers->count()) +ui->box_t_paradise->contentsMargins().top() +ui->box_t_paradise->contentsMargins().bottom() );
+
 }
 void MainWindow::init_style()
 {
@@ -341,9 +342,14 @@ void MainWindow::init_settings()
 
     if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
     else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
+
+    restoreGeometry(settings->value("MainGeometry").toByteArray());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
-MainWindow::~MainWindow(){delete ui;}
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
 
 void MainWindow::changeEvent(QEvent *e)
 {
@@ -390,13 +396,19 @@ int MainWindow::save_changes(void)
     return rtn;
 }
 void MainWindow::closeEvent(QCloseEvent *e)
-{if(ff7->isFileModified()){
-    switch(save_changes())
+{
+    if(ff7->isFileModified())
     {
-        case 0: e->ignore(); break;
-        case 1: e->accept(); break;
+        switch(save_changes())
+        {
+            case 0: e->ignore(); break;
+            case 1: e->accept(); break;
+        }
     }
-}}
+    settings->setValue("MainGeometry",saveGeometry());
+}
+void MainWindow::resizeEvent(QResizeEvent *){settings->setValue("MainGeometry",saveGeometry());}
+void MainWindow::moveEvent(QMoveEvent *){settings->setValue("MainGeometry",saveGeometry());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_triggered()
 {
@@ -603,15 +615,15 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s);  guirefresh(0);}
-void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();CheckGame(); guirefresh(0);}
+void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
+void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
-void MainWindow::on_actionAbout_triggered(){about adialog; adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
+void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
-void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
-void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
+void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.exec(); init_settings(); }
+void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7);mdata.exec();}
 
 
 void MainWindow::on_actionOpen_Achievement_File_triggered()
@@ -630,7 +642,6 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     else
     {
         achievementDialog achDialog(this,temp);
-        achDialog.setStyleSheet(this->styleSheet());
         achDialog.exec();
     }
     ff7->setFileModified(c2,s);
@@ -1087,7 +1098,6 @@ void MainWindow::CheckGame()
                        && (ff7->psx_block_type(s) !=0xA0)))
     {// NOT FF7
         errbox error(0,ff7,s);
-        error.setStyleSheet(this->styleSheet());
         switch(error.exec())
         {
         case 0://View Anyway..
