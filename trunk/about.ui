@@ -9,15 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>426</width>
-    <height>380</height>
+    <width>472</width>
+    <height>465</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>About Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset theme="help-about" resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="modal">
@@ -62,8 +62,19 @@
            <height>24</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <italic>true</italic>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Black Chocobo </string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -149,15 +160,18 @@
      <property name="styleSheet">
       <string notr="true"/>
      </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
      <widget class="QWidget" name="tab_about">
       <attribute name="title">
        <string>&amp;About</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>3</number>
+       </property>
        <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
         <number>3</number>
        </property>
        <property name="rightMargin">
@@ -887,7 +901,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>343</width>
+            <width>436</width>
             <height>408</height>
            </rect>
           </property>
@@ -1532,8 +1546,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>124</width>
-            <height>956</height>
+            <width>436</width>
+            <height>424</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

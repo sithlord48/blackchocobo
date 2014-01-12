@@ -6,15 +6,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
-    <height>593</height>
+    <width>767</width>
+    <height>596</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>766</width>
-    <height>593</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Black Chocobo</string>
@@ -27,12 +21,6 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
    <layout class="QVBoxLayout" name="verticalLayout_20">
     <property name="spacing">
      <number>3</number>
@@ -79,12 +67,6 @@
         </property>
         <item>
          <widget class="QFrame" name="frmParty">
-          <property name="minimumSize">
-           <size>
-            <width>300</width>
-            <height>0</height>
-           </size>
-          </property>
           <layout class="QVBoxLayout" name="verticalLayout_23">
            <property name="spacing">
             <number>0</number>
@@ -749,12 +731,6 @@
         </item>
         <item>
          <widget class="QFrame" name="group_char_editor_box">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
           <property name="charbox" stdset="0">
            <bool>true</bool>
           </property>
@@ -7918,7 +7894,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>767</width>
      <height>20</height>
     </rect>
    </property>
@@ -8200,78 +8176,75 @@ Var And Scrolling Synced To Left Table</string>
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/us_unsel</normaloff>
-     <normalon>:/icon/us_sel</normalon>:/icon/us_unsel</iconset>
-   </property>
    <property name="text">
-    <string>USA (BASCUS-94163)</string>
+    <string>Us English (Ntsc-U)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BASCUS-94163</string>
    </property>
   </action>
   <action name="action_Region_PAL_Generic">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/eu_unsel</normaloff>
-     <normalon>:/icon/eu_sel</normalon>:/icon/eu_unsel</iconset>
-   </property>
    <property name="text">
-    <string>PAL (BESCES-00867)</string>
+    <string>Uk English (PAL)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BESCES-00867</string>
    </property>
   </action>
   <action name="action_Region_PAL_German">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/de_unsel</normaloff>
-     <normalon>:/icon/de_sel</normalon>:/icon/de_unsel</iconset>
-   </property>
    <property name="text">
-    <string>PAL (BESCES-00869)</string>
+    <string>German (PAL)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BESCES-00869</string>
    </property>
   </action>
   <action name="action_Region_PAL_Spanish">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/es_unsel</normaloff>
-     <normalon>:/icon/es_sel</normalon>:/icon/es_unsel</iconset>
-   </property>
    <property name="text">
-    <string>PAL (BESCES-00900)</string>
+    <string>Spanish (PAL)</string>
+   </property>
+   <property name="iconText">
+    <string>Spanish (PAL)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BESCES-00900</string>
    </property>
   </action>
   <action name="action_Region_JPN">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/jp_unsel</normaloff>
-     <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
-   </property>
    <property name="text">
-    <string>JPN (BISLPS-00700)</string>
+    <string>Japanese (Ntsc-J)</string>
+   </property>
+   <property name="iconText">
+    <string>Japanese (Ntsc-J)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BISLPS-00700</string>
    </property>
   </action>
   <action name="action_Region_JPN_International">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/jp_unsel</normaloff>
-     <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
-   </property>
    <property name="text">
-    <string>JPN (BISLPS-01057)</string>
+    <string>International (Ntsc-J)</string>
+   </property>
+   <property name="iconText">
+    <string>International (Ntsc-J)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BISLPS-01057</string>
    </property>
   </action>
   <action name="actionNew_Game">
@@ -8373,13 +8346,11 @@ Var And Scrolling Synced To Left Table</string>
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/fr_unsel</normaloff>
-     <normalon>:/icon/fr_sel</normalon>:/icon/fr_unsel</iconset>
-   </property>
    <property name="text">
-    <string>PAL (BESCES-00868)</string>
+    <string>French (PAL)</string>
+   </property>
+   <property name="statusTip">
+    <string notr="true">BESCES-00868</string>
    </property>
   </action>
   <action name="actionCreateNewMetadata">

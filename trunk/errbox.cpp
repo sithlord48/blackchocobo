@@ -31,15 +31,15 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
     lblIcon->setFixedSize(64,64);
     lblIcon->setScaledContents(true);
 
-    btnPrev = new QPushButton(QIcon(":/icon/prev"),tr("&Previous Slot "));
+    btnPrev = new QPushButton(QIcon::fromTheme("go-previous",QIcon(":/icon/prev")),tr("&Previous Slot "));
     btnPrev->setShortcut(QKeySequence::Back);
     btnPrev->setFixedHeight(24);
 
-    btnView = new QPushButton(QIcon(":/icon/quit"),tr("View Anyway "));
+    btnView = new QPushButton(QIcon::fromTheme("window-close",QIcon(":/icon/quit")),tr("View Anyway "));
     btnView->setShortcut(QKeySequence::Close);
     btnView->setFixedHeight(24);
 
-    btnNext = new QPushButton(QIcon(":/icon/next"),tr("    &Next Slot"));
+    btnNext = new QPushButton(QIcon::fromTheme("go-next",QIcon(":/icon/next")),tr("    &Next Slot"));
     btnNext->setShortcut(QKeySequence::Forward);
     btnNext->setLayoutDirection(Qt::RightToLeft);
     btnNext->setFixedHeight(24);

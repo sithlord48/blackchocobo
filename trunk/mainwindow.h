@@ -70,6 +70,8 @@ protected:
     void dropEvent(QDropEvent *e);
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *e);
+    void resizeEvent(QResizeEvent *);
+    void moveEvent(QMoveEvent *);
 private:
     Ui::MainWindow *ui;
     bool skip_slot_mask;

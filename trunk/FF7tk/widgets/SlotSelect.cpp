@@ -18,8 +18,7 @@
 SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 {
     list_preview = new QScrollArea;
-    setMinimumSize(600,420);
-    setMaximumWidth(600);
+    setMinimumHeight(420);
     setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
     setWindowTitle(tr("Select A Slot"));
     preview_layout = new QVBoxLayout;
@@ -28,7 +27,6 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     frm_preview->setContentsMargins(0,0,0,0);
     preview_layout->setContentsMargins(0,0,0,0);
     preview_layout->setSpacing(3);
-    frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     ff7 = data;
     for(int i=0;i<15;i++)
     {
@@ -36,7 +34,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
         preview_layout->addWidget(preview[i]);
         setSlotPreview(i);
     }
-
+    frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
     list_preview->setWidget(frm_preview);
     list_preview->setContentsMargins(0,0,0,0);
 
@@ -46,6 +44,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
     dialog_layout->addWidget(list_preview);
     this->setLayout(dialog_layout);
     this->setContentsMargins(0,0,0,0);
+    setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());
 }
 void SlotSelect::button_clicked(int s){ this->done(s);}
 

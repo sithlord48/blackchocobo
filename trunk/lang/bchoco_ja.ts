@@ -5508,26 +5508,6 @@ The km/h speeds are calculated while playing </source>
         <translation>スロットのリージョン</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00867)</source>
-        <translation>PAL (BESCES-00867)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00869)</source>
-        <translation>PAL (BESCES-00869)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00900)</source>
-        <translation>PAL (BESCES-00900)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-00700)</source>
-        <translation>JPN (BISLPS-00700)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-01057)</source>
-        <translation>JPN (BISLPS-01057)</translation>
-    </message>
-    <message>
         <source>Hel&amp;p</source>
         <translation>ヘルプ(&amp;H)</translation>
     </message>
@@ -6114,11 +6094,6 @@ Table Entries are Editable</source>
         <translation>能力値を算出</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00868)</source>
-        <translatorcomment>PAL (BESCES-00900) {00868)?}</translatorcomment>
-        <translation>PAL (BESCES-00868)</translation>
-    </message>
-    <message>
         <source>Visible On World Map</source>
         <translation>ワールドマップ上の表示</translation>
     </message>
@@ -6274,10 +6249,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>USA (BASCUS-94163)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6580,6 +6551,34 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Us English (Ntsc-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uk English (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spanish (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>International (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>French (PAL)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

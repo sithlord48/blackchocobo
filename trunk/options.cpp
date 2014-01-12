@@ -38,13 +38,11 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     else{ui->cb_override_def_save->setChecked(Qt::Unchecked);}
     if(settings->value("skip_slot_mask").toBool()){ui->cb_skip_slot_mask->setChecked(Qt::Checked);}
     else{ui->cb_skip_slot_mask->setChecked(Qt::Unchecked);}
+    restoreGeometry(settings->value("OptionsGeometry").toByteArray());
     load=false;
 }
 
-Options::~Options()
-{
-    delete ui;
-}
+Options::~Options(){delete ui;}
 
 void Options::changeEvent(QEvent *e)
 {
@@ -57,6 +55,10 @@ void Options::changeEvent(QEvent *e)
         break;
     }
 }
+
+void Options::closeEvent(QCloseEvent *){settings->setValue("OptionsGeometry",saveGeometry());}
+void Options::moveEvent(QMoveEvent *){settings->setValue("OptionsGeometry",saveGeometry());}
+void Options::resizeEvent(QResizeEvent *){settings->setValue("OptionsGeometry",saveGeometry());}
 
 void Options::set_path_lbls()
 {

@@ -5435,26 +5435,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
         <translation>Format du slot</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00867)</source>
-        <translation>PAL (BESCES-00867)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00869)</source>
-        <translation>PAL (BESCES-00869)</translation>
-    </message>
-    <message>
-        <source>PAL (BESCES-00900)</source>
-        <translation>PAL (BESCES-00900)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-00700)</source>
-        <translation>JPN (BISLPS-00700)</translation>
-    </message>
-    <message>
-        <source>JPN (BISLPS-01057)</source>
-        <translation>JPN (BISLPS-01057)</translation>
-    </message>
-    <message>
         <source>Hel&amp;p</source>
         <translation>Aid&amp;e</translation>
     </message>
@@ -6042,10 +6022,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Calculer les statistiques</translation>
     </message>
     <message>
-        <source>PAL (BESCES-00868)</source>
-        <translation>PAL (BESCES-00868)</translation>
-    </message>
-    <message>
         <source>Visible On World Map</source>
         <translation>Affiché sur la mappemonde</translation>
     </message>
@@ -6202,10 +6178,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Unknown Vars</source>
         <translation>Variables inconnues</translation>
-    </message>
-    <message>
-        <source>USA (BASCUS-94163)</source>
-        <translation>USA (BASCUS-94163)</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
@@ -6515,6 +6487,34 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation>Cait Sith et Vincent ne devraient pas être disponibles si ils 
 sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
+    </message>
+    <message>
+        <source>Us English (Ntsc-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uk English (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spanish (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>International (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>French (PAL)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
