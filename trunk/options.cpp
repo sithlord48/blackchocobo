@@ -32,12 +32,6 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     set_path_lbls();
     load=true;
 
-    if(settings->value("font-size").isNull()){settings->setValue("font-size",QApplication::font().pointSize());}
-    if(settings->value("font-family").isNull()){settings->setValue("font-family",QApplication::font().family());}
-
-    ui->combo_font->setFont(settings->value("font-family").toString());
-    ui->combo_font_size->setCurrentIndex(settings->value("font-size").toInt()-8);
-
     if(settings->value("show_test").toBool()){ui->cb_skip_slot_mask->setVisible(true);}
     else{ui->cb_skip_slot_mask->setVisible(false);}
     if(settings->value("override_default_save").toBool()){ui->cb_override_def_save->setChecked(Qt::Checked);}
@@ -83,7 +77,6 @@ void Options::on_btn_set_save_pc_clicked()
     load=false;
 }
 
-
 void Options::on_line_save_emu_editingFinished(){settings->setValue("save_emu",ui->line_save_emu->text());}
 void Options::on_btn_set_save_emu_clicked()
 {
@@ -125,24 +118,6 @@ void Options::on_btn_set_char_stat_folder_clicked()
     set_path_lbls();
     load=false;
 }
-/*~~~~~~~~~~~~~~~~~~~~Font Stuff~~~~~~~~~~~~~~~~~~~~~~*/
-
-void Options::on_combo_font_currentIndexChanged(QString family)
-{if(!load){
-    settings->setValue("font-family",family);
-    QApplication::setFont(QFont(family,settings->value("font-size").toInt(),-1,false));
-}}
-
-void Options::on_combo_font_size_currentIndexChanged(int index)
-{
-    if(!load)
-    {
-        index+=8;//adjust so index 0 = starting font size.
-        settings->setValue("font-size",index);
-        QApplication::setFont(QFont(settings->value("font-family").toString(),index,-1,false));
-    }
-    else{ui->combo_font_size->setCurrentIndex(settings->value("font-size").toInt()-8);}
-}
 /*~~~~~~~~~~~~~~~~~~RESET STUFF~~~~~~~~~~~~~~~~~~~*/
 void Options::on_reset_default_save_location_clicked()
 {
@@ -150,14 +125,6 @@ void Options::on_reset_default_save_location_clicked()
     settings->remove("default_save_file");
     ui->line_default_save->clear();
 }
-
-void Options::on_reset_font_clicked()
-{
-    ui->combo_font->setCurrentFont(QFont("ubuntu",9,-1,false));
-    ui->combo_font_size->setCurrentIndex(1);
-    settings->remove("font-family"); settings->remove("font-size");
-}
-
 void Options::on_cb_skip_slot_mask_toggled(bool checked){if(!load){settings->setValue("skip_slot_mask",checked);}}
 void Options::on_cb_override_def_save_toggled(bool checked)
 {

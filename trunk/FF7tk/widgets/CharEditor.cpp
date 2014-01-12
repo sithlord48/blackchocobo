@@ -64,37 +64,36 @@ void CharEditor::init_display()
     cb_idChanger = new QCheckBox;
     cb_idChanger->setHidden(true);
 
-    lbl_id = new QLabel(tr("ID"));
     combo_id = new QComboBox;
     for(int i=0;i<11;i++){combo_id->addItem(Chars.icon(i),Chars.defaultName(i));}
+    combo_id->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+    combo_id->setHidden(true);
+
     lbl_base_hp = new QLabel(tr("Base HP"));
     lbl_base_hp_bonus = new QLabel;
     sb_base_hp = new QSpinBox;
     sb_base_hp->setFixedWidth(this->font().pointSize()*6);
-
     lbl_base_mp = new QLabel(tr("Base MP"));
     lbl_base_mp_bonus = new QLabel;
     sb_base_mp = new QSpinBox;
     sb_base_mp->setFixedWidth(this->font().pointSize()*6);
 
-    lbl_total_xp = new QLabel(tr("Total Exp"));
     lbl_level_progress = new QLabel(tr("Level Progress"));
     bar_tnl = new QProgressBar;
     bar_tnl->setMaximum(61);//strange indeed..
     bar_tnl->setTextVisible(false);
+    bar_tnl->setFixedHeight(10);
+    bar_tnl->setFixedWidth(61);
     lbl_level_next = new QLabel(tr("Next"));
     sb_total_exp = new QSpinBox;
+    sb_total_exp->setPrefix(tr("Exp: "));
+    sb_total_exp->setMaximumWidth(fontMetrics().width(QChar('9'))*16);
     sb_total_exp->setMaximum(2147483647);
     sb_total_exp->setWrapping(true);
 
-    lcd_tnl = new QLCDNumber;
-    lcd_tnl->setDigitCount(8);
-    lcd_tnl->setMaximumHeight(20);
-    lcd_tnl->setSegmentStyle(QLCDNumber::Flat);
     lbl_limit_bar = new QLabel (tr("Limit Bar"));
     slider_limit = new QSlider;
     slider_limit->setMaximumHeight(20);
-    bar_tnl->setMaximumHeight(20);
     slider_limit->setMaximum(255);
     slider_limit->setOrientation(Qt::Horizontal);
     lcd_limit_value = new QLCDNumber;
@@ -205,24 +204,24 @@ void CharEditor::init_display()
 
     QHBoxLayout *layout_1_1 = new QHBoxLayout;
     layout_1_1->setContentsMargins(0,0,0,0);
-    layout_1_1->setSpacing(3);
+    //layout_1_1->setSpacing(3);
     layout_1_1->addWidget(lbl_1_1);
     layout_1_1->addWidget(sb_uses_limit_1_1);
 
     QHBoxLayout *layout_2_1 = new QHBoxLayout;
     layout_2_1->setContentsMargins(0,0,0,0);
-    layout_2_1->setSpacing(3);
+    //layout_2_1->setSpacing(3);
     layout_2_1->addWidget(lbl_2_1);
     layout_2_1->addWidget(sb_uses_limit_2_1);
     QHBoxLayout *layout_3_1 = new QHBoxLayout;
     layout_3_1->setContentsMargins(0,0,0,0);
-    layout_3_1->setSpacing(3);
+    //layout_3_1->setSpacing(3);
     layout_3_1->addWidget(lbl_3_1);
     layout_3_1->addWidget(sb_uses_limit_3_1);
 
     QVBoxLayout *used_limits_layout = new QVBoxLayout;
     used_limits_layout->setContentsMargins(0,0,0,0);
-    used_limits_layout->setSpacing(3);
+    //used_limits_layout->setSpacing(3);
     used_limits_layout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
     used_limits_layout->addWidget(lbl_uses);
     used_limits_layout->addLayout(layout_1_1);
@@ -233,6 +232,7 @@ void CharEditor::init_display()
     list_limits = new QListWidget;
     lbl_limit_level = new QLabel(tr("Limit Level"));
     sb_limit_level = new QSpinBox;
+
     sb_limit_level->setFixedWidth(this->font().pointSize()*4);
 
     QHBoxLayout *limit_level_layout = new QHBoxLayout;
@@ -289,7 +289,6 @@ void CharEditor::init_display()
 
     line_name->setMaxLength(11);
     line_name->setMaximumWidth(this->font().pointSize()*12);
-    bar_tnl->setMaximumWidth(line_name->width()*1.5);
 
     QHBoxLayout * name_level_layout= new QHBoxLayout;
     name_level_layout->addWidget(line_name);
@@ -319,20 +318,25 @@ void CharEditor::init_display()
     QSpacerItem *mp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     mp_layout->addSpacerItem(mp_spacer);
 
+    QHBoxLayout *barNextLayout = new QHBoxLayout();
+    barNextLayout->setContentsMargins(0,0,0,0);
+    barNextLayout->addWidget(bar_tnl);
+    barNextLayout->addWidget(lbl_level_next);
+    barNextLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::MinimumExpanding,QSizePolicy::Fixed));
+
     QVBoxLayout *exp_layout = new QVBoxLayout;
     exp_layout->setContentsMargins(0,0,0,0);
-    exp_layout->setSpacing(0);
-    exp_layout->addWidget(lbl_total_xp);
+    //exp_layout->setSpacing(0);
     exp_layout->addWidget(sb_total_exp);
+    exp_layout->addLayout(barNextLayout);
 
     QHBoxLayout *kills_layout = new QHBoxLayout;
+    kills_layout->setContentsMargins(0,0,0,0);
     kills_layout->addWidget(sb_kills);
-    QSpacerItem *kills_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
-    kills_layout->addSpacerItem(kills_spacer1);
-    QSpacerItem *kills_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
-    kills_layout->addSpacerItem(kills_spacer);
+    kills_layout->addLayout(exp_layout);
 
     QVBoxLayout *name_hp_mp_kills_layout = new QVBoxLayout;
+    //name_hp_mp_kills_layout->setSpacing(0);
     name_hp_mp_kills_layout->addLayout(name_level_layout);
     name_hp_mp_kills_layout->addLayout(hp_layout);
     name_hp_mp_kills_layout->addLayout(mp_layout);
@@ -340,18 +344,10 @@ void CharEditor::init_display()
 
     QVBoxLayout *fury_sadness_layout = new QVBoxLayout;
     fury_sadness_layout->setContentsMargins(0,0,0,0);
-    fury_sadness_layout->setSpacing(2);
+    //fury_sadness_layout->setSpacing(2);
     fury_sadness_layout->addWidget(cb_fury);
     fury_sadness_layout->addWidget(cb_sadness);
 
-    QHBoxLayout *id_layout = new QHBoxLayout;
-    id_layout->setContentsMargins(0,0,0,0);
-    id_layout->addWidget(lbl_id);
-    id_layout->addWidget(combo_id);
-
-    combo_id_box = new QWidget;
-    combo_id_box->setLayout(id_layout);
-    combo_id_box->setHidden(true);
 
     QVBoxLayout *sadness_row_id_layout =new QVBoxLayout;
     sadness_row_id_layout->addLayout(fury_sadness_layout);
@@ -359,43 +355,24 @@ void CharEditor::init_display()
     sadness_row_id_layout->addWidget(cb_front_row);
     sadness_row_id_layout->addWidget(cb_idChanger);
     sadness_row_id_layout->addSpacerItem(new QSpacerItem(0,6,QSizePolicy::Preferred,QSizePolicy::Preferred));
-    sadness_row_id_layout->addWidget(combo_id_box);
+    sadness_row_id_layout->addWidget(combo_id);
 
     QHBoxLayout *avatar_name_layout = new QHBoxLayout;
     avatar_name_layout->setContentsMargins(0,0,0,0);
+    //avatar_name_layout->setSpacing(0);
     avatar_name_layout->addWidget(lbl_avatar);
     avatar_name_layout->addLayout(name_hp_mp_kills_layout);
     avatar_name_layout->addLayout(sadness_row_id_layout);
 
-    QVBoxLayout *level_bar_layout = new QVBoxLayout;
-    level_bar_layout->setContentsMargins(0,0,0,0);
-    level_bar_layout->setSpacing(0);
-    level_bar_layout->addWidget(lbl_level_progress);
-    level_bar_layout->addWidget(bar_tnl);
-
-    QVBoxLayout *level_next_layout = new QVBoxLayout;
-    level_next_layout->setContentsMargins(0,0,0,0);
-    level_next_layout->setSpacing(0);
-    level_next_layout->addWidget(lbl_level_next);
-    level_next_layout->addWidget(lcd_tnl);
-
-    QHBoxLayout *level_progress_layout = new QHBoxLayout;
-    level_progress_layout->addLayout(level_bar_layout);
-    level_progress_layout->addLayout(level_next_layout);
-
     QHBoxLayout *limit_bar_layout = new QHBoxLayout;
     limit_bar_layout->setContentsMargins(0,0,0,0);
     limit_bar_layout->addLayout(limit_level_layout);
+
     QSpacerItem *limitSpacer = new QSpacerItem(10,0,QSizePolicy::Fixed,QSizePolicy::Fixed);
     limit_bar_layout->addSpacerItem(limitSpacer);
     limit_bar_layout->addWidget(lbl_limit_bar);
     limit_bar_layout->addWidget(slider_limit);
     limit_bar_layout->addWidget(lcd_limit_value);
-
-    QHBoxLayout *level_exp_limit_layout = new QHBoxLayout;
-    level_exp_limit_layout->setContentsMargins(0,0,0,0);
-    level_exp_limit_layout->addLayout(exp_layout);
-    level_exp_limit_layout->addLayout(level_progress_layout);
 
     QHBoxLayout *str_layout = new QHBoxLayout;
     str_layout->setContentsMargins(0,0,0,0);
@@ -570,22 +547,23 @@ void CharEditor::init_display()
     limit_use_list->addWidget(list_limits);
 
     QVBoxLayout *limit_box = new QVBoxLayout;
-    limit_box->setSpacing(0);
+    limit_box->setContentsMargins(0,0,0,0);
+    //limit_box->setSpacing(0);
     limit_box->addLayout(limit_bar_layout);
     limit_box->addLayout(limit_use_list);
 
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
+    lower_section->setSpacing(0);
     lower_section->addLayout(stat_layout_2);
     lower_section->addLayout(limit_box);
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(2,0,2,2);
+    left_Final->setContentsMargins(0,0,0,0);
+    //left_Final->setSpacing(0);
     left_Final->addLayout(avatar_name_layout);
-    left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
     left_Final->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
-
 
     weapon_selection = new QComboBox;
 
@@ -641,7 +619,6 @@ void CharEditor::init_display()
     //set up materia slots and box for weapon.
     weapon_materia_box = new QFrame;
     weapon_materia_box->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
-    //weapon_materia_box->setFixedHeight(45);
     QSpacerItem *weapon_spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
     //I Like the No Growth Slots They Look Better so i always use them
     // you can use FF7Item::Style_m_grow_slot() to get the style of that slot
@@ -1318,7 +1295,6 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     _name=Processed_Name;
     //more here like setting the gui stuff.
     lbl_avatar->setPixmap(Chars.pixmap(data.id));
-    //if(_name=="")
     line_name->setText(_name);
     sb_level->setValue(data.level);
     sb_curMp->setValue(data.curMP);
@@ -1333,8 +1309,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     if(data.flags[0]==FF7Char::Sadness ){cb_sadness->setChecked(Qt::Checked);}else{cb_sadness->setChecked(Qt::Unchecked);}
     if(data.flags[1] ==FF7Char::FrontRow){cb_front_row->setChecked(Qt::Checked);}else{cb_front_row->setChecked(Qt::Unchecked);}
     sb_total_exp->setValue(data.exp);
-    lcd_tnl->display(int(data.expNext));
+    lbl_level_next->setText(tr("Next:%1").arg(QString::number(data.expNext)));
     slider_limit->setValue(data.limitbar);
+    lcd_limit_value->display(int(data.limitbar));
     bar_tnl->setValue(data.flags[2]);
     sb_str->setValue(data.strength);
     sb_str_bonus->setValue(data.strength_bonus);
@@ -1372,7 +1349,8 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 
         if(data.limits & (1<< _limitbitarray[i])){list_limits->item(i)->setCheckState(Qt::Checked);} //Vegeta_Ss4: Fixed list_limits GUI
         else{list_limits->item(i)->setCheckState(Qt::Unchecked);}
-    }   
+    }
+    list_limits->setFixedHeight(list_limits->sizeHintForRow(0)*list_limits->count() +list_limits->contentsMargins().top()+list_limits->contentsMargins().bottom());
     sb_uses_limit_1_1->setValue(data.timesused1); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_2_1->setValue(data.timesused2); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
@@ -1870,7 +1848,7 @@ void CharEditor::setAdvancedMode(bool new_advancedMode)
 {
     advancedMode = new_advancedMode;
     unknown_box->setVisible(advancedMode);
-    combo_id_box->setVisible(advancedMode);
+    combo_id->setVisible(advancedMode);
     sb_maxHp->setVisible(advancedMode);
     sb_maxMp->setVisible(advancedMode);
     lcdMaxHp->setVisible(!advancedMode);
@@ -2185,8 +2163,6 @@ void CharEditor::level_up(int pre_level)
 }
 void CharEditor::update_tnl_bar(void)
 {
-    QString numvalue;
-
     if(data.level!=99)
     {
         setExpNext(Chars.totalExpForLevel(data.id,data.level)- data.exp);
@@ -2202,13 +2178,12 @@ void CharEditor::update_tnl_bar(void)
     }
     bar_tnl->setValue(data.flags[2]);
     if(bar_tnl->value()<4){bar_tnl->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
-    numvalue.setNum(data.expNext);
-    lcd_tnl->display(numvalue);
+    lbl_level_next->setText(tr("Next: %1").arg(QString::number(data.expNext)));
 }
 
 void CharEditor::elemental_info(void)
 {
-    int y= this->fontMetrics().height() *2.25;
+    int y= elemental_effects->contentsMargins().top() +elemental_effects->contentsMargins().bottom();
     bool show=false;
     int item_id = 0;
     QString m_effect;
@@ -2257,11 +2232,11 @@ void CharEditor::elemental_info(void)
                 {
                         m_effect.append(effect);
                         elemental_effects->addItem(effect);
-                        show=true; y+=this->fontMetrics().height();
+                        show=true; y+=elemental_effects->sizeHintForRow(0);
                 }
              }//end of for Loop
             elemental_effects->setFixedHeight(y);
-            elemental_box->setFixedSize(205,y);
+            elemental_box->setFixedSize(205,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
         }//end of else.
     }//end of other loop.
    elemental_box->setVisible(show);
@@ -2270,7 +2245,7 @@ void CharEditor::elemental_info(void)
 
 void CharEditor::status_info(void)
 {
-    int y=this->fontMetrics().height()*2.25;
+    int y=status_effects->contentsMargins().top()+status_effects->contentsMargins().bottom();
     bool show=false;
     int item_id =0;
     QString m_status;
@@ -2330,11 +2305,11 @@ void CharEditor::status_info(void)
                 {
                     m_status.append(effect);
                     status_effects->addItem(effect);
-                    show=true; y+=this->fontMetrics().height();
+                    show=true; y+=status_effects->sizeHintForRow(0);
                 }
             }//end of for Loop
             status_effects->setFixedHeight(y);
-            status_box->setFixedSize(205,y);
+            status_box->setFixedSize(205,y + status_box->contentsMargins().top()+ status_box->contentsMargins().bottom());
         }//end of else.
      }//end of loop
     status_box->setVisible(show);

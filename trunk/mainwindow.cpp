@@ -25,8 +25,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     this->setAcceptDrops(true);
     //Get Font Info Before Setting up the GUI!
     settings =configdata;
-    if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
-    if(!settings->value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings->value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
     ui->setupUi(this);
     _init=true;
     ff7 = ff7data;
@@ -118,18 +116,19 @@ void MainWindow::init_display()
 
     char_editor = new CharEditor;
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
-    char_editor_layout->setSpacing(0);
     char_editor_layout->setContentsMargins(0,0,0,0);
+    char_editor_layout->setSpacing(0);
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
+
     itemlist= new ItemList;
-    QHBoxLayout *itemlist_layout = new QHBoxLayout;
-    itemlist_layout->setSpacing(0);
-    itemlist_layout->setContentsMargins(0,0,0,0);
-    itemlist_layout->addWidget(itemlist);
-    ui->frm_itemlist->setLayout(itemlist_layout);
-    ui->group_items->setFixedWidth(itemlist->width()+6);
+
+    ui->group_items->layout()->removeWidget(ui->group_item_options);
+    ui->group_items->layout()->addWidget(itemlist);
+    ui->group_items->layout()->addWidget(ui->group_item_options);
+
+    ui->group_items->setFixedWidth(itemlist->width()+ itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
     chocoboManager = new ChocoboManager;
     QHBoxLayout *cmLayout = new QHBoxLayout;
@@ -138,7 +137,9 @@ void MainWindow::init_display()
     ui->chocoboManagerBox->setLayout(cmLayout);
 
     hexEditor = new QHexEdit;
-
+    #ifdef Q_OS_MAC
+        hexEditor->setFont(this->font());
+    #endif
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0,0,0,0);
     hexLayout->addWidget(hexEditor);
@@ -156,14 +157,10 @@ void MainWindow::init_display()
     //Set up Status Bar..
     ui->statusBar->addWidget(ui->frame_status,1);
     //Dynamicly Populate The List of languages
-    QIcon langIcon;
-    langIcon.addFile(":/icon/checkbox_unchecked",QSize(22,22),QIcon::Normal,QIcon::Off);
-    langIcon.addFile(":/icon/checkbox_checked",QSize(22,22),QIcon::Normal,QIcon::On);
 
     QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
     QAction *langAction = ui->menuLang->addAction("English");
-    langAction->setIcon(langIcon);
     langAction->setData("en");
     langAction->setCheckable(true);
     langAction->setChecked(settings->value("lang").toString()=="en");
@@ -175,50 +172,32 @@ void MainWindow::init_display()
         translator.load(langList.at(i),dir.absolutePath());
         QString lang = langList.at(i).mid(7,2);
         langAction = ui->menuLang->addAction(translator.translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
-        langAction->setIcon(langIcon);
         langAction->setData(lang);
         langAction->setCheckable(true);
         langAction->setChecked(settings->value("lang").toString()==lang);
     }
+
+    ui->box_t_paradise->setMaximumHeight( (ui->list_flyers->sizeHintForRow(0)*ui->list_flyers->count()) +ui->box_t_paradise->contentsMargins().top() +ui->box_t_paradise->contentsMargins().bottom() );
 }
 void MainWindow::init_style()
 {
-    QString hoverStyle = QString("qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));");
-
-    QString tablestyle = QString("::section{background-color:%1;color: white;padding-left:4px;border:1px solid #6c6c6c;}").arg(hoverStyle);
-    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
-    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
-
-    locationViewer->setHorizontalHeaderStyle(tablestyle);
-    ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
-
-
     QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
     sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
     sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
     sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
     sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
 
-  optionsWidget->setSliderStyle(sliderStyleSheet);
-  char_editor->setSliderStyle(sliderStyleSheet);
+    char_editor->setSliderStyle(sliderStyleSheet);
 
-  char_editor->setToolBoxStyle(QString("::tab:hover{background-color:%1}").arg(hoverStyle));
-  ui->locationToolBox->setStyleSheet(QString("::tab:hover{background-color:%1}").arg(hoverStyle));
+    QString tabStyle = QString("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
 
-  char_editor->setMateriaHoverStyle(hoverStyle);
-  materia_editor->setHoverStyle(hoverStyle);
-  chocoboManager->setHoverStyle(hoverStyle);
+    char_editor->setToolBoxStyle(tabStyle);
+    ui->locationToolBox->setStyleSheet(tabStyle);
 
-  hexEditor->setStyleSheet(QString("background-color: rgb(64,65,64);font:;color:rgb(255,255,255);"));
-  hexEditor->setHighlightingColor(Qt::yellow);
-  hexEditor->setSelectionColor(QColor(82,120,142));
-  hexEditor->setAddressAreaColor(QColor(64,65,64));
-
-  ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
-  ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
-  ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
+    hexEditor->setStyleSheet(this->styleSheet());
+    ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
+    ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
+    ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.

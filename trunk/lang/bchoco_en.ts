@@ -179,19 +179,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Base HP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Base MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Total Exp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -532,6 +524,18 @@
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1868,10 +1872,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show Gold Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>x-Potion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5832,10 +5832,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Disk  #</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Elevator Door Open</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6229,27 +6225,8 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Team Avalanche Had Meeting after Bombing 
-Mission</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That 
-Mission.  This Will automaticly set your save location and disk # as well as 
-Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
-feature, i can not promise that you will be able to play from any replay untill 
-the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
-Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
-Disabled in the Party Tab.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6502,6 +6479,22 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disc  #</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Team Avalanche had meeting after Bombing Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8210,43 +8203,11 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set Applications Font</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>9 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>10 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>11 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>12 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>13 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>14 Pt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>8 Pt.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8476,10 +8437,6 @@ trigger showing that tutorial</source>
 <context>
     <name>PhsListWidget</name>
     <message>
-        <source>Phs Manager</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cloud</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8521,6 +8478,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Cid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PHS Manager</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8777,35 +8738,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7 Program Icon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thanks To</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thank You For, the old checksum program</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cause She&apos;s Just Awesome!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9101,10 +9034,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9218,6 +9147,34 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for the old checksum program</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for helping me see the light of stupid errors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cause she&apos;s just awesome!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

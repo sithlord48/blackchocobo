@@ -178,7 +178,6 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   main_layout->addWidget(lbl_desc);
   main_layout->addWidget(materia_slot_box);
   main_layout->addLayout(effects_layout);
-  this->adjustSize();
 }
 void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjustSize();}
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}
@@ -292,7 +291,7 @@ void ItemPreview::setItem(int id)
 }
 void ItemPreview::elemental_info(int id)
 {
-    int y=6+this->font().pointSize()*2;
+    int y= elemental_effects->contentsMargins().top() +elemental_effects->contentsMargins().bottom();
     bool show=false;
     elemental_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -330,25 +329,32 @@ void ItemPreview::elemental_info(int id)
             if(!effect.isNull())
             {
                 elemental_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*5/3;
+                show=true; y+= elemental_effects->sizeHintForRow(0);
+
             }
         }//end of for Loop
         Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
         if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
         {//make the combo box smaller if not a popup or tooltip
-            if(elemental_effects->count()<6){elemental_box->setFixedSize(160,y);}
-            else{elemental_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+            if(elemental_effects->count() <6)
+            {
+                //elemental_effects->setFixedHeight(y);
+                elemental_box->setFixedSize(160,elemental_effects->height()+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
+                //elemental_box->setFixedSize(160,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
+            }
+            else{elemental_box->setFixedSize(160,elemental_effects->sizeHintForRow(0)*5 +elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());}
         }
-       else{elemental_box->setFixedSize(160,y);}
-        elemental_box->setFixedSize(160,y);
-   }//end of else
+        else
+        {
+            elemental_box->setFixedSize(160,y + elemental_box->contentsMargins().top() +elemental_box->contentsMargins().bottom());
+        }}//end of else
    elemental_box->setVisible(show);
    elemental_box->adjustSize();
 }//end of function
 
 void ItemPreview::status_info(int id)
 {
-    int y=6+this->font().pointSize()*2;
+    int y=status_effects->contentsMargins().top()+ status_effects->contentsMargins().bottom();
     bool show=false;
     status_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -396,16 +402,19 @@ void ItemPreview::status_info(int id)
             if(!effect.isNull())
             {
                 status_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*5/3;
+                show=true; y+=status_effects->sizeHintForRow(0);
             }
         }//end of for Loop
         Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
         if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
         {//make the combo box smaller if not a popup or tooltip
-            if(status_effects->count()<6){status_box->setFixedSize(160,y);}
-            else{status_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+            if(status_effects->count()<6)
+            {
+                status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());
+            }
+            else{status_box->setFixedSize(160,status_effects->sizeHintForRow(0)*5 +status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
         }
-        else{status_box->setFixedSize(160,y);}
+        else{status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
     }//end of else
     status_box->setVisible(show);
     status_box->adjustSize();

@@ -101,15 +101,17 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     itemSelector = new ItemSelector();
     createdSelector=true;
     setCellWidget(0,0,itemSelector);
+    setColumnWidth(0,itemSelector->combo_type_width());
     setColumnWidth(1,itemSelector->combo_item_width());
-    itemSelector->setFixedWidth(itemSelector->combo_item_width()+66+font().pointSize()*5+verticalScrollBar()->width()+contentsMargins().left()+contentsMargins().right());
+    setColumnWidth(2,itemSelector->qty_width());
+    itemSelector->setFixedWidth(itemSelector->combo_type_width()+itemSelector->combo_item_width()+itemSelector->qty_width());
     connect(this,SIGNAL(currentCellChanged(int,int,int,int)),this,SLOT(listSelectionChanged(int,int,int,int)));
     horizontalHeader()->hide();
     verticalHeader()->hide();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
-    adjustSize();
     for(int i=0;i<320;i++){itemlist.append(FF7Item::EmptyItemData);}//initlize the data.
-    setFixedWidth(itemSelector->size().width());
+    itemSelector->setFixedHeight(this->sizeHintForRow(0)+contentsMargins().top()+contentsMargins().bottom());
+    setFixedWidth(itemSelector->frameGeometry().width()+ verticalScrollBar()->width() + contentsMargins().left() + contentsMargins().right()+6);
     itemSelector->close();
     createdSelector = false;
     itemupdate();// redraw Display After data init.
@@ -166,12 +168,14 @@ void ItemList::itemSelector_changed(quint16 item)
 void ItemList::itemupdate()
 {
     int j= currentRow();
-    int column_one_width =columnWidth(1);
+    int column0width =columnWidth(0);
+    int column1width =columnWidth(1);
+    int column2width =columnWidth(2);
     int selectorLocation=321;
     clearContents();
-    setColumnWidth(0,40);
-    setColumnWidth(1,column_one_width);
-    setColumnWidth(2,(this->font().pointSize()*5)+22);
+    setColumnWidth(0,column0width);
+    setColumnWidth(1,column1width);
+    setColumnWidth(2,column2width);
     setRowCount(320);
     if(createdSelector){selectorLocation = itemSelector->objectName().toInt(); itemSelector->setMaximumQty(itemQtyLimit);}
     for (int i=0;i<320;i++) // set up items
