@@ -9274,6 +9274,10 @@ p, li { white-space: pre-wrap; }
         <source>Cause she&apos;s just awesome!</source>
         <translation>ともかく彼女は素晴らしい！</translation>
     </message>
+    <message>
+        <source>New: Save/Restore Geometry for MainWindow and Options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>
