@@ -55,13 +55,13 @@ void LocationViewer::init_display(void)
 
     newItem = new QTableWidgetItem(tr("Filename"),0);
     locationTable->setHorizontalHeaderItem(0,newItem);
-    locationTable->setColumnWidth(0,font().pointSize()*8);
+    locationTable->setColumnWidth(0,fontMetrics().width(QChar('W'))*8);
 
     newItem = new QTableWidgetItem(tr("Location Name"),0);
     locationTable->setHorizontalHeaderItem(1,newItem);
-    locationTable->setColumnWidth(1,font().pointSize()*24);
+    locationTable->setColumnWidth(1,fontMetrics().width(QChar('W'))*15);
     newItem = new QTableWidgetItem(tr("LocID"),0);
-    locationTable->setColumnWidth(2,font().pointSize()*6);
+    locationTable->setColumnWidth(2,fontMetrics().width(QChar('W'))*4);
     locationTable->setHorizontalHeaderItem(2,newItem);
 
     for (int i=0;i<locationTable->rowCount();i++)
@@ -89,9 +89,10 @@ void LocationViewer::init_display(void)
         locationTable->setRowHeight(i,font().pointSizeF()*2+2);
     }
     locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
-    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM());
+    locationTable->adjustSize();
+    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->contentsMargins().left()+locationTable->contentsMargins().right()+locationTable->verticalScrollBar()->widthMM()+14);
     locationTable->setCurrentCell(-1,-1);
+    locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 
     btnSearchOptions = new QToolButton;
     btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(delete_xpm)));
@@ -186,7 +187,6 @@ void LocationViewer::init_display(void)
     XYTD->addWidget(sbY);
     XYTD->addWidget(sbT);
     XYTD->addWidget(sbD);
-
 
     QVBoxLayout *CoordsLayout = new QVBoxLayout;
     CoordsLayout->setContentsMargins(6,6,6,6);

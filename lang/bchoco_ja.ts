@@ -65,11 +65,11 @@
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バハムート零式</translation>
     </message>
     <message>
         <source>Ultimate Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アルテマウェポン</translation>
     </message>
     <message>
         <source>Diamond Weapon</source>
@@ -179,19 +179,11 @@
         <translation type="unfinished">前列配置</translation>
     </message>
     <message>
-        <source>ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Base HP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Base MP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Total Exp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -532,6 +524,18 @@
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1868,10 +1872,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show Gold Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>x-Potion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5916,10 +5916,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>メイン進捗度</translation>
     </message>
     <message>
-        <source>Disk  #</source>
-        <translation>ディスク  #</translation>
-    </message>
-    <message>
         <source>Elevator Door Open</source>
         <translation>エレベーターのドアが開く</translation>
     </message>
@@ -6318,27 +6314,8 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Team Avalanche Had Meeting after Bombing 
-Mission</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That 
-Mission.  This Will automaticly set your save location and disk # as well as 
-Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
-feature, i can not promise that you will be able to play from any replay untill 
-the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
-Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
-Disabled in the Party Tab.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6587,6 +6564,22 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Current Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disc  #</source>
+        <translation type="unfinished">ディスク  #</translation>
+    </message>
+    <message>
+        <source>Team Avalanche had meeting after Bombing Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8295,44 +8288,12 @@ trigger showing that tutorial</source>
         <translation>デフォルトにリセット</translation>
     </message>
     <message>
-        <source>Set Applications Font</source>
-        <translation>アプリケーションのフォント設定</translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
     <message>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
-    </message>
-    <message>
-        <source>9 Pt.</source>
-        <translation>9 Pt.</translation>
-    </message>
-    <message>
-        <source>10 Pt.</source>
-        <translation>10 Pt.</translation>
-    </message>
-    <message>
-        <source>11 Pt.</source>
-        <translation>11 Pt.</translation>
-    </message>
-    <message>
-        <source>12 Pt.</source>
-        <translation>12 Pt.</translation>
-    </message>
-    <message>
-        <source>13 Pt.</source>
-        <translation>13 Pt.</translation>
-    </message>
-    <message>
-        <source>14 Pt.</source>
-        <translation>14 Pt.</translation>
-    </message>
-    <message>
-        <source>8 Pt.</source>
-        <translation>8 Pt.</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
@@ -8561,10 +8522,6 @@ trigger showing that tutorial</source>
 <context>
     <name>PhsListWidget</name>
     <message>
-        <source>Phs Manager</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cloud</source>
         <translation>クラウド</translation>
     </message>
@@ -8607,6 +8564,10 @@ trigger showing that tutorial</source>
     <message>
         <source>Cid</source>
         <translation>シド</translation>
+    </message>
+    <message>
+        <source>PHS Manager</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8875,36 +8836,8 @@ p, li { white-space: pre-wrap; }
         <translation>バフ アイコン (その他・諸々) の作成: </translation>
     </message>
     <message>
-        <source>FF7 Program Icon</source>
-        <translation> FF7 プログラム アイコン</translation>
-    </message>
-    <message>
-        <source>Thanks To</source>
-        <translation>謝辞</translation>
-    </message>
-    <message>
         <source>A Big Thank You  To:</source>
         <translation>大いなる感謝を:</translation>
-    </message>
-    <message>
-        <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation>彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
-    </message>
-    <message>
-        <source>Thank You For, the old checksum program</source>
-        <translation>定番のチェックサム プログラムに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
-    </message>
-    <message>
-        <source>Cause She&apos;s Just Awesome!</source>
-        <translation>ともかく彼女は素晴らしい！</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
@@ -9199,10 +9132,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9318,6 +9247,34 @@ p, li { white-space: pre-wrap; }
         <source>Using Qt: %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Thanks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
+        <translation>彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
+    </message>
+    <message>
+        <source>Thank you for the old checksum program</source>
+        <translation>定番のチェックサム プログラムに感謝します。</translation>
+    </message>
+    <message>
+        <source>Thank you for helping me see the light of stupid errors.</source>
+        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
+    </message>
+    <message>
+        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
+        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
+    </message>
+    <message>
+        <source>Cause she&apos;s just awesome!</source>
+        <translation>ともかく彼女は素晴らしい！</translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>
@@ -9327,11 +9284,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存(&amp;S)</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キャンセル(&amp;C)</translation>
     </message>
     <message>
         <source>Save As</source>

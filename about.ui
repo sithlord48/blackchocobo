@@ -149,6 +149,9 @@
      <property name="styleSheet">
       <string notr="true"/>
      </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <widget class="QWidget" name="tab_about">
       <attribute name="title">
        <string>&amp;About</string>
@@ -188,7 +191,7 @@
           </size>
          </property>
          <property name="text">
-          <string notr="true">(C) 2010 - 2013 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2014 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
@@ -884,8 +887,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>378</width>
-            <height>430</height>
+            <width>343</width>
+            <height>408</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1463,37 +1466,6 @@ p, li { white-space: pre-wrap; }
                </property>
               </widget>
              </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_14">
-               <item>
-                <widget class="QLabel" name="label_26">
-                 <property name="text">
-                  <string notr="true">Covarr:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_27">
-                 <property name="text">
-                  <string>FF7 Program Icon</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_15">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
             </layout>
            </item>
           </layout>
@@ -1504,7 +1476,7 @@ p, li { white-space: pre-wrap; }
      </widget>
      <widget class="QWidget" name="tab_thanks">
       <attribute name="title">
-       <string>Thanks To</string>
+       <string>Thanks</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_10">
        <property name="leftMargin">
@@ -1560,8 +1532,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>134</width>
-            <height>942</height>
+            <width>124</width>
+            <height>956</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1595,7 +1567,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_30">
                 <property name="text">
-                 <string> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova's savefile struct And item/materia lists. Access to it's source code saved a lot of time during the early stages of development.</string>
+                 <string>Thank you for providing the source to Jenova. This program uses modified versions of Jenova's savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1620,7 +1592,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_31">
                 <property name="text">
-                 <string>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</string>
+                 <string>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You've done a lot to help.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1645,7 +1617,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_32">
                 <property name="text">
-                 <string>Thank You For, the old checksum program</string>
+                 <string>Thank you for the old checksum program</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1670,7 +1642,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_33">
                 <property name="text">
-                 <string>Thank You For, Helping me see the light of stupid errors. </string>
+                 <string>Thank you for helping me see the light of stupid errors.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1695,7 +1667,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_34">
                 <property name="text">
-                 <string>Thank You For, Providing a Better understanding of Qt's Functions When the help files failed.</string>
+                 <string>Thank you for providing a better understanding of Qt's functions when the help files failed.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1708,7 +1680,7 @@ p, li { white-space: pre-wrap; }
            <item>
             <widget class="QGroupBox" name="groupBox_6">
              <property name="title">
-              <string notr="true">Ms.sith</string>
+              <string notr="true">Ms.Sith</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_21">
               <property name="topMargin">
@@ -1720,7 +1692,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QLabel" name="label_35">
                 <property name="text">
-                 <string>Cause She's Just Awesome!</string>
+                 <string>Cause she's just awesome!</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>

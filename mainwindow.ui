@@ -24,392 +24,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-/*QWidget#optionsWidget:enabled,QScrollArea[visible=&quot;true&quot;]:enabled,QToolBox:enabled,QWidget#tab_hex,QWidget#scrollAreaWidgetContents_5,QWidget#scrollAreaWidgetContents_3,QWidget#scrollAreaWidgetContents,QWidget#scrollAreaWidgetContents_4,QWidget#scrollAreaWidgetContents_2,QWidget#page,QWidget#page_2,ChocoboEditor:enabled,QGroupBox:enabled,QCheckBox:enabled,QFrame ,QLabel[visible=&quot;true&quot;]:enabled,QWidet#tab_test,QListWidget:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}*/
-QWidget:enabled{background-color:rgb(80,80,80);font:;color:rgb(255,255,255);}
-
-QWidget[visible=&quot;true&quot;]:disabled,QLabel[visible=&quot;true&quot;]:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
-QLabel:enabled{background-color:rgb(255,255,255,0);font:;color:rgb(255,255,255);}
-
-QDialog{
-background-color:rgb(48,47,47);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-selection-color: rgb(255,255,255);
-}
-
-QListView,QTreeView,QTableView,QColumnView{
-background-color:rgba(10,10,10,64);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-selection-color: rgb(255,255,255);
-}
-QGroupBox:enabled,QMdiArea{
-background-color:rgba(10,10,10,32);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-selection-color: rgb(255,255,255);
-}
-
-/*QMenuBar*/
-QMenuBar {
-	background-color: rgb(99, 97, 97);
-}
-QStatusBar{
-   background:rgb(99,97,97);
-	font:;color:rgb(255,255,255);
-}
-QMenuBar:item{
-background-color:rgb(99,97,97);	
-font:;color:rgb(255,255,255);
-}
-
-QMenu,QWidget.ItemPreview{
-	border:2px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172,172,172);
-	border-radius:5px;
-	background-color: rgba(99, 97, 97,255);
-	
-}
-QMenu::item:enabled{
-	background-color: rgba(99, 97, 97,255);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);font:;color:rgb(255,255,255);
-}
-
-QMenu::item:disabled{
-	background-color: rgb(38, 38, 38);
-	font:;color:rgb(74, 80, 73);
-}
-QToolBox::tab{
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));font:;color:rgb(255,255,255);
-}
-QFrame#frame_status{
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
-}
- QToolBox::tab:selected,QTabBar::tab:selected,QMenuBar::item:selected,QMenuBar::item:hover { 
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
- 	font:;color: rgb(255,255,255);
- }
-/*End OF Menu*/
-
-QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
-background-color:rgba(48, 47, 47,16);
-font:;color:rgb(74, 80, 73);
-}
-
-QTabBar::tab:disabled
-{
-background:rgba(0,0,0,0);font:;color:rgba(0,0,0,0);
-border: 1px solid;
-border-top-color:rgba(0,0,0,0);
-border-left-color:rgba(0,0,0,0);
-border-right-color:rgba(0,0,0,0);
-
-
-border-bottom-color: rgb(0, 0, 0);
-}
-
-QTableWidget:enabled,QListWidget:enabled{
-background-color: rgba(32, 31, 31,64);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
-selection-color: rgb(255,255,255);
-gridline-color: rgb(25, 25, 25);
-
-}
-/*WIDGET ITEMS (spinboxes, sliders, combos etc...)*/
-/*Sliders */
-/*Checkboxes-enabled*/
-QListWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
-QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked{image: url(:/icon/checkbox_checked);}
-QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked{image: url(:/icon/checkbox_unchecked);}
-QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
-QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover{image: url(:/icon/checkbox_checked_hover);}
-QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover{image: url(:/icon/checkbox_unchecked_hover);}
-QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
-
-/*Checkboxes-disabled*/
-QListWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);font:;color:rgb(74, 80, 73);}
-QListWidget::indicator:disabled:checked,QCheckBox::indicator:disabled:checked{image: url(:/icon/checkbox_checked_disabled);}
-QListWidget::indicator:disabled:unchecked,QCheckBox::indicator:disabled:unchecked{image: url(:/icon/checkbox_unchecked_disabled);}
-QListWidget::indicator:disabled:indeterminate,QCheckBox::indicator:disabled:indeterminate{image: url(:/icon/checkbox_indeterminate_disabled);}
-QListWidget::indicator:disabled:checked:hover,QCheckBox::indicator:disabled:checked:hover {image: url(:/icon/checkbox_checked_hover_disabled);}
-QListWidget::indicator:disabled:unchecked:hover,QCheckBox::indicator:disabled:unchecked:hover {image: url(:/icon/checkbox_unchecked_hover_disabled);}
-QListWidget::indicator:disabled:indeterminate:hover,QCheckBox::indicator:disabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover_disabled);}
-
-/*Spinbox-enabled*/
-QSpinBox:enabled{
-	border:1px solid; 
-	border-color: rgba(67,67,67,192);
-	background-color: rgba(32,31,31,128);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));selection-color: rgb(255,255,255);
-	selection-color: rgb(255,255,255);
-	border-radius: 5px;
-	font:;color:rgb(255,255,255);
-}
-QSpinBox::up-button {
-     subcontrol-origin: border;
-     subcontrol-position: top right;
-     width: 8px; 
-	background-color: rgba(67, 67, 67,128);
- }
-QSpinBox:up-arrow{
-	image: url(:/icon/arrow_up);
-	width:6px;
-	height:6px;
-}
-QSpinBox::down-button {
-     subcontrol-origin: border;
-     subcontrol-position: bottom right;
-     width: 8px; 
-	background-color: rgba(67,67,67,128); 
-}
-QSpinBox:down-arrow{
-	image: url(:/icon/arrow_down);
-	width:6px;
-	height:6px;
-}
-
-/*Spinbox-disabled*/
-QSpinBox:disabled{
-	border:1px solid; 
-	border:1px solid; 
-	border-color: rgb(67,67,67,16);
-	background-color: rgb(67,67,67,16);
-	border-radius: 5px;
-}
-QSpinBox:up-arrow:disabled, QSpinBox:up-arrow:off{
-	image: url(:/icon/arrow_up_disabled);
-	width:6px;
-	height:6px;
-}
-QSpinBox:down-arrow:disabled, QSpinBox:down-arrow:off{
-	image: url(:/icon/arrow_down_disabled);
-	width:6px;
-	height:6px;
-}
-/*ComboBox-enabled*/
-QComboBox:enabled{
-  border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-bottom-color: rgba(172, 172, 172,192);
-	border-top-color: rgba(172, 172, 172,192);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31, 128));
-	border-radius: 5px; font:;color:rgb(255,255,255);
-}
-
-QComboBox::down-arrow{
-	image: url(:/icon/arrow_down);
-}
-QComboBox::down-arrow:on{
-	top: 1px;
-	left:1px;
-}
-
-QComboBox::drop-down:on{
-    border:1px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-bottom-color: rgba(172, 172, 172,192);
-	border-top-color: rgba(172, 172, 172,192);
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31, 128));
-	border-radius: 5px; font:;color:rgb(255,255,255);
-}
-
-QAbstractItemView{
-    border:1px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-	selection-color: rgb(255,255,255);
-	border-radius: 5px; font:;color:rgb(255,255,255);
-}
-/*ComboBox-disabled*/
-QComboBox:disabled{
-
-}
-QComboBox::down-arrow:disabled{
-	image: url(:/icon/arrow_down_disabled);
-}
-QLineEdit:enabled{
-border: 2px solid grey;
-background-color: rgba(32, 31, 31,96);
-selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-selection-color: rgb(255,255,255);
-color:rgb(255,255,255);
-border-radius: 5px;
-}
-QLCDNumber:enabled{
-	border:2px solid;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-bottom-color: rgba(172, 172, 172,192);
-	border-top-color: rgba(172, 172, 172,192);
-	background-color: rgba(32, 31, 31,96);
-	selection-background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), stop:1 rgba(67, 67, 67, 128));
-	selection-color: rgb(255,255,255);
-	border-radius: 5px;
-}
-QPushButton:enabled{  
-    border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-bottom-color: rgba(172, 172, 172,192);
-	border-top-color: rgba(172, 172, 172,192);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31,128));
-	border-radius: 5px; font:;color:rgb(255,255,255);
-}
-QPushButton:disabled{
-/*    border:3px solid; */
-	border-radius: 5px; 
-}
-/*Scroll Bars */
-QScrollBar:horizontal{
-    border:1px solid grey;
-	background-color:rgba(47,47,47,128);
-	height:14px;
-	margin: 0px 16px 0px 16px ;
-
-}
- QScrollBar::add-line:horizontal {
-     border: 1px solid grey;
-     width: 14px;
-     subcontrol-position: right;
-	subcontrol-origin:margin;
- }
-
- QScrollBar::sub-line:horizontal {
-     border: 1px solid grey;
-     width: 14px;
-    subcontrol-position: left;
-	subcontrol-origin:margin;
- }
-QScrollBar::left-arrow:horizontal{
-	image:url(:/icon/prev);
-	height:12px;
-}
-
-QScrollBar::handle:horizontal{
-	image: url(:/icon/scroll_handle_h) 1 ;
-	border:2px solid;	
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-}
-QScrollBar::right-arrow:horizontal{
-image: url(:/icon/next);
-height:12px;
-}
-QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal{
-background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 192), stop:1 rgba(67, 67, 67, 192));
-}
-/* Vertical scroll bar */
-
-QScrollBar:vertical{
-    border:1px solid grey;
-	background-color:rgba(47,47,47,192);
-	width:14px;
-	margin: 16px 0px 16px 0px ;
-
-}
- QScrollBar::add-line:vertical{
-     border: 1px solid grey;
-     height: 14px;
-     subcontrol-position:bottom;
-	subcontrol-origin:margin;
- }
-
- QScrollBar::sub-line:vertical{
-     border: 1px solid grey;
-     height: 14px;
-    subcontrol-position: top;
-	subcontrol-origin:margin;
- }
-QScrollBar::up-arrow:vertical{
-	image:url(:/icon/arrow_up);
-	width:12px;
-}
-
-QScrollBar::handle:vertical{
-	image: url(:/icon/scroll_handle_v) 1 ;
-	border:2px solid;	
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-}
-QScrollBar::down-arrow:vertical{
-image: url(:/icon/arrow_down);
-width:12px;
-}
-QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
-background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 192), stop:0.5 rgba(106, 106, 106,192), stop:1 rgba(67, 67, 67, 192));
-}
-
-QProgressBar {
-  border:3px solid;	
-		border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-		border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-		border-bottom-color: rgb(172, 172, 172);
-		border-top-color: rgb(172, 172, 172);
-  border-radius: 5px;
-background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
-	 }
- QProgressBar::chunk {
-	background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
-  width:1px;
- }
-
-
-
-QTabWidget::pane { border-top-color:rgba(0,0,0,0); }
-QTabBar::tab:enabled{
-    background: rgba(10,10,10,16);
-    border: 2px solid;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172,172,172);
-    padding: 2px;
-	border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-	min-width: 10ex;
-	font:;color:rgb(255,255,255);
-
- }
-QTabBar::tab:selected {
-	border:3px solid;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-top-color: rgb(172,172,172);
-    border-bottom-color: rgba(10,10,10,16);
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
- }
-QTabBar::tab:!selected { margin-top: 2px; }
-QTabBar::tab:selected{
-     margin-left: -4px;
-     margin-right: -4px;
- }
-
-QTabBar::tab:first:selected { margin-left: 0; }
-QTabBar::tab:last:selected { margin-right: 0; }
-QTabBar::tab:only-one { margin: 0;  }
-QTabBar::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}
-
-QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
-QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
-QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -438,9 +53,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
        <number>0</number>
-      </property>
-      <property name="usesScrollButtons">
-       <bool>false</bool>
       </property>
       <widget class="QWidget" name="tab_party">
        <property name="focusPolicy">
@@ -1137,14 +749,11 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         </item>
         <item>
          <widget class="QFrame" name="group_char_editor_box">
-          <property name="minimumSize">
-           <size>
-            <width>450</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
           <property name="charbox" stdset="0">
            <bool>true</bool>
@@ -1298,13 +907,19 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
         <property name="leftMargin">
          <number>3</number>
         </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
          <widget class="QGroupBox" name="group_items">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -1314,33 +929,17 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_46">
            <property name="leftMargin">
-            <number>0</number>
+            <number>3</number>
            </property>
            <property name="topMargin">
             <number>0</number>
            </property>
            <property name="rightMargin">
-            <number>0</number>
+            <number>3</number>
            </property>
            <property name="bottomMargin">
             <number>3</number>
            </property>
-           <item>
-            <widget class="QFrame" name="frm_itemlist">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-            </widget>
-           </item>
            <item>
             <widget class="QFrame" name="group_item_options">
              <property name="sizePolicy">
@@ -1454,22 +1053,10 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
               <item>
                <widget class="QListWidget" name="list_flyers">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
                 </property>
                 <property name="baseSize">
                  <size>
@@ -1570,6 +1157,12 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
            </item>
            <item>
             <widget class="QGroupBox" name="group_keyitems">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title">
               <string>Key Items</string>
              </property>
@@ -2431,8 +2024,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>454</height>
+             <width>98</width>
+             <height>28</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2502,7 +2095,7 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
             <item>
              <widget class="QScrollArea" name="scrollArea">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2528,12 +2121,18 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                  <x>0</x>
                  <y>0</y>
                  <width>256</width>
-                 <height>510</height>
+                 <height>615</height>
                 </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>3</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -2549,18 +2148,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </property>
                 <item>
                  <widget class="QGroupBox" name="groupBox_42">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>130</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Visible On World Map</string>
                   </property>
@@ -2593,12 +2180,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
                        <layout class="QVBoxLayout" name="verticalLayout_121">
                         <property name="spacing">
                          <number>0</number>
@@ -2617,12 +2198,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                         </property>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_buggy">
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>15</height>
-                           </size>
-                          </property>
                           <property name="text">
                            <string>Buggy</string>
                           </property>
@@ -2654,15 +2229,9 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QFrame" name="frmChocoType">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
                        <layout class="QVBoxLayout" name="verticalLayout_122">
                         <property name="spacing">
-                         <number>0</number>
+                         <number>3</number>
                         </property>
                         <property name="leftMargin">
                          <number>0</number>
@@ -2699,12 +2268,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                         </item>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_black_chocobo">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>16</height>
-                           </size>
-                          </property>
                           <property name="text">
                            <string>Black chocobo</string>
                           </property>
@@ -2727,12 +2290,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>75</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Party leader</string>
                   </property>
@@ -2756,18 +2313,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_52">
                      <item>
                       <widget class="QSpinBox" name="leader_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -2784,18 +2329,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -2812,18 +2345,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -2849,8 +2370,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
-                         <height>20</height>
+                         <width>0</width>
+                         <height>0</height>
                         </size>
                        </property>
                       </spacer>
@@ -2889,29 +2410,10 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="sizeType">
                         <enum>QSizePolicy::Expanding</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="cb_world_party_leader">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>24</height>
-                        </size>
-                       </property>
-                      </widget>
+                      <widget class="QComboBox" name="cb_world_party_leader"/>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_id">
@@ -2930,12 +2432,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_4">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
@@ -2959,18 +2455,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_53">
                      <item>
                       <widget class="QSpinBox" name="tc_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -2987,18 +2471,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="tc_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3015,18 +2487,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="tc_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3049,12 +2509,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                       <spacer name="horizontalSpacer_59">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
                        </property>
                       </spacer>
                      </item>
@@ -3086,12 +2540,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                      <item>
@@ -3116,12 +2564,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                     </layout>
@@ -3131,18 +2573,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_3">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>70</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Buggy / Highwind</string>
                   </property>
@@ -3166,18 +2596,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_60">
                      <item>
                       <widget class="QSpinBox" name="bh_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3194,18 +2612,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="bh_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3222,18 +2628,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="bh_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3262,8 +2656,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>10</width>
-                         <height>20</height>
+                         <width>0</width>
+                         <height>0</height>
                         </size>
                        </property>
                       </spacer>
@@ -3301,8 +2695,8 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>10</width>
-                         <height>20</height>
+                         <width>0</width>
+                         <height>0</height>
                         </size>
                        </property>
                       </spacer>
@@ -3361,12 +2755,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_5">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Sub</string>
                   </property>
@@ -3390,18 +2778,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_62">
                      <item>
                       <widget class="QSpinBox" name="sub_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3418,18 +2794,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sub_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3446,18 +2810,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sub_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3480,12 +2832,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                       <spacer name="horizontalSpacer_60">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
                        </property>
                       </spacer>
                      </item>
@@ -3517,12 +2863,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                      <item>
@@ -3547,12 +2887,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                     </layout>
@@ -3562,12 +2896,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_7">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Wild Chocobo</string>
                   </property>
@@ -3591,18 +2919,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_73">
                      <item>
                       <widget class="QSpinBox" name="wc_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3619,18 +2935,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="wc_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3647,18 +2951,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="wc_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3681,12 +2973,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                       <spacer name="horizontalSpacer_67">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
                        </property>
                       </spacer>
                      </item>
@@ -3718,12 +3004,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                      <item>
@@ -3748,12 +3028,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                     </layout>
@@ -3763,12 +3037,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_2">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
@@ -3792,18 +3060,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                     <layout class="QHBoxLayout" name="horizontalLayout_75">
                      <item>
                       <widget class="QSpinBox" name="durw_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3820,18 +3076,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="durw_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3848,18 +3092,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="durw_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -3882,12 +3114,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                       <spacer name="horizontalSpacer_68">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
                        </property>
                       </spacer>
                      </item>
@@ -3919,12 +3145,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
                       </spacer>
                      </item>
                      <item>
@@ -3948,12 +3168,6 @@ QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
                       <spacer name="horizontalSpacer_86">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
                        </property>
                       </spacer>
                      </item>
@@ -4235,18 +3449,6 @@ location.</string>
              </item>
              <item>
               <widget class="QSpinBox" name="sb_mprogress">
-               <property name="minimumSize">
-                <size>
-                 <width>50</width>
-                 <height>18</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>120</width>
-                 <height>24</height>
-                </size>
-               </property>
                <property name="wrapping">
                 <bool>true</bool>
                </property>
@@ -4279,12 +3481,6 @@ location.</string>
                  <height>18</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>18</height>
-                </size>
-               </property>
                <property name="wrapping">
                 <bool>true</bool>
                </property>
@@ -4292,7 +3488,7 @@ location.</string>
                 <set>Qt::AlignCenter</set>
                </property>
                <property name="prefix">
-                <string>Disk  #</string>
+                <string>Disc  #</string>
                </property>
                <property name="minimum">
                 <number>1</number>
@@ -4349,8 +3545,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>313</width>
-                  <height>1705</height>
+                  <width>336</width>
+                  <height>1982</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -4537,8 +3733,7 @@ location.</string>
                     <item>
                      <widget class="QCheckBox" name="cb_s7ts_1">
                       <property name="text">
-                       <string>Team Avalanche Had Meeting after Bombing 
-Mission</string>
+                       <string>Team Avalanche had meeting after Bombing Mission</string>
                       </property>
                      </widget>
                     </item>
@@ -4982,12 +4177,7 @@ Mission</string>
           <item>
            <widget class="QLabel" name="label_172">
             <property name="text">
-             <string> Set Replay Mission above To Set The Game Back To That 
-Mission.  This Will automaticly set your save location and disk # as well as 
-Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
-feature, i can not promise that you will be able to play from any replay untill 
-the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
-Is Under Heavy Development</string>
+             <string>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -5103,18 +4293,6 @@ Is Under Heavy Development</string>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_6">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>62</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>62</height>
-             </size>
-            </property>
             <property name="title">
              <string>Time Played</string>
             </property>
@@ -5141,12 +4319,6 @@ Is Under Heavy Development</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_23">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>15</height>
-                  </size>
-                 </property>
                  <property name="text">
                   <string>Hour</string>
                  </property>
@@ -5250,12 +4422,6 @@ Is Under Heavy Development</string>
             <property name="minimumSize">
              <size>
               <width>216</width>
-              <height>126</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
               <height>126</height>
              </size>
             </property>
@@ -5561,8 +4727,8 @@ Is Under Heavy Development</string>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>0</width>
+              <height>0</height>
              </size>
             </property>
            </spacer>
@@ -5608,8 +4774,8 @@ Is Under Heavy Development</string>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>0</width>
+              <height>0</height>
              </size>
             </property>
            </spacer>
@@ -5997,8 +5163,7 @@ Is Under Heavy Development</string>
           <item>
            <widget class="QLabel" name="label_25">
             <property name="text">
-             <string>Cait Sith And Vincent Should Not Be Enabled If They Are 
-Disabled in the Party Tab.</string>
+             <string>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -6712,16 +5877,10 @@ rgb(255, 255, 255)</string>
              <bool>true</bool>
             </property>
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>128</height>
-             </size>
             </property>
             <property name="title">
              <string>Coaster Shooter High Scores</string>
@@ -6734,13 +5893,13 @@ rgb(255, 255, 255)</string>
               <number>3</number>
              </property>
              <property name="topMargin">
-              <number>3</number>
+              <number>0</number>
              </property>
              <property name="rightMargin">
               <number>3</number>
              </property>
              <property name="bottomMargin">
-              <number>3</number>
+              <number>0</number>
              </property>
              <item>
               <widget class="QFrame" name="frm_1st">
@@ -6752,6 +5911,18 @@ rgb(255, 255, 255)</string>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_149">
                 <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
                  <number>0</number>
                 </property>
                 <item>
@@ -6784,13 +5955,7 @@ rgb(255, 255, 255)</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>18</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777215</height>
+                    <height>24</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -6817,6 +5982,18 @@ rgb(255, 255, 255)</string>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_148">
                 <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
                  <number>0</number>
                 </property>
                 <item>
@@ -6849,13 +6026,7 @@ rgb(255, 255, 255)</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>18</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777215</height>
+                    <height>24</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -6882,6 +6053,18 @@ rgb(255, 255, 255)</string>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_147">
                 <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
                  <number>0</number>
                 </property>
                 <item>
@@ -6920,13 +6103,7 @@ rgb(255, 255, 255)</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>18</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>16777215</height>
+                    <height>24</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -7313,36 +6490,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-		x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-		stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
-}
-::tab {
-    background: rgba(10,10,10,16);
-	min-height: 14ex;
-	min-width: 1ex;
-	max-width:4ex;
-	font:;color:rgb(255,255,255);
-	border:2px solid;
-	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
- }
-::tab:selected {
-	border:2px solid;
-	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, 
-		x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(98,192,247,128), 
-		stop:1 rgba(67, 67, 67, 128)); font:;color:rgb(255,255,255);
- }
-QTabBar::tab:!selected { margin-left: 2px; }
-QTabBar::tab:selected{
-     margin-top: -4px;
-     margin-bottom: -4px;
- }
-
-QTabBar::tab:first:selected { margin-top: 0; }
-QTabBar::tab:last:selected { margin-bottom: 0; }
-QTabBar::tab:only-one { margin: 0;  }</string>
+           <string notr="true"/>
           </property>
           <property name="tabPosition">
            <enum>QTabWidget::West</enum>
@@ -7358,6 +6506,18 @@ QTabBar::tab:only-one { margin: 0;  }</string>
             <string>Misc</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_125">
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_157">
               <item>
@@ -7539,6 +6699,9 @@ trigger showing that tutorial</string>
             </item>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_93">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_153">
                 <item>
@@ -7550,6 +6713,9 @@ trigger showing that tutorial</string>
                    <string>Tutorials Seen</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_31">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
                    <property name="leftMargin">
                     <number>3</number>
                    </property>
@@ -7741,6 +6907,18 @@ trigger showing that tutorial</string>
                  <string>Save Pont Location In North Crater</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
                   <widget class="QSpinBox" name="sb_saveMapId">
                    <property name="prefix">
@@ -7807,6 +6985,15 @@ trigger showing that tutorial</string>
                    <string>0xC1E tut_sub</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_71">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
                    <item>
                     <widget class="QCheckBox" name="cb_tut_sub_1">
                      <property name="text">
@@ -7903,6 +7090,15 @@ trigger showing that tutorial</string>
                    <string>0xBEF (farmitems)</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
                    <item>
                     <widget class="QCheckBox" name="cb_farm_items_1">
                      <property name="text">
@@ -8987,11 +8183,6 @@ Var And Scrolling Synced To Left Table</string>
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/checkbox_unchecked</normaloff>
-     <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
-   </property>
    <property name="text">
     <string>Advanced Mode</string>
    </property>
@@ -9155,11 +8346,6 @@ Var And Scrolling Synced To Left Table</string>
   <action name="action_auto_char_growth">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/checkbox_unchecked</normaloff>
-     <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
    </property>
    <property name="text">
     <string>Calculate Stats</string>

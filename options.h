@@ -53,11 +53,8 @@ private slots:
     void on_pushButton_clicked();
     void set_path_lbls();
     void on_reset_default_save_location_clicked();
-    void on_combo_font_currentIndexChanged(QString );
-    void on_reset_font_clicked();
     void on_cb_skip_slot_mask_toggled(bool checked);
     void on_cb_override_def_save_toggled(bool checked);
-    void on_combo_font_size_currentIndexChanged(int index);
 };
 
 #endif // OPTIONS_H

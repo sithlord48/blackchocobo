@@ -219,17 +219,14 @@ private:
     QLabel *lbl_hp_slash;
     QLabel *lbl_mp;
     QLabel *lbl_mp_slash;
-    QLabel *lbl_id;
     QCheckBox *cb_fury;
     QCheckBox *cb_sadness;
     QCheckBox *cb_front_row;
     QComboBox *combo_id;
 
-    QLabel * lbl_total_xp;
     QSpinBox * sb_total_exp;
     QLabel * lbl_level_progress;
     QLabel * lbl_level_next;
-    QLCDNumber *lcd_tnl;
     QProgressBar *bar_tnl;
     QLabel * lbl_limit_bar;
     QSlider *slider_limit;
@@ -353,7 +350,6 @@ private:
     QLCDNumber *lcd_0x36;
     QLCDNumber *lcd_0x37;
     QCheckBox * cb_idChanger;
-    QWidget *combo_id_box;
 //Data
    FF7Char Chars;
    FF7Item Items;

@@ -1,3 +1,11 @@
+blackchocobo (1.9.820) precise; urgency=low
+  *Black Chocobo Will now Use Native Style (except mac os)
+  *Fixed: Signing for non numeric User ID (Stright md5)
+  *Fixed: Menu Locked and Visible changes backwards.
+  *FF7tk: + Achievement Editor
+  *FF7tk: + Field Items shown in location Editor
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sun, 12 Jan 2014 01:29:22 -0400
+
 blackchocobo (1.9.800) precise; urgency=low
   *New Error Box Dialog
   *Better Handling of Japanese PSX versions hard item qty limit

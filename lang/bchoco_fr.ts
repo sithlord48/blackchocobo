@@ -179,20 +179,12 @@
         <translation>Première ligne</translation>
     </message>
     <message>
-        <source>ID</source>
-        <translation>ID </translation>
-    </message>
-    <message>
         <source>Base HP</source>
         <translation>Base HP</translation>
     </message>
     <message>
         <source>Base MP</source>
         <translation>Base MP</translation>
-    </message>
-    <message>
-        <source>Total Exp</source>
-        <translation>EXP totale</translation>
     </message>
     <message>
         <source>Level Progress</source>
@@ -533,6 +525,18 @@
     <message>
         <source>value calculated ingame; edit BaseHp</source>
         <translation>valeur calculée en jeu ; modifie BaseHp</translation>
+    </message>
+    <message>
+        <source>Exp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next: %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1870,10 +1874,6 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Show Gold Chocobo</source>
         <translation>Montrer chocobo or</translation>
-    </message>
-    <message>
-        <source>x-Potion</source>
-        <translation>Potion-X</translation>
     </message>
     <message>
         <source>Cologne</source>
@@ -5844,10 +5844,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Valeur de la variable de progression</translation>
     </message>
     <message>
-        <source>Disk  #</source>
-        <translation>Disque </translation>
-    </message>
-    <message>
         <source>Elevator Door Open</source>
         <translation>Porte de l&apos;ascenseur ouverte</translation>
     </message>
@@ -6245,30 +6241,10 @@ location.</source>
         <translation>Faites un clic droit sur la map pour placer un personnage ou un moyen de transport facilement.</translation>
     </message>
     <message>
-        <source>Team Avalanche Had Meeting after Bombing 
-Mission</source>
-        <translation>L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
-    </message>
-    <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
         <translation type="unfinished">cb_s5_7 (Ether turbo du gamin dans la maison au second 
 5min1_2)</translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That 
-Mission.  This Will automaticly set your save location and disk # as well as 
-Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this 
-feature, i can not promise that you will be able to play from any replay untill 
-the end of the game.Or That Any Given Replay Will Work In Your Save, This Area 
-Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are 
-Disabled in the Party Tab.</source>
-        <translation>Cait Sith et Vincent ne devraient pas être disponibles si ils 
-sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
@@ -6522,6 +6498,23 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>Current Slot:%1</source>
         <translation>Slot actuel : %1</translation>
+    </message>
+    <message>
+        <source>Disc  #</source>
+        <translation>Disque </translation>
+    </message>
+    <message>
+        <source>Team Avalanche had meeting after Bombing Mission</source>
+        <translation>L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
+        <translation>Cait Sith et Vincent ne devraient pas être disponibles si ils 
+sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
 </context>
 <context>
@@ -8229,44 +8222,12 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <translation>Réinitialiser</translation>
     </message>
     <message>
-        <source>Set Applications Font</source>
-        <translation>Polices d&apos;applications Set</translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation></translation>
     </message>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
-    </message>
-    <message>
-        <source>9 Pt.</source>
-        <translation>9 Pt.</translation>
-    </message>
-    <message>
-        <source>10 Pt.</source>
-        <translation>10 Pt.</translation>
-    </message>
-    <message>
-        <source>11 Pt.</source>
-        <translation>11 Pt.</translation>
-    </message>
-    <message>
-        <source>12 Pt.</source>
-        <translation>12 Pt.</translation>
-    </message>
-    <message>
-        <source>13 Pt.</source>
-        <translation>13 Pt.</translation>
-    </message>
-    <message>
-        <source>14 Pt.</source>
-        <translation>14 Pt.</translation>
-    </message>
-    <message>
-        <source>8 Pt.</source>
-        <translation>8 Pt.</translation>
     </message>
     <message>
         <source>Set File Paths For Saving and Loading</source>
@@ -8495,10 +8456,6 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
 <context>
     <name>PhsListWidget</name>
     <message>
-        <source>Phs Manager</source>
-        <translation>Gestionnaire de PHS</translation>
-    </message>
-    <message>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
@@ -8541,6 +8498,10 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     <message>
         <source>Cid</source>
         <translation>Cid</translation>
+    </message>
+    <message>
+        <source>PHS Manager</source>
+        <translation>Gestionnaire de PHS</translation>
     </message>
 </context>
 <context>
@@ -8809,36 +8770,8 @@ p, li { white-space: pre-wrap; }
         <translation>Icônes spéciaux (et un ou deux de plus) par </translation>
     </message>
     <message>
-        <source>FF7 Program Icon</source>
-        <translation>FF7 icône du programme</translation>
-    </message>
-    <message>
-        <source>Thanks To</source>
-        <translation>Merci à</translation>
-    </message>
-    <message>
         <source>A Big Thank You  To:</source>
         <translation>Un grand merci à:</translation>
-    </message>
-    <message>
-        <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, Aide pour trouver des données dans la savemap. Test des thèmes, etc. il a fait beaucoup pour aider.</translation>
-    </message>
-    <message>
-        <source>Thank You For, the old checksum program</source>
-        <translation>Merci pour l&apos;ancien programme de checksum</translation>
-    </message>
-    <message>
-        <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation>Merci pour m&apos;avoir montré la solution à des erreurs stupides.</translation>
-    </message>
-    <message>
-        <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation>Merci pour m&apos;avoir donné une meilleure compréhension des fonctions de Qt lorsque les fichiers d&apos;aide se sont avérés inutiles.</translation>
-    </message>
-    <message>
-        <source>Cause She&apos;s Just Awesome!</source>
-        <translation>Parce qu&apos;elle est tout simplement incroyable!</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
@@ -9135,10 +9068,6 @@ p, li { white-space: pre-wrap; }
         <translation>Nouveau : widget CharEditor.</translation>
     </message>
     <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation> Merci pour avoir publié le code source de Jenova. Ce programme utilise une version modifiée des structures du fichier de sauvegarde et des listes d&apos;objets/matérias provenant de Jenova. Pouvoir consulter ces sources m&apos;a permis de gagner beaucoup de temps au cours des premiers stades de développement.</translation>
-    </message>
-    <message>
         <source>New: ItemList Widget;</source>
         <translation>Nouveau : widget ItemList</translation>
     </message>
@@ -9253,6 +9182,34 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Using Qt: %1</source>
         <translation>Utilisation de Qt : %1</translation>
+    </message>
+    <message>
+        <source>Thanks</source>
+        <translation>Merci</translation>
+    </message>
+    <message>
+        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
+        <translation> Merci pour avoir publié le code source de Jenova. Ce programme utilise une version modifiée des structures du fichier de sauvegarde et des listes d&apos;objets/matérias provenant de Jenova. Pouvoir consulter ces sources m&apos;a permis de gagner beaucoup de temps au cours des premiers stades de développement.</translation>
+    </message>
+    <message>
+        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
+        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, Aide pour trouver des données dans la savemap. Test des thèmes, etc. il a fait beaucoup pour aider.</translation>
+    </message>
+    <message>
+        <source>Thank you for the old checksum program</source>
+        <translation>Merci pour l&apos;ancien programme de checksum</translation>
+    </message>
+    <message>
+        <source>Thank you for helping me see the light of stupid errors.</source>
+        <translation>Merci pour m&apos;avoir montré la solution à des erreurs stupides.</translation>
+    </message>
+    <message>
+        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
+        <translation>Merci pour m&apos;avoir donné une meilleure compréhension des fonctions de Qt lorsque les fichiers d&apos;aide se sont avérés inutiles.</translation>
+    </message>
+    <message>
+        <source>Cause she&apos;s just awesome!</source>
+        <translation>Parce qu&apos;elle est tout simplement incroyable!</translation>
     </message>
 </context>
 <context>

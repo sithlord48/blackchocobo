@@ -118,9 +118,11 @@ void MateriaEditor::init_display()
     lbl_materiaIcon->setFixedSize(24,24);
     combo_type->setMinimumHeight(24);
     combo_materia->setMinimumHeight(24);
-    list_skills->setFixedHeight((this->fontMetrics().height()*5)+6);
+
+    list_skills->addItem(new QListWidgetItem("Item"));
+    list_skills->setFixedHeight(list_skills->sizeHintForRow(0)*5 +list_skills->contentsMargins().top()+ list_skills->contentsMargins().bottom()+3);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
-    list_status->setFixedHeight((this->fontMetrics().height()*5)+6);
+    list_status->setFixedHeight(list_skills->height());
     list_status->setSelectionMode(QAbstractItemView::NoSelection);
 
     //size policies
@@ -134,6 +136,7 @@ void MateriaEditor::init_display()
     box_stats->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
     frm_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     box_status_effects->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Minimum);
+
 //Set up display
     this->setContentsMargins(0,0,0,0);
     QHBoxLayout * type_name_layout = new QHBoxLayout;
@@ -166,7 +169,6 @@ void MateriaEditor::init_display()
     QSpacerItem *spacer2 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     stars->addSpacerItem(spacer2);
     box_stars->setLayout(stars);
-
 
     /* Init Skills Area */
     ap_stars_layout =  new QGridLayout;
@@ -254,7 +256,6 @@ void MateriaEditor::init_data()
 {
     data = new FF7Materia;
     //Fill Eskill List.
-    //QListWidgetItem *newItem;
     for(int i=0;i<24;i++)
     {
         QListWidgetItem *newItem = new QListWidgetItem();
@@ -262,6 +263,7 @@ void MateriaEditor::init_data()
         newItem->setCheckState(Qt::Unchecked);
         eskill_list->addItem(newItem);
     }
+    eskill_list->setMaximumHeight(eskill_list->sizeHintForRow(0)*24 +eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
     eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
     //Fill Combo_type
     combo_type->addItem(data->iconAllMateria(),tr("All Materia"));
@@ -478,7 +480,7 @@ void MateriaEditor::setSkills()
             case 2:if(data->skills(_id).count()>1){list_skills->insertItem(0,data->skills(_id).at(1));}
             case 1:if(data->skills(_id).count()>0){list_skills->insertItem(0,data->skills(_id).at(0));}
         }
-        frm_skill_status->adjustSize();
+        //frm_skill_status->adjustSize();
     }
     this->layout()->update();
 }

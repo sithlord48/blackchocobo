@@ -33,6 +33,9 @@ public:
     explicit ItemSelector(QWidget *parent = 0);
     int id();// current id
     int combo_item_width();//width of the item box.
+    int combo_type_width();//width of the type box.
+    int qty_width();//width of qty area.
+    void setFixedHeight(int h);
 signals:
     void item_changed(quint16);//return selected rawitem
 public slots:

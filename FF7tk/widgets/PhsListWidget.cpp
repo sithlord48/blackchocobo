@@ -22,7 +22,7 @@ PhsListWidget::PhsListWidget(QWidget *parent) :
 }
 void PhsListWidget::init_display()
 {
-    lbl_phs = new QLabel(QString(tr("Phs Manager")));
+    lbl_phs = new QLabel(QString(tr("PHS Manager")));
     lbl_phs->setStyleSheet(QString("text-decoration: underline;"));
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(lbl_phs);

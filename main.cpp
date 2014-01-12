@@ -16,10 +16,15 @@
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
     #include <QtWidgets/QApplication>
-    #include <QStyleFactory>
+    #ifdef Q_OS_MAC
+        #include <QStyleFactory>
+    #endif
 #else
     #include <QtGui/QApplication>
-    #include <QPlastiqueStyle>
+    #ifdef Q_OS_MAC
+        #include <QMacStyle>
+        #include <QPlastiqueStyle>
+    #endif
 #endif
 
 #include <QLocale>
@@ -56,8 +61,11 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
-    if(QT_VERSION < 0x50000){a.setStyle("Plastique");}
-    else{a.setStyle(QStyleFactory::create("windows"));}
+
+    #ifdef Q_OS_MAC
+        if(QT_VERSION < 0x50000){a.setStyle("Plastique");}
+        else{a.setStyle(QStyleFactory::create("fusion"));}
+    #endif
     a.setApplicationVersion(Version);
 
     #ifdef STATIC
