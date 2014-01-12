@@ -335,21 +335,6 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
            <string>Fixed: Menu Editor Backward Columns</string>
           </property>
          </item>
@@ -361,6 +346,21 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>FF7tk: LocationViewer Contains Field Items (WIP)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -906,8 +906,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>343</width>
-            <height>408</height>
+            <width>339</width>
+            <height>402</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1551,8 +1551,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>124</width>
-            <height>956</height>
+            <width>104</width>
+            <height>970</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
