@@ -1102,7 +1102,7 @@ void MainWindow::CheckGame()
         {
         case 0://View Anyway..
             setmenu(0);
-            hexEditorRefresh();
+            hexEditor->setData(ff7->slotPsxRawData(s));
         break;
 
         case 1://Previous Clicked
@@ -1303,7 +1303,11 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         break;
 
         case 8://HexEditor Tab
-            hexEditorRefresh();
+            switch(ui->combo_hexEditor->currentIndex())
+            {
+                case 0:hexEditor->setData(ff7->slotPsxRawData(s)); break;
+                case 1:hexEditor->setData(ff7->slotFF7Data(s)); break;
+            }
         break;
 
         case 9: //Test Data Tab
@@ -3029,15 +3033,15 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s,arg1);}}
 
-void MainWindow::hexEditorRefresh()
+
+void MainWindow::on_combo_hexEditor_currentIndexChanged(int index)
 {
-    switch(ui->combo_hexEditor->currentIndex())
+    switch(index)
     {
         case 0:hexEditor->setData(ff7->slotPsxRawData(s)); break;
         case 1:hexEditor->setData(ff7->slotFF7Data(s)); break;
     }
 }
-void MainWindow::on_combo_hexEditor_currentIndexChanged(){hexEditorRefresh();}
 
 void MainWindow::hexEditorChanged(void)
 {

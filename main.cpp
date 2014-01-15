@@ -75,16 +75,17 @@ int main(int argc, char *argv[])
     #endif //STATIC
 
     QTranslator translator;
-    if(settings.value("langPath").isNull())
-    {
-        #ifdef Q_OS_UNIX
-            #ifndef Q_OS_MAC
+    #ifdef Q_OS_UNIX
+        #ifndef Q_OS_MAC
+            if(QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
+            {//check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
                 settings.setValue("langPath",QString("/usr/share/blackchocobo"));
-            #endif
-        #else
-            settings.setValue("langPath",QCoreApplication::applicationDirPath());
+            }
+            else{settings.setValue("langPath",QCoreApplication::applicationDirPath());}
         #endif
-    }
+    #else
+        settings.setValue("langPath",QCoreApplication::applicationDirPath());
+    #endif
     QString lang = settings.value("langPath").toString() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
     lang.append(settings.value("lang").toString());

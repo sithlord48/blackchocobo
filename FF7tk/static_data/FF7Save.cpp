@@ -66,21 +66,10 @@ bool FF7Save::loadFile(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (SG_TYPE == "PC")
     {
-        if(slot[0].checksum != 0x0000 && slot[0].checksum != 0x4D1D){SG_Region_String[0]= "BASCUS-94163FF7-S01";} else {SG_Region_String[0].clear();}
-        if(slot[1].checksum != 0x0000 && slot[1].checksum != 0x4D1D){SG_Region_String[1]= "BASCUS-94163FF7-S02";} else {SG_Region_String[1].clear();}
-        if(slot[2].checksum != 0x0000 && slot[2].checksum != 0x4D1D){SG_Region_String[2]= "BASCUS-94163FF7-S03";} else {SG_Region_String[2].clear();}
-        if(slot[3].checksum != 0x0000 && slot[3].checksum != 0x4D1D){SG_Region_String[3]= "BASCUS-94163FF7-S04";} else {SG_Region_String[3].clear();}
-        if(slot[4].checksum != 0x0000 && slot[4].checksum != 0x4D1D){SG_Region_String[4]= "BASCUS-94163FF7-S05";} else {SG_Region_String[4].clear();}
-        if(slot[5].checksum != 0x0000 && slot[5].checksum != 0x4D1D){SG_Region_String[5]= "BASCUS-94163FF7-S06";} else {SG_Region_String[5].clear();}
-        if(slot[6].checksum != 0x0000 && slot[6].checksum != 0x4D1D){SG_Region_String[6]= "BASCUS-94163FF7-S07";} else {SG_Region_String[6].clear();}
-        if(slot[7].checksum != 0x0000 && slot[7].checksum != 0x4D1D){SG_Region_String[7]= "BASCUS-94163FF7-S08";} else {SG_Region_String[7].clear();}
-        if(slot[8].checksum != 0x0000 && slot[8].checksum != 0x4D1D){SG_Region_String[8]= "BASCUS-94163FF7-S09";} else {SG_Region_String[8].clear();}
-        if(slot[9].checksum != 0x0000 && slot[9].checksum != 0x4D1D){SG_Region_String[9]= "BASCUS-94163FF7-S10";} else {SG_Region_String[9].clear();}
-        if(slot[10].checksum != 0x0000 && slot[10].checksum != 0x4D1D){SG_Region_String[10]= "BASCUS-94163FF7-S11";} else {SG_Region_String[10].clear();}
-        if(slot[11].checksum != 0x0000 && slot[11].checksum != 0x4D1D){SG_Region_String[11]= "BASCUS-94163FF7-S12";} else {SG_Region_String[11].clear();}
-        if(slot[12].checksum != 0x0000 && slot[12].checksum != 0x4D1D){SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {SG_Region_String[12].clear();}
-        if(slot[13].checksum != 0x0000 && slot[13].checksum != 0x4D1D){SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {SG_Region_String[13].clear();}
-        if(slot[14].checksum != 0x0000 && slot[14].checksum != 0x4D1D){SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {SG_Region_String[14].clear();}
+        for(int i=0;i<15;i++)
+        {
+            if(slot[i].checksum != 0x0000 && slot[i].checksum != 0x4D1D){SG_Region_String[i]= QString("BASCUS-94163FF7-S%1").arg(QString::number(i+1),2,QChar('0'));} else {SG_Region_String[i].clear();}
+        }
     }
 
     else if (SG_TYPE == "PSX")
@@ -915,9 +904,8 @@ void FF7Save::fix_vmc_header(void)
                {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                     else{hf[i].sl_header[P]= 0x00;}
-                }
+               }
            }
-
            if(region(i).endsWith("FF7-S02"))
            {for(int P=0;P<512;P++)
                 {
@@ -1028,7 +1016,7 @@ void FF7Save::fix_vmc_header(void)
                 if(SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(file_header_dex[index+j]);}}
             }
             else if((region(i).isEmpty() || region(i).isNull()))
-            {
+            {               
                 //QString empty_header = ;
                 mc_header_2.append("\xA0\x00\x00\x00\x00\x00\x00\x00\xFF\xFF",10);
                 for (int j=0;j<117;j++){mc_header_2.append('\x00');}
@@ -1077,150 +1065,31 @@ void FF7Save::setRegion(int s ,QString new_region)
 {
     if( (new_region =="USA") || (new_region == "NTSC-U") || (new_region =="1") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
-            case 10: SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
-            case 11: SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
-            case 12: SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
-            case 13: SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
-            case 14: SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="UK") || (new_region =="PAL-E") || (new_region =="2") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BESCES-00867FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="French") || (new_region =="PAL-FR") || (new_region =="3") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BESCES-00868FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BESCES-00868FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BESCES-00868FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BESCES-00868FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BESCES-00868FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BESCES-00868FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BESCES-00868FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BESCES-00868FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BESCES-00868FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BESCES-00868FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BESCES-00868FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BESCES-00868FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BESCES-00868FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BESCES-00868FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BESCES-00868FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BESCES-00868FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="German") || (new_region =="PAL-DE") || (new_region =="4") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BESCES-00869FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="Spanish")||(new_region =="PAL-ES")||(new_region == "5") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BESCES-00900FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="Japanese")||(new_region =="NTSC-J")||(new_region =="6") )
     {
-        switch(s)
-        {
-            case 0: SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
-            case 1: SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
-            case 2: SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
-            case 3: SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
-            case 4: SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
-            case 5: SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
-            case 6: SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
-            case 7: SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
-            case 8: SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
-            case 9: SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BISLPS-00700FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="International")||(new_region =="NTSC-JI")||(new_region =="7") )
     {
-        switch(s)
-        {
-            case 0:SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
-            case 1:SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
-            case 2:SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
-            case 3:SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
-            case 4:SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
-            case 5:SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
-            case 6:SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
-            case 7:SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
-            case 8:SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
-            case 9:SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
-            case 10:SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
-            case 11:SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
-            case 12:SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
-            case 13:SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
-            case 14:SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
-        }
+        SG_Region_String[s]= QString("BISLPS-01057FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else{SG_Region_String[s]=new_region;}
     setFileModified(true,s);
@@ -1229,27 +1098,8 @@ void FF7Save::copySlot(int s){buffer_slot=slot[s]; buffer_region = SG_Region_Str
 void FF7Save::pasteSlot(int s)
 {
     slot[s]=buffer_slot;
-    //memcpy(&slot[s],&buffer_slot,0x10f4);
     SG_Region_String[s]= buffer_region;
-    SG_Region_String[s].chop(2);
-    switch(s)
-    {
-        case 0: SG_Region_String[s].append("01"); break;
-        case 1: SG_Region_String[s].append("02"); break;
-        case 2: SG_Region_String[s].append("03"); break;
-        case 3: SG_Region_String[s].append("04"); break;
-        case 4: SG_Region_String[s].append("05"); break;
-        case 5: SG_Region_String[s].append("06"); break;
-        case 6: SG_Region_String[s].append("07"); break;
-        case 7: SG_Region_String[s].append("08"); break;
-        case 8: SG_Region_String[s].append("09"); break;
-        case 9: SG_Region_String[s].append("10"); break;
-        case 10:SG_Region_String[s].append("11"); break;
-        case 11:SG_Region_String[s].append("12"); break;
-        case 12:SG_Region_String[s].append("13"); break;
-        case 13:SG_Region_String[s].append("14"); break;
-        case 14:SG_Region_String[s].append("15"); break;
-    }
+    SG_Region_String[s].replace(SG_Region_String[s].length()-2,2,QString("%1").arg(QString::number(s+1),2,QChar('0')));
     if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){fix_vmc_header();}
     setFileModified(true,s);
 }
@@ -1521,7 +1371,7 @@ void FF7Save::newGame(int s,QString fileName)
         setDescLocation(s,QString::fromUtf8("１番街駅ホーム"));
         setLocation(s,QString::fromUtf8("１番街駅ホーム"));
     }
-    else if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");Text.init(0);}
+    else if(region(s).isEmpty()){setRegion(s,QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0')));Text.init(0);}
     setFileModified(true,s);
 }
 
