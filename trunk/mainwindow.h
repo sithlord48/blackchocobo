@@ -510,8 +510,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_BikeHighScore_valueChanged(int arg1);
     void on_sb_BattlePoints_valueChanged(int arg1);
     void on_actionCreateNewMetadata_triggered();
-    void hexEditorRefresh();
-    void on_combo_hexEditor_currentIndexChanged(void);
+    void on_combo_hexEditor_currentIndexChanged(int index);
     void hexEditorChanged(void);
     void phsList_box_allowed_toggled(int row, bool checked);
     void phsList_box_visible_toggled(int row, bool checked);

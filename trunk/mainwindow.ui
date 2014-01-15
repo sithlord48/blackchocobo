@@ -2000,8 +2000,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>757</width>
+             <height>453</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3521,7 +3521,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>336</width>
+                  <width>353</width>
                   <height>1982</height>
                  </rect>
                 </property>
@@ -8004,6 +8004,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string notr="true">Alt+Q</string>
    </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
   </action>
   <action name="actionOpen_Save_File">
    <property name="icon">
@@ -8051,6 +8054,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
    </property>
   </action>
   <action name="actionShow_Selection_Dialog">
@@ -8170,6 +8176,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>More Options...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
    </property>
   </action>
   <action name="action_Region_USA">
