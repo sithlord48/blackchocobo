@@ -9228,7 +9228,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save As</source>
-        <translation type="unfinished">Speichern als</translation>
+        <translation type="unfinished">Speichern unter</translation>
     </message>
     <message>
         <source>Dat Files (*.dat)</source>

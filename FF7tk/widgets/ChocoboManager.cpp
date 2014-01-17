@@ -49,18 +49,14 @@ void ChocoboManager::initDisplay(void)
     occupiedLayout->addWidget(lblStablesOccupied);
     occupiedLayout->addWidget(lcdStablesOccupied);
 
-
     QHBoxLayout *topLayout = new QHBoxLayout();
     topLayout->setContentsMargins(0,0,0,0);
-    QSpacerItem *topSpacer1 = new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Preferred);
-    topLayout->addSpacerItem(topSpacer1);
+    topLayout->addSpacerItem(new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Preferred));
     topLayout->addLayout(ownedLayout);
     topLayout->addLayout(occupiedLayout);
-    QSpacerItem *topSpacer2 = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred);
-    topLayout->addSpacerItem(topSpacer2);
+    topLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred));
 
     QGridLayout *stableGridLayout =new QGridLayout();
-    stableGridLayout->setContentsMargins(0,0,0,0);
     for(int i=0;i<6;i++)
     {
         chocoboLabel[i] = new ChocoboLabel(this,QString(tr("Stable:%1")).arg(QString::number(i+1)));
@@ -69,13 +65,18 @@ void ChocoboManager::initDisplay(void)
         chocoboLabel[i]->setEnabled(false);
         chocoboLabel[i]->setSelected(false);
     }
-    chocoboEditor = new ChocoboEditor;
+    QVBoxLayout *leftSideLayout = new QVBoxLayout();
+    leftSideLayout->setSpacing(0);
+    leftSideLayout->addLayout(topLayout);
+    leftSideLayout->addLayout(stableGridLayout);
+    leftSideLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
 
-    stableGridLayout->addWidget(chocoboEditor,0,3,2,2);
+    chocoboEditor = new ChocoboEditor;
     chocoboEditor->setHidden(true);
 
     QGroupBox *penBox = new QGroupBox(tr("Fenced Chocobos"));
     penBox->setMaximumHeight(80);
+    penBox->setFixedWidth( (chocoboLabel[0]->width()*4));
     QGridLayout *comboGrid = new QGridLayout;
     comboGrid->setContentsMargins(0,0,0,0);
     penBox->setLayout(comboGrid);
@@ -98,11 +99,15 @@ void ChocoboManager::initDisplay(void)
         comboChocoPen[i]->setObjectName(QString::number(i));
         comboGrid->addWidget(comboChocoPen[i],i/2,i%2,1,1);
     }
-    QVBoxLayout *finalLayout = new QVBoxLayout();
 
-    stableGridLayout->addWidget(penBox,2,3,1,2);
-    finalLayout->addLayout(topLayout);
-    finalLayout->addLayout(stableGridLayout);
+    QVBoxLayout *rightSideLayout = new QVBoxLayout();
+    rightSideLayout->addWidget(chocoboEditor);
+    rightSideLayout->addWidget(penBox);
+    rightSideLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
+
+    QHBoxLayout *finalLayout = new QHBoxLayout();
+    finalLayout->addLayout(leftSideLayout);
+    finalLayout->addLayout(rightSideLayout);
     this->setLayout(finalLayout);
 }
 void ChocoboManager::initConnections()
