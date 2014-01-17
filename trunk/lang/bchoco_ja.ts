@@ -192,7 +192,7 @@
     </message>
     <message>
         <source>Next</source>
-        <translation type="unfinished">次のレベルまで</translation>
+        <translation type="unfinished">次へ</translation>
     </message>
     <message>
         <source>Limit Bar</source>
@@ -6245,7 +6245,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Show:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">表示:</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
@@ -8589,11 +8589,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">コピー</translation>
     </message>
     <message>
         <source>Paste Into Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">貼り付け</translation>
     </message>
     <message>
         <source>-Empty-</source>

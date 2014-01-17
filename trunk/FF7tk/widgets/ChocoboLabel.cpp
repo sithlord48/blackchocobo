@@ -84,15 +84,13 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     LeftTopLayout->setContentsMargins(0,0,0,0);
     LeftTopLayout->addWidget(lblName);
     LeftTopLayout->addWidget(lblSex);
-    QSpacerItem *spacer1 = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred);
-    LeftTopLayout->addSpacerItem(spacer1);
+    LeftTopLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred));
     LeftTopLayout->setSpacing(1);
 
     QHBoxLayout *RightTopLayout = new QHBoxLayout;
     RightTopLayout->setContentsMargins(0,0,0,0);
     RightTopLayout->addWidget(lblRank);
-    QSpacerItem *spacer2 = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred);
-    RightTopLayout->addSpacerItem(spacer2);
+    RightTopLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred));
     RightTopLayout->setSpacing(1);
 
     QVBoxLayout *rightSideLayout = new QVBoxLayout;
