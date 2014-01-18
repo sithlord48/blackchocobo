@@ -2192,15 +2192,20 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     else if(value ==2){ff7->setTutSave(s,0x3A);}
     ui->lcdNumber_7->display(ff7->tutSave(s));
 }}
-
+/*
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
 {if(!load){ if(!ff7->region(s).isEmpty()){
     QString new_regionString = ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1);
     new_regionString.append(ui->cb_Region_Slot->currentText().toLocal8Bit());
     ff7->setRegion(s,new_regionString);
     if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
-}}}
+}}}*/
+void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
+{if(!load){ if(!ff7->region(s).isEmpty()){
 
+        ff7->setRegion(s,ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1).append(QString("S%1").arg(QString::number(index+1),2,QChar('0'))));
+        if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
+}}}
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){
     ff7->setTutSub(s,2,checked);
@@ -2581,7 +2586,6 @@ void MainWindow::on_btn_item_add_each_item_clicked()
         else{ff7->setItem(s,i,0x1FF,0x7F);}//exclude the test items
         if(i>296){ff7->setItem(s,i,0x1FF,0x7F);}//replace the shifted ones w/ empty slots
     }
-    //guirefresh(0)
     itemlist->setItems(ff7->items(s));
     statusBar()->showMessage(tr("All Items Added"),750);
 }
@@ -2721,9 +2725,9 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     load=false;
 }
 void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
-void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
+void MainWindow::on_combo_compare_slot_currentIndexChanged(int index)
 {
-    if(ui->combo_compare_slot->currentIndex()==0)
+    if(index==0)
     {
         ui->tbl_compare_unknown->clearContents();
         ui->tbl_compare_unknown->setRowCount(0);
@@ -2769,13 +2773,16 @@ void MainWindow::on_btn_all_z_diffs_clicked()
         {
             if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
             {
+
                 num_diff++;
                 ui->tbl_diff->setRowCount(num_diff);
                 text.clear();
+
                 //Offset
                 QString hex_str = QString("%1").arg(i,4,16,QChar('0')).toUpper(); //Format: 0000C
                 newItem = new QTableWidgetItem(hex_str,0);
                 ui->tbl_diff->setItem(num_diff-1,0,newItem);
+
                 //Decimal
                 diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
                 newItem = new QTableWidgetItem(text.number(diff,10),0);
@@ -2785,7 +2792,6 @@ void MainWindow::on_btn_all_z_diffs_clicked()
                 QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
                 newItem = new QTableWidgetItem(binary_str,0);
                 ui->tbl_diff->setItem(num_diff-1,2,newItem);
-
                 //set properites for the tableitems
                 ui->tbl_diff->setVisible(1);
                 ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
@@ -3283,3 +3289,4 @@ void MainWindow::on_sb_saveMapId_valueChanged(int arg1){if(!load){ff7->setCrater
 void MainWindow::on_sb_saveX_valueChanged(int arg1){if(!load){ff7->setCraterSavePointX(s,arg1);}}
 void MainWindow::on_sb_saveY_valueChanged(int arg1){if(!load){ff7->setCraterSavePointY(s,arg1);}}
 void MainWindow::on_sb_saveZ_valueChanged(int arg1){if(!load){ff7->setCraterSavePointZ(s,arg1);}}
+

@@ -5,6 +5,14 @@
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>468</width>
+    <height>259</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>Options</string>
   </property>
@@ -28,7 +36,16 @@
       <string>Set File Paths For Saving and Loading</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="margin">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
        <number>3</number>
       </property>
       <item>
@@ -289,8 +306,8 @@
            <string>Reset to Default</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/default_setting</normaloff>:/icon/default_setting</iconset>
+           <iconset theme="edit-clear" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+            <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
           </property>
          </widget>
         </item>
@@ -312,8 +329,8 @@
       <string>&amp;Close</string>
      </property>
      <property name="icon">
-      <iconset theme="window-close" resource="images.qrc">
-       <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
+      <iconset theme="window-close" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+       <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
      </property>
     </widget>
    </item>
@@ -321,6 +338,7 @@
  </widget>
  <resources>
   <include location="images.qrc"/>
+  <include location="FF7tk/static_data/icons/Common_Icons/common.qrc"/>
  </resources>
  <connections/>
 </ui>

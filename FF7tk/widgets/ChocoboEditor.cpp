@@ -15,11 +15,6 @@
 /****************************************************************************/
 #include "ChocoboEditor.h"
 // Pull in Icons, Be Sure Paths Are Correct
-#include"../static_data/icons/Chocobo_Icons/black_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/blue_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/green_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/yellow_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/gold_choco.xpm"
 
 void ChocoboEditor::resizeEvent(QResizeEvent *ev)
 {
@@ -315,11 +310,11 @@ void ChocoboEditor::init_display(void)
     combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
     combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
 
-    combo_type->addItem(QIcon(QPixmap(yellow_choco_xpm)),tr("Yellow"));
-    combo_type->addItem(QIcon(QPixmap(green_choco_xpm)),tr("Green"));
-    combo_type->addItem(QIcon(QPixmap(blue_choco_xpm)),tr("Blue"));
-    combo_type->addItem(QIcon(QPixmap(black_choco_xpm)),tr("Black"));
-    combo_type->addItem(QIcon(QPixmap(gold_choco_xpm)),tr("Gold"));
+    combo_type->addItem(QIcon(QPixmap("://chocobo/yellow")),tr("Yellow"));
+    combo_type->addItem(QIcon(QPixmap("://chocobo/green")),tr("Green"));
+    combo_type->addItem(QIcon(QPixmap("://chocobo/blue")),tr("Blue"));
+    combo_type->addItem(QIcon(QPixmap("://chocobo/black")),tr("Black"));
+    combo_type->addItem(QIcon(QPixmap("://chocobo/gold")),tr("Gold"));
     //Make Layouts
 
     QHBoxLayout *speed_layout = new QHBoxLayout;

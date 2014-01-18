@@ -109,7 +109,10 @@ FORMS += \
 	options.ui
 RESOURCES += \
 	images.qrc \
-	FF7tk/static_data/icons/Location_Icons/locations.qrc \
+        FF7tk/static_data/icons/Common_Icons/common.qrc \
+        FF7tk/static_data/icons/Chocobo_Icons/chocobo.qrc \
+        FF7tk/static_data/icons/Location_Icons/locations.qrc \
+        FF7tk/static_data/icons/Psx_Button_Icons/psxButtons.qrc \
 	FF7tk/static_data/icons/Achievement_Icons/achievements.qrc
 
 TRANSLATIONS += \

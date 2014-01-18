@@ -906,8 +906,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>339</width>
-            <height>402</height>
+            <width>343</width>
+            <height>408</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1551,8 +1551,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>104</width>
-            <height>970</height>
+            <width>124</width>
+            <height>956</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1746,8 +1746,8 @@ p, li { white-space: pre-wrap; }
         <string>&amp;Close</string>
        </property>
        <property name="icon">
-        <iconset theme="window-close" resource="images.qrc">
-         <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
+        <iconset theme="window-close" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+         <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
        </property>
       </widget>
      </item>
@@ -1757,6 +1757,7 @@ p, li { white-space: pre-wrap; }
  </widget>
  <resources>
   <include location="images.qrc"/>
+  <include location="FF7tk/static_data/icons/Common_Icons/common.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -15,7 +15,6 @@
 /****************************************************************************/
 #include "ItemSelector.h"
 // include icon data
-#include "../static_data/icons/Common_Icons/quit.xpm"
 
 ItemSelector::ItemSelector(QWidget *parent): QWidget(parent)
 {
@@ -36,7 +35,8 @@ void ItemSelector::init_display()
     sb_qty->setWrapping(true);
     sb_qty->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
     btn_remove = new QPushButton();
-    btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)));
+    btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));
+
     btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedSize(22,22);
     btn_remove->setShortcut(QKeySequence::Delete);

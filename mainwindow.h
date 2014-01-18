@@ -426,7 +426,7 @@ private slots://try to keep these in the same order as the .cpp file
     void materia_ap_changed(qint32 ap);
     void materia_id_changed(qint8 id);  
 
-    void on_cb_Region_Slot_currentIndexChanged();
+    void on_cb_Region_Slot_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
     void on_cb_emerald_dead_toggled(bool checked);
     void on_combo_highwind_buggy_currentIndexChanged(int index);
@@ -479,7 +479,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
 
     void on_btn_add_all_materia_clicked();
-    void on_combo_compare_slot_currentIndexChanged(void);
+    void on_combo_compare_slot_currentIndexChanged(int index);
     void on_btn_all_z_diffs_clicked();
     void on_sb_steps_valueChanged(int );
 
@@ -528,7 +528,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_saveMapId_valueChanged(int arg1);
     void on_sb_saveX_valueChanged(int arg1);
     void on_sb_saveY_valueChanged(int arg1);
-    void on_sb_saveZ_valueChanged(int arg1);
+    void on_sb_saveZ_valueChanged(int arg1);    
     void on_actionOpen_Achievement_File_triggered();
 };
 #endif // MAINWINDOW_H

@@ -1065,7 +1065,7 @@ void FF7Save::setRegion(int s ,QString new_region)
 {
     if( (new_region =="USA") || (new_region == "NTSC-U") || (new_region =="1") )
     {
-        SG_Region_String[s]= QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
+        SG_Region_String[s]= QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0'));        
     }
     else if( (new_region =="UK") || (new_region =="PAL-E") || (new_region =="2") )
     {
@@ -1092,6 +1092,12 @@ void FF7Save::setRegion(int s ,QString new_region)
         SG_Region_String[s]= QString("BISLPS-01057FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else{SG_Region_String[s]=new_region;}
+
+    if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") )
+    {
+        fix_vmc_header();
+        setFileModified(true,s);
+    }
     setFileModified(true,s);
 }
 void FF7Save::copySlot(int s){buffer_slot=slot[s]; buffer_region = SG_Region_String[s];}

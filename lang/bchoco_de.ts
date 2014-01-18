@@ -531,10 +531,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Next:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Next: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5330,7 +5326,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Über Black Chocobo</translation>
+        <translation type="obsolete">Über Black Chocobo</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -6512,6 +6508,10 @@ trigger showing that tutorial</source>
     <message>
         <source>French (PAL)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished">Info</translation>
     </message>
 </context>
 <context>
