@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
-#include "../static_data/icons/Common_Icons/delete.xpm"
 
 LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 {
@@ -95,7 +94,7 @@ void LocationViewer::init_display(void)
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 
     btnSearchOptions = new QToolButton;
-    btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(delete_xpm)));
+    btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));
     btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
 
     actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);

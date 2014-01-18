@@ -15,14 +15,6 @@
 /****************************************************************************/
 #include "ChocoboLabel.h"
 // Pull in Icons, Be Sure Paths Are Correct
-#include"../static_data/icons/Chocobo_Icons/black_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/blue_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/green_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/yellow_choco.xpm"
-#include"../static_data/icons/Chocobo_Icons/gold_choco.xpm"
-#include"../static_data/icons/Common_Icons/copy.xpm"
-#include"../static_data/icons/Common_Icons/paste.xpm"
-#include"../static_data/icons/Common_Icons/delete.xpm"
 
 bool ChocoboLabel::event(QEvent *ev)
 {
@@ -51,7 +43,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnCopy->setIconSize(QSize(16,16));
     btnCopy->setToolTip(QString(tr("Copy")));
     btnCopy->setProperty("HoverStyled",QVariant(true));
-    btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(copy_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
+    btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap("://common/edit-copy")));
 
     btnPaste = new QPushButton();
     btnPaste->setFlat(true);
@@ -59,7 +51,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnPaste->setIconSize(QSize(16,16));
     btnPaste->setToolTip(QString(tr("Paste")));
     btnPaste->setProperty("HoverStyled",QVariant(true));
-    btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(paste_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
+    btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap("://common/edit-paste")));
 
     btnRemove = new QPushButton();
     btnRemove->setFlat(true);
@@ -67,7 +59,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnRemove->setIconSize(QSize(16,16));
     btnRemove->setToolTip(QString(tr("Remove")));
     btnRemove->setProperty("HoverStyled",QVariant(true));
-    btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(delete_xpm).scaled(QSize(16,16),Qt::KeepAspectRatio,Qt::SmoothTransformation)));
+    btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));
 
     setFontSize(14);
     chkOccupied->setChecked(occupied);
@@ -129,12 +121,15 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
 
 void ChocoboLabel::setType(int type)
 {
-    if((type<0) || (type>4)) {lblType->setPixmap (QPixmap ( QString("") ) );return;}
-    else if (type==0){lblType->setPixmap(QPixmap(yellow_choco_xpm));}
-    else if (type==1){lblType->setPixmap(QPixmap(green_choco_xpm));}
-    else if (type==2){lblType->setPixmap(QPixmap(blue_choco_xpm));}
-    else if (type==3){lblType->setPixmap(QPixmap(black_choco_xpm));}
-    else {lblType->setPixmap(QPixmap(gold_choco_xpm));}
+    switch(type)
+    {
+        case 0: lblType->setPixmap(QPixmap("://chocobo/yellow")); break;
+        case 1: lblType->setPixmap(QPixmap("://chocobo/green")); break;
+        case 2: lblType->setPixmap(QPixmap("://chocobo/blue")); break;
+        case 3: lblType->setPixmap(QPixmap("://chocobo/black")); break;
+        case 4: lblType->setPixmap(QPixmap("://chocobo/gold")); break;
+        default: lblType->setPixmap(QPixmap("")); break;
+    }
 }
 
 void ChocoboLabel::setTitle(QString title){chkOccupied->setText(title);}
@@ -143,14 +138,14 @@ void ChocoboLabel::setName(QString decodedName){lblName->setText(decodedName.mid
 
 void ChocoboLabel::setSex(bool male)
 {
-    if(male){lblSex->setText(QString::fromUtf8(" ♂"));}
-    else{lblSex->setText(QString::fromUtf8(" ♀"));}
+    if(male){lblSex->setText(QString::fromUtf8("♂"));}
+    else{lblSex->setText(QString::fromUtf8("♀"));}
 }
 
 void ChocoboLabel::setSex(int sex)
 {
-    if (sex==0){lblSex->setText(QString::fromUtf8(" ♂"));}
-    else if(sex==1){lblSex->setText(QString::fromUtf8(" ♀"));}
+    if (sex==0){lblSex->setText(QString::fromUtf8("♂"));}
+    else if(sex==1){lblSex->setText(QString::fromUtf8("♀"));}
     else{lblSex->setText("");}
 }
 

@@ -531,10 +531,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Next:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Next: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5330,7 +5326,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation>À propos de Black Chocobo</translation>
+        <translation type="obsolete">À propos de Black Chocobo</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -6515,6 +6511,10 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     <message>
         <source>French (PAL)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished">A propos</translation>
     </message>
 </context>
 <context>

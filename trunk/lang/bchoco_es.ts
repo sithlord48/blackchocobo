@@ -531,10 +531,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Next:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Next: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5331,7 +5327,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Acerca de Chocobo Negro</translation>
+        <translation type="obsolete">Acerca de Chocobo Negro</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -6513,6 +6509,10 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>French (PAL)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished">Acerca de</translation>
     </message>
 </context>
 <context>

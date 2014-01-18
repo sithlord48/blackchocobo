@@ -1309,7 +1309,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     if(data.flags[0]==FF7Char::Sadness ){cb_sadness->setChecked(Qt::Checked);}else{cb_sadness->setChecked(Qt::Unchecked);}
     if(data.flags[1] ==FF7Char::FrontRow){cb_front_row->setChecked(Qt::Checked);}else{cb_front_row->setChecked(Qt::Unchecked);}
     sb_total_exp->setValue(data.exp);
-    lbl_level_next->setText(tr("Next:%1").arg(QString::number(data.expNext)));
+    lbl_level_next->setText(tr("Next: %1").arg(QString::number(data.expNext)));
     slider_limit->setValue(data.limitbar);
     lcd_limit_value->display(int(data.limitbar));
     bar_tnl->setValue(data.flags[2]);

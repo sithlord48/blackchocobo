@@ -14,10 +14,11 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "SlotPreview.h"
-
+/*
 #include "../static_data/icons/Common_Icons/quit.xpm"
 #include "../static_data/icons/Common_Icons/copy.xpm"
 #include "../static_data/icons/Common_Icons/paste.xpm"
+*/
 //Slot Preview Widget is for display of the previewed save data.
 SlotPreview::SlotPreview(int index, QWidget *parent):QLabel(parent)
 {
@@ -35,19 +36,19 @@ void SlotPreview::init_display(void)
     lbl_Slot = new QLabel;
     lbl_Slot->setText(QString(tr("Slot: %1")).arg(QString::number(index()+1)));
 
-    btn_remove = new QPushButton(QIcon::fromTheme(QString("edit-clear"),QPixmap(quit_xpm)),"",this);
+    btn_remove = new QPushButton(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")),"",this);
     btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
     btn_remove->setMaximumSize(22,22);
     btn_remove->setCursor(Qt::BitmapCursor);
 
-    btn_copy = new QPushButton(QIcon::fromTheme(QString("edit-copy"),QPixmap(copy_xpm)),"",this);
+    btn_copy = new QPushButton(QIcon::fromTheme(QString("edit-copy"),QPixmap("://common/edit-copy")),"",this);
     btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
     btn_copy->setToolTip(tr("Copy Slot"));
     btn_copy->setMaximumSize(22,22);
     btn_copy->setCursor(Qt::BitmapCursor);
 
-    btn_paste = new QPushButton(QIcon::fromTheme(QString("edit-paste"),QPixmap(paste_xpm)),"",this);
+    btn_paste = new QPushButton(QIcon::fromTheme(QString("edit-paste"),QPixmap("://common/edit-paste")),"",this);
     btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
     btn_paste->setToolTip(tr("Paste Into Slot"));
     btn_paste->setMaximumSize(22,22);
