@@ -563,7 +563,7 @@ static const LOCATION Locations[]=
     {"lost1",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","630","-1595","1142","10","32"},
     {"losin1",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","631","216","-184","29","32"},
     {"losin2",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","632","192","-90","14","32"},
-    {"losin3",QT_TRANSLATE_NOOP("Locations","Forgotten Captial"),"1","633","-134","-135","40","32"},
+    {"losin3",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","633","-134","-135","40","32"},
     {"lost2",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","634","-1587","4484","7","32"},
     {"lost3",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","635","-5466","7108","12","32"},
     {"losinn",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","636","427","-157","5","32"},
