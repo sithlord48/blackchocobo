@@ -23,7 +23,7 @@
     #include <QtGui>
 #endif
 
-#include "../static_data/FF7Achievements.h"
+#include "../data/FF7Achievements.h"
 
 class AchievementEditor : public QWidget
 {

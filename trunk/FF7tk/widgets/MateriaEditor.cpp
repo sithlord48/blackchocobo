@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "MateriaEditor.h"
-/* Path To Common Icons For Copy / Paste / Delete icon*/
 
 MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
 {
@@ -72,9 +71,9 @@ void MateriaEditor::init_display()
     sb_ap->setAlignment(Qt::AlignCenter);
     lcd_max_ap->setDigitCount(8);
     lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
-    btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));    
-    btn_copy_materia->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap("://common/edit-copy")));
-    btn_paste_materia->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap("://common/edit-paste")));
+    btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
+    btn_copy_materia->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
+    btn_paste_materia->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
 
     QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(%1,%2,%3,96);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
     btn_star1->setStyleSheet(style);

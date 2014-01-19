@@ -1,0 +1,13 @@
+<RCC>
+   <qresource prefix="/achievements">
+        <file alias="63">achievements/63.png</file>
+        <file alias="62">achievements/62.png</file>
+	<file alias="61">achievements/61.png</file>
+	<file alias="60">achievements/60.png</file>
+	<file alias="59">achievements/59.png</file>
+	<file alias="58">achievements/58.png</file>
+	<file alias="57">achievements/57.png</file>
+	<file alias="56">achievements/56.png</file>	
+	<file alias="50">achievements/50.png</file>		
+      </qresource>
+</RCC>

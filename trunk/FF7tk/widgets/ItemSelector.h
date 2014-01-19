@@ -24,7 +24,7 @@
 #endif
 
 //Include Data class
-#include "../static_data/FF7Item.h"
+#include "../data/FF7Item.h"
 
 class ItemSelector : public QWidget
 {

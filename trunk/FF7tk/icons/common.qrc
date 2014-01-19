@@ -1,0 +1,9 @@
+<RCC>
+   <qresource prefix="/common">
+        <file alias="edit-copy">common/edit-copy.png</file>
+        <file alias="edit-paste">common/edit-paste.png</file>
+	<file alias="applications-quit">common/application-quit.png</file>
+	<file alias="edit-clear">common/edit-clear.png</file>
+      </qresource>
+</RCC>
+ 

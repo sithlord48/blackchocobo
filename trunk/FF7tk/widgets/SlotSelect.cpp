@@ -144,7 +144,7 @@ void SlotSelect::setSlotPreview(int s)
         image.setPixel(1, 0, ff7->dialogColorUR(s).rgb());
         image.setPixel(0, 1, ff7->dialogColorLL(s).rgb());
         image.setPixel(1, 1, ff7->dialogColorLR(s).rgb());
-        QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+        QImage gradient = image.scaled(preview[s]->width(),preview[s]->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         preview[s]->setPixmap(QPixmap::fromImage(gradient));
         preview[s]->setParty(Chars.pixmap(ff7->descParty(s,0)),Chars.pixmap(ff7->descParty(s,1)),Chars.pixmap(ff7->descParty(s,2)));
         preview[s]->setLocation(ff7->descLocation(s));

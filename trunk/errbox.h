@@ -26,8 +26,8 @@
 #else
     #include <QtGui/QDialog>
 #endif
-#include "FF7tk/static_data/FF7Save.h"
-#include "FF7tk/static_data/SaveIcon.h"
+#include "FF7tk/data/FF7Save.h"
+#include "FF7tk/data/SaveIcon.h"
 
 class errbox : public QDialog
 {

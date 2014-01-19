@@ -25,7 +25,7 @@
 
 //Be sure to set paths correctly for below.
 //ALSO CHECK ChocoboEditor.cpp for icons includes.
-#include "../static_data/Type_FF7CHOCOBO.h"
+#include "../data/Type_FF7CHOCOBO.h"
 
 class ChocoboEditor : public QWidget
 {

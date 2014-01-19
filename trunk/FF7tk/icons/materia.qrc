@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/materia">
+        <file alias="all">materia/all.png</file>
+        <file alias="command">materia/command.png</file>
+        <file alias="command_star_empty">materia/command_star_empty.png</file>
+        <file alias="command_star_full">materia/command_star_full.png</file>
+        <file alias="independent">materia/independent.png</file>
+        <file alias="independent_star_empty">materia/independent_star_empty.png</file>
+        <file alias="independent_star_full">materia/independent_star_full.png</file>
+        <file alias="magic">materia/magic.png</file>
+        <file alias="magic_star_empty">materia/magic_star_empty.png</file>
+        <file alias="magic_star_full">materia/magic_star_full.png</file>
+        <file alias="summon">materia/summon.png</file>
+        <file alias="summon_star_empty">materia/summon_star_empty.png</file>
+        <file alias="summon_star_full">materia/summon_star_full.png</file>
+        <file alias="support">materia/support.png</file>
+        <file alias="support_star_empty">materia/support_star_empty.png</file>
+        <file alias="support_star_full">materia/support_star_full.png</file>
+    </qresource>
+</RCC>

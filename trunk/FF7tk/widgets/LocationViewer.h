@@ -23,8 +23,8 @@
     #include <QtGui>
 #endif
 // Include FF7tk Items.
-#include "../static_data/FF7Location.h"
-#include "../static_data/FF7FieldItemList.h"
+#include "../data/FF7Location.h"
+#include "../data/FF7FieldItemList.h"
 class LocationViewer : public QWidget
 {
     Q_OBJECT

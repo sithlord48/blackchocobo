@@ -25,11 +25,10 @@
 
 
 //set path to FF7Item FF7Materia and FF7Char
-#include "../static_data/FF7Item.h"
-#include "../static_data/FF7Materia.h"
-#include "../static_data/FF7Char.h"
-
-#include "../static_data/Type_FF7CHAR.h"
+#include "../data/FF7Item.h"
+#include "../data/FF7Materia.h"
+#include "../data/FF7Char.h"
+#include "../data/Type_FF7CHAR.h"
 #include "MateriaEditor.h"
 
 class CharEditor : public QWidget

@@ -1,0 +1,19 @@
+<RCC>
+   <qresource prefix="/psxButtons">
+        <file alias="left">psxButtons/left.png</file>
+        <file alias="right">psxButtons/right.png</file>
+	<file alias="up">psxButtons/up.png</file>
+	<file alias="down">psxButtons/down.png</file>
+	<file alias="circle">psxButtons/circle.png</file>
+	<file alias="cross">psxButtons/cross.png</file>
+	<file alias="square">psxButtons/square.png</file>
+	<file alias="triangle">psxButtons/triangle.png</file>	
+	<file alias="select">psxButtons/select.png</file>		
+	<file alias="start">psxButtons/start.png</file>		
+	<file alias="l1">psxButtons/l1.png</file>		
+	<file alias="l2">psxButtons/l2.png</file>		
+	<file alias="r1">psxButtons/r1.png</file>		
+	<file alias="r2">psxButtons/r2.png</file>		
+      </qresource>
+</RCC>
+ 

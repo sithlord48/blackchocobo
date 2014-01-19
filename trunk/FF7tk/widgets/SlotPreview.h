@@ -24,7 +24,7 @@
 #endif
 
 //set path to save icon class
-#include "../static_data/SaveIcon.h"
+#include "../data/SaveIcon.h"
 
 
 class SlotPreview : public QLabel

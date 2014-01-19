@@ -25,7 +25,7 @@
 
 #include "ItemPreview.h"
 #include "ItemSelector.h"
-#include "../static_data/FF7Item.h"
+#include "../data/FF7Item.h"
 
 class ItemList : public QTableWidget
 {

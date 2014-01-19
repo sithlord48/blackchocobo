@@ -43,7 +43,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnCopy->setIconSize(QSize(16,16));
     btnCopy->setToolTip(QString(tr("Copy")));
     btnCopy->setProperty("HoverStyled",QVariant(true));
-    btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap("://common/edit-copy")));
+    btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
 
     btnPaste = new QPushButton();
     btnPaste->setFlat(true);
@@ -51,7 +51,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnPaste->setIconSize(QSize(16,16));
     btnPaste->setToolTip(QString(tr("Paste")));
     btnPaste->setProperty("HoverStyled",QVariant(true));
-    btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap("://common/edit-paste")));
+    btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
 
     btnRemove = new QPushButton();
     btnRemove->setFlat(true);
@@ -59,7 +59,7 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
     btnRemove->setIconSize(QSize(16,16));
     btnRemove->setToolTip(QString(tr("Remove")));
     btnRemove->setProperty("HoverStyled",QVariant(true));
-    btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));
+    btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 
     setFontSize(14);
     chkOccupied->setChecked(occupied);
