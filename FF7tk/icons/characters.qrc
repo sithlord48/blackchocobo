@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/characters">
+    <file alias="cloud">characters/cloud.jpg</file>
+    <file alias="barret">characters/barret.jpg</file>
+    <file alias="tifa">characters/tifa.jpg</file>
+    <file alias="aerith">characters/aerith.jpg</file>
+    <file alias="red">characters/red.jpg</file>
+    <file alias="yuffie">characters/yuffie.jpg</file>
+    <file alias="cait">characters/cait.jpg</file>
+    <file alias="vincent">characters/vincent.jpg</file>
+    <file alias="cid">characters/cid.jpg</file>
+    <file alias="y_cloud">characters/y_cloud.jpg</file>
+    <file alias="sep">characters/sep.jpg</file>     
+  </qresource>
+</RCC>
+  
+ 

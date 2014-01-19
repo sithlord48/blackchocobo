@@ -1,0 +1,19 @@
+<RCC>
+   <qresource prefix="/items">
+        <file alias="accessory">items/accessory.png</file>
+	<file alias="armor">items/armor.png</file>
+	<file alias="clip">items/clip.png</file>
+	<file alias="glove">items/glove.png</file>
+	<file alias="gun">items/gun.png</file>
+	<file alias="gunarm">items/gunarm.png</file>
+        <file alias="item">items/item.png</file>
+	<file alias="m_grow_slot">items/m_grow_slot.png</file>	
+	<file alias="m_no_grow_slot">items/m_no_grow_slot.png</file>		
+	<file alias="mlink">items/mlink.png</file>		
+	<file alias="mphone">items/mphone.png</file>		
+	<file alias="spear">items/spear.png</file>		
+	<file alias="staff">items/staff.png</file>		
+	<file alias="star">items/star.png</file>
+	<file alias="sword">items/sword.png</file>		
+      </qresource>
+</RCC> 

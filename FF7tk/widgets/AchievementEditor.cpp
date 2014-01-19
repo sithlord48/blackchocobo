@@ -37,7 +37,7 @@ void AchievementEditor::initDisplay(void)
     QGridLayout * layout = new QGridLayout;
     for(int i=63;i>27;--i)
     {
-        QPixmap pix(QString("://achievements/%1").arg(QString::number(i)));
+        QPixmap pix(QString(":/achievements/%1").arg(QString::number(i)));
         QListWidgetItem *newItem =new QListWidgetItem(QIcon(pix),achievements.name(i),0,0);
         newItem->setCheckState(Qt::Unchecked);
         achievementList->addItem(newItem);

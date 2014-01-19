@@ -24,7 +24,7 @@
 #else
     #include <QtGui>
 #endif
-#include "../static_data/FF7Save.h"
+#include "../data/FF7Save.h"
 
 
 class MetadataCreator : public QDialog

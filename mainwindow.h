@@ -35,12 +35,12 @@
 #include "errbox.h"                 // non ff7 error box
 #include "achievementdialog.h"      // Dialog for editing achievement files
 //FF7tk Items
-#include "FF7tk/static_data/SaveIcon.h"
-#include "FF7tk/static_data/FF7Item.h"
-#include "FF7tk/static_data/FF7Save.h"
-#include "FF7tk/static_data/FF7Char.h"
-#include "FF7tk/static_data/FF7Materia.h"
-#include "FF7tk/static_data/FF7Location.h"
+#include "FF7tk/data/SaveIcon.h"
+#include "FF7tk/data/FF7Item.h"
+#include "FF7tk/data/FF7Save.h"
+#include "FF7tk/data/FF7Char.h"
+#include "FF7tk/data/FF7Materia.h"
+#include "FF7tk/data/FF7Location.h"
 #include "FF7tk/widgets/OptionsWidget.h"
 #include "FF7tk/widgets/MateriaEditor.h"
 #include "FF7tk/widgets/SlotSelect.h"

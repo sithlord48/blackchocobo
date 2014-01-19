@@ -25,7 +25,7 @@
 #endif
 
 //Besure to set FF7Item Path!
-#include "../static_data/FF7Item.h"
+#include "../data/FF7Item.h"
 
 class ItemPreview : public QWidget
 {

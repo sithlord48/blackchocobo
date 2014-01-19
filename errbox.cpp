@@ -39,7 +39,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
     btnView->setShortcut(QKeySequence::Close);
     btnView->setFixedHeight(24);
 
-    btnNext = new QPushButton(QIcon::fromTheme("go-next",QIcon(":/icon/next")),tr("    &Next Slot"));
+    btnNext = new QPushButton(QIcon::fromTheme("go-next",QIcon(":/icon/next")),tr(" &Next Slot"));
     btnNext->setShortcut(QKeySequence::Forward);
     btnNext->setLayoutDirection(Qt::RightToLeft);
     btnNext->setFixedHeight(24);

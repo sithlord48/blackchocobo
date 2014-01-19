@@ -310,11 +310,11 @@ void ChocoboEditor::init_display(void)
     combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
     combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
 
-    combo_type->addItem(QIcon(QPixmap("://chocobo/yellow")),tr("Yellow"));
-    combo_type->addItem(QIcon(QPixmap("://chocobo/green")),tr("Green"));
-    combo_type->addItem(QIcon(QPixmap("://chocobo/blue")),tr("Blue"));
-    combo_type->addItem(QIcon(QPixmap("://chocobo/black")),tr("Black"));
-    combo_type->addItem(QIcon(QPixmap("://chocobo/gold")),tr("Gold"));
+    combo_type->addItem(QIcon(QPixmap(":/chocobo/yellow")),tr("Yellow"));
+    combo_type->addItem(QIcon(QPixmap(":/chocobo/green")),tr("Green"));
+    combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")),tr("Blue"));
+    combo_type->addItem(QIcon(QPixmap(":/chocobo/black")),tr("Black"));
+    combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")),tr("Gold"));
     //Make Layouts
 
     QHBoxLayout *speed_layout = new QHBoxLayout;

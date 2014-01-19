@@ -30,7 +30,7 @@ LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 void LocationViewer::resizeEvent(QResizeEvent *ev)
 {
     if(ev->type()==QResizeEvent::Resize){/*Stop Warning*/}
-    QPixmap pix(QString("://locations/%1_%2").arg(QString::number(sbMapID->value()),QString::number(sbLocID->value())));
+    QPixmap pix(QString(":/locations/%1_%2").arg(QString::number(sbMapID->value()),QString::number(sbLocID->value())));
     if(pix.isNull()){return;}
     else{lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 }
@@ -94,7 +94,7 @@ void LocationViewer::init_display(void)
     locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 
     btnSearchOptions = new QToolButton;
-    btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap("://common/edit-clear")));
+    btnSearchOptions->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
     btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
 
     actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);

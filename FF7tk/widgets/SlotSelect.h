@@ -24,8 +24,8 @@
 #endif
 
 #include <QFrame>
-#include "../static_data/FF7Save.h"
-#include "../static_data/FF7Char.h"
+#include "../data/FF7Save.h"
+#include "../data/FF7Char.h"
 #include "SlotPreview.h"
 
 class SlotSelect : public QDialog
