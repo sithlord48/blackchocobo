@@ -3996,10 +3996,6 @@ The km/h speeds are calculated while playing </source>
         <translation>ジュノン空港通路</translation>
     </message>
     <message>
-        <source>Forgotten Captial</source>
-        <translation>忘らるる都</translation>
-    </message>
-    <message>
         <source>Sector 8, Underground</source>
         <translation>ミッドガル８番街地下</translation>
     </message>
@@ -5396,10 +5392,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>&amp;Quit</source>
         <translation>終了(&amp;Q)</translation>
-    </message>
-    <message>
-        <source>About Black Chocobo</source>
-        <translation type="obsolete">Black Chocobo について</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -8291,10 +8283,6 @@ trigger showing that tutorial</source>
         <translation>オプション</translation>
     </message>
     <message>
-        <source>&amp;Close</source>
-        <translation>閉じる(&amp;C)</translation>
-    </message>
-    <message>
         <source>Set File Paths For Saving and Loading</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8751,38 +8739,6 @@ p, li { white-space: pre-wrap; }
         <translation>最新の変更点</translation>
     </message>
     <message>
-        <source>New: This Fancy About Dialog</source>
-        <translation>追加: この瀟洒なダイアログ</translation>
-    </message>
-    <message>
-        <source>New: Main Window Resizeable</source>
-        <translation>追加: メイン ウィンドウのリサイズ</translation>
-    </message>
-    <message>
-        <source>New: Psx Icons Show In Region Info</source>
-        <translation>追加: リージョン情報に PSX アイコンを表示</translation>
-    </message>
-    <message>
-        <source>New: Some Options have Ability to reset to default</source>
-        <translation>追加: いくつかのオプションをリセット可能に</translation>
-    </message>
-    <message>
-        <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation>修正: FF7 以外のスロットが PC にエクスポート不能</translation>
-    </message>
-    <message>
-        <source>Fixed: Pc Header Mask Aware</source>
-        <translation>修正: PC ヘッダーの書き込み</translation>
-    </message>
-    <message>
-        <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation>修正: セーブのスロット表示</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>閉じる(&amp;C)</translation>
-    </message>
-    <message>
         <source>Credits</source>
         <translation>クレジット</translation>
     </message>
@@ -8843,388 +8799,20 @@ p, li { white-space: pre-wrap; }
         <translation>Win32 の初期テスター</translation>
     </message>
     <message>
-        <source>New: Using Myst6re SaveIcon Class</source>
-        <translation>追加: Myst6re セーブ アイコン クラスの使用</translation>
-    </message>
-    <message>
-        <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation>修正: アイテム, マテリアの名称とスキルが翻訳I可能に</translation>
-    </message>
-    <message>
-        <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>修正: タイタン/ラムウの値の入れ替り</translation>
-    </message>
-    <message>
-        <source>New: Save and Save as are now both allowed</source>
-        <translation>追加: 保存, 名前を付けて保存 の両方が可能に</translation>
-    </message>
-    <message>
-        <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation>追加: デバッグ モードのスロット変更 (MC のみ) </translation>
-    </message>
-    <message>
-        <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation>追加: VGS, MEM, GME フォーマットに対応</translation>
-    </message>
-    <message>
-        <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation>追加: 装備タブのお洒落なマテリア表示</translation>
-    </message>
-    <message>
-        <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation>追加: フィールド ヘルプ, バトル ターゲットの切り替え</translation>
-    </message>
-    <message>
-        <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation>追加: ルビーウェポン, エメラルドウェポンと再戦可能に</translation>
-    </message>
-    <message>
-        <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>追加: ワールドマップ上の場所の基本設定 (デバッグ)</translation>
-    </message>
-    <message>
-        <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>追加: BIN,MC,MCI,PS,PSM,DFF を MCR/MCD に追加</translation>
-    </message>
-    <message>
-        <source>Fixed: Psx and Psv Region Detection</source>
-        <translation>修正: PSX, PSV のリージョン検出</translation>
-    </message>
-    <message>
-        <source>Previous Versions</source>
-        <translation>以前のバージョンの変更点</translation>
-    </message>
-    <message>
         <source>inital psx save/load; fixed checksum</source>
         <translation>初期 PSX の保存/ロード; チェックサム修正</translation>
-    </message>
-    <message>
-        <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation>修正: マテリア スロットを左から右へ表示 (ゲームと同様に)</translation>
-    </message>
-    <message>
-        <source>New: Set Font For Program</source>
-        <translation>追加: プログラムのフォント設定</translation>
-    </message>
-    <message>
-        <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation>修正: キーアイテム リストのキーカード</translation>
-    </message>
-    <message>
-        <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation>変更: 大半のスピンボックスをラップ可能に</translation>
-    </message>
-    <message>
-        <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>修正: 開始時に空きチョコ房の名前欄を空欄に</translation>
-    </message>
-    <message>
-        <source>Fixed: Typos Lots of Typos..</source>
-        <translation>修正: タイプミスの修正</translation>
-    </message>
-    <message>
-        <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation>修正: &quot;時間のバグ&quot;</translation>
-    </message>
-    <message>
-        <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation>修正: &quot;じゅうりょく&quot; マテリアのバグ</translation>
-    </message>
-    <message>
-        <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>修正: Gil,Exp,CoasterScore, 等のスピンボックスの大文字</translation>
-    </message>
-    <message>
-        <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>変更: ワールドマップのウェポンをダイヤ/アルテマ/ルビーに</translation>
-    </message>
-    <message>
-        <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation>追加: &quot;経験値 &lt;-&gt; レベル&quot; 自動変換 (初期状態: 有効)</translation>
-    </message>
-    <message>
-        <source>New: Flashback  Chruch in the slums</source>
-        <translation>追加: スラムの教会のフラッシュバック</translation>
-    </message>
-    <message>
-        <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>変更: フィールド, ワールド両方のセーブ地点を変更可能に</translation>
-    </message>
-    <message>
-        <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation>追加: 新規ウィンドウを開く (主にテスト用)</translation>
-    </message>
-    <message>
-        <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>追加: 未知の変数の調査 (今のところ単純な機能)</translation>
-    </message>
-    <message>
-        <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation>更新: チョコボ タブのチョコ房パートをスクロール可能に</translation>
-    </message>
-    <message>
-        <source>Fixed: New Window Now Via Detached Process</source>
-        <translation>修正: 新規ウィンドウを独立した別のプロセスに</translation>
-    </message>
-    <message>
-        <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation>修正: リミット ボックスのデータ表示の不具合</translation>
-    </message>
-    <message>
-        <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation>修正: PHS のケット・シー/ヴィンセントの配置順</translation>
-    </message>
-    <message>
-        <source>New: Editable Unknown Vars</source>
-        <translation>追加: 未知の変数を編集可能に</translation>
-    </message>
-    <message>
-        <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation>追加: チョコボの &quot;カップリング不可&quot; フラグの切り替え</translation>
-    </message>
-    <message>
-        <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation>修正: スロット選択ダイアログの使用</translation>
-    </message>
-    <message>
-        <source>Fixed: Chocobo Name Editable again</source>
-        <translation>修正: チョコボの名前を再編集可能に</translation>
-    </message>
-    <message>
-        <source>Fixed: Dialogs Inherit style.</source>
-        <translation>修正: ダイアログ スタイルの共通化</translation>
-    </message>
-    <message>
-        <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation>追加: チョコ房使用フラグの個別切り替え</translation>
-    </message>
-    <message>
-        <source>New: Reload Feature</source>
-        <translation>追加: 再読み込み機能</translation>
-    </message>
-    <message>
-        <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation>追加: セーブ地点に &quot;チョコ小屋&quot;, &quot;ハイウィンド&quot; を追加</translation>
-    </message>
-    <message>
-        <source>New: Better Unknown Var Tab.</source>
-        <translation>追加: 未知の変数タブの改良</translation>
-    </message>
-    <message>
-        <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation>追加: NTSC &lt;=&gt; PAL 時間の変換</translation>
-    </message>
-    <message>
-        <source>New: Edit number of steps taken</source>
-        <translation>追加: 歩数の編集</translation>
-    </message>
-    <message>
-        <source>New: Better Organized Progression Tab.</source>
-        <translation>追加: ゲームの進捗タブの再構成</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
         <translation>日本語翻訳:</translation>
     </message>
     <message>
-        <source>New: Japanese Translation</source>
-        <translation>追加: 日本語翻訳</translation>
-    </message>
-    <message>
-        <source>New: Field Items Picked Up</source>
-        <translation>追加: フィールド アイテムの取得情報</translation>
-    </message>
-    <message>
-        <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation>修正: スロット選択ダイアログを調整</translation>
-    </message>
-    <message>
-        <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation>追加: コントローラーの割り当て (PC セーブを除く)</translation>
-    </message>
-    <message>
-        <source>New: Materia Buffer , copy/paste materias</source>
-        <translation>追加: マテリアのバッファ, コピー/貼り付け</translation>
-    </message>
-    <message>
-        <source>New: Status Area</source>
-        <translation>追加: ステータス バー</translation>
-    </message>
-    <message>
-        <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation>追加: ファイル パスの取得 (ファイルのオープン時)</translation>
-    </message>
-    <message>
-        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation>追加: テキスト変換クラス (myst6re 氏の資料に基づく)</translation>
-    </message>
-    <message>
-        <source>Fixed: Save Button</source>
-        <translation>修正: 保存ボタン</translation>
-    </message>
-    <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
     <message>
-        <source>New: German Translation</source>
-        <translation>追加: ドイツ語翻訳</translation>
-    </message>
-    <message>
-        <source>Improved: Detection of FF7 Types.</source>
-        <translation>調整: FF7 のタイプの検出</translation>
-    </message>
-    <message>
-        <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
-        <translation>調整: 空きスロット/FF7 以外のスロットのハンドリング</translation>
-    </message>
-    <message>
-        <source>New: Predict stat growth (if enabled)</source>
-        <translation>追加: 能力値の変化を推計 (有効化した場合)</translation>
-    </message>
-    <message>
-        <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation>追加: 仏語版 PSX (BASCES-00868) に対応</translation>
-    </message>
-    <message>
-        <source>New: Static Data Classes</source>
-        <translation>追加: スタティック データ クラス</translation>
-    </message>
-    <message>
-        <source>New: Dialog Preview Widget</source>
-        <translation>追加: ダイアログ プレビュー ウィジェット</translation>
-    </message>
-    <message>
-        <source>New: Item Preview Widget</source>
-        <translation>追加: アイテム プレビュー ウィジェット</translation>
-    </message>
-    <message>
-        <source>Fixed: E.Skills not updating in some cases</source>
-        <translation>修正: てきのわざの更新適用の不具合</translation>
-    </message>
-    <message>
         <source>German Translation:</source>
         <translation>ドイツ語翻訳:</translation>
-    </message>
-    <message>
-        <source>New: Added .VM1to list of VMC formats</source>
-        <translation>追加: .VM1 を VMC フォーマットに追加</translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation>修正: DEX, VGS ヘッダーのバグ</translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation>修正: てきのわざ, キーアイテム,亀道楽, PHS メニューの変更適用の不具合</translation>
-    </message>
-    <message>
-        <source>New: MateriaEditor Widget.</source>
-        <translation>追加: MateriaEditor ウィジェット</translation>
-    </message>
-    <message>
-        <source>New: ChocoboEditor Widgets.</source>
-        <translation>追加: ChocoboEditor ウィジェット</translation>
-    </message>
-    <message>
-        <source>New: Character Editor Widget.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: ItemList Widget;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: File Drop Support.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Slot Selection Dialog.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: FF7 Pc 2012 Cloud Save Support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Diff Table</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Crash On Clear Slots with no file loaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + Chocobo Manager Widget.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Error Box Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Optimized Refresh Code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed:Sadness/Fury value were backwards</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: HexEditor for full psxslot or ff7slot Editing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Edit Condor Funds , Condor Wins/Losses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Pandora Box Flags , Item Flags to Edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + LocationViewer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + SlotSelect Improvements</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: + More Locations And Viewer</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Fixed: Menu Editor Backward Columns</source>
@@ -9322,10 +8910,6 @@ File:%1</source>
         <translation>かまわず表示</translation>
     </message>
     <message>
-        <source>    &amp;Next Slot</source>
-        <translation> 次のスロット(&amp;P)</translation>
-    </message>
-    <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>Raw PSX でエクスポート(&amp;E)</translation>
     </message>
@@ -9394,6 +8978,10 @@ File:%1</source>
    Next Data Chunk @ Slot:%1</source>
         <translation>
    次のデータ チャンク @ スロット:%1</translation>
+    </message>
+    <message>
+        <source> &amp;Next Slot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

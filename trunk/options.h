@@ -52,11 +52,9 @@ private slots:
     void on_btn_set_load_path_clicked();
     void on_btn_set_save_emu_clicked();
     void on_btn_set_save_pc_clicked();
-    void on_pushButton_clicked();
     void set_path_lbls();
     void on_reset_default_save_location_clicked();
     void on_cb_skip_slot_mask_toggled(bool checked);
     void on_cb_override_def_save_toggled(bool checked);
 };
-
 #endif // OPTIONS_H

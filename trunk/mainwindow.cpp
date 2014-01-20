@@ -107,12 +107,9 @@ void MainWindow::init_display()
     materia_editor->setStarsSize(48);
     QVBoxLayout *materia_editor_layout = new QVBoxLayout();
     mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
-    materia_editor_layout->setContentsMargins(0,6,0,0);
-    materia_editor_layout->setSpacing(0);
     materia_editor_layout->addWidget(materia_editor);
     materia_editor_layout->addSpacerItem(mat_spacer);
     ui->group_materia->setLayout(materia_editor_layout);
-    ui->group_materia->setContentsMargins(0,6,0,0);
 
     char_editor = new CharEditor;
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
@@ -120,7 +117,6 @@ void MainWindow::init_display()
     char_editor_layout->setSpacing(0);
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
-
 
     itemlist= new ItemList;
 
@@ -616,13 +612,13 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
-void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(0,ff7);s=slotselect.exec();CheckGame(); guirefresh(0);}
+void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(this,ff7);s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
-void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.exec(); init_settings(); }
+void MainWindow::on_actionShow_Options_triggered(){Options odialog(this,settings); odialog.exec(); }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7);mdata.exec();}
 
 

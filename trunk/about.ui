@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>472</width>
-    <height>465</height>
+    <width>431</width>
+    <height>349</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,9 +25,9 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="_2">
      <item>
-      <spacer name="horizontalSpacer_5">
+      <spacer name="spacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -50,7 +50,7 @@
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="_3">
        <property name="spacing">
         <number>0</number>
        </property>
@@ -85,7 +85,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <layout class="QHBoxLayout" name="_4">
          <item>
           <widget class="QLabel" name="lbl_bc_version">
            <property name="smaller_text" stdset="0">
@@ -94,7 +94,7 @@
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_4">
+          <spacer name="spacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -112,7 +112,7 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="_5">
          <item>
           <widget class="QLabel" name="lbl_qt_version">
            <property name="smaller_text" stdset="0">
@@ -121,7 +121,7 @@
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_6">
+          <spacer name="spacer_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -138,7 +138,7 @@
       </layout>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3">
+      <spacer name="spacer_3">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -154,40 +154,22 @@
    </item>
    <item>
     <widget class="QTabWidget" name="tabWidget">
-     <property name="contextMenuPolicy">
-      <enum>Qt::DefaultContextMenu</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
+     <property name="currentIndex">
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_about">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <attribute name="title">
        <string>&amp;About</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <property name="spacing">
-        <number>3</number>
-       </property>
-       <property name="leftMargin">
-        <number>3</number>
-       </property>
-       <property name="topMargin">
-        <number>3</number>
-       </property>
-       <property name="rightMargin">
-        <number>3</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
+      <layout class="QVBoxLayout" name="_6">
        <item>
         <widget class="QLabel" name="ff7editor">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="text">
           <string>The Final Fantasy VII Save Game Editor</string>
          </property>
@@ -198,12 +180,6 @@
        </item>
        <item>
         <widget class="QLabel" name="copyleft">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="text">
           <string notr="true">(C) 2010 - 2014 Chris Rizzitello</string>
          </property>
@@ -214,12 +190,6 @@
        </item>
        <item>
         <widget class="QLabel" name="link_gpl">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -237,12 +207,6 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="link_web">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -260,12 +224,6 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="link_guide">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -283,19 +241,10 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="lbl_features">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>18</height>
-          </size>
-         </property>
          <property name="font">
           <font>
            <underline>true</underline>
           </font>
-         </property>
-         <property name="midLineWidth">
-          <number>0</number>
          </property>
          <property name="text">
           <string>Newest Features</string>
@@ -307,26 +256,17 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QListWidget" name="list_newest">
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <property name="autoScroll">
-          <bool>false</bool>
-         </property>
          <property name="editTriggers">
           <set>QAbstractItemView::NoEditTriggers</set>
          </property>
          <property name="showDropIndicator" stdset="0">
           <bool>false</bool>
          </property>
-         <property name="alternatingRowColors">
-          <bool>false</bool>
-         </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::NoSelection</enum>
          </property>
-         <property name="wordWrap">
-          <bool>true</bool>
+         <property name="viewMode">
+          <enum>QListView::ListMode</enum>
          </property>
          <item>
           <property name="text">
@@ -348,511 +288,6 @@ p, li { white-space: pre-wrap; }
            <string>FF7tk: LocationViewer Contains Field Items (WIP)</string>
           </property>
          </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New Error Box Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Better Handling Of Japanese PSX hard Item Qty Limit</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Optimized Refresh Code</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cleaned Up Menus - Only one Import and Export (save as)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Diff Table</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Crash On Clear Slots with no file loaded</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed:Sadness/Fury value were backwards</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Use Same Format as FF7 For Location Data (XYTD)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: HexEditor for full psxslot or ff7slot Editing</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Edit Condor Funds , Condor Wins/Losses</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Pandora Box Flags , Item Flags to Edit</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + LocationViewer</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + View and Export Psx Data (for multi block saves)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + SlotSelect Improvements</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + More Locations And Viewer</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + Widgets now have Wrapping spinboxes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>FF7tk: + Chocobo Manager Widget.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: FF7 Pc 2012 Cloud Save Support</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: File Drop Support.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: ItemList Widget;</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Character Editor Widget.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: ChocoboEditor Widgets.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: MateriaEditor Widget.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Slot Selection Dialog.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Bug In Stat Calculation For Materia Changes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Added .VM1to list of VMC formats</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Dialog Preview Widget</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Item Preview Widget</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Static Data Classes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Added Support for French PSX (BASCES-00868)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: E.Skills not updating in some cases</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Bug In Dex and Vgs Header</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Text Conversion Class (based on myst6re's work) </string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Predict stat growth (if enabled)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: German Translation</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Save Button</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Improved: Detection of FF7 Types.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Improved: Slotselect handling of non-ff7 and empty slots</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Japanese Translation</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Status Area</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Materia Buffer , copy/paste materias</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Takes a filename argument (open w/ a file)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Field Items Picked Up</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Edit number of steps taken</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Better Organized Progression Tab.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Edit Controller Mapping (non pc saves)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Optimized Slotselect Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Better Unknown Var Tab.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Toggle Each Stable Occupied Flag</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Reload Feature</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Toggle &quot;unable to mate&quot; flag for chocobos</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: NTSC &lt;=&gt; PAL Time Conversion</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Dialogs Inherit style.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Use the Action for showing Slot select dialog.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Chocobo Name Editable again</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Editable Unknown Vars</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: New Window Now Via Detached Process</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Limit Boxes Not Always Showing Data Correctly</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Cait/ Vincent Reversed in PHS Boxes</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Spawn New Windows. (mainly for testing)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Unknown Var  Tracker in Test Data (very basic atm)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Flashback  Chruch in the slums</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Empty Chocobos Now Start W/ empty names.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Typos Lots of Typos..</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: &quot;Time Bug&quot;</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: &quot;Gravity&quot; Materia Bug</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Missing Keycard 66 in keyitems list</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Update: Location Tab; Both Save &amp; World Locations</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Update: Chocobo tab's Chocobo Stables Now In Scroll Area</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Update: World Map ruby-&gt;diamond/ulitmate/ruby</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Update:Almost All Spinboxes now &quot;Wrapping&quot;</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Basic Setting of World Locations In Debug</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Set Font For Program</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Revive Ruby Weapon &amp; Emerald Weapon</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Toggle Field Help and Battle Target Labels</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Fancy Character Materia on Equipment tab</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Save and Save as are now both allowed</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Change Slot Posin in Debug mode (MC only) </string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Support for .vgs .mem and .gme formats</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Using Myst6re SaveIcon Class</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Materia Slots Display Left To Right (see ingame)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Psx and Psv Region Detection</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Titan/Ramuh Stats Backward.</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Items/Materia Names And Skill Now Translated</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: This Fancy About Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Main Window Resizeable</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Psx Icons Show In Region Info</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New: Some Options have Ability to reset to default</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: No longer export non ff7 slots to pc</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Pc Header Mask Aware</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Fixed: Saves Will Display Slots Correctly</string>
-          </property>
-         </item>
         </widget>
        </item>
       </layout>
@@ -861,19 +296,7 @@ p, li { white-space: pre-wrap; }
       <attribute name="title">
        <string>Credits</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>3</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>3</number>
-       </property>
+      <layout class="QVBoxLayout" name="_7">
        <item>
         <widget class="QLabel" name="label_5">
          <property name="maximumSize">
@@ -892,9 +315,6 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QScrollArea" name="scrollArea">
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -906,40 +326,23 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>343</width>
-            <height>408</height>
+            <width>349</width>
+            <height>492</height>
            </rect>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_9">
+          <layout class="QVBoxLayout" name="_8">
            <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
             <number>3</number>
            </property>
            <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
             <number>3</number>
            </property>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="sizeConstraint">
-              <enum>QLayout::SetDefaultConstraint</enum>
-             </property>
+            <layout class="QVBoxLayout" name="_20">
              <item>
               <widget class="QLabel" name="lbl_programmers">
                <property name="font">
                 <font>
-                 <family>ubuntu</family>
-                 <pointsize>9</pointsize>
-                 <weight>50</weight>
-                 <italic>false</italic>
-                 <bold>false</bold>
                  <underline>true</underline>
                 </font>
                </property>
@@ -949,13 +352,10 @@ p, li { white-space: pre-wrap; }
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
-               <property name="Heading" stdset="0">
-                <bool>true</bool>
-               </property>
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <layout class="QHBoxLayout" name="_22">
                <item>
                 <widget class="QLabel" name="label">
                  <property name="text">
@@ -971,7 +371,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_7">
+                <spacer name="spacer_15">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -986,7 +386,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <layout class="QHBoxLayout" name="_21">
                <item>
                 <widget class="QLabel" name="label_4">
                  <property name="text">
@@ -1002,7 +402,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_2">
+                <spacer name="spacer_14">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1017,7 +417,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <layout class="QHBoxLayout" name="_23">
                <item>
                 <widget class="QLabel" name="label_36">
                  <property name="text">
@@ -1033,7 +433,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_17">
+                <spacer name="spacer_16">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1050,10 +450,7 @@ p, li { white-space: pre-wrap; }
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <property name="spacing">
-              <number>0</number>
-             </property>
+            <layout class="QVBoxLayout" name="_14">
              <item>
               <widget class="QLabel" name="label_6">
                <property name="font">
@@ -1078,7 +475,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <layout class="QHBoxLayout" name="_19">
                <item>
                 <widget class="QLabel" name="label_9">
                  <property name="text">
@@ -1094,7 +491,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_9">
+                <spacer name="spacer_13">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1109,7 +506,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <layout class="QHBoxLayout" name="_17">
                <item>
                 <widget class="QLabel" name="label_7">
                  <property name="text">
@@ -1125,7 +522,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_8">
+                <spacer name="spacer_11">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1140,7 +537,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <layout class="QHBoxLayout" name="_16">
                <item>
                 <widget class="QLabel" name="label_11">
                  <property name="text">
@@ -1156,7 +553,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_10">
+                <spacer name="spacer_10">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1171,7 +568,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <layout class="QHBoxLayout" name="_15">
                <item>
                 <widget class="QLabel" name="label_14">
                  <property name="text">
@@ -1187,7 +584,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_11">
+                <spacer name="spacer_9">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1202,7 +599,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <layout class="QHBoxLayout" name="_18">
                <item>
                 <widget class="QLabel" name="label_15">
                  <property name="text">
@@ -1218,7 +615,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_12">
+                <spacer name="spacer_12">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1235,10 +632,7 @@ p, li { white-space: pre-wrap; }
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <property name="spacing">
-              <number>0</number>
-             </property>
+            <layout class="QVBoxLayout" name="_9">
              <item>
               <widget class="QLabel" name="label_17">
                <property name="font">
@@ -1263,7 +657,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <layout class="QHBoxLayout" name="_11">
                <item>
                 <widget class="QLabel" name="label_19">
                  <property name="text">
@@ -1279,7 +673,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_13">
+                <spacer name="spacer_6">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1294,7 +688,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <layout class="QHBoxLayout" name="_12">
                <item>
                 <widget class="QLabel" name="label_20">
                  <property name="text">
@@ -1310,7 +704,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_14">
+                <spacer name="spacer_7">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1325,10 +719,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_23">
-               <property name="spacing">
-                <number>6</number>
-               </property>
+              <layout class="QHBoxLayout" name="_10">
                <item>
                 <widget class="QLabel" name="label_38">
                  <property name="text">
@@ -1344,7 +735,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_18">
+                <spacer name="spacer_5">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1359,7 +750,7 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <layout class="QHBoxLayout" name="_13">
                <item>
                 <widget class="QLabel" name="label_40">
                  <property name="text">
@@ -1375,7 +766,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_19">
+                <spacer name="spacer_8">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1392,7 +783,7 @@ p, li { white-space: pre-wrap; }
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_8">
+            <layout class="QVBoxLayout" name="_24">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -1434,7 +825,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <layout class="QHBoxLayout" name="_25">
                <item>
                 <widget class="QLabel" name="label_28">
                  <property name="text">
@@ -1457,7 +848,7 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
                <item>
-                <spacer name="horizontalSpacer_16">
+                <spacer name="spacer_17">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1497,19 +888,7 @@ p, li { white-space: pre-wrap; }
       <attribute name="title">
        <string>Thanks</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>3</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>3</number>
-       </property>
+      <layout class="QVBoxLayout" name="_26">
        <item>
         <widget class="QLabel" name="label_29">
          <property name="maximumSize">
@@ -1537,14 +916,8 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QScrollArea" name="scrollArea_2">
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
          <property name="widgetResizable">
           <bool>true</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
          </property>
          <widget class="QWidget" name="scrollAreaWidgetContents_2">
           <property name="geometry">
@@ -1552,37 +925,16 @@ p, li { white-space: pre-wrap; }
             <x>0</x>
             <y>0</y>
             <width>124</width>
-            <height>956</height>
+            <height>1006</height>
            </rect>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_11">
+          <layout class="QVBoxLayout" name="_27">
            <item>
             <widget class="QGroupBox" name="groupBox">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
              <property name="title">
               <string notr="true">Qhimm</string>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-             <property name="checkable">
-              <bool>false</bool>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_12">
+             <layout class="QVBoxLayout" name="_29">
               <item>
                <widget class="QLabel" name="label_30">
                 <property name="text">
@@ -1601,13 +953,7 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string notr="true">Eslava</string>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_13">
-              <property name="topMargin">
-               <number>4</number>
-              </property>
-              <property name="bottomMargin">
-               <number>4</number>
-              </property>
+             <layout class="QVBoxLayout" name="_28">
               <item>
                <widget class="QLabel" name="label_31">
                 <property name="text">
@@ -1626,13 +972,7 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string notr="true">Dziugo</string>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_18">
-              <property name="topMargin">
-               <number>4</number>
-              </property>
-              <property name="bottomMargin">
-               <number>4</number>
-              </property>
+             <layout class="QHBoxLayout" name="_30">
               <item>
                <widget class="QLabel" name="label_32">
                 <property name="text">
@@ -1651,13 +991,7 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string notr="true">Aali</string>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_19">
-              <property name="topMargin">
-               <number>4</number>
-              </property>
-              <property name="bottomMargin">
-               <number>4</number>
-              </property>
+             <layout class="QHBoxLayout" name="_31">
               <item>
                <widget class="QLabel" name="label_33">
                 <property name="text">
@@ -1676,13 +1010,7 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string notr="true">Dhrosa</string>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_14">
-              <property name="topMargin">
-               <number>4</number>
-              </property>
-              <property name="bottomMargin">
-               <number>4</number>
-              </property>
+             <layout class="QVBoxLayout" name="_32">
               <item>
                <widget class="QLabel" name="label_34">
                 <property name="text">
@@ -1701,13 +1029,7 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string notr="true">Ms.Sith</string>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_21">
-              <property name="topMargin">
-               <number>4</number>
-              </property>
-              <property name="bottomMargin">
-               <number>4</number>
-              </property>
+             <layout class="QHBoxLayout" name="_33">
               <item>
                <widget class="QLabel" name="label_35">
                 <property name="text">
@@ -1729,35 +1051,10 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="text">
-        <string>&amp;Close</string>
-       </property>
-       <property name="icon">
-        <iconset theme="window-close" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
-         <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
   </layout>
  </widget>
  <resources>
   <include location="images.qrc"/>
-  <include location="FF7tk/static_data/icons/Common_Icons/common.qrc"/>
  </resources>
  <connections/>
 </ui>

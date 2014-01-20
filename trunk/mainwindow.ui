@@ -17,9 +17,6 @@
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_20">
     <property name="spacing">
@@ -39,9 +36,6 @@
     </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
       <widget class="QWidget" name="tab_party">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -421,18 +415,6 @@
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_5">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
              <property name="maximumSize">
               <size>
                <width>300</width>
@@ -441,9 +423,6 @@
              </property>
              <property name="title">
               <string>Click On A Char To edit ===========&gt;</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
               <property name="leftMargin">
@@ -731,9 +710,6 @@
         </item>
         <item>
          <widget class="QFrame" name="group_char_editor_box">
-          <property name="charbox" stdset="0">
-           <bool>true</bool>
-          </property>
           <widget class="QFrame" name="frame_status">
            <property name="geometry">
             <rect>
@@ -822,12 +798,6 @@
              <spacer name="horizontalSpacer_76">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>48</width>
-                <height>0</height>
-               </size>
               </property>
              </spacer>
             </item>
@@ -2000,8 +1970,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>757</width>
+             <height>453</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3521,7 +3491,7 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>336</width>
+                  <width>353</width>
                   <height>1982</height>
                  </rect>
                 </property>
@@ -7983,7 +7953,7 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="action_Quit">
    <property name="icon">
-    <iconset theme="application-exit" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+    <iconset theme="application-exit" resource="FF7tk/icons/common.qrc">
      <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
    </property>
    <property name="text">
@@ -8064,7 +8034,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-copy" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+    <iconset theme="edit-copy" resource="FF7tk/icons/common.qrc">
      <normaloff>:/common/edit-copy</normaloff>:/common/edit-copy</iconset>
    </property>
    <property name="text">
@@ -8082,7 +8052,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-paste" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+    <iconset theme="edit-paste" resource="FF7tk/icons/common.qrc">
      <normaloff>:/common/edit-paste</normaloff>:/common/edit-paste</iconset>
    </property>
    <property name="text">
@@ -8100,7 +8070,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-clear" resource="FF7tk/static_data/icons/Common_Icons/common.qrc">
+    <iconset theme="edit-clear" resource="FF7tk/icons/common.qrc">
      <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
    </property>
    <property name="text">
@@ -8426,7 +8396,7 @@ Var And Scrolling Synced To Left Table</string>
  </tabstops>
  <resources>
   <include location="images.qrc"/>
-  <include location="FF7tk/static_data/icons/Common_Icons/common.qrc"/>
+  <include location="FF7tk/icons/common.qrc"/>
  </resources>
  <connections>
   <connection>
