@@ -144,5 +144,3 @@ void Options::on_cb_override_def_save_toggled(bool checked)
         ui->reset_default_save_location->setVisible(false);
     }
 }
-/*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/
-void Options::on_pushButton_clicked(){this->close();}

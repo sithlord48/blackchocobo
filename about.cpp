@@ -44,8 +44,3 @@ void about::changeEvent(QEvent *e)
     }
 }
 
-void about::on_pushButton_clicked()
-{
-    this->close();
-}
-

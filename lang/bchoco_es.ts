@@ -3998,10 +3998,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Camino del Aeropuerto de Junon</translation>
     </message>
     <message>
-        <source>Forgotten Captial</source>
-        <translation>Capital Olvidada</translation>
-    </message>
-    <message>
         <source>Sector 8, Underground</source>
         <translation>Sector 8, subterráneo</translation>
     </message>
@@ -5324,10 +5320,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
-    </message>
-    <message>
-        <source>About Black Chocobo</source>
-        <translation type="obsolete">Acerca de Chocobo Negro</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
@@ -8225,10 +8217,6 @@ Fénix x3 (180pm)</translation>
         <translation>Opciones</translation>
     </message>
     <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Cerrar</translation>
-    </message>
-    <message>
         <source>Set File Paths For Saving and Loading</source>
         <translation>Establecer rutas de archivo para guardar y cargar</translation>
     </message>
@@ -8685,38 +8673,6 @@ p, li { white-space: pre-wrap; }
         <translation>Características Recientes</translation>
     </message>
     <message>
-        <source>New: This Fancy About Dialog</source>
-        <translation>Nuevo: Esta ventana &apos;Acerca de&apos;</translation>
-    </message>
-    <message>
-        <source>New: Main Window Resizeable</source>
-        <translation>Nuevo: Ventana principal escalable</translation>
-    </message>
-    <message>
-        <source>New: Psx Icons Show In Region Info</source>
-        <translation>Nuevo: Los iconos de PSX muestran información de región</translation>
-    </message>
-    <message>
-        <source>New: Some Options have Ability to reset to default</source>
-        <translation>Nuevo: Algunas opciones se pueden resetear a valores predeterminados</translation>
-    </message>
-    <message>
-        <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation>Arreglado: Ya no se exportan ranuras no FF7 a PC</translation>
-    </message>
-    <message>
-        <source>Fixed: Pc Header Mask Aware</source>
-        <translation>Areglado: Máscara de cabecera de PC</translation>
-    </message>
-    <message>
-        <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation>Arreglado: Las partidas mostrarán las renuras correctamente</translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation>&amp;Cerrar</translation>
-    </message>
-    <message>
         <source>Credits</source>
         <translation>Reconocimientos</translation>
     </message>
@@ -8777,388 +8733,20 @@ p, li { white-space: pre-wrap; }
         <translation>Probador de Win32</translation>
     </message>
     <message>
-        <source>New: Using Myst6re SaveIcon Class</source>
-        <translation>Nuevo: Usar tipo de icono de guardado de Myst6re</translation>
-    </message>
-    <message>
-        <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation>Arreglado: nombres y habilidades de objetos/materia traducidos</translation>
-    </message>
-    <message>
-        <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>Arreglado: Stats de Titan/Ramuh al revés.</translation>
-    </message>
-    <message>
-        <source>New: Save and Save as are now both allowed</source>
-        <translation>Nuevo: Guardar y guardar como ambos disponibles</translation>
-    </message>
-    <message>
-        <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation>Nuevo: Cambiar la posición de slot en modo Debug (sólo MC) </translation>
-    </message>
-    <message>
-        <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation>Nuevo: Compatibilidad para los formatos gme y vgs</translation>
-    </message>
-    <message>
-        <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation>Nuevo:Submenu de materia en el equipo</translation>
-    </message>
-    <message>
-        <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation>Nuevo: Activar ayuda de campo y etiquetas de objetivos en batallas</translation>
-    </message>
-    <message>
-        <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation>Nuevo: Revivir a arma rubí y arma esmeralda</translation>
-    </message>
-    <message>
-        <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>Nuevo: Opciones básicas de lugares del mundo en modo prueba</translation>
-    </message>
-    <message>
-        <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>Nuevo: añadidos .bin .mc .mci .ps .psm .dff a la lista mcr/mcd</translation>
-    </message>
-    <message>
-        <source>Fixed: Psx and Psv Region Detection</source>
-        <translation>Arreglado: Detección de región para Psx y Psv</translation>
-    </message>
-    <message>
-        <source>Previous Versions</source>
-        <translation>Versiones anteriores</translation>
-    </message>
-    <message>
         <source>inital psx save/load; fixed checksum</source>
         <translation>Guardado/Cargado psx inicial; checksum arreglado</translation>
-    </message>
-    <message>
-        <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation>Arreglado: Las ranuras de materia se muestran de izquierda a derecha (ver dentro del juego)</translation>
-    </message>
-    <message>
-        <source>New: Set Font For Program</source>
-        <translation>Nuevo: Establecer fuente Para el Programa</translation>
-    </message>
-    <message>
-        <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation>Arreglado: LLave 66 faltante de los objetos clave</translation>
-    </message>
-    <message>
-        <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation>Actualizado: Casi todas las Spinboxes ahora se &apos;enrollan&apos;</translation>
-    </message>
-    <message>
-        <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>Arreglado: Los chocobos nuevos empiezan ahora con nombres vacíos.</translation>
-    </message>
-    <message>
-        <source>Fixed: Typos Lots of Typos..</source>
-        <translation>Arreglado: Muchas muchas erratas..</translation>
-    </message>
-    <message>
-        <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation>Arreglado: Error en el tiempo</translation>
-    </message>
-    <message>
-        <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation>Arreglado: Error con la materia gravedad</translation>
-    </message>
-    <message>
-        <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>Arreglado: Limites de Gil, Exp, Puntos de la montaña rusa, y otros Spinboxes.</translation>
-    </message>
-    <message>
-        <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>Actualizado: Rubí en el mapa del mundo -&gt; diamante/última/rubí</translation>
-    </message>
-    <message>
-        <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation>Nuevo: Opción de experiencia automática con el nivel (activado por defecto)</translation>
-    </message>
-    <message>
-        <source>New: Flashback  Chruch in the slums</source>
-        <translation>Nuevo: Flashback de Church in the slums</translation>
-    </message>
-    <message>
-        <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>Actualizado: La pestaña de Localización ahora guarda puntos de guardado y puntos en el mapa del mundo</translation>
-    </message>
-    <message>
-        <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation>Nuevo: Abrir varias ventanas (principalmente de prueba)</translation>
-    </message>
-    <message>
-        <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>Nuevo: Visor de variables indefinidas en la pestaña de test (muy básico de momento)</translation>
-    </message>
-    <message>
-        <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation>Actualizado: Los establos en la pestaña de chocobo están ahora en un mismo submenú</translation>
-    </message>
-    <message>
-        <source>Fixed: New Window Now Via Detached Process</source>
-        <translation>Arreglado: Ahora la nueva ventana a través de procesos independiente</translation>
-    </message>
-    <message>
-        <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation>Arreglado: Cajas límite no siempre muestra los datos correctamente</translation>
-    </message>
-    <message>
-        <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation>Arreglado:Cuadro PHS de Cait / Vicente invertidos</translation>
-    </message>
-    <message>
-        <source>New: Editable Unknown Vars</source>
-        <translation>Nuevo: Variables desconocido editables</translation>
-    </message>
-    <message>
-        <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation>Nuevo: Bandera &quot;Imposible cruzar&quot; para chocobos</translation>
-    </message>
-    <message>
-        <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation>Arreglado: Uso de Acción para mostrar el diálogo de selección de ranura.</translation>
-    </message>
-    <message>
-        <source>Fixed: Chocobo Name Editable again</source>
-        <translation>Arreglado: Nombres de chocobo editables otra vez</translation>
-    </message>
-    <message>
-        <source>Fixed: Dialogs Inherit style.</source>
-        <translation>Arreglado: Estilo de diálogos interno.</translation>
-    </message>
-    <message>
-        <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation>Nuevo: Bandera para poner cada establo ocupado</translation>
-    </message>
-    <message>
-        <source>New: Reload Feature</source>
-        <translation>Nuevo: Función de recargar</translation>
-    </message>
-    <message>
-        <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation>Nuevo: Lugares &quot;Rancho chocobo&quot; y &quot;Vientofuerte&quot;</translation>
-    </message>
-    <message>
-        <source>New: Better Unknown Var Tab.</source>
-        <translation>Nuevo: Pestaña de var desconocidas mejorada.</translation>
-    </message>
-    <message>
-        <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation>Nuevo: Conversión de tiempo NTSC &lt;=&gt; PAL</translation>
-    </message>
-    <message>
-        <source>New: Edit number of steps taken</source>
-        <translation>Nuevo: Editar el número de pasos dados</translation>
-    </message>
-    <message>
-        <source>New: Better Organized Progression Tab.</source>
-        <translation>Nuevo: Pestaña de progresión mejor organizada.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
         <translation>Traducción Japonesa:</translation>
     </message>
     <message>
-        <source>New: Japanese Translation</source>
-        <translation>Nuevo: Traducción Japonesa</translation>
-    </message>
-    <message>
-        <source>New: Field Items Picked Up</source>
-        <translation>Nuevo: Objetos de campo recogidos</translation>
-    </message>
-    <message>
-        <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation>Arreglado: Dialogo de selección de ranura optimizado</translation>
-    </message>
-    <message>
-        <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation>Nuevo: Editar mapeo de controles (archivos no pc)</translation>
-    </message>
-    <message>
-        <source>New: Materia Buffer , copy/paste materias</source>
-        <translation>Nuevo: Buffer de Materia, copiar/pegar materias</translation>
-    </message>
-    <message>
-        <source>New: Status Area</source>
-        <translation>Nuevo: Area de estado</translation>
-    </message>
-    <message>
-        <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation>Nuevo: Toma el argumento de nombre de archivo (abrir con un archivo)</translation>
-    </message>
-    <message>
-        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation>Nuevo: Clase de conversión de texto (Basado en el trabajo de myst6re)</translation>
-    </message>
-    <message>
-        <source>Fixed: Save Button</source>
-        <translation>Arreglado: Botón de guardar</translation>
-    </message>
-    <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation>Conversor de dalse de cadenas de icono Psx y PC para el japonés</translation>
     </message>
     <message>
-        <source>New: German Translation</source>
-        <translation>Nuevo: Traducción Alemana</translation>
-    </message>
-    <message>
-        <source>Improved: Detection of FF7 Types.</source>
-        <translation>Mejorado: Detección de tipos de FF7.</translation>
-    </message>
-    <message>
-        <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
-        <translation>Mejorado:Manejo de la selección de ranuras para ranuras vacías y no ff7</translation>
-    </message>
-    <message>
-        <source>New: Predict stat growth (if enabled)</source>
-        <translation>Nuevo: Predecir el crecimiento de stats (si está activado)</translation>
-    </message>
-    <message>
-        <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation>Nuevo: Añadido Soporte para version francesa de PSX (BASCES 00868)</translation>
-    </message>
-    <message>
-        <source>New: Static Data Classes</source>
-        <translation>Nuevo: Clases de datos estáticas</translation>
-    </message>
-    <message>
-        <source>New: Dialog Preview Widget</source>
-        <translation>Nuevo: Widget de Vista Previa de Diálogos</translation>
-    </message>
-    <message>
-        <source>New: Item Preview Widget</source>
-        <translation>Nuevo: Widget de Vista Previa de Items</translation>
-    </message>
-    <message>
-        <source>Fixed: E.Skills not updating in some cases</source>
-        <translation>Arreglado: Habil. Enem no actualizaba en algunos casos</translation>
-    </message>
-    <message>
         <source>German Translation:</source>
         <translation>Traducción alemana:</translation>
-    </message>
-    <message>
-        <source>New: Added .VM1to list of VMC formats</source>
-        <translation>Nuevo: Añadido .VM1 a la lista de formatos VMC</translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation>Arreglado: Error en las cabeceras Dex y Vgs</translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation>Arreglado: Error en Eskill,KeyItem,Tparadise,Phs,Menu a veces los cambios no se guardaban</translation>
-    </message>
-    <message>
-        <source>New: MateriaEditor Widget.</source>
-        <translation>Nuevo: Widget para editor de materia.</translation>
-    </message>
-    <message>
-        <source>New: ChocoboEditor Widgets.</source>
-        <translation>Nuevo: Widget para Editor de chocobo.</translation>
-    </message>
-    <message>
-        <source>New: Character Editor Widget.</source>
-        <translation>Nuevo: Widget para editor de personajes.</translation>
-    </message>
-    <message>
-        <source>New: ItemList Widget;</source>
-        <translation>Nuevo: Widget para las listas de objetos</translation>
-    </message>
-    <message>
-        <source>New: File Drop Support.</source>
-        <translation>Nuevo: Soporte para volcado de archivo.</translation>
-    </message>
-    <message>
-        <source>New: Slot Selection Dialog.</source>
-        <translation>Nuevo: Diálogo de selección de ranura.</translation>
-    </message>
-    <message>
-        <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
-        <translation>Arreglado: Fallo en el cálculo de stats cuando se cambian materias</translation>
-    </message>
-    <message>
-        <source>New: FF7 Pc 2012 Cloud Save Support</source>
-        <translation>Nuevo: Compatibilidad para guardado en la nube en FF7 Pc 2012</translation>
-    </message>
-    <message>
-        <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
-        <translation>Nuevo: Edición de puntuación/tiempo en los minijuegos Snowboard y G-Bike (Gracias a DLPB)</translation>
-    </message>
-    <message>
-        <source>Fixed: Diff Table</source>
-        <translation>Arreglado: Tabla de diferencias</translation>
-    </message>
-    <message>
-        <source>Fixed: Crash On Clear Slots with no file loaded</source>
-        <translation>Arreglado: Error al borrar ranuras cuando no se ha cargado un archivo</translation>
-    </message>
-    <message>
-        <source>FF7tk: + View and Export Psx Data (for multi block saves)</source>
-        <translation>FF7tk: + Ver y exportar datos PSX (para guardados multi bloque</translation>
-    </message>
-    <message>
-        <source>FF7tk: + Widgets now have Wrapping spinboxes</source>
-        <translation>FF7tk: + Las widgets tienen ahora selectores ajustados</translation>
-    </message>
-    <message>
-        <source>FF7tk: + Chocobo Manager Widget.</source>
-        <translation>FF7tk: + Widget para gestionar chocobos.</translation>
-    </message>
-    <message>
-        <source>New Error Box Dialog</source>
-        <translation type="unfinished">Nuevo: Ventana de error</translation>
-    </message>
-    <message>
-        <source>Better Handling Of Japanese PSX hard Item Qty Limit</source>
-        <translation type="unfinished">Mejor manejo del límite de cantidad de item en la versión japonesa de PSX</translation>
-    </message>
-    <message>
-        <source>Optimized Refresh Code</source>
-        <translation type="unfinished">Código de actualización optimizado</translation>
-    </message>
-    <message>
-        <source>Cleaned Up Menus - Only one Import and Export (save as)</source>
-        <translation type="unfinished">Limpieza de Menus - Solo Importar y Exportar (Guardar como)</translation>
-    </message>
-    <message>
-        <source>Fixed:Few Wrong Materia Slot Counts and Stat Modifiers</source>
-        <translation type="unfinished">Arreglado: Algunas Ranuras de Materia y Modificadores de Stats erróneos</translation>
-    </message>
-    <message>
-        <source>Fixed:Sadness/Fury value were backwards</source>
-        <translation type="unfinished">Arreglado: Valores de Tristeza/Furia invertidos</translation>
-    </message>
-    <message>
-        <source>New: Use Same Format as FF7 For Location Data (XYTD)</source>
-        <translation type="unfinished">Nuevo: Usar el mismo formato de FF7 para los Datos de Lugar (XYTD)</translation>
-    </message>
-    <message>
-        <source>New: HexEditor for full psxslot or ff7slot Editing</source>
-        <translation type="unfinished">Nuevo: EditorHex para ranura de psx completa / edición de ranura de ff7</translation>
-    </message>
-    <message>
-        <source>New: Edit Condor Funds , Condor Wins/Losses</source>
-        <translation type="unfinished">Nuevo: Editar Fondos de Condor , Victorias/Derrotas de Condor</translation>
-    </message>
-    <message>
-        <source>New: Pandora Box Flags , Item Flags to Edit</source>
-        <translation type="unfinished">Nuevo: Banderas de Caja de Pandora, Banderas de items para editar</translation>
-    </message>
-    <message>
-        <source>FF7tk: + LocationViewer</source>
-        <translation type="unfinished">FF7tk: + Visor de Lugares</translation>
-    </message>
-    <message>
-        <source>FF7tk: + SlotSelect Improvements</source>
-        <translation type="unfinished">FF7tk: + Mejoras en el Dialogo de selección</translation>
-    </message>
-    <message>
-        <source>FF7tk: + More Locations And Viewer</source>
-        <translation type="unfinished">FF7tk: + Más localizaciones y Visor</translation>
     </message>
     <message>
         <source>Fixed: Menu Editor Backward Columns</source>
@@ -9256,10 +8844,6 @@ File:%1</source>
         <translation>Ver de todas formas </translation>
     </message>
     <message>
-        <source>    &amp;Next Slot</source>
-        <translation>    &amp;Ranura siguiente</translation>
-    </message>
-    <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exportar como PSX Raw</translation>
     </message>
@@ -9328,6 +8912,10 @@ El juego usa el bloque de guardado %1 </translation>
    Next Data Chunk @ Slot:%1</source>
         <translation>s
    Siguiente trozo de datos en la ranura:%1</translation>
+    </message>
+    <message>
+        <source> &amp;Next Slot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

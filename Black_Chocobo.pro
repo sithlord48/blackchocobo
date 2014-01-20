@@ -123,7 +123,7 @@ TRANSLATIONS += \
 	lang/bchoco_es.ts \
 	lang/bchoco_fr.ts \
 	lang/bchoco_de.ts \
-	lang/bchoco_ja.ts
+        lang/bchoco_ja.ts
 
 #Below Is OS Specific Stuff.
 win32: {
