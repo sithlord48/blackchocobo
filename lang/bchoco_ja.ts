@@ -8903,11 +8903,11 @@ File:%1</source>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation>Final Fantasy VII のスロットではありません</translation>
+        <translation type="obsolete">Final Fantasy VII のスロットではありません</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>かまわず表示</translation>
+        <translation type="obsolete">かまわず表示</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
@@ -8953,7 +8953,7 @@ File:%1</source>
     </message>
     <message>
         <source>&amp;Previous Slot </source>
-        <translation>前のスロット(&amp;P) </translation>
+        <translation type="obsolete">前のスロット(&amp;P) </translation>
     </message>
     <message>
         <source>Slot:%1
@@ -8980,8 +8980,12 @@ File:%1</source>
    次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
-        <source> &amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <source>Non Final Fantasy VII Slot</source>
+        <translation type="unfinished">Final Fantasy VII のスロットではありません</translation>
+    </message>
+    <message>
+        <source>View Anyway</source>
+        <translation type="unfinished">かまわず表示</translation>
     </message>
 </context>
 </TS>

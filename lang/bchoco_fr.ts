@@ -8839,11 +8839,11 @@ Fichier : %1</translation>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation>Aucun slot de Final Fantasy VII détecté</translation>
+        <translation type="obsolete">Aucun slot de Final Fantasy VII détecté</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>Visionner quand même</translation>
+        <translation type="obsolete">Visionner quand même</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
@@ -8889,7 +8889,7 @@ Fichier : %1</translation>
     </message>
     <message>
         <source>&amp;Previous Slot </source>
-        <translation>Slot &amp;précédent </translation>
+        <translation type="obsolete">Slot &amp;précédent </translation>
     </message>
     <message>
         <source>Slot:%1
@@ -8916,8 +8916,12 @@ Fichier : %1</translation>
    la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
-        <source> &amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <source>Non Final Fantasy VII Slot</source>
+        <translation type="unfinished">Aucun slot de Final Fantasy VII</translation>
+    </message>
+    <message>
+        <source>View Anyway</source>
+        <translation type="unfinished">Visionner quand même</translation>
     </message>
 </context>
 </TS>

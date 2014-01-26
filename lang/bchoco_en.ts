@@ -8805,14 +8805,6 @@ File:%1</source>
 <context>
     <name>errbox</name>
     <message>
-        <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>View Anyway </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Export As Raw PSX</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8854,10 +8846,6 @@ File:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Previous Slot </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Slot:%1
 </source>
         <translation type="unfinished"></translation>
@@ -8878,7 +8866,11 @@ File:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> &amp;Next Slot</source>
+        <source>Non Final Fantasy VII Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Anyway</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

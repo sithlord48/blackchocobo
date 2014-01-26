@@ -8835,11 +8835,11 @@ File:%1</source>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation>Nicht-Final Fantasy VII Steckplatz erkannt</translation>
+        <translation type="obsolete">Nicht-Final Fantasy VII Steckplatz erkannt</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>Zeige trotzdem </translation>
+        <translation type="obsolete">Zeige trotzdem </translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
@@ -8885,7 +8885,7 @@ File:%1</source>
     </message>
     <message>
         <source>&amp;Previous Slot </source>
-        <translation>&amp;Vorheriger Steckplatz</translation>
+        <translation type="obsolete">&amp;Vorheriger Steckplatz</translation>
     </message>
     <message>
         <source>Slot:%1
@@ -8912,8 +8912,12 @@ File:%1</source>
    Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
-        <source> &amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <source>Non Final Fantasy VII Slot</source>
+        <translation type="unfinished">Nicht-Final Fantasy VII Steckplatz</translation>
+    </message>
+    <message>
+        <source>View Anyway</source>
+        <translation type="unfinished">Zeige trotzdem </translation>
     </message>
 </context>
 </TS>
