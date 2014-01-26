@@ -8837,11 +8837,11 @@ File:%1</source>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation>Detectada ranura no Final Fantasy VII</translation>
+        <translation type="obsolete">Detectada ranura no Final Fantasy VII</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>Ver de todas formas </translation>
+        <translation type="obsolete">Ver de todas formas </translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
@@ -8887,7 +8887,7 @@ El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>&amp;Previous Slot </source>
-        <translation>&amp;Ranura Anterior </translation>
+        <translation type="obsolete">&amp;Ranura Anterior </translation>
     </message>
     <message>
         <source>Slot:%1
@@ -8914,8 +8914,12 @@ El juego usa el bloque de guardado %1 </translation>
    Siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
-        <source> &amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <source>Non Final Fantasy VII Slot</source>
+        <translation type="unfinished">Ranura no Final Fantasy VII</translation>
+    </message>
+    <message>
+        <source>View Anyway</source>
+        <translation type="unfinished">Ver de todas formas </translation>
     </message>
 </context>
 </TS>

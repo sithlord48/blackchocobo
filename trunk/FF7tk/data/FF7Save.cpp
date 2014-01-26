@@ -105,7 +105,7 @@ bool FF7Save::loadFile(const QString &fileName)
         for(int i=0; i<15;i++)
         {
             int index = (128*i) +138;
-            setRegion(i,QString(mc_header.mid(index,19)));
+            SG_Region_String[i]=QString(mc_header.mid(index,19));\
         }
 
     }
@@ -859,7 +859,6 @@ void FF7Save::fix_vmc_header(void)
 {//Set The Index Section Up.
     QByteArray mc_header_2;
     int index=2;
-
     if(SG_TYPE =="PSP"){for(int i=0; i<0x80; i++){mc_header_2.append(file_header_psp[i]);} index=0x82;}
     if(SG_TYPE =="VGS"){for(int i=0; i<0x40; i++){mc_header_2.append(file_header_vgs[i]);} index=0x42;}
     if(SG_TYPE =="DEX"){for(int i=0; i<0xF40; i++){mc_header_2.append(file_header_dex[i]);} index=0xF42;}
@@ -1093,7 +1092,7 @@ void FF7Save::setRegion(int s ,QString new_region)
     }
     else{SG_Region_String[s]=new_region;}
 
-    if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") )
+    if((SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX"))
     {
         fix_vmc_header();
         setFileModified(true,s);

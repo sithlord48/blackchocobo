@@ -21,7 +21,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 {
     setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
     setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
-    setWindowTitle(tr("Non Final Fantasy VII Slot Detected"));
+    setWindowTitle(tr("Non Final Fantasy VII Slot"));
     //set up Gui
     lblRegionString = new QLabel;
     lblRegionString->setFixedHeight(64);
@@ -31,17 +31,16 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
     lblIcon->setFixedSize(64,64);
     lblIcon->setScaledContents(true);
 
-    btnPrev = new QPushButton(QIcon::fromTheme("go-previous",QIcon(":/icon/prev")),tr("&Previous Slot "));
+    btnPrev = new QPushButton(QIcon::fromTheme("go-previous",QIcon(":/icon/prev")),"");
     btnPrev->setShortcut(QKeySequence::Back);
     btnPrev->setFixedHeight(24);
 
-    btnView = new QPushButton(QIcon::fromTheme("window-close",QIcon(":/icon/quit")),tr("View Anyway "));
+    btnView = new QPushButton(QIcon::fromTheme("window-close",QIcon(":/icon/quit")),tr("View Anyway"));
     btnView->setShortcut(QKeySequence::Close);
     btnView->setFixedHeight(24);
 
-    btnNext = new QPushButton(QIcon::fromTheme("go-next",QIcon(":/icon/next")),tr(" &Next Slot"));
+    btnNext = new QPushButton(QIcon::fromTheme("go-next",QIcon(":/icon/next")),"");
     btnNext->setShortcut(QKeySequence::Forward);
-    btnNext->setLayoutDirection(Qt::RightToLeft);
     btnNext->setFixedHeight(24);
 
     btnExport = new QPushButton(QIcon(":/icon/psxmc"),tr("&Export As Raw PSX"));
