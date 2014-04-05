@@ -408,6 +408,7 @@ void LocationViewer::actionCaseSensitiveToggled(bool checked)
     else{filterLocations(lineTableFilter->text());}
 }
 
+
 void LocationViewer::init_fieldItems(void)
 {
     groupFieldItems->setVisible(false);
@@ -419,7 +420,7 @@ void LocationViewer::init_fieldItems(void)
         for(int i=0;i<fieldItems->count();i++)
         {
             for(int j=0;j<fieldItems->maps(i).count();j++)
-            {                
+            {
                 if(fieldItems->maps(i).at(j)== fieldFileName)
                 {
                     QListWidgetItem *newItem = new QListWidgetItem(fieldItems->text(i));
@@ -433,23 +434,15 @@ void LocationViewer::init_fieldItems(void)
         }
         if(fieldItemList->count()>0){groupFieldItems->setVisible(true);}
 
-        if(fieldItemList->count()<5)
+        if(fieldItemList->count()<=5)
         {
             fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
-            fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
-        }
-        else if(fieldItemList->count()==5)
-        {
-            fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * fieldItemList->count())+3);
-            fieldItemList->viewport()->setFixedHeight(fieldItemList->height());
+            fieldItemList->setFixedHeight(fieldItemList->sizeHintForRow(0)*fieldItemList->count() +fieldItemList->contentsMargins().top()+fieldItemList->contentsMargins().bottom());
         }
         else
         {
             fieldItemList->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-            fieldItemList->setFixedHeight((fieldItemList->sizeHintForRow(0) * 5 )+3);
-            fieldItemList->viewport()->setFixedHeight(fieldItemList->contentsRect().height());
+            fieldItemList->setFixedHeight(fieldItemList->sizeHintForRow(0)*5 +fieldItemList->contentsMargins().top()+fieldItemList->contentsMargins().bottom());
         }
         groupFieldItems->setFixedHeight(fieldItemList->contentsRect().height() + groupFieldItems->contentsMargins().bottom() + groupFieldItems->contentsMargins().top());
     }
