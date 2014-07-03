@@ -259,9 +259,9 @@ static const FieldItemList FILIST[]=
     {QList<quint16>()<<0x0FCA,QList<quint8>()<<2,QStringList()<<"bonevil",QT_TRANSLATE_NOOP("FieldItems","Megalixir")},
     {QList<quint16>()<<0x0FCA<<0x0BE7,QList<quint8>()<<3<<5,QStringList()<<"blackbg1"<<"mds5_5"<<"bonevil",QT_TRANSLATE_NOOP("FieldItems","Key To Sector 5")},
 
-    {QList<quint16>()<<0x0FF4,QList<quint8>()<<0,QStringList()<<"4sbwy_6",QT_TRANSLATE_NOOP("FieldItems","Tent")},
-    {QList<quint16>()<<0x0FF4,QList<quint8>()<<1,QStringList()<<"4sbwy_3",QT_TRANSLATE_NOOP("FieldItems","Potion")},
-    {QList<quint16>()<<0x0FF4,QList<quint8>()<<2,QStringList()<<"4sbwy_1",QT_TRANSLATE_NOOP("Items","Ether")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<0,QStringList()<<"sbwy4_6",QT_TRANSLATE_NOOP("FieldItems","Tent")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<1,QStringList()<<"sbwy4_3",QT_TRANSLATE_NOOP("FieldItems","Potion")},
+    {QList<quint16>()<<0x0FF4,QList<quint8>()<<2,QStringList()<<"sbwy4_1",QT_TRANSLATE_NOOP("Items","Ether")},
     {QList<quint16>()<<0x0FF4,QList<quint8>()<<3,QStringList()<<"psdun_3",QT_TRANSLATE_NOOP("FieldItems","Ether")},
     {QList<quint16>()<<0x0FF4,QList<quint8>()<<4,QStringList()<<"psdun_4",QT_TRANSLATE_NOOP("FieldItems","Hi-Potion")},
     {QList<quint16>()<<0x0FF4,QList<quint8>()<<5,QStringList()<<"psdun_4",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
@@ -372,7 +372,7 @@ static const FieldItemList FILIST[]=
     {QList<quint16>()<<0x1031,QList<quint8>()<<7,QStringList()<<"semkin_7",QT_TRANSLATE_NOOP("FieldItems","Scimitar")},
 
     {QList<quint16>()<<0x1032,QList<quint8>()<<0,QStringList()<<"semkin_6",QT_TRANSLATE_NOOP("FieldItems","Battle Trumpet")},
-    {QList<quint16>()<<0x1032,QList<quint8>()<<1,QStringList()<<"5tower",QT_TRANSLATE_NOOP("FieldItems","Leviathan")},
+    {QList<quint16>()<<0x1032,QList<quint8>()<<1,QStringList()<<"tower5",QT_TRANSLATE_NOOP("FieldItems","Leviathan")},
     {QList<quint16>()<<0x1032,QList<quint8>()<<2,QStringList()<<"md8_b1",QT_TRANSLATE_NOOP("FieldItems","Megalixir")},
     {QList<quint16>()<<0x1032,QList<quint8>()<<3,QStringList()<<"datiao_8",QT_TRANSLATE_NOOP("FieldItems","Oritsuru")},
     {QList<quint16>()<<0x1032,QList<quint8>()<<4,QStringList()<<"md8_b2",QT_TRANSLATE_NOOP("FieldItems","Starlight Phone")},
