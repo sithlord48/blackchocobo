@@ -19,7 +19,7 @@
 #include "ui_mainwindow.h"
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
+MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
     this->setAcceptDrops(true);
@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     settings =configdata;
     ui->setupUi(this);
     _init=true;
-    ff7 = ff7data;
+    ff7 = new FF7Save;
     load=true;
     curchar =0;
     mslotsel=-1;
@@ -99,9 +99,13 @@ void MainWindow::init_display()
     menuLayout->addWidget(menuList);
     ui->Menu_Box->setLayout(menuLayout);
 
+    chocoboManager = new ChocoboManager;
+    chocoboManager->setContentsMargins(0,20,0,0);
+    ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
+
     optionsWidget = new OptionsWidget;
     optionsWidget->setControllerMappingVisible(false);
-    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));   
+    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
 
     materia_editor = new MateriaEditor(this);
     materia_editor->setStarsSize(48);
@@ -125,12 +129,6 @@ void MainWindow::init_display()
     ui->group_items->layout()->addWidget(ui->group_item_options);
 
     ui->group_items->setFixedWidth(itemlist->width()+ itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
-
-    chocoboManager = new ChocoboManager;
-    QHBoxLayout *cmLayout = new QHBoxLayout;
-    cmLayout->setContentsMargins(0,0,0,0);
-    cmLayout->addWidget(chocoboManager);
-    ui->chocoboManagerBox->setLayout(cmLayout);
 
     hexEditor = new QHexEdit;
     #ifdef Q_OS_MAC
@@ -191,10 +189,10 @@ void MainWindow::init_style()
     char_editor->setToolBoxStyle(tabStyle);
     ui->locationToolBox->setStyleSheet(tabStyle);
 
-    hexEditor->setStyleSheet(this->styleSheet());
+    //hexEditor->setStyleSheet(this->styleSheet());
     ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
     ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
-    ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
+//    ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
@@ -669,7 +667,7 @@ void MainWindow::on_action_AdvancedMode_toggled(bool checked)
     ui->bm_unknown->setVisible(checked);
     ui->bh_id->setVisible(checked);
     ui->leader_id->setVisible(checked);
-    if(ff7->type() =="PC"){setControllerMappingVisible(checked);}
+    if(ff7->type() =="PC" || ff7->type() == ""){setControllerMappingVisible(checked);}
     ui->cb_farm_items_1->setVisible(checked);
     ui->cb_farm_items_2->setVisible(checked);
     ui->cb_farm_items_3->setVisible(checked);
@@ -1126,7 +1124,7 @@ void MainWindow::othersUpdate()
 
     ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
     ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-    if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
+    if (ff7->type() != "PC" && ff7->type() !="") //we Display an icon. for all formats except for pc
     {
         ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slot_header(s).mid(96,160)).icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
@@ -1290,10 +1288,11 @@ void MainWindow::on_tabWidget_currentChanged(int index)
             optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
             optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
             optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
-            if(ff7->type() !="PC" || ui->action_AdvancedMode->isChecked())
+            if((ff7->type() !="PC" && ff7->type() !="")|| ui->action_AdvancedMode->isChecked())
             {
                 setControllerMappingVisible(true);
-                optionsWidget->setFixedWidth(ui->tabWidget->width()- optionsWidget->verticalScrollBar()->width());
+                if(optionsWidget->verticalScrollBar()->isVisible())
+                {optionsWidget->setFixedWidth(optionsWidget->width()-1);}
             }
             else{setControllerMappingVisible(false);}
         break;
@@ -3235,8 +3234,8 @@ void MainWindow::connectFieldItem(quint8 boxID,QList<quint16>Offset,QList<quint8
         fieldItemOffset = new QList<fieldItemOffsetList>;
         fieldItemBit = new QList<fieldItemBitList>;
     }
-    fieldItemOffset->append(Offset);
-    fieldItemBit->append(Bit);
+        fieldItemOffset->append(Offset);
+        fieldItemBit->append(Bit);
 }
 void MainWindow::checkFieldItem(int boxID)
 {
@@ -3248,7 +3247,7 @@ void MainWindow::checkFieldItem(int boxID)
         bool checked=false;
         bool check1=false;
         for(int i=0;i<offsetList.count();i++)
-        {
+        {//attempt to cope with multi bits.
             int offset = offsetList.at(i);
             int bit = bitList.at(i);
             if((ff7->slotFF7Data(s).at(offset)&(1<<bit))){check1=true;}

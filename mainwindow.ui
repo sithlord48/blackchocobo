@@ -27,6 +27,9 @@
     </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="tab_party">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -1747,70 +1750,6 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_chocobos">
-       <attribute name="title">
-        <string>Chocobo</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_19">
-        <property name="spacing">
-         <number>3</number>
-        </property>
-        <property name="leftMargin">
-         <number>3</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>3</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item>
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>751</width>
-            <height>29</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QFrame" name="chocoboManagerBox">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>450</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>751</width>
-            <height>10</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </widget>
       <widget class="QWidget" name="tab_location">
        <attribute name="title">
         <string>Location</string>
@@ -1841,8 +1780,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>743</width>
-             <height>460</height>
+             <width>757</width>
+             <height>469</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1876,8 +1815,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>741</width>
-             <height>426</height>
+             <width>757</width>
+             <height>469</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3066,6 +3005,12 @@
                    <property name="contextMenuPolicy">
                     <enum>Qt::CustomContextMenu</enum>
                    </property>
+                   <property name="pixmap">
+                    <pixmap resource="images.qrc">:/icon/world_map</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
                    <property name="textInteractionFlags">
                     <set>Qt::NoTextInteraction</set>
                    </property>
@@ -3323,8 +3268,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>351</width>
-                  <height>1817</height>
+                  <width>330</width>
+                  <height>1778</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -7496,7 +7441,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>767</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -7996,7 +7941,6 @@ Var And Scrolling Synced To Left Table</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
   <tabstop>combo_party2</tabstop>
   <tabstop>sb_gp</tabstop>
   <tabstop>sb_battles</tabstop>
