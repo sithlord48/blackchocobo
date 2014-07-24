@@ -62,7 +62,7 @@ namespace Ui {
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = 0,FF7Save *ff7data=0,QSettings *config_data=0);
+    MainWindow(QWidget *parent = 0,QSettings *config_data=0);
     ~MainWindow();
 
 protected:
