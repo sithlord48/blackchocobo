@@ -857,6 +857,7 @@ void FF7Save::fix_psv_header(void)
 }
 void FF7Save::fix_vmc_header(void)
 {//Set The Index Section Up.
+    //get list of whats on the card.
     QByteArray mc_header_2;
     int index=2;
     if(SG_TYPE =="PSP"){for(int i=0; i<0x80; i++){mc_header_2.append(file_header_psp[i]);} index=0x82;}
@@ -897,6 +898,8 @@ void FF7Save::fix_vmc_header(void)
            xor_byte = 0x00;
            for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
            mc_header_2.append(xor_byte);
+
+           //if(region(i).mid(17,2).toInt()!=(i+1) && slotChanged[i]){vmcRegionEval(i);}
 
            if(region(i).endsWith("FF7-S01"))
            {for(int P=0;P<512;P++)
@@ -1058,13 +1061,22 @@ void FF7Save::fix_vmc_header(void)
     }
 }  
 
-QString FF7Save::region(int s){return SG_Region_String[s];}
+void FF7Save::setSaveNumber(int s, int saveNum)
+{
+    if(((SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX")) && isFF7(s))
+    {
+       SG_Region_String[s].chop(2);
+       SG_Region_String[s].append(QString("%1").arg(QString::number(saveNum),2,QChar('0')));
+       fix_vmc_header();
+    }
+}
 
+QString FF7Save::region(int s){return SG_Region_String[s];}
 void FF7Save::setRegion(int s ,QString new_region)
 {
     if( (new_region =="USA") || (new_region == "NTSC-U") || (new_region =="1") )
     {
-        SG_Region_String[s]= QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0'));        
+        SG_Region_String[s]= QString("BASCUS-94163FF7-S%1").arg(QString::number(s+1),2,QChar('0'));
     }
     else if( (new_region =="UK") || (new_region =="PAL-E") || (new_region =="2") )
     {
@@ -1094,8 +1106,8 @@ void FF7Save::setRegion(int s ,QString new_region)
 
     if((SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX"))
     {
+        if(isFF7(s)){vmcRegionEval(s);}
         fix_vmc_header();
-        setFileModified(true,s);
     }
     setFileModified(true,s);
 }
@@ -1105,7 +1117,7 @@ void FF7Save::pasteSlot(int s)
     slot[s]=buffer_slot;
     SG_Region_String[s]= buffer_region;
     SG_Region_String[s].replace(SG_Region_String[s].length()-2,2,QString("%1").arg(QString::number(s+1),2,QChar('0')));
-    if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){fix_vmc_header();}
+    if( (SG_TYPE =="MC") || (SG_TYPE =="PSP") || (SG_TYPE =="VGS") || (SG_TYPE =="DEX") ){vmcRegionEval(s); fix_vmc_header();}
     setFileModified(true,s);
 }
 
@@ -4555,4 +4567,112 @@ void FF7Save::setCraterSavePointZ(int s,int value)
         slot[s].z_30[40]=(value & 0xFF00) >> 8;
         setFileModified(true,s);
     }
+}
+void FF7Save::vmcRegionEval(int s)
+{//used when saving a VMC file to adjust slot to save game#
+    //compare our list to known ff7 region codes to find out what slot we should be writing to
+    //int us=0,uk=0,fr=0,ge=0,es=0,jp=0,in=0;
+    QStringList us = QStringList()<<QString("FF7-S01")<<QString("FF7-S02")<<QString("FF7-S03")<<QString("FF7-S04")<<QString("FF7-S05")<<QString("FF7-S06")<<QString("FF7-S07")<<QString("FF7-S08")<<QString("FF7-S09")<<QString("FF7-S10")<<QString("FF7-S11")<<QString("FF7-S12")<<QString("FF7-S13")<<QString("FF7-S14")<<QString("FF7-S15");
+    QStringList uk = us;
+    QStringList fr = us;
+    QStringList ge = us;
+    QStringList es = us;
+    QStringList jp = us;
+    QStringList in = us;
+    for (int i=0;i<s;i++)
+    {
+        if(region(i).contains("BASCUS-94163"))
+        {
+            if(i==s){continue;}
+            else{us.replace(region(i).mid(17,2).toInt()-1,QString("")); continue;}
+        }
+        else if(region(i).contains("BESCES-00867"))
+        {
+            if(i==s){continue;}
+            else{uk.replace(region(i).mid(17,2).toInt()-1,QString("")); continue;}
+        }
+        else if(region(i).contains("BESCES-00868"))
+        {
+            if(i==s){continue;}
+            else{fr.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+        }
+        else if(region(i).contains("BESCES-00869"))
+        {
+            if(i==s){continue;}
+            else{ge.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+        }
+        else if(region(i).contains("BESCES-00900"))
+        {
+            if(i==s){continue;}
+            else{es.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+        }
+        else if(region(i).contains("BISLPS-00700"))
+        {
+            if(i==s){continue;}
+            else{jp.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+        }
+        else if(region(i).contains("BISLPS-01057"))
+        {
+            if(i==s){continue;}
+            else{in.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+        }
+    }
+    QString newRegionString = region(s).mid(0,12);
+    if(region(s).contains("BASCUS-94163"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(us.at(i) == QString("")){continue;}
+            else{newRegionString.append(us.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BESCES-00867"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(uk.at(i).isEmpty()){continue;}
+            else{newRegionString.append(uk.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BESCES-00868"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(fr.at(i).isEmpty()){continue;}
+            else{newRegionString.append(fr.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BESCES-00869"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(ge.at(i).isEmpty()){continue;}
+            else{newRegionString.append(ge.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BESCES-00900"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(es.at(i).isEmpty()){continue;}
+            else{newRegionString.append(es.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BISLPS-00700"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(jp.at(i).isEmpty()){continue;}
+            else{newRegionString.append(jp.at(i));break;}
+        }
+    }
+    else if(region(s).contains("BISLPS-01057"))
+    {
+        for(int i=0;i<15;i++)
+        {
+            if(in.at(i).isEmpty()){continue;}
+            else{newRegionString.append(in.at(i));break;}
+        }
+    }
+    SG_Region_String[s]=newRegionString;
 }
