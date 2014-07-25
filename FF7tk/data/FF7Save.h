@@ -551,9 +551,12 @@ public:
   void setWorldCoordsDurwAngle(int s,int value);
   void setWorldCoordsDurwY(int s,int value);
   void setWorldCoordsDurwZ(int s,int value);
+  void setSaveNumber(int s,int saveNum);
 signals:
   void fileChanged(bool);
 private:
+  //methods
+  void vmcRegionEval(int s);
   //data members
   FF7SLOT slot[15]; //core slot data.
   FF7HEADFOOT hf[15]; //slot header and footer.

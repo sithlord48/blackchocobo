@@ -2187,20 +2187,13 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     else if(value ==2){ff7->setTutSave(s,0x3A);}
     ui->lcdNumber_7->display(ff7->tutSave(s));
 }}
-/*
-void MainWindow::on_cb_Region_Slot_currentIndexChanged()
-{if(!load){ if(!ff7->region(s).isEmpty()){
-    QString new_regionString = ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1);
-    new_regionString.append(ui->cb_Region_Slot->currentText().toLocal8Bit());
-    ff7->setRegion(s,new_regionString);
-    if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
-}}}*/
+
 void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
 {if(!load){ if(!ff7->region(s).isEmpty()){
-
-        ff7->setRegion(s,ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1).append(QString("S%1").arg(QString::number(index+1),2,QChar('0'))));
+        ff7->setSaveNumber(s,index+1);
         if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
 }}}
+
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){
     ff7->setTutSub(s,2,checked);
