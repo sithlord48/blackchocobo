@@ -15,10 +15,14 @@
 /****************************************************************************/
 #ifndef TYPE_MATERIA_H
 #define TYPE_MATERIA_H
-
 #endif // TYPE_MATERIA_H
 
+/*! \struct materia
+ *  \brief materia format saved in materia list or on a character
+ *
+ * Total Size 4 Bytes 100% known!
+ */
 struct materia{// sizeof 4
-quint8 id;
-quint8 ap[3];
+quint8 id; /**< materias id */
+quint8 ap[3]; /** Ap Storage is done as a 24bit int. */
 }__attribute__((__packed__));

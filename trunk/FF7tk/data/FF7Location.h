@@ -16,7 +16,10 @@
 #ifndef FF7LOCATION_H
     #define FF7LOCATION_H
 #include <QObject> 
-struct LOCATION {//Location Table Stuff
+/*! \struct LOCATION
+ *  \brief type for holding location data
+ */
+struct LOCATION {
     QString filename;
     QString location;
     QString map_id;
@@ -26,26 +29,130 @@ struct LOCATION {//Location Table Stuff
     QString t;
     QString d;
 };
-
+/*! \class FF7Location
+ *  \brief Info about field locations.
+ */
 class FF7Location
 {
 public:
-    QString fileName(int);
+     /*!
+     * \brief get filename for location (flevel file)
+     * \param i Number on the location list
+     * \return filename of the location
+     *	\sa fileName(int,int)  
+     */
+    QString fileName(int i);
+    
+    
+     /*! \brief get filename for location (flevel file)
+     * 	\param MapID Map Number location is on 
+     *  \param LocID Location Id for location
+     * 	\return filename of the location 
+     * \sa fileName()
+     */
     QString fileName(int MapID,int LocID);
+    
+    /*! \brief locations String showing menu
+     * \param int Number on the locations list
+     * \return Translated location string (as shown in menu/save preview) 
+     * \sa locationString(QString)
+     */
     QString locationString(int);
+    
+    /*! \brief locations String showing menu
+     * \param fileName fileName of location
+     * \return Translated location string (as shown in menu/save preview) 
+     * \sa locationString(int)
+     */
     QString locationString(QString fileName);
+    
+    /*! \brief get map id number
+     *  \param int Number on the locations list
+     * 	\return MapID as QString
+     *  \sa mapID(QString)
+     */
     QString mapID(int);
+    
+    /*! \brief get map id number
+     *  \param fileName fileName of location
+     * 	\return MapID as QString
+     *  \sa mapID(int)
+     */ 
     QString mapID(QString fileName);
+    
+    /*! \brief get location id number
+     *  \param int Number on the locations list
+     * 	\return location id as QString
+     *  \sa locationID(QString)
+     */ 
     QString locationID(int);
+    
+    /*! \brief get location id number
+     *  \param fileName fileName of location
+     * 	\return locationID as QString
+     *  \sa locationID(int)
+     */ 
     QString locationID(QString fileName);
+    
+    /*! \brief x coord of save or valid placment
+     *  \param int Number on the locations list
+     * 	\return x as QString
+     *  \sa x(QString)
+     */ 
     QString x(int);
+    
+    /*! \brief x coord of save or valid placment
+     *  \param fileName fileName of location
+     * 	\return x as QString
+     *  \sa x(int)   
+     */ 
     QString x(QString fileName);
+    
+    /*! \brief y coord of save or valid placment
+     *  \param int Number on the locations list
+     * 	\return y as QString
+     *  \sa y(QString)
+     */ 
     QString y(int);
+     
+    /*! \brief y coord of save or valid placment
+     *  \param fileName fileName of location
+     * 	\return y as QString
+     *  \sa y(int)   
+     */ 
     QString y(QString fileName);
+    
+    /*! \brief triangle of save or valid placment
+     *  \param int Number on the locations list
+     * 	\return triangle as QString
+     *  \sa t(QString)
+     */ 
     QString t(int);
+    
+     /*! \brief triangle of save or valid placment
+     *  \param fileName fileName of location
+     * 	\return t as QString
+     *  \sa t(int)   
+     */ 
     QString t(QString fileName);
+    
+    /*! \brief direction your facing
+     *  \param int Number on the locations list
+     * 	\return d as QString
+     *  \sa d(QString)
+     */ 
     QString d(int);
+    
+     /*! \brief direction your facing
+     *  \param fileName fileName of location
+     * 	\return d as QString
+     *  \sa d(int)   
+     */ 
     QString d(QString fileName);
+    
+    /*! \brief how many items on the location list do we have 
+     *  \return length of Locations 
+     */
     int len(void);
 };
 static const LOCATION Locations[]=

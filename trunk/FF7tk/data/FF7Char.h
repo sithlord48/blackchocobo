@@ -20,72 +20,203 @@
 #include <QIcon>
 #include <QStringList>
 
+/*! \class FF7Char
+*   \brief Data and Enums for Characters in Final Fantasy 7
+*
+*/
+
 class FF7Char
 {
+
 public:
-    enum FF7CharId{Cloud,Barret,Tifa,Aerith,Red,Yuffie,CaitSith,Vincent,Cid,YoungCloud,Sephiroth,Empty=0xFF};
+    enum FF7CharId{Cloud/**<0*/,Barret/**<1*/,Tifa/**<2*/,Aerith/**<3*/,Red/**<4*/,Yuffie/**<5*/,CaitSith/**<6*/,Vincent/**<7*/,Cid/**<8*/,YoungCloud/**<9*/,Sephiroth/**<10*/,Empty=0xFF/**<0xFF*/};
     enum FF7CharStatus
     {
-        Sadness =0x10,
-        Fury = 0x20,
-        BackRow = 0xFE,
-        FrontRow =0xFF
+        Sadness =0x10, /**<0x10*/
+        Fury = 0x20,   /**<0x20*/
+        BackRow = 0xFE,/**<0xFE*/
+        FrontRow =0xFF /**<0xFF*/
     };
     enum CharSpecial
     {
-        EmptyArmor=0xFF,
-        EmptyAccessory=0xFF
+        EmptyArmor=0xFF, /**<0xFF*/
+        EmptyAccessory=0xFF/**<0xFF*/
     };
     explicit FF7Char();
+    /*! \brief get id value for Character
+     * \param who persons id  (they are almost always the same in stock game)
+     * \return Chars[who].id
+     */
     quint8 id(int who);
-    int statGain(int who,int stat,int stat_amout,int current_lvl, int next_lvl);
+    /*! \brief number of weapons for a Character
+     * \param who Characters id number
+     * \return Number of Weapons for the given character
+     */
     int numberOfWeapons(int who);
+
+    /*! \brief find what item id is the first weapon for a Character
+     * \param who Characters id number
+     * \return Item Id of characters first weapon
+     */
     int weaponStartingId(int who);
+
+    /*! \brief find what weapon number is the first weapon for a Character
+     * \param who Characters id number
+     * \return Weapon number of characters first weapon
+     */
     int weaponOffset(int who);
+
+    /*! \brief default name for a character
+     * \param who Characters id number
+     * \return Translated defalut name for character
+     */
     QString defaultName(int who);
+
+    /*! \brief Menu icon for a character
+     * \param who Characters id number
+     * \return QImage of a characters menu icon
+     * \sa icon(),pixmap()
+     */
     QImage image(int who);
+
+    /*! \brief Menu icon for a character
+     * \param who Characters id number
+     * \return QIcon of a characters menu icon
+     * \sa image(),pixmap()
+     */
     QIcon icon(int who);
+
+    /*! \brief Menu icon for a character
+     * \param who Characters id number
+     * \return QPixmap of a characters menu icon
+     * \sa icon(),image()
+     */
     QPixmap pixmap(int who);
+
+    /*! \brief Limit list for a character
+     * \param who Characters id number
+     * \return QStringList of Translated names for each limit break
+     */
     QStringList limits(int who);
+
+    /*! \brief Exp needed to reach a level
+     * \param who Characters id number
+     * \param level Level you want to reach
+     * \return Total amount of Exp needed to reach level (ex. to reach level 99 you need 20000000 xp)
+     */
     quint32 totalExpForLevel(int who,int level);
+
+    /*! \brief experance needed to level up
+     * \param who Characters id number
+     * \param level Level you are trying to reach
+     * \return Exp needed to reach the next level. (i.e from 9 to 10 you need 50 exp)
+     */
     quint32 tnlForLevel(int who,int level);
+
+    /*! \brief how much to increase stat on level up
+     * \param who Characters id number
+     * \param stat Stat you want to gain a point in (stat: 0 str, 1 vit, 2 mag, 3 spi, 4 dex, 5 luck,6 hp,7mp)
+     * \param stat_amount current value for that stat
+     * \param current_lvl characters current level
+     * \param next_lvl level the character is becoming
+     * \return how many points to be put in stat.
+     */
+    int statGain(int who,int stat,int stat_amout,int current_lvl, int next_lvl);
 private:
+
+     /*! \brief characters grade in a stat
+     * \param who Characters id number
+     * \param stat Stat you want to get grade for (stat: 0 str, 1 vit, 2 mag, 3 spi, 4 dex, 5 luck,6 hp,7mp)
+     * \return characters grade in a stat
+     */
     quint8 stat_grade(int who,int stat);
+
+    /*! \brief characters base mp for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters base mp for that bracket
+    */
     int mp_base(int who,int lvl_bracket);
+
+    /*! \brief characters mp gradent for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters mp gradent for bracket
+    */
     quint8 mp_gradent (int who, int lvl_bracket);
+
+    /*! \brief characters base hp for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters base hp for that bracket
+    */
     int hp_base(int who,int lvl_bracket);
+
+    /*! \brief characters mp gradent for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters mp gradent for bracket
+    */
     quint8 hp_gradent (int who, int lvl_bracket);
+
+    /*! \brief characters base luck for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters base luck for that bracket
+    */
     int luck_base(int who,int lvl_bracket);
+
+    /*! \brief characters luck gradent for set of levels
+    * \param who Characters id number
+    * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
+    * \return characters luck gradent for bracket
+    */
     quint8 luck_gradent (int who, int lvl_bracket);
+
+    /*! \brief base stat for rank in a set of levels
+    * \param who Characters id number
+    * \param rank Rank character is at start (grade)
+    * \return base stat for that bracket
+    */
     quint8 stat_base (int rank,int lvl_bracket);
+
+    /*! \brief characters mp gradent for set of levels
+    * \param who Characters id number
+    * \param rank Rank character is at start (grade)
+    * \return stat gradent for bracket
+    */
     quint8 stat_gradent (int rank,int lvl_bracket);
-signals:
-
-public slots:
 };
 
+/*! \struct Character
+ *  \brief Holds all data for a single Character
+ *  \sa Chars[]
+ */
 struct Character {
-    qint8 _id;
-    int _starting_weapon_id;
-    int _num_weapons;
-    int _weapon_offset;
-    QString _def_name;
-    QString _avatarString;
-    QStringList _limits;
+    qint8 _id; /**< CharacterID */
+    int _starting_weapon_id; /**< first item id for characters weapon*/
+    int _num_weapons; /**< how many weapons the character has*/
+    int _weapon_offset;/**< weapon offset of characters first weapon */
+    QString _def_name; /**< default name for character*/
+    QString _avatarString;/**< path it image resource*/
+    QStringList _limits; /**< list of limit names */
     //Below for Leveling calcs.
-    quint32 _charlvls[99];
-    quint32 _chartnls[99];
-    quint8 _stat_grade[5];
-    int _mp_base[8];
-    quint8 _mp_gradent[8];
-    int _hp_base[8];
-    quint8 _hp_gradent[8];
-    quint8 _luck_base[8];
-    quint8 _luck_gradent[8];
-
+    quint32 _charlvls[99];/**< holds exp needed for lvls */
+    quint32 _chartnls[99];/**< starting exp needed to next level for each level*/
+    quint8 _stat_grade[5];/**< how the character grades in each basic stat*/
+    int _mp_base[8];/**< grade in mp gain for each level bracket*/
+    quint8 _mp_gradent[8];/**< gradent for mp gain for each level bracket*/
+    int _hp_base[8];/**< grade in hp gain for each level bracket*/
+    quint8 _hp_gradent[8];/**< gradent for hp gain for each level bracket*/
+    quint8 _luck_base[8];/**< luck base for each level bracket*/
+    quint8 _luck_gradent[8];/**< gradent for luck for each level bracket*/
 };
-static const Character Chars[11]=
 
+/*! \static Chars[]
+ * Holds data for each character in Final Fantasy 7
+ * \sa Character
+ */
+static const Character Chars[11]=
 {
     {0,128,16,0,QT_TRANSLATE_NOOP("Char_Names","Cloud"),QString(":/characters/cloud"),
     QStringList()<<QT_TRANSLATE_NOOP("Char_Limits","Braver")<<QT_TRANSLATE_NOOP("Char_Limits","Cross-Slash")<<QT_TRANSLATE_NOOP("Char_Limits","Blade Beam")<<QT_TRANSLATE_NOOP("Char_Limits","Climhazzard")<<QT_TRANSLATE_NOOP("Char_Limits","Meteorain")<<QT_TRANSLATE_NOOP("Char_Limits","Finishing Touch")<<QT_TRANSLATE_NOOP("Char_Limits","Omnislash"),
@@ -154,6 +285,7 @@ static const Character Chars[11]=
     {0,0,0,0,0},{0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0}}
 };
 
+
 static const quint8 _stat_base[30][8]=
 {
     {12,9,9,21,44,50,57,73},
@@ -221,7 +353,5 @@ static const quint8 _stat_gradent[30][8]=
     {65,63,76,61,49,36,28,20}
 };
 
-
-//static const quint16 _limitbitarray[0x07] = {0x01,0x02,/*0x04,*/0x08, 0x10,/*0x20,*/0x40,0x80, /*0x100,*/0x200};  //Vegeta_Ss4: Fixed list_limits GUI
-static const quint16 _limitbitarray[0x07] = {0,1,3,4,6,7,9};  //Sithlord48: Adjusted to bit offset so we can use for read/write
+static const quint16 _limitbitarray[0x07] = {0,1,3,4,6,7,9};/**< Order of bytes used to flag limit breaks as learned*///Adjusted to bit offset so we can use for read/write
 #endif // FF7CHAR_H

@@ -18,23 +18,52 @@
 #define FF7FIELDITEMLIST_H
 
 #include<QStringList>
+/*! \brief data structure to hold field item  changes
+    \todo add more field items
+*/
 
 struct FieldItemList
 {
-  QList<quint16> Offset;
-  QList<quint8> Bit;
-  QStringList Maps;
-  QString Text;
+  QList<quint16> Offset; /**< list of offsets to change */
+  QList<quint8> Bit;	/**< list of bits to change (@offset of same index) */
+  QStringList Maps;	/**< list of maps (filename) the item is shown on */
+  QString Text;    /**< text to show. */
 };
 
+/*! \class FF7FieldItemList
+ *  \brief Data Class to allow the tracking and changing of items being picked up on the field
+ */
 class FF7FieldItemList
 {
 public:
     FF7FieldItemList();
+    /*! \brief offset list for an entry (offset[x] bit[x] are pairs needed to read/write correctly
+     *  \param index index in list
+     *   \return List of Offsets where that control the item being shown 
+     */
     QList<quint16> offset(int index);
+    
+    /*! \brief bit list for an entry (one per offset)
+     *  \param index index in list
+     *  \return List of bits that control the item being shown
+     */
     QList<quint8> bit(int index);
+
+    /*! \brief map list for an entry.
+     *  \param index index in list
+     *  \return List of maps that item is shown on
+     */
     QStringList maps(int index);
+
+    /*! \brief item or desc of item
+     *  \param index index in list
+     *  \return text for item
+     */
     QString text(int index);
+
+    /*! \brief total entries in FILIST
+     *  \return number of entries in FILIST
+     */
     int count();
 };
 
