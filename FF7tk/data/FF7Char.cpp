@@ -21,7 +21,6 @@ quint8 FF7Char::id(int who){return Chars[who]._id;}
 int FF7Char::weaponStartingId(int who){return Chars[who]._starting_weapon_id;}
 int FF7Char::weaponOffset(int who){return Chars[who]._weapon_offset;}
 int FF7Char::numberOfWeapons(int who){return Chars[who]._num_weapons;}
-
 QPixmap FF7Char::pixmap(int who){return QPixmap(Chars[who]._avatarString);}
 QImage FF7Char::image(int who) {return QImage(Chars[who]._avatarString);}
 QIcon FF7Char::icon(int who){return QIcon(pixmap(who));}

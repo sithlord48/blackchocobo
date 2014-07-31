@@ -15,20 +15,26 @@
 /****************************************************************************/
 #ifndef TYPE_FF7CHOCOBO_H
 #define TYPE_FF7CHOCOBO_H
-
-struct FF7CHOCOBO {		            // [0x0010] Chocobo - 99% - 1 Personality unknown!
-    quint16 sprintspd;		        // [0x0000] Speed
-    quint16 maxsprintspd;           // [0x0002] Max Speed
-    quint16 speed;		            // [0x0004] Sprint speed
-    quint16 maxspeed;		        // [0x0006] Max Sprint speed
-    quint8 accel;                   // [0x0008] acceleration
-    quint8 coop;                    // [0x0009] cooperation
-    quint8 intelligence;	        // [0x000A] Intelligence
-    quint8 personality;             // [0x000B] personality Type - THIS NEED TO HAVE A RANGE FOUND!
-    quint8 pcount;                  // [0x000C] P count ??
-    quint8 raceswon;		        // [0x000D] Number of races won
-    quint8 sex;			            // [0x000E] Sex (0=male,1=female)
-    quint8 type;		            // [0x000F] Type (Yellow,Green,Blue,Black,Gold)
+/*! \struct FF7CHOCOBO
+ *  \brief a chocobo in save game
+ *
+ *  16 Bytes total size 15 known 1 Byte Unknown
+ *  \todo Research The Personality byte
+ *  \todo Research the pcount byte
+ */
+struct FF7CHOCOBO {
+    quint16 sprintspd;		        /**< [0x0000] Speed */
+    quint16 maxsprintspd;           /**< [0x0002] Max Speed*/
+    quint16 speed;		            /**< [0x0004] Sprint speed*/
+    quint16 maxspeed;		        /**< [0x0006] Max Sprint speed*/
+    quint8 accel;                   /**< [0x0008] acceleration*/
+    quint8 coop;                    /**< [0x0009] cooperation*/
+    quint8 intelligence;	        /**< [0x000A] Intelligence*/
+    quint8 personality;             /**< [0x000B] personality Type - THIS NEED TO HAVE A RANGE FOUND!*/
+    quint8 pcount;                  /**< [0x000C] P count ??*/
+    quint8 raceswon;		        /**< [0x000D] Number of races won*/
+    quint8 sex;			            /**< [0x000E] Sex (0=male,1=female)*/
+    quint8 type;		            /**< [0x000F] Type (Yellow,Green,Blue,Black,Gold)*/
 }__attribute__((__packed__));
 
 #endif // TYPE_FF7CHOCOBO_H

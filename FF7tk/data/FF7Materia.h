@@ -1,14 +1,14 @@
 /****************************************************************************/
-//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
+//    copyright 2010 -2014  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
-//    This file is part of <UnNamedToolKit>                                 //
+//    This file is part of FF7tk                                            //
 //                                                                          //
-//  <UnNamedToolKit> is free software: you can redistribute it and/or modify//
+//    FF7tk is free software: you can redistribute it and/or modify         //
 //    it under the terms of the GNU General Public License as published by  //
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-// <UnNamedToolKit> is distributed in the hope that it will be useful,      //
+//   FF7tk is distributed in the hope that it will be useful,               //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
@@ -17,7 +17,9 @@
     #define FF7MATERIA_H
 #include <QObject>
 #include <QIcon>
-
+/*! \struct MATERIA
+ *  \brief MATERIA data storage
+ */
 struct MATERIA
 {
     QString name;
@@ -34,7 +36,7 @@ struct MATERIA
     qint8 dex;
     qint8 lck;
     qint8 mag;
-    qint8 spi;//for use in hp/mp/char stat calculations (maybe later)
+    qint8 spi;
     qint32 ap[5]; //ap needed for levels.
     qint8 type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
     qint8 levels;
@@ -45,16 +47,16 @@ struct MATERIA
 class FF7Materia
 {
  public:
-    enum MateriaType{Unknown,Magic,Summon,Independent,Support,Command };
+    enum MateriaType{Unknown/**< 0*/,Magic/**< 1*/,Summon/**< 2*/,Independent/**< 3*/,Support/**< 4*/,Command/**< 5*/ };
     enum MateriaNames{
-        MpPlus=0x00,HpPlus=0x01,SpeedPlus=0x02,MagicPlus=0x03,LuckPlus=0x04,ExpPlus=0x05,GilPlus=0x06,EnemyAway=0x07,EnemyLure=0x08,ChocoboLure=0x09,PreEmptive=0x0A,LongRange=0x0B,MegaAll=0x0C,CounterAttack=0x0D,SlashAll=0x0E,DoubleCut=0x0F,
-        Cover=0x10,Underwater=0x11,HPMP=0x12,WMagic=0x13,WSummon=0x14,WItem=0x15,All=0x17,Counter=0x18,MagicCounter=0x19,MpTurbo=0x1A,MpAbsorb=0x1B,HpAbsorb=0x1C,Elemental=0x1D,AddedEffect=0x1E,SneakAttack=0x1F,
-        FinalAttack=0x20,AddedCut=0x21,StealAsWell=0x22,QuadraMagic=0x23,Steal=0x24,Sense=0x25,Throw=0x27,Morph=0x28,Deathblow=0x29,Manipulate=0x2A,Mime=0x2B,EnemySkill=0x2C,
-        MasterCommand=0x30,Fire=0x31,Ice=0x32,Earth=0x33,Lightning=0x34,Restore=0x35,Heal=0x36,Revive=0x37,Seal=0x38,Mystify=0x39,Transform=0x3A,Exit=0x3B,Poison=0x3C,Demi=0x3D,Barrier=0x3E,
-        Comet=0x40,Time=0x41,Destruct=0x44,Contain=0x45,FullCure=0x46,Shield=0x47,Ultima=0x48,MasterMagic=0x49,ChocoMog=0x4A,Shiva=0x4B,Ifrit=0x4C,Ramuh=0x4D,Titan=0x4E,Odin=0x4F,
-        Leviathan=0x50,Bahamut=0x51,Kujata=0x52,Alexander=0x53,Phoenix=0x54,NeoBahamut=0x55,Hades=0x56,Typhoon=0x57,BahamutZERO=0x58,KOTR=0x59,MasterSummon=0x5A,
-        EmptyId=0xFF,
-        MaxMateriaAp =0xFFFFFF
+        MpPlus=0x00/**< 0x00*/,HpPlus=0x01/**< 0x01*/,SpeedPlus=0x02/**< 0x02*/,MagicPlus=0x03/**< 0x03*/,LuckPlus=0x04/**< 0x04*/,ExpPlus=0x05/**< 0x05*/,GilPlus=0x06/**< 0x06*/,EnemyAway=0x07/**< 0x07*/,EnemyLure=0x08/**< 0x08*/,ChocoboLure=0x09/**< 0x09*/,PreEmptive=0x0A/**< 0x0A*/,LongRange=0x0B/**< 0x0B*/,MegaAll=0x0C/**< 0x0C*/,CounterAttack=0x0D/**< 0x0D*/,SlashAll=0x0E/**< 0x0E*/,DoubleCut=0x0F/**< 0x0F*/,
+        Cover=0x10/**< 0x10*/,Underwater=0x11/**< 0x11*/,HPMP=0x12/**< 0x12*/,WMagic=0x13/**< 0x13*/,WSummon=0x14/**< 0x14*/,WItem=0x15/**< 0x15*/,All=0x17/**< 0x17*/,Counter=0x18/**< 0x18*/,MagicCounter=0x19/**< 0x19*/,MpTurbo=0x1A/**< 0x1A*/,MpAbsorb=0x1B/**< 0x1B*/,HpAbsorb=0x1C/**< 0x1C*/,Elemental=0x1D/**< 0x1D*/,AddedEffect=0x1E/**< 0x1E*/,SneakAttack=0x1F/**< 0x1F*/,
+        FinalAttack=0x20/**< 0x20*/,AddedCut=0x21/**< 0x21*/,StealAsWell=0x22/**< 0x22*/,QuadraMagic=0x23/**< 0x23*/,Steal=0x24/**< 0x24*/,Sense=0x25/**< 0x25*/,Throw=0x27/**< 0x27*/,Morph=0x28/**< 0x28*/,Deathblow=0x29/**< 0x29*/,Manipulate=0x2A/**< 0x2A*/,Mime=0x2B/**< 0x2B*/,EnemySkill=0x2C/**< 0x2C*/,
+        MasterCommand=0x30/**< 0x30*/,Fire=0x31/**< 0x31*/,Ice=0x32/**< 0x32*/,Earth=0x33/**< 0x33*/,Lightning=0x34/**< 0x34*/,Restore=0x35/**< 0x35*/,Heal=0x36/**< 0x36*/,Revive=0x37/**< 0x37*/,Seal=0x38/**< 0x38*/,Mystify=0x39/**< 0x39*/,Transform=0x3A/**< 0x3A*/,Exit=0x3B/**< 0x3B*/,Poison=0x3C/**< 0x3C*/,Demi=0x3D/**< 0x3D*/,Barrier=0x3E/**< 0x3E*/,
+        Comet=0x40/**< 0x40*/,Time=0x41/**< 0x41*/,Destruct=0x44/**< 0x44*/,Contain=0x45/**< 0x45*/,FullCure=0x46/**< 0x46*/,Shield=0x47/**< 0x47*/,Ultima=0x48/**< 0x48*/,MasterMagic=0x49/**< 0x49*/,ChocoMog=0x4A/**< 0x4A*/,Shiva=0x4B/**< 0x4B*/,Ifrit=0x4C/**< 0x4C*/,Ramuh=0x4D/**< 0x4D*/,Titan=0x4E/**< 0x4E*/,Odin=0x4F/**< 0x4F*/,
+        Leviathan=0x50/**< 0x50*/,Bahamut=0x51/**< 0x51*/,Kujata=0x52/**< 0x52*/,Alexander=0x53/**< 0x53*/,Phoenix=0x54/**< 0x54*/,NeoBahamut=0x55/**< 0x55*/,Hades=0x56/**< 0x56*/,Typhoon=0x57/**< 0x57*/,BahamutZERO=0x58/**< 0x58*/,KOTR=0x59/**< 0x59*/,MasterSummon=0x5A/**< 0x5A*/,
+        EmptyId=0xFF/**< 0xFF*/,
+        MaxMateriaAp =0xFFFFFF/**< 0xFFFFFF*/
     };
     QString name(int id);
     QImage image(int id);

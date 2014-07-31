@@ -22,6 +22,7 @@ FF7Achievements::FF7Achievements(QObject *parent) :
 {
     Achievements = QByteArray("\x00\x00\x00\x00\x00\x00\x00\x00");
 }
+
 bool FF7Achievements::openFile(QString fileName)
 {
     if(!fileName.isEmpty())
@@ -37,6 +38,7 @@ bool FF7Achievements::openFile(QString fileName)
     }
     return false;
 }
+
 bool FF7Achievements::saveFile(QString fileName)
 {
     if(!fileName.isEmpty())
@@ -53,7 +55,9 @@ bool FF7Achievements::saveFile(QString fileName)
     }
     return false;
 }
+
 bool FF7Achievements::achievmentUnlocked(int bit){return (Achievements.at(bit/8) &(1<< (7-(bit%8))));}
+
 void FF7Achievements::setAchievementUnlocked(int bit,bool unlocked)
 {
     char temp = Achievements.at(bit/8);
@@ -61,6 +65,7 @@ void FF7Achievements::setAchievementUnlocked(int bit,bool unlocked)
     else{temp &= ~(1<< (7-(bit%8)));}
     Achievements[bit/8]=temp;
 }
+
 QString FF7Achievements::name(int bit)
 {
     switch(bit)
