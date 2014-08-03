@@ -27,8 +27,10 @@ class SaveIcon : public QObject
 public:
 	SaveIcon();
 	SaveIcon(QByteArray data, quint8 nbFrames=1);
+	SaveIcon(QList<QByteArray> data);
 	//~SaveIcon();
 	void setAll(QByteArray data, quint8 nbFrames=1);
+	void setAll(QList<QByteArray> data);
 	QByteArray sauver();
 	QPixmap icon(bool chocobo_world_icon=false);
 signals:
