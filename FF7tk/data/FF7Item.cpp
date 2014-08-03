@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
+//    copyright 2012 -2014  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -8,7 +8,7 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//    FF7tk is distributed in the hope that it will be useful,              //
+//   FF7tk is distributed in the hope that it will be useful,               //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
@@ -76,88 +76,88 @@ qint8 FF7Item::statusRegen(int i){return Items[i].s_regen;}
 qint8 FF7Item::statusResist(int i){return Items[i].s_resist;}
 QString FF7Item::styleMateriaSlotNoGrowth(void)
 {
-    return QString("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.079096 rgba(77, 77, 77, 255), stop:0.152542 rgba(11, 28, 19, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
+	return QString("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.079096 rgba(77, 77, 77, 255), stop:0.152542 rgba(11, 28, 19, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
 }
 QString FF7Item::styleMateriaSlot(void)
 {
-    return QString("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
+	return QString("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
 }
 QString FF7Item::styleMateriaLink(void)
 {
-    return QString("QLabel:enabled{background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0.0225989 rgba(37, 37, 37, 255), stop:0.231638 rgba(153, 152, 152, 255), stop:0.389831 rgba(200, 195, 194, 255), stop:0.502825 rgba(138, 137, 137, 255), stop:0.621469 rgba(200, 195, 194, 255), stop:0.768362 rgba(138, 137, 137, 255), stop:0.932584 rgba(37, 37, 37, 0));}");
+	return QString("QLabel:enabled{background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0.0225989 rgba(37, 37, 37, 255), stop:0.231638 rgba(153, 152, 152, 255), stop:0.389831 rgba(200, 195, 194, 255), stop:0.502825 rgba(138, 137, 137, 255), stop:0.621469 rgba(200, 195, 194, 255), stop:0.768362 rgba(138, 137, 137, 255), stop:0.932584 rgba(37, 37, 37, 0));}");
 }
 
 quint16 FF7Item::itemDecode( quint16 itemraw )
 {//see FF7Save::itemDecode for full comments
-    quint16 item;
-    #ifdef Q_BYTE_ORDER
-        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
-            item = itemraw;
-        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
-            item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
-        #else
-            int one = 1;
-            if (*(char *)&one){item = itemraw;}
-            else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
-        #endif
-    #else
-        int one = 1;
-        if (*(char *)&one){item = itemraw;}
-        else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
-    #endif
+	quint16 item;
+	#ifdef Q_BYTE_ORDER
+		#if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+			item = itemraw;
+		#elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+			item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+		#else
+			int one = 1;
+			if (*(char *)&one){item = itemraw;}
+			else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+		#endif
+	#else
+		int one = 1;
+		if (*(char *)&one){item = itemraw;}
+		else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+	#endif
 
-    return item;
+	return item;
 }
 quint16 FF7Item::itemEncode( quint16 id, quint8 qty )
 {//see FF7Save::itemEncode for full comments
-    quint16 item,itemraw;
-    #ifdef Q_BYTE_ORDER
-        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
-            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-            itemraw = item;
-        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
-            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-        #else
-            int one = 1;
-            if (*(char *)&one)
-            {
-                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-                itemraw = item;
-            }
-            else
-            {
-                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-                itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-            }
-        #endif
-    #else
-        int one = 1;
-        if (*(char *)&one)
-        {
-            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-            itemraw = item;
-        }
-        else
-        {
-            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-        }
-    #endif
+	quint16 item,itemraw;
+	#ifdef Q_BYTE_ORDER
+		#if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+			item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+			itemraw = item;
+		#elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+			item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+			itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+		#else
+			int one = 1;
+			if (*(char *)&one)
+			{
+				item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+				itemraw = item;
+			}
+			else
+			{
+				item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+				itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+			}
+		#endif
+	#else
+		int one = 1;
+		if (*(char *)&one)
+		{
+			item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+			itemraw = item;
+		}
+		else
+		{
+			item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+			itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+		}
+	#endif
 
-    return itemraw;
+	return itemraw;
 }
 
 quint16 FF7Item::itemId(quint16 item)
 {
-    quint16 new_item = itemDecode(item);
-    quint16 id = (new_item & 0x1FF);
-    return id;
+	quint16 new_item = itemDecode(item);
+	quint16 id = (new_item & 0x1FF);
+	return id;
 }
 quint8 FF7Item::itemQty(quint16 item)
 {
-    quint16 new_item = itemDecode(item);
-    quint8 qty;
-    qty = (new_item & 0xFE00) >> 9;
-    return qty;
+	quint16 new_item = itemDecode(item);
+	quint8 qty;
+	qty = (new_item & 0xFE00) >> 9;
+	return qty;
 }

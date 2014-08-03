@@ -30,7 +30,11 @@ SaveIcon::SaveIcon(QByteArray data, quint8 nbFrames)
 {
 	setAll(data, nbFrames);
 }
-
+SaveIcon::SaveIcon(QList<QByteArray> data)
+	: curFrame(0)
+{
+	setAll(data);
+}
 void SaveIcon::setAll(QByteArray data, quint8 nbFrames)
 {
 	this->data = data;
@@ -42,6 +46,20 @@ void SaveIcon::setAll(QByteArray data, quint8 nbFrames)
 	}
 }
 
+void SaveIcon::setAll(QList<QByteArray> data)
+{
+	this->data.clear();
+	this->nbFrames=data.size();
+	for(int i=0;i < this->nbFrames;i++)
+	{
+		this->data.append(data.at(i));
+	}
+	if(nbFrames>1)
+	{
+		connect(&timer, SIGNAL(timeout()), SLOT(nextFrame()));
+		timer.start(160);
+	}
+}
 QByteArray SaveIcon::sauver()
 {
 	return data;
@@ -102,7 +120,7 @@ QPixmap SaveIcon::icon(bool chocobo_world_icon)
 	}
 
 	if(data.size()!=288)	return QPixmap();
-	
+
 	QImage image(32, 32, QImage::Format_Mono);
 	quint8 j, curPx;
 

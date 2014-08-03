@@ -180,7 +180,7 @@
     </message>
     <message>
         <source>Base HP</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Base MP</source>
@@ -192,7 +192,7 @@
     </message>
     <message>
         <source>Next</source>
-        <translation>Nächster</translation>
+        <translation>Weiter</translation>
     </message>
     <message>
         <source>Limit Bar</source>
@@ -316,7 +316,7 @@
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation> Mp:+%1</translation>
+        <translation type="unfinished"> Mp:+%1%</translation>
     </message>
     <message>
         <source>Restoration</source>
@@ -332,7 +332,7 @@
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Blitz</translation>
+        <translation type="unfinished">Blitz</translation>
     </message>
     <message>
         <source>Earth</source>
@@ -388,7 +388,7 @@
     </message>
     <message>
         <source>Attack:</source>
-        <translation>Angreifen:</translation>
+        <translation type="unfinished">Angreifen:</translation>
     </message>
     <message>
         <source>Death</source>
@@ -448,7 +448,7 @@
     </message>
     <message>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="unfinished">Beenden</translation>
     </message>
     <message>
         <source>Barrier</source>
@@ -468,7 +468,7 @@
     </message>
     <message>
         <source>Regen</source>
-        <translation>Regenerieren</translation>
+        <translation type="unfinished">Regenerieren</translation>
     </message>
     <message>
         <source>Protect:</source>
@@ -532,7 +532,7 @@
     </message>
     <message>
         <source>Next: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Weiter: %1</translation>
     </message>
 </context>
 <context>
@@ -8517,7 +8517,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Leer-</translation>
+        <translation>-Leer-</translation>
     </message>
     <message>
         <source>Slot: %1</source>

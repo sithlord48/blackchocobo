@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010- 2014  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2014  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,6 +13,7 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+
 #include "FF7Materia.h"
 #include <QCoreApplication>
 
@@ -39,21 +40,21 @@ QString FF7Materia::enemySkill(int i){return qApp->translate("E_skills",ESkills[
 QString FF7Materia::element(int i){return qApp->translate("Elements",Materias[i].elemental.toLocal8Bit());}
 QStringList FF7Materia::skills(int i)
 {
-    QStringList translated_list;
-    for(int j=0;j<Materias[i].skills.count();j++)
-    {
-        translated_list.append(qApp->translate("Materia_Skills",Materias[i].skills.at(j).toLocal8Bit()));
-    }
-    return translated_list;
+	QStringList translated_list;
+	for(int j=0;j<Materias[i].skills.count();j++)
+	{
+		translated_list.append(qApp->translate("Materia_Skills",Materias[i].skills.at(j).toLocal8Bit()));
+	}
+	return translated_list;
 }
 QStringList FF7Materia::status(int i)
 {
-    QStringList translated_list;
-    for (int j=0;j<Materias[i].status.count();j++)
-    {
-        translated_list.append(qApp->translate("Status",Materias[i].status.at(j).toLocal8Bit()));
-    }
-    return translated_list;
+	QStringList translated_list;
+	for (int j=0;j<Materias[i].status.count();j++)
+	{
+		translated_list.append(qApp->translate("Status",Materias[i].status.at(j).toLocal8Bit()));
+	}
+	return translated_list;
 }
 quint32 FF7Materia::ap2num(quint8 ap[3]){return (ap[0] | (ap[1] << 8) | (ap[2]<<16));}
 
