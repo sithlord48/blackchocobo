@@ -4556,7 +4556,7 @@ void FF7Save::setCraterSavePointZ(int s,int value)
 void FF7Save::vmcRegionEval(int s)
 {//used when saving a VMC file to adjust slot to save game#
 	//compare our list to known ff7 region codes to find out what slot we should be writing to
-	//int us=0,uk=0,fr=0,ge=0,es=0,jp=0,in=0;
+	//use strings for each region incase the card contains more then one FF7 regions save.
 	QStringList us = QStringList()<<QString("FF7-S01")<<QString("FF7-S02")<<QString("FF7-S03")<<QString("FF7-S04")<<QString("FF7-S05")<<QString("FF7-S06")<<QString("FF7-S07")<<QString("FF7-S08")<<QString("FF7-S09")<<QString("FF7-S10")<<QString("FF7-S11")<<QString("FF7-S12")<<QString("FF7-S13")<<QString("FF7-S14")<<QString("FF7-S15");
 	QStringList uk = us;
 	QStringList fr = us;
@@ -4568,38 +4568,31 @@ void FF7Save::vmcRegionEval(int s)
 	{
 		if(region(i).contains("BASCUS-94163"))
 		{
-			if(i==s){continue;}
-			else{us.replace(region(i).mid(17,2).toInt()-1,QString("")); continue;}
+			us.replace(region(i).mid(17,2).toInt()-1,QString(""));
 		}
 		else if(region(i).contains("BESCES-00867"))
 		{
-			if(i==s){continue;}
-			else{uk.replace(region(i).mid(17,2).toInt()-1,QString("")); continue;}
+			uk.replace(region(i).mid(17,2).toInt()-1,QString(""));
 		}
 		else if(region(i).contains("BESCES-00868"))
 		{
-			if(i==s){continue;}
-			else{fr.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+			fr.removeAt(region(i).mid(17,2).toInt()-1);
 		}
 		else if(region(i).contains("BESCES-00869"))
 		{
-			if(i==s){continue;}
-			else{ge.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+			ge.removeAt(region(i).mid(17,2).toInt()-1);
 		}
 		else if(region(i).contains("BESCES-00900"))
 		{
-			if(i==s){continue;}
-			else{es.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+			es.removeAt(region(i).mid(17,2).toInt()-1);
 		}
 		else if(region(i).contains("BISLPS-00700"))
 		{
-			if(i==s){continue;}
-			else{jp.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+			jp.removeAt(region(i).mid(17,2).toInt()-1);
 		}
 		else if(region(i).contains("BISLPS-01057"))
 		{
-			if(i==s){continue;}
-			else{in.removeAt(region(i).mid(17,2).toInt()-1); continue;}
+			in.removeAt(region(i).mid(17,2).toInt()-1);
 		}
 	}
 	QString newRegionString = region(s).mid(0,12);

@@ -427,6 +427,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 
 	if (!file.open(QFile::ReadOnly )){QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName).arg(file.errorString()));  return; }
 
+	prevFile = ff7->fileName();
 	if(ff7->loadFile(fileName))
 	{
 		_init=false;//we have now loaded a file
@@ -460,7 +461,12 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 		{
 			SlotSelect * SSelect= new SlotSelect(this,tempSave);
 			fileSlot = SSelect->exec();
-			ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot+1),QString::number(s+1)),2000);
+			if(fileSlot == -1)
+			{
+				on_actionImport_Slot_From_File_triggered();
+				return;
+			}
+			else{ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot+1),QString::number(s+1)),2000);}
 		}
 		else{ui->statusBar->showMessage(QString(tr("Import:: %1 -> Slot:%2")).arg(fileName,QString::number(s+1)),2000);}
 		ff7->importSlot(s,fileName,fileSlot);
@@ -610,7 +616,6 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
-void MainWindow::on_actionShow_Selection_Dialog_triggered(){SlotSelect slotselect(this,ff7);s=slotselect.exec();CheckGame(); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
 void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
@@ -619,6 +624,21 @@ void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(this,settings); odialog.exec(); }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7);mdata.exec();}
 
+void MainWindow::on_actionShow_Selection_Dialog_triggered()
+{
+	SlotSelect slotselect(this,ff7);
+	int i =slotselect.exec();
+	if(i==-1)
+	{
+		on_actionOpen_Save_File_triggered();
+	}
+	else
+	{
+		s=i;
+		CheckGame();
+		guirefresh(0);
+	}
+}
 
 void MainWindow::on_actionOpen_Achievement_File_triggered()
 {
