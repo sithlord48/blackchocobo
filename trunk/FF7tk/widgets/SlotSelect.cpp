@@ -17,8 +17,10 @@
 
 SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 {
-	list_preview = new QScrollArea;
-	setMinimumHeight(420);
+	list_preview = new QScrollArea();
+	btnNew = new QPushButton (QIcon::fromTheme(QString("document-open"),QPixmap()),tr("Load Another File"));
+	connect (btnNew,SIGNAL(clicked()),this, SLOT(newFile()));
+	setMinimumHeight(442);
 	setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 	setWindowTitle(tr("Select A Slot"));
 	preview_layout = new QVBoxLayout;
@@ -37,11 +39,11 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 	frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 	list_preview->setWidget(frm_preview);
 	list_preview->setContentsMargins(0,0,0,0);
-
 	QVBoxLayout *dialog_layout = new QVBoxLayout;
 	dialog_layout->setContentsMargins(0,0,0,0);
 	dialog_layout->setSpacing(2);
 	dialog_layout->addWidget(list_preview);
+	dialog_layout->addWidget(btnNew);
 	this->setLayout(dialog_layout);
 	this->setContentsMargins(0,0,0,0);
 	setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());
@@ -167,4 +169,9 @@ void SlotSelect::setSlotPreview(int s)
 	connect(preview[s],SIGNAL(btn_remove_clicked(int)),this,SLOT(remove_slot(int)));
 	connect(preview[s],SIGNAL(btn_copy_clicked(int)),this,SLOT(copy_slot(int)));
 	connect(preview[s],SIGNAL(btn_paste_clicked(int)),this,SLOT(paste_slot(int)));
+}
+
+void SlotSelect::newFile(void)
+{
+	this->done(-1);
 }

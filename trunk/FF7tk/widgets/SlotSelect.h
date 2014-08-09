@@ -18,9 +18,9 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets>
+	#include <QtWidgets>
 #else
-    #include <QtGui>
+	#include <QtGui>
 #endif
 
 #include <QFrame>
@@ -30,24 +30,26 @@
 
 class SlotSelect : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0);
+	explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0);
 private slots:
-    void button_clicked(int s);
-    void remove_slot(int s);
-    void copy_slot(int s);
-    void paste_slot(int s);
+	void button_clicked(int s);
+	void remove_slot(int s);
+	void copy_slot(int s);
+	void paste_slot(int s);
+	void newFile(void);
 private:
-    void setSlotPreview(int s);
-    void ReIntSlot(int s);
-    QFrame *frm_preview;
-    QVBoxLayout *preview_layout;
-    QScrollArea *list_preview;
-    SlotPreview *preview[15];
-    //Private Data
-    FF7Save *ff7;
-    FF7Char Chars;
+	void setSlotPreview(int s);
+	void ReIntSlot(int s);
+	QFrame *frm_preview;
+	QVBoxLayout *preview_layout;
+	QScrollArea *list_preview;
+	SlotPreview *preview[15];
+	QPushButton *btnNew;
+	//Private Data
+	FF7Save *ff7;
+	FF7Char Chars;
 };
 
 #endif // SLOTSELECT_H

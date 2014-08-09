@@ -99,6 +99,7 @@ private:
 	ItemList *itemlist;
 	ChocoboManager *chocoboManager;
 	LocationViewer *locationViewer;
+	QString prevFile;
 
 	typedef QList<quint16> fieldItemOffsetList;
 	typedef QList<quint8> fieldItemBitList;
