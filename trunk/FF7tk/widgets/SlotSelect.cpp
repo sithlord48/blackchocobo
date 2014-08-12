@@ -15,12 +15,11 @@
 /****************************************************************************/
 #include "SlotSelect.h"
 
-SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
+SlotSelect::SlotSelect(QWidget *parent,FF7Save *data, bool showLoad):QDialog(parent)
 {
 	list_preview = new QScrollArea();
 	btnNew = new QPushButton (QIcon::fromTheme(QString("document-open"),QPixmap()),tr("Load Another File"));
 	connect (btnNew,SIGNAL(clicked()),this, SLOT(newFile()));
-	setMinimumHeight(442);
 	setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 	setWindowTitle(tr("Select A Slot"));
 	preview_layout = new QVBoxLayout;
@@ -44,6 +43,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
 	dialog_layout->setSpacing(2);
 	dialog_layout->addWidget(list_preview);
 	dialog_layout->addWidget(btnNew);
+	this->showLoad(showLoad); //by defalut hide the load new save button
 	this->setLayout(dialog_layout);
 	this->setContentsMargins(0,0,0,0);
 	setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());
@@ -174,4 +174,11 @@ void SlotSelect::setSlotPreview(int s)
 void SlotSelect::newFile(void)
 {
 	this->done(-1);
+}
+
+void SlotSelect::showLoad(bool show)
+{
+	btnNew->setVisible(show);
+	if(show){this->setMinimumHeight(442);}
+	else{this->setMinimumHeight(420);}
 }

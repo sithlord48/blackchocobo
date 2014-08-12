@@ -18,60 +18,79 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets>
+	#include <QtWidgets>
 #else
-    #include <QtGui>
+	#include <QtGui>
 #endif
 #include "DoubleCheckBox.h"
-
+/** \class MenuListWidget
+ *	\brief easily manage the menus in Final Fantasy 7
+ */
 class MenuListWidget : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    enum BoxType {BOX_VISIBLE=1,BOX_LOCKED=2};
-    explicit MenuListWidget(QWidget *parent = 0);
+	/** \enum Box
+	 *	\brief Acces to Visible and Locked boxes without knowing their index
+	 */
+	enum Box {MENUVISIBLE=1,MENULOCKED=2};
+	explicit MenuListWidget(QWidget *parent = 0);
 
 signals:
-    void box1_toggled(int row,bool checked);
-    void box2_toggled(int row,bool checked);
+	/** \brief SIGNAL: The visible box has changed its checked state
+	 *	\param row the row (FF7Save::MENUITEMS)
+	 *	\param checked the new check state
+	 */
+	void visibleToggled(int row,bool checked);
+
+	/** \brief SIGNAL: The locked box has changed its checked state
+	 *	\param row the row (FF7Save::MENUITEMS)
+	 *	\param checked the new check state
+	 */
+	void lockedToggled(int row,bool checked);
 public slots:
-     void setChecked(int row,int box,bool checked);
+	/** \brief SLOT: set the check state for an item
+	 *	\param row the row (FF7Save::MENUITEMS)
+	 *	\param box the box that is being set (MenuListWidget::Box)
+	 *	\param checked the new check state
+	 */
+	 void setChecked(int row,int box,bool checked);
 private slots:
-    void cb_item_one_toggled(bool checked);
-    void cb_item_two_toggled(bool checked);
-    void cb_magic_one_toggled(bool checked);
-    void cb_magic_two_toggled(bool checked);
-    void cb_materia_one_toggled(bool checked);
-    void cb_materia_two_toggled(bool checked);
-    void cb_equip_one_toggled(bool checked);
-    void cb_equip_two_toggled(bool checked);
-    void cb_status_one_toggled(bool checked);
-    void cb_status_two_toggled(bool checked);
-    void cb_order_one_toggled(bool checked);
-    void cb_order_two_toggled(bool checked);
-    void cb_limit_one_toggled(bool checked);
-    void cb_limit_two_toggled(bool checked);
-    void cb_config_one_toggled(bool checked);
-    void cb_config_two_toggled(bool checked);
-    void cb_phs_one_toggled(bool checked);
-    void cb_phs_two_toggled(bool checked);
-    void cb_save_one_toggled(bool checked);
-    void cb_save_two_toggled(bool checked);
+	void cb_item_one_toggled(bool checked);
+	void cb_item_two_toggled(bool checked);
+	void cb_magic_one_toggled(bool checked);
+	void cb_magic_two_toggled(bool checked);
+	void cb_materia_one_toggled(bool checked);
+	void cb_materia_two_toggled(bool checked);
+	void cb_equip_one_toggled(bool checked);
+	void cb_equip_two_toggled(bool checked);
+	void cb_status_one_toggled(bool checked);
+	void cb_status_two_toggled(bool checked);
+	void cb_order_one_toggled(bool checked);
+	void cb_order_two_toggled(bool checked);
+	void cb_limit_one_toggled(bool checked);
+	void cb_limit_two_toggled(bool checked);
+	void cb_config_one_toggled(bool checked);
+	void cb_config_two_toggled(bool checked);
+	void cb_phs_one_toggled(bool checked);
+	void cb_phs_two_toggled(bool checked);
+	void cb_save_one_toggled(bool checked);
+	void cb_save_two_toggled(bool checked);
 private:
-    DoubleCheckBox *cb_item;
-    DoubleCheckBox *cb_magic;
-    DoubleCheckBox *cb_materia;
-    DoubleCheckBox *cb_equip;
-    DoubleCheckBox *cb_status;
-    DoubleCheckBox *cb_order;
-    DoubleCheckBox *cb_limit;
-    DoubleCheckBox *cb_config;
-    DoubleCheckBox *cb_phs;
-    DoubleCheckBox *cb_save;
-    QLabel *lbl_title;
-    void init_display();
-    void connectAll();
-    void disconnectAll();
+	DoubleCheckBox *cb_item;
+	DoubleCheckBox *cb_magic;
+	DoubleCheckBox *cb_materia;
+	DoubleCheckBox *cb_equip;
+	DoubleCheckBox *cb_status;
+	DoubleCheckBox *cb_order;
+	DoubleCheckBox *cb_limit;
+	DoubleCheckBox *cb_config;
+	DoubleCheckBox *cb_phs;
+	DoubleCheckBox *cb_save;
+	QLabel *lbl_title;
+	void init_display();
+	void connectAll();
+	void disconnectAll();
 };
 
 #endif // MENULISTWIDGET_H

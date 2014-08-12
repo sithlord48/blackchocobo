@@ -28,11 +28,24 @@
 #include "../data/FF7Char.h"
 #include "SlotPreview.h"
 
+/**	\class SlotSelect
+ *	\brief Display a preview of the contents of a PSX memory card file or FF7 PC save.
+ *
+ * When the dialog is run it will return the slot selected (0-14) or -1 if the load button was pushed.
+ * Copy Paste and Remove are are internal so no need to worry about doing those.
+ * Copy will currently only copies FF7 Saves.
+ */
 class SlotSelect : public QDialog
 {
 	Q_OBJECT
 public:
-	explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0);
+
+	/** \brief create a new SlotSelect Dialog.
+	 *	\param parent Dialogs Parent
+	 *	\param data Pointer to a FF7Save object
+	 *  \param showLoad show the load new file button
+	 */
+	explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0,bool showLoad=false);
 private slots:
 	void button_clicked(int s);
 	void remove_slot(int s);
@@ -41,6 +54,7 @@ private slots:
 	void newFile(void);
 private:
 	void setSlotPreview(int s);
+	void showLoad(bool shown);
 	void ReIntSlot(int s);
 	QFrame *frm_preview;
 	QVBoxLayout *preview_layout;

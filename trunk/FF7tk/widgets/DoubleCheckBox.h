@@ -19,34 +19,75 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets>
+	#include <QtWidgets>
 #else
-    #include <QtGui>
+	#include <QtGui>
 #endif
 
+/** \class DoubleCheckBox
+ *	\brief one text two checkable boxes
+ */
 class DoubleCheckBox : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    explicit DoubleCheckBox(QWidget *parent = 0);
-    explicit DoubleCheckBox(const QString &text,QWidget *parent = 0);
-    void setText(QString text);
-    void setChecked(int box,bool checked);
-    bool checked(int box);
-    void setBoxToolTip(int box,QString text);
-    void setToolTip(QString text);
+	/** \brief create a new empty Double Checkbox
+	 *	\param parent parent of this widget
+	*/
+	explicit DoubleCheckBox(QWidget *parent = 0);
+	/** \brief create a new empty Double Checkbox
+	 *	\param text Text for this checkbox
+	 *	\param parent parent of this widget
+	 */
+	explicit DoubleCheckBox(const QString &text,QWidget *parent = 0);
+
+	/** \brief set the text displayed
+	 *	\param text Text for this checkbox
+	 */
+	void setText(QString text);
+
+	/** \brief set if a box is checked
+	 *	\param box checkbox (1-2) 1 is closest to text
+	 *	\param checked is this box checked?
+	 */
+	void setChecked(int box,bool checked);
+
+	/** \brief check if a box has been checked .
+	 *	\param box checkbox (1-2) 1 is closest to text
+	 *	\return checkbox checked ?
+	 */
+	bool checked(int box);
+
+	/** \brief Set the tooltip for a checkbox
+	 *	\param box checkbox (1-2) 1 is closest to text
+	 *	\param text tooltip text
+	 */
+	void setBoxToolTip(int box,QString text);
+
+	/** \brief Set the tooltip for the widget
+	 *	\param text tooltip text
+	 */
+	void setToolTip(QString text);
 signals:
-    void box1_toggled(bool checked);
-    void box2_toggled(bool checked);
+	/** \brief Signal: box1 has had its state changed
+	 *	\param checked checked state
+	 */
+	void box1_toggled(bool checked);
+
+	/** \brief Signal: box2 has had its state changed
+	 *	\param checked checked state
+	 */
+	void box2_toggled(bool checked);
+
 private slots:
-    void cb_one_toggled(bool checked);
-    void cb_two_toggled(bool checked);
+	void cb_one_toggled(bool checked);
+	void cb_two_toggled(bool checked);
 private:
-    void init_display();
-    void init_connections();
-    QCheckBox *cb_one;
-    QCheckBox *cb_two;
-    QLabel * label;
+	void init_display();
+	void init_connections();
+	QCheckBox *cb_one;
+	QCheckBox *cb_two;
+	QLabel * label;
 };
 
 #endif // DOUBLECHECKBOX_H

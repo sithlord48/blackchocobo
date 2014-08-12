@@ -317,10 +317,10 @@ void MainWindow::init_connections()
 		connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
 		connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
 		//HexEditor.
-		connect(phsList,SIGNAL(box1_toggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
-		connect(phsList,SIGNAL(box2_toggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
-		connect(menuList,SIGNAL(box1_toggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
-		connect(menuList,SIGNAL(box2_toggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
+		connect(phsList,SIGNAL(allowedToggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
+		connect(phsList,SIGNAL(visibleToggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
+		connect(menuList,SIGNAL(visibleToggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
+		connect(menuList,SIGNAL(lockedToggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
 		connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::init_settings()
@@ -459,7 +459,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 		tempSave->loadFile(fileName);
 		if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
 		{
-			SlotSelect * SSelect= new SlotSelect(this,tempSave);
+			SlotSelect * SSelect= new SlotSelect(this,tempSave,false);
 			fileSlot = SSelect->exec();
 			if(fileSlot == -1)
 			{
@@ -626,7 +626,7 @@ void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(t
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
-	SlotSelect slotselect(this,ff7);
+	SlotSelect slotselect(this,ff7,true);
 	int i =slotselect.exec();
 	if(i==-1)
 	{
@@ -650,7 +650,6 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 	if(!tmp.exists())
 	{
 		temp = QFileDialog::getOpenFileName(this,tr("Select Achievement File"),QDir::homePath(),tr("Dat File (*.dat);"));
-
 	}
 	if(temp.isEmpty()){ff7->setFileModified(c2,s);return;}
 	else
@@ -1159,23 +1158,23 @@ void MainWindow::othersUpdate()
 
 	for (int i=0;i<9;i++)//Allowed in Phs
 	{
-		if(ff7->phsAllowed(s,i)){phsList->setChecked(i,1,false);}
-		else{phsList->setChecked(i,1,true);}
+		if(ff7->phsAllowed(s,i)){phsList->setChecked(i,PhsListWidget::PHSALLOWED,false);}
+		else{phsList->setChecked(i,PhsListWidget::PHSALLOWED,true);}
 	}
 	for (int i=0;i<9;i++)//Visible
 	{
-		if(ff7->phsVisible(s,i)){phsList->setChecked(i,2,true);}
-		else{phsList->setChecked(i,2,false);}
+		if(ff7->phsVisible(s,i)){phsList->setChecked(i,PhsListWidget::PHSVISIBLE,true);}
+		else{phsList->setChecked(i,PhsListWidget::PHSVISIBLE,false);}
 	}
 	for (int i=0;i<10;i++)//visible_menu
 	{
-		if(ff7->menuVisible(s,i)){menuList->setChecked(i,1,true);}
-		else{menuList->setChecked(i,1,false);}
+		if(ff7->menuVisible(s,i)){menuList->setChecked(i,MenuListWidget::MENUVISIBLE,true);}
+		else{menuList->setChecked(i,MenuListWidget::MENUVISIBLE,false);}
 	}
 	for (int i=0;i<10;i++)//menu_locked
 	{
-		if(ff7->menuLocked(s,i)){menuList->setChecked(i,2,true);}
-		else{menuList->setChecked(i,2,false);}
+		if(ff7->menuLocked(s,i)){menuList->setChecked(i,MenuListWidget::MENULOCKED,true);}
+		else{menuList->setChecked(i,MenuListWidget::MENULOCKED,false);}
 	}
 	ui->sb_steps->setValue(ff7->steps(s));
 
@@ -2135,8 +2134,8 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(646);
-		phsList->setChecked(3,1,false);
-		phsList->setChecked(3,2,false);
+		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSALLOWED,false);
+		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSVISIBLE,false);
 		ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
