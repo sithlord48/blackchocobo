@@ -28,7 +28,32 @@
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
-
+/** \class FF7Save
+ *	\todo add support for signing psv files.
+ *	\todo add support for signing vmp files.
+ *	\brief edit saves from Final Fantasy 7
+ *
+ *	FF7Save does it all for you open the file , edit then save. All of the file handling will be taken care of for you.
+ *	the following are supported formats:
+ *	|Flie	| Description |
+ *	|-------|-------------|
+ *	|*.ff7	|PC Format Save if with a metadata.xml file will attempt to sign it|
+ *	|*.mcr	|Common Emulator format (Virtual Memory Card)|
+ *	|*.mcd	|Common Emulator format (Virtual Memory Card)|
+ *	|*.mci	|Common Emulator format (Virtual Memory Card)|
+ *	|*.mc	|Common Emulator format (Virtual Memory Card)|
+ *	|*.ddf	|Common Emulator format (Virtual Memory Card)|
+ *	|*.ps	|Common Emulator format (Virtual Memory Card)|
+ *	|*.psm	|Common Emulator format (Virtual Memory Card)|
+ *	|*.bin	|Common Emulator format (Virtual Memory Card)|
+ *	|*.vgs	|Memory Card from Virtual Game Station|
+ *	|*.mem	|Memory Card from Virtual Game Station|
+ *	|*.gme	|Dex drive format virtual memory card|
+ *	|*.VM1	|Internal PSX Memory Card on PS3 (Virtual Memory Card)|
+ *	|*.vmp	| VMC format used by the PSP/PsVita. Can not sign this type yet;reimport to console will fail|
+ *	|*.psv	| Saves "Exported" by a PS3. can not sign this type yet;reimport to console will fail|
+ *	|*FF7-S*| A Raw PSX memory card "file" extracted from a real or virtual memory card|
+ */
 class FF7Save: public QObject{
 	Q_OBJECT
 	public:
@@ -43,6 +68,13 @@ class FF7Save: public QObject{
 	enum ATBMODE{ATB_ACTIVE/**< 0*/,ATB_RECOMMENED,ATB_WAIT/**< 1*/};
 	enum CAMERAMODE {CAMERA_AUTO/**< 0*/,CAMERA_FIXED/**< 1*/};
 	enum MAGICORDER {MAGIC_RAI/**< 0*/,MAGIC_RIA/**< 1*/,MAGIC_AIR/**< 2*/,MAGIC_ARI/**< 3*/,MAGIC_IRA/**< 4*/,MAGIC_IAR/**< 5*/};
+	/** \enum MENUITEMS
+	 *	\brief Menu items for ff7.
+	 */
+	enum MENUITEMS {MENUITEM/**< 0*/,MENUMAGIC/**< 1*/,MENUMATERIA/**< 2*/,MENUEQUIPMENT/**< 3*/,MENUSTATUS/**< 4*/,MENUFORM/**< 5*/,MENULIMIT/**< 6*/,MENUCONFIG/**< 7*/,MENUPHS/**< 8*/,MENUSAVE/**< 9*/};
+	/** \enum CONTROLACTION
+	 *	\brief Possible Actions the user can input
+	 */
 	enum CONTROLACTION
 	{
 		ACTION_CAMERA/**< 0*/,ACTION_TARGET/**< 1*/,ACTION_PAGEUP/**< 2*/,ACTION_PAGEDOWN/**< 3*/,
@@ -50,14 +82,24 @@ class FF7Save: public QObject{
 		ACTION_HELP/**< 8*/,ACTION_UNKNOWN1/**< 9*/,ACTION_UNKNOWN2/**< 10*/,
 		ACTION_PAUSE/**< 11*/,ACTION_UP/**< 12*/,ACTION_RIGHT/**< 13*/,ACTION_DOWN/**< 14*/,ACTION_LEFT/**< 15*/
 	};
-	enum PSXBUTTONS
+
+	/** \enum PSXBUTTON
+	 *	\brief Final Fantasy 7 Buttons for when on PSX
+	 */
+	enum PSXBUTTON
 	{
 		BTN_L2/**< 0*/,BTN_R2/**< 1*/,BTN_L1/**< 2*/,BTN_R1/**< 3*/,
 		BTN_TRIANGLE/**< 4*/,BTN_CIRCLE/**< 5*/,BTN_X/**< 6*/,BTN_SQUARE/**< 7*/,
 		BTN_SELECT/**< 8*/,BTN_UNKNOWN1/**< 9*/,BTN_UNKNOWN2/**< 10*/,BTN_START/**< 11*/,
 		BTN_UP/**< 12*/,BTN_RIGHT/**< 13*/,BTN_DOWN/**< 14*/,BTN_LEFT/**< 15*/
 	};
+	/** \enum PSXBLOCKTYPE
+	 *	\brief Used to set the type of block on a PSX memory card (image) when creating the index.
+	 */
 	enum PSXBLOCKTYPE {BLOCK_EMPTY= 0xA0, /**< 0xA0*/ BLOCK_MAIN=0x51, /**< 0x51*/ BLOCK_DELETED_MAIN=0xA1, /**< 0xA1*/ BLOCK_MIDLINK=0x52, /**< 0x52*/ BLOCK_DELETED_MIDLINK=0xA2, /**< 0xA2*/ BLOCK_ENDLINK=0x53, /**< 0x53*/ BLOCK_DELETED_ENDLINK=0xA3, /**< 0xA3*/};
+	/*! \enum KEYITEMS
+	 *	\brief ID's for each keyitem
+	 */
 	enum KEYITEMS
 	{
 		COTTONDRESS/**< 0*/,SATINDRESS/**< 1*/,SILKDRESS/**< 2*/,WIG/**< 3*/,DYEDWIG/**< 4*/,BLONDEWIG/**< 5*/,GLASSTIARA/**< 6*/,RUBYTIATA/**< 7*/,DIAMONDTIARA/**< 8*/,COLOGNE/**< 9*/,FLOWERCOLOGNE/**< 10*/,SEXYCOLOGNE/**< 11*/,MEMBERSCARD/**< 12*/,
@@ -361,26 +403,106 @@ class FF7Save: public QObject{
 
 	/** \brief set direction player is facing on field map
 	 * \param s slot number (0-14)
-	 * \param d new directione
+	 * \param d new direction
 	*/
 	void setLocationD(int s,quint8 d);
 
-
+	/** \brief map the placeable save point is on
+	 *	\param s slot number (0-14)
+	 *	\return mapID of map containing the save point
+	 */
 	quint16 craterSavePointMapID(int s);
+
+	/** \brief x coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\return x coordinate of the placeable save point
+	*/
 	qint16 craterSavePointX(int s);
+
+	/** \brief y coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\return y coordinate of the placeable save point
+	*/
 	qint16 craterSavePointY(int s);
+
+	/** \brief z coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\return z coordinate of the placeable save point
+	*/
 	qint16 craterSavePointZ(int s);
+
+	/** \brief set the map that the placeable save point is on
+	 *	\param s slot number (0-14)
+	 *	\param value new mapID
+	 */
 	void setCraterSavePointMapID(int s,int value);
+
+	/** \brief set x coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\param value new x coordinate
+	*/
 	void setCraterSavePointX(int s,int value);
+
+	/** \brief set y coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\param value new y coordinate
+	*/
 	void setCraterSavePointY(int s,int value);
+
+	/** \brief set z coordinate of the placeable save point
+	 *	\param s slot number (0-14)
+	 *	\param value new z coordinate
+	*/
 	void setCraterSavePointZ(int s,int value);
+
 	//options
+	/** \brief get controller mapping for a slot
+	 *
+	 *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+	 *	\param s slot number (0-14)
+	 *	\return Mapping as raw bytes
+	 */
 	QByteArray controllerMapping(int s);
-	quint8 controllerMapping(int s, int action);
+
+	/** \brief set the controller mapping for a slot
+	 *
+	 *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+	 *	\param s slot number (0-14)
+	 *	\param map Mapping as raw bytes
+	 */
 	void setControllerMapping(int s,QByteArray map);
+
+	/** \brief get button bound to an action for a slot
+	 *
+	 *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+	 *	\param s slot number (0-14)
+	 *	\param action game action ( FF7Save::CONTROLACTION )
+	 *	\return  FF7Save::PSXBUTTON that an action is mapped to
+	 */
+	quint8 controllerMapping(int s, int action);
+
+	/** \brief bind a button to an action for a slot.
+	 *
+	 *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+	 *	\param s slot number (0-14)
+	 *	\param action valid game action ( FF7Save::CONTROLACTION )
+	 *	\param button a valid button ( FF7Save::PSXBUTTON )
+	 */
 	void setControllerMapping(int s, int action,int button);
+
+	/** \brief In game options for a slot
+	 *	\param s slot number (0-14)
+	 *	\return game options in raw format
+	 */
 	quint16 options(int s);
+
+	/** \brief Set in game options for a slot
+	 *	\param s slot number (0-14)
+	 *	\param opt game options in raw format
+	 */
 	void setOptions(int s, int opt);
+
+
 	bool soundMode(int s);
 	void setSoundMode(int s, int mode);
 	void setSoundMode(int s, bool mode);
@@ -409,6 +531,7 @@ class FF7Save: public QObject{
 	void setFieldHelp(int s, bool shown);
 	bool battleTargets(int s);
 	void setBattleTargets(int s, bool shown);
+
 	//Phs/Menu
 	bool phsVisible(int s, int who);
 	void setPhsVisible(int s, int who , bool checked);
