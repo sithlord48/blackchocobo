@@ -4756,7 +4756,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Correl Valley</source>
-        <translation>Valle Corral</translation>
+        <translation type="obsolete">Valle Corral</translation>
     </message>
     <message>
         <source>Outside Plates</source>
@@ -4804,7 +4804,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Correl Valley Cave</source>
-        <translation>Cueva del valle Corral</translation>
+        <translation type="obsolete">Cueva del valle Corral</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -4993,6 +4993,14 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Bottom of Northern Cave</source>
         <translation>Fondo de la Cueva del Norte</translation>
+    </message>
+    <message>
+        <source>Corel Valley</source>
+        <translation>Valle Corral</translation>
+    </message>
+    <message>
+        <source>Corel Valley Cave</source>
+        <translation>Cueva del valle Corral</translation>
     </message>
 </context>
 <context>
@@ -7201,19 +7209,19 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>Turbo PM 20%</translation>
+        <translation type="obsolete">Turbo PM 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>Turbo PM 30%</translation>
+        <translation type="obsolete">Turbo PM 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>Turbo PM 40%</translation>
+        <translation type="obsolete">Turbo PM 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>Turbo PM 50%</translation>
+        <translation type="obsolete">Turbo PM 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -7936,6 +7944,22 @@ Fénix x3 (180pm)</translation>
         <source>KOTR x5 (250mp)</source>
         <translation>Cab. de la mesa R. x5 (250pm)</translation>
     </message>
+    <message>
+        <source>MP Turbo 20%</source>
+        <translation>Turbo PM 20%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 30%</source>
+        <translation>Turbo PM 30%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 40%</source>
+        <translation>Turbo PM 40%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 50%</source>
+        <translation>Turbo PM 50%</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -8565,6 +8589,10 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Select A Slot</source>
         <translation>Selecciona una ranura</translation>
+    </message>
+    <message>
+        <source>Load Another File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

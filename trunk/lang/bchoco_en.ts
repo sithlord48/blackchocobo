@@ -4752,10 +4752,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Correl Valley</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Outside Plates</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4797,10 +4793,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Junon branch,(ext.)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Correl Valley Cave</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4989,6 +4981,14 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Bottom of Northern Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Valley</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Valley Cave</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7183,22 +7183,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Mp Turbo 20%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mp Turbo 30%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mp Turbo 40%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mp Turbo 50%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>MP Absorb</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7918,6 +7902,22 @@ trigger showing that tutorial</source>
         <source>KOTR x5 (250mp)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>MP Turbo 20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Turbo 30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Turbo 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Turbo 50%</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -8545,6 +8545,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Select A Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Another File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

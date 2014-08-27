@@ -2954,7 +2954,7 @@ void MainWindow::char_maxMp_changed(quint16 value)
 void MainWindow::on_btn_maxChar_clicked()
 {
 	if(ff7->charID(s,curchar)==FF7Char::YoungCloud || ff7->charID(s,curchar) == FF7Char::Sephiroth  ||  _init){return;}//no char selected, sephiroth and young cloud.
-	int result = QMessageBox::question(this,tr("Black Chococbo"),tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(ff7->charName(s,curchar)),QMessageBox::Yes,QMessageBox::No);
+	int result = QMessageBox::question(this,tr("Black Chocobo"),tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(ff7->charName(s,curchar)),QMessageBox::Yes,QMessageBox::No);
 	switch(result)
 	{
 		case QMessageBox::Yes:char_editor->MaxEquip();char_editor->MaxStats();break;

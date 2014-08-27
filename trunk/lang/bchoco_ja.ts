@@ -4437,7 +4437,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Marshes</source>
-        <translation type="unfinished"></translation>
+        <translation>湿地帯</translation>
     </message>
     <message>
         <source>Mythril Mine</source>
@@ -4446,16 +4446,16 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Base of Fort Condor</source>
         <translatorcomment>has no translation.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>コンドルフォートふもと</translation>
     </message>
     <message>
         <source>Entrance to Fort Condor</source>
         <translatorcomment>has no translation</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>コンドルフォート入口</translation>
     </message>
     <message>
         <source>Watch Room</source>
-        <translation type="unfinished"></translation>
+        <translation>見張り小屋</translation>
     </message>
     <message>
         <source>Plains</source>
@@ -4539,15 +4539,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Grasslands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>グラスランドエリア</translation>
     </message>
     <message>
         <source>Junon Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ジュノンエリア</translation>
     </message>
     <message>
         <source>Corel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>コレルエリア</translation>
     </message>
     <message>
         <source>Corel Reactor</source>
@@ -4651,15 +4651,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gold Saucer Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴールドソーサーエリア</translation>
     </message>
     <message>
         <source>Gongaga Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴンガガエリア</translation>
     </message>
     <message>
         <source>Cosmo Area</source>
-        <translation type="unfinished"></translation>
+        <translation>コスモエリア</translation>
     </message>
     <message>
         <source>Battle Square</source>
@@ -4715,7 +4715,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Nibel Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブルエリア</translation>
     </message>
     <message>
         <source>Rocket Town</source>
@@ -4740,7 +4740,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rocket Launch Pad Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ロケットポートエリア</translation>
     </message>
     <message>
         <source>Weapon seller</source>
@@ -4796,7 +4796,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Wutai Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ウータイエリア</translation>
     </message>
     <message>
         <source>Temple of the Ancients</source>
@@ -4804,7 +4804,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Woodlands Area</source>
-        <translation type="unfinished"></translation>
+        <translation>ウッドランドエリア</translation>
     </message>
     <message>
         <source>Bone Village</source>
@@ -4824,11 +4824,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Icicle Area</source>
-        <translation type="unfinished"></translation>
+        <translation>アイシクルエリア</translation>
     </message>
     <message>
         <source>Correl Valley</source>
-        <translation>サンゴの谷</translation>
+        <translation type="obsolete">サンゴの谷</translation>
     </message>
     <message>
         <source>Outside Plates</source>
@@ -4876,7 +4876,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Correl Valley Cave</source>
-        <translation>サンゴの谷洞窟</translation>
+        <translation type="obsolete">サンゴの谷洞窟</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -4892,7 +4892,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Great Glacier</source>
-        <translation type="unfinished"></translation>
+        <translation>大氷河</translation>
     </message>
     <message>
         <source>Frostbite Cave</source>
@@ -5056,7 +5056,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Northern Cave</source>
-        <translation type="unfinished"></translation>
+        <translation>大空洞</translation>
     </message>
     <message>
         <source>Inside Northern Cave</source>
@@ -5065,6 +5065,14 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Bottom of Northern Cave</source>
         <translation>大空洞最下部</translation>
+    </message>
+    <message>
+        <source>Corel Valley</source>
+        <translation>サンゴの谷</translation>
+    </message>
+    <message>
+        <source>Corel Valley Cave</source>
+        <translation>サンゴの谷洞窟</translation>
     </message>
 </context>
 <context>
@@ -6969,7 +6977,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation type="unfinished">フルケア</translation>
+        <translation>フルケア</translation>
     </message>
 </context>
 <context>
@@ -7268,19 +7276,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>ＭＰターボ 20%</translation>
+        <translation type="obsolete">ＭＰターボ 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>ＭＰターボ 30%</translation>
+        <translation type="obsolete">ＭＰターボ 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>ＭＰターボ 40%</translation>
+        <translation type="obsolete">ＭＰターボ 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>ＭＰターボ 50%</translation>
+        <translation type="obsolete">ＭＰターボ 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -8002,6 +8010,22 @@ trigger showing that tutorial</source>
         <source>KOTR x5 (250mp)</source>
         <translation>ナイツオブラウンド x5 (250MP)</translation>
     </message>
+    <message>
+        <source>MP Turbo 20%</source>
+        <translation>ＭＰターボ 20%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 30%</source>
+        <translation>ＭＰターボ 30%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 40%</source>
+        <translation>ＭＰターボ 40%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 50%</source>
+        <translation>ＭＰターボ 50%</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -8630,6 +8654,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Select A Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Another File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

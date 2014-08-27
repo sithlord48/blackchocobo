@@ -15,7 +15,6 @@
 /****************************************************************************/
 
 #include "FF7Save.h"
-#include <QDebug>
 #include <QObject>
 #include <QFile>
 #include <QDataStream>

@@ -4755,7 +4755,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Correl Valley</source>
-        <translation>Vallée de Corral</translation>
+        <translation type="obsolete">Vallée de Corral</translation>
     </message>
     <message>
         <source>Outside Plates</source>
@@ -4803,7 +4803,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Correl Valley Cave</source>
-        <translation>Val de Corral (Grotte)</translation>
+        <translation type="obsolete">Val de Corral (Grotte)</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -4992,6 +4992,14 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Bottom of Northern Cave</source>
         <translation>Fond de la Grotte Nord</translation>
+    </message>
+    <message>
+        <source>Corel Valley</source>
+        <translation>Vallée de Corral</translation>
+    </message>
+    <message>
+        <source>Corel Valley Cave</source>
+        <translation>Val de Corral (Grotte)</translation>
     </message>
 </context>
 <context>
@@ -7203,19 +7211,19 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>Turbo MP +20%</translation>
+        <translation type="obsolete">Turbo MP +20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>Turbo MP +30%</translation>
+        <translation type="obsolete">Turbo MP +30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>Turbo MP +40%</translation>
+        <translation type="obsolete">Turbo MP +40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>Turbo MP +50%</translation>
+        <translation type="obsolete">Turbo MP +50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -7937,6 +7945,22 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
         <source>KOTR x5 (250mp)</source>
         <translation>Chevaliers de la Table Ronde 5x (250 MP)</translation>
     </message>
+    <message>
+        <source>MP Turbo 20%</source>
+        <translation>Turbo MP +20%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 30%</source>
+        <translation>Turbo MP +30%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 40%</source>
+        <translation>Turbo MP +40%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 50%</source>
+        <translation>Turbo MP +50%</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -8566,6 +8590,10 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     <message>
         <source>Select A Slot</source>
         <translation>Sélectionnez un slot</translation>
+    </message>
+    <message>
+        <source>Load Another File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

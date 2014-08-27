@@ -16,9 +16,9 @@
 
 #ifndef DEF_FF7SAVE
 #define DEF_FF7SAVE
-//QtI Includes
+//Qt Includes
 #include <QObject>
-#include<QColor>
+#include <QColor>
 #include <cstdlib>
 #include <QFileInfo>
 #include <QDateTime>
@@ -138,7 +138,7 @@ class FF7Save: public QObject{
 	*/
 	bool exportPC(const QString &fileName);
 
-	/**	\brief attempt to save fileName as a PC ff7save
+	/**	\brief attempt to save fileName as a PSX ff7save
 	 *	\param s slot in loaded file to export as psx
 	*	\param fileName file that will be saved
 	 *	\return True if Successful
@@ -502,9 +502,18 @@ class FF7Save: public QObject{
 	 */
 	void setOptions(int s, int opt);
 
-
+	/** \brief soundMode mono or stero
+	 *  \param s slot number (0-14)
+	 *	return TRUE if Stero mode; FALSE for Mono
+	 */
 	bool soundMode(int s);
+
+	/** \brief setSound mode for a slot
+	 *  \param s slot number (0-14)
+	 *	\param new soundMode FF7Save::SOUNDMODE
+	 */
 	void setSoundMode(int s, int mode);
+
 	void setSoundMode(int s, bool mode);
 	bool controlMode(int s);
 	void setControlMode(int s, int mode);
