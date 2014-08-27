@@ -4753,7 +4753,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Correl Valley</source>
-        <translation>Correl Valley</translation>
+        <translation type="obsolete">Correl Valley</translation>
     </message>
     <message>
         <source>Outside Plates</source>
@@ -4801,7 +4801,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Correl Valley Cave</source>
-        <translation>Höhle im Corel-Tal</translation>
+        <translation type="obsolete">Höhle im Corel-Tal</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -4991,6 +4991,14 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Bottom of Northern Cave</source>
         <translation>Grund der Nordhöhle</translation>
+    </message>
+    <message>
+        <source>Corel Valley</source>
+        <translation>Corel Valley</translation>
+    </message>
+    <message>
+        <source>Corel Valley Cave</source>
+        <translation>Höhle im Corel-Tal</translation>
     </message>
 </context>
 <context>
@@ -7200,19 +7208,19 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>MP-Turbo 20%</translation>
+        <translation type="obsolete">MP-Turbo 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>MP-Turbo 30%</translation>
+        <translation type="obsolete">MP-Turbo 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>MP-Turbo 40%</translation>
+        <translation type="obsolete">MP-Turbo 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>MP-Turbo 50%</translation>
+        <translation type="obsolete">MP-Turbo 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -7934,6 +7942,22 @@ trigger showing that tutorial</source>
         <source>KOTR x5 (250mp)</source>
         <translation>RdR x5 (250MP)</translation>
     </message>
+    <message>
+        <source>MP Turbo 20%</source>
+        <translation>MP-Turbo 20%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 30%</source>
+        <translation>MP-Turbo 30%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 40%</source>
+        <translation>MP-Turbo 40%</translation>
+    </message>
+    <message>
+        <source>MP Turbo 50%</source>
+        <translation>MP-Turbo 50%</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -8562,6 +8586,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Select A Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Another File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

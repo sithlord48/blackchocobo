@@ -660,11 +660,11 @@ static const LOCATION Locations[]=
 	{"anfrst_5",QT_TRANSLATE_NOOP("Locations","Ancient Forest"),"1","624","118","1045","2","64"},
 
 
-	{"sango1",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","625","-112","-345","76","32"},
-	{"sango2",QT_TRANSLATE_NOOP("Locations","Correl Valley"),"1","626","-1916","-11320","14","32"},
+	{"sango1",QT_TRANSLATE_NOOP("Locations","Corel Valley"),"1","625","-112","-345","76","32"},
+	{"sango2",QT_TRANSLATE_NOOP("Locations","Corel Valley"),"1","626","-1916","-11320","14","32"},
 	{"sango3",QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","627","-65","431","135","84"},
-	{"sandun_1",QT_TRANSLATE_NOOP("Locations","Correl Valley Cave"),"1","628","635","-599","164","192"},
-	{"sandun_2",QT_TRANSLATE_NOOP("Locations","Correl Valley Cave"),"1","629","29","-1053","29","128"},
+	{"sandun_1",QT_TRANSLATE_NOOP("Locations","Corel Valley Cave"),"1","628","635","-599","164","192"},
+	{"sandun_2",QT_TRANSLATE_NOOP("Locations","Corel Valley Cave"),"1","629","29","-1053","29","128"},
 
 
 	{"lost1",QT_TRANSLATE_NOOP("Locations","Forgotten Capital"),"1","630","-1595","1142","10","32"},
