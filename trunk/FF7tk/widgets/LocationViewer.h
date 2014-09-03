@@ -18,93 +18,102 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets>
+	#include <QtWidgets>
 #else
-    #include <QtGui>
+	#include <QtGui>
 #endif
 // Include FF7tk Items.
 #include "../data/FF7Location.h"
 #include "../data/FF7FieldItemList.h"
 class LocationViewer : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    explicit LocationViewer(QWidget *parent = 0);
-
+	explicit LocationViewer(QWidget *parent = 0);
 signals:
-    void locationChanged(QString);
-    void xChanged(int x);
-    void yChanged(int y);
-    void tChanged(int t);
-    void dChanged(int d);
-    void mapIdChanged(int mapId);
-    void locIdChanged(int locId);
-    void locationStringChanged(QString);
-    void fieldItemConnectRequest(quint8 index,QList<quint16> offset,QList<quint8>bit);
-    void fieldItemCheck(int index);
-    void fieldItemChanged(int index,bool checked);
+	void locationChanged(QString);
+	void xChanged(int x);
+	void yChanged(int y);
+	void tChanged(int t);
+	void dChanged(int d);
+	void mapIdChanged(int mapId);
+	void locIdChanged(int locId);
+	void locationStringChanged(QString);
+	void fieldItemConnectRequest(quint8 index,QList<quint16> offset,QList<quint8>bit);
+	void fieldItemCheck(int index);
+	void fieldItemChanged(int index,bool checked);
 
 public slots:
-    void setSelected(QString);
-    void setRegion(QString region);
-    void setTranslationBaseFile(QString);
-    void setX(int x);
-    void setY(int y);
-    void setT(int t);
-    void setD(int d);
-    void setMapId(int mapId);
-    void setLocationId(int locId);
-    void setLocationString(QString);
-    void setHorizontalHeaderStyle(QString styleSheet);
-    void setFieldItemChecked(int row,bool checked);
-    void init_fieldItems(void);
+	void setSelected(QString);
+	void setLocationChangesSaved(bool saveChanges);
+	bool locationChangesSaved(void);
+	void setRegion(QString region);
+	void setTranslationBaseFile(QString);
+	void setX(int x);
+	void setY(int y);
+	void setT(int t);
+	void setD(int d);
+	void setMapId(int mapId);
+	void setLocationId(int locId);
+	void setLocationString(QString);
+	void setHorizontalHeaderStyle(QString styleSheet);
+	void setFieldItemChecked(int row,bool checked);
+	void init_fieldItems(void);
 
 private slots:
-    void itemChanged(int currentRow,int currentColumn,int prevRow, int prevColumn);
-    void sbMapIdChanged(int mapId);
-    void sbLocIdChanged(int locId);
-    void sbXChanged(int x);
-    void sbYChanged(int y);
-    void sbTChanged(int t);
-    void sbDChanged(int d);
-    void lineLocationNameChanged(QString);
-    void setLocation(int mapId,int locId);
-    void filterLocations(QString filter);
-    void actionRegExpSearchToggled(bool checked);
-    void actionCaseSensitiveToggled(bool checked);
-    void btnSearchOptionsClicked(void);
-    void fieldItemListItemChanged(QModelIndex index);
-    void chkAutoUpdateChanged(bool checked);
+	void itemChanged(int currentRow,int currentColumn,int prevRow, int prevColumn);
+	void sbMapIdChanged(int mapId);
+	void sbLocIdChanged(int locId);
+	void sbXChanged(int x);
+	void sbYChanged(int y);
+	void sbTChanged(int t);
+	void sbDChanged(int d);
+	void lineLocationNameChanged(QString);
+	void setLocation(int mapId,int locId);
+	void filterLocations(QString filter);
+	void actionNameSearchToggled(bool checked);
+	void actionItemSearchToggled(bool checked);
+	void actionRegExpSearchToggled(bool checked);
+	void actionCaseSensitiveToggled(bool checked);
+	void btnSearchOptionsClicked(void);
+	void fieldItemListItemChanged(QModelIndex index);
+	void chkAutoUpdateChanged(bool checked);
 protected:
-    void resizeEvent(QResizeEvent *ev);
+	void resizeEvent(QResizeEvent *ev);
 private:
-    void init_display(void);
-    void init_connections(void);
-    void init_disconnect(void);
-    QString translate(QString text);
-    QTableWidget *locationTable;
-    QLineEdit *lineTableFilter;
-    QAction *actionRegExpSearch;
-    QAction *actionCaseSensitive;
-    QToolButton *btnSearchOptions;
-    FF7Location *Locations;
-    FF7FieldItemList *fieldItems;
-    QLabel * lblLocationPreview;
-    QLineEdit *lineLocationName;
-    QSpinBox *sbMapID;
-    QSpinBox *sbLocID;
-    QSpinBox *sbX;
-    QSpinBox *sbY;
-    QSpinBox *sbT;
-    QSpinBox *sbD;
-    QString region;
-    QString transBasePath;
-    QListWidget *fieldItemList;
-    QGroupBox *groupFieldItems;
-    QCheckBox *chkAutoUpdate;
-    bool regExpSearch;
-    bool caseSensitive;
-    bool autoUpdate;
+	enum filterMode {NAME,ITEM};
+	void init_display(void);
+	void init_connections(void);
+	void init_disconnect(void);
+	QString translate(QString text);
+	void searchItem(QRegExp exp);
+	void searchName(QRegExp exp);
+	QTableWidget *locationTable;
+	QLineEdit *lineTableFilter;
+	QAction *actionNameSearch;
+	QAction *actionItemSearch;
+	QAction *actionRegExpSearch;
+	QAction *actionCaseSensitive;
+	QToolButton *btnSearchOptions;
+	FF7Location *Locations;
+	FF7FieldItemList *fieldItems;
+	QLabel * lblLocationPreview;
+	QLineEdit *lineLocationName;
+	QSpinBox *sbMapID;
+	QSpinBox *sbLocID;
+	QSpinBox *sbX;
+	QSpinBox *sbY;
+	QSpinBox *sbT;
+	QSpinBox *sbD;
+	QString region;
+	QString transBasePath;
+	QListWidget *fieldItemList;
+	QGroupBox *groupFieldItems;
+	QCheckBox *chkAutoUpdate;
+	quint8 searchMode;
+	bool regExpSearch;
+	bool caseSensitive;
+	bool autoUpdate;
 };
 
 #endif // LOCATIONVIEWER_H

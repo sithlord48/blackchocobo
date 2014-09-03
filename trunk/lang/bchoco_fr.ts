@@ -1165,7 +1165,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Mythril</source>
-        <translation>Mythril</translation>
+        <translation type="obsolete">Mythril</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -1345,7 +1345,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation>Clé du Secteur 5</translation>
+        <translation type="obsolete">Clé du Secteur 5</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1545,7 +1545,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation>Ecailles-Léviathan</translation>
+        <translation type="obsolete">Ecailles-Léviathan</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
@@ -1609,7 +1609,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>Méga-Matéria : Fusée</translation>
+        <translation type="obsolete">Méga-Matéria : Fusée</translation>
     </message>
     <message>
         <source>Remedy</source>
@@ -1657,7 +1657,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation>Carte 66</translation>
+        <translation type="obsolete">Carte 66</translation>
     </message>
     <message>
         <source>Wind Slash</source>
@@ -1689,7 +1689,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation>Secteur de Midgar</translation>
+        <translation type="obsolete">Secteur de Midgar</translation>
     </message>
     <message>
         <source>Mega All</source>
@@ -1721,7 +1721,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>Méga-Matéria : Corel</translation>
+        <translation type="obsolete">Méga-Matéria : Corel</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -1729,11 +1729,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Snowboard</source>
-        <translation>Surf des neiges</translation>
+        <translation type="obsolete">Surf des neiges</translation>
     </message>
     <message>
         <source>Glacier Map</source>
-        <translation>Carte-glacier</translation>
+        <translation type="obsolete">Carte-glacier</translation>
     </message>
     <message>
         <source>Shiva</source>
@@ -1741,55 +1741,55 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Pharmacy Coupon</source>
-        <translation>Coupon pharmacie</translation>
+        <translation type="obsolete">Coupon pharmacie</translation>
     </message>
     <message>
         <source>Wig</source>
-        <translation>Perruque</translation>
+        <translation type="obsolete">Perruque</translation>
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation>Perruque-brune</translation>
+        <translation type="obsolete">Perruque-brune</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
-        <translation>Perruque-blonde</translation>
+        <translation type="obsolete">Perruque-blonde</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
-        <translation>Robe coton</translation>
+        <translation type="obsolete">Robe coton</translation>
     </message>
     <message>
         <source>Satin Dress</source>
-        <translation>Robe satin</translation>
+        <translation type="obsolete">Robe satin</translation>
     </message>
     <message>
         <source>Silk Dress</source>
-        <translation>Robe soie</translation>
+        <translation type="obsolete">Robe soie</translation>
     </message>
     <message>
         <source>Disinfectant</source>
-        <translation>Désinfectant</translation>
+        <translation type="obsolete">Désinfectant</translation>
     </message>
     <message>
         <source>Deodorant</source>
-        <translation>Déodorant</translation>
+        <translation type="obsolete">Déodorant</translation>
     </message>
     <message>
         <source>Digestive</source>
-        <translation>Digestif</translation>
+        <translation type="obsolete">Digestif</translation>
     </message>
     <message>
         <source>Glass Tiara</source>
-        <translation>Diadème verre</translation>
+        <translation type="obsolete">Diadème verre</translation>
     </message>
     <message>
         <source>Ruby Tiara</source>
-        <translation>Diadème rubis</translation>
+        <translation type="obsolete">Diadème rubis</translation>
     </message>
     <message>
         <source>Diamond Tiara</source>
-        <translation>Diadème diamants</translation>
+        <translation type="obsolete">Diadème diamants</translation>
     </message>
     <message>
         <source>Batteries</source>
@@ -1813,15 +1813,15 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>KeyCard 68</source>
-        <translation>Carte 68</translation>
+        <translation type="obsolete">Carte 68</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
-        <translation>Harpe lunaire</translation>
+        <translation type="obsolete">Harpe lunaire</translation>
     </message>
     <message>
         <source>Key To Basement</source>
-        <translation>Clé sous-sol</translation>
+        <translation type="obsolete">Clé sous-sol</translation>
     </message>
     <message>
         <source>Mind Plus</source>
@@ -1833,7 +1833,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Gold Ticket</source>
-        <translation>Ticket d&apos;or</translation>
+        <translation type="obsolete">Ticket d&apos;or</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -1873,19 +1873,215 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Cologne</source>
-        <translation>Parfum</translation>
+        <translation type="obsolete">Parfum</translation>
     </message>
     <message>
         <source>Flower Cologne</source>
-        <translation>Parfum fleur</translation>
+        <translation type="obsolete">Parfum fleur</translation>
     </message>
     <message>
         <source>Sexy Cologne</source>
-        <translation>Parfum sexy</translation>
+        <translation type="obsolete">Parfum sexy</translation>
     </message>
     <message>
         <source>Omnislash</source>
         <translation>Omnislash</translation>
+    </message>
+    <message>
+        <source>KeyItem: Mythril</source>
+        <translation>Elément-clé: Mythril</translation>
+    </message>
+    <message>
+        <source>KeyItem: Midgar parts</source>
+        <translation>Elément-clé: Secteur de Midgar</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 66</source>
+        <translation>Elément-clé: Carte 66</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Corel</source>
+        <translation>Elément-clé: Méga-Matéria : Corel</translation>
+    </message>
+    <message>
+        <source>KeyItem: Snowboard</source>
+        <translation>Elément-clé: Surf des neiges</translation>
+    </message>
+    <message>
+        <source>KeyItem: Glacier Map</source>
+        <translation>Elément-clé: Carte-glacier</translation>
+    </message>
+    <message>
+        <source>KeyItem: Cologne</source>
+        <translation>Elément-clé: Parfum</translation>
+    </message>
+    <message>
+        <source>KeyItem: Flower Cologne</source>
+        <translation>Elément-clé: Parfum fleur</translation>
+    </message>
+    <message>
+        <source>KeyItem: Sexy Cologne</source>
+        <translation>Elément-clé: Parfum sexy</translation>
+    </message>
+    <message>
+        <source>KeyItem: Pharmacy Coupon</source>
+        <translation>Elément-clé: Coupon pharmacie</translation>
+    </message>
+    <message>
+        <source>KeyItem: Wig</source>
+        <translation>Elément-clé: Perruque</translation>
+    </message>
+    <message>
+        <source>KeyItem: Dyed Wig</source>
+        <translation>Elément-clé: Perruque-brune</translation>
+    </message>
+    <message>
+        <source>KeyItem: Blonde Wig</source>
+        <translation>Elément-clé: Perruque-blonde</translation>
+    </message>
+    <message>
+        <source>KeyItem: Cotton Dress</source>
+        <translation>Elément-clé: Robe coton</translation>
+    </message>
+    <message>
+        <source>KeyItem: Satin Dress</source>
+        <translation>Elément-clé: Robe satin</translation>
+    </message>
+    <message>
+        <source>KeyItem: Silk Dress</source>
+        <translation>Elément-clé: Robe soie</translation>
+    </message>
+    <message>
+        <source>KeyItem: Disinfectant</source>
+        <translation>Elément-clé: Désinfectant</translation>
+    </message>
+    <message>
+        <source>KeyItem: Deodorant</source>
+        <translation>Elément-clé: Déodorant</translation>
+    </message>
+    <message>
+        <source>KeyItem: Digestive</source>
+        <translation>Elément-clé: Digestif</translation>
+    </message>
+    <message>
+        <source>KeyItem: Glass Tiara</source>
+        <translation>Elément-clé: Diadème verre</translation>
+    </message>
+    <message>
+        <source>KeyItem: Ruby Tiara</source>
+        <translation>Elément-clé: Diadème rubis</translation>
+    </message>
+    <message>
+        <source>KeyItem: Diamond Tiara</source>
+        <translation>Elément-clé: Diadème diamants</translation>
+    </message>
+    <message>
+        <source>Can Advance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: KeyCard 68</source>
+        <translation>Elément-clé: Carte 68</translation>
+    </message>
+    <message>
+        <source>KeyItem: Lunar Harp</source>
+        <translation>Elément-clé: Harpe lunaire</translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Basement</source>
+        <translation>Elément-clé: Clé sous-sol</translation>
+    </message>
+    <message>
+        <source>KeyItem: Gold Ticket</source>
+        <translation>Elément-clé: Ticket d&apos;or</translation>
+    </message>
+    <message>
+        <source>Found hidden draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stole boys 5 gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initilized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: A Coupon</source>
+        <translation>Elément-clé: Coupon A</translation>
+    </message>
+    <message>
+        <source>KeyItem: B Coupon</source>
+        <translation>Elément-clé: Coupon B</translation>
+    </message>
+    <message>
+        <source>KeyItem: C Coupon</source>
+        <translation>Elément-clé: Coupon C</translation>
+    </message>
+    <message>
+        <source>Star Pendant</source>
+        <translation type="unfinished">Pendentif étoilé</translation>
+    </message>
+    <message>
+        <source>Four Slots</source>
+        <translation type="unfinished">Quatre orifices</translation>
+    </message>
+    <message>
+        <source>Grow Lance</source>
+        <translation type="unfinished">Lance croissance</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 65</source>
+        <translation>Elément-clé: Carte 65</translation>
+    </message>
+    <message>
+        <source>MP Absorb</source>
+        <translation>Absorption MP</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #1</source>
+        <translation>Affiches du Turtle&apos;s Paradise #1</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #2</source>
+        <translation>Affiches du Turtle&apos;s Paradise #2</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #3</source>
+        <translation>Affiches du Turtle&apos;s Paradise #3</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #4</source>
+        <translation>Affiches du Turtle&apos;s Paradise #4</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #5</source>
+        <translation>Affiches du Turtle&apos;s Paradise #5</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #6</source>
+        <translation>Affiches du Turtle&apos;s Paradise #6</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #7</source>
+        <translation>Affiches du Turtle&apos;s Paradise #7</translation>
+    </message>
+    <message>
+        <source>Rewarded for viewing all Turtle Paradise Flyers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Sector 5</source>
+        <translation>Elément-clé: Clé du Secteur 5</translation>
+    </message>
+    <message>
+        <source>KeyItem: Leviathan Scales</source>
+        <translation>Elément-clé: Ecailles-Léviathan</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Rocket</source>
+        <translation>Elément-clé: Méga-Matéria : Fusée</translation>
     </message>
 </context>
 <context>
@@ -3895,7 +4091,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Location Filter...</source>
-        <translation>Filtre sur le lieu...</translation>
+        <translation type="obsolete">Filtre sur le lieu...</translation>
     </message>
     <message>
         <source>Field Items</source>
@@ -3904,6 +4100,22 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Save New Coordinates When Table Se&amp;lection Changes</source>
         <translation>Sauver les nouvelles coordonnées quand la sé&amp;lection dans le tableau change</translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found At Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location Name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found at Location...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5058,7 +5270,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Key Items</source>
-        <translation>Eléments-clé</translation>
+        <translation type="unfinished">Elément-clé</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
@@ -5953,7 +6165,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation>Volé les 5 gils de l&apos;enfant</translation>
+        <translation type="obsolete">Volé les 5 gils de l&apos;enfant</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
@@ -6093,7 +6305,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Black Chococbo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="obsolete">Black Chocobo</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
@@ -6211,7 +6423,7 @@ location.</source>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation type="unfinished">cb_s5_7 (Ether turbo du gamin dans la maison au second 
+        <translation type="obsolete">cb_s5_7 (Ether turbo du gamin dans la maison au second 
 5min1_2)</translation>
     </message>
     <message>

@@ -362,8 +362,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_s5_3_toggled(bool checked);
 	void on_cb_s5_4_toggled(bool checked);
 	void on_cb_s5_5_toggled(bool checked);
-	void on_cb_s5_6_toggled(bool checked);
-	void on_cb_s5_7_toggled(bool checked);
 	void on_cb_s5_8_toggled(bool checked);
 
 	// game options tab
@@ -417,7 +415,6 @@ private slots://try to keep these in the same order as the .cpp file
 
 
 	//items tab
-	void on_list_flyers_clicked(const QModelIndex &index);
 	void on_list_keyitems_clicked(const QModelIndex &index);
 	void on_btn_item_add_each_item_clicked();
 	void on_btn_remove_all_items_clicked();

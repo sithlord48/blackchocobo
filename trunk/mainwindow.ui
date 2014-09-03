@@ -868,13 +868,7 @@
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>150</height>
-              </size>
-             </property>
+             </property>            
              <property name="title">
               <string>Turtle Paradise Flyers Collected</string>
              </property>
@@ -882,122 +876,12 @@
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_16">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>3</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>3</number>
-              </property>
               <item>
-               <widget class="QListWidget" name="list_flyers">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="baseSize">
-                 <size>
-                  <width>0</width>
-                  <height>130</height>
-                 </size>
-                </property>
-                <property name="editTriggers">
-                 <set>QAbstractItemView::NoEditTriggers</set>
-                </property>
-                <property name="showDropIndicator" stdset="0">
-                 <bool>false</bool>
-                </property>
-                <property name="dragDropMode">
-                 <enum>QAbstractItemView::NoDragDrop</enum>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>2nd Floor Sector 5 House</string>
+               <widget class="QLabel" name="FlyerLabel">
+                <property name="text">
+                  <string>Search for "Turtle Paradise" using item search mode on the location tab</string>
                  </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>1st Floor Shinra Building</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Gold Saucer - Ghost Hotel</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Cosmo Canyon - Inn 2nd Floor</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Cosmo Canyon - Near Shop</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wutai - In Front Of Trap Room</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Wutai - In Front Of Turtle Paradise</string>
-                 </property>
-                 <property name="checkState">
-                  <enum>Unchecked</enum>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
-                 </property>
-                </item>
-               </widget>
+                </widget>
               </item>
              </layout>
             </widget>
@@ -3591,13 +3475,6 @@ location.</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s5_6">
-                      <property name="text">
-                       <string>Stole The Kids 5 Gil</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
                      <widget class="QCheckBox" name="cb_s5_8">
                       <property name="text">
                        <string>After Aeris Church Scene</string>
@@ -3847,15 +3724,7 @@ location.</string>
                       </property>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_7">
-                      <property name="text">
-                       <string>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
-5min1_2)</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                    </layout>
                   </widget>
                  </item>
                 </layout>

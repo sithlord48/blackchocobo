@@ -147,7 +147,6 @@ void MainWindow::init_display()
 	locLayout->addWidget(locationViewer);
 	ui->fieldFrame->setLayout(locLayout);
 
-	ui->list_flyers->setFixedHeight(ui->list_flyers->sizeHintForRow(0)*8);
 	//Set up Status Bar..
 	ui->statusBar->addWidget(ui->frame_status,1);
 	//Dynamicly Populate The List of languages
@@ -170,9 +169,6 @@ void MainWindow::init_display()
 		langAction->setCheckable(true);
 		langAction->setChecked(settings->value("lang").toString()==lang);
 	}
-
-	ui->box_t_paradise->setMaximumHeight( (ui->list_flyers->sizeHintForRow(0)*ui->list_flyers->count()) +ui->box_t_paradise->contentsMargins().top() +ui->box_t_paradise->contentsMargins().bottom() );
-
 }
 void MainWindow::init_style()
 {
@@ -1096,12 +1092,6 @@ void MainWindow::itemupdate(void)
 		else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
 	}
 
-	for (int i=0;i<7;i++)//flyers
-	{
-		if (ff7->turtleParadiseFlyerSeen(s,i)){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
-		else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
-	}
-
 	load=false;
 }
 void MainWindow::CheckGame()
@@ -1461,8 +1451,6 @@ void MainWindow::progress_update()
 	if(ff7->unknown(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}      else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
 	if(ff7->unknown(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}      else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
 	if(ff7->unknown(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}      else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}      else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}      else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
 	if(ff7->unknown(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
 
 	//When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
@@ -1613,7 +1601,6 @@ void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s
 void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,value);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_flyers_clicked(const QModelIndex &index){if(!load){ff7->setTurtleParadiseFlyerSeen(s,index.row(),ui->list_flyers->item(index.row())->checkState());}}
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());}}
 
 // Field Items Combos
@@ -2018,24 +2005,6 @@ void MainWindow::on_cb_s5_5_toggled(bool checked)
 		ff7->setUnknown(s,23,temp);
 }}
 
-void MainWindow::on_cb_s5_6_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<5);}
-		else{t &= ~(1<<5);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_7_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<6);}
-		else{t &= ~(1<<6);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
 void MainWindow::on_cb_s5_8_toggled(bool checked)
 {if(!load){
 		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
@@ -2059,11 +2028,16 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ff7->setMidgarTrainFlags(s,0);
 		ui->cb_bombing_int->setChecked(Qt::Checked);
 		ui->combo_s7_slums->setCurrentIndex(1);
-		ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
+		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
 		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
 		ui->sb_turkschruch->setValue(0); // reset turks.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(116);
+		if(!locationViewer->locationChangesSaved())
+		{//toggle saving of locations if they are not being saved by the widget
+				locationViewer->setLocationChangesSaved(true);
+				locationViewer->setLocationChangesSaved(false);
+		}
 		ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
@@ -2076,10 +2050,15 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ff7->setBmProgress2(s,198);
 		ff7->setBmProgress3(s,3);
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
-		ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
+		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
 		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(183);
+		if(!locationViewer->locationChangesSaved())
+		{//toggle saving of locations if they are not being saved by the widget
+				locationViewer->setLocationChangesSaved(true);
+				locationViewer->setLocationChangesSaved(false);
+		}
 		ui->combo_party1->setCurrentIndex(0);
 		ui->combo_party2->setCurrentIndex(12);
 		ui->combo_party3->setCurrentIndex(12);
@@ -2096,8 +2075,13 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(332);
+		if(!locationViewer->locationChangesSaved())
+		{//toggle saving of locations if they are not being saved by the widget
+				locationViewer->setLocationChangesSaved(true);
+				locationViewer->setLocationChangesSaved(false);
+		}
 		// set up young cloud, Copy Cloud Change ID to young Cloud
-		ff7->setCharacter(s,6,ff7->character(s,0));
+		ff7->setCharacter(s,FF7Char::YoungCloud,ff7->character(s,FF7Char::Cloud));
 		ff7->setCharID(s,6,FF7Char::YoungCloud);
 		//set up Sephiroth
 		ff7->setCharID(s,7,FF7Char::Sephiroth);
@@ -2120,6 +2104,11 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(496);
+		if(!locationViewer->locationChangesSaved())
+		{//toggle saving of locations if they are not being saved by the widget
+				locationViewer->setLocationChangesSaved(true);
+				locationViewer->setLocationChangesSaved(false);
+		}
 		ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
@@ -2134,6 +2123,11 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(646);
+		if(!locationViewer->locationChangesSaved())
+		{//toggle saving of locations if they are not being saved by the widget
+				locationViewer->setLocationChangesSaved(true);
+				locationViewer->setLocationChangesSaved(false);
+		}
 		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSALLOWED,false);
 		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSVISIBLE,false);
 		ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));

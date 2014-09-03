@@ -1163,10 +1163,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Mythril</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mime</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1340,10 +1336,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Mop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1543,10 +1535,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Leviathan Scales</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Dragoon Lance</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1607,10 +1595,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Remedy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1655,10 +1639,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Wind Slash</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1684,10 +1664,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Midgar parts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1719,75 +1695,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ultima</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Snowboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Shiva</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cotton Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1811,27 +1723,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>KeyCard 68</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Key To Basement</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mind Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1871,19 +1767,203 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Mythril</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Midgar parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 66</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Snowboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Glacier Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Flower Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Sexy Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Dyed Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Blonde Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Cotton Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Satin Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Silk Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Disinfectant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Deodorant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Digestive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Glass Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Ruby Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Diamond Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can Advance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Lunar Harp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Gold Ticket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Found hidden draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stole boys 5 gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initilized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: A Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: B Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: C Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star Pendant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Four Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grow Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 65</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rewarded for viewing all Turtle Paradise Flyers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Sector 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Leviathan Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Rocket</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3893,15 +3973,27 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Location Filter...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Field Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Save New Coordinates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found At Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location Name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found at Location...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5930,10 +6022,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Stole The Kids 5 Gil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6068,10 +6156,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6182,11 +6266,6 @@ Table Entries are Editable</source>
     <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
-5min1_2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

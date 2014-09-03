@@ -1472,7 +1472,7 @@ The km/h speeds are calculated while playing </source>
 <context>
     <name>FF7Save</name>
     <message>
-        <location filename="../FF7tk/data/FF7Save.cpp" line="1442"/>
+        <location filename="../FF7tk/data/FF7Save.cpp" line="1507"/>
         <source>New Game +</source>
         <translation></translation>
     </message>
@@ -1483,7 +1483,7 @@ The km/h speeds are calculated while playing </source>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="73"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="77"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="80"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="296"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="334"/>
         <source>Hi-Potion</source>
         <translation>High Potion</translation>
     </message>
@@ -1498,15 +1498,15 @@ The km/h speeds are calculated while playing </source>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="79"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="83"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="89"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="238"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="239"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="240"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="243"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="244"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="246"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="247"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="248"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="293"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="276"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="277"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="278"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="281"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="282"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="284"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="285"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="286"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="331"/>
         <source>Potion</source>
         <translation></translation>
     </message>
@@ -1516,12 +1516,12 @@ The km/h speeds are calculated while playing </source>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="124"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="137"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="144"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="226"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="252"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="295"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="301"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="338"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="341"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="264"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="290"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="333"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="339"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="376"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="379"/>
         <source>Ether</source>
         <translation></translation>
     </message>
@@ -1533,19 +1533,19 @@ The km/h speeds are calculated while playing </source>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="128"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="145"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="153"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="206"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="220"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="223"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="274"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="285"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="297"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="313"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="316"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="324"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="409"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="410"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="420"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="437"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="208"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="258"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="261"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="312"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="323"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="335"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="351"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="354"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="362"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="447"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="448"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="458"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="475"/>
         <source>Elixir</source>
         <translation></translation>
     </message>
@@ -1556,13 +1556,13 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="85"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="326"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="350"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="362"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="384"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="364"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="388"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="415"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="434"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="400"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="422"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="426"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="453"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="472"/>
         <source>Mind Source</source>
         <translation></translation>
     </message>
@@ -1579,7 +1579,7 @@ The km/h speeds are calculated while playing </source>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="90"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="126"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="241"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="279"/>
         <source>Phoenix Down</source>
         <translation>Phoenix Tail</translation>
     </message>
@@ -1604,9 +1604,8 @@ The km/h speeds are calculated while playing </source>
         <translation>Ramu</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="96"/>
         <source>Mythril</source>
-        <translation>Mithril</translation>
+        <translation type="obsolete">Mithril</translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="98"/>
@@ -1632,25 +1631,26 @@ The km/h speeds are calculated while playing </source>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="103"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="110"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="141"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="230"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="329"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="268"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="367"/>
         <source>X-Potion</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="104"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="109"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="207"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="231"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="361"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="382"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="209"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="224"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="269"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="399"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="420"/>
         <source>Turbo Ether</source>
         <translation>Ether Turbo</translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="105"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="229"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="428"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="267"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="466"/>
         <source>Vaccine</source>
         <translation></translation>
     </message>
@@ -1661,9 +1661,9 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="108"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="221"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="319"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="393"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="259"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="357"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="431"/>
         <source>Speed Source</source>
         <translation></translation>
     </message>
@@ -1674,15 +1674,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="112"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="204"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="209"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="391"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="206"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="211"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="429"/>
         <source>Luck Source</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="113"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="426"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="464"/>
         <source>Remedy</source>
         <translation>Panacea</translation>
     </message>
@@ -1718,8 +1718,8 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="122"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="256"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="337"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="294"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="375"/>
         <source>Enemy Skill</source>
         <translation></translation>
     </message>
@@ -1730,32 +1730,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="128"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="265"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="315"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="339"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="411"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="425"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="303"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="353"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="377"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="449"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="463"/>
         <source>Magic Source</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="129"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="130"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="132"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="133"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="134"/>
-        <source>Midgar parts</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="135"/>
-        <source>Keycard 66</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="136"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="197"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="275"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="235"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="313"/>
         <source>All</source>
         <translation></translation>
     </message>
@@ -1782,7 +1769,7 @@ The km/h speeds are calculated while playing </source>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="146"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="151"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="349"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="387"/>
         <source>HP Absorb</source>
         <translation></translation>
     </message>
@@ -1827,24 +1814,13 @@ The km/h speeds are calculated while playing </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="159"/>
-        <source>Huge Materia:Corel</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="160"/>
         <source>Ultima</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="162"/>
-        <source>Snowboard</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="163"/>
         <source>Glacier Map</source>
-        <translation>Map of Great Glacier</translation>
+        <translation type="obsolete">Map of Great Glacier</translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="165"/>
@@ -1852,84 +1828,20 @@ The km/h speeds are calculated while playing </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="167"/>
         <source>Cologne</source>
-        <translation>Cologne</translation>
+        <translation type="obsolete">Cologne</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="168"/>
-        <source>Flower Cologne</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="169"/>
-        <source>Sexy Cologne</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="171"/>
         <source>Pharmacy Coupon</source>
-        <translation>Pharmacy Coupon</translation>
+        <translation type="obsolete">Pharmacy Coupon</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="173"/>
         <source>Wig</source>
-        <translation>Frizzy Wig</translation>
+        <translation type="obsolete">Frizzy Wig</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="174"/>
         <source>Dyed Wig</source>
-        <translation>Brown Wig</translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="175"/>
-        <source>Blonde Wig</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="177"/>
-        <source>Cotton Dress</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="178"/>
-        <source>Satin Dress</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="179"/>
-        <source>Silk Dress</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="181"/>
-        <source>Disinfectant</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="182"/>
-        <source>Deodorant</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="183"/>
-        <source>Digestive</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="185"/>
-        <source>Glass Tiara</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="186"/>
-        <source>Ruby Tiara</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="187"/>
-        <source>Diamond Tiara</source>
-        <translation></translation>
+        <translation type="obsolete">Brown Wig</translation>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="189"/>
@@ -1943,16 +1855,16 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="192"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="251"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="289"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="311"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="312"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="321"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="322"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="344"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="368"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="327"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="349"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="350"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="359"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="360"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="382"/>
         <location filename="../FF7tk/data/FF7FieldItemList.h" line="406"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="421"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="444"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="459"/>
         <source>Megalixir</source>
         <translation>Last Elixir</translation>
     </message>
@@ -1972,570 +1884,793 @@ The km/h speeds are calculated while playing </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="199"/>
-        <source>KeyCard 68</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="200"/>
-        <source>Lunar Harp</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="201"/>
-        <source>Key To Basement</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="203"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="205"/>
         <source>Mind Plus</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="208"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="210"/>
         <source>Platinum Fist</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="211"/>
-        <source>Gold Ticket</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="212"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="214"/>
         <source>Gil Plus</source>
         <translation>Gil Plus</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="213"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="215"/>
         <source>Exp Plus</source>
         <translation>Experience Plus</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="214"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="216"/>
         <source>Sprint Shoes</source>
         <translation>Hermes&apos; Sandles</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="215"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="217"/>
         <source>Omnislash</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="216"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="218"/>
         <source>W-Summon</source>
         <translation>Double Summon</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="218"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="256"/>
         <source>Enhance Sword</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="219"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="257"/>
         <source>Fire Armlet</source>
         <translation>Inferno Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="222"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="260"/>
         <source>Javelin</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="224"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="372"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="262"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="410"/>
         <source>Ribbon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="227"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="265"/>
         <source>Catastrophe</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="228"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="235"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="427"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="435"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="266"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="273"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="465"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="473"/>
         <source>Hero Drink</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="233"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="271"/>
         <source>Neo Bahamut</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="234"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="272"/>
         <source>Poison Ring</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="236"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="274"/>
         <source>MP Turbo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="242"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="280"/>
         <source>Poison</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="249"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="287"/>
         <source>Bolt Armlet</source>
         <translation>Thunder Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="250"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="288"/>
         <source>HypnoCrown</source>
         <translation>Hypno Crown</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="253"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="291"/>
         <source>Kujata</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="255"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="293"/>
         <source>Destruct</source>
         <translation>Extinguish</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="257"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="295"/>
         <source>Odin</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="258"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="430"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="296"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="468"/>
         <source>Counter</source>
         <translation>Command Counter</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="259"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="297"/>
         <source>Magic Plus</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="261"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="299"/>
         <source>Steal</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="262"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="300"/>
         <source>Twin Viper</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="263"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="301"/>
         <source>Silver M-phone</source>
         <translation>Silver Megaphone</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="264"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="302"/>
         <source>Enemy Launcher</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="266"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="304"/>
         <source>Buntline</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="267"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="305"/>
         <source>Aurora Armlet</source>
         <translation>Aurora Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="268"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="306"/>
         <source>Viper Halberd</source>
         <translation>She Mao</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="270"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="308"/>
         <source>Rune Blade</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="271"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="309"/>
         <source>Plus Barrette</source>
         <translation>Platinum Barrette</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="272"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="310"/>
         <source>Powersoul</source>
         <translation>Oversoul</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="273"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="311"/>
         <source>Sniper CR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="276"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="243"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="314"/>
         <source>Elemental</source>
         <translation>Force</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="278"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="323"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="331"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="377"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="385"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="389"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="416"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="422"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="96"/>
+        <source>KeyItem: Mythril</source>
+        <translation>KeyItem: Mithril</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="129"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="130"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="132"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="133"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="134"/>
+        <source>KeyItem: Midgar parts</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="135"/>
+        <source>KeyItem: Keycard 66</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="159"/>
+        <source>KeyItem: Huge Materia:Corel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="162"/>
+        <source>KeyItem: Snowboard</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="163"/>
+        <source>KeyItem: Glacier Map</source>
+        <translation>KeyItem: Map of Great Glacier</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="167"/>
+        <source>KeyItem: Cologne</source>
+        <translation>KeyItem: Cologne</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="168"/>
+        <source>KeyItem: Flower Cologne</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="169"/>
+        <source>KeyItem: Sexy Cologne</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="171"/>
+        <source>KeyItem: Pharmacy Coupon</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="173"/>
+        <source>KeyItem: Wig</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="174"/>
+        <source>KeyItem: Dyed Wig</source>
+        <translation>KeyItem: Brown Wig</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="175"/>
+        <source>KeyItem: Blonde Wig</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="177"/>
+        <source>KeyItem: Cotton Dress</source>
+        <translation>KeyItem: Cotton Dress</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="178"/>
+        <source>KeyItem: Satin Dress</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="179"/>
+        <source>KeyItem: Silk Dress</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="181"/>
+        <source>KeyItem: Disinfectant</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="182"/>
+        <source>KeyItem: Deodorant</source>
+        <translation>KeyItem: Deodorant</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="183"/>
+        <source>KeyItem: Digestive</source>
+        <translation>KeyItem: Digestive</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="185"/>
+        <source>KeyItem: Glass Tiara</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="186"/>
+        <source>KeyItem: Ruby Tiara</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="187"/>
+        <source>KeyItem: Diamond Tiara</source>
+        <translation>KeyItem: Diamond Tiara</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="199"/>
+        <source>Can Advance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="201"/>
+        <source>KeyItem: KeyCard 68</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="202"/>
+        <source>KeyItem: Lunar Harp</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="203"/>
+        <source>KeyItem: Key To Basement</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="213"/>
+        <source>KeyItem: Gold Ticket</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="221"/>
+        <source>Found hidden draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="223"/>
+        <source>Stole boys 5 gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="226"/>
+        <source>Initilized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="227"/>
+        <source>KeyItem: A Coupon</source>
+        <translation>KeyItem: Coupon A</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="228"/>
+        <source>KeyItem: B Coupon</source>
+        <translation>KeyItem: Coupon B</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="229"/>
+        <source>KeyItem: C Coupon</source>
+        <translation>KeyItem: Coupon C</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="234"/>
+        <source>Star Pendant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="236"/>
+        <source>Four Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="239"/>
+        <source>Grow Lance</source>
+        <translation type="unfinished">Glow Lance</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="241"/>
+        <source>KeyItem: Keycard 65</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="245"/>
+        <source>MP Absorb</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="247"/>
+        <source>Turtle Paradise Flyer #1</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="248"/>
+        <source>Turtle Paradise Flyer #2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="249"/>
+        <source>Turtle Paradise Flyer #3</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="250"/>
+        <source>Turtle Paradise Flyer #4</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="251"/>
+        <source>Turtle Paradise Flyer #5</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="252"/>
+        <source>Turtle Paradise Flyer #6</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="253"/>
+        <source>Turtle Paradise Flyer #7</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="254"/>
+        <source>Rewarded for viewing all Turtle Paradise Flyers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="316"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="361"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="369"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="415"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="423"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="427"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="454"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="460"/>
         <source>Power Source</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="279"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="317"/>
         <source>Water Ring</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="280"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="318"/>
         <source>Typhon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="281"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="319"/>
         <source>Supershot ST</source>
         <translation>Highbrow ST</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="282"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="320"/>
         <source>Slash-All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="283"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="321"/>
         <source>Minerva Band</source>
         <translation>Minerva Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="284"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="322"/>
         <source>Apocalypse</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="287"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="325"/>
         <source>Spring Gun Clip</source>
         <translation>Spriggan Clip</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="288"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="326"/>
         <source>Mop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="290"/>
-        <source>Key To Sector 5</source>
-        <translation>District 5 Gate Key</translation>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="328"/>
+        <source>KeyItem: Key To Sector 5</source>
+        <translation>KeyItem: District 5 Gate Key</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="292"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="351"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="386"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="434"/>
+        <source>KeyItem: Leviathan Scales</source>
+        <translation>KeyItem: Scales of Levathan</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="451"/>
+        <source>KeyItem: Huge Materia:Rocket</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Key To Sector 5</source>
+        <translation type="obsolete">District 5 Gate Key</translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="330"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="389"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="424"/>
         <source>Tent</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="298"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="336"/>
         <source>Long Range</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="299"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="337"/>
         <source>Titan</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="302"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="340"/>
         <source>Comet</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="303"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="341"/>
         <source>Deathblow</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="304"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="342"/>
         <source>Hades</source>
         <translation>Hades</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="305"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="343"/>
         <source>Outsider</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="306"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="344"/>
         <source>Escort Guard</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="307"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="345"/>
         <source>Conformer</source>
         <translation>Eternal Nemesis</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="308"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="346"/>
         <source>Spirit Lance</source>
         <translation>Longinus</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="310"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="348"/>
         <source>Heaven&apos;s Cloud</source>
         <translation>Ama no Murakumo</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="314"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="325"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="340"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="343"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="346"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="390"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="417"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="424"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="352"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="363"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="378"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="381"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="384"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="428"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="455"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="462"/>
         <source>Guard Source</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="317"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="418"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="355"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="456"/>
         <source>Mystile</source>
         <translation>Mystère</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="320"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="358"/>
         <source>Tetra Elemental</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="328"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="366"/>
         <source>White M-phone</source>
         <translation>White Megaphone</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="330"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="368"/>
         <source>Drill Arm</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="332"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="370"/>
         <source>Yoshiyuki</source>
         <translation>Mutsunokami Yoshiyuki</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="333"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="371"/>
         <source>Venus Gospel</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="334"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="372"/>
         <source>Save Crystal</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="335"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="373"/>
         <source>Peacemaker</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="342"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="380"/>
         <source>Fourth Bracelet</source>
         <translation>Force Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="347"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="385"/>
         <source>Double Cut</source>
         <translation>Consecutive Cut</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="348"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="386"/>
         <source>Highwind</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="353"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="391"/>
         <source>Show Underwater</source>
         <translation>Show Diving</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="354"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="392"/>
         <source>Show Master Command</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="355"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="393"/>
         <source>Show Master Magic</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="356"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="394"/>
         <source>Show Master Summon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="357"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="395"/>
         <source>Show Gold Chocobo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="359"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="397"/>
         <source>Morph</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="360"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="398"/>
         <source>Luck Plus</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="365"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="403"/>
         <source>Princess Guard</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="366"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="404"/>
         <source>Trumpet Shell</source>
         <translation>Triton Trumpet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="369"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="407"/>
         <source>Bahamut</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="370"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="408"/>
         <source>Trident</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="371"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="409"/>
         <source>Rocket Punch</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="373"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="411"/>
         <source>Silver Rifle</source>
         <translation>BB Gun</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="375"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="413"/>
         <source>Motor Drive</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="376"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="414"/>
         <source>Fire Ring</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="378"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="416"/>
         <source>Purchased The House</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="380"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="418"/>
         <source>W Machine Gun</source>
         <translation>Machine Gun</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="381"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="419"/>
         <source>Transform</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="392"/>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="394"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="430"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="432"/>
         <source>1/35 soldier</source>
         <translation>1:35 Solider</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="396"/>
         <source>Leviathan Scales</source>
-        <translation>Scales of Levathan</translation>
+        <translation type="obsolete">Scales of Levathan</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="397"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="435"/>
         <source>Steal-As-Well</source>
         <translation>Added Steal</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="398"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="436"/>
         <source>Dragoon Lance</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="399"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="437"/>
         <source>W-Item</source>
         <translation>Double Item</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="400"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="438"/>
         <source>Max Ray</source>
         <translation>Maximum Ray</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="401"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="439"/>
         <source>Aegis Armlet</source>
         <translation>Aegis Bracelet</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="402"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="440"/>
         <source>Scimitar</source>
         <translation>Qing Long</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="404"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="442"/>
         <source>Battle Trumpet</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="405"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="443"/>
         <source>Leviathan</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="407"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="445"/>
         <source>Oritsuru</source>
         <translation>Orizuru</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="408"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="446"/>
         <source>Starlight Phone</source>
         <translation>Starlight Megaphone</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="413"/>
-        <source>Huge Materia:Rocket</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="419"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="457"/>
         <source>Missing Score</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="429"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="467"/>
         <source>Shield</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="431"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="469"/>
         <source>W-Magic</source>
         <translation>Double Magic</translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="433"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="471"/>
         <source>Imperial Guard</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="438"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="476"/>
         <source>Contain</source>
         <translation>Forbidden</translation>
     </message>
@@ -3549,7 +3684,7 @@ The km/h speeds are calculated while playing </source>
 <context>
     <name>Items</name>
     <message>
-        <location filename="../FF7tk/data/FF7FieldItemList.h" line="294"/>
+        <location filename="../FF7tk/data/FF7FieldItemList.h" line="332"/>
         <location filename="../FF7tk/data/FF7Item.h" line="600"/>
         <source>Ether</source>
         <translation></translation>
@@ -5065,75 +5200,90 @@ The km/h speeds are calculated while playing </source>
 <context>
     <name>LocationViewer</name>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="55"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="59"/>
         <source>Filename</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="58"/>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="118"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="62"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="131"/>
         <source>Location Name</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="61"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="65"/>
         <source>LocID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="99"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="103"/>
+        <source>Filter Mode: Name / Location String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="106"/>
+        <source>Filter Mode: Items Found At Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="109"/>
         <source>Process Regular Expressions</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="102"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="112"/>
         <source>Case Sensitive</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="115"/>
-        <source>Location Filter...</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="124"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="137"/>
         <source>MapID: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="130"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="143"/>
         <source>LocID: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="134"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="147"/>
         <source>X: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="141"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="154"/>
         <source>Y: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="148"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="161"/>
         <source>T: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="155"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="168"/>
         <source>D: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="160"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="173"/>
         <source>Save New Coordinates When Table Se&amp;lection Changes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="174"/>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="187"/>
         <source>Field Items</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="418"/>
+        <source>Filter Mode: Name / Location Name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../FF7tk/widgets/LocationViewer.cpp" line="431"/>
+        <source>Filter Mode: Items Found at Location...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6811,7 +6961,8 @@ The km/h speeds are calculated while playing </source>
         <location filename="../mainwindow.cpp" line="428"/>
         <location filename="../mainwindow.cpp" line="484"/>
         <location filename="../mainwindow.cpp" line="485"/>
-        <location filename="../mainwindow.cpp" line="3159"/>
+        <location filename="../mainwindow.cpp" line="2962"/>
+        <location filename="../mainwindow.cpp" line="3164"/>
         <source>Black Chocobo</source>
         <translation></translation>
     </message>
@@ -7173,7 +7324,7 @@ The km/h speeds are calculated while playing </source>
     <message>
         <location filename="../mainwindow.ui" line="1614"/>
         <location filename="../mainwindow.ui" line="1690"/>
-        <location filename="../mainwindow.ui" line="4927"/>
+        <location filename="../mainwindow.ui" line="4912"/>
         <source>Materia</source>
         <translation></translation>
     </message>
@@ -7184,7 +7335,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1695"/>
-        <location filename="../mainwindow.ui" line="4932"/>
+        <location filename="../mainwindow.ui" line="4917"/>
         <source>AP</source>
         <translation></translation>
     </message>
@@ -7282,7 +7433,7 @@ The km/h speeds are calculated while playing </source>
         <location filename="../mainwindow.ui" line="2494"/>
         <location filename="../mainwindow.ui" line="2644"/>
         <location filename="../mainwindow.ui" line="2794"/>
-        <location filename="../mainwindow.ui" line="6512"/>
+        <location filename="../mainwindow.ui" line="6497"/>
         <source>Y: </source>
         <translation></translation>
     </message>
@@ -7574,342 +7725,336 @@ location.</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="3596"/>
-        <source>Stole The Kids 5 Gil</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="3603"/>
         <source>After Aeris Church Scene</source>
         <translation>After Aerith Church Scene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3613"/>
+        <location filename="../mainwindow.ui" line="3606"/>
         <source>Unknowns / Unused</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3627"/>
+        <location filename="../mainwindow.ui" line="3620"/>
         <source>ChruchProgress</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3641"/>
+        <location filename="../mainwindow.ui" line="3634"/>
         <source>DonProgress</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3832"/>
+        <location filename="../mainwindow.ui" line="3825"/>
         <source>cb_s5_1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3839"/>
+        <location filename="../mainwindow.ui" line="3832"/>
         <source>cb_s5_2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3846"/>
+        <location filename="../mainwindow.ui" line="3839"/>
         <source>cb_s5_5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3853"/>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
 5min1_2)</source>
-        <translation>cb_s5_7 (Ether Turbo from Kid in &quot;house 2F 
+        <translation type="obsolete">cb_s5_7 (Ether Turbo from Kid in &quot;house 2F 
 5min1_2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3894"/>
+        <location filename="../mainwindow.ui" line="3879"/>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3904"/>
+        <location filename="../mainwindow.ui" line="3889"/>
         <source>Replay Mission</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3922"/>
+        <location filename="../mainwindow.ui" line="3907"/>
         <source>Bombing Mission</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3927"/>
+        <location filename="../mainwindow.ui" line="3912"/>
         <source>The Church In The Slums</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3932"/>
+        <location filename="../mainwindow.ui" line="3917"/>
         <source>Cloud&apos;s Flashback</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3937"/>
+        <location filename="../mainwindow.ui" line="3922"/>
         <source>The Date Scene</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3942"/>
+        <location filename="../mainwindow.ui" line="3927"/>
         <source>Aeris Death</source>
         <translation>Aerith&apos;s Death</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3985"/>
+        <location filename="../mainwindow.ui" line="3970"/>
         <source>Other</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4002"/>
+        <location filename="../mainwindow.ui" line="3987"/>
         <source>Time Played</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4019"/>
-        <location filename="../mainwindow.ui" line="4505"/>
+        <location filename="../mainwindow.ui" line="4004"/>
+        <location filename="../mainwindow.ui" line="4490"/>
         <source>Hour</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4055"/>
-        <location filename="../mainwindow.ui" line="4544"/>
+        <location filename="../mainwindow.ui" line="4040"/>
+        <location filename="../mainwindow.ui" line="4529"/>
         <source>Min</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4088"/>
-        <location filename="../mainwindow.ui" line="4589"/>
+        <location filename="../mainwindow.ui" line="4073"/>
+        <location filename="../mainwindow.ui" line="4574"/>
         <source>Sec</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4125"/>
+        <location filename="../mainwindow.ui" line="4110"/>
         <source>Love Points</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4435"/>
+        <location filename="../mainwindow.ui" line="4420"/>
         <source>Beat Ruby Weapon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4442"/>
+        <location filename="../mainwindow.ui" line="4427"/>
         <source>Beat Emerald Weapon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4455"/>
+        <location filename="../mainwindow.ui" line="4440"/>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4462"/>
+        <location filename="../mainwindow.ui" line="4447"/>
         <source>Have Seen Pandora&apos;s Box</source>
         <translation>Have Seen Engmia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4482"/>
+        <location filename="../mainwindow.ui" line="4467"/>
         <source>Countdown Timer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4623"/>
+        <location filename="../mainwindow.ui" line="4608"/>
         <source>Fort Condor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4640"/>
+        <location filename="../mainwindow.ui" line="4625"/>
         <source>Funds </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4676"/>
+        <location filename="../mainwindow.ui" line="4661"/>
         <source>Record </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4723"/>
+        <location filename="../mainwindow.ui" line="4708"/>
         <source>/</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4853"/>
+        <location filename="../mainwindow.ui" line="4838"/>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4875"/>
+        <location filename="../mainwindow.ui" line="4860"/>
         <source>Materia Stolen By Yuffie</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4940"/>
+        <location filename="../mainwindow.ui" line="4925"/>
         <source>Clear All Stolen Materia</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="4953"/>
+        <location filename="../mainwindow.ui" line="4938"/>
         <source>Region String</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5007"/>
+        <location filename="../mainwindow.ui" line="4992"/>
         <source>S01</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5012"/>
+        <location filename="../mainwindow.ui" line="4997"/>
         <source>S02</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5017"/>
+        <location filename="../mainwindow.ui" line="5002"/>
         <source>S03</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5022"/>
+        <location filename="../mainwindow.ui" line="5007"/>
         <source>S04</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5027"/>
+        <location filename="../mainwindow.ui" line="5012"/>
         <source>S05</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5032"/>
+        <location filename="../mainwindow.ui" line="5017"/>
         <source>S06</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5037"/>
+        <location filename="../mainwindow.ui" line="5022"/>
         <source>S07</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5042"/>
+        <location filename="../mainwindow.ui" line="5027"/>
         <source>S08</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5047"/>
+        <location filename="../mainwindow.ui" line="5032"/>
         <source>S09</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5052"/>
+        <location filename="../mainwindow.ui" line="5037"/>
         <source>S10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5057"/>
+        <location filename="../mainwindow.ui" line="5042"/>
         <source>S11</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5062"/>
+        <location filename="../mainwindow.ui" line="5047"/>
         <source>S12</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5067"/>
+        <location filename="../mainwindow.ui" line="5052"/>
         <source>S13</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5072"/>
+        <location filename="../mainwindow.ui" line="5057"/>
         <source>S14</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5077"/>
+        <location filename="../mainwindow.ui" line="5062"/>
         <source>S15</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5138"/>
+        <location filename="../mainwindow.ui" line="5123"/>
         <source>SnowBoard Mini Game </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5150"/>
+        <location filename="../mainwindow.ui" line="5135"/>
         <source>Beginner Course</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5176"/>
-        <location filename="../mainwindow.ui" line="5304"/>
-        <location filename="../mainwindow.ui" line="5432"/>
+        <location filename="../mainwindow.ui" line="5161"/>
+        <location filename="../mainwindow.ui" line="5289"/>
+        <location filename="../mainwindow.ui" line="5417"/>
         <source>Time:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5202"/>
-        <location filename="../mainwindow.ui" line="5330"/>
-        <location filename="../mainwindow.ui" line="5458"/>
+        <location filename="../mainwindow.ui" line="5187"/>
+        <location filename="../mainwindow.ui" line="5315"/>
+        <location filename="../mainwindow.ui" line="5443"/>
         <source>:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5228"/>
-        <location filename="../mainwindow.ui" line="5356"/>
-        <location filename="../mainwindow.ui" line="5484"/>
+        <location filename="../mainwindow.ui" line="5213"/>
+        <location filename="../mainwindow.ui" line="5341"/>
+        <location filename="../mainwindow.ui" line="5469"/>
         <source>.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5249"/>
-        <location filename="../mainwindow.ui" line="5377"/>
-        <location filename="../mainwindow.ui" line="5505"/>
+        <location filename="../mainwindow.ui" line="5234"/>
+        <location filename="../mainwindow.ui" line="5362"/>
+        <location filename="../mainwindow.ui" line="5490"/>
         <source>Score:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5266"/>
-        <location filename="../mainwindow.ui" line="5394"/>
-        <location filename="../mainwindow.ui" line="5522"/>
+        <location filename="../mainwindow.ui" line="5251"/>
+        <location filename="../mainwindow.ui" line="5379"/>
+        <location filename="../mainwindow.ui" line="5507"/>
         <source>Points</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5278"/>
+        <location filename="../mainwindow.ui" line="5263"/>
         <source>Expert Course</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5406"/>
+        <location filename="../mainwindow.ui" line="5391"/>
         <source>Crazy Course</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5546"/>
+        <location filename="../mainwindow.ui" line="5531"/>
         <source>Coaster Shooter High Scores</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5600"/>
+        <location filename="../mainwindow.ui" line="5585"/>
         <source>1st</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5662"/>
+        <location filename="../mainwindow.ui" line="5647"/>
         <source>2nd</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5724"/>
+        <location filename="../mainwindow.ui" line="5709"/>
         <source>3rd</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5795"/>
+        <location filename="../mainwindow.ui" line="5780"/>
         <source>G_Bike High Score</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5839"/>
-        <location filename="../mainwindow.ui" line="5852"/>
+        <location filename="../mainwindow.ui" line="5824"/>
+        <location filename="../mainwindow.ui" line="5837"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
 Lobby&amp;quot; so you can spend 
@@ -7917,241 +8062,241 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5845"/>
+        <location filename="../mainwindow.ui" line="5830"/>
         <source>Battle Points</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5898"/>
+        <location filename="../mainwindow.ui" line="5883"/>
         <source>Number Steps</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5924"/>
+        <location filename="../mainwindow.ui" line="5909"/>
         <source>Hex Editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5970"/>
+        <location filename="../mainwindow.ui" line="5955"/>
         <source>Show:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="5999"/>
+        <location filename="../mainwindow.ui" line="5984"/>
         <source>PSX Save Data</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6066"/>
+        <location filename="../mainwindow.ui" line="6051"/>
         <source>Test Data</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6094"/>
+        <location filename="../mainwindow.ui" line="6079"/>
         <source>Misc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6105"/>
+        <location filename="../mainwindow.ui" line="6090"/>
         <source>Battle Love Points</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6222"/>
+        <location filename="../mainwindow.ui" line="6207"/>
         <source>Ultimate Weapons Hp</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6262"/>
+        <location filename="../mainwindow.ui" line="6247"/>
         <source>When Box is Partally Checked (&quot;-&quot;)it will 
 trigger showing that tutorial</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6283"/>
+        <location filename="../mainwindow.ui" line="6268"/>
         <source>Tutorials Seen</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6309"/>
+        <location filename="../mainwindow.ui" line="6294"/>
         <source>Controling the Sub</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6342"/>
+        <location filename="../mainwindow.ui" line="6327"/>
         <source>Saving on the World Map</source>
         <translation>Saving on the World Map</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6379"/>
+        <location filename="../mainwindow.ui" line="6364"/>
         <source>Secret Chars Unlocked</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6396"/>
+        <location filename="../mainwindow.ui" line="6381"/>
         <source>Vincent</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6432"/>
+        <location filename="../mainwindow.ui" line="6417"/>
         <source>Yuffie</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6468"/>
+        <location filename="../mainwindow.ui" line="6453"/>
         <source>Save Pont Location In North Crater</source>
         <translation>Save Pont Location In Great Crater</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6486"/>
+        <location filename="../mainwindow.ui" line="6471"/>
         <source>Map Id: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6499"/>
+        <location filename="../mainwindow.ui" line="6484"/>
         <source>X: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6525"/>
+        <location filename="../mainwindow.ui" line="6510"/>
         <source>Z:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6546"/>
+        <location filename="../mainwindow.ui" line="6531"/>
         <source>0xC1E tut_sub</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6561"/>
+        <location filename="../mainwindow.ui" line="6546"/>
         <source>0x01</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6568"/>
+        <location filename="../mainwindow.ui" line="6553"/>
         <source>0x02 </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6578"/>
+        <location filename="../mainwindow.ui" line="6563"/>
         <source>0x04 - Played Sub Tutorial</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6585"/>
-        <location filename="../mainwindow.ui" line="6687"/>
+        <location filename="../mainwindow.ui" line="6570"/>
+        <location filename="../mainwindow.ui" line="6672"/>
         <source>0x08</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6592"/>
-        <location filename="../mainwindow.ui" line="6694"/>
+        <location filename="../mainwindow.ui" line="6577"/>
+        <location filename="../mainwindow.ui" line="6679"/>
         <source>0x10</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6599"/>
-        <location filename="../mainwindow.ui" line="6701"/>
+        <location filename="../mainwindow.ui" line="6584"/>
+        <location filename="../mainwindow.ui" line="6686"/>
         <source>0x20</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6609"/>
+        <location filename="../mainwindow.ui" line="6594"/>
         <source>0x40 - Battle Targets</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6616"/>
-        <location filename="../mainwindow.ui" line="6715"/>
+        <location filename="../mainwindow.ui" line="6601"/>
+        <location filename="../mainwindow.ui" line="6700"/>
         <source>0x80</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6651"/>
+        <location filename="../mainwindow.ui" line="6636"/>
         <source>0xBEF (farmitems)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6666"/>
+        <location filename="../mainwindow.ui" line="6651"/>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6673"/>
+        <location filename="../mainwindow.ui" line="6658"/>
         <source>0x02</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6680"/>
+        <location filename="../mainwindow.ui" line="6665"/>
         <source>0x04</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6708"/>
+        <location filename="../mainwindow.ui" line="6693"/>
         <source>0x40</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6755"/>
+        <location filename="../mainwindow.ui" line="6740"/>
         <source>Unknown Vars</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6805"/>
+        <location filename="../mainwindow.ui" line="6790"/>
         <source>Unknown Var:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6819"/>
-        <location filename="../mainwindow.ui" line="7278"/>
+        <location filename="../mainwindow.ui" line="6804"/>
+        <location filename="../mainwindow.ui" line="7263"/>
         <source>-None-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7059"/>
-        <location filename="../mainwindow.ui" line="7160"/>
-        <location filename="../mainwindow.ui" line="7400"/>
+        <location filename="../mainwindow.ui" line="7044"/>
+        <location filename="../mainwindow.ui" line="7145"/>
+        <location filename="../mainwindow.ui" line="7385"/>
         <source>#</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7064"/>
-        <location filename="../mainwindow.ui" line="7405"/>
+        <location filename="../mainwindow.ui" line="7049"/>
+        <location filename="../mainwindow.ui" line="7390"/>
         <source>Hex</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7069"/>
-        <location filename="../mainwindow.ui" line="7410"/>
+        <location filename="../mainwindow.ui" line="7054"/>
+        <location filename="../mainwindow.ui" line="7395"/>
         <source>Dec</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7074"/>
-        <location filename="../mainwindow.ui" line="7170"/>
-        <location filename="../mainwindow.ui" line="7415"/>
+        <location filename="../mainwindow.ui" line="7059"/>
+        <location filename="../mainwindow.ui" line="7155"/>
+        <location filename="../mainwindow.ui" line="7400"/>
         <source>Bin</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7098"/>
+        <location filename="../mainwindow.ui" line="7083"/>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7125"/>
+        <location filename="../mainwindow.ui" line="7110"/>
         <source>Show All &apos;Z&apos; Changes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7165"/>
+        <location filename="../mainwindow.ui" line="7150"/>
         <source>Diff</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7193"/>
+        <location filename="../mainwindow.ui" line="7178"/>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
@@ -8159,195 +8304,195 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7252"/>
+        <location filename="../mainwindow.ui" line="7237"/>
         <source>Compare To Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7449"/>
+        <location filename="../mainwindow.ui" line="7434"/>
         <source>Hel&amp;p</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7456"/>
+        <location filename="../mainwindow.ui" line="7441"/>
         <source>&amp;File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7474"/>
+        <location filename="../mainwindow.ui" line="7459"/>
         <source>Vie&amp;w</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7486"/>
+        <location filename="../mainwindow.ui" line="7471"/>
         <source>&amp;Options</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7490"/>
+        <location filename="../mainwindow.ui" line="7475"/>
         <source>Language</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7502"/>
+        <location filename="../mainwindow.ui" line="7487"/>
         <source>&amp;Edit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7506"/>
+        <location filename="../mainwindow.ui" line="7491"/>
         <source>Slot Region</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7548"/>
+        <location filename="../mainwindow.ui" line="7533"/>
         <source>&amp;Quit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7563"/>
+        <location filename="../mainwindow.ui" line="7548"/>
         <source>&amp;Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7566"/>
+        <location filename="../mainwindow.ui" line="7551"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7581"/>
+        <location filename="../mainwindow.ui" line="7566"/>
         <source>Save As</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7596"/>
+        <location filename="../mainwindow.ui" line="7581"/>
         <source>About</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7617"/>
+        <location filename="../mainwindow.ui" line="7602"/>
         <source>Show Selection Dialog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7629"/>
+        <location filename="../mainwindow.ui" line="7614"/>
         <source>&amp;Copy Current Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7647"/>
+        <location filename="../mainwindow.ui" line="7632"/>
         <source>&amp;Paste Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7665"/>
+        <location filename="../mainwindow.ui" line="7650"/>
         <source>Clea&amp;r Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7683"/>
+        <location filename="../mainwindow.ui" line="7668"/>
         <source>Previous Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7701"/>
+        <location filename="../mainwindow.ui" line="7686"/>
         <source>Next Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7715"/>
+        <location filename="../mainwindow.ui" line="7700"/>
         <source>Advanced Mode</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7724"/>
+        <location filename="../mainwindow.ui" line="7709"/>
         <source>More Options...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7735"/>
+        <location filename="../mainwindow.ui" line="7720"/>
         <source>Us English (Ntsc-U)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7746"/>
+        <location filename="../mainwindow.ui" line="7731"/>
         <source>Uk English (PAL)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7757"/>
+        <location filename="../mainwindow.ui" line="7742"/>
         <source>German (PAL)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7768"/>
-        <location filename="../mainwindow.ui" line="7771"/>
+        <location filename="../mainwindow.ui" line="7753"/>
+        <location filename="../mainwindow.ui" line="7756"/>
         <source>Spanish (PAL)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7782"/>
-        <location filename="../mainwindow.ui" line="7785"/>
+        <location filename="../mainwindow.ui" line="7767"/>
+        <location filename="../mainwindow.ui" line="7770"/>
         <source>Japanese (Ntsc-J)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7796"/>
-        <location filename="../mainwindow.ui" line="7799"/>
+        <location filename="../mainwindow.ui" line="7781"/>
+        <location filename="../mainwindow.ui" line="7784"/>
         <source>International (Ntsc-J)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7811"/>
+        <location filename="../mainwindow.ui" line="7796"/>
         <source>&amp;New Game</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7829"/>
+        <location filename="../mainwindow.ui" line="7814"/>
         <source>New Game+ </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7844"/>
+        <location filename="../mainwindow.ui" line="7829"/>
         <source>E&amp;xport Current Character</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7853"/>
+        <location filename="../mainwindow.ui" line="7838"/>
         <source>I&amp;mport Current Character</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7865"/>
+        <location filename="../mainwindow.ui" line="7850"/>
         <source>&amp;Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7879"/>
+        <location filename="../mainwindow.ui" line="7864"/>
         <source>Calculate Stats</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7891"/>
+        <location filename="../mainwindow.ui" line="7876"/>
         <source>Reload</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7905"/>
+        <location filename="../mainwindow.ui" line="7890"/>
         <source>French (PAL)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7917"/>
+        <location filename="../mainwindow.ui" line="7902"/>
         <source>Create Cloud Save Folder</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7929"/>
+        <location filename="../mainwindow.ui" line="7914"/>
         <source>&amp;Import To Current Slot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7938"/>
+        <location filename="../mainwindow.ui" line="7923"/>
         <source>Open Achievement File</source>
         <translation></translation>
     </message>
@@ -8644,36 +8789,36 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1748"/>
+        <location filename="../mainwindow.cpp" line="1746"/>
         <source>All Materia Added!</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1761"/>
+        <location filename="../mainwindow.cpp" line="1759"/>
         <source>Set Save Location: %1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2067"/>
+        <location filename="../mainwindow.cpp" line="2052"/>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2068"/>
-        <location filename="../mainwindow.cpp" line="2087"/>
-        <location filename="../mainwindow.cpp" line="2110"/>
+        <location filename="../mainwindow.cpp" line="2053"/>
+        <location filename="../mainwindow.cpp" line="2077"/>
+        <location filename="../mainwindow.cpp" line="2105"/>
         <location filename="../mainwindow.cpp" line="2124"/>
-        <location filename="../mainwindow.cpp" line="2140"/>
+        <location filename="../mainwindow.cpp" line="2145"/>
         <source>Progression Reset Complete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2086"/>
+        <location filename="../mainwindow.cpp" line="2076"/>
         <source>Meeting Aeris</source>
         <translation>Meeting Aerith</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2109"/>
+        <location filename="../mainwindow.cpp" line="2104"/>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
         <translation></translation>
     </message>
@@ -8683,73 +8828,68 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2139"/>
+        <location filename="../mainwindow.cpp" line="2144"/>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>Replay the death of Aerith.This option Will remove Aerith from your PHS</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2143"/>
+        <location filename="../mainwindow.cpp" line="2148"/>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2531"/>
-        <location filename="../mainwindow.cpp" line="2543"/>
+        <location filename="../mainwindow.cpp" line="2536"/>
+        <location filename="../mainwindow.cpp" line="2548"/>
         <source>Place Leader</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2532"/>
-        <location filename="../mainwindow.cpp" line="2548"/>
+        <location filename="../mainwindow.cpp" line="2537"/>
+        <location filename="../mainwindow.cpp" line="2553"/>
         <source>Place Tiny Bronco/Chocobo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2533"/>
-        <location filename="../mainwindow.cpp" line="2553"/>
+        <location filename="../mainwindow.cpp" line="2538"/>
+        <location filename="../mainwindow.cpp" line="2558"/>
         <source>Place Buggy/Highwind</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2534"/>
-        <location filename="../mainwindow.cpp" line="2558"/>
+        <location filename="../mainwindow.cpp" line="2539"/>
+        <location filename="../mainwindow.cpp" line="2563"/>
         <source>Place Sub</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2535"/>
-        <location filename="../mainwindow.cpp" line="2563"/>
+        <location filename="../mainwindow.cpp" line="2540"/>
+        <location filename="../mainwindow.cpp" line="2568"/>
         <source>Place Wild Chocobo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2536"/>
-        <location filename="../mainwindow.cpp" line="2568"/>
+        <location filename="../mainwindow.cpp" line="2541"/>
+        <location filename="../mainwindow.cpp" line="2573"/>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2582"/>
+        <location filename="../mainwindow.cpp" line="2587"/>
         <source>DON&apos;T USE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2597"/>
+        <location filename="../mainwindow.cpp" line="2602"/>
         <source>All Items Added</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2957"/>
-        <source>Black Chococbo</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2957"/>
+        <location filename="../mainwindow.cpp" line="2962"/>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3159"/>
+        <location filename="../mainwindow.cpp" line="3164"/>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation></translation>
     </message>
