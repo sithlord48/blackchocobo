@@ -1164,7 +1164,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Mythril</source>
-        <translation type="unfinished">ミスリル</translation>
+        <translation type="obsolete">ミスリル</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -1344,7 +1344,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation type="unfinished">５番街ゲートの鍵</translation>
+        <translation type="obsolete">５番街ゲートの鍵</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1544,7 +1544,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation type="unfinished">水神様のうろこ</translation>
+        <translation type="obsolete">水神様のうろこ</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
@@ -1608,7 +1608,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation type="unfinished">ヒュージマテリア (ロケット)</translation>
+        <translation type="obsolete">ヒュージマテリア (ロケット)</translation>
     </message>
     <message>
         <source>Remedy</source>
@@ -1656,7 +1656,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation type="unfinished">カードキー６６</translation>
+        <translation type="obsolete">カードキー６６</translation>
     </message>
     <message>
         <source>Wind Slash</source>
@@ -1688,7 +1688,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation type="unfinished">ミッドガルパーツ</translation>
+        <translation type="obsolete">ミッドガルパーツ</translation>
     </message>
     <message>
         <source>Mega All</source>
@@ -1720,7 +1720,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation type="unfinished">ヒュージマテリア (コレル)</translation>
+        <translation type="obsolete">ヒュージマテリア (コレル)</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -1728,67 +1728,63 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Snowboard</source>
-        <translation type="unfinished">スノーボード</translation>
+        <translation type="obsolete">スノーボード</translation>
     </message>
     <message>
         <source>Glacier Map</source>
-        <translation type="unfinished">大氷河の地図</translation>
+        <translation type="obsolete">大氷河の地図</translation>
     </message>
     <message>
         <source>Shiva</source>
         <translation type="unfinished">シヴァ</translation>
     </message>
     <message>
-        <source>Pharmacy Coupon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Wig</source>
-        <translation type="unfinished">クセゲのかつら</translation>
+        <translation type="obsolete">クセゲのかつら</translation>
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation type="unfinished">チャパツのかつら</translation>
+        <translation type="obsolete">チャパツのかつら</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
-        <translation type="unfinished">ブロンドのかつら</translation>
+        <translation type="obsolete">ブロンドのかつら</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
-        <translation type="unfinished">コットンのドレス</translation>
+        <translation type="obsolete">コットンのドレス</translation>
     </message>
     <message>
         <source>Satin Dress</source>
-        <translation type="unfinished">サテンのドレス</translation>
+        <translation type="obsolete">サテンのドレス</translation>
     </message>
     <message>
         <source>Silk Dress</source>
-        <translation type="unfinished">シルクのドレス</translation>
+        <translation type="obsolete">シルクのドレス</translation>
     </message>
     <message>
         <source>Disinfectant</source>
-        <translation type="unfinished">消毒薬</translation>
+        <translation type="obsolete">消毒薬</translation>
     </message>
     <message>
         <source>Deodorant</source>
-        <translation type="unfinished">消臭薬</translation>
+        <translation type="obsolete">消臭薬</translation>
     </message>
     <message>
         <source>Digestive</source>
-        <translation type="unfinished">消化薬</translation>
+        <translation type="obsolete">消化薬</translation>
     </message>
     <message>
         <source>Glass Tiara</source>
-        <translation type="unfinished">ガラスのティアラ</translation>
+        <translation type="obsolete">ガラスのティアラ</translation>
     </message>
     <message>
         <source>Ruby Tiara</source>
-        <translation type="unfinished">ルビーのティアラ</translation>
+        <translation type="obsolete">ルビーのティアラ</translation>
     </message>
     <message>
         <source>Diamond Tiara</source>
-        <translation type="unfinished">ダイヤのティアラ</translation>
+        <translation type="obsolete">ダイヤのティアラ</translation>
     </message>
     <message>
         <source>Batteries</source>
@@ -1811,16 +1807,8 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">ついかぎり</translation>
     </message>
     <message>
-        <source>KeyCard 68</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Lunar Harp</source>
-        <translation type="unfinished">ルナハープ</translation>
-    </message>
-    <message>
-        <source>Key To Basement</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">ルナハープ</translation>
     </message>
     <message>
         <source>Mind Plus</source>
@@ -1832,7 +1820,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gold Ticket</source>
-        <translation type="unfinished">ゴールドチケット</translation>
+        <translation type="obsolete">ゴールドチケット</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -1872,19 +1860,215 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Cologne</source>
-        <translation type="unfinished">コロン</translation>
+        <translation type="obsolete">コロン</translation>
     </message>
     <message>
         <source>Flower Cologne</source>
-        <translation type="unfinished">フラワーコロン</translation>
+        <translation type="obsolete">フラワーコロン</translation>
     </message>
     <message>
         <source>Sexy Cologne</source>
-        <translation type="unfinished">セクシーコロン</translation>
+        <translation type="obsolete">セクシーコロン</translation>
     </message>
     <message>
         <source>Omnislash</source>
         <translation type="unfinished">超究武神覇斬</translation>
+    </message>
+    <message>
+        <source>KeyItem: Mythril</source>
+        <translation>キーアイテム: ミスリル</translation>
+    </message>
+    <message>
+        <source>KeyItem: Midgar parts</source>
+        <translation>キーアイテム: ミッドガルパーツ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 66</source>
+        <translation>キーアイテム: カードキー６６</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Corel</source>
+        <translation>キーアイテム: ヒュージマテリア (コレル)</translation>
+    </message>
+    <message>
+        <source>KeyItem: Snowboard</source>
+        <translation>キーアイテム: スノーボード</translation>
+    </message>
+    <message>
+        <source>KeyItem: Glacier Map</source>
+        <translation>キーアイテム: 大氷河の地図</translation>
+    </message>
+    <message>
+        <source>KeyItem: Cologne</source>
+        <translation>キーアイテム: コロン</translation>
+    </message>
+    <message>
+        <source>KeyItem: Flower Cologne</source>
+        <translation>キーアイテム: フラワーコロン</translation>
+    </message>
+    <message>
+        <source>KeyItem: Sexy Cologne</source>
+        <translation>キーアイテム: セクシーコロン</translation>
+    </message>
+    <message>
+        <source>KeyItem: Pharmacy Coupon</source>
+        <translation>キーアイテム: 薬屋商品クーポン</translation>
+    </message>
+    <message>
+        <source>KeyItem: Wig</source>
+        <translation>キーアイテム: クセゲのかつら</translation>
+    </message>
+    <message>
+        <source>KeyItem: Dyed Wig</source>
+        <translation>キーアイテム: チャパツのかつら</translation>
+    </message>
+    <message>
+        <source>KeyItem: Blonde Wig</source>
+        <translation>キーアイテム: ブロンドのかつら</translation>
+    </message>
+    <message>
+        <source>KeyItem: Cotton Dress</source>
+        <translation>キーアイテム: コットンのドレス</translation>
+    </message>
+    <message>
+        <source>KeyItem: Satin Dress</source>
+        <translation>キーアイテム: サテンのドレス</translation>
+    </message>
+    <message>
+        <source>KeyItem: Silk Dress</source>
+        <translation>キーアイテム: シルクのドレス</translation>
+    </message>
+    <message>
+        <source>KeyItem: Disinfectant</source>
+        <translation>キーアイテム: 消毒薬</translation>
+    </message>
+    <message>
+        <source>KeyItem: Deodorant</source>
+        <translation>キーアイテム: 消臭薬</translation>
+    </message>
+    <message>
+        <source>KeyItem: Digestive</source>
+        <translation>キーアイテム: 消化薬</translation>
+    </message>
+    <message>
+        <source>KeyItem: Glass Tiara</source>
+        <translation>キーアイテム: ガラスのティアラ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Ruby Tiara</source>
+        <translation>キーアイテム: ルビーのティアラ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Diamond Tiara</source>
+        <translation>キーアイテム: ダイヤのティアラ</translation>
+    </message>
+    <message>
+        <source>Can Advance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: KeyCard 68</source>
+        <translation>キーアイテム: カードキー６８</translation>
+    </message>
+    <message>
+        <source>KeyItem: Lunar Harp</source>
+        <translation>キーアイテム: ルナハープ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Basement</source>
+        <translation>キーアイテム: 地下室の鍵</translation>
+    </message>
+    <message>
+        <source>KeyItem: Gold Ticket</source>
+        <translation>キーアイテム: ゴールドチケット</translation>
+    </message>
+    <message>
+        <source>Found hidden draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stole boys 5 gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initilized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: A Coupon</source>
+        <translation>キーアイテム: Aクーポン</translation>
+    </message>
+    <message>
+        <source>KeyItem: B Coupon</source>
+        <translation>キーアイテム: Bクーポン</translation>
+    </message>
+    <message>
+        <source>KeyItem: C Coupon</source>
+        <translation>キーアイテム: Cクーポン</translation>
+    </message>
+    <message>
+        <source>Star Pendant</source>
+        <translation type="unfinished">星のペンダント</translation>
+    </message>
+    <message>
+        <source>Four Slots</source>
+        <translation type="unfinished">フォウスロット</translation>
+    </message>
+    <message>
+        <source>Grow Lance</source>
+        <translation type="unfinished">グローランス</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 65</source>
+        <translation>キーアイテム: カードキー６５</translation>
+    </message>
+    <message>
+        <source>MP Absorb</source>
+        <translation type="unfinished">ＭＰきゅうしゅう</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyer #7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rewarded for viewing all Turtle Paradise Flyers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key To Sector 5</source>
+        <translation>キーアイテム: ５番街ゲートの鍵</translation>
+    </message>
+    <message>
+        <source>KeyItem: Leviathan Scales</source>
+        <translation>キーアイテム: 水神様のうろこ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia:Rocket</source>
+        <translation>キーアイテム: ヒュージマテリア (ロケット)</translation>
     </message>
 </context>
 <context>
@@ -3893,15 +4077,27 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Location Filter...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Field Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Save New Coordinates When Table Se&amp;lection Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found At Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Name / Location Name...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Filter Mode: Items Found at Location...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6025,7 +6221,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation>子供のへそくり５ギルを盗む</translation>
+        <translation type="obsolete">子供のへそくり５ギルを盗む</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
@@ -6164,10 +6360,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6278,11 +6470,6 @@ Table Entries are Editable</source>
     <message>
         <source>Right click on map to easily set an item&apos;s 
 location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
-5min1_2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

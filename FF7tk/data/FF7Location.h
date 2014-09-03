@@ -581,6 +581,7 @@ static const LOCATION Locations[]=
 
 	{"cos_top",QT_TRANSLATE_NOOP("Locations","Observatory"),"1","540","-81","-453","31","104"},
 	{"bugin1a",QT_TRANSLATE_NOOP("Locations","Observatory"),"1","541","-147","42","32","32"},
+	{"bugin1b",QT_TRANSLATE_NOOP("Locations","Observatory"),"1","542","-1821","1835","-1792","99"},
 	{"bugin2",QT_TRANSLATE_NOOP("Locations","Bugen Research Center"),"1","544","-107","-137","9","32"},
 	{"gidun_1",QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","546","-1070","515","198","32"},
 	{"gidun_2",QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","547","333","-1127","144","32"},
