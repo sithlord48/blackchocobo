@@ -258,20 +258,13 @@ private slots://try to keep these in the same order as the .cpp file
 	void char_materia_changed(materia);
 	void char_expNext_changed(quint32);
 
-	void on_cb_tut_sub_8_toggled(bool);
-	void on_cb_tut_sub_7_toggled(bool);
-	void on_cb_tut_sub_6_toggled(bool);
-	void on_cb_tut_sub_5_toggled(bool);
-	void on_cb_tut_sub_4_toggled(bool);
-	void on_cb_tut_sub_3_toggled(bool);
 	void on_sb_timer_time_sec_valueChanged(int);
 	void on_cb_tut_worldsave_stateChanged(int);
 	void on_cb_bombing_int_stateChanged(int);
 	void on_cb_tut_sub_toggled(bool checked);
-	void on_cb_tut_sub_1_toggled(bool);
-	void on_cb_tut_sub_2_toggled(bool);
 	void on_sb_timer_time_min_valueChanged(int);
 	void on_sb_timer_time_hour_valueChanged(int);
+
 	void on_cb_midgartrain_8_toggled(bool);
 	void on_cb_midgartrain_7_toggled(bool);
 	void on_cb_midgartrain_6_toggled(bool);
@@ -280,9 +273,9 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_midgartrain_3_toggled(bool);
 	void on_cb_midgartrain_2_toggled(bool);
 	void on_cb_midgartrain_1_toggled(bool);
+
 	void on_cb_yuffieforest_toggled(bool);
 	void on_cb_reg_yuffie_toggled(bool);
-
 	void on_cb_reg_vinny_toggled(bool);
 
 	void on_sb_u_weapon_hp_valueChanged(int);
@@ -347,15 +340,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_s7ts_6_toggled(bool checked);
 	void on_cb_s7ts_7_toggled(bool checked);
 	void on_cb_s7ts_8_toggled(bool checked);
-
-	void on_cb_farm_items_1_toggled(bool checked);
-	void on_cb_farm_items_2_toggled(bool checked);
-	void on_cb_farm_items_3_toggled(bool checked);
-	void on_cb_farm_items_4_toggled(bool checked);
-	void on_cb_farm_items_5_toggled(bool checked);
-	void on_cb_farm_items_6_toggled(bool checked);
-	void on_cb_farm_items_7_toggled(bool checked);
-	void on_cb_farm_items_8_toggled(bool checked);
 
 	void on_cb_s5_1_toggled(bool checked);
 	void on_cb_s5_2_toggled(bool checked);
@@ -528,5 +512,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_sb_saveY_valueChanged(int arg1);
 	void on_sb_saveZ_valueChanged(int arg1);
 	void on_actionOpen_Achievement_File_triggered();
+	void on_cbSubGameWon_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

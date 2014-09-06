@@ -4653,3 +4653,19 @@ void FF7Save::vmcRegionEval(int s)
 	}
 	SG_Region_String[s]=newRegionString;
 }
+
+bool FF7Save::subMiniGameVictory(int s)
+{//0x0F38 in game saved as int 1 or int 0
+	if(s<0 || s>14){return false;}
+
+	if(slot[s].z_37[14] == 1){return true;}
+	else{return false;}
+}
+void FF7Save::setSubMiniGameVictory(int s, bool won)
+{
+	if(s<0 || s>14){return;}
+	int temp = slot[s].z_37[14];
+	if(won){slot[s].z_37[14] = 1; }
+	else{slot[s].z_37[14] = 0;}
+	if(temp != slot[s].z_37[14]){setFileModified(true,s);}
+}

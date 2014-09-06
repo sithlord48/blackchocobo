@@ -59,6 +59,8 @@ public slots:
 	void setHorizontalHeaderStyle(QString styleSheet);
 	void setFieldItemChecked(int row,bool checked);
 	void init_fieldItems(void);
+	void setAdvancedMode(bool advancedMode);
+	bool advancedMode(void);
 
 private slots:
 	void itemChanged(int currentRow,int currentColumn,int prevRow, int prevColumn);
@@ -98,6 +100,7 @@ private:
 	FF7Location *Locations;
 	FF7FieldItemList *fieldItems;
 	QLabel * lblLocationPreview;
+	QWidget *CoordsWidget;
 	QLineEdit *lineLocationName;
 	QSpinBox *sbMapID;
 	QSpinBox *sbLocID;
@@ -114,6 +117,7 @@ private:
 	bool regExpSearch;
 	bool caseSensitive;
 	bool autoUpdate;
+	bool _advancedMode;
 };
 
 #endif // LOCATIONVIEWER_H

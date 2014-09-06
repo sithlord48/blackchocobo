@@ -2070,6 +2070,26 @@ The km/h speeds are calculated while playing </source>
         <source>KeyItem: Huge Materia:Rocket</source>
         <translation>キーアイテム: ヒュージマテリア (ロケット)</translation>
     </message>
+    <message>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished">バハムート零式</translation>
+    </message>
+    <message>
+        <source>KeyItem: Bikini briefs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Lingerie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Work Glove</source>
+        <translation type="unfinished">軍手</translation>
+    </message>
+    <message>
+        <source>Nail Bat</source>
+        <translation type="unfinished">釘バット</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3439,11 +3459,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Silver Barette</source>
-        <translation>シルバーバレッタ</translation>
+        <translation type="obsolete">シルバーバレッタ</translation>
     </message>
     <message>
         <source>Gold Barette</source>
-        <translation>ゴールドバレッタ</translation>
+        <translation type="obsolete">ゴールドバレッタ</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
@@ -4029,6 +4049,14 @@ The km/h speeds are calculated while playing </source>
         <source>Echo Screen</source>
         <translation>やまびこえんまく</translation>
     </message>
+    <message>
+        <source>Silver Barrette</source>
+        <translation>シルバーバレッタ</translation>
+    </message>
+    <message>
+        <source>Gold Barrette</source>
+        <translation>ゴールドバレッタ</translation>
+    </message>
 </context>
 <context>
     <name>LocationViewer</name>
@@ -4089,15 +4117,7 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filter Mode: Items Found At Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Name / Location Name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Items Found at Location...</source>
+        <source>Filter Mode: Items Found at Location</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5270,6 +5290,10 @@ The km/h speeds are calculated while playing </source>
         <source>Corel Valley Cave</source>
         <translation>サンゴの谷洞窟</translation>
     </message>
+    <message>
+        <source>Respectable Inn</source>
+        <translation>上級者の館</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -5531,23 +5555,23 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>神羅ビル・１階ロビー</translation>
+        <translation type="obsolete">神羅ビル・１階ロビー</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
-        <translation>ゴールドソーサー・ゴーストホテル</translation>
+        <translation type="obsolete">ゴールドソーサー・ゴーストホテル</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation>コスモキャニオン・宿屋 フロント</translation>
+        <translation type="obsolete">コスモキャニオン・宿屋 フロント</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
-        <translation>コスモキャニオン・武器屋</translation>
+        <translation type="obsolete">コスモキャニオン・武器屋</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
-        <translation>ウータイ・仕掛け部屋の前</translation>
+        <translation type="obsolete">ウータイ・仕掛け部屋の前</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -5661,31 +5685,31 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>0x02</source>
-        <translation>0x02</translation>
+        <translation type="obsolete">0x02</translation>
     </message>
     <message>
         <source>0x04</source>
-        <translation>0x04</translation>
+        <translation type="obsolete">0x04</translation>
     </message>
     <message>
         <source>0x08</source>
-        <translation>0x08</translation>
+        <translation type="obsolete">0x08</translation>
     </message>
     <message>
         <source>0x10</source>
-        <translation>0x10</translation>
+        <translation type="obsolete">0x10</translation>
     </message>
     <message>
         <source>0x20</source>
-        <translation>0x20</translation>
+        <translation type="obsolete">0x20</translation>
     </message>
     <message>
         <source>0x40</source>
-        <translation>0x40</translation>
+        <translation type="obsolete">0x40</translation>
     </message>
     <message>
         <source>0x80</source>
-        <translation>0x80</translation>
+        <translation type="obsolete">0x80</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -5823,23 +5847,23 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
-        <translation>0xC1E 潜水艦チュートリアル</translation>
+        <translation type="obsolete">0xC1E 潜水艦チュートリアル</translation>
     </message>
     <message>
         <source>0x01</source>
-        <translation>0x01</translation>
+        <translation type="obsolete">0x01</translation>
     </message>
     <message>
         <source>0x02 </source>
-        <translation>0x02 </translation>
+        <translation type="obsolete">0x02 </translation>
     </message>
     <message>
         <source>0x04 - Played Sub Tutorial</source>
-        <translation>0x04 - 潜水艦の説明を表示済み</translation>
+        <translation type="obsolete">0x04 - 潜水艦の説明を表示済み</translation>
     </message>
     <message>
         <source>0x40 - Battle Targets</source>
-        <translation>0x40 - バトル ターゲット</translation>
+        <translation type="obsolete">0x40 - バトル ターゲット</translation>
     </message>
     <message>
         <source>Misc</source>
@@ -6323,11 +6347,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
-        <translation>0xBEF (farmitems)</translation>
+        <translation type="obsolete">0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation>0x01 - チョコボ＆モーグリ入手後 （再入手？）</translation>
+        <translation type="obsolete">0x01 - チョコボ＆モーグリ入手後 （再入手？）</translation>
     </message>
     <message>
         <source>Load Failed</source>
@@ -6345,11 +6369,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation>５番街スラム・民家２階</translation>
+        <translation type="obsolete">５番街スラム・民家２階</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation>ウータイ・かめ道楽の前</translation>
+        <translation type="obsolete">ウータイ・かめ道楽の前</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -6397,10 +6421,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Crazy Course</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G_Bike High Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6767,6 +6787,18 @@ trigger showing that tutorial</source>
     <message>
         <source>About</source>
         <translation type="unfinished">について</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

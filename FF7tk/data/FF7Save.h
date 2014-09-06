@@ -925,6 +925,9 @@ class FF7Save: public QObject{
 	void setWorldCoordsDurwY(int s,int value);
 	void setWorldCoordsDurwZ(int s,int value);
 	void setSaveNumber(int s,int saveNum);
+	
+	bool subMiniGameVictory(int s);
+	void setSubMiniGameVictory(int s,bool won);
 signals:
 	void fileChanged(bool);/**< \brief emits when internal data changes */
 private:

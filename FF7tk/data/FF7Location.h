@@ -432,6 +432,7 @@ static const LOCATION Locations[]=
 	{"jun_i2",QT_TRANSLATE_NOOP("Locations","Materia Store"),"1","375","10","-348","46","32"},
 	{"juninn",QT_TRANSLATE_NOOP("Locations","Junon Inn"),"1","376","45","197","21","32"},
 	{"junpb_1",QT_TRANSLATE_NOOP("Locations","Shinra Member's Bar"),"1","377","82","-241","18","32"},
+	{"junpb_2",QT_TRANSLATE_NOOP("Locations","Respectable Inn"),"1","378","-135","107","34","32"},
 	{"junpb_3",QT_TRANSLATE_NOOP("Locations","Bar"),"1","379","17","-156","39","32"},
 
 	{"junmin4",QT_TRANSLATE_NOOP("Locations","Barracks"),"1","380","182","-170","2","32"},
@@ -644,6 +645,7 @@ static const LOCATION Locations[]=
 	{"kuro_1",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","604","0","0","0","32"},
 	{"kuro_2",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","605","-59","39","30","32"},
 	{"kuro_3",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","606","-75","1430","61","32"},
+	{"kuro_5",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","608","-126","-494","6","32"},
 	{"kuro_6",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","609","-3","-191","2","32"},
 
 	{"kuro_7",QT_TRANSLATE_NOOP("Locations","Temple of the Ancients"),"1","610","-345","314","127","32"},
