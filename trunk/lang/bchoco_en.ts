@@ -1966,6 +1966,26 @@ The km/h speeds are calculated while playing </source>
         <source>KeyItem: Huge Materia:Rocket</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Bikini briefs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Lingerie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Work Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nail Bat</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3334,14 +3354,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Silver Barette</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Barette</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Adaman Clip</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3925,6 +3937,14 @@ The km/h speeds are calculated while playing </source>
         <source>Echo Screen</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Silver Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LocationViewer</name>
@@ -3985,15 +4005,7 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filter Mode: Items Found At Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Name / Location Name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Items Found at Location...</source>
+        <source>Filter Mode: Items Found at Location</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5083,6 +5095,10 @@ The km/h speeds are calculated while playing </source>
         <source>Corel Valley Cave</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Respectable Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -5339,26 +5355,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>1st Floor Shinra Building</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Saucer - Ghost Hotel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Near Shop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Trap Room</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5465,34 +5461,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x02</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x04</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x08</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x20</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x80</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5626,26 +5594,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0xC1E tut_sub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x02 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x04 - Played Sub Tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x40 - Battle Targets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6119,14 +6067,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0xBEF (farmitems)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Load Failed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6137,14 +6077,6 @@ Table Entries are Editable</source>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6193,10 +6125,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Crazy Course</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G_Bike High Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6566,6 +6494,18 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Won the Submarine Game</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

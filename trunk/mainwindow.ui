@@ -5400,6 +5400,13 @@ rgb(255, 255, 255)</string>
             </layout>
            </widget>
           </item>
+	  <item>
+           <widget class="QCheckBox" name="cbSubGameWon">
+            <property name="text">
+             <string>Have Won the Submarine Game</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QGroupBox" name="groupBox_29">
             <property name="enabled">
@@ -5661,7 +5668,7 @@ rgb(255, 255, 255)</string>
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>G_Bike High Score</string>
+                <string>G-Bike High Score</string>
                </property>
                <property name="buddy">
                 <cstring>sb_BikeHighScore</cstring>
@@ -6407,215 +6414,20 @@ trigger showing that tutorial</string>
                 </layout>
                </widget>
               </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_152">
-                <item>
-                 <widget class="QGroupBox" name="groupBox_38">
-                  <property name="title">
-                   <string>0xC1E tut_sub</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_71">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_1">
-                     <property name="text">
-                      <string>0x01</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_2">
-                     <property name="text">
-                      <string>0x02 </string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_3">
-                     <property name="enabled">
-                      <bool>false</bool>
-                     </property>
-                     <property name="text">
-                      <string>0x04 - Played Sub Tutorial</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_4">
-                     <property name="text">
-                      <string>0x08</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_5">
-                     <property name="text">
-                      <string>0x10</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_6">
-                     <property name="text">
-                      <string>0x20</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_7">
-                     <property name="enabled">
-                      <bool>false</bool>
-                     </property>
-                     <property name="text">
-                      <string>0x40 - Battle Targets</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_tut_sub_8">
-                     <property name="text">
-                      <string>0x80</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLCDNumber" name="lcd_tut_sub">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>23</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>23</height>
-                      </size>
-                     </property>
-                     <property name="digitCount">
-                      <number>8</number>
-                     </property>
-                     <property name="mode">
-                      <enum>QLCDNumber::Bin</enum>
-                     </property>
-                     <property name="segmentStyle">
-                      <enum>QLCDNumber::Flat</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QGroupBox" name="groupBox_33">
-                  <property name="title">
-                   <string>0xBEF (farmitems)</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_9">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_1">
-                     <property name="text">
-                      <string>0x01 - After Choco mog picked up (again)?</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_2">
-                     <property name="text">
-                      <string>0x02</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_3">
-                     <property name="text">
-                      <string>0x04</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_4">
-                     <property name="text">
-                      <string>0x08</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_5">
-                     <property name="text">
-                      <string>0x10</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_6">
-                     <property name="text">
-                      <string>0x20</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_7">
-                     <property name="text">
-                      <string>0x40</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_farm_items_8">
-                     <property name="text">
-                      <string>0x80</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLCDNumber" name="lcd_farm_items">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>23</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>23</height>
-                      </size>
-                     </property>
-                     <property name="digitCount">
-                      <number>8</number>
-                     </property>
-                     <property name="mode">
-                      <enum>QLCDNumber::Bin</enum>
-                     </property>
-                     <property name="segmentStyle">
-                      <enum>QLCDNumber::Flat</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </item>
              </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+             </spacer>
             </item>
            </layout>
           </widget>

@@ -2083,6 +2083,26 @@ Los km/h son calculados mientras se juega</translation>
         <source>KeyItem: Huge Materia:Rocket</source>
         <translation>Element Clave: Materia Enorme:Cohete</translation>
     </message>
+    <message>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished">Bahamut CERO</translation>
+    </message>
+    <message>
+        <source>KeyItem: Bikini briefs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Lingerie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Work Glove</source>
+        <translation type="unfinished">Guante de Trabajo</translation>
+    </message>
+    <message>
+        <source>Nail Bat</source>
+        <translation type="unfinished">Garra</translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -3452,11 +3472,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Silver Barette</source>
-        <translation>Barreta Plata</translation>
+        <translation type="obsolete">Barreta Plata</translation>
     </message>
     <message>
         <source>Gold Barette</source>
-        <translation>Barreta Oro</translation>
+        <translation type="obsolete">Barreta Oro</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
@@ -4043,6 +4063,14 @@ Los km/h son calculados mientras se juega</translation>
         <source>Echo Screen</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Silver Barrette</source>
+        <translation>Barreta Plata</translation>
+    </message>
+    <message>
+        <source>Gold Barrette</source>
+        <translation>Barreta Oro</translation>
+    </message>
 </context>
 <context>
     <name>LocationViewer</name>
@@ -4107,15 +4135,7 @@ Los km/h son calculados mientras se juega</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Filter Mode: Items Found At Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Name / Location Name...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter Mode: Items Found at Location...</source>
+        <source>Filter Mode: Items Found at Location</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5214,6 +5234,10 @@ Los km/h son calculados mientras se juega</translation>
         <source>Corel Valley Cave</source>
         <translation>Cueva del valle Corral</translation>
     </message>
+    <message>
+        <source>Respectable Inn</source>
+        <translation>Posada Respetable</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -5447,23 +5471,23 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>Edificio Shinra 1er piso</translation>
+        <translation type="obsolete">Edificio Shinra 1er piso</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
-        <translation>Gold Saucer - Hotel Fantasma</translation>
+        <translation type="obsolete">Gold Saucer - Hotel Fantasma</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation>Cañón Cosmo - 2do piso de la posada</translation>
+        <translation type="obsolete">Cañón Cosmo - 2do piso de la posada</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
-        <translation>Cañón Cosmo - Cerca de la Tienda</translation>
+        <translation type="obsolete">Cañón Cosmo - Cerca de la Tienda</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
-        <translation>Wutai - Enfrente de la Habitación Trampa</translation>
+        <translation type="obsolete">Wutai - Enfrente de la Habitación Trampa</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -5605,31 +5629,31 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>0x02</source>
-        <translation>0x02</translation>
+        <translation type="obsolete">0x02</translation>
     </message>
     <message>
         <source>0x04</source>
-        <translation>0x04</translation>
+        <translation type="obsolete">0x04</translation>
     </message>
     <message>
         <source>0x08</source>
-        <translation>0x08</translation>
+        <translation type="obsolete">0x08</translation>
     </message>
     <message>
         <source>0x10</source>
-        <translation>0x10</translation>
+        <translation type="obsolete">0x10</translation>
     </message>
     <message>
         <source>0x20</source>
-        <translation>0x20</translation>
+        <translation type="obsolete">0x20</translation>
     </message>
     <message>
         <source>0x40</source>
-        <translation>0x40</translation>
+        <translation type="obsolete">0x40</translation>
     </message>
     <message>
         <source>0x80</source>
-        <translation>0x80</translation>
+        <translation type="obsolete">0x80</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -5767,23 +5791,23 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
-        <translation>0xC1E tut_sub</translation>
+        <translation type="obsolete">0xC1E tut_sub</translation>
     </message>
     <message>
         <source>0x01</source>
-        <translation>0x01</translation>
+        <translation type="obsolete">0x01</translation>
     </message>
     <message>
         <source>0x02 </source>
-        <translation>0x02</translation>
+        <translation type="obsolete">0x02</translation>
     </message>
     <message>
         <source>0x04 - Played Sub Tutorial</source>
-        <translation>0x04 - Tutorial del submarino jugado</translation>
+        <translation type="obsolete">0x04 - Tutorial del submarino jugado</translation>
     </message>
     <message>
         <source>0x40 - Battle Targets</source>
-        <translation>0x40 - Objetivos de batalla</translation>
+        <translation type="obsolete">0x40 - Objetivos de batalla</translation>
     </message>
     <message>
         <source>Misc</source>
@@ -6267,11 +6291,11 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
-        <translation>0xBEF (objetos de granja)</translation>
+        <translation type="obsolete">0xBEF (objetos de granja)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation>0x01 - después de obtener choco mog (otra vez)?</translation>
+        <translation type="obsolete">0x01 - después de obtener choco mog (otra vez)?</translation>
     </message>
     <message>
         <source>Load Failed</source>
@@ -6289,11 +6313,11 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation>Wutai - En frente del paraíso de las tortugas</translation>
+        <translation type="obsolete">Wutai - En frente del paraíso de las tortugas</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation>Segundo piso de casa en Sector 5</translation>
+        <translation type="obsolete">Segundo piso de casa en Sector 5</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -6349,7 +6373,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>G_Bike High Score</source>
-        <translation>Puntuación más alta G_Bike</translation>
+        <translation type="obsolete">Puntuación más alta G_Bike</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
@@ -6725,6 +6749,18 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>About</source>
         <translation type="unfinished">Acerca de</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -22,27 +22,33 @@ LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
 	autoUpdate=false;
 	regExpSearch=false;
 	caseSensitive=false;
+	_advancedMode=false;
 	Locations = new FF7Location();
 	fieldItems= new FF7FieldItemList();
 	init_display();
 	init_connections();
-
 	actionNameSearch->setChecked(true);
 }
 void LocationViewer::setLocationChangesSaved(bool saveChanges){chkAutoUpdate->setChecked(saveChanges);}
 bool LocationViewer::locationChangesSaved(void){return autoUpdate;}
 void LocationViewer::resizeEvent(QResizeEvent *ev)
 {
-	if(ev->type()==QResizeEvent::Resize){/*Stop Warning*/}
-	QPixmap pix(QString(":/locations/%1_%2").arg(QString::number(sbMapID->value()),QString::number(sbLocID->value())));
-	if(pix.isNull()){return;}
-	else{lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
+	if(ev->type()==QResizeEvent::Resize)
+	{
+		QPixmap pix(QString(":/locations/%1_%2").arg(QString::number(sbMapID->value()),QString::number(sbLocID->value())));
+		if(pix.isNull()){return;}
+		else
+		{
+			lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+		}
+	}
 }
 
 void LocationViewer::init_display(void)
 {
 	lblLocationPreview = new QLabel;
 	lblLocationPreview->setMinimumSize(320,240);
+	lblLocationPreview->setBaseSize(640,480);
 	lblLocationPreview->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 	QTableWidgetItem *newItem;
 
@@ -103,7 +109,7 @@ void LocationViewer::init_display(void)
 	actionNameSearch = new QAction(tr("Filter Mode: Name / Location String"),btnSearchOptions);
 	actionNameSearch->setCheckable(true);
 
-	actionItemSearch = new QAction(tr("Filter Mode: Items Found At Location"),btnSearchOptions);
+	actionItemSearch = new QAction(tr("Filter Mode: Items Found at Location"),btnSearchOptions);
 	actionItemSearch->setCheckable(true);
 
 	actionRegExpSearch = new QAction(tr("Process Regular Expressions"),btnSearchOptions);
@@ -111,7 +117,6 @@ void LocationViewer::init_display(void)
 
 	actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
 	actionCaseSensitive->setCheckable(true);
-
 
 	QMenu * newMenu=new QMenu;
 	newMenu->setStyleSheet(this->styleSheet());
@@ -174,7 +179,6 @@ void LocationViewer::init_display(void)
 	//connect now and forget it
 	connect(chkAutoUpdate,SIGNAL(clicked(bool)),this,SLOT(chkAutoUpdateChanged(bool)));
 
-
 	fieldItemList = new QListWidget();
 	fieldItemList->setFixedHeight(0);
 	fieldItemList->setUniformItemSizes(true);
@@ -200,10 +204,14 @@ void LocationViewer::init_display(void)
 	XYTD->addWidget(sbD);
 
 	QVBoxLayout *CoordsLayout = new QVBoxLayout;
-	CoordsLayout->setContentsMargins(6,6,6,6);
-	CoordsLayout->addWidget(chkAutoUpdate);
+	CoordsLayout->setContentsMargins(3,3,3,3);
 	CoordsLayout->addLayout(nameIDs);
 	CoordsLayout->addLayout(XYTD);
+
+	CoordsWidget = new QWidget;
+	CoordsWidget->setContentsMargins(0,0,0,0);
+	CoordsWidget->setLayout(CoordsLayout);
+	CoordsWidget->setVisible(advancedMode());
 
 	QHBoxLayout *PreviewLayout = new QHBoxLayout;
 	PreviewLayout->setAlignment(Qt::AlignCenter);
@@ -215,11 +223,12 @@ void LocationViewer::init_display(void)
 
 	QVBoxLayout *LeftSideLayout = new QVBoxLayout;
 	LeftSideLayout->setSpacing(0);
+	LeftSideLayout->addWidget(chkAutoUpdate);
 	LeftSideLayout->addWidget(locationTable);
 	LeftSideLayout->addLayout(FilterLayout);
 
 	QVBoxLayout *RightSideLayout = new QVBoxLayout;
-	RightSideLayout->addLayout(CoordsLayout);
+	RightSideLayout->addWidget(CoordsWidget);
 	RightSideLayout->addLayout(PreviewLayout);
 	RightSideLayout->addWidget(groupFieldItems);
 
@@ -415,7 +424,7 @@ void LocationViewer::actionNameSearchToggled(bool checked)
 	{
 		actionItemSearchToggled(false);
 		searchMode = NAME;
-		lineTableFilter->setPlaceholderText(QString(tr("Filter Mode: Name / Location Name...")));
+		lineTableFilter->setPlaceholderText(actionNameSearch->text());
 		if(!lineTableFilter->text().isEmpty()){filterLocations(lineTableFilter->text());}
 	}
 	else{actionNameSearch->setChecked(false);}
@@ -428,7 +437,7 @@ void LocationViewer::actionItemSearchToggled(bool checked)
 	{
 		actionNameSearchToggled(false);
 		searchMode = ITEM;
-		lineTableFilter->setPlaceholderText(QString(tr("Filter Mode: Items Found at Location...")));
+		lineTableFilter->setPlaceholderText(actionItemSearch->text());
 		if(!lineTableFilter->text().isEmpty()){filterLocations(lineTableFilter->text());}
 	}
 	else{actionItemSearch->setChecked(false);}
@@ -536,4 +545,14 @@ void LocationViewer::searchItem(QRegExp exp)
 		}
 		locationTable->setRowHidden(i,hidden);
 	}
+}
+void LocationViewer::setAdvancedMode(bool advancedMode)
+{
+	_advancedMode = advancedMode;
+	CoordsWidget->setVisible(_advancedMode);
+	lblLocationPreview->adjustSize();
+}
+bool LocationViewer::advancedMode(void)
+{
+	return _advancedMode;
 }

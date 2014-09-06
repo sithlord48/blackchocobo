@@ -227,7 +227,7 @@ static const FieldItemList FILIST[]=
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<1<<5,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: A Coupon")},
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<3<<6,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: B Coupon")},
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<2<<7,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: C Coupon")},
-	//Can't Seam to varify these found in script never on field
+	//Can't Seam to varify these found in script never on field77777
 	//{QList<quint16>()<<0x0D55,QList<quint8>()<<5,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","Hourglass")},
 	//{QList<quint16>()<<0x0D55,QList<quint8>()<<6,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","All")},
 	//Reward For Trading in the A B or C Coupon(s)
@@ -256,7 +256,19 @@ static const FieldItemList FILIST[]=
 	{QList<quint16>()<<0x0D66,QList<quint8>()<<6,QStringList()<<"uutai1",QT_TRANSLATE_NOOP("FieldItems","Turtle Paradise Flyer #7")},
 	{QList<quint16>()<<0x0D66,QList<quint8>()<<7,QStringList()<<"utapb",QT_TRANSLATE_NOOP("FieldItems","Rewarded for viewing all Turtle Paradise Flyers")},
 
- {QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
+	{QList<quint16>()<<0x0D7B,QList<quint8>()<<3,QStringList()<<"junpb_2",QT_TRANSLATE_NOOP("FieldItems","Potion")},
+	{QList<quint16>()<<0x0D7B,QList<quint8>()<<4,QStringList()<<"mds7_w2",QT_TRANSLATE_NOOP("FieldItems","All")},
+	{QList<quint16>()<<0x0D7B,QList<quint8>()<<5,QStringList()<<"mds7_w2",QT_TRANSLATE_NOOP("FieldItems","Ether")},
+
+	{QList<quint16>()<<0x0D81<<0x0BE5,QList<quint8>()<<0<<7,QStringList()<<"onna_52",QT_TRANSLATE_NOOP("FieldItems","KeyItem: Bikini briefs")}, //Mutually Exclusive
+	{QList<quint16>()<<0x0D81<<0x0D81<<0x0BE5,QList<quint8>()<<0<<1<<5,QStringList()<<"onna_52",QT_TRANSLATE_NOOP("FieldItems","KeyItem: Lingerie")},//Mutually Exclusive
+
+	{QList<quint16>()<<0x0D90,QList<quint8>()<<5,QStringList()<<"junpb_2",QT_TRANSLATE_NOOP("FieldItems","Enemy Skill")},
+
+	{QList<quint16>()<<0x0D93,QList<quint8>()<<3,QStringList()<<"kuro_7",QT_TRANSLATE_NOOP("FieldItems","Work Glove")},
+	{QList<quint16>()<<0x0D93,QList<quint8>()<<4,QStringList()<<"kuro_5",QT_TRANSLATE_NOOP("FieldItems","Nail Bat")},
+
+	{QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("FieldItems","Fire Armlet")},
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<3,QStringList()<<"gaiin_3",QT_TRANSLATE_NOOP("FieldItems","Elixir")},
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<4,QStringList()<<"gaiin_3",QT_TRANSLATE_NOOP("FieldItems","Speed Source")},

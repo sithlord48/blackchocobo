@@ -54,15 +54,6 @@ void MainWindow::init_display()
 	ui->tabWidget->setTabEnabled(9,0);
 	ui->cb_Region_Slot->setEnabled(false);
 
-	// Temp hidden (show only via advancedMode)
-	ui->cb_farm_items_1->setVisible(false);
-	ui->cb_farm_items_2->setVisible(false);
-	ui->cb_farm_items_3->setVisible(false);
-	ui->cb_farm_items_4->setVisible(false);
-	ui->cb_farm_items_5->setVisible(false);
-	ui->cb_farm_items_6->setVisible(false);
-	ui->cb_farm_items_7->setVisible(false);
-	ui->cb_farm_items_8->setVisible(false);
 	load=false;
 
 	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
@@ -682,15 +673,8 @@ void MainWindow::on_action_AdvancedMode_toggled(bool checked)
 	ui->bm_unknown->setVisible(checked);
 	ui->bh_id->setVisible(checked);
 	ui->leader_id->setVisible(checked);
+	locationViewer->setAdvancedMode(checked);
 	if(ff7->type() =="PC" || ff7->type() == ""){setControllerMappingVisible(checked);}
-	ui->cb_farm_items_1->setVisible(checked);
-	ui->cb_farm_items_2->setVisible(checked);
-	ui->cb_farm_items_3->setVisible(checked);
-	ui->cb_farm_items_4->setVisible(checked);
-	ui->cb_farm_items_5->setVisible(checked);
-	ui->cb_farm_items_6->setVisible(checked);
-	ui->cb_farm_items_7->setVisible(checked);
-	ui->cb_farm_items_8->setVisible(checked);
 	//Widgets are Connected to the Signal see init_connections()
 }
 
@@ -1138,6 +1122,7 @@ void MainWindow::othersUpdate()
 		ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaledToHeight(64,Qt::SmoothTransformation));
 	}
 	ui->cbPandorasBox->setChecked(ff7->seenPandorasBox(s));
+	ui->cbSubGameWon->setChecked(ff7->subMiniGameVictory(s));
 	ui->sbCondorWins->setValue(ff7->condorWins(s));
 	ui->sbCondorLosses->setValue(ff7->condorLosses(s));
 	ui->sbCondorFunds->setValue(ff7->condorFunds(s));
@@ -1602,97 +1587,6 @@ void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,v
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());}}
-
-// Field Items Combos
-
-void MainWindow::on_cb_farm_items_1_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<0);}
-		else{t &= ~(1<<0);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_2_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<1);}
-		else{t &= ~(1<<1);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_3_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<2);}
-		else{t &= ~(1<<2);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_4_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<3);}
-		else{t &= ~(1<<3);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_5_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<4);}
-		else{t &= ~(1<<4);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_6_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<5);}
-		else{t &= ~(1<<5);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_7_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<6);}
-		else{t &= ~(1<<6);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
-void MainWindow::on_cb_farm_items_8_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,11); char t = temp.at (3);
-		if(checked){t |= (1<<7);}
-		else{t &= ~(1<<7);}
-		temp[3]=t;
-		ff7->setUnknown(s,11,temp);
-	}
-	ui->lcd_farm_items->display(ff7->unknown(s,11).at(3));
-}
-
 void MainWindow::on_btn_clear_keyitems_clicked()
 {if(!load){fileModified(true);}//used in other functions
 	for(int i=0;i<51;i++)
@@ -2210,58 +2104,9 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){
 	ff7->setTutSub(s,2,checked);
-	load=true;ui->cb_tut_sub_3->setChecked(checked);load=false;
 	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
 }}
-void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,0,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,1,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,2,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,3,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,4,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,5,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,6,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
-void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
-{if(!load){
-	ff7->setTutSub(s,7,checked);
-	ui->lcdTutSub->display(ff7->tutSub(s));
-	ui->lcd_tut_sub->display(ff7->tutSub(s));
-}}
+
 void MainWindow::on_cb_ruby_dead_toggled(bool checked){if(!load){ff7->setKilledRubyWeapon(s,checked);}}
 void MainWindow::on_cb_emerald_dead_toggled(bool checked){if(!load){ff7->setKilledEmeraldWeapon(s,checked);}}
 
@@ -3194,26 +3039,6 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 			ui->cb_reg_vinny->setChecked(ff7->vincentAquired(s));
 			ui->lcdNumber_8->display(ff7->regVincent(s));
 
-			if(ff7->unknown(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
-			if(ff7->unknown(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
-
-			ui->cb_tut_sub_1->setChecked(ff7->tutSub(s,0));
-			ui->cb_tut_sub_2->setChecked(ff7->tutSub(s,1));
-			ui->cb_tut_sub_3->setChecked(ff7->tutSub(s,2));
-			ui->cb_tut_sub_4->setChecked(ff7->tutSub(s,3));
-			ui->cb_tut_sub_5->setChecked(ff7->tutSub(s,4));
-			ui->cb_tut_sub_6->setChecked(ff7->tutSub(s,5));
-			ui->cb_tut_sub_7->setChecked(ff7->tutSub(s,6));
-			ui->cb_tut_sub_8->setChecked(ff7->tutSub(s,7));
-			ui->lcd_tut_sub->display(ff7->tutSub(s));
-
-
 			ui->sb_saveMapId->setValue(ff7->craterSavePointMapID(s));
 			ui->sb_saveX->setValue(ff7->craterSavePointX(s));
 			ui->sb_saveY->setValue(ff7->craterSavePointY(s));
@@ -3229,12 +3054,10 @@ void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){ff7->setCondo
 void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){ff7->setCondorWins(s,arg1);}}
 void MainWindow::on_sbCondorLosses_valueChanged(int arg1){if(!load){ff7->setCondorLosses(s,arg1);}}
 void MainWindow::on_cbPandorasBox_toggled(bool checked){if(!load){ff7->setSeenPandorasBox(s,checked);}}
+void MainWindow::on_cbSubGameWon_toggled(bool checked){if(!load){ff7->setSubMiniGameVictory(s,checked);}}
 
 void MainWindow::connectFieldItem(quint8 boxID,QList<quint16>Offset,QList<quint8> Bit)
 {
-	//Will always be called in numerical Order
-	//this output does not account for items that set more then one bit (on same of different offsets)
-	//Items that set multibit will only look at last entry. (this needs to be fixed here possibly on write)
 	if(boxID ==0)
 	{//if box is 0 then new list.
 		fieldItemOffset = new QList<fieldItemOffsetList>;
@@ -3245,6 +3068,7 @@ void MainWindow::connectFieldItem(quint8 boxID,QList<quint16>Offset,QList<quint8
 }
 void MainWindow::checkFieldItem(int boxID)
 {
+	//Will always be called in numerical Order
 	fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
 	fieldItemBitList bitList = fieldItemBit->at(boxID);
 
@@ -3276,7 +3100,6 @@ void MainWindow::fieldItemStateChanged(int boxID,bool checked)
 			int offset = offsetList.at(i);
 			int bit = bitList.at(i);
 			QByteArray temp = ff7->slotFF7Data(s); char t=temp.at(offset);
-
 			if(checked){t |= (1<<bit);}
 			else{t &= ~(1<<bit);}
 			temp[offset]=t;
