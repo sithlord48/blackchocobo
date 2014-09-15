@@ -1136,31 +1136,31 @@ The km/h speeds are calculated while playing </source>
     <name>FieldItems</name>
     <message>
         <source>Hi-Potion</source>
-        <translation type="unfinished">ハイポーション</translation>
+        <translation>ハイポーション</translation>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation type="unfinished">やまびこえんまく</translation>
+        <translation>やまびこえんまく</translation>
     </message>
     <message>
         <source>Potion</source>
-        <translation type="unfinished">ポーション</translation>
+        <translation>ポーション</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation type="unfinished">エーテル</translation>
+        <translation>エーテル</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation type="unfinished">フェニックスの尾</translation>
+        <translation>フェニックスの尾</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation type="unfinished">かばう</translation>
+        <translation>かばう</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation type="unfinished">ラムウ</translation>
+        <translation>ラムウ</translation>
     </message>
     <message>
         <source>Mythril</source>
@@ -1168,179 +1168,179 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">ものまね</translation>
+        <translation>ものまね</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">ＨＰＭＰいれかえ</translation>
+        <translation>ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished">まほうみだれうち</translation>
+        <translation>まほうみだれうち</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation type="unfinished">エンハンスソード</translation>
+        <translation>エンハンスソード</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation type="unfinished">烈火の腕輪</translation>
+        <translation>烈火の腕輪</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation type="unfinished">エリクサー</translation>
+        <translation>エリクサー</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation type="unfinished">スピードアップ</translation>
+        <translation>スピードアップ</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation type="unfinished">ジャベリン</translation>
+        <translation>ジャベリン</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation type="unfinished">リボン</translation>
+        <translation>リボン</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">カタストロフィ</translation>
+        <translation>カタストロフィ</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation type="unfinished">英雄の薬</translation>
+        <translation>英雄の薬</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation type="unfinished">ワクチン</translation>
+        <translation>ワクチン</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation type="unfinished">ポイズンリング</translation>
+        <translation>ポイズンリング</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">どく</translation>
+        <translation>どく</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation type="unfinished">天雷の腕輪</translation>
+        <translation>天雷の腕輪</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation type="unfinished">ヒュプノクラウン</translation>
+        <translation>ヒュプノクラウン</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation type="unfinished">ラストエリクサー</translation>
+        <translation>ラストエリクサー</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation type="unfinished">クジャタ</translation>
+        <translation>クジャタ</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation type="unfinished">しょうめつ</translation>
+        <translation>しょうめつ</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished">てきのわざ</translation>
+        <translation>てきのわざ</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation type="unfinished">オーディーン</translation>
+        <translation>オーディーン</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation type="unfinished">コマンドカウンター</translation>
+        <translation>コマンドカウンター</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation type="unfinished">マジカル</translation>
+        <translation>マジカル</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished">ぬすむ</translation>
+        <translation>ぬすむ</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation type="unfinished">ツインヴァイパー</translation>
+        <translation>ツインヴァイパー</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation type="unfinished">エネミーランチャ</translation>
+        <translation>エネミーランチャ</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation type="unfinished">マジックアップ</translation>
+        <translation>マジックアップ</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation type="unfinished">バントライン</translation>
+        <translation>バントライン</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation type="unfinished">極光の腕輪</translation>
+        <translation>極光の腕輪</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation type="unfinished">蛇矛</translation>
+        <translation>蛇矛</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation type="unfinished">ルーンブレイド</translation>
+        <translation>ルーンブレイド</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation type="unfinished">プラチナバレッタ</translation>
+        <translation>プラチナバレッタ</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation type="unfinished">オーバーソウル</translation>
+        <translation>オーバーソウル</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation type="unfinished">スナイパーCR</translation>
+        <translation>スナイパーCR</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished">ぜんたいか</translation>
+        <translation>ぜんたいか</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation type="unfinished">ぞくせい</translation>
+        <translation>ぞくせい</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation type="unfinished">パワーアップ</translation>
+        <translation>パワーアップ</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation type="unfinished">水の指輪</translation>
+        <translation>水の指輪</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation type="unfinished">ハイブロウST</translation>
+        <translation>ハイブロウST</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished">ぜんたいぎり</translation>
+        <translation>ぜんたいぎり</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation type="unfinished">ミネルバブレス</translation>
+        <translation>ミネルバブレス</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation type="unfinished">アポカリプス</translation>
+        <translation>アポカリプス</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation type="unfinished">スプリガンクリップ</translation>
+        <translation>スプリガンクリップ</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation type="unfinished">モップ</translation>
+        <translation>モップ</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
@@ -1348,179 +1348,179 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Tent</source>
-        <translation type="unfinished">テント</translation>
+        <translation>テント</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished">えんきょりこうげき</translation>
+        <translation>えんきょりこうげき</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation type="unfinished">タイタン</translation>
+        <translation>タイタン</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation type="unfinished">いんせき</translation>
+        <translation>いんせき</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation type="unfinished">ひっさつ</translation>
+        <translation>ひっさつ</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation type="unfinished">ハーデス</translation>
+        <translation>ハーデス</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation type="unfinished">アウトサイダー</translation>
+        <translation>アウトサイダー</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation type="unfinished">不倶戴天</translation>
+        <translation>不倶戴天</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation type="unfinished">ロンギヌス</translation>
+        <translation>ロンギヌス</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation type="unfinished">天の叢雲</translation>
+        <translation>天の叢雲</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation type="unfinished">ガードアップ</translation>
+        <translation>ガードアップ</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation type="unfinished">テトラエレメンタル</translation>
+        <translation>テトラエレメンタル</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation type="unfinished">マインドアップ</translation>
+        <translation>マインドアップ</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation type="unfinished">エクスポーション</translation>
+        <translation>エクスポーション</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation type="unfinished">ドリルアーム</translation>
+        <translation>ドリルアーム</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation type="unfinished">陸奥守吉行</translation>
+        <translation>陸奥守吉行</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation type="unfinished">ビーナスゴスペル</translation>
+        <translation>ビーナスゴスペル</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation type="unfinished">セーブクリスタル</translation>
+        <translation>セーブクリスタル</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation type="unfinished">ピースメーカー</translation>
+        <translation>ピースメーカー</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation type="unfinished">れんぞくぎり</translation>
+        <translation>れんぞくぎり</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">ハイウインド</translation>
+        <translation>ハイウインド</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation type="unfinished">ナイツオブラウンド</translation>
+        <translation>ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation type="unfinished">チョコボ＆モーグリ</translation>
+        <translation>チョコボ＆モーグリ</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation type="unfinished">エスコートガード</translation>
+        <translation>エスコートガード</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation type="unfinished">みやぶる</translation>
+        <translation>みやぶる</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation type="unfinished">エーテルターボ</translation>
+        <translation>エーテルターボ</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation type="unfinished">バハムート改</translation>
+        <translation>バハムート改</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation type="unfinished">ＭＰターボ</translation>
+        <translation>ＭＰターボ</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation type="unfinished">シルバーメガホン</translation>
+        <translation>シルバーメガホン</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation type="unfinished">テュポーン</translation>
+        <translation>テュポーン</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation type="unfinished">ミスティール</translation>
+        <translation>ミスティール</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation type="unfinished">ホワイトメガホン</translation>
+        <translation>ホワイトメガホン</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation type="unfinished">フォースブレス</translation>
+        <translation>フォースブレス</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished">ＨＰきゅうしゅう</translation>
+        <translation>ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished">へんか</translation>
+        <translation>へんか</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation type="unfinished">ラッキー</translation>
+        <translation>ラッキー</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation type="unfinished">プリンセスガード</translation>
+        <translation>プリンセスガード</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation type="unfinished">法螺貝</translation>
+        <translation>法螺貝</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation type="unfinished">バハムート</translation>
+        <translation>バハムート</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation type="unfinished">トライデント</translation>
+        <translation>トライデント</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation type="unfinished">ロケットパンチ</translation>
+        <translation>ロケットパンチ</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation type="unfinished">銀玉鉄砲</translation>
+        <translation>銀玉鉄砲</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation type="unfinished">モータードライブ</translation>
+        <translation>モータードライブ</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation type="unfinished">炎の指輪</translation>
+        <translation>炎の指輪</translation>
     </message>
     <message>
         <source>Purchased The House</source>
@@ -1528,19 +1528,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation type="unfinished">Wマシンガン</translation>
+        <translation>Wマシンガン</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation type="unfinished">へんしん</translation>
+        <translation>へんしん</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation type="unfinished">ラックアップ</translation>
+        <translation>ラックアップ</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation type="unfinished">1/35神羅兵</translation>
+        <translation>1/35神羅兵</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
@@ -1548,63 +1548,63 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation type="unfinished">ドラグーンランス</translation>
+        <translation>ドラグーンランス</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished">Ｗアイテム</translation>
+        <translation>Ｗアイテム</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation type="unfinished">マキシマムレイ</translation>
+        <translation>マキシマムレイ</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation type="unfinished">エイジスの腕輪</translation>
+        <translation>エイジスの腕輪</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation type="unfinished">青龍偃月刀</translation>
+        <translation>青龍偃月刀</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation type="unfinished">突撃ラッパ</translation>
+        <translation>突撃ラッパ</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation type="unfinished">リヴァイアサン</translation>
+        <translation>リヴァイアサン</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation type="unfinished">折り鶴</translation>
+        <translation>折り鶴</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation type="unfinished">スターライトホン</translation>
+        <translation>スターライトホン</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation type="unfinished">ミッシングスコア</translation>
+        <translation>ミッシングスコア</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">シールド</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished">Ｗまほう</translation>
+        <translation>Ｗまほう</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation type="unfinished">インペリアルガード</translation>
+        <translation>インペリアルガード</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation type="unfinished">ふういん</translation>
+        <translation>ふういん</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished">ついでにぬすむ</translation>
+        <translation>ついでにぬすむ</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
@@ -1612,47 +1612,47 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Remedy</source>
-        <translation type="unfinished">万能薬</translation>
+        <translation>万能薬</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation type="unfinished">盗族の小手</translation>
+        <translation>盗族の小手</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation type="unfinished">プレミアムハート</translation>
+        <translation>プレミアムハート</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation type="unfinished">まほうカウンター</translation>
+        <translation>まほうカウンター</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation type="unfinished">雷の指輪</translation>
+        <translation>雷の指輪</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation type="unfinished">金の腕輪</translation>
+        <translation>金の腕輪</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished">大いなる福音</translation>
+        <translation>大いなる福音</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation type="unfinished">アンブレラ</translation>
+        <translation>アンブレラ</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation type="unfinished">方天画戟</translation>
+        <translation>方天画戟</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">カオス</translation>
+        <translation>カオス</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation type="unfinished">興奮剤</translation>
+        <translation>興奮剤</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -1660,31 +1660,31 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation type="unfinished">風斬り</translation>
+        <translation>風斬り</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation type="unfinished">フェアリーリング</translation>
+        <translation>フェアリーリング</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished">ついかこうか</translation>
+        <translation>ついかこうか</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation type="unfinished">ブラックメガホン</translation>
+        <translation>ブラックメガホン</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation type="unfinished">風魔手裏剣</translation>
+        <translation>風魔手裏剣</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation type="unfinished">かんざし</translation>
+        <translation>かんざし</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation type="unfinished">セーフティビット</translation>
+        <translation>セーフティビット</translation>
     </message>
     <message>
         <source>Midgar parts</source>
@@ -1692,31 +1692,31 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Mega All</source>
-        <translation type="unfinished">すべてぜんたいか</translation>
+        <translation>すべてぜんたいか</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation type="unfinished">カードキー６２</translation>
+        <translation type="obsolete">カードキー６２</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation type="unfinished">雷迅</translation>
+        <translation>雷迅</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation type="unfinished">マスターフィスト</translation>
+        <translation>マスターフィスト</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation type="unfinished">ベヒーモスホーン</translation>
+        <translation>ベヒーモスホーン</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation type="unfinished">フルケア</translation>
+        <translation>フルケア</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation type="unfinished">パイルバンカー</translation>
+        <translation>パイルバンカー</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
@@ -1724,7 +1724,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Ultima</source>
-        <translation type="unfinished">アルテマ</translation>
+        <translation>アルテマ</translation>
     </message>
     <message>
         <source>Snowboard</source>
@@ -1736,7 +1736,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Shiva</source>
-        <translation type="unfinished">シヴァ</translation>
+        <translation>シヴァ</translation>
     </message>
     <message>
         <source>Wig</source>
@@ -1792,19 +1792,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation type="unfinished">安らぎの指輪</translation>
+        <translation>安らぎの指輪</translation>
     </message>
     <message>
         <source>Super Ball</source>
-        <translation type="unfinished"></translation>
+        <translation>スーパーボール</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation type="unfinished">アレクサンダー</translation>
+        <translation>アレクサンダー</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished">ついかぎり</translation>
+        <translation>ついかぎり</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
@@ -1812,11 +1812,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Mind Plus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マジカル</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation type="unfinished">プラチナフィスト</translation>
+        <translation>プラチナフィスト</translation>
     </message>
     <message>
         <source>Gold Ticket</source>
@@ -1824,19 +1824,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation type="unfinished">ギルアップ</translation>
+        <translation>ギルアップ</translation>
     </message>
     <message>
         <source>Exp Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>けいけんちアップ</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation type="unfinished">エルメスのくつ</translation>
+        <translation>エルメスのくつ</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished">Ｗしょうかん</translation>
+        <translation>Ｗしょうかん</translation>
     </message>
     <message>
         <source>Show Underwater</source>
@@ -1872,7 +1872,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">超究武神覇斬</translation>
+        <translation>超究武神覇斬</translation>
     </message>
     <message>
         <source>KeyItem: Mythril</source>
@@ -2008,15 +2008,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation type="unfinished">星のペンダント</translation>
+        <translation>星のペンダント</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation type="unfinished">フォウスロット</translation>
+        <translation>フォウスロット</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation type="unfinished">グローランス</translation>
+        <translation>グローランス</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 65</source>
@@ -2024,7 +2024,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation type="unfinished">ＭＰきゅうしゅう</translation>
+        <translation>ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #1</source>
@@ -2072,23 +2072,79 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished">バハムート零式</translation>
+        <translation>バハムート零式</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation type="unfinished"></translation>
+        <translation>キーアイテム: ビキニパンツ</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation type="unfinished"></translation>
+        <translation>キーアイテム: ランジェリー</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation type="unfinished">軍手</translation>
+        <translation>軍手</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation type="unfinished">釘バット</translation>
+        <translation>釘バット</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 62</source>
+        <translation>キーアイテム: カードキー６２</translation>
+    </message>
+    <message>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation>キーアイテム: 会員カード</translation>
+    </message>
+    <message>
+        <source>KeyItem: Key to Ancients</source>
+        <translation>キーアイテム: 古代種の鍵</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keystone</source>
+        <translation>キーアイテム: キーストーン</translation>
+    </message>
+    <message>
+        <source>KeyItem: Black Materia</source>
+        <translation>キーアイテム: 黒マテリア</translation>
+    </message>
+    <message>
+        <source>Phoenix</source>
+        <translation>フェニックス</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 60</source>
+        <translation>キーアイテム: カードキー６０</translation>
+    </message>
+    <message>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished">インク</translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation>時空弾</translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation>双龍の牙</translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation>海龍のウロコ</translation>
+    </message>
+    <message>
+        <source>Caldrun</source>
+        <translation>魔女の大釜</translation>
+    </message>
+    <message>
+        <source>Chocobo Lure</source>
+        <translation>チョコボよせ</translation>
     </message>
 </context>
 <context>
@@ -2099,7 +2155,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished">------無効な ID------</translation>
+        <translation>------無効な ID------</translation>
     </message>
 </context>
 <context>
@@ -5307,11 +5363,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>ユフィ</translation>
+        <translation type="obsolete">ユフィ</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>ヴィンセント</translation>
+        <translation type="obsolete">ヴィンセント</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -5681,7 +5737,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation>隠しキャラのロックを解除</translation>
+        <translation type="obsolete">隠しキャラのロックを解除</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -6693,10 +6749,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Pont Location In North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Map Id: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -6798,6 +6850,18 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Yuffie </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9138,12 +9202,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルの保存に失敗しました</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルの保存に失敗しました
+%1</translation>
     </message>
 </context>
 <context>
@@ -9232,7 +9297,7 @@ File:%1</source>
     </message>
     <message>
         <source>View Anyway</source>
-        <translation type="unfinished">かまわず表示</translation>
+        <translation>かまわず表示</translation>
     </message>
 </context>
 </TS>

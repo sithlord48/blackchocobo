@@ -3677,96 +3677,35 @@ void FF7Save::setTutSub(int s, int value)
 		}
 	}
 }
-bool FF7Save::yuffieAquired(int s)
+bool FF7Save::yuffieUnlocked(int s)
 {
 	if(s<0 || s>14){return false;}
-	else
-	{
-		if(regYuffie(s) ==0x6F){return true;}
-		else{return false;}
-	}
+	else{return (slot[s].reg_yuffie & (1<<0));}
 }
-void FF7Save::setYuffieAquired(int s,bool isTrue)
+void FF7Save::setYuffieUnlocked(int s,bool isUnlocked)
 {
 	if(s<0 || s>14){return;}
 	else
 	{
-		if(isTrue && regYuffie(s) !=0x6F)
-		{
-			setRegYuffie(s,0x6F);
-			setFileModified(true,s);
-		}
-		else
-		{
-			if(regYuffie(s) !=0x6E)
-			{
-				setRegYuffie(s,0x6E);
-				setFileModified(true,s);
-			}
-		}
-	}
-}
-quint8 FF7Save::regYuffie(int s)
-{
-	if(s<0 || s>14){return false;}
-	else{return slot[s].reg_yuffie;}
-}
-void FF7Save::setRegYuffie(int s , int value)
-{
-	if(s<0 || s>14){return;}
-	if(value<0){value=0;}
-	if(value>0xFF){value=0xFF;}
-	if(slot[s].reg_yuffie!=value)
-	{
-		slot[s].reg_yuffie=value;
+		if(isUnlocked){slot[s].reg_yuffie |= (1<<0);}
+		else{slot[s].reg_yuffie &= ~(1<<0);}
 		setFileModified(true,s);
 	}
 }
 
-bool FF7Save::vincentAquired(int s)
+bool FF7Save::vincentUnlocked(int s)
 {
 	if(s<0 || s>14){return false;}
-	else
-	{
-		if(regVincent(s)==0xFF){return true;}
-		else{return false;}
-	}
+	else{return (slot[s].reg_vinny&(1<<2));}
 }
 
-void FF7Save::setVincentAquired(int s,bool isTrue)
+void FF7Save::setVincentUnlocked(int s,bool isUnlocked)
 {
 	if(s<0 || s>14){return;}
 	else
 	{
-		if(isTrue && regVincent(s) !=0xFF)
-		{
-			setRegVincent(s,0xFF);
-			setFileModified(true,s);
-		}
-		else
-		{
-			if(regVincent(s) !=0xFB)
-			{
-				setRegVincent(s,0xFB);
-				setFileModified(true,s);
-			}
-		}
-	}
-}
-
-quint8 FF7Save::regVincent(int s)
-{
-	if(s<0 || s>14){return false;}
-	else{return slot[s].reg_vinny;}
-}
-void FF7Save::setRegVincent(int s , int value)
-{
-	if(s<0 || s>14){return;}
-	if(value<0){value=0;}
-	if(value>0xFF){value=0xFF;}
-	if(slot[s].reg_vinny!=value)
-	{
-		slot[s].reg_vinny=value;
+		if(isUnlocked){slot[s].reg_vinny |= (1<<2);}
+		else{slot[s].reg_vinny &= ~(1<<2);}
 		setFileModified(true,s);
 	}
 }
