@@ -1115,12 +1115,6 @@ void MainWindow::othersUpdate()
 	ui->cb_ruby_dead->setChecked(ff7->killedRubyWeapon(s));
 	ui->cb_emerald_dead->setChecked(ff7->killedEmeraldWeapon(s));
 
-	ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
-	ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-	if (ff7->type() != "PC" && ff7->type() !="") //we Display an icon. for all formats except for pc
-	{
-		ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaledToHeight(64,Qt::SmoothTransformation));
-	}
 	ui->cbPandorasBox->setChecked(ff7->seenPandorasBox(s));
 	ui->cbSubGameWon->setChecked(ff7->subMiniGameVictory(s));
 	ui->sbCondorWins->setValue(ff7->condorWins(s));
@@ -1166,7 +1160,8 @@ void MainWindow::othersUpdate()
 	ui->sb_timer_time_min->setValue(ff7->countdownTimer(s)/60%60);
 	ui->sb_timer_time_sec->setValue(ff7->countdownTimer(s) -((ui->sb_timer_time_hour->value()*3600)+ui->sb_timer_time_min->value()*60));
 	ui->cb_yuffieforest->setChecked(ff7->canFightNinjaInForest(s));
-
+	ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
+	ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
 
 	/*~~~~~Stolen Materia~~~~~~~*/
 	QTableWidgetItem *newItem;
@@ -2062,22 +2057,11 @@ void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){ ff7->setSpeed
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
-
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value){if(!load){ff7->setUWeaponHp(s,value);}}
-
-void MainWindow::on_cb_reg_vinny_toggled(bool checked)
-{if(!load){
-		ff7->setVincentAquired(s,checked);
-		ui->lcdNumber_8->display(ff7->regVincent(s));
-}}
-
-void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
-{if(!load){
-		ff7->setYuffieAquired(s,checked);
-		ui->lcdNumber_9->display(ff7->regYuffie(s));
-}}
-
+void MainWindow::on_cb_reg_vinny_toggled(bool checked){if(!load){ff7->setVincentUnlocked(s,checked);}}
+void MainWindow::on_cb_reg_yuffie_toggled(bool checked){if(!load){ff7->setYuffieUnlocked(s,checked);}}
 void MainWindow::on_cb_yuffieforest_toggled(bool checked){if(!load){ff7->setCanFightNinjaInForest(s,checked);}}
+
 void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,0,checked);}}
 void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,1,checked);}}
 void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){ff7->setMidgarTrainFlags(s,2,checked);}}
@@ -3033,16 +3017,20 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 			else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
 			ui->lcdNumber_7->display(ff7->tutSave(s));
 
-			ui->cb_reg_yuffie->setChecked(ff7->yuffieAquired(s));
-			ui->lcdNumber_9->display(ff7->regYuffie(s));
-
-			ui->cb_reg_vinny->setChecked(ff7->vincentAquired(s));
-			ui->lcdNumber_8->display(ff7->regVincent(s));
+			ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
+			ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
 
 			ui->sb_saveMapId->setValue(ff7->craterSavePointMapID(s));
 			ui->sb_saveX->setValue(ff7->craterSavePointX(s));
 			ui->sb_saveY->setValue(ff7->craterSavePointY(s));
 			ui->sb_saveZ->setValue(ff7->craterSavePointZ(s));
+
+			ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
+			ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
+			if (ff7->type() != "PC" && ff7->type() !="") //we Display an icon. for all formats except for pc
+			{
+				ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaledToHeight(64,Qt::SmoothTransformation));
+			}
 			load=false;
 		break;
 

@@ -839,14 +839,31 @@ class FF7Save: public QObject{
 	bool tutSub(int s, int bit);
 	void setTutSub(int s, int bit, bool isTrue);
 	void setTutSub(int s, int value);
-	bool yuffieAquired(int s);
-	quint8 regYuffie(int s);
-	void setYuffieAquired(int s,bool isTrue);
-	void setRegYuffie(int s , int value);
-	bool vincentAquired(int s);
-	quint8 regVincent(int s);
-	void setVincentAquired(int s,bool isTrue);
-	void setRegVincent(int s , int value);
+	
+	/** \brief has yuffie been unlocked
+	 *  \param s slot number (0-14)
+	 *  \return True if yuffie has been unlocked
+	*/
+	bool yuffieUnlocked(int s);
+	
+	/** \brief set if yuffie has been unlocked
+	 *  \param s slot number (0-14)
+	 *  \param isUnlocked Is Character Unlocked?
+	 */
+	void setYuffieUnlocked(int s,bool isUnlocked);
+	
+	/** \brief has vincent been unlocked
+	 *  \param s slot number (0-14)
+	 *  \return True if vincent has been unlocked
+	*/
+	bool vincentUnlocked(int s);
+	
+	/** \brief set if vincent has been unlocked
+	 *  \param s slot number (0-14)
+	 *  \param isUnlocked Is Character Unlocked?
+	*/
+	void setVincentUnlocked(int s,bool isUnlocked);
+	
 	bool worldChocobo(int s, int bit);
 	void setWorldChocobo(int s, int bit, bool isTrue);
 	bool worldVehicle(int s, int bit);

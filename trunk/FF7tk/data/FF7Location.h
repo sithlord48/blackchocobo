@@ -153,7 +153,7 @@ public:
 	/*! \brief how many items on the location list do we have
 	 *  \return length of Locations
 	 */
-	int len(void);
+	inline int len(void){return 573;}
 };
 static const LOCATION Locations[]=
 {

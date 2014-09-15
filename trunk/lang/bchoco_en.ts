@@ -1671,10 +1671,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Keycard 62</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Swift Bolt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1984,6 +1980,62 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Nail Bat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 62</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key to Ancients</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Keystone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Black Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 60</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Caldrun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Lure</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5111,14 +5163,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Yuffie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vincent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Click On A Char To edit ===========&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5457,10 +5501,6 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Secret Chars Unlocked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6401,10 +6441,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Pont Location In North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Map Id: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -6506,6 +6542,18 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Yuffie </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

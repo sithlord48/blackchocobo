@@ -1137,7 +1137,7 @@ Los km/h son calculados mientras se juega</translation>
     <name>FieldItems</name>
     <message>
         <source>Hi-Potion</source>
-        <translation type="unfinished">Poción S</translation>
+        <translation>Poción S</translation>
     </message>
     <message>
         <source>Echo Screen</source>
@@ -1145,23 +1145,23 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Potion</source>
-        <translation type="unfinished">Poción</translation>
+        <translation>Poción</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation type="unfinished">Éter</translation>
+        <translation>Éter</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation type="unfinished">Plumaje Fénix</translation>
+        <translation>Plumaje Fénix</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation type="unfinished">Cubrir</translation>
+        <translation>Cubrir</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation type="unfinished">Ramuh</translation>
+        <translation>Ramuh</translation>
     </message>
     <message>
         <source>Mythril</source>
@@ -1169,179 +1169,179 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">Gesticular</translation>
+        <translation>Gesticular</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">PG/PM</translation>
+        <translation>PG/PM</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished">Cuadrimagia</translation>
+        <translation>Cuadrimagia</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation type="unfinished">Super Espada</translation>
+        <translation>Super Espada</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation type="unfinished">Aro de Fuego</translation>
+        <translation>Aro de Fuego</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation type="unfinished">Elixir</translation>
+        <translation>Elixir</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation type="unfinished">Fuente veloc.</translation>
+        <translation>Fuente veloc.</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation type="unfinished">Jabalina</translation>
+        <translation>Jabalina</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation type="unfinished">Cinta</translation>
+        <translation>Cinta</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">Catástrofe</translation>
+        <translation>Catástrofe</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation type="unfinished">Bebida Héroe</translation>
+        <translation>Bebida Héroe</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation type="unfinished">Vacuna</translation>
+        <translation>Vacuna</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation type="unfinished">Anillo Veneno</translation>
+        <translation>Anillo Veneno</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">Envenenar</translation>
+        <translation>Envenenar</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation type="unfinished">Aro de Rayo</translation>
+        <translation>Aro de Rayo</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation type="unfinished">Hipnocorona</translation>
+        <translation>Hipnocorona</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation type="unfinished">Megaelixir</translation>
+        <translation>Megaelixir</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation type="unfinished">Kjata</translation>
+        <translation>Kjata</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation type="unfinished">Destruir</translation>
+        <translation>Destruir</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished">Habil. Enem</translation>
+        <translation>Habil. Enem</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation type="unfinished">Odín</translation>
+        <translation>Odín</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation type="unfinished">Contar</translation>
+        <translation>Contar</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation type="unfinished">Super magia</translation>
+        <translation>Super magia</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished">Robar</translation>
+        <translation>Robar</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation type="unfinished">Serpiente Bicéfala</translation>
+        <translation>Serpiente Bicéfala</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation type="unfinished">Lanza Enemigos</translation>
+        <translation>Lanza Enemigos</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation type="unfinished">Fuente Magia</translation>
+        <translation>Fuente Magia</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation type="unfinished">Línea</translation>
+        <translation>Línea</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation type="unfinished">Aro de Aurora</translation>
+        <translation>Aro de Aurora</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation type="unfinished">Víbora Halberd</translation>
+        <translation>Víbora Halberd</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation type="unfinished">Hoja Runa</translation>
+        <translation>Hoja Runa</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation type="unfinished">Barreta Plus</translation>
+        <translation>Barreta Plus</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation type="unfinished">Alma Poder</translation>
+        <translation>Alma Poder</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation type="unfinished">CR Francotirador</translation>
+        <translation>CR Francotirador</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished">Todo</translation>
+        <translation>Todo</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation type="unfinished">Elemento Básico</translation>
+        <translation>Elemento Básico</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation type="unfinished">Fuente Potencia</translation>
+        <translation>Fuente Potencia</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation type="unfinished">Anillo Agua</translation>
+        <translation>Anillo Agua</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation type="unfinished">Super ST</translation>
+        <translation>Super ST</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished">Fulminar a todos</translation>
+        <translation>Fulminar a todos</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation type="unfinished">Aro de Minerva</translation>
+        <translation>Aro de Minerva</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation type="unfinished">Apocalipsis</translation>
+        <translation>Apocalipsis</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation type="unfinished">Clip Pistola</translation>
+        <translation>Clip Pistola</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation type="unfinished">Fregador</translation>
+        <translation>Fregador</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
@@ -1349,179 +1349,179 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation type="unfinished">Carpa</translation>
+        <translation>Carpa</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished">Larga fila</translation>
+        <translation>Larga fila</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation type="unfinished">Titán</translation>
+        <translation>Titán</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation type="unfinished">Cometa</translation>
+        <translation>Cometa</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation type="unfinished">Golpe mortal</translation>
+        <translation>Golpe mortal</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation type="unfinished">Hades</translation>
+        <translation>Hades</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation type="unfinished">Forastero</translation>
+        <translation>Forastero</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation type="unfinished">Conformar</translation>
+        <translation>Conformar</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation type="unfinished">Lanza Espíritu</translation>
+        <translation>Lanza Espíritu</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation type="unfinished">Nubecielo</translation>
+        <translation>Nubecielo</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation type="unfinished">Fuente guardia</translation>
+        <translation>Fuente guardia</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation type="unfinished">Tetra Elemental</translation>
+        <translation>Tetra Elemental</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation type="unfinished">Fuente espíritu</translation>
+        <translation>Fuente espíritu</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation type="unfinished">Poción X</translation>
+        <translation>Poción X</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation type="unfinished">Taladro</translation>
+        <translation>Taladro</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation type="unfinished">Yoshiyuki</translation>
+        <translation>Yoshiyuki</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation type="unfinished">Evangelio Venus</translation>
+        <translation>Evangelio Venus</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation type="unfinished">Cristal salvador</translation>
+        <translation>Cristal salvador</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation type="unfinished">Pacificador</translation>
+        <translation>Pacificador</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation type="unfinished">Corte Doble</translation>
+        <translation>Corte Doble</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Gran Viento</translation>
+        <translation>Gran Viento</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation type="unfinished">Cab. de la mesa R.</translation>
+        <translation>Cab. de la mesa R.</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation type="unfinished">Choco/Mog</translation>
+        <translation>Choco/Mog</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation type="unfinished">Guardia Escolta</translation>
+        <translation>Guardia Escolta</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation type="unfinished">Sentir</translation>
+        <translation>Sentir</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation type="unfinished">Éter Turbo</translation>
+        <translation>Éter Turbo</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation type="unfinished">Neo Bahamut</translation>
+        <translation>Neo Bahamut</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation type="unfinished">Turbo PM</translation>
+        <translation>Turbo PM</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation type="unfinished">M-Fono Plata</translation>
+        <translation>M-Fono Plata</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation type="unfinished">Typhon</translation>
+        <translation>Typhon</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation type="unfinished">Mitrilo</translation>
+        <translation>Mitrilo</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation type="unfinished">M-Fono Blanco</translation>
+        <translation>M-Fono Blanco</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation type="unfinished">Cuarto aro</translation>
+        <translation>Cuarto aro</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished">Absorber PG</translation>
+        <translation>Absorber PG</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished">Morfo</translation>
+        <translation>Morfo</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation type="unfinished">Super suerte</translation>
+        <translation>Super suerte</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation type="unfinished">Guardia Princesa</translation>
+        <translation>Guardia Princesa</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation type="unfinished">Armazón</translation>
+        <translation>Armazón</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation type="unfinished">Bahamut</translation>
+        <translation>Bahamut</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation type="unfinished">Tridente</translation>
+        <translation>Tridente</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation type="unfinished">Golpe Cohete</translation>
+        <translation>Golpe Cohete</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation type="unfinished">Rifle</translation>
+        <translation>Rifle</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation type="unfinished">Fuerza Motor</translation>
+        <translation>Fuerza Motor</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation type="unfinished">Anillo Fuego</translation>
+        <translation>Anillo Fuego</translation>
     </message>
     <message>
         <source>Purchased The House</source>
@@ -1529,19 +1529,19 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation type="unfinished">Metralleta W</translation>
+        <translation>Metralleta W</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation type="unfinished">Transformar</translation>
+        <translation>Transformar</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation type="unfinished">Fuente Suerte</translation>
+        <translation>Fuente Suerte</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation type="unfinished">Soldado 1/35</translation>
+        <translation>Soldado 1/35</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
@@ -1549,63 +1549,63 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation type="unfinished">Lanza Dragón</translation>
+        <translation>Lanza Dragón</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished">Objeto W</translation>
+        <translation>Objeto W</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation type="unfinished">Rayo Máximo</translation>
+        <translation>Rayo Máximo</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation type="unfinished">Aro de Aegis</translation>
+        <translation>Aro de Aegis</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation type="unfinished">Cimitarra</translation>
+        <translation>Cimitarra</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation type="unfinished">Trompeta</translation>
+        <translation>Trompeta</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation type="unfinished">Leviatán</translation>
+        <translation>Leviatán</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation type="unfinished">Oritsuru</translation>
+        <translation>Oritsuru</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation type="unfinished">Fono de Luz</translation>
+        <translation>Fono de Luz</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation type="unfinished">Punto Errado</translation>
+        <translation>Punto Errado</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">Escudo</translation>
+        <translation>Escudo</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished">Magia W</translation>
+        <translation>Magia W</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation type="unfinished">Guardia Imperial</translation>
+        <translation>Guardia Imperial</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation type="unfinished">Contener</translation>
+        <translation>Contener</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished">Robo simultáneo</translation>
+        <translation>Robo simultáneo</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
@@ -1613,47 +1613,47 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation type="unfinished">Remedio</translation>
+        <translation>Remedio</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation type="unfinished">Guante Furtivo</translation>
+        <translation>Guante Furtivo</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation type="unfinished">Corazón</translation>
+        <translation>Corazón</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation type="unfinished">Oposición mágica</translation>
+        <translation>Oposición mágica</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation type="unfinished">Anillo Rayo</translation>
+        <translation>Anillo Rayo</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation type="unfinished">Aro de Oro</translation>
+        <translation>Aro de Oro</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished">Gran Evangelio</translation>
+        <translation>Gran Evangelio</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation type="unfinished">Paraguas</translation>
+        <translation>Paraguas</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation type="unfinished">Cruel</translation>
+        <translation>Cruel</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">Caos</translation>
+        <translation>Caos</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation type="unfinished">Híper</translation>
+        <translation>Híper</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -1661,31 +1661,31 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation type="unfinished">Ventolera</translation>
+        <translation>Ventolera</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation type="unfinished">Anillo Hada</translation>
+        <translation>Anillo Hada</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished">Efecto añaddo</translation>
+        <translation>Efecto añaddo</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation type="unfinished">M-Fono Negro</translation>
+        <translation>M-Fono Negro</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation type="unfinished">Shuriken Mágico</translation>
+        <translation>Shuriken Mágico</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation type="unfinished">Horquilla</translation>
+        <translation>Horquilla</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation type="unfinished">Trozo Seguridad</translation>
+        <translation>Trozo Seguridad</translation>
     </message>
     <message>
         <source>Midgar parts</source>
@@ -1693,31 +1693,31 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation type="unfinished">Mega todo</translation>
+        <translation>Mega todo</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation type="unfinished">Tarjeta Llave 62</translation>
+        <translation type="obsolete">Tarjeta Llave 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation type="unfinished">Rayo rápido</translation>
+        <translation>Rayo rápido</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation type="unfinished">Puño Principal</translation>
+        <translation>Puño Principal</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation type="unfinished">Cuerno Behemot</translation>
+        <translation>Cuerno Behemot</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation type="unfinished">Cura Total</translation>
+        <translation>Cura Total</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation type="unfinished">Pila Banger</translation>
+        <translation>Pila Banger</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
@@ -1725,7 +1725,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation type="unfinished">Última</translation>
+        <translation>Última</translation>
     </message>
     <message>
         <source>Snowboard</source>
@@ -1737,7 +1737,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation type="unfinished">Shiva</translation>
+        <translation>Shiva</translation>
     </message>
     <message>
         <source>Pharmacy Coupon</source>
@@ -1793,23 +1793,23 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Batteries</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation type="unfinished">Anillo Paz</translation>
+        <translation>Anillo Paz</translation>
     </message>
     <message>
         <source>Super Ball</source>
-        <translation type="unfinished">Superbola</translation>
+        <translation>Superbola</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation type="unfinished">Alejandro</translation>
+        <translation>Alejandro</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished">Corte añadido</translation>
+        <translation>Corte añadido</translation>
     </message>
     <message>
         <source>KeyCard 68</source>
@@ -1825,11 +1825,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Mind Plus</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation type="unfinished">Puño Platino</translation>
+        <translation>Puño Platino</translation>
     </message>
     <message>
         <source>Gold Ticket</source>
@@ -1837,19 +1837,19 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation type="unfinished">Super Gil</translation>
+        <translation>Super Gil</translation>
     </message>
     <message>
         <source>Exp Plus</source>
-        <translation type="unfinished">Super EXP</translation>
+        <translation>Super EXP</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation type="unfinished">Zapatillas</translation>
+        <translation>Zapatillas</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished">Invocación W</translation>
+        <translation>Invocación W</translation>
     </message>
     <message>
         <source>Show Underwater</source>
@@ -1885,7 +1885,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">Omnilátigo</translation>
+        <translation>Omnilátigo</translation>
     </message>
     <message>
         <source>KeyItem: Mythril</source>
@@ -2089,11 +2089,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation type="unfinished"></translation>
+        <translation>Element Clave: Bragas de bikini</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation type="unfinished"></translation>
+        <translation>Element Clave: Lencería</translation>
     </message>
     <message>
         <source>Work Glove</source>
@@ -2102,6 +2102,62 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Nail Bat</source>
         <translation type="unfinished">Garra</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 62</source>
+        <translation>Element Clave: Tarjeta Llave 62</translation>
+    </message>
+    <message>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation>Element Clave: Tarjeta de Miembro</translation>
+    </message>
+    <message>
+        <source>KeyItem: Key to Ancients</source>
+        <translation>Element Clave: Clave de los Ancianos</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keystone</source>
+        <translation>Element Clave: Piedra Angular</translation>
+    </message>
+    <message>
+        <source>KeyItem: Black Materia</source>
+        <translation>Element Clave: Materia Negra</translation>
+    </message>
+    <message>
+        <source>Phoenix</source>
+        <translation type="unfinished">Fénix</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 60</source>
+        <translation>Element Clave: Tarjeta Llave 60</translation>
+    </message>
+    <message>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished">Tinta</translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation type="unfinished">Bomba T/S</translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation type="unfinished">Colmillo dragón</translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation type="unfinished">Escamas dragón</translation>
+    </message>
+    <message>
+        <source>Caldrun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Lure</source>
+        <translation type="unfinished">Atrae chocobo</translation>
     </message>
 </context>
 <context>
@@ -5251,11 +5307,11 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation type="obsolete">Yuffie</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="obsolete">Vincent</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -5625,7 +5681,7 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation>Pers Secretos Desbloqueados</translation>
+        <translation type="obsolete">Pers Secretos Desbloqueados</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -6655,10 +6711,6 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Pont Location In North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Map Id: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -6760,6 +6812,18 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Yuffie </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1636,7 +1636,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Engels Chor</translation>
     </message>
     <message>
         <source>Umbrella</source>
@@ -1696,7 +1696,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation type="unfinished">Code-Karte 62</translation>
+        <translation type="obsolete">Code-Karte 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
@@ -1788,7 +1788,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Batteries</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Batterie</translation>
     </message>
     <message>
         <source>Peace Ring</source>
@@ -1828,7 +1828,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Exp Plus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Extra EXP</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
@@ -2072,7 +2072,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bahamut ZERO</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
@@ -2080,7 +2080,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlüsselgegenstände: Unterwäsche</translation>
     </message>
     <message>
         <source>Work Glove</source>
@@ -2089,6 +2089,62 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Nail Bat</source>
         <translation type="unfinished">Nagelkeule</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 62</source>
+        <translation>Schlüsselgegenstände: Code-Karte 62</translation>
+    </message>
+    <message>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Key to Ancients</source>
+        <translation>Schlüsselgegenstände:  Schlüssel für Sektor 5</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keystone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem: Black Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix</source>
+        <translation type="unfinished">Phönix</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 60</source>
+        <translation>Schlüsselgegenstände: Code-Karte 60</translation>
+    </message>
+    <message>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished">Tinte</translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation type="unfinished">T/S Bombe</translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation type="unfinished">Drachenzahn</translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation type="unfinished">Drachenschuppen</translation>
+    </message>
+    <message>
+        <source>Caldrun</source>
+        <translation type="unfinished">Kessel</translation>
+    </message>
+    <message>
+        <source>Chocobo Lure</source>
+        <translation type="unfinished">Chocobo-Köder</translation>
     </message>
 </context>
 <context>
@@ -5233,11 +5289,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation type="obsolete">Yuffie</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="obsolete">Vincent</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -5608,7 +5664,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation>Geheime Charaktere freigeschaltet</translation>
+        <translation type="obsolete">Geheime Charaktere freigeschaltet</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -6377,7 +6433,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished">Zahlungsmittel</translation>
+        <translation>Zahlungsmittel</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
@@ -6629,10 +6685,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Pont Location In North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Map Id: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -6734,6 +6786,18 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Yuffie </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1697,7 +1697,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation>Carte 62</translation>
+        <translation type="obsolete">Carte 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
@@ -2089,11 +2089,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation type="unfinished"></translation>
+        <translation>Elément-clé: Slips bikinis</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation type="unfinished"></translation>
+        <translation>Elément-clé: Lingerie</translation>
     </message>
     <message>
         <source>Work Glove</source>
@@ -2102,6 +2102,63 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Nail Bat</source>
         <translation type="unfinished">Coup d&apos;ongle</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 62</source>
+        <translation>Elément-clé: Carte 62</translation>
+    </message>
+    <message>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation>Elément-clé: Carte membre</translation>
+    </message>
+    <message>
+        <source>KeyItem: Key to Ancients</source>
+        <translatorcomment>Lingerie</translatorcomment>
+        <translation>Elément-clé: Clef des Anciens</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keystone</source>
+        <translation>Elément-clé: Clé de pierre</translation>
+    </message>
+    <message>
+        <source>KeyItem: Black Materia</source>
+        <translation>Elément-clé: Matéria Noire</translation>
+    </message>
+    <message>
+        <source>Phoenix</source>
+        <translation type="unfinished">Phénix</translation>
+    </message>
+    <message>
+        <source>KeyItem: Keycard 60</source>
+        <translation>Elément-clé: Carte 60</translation>
+    </message>
+    <message>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished">Encre</translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation type="unfinished">Bombe T/S</translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation type="unfinished">Dent de dragon</translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation type="unfinished">Ecailles de dragon</translation>
+    </message>
+    <message>
+        <source>Caldrun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Lure</source>
+        <translation type="unfinished">Appât-chocobo</translation>
     </message>
 </context>
 <context>
@@ -5250,11 +5307,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Youfie</translation>
+        <translation type="obsolete">Youfie</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="obsolete">Vincent</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
@@ -5624,7 +5681,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation>Personnages secrets débloqués</translation>
+        <translation type="obsolete">Personnages secrets débloqués</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -6656,10 +6713,6 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
         <translation>Tous les objets ajoutés</translation>
     </message>
     <message>
-        <source>Save Pont Location In North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Map Id: </source>
         <translation type="unfinished">Map ID : </translation>
     </message>
@@ -6762,6 +6815,18 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlocked Yuffie </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
