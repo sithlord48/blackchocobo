@@ -22,8 +22,8 @@ quint8 FF7Char::id(int who){return Chars[who]._id;}
 int FF7Char::weaponStartingId(int who){return Chars[who]._starting_weapon_id;}
 int FF7Char::weaponOffset(int who){return Chars[who]._weapon_offset;}
 int FF7Char::numberOfWeapons(int who){return Chars[who]._num_weapons;}
-QPixmap FF7Char::pixmap(int who){return QPixmap(Chars[who]._avatarString);}
-QImage FF7Char::image(int who) {return QImage(Chars[who]._avatarString);}
+QPixmap FF7Char::pixmap(int who){if(who<0x00 || who<0x0B){return QPixmap(Chars[who]._avatarString);} else{return QPixmap();}}
+QImage FF7Char::image(int who) {if(who>0x00 || who<0x0B){return QImage(Chars[who]._avatarString);} else{return QImage();}}
 QIcon FF7Char::icon(int who){return QIcon(pixmap(who));}
 quint32 FF7Char::totalExpForLevel(int who,int level){return Chars[who]._charlvls[level];}
 quint32 FF7Char::tnlForLevel(int who,int level){return Chars[who]._chartnls[level];}
