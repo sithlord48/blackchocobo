@@ -91,7 +91,6 @@ private:
 	int mslotsel; //keeps track of materia slot on char selected
 	PhsListWidget *phsList;
 	MenuListWidget *menuList;
-	ItemPreview *item_preview;
 	OptionsWidget *optionsWidget;
 	MateriaEditor *materia_editor;
 	QSpacerItem *mat_spacer;
@@ -151,7 +150,6 @@ private slots://try to keep these in the same order as the .cpp file
 	/*GuiFunctions*/
 	void setmenu(bool newgame);
 	void materiaupdate(void);
-	void itemupdate(void);
 	void guirefresh(bool newgame);
 	void progress_update(void);
 	void unknown_refresh(int);
@@ -399,7 +397,6 @@ private slots://try to keep these in the same order as the .cpp file
 
 
 	//items tab
-	void on_list_keyitems_clicked(const QModelIndex &index);
 	void on_btn_item_add_each_item_clicked();
 	void on_btn_remove_all_items_clicked();
 
@@ -455,7 +452,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_slide_world_y_valueChanged(int value);
 	void on_world_map_view_customContextMenuRequested(QPoint pos);
 
-	void on_btn_clear_keyitems_clicked();
 	void on_sb_donprog_valueChanged(int );
 	void on_combo_z_var_currentIndexChanged(int);
 	void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
@@ -464,7 +460,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_combo_compare_slot_currentIndexChanged(int index);
 	void on_btn_all_z_diffs_clicked();
 	void on_sb_steps_valueChanged(int );
-
 	void on_combo_s7_slums_currentIndexChanged(int index);
 	void on_cb_visible_buggy_toggled(bool checked);
 	void on_cb_visible_bronco_toggled(bool checked);
@@ -513,5 +508,8 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_sb_saveZ_valueChanged(int arg1);
 	void on_actionOpen_Achievement_File_triggered();
 	void on_cbSubGameWon_toggled(bool checked);
+	void on_cb_mysteryPanties_toggled(bool checked);
+	void on_cb_letterToDaughter_toggled(bool checked);
+	void on_cb_letterToWife_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

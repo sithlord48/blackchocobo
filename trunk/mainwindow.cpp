@@ -188,7 +188,6 @@ void MainWindow::init_connections()
 		connect(ff7,SIGNAL(fileChanged(bool)),this,SLOT(fileModified(bool)));
 		connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
 		connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
-
 		//ItemList
 		connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
 		//Materia_Editor
@@ -1064,20 +1063,6 @@ void MainWindow::materia_id_changed(qint8 id)
 	ff7->setPartyMateria(s,ui->tbl_materia->currentRow(),id,ff7->partyMateriaAp(s,ui->tbl_materia->currentRow()));
 	materiaupdate();
 }}
-
-void MainWindow::itemupdate(void)
-{
-	load=true;
-	//Field Items Picked up
-	itemlist->setItems(ff7->items(s));
-	for(int i=0;i<ui->list_keyitems->count();i++)
-	{
-		if (ff7->keyItem(s,i)){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
-		else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
-	}
-
-	load=false;
-}
 void MainWindow::CheckGame()
 {
 	if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
@@ -1220,10 +1205,6 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 			else{ui->combo_party2->setCurrentIndex(ff7->party(s,1));}
 			if (ff7->party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
 			else{ui->combo_party3->setCurrentIndex(ff7->party(s,2));}
-			ui->sb_gil->setValue(ff7->gil(s));
-			ui->sb_gp->setValue(ff7->gp(s));
-			ui->sb_runs->setValue(ff7->runs(s));
-			ui->sb_battles->setValue(ff7->battles(s));
 			set_char_buttons();
 			switch(curchar)
 			{
@@ -1240,7 +1221,14 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 		break;
 
 		case 1://Item Tab
-			itemupdate();
+			itemlist->setItems(ff7->items(s));
+			ui->sb_gil->setValue(ff7->gil(s));
+			ui->sb_gp->setValue(ff7->gp(s));
+			ui->sb_runs->setValue(ff7->runs(s));
+			ui->sb_battles->setValue(ff7->battles(s));
+			ui->cb_mysteryPanties->setChecked(ff7->keyItem(s,FF7Save::MYSTERYPANTIES));
+			ui->cb_letterToDaughter->setChecked(ff7->keyItem(s,FF7Save::LETTERTOADAUGHTER));
+			ui->cb_letterToWife->setChecked(ff7->keyItem(s,FF7Save::LETTERTOAWIFE));
 		break;
 
 		case 2://Materia
@@ -1408,30 +1396,30 @@ void MainWindow::progress_update()
 	ui->cb_midgartrain_8->setChecked(ff7->midgarTrainFlags(s,7));
 	ui->cb_bombing_int->setChecked(ff7->startBombingMission(s));
 
-	if(ff7->unknown(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}    else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}    else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}    else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}    else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}    else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(0) & (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}    else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
+	ui->cb_s7pl_1->setChecked((ff7->unknown(s,26).at(0) & (1<<0)));
+	ui->cb_s7pl_2->setChecked((ff7->unknown(s,26).at(0) & (1<<1)));
+	ui->cb_s7pl_3->setChecked((ff7->unknown(s,26).at(0) & (1<<2)));
+	ui->cb_s7pl_4->setChecked((ff7->unknown(s,26).at(0) & (1<<3)));
+	ui->cb_s7pl_5->setChecked((ff7->unknown(s,26).at(0) & (1<<4)));
+	ui->cb_s7pl_6->setChecked((ff7->unknown(s,26).at(0) & (1<<5)));
+	ui->cb_s7pl_7->setChecked((ff7->unknown(s,26).at(0) & (1<<6)));
+	ui->cb_s7pl_8->setChecked((ff7->unknown(s,26).at(0) & (1<<7)));
 
-	if(ff7->unknown(s,26).at(8) & (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}    else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}    else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}    else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}    else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}    else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}    else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}    else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,26).at(8) & (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}    else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
+	ui->cb_s7ts_1->setChecked((ff7->unknown(s,26).at(8) & (1<<0)));
+	ui->cb_s7ts_2->setChecked((ff7->unknown(s,26).at(8) & (1<<1)));
+	ui->cb_s7ts_3->setChecked((ff7->unknown(s,26).at(8) & (1<<2)));
+	ui->cb_s7ts_4->setChecked((ff7->unknown(s,26).at(8) & (1<<3)));
+	ui->cb_s7ts_5->setChecked((ff7->unknown(s,26).at(8) & (1<<4)));
+	ui->cb_s7ts_6->setChecked((ff7->unknown(s,26).at(8) & (1<<5)));
+	ui->cb_s7ts_7->setChecked((ff7->unknown(s,26).at(8) & (1<<6)));
+	ui->cb_s7ts_8->setChecked((ff7->unknown(s,26).at(8) & (1<<7)));
 
-	if(ff7->unknown(s,23).at(26) & (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}      else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}      else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}      else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}      else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}      else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
-	if(ff7->unknown(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
+	ui->cb_s5_1->setChecked((ff7->unknown(s,23).at(26) & (1<<0)));
+	ui->cb_s5_2->setChecked((ff7->unknown(s,23).at(26) & (1<<1)));
+	ui->cb_s5_3->setChecked((ff7->unknown(s,23).at(26) & (1<<2)));
+	ui->cb_s5_4->setChecked((ff7->unknown(s,23).at(26) & (1<<3)));
+	ui->cb_s5_5->setChecked((ff7->unknown(s,23).at(26) & (1<<4)));
+	ui->cb_s5_8->setChecked((ff7->unknown(s,23).at(26) & (1<<7)));
 
 	//When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
 	//to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
@@ -1468,10 +1456,6 @@ void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7
 void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));}
 void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->character(s,8),ff7->charName(s,8));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7->setGil(s,value);}}
-void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
-void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
-void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
 {if(!load){
 	if(index == 0x0C) //empty char slot (index 12)
@@ -1581,14 +1565,15 @@ void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s
 void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,value);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_keyitems_clicked(const QModelIndex &index){if(!load){ff7->setKeyItem(s,index.row(),ui->list_keyitems->item(index.row())->checkState());}}
-void MainWindow::on_btn_clear_keyitems_clicked()
-{if(!load){fileModified(true);}//used in other functions
-	for(int i=0;i<51;i++)
-	{
-		ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
-	}
-}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7->setGil(s,value);}}
+void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
+void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
+void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
+
+void MainWindow::on_cb_mysteryPanties_toggled(bool checked){if(!load){ff7->setKeyItem(s,FF7Save::MYSTERYPANTIES,checked);}}
+void MainWindow::on_cb_letterToDaughter_toggled(bool checked){if(!load){ff7->setKeyItem(s,FF7Save::LETTERTOADAUGHTER,checked);}}
+void MainWindow::on_cb_letterToWife_toggled(bool checked){if(!load){ff7->setKeyItem(s,FF7Save::LETTERTOAWIFE,checked);}}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row){if(!load){load=true;materia_editor->setMateria(ff7->partyMateriaId(s,row),ff7->partyMateriaAp(s,row));load=false;}}
@@ -2028,7 +2013,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_btn_remove_all_items_clicked() //used for testing
+void MainWindow::on_btn_remove_all_items_clicked()
 {
 	for(int i=0;i<320;i++){ff7->setItem(s,i,FF7Item::EmptyItemData);}
 	itemlist->setItems(ff7->items(s));

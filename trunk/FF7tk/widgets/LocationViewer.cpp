@@ -47,6 +47,7 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 void LocationViewer::init_display(void)
 {
 	lblLocationPreview = new QLabel;
+	lblLocationPreview->setScaledContents(true);
 	lblLocationPreview->setMinimumSize(320,240);
 	lblLocationPreview->setBaseSize(640,480);
 	lblLocationPreview->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
@@ -287,7 +288,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
 		setLocation(mapID,locID);
 		if(autoUpdate){emit(locationChanged(Locations->fileName(mapID,locID)));}
 	}
-	lblLocationPreview->adjustSize();
+	//lblLocationPreview->adjustSize();
 }
 
 void LocationViewer::setSelected(QString locFilename)
@@ -332,7 +333,7 @@ void LocationViewer::setLocation(int mapId,int locId)
 	if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
 	else
 	{
-		lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+		lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))));
 		QString oldStr = Locations->locationString(fileName);
 		QString newStr = translate(oldStr);
 		if(oldStr !=newStr && autoUpdate)
@@ -550,9 +551,5 @@ void LocationViewer::setAdvancedMode(bool advancedMode)
 {
 	_advancedMode = advancedMode;
 	CoordsWidget->setVisible(_advancedMode);
-	lblLocationPreview->adjustSize();
 }
-bool LocationViewer::advancedMode(void)
-{
-	return _advancedMode;
-}
+bool LocationViewer::advancedMode(void){return _advancedMode;}
