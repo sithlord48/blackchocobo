@@ -17,9 +17,9 @@
 
 bool ItemPreview::eventFilter(QObject *obj, QEvent *ev)
 {
-    if(obj != this->parent() && (obj != this)){this->close();return true;}
-    if(ev->type()==QEvent::MouseButtonPress){this->close();return true;}
-    else{return false;}
+	if(obj != this->parent() && (obj != this)){this->close();return true;}
+	else if(ev->type()==QEvent::MouseButtonPress || ev->type() == QEvent::Leave){this->close();return true;}
+	else{return event(ev);}
 
 }
 ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QWidget(parent)
@@ -29,7 +29,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
   if(WidgetType ==Qt::Popup || WidgetType ==Qt::ToolTip)
   {// if popup or tooltip install the eventFilter
-      installEventFilter(this);
+	  installEventFilter(this);
    }
   _id=FF7Item::EmptyItem;
   lbl_name=new QLabel();
@@ -185,238 +185,238 @@ void ItemPreview::setIcon(QPixmap picture){lbl_icon->setPixmap(picture);lbl_icon
 
 void ItemPreview::setItem(quint16 itemraw)
 {//see FF7Save::itemDecode(quint16) for proper comments.
-    quint16 item;
-    int one = 1;
-    if (*(char *)&one){item=itemraw;}
-    else{item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
-    int id = (item & 0x1FF);
-    setItem(id);
+	quint16 item;
+	int one = 1;
+	if (*(char *)&one){item=itemraw;}
+	else{item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+	int id = (item & 0x1FF);
+	setItem(id);
 }
 void ItemPreview::setItem(int id)
 {
-    lbl_slot_8->setHidden(true);
-    lbl_slot_7->setHidden(true);
-    lbl_slot_6->setHidden(true);
-    lbl_slot_5->setHidden(true);
-    lbl_slot_4->setHidden(true);
-    lbl_slot_3->setHidden(true);
-    lbl_slot_2->setHidden(true);
-    lbl_slot_1->setHidden(true);
+	lbl_slot_8->setHidden(true);
+	lbl_slot_7->setHidden(true);
+	lbl_slot_6->setHidden(true);
+	lbl_slot_5->setHidden(true);
+	lbl_slot_4->setHidden(true);
+	lbl_slot_3->setHidden(true);
+	lbl_slot_2->setHidden(true);
+	lbl_slot_1->setHidden(true);
 
-    lbl_m_link_1->setPixmap(QPixmap());
-    lbl_m_link_2->setPixmap(QPixmap());
-    lbl_m_link_3->setPixmap(QPixmap());
-    lbl_m_link_4->setPixmap(QPixmap());
+	lbl_m_link_1->setPixmap(QPixmap());
+	lbl_m_link_2->setPixmap(QPixmap());
+	lbl_m_link_3->setPixmap(QPixmap());
+	lbl_m_link_4->setPixmap(QPixmap());
 
-    materia_slot_box->setHidden(true);
-    lbl_desc->setHidden(true);
-    lbl_name->setHidden(true);
-    lbl_icon->setHidden(true);
-    status_box->setHidden(true);
-    elemental_box->setHidden(true);
+	materia_slot_box->setHidden(true);
+	lbl_desc->setHidden(true);
+	lbl_name->setHidden(true);
+	lbl_icon->setHidden(true);
+	status_box->setHidden(true);
+	elemental_box->setHidden(true);
 
-    if(id<0 || id>319){_id=FF7Item::EmptyItem;/*InValid Number..Do Nothing*/}
-    else
-    {
-        _id=id;
-        if(data.name(id) !="")
-        {
-            lbl_name->setHidden(false);
-            setName(data.name(id));
-        }
+	if(id<0 || id>319){_id=FF7Item::EmptyItem;/*InValid Number..Do Nothing*/}
+	else
+	{
+		_id=id;
+		if(data.name(id) !="")
+		{
+			lbl_name->setHidden(false);
+			setName(data.name(id));
+		}
 
-        if(data.desc(id)!="")
-        {
-            setDesc(data.desc(id));
-            lbl_desc->setHidden(false);
-        }
-        if(!data.image(id).isNull())
-        {
-            lbl_icon->setHidden(false);
-            setIcon(QPixmap::fromImage(data.image(id)));
-        }
-        this->status_info(id);
-        this->elemental_info(id);
+		if(data.desc(id)!="")
+		{
+			setDesc(data.desc(id));
+			lbl_desc->setHidden(false);
+		}
+		if(!data.image(id).isNull())
+		{
+			lbl_icon->setHidden(false);
+			setIcon(QPixmap::fromImage(data.image(id)));
+		}
+		this->status_info(id);
+		this->elemental_info(id);
 
-        if(data.type(id)>FF7Item::Item && data.type(id)!=FF7Item::Accessory)
-        {
-            if(data.materiaGrowthRate(id)==0)
-            {//no growth slots
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
-            }
-            else
-            {//growth slots.
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
-            }
-            QString ap_rate =tr("APx%1").arg(data.materiaGrowthRate(id));
-            materia_slot_box->setTitle(ap_rate);
-            materia_slot_box->setHidden(false);
-            switch(data.materiaSlots(id))
-            {
-                case 8:lbl_slot_8->setHidden(false);
-                case 7:lbl_slot_7->setHidden(false);
-                case 6:lbl_slot_6->setHidden(false);
-                case 5:lbl_slot_5->setHidden(false);
-                case 4:lbl_slot_4->setHidden(false);
-                case 3:lbl_slot_3->setHidden(false);
-                case 2:lbl_slot_2->setHidden(false);
-                case 1:lbl_slot_1->setHidden(false);
-            };
+		if(data.type(id)>FF7Item::Item && data.type(id)!=FF7Item::Accessory)
+		{
+			if(data.materiaGrowthRate(id)==0)
+			{//no growth slots
+				lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+				lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()));
+			}
+			else
+			{//growth slots.
+				lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+				lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()));
+			}
+			QString ap_rate =tr("APx%1").arg(data.materiaGrowthRate(id));
+			materia_slot_box->setTitle(ap_rate);
+			materia_slot_box->setHidden(false);
+			switch(data.materiaSlots(id))
+			{
+				case 8:lbl_slot_8->setHidden(false);
+				case 7:lbl_slot_7->setHidden(false);
+				case 6:lbl_slot_6->setHidden(false);
+				case 5:lbl_slot_5->setHidden(false);
+				case 4:lbl_slot_4->setHidden(false);
+				case 3:lbl_slot_3->setHidden(false);
+				case 2:lbl_slot_2->setHidden(false);
+				case 1:lbl_slot_1->setHidden(false);
+			};
 
-            switch(data.linkedSlots(id))
-            {
+			switch(data.linkedSlots(id))
+			{
 
-                case 4: lbl_m_link_4->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
-                case 3: lbl_m_link_3->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
-                case 2: lbl_m_link_2->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
-                case 1: lbl_m_link_1->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
-            };
-        }
-    }
-    this->adjustSize();
+				case 4: lbl_m_link_4->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+				case 3: lbl_m_link_3->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+				case 2: lbl_m_link_2->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+				case 1: lbl_m_link_1->setPixmap(QPixmap::fromImage(data.imageMateriaLink()));
+			};
+		}
+	}
+	this->adjustSize();
 }
 void ItemPreview::elemental_info(int id)
 {
-    int y= elemental_effects->contentsMargins().top() +elemental_effects->contentsMargins().bottom();
-    bool show=false;
-    elemental_effects->clear();
-    if(id<0 || id>319){/*invalid number*/}
-    else
-    {
-        for(int i=0;i<14;i++)
-        {
-            QString effect;
-            int element=0;
-            switch(i)
-            {
-                case 0: element=data.elementRestoration(id); effect.append(tr("Restoration"));break;
-                case 1: element=data.elementFire(id); effect.append(tr("Fire")); break;
-                case 2: element=data.elementCold(id); effect.append(tr("Cold")); break;
-                case 3: element=data.elementLightning(id); effect.append(tr("Lightning")); break;
-                case 4: element=data.elementEarth(id); effect.append(tr("Earth")); break;
-                case 5: element=data.elementWind(id); effect.append(tr("Wind")); break;
-                case 6: element=data.elementWater(id); effect.append(tr("Water")); break;
-                case 7: element=data.elementGravity(id); effect.append(tr("Gravity")); break;
-                case 8: element=data.elementHoly(id); effect.append(tr("Holy")); break;
-                case 9: element=data.elementPoison(id); effect.append(tr("Poison")); break;
-                case 10: element=data.elementCut(id); effect.append(tr("Cut")); break;
-                case 11: element=data.elementShoot(id); effect.append(tr("Shoot")); break;
-                case 12: element=data.elementPunch(id); effect.append(tr("Punch")); break;
-                case 13: element=data.elementHit(id); effect.append(tr("Hit")); break;
-            }
-            switch(element)
-            {
-                case FF7Item::Absorb: effect.prepend(tr("Absorb:"));break;
-                case FF7Item::Nullify: effect.prepend(tr("Nullify:"));break;
-                case FF7Item::Halve: effect.prepend(tr("Halve:"));break;
-                case FF7Item::NoEffect: effect.clear();break;
-                case FF7Item::Damage: effect.prepend(tr("Attack:"));break;
-            }
-            if(!effect.isNull())
-            {
-                elemental_effects->addItem(effect);
-                show=true; y+= elemental_effects->sizeHintForRow(0);
+	int y= elemental_effects->contentsMargins().top() +elemental_effects->contentsMargins().bottom();
+	bool show=false;
+	elemental_effects->clear();
+	if(id<0 || id>319){/*invalid number*/}
+	else
+	{
+		for(int i=0;i<14;i++)
+		{
+			QString effect;
+			int element=0;
+			switch(i)
+			{
+				case 0: element=data.elementRestoration(id); effect.append(tr("Restoration"));break;
+				case 1: element=data.elementFire(id); effect.append(tr("Fire")); break;
+				case 2: element=data.elementCold(id); effect.append(tr("Cold")); break;
+				case 3: element=data.elementLightning(id); effect.append(tr("Lightning")); break;
+				case 4: element=data.elementEarth(id); effect.append(tr("Earth")); break;
+				case 5: element=data.elementWind(id); effect.append(tr("Wind")); break;
+				case 6: element=data.elementWater(id); effect.append(tr("Water")); break;
+				case 7: element=data.elementGravity(id); effect.append(tr("Gravity")); break;
+				case 8: element=data.elementHoly(id); effect.append(tr("Holy")); break;
+				case 9: element=data.elementPoison(id); effect.append(tr("Poison")); break;
+				case 10: element=data.elementCut(id); effect.append(tr("Cut")); break;
+				case 11: element=data.elementShoot(id); effect.append(tr("Shoot")); break;
+				case 12: element=data.elementPunch(id); effect.append(tr("Punch")); break;
+				case 13: element=data.elementHit(id); effect.append(tr("Hit")); break;
+			}
+			switch(element)
+			{
+				case FF7Item::Absorb: effect.prepend(tr("Absorb:"));break;
+				case FF7Item::Nullify: effect.prepend(tr("Nullify:"));break;
+				case FF7Item::Halve: effect.prepend(tr("Halve:"));break;
+				case FF7Item::NoEffect: effect.clear();break;
+				case FF7Item::Damage: effect.prepend(tr("Attack:"));break;
+			}
+			if(!effect.isNull())
+			{
+				elemental_effects->addItem(effect);
+				show=true; y+= elemental_effects->sizeHintForRow(0);
 
-            }
-        }//end of for Loop
-        Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
-        if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
-        {//make the combo box smaller if not a popup or tooltip
-            if(elemental_effects->count() <6)
-            {
-                //elemental_effects->setFixedHeight(y);
-                elemental_box->setFixedSize(160,elemental_effects->height()+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
-                //elemental_box->setFixedSize(160,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
-            }
-            else{elemental_box->setFixedSize(160,elemental_effects->sizeHintForRow(0)*5 +elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());}
-        }
-        else
-        {
-            elemental_box->setFixedSize(160,y + elemental_box->contentsMargins().top() +elemental_box->contentsMargins().bottom());
-        }}//end of else
+			}
+		}//end of for Loop
+		Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
+		if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
+		{//make the combo box smaller if not a popup or tooltip
+			if(elemental_effects->count() <6)
+			{
+				//elemental_effects->setFixedHeight(y);
+				elemental_box->setFixedSize(160,elemental_effects->height()+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
+				//elemental_box->setFixedSize(160,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
+			}
+			else{elemental_box->setFixedSize(160,elemental_effects->sizeHintForRow(0)*5 +elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());}
+		}
+		else
+		{
+			elemental_box->setFixedSize(160,y + elemental_box->contentsMargins().top() +elemental_box->contentsMargins().bottom());
+		}}//end of else
    elemental_box->setVisible(show);
    elemental_box->adjustSize();
 }//end of function
 
 void ItemPreview::status_info(int id)
 {
-    int y=status_effects->contentsMargins().top()+ status_effects->contentsMargins().bottom();
-    bool show=false;
-    status_effects->clear();
-    if(id<0 || id>319){/*invalid number*/}
-    else
-    {
-        for(int i=0;i<24;i++)
-        {
-            QString effect;
-            int status=0;
-            switch(i)
-            {
-                case 0: status=data.statusDeath(id); effect.append(tr("Death"));break;
-                case 1: status=data.statusSlowNumb(id); effect.append(tr("Slow-Numb"));break;
-                case 2: status=data.statusDeathSentence(id); effect.append(tr("D.Sentence"));break;
-                case 3: status=data.statusParalysis(id); effect.append(tr("Paralysis"));break;
-                case 4: status=data.statusPetrify(id); effect.append(tr("Petrify"));break;
-                case 5: status=data.statusSilence(id); effect.append(tr("Silence"));break;
-                case 6: status=data.statusSleep(id); effect.append(tr("Sleep"));break;
-                case 7: status=data.statusConfusion(id); effect.append(tr("Confusion"));break;
-                case 8: status=data.statusBerserk(id); effect.append(tr("Berserk"));break;
-                case 9: status=data.statusFrog(id); effect.append(tr("Frog"));break;
-                case 10: status=data.statusMini(id); effect.append(tr("Mini"));break;
-                case 11: status=data.statusPoison(id); effect.append(tr("Poison"));break;
-                case 12: status=data.statusFury(id); effect.append(tr("Fury"));break;
-                case 13: status=data.statusSadness(id); effect.append(tr("Sadness"));break;
-                case 14: status=data.statusDarkness(id); effect.append(tr("Darkness"));break;
-                case 15: status=data.statusHaste(id); effect.append(tr("Haste"));break;
-                case 16: status=data.statusSlow(id); effect.append(tr("Slow"));break;
-                case 17: status=data.statusStop(id); effect.append(tr("Stop"));break;
-                case 18: status=data.statusBarrier(id); effect.append(tr("Barrier"));break;
-                case 19: status=data.statusMagicBarrier(id); effect.append(tr("M.Barrier"));break;
-                case 20: status=data.statusReflect(id); effect.append(tr("Reflect"));break;
-                case 21: status=data.statusShield(id); effect.append(tr("Shield"));break;
-                case 22: status=data.statusRegen(id); effect.append(tr("Regen"));break;
-                case 23:status=data.statusResist(id); effect.append(tr("Resist"));break;
-            }
-            switch(status)
-            {
-                case FF7Item::Protect: effect.prepend(tr("Protect:")); break;
-                case FF7Item::Remove: effect.prepend(tr("Remove:")); break;
-                case  FF7Item::NoEffect: effect.clear();break;
-                case FF7Item::Infilict: effect.prepend(tr("Inflict:")); break;
-                case FF7Item::SelfCast: effect.prepend(tr("OnBattle:"));break;
-            }
-            if(!effect.isNull())
-            {
-                status_effects->addItem(effect);
-                show=true; y+=status_effects->sizeHintForRow(0);
-            }
-        }//end of for Loop
-        Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
-        if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
-        {//make the combo box smaller if not a popup or tooltip
-            if(status_effects->count()<6)
-            {
-                status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());
-            }
-            else{status_box->setFixedSize(160,status_effects->sizeHintForRow(0)*5 +status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
-        }
-        else{status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
-    }//end of else
-    status_box->setVisible(show);
-    status_box->adjustSize();
+	int y=status_effects->contentsMargins().top()+ status_effects->contentsMargins().bottom();
+	bool show=false;
+	status_effects->clear();
+	if(id<0 || id>319){/*invalid number*/}
+	else
+	{
+		for(int i=0;i<24;i++)
+		{
+			QString effect;
+			int status=0;
+			switch(i)
+			{
+				case 0: status=data.statusDeath(id); effect.append(tr("Death"));break;
+				case 1: status=data.statusSlowNumb(id); effect.append(tr("Slow-Numb"));break;
+				case 2: status=data.statusDeathSentence(id); effect.append(tr("D.Sentence"));break;
+				case 3: status=data.statusParalysis(id); effect.append(tr("Paralysis"));break;
+				case 4: status=data.statusPetrify(id); effect.append(tr("Petrify"));break;
+				case 5: status=data.statusSilence(id); effect.append(tr("Silence"));break;
+				case 6: status=data.statusSleep(id); effect.append(tr("Sleep"));break;
+				case 7: status=data.statusConfusion(id); effect.append(tr("Confusion"));break;
+				case 8: status=data.statusBerserk(id); effect.append(tr("Berserk"));break;
+				case 9: status=data.statusFrog(id); effect.append(tr("Frog"));break;
+				case 10: status=data.statusMini(id); effect.append(tr("Mini"));break;
+				case 11: status=data.statusPoison(id); effect.append(tr("Poison"));break;
+				case 12: status=data.statusFury(id); effect.append(tr("Fury"));break;
+				case 13: status=data.statusSadness(id); effect.append(tr("Sadness"));break;
+				case 14: status=data.statusDarkness(id); effect.append(tr("Darkness"));break;
+				case 15: status=data.statusHaste(id); effect.append(tr("Haste"));break;
+				case 16: status=data.statusSlow(id); effect.append(tr("Slow"));break;
+				case 17: status=data.statusStop(id); effect.append(tr("Stop"));break;
+				case 18: status=data.statusBarrier(id); effect.append(tr("Barrier"));break;
+				case 19: status=data.statusMagicBarrier(id); effect.append(tr("M.Barrier"));break;
+				case 20: status=data.statusReflect(id); effect.append(tr("Reflect"));break;
+				case 21: status=data.statusShield(id); effect.append(tr("Shield"));break;
+				case 22: status=data.statusRegen(id); effect.append(tr("Regen"));break;
+				case 23:status=data.statusResist(id); effect.append(tr("Resist"));break;
+			}
+			switch(status)
+			{
+				case FF7Item::Protect: effect.prepend(tr("Protect:")); break;
+				case FF7Item::Remove: effect.prepend(tr("Remove:")); break;
+				case  FF7Item::NoEffect: effect.clear();break;
+				case FF7Item::Infilict: effect.prepend(tr("Inflict:")); break;
+				case FF7Item::SelfCast: effect.prepend(tr("OnBattle:"));break;
+			}
+			if(!effect.isNull())
+			{
+				status_effects->addItem(effect);
+				show=true; y+=status_effects->sizeHintForRow(0);
+			}
+		}//end of for Loop
+		Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
+		if(WidgetType !=Qt::Popup && WidgetType !=Qt::ToolTip)
+		{//make the combo box smaller if not a popup or tooltip
+			if(status_effects->count()<6)
+			{
+				status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());
+			}
+			else{status_box->setFixedSize(160,status_effects->sizeHintForRow(0)*5 +status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
+		}
+		else{status_box->setFixedSize(160,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
+	}//end of else
+	status_box->setVisible(show);
+	status_box->adjustSize();
 }//end of function
 int ItemPreview::id(void){return _id;}
