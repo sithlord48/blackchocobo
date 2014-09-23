@@ -46,13 +46,6 @@ void MainWindow::init_display()
 	//Hide the stuff that needs to be hidden.
 	ui->compare_table->setEnabled(false);
 	ui->tbl_diff->setVisible(0);
-	ui->bm_unknown->setVisible(0);
-	ui->bh_id->setVisible(0);
-	ui->leader_id->setVisible(false);
-
-	//testing stuff.
-	ui->tabWidget->setTabEnabled(9,0);
-	ui->cb_Region_Slot->setEnabled(false);
 
 	load=false;
 
@@ -194,7 +187,6 @@ void MainWindow::init_connections()
 		connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
 		connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
 		//Char_Editor
-		connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),char_editor,(SLOT(setAdvancedMode(bool))));
 		connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
 		connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));
 		connect(char_editor,SIGNAL(str_changed(quint8)),this,SLOT(char_str_changed(quint8)));
@@ -234,7 +226,6 @@ void MainWindow::init_connections()
 		connect(char_editor,SIGNAL(Materias_changed(materia)),this,SLOT(char_materia_changed(materia)));
 		connect(char_editor,SIGNAL(expNext_changed(quint32)),this,SLOT(char_expNext_changed(quint32)));
 		//ChocoboManager
-		connect(ui->action_AdvancedMode,SIGNAL(toggled(bool)),chocoboManager,(SLOT(setAdvancedMode(bool))));
 		connect(chocoboManager,SIGNAL(ownedChanged(qint8)),this,SLOT(cm_stablesOwnedChanged(qint8)));
 		connect(chocoboManager,SIGNAL(stableMaskChanged(qint8)),this,SLOT(cm_stableMaskChanged(qint8)));
 		connect(chocoboManager,SIGNAL(occupiedChanged(qint8)),this,SLOT(cm_stablesOccupiedChanged(qint8)));
@@ -315,15 +306,22 @@ void MainWindow::init_settings()
 	if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
 	if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
 	if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-	skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 
-	if(settings->value("show_test").toBool()){ui->action_AdvancedMode->setChecked(Qt::Checked);}
-	else{ui->action_AdvancedMode->setChecked(Qt::Unchecked);}
-
-	if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
-	else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
-
+	ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
+	advancedSettings();
 	restoreGeometry(settings->value("MainGeometry").toByteArray());
+}
+void MainWindow::advancedSettings()
+{
+	skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
+	char_editor->setAdvancedMode(settings->value("charEditorAdvanced").toBool());
+	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
+	locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
+	ui->tabWidget->setTabEnabled(9,settings->value("show_test").toBool());
+	if(ff7->type() =="PC" || ff7->type() == ""){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
+	ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
+	ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
+	ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -607,7 +605,12 @@ void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else
 void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
-void MainWindow::on_actionShow_Options_triggered(){Options odialog(this,settings); odialog.exec(); }
+void MainWindow::on_actionShow_Options_triggered()
+{
+	Options odialog(this,settings);
+	odialog.exec();
+	advancedSettings();
+}
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7);mdata.exec();}
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
@@ -658,23 +661,6 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 		settings->setValue("autochargrowth",0);
 		char_editor->setAutoLevel(0); char_editor->setAutoStatCalc(0);
 	}
-}
-void MainWindow::on_action_AdvancedMode_toggled(bool checked)
-{
-	if(checked){settings->setValue("show_test",1);}
-	else
-	{
-		settings->setValue("show_test",0);
-		if(!ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty()){ui->tabWidget->setCurrentIndex(8);}
-	}
-	ui->tabWidget->setTabEnabled(9,checked);
-	ui->cb_Region_Slot->setEnabled(checked);
-	ui->bm_unknown->setVisible(checked);
-	ui->bh_id->setVisible(checked);
-	ui->leader_id->setVisible(checked);
-	locationViewer->setAdvancedMode(checked);
-	if(ff7->type() =="PC" || ff7->type() == ""){setControllerMappingVisible(checked);}
-	//Widgets are Connected to the Signal see init_connections()
 }
 
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
@@ -896,7 +882,7 @@ void MainWindow::setmenu(bool newgame)
 	else
 	{
 		for(int i=0;i<9;i++){ui->tabWidget->setTabEnabled(i,true);}
-		ui->tabWidget->setTabEnabled(9,ui->action_AdvancedMode->isChecked());
+		ui->tabWidget->setTabEnabled(9,settings->value("show_test").toBool());
 	}
 
 	if(!newgame)

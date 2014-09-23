@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>412</width>
-    <height>225</height>
+    <width>562</width>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -209,13 +209,93 @@
        </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="cb_skip_slot_mask">
-        <property name="text">
-         <string notr="true">Don't update the slot mask (pc version only) </string>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Editor Options</string>
         </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QCheckBox" name="cbCharEditorAdvanced">
+           <property name="text">
+            <string>CharEditor - Advanced Mode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbChocoboEditorAdvanced">
+           <property name="text">
+            <string>Chocobo Manager - Show Pcount / Personality</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbLocationViewerAdvanced">
+           <property name="text">
+            <string>Field Location - Show Map/X/Y/T/D</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbWorldMapAdvanced">
+           <property name="text">
+            <string>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbGameProgressAdvanced">
+           <property name="text">
+            <string>Game Progress - Show Untested</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbOptionsShowMapping">
+           <property name="text">
+            <string>Options - Always Show Controller Mapping </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cbTestDataEnabled">
+           <property name="text">
+            <string>Enable Experimental TestData </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_skip_slot_mask">
+           <property name="text">
+            <string notr="true">Don't update the slot mask (pc version only) </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Close</string>
+     </property>
     </widget>
    </item>
   </layout>
@@ -224,5 +304,22 @@
   <include location="images.qrc"/>
   <include location="FF7tk/icons/common.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Options</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>250</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

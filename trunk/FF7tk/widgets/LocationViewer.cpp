@@ -209,10 +209,6 @@ void LocationViewer::init_display(void)
 	CoordsLayout->addLayout(nameIDs);
 	CoordsLayout->addLayout(XYTD);
 
-	CoordsWidget = new QWidget;
-	CoordsWidget->setContentsMargins(0,0,0,0);
-	CoordsWidget->setLayout(CoordsLayout);
-	CoordsWidget->setVisible(advancedMode());
 
 	QHBoxLayout *PreviewLayout = new QHBoxLayout;
 	PreviewLayout->setAlignment(Qt::AlignCenter);
@@ -229,9 +225,10 @@ void LocationViewer::init_display(void)
 	LeftSideLayout->addLayout(FilterLayout);
 
 	QVBoxLayout *RightSideLayout = new QVBoxLayout;
-	RightSideLayout->addWidget(CoordsWidget);
+	RightSideLayout->addLayout(CoordsLayout);
 	RightSideLayout->addLayout(PreviewLayout);
 	RightSideLayout->addWidget(groupFieldItems);
+	setAdvancedMode(advancedMode());
 
 	QHBoxLayout *FinalLayout = new QHBoxLayout;
 	FinalLayout->setContentsMargins(3,3,3,3);
@@ -550,6 +547,11 @@ void LocationViewer::searchItem(QRegExp exp)
 void LocationViewer::setAdvancedMode(bool advancedMode)
 {
 	_advancedMode = advancedMode;
-	CoordsWidget->setVisible(_advancedMode);
+	sbMapID->setVisible(_advancedMode);
+	sbLocID->setVisible(_advancedMode);
+	sbX->setVisible(_advancedMode);
+	sbY->setVisible(_advancedMode);
+	sbT->setVisible(_advancedMode);
+	sbD->setVisible(_advancedMode);
 }
 bool LocationViewer::advancedMode(void){return _advancedMode;}

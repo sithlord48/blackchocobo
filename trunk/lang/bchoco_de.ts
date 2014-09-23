@@ -65,7 +65,7 @@
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bahamut ZERO</translation>
     </message>
     <message>
         <source>Ultimate Weapon</source>
@@ -5346,163 +5346,163 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Cotton Dress</source>
-        <translation>Baumwollkleid</translation>
+        <translation type="obsolete">Baumwollkleid</translation>
     </message>
     <message>
         <source>Satin Dress</source>
-        <translation>Satinkleid</translation>
+        <translation type="obsolete">Satinkleid</translation>
     </message>
     <message>
         <source>Silk Dress</source>
-        <translation>Seidenkleid</translation>
+        <translation type="obsolete">Seidenkleid</translation>
     </message>
     <message>
         <source>Wig</source>
-        <translation>Perücke</translation>
+        <translation type="obsolete">Perücke</translation>
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation>Gefärbte Perücke</translation>
+        <translation type="obsolete">Gefärbte Perücke</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
-        <translation>Blonde Perücke</translation>
+        <translation type="obsolete">Blonde Perücke</translation>
     </message>
     <message>
         <source>Glass Tiara</source>
-        <translation>Glasdiadem</translation>
+        <translation type="obsolete">Glasdiadem</translation>
     </message>
     <message>
         <source>Ruby Tiara</source>
-        <translation>Rubindiadem</translation>
+        <translation type="obsolete">Rubindiadem</translation>
     </message>
     <message>
         <source>Diamond Tiara</source>
-        <translation>Diamantendiadem</translation>
+        <translation type="obsolete">Diamantendiadem</translation>
     </message>
     <message>
         <source>Cologne</source>
-        <translation>Eau de Cologne</translation>
+        <translation type="obsolete">Eau de Cologne</translation>
     </message>
     <message>
         <source>Flower Cologne</source>
-        <translation>Rosenparfüm</translation>
+        <translation type="obsolete">Rosenparfüm</translation>
     </message>
     <message>
         <source>Sexy Cologne</source>
-        <translation>Sexy Parfüm</translation>
+        <translation type="obsolete">Sexy Parfüm</translation>
     </message>
     <message>
         <source>Member&apos;s Card</source>
-        <translation>Mitgliedskarte</translation>
+        <translation type="obsolete">Mitgliedskarte</translation>
     </message>
     <message>
         <source>Lingerie</source>
-        <translation>Unterwäsche</translation>
+        <translation type="obsolete">Unterwäsche</translation>
     </message>
     <message>
         <source>Pharmacy Coupons</source>
-        <translation>Apothekengutschein</translation>
+        <translation type="obsolete">Apothekengutschein</translation>
     </message>
     <message>
         <source>Disinfectant</source>
-        <translation>Desinfektionsmittel</translation>
+        <translation type="obsolete">Desinfektionsmittel</translation>
     </message>
     <message>
         <source>Deodorant</source>
-        <translation>Deodorant</translation>
+        <translation type="obsolete">Deodorant</translation>
     </message>
     <message>
         <source>Digestive</source>
-        <translation>Abführmittel</translation>
+        <translation type="obsolete">Abführmittel</translation>
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>Große Materia:Fort Condor</translation>
+        <translation type="obsolete">Große Materia:Fort Condor</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>Große Materia:Corel</translation>
+        <translation type="obsolete">Große Materia:Corel</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>Große Materia:Unterwasser</translation>
+        <translation type="obsolete">Große Materia:Unterwasser</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>Große Materia:Rakete</translation>
+        <translation type="obsolete">Große Materia:Rakete</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
-        <translation>Mondharfe</translation>
+        <translation type="obsolete">Mondharfe</translation>
     </message>
     <message>
         <source>Basement Key</source>
-        <translation>Kellerschlüssel</translation>
+        <translation type="obsolete">Kellerschlüssel</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation>Schlüssel für Sektor 5</translation>
+        <translation type="obsolete">Schlüssel für Sektor 5</translation>
     </message>
     <message>
         <source>Keycard 60</source>
-        <translation>Code-Karte 60</translation>
+        <translation type="obsolete">Code-Karte 60</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation>Code-Karte 62</translation>
+        <translation type="obsolete">Code-Karte 62</translation>
     </message>
     <message>
         <source>Keycard 65</source>
-        <translation>Code-Karte 65</translation>
+        <translation type="obsolete">Code-Karte 65</translation>
     </message>
     <message>
         <source>Keycard 68</source>
-        <translation>Code-Karte 68</translation>
+        <translation type="obsolete">Code-Karte 68</translation>
     </message>
     <message>
         <source>PHS</source>
-        <translation>PHS</translation>
+        <translation type="obsolete">PHS</translation>
     </message>
     <message>
         <source>Gold Ticket</source>
-        <translation>Goldticket</translation>
+        <translation type="obsolete">Goldticket</translation>
     </message>
     <message>
         <source>Keystone</source>
-        <translation>Schlüsselstein</translation>
+        <translation type="obsolete">Schlüsselstein</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation>Leviathanschuppen</translation>
+        <translation type="obsolete">Leviathanschuppen</translation>
     </message>
     <message>
         <source>Glacier Map</source>
-        <translation>Gletscherkarte</translation>
+        <translation type="obsolete">Gletscherkarte</translation>
     </message>
     <message>
         <source>A Coupon</source>
-        <translation>A-Coupon</translation>
+        <translation type="obsolete">A-Coupon</translation>
     </message>
     <message>
         <source>B Coupon</source>
-        <translation>B-Coupon</translation>
+        <translation type="obsolete">B-Coupon</translation>
     </message>
     <message>
         <source>C Coupon</source>
-        <translation>C-Coupon</translation>
+        <translation type="obsolete">C-Coupon</translation>
     </message>
     <message>
         <source>Black Materia</source>
-        <translation>Schwarze Materia</translation>
+        <translation type="obsolete">Schwarze Materia</translation>
     </message>
     <message>
         <source>Mythril</source>
-        <translation>Mythril</translation>
+        <translation type="obsolete">Mythril</translation>
     </message>
     <message>
         <source>Snowboard</source>
-        <translation>Snowboard</translation>
+        <translation type="obsolete">Snowboard</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -5932,7 +5932,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation>Code-Karte 66</translation>
+        <translation type="obsolete">Code-Karte 66</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5940,11 +5940,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Bikini briefs</source>
-        <translation>Bikinislip</translation>
+        <translation type="obsolete">Bikinislip</translation>
     </message>
     <message>
         <source>Key to Ancients</source>
-        <translation>Schlüssel zum alten Volk</translation>
+        <translation type="obsolete">Schlüssel zum alten Volk</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -5956,7 +5956,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation>Teil von Midgar</translation>
+        <translation type="obsolete">Teil von Midgar</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5968,7 +5968,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation>Setze Schlüsselobjekte zurück</translation>
+        <translation type="obsolete">Setze Schlüsselobjekte zurück</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -5980,7 +5980,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save Location</source>
-        <translation>Speichere Ort</translation>
+        <translation type="obsolete">Speichere Ort</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
@@ -6480,23 +6480,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s 
-location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
-When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
-Lobby&amp;quot; so you can spend 
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will 
-trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation>Fort Condor</translation>
     </message>
@@ -6798,6 +6781,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
+Lobby&amp;quot; so you can spend
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will
+trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8553,6 +8565,42 @@ trigger showing that tutorial</source>
         <source>Use Only Raw Psx Files</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Editor Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CharEditor - Advanced Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Manager - Show Pcount / Personality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location - Show Map/X/Y/T/D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Progress - Show Untested</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options - Always Show Controller Mapping </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Experimental TestData </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>OptionsWidget</name>
@@ -8975,7 +9023,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -8999,7 +9047,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation>Haupt-Programmierer</translation>
+        <translation type="obsolete">Haupt-Programmierer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -9047,7 +9095,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation>Anfangs-PSX speichern/laden; checksum-Fehler behoben</translation>
+        <translation type="obsolete">Anfangs-PSX speichern/laden; checksum-Fehler behoben</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -9067,10 +9115,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Achievement Editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9111,6 +9155,34 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Save/Restore Geometry for MainWindow and Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Auto guess Slot location for VMC formats.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Almost All code and GUI design; </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Various code help/debug; Windows QA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -5211,166 +5211,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cotton Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Member&apos;s Card</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lingerie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupons</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Huge Materia:Fort Condor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Huge Materia:Underwater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Basement Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keycard 60</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keycard 65</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keycard 68</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PHS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keystone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Leviathan Scales</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A Coupon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>B Coupon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C Coupon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Black Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Snowboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5717,19 +5557,7 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bikini briefs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Key to Ancients</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5741,10 +5569,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5753,19 +5577,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Clear Key Items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6232,23 +6048,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s 
-location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
-When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
-Lobby&amp;quot; so you can spend 
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will 
-trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6554,6 +6353,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
+Lobby&amp;quot; so you can spend
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will
+trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8293,6 +8121,42 @@ trigger showing that tutorial</source>
         <source>Use Only Raw Psx Files</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Editor Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CharEditor - Advanced Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Manager - Show Pcount / Personality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location - Show Map/X/Y/T/D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Progress - Show Untested</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options - Always Show Controller Mapping </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Experimental TestData </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>OptionsWidget</name>
@@ -8701,14 +8565,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Newest Features</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8722,10 +8578,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Main Programmer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8773,10 +8625,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>inital psx save/load; fixed checksum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Japanese Translation:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8794,10 +8642,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Achievement Editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8838,6 +8682,34 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Save/Restore Geometry for MainWindow and Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Auto guess Slot location for VMC formats.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Almost All code and GUI design; </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Various code help/debug; Windows QA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
