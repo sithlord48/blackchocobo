@@ -5419,163 +5419,163 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Cotton Dress</source>
-        <translation>コットンのドレス</translation>
+        <translation type="obsolete">コットンのドレス</translation>
     </message>
     <message>
         <source>Satin Dress</source>
-        <translation>サテンのドレス</translation>
+        <translation type="obsolete">サテンのドレス</translation>
     </message>
     <message>
         <source>Silk Dress</source>
-        <translation>シルクのドレス</translation>
+        <translation type="obsolete">シルクのドレス</translation>
     </message>
     <message>
         <source>Wig</source>
-        <translation>クセゲのかつら</translation>
+        <translation type="obsolete">クセゲのかつら</translation>
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation>チャパツのかつら</translation>
+        <translation type="obsolete">チャパツのかつら</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
-        <translation>ブロンドのかつら</translation>
+        <translation type="obsolete">ブロンドのかつら</translation>
     </message>
     <message>
         <source>Glass Tiara</source>
-        <translation>ガラスのティアラ</translation>
+        <translation type="obsolete">ガラスのティアラ</translation>
     </message>
     <message>
         <source>Ruby Tiara</source>
-        <translation>ルビーのティアラ</translation>
+        <translation type="obsolete">ルビーのティアラ</translation>
     </message>
     <message>
         <source>Diamond Tiara</source>
-        <translation>ダイヤのティアラ</translation>
+        <translation type="obsolete">ダイヤのティアラ</translation>
     </message>
     <message>
         <source>Cologne</source>
-        <translation>コロン</translation>
+        <translation type="obsolete">コロン</translation>
     </message>
     <message>
         <source>Flower Cologne</source>
-        <translation>フラワーコロン</translation>
+        <translation type="obsolete">フラワーコロン</translation>
     </message>
     <message>
         <source>Sexy Cologne</source>
-        <translation>セクシーコロン</translation>
+        <translation type="obsolete">セクシーコロン</translation>
     </message>
     <message>
         <source>Member&apos;s Card</source>
-        <translation>会員カード</translation>
+        <translation type="obsolete">会員カード</translation>
     </message>
     <message>
         <source>Lingerie</source>
-        <translation>ランジェリー</translation>
+        <translation type="obsolete">ランジェリー</translation>
     </message>
     <message>
         <source>Pharmacy Coupons</source>
-        <translation>薬屋商品クーポン</translation>
+        <translation type="obsolete">薬屋商品クーポン</translation>
     </message>
     <message>
         <source>Disinfectant</source>
-        <translation>消毒薬</translation>
+        <translation type="obsolete">消毒薬</translation>
     </message>
     <message>
         <source>Deodorant</source>
-        <translation>消臭薬</translation>
+        <translation type="obsolete">消臭薬</translation>
     </message>
     <message>
         <source>Digestive</source>
-        <translation>消化薬</translation>
+        <translation type="obsolete">消化薬</translation>
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>ヒュージマテリア (コンドルフォート)</translation>
+        <translation type="obsolete">ヒュージマテリア (コンドルフォート)</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>ヒュージマテリア (コレル)</translation>
+        <translation type="obsolete">ヒュージマテリア (コレル)</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>ヒュージマテリア (海底)</translation>
+        <translation type="obsolete">ヒュージマテリア (海底)</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>ヒュージマテリア (ロケット)</translation>
+        <translation type="obsolete">ヒュージマテリア (ロケット)</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
-        <translation>ルナハープ</translation>
+        <translation type="obsolete">ルナハープ</translation>
     </message>
     <message>
         <source>Basement Key</source>
-        <translation>地下室の鍵</translation>
+        <translation type="obsolete">地下室の鍵</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation>５番街ゲートの鍵</translation>
+        <translation type="obsolete">５番街ゲートの鍵</translation>
     </message>
     <message>
         <source>Keycard 60</source>
-        <translation>カードキー６０</translation>
+        <translation type="obsolete">カードキー６０</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation>カードキー６２</translation>
+        <translation type="obsolete">カードキー６２</translation>
     </message>
     <message>
         <source>Keycard 65</source>
-        <translation>カードキー６５</translation>
+        <translation type="obsolete">カードキー６５</translation>
     </message>
     <message>
         <source>Keycard 68</source>
-        <translation>カードキー６８</translation>
+        <translation type="obsolete">カードキー６８</translation>
     </message>
     <message>
         <source>PHS</source>
-        <translation>PHS</translation>
+        <translation type="obsolete">PHS</translation>
     </message>
     <message>
         <source>Gold Ticket</source>
-        <translation>ゴールドチケット</translation>
+        <translation type="obsolete">ゴールドチケット</translation>
     </message>
     <message>
         <source>Keystone</source>
-        <translation>キーストーン</translation>
+        <translation type="obsolete">キーストーン</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation>水神様のうろこ</translation>
+        <translation type="obsolete">水神様のうろこ</translation>
     </message>
     <message>
         <source>Glacier Map</source>
-        <translation>大氷河の地図</translation>
+        <translation type="obsolete">大氷河の地図</translation>
     </message>
     <message>
         <source>A Coupon</source>
-        <translation>Aクーポン</translation>
+        <translation type="obsolete">Aクーポン</translation>
     </message>
     <message>
         <source>B Coupon</source>
-        <translation>Bクーポン</translation>
+        <translation type="obsolete">Bクーポン</translation>
     </message>
     <message>
         <source>C Coupon</source>
-        <translation>Cクーポン</translation>
+        <translation type="obsolete">Cクーポン</translation>
     </message>
     <message>
         <source>Black Materia</source>
-        <translation>黒マテリア</translation>
+        <translation type="obsolete">黒マテリア</translation>
     </message>
     <message>
         <source>Mythril</source>
-        <translation>ミスリル</translation>
+        <translation type="obsolete">ミスリル</translation>
     </message>
     <message>
         <source>Snowboard</source>
-        <translation>スノーボード</translation>
+        <translation type="obsolete">スノーボード</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
@@ -6003,7 +6003,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation>カードキー６６</translation>
+        <translation type="obsolete">カードキー６６</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -6011,11 +6011,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Bikini briefs</source>
-        <translation>ビキニパンツ</translation>
+        <translation type="obsolete">ビキニパンツ</translation>
     </message>
     <message>
         <source>Key to Ancients</source>
-        <translation>古代種の鍵</translation>
+        <translation type="obsolete">古代種の鍵</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -6027,7 +6027,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation>ミッドガルパーツ</translation>
+        <translation type="obsolete">ミッドガルパーツ</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -6039,7 +6039,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation>キーアイテムをクリア</translation>
+        <translation type="obsolete">キーアイテムをクリア</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -6051,7 +6051,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save Location</source>
-        <translation>セーブの現在地</translation>
+        <translation type="obsolete">セーブの現在地</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
@@ -6544,23 +6544,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s 
-location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
-When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
-Lobby&amp;quot; so you can spend 
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will 
-trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation type="unfinished">コンドルフォート</translation>
     </message>
@@ -6862,6 +6845,35 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
+Lobby&amp;quot; so you can spend
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will
+trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8617,6 +8629,42 @@ trigger showing that tutorial</source>
         <source>Use Only Raw Psx Files</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Editor Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CharEditor - Advanced Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Manager - Show Pcount / Personality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Location - Show Map/X/Y/T/D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Game Progress - Show Untested</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options - Always Show Controller Mapping </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Experimental TestData </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>OptionsWidget</name>
@@ -9039,7 +9087,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9063,7 +9111,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation> メイン プログラマー</translation>
+        <translation type="obsolete"> メイン プログラマー</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -9111,7 +9159,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation>初期 PSX の保存/ロード; チェックサム修正</translation>
+        <translation type="obsolete">初期 PSX の保存/ロード; チェックサム修正</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -9131,10 +9179,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Achievement Editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: LocationViewer Contains Field Items (WIP)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9175,6 +9219,34 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Save/Restore Geometry for MainWindow and Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Auto guess Slot location for VMC formats.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Almost All code and GUI design; </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Various code help/debug; Windows QA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
