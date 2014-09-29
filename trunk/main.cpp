@@ -34,7 +34,7 @@
 #include "mainwindow.h"
 #include "version.h"                // contains the program version
 
-#ifdef STATIC
+#if defined(STATIC) && (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
 #include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
 //FOR STATIC BUILD.(WILL FAIL HERE IF NOT STATICLY BUILT QT!)
 Q_IMPORT_PLUGIN(qcncodecs)

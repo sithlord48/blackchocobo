@@ -123,26 +123,32 @@ TRANSLATIONS += \
 	lang/bchoco_es.ts \
 	lang/bchoco_fr.ts \
 	lang/bchoco_de.ts \
-        lang/bchoco_ja.ts \
+	lang/bchoco_ja.ts\
 	lang/bchoco_re.ts #re translation to english
 
 #Below Is OS Specific Stuff.
+#set up for windows
 win32: {
-        INCLUDEPATH += C:/OpenSSL-Win32/include # Be Sure Path is openSSL .
-        LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32 #besure to update path to installed openSSL 
+	#Set OpenSSL include & lib paths
+	#THIS MUST BE CHANGED WITH YOUR OPENSSL PATHS OR YOUR BUILD WILL FAIL!!!
+	INCLUDEPATH += C:/OpenSSL-Win32/include # Be Sure Path is openSSL
+	LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32 #Be sure to update path to installed openSSL
 	RC_FILE = bchoco.rc #program icon for windows
 	TARGET = Black_Chocobo
 }
+
+#set up for mac os
 macx:{
-        LIBS += -lcrypto
+	LIBS += -lcrypto
 	TARGET = Black_Chocobo
 	ICON = icon/bchoco_icon_osx.icns     #set program icon
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
 
+#set up for unix os
 unix:!macx:!symbian: {
-        LIBS += -lcrypto
+	LIBS += -lcrypto
 	TARGET = blackchocobo
 	target.path = /usr/bin #place our binary in /usr/bin
 	INSTALLS +=target
@@ -151,7 +157,7 @@ unix:!macx:!symbian: {
 static:{ # everything below takes effect with CONFIG += static
 	CONFIG += static
 	CONFIG += staticlib # this is needed if you create a static library, not a static executable
-	QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
+	lessThan(QT_MAJOR_VERSION, 5): QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
 	DEFINES += STATIC
 	message("Static Build") # this is for information, that the static build is done
 	TARGET = $$join(TARGET,,,-static) #this adds an s in the end, so you can seperate static build from non static build
