@@ -1,3 +1,10 @@
+blackchocobo (1.9.830) trusty; urgency=low
+  *New: Attempt to sign psv files with user provided key/seed pair
+  *Various Fixes and updates
+  *FF7tk: Vmc Saves will auto guess slot number.
+  *FF7tk: LocationViewer FieldItems Finished
+ -- Chris Rizzitello <sithlord48@gmail.com>  Mon, 29 Sep 2014 00:15:49 -0400
+
 blackchocobo (1.9.820) precise; urgency=low
   *Black Chocobo Will now Use Native Style (except mac os)
   *Fixed: Signing for non numeric User ID (Stright md5)

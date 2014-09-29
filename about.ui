@@ -270,6 +270,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Psv Signing Place Keys in Options</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Save/Restore Geometry for MainWindow and Options</string>
           </property>
          </item>
@@ -930,7 +935,7 @@ p, li { white-space: pre-wrap; }
             <x>0</x>
             <y>0</y>
             <width>110</width>
-            <height>948</height>
+            <height>934</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">
