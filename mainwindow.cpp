@@ -306,7 +306,6 @@ void MainWindow::init_settings()
 	if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
 	if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
 	if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-
 	ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
 	advancedSettings();
 	restoreGeometry(settings->value("MainGeometry").toByteArray());
@@ -322,6 +321,9 @@ void MainWindow::advancedSettings()
 	ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
 	ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
 	ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
+	//set Key data
+	ff7->setPs3Key(settings->value("ps3Key").toByteArray());
+	ff7->setPs3Seed(settings->value("ps3Seed").toByteArray());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -492,7 +494,7 @@ void MainWindow::on_action_Save_triggered()
 	else
 	{
 		if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
-		else if(ff7->type()=="PSV"){QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+		else if(ff7->type()=="PSV"){QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
 		saveFileFull(ff7->fileName());
 	}
 }
@@ -544,7 +546,7 @@ void MainWindow::on_actionSave_File_As_triggered()
 	else if(selectedType ==mc){newType = "MC";}
 	else if(selectedType ==vgs){newType = "VGS";}
 	else if(selectedType ==dex){newType = "DEX";}
-	else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PS3 Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PS3 will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+	else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
 	else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
 	else{newType ="";}
 

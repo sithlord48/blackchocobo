@@ -63,5 +63,7 @@ private slots:
 	void on_cbTestDataEnabled_toggled(bool checked);
 	void on_cbLocationViewerAdvanced_toggled(bool checked);
 	void on_cbWorldMapAdvanced_toggled(bool checked);
+	void on_linePs3Key_editingFinished();
+	void on_linePs3Seed_editingFinished();
 };
 #endif // OPTIONS_H
