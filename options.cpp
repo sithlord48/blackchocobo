@@ -29,6 +29,7 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	ui->reset_default_save_location->setVisible(false);
 
 	settings = config_data;
+	restoreGeometry(settings->value("OptionsGeometry").toByteArray());
 	set_path_lbls();
 	load=true;
 	ui->cbCharEditorAdvanced->setChecked(settings->value("charEditorAdvanced").toBool());
