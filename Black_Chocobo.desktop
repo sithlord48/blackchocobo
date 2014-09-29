@@ -17,5 +17,5 @@ Name[de]=Black Chocobo
 StartupNotify=true
 Terminal=false
 Type=Application
-Version=1.9.82
+Version=1.9.83
 X-KDE-SubstituteUID=false
