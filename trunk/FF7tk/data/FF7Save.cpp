@@ -13,14 +13,19 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
+//#include <QDebug>
 #include "FF7Save.h"
 #include <QObject>
 #include <QFile>
 #include <QDataStream>
 #include <QTextStream>
 #include <QCryptographicHash>
+//Includes From OpenSSL
+#include <openssl/evp.h>
+#include <openssl/hmac.h>
+#include <openssl/aes.h>
 // This Class should contain NO Gui Parts
+
 FF7Save::FF7Save()
 {
 	fileHasChanged = false;
@@ -222,7 +227,7 @@ bool FF7Save::saveFile(const QString &fileName)
 	//fix our headers before saving
 	if(type() =="PC"){/*PC Header Should be Fixed By Host*/}
 	else if(type() == "PSX"){fix_psx_header(0);}
-	else if(type() =="PSV"){fix_psv_header();}
+	else if(type() =="PSV"){fix_psv_header(0);}
 	else{fix_vmc_header();}
 	checksumSlots();
 	// write the file
@@ -263,6 +268,7 @@ bool FF7Save::exportFile(const QString &fileName,QString newType,int s)
 		//else if(newType =="VMP"){return false;}
 	}
 }
+
 bool FF7Save::exportPC(const QString &fileName)
 {
 	if(fileName.isEmpty()){return false;}
@@ -809,6 +815,7 @@ void FF7Save::fix_pc_bytemask(int s)
 	newheader[6]=mask;
 	memcpy(file_headerp,newheader,9);
 }
+
 void FF7Save::fix_psx_header(int s)
 {if(isFF7(s)){
 	//Time Has to be fixed in the header part of description string.
@@ -821,11 +828,55 @@ void FF7Save::fix_psx_header(int s)
 	hf[s].sl_header[33] = ((slot[s].time/60%60)/10)+0x4F;
 	hf[s].sl_header[35] = ((slot[s].time/60%60)%10)+0x4F;
 }}
-void FF7Save::fix_psv_header(void)
+void FF7Save::fix_psv_header(int s)
 {
- /*do signing stuff*/
- fix_psx_header(0);//adjust time.
+	fix_psx_header(s);//adjust time.
+
+	/* do signing stuff */
+	//qDebug() << QString("key:	%1 (%2 bytes)").arg(ps3Key().toHex().toUpper(),QString::number(ps3Key().length()));
+	//qDebug() << QString("Ps3Seed:	%1 (%2 bytes)").arg(ps3Seed().toHex().toUpper(),QString::number(ps3Seed().length()));
+
+	QByteArray keySeed = fileHeader().mid(0x08,20);
+	//qDebug() << QString("Encrypted KeySeed:    %1 (%2 bytes)").arg(keySeed.toHex().toUpper(),QString::number(keySeed.length()));
+
+	QByteArray hmacDigest = fileHeader().mid(0x1C,20);
+	QByteArray signedData = fileHeader().mid(0x30);
+	signedData.append(slotPsxRawData(0));
+	QByteArray decryptedKeySeed;decryptedKeySeed.resize(keySeed.size()+16);
+
+	const EVP_CIPHER *cipher = EVP_aes_128_cbc();
+	int inLen=keySeed.length();
+	int outLen=0x10;
+
+	EVP_CIPHER_CTX ctx;
+	EVP_CIPHER_CTX_init(&ctx);
+	EVP_DecryptInit(&ctx, cipher, (const unsigned char*)ps3Key().data(), (const unsigned char*)ps3Seed().data()); //Working on unix
+	EVP_DecryptUpdate(&ctx, (unsigned char*)decryptedKeySeed.data(), &outLen, (const unsigned char*)keySeed.data(), inLen);
+	int tempLen=outLen;
+	EVP_DecryptFinal(&ctx,(unsigned char*)decryptedKeySeed.data()+tempLen,&outLen);
+	EVP_CIPHER_CTX_cleanup(&ctx);
+
+	decryptedKeySeed.resize(tempLen);
+
+	//qDebug() << QString("Decrypted KeySeed:	%1 (%2 bytes)").arg(decryptedKeySeed.toHex().toUpper(),QString::number(decryptedKeySeed.length()));
+
+	QByteArray newHMAC; newHMAC.resize(0x14);
+	unsigned int result_len = 0x14;
+	//qDebug() << QString("Signed Data Size:%1 bytes").arg(QString::number(signedData.length()));
+
+	HMAC_CTX ctx2;
+	HMAC_CTX_init(&ctx2);
+	HMAC_Init(&ctx2, decryptedKeySeed.data(), decryptedKeySeed.length(), EVP_sha1());
+	HMAC_Update(&ctx2, (unsigned char *)signedData.data(), signedData.length());
+	HMAC_Final(&ctx2, ( unsigned char*)newHMAC.data(), &result_len);
+	HMAC_CTX_cleanup(&ctx2);
+	//qDebug() << QString("Files HMAC Digest:	%1 (%2 bytes)").arg(hmacDigest.toHex().toUpper(),QString::number(hmacDigest.length()));
+	//qDebug() << QString("New HMAC Digest:	%1 (%2 bytes)").arg(newHMAC.toHex().toUpper(), QString::number(newHMAC.length()));
+
+ QByteArray temp = fileHeader().replace(0x1C,0x14,newHMAC);
+ setFileHeader(temp);
 }
+
 void FF7Save::fix_vmc_header(void)
 {//Set The Index Section Up.
 	//get list of whats on the card.
@@ -3709,6 +3760,7 @@ void FF7Save::setVincentUnlocked(int s,bool isUnlocked)
 		setFileModified(true,s);
 	}
 }
+
 bool FF7Save::worldChocobo(int s, int bit)
 {//the Bit Number to offset.
 	if(bit <0 || bit> 7){return false;}
@@ -4592,7 +4644,6 @@ void FF7Save::vmcRegionEval(int s)
 	}
 	SG_Region_String[s]=newRegionString;
 }
-
 bool FF7Save::subMiniGameVictory(int s)
 {//0x0F38 in game saved as int 1 or int 0
 	if(s<0 || s>14){return false;}

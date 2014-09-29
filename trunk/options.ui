@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>562</width>
-    <height>419</height>
+    <height>529</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Set File Paths For Saving and Loading</string>
+      <string>Path Options</string>
      </property>
      <layout class="QVBoxLayout" name="_3">
       <property name="leftMargin">
@@ -155,60 +155,6 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="_4">
-        <item>
-         <widget class="QCheckBox" name="cb_override_def_save">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Override Builtin New Game Data</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="line_default_save">
-          <property name="placeholderText">
-           <string>Use Only Raw Psx Files</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_set_default_save">
-          <property name="maximumSize">
-           <size>
-            <width>24</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="text">
-           <string notr="true">...</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="reset_default_save_location">
-          <property name="maximumSize">
-           <size>
-            <width>24</width>
-            <height>24</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Reset to Default</string>
-          </property>
-          <property name="icon">
-           <iconset theme="edit-clear" resource="FF7tk/icons/common.qrc">
-            <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
        <widget class="QGroupBox" name="groupBox_2">
         <property name="title">
          <string>Editor Options</string>
@@ -285,8 +231,110 @@
            </property>
           </widget>
          </item>
+         <item>
+          <layout class="QHBoxLayout" name="_4">
+           <item>
+            <widget class="QCheckBox" name="cb_override_def_save">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Override Builtin New Game Data</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line_default_save">
+             <property name="placeholderText">
+              <string>Use Only Raw Psx Files</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_set_default_save">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="reset_default_save_location">
+             <property name="maximumSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Reset to Default</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-clear" resource="FF7tk/icons/common.qrc">
+               <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
         </layout>
        </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Signing Keys:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout474">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Ps3Key</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="linePs3Key">
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Input Key in HEX ex( 00010203AABF )</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Ps3Seed</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="linePs3Seed">
+          <property name="placeholderText">
+           <string>Input Seed in Hex ex( 00010203AABF )</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -312,8 +360,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>195</x>
-     <y>242</y>
+     <x>204</x>
+     <y>534</y>
     </hint>
     <hint type="destinationlabel">
      <x>377</x>

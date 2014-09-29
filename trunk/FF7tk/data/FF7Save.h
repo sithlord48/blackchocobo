@@ -149,6 +149,7 @@ class FF7Save: public QObject{
 	 *	\param fileName file that will be saved
 	 *	\return True if Successful
 	*/
+
 	bool exportVMC(const QString &fileName);
 
 	/**	\brief attempt to save fileName as a DEX Drive format memory card file
@@ -839,31 +840,31 @@ class FF7Save: public QObject{
 	bool tutSub(int s, int bit);
 	void setTutSub(int s, int bit, bool isTrue);
 	void setTutSub(int s, int value);
-	
-	/** \brief has yuffie been unlocked
-	 *  \param s slot number (0-14)
-	 *  \return True if yuffie has been unlocked
+
+	/**	\brief has yuffie been unlocked
+	 * \param s slot number (0-14)
+	 *	\return True if yuffie has been unlocked
 	*/
 	bool yuffieUnlocked(int s);
-	
-	/** \brief set if yuffie has been unlocked
-	 *  \param s slot number (0-14)
-	 *  \param isUnlocked Is Character Unlocked?
+
+	/**	\brief set if yuffie has been unlocked
+	 * \param s slot number (0-14)
+	 * \param isUnlocked Is Character Unlocked?
 	 */
 	void setYuffieUnlocked(int s,bool isUnlocked);
-	
-	/** \brief has vincent been unlocked
-	 *  \param s slot number (0-14)
-	 *  \return True if vincent has been unlocked
+
+	/**	\brief has vincent been unlocked
+	 * \param s slot number (0-14)
+	 *	\return True if vincent has been unlocked
 	*/
 	bool vincentUnlocked(int s);
-	
-	/** \brief set if vincent has been unlocked
-	 *  \param s slot number (0-14)
-	 *  \param isUnlocked Is Character Unlocked?
+
+	/**	\brief set if vincent has been unlocked
+	* \param s slot number (0-14)
+	* \param isUnlocked Is Character Unlocked?
 	*/
 	void setVincentUnlocked(int s,bool isUnlocked);
-	
+
 	bool worldChocobo(int s, int bit);
 	void setWorldChocobo(int s, int bit, bool isTrue);
 	bool worldVehicle(int s, int bit);
@@ -942,9 +943,14 @@ class FF7Save: public QObject{
 	void setWorldCoordsDurwY(int s,int value);
 	void setWorldCoordsDurwZ(int s,int value);
 	void setSaveNumber(int s,int saveNum);
-	
+
 	bool subMiniGameVictory(int s);
 	void setSubMiniGameVictory(int s,bool won);
+
+	inline void setPs3Key(QByteArray key){PS3Key=key;}
+	inline void setPs3Seed(QByteArray seed){PS3Seed=seed;}
+	inline QByteArray ps3Key(void){return PS3Key;}
+	inline QByteArray ps3Seed(void){return PS3Seed;}
 signals:
 	void fileChanged(bool);/**< \brief emits when internal data changes */
 private:
@@ -990,7 +996,7 @@ private:
 	QString filetimestamp(QString fileName);
 	void checksumSlots();
 	quint16 ff7Checksum(int s);
-	void fix_psv_header(void);
+	void fix_psv_header(int s);
 	void fix_psx_header(int s);
 	void fix_vmc_header(void);
 	quint16 itemDecode( quint16 itemraw );
@@ -998,5 +1004,7 @@ private:
 	void vmcRegionEval(int s);
 	QVector< SubContainer > parseXML(QString fileName,QString metadataPath,QString UserID);
 	QVector< SubContainer > createMetadata(QString fileName, QString UserID);
+	QByteArray PS3Key;
+	QByteArray PS3Seed;
 };
 #endif //FF7Save

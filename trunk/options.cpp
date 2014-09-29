@@ -40,6 +40,8 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	ui->cb_skip_slot_mask->setChecked(settings->value("skip_slot_mask").toBool());
 	ui->cbWorldMapAdvanced->setChecked(settings->value("worldMapAdvanced").toBool());
 	ui->cb_override_def_save->setChecked(settings->value("override_default_save").toBool());
+	ui->linePs3Key->setText(settings->value("ps3Key").toByteArray().toHex().toUpper());
+	ui->linePs3Seed->setText(settings->value("ps3Seed").toByteArray().toHex().toUpper());
 	load=false;
 }
 
@@ -153,3 +155,15 @@ void Options::on_cbOptionsShowMapping_toggled(bool checked){if(!load){settings->
 void Options::on_cbTestDataEnabled_toggled(bool checked){if(!load){settings->setValue("show_test",checked);}}
 void Options::on_cbLocationViewerAdvanced_toggled(bool checked){if(!load){settings->setValue("locationViewerAdvanced",checked);}}
 void Options::on_cbWorldMapAdvanced_toggled(bool checked){if(!load){settings->setValue("worldMapAdvanced",checked);}}
+
+void Options::on_linePs3Key_editingFinished()
+{if(!load){
+		QByteArray temp = QByteArray::fromHex(ui->linePs3Key->text().toLocal8Bit());
+		settings->setValue("ps3Key",temp);
+}}
+
+void Options::on_linePs3Seed_editingFinished()
+{if(!load){
+		QByteArray temp = QByteArray::fromHex(ui->linePs3Seed->text().toLocal8Bit());
+		settings->setValue("ps3Seed",temp);
+}}

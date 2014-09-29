@@ -20,8 +20,6 @@ TEMPLATE = app
 QT += core gui xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-#LIBS += -lcrypto
-
 SOURCES += \
 	main.cpp \
 	mainwindow.cpp \
@@ -125,15 +123,18 @@ TRANSLATIONS += \
 	lang/bchoco_es.ts \
 	lang/bchoco_fr.ts \
 	lang/bchoco_de.ts \
-	lang/bchoco_ja.ts\
+        lang/bchoco_ja.ts \
 	lang/bchoco_re.ts #re translation to english
 
 #Below Is OS Specific Stuff.
 win32: {
+        INCLUDEPATH += C:/OpenSSL-Win32/include # Be Sure Path is openSSL .
+        LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32 #besure to update path to installed openSSL 
 	RC_FILE = bchoco.rc #program icon for windows
 	TARGET = Black_Chocobo
 }
 macx:{
+        LIBS += -lcrypto
 	TARGET = Black_Chocobo
 	ICON = icon/bchoco_icon_osx.icns     #set program icon
 }
@@ -141,6 +142,7 @@ macx:{
 system (lrelease Black_Chocobo.pro)#release the .qm files
 
 unix:!macx:!symbian: {
+        LIBS += -lcrypto
 	TARGET = blackchocobo
 	target.path = /usr/bin #place our binary in /usr/bin
 	INSTALLS +=target
