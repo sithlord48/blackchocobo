@@ -20,7 +20,7 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 9
-#define VER_SP 825
+#define VER_SP 830
 #ifdef SVNVERSION
 #define VER_BUILDNR SVNVERSION
 #else
