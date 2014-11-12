@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>562</width>
-    <height>529</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -175,6 +175,13 @@
          <property name="bottomMargin">
           <number>3</number>
          </property>
+         <item>
+          <widget class="QCheckBox" name="cbEditableCombos">
+           <property name="text">
+            <string>Editable Combo for Materia and Items</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QCheckBox" name="cbCharEditorAdvanced">
            <property name="text">

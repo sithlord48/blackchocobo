@@ -39,6 +39,7 @@ signals:
 public slots:
     void setItems(QList<quint16> items);
     void setMaximumItemQty(int maxQty);
+    void setEditableItemCombo(bool);
 private slots:
     void listSelectionChanged(int row,int colum,int prevRow,int prevColum);
     void itemSelector_changed(quint16);
@@ -52,5 +53,6 @@ private:
     QList<quint16> itemlist;
     bool createdSelector;
     bool createdTooltip;
+    bool editableItemCombo;
 };
 #endif // ITEMLIST_H

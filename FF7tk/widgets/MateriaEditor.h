@@ -42,6 +42,8 @@ public:
     void setEditable(bool);
     void setHoverStyle(QString hoverColor);
 //    qint32 raw_data(void);
+public slots:
+    void setEditableMateriaCombo(bool enabled);
 private:
     //Private Functions
     void init_display(void);

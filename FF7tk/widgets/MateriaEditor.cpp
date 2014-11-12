@@ -627,3 +627,8 @@ void MateriaEditor::setHoverStyle(QString hoverColor)
 		btn_star4->setStyleSheet(style);
 		btn_star5->setStyleSheet(style);
 }
+void MateriaEditor::setEditableMateriaCombo(bool enabled)
+{
+    combo_materia->setEditable(enabled);
+    combo_materia->setInsertPolicy(QComboBox::NoInsert);
+}
