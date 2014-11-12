@@ -567,10 +567,12 @@ void CharEditor::init_display()
 
     weapon_selection = new QComboBox;
 
+
     armor_selection = new QComboBox;
     for(int i=256;i<288;i++){armor_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));}
 
     accessory_selection = new QComboBox;
+
     for(int i=288;i<320;i++){accessory_selection->addItem(QPixmap::fromImage(Items.image(i)),Items.name(i));}
     accessory_selection->addItem(QPixmap::fromImage(Items.image(288)),tr("-NONE-"));
     materia_edit  = new MateriaEditor(this);
@@ -2618,4 +2620,16 @@ void CharEditor::MaxEquip()
         update_materia_slots();
         cb_front_row->setCheckState(Qt::Unchecked);
     }
+}
+void CharEditor::setEditableComboBoxes(bool editable)
+{
+        weapon_selection->setEditable(editable);
+        weapon_selection->setInsertPolicy(QComboBox::NoInsert);
+
+        armor_selection->setEditable(editable);
+        armor_selection->setInsertPolicy(QComboBox::NoInsert);
+
+        accessory_selection->setEditable(editable);
+        accessory_selection->setInsertPolicy(QComboBox::NoInsert);
+        materia_edit->setEditableMateriaCombo(editable);
 }

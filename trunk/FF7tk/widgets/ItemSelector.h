@@ -42,6 +42,7 @@ public slots:
     void setCurrentItem(quint16 ff7item);
     void setCurrentItem(int id,int qty);
     void setMaximumQty(int maxQty);
+    void setEditableItemCombo(bool editable);
 private slots:
     void setFilter(int type);
     void comboItem_changed(int index);

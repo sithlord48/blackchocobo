@@ -32,6 +32,7 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	restoreGeometry(settings->value("OptionsGeometry").toByteArray());
 	set_path_lbls();
 	load=true;
+    ui->cbEditableCombos->setChecked(settings->value("editableCombos").toBool());
 	ui->cbCharEditorAdvanced->setChecked(settings->value("charEditorAdvanced").toBool());
 	ui->cbChocoboEditorAdvanced->setChecked(settings->value("chocoboEditorAdvanced").toBool());
 	ui->cbLocationViewerAdvanced->setChecked(settings->value("locationViewerAdvanced").toBool());
@@ -156,6 +157,7 @@ void Options::on_cbOptionsShowMapping_toggled(bool checked){if(!load){settings->
 void Options::on_cbTestDataEnabled_toggled(bool checked){if(!load){settings->setValue("show_test",checked);}}
 void Options::on_cbLocationViewerAdvanced_toggled(bool checked){if(!load){settings->setValue("locationViewerAdvanced",checked);}}
 void Options::on_cbWorldMapAdvanced_toggled(bool checked){if(!load){settings->setValue("worldMapAdvanced",checked);}}
+void Options::on_cbEditableCombos_clicked(bool checked){if(!load){settings->setValue("editableCombos",checked);}}
 
 void Options::on_linePs3Key_editingFinished()
 {if(!load){
@@ -168,3 +170,5 @@ void Options::on_linePs3Seed_editingFinished()
 		QByteArray temp = QByteArray::fromHex(ui->linePs3Seed->text().toLocal8Bit());
 		settings->setValue("ps3Seed",temp);
 }}
+
+

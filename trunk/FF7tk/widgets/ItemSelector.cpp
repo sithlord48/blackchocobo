@@ -25,6 +25,7 @@ void ItemSelector::init_display()
     combo_type = new QComboBox;
     combo_type->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
     combo_item = new QComboBox;
+    qWarning()<<QString::number(combo_item->insertPolicy());
     combo_item->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
     sb_qty = new QSpinBox;
     sb_qty->setAlignment(Qt::AlignCenter);
@@ -209,4 +210,9 @@ void ItemSelector::setFixedHeight(int h)
     sb_qty->setFixedHeight(h);
     combo_type->setFixedHeight(h);
     combo_item->setFixedHeight(h);
+}
+void ItemSelector::setEditableItemCombo(bool editable)
+{
+    combo_item->setEditable(editable);
+    combo_item->setInsertPolicy(QComboBox::NoInsert);
 }

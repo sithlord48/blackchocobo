@@ -100,7 +100,7 @@ void MainWindow::init_display()
 	ui->group_materia->setLayout(materia_editor_layout);
 
 	char_editor = new CharEditor;
-	QHBoxLayout *char_editor_layout = new QHBoxLayout;
+    QHBoxLayout *char_editor_layout = new QHBoxLayout;
 	char_editor_layout->setContentsMargins(0,0,0,0);
 	char_editor_layout->setSpacing(0);
 	char_editor_layout->addWidget(char_editor);
@@ -303,15 +303,20 @@ void MainWindow::init_connections()
 void MainWindow::init_settings()
 {
 	//are any empty? if so set them accordingly.
-	if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
+    if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",true);}
 	if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
 	if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
+    if(settings->value("editableCombos").isNull()){settings->setValue("editableCombos",true);}
+
 	ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
 	advancedSettings();
 	restoreGeometry(settings->value("MainGeometry").toByteArray());
 }
 void MainWindow::advancedSettings()
 {
+    char_editor->setEditableComboBoxes(settings->value("editableCombos").toBool());
+    materia_editor->setEditableMateriaCombo(settings->value("editableCombos").toBool());
+    itemlist->setEditableItemCombo(settings->value("editableCombos").toBool());
 	skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 	char_editor->setAdvancedMode(settings->value("charEditorAdvanced").toBool());
 	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());

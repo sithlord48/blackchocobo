@@ -24,6 +24,6 @@
  * Total Size 4 Bytes 100% known!
  */
 struct materia{// sizeof 4
-quint8 id; /**< materias id */
-quint8 ap[3]; /** Ap Storage is done as a 24bit int. */
+quint8 id;      /**< materias id */
+quint8 ap[3];   /** Ap Storage is done as a 24bit int. */
 }__attribute__((__packed__));

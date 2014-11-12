@@ -210,6 +210,7 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     if(colum<0||row <0){return;}//Ingore if selecting -1 (clearContents)
     if (prevRow>=0){updateItem(prevRow);}//update the previews Row so its filled again.
     itemSelector = new ItemSelector;
+    itemSelector->setEditableItemCombo(editableItemCombo);
     createdSelector = true;
     itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
@@ -264,3 +265,4 @@ void ItemList::updateItem(int row)
         setItem(row,2,newItem);
     }
 }
+void ItemList::setEditableItemCombo(bool editable){editableItemCombo=editable;}

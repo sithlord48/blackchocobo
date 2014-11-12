@@ -68,7 +68,7 @@ public:
 
 	/*! \brief default name for a character
 	 * \param who Characters id number
-	 * \return Translated defalut name for character
+     * \return Translated default name for character
 	 */
 	QString defaultName(int who);
 
