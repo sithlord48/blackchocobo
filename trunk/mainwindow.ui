@@ -27,6 +27,9 @@
     </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="tab_party">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
@@ -872,13 +875,15 @@
                 <property name="title">
                  <string>Turtle Paradise Flyers Collected</string>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_9">
-                <property name="text">
-                 <string>Search For &quot;KeyItem&quot; using item search mode on the location tab</string>
-                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="FlyerLabel">
+                   <property name="text">
+                    <string>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -888,9 +893,9 @@
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_4">
                  <item>
-                  <widget class="QLabel" name="FlyerLabel">
+                  <widget class="QLabel" name="label_9">
                    <property name="text">
-                    <string>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</string>
+                    <string>Search For &quot;KeyItem&quot; using item search mode on the location tab</string>
                    </property>
                   </widget>
                  </item>
@@ -1125,8 +1130,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>94</width>
-             <height>24</height>
+             <width>85</width>
+             <height>16</height>
             </rect>
            </property>
            <attribute name="icon">
