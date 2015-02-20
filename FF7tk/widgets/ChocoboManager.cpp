@@ -430,7 +430,7 @@ void ChocoboManager::setChocobo(int s,FF7CHOCOBO chocoData,QString chocoName,qui
 }
 void ChocoboManager::setChocoboPen(int pen, int value)
 {
-    if(pen<0 || pen>4 || value<0 || value>8){return;}
+    if(pen<0 || pen>3 || value<0 || value>8){return;}
     else{comboChocoPen[pen]->setCurrentIndex(value);}
 }
 void ChocoboManager::setOwned(int owned)

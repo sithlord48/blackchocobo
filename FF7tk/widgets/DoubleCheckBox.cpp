@@ -77,8 +77,8 @@ void DoubleCheckBox::setBoxToolTip(int box,QString text)
 {
 	switch(box)
 	{
-		case 1: cb_one->setToolTip(text);
-		case 2: cb_two->setToolTip(text);
+		case 1: cb_one->setToolTip(text); break;
+		case 2: cb_two->setToolTip(text); break;
 		default: break;
 	}
 }
