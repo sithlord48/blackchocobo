@@ -2208,7 +2208,7 @@ void FF7Save::setRuns(int s,int runs)
 quint8 FF7Save::party(int s,int pos){return slot[s].party[pos];}
 void FF7Save::setParty(int s,int pos, int new_id)
 {
-	if(pos >=0 && pos <4)
+    if(pos >=0 && pos <3)
 	{
 		if(new_id >=0 && new_id<12){slot[s].party[pos] = new_id;}
 		else{slot[s].party[pos] =0xFF;}
