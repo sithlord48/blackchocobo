@@ -25,7 +25,6 @@ void ItemSelector::init_display()
     combo_type = new QComboBox;
     combo_type->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
     combo_item = new QComboBox;
-    qWarning()<<QString::number(combo_item->insertPolicy());
     combo_item->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
     sb_qty = new QSpinBox;
     sb_qty->setAlignment(Qt::AlignCenter);
