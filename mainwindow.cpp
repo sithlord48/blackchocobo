@@ -100,7 +100,7 @@ void MainWindow::init_display()
 	ui->group_materia->setLayout(materia_editor_layout);
 
 	char_editor = new CharEditor;
-    QHBoxLayout *char_editor_layout = new QHBoxLayout;
+	QHBoxLayout *char_editor_layout = new QHBoxLayout;
 	char_editor_layout->setContentsMargins(0,0,0,0);
 	char_editor_layout->setSpacing(0);
 	char_editor_layout->addWidget(char_editor);
@@ -303,10 +303,10 @@ void MainWindow::init_connections()
 void MainWindow::init_settings()
 {
 	//are any empty? if so set them accordingly.
-    if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",true);}
+	if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",true);}
 	if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
 	if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-    if(settings->value("editableCombos").isNull()){settings->setValue("editableCombos",true);}
+	if(settings->value("editableCombos").isNull()){settings->setValue("editableCombos",true);}
 
 	ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
 	advancedSettings();
@@ -314,9 +314,9 @@ void MainWindow::init_settings()
 }
 void MainWindow::advancedSettings()
 {
-    char_editor->setEditableComboBoxes(settings->value("editableCombos").toBool());
-    materia_editor->setEditableMateriaCombo(settings->value("editableCombos").toBool());
-    itemlist->setEditableItemCombo(settings->value("editableCombos").toBool());
+	char_editor->setEditableComboBoxes(settings->value("editableCombos").toBool());
+	materia_editor->setEditableMateriaCombo(settings->value("editableCombos").toBool());
+	itemlist->setEditableItemCombo(settings->value("editableCombos").toBool());
 	skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 	char_editor->setAdvancedMode(settings->value("charEditorAdvanced").toBool());
 	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
@@ -1167,19 +1167,19 @@ void MainWindow::othersUpdate()
 		}
 	}
 	//SnowBoard Mini Game Data.
-	ui->sbSnowBegMin->setValue((ff7->snowboardTime(s,0)/1000)/60%60);
-	ui->sbSnowBegSec->setValue((ff7->snowboardTime(s,0)/1000)-(ui->sbSnowBegMin->value()*60));
-	ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s,0)%1000);
+	ui->sbSnowBegMin->setValue(ff7->snowboardTime(s,0).mid(0,2).toInt());
+	ui->sbSnowBegSec->setValue(ff7->snowboardTime(s,0).mid(2,2).toInt());
+	ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s,0).mid(4,3).toInt());
 	ui->sbSnowBegScore->setValue(ff7->snowboardScore(s,0));
 
-	ui->sbSnowExpMin->setValue((ff7->snowboardTime(s,1)/1000)/60%60);
-	ui->sbSnowExpSec->setValue((ff7->snowboardTime(s,1)/1000)-(ui->sbSnowExpMin->value()*60));
-	ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s,1)%1000);
+	ui->sbSnowExpMin->setValue(ff7->snowboardTime(s,1).mid(0,2).toInt());
+	ui->sbSnowExpSec->setValue(ff7->snowboardTime(s,1).mid(2,2).toInt());
+	ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s,1).mid(4,3).toInt());
 	ui->sbSnowExpScore->setValue(ff7->snowboardScore(s,1));
 
-	ui->sbSnowCrazyMin->setValue((ff7->snowboardTime(s,2)/1000)/60%60);
-	ui->sbSnowCrazySec->setValue((ff7->snowboardTime(s,2)/1000)-(ui->sbSnowCrazyMin->value()*60));
-	ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2)%1000);
+	ui->sbSnowCrazyMin->setValue(ff7->snowboardTime(s,2).mid(0,2).toInt());
+	ui->sbSnowCrazySec->setValue(ff7->snowboardTime(s,2).mid(2,2).toInt());
+	ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2).mid(4,3).toInt());
 	ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
 
 	ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
@@ -2783,65 +2783,64 @@ void MainWindow::on_sbSnowCrazyScore_valueChanged(int value){if(!load){ff7->setS
 
 void MainWindow::on_sbSnowBegMin_valueChanged(int value)
 {if(!load){
-	quint32 time;
-	time = ((value*60)*1000) + (ui->sbSnowBegSec->value()*1000) + ui->sbSnowBegMsec->value();
+	QString time=ff7->snowboardTime(s,0);
+	time.replace(0,2,QString("%1").arg(value, 2, 10, QChar('0')));
 	ff7->setSnowboardTime(s,0,time);
 }}
 
 void MainWindow::on_sbSnowBegSec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowBegMin->value()*60)*1000) + (value*1000) + ui->sbSnowBegMsec->value();
+		QString time=ff7->snowboardTime(s,0);
+		time.replace(2,2,QString("%1").arg(value, 2, 10, QChar('0')));
 		ff7->setSnowboardTime(s,0,time);
 }}
 
 void MainWindow::on_sbSnowBegMsec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowBegMin->value()*60)*1000) + (ui->sbSnowBegSec->value()*1000) + value;
+		QString time=ff7->snowboardTime(s,0);
+		time.replace(4,3,QString("%1").arg(value, 3, 10, QChar('0')));
 		ff7->setSnowboardTime(s,0,time);
 }}
 
 void MainWindow::on_sbSnowExpMin_valueChanged(int value)
 {if(!load){
-	quint32 time;
-	time = ((value*60)*1000) + (ui->sbSnowExpSec->value()*1000) + ui->sbSnowExpMsec->value();
+	QString time=ff7->snowboardTime(s,1);
+	time.replace(0,2,QString("%1").arg(value, 2, 10, QChar('0')));
 	ff7->setSnowboardTime(s,1,time);
 }}
 
 void MainWindow::on_sbSnowExpSec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowExpMin->value()*60)*1000) + (value*1000) + ui->sbSnowExpMsec->value();
+		QString time=ff7->snowboardTime(s,1);
+		time.replace(2,2,QString("%1").arg(value, 2, 10, QChar('0')));
 		ff7->setSnowboardTime(s,1,time);
 }}
 
 void MainWindow::on_sbSnowExpMsec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowExpMin->value()*60)*1000) + (ui->sbSnowExpSec->value()*1000) + value;
+		QString time=ff7->snowboardTime(s,1);
+		time.replace(4,3,QString("%1").arg(value, 3, 10, QChar('0')));
 		ff7->setSnowboardTime(s,1,time);
 }}
 
 void MainWindow::on_sbSnowCrazyMin_valueChanged(int value)
 {if(!load){
-	quint32 time;
-	time = ((value*60)*1000) + (ui->sbSnowCrazySec->value()*1000) + ui->sbSnowCrazyMsec->value();
+	QString time=ff7->snowboardTime(s,2);
+	time.replace(0,2,QString("%1").arg(value, 2, 10, QChar('0')));
 	ff7->setSnowboardTime(s,2,time);
 }}
 
 void MainWindow::on_sbSnowCrazySec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowCrazyMin->value()*60)*1000) + (value*1000) + ui->sbSnowCrazyMsec->value();
+		QString time=ff7->snowboardTime(s,2);
+		time.replace(2,2,QString("%1").arg(value, 2, 10, QChar('0')));
 		ff7->setSnowboardTime(s,2,time);
 }}
 
 void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 {if(!load){
-		quint32 time;
-		time = ((ui->sbSnowCrazyMin->value()*60)*1000) + (ui->sbSnowCrazySec->value()*1000) + value;
-
+		QString time=ff7->snowboardTime(s,2);
+		time.replace(4,3,QString("%1").arg(value, 3, 10, QChar('0')));
 		ff7->setSnowboardTime(s,2,time);
 }}
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}

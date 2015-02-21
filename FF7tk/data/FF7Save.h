@@ -634,8 +634,8 @@ class FF7Save: public QObject{
 	void setSpeedScore(int s,int rank,quint16 score);
 	quint16 bikeHighScore(int s);
 	void setBikeHighScore(int s,quint16 score);
-	quint32 snowboardTime(int s,int course);
-	void setSnowboardTime(int s,int course,quint32 time);
+    QString snowboardTime(int s,int course);
+    void setSnowboardTime(int s,int course,QString time);
 	quint8 snowboardScore(int s,int course);
 	void setSnowboardScore(int s,int course,quint8 score);
 	quint32 countdownTimer(int s);
