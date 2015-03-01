@@ -511,5 +511,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_mysteryPanties_toggled(bool checked);
 	void on_cb_letterToDaughter_toggled(bool checked);
 	void on_cb_letterToWife_toggled(bool checked);
+    void on_btnSearchFlyers_clicked();
+    void on_btnSearchKeyItems_clicked();
 };
 #endif // MAINWINDOW_H

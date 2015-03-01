@@ -34,7 +34,9 @@ class LocationViewer : public QWidget
 {
 	Q_OBJECT
 public:
+    enum filterMode {NAME,ITEM};
 	explicit LocationViewer(QWidget *parent = 0);
+    void setFilterString(QString filter="",LocationViewer::filterMode mode=LocationViewer::NAME);
 signals:
 	void locationChanged(QString);
 	void xChanged(int x);
@@ -88,7 +90,6 @@ private slots:
 protected:
 	void resizeEvent(QResizeEvent *ev);
 private:
-	enum filterMode {NAME,ITEM};
 	void init_display(void);
 	void init_connections(void);
 	void init_disconnect(void);
