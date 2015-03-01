@@ -131,7 +131,7 @@ void LocationViewer::init_display(void)
 	btnSearchOptions->setFixedWidth(36);
 
 	lineTableFilter = new QLineEdit;
-	lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());
+    lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());
 
 	lineLocationName = new QLineEdit;
 	lineLocationName->setPlaceholderText(tr("Location Name"));
@@ -176,7 +176,8 @@ void LocationViewer::init_display(void)
 	sbD->setAlignment(Qt::AlignCenter);
 
 	chkAutoUpdate = new QCheckBox;
-	chkAutoUpdate->setText(tr("Save New Coordinates When Table Se&lection Changes"));
+    chkAutoUpdate->setText(tr("Save &Location Changes"));
+    chkAutoUpdate->setFixedWidth(locationTable->width());
 	//connect now and forget it
 	connect(chkAutoUpdate,SIGNAL(clicked(bool)),this,SLOT(chkAutoUpdateChanged(bool)));
 
@@ -215,6 +216,8 @@ void LocationViewer::init_display(void)
 	PreviewLayout->addWidget(lblLocationPreview);
 
 	QHBoxLayout *FilterLayout = new QHBoxLayout;
+    FilterLayout->setContentsMargins(0,0,0,0);
+    FilterLayout->setSpacing(0);
 	FilterLayout->addWidget(btnSearchOptions);
 	FilterLayout->addWidget(lineTableFilter);
 
@@ -555,3 +558,19 @@ void LocationViewer::setAdvancedMode(bool advancedMode)
 	sbD->setVisible(_advancedMode);
 }
 bool LocationViewer::advancedMode(void){return _advancedMode;}
+void LocationViewer::setFilterString(QString filter,filterMode mode)
+{
+    switch(mode)
+    {
+        case NAME: actionNameSearch->setChecked(true); break;
+        case ITEM: actionItemSearch->setChecked(true); break;
+    }
+    lineTableFilter->setText(filter);
+    setLocationChangesSaved(false);
+    for(int i=0;i<locationTable->rowCount();i++)
+    {
+        if(locationTable->isRowHidden(i)){}
+        else{locationTable->selectRow(i); return;}
+    }
+
+}

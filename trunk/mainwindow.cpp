@@ -3078,3 +3078,17 @@ void MainWindow::on_sb_saveX_valueChanged(int arg1){if(!load){ff7->setCraterSave
 void MainWindow::on_sb_saveY_valueChanged(int arg1){if(!load){ff7->setCraterSavePointY(s,arg1);}}
 void MainWindow::on_sb_saveZ_valueChanged(int arg1){if(!load){ff7->setCraterSavePointZ(s,arg1);}}
 
+
+void MainWindow::on_btnSearchFlyers_clicked()
+{
+    ui->tabWidget->setCurrentIndex(4);
+    ui->locationToolBox->setCurrentIndex(0);
+    locationViewer->setFilterString(tr("Turtle Paradise"),LocationViewer::ITEM);
+}
+
+void MainWindow::on_btnSearchKeyItems_clicked()
+{
+    ui->tabWidget->setCurrentIndex(4);
+    ui->locationToolBox->setCurrentIndex(0);
+    locationViewer->setFilterString(tr("KeyItem"),LocationViewer::ITEM);
+}
