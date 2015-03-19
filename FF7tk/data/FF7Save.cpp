@@ -2208,53 +2208,62 @@ void FF7Save::setRuns(int s,int runs)
 quint8 FF7Save::party(int s,int pos){return slot[s].party[pos];}
 void FF7Save::setParty(int s,int pos, int new_id)
 {
-	if(pos >=0 && pos <3)
+    if(pos >=0 && pos <3)
 	{
 		if(new_id >=0 && new_id<12){slot[s].party[pos] = new_id;}
 		else{slot[s].party[pos] =0xFF;}
 		setFileModified(true,s);
 	}
 }
-QString FF7Save::snowboardTime(int s, int course)
+quint32 FF7Save::snowboardTime(int s, int course)
 {
 	quint32 time=0;
 	switch(course)
 	{
 	case 0:
-		time = slot[s].SnowBegFastTime;
+		time = ((slot[s].SnowBegFastTime[1]) | (slot[s].SnowBegFastTime[2]<< 8) | (slot[s].SnowBegFastTime[3] <<16));
 		break;
 
 	case 1:
-		time = slot[s].SnowExpFastTime;
-		break;
+		time = ((slot[s].SnowExpFastTime[1]) | (slot[s].SnowExpFastTime[2]<< 8) | (slot[s].SnowExpFastTime[3] <<16));
+	   break;
 
 	case 2:
-		time = slot[s].SnowCrazyFastTime;
-		break;
+		time = ((slot[s].SnowCrazyFastTime[1]) | (slot[s].SnowCrazyFastTime[2]<< 8) | (slot[s].SnowCrazyFastTime[3] <<16));
+	   break;
 
-	default: break;
-	}
-	return QString("%1").arg(time, 8, 16, QChar('0'));
+	   default: break;
+	 }
+	return time;
 }
 
-void FF7Save::setSnowboardTime(int s, int course,QString value)
+void FF7Save::setSnowboardTime(int s, int course,quint32 value)
 {
+	int a = (value & 0xff);
+	int b = (value & 0xff00) >> 8;
+	int c = (value & 0xff0000) >> 16;
 	switch(course)
 	{
 	case 0:
-		slot[s].SnowBegFastTime= value.toInt(0,16);
+		slot[s].SnowBegFastTime[1]=a;
+		slot[s].SnowBegFastTime[2]=b;
+		slot[s].SnowBegFastTime[3]=c;
 		setFileModified(true,s);
 		break;
 	case 1:
-		slot[s].SnowExpFastTime= value.toInt(0,16);
+		slot[s].SnowExpFastTime[1]=a;
+		slot[s].SnowExpFastTime[2]=b;
+		slot[s].SnowExpFastTime[3]=c;
 		setFileModified(true,s);
 		break;
 	case 2:
-		slot[s].SnowCrazyFastTime= value.toInt(0,16);
+		slot[s].SnowCrazyFastTime[1]=a;
+		slot[s].SnowCrazyFastTime[2]=b;
+		slot[s].SnowCrazyFastTime[3]=c;
 		setFileModified(true,s);
 		break;
-	default: break;
-	}
+		default: break;
+	 }
 }
 
 quint8 FF7Save::snowboardScore(int s, int course)
@@ -2346,7 +2355,7 @@ QVector< SubContainer > FF7Save::parseXML(QString fileName, QString metadataPath
 		QDomElement el = nodeList.at(ii).toElement();               //Get the current one as QDomElement
 		QDomNode pEntries = el.firstChild();                        //Get all data for the element, by looping through all child elements
 		int iii = 0;
-		while(!pEntries.isNull())
+		while(!pEntries.isNull() && iii <= 15)
 		{
 			QDomElement peData = pEntries.toElement();
 			vector[ii][iii] = peData.text();
