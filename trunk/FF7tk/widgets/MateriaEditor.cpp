@@ -398,7 +398,8 @@ void MateriaEditor::setStats()
 void MateriaEditor::setLevel()
 {
 	_level=0;
-	if( (_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)){_level=1;}
+	if( _id==FF7Materia::EmptyId){/*catch to avoid CID 25848*/ }
+	else if( (_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)){_level=1;}
 	else{for(int i=0;i<data->levels(_id);i++){if(_current_ap >= data->ap(_id,i)){_level++;}}}
 	setStars();
 	setSkills();
@@ -629,6 +630,6 @@ void MateriaEditor::setHoverStyle(QString hoverColor)
 }
 void MateriaEditor::setEditableMateriaCombo(bool enabled)
 {
-    combo_materia->setEditable(enabled);
-    combo_materia->setInsertPolicy(QComboBox::NoInsert);
+	combo_materia->setEditable(enabled);
+	combo_materia->setInsertPolicy(QComboBox::NoInsert);
 }
