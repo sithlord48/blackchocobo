@@ -87,7 +87,7 @@ class FF7Materia
 	quint32 ap2num (quint8 ap[3]);
 };
 
-static const MATERIA Materias[]=
+static const MATERIA MateriasList[]=
 {
 	{QT_TRANSLATE_NOOP("Materia_Names","MP Plus"),         QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +10%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +20%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +30%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +40%")<<QT_TRANSLATE_NOOP("Materia_Skills","MP Plus +50%"),QT_TRANSLATE_NOOP("Materia_Stats","MaxMp:+% depending on level"), QString(":/materia/independent"),QString(":/materia/independent_star_empty"),QString(":/materia/independent_star_full"), 0x00,0,0,0,0,0,0,0,0,{0,10000,20000,30000,50000},3,5,"",QStringList("")},
 	{QT_TRANSLATE_NOOP("Materia_Names","HP Plus"),         QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +10%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +20%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +30%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +40%")<<QT_TRANSLATE_NOOP("Materia_Skills","HP Plus +50%"),QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:+% depending on level"), QString(":/materia/independent"),QString(":/materia/independent_star_empty"),QString(":/materia/independent_star_full"), 0x01,0,0,0,0,0,0,0,0,{0,10000,20000,30000,50000},3,5,"",QStringList("")},
@@ -181,6 +181,7 @@ static const MATERIA Materias[]=
 	{QT_TRANSLATE_NOOP("Materia_Names","Knights of the Round"),QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","KOTR x1 (250mp)")<<QT_TRANSLATE_NOOP("Materia_Skills","KOTR x2 (250mp)")<<QT_TRANSLATE_NOOP("Materia_Skills","KOTR x3 (250mp)")<<QT_TRANSLATE_NOOP("Materia_Skills","KOTR x4 (250mp)")<<QT_TRANSLATE_NOOP("Materia_Skills","KOTR x5 (250mp)"),QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8"), QString(":/materia/summon"),QString(":/materia/summon_star_empty"),QString(":/materia/summon_star_full"),      0x59,-10,+20,0,0,0,0,+8,+8,{0,50000,200000,300000,500000},2,5,"",QStringList("")},
 	{QT_TRANSLATE_NOOP("Materia_Names","Master Summon"),   QStringList()<<QT_TRANSLATE_NOOP("Materia_Skills","Master Summon"),"",QString(":/materia/summon"),QString(":/materia/summon_star_empty"),QString(":/materia/summon_star_full"),      0x5A,0,0,0,0,0,0,0,0,{0,0,0,0,0},2,1,"",QStringList("")}
 };
+
 static QString ESkills[]=
 {
 	QT_TRANSLATE_NOOP("E_skills","Frog Song"),
@@ -208,4 +209,14 @@ static QString ESkills[]=
 	QT_TRANSLATE_NOOP("E_skills","Shadow Flare"),
 	QT_TRANSLATE_NOOP("E_skills","Pandora's Box")
 };
+
+static const MATERIA EmptyMateria = {QT_TRANSLATE_NOOP("Materia_Names","EMPTY"),       QStringList()<<"?"<<"?"<<"?"<<"?"<<"?","ID:0xFF",QString(""),QString(""),QString(""),0XFF,0,0,0,0,0,0,0,0,{0,0,0,0,0},0,0,"",QStringList("")};
+
+/*!
+* \brief Materia Wrapper function to get Materia data
+* \param id Materia ID (0x00 - 0x5A && 0xFF)
+* \return Materia data for given id
+* \sa Materias(int)
+*/
+MATERIA Materias(int id);
 #endif //FF7MATERIA_H
