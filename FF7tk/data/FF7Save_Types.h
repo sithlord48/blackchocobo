@@ -138,10 +138,10 @@ struct FF7SLOT {
 	FF7CHOCOBO chocobos[4];		/**< [0x0DC4] Chocobo slots*/
 	quint8 z_28[13];			/**< [0x0E04] UNKNOWN DATA*/
 	quint16 BikeHighScore;		/**< [0x0E11] Bike Mini Game High Score*/
-	quint8 SnowBegFastTime[4];	/**< [0x0E13] Fastest Time For Snowboard Beginner Course stored in Msec 3bytes byte[0] unused*/
-	quint8 SnowExpFastTime[4];	/**< [0x0E17] Fastest Time For Snowboard Expert Course Stored in Msec 3bytes byte[0] unused*/
-	quint8 SnowCrazyFastTime[4];/**< [0x0E1B] Fastest Time For Snowboard Crazy Course Stored in Msec 3bytes byte[0] unused*/
-	quint8 SnowUnused;			/**< [0x0E1F] Unused var for snowboard game?*/
+    quint8 SnowUnused;			/**< [0x0E13] Unused var for snowboard game?*/
+    quint32 SnowBegFastTime;	/**< [0x0E14] Fastest Time For Snowboard Beginner Course stored in Msec 3bytes byte[0] unused*/
+    quint32 SnowExpFastTime;	/**< [0x0E16] Fastest Time For Snowboard Expert Course Stored in Msec 3bytes byte[0] unused*/
+    quint32 SnowCrazyFastTime;  /**< [0x0E1C] Fastest Time For Snowboard Crazy Course Stored in Msec 3bytes byte[0] unused*/
 	quint8 SnowBegScore;		/**< [0x0E20] SnowBoard Minigame HighScore For Beginner Course*/
 	quint8 SnowExpScore;		/**< [0x0E21] SnowBoard Minigame HighScore For Expert Course*/
 	quint8 SnowCrazyScore;		/**< [0x0E22] SnowBoard Minigame HighScore For Crazy Course*/
