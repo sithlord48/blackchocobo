@@ -1,6 +1,9 @@
 Black Chocobo 
 =====
-A Save Editor for final fantasy 7
+A Save Editor for final fantasy 7 [![Build Status](https://travis-ci.org/sithlord48/blackchocobo.svg)](https://travis-ci.org/sithlord48/blackchocobo) <a href="https://scan.coverity.com/projects/4594">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/4594/badge.svg"/>
+</a>
 
 Requires: Qt and OpenSSL (to sign some save types)
 
