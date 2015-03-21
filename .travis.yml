@@ -28,3 +28,19 @@ script:
 - make -j2
 
 language: cpp
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "B4xjY+hcZOob6hGLx8b5Ykxk+8sN9M+XwfnuhRReR1YRFvXZdcUUiL/VusDM0iapUGhkuvbO0AQEeLPaC69uBNdxQsBJFGFMzrHZGEtuBFl44SJB+lZGRTVemj3AZ4f5aQvTkKFbt7M+/sjkWa6ZP6EHdrAN2XCp4emrwKBApO4="
+
+addons:
+  coverity_scan:
+    project:
+      name: "sithlord48/blackchocobo"
+      description: "Final Fantasy VII Save Editor"
+    notification_email: sithlord48@gmail.com
+    build_command_prepend: "qmake Black_Chocobo.pro"
+    build_command:   "make -j 4"
+    branch_pattern: coverity_scan
