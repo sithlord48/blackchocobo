@@ -31,33 +31,33 @@ SOURCES += \
 	qhexedit/qhexedit_p.cpp \
 	qhexedit/qhexedit.cpp \
 	qhexedit/commands.cpp \
-	FF7tk/data/SaveIcon.cpp \
-	FF7tk/data/FF7Text.cpp \
-	FF7tk/data/FF7Save.cpp \
-	FF7tk/data/FF7Materia.cpp \
-	FF7tk/data/FF7Location.cpp \
-	FF7tk/data/FF7Item.cpp \
-	FF7tk/data/FF7Char.cpp \
-	FF7tk/data/FF7FieldItemList.cpp \
-	FF7tk/widgets/SlotSelect.cpp \
-	FF7tk/widgets/SlotPreview.cpp \
-	FF7tk/widgets/MateriaEditor.cpp \
-	FF7tk/widgets/ItemPreview.cpp \
-	FF7tk/widgets/DialogPreview.cpp \
-	FF7tk/widgets/ChocoboEditor.cpp \
-	FF7tk/widgets/CharEditor.cpp \
-	FF7tk/widgets/ItemSelector.cpp \
-	FF7tk/widgets/ItemList.cpp \
-	FF7tk/widgets/MetadataCreator.cpp \
-	FF7tk/widgets/DoubleCheckBox.cpp \
-	FF7tk/widgets/MenuListWidget.cpp \
-	FF7tk/widgets/OptionsWidget.cpp \
-	FF7tk/widgets/ChocoboManager.cpp \
-	FF7tk/widgets/ChocoboLabel.cpp \
-	FF7tk/widgets/LocationViewer.cpp \
-	FF7tk/widgets/AchievementEditor.cpp \
-	FF7tk/widgets/PhsListWidget.cpp \
-	FF7tk/data/FF7Achievements.cpp
+	ff7tk/data/SaveIcon.cpp \
+	ff7tk/data/FF7Text.cpp \
+	ff7tk/data/FF7Save.cpp \
+	ff7tk/data/FF7Materia.cpp \
+	ff7tk/data/FF7Location.cpp \
+	ff7tk/data/FF7Item.cpp \
+	ff7tk/data/FF7Char.cpp \
+	ff7tk/data/FF7FieldItemList.cpp \
+	ff7tk/widgets/SlotSelect.cpp \
+	ff7tk/widgets/SlotPreview.cpp \
+	ff7tk/widgets/MateriaEditor.cpp \
+	ff7tk/widgets/ItemPreview.cpp \
+	ff7tk/widgets/DialogPreview.cpp \
+	ff7tk/widgets/ChocoboEditor.cpp \
+	ff7tk/widgets/CharEditor.cpp \
+	ff7tk/widgets/ItemSelector.cpp \
+	ff7tk/widgets/ItemList.cpp \
+	ff7tk/widgets/MetadataCreator.cpp \
+	ff7tk/widgets/DoubleCheckBox.cpp \
+	ff7tk/widgets/MenuListWidget.cpp \
+	ff7tk/widgets/OptionsWidget.cpp \
+	ff7tk/widgets/ChocoboManager.cpp \
+	ff7tk/widgets/ChocoboLabel.cpp \
+	ff7tk/widgets/LocationViewer.cpp \
+	ff7tk/widgets/AchievementEditor.cpp \
+	ff7tk/widgets/PhsListWidget.cpp \
+	ff7tk/data/FF7Achievements.cpp
 
 HEADERS += \
 	mainwindow.h \
@@ -70,38 +70,38 @@ HEADERS += \
 	qhexedit/qhexedit.h \
 	qhexedit/commands.h \
 	achievementdialog.h \
-	FF7tk/data/Type_FF7CHOCOBO.h \
-	FF7tk/data/FF7FieldItemList.h \
-	FF7tk/data/FF7Achievements.h \
-	FF7tk/data/Type_materia.h \
-	FF7tk/data/Type_FF7CHAR.h \
-	FF7tk/data/SaveIcon.h \
-	FF7tk/data/FF7Text.h \
-	FF7tk/data/FF7Save_Types.h \
-	FF7tk/data/FF7Save_Const.h \
-	FF7tk/data/FF7Save.h \
-	FF7tk/data/FF7Materia.h \
-	FF7tk/data/FF7Location.h \
-	FF7tk/data/FF7Item.h \
-	FF7tk/data/FF7Char.h \
-	FF7tk/widgets/ItemSelector.h \
-	FF7tk/widgets/ItemList.h \
-	FF7tk/widgets/MetadataCreator.h \
-	FF7tk/widgets/SlotSelect.h \
-	FF7tk/widgets/SlotPreview.h \
-	FF7tk/widgets/MateriaEditor.h \
-	FF7tk/widgets/ItemPreview.h \
-	FF7tk/widgets/DialogPreview.h \
-	FF7tk/widgets/ChocoboEditor.h \
-	FF7tk/widgets/CharEditor.h \
-	FF7tk/widgets/PhsListWidget.h \
-	FF7tk/widgets/DoubleCheckBox.h \
-	FF7tk/widgets/MenuListWidget.h \
-	FF7tk/widgets/OptionsWidget.h \
-	FF7tk/widgets/ChocoboManager.h \
-	FF7tk/widgets/ChocoboLabel.h \
-	FF7tk/widgets/LocationViewer.h \
-	FF7tk/widgets/AchievementEditor.h
+	ff7tk/data/Type_FF7CHOCOBO.h \
+	ff7tk/data/FF7FieldItemList.h \
+	ff7tk/data/FF7Achievements.h \
+	ff7tk/data/Type_materia.h \
+	ff7tk/data/Type_FF7CHAR.h \
+	ff7tk/data/SaveIcon.h \
+	ff7tk/data/FF7Text.h \
+	ff7tk/data/FF7Save_Types.h \
+	ff7tk/data/FF7Save_Const.h \
+	ff7tk/data/FF7Save.h \
+	ff7tk/data/FF7Materia.h \
+	ff7tk/data/FF7Location.h \
+	ff7tk/data/FF7Item.h \
+	ff7tk/data/FF7Char.h \
+	ff7tk/widgets/ItemSelector.h \
+	ff7tk/widgets/ItemList.h \
+	ff7tk/widgets/MetadataCreator.h \
+	ff7tk/widgets/SlotSelect.h \
+	ff7tk/widgets/SlotPreview.h \
+	ff7tk/widgets/MateriaEditor.h \
+	ff7tk/widgets/ItemPreview.h \
+	ff7tk/widgets/DialogPreview.h \
+	ff7tk/widgets/ChocoboEditor.h \
+	ff7tk/widgets/CharEditor.h \
+	ff7tk/widgets/PhsListWidget.h \
+	ff7tk/widgets/DoubleCheckBox.h \
+	ff7tk/widgets/MenuListWidget.h \
+	ff7tk/widgets/OptionsWidget.h \
+	ff7tk/widgets/ChocoboManager.h \
+	ff7tk/widgets/ChocoboLabel.h \
+	ff7tk/widgets/LocationViewer.h \
+	ff7tk/widgets/AchievementEditor.h
 
 FORMS += \
 	mainwindow.ui \
@@ -109,14 +109,14 @@ FORMS += \
 	options.ui
 RESOURCES += \
 	images.qrc \
-	FF7tk/icons/achievements.qrc\
-	FF7tk/icons/characters.qrc \
-	FF7tk/icons/chocobo.qrc \
-	FF7tk/icons/common.qrc \
-	FF7tk/icons/items.qrc \
-	FF7tk/icons/locations.qrc \
-	FF7tk/icons/materia.qrc \
-	FF7tk/icons/psxButtons.qrc
+	ff7tk/icons/achievements.qrc\
+	ff7tk/icons/characters.qrc \
+	ff7tk/icons/chocobo.qrc \
+	ff7tk/icons/common.qrc \
+	ff7tk/icons/items.qrc \
+	ff7tk/icons/locations.qrc \
+	ff7tk/icons/materia.qrc \
+	ff7tk/icons/psxButtons.qrc
 
 TRANSLATIONS += \
 	lang/bchoco_en.ts \
@@ -147,13 +147,19 @@ macx:{
 system (lrelease Black_Chocobo.pro)#release the .qm files
 
 #set up for unix os
-unix:!macx:!symbian: {
+unix:!macx:!symbian:!android {
 	LIBS += -lcrypto
 	TARGET = blackchocobo
 	target.path = /usr/bin #place our binary in /usr/bin
 	INSTALLS +=target
 }
-
+android:{
+	INCLUDEPATH += /home/chris/Downloads/openssl-1.0.1i/include
+	#LIBS += -L "" -lcrypto
+	TARGET = blackchocobo
+	target.path = /usr/bin
+	INSTALLS +=target
+}
 static:{ # everything below takes effect with CONFIG += static
 	CONFIG += static
 	CONFIG += staticlib # this is needed if you create a static library, not a static executable

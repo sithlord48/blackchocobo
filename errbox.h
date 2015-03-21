@@ -18,41 +18,41 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets/QDialog>
-    #include <QtWidgets/QLabel>
-    #include <QtWidgets/QPushButton>
-    #include <QtWidgets/QHBoxLayout>
-    #include <QtWidgets/QVBoxLayout>
+	#include <QtWidgets/QDialog>
+	#include <QtWidgets/QLabel>
+	#include <QtWidgets/QPushButton>
+	#include <QtWidgets/QHBoxLayout>
+	#include <QtWidgets/QVBoxLayout>
 #else
-    #include <QtGui/QDialog>
+	#include <QtGui/QDialog>
 #endif
-#include "FF7tk/data/FF7Save.h"
-#include "FF7tk/data/SaveIcon.h"
+#include "ff7tk/data/FF7Save.h"
+#include "ff7tk/data/SaveIcon.h"
 
 class errbox : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
+	explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
 protected:
-    void keyPressEvent(QKeyEvent *e);
+	void keyPressEvent(QKeyEvent *e);
 private slots:
-    void btnPrevClicked();
-    void btnExportClicked();
-    void btnViewClicked();
-    void btnNextClicked();
+	void btnPrevClicked();
+	void btnExportClicked();
+	void btnViewClicked();
+	void btnNextClicked();
 private:
-    int s;
-    SaveIcon save_icon;
-    FF7Save *ff7;
-    /* Gui Objects*/
-    QPushButton * btnNext;
-    QPushButton * btnPrev;
-    QPushButton * btnView;
-    QPushButton * btnExport;
-    QLabel *lblRegionString;
-    QLabel *lblIcon;
+	int s;
+	SaveIcon save_icon;
+	FF7Save *ff7;
+	/* Gui Objects*/
+	QPushButton * btnNext;
+	QPushButton * btnPrev;
+	QPushButton * btnView;
+	QPushButton * btnExport;
+	QLabel *lblRegionString;
+	QLabel *lblIcon;
 };
 
 #endif // ERRBOX_H
