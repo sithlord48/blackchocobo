@@ -24,7 +24,7 @@ before_script:
 script: 
 - mkdir build_blackchocobo
 - cd build_blackchocobo
-- qmake Black_Chocobo.pro
+- qmake ../Black_Chocobo.pro
 - make -j2
 
 language: cpp
