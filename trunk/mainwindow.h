@@ -34,24 +34,24 @@
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
 #include "achievementdialog.h"      // Dialog for editing achievement files
-//FF7tk Items
-#include "FF7tk/data/SaveIcon.h"
-#include "FF7tk/data/FF7Item.h"
-#include "FF7tk/data/FF7Save.h"
-#include "FF7tk/data/FF7Char.h"
-#include "FF7tk/data/FF7Materia.h"
-#include "FF7tk/data/FF7Location.h"
-#include "FF7tk/widgets/OptionsWidget.h"
-#include "FF7tk/widgets/MateriaEditor.h"
-#include "FF7tk/widgets/SlotSelect.h"
-#include "FF7tk/widgets/ChocoboEditor.h"
-#include "FF7tk/widgets/CharEditor.h"
-#include "FF7tk/widgets/ItemList.h"
-#include "FF7tk/widgets/MetadataCreator.h"
-#include "FF7tk/widgets/PhsListWidget.h"
-#include "FF7tk/widgets/MenuListWidget.h"
-#include "FF7tk/widgets/ChocoboManager.h"
-#include "FF7tk/widgets/LocationViewer.h"
+//ff7tk Items
+#include "ff7tk/data/SaveIcon.h"
+#include "ff7tk/data/FF7Item.h"
+#include "ff7tk/data/FF7Save.h"
+#include "ff7tk/data/FF7Char.h"
+#include "ff7tk/data/FF7Materia.h"
+#include "ff7tk/data/FF7Location.h"
+#include "ff7tk/widgets/OptionsWidget.h"
+#include "ff7tk/widgets/MateriaEditor.h"
+#include "ff7tk/widgets/SlotSelect.h"
+#include "ff7tk/widgets/ChocoboEditor.h"
+#include "ff7tk/widgets/CharEditor.h"
+#include "ff7tk/widgets/ItemList.h"
+#include "ff7tk/widgets/MetadataCreator.h"
+#include "ff7tk/widgets/PhsListWidget.h"
+#include "ff7tk/widgets/MenuListWidget.h"
+#include "ff7tk/widgets/ChocoboManager.h"
+#include "ff7tk/widgets/LocationViewer.h"
 //QHexedit
 #include "qhexedit/qhexedit.h"
 
@@ -511,7 +511,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_mysteryPanties_toggled(bool checked);
 	void on_cb_letterToDaughter_toggled(bool checked);
 	void on_cb_letterToWife_toggled(bool checked);
-    void on_btnSearchFlyers_clicked();
-    void on_btnSearchKeyItems_clicked();
+	void on_btnSearchFlyers_clicked();
+	void on_btnSearchKeyItems_clicked();
 };
 #endif // MAINWINDOW_H
