@@ -1,7 +1,7 @@
 blackchocobo (1.9.831) trusty; urgency=low
   *build from git hub
   *Various Fixes and updates
- -- Chris Rizzitello <sithlord48@gmail.com> Sat, 21 Mar 2015 10:15:49 -0400
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 21 Mar 2015 10:15:49 -0400
 
 blackchocobo (1.9.830) trusty; urgency=low
   *New: Attempt to sign psv files with user provided key/seed pair
