@@ -447,21 +447,24 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 	{
 		int fileSlot=0;
 		FF7Save * tempSave = new FF7Save();
-		tempSave->loadFile(fileName);
-		if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
+		if(tempSave->loadFile(fileName))
 		{
-			SlotSelect * SSelect= new SlotSelect(this,tempSave,false);
-			fileSlot = SSelect->exec();
-			if(fileSlot == -1)
+			if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
 			{
-				on_actionImport_Slot_From_File_triggered();
-				return;
+				SlotSelect * SSelect= new SlotSelect(this,tempSave,false);
+				fileSlot = SSelect->exec();
+				if(fileSlot == -1)
+				{
+					on_actionImport_Slot_From_File_triggered();
+					return;
+				}
+				else{ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot+1),QString::number(s+1)),2000);}
 			}
-			else{ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName,QString::number(fileSlot+1),QString::number(s+1)),2000);}
+			else{ui->statusBar->showMessage(QString(tr("Imported %1 -> Slot:%2")).arg(fileName,QString::number(s+1)),2000);}
+			ff7->importSlot(s,fileName,fileSlot);
+			guirefresh(0);
 		}
-		else{ui->statusBar->showMessage(QString(tr("Import:: %1 -> Slot:%2")).arg(fileName,QString::number(s+1)),2000);}
-		ff7->importSlot(s,fileName,fileSlot);
-		guirefresh(0);
+		else{ui->statusBar->showMessage(QString(tr("Error Loading File %1")).arg(fileName),2000);}
 	}
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
@@ -1885,7 +1888,41 @@ void MainWindow::on_cb_bombing_int_stateChanged(int checked){if(!load){ff7->setS
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
-	if(index == 1) // bombing mission
+	if(index >0){ui->btnReplay->setEnabled(true);}
+	else{ui->btnReplay->setEnabled(false);}
+
+	//Display Info on the Selected Reset
+	//see on_btnReplay_clicked() for the reset data
+	if(index ==1) //Bombing Mission Reset
+	{
+		ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
+	}
+
+	else if(index ==2) //Church in the Slums Reset
+	{
+		ui->label_replaynote->setText(tr("Meeting Aeris"));
+	}
+
+	else if(index ==3) //Cloud's Flashback Reset
+	{
+		ui->label_replaynote->setText(tr("This Will Copy Cloud as is to young cloud (caitsith's slot). Sephiroth's stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again"));
+	}
+
+	else if(index ==4) //Date Scene
+	{
+		ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
+	}
+
+	else if(index ==5) //Aerith's Death
+	{
+		ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
+	}
+	else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
+
+}
+void MainWindow::on_btnReplay_clicked()
+{
+	if(ui->cb_replay->currentIndex() == 1) // bombing mission
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(1);
@@ -1905,10 +1942,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 				locationViewer->setLocationChangesSaved(true);
 				locationViewer->setLocationChangesSaved(false);
 		}
-		ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
-	else if(index == 2) // The Church In The Slums
+	else if(ui->cb_replay->currentIndex() == 2) // The Church In The Slums
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(130);
@@ -1929,10 +1965,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		ui->combo_party1->setCurrentIndex(0);
 		ui->combo_party2->setCurrentIndex(12);
 		ui->combo_party3->setCurrentIndex(12);
-		ui->label_replaynote->setText(tr("Meeting Aeris"));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
-	else if (index ==3)// Flash back
+	else if (ui->cb_replay->currentIndex() ==3)// Flash back
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(341);
@@ -1948,20 +1983,22 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 				locationViewer->setLocationChangesSaved(false);
 		}
 		// set up young cloud, Copy Cloud Change ID to young Cloud
-		ff7->setCharacter(s,FF7Char::YoungCloud,ff7->character(s,FF7Char::Cloud));
-		ff7->setCharID(s,6,FF7Char::YoungCloud);
+		ff7->setCharacter(s,FF7Char::CaitSith,ff7->character(s,FF7Char::Cloud));
+		ff7->setCharID(s,FF7Char::CaitSith,FF7Char::YoungCloud);
 		//set up Sephiroth
-		ff7->setCharID(s,7,FF7Char::Sephiroth);
+		FF7Save * temp = new FF7Save();
+		temp->newGame(s);
+		ff7->setCharacter(s,FF7Char::Vincent,temp->character(s,FF7Char::Vincent));
 		if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));}
 		else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
+
 		set_char_buttons();
 		if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->character(s,6),ff7->charName(s,6));}
 		else if(curchar ==FF7Char::Vincent){char_editor->setChar(ff7->character(s,7),ff7->charName(s,7));}
-		ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
 
-	else if(index == 4) // The Date Scene
+	else if(ui->cb_replay->currentIndex() == 4) // The Date Scene
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(583);
@@ -1976,11 +2013,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 				locationViewer->setLocationChangesSaved(true);
 				locationViewer->setLocationChangesSaved(false);
 		}
-		ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
 
-	else if (index == 5)//Aeris Death
+	else if (ui->cb_replay->currentIndex() == 5)//Aeris Death
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(664);
@@ -1997,11 +2033,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 		}
 		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSALLOWED,false);
 		phsList->setChecked(FF7Char::Aerith,PhsListWidget::PHSVISIBLE,false);
-		ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
 		statusBar()->showMessage(tr("Progression Reset Complete"),750);
 	}
-
-	else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
+	else {}
+	ui->cb_replay->setCurrentIndex(0);
 	if(!load){progress_update();}
 }
 
@@ -3081,14 +3116,14 @@ void MainWindow::on_sb_saveZ_valueChanged(int arg1){if(!load){ff7->setCraterSave
 
 void MainWindow::on_btnSearchFlyers_clicked()
 {
-    ui->tabWidget->setCurrentIndex(4);
-    ui->locationToolBox->setCurrentIndex(0);
-    locationViewer->setFilterString(tr("Turtle Paradise"),LocationViewer::ITEM);
+	ui->tabWidget->setCurrentIndex(4);
+	ui->locationToolBox->setCurrentIndex(0);
+	locationViewer->setFilterString(tr("Turtle Paradise"),LocationViewer::ITEM);
 }
 
 void MainWindow::on_btnSearchKeyItems_clicked()
 {
-    ui->tabWidget->setCurrentIndex(4);
-    ui->locationToolBox->setCurrentIndex(0);
-    locationViewer->setFilterString(tr("KeyItem"),LocationViewer::ITEM);
+	ui->tabWidget->setCurrentIndex(4);
+	ui->locationToolBox->setCurrentIndex(0);
+	locationViewer->setFilterString(tr("KeyItem"),LocationViewer::ITEM);
 }

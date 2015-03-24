@@ -23,24 +23,24 @@ steps: insert a "00", replace it with "03" and the replace it with "34". These
 class CharCommand : public QUndoCommand
 {
 public:
-    enum { Id = 1234 };
-    enum Cmd {insert, remove, replace};
+	enum { Id = 1234 };
+	enum Cmd {insert, remove, replace};
 
-    CharCommand(XByteArray * xData, Cmd cmd, int charPos, char newChar,
-                       QUndoCommand *parent=0);
+	CharCommand(XByteArray * xData, Cmd cmd, int charPos, char newChar,
+					   QUndoCommand *parent=0);
 
-    void undo();
-    void redo();
-    bool mergeWith(const QUndoCommand *command);
-    int id() const { return Id; }
+	void undo();
+	void redo();
+	bool mergeWith(const QUndoCommand *command);
+	int id() const { return Id; }
 
 private:
-    XByteArray * _xData;
-    int _charPos;
-    bool _wasChanged;
-    char _newChar;
-    char _oldChar;
-    Cmd _cmd;
+	XByteArray * _xData;
+	int _charPos;
+	bool _wasChanged;
+	char _newChar;
+	char _oldChar;
+	Cmd _cmd;
 };
 
 /*! ArrayCommand provides undo/redo functionality for handling binary strings. It
@@ -49,20 +49,20 @@ can undo/redo insert, replace and remove binary strins (QByteArrays).
 class ArrayCommand : public QUndoCommand
 {
 public:
-    enum Cmd {insert, remove, replace};
-    ArrayCommand(XByteArray * xData, Cmd cmd, int baPos, QByteArray newBa=QByteArray(), int len=0,
-                 QUndoCommand *parent=0);
-    void undo();
-    void redo();
+	enum Cmd {insert, remove, replace};
+	ArrayCommand(XByteArray * xData, Cmd cmd, int baPos, QByteArray newBa=QByteArray(), int len=0,
+				 QUndoCommand *parent=0);
+	void undo();
+	void redo();
 
 private:
-    Cmd _cmd;
-    XByteArray * _xData;
-    int _baPos;
-    int _len;
-    QByteArray _wasChanged;
-    QByteArray _newBa;
-    QByteArray _oldBa;
+	Cmd _cmd;
+	XByteArray * _xData;
+	int _baPos;
+	int _len;
+	QByteArray _wasChanged;
+	QByteArray _newBa;
+	QByteArray _oldBa;
 };
 
 /** \endcond docNever */

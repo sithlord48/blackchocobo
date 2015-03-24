@@ -41,6 +41,7 @@ FF7Save::FF7Save()
 	SG_TYPE="";
 	file_footerp=0;
 	file_headerp=0;
+	memcpy(&buffer_slot,&default_save,0x10F4);
 }
 bool FF7Save::loadFile(const QString &fileName)
 {
@@ -2208,7 +2209,7 @@ void FF7Save::setRuns(int s,int runs)
 quint8 FF7Save::party(int s,int pos){return slot[s].party[pos];}
 void FF7Save::setParty(int s,int pos, int new_id)
 {
-    if(pos >=0 && pos <3)
+	if(pos >=0 && pos <3)
 	{
 		if(new_id >=0 && new_id<12){slot[s].party[pos] = new_id;}
 		else{slot[s].party[pos] =0xFF;}
@@ -2251,7 +2252,7 @@ void FF7Save::setSnowboardTime(int s, int course,QString value)
 		break;
 	default: break;
 	}
-} 
+}
 
 quint8 FF7Save::snowboardScore(int s, int course)
 {
