@@ -1163,10 +1163,6 @@ The km/h speeds are calculated while playing </source>
         <translation>ラムウ</translation>
     </message>
     <message>
-        <source>Mythril</source>
-        <translation type="obsolete">ミスリル</translation>
-    </message>
-    <message>
         <source>Mime</source>
         <translation>ものまね</translation>
     </message>
@@ -1341,10 +1337,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Mop</source>
         <translation>モップ</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">５番街ゲートの鍵</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1543,10 +1535,6 @@ The km/h speeds are calculated while playing </source>
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">水神様のうろこ</translation>
-    </message>
-    <message>
         <source>Dragoon Lance</source>
         <translation>ドラグーンランス</translation>
     </message>
@@ -1607,10 +1595,6 @@ The km/h speeds are calculated while playing </source>
         <translation>ついでにぬすむ</translation>
     </message>
     <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">ヒュージマテリア (ロケット)</translation>
-    </message>
-    <message>
         <source>Remedy</source>
         <translation>万能薬</translation>
     </message>
@@ -1655,10 +1639,6 @@ The km/h speeds are calculated while playing </source>
         <translation>興奮剤</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">カードキー６６</translation>
-    </message>
-    <message>
         <source>Wind Slash</source>
         <translation>風斬り</translation>
     </message>
@@ -1687,16 +1667,8 @@ The km/h speeds are calculated while playing </source>
         <translation>セーフティビット</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">ミッドガルパーツ</translation>
-    </message>
-    <message>
         <source>Mega All</source>
         <translation>すべてぜんたいか</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">カードキー６２</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
@@ -1719,72 +1691,12 @@ The km/h speeds are calculated while playing </source>
         <translation>パイルバンカー</translation>
     </message>
     <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">ヒュージマテリア (コレル)</translation>
-    </message>
-    <message>
         <source>Ultima</source>
         <translation>アルテマ</translation>
     </message>
     <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">スノーボード</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">大氷河の地図</translation>
-    </message>
-    <message>
         <source>Shiva</source>
         <translation>シヴァ</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">クセゲのかつら</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">チャパツのかつら</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">ブロンドのかつら</translation>
-    </message>
-    <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">コットンのドレス</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">サテンのドレス</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">シルクのドレス</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">消毒薬</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">消臭薬</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">消化薬</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">ガラスのティアラ</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">ルビーのティアラ</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">ダイヤのティアラ</translation>
     </message>
     <message>
         <source>Batteries</source>
@@ -1807,20 +1719,12 @@ The km/h speeds are calculated while playing </source>
         <translation>ついかぎり</translation>
     </message>
     <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">ルナハープ</translation>
-    </message>
-    <message>
         <source>Mind Plus</source>
         <translation type="unfinished">マジカル</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
         <translation>プラチナフィスト</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">ゴールドチケット</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -1857,18 +1761,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">コロン</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">フラワーコロン</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">セクシーコロン</translation>
     </message>
     <message>
         <source>Omnislash</source>
@@ -3514,14 +3406,6 @@ The km/h speeds are calculated while playing </source>
         <translation>ギヤマンヘアピン</translation>
     </message>
     <message>
-        <source>Silver Barette</source>
-        <translation type="obsolete">シルバーバレッタ</translation>
-    </message>
-    <message>
-        <source>Gold Barette</source>
-        <translation type="obsolete">ゴールドバレッタ</translation>
-    </message>
-    <message>
         <source>Adaman Clip</source>
         <translation>アダマンクリップ</translation>
     </message>
@@ -4165,15 +4049,15 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Filter Mode: Name / Location String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save &amp;Location Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5099,10 +4983,6 @@ The km/h speeds are calculated while playing </source>
         <translation>アイシクルエリア</translation>
     </message>
     <message>
-        <source>Correl Valley</source>
-        <translation type="obsolete">サンゴの谷</translation>
-    </message>
-    <message>
         <source>Outside Plates</source>
         <translation>プレート外辺</translation>
     </message>
@@ -5145,10 +5025,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Junon branch,(ext.)</source>
         <translation>ジュノン支社外観</translation>
-    </message>
-    <message>
-        <source>Correl Valley Cave</source>
-        <translation type="obsolete">サンゴの谷洞窟</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -5362,14 +5238,6 @@ The km/h speeds are calculated while playing </source>
         <translation>パーティ メンバー</translation>
     </message>
     <message>
-        <source>Yuffie</source>
-        <translation type="obsolete">ユフィ</translation>
-    </message>
-    <message>
-        <source>Vincent</source>
-        <translation type="obsolete">ヴィンセント</translation>
-    </message>
-    <message>
         <source>Click On A Char To edit ===========&gt;</source>
         <translation>編集するキャラクターをクリック =========&gt;</translation>
     </message>
@@ -5418,166 +5286,6 @@ The km/h speeds are calculated while playing </source>
         <translation>キーアイテム</translation>
     </message>
     <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">コットンのドレス</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">サテンのドレス</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">シルクのドレス</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">クセゲのかつら</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">チャパツのかつら</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">ブロンドのかつら</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">ガラスのティアラ</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">ルビーのティアラ</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">ダイヤのティアラ</translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">コロン</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">フラワーコロン</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">セクシーコロン</translation>
-    </message>
-    <message>
-        <source>Member&apos;s Card</source>
-        <translation type="obsolete">会員カード</translation>
-    </message>
-    <message>
-        <source>Lingerie</source>
-        <translation type="obsolete">ランジェリー</translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupons</source>
-        <translation type="obsolete">薬屋商品クーポン</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">消毒薬</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">消臭薬</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">消化薬</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Fort Condor</source>
-        <translation type="obsolete">ヒュージマテリア (コンドルフォート)</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">ヒュージマテリア (コレル)</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Underwater</source>
-        <translation type="obsolete">ヒュージマテリア (海底)</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">ヒュージマテリア (ロケット)</translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">ルナハープ</translation>
-    </message>
-    <message>
-        <source>Basement Key</source>
-        <translation type="obsolete">地下室の鍵</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">５番街ゲートの鍵</translation>
-    </message>
-    <message>
-        <source>Keycard 60</source>
-        <translation type="obsolete">カードキー６０</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">カードキー６２</translation>
-    </message>
-    <message>
-        <source>Keycard 65</source>
-        <translation type="obsolete">カードキー６５</translation>
-    </message>
-    <message>
-        <source>Keycard 68</source>
-        <translation type="obsolete">カードキー６８</translation>
-    </message>
-    <message>
-        <source>PHS</source>
-        <translation type="obsolete">PHS</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">ゴールドチケット</translation>
-    </message>
-    <message>
-        <source>Keystone</source>
-        <translation type="obsolete">キーストーン</translation>
-    </message>
-    <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">水神様のうろこ</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">大氷河の地図</translation>
-    </message>
-    <message>
-        <source>A Coupon</source>
-        <translation type="obsolete">Aクーポン</translation>
-    </message>
-    <message>
-        <source>B Coupon</source>
-        <translation type="obsolete">Bクーポン</translation>
-    </message>
-    <message>
-        <source>C Coupon</source>
-        <translation type="obsolete">Cクーポン</translation>
-    </message>
-    <message>
-        <source>Black Materia</source>
-        <translation type="obsolete">黒マテリア</translation>
-    </message>
-    <message>
-        <source>Mythril</source>
-        <translation type="obsolete">ミスリル</translation>
-    </message>
-    <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">スノーボード</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>ユフィに盗まれるマテリア</translation>
     </message>
@@ -5608,26 +5316,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Love Points</source>
         <translation>好感度</translation>
-    </message>
-    <message>
-        <source>1st Floor Shinra Building</source>
-        <translation type="obsolete">神羅ビル・１階ロビー</translation>
-    </message>
-    <message>
-        <source>Gold Saucer - Ghost Hotel</source>
-        <translation type="obsolete">ゴールドソーサー・ゴーストホテル</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation type="obsolete">コスモキャニオン・宿屋 フロント</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Near Shop</source>
-        <translation type="obsolete">コスモキャニオン・武器屋</translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Trap Room</source>
-        <translation type="obsolete">ウータイ・仕掛け部屋の前</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -5734,38 +5422,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Ultimate Weapons Hp</source>
         <translation>アルテマウェポン HP</translation>
-    </message>
-    <message>
-        <source>Secret Chars Unlocked</source>
-        <translation type="obsolete">隠しキャラのロックを解除</translation>
-    </message>
-    <message>
-        <source>0x02</source>
-        <translation type="obsolete">0x02</translation>
-    </message>
-    <message>
-        <source>0x04</source>
-        <translation type="obsolete">0x04</translation>
-    </message>
-    <message>
-        <source>0x08</source>
-        <translation type="obsolete">0x08</translation>
-    </message>
-    <message>
-        <source>0x10</source>
-        <translation type="obsolete">0x10</translation>
-    </message>
-    <message>
-        <source>0x20</source>
-        <translation type="obsolete">0x20</translation>
-    </message>
-    <message>
-        <source>0x40</source>
-        <translation type="obsolete">0x40</translation>
-    </message>
-    <message>
-        <source>0x80</source>
-        <translation type="obsolete">0x80</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -5902,26 +5558,6 @@ The km/h speeds are calculated while playing </source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <source>0xC1E tut_sub</source>
-        <translation type="obsolete">0xC1E 潜水艦チュートリアル</translation>
-    </message>
-    <message>
-        <source>0x01</source>
-        <translation type="obsolete">0x01</translation>
-    </message>
-    <message>
-        <source>0x02 </source>
-        <translation type="obsolete">0x02 </translation>
-    </message>
-    <message>
-        <source>0x04 - Played Sub Tutorial</source>
-        <translation type="obsolete">0x04 - 潜水艦の説明を表示済み</translation>
-    </message>
-    <message>
-        <source>0x40 - Battle Targets</source>
-        <translation type="obsolete">0x40 - バトル ターゲット</translation>
-    </message>
-    <message>
         <source>Misc</source>
         <translation>各種</translation>
     </message>
@@ -6002,20 +5638,8 @@ The km/h speeds are calculated while playing </source>
         <translation>ダイヤ/アルテマ/ルビー ウェポンを配置</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">カードキー６６</translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
         <translation>入手先不明パンツ</translation>
-    </message>
-    <message>
-        <source>Bikini briefs</source>
-        <translation type="obsolete">ビキニパンツ</translation>
-    </message>
-    <message>
-        <source>Key to Ancients</source>
-        <translation type="obsolete">古代種の鍵</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -6026,10 +5650,6 @@ The km/h speeds are calculated while playing </source>
         <translation>奥さんへの手紙</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">ミッドガルパーツ</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>すべてのアイテムを最大数追加</translation>
     </message>
@@ -6038,20 +5658,12 @@ The km/h speeds are calculated while playing </source>
         <translation>すべてのアイテムを削除</translation>
     </message>
     <message>
-        <source>Clear Key Items</source>
-        <translation type="obsolete">キーアイテムをクリア</translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation>スラムの教会</translation>
     </message>
     <message>
         <source>Aeris Death</source>
         <translation>エアリスの死</translation>
-    </message>
-    <message>
-        <source>Save Location</source>
-        <translation type="obsolete">セーブの現在地</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
@@ -6068,10 +5680,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から始まります。</translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>現在のクラウドがそのまま昔のクラウド (ケット・シーのスロット) にコピーされます。セフィロスにはヴィンセントの能力値が適用されます。</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
@@ -6300,10 +5908,6 @@ Table Entries are Editable</source>
         <translation>エアリスの病人に関する話を聞く</translation>
     </message>
     <message>
-        <source>Stole The Kids 5 Gil</source>
-        <translation type="obsolete">子供のへそくり５ギルを盗む</translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation>cb_s5_1</translation>
     </message>
@@ -6402,14 +6006,6 @@ Table Entries are Editable</source>
         <translation>海チョコボ</translation>
     </message>
     <message>
-        <source>0xBEF (farmitems)</source>
-        <translation type="obsolete">0xBEF (farmitems)</translation>
-    </message>
-    <message>
-        <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="obsolete">0x01 - チョコボ＆モーグリ入手後 （再入手？）</translation>
-    </message>
-    <message>
         <source>Load Failed</source>
         <translation>読み込みに失敗</translation>
     </message>
@@ -6422,14 +6018,6 @@ Table Entries are Editable</source>
 %1</source>
         <translation>ファイルの保存に失敗しました
 %1</translation>
-    </message>
-    <message>
-        <source>2nd Floor Sector 5 House</source>
-        <translation type="obsolete">５番街スラム・民家２階</translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="obsolete">ウータイ・かめ道楽の前</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -6560,12 +6148,6 @@ Table Entries are Editable</source>
         <translation>/</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PS3 will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6583,7 +6165,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
+        <translation type="obsolete">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
@@ -6605,7 +6187,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
@@ -6618,10 +6200,6 @@ Table Entries are Editable</source>
     <message>
         <source>PSP (*.vmp)</source>
         <translation type="unfinished">FF7 PSP セーブ (*.vmp)</translation>
-    </message>
-    <message>
-        <source>PS3 Save Notice</source>
-        <translation type="unfinished">PS3 セーブ: 警告</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -6649,10 +6227,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import:: %1 -&gt; Slot:%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6784,10 +6358,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6874,6 +6444,48 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Selected Replay </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error Loading File %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
+ ps3Key: %1
+ ps3Seed: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7274,6 +6886,10 @@ trigger showing that tutorial</source>
         <source>Full Cure</source>
         <translation>フルケア</translation>
     </message>
+    <message>
+        <source>EMPTY</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Skills</name>
@@ -7568,22 +7184,6 @@ trigger showing that tutorial</source>
     <message>
         <source>MP Turbo 10%</source>
         <translation>ＭＰターボ 10%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 20%</source>
-        <translation type="obsolete">ＭＰターボ 20%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 30%</source>
-        <translation type="obsolete">ＭＰターボ 30%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 40%</source>
-        <translation type="obsolete">ＭＰターボ 40%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 50%</source>
-        <translation type="obsolete">ＭＰターボ 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -8570,6 +8170,14 @@ trigger showing that tutorial</source>
         <source>Create Cloud Save Folder</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failure to write the File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -8600,10 +8208,6 @@ trigger showing that tutorial</source>
     <message>
         <source>Options</source>
         <translation>オプション</translation>
-    </message>
-    <message>
-        <source>Set File Paths For Saving and Loading</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
@@ -8663,6 +8267,34 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editable Combo for Materia and Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signing Keys:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Key in HEX ex( 00010203AABF )</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Seed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Seed in Hex ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9082,18 +8714,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;プロジェクト ホーム ページ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;ユーザー ガイドの表示&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Newest Features</source>
         <translation>最新の変更点</translation>
     </message>
@@ -9108,10 +8728,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Programmers</source>
         <translation>プログラマー</translation>
-    </message>
-    <message>
-        <source>Main Programmer</source>
-        <translation type="obsolete"> メイン プログラマー</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -9156,10 +8772,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Win32 の初期テスター</translation>
-    </message>
-    <message>
-        <source>inital psx save/load; fixed checksum</source>
-        <translation type="obsolete">初期 PSX の保存/ロード; チェックサム修正</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -9249,6 +8861,10 @@ p, li { white-space: pre-wrap; }
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New: Psv Signing Place Keys in Options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>
@@ -9285,14 +8901,6 @@ File:%1</source>
 </context>
 <context>
     <name>errbox</name>
-    <message>
-        <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="obsolete">Final Fantasy VII のスロットではありません</translation>
-    </message>
-    <message>
-        <source>View Anyway </source>
-        <translation type="obsolete">かまわず表示</translation>
-    </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>Raw PSX でエクスポート(&amp;E)</translation>
@@ -9334,10 +8942,6 @@ File:%1</source>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>ファイルの保存エラー, 選択ダイアログに戻ります</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot </source>
-        <translation type="obsolete">前のスロット(&amp;P) </translation>
     </message>
     <message>
         <source>Slot:%1

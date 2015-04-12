@@ -4049,15 +4049,15 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Filter Mode: Name / Location String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save &amp;Location Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5601,10 +5601,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6064,12 +6060,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PS3 will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6083,10 +6073,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6108,10 +6094,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6121,10 +6103,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PS3 Save Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6153,10 +6131,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import:: %1 -&gt; Slot:%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6292,10 +6266,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6382,6 +6352,48 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Selected Replay </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error Loading File %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
+ ps3Key: %1
+ ps3Seed: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6780,6 +6792,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Full Cure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EMPTY</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8062,6 +8078,14 @@ trigger showing that tutorial</source>
         <source>Create Cloud Save Folder</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failure to write the File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -8091,10 +8115,6 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set File Paths For Saving and Loading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8155,6 +8175,34 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editable Combo for Materia and Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signing Keys:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Key in HEX ex( 00010203AABF )</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Seed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Seed in Hex ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8710,6 +8758,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Psv Signing Place Keys in Options</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

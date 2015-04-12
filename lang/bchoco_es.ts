@@ -1164,10 +1164,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Ramuh</translation>
     </message>
     <message>
-        <source>Mythril</source>
-        <translation type="obsolete">Mitrilo</translation>
-    </message>
-    <message>
         <source>Mime</source>
         <translation>Gesticular</translation>
     </message>
@@ -1342,10 +1338,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Mop</source>
         <translation>Fregador</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">Llave Sector 5</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1544,10 +1536,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Soldado 1/35</translation>
     </message>
     <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">Escamas Leviatán</translation>
-    </message>
-    <message>
         <source>Dragoon Lance</source>
         <translation>Lanza Dragón</translation>
     </message>
@@ -1608,10 +1596,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Robo simultáneo</translation>
     </message>
     <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">Materia Enorme:Cohete</translation>
-    </message>
-    <message>
         <source>Remedy</source>
         <translation>Remedio</translation>
     </message>
@@ -1656,10 +1640,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Híper</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">Tarjeta Llave 66</translation>
-    </message>
-    <message>
         <source>Wind Slash</source>
         <translation>Ventolera</translation>
     </message>
@@ -1688,16 +1668,8 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Trozo Seguridad</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">Partes de Midgar</translation>
-    </message>
-    <message>
         <source>Mega All</source>
         <translation>Mega todo</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">Tarjeta Llave 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
@@ -1720,76 +1692,12 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Pila Banger</translation>
     </message>
     <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">Materia Enorme:Corel</translation>
-    </message>
-    <message>
         <source>Ultima</source>
         <translation>Última</translation>
     </message>
     <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">Snowboard</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">Mapa Glaciar</translation>
-    </message>
-    <message>
         <source>Shiva</source>
         <translation>Shiva</translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupon</source>
-        <translation type="obsolete">Cupón Farmacia</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">Peluca</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">Peluca Teñida</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">Peluca Rubia</translation>
-    </message>
-    <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">Vestido de Algodón</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">Vestido Satén</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">Vestido de Seda</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">Desinfectante</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">Desodorante</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">Digestivo</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">Diadema Cristal</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">Diadema Rubí</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">Diadema Diamante</translation>
     </message>
     <message>
         <source>Batteries</source>
@@ -1812,28 +1720,12 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Corte añadido</translation>
     </message>
     <message>
-        <source>KeyCard 68</source>
-        <translation type="obsolete">Tarjeta Llave 68</translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">Harpa Lunar</translation>
-    </message>
-    <message>
-        <source>Key To Basement</source>
-        <translation type="obsolete">Llave Sótano</translation>
-    </message>
-    <message>
         <source>Mind Plus</source>
         <translation></translation>
     </message>
     <message>
         <source>Platinum Fist</source>
         <translation>Puño Platino</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">Ticket de Oro</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -1870,18 +1762,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">Colonia</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">Colonia de Flores</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">Colonia Sexy</translation>
     </message>
     <message>
         <source>Omnislash</source>
@@ -3527,14 +3407,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Aguja Diamantada</translation>
     </message>
     <message>
-        <source>Silver Barette</source>
-        <translation type="obsolete">Barreta Plata</translation>
-    </message>
-    <message>
-        <source>Gold Barette</source>
-        <translation type="obsolete">Barreta Oro</translation>
-    </message>
-    <message>
         <source>Adaman Clip</source>
         <translation>Clip Adaman</translation>
     </message>
@@ -4175,15 +4047,7 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Sensible a mayúsculas y minúsculas</translation>
     </message>
     <message>
-        <source>Location Filter...</source>
-        <translation type="obsolete">Filtro de Lugar</translation>
-    </message>
-    <message>
         <source>Field Items</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4192,6 +4056,10 @@ Los km/h son calculados mientras se juega</translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save &amp;Location Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5043,10 +4911,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Área de iciclos</translation>
     </message>
     <message>
-        <source>Correl Valley</source>
-        <translation type="obsolete">Valle Corral</translation>
-    </message>
-    <message>
         <source>Outside Plates</source>
         <translation>Planetas exteriores</translation>
     </message>
@@ -5089,10 +4953,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Junon branch,(ext.)</source>
         <translation>Oficina Junon,(ext.)</translation>
-    </message>
-    <message>
-        <source>Correl Valley Cave</source>
-        <translation type="obsolete">Cueva del valle Corral</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -5306,14 +5166,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>En El Grupo</translation>
     </message>
     <message>
-        <source>Yuffie</source>
-        <translation type="obsolete">Yuffie</translation>
-    </message>
-    <message>
-        <source>Vincent</source>
-        <translation type="obsolete">Vincent</translation>
-    </message>
-    <message>
         <source>Click On A Char To edit ===========&gt;</source>
         <translation>Click En Un Personaje Para editar =====&gt;</translation>
     </message>
@@ -5354,166 +5206,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation type="unfinished">Elementos Clave</translation>
     </message>
     <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">Vestido de Algodón</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">Vestido Satén</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">Vestido de Seda</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">Peluca</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">Peluca Teñida</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">Peluca Rubia</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">Diadema Cristal</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">Diadema Rubí</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">Diadema Diamante</translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">Colonia</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">Colonia de Flores</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">Colonia Sexy</translation>
-    </message>
-    <message>
-        <source>Member&apos;s Card</source>
-        <translation type="obsolete">Tarjeta de Miembro</translation>
-    </message>
-    <message>
-        <source>Lingerie</source>
-        <translation type="obsolete">Lencería</translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupons</source>
-        <translation type="obsolete">Cupón Farmacia</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">Desinfectante</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">Desodorante</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">Digestivo</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Fort Condor</source>
-        <translation type="obsolete">Materia Enorme:Fuerte Cóndor</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">Materia Enorme:Corel</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Underwater</source>
-        <translation type="obsolete">Materia Enorme:Submarina</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">Materia Enorme:Cohete</translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">Harpa Lunar</translation>
-    </message>
-    <message>
-        <source>Basement Key</source>
-        <translation type="obsolete">Llave Sótano</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">Llave Sector 5</translation>
-    </message>
-    <message>
-        <source>Keycard 60</source>
-        <translation type="obsolete">Tarjeta Llave 60</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">Tarjeta Llave 62</translation>
-    </message>
-    <message>
-        <source>Keycard 65</source>
-        <translation type="obsolete">Tarjeta Llave 65</translation>
-    </message>
-    <message>
-        <source>Keycard 68</source>
-        <translation type="obsolete">Tarjeta Llave 68</translation>
-    </message>
-    <message>
-        <source>PHS</source>
-        <translation type="obsolete">PHS</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">Ticket de Oro</translation>
-    </message>
-    <message>
-        <source>Keystone</source>
-        <translation type="obsolete">Piedra Angular</translation>
-    </message>
-    <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">Escamas Leviatán</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">Mapa Glaciar</translation>
-    </message>
-    <message>
-        <source>A Coupon</source>
-        <translation type="obsolete">Cupón A</translation>
-    </message>
-    <message>
-        <source>B Coupon</source>
-        <translation type="obsolete">Cupón B</translation>
-    </message>
-    <message>
-        <source>C Coupon</source>
-        <translation type="obsolete">Cupón C</translation>
-    </message>
-    <message>
-        <source>Black Materia</source>
-        <translation type="obsolete">Materia Negra</translation>
-    </message>
-    <message>
-        <source>Mythril</source>
-        <translation type="obsolete">Mitrilo</translation>
-    </message>
-    <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">Snowboard</translation>
-    </message>
-    <message>
         <source>Time Played</source>
         <translation>Tiempo de Juego</translation>
     </message>
@@ -5524,26 +5216,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Love Points</source>
         <translation>Puntos de Amor</translation>
-    </message>
-    <message>
-        <source>1st Floor Shinra Building</source>
-        <translation type="obsolete">Edificio Shinra 1er piso</translation>
-    </message>
-    <message>
-        <source>Gold Saucer - Ghost Hotel</source>
-        <translation type="obsolete">Gold Saucer - Hotel Fantasma</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation type="obsolete">Cañón Cosmo - 2do piso de la posada</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Near Shop</source>
-        <translation type="obsolete">Cañón Cosmo - Cerca de la Tienda</translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Trap Room</source>
-        <translation type="obsolete">Wutai - Enfrente de la Habitación Trampa</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -5680,38 +5352,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>PG de Arma Última</translation>
     </message>
     <message>
-        <source>Secret Chars Unlocked</source>
-        <translation type="obsolete">Pers Secretos Desbloqueados</translation>
-    </message>
-    <message>
-        <source>0x02</source>
-        <translation type="obsolete">0x02</translation>
-    </message>
-    <message>
-        <source>0x04</source>
-        <translation type="obsolete">0x04</translation>
-    </message>
-    <message>
-        <source>0x08</source>
-        <translation type="obsolete">0x08</translation>
-    </message>
-    <message>
-        <source>0x10</source>
-        <translation type="obsolete">0x10</translation>
-    </message>
-    <message>
-        <source>0x20</source>
-        <translation type="obsolete">0x20</translation>
-    </message>
-    <message>
-        <source>0x40</source>
-        <translation type="obsolete">0x40</translation>
-    </message>
-    <message>
-        <source>0x80</source>
-        <translation type="obsolete">0x80</translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation>String de Región</translation>
     </message>
@@ -5846,26 +5486,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <source>0xC1E tut_sub</source>
-        <translation type="obsolete">0xC1E tut_sub</translation>
-    </message>
-    <message>
-        <source>0x01</source>
-        <translation type="obsolete">0x01</translation>
-    </message>
-    <message>
-        <source>0x02 </source>
-        <translation type="obsolete">0x02</translation>
-    </message>
-    <message>
-        <source>0x04 - Played Sub Tutorial</source>
-        <translation type="obsolete">0x04 - Tutorial del submarino jugado</translation>
-    </message>
-    <message>
-        <source>0x40 - Battle Targets</source>
-        <translation type="obsolete">0x40 - Objetivos de batalla</translation>
-    </message>
-    <message>
         <source>Misc</source>
         <translation>Misc</translation>
     </message>
@@ -5946,20 +5566,8 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Colocar Arma Diamante / Última / Rubí</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">Tarjeta Llave 66</translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
         <translation>Bragas Misterio</translation>
-    </message>
-    <message>
-        <source>Bikini briefs</source>
-        <translation type="obsolete">Bragas de bikini</translation>
-    </message>
-    <message>
-        <source>Key to Ancients</source>
-        <translation type="obsolete">Clave de los Ancianos</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -5970,10 +5578,6 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Carta a una esposa</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">Partes de Midgar</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>Añadir el máximo de todos los objetos</translation>
     </message>
@@ -5982,20 +5586,12 @@ Los km/h son calculados mientras se juega</translation>
         <translation>Eliminar todos los objetos</translation>
     </message>
     <message>
-        <source>Clear Key Items</source>
-        <translation type="obsolete">Eliminar todos los objetos clave</translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation>The Church In The Slums</translation>
     </message>
     <message>
         <source>Aeris Death</source>
         <translation>Muerte de Aeris</translation>
-    </message>
-    <message>
-        <source>Save Location</source>
-        <translation type="obsolete">Lugar de guardado</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
@@ -6012,10 +5608,6 @@ Los km/h son calculados mientras se juega</translation>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>Rejugar bombing mission desde el momento que te bajas del tren.</translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>Activando esto se copiará Cloud a Cloud joven (en el sitio de Cait Sith). Los stats de Sephiroth vendrán directamente de Vincent.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
@@ -6244,10 +5836,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Aeris habla sobre el hombre enfermo</translation>
     </message>
     <message>
-        <source>Stole The Kids 5 Gil</source>
-        <translation type="obsolete">Robar 5 Gil al niño</translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation>cb_s5_1</translation>
     </message>
@@ -6346,14 +5934,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Chocobo dorado</translation>
     </message>
     <message>
-        <source>0xBEF (farmitems)</source>
-        <translation type="obsolete">0xBEF (objetos de granja)</translation>
-    </message>
-    <message>
-        <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="obsolete">0x01 - después de obtener choco mog (otra vez)?</translation>
-    </message>
-    <message>
         <source>Load Failed</source>
         <translation>Fallo al cargar</translation>
     </message>
@@ -6368,24 +5948,12 @@ Las entradas de la tabla son editables</translation>
 %1</translation>
     </message>
     <message>
-        <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="obsolete">Wutai - En frente del paraíso de las tortugas</translation>
-    </message>
-    <message>
-        <source>2nd Floor Sector 5 House</source>
-        <translation type="obsolete">Segundo piso de casa en Sector 5</translation>
-    </message>
-    <message>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>Se puede luchar contra el ninja misterioso en los bosques</translation>
     </message>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
         <translation>Max stats/armas/materia de personaje seleccionado</translation>
-    </message>
-    <message>
-        <source>Black Chococbo</source>
-        <translation type="obsolete">Chocobo Negro</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
@@ -6426,10 +5994,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Crazy Course</source>
         <translation>Etapa loca</translation>
-    </message>
-    <message>
-        <source>G_Bike High Score</source>
-        <translation type="obsolete">Puntuación más alta G_Bike</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
@@ -6496,29 +6060,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Exportación fallida</translation>
     </message>
     <message>
-        <source>Right click on map to easily set an item&apos;s 
-location.</source>
-        <translation type="obsolete">Haz click con el botón derecho en el mapa para establecer la localización de un elemento.</translation>
-    </message>
-    <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 
-5min1_2)</source>
-        <translation type="obsolete">cb_s5_7 (Éter turbe de la casa del niño en el segundo piso 
-5min1_2)</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets 
-When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena 
-Lobby&amp;quot; so you can spend 
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando atraviesas la puerta del Battle Square. Establece la localización en &amp;quot;Arena Lobby&amp;quot; para gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will 
-trigger showing that tutorial</source>
-        <translation type="obsolete">Cuando la casilla está seleccionada parcialmente (&quot;-&quot;) se activará mostrando el tutorial</translation>
-    </message>
-    <message>
         <source>Fort Condor</source>
         <translation>Fuerte Cóndor</translation>
     </message>
@@ -6533,14 +6074,6 @@ trigger showing that tutorial</source>
     <message>
         <source>/</source>
         <translation>/</translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PS3 will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation>Este archivo no tiene una firma actualizada
-Debido a esto tu PS3 rechazará este archivo y lo tomará como corrupto
-Esto es normal, por favor mira la Guía de Usuario para más información.</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
@@ -6560,7 +6093,7 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP/PsVita (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
+        <translation type="obsolete">Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP/PsVita (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
@@ -6584,7 +6117,7 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished">Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+        <translation type="obsolete">Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
@@ -6597,10 +6130,6 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>PSP (*.vmp)</source>
         <translation type="unfinished">Partida Guardada de FF7 PSP/PsVita(*.vmp)</translation>
-    </message>
-    <message>
-        <source>PS3 Save Notice</source>
-        <translation type="unfinished">Aviso de guardado PS3</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -6629,10 +6158,6 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
         <translation type="unfinished">Ranura Importada:%2 de %1 -&gt; Ranura:%3</translation>
-    </message>
-    <message>
-        <source>Import:: %1 -&gt; Slot:%2</source>
-        <translation type="unfinished">Importar:: %1 -&gt; Ranura:%2</translation>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
@@ -6763,10 +6288,6 @@ Esto es normal, por favor mira la Guía de Usuario para más información.</tran
         <translation>Avalancha tuvo la reunión despues de la &apos;Bombing mission&apos;</translation>
     </message>
     <message>
-        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
-        <translation>Establece la misión a rejugar para colocar el juego justo en esa misión. Esto automáticamente establece tu localización, número de disco así como variables de progreso de misión. NO SOBREESCRIBAS TU PARTIDA GUARDADA ACTUAL. Cuando se usa esta función, no se puede prometer que se podrá jugar desde cualquier punto hasta el final del juego. Tampoco que una misión a rejugar funcionará en tu partida guardada. Ésta sección sigue en desarrollo.</translation>
-    </message>
-    <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation>Cait Sith y Vincent no deberían de ser activados si están desactivados en la pestaña de grupo.</translation>
     </message>
@@ -6853,6 +6374,48 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Selected Replay </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error Loading File %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
+ ps3Key: %1
+ ps3Seed: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7253,6 +6816,10 @@ trigger showing that tutorial</source>
         <source>Full Cure</source>
         <translation type="unfinished">Cura Total</translation>
     </message>
+    <message>
+        <source>EMPTY</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Skills</name>
@@ -7547,22 +7114,6 @@ trigger showing that tutorial</source>
     <message>
         <source>MP Turbo 10%</source>
         <translation>Turbo PM 10%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 20%</source>
-        <translation type="obsolete">Turbo PM 20%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 30%</source>
-        <translation type="obsolete">Turbo PM 30%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 40%</source>
-        <translation type="obsolete">Turbo PM 40%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 50%</source>
-        <translation type="obsolete">Turbo PM 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -8550,6 +8101,14 @@ Fénix x3 (180pm)</translation>
         <source>Create Cloud Save Folder</source>
         <translation>Crear carpeta de guardado en la nube</translation>
     </message>
+    <message>
+        <source>File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failure to write the File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -8580,10 +8139,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Options</source>
         <translation>Opciones</translation>
-    </message>
-    <message>
-        <source>Set File Paths For Saving and Loading</source>
-        <translation>Establecer rutas de archivo para guardar y cargar</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
@@ -8643,6 +8198,34 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editable Combo for Materia and Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signing Keys:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Key in HEX ex( 00010203AABF )</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Seed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Seed in Hex ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9062,18 +8645,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Página del proyecto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ver la guía de usuario&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Newest Features</source>
         <translation>Características Recientes</translation>
     </message>
@@ -9088,10 +8659,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Programmers</source>
         <translation>Programadores</translation>
-    </message>
-    <message>
-        <source>Main Programmer</source>
-        <translation type="obsolete">Programador principal</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -9136,10 +8703,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Probador de Win32</translation>
-    </message>
-    <message>
-        <source>inital psx save/load; fixed checksum</source>
-        <translation type="obsolete">Guardado/Cargado psx inicial; checksum arreglado</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -9229,6 +8792,10 @@ p, li { white-space: pre-wrap; }
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New: Psv Signing Place Keys in Options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>
@@ -9264,14 +8831,6 @@ File:%1</source>
 </context>
 <context>
     <name>errbox</name>
-    <message>
-        <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="obsolete">Detectada ranura no Final Fantasy VII</translation>
-    </message>
-    <message>
-        <source>View Anyway </source>
-        <translation type="obsolete">Ver de todas formas </translation>
-    </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exportar como PSX Raw</translation>
@@ -9313,10 +8872,6 @@ El juego usa el bloque de guardado %1 </translation>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>Error guardando el archivo, volviendo al diálogo de selección</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot </source>
-        <translation type="obsolete">&amp;Ranura Anterior </translation>
     </message>
     <message>
         <source>Slot:%1

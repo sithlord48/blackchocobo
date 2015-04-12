@@ -1163,10 +1163,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Ramuh</translation>
     </message>
     <message>
-        <source>Mythril</source>
-        <translation type="obsolete">Mythril</translation>
-    </message>
-    <message>
         <source>Mime</source>
         <translation type="unfinished">Mimik</translation>
     </message>
@@ -1341,10 +1337,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Mop</source>
         <translation type="unfinished">Mop</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">Schlüssel für Sektor 5</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1543,10 +1535,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">1/35 - Soldat</translation>
     </message>
     <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">Leviathanschuppen</translation>
-    </message>
-    <message>
         <source>Dragoon Lance</source>
         <translation type="unfinished">Dragonerlanze</translation>
     </message>
@@ -1607,10 +1595,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Auch Stehlen</translation>
     </message>
     <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">Große Materia:Rakete</translation>
-    </message>
-    <message>
         <source>Remedy</source>
         <translation type="unfinished">Heilmittel</translation>
     </message>
@@ -1655,10 +1639,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Hyper</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">Code-Karte 66</translation>
-    </message>
-    <message>
         <source>Wind Slash</source>
         <translation type="unfinished">Windschwert</translation>
     </message>
@@ -1687,16 +1667,8 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Schutzbit</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">Teil von Midgar</translation>
-    </message>
-    <message>
         <source>Mega All</source>
         <translation type="unfinished">Mega-Alle</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">Code-Karte 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
@@ -1719,72 +1691,12 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Stapelschläger</translation>
     </message>
     <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">Große Materia:Corel</translation>
-    </message>
-    <message>
         <source>Ultima</source>
         <translation type="unfinished">Ultima</translation>
     </message>
     <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">Snowboard</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">Gletscherkarte</translation>
-    </message>
-    <message>
         <source>Shiva</source>
         <translation type="unfinished">Shiva</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">Perücke</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">Gefärbte Perücke</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">Blonde Perücke</translation>
-    </message>
-    <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">Baumwollkleid</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">Satinkleid</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">Seidenkleid</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">Desinfektionsmittel</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">Deodorant</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">Abführmittel</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">Glasdiadem</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">Rubindiadem</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">Diamantendiadem</translation>
     </message>
     <message>
         <source>Batteries</source>
@@ -1807,20 +1719,12 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">Zusatzschlag</translation>
     </message>
     <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">Mondharfe</translation>
-    </message>
-    <message>
         <source>Mind Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Platinum Fist</source>
         <translation type="unfinished">Platinfaust</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">Goldticket</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -1857,18 +1761,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Show Gold Chocobo</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">Eau de Cologne</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">Rosenparfüm</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">Sexy Parfüm</translation>
     </message>
     <message>
         <source>Omnislash</source>
@@ -3514,14 +3406,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Diamantnadel</translation>
     </message>
     <message>
-        <source>Silver Barette</source>
-        <translation type="obsolete">Silberspange</translation>
-    </message>
-    <message>
-        <source>Gold Barette</source>
-        <translation type="obsolete">Goldspange</translation>
-    </message>
-    <message>
         <source>Adaman Clip</source>
         <translation>Diamantclip</translation>
     </message>
@@ -4165,15 +4049,15 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save New Coordinates When Table Se&amp;lection Changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Filter Mode: Name / Location String</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save &amp;Location Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5024,10 +4908,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Correl Valley</source>
-        <translation type="obsolete">Correl Valley</translation>
-    </message>
-    <message>
         <source>Outside Plates</source>
         <translation>Außenplatte</translation>
     </message>
@@ -5070,10 +4950,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Junon branch,(ext.)</source>
         <translation>Niederlassung(Anbau)</translation>
-    </message>
-    <message>
-        <source>Correl Valley Cave</source>
-        <translation type="obsolete">Höhle im Corel-Tal</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
@@ -5288,14 +5164,6 @@ The km/h speeds are calculated while playing </source>
         <translation>In Gruppe</translation>
     </message>
     <message>
-        <source>Yuffie</source>
-        <translation type="obsolete">Yuffie</translation>
-    </message>
-    <message>
-        <source>Vincent</source>
-        <translation type="obsolete">Vincent</translation>
-    </message>
-    <message>
         <source>Click On A Char To edit ===========&gt;</source>
         <translation>Klicke auf einen Char zum Editieren ===========&gt;</translation>
     </message>
@@ -5345,166 +5213,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Schlüsselgegenstände</translation>
     </message>
     <message>
-        <source>Cotton Dress</source>
-        <translation type="obsolete">Baumwollkleid</translation>
-    </message>
-    <message>
-        <source>Satin Dress</source>
-        <translation type="obsolete">Satinkleid</translation>
-    </message>
-    <message>
-        <source>Silk Dress</source>
-        <translation type="obsolete">Seidenkleid</translation>
-    </message>
-    <message>
-        <source>Wig</source>
-        <translation type="obsolete">Perücke</translation>
-    </message>
-    <message>
-        <source>Dyed Wig</source>
-        <translation type="obsolete">Gefärbte Perücke</translation>
-    </message>
-    <message>
-        <source>Blonde Wig</source>
-        <translation type="obsolete">Blonde Perücke</translation>
-    </message>
-    <message>
-        <source>Glass Tiara</source>
-        <translation type="obsolete">Glasdiadem</translation>
-    </message>
-    <message>
-        <source>Ruby Tiara</source>
-        <translation type="obsolete">Rubindiadem</translation>
-    </message>
-    <message>
-        <source>Diamond Tiara</source>
-        <translation type="obsolete">Diamantendiadem</translation>
-    </message>
-    <message>
-        <source>Cologne</source>
-        <translation type="obsolete">Eau de Cologne</translation>
-    </message>
-    <message>
-        <source>Flower Cologne</source>
-        <translation type="obsolete">Rosenparfüm</translation>
-    </message>
-    <message>
-        <source>Sexy Cologne</source>
-        <translation type="obsolete">Sexy Parfüm</translation>
-    </message>
-    <message>
-        <source>Member&apos;s Card</source>
-        <translation type="obsolete">Mitgliedskarte</translation>
-    </message>
-    <message>
-        <source>Lingerie</source>
-        <translation type="obsolete">Unterwäsche</translation>
-    </message>
-    <message>
-        <source>Pharmacy Coupons</source>
-        <translation type="obsolete">Apothekengutschein</translation>
-    </message>
-    <message>
-        <source>Disinfectant</source>
-        <translation type="obsolete">Desinfektionsmittel</translation>
-    </message>
-    <message>
-        <source>Deodorant</source>
-        <translation type="obsolete">Deodorant</translation>
-    </message>
-    <message>
-        <source>Digestive</source>
-        <translation type="obsolete">Abführmittel</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Fort Condor</source>
-        <translation type="obsolete">Große Materia:Fort Condor</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Corel</source>
-        <translation type="obsolete">Große Materia:Corel</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Underwater</source>
-        <translation type="obsolete">Große Materia:Unterwasser</translation>
-    </message>
-    <message>
-        <source>Huge Materia:Rocket</source>
-        <translation type="obsolete">Große Materia:Rakete</translation>
-    </message>
-    <message>
-        <source>Lunar Harp</source>
-        <translation type="obsolete">Mondharfe</translation>
-    </message>
-    <message>
-        <source>Basement Key</source>
-        <translation type="obsolete">Kellerschlüssel</translation>
-    </message>
-    <message>
-        <source>Key To Sector 5</source>
-        <translation type="obsolete">Schlüssel für Sektor 5</translation>
-    </message>
-    <message>
-        <source>Keycard 60</source>
-        <translation type="obsolete">Code-Karte 60</translation>
-    </message>
-    <message>
-        <source>Keycard 62</source>
-        <translation type="obsolete">Code-Karte 62</translation>
-    </message>
-    <message>
-        <source>Keycard 65</source>
-        <translation type="obsolete">Code-Karte 65</translation>
-    </message>
-    <message>
-        <source>Keycard 68</source>
-        <translation type="obsolete">Code-Karte 68</translation>
-    </message>
-    <message>
-        <source>PHS</source>
-        <translation type="obsolete">PHS</translation>
-    </message>
-    <message>
-        <source>Gold Ticket</source>
-        <translation type="obsolete">Goldticket</translation>
-    </message>
-    <message>
-        <source>Keystone</source>
-        <translation type="obsolete">Schlüsselstein</translation>
-    </message>
-    <message>
-        <source>Leviathan Scales</source>
-        <translation type="obsolete">Leviathanschuppen</translation>
-    </message>
-    <message>
-        <source>Glacier Map</source>
-        <translation type="obsolete">Gletscherkarte</translation>
-    </message>
-    <message>
-        <source>A Coupon</source>
-        <translation type="obsolete">A-Coupon</translation>
-    </message>
-    <message>
-        <source>B Coupon</source>
-        <translation type="obsolete">B-Coupon</translation>
-    </message>
-    <message>
-        <source>C Coupon</source>
-        <translation type="obsolete">C-Coupon</translation>
-    </message>
-    <message>
-        <source>Black Materia</source>
-        <translation type="obsolete">Schwarze Materia</translation>
-    </message>
-    <message>
-        <source>Mythril</source>
-        <translation type="obsolete">Mythril</translation>
-    </message>
-    <message>
-        <source>Snowboard</source>
-        <translation type="obsolete">Snowboard</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia gestohlen von Yuffie</translation>
     </message>
@@ -5535,26 +5243,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Love Points</source>
         <translation>Liebespunkte</translation>
-    </message>
-    <message>
-        <source>1st Floor Shinra Building</source>
-        <translation type="obsolete">Shinra HQ Erdgeschoss</translation>
-    </message>
-    <message>
-        <source>Gold Saucer - Ghost Hotel</source>
-        <translation type="obsolete">Gold-Saucer Geisterhotel</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation type="obsolete">Cosmo Canyon - Herberge 1. Stock</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon - Near Shop</source>
-        <translation type="obsolete">Cosmo Canyon - Waffengeschäft</translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Trap Room</source>
-        <translation type="obsolete">Wutai - Keller vorm Fallenraum</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -5661,38 +5349,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Ultimate Weapons Hp</source>
         <translation>Ultima Weapons HP</translation>
-    </message>
-    <message>
-        <source>Secret Chars Unlocked</source>
-        <translation type="obsolete">Geheime Charaktere freigeschaltet</translation>
-    </message>
-    <message>
-        <source>0x02</source>
-        <translation type="obsolete">0x02</translation>
-    </message>
-    <message>
-        <source>0x04</source>
-        <translation type="obsolete">0x04</translation>
-    </message>
-    <message>
-        <source>0x08</source>
-        <translation type="obsolete">0x08</translation>
-    </message>
-    <message>
-        <source>0x10</source>
-        <translation type="obsolete">0x10</translation>
-    </message>
-    <message>
-        <source>0x20</source>
-        <translation type="obsolete">0x20</translation>
-    </message>
-    <message>
-        <source>0x40</source>
-        <translation type="obsolete">0x40</translation>
-    </message>
-    <message>
-        <source>0x80</source>
-        <translation type="obsolete">0x80</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -5829,26 +5485,6 @@ The km/h speeds are calculated while playing </source>
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <source>0xC1E tut_sub</source>
-        <translation type="obsolete">0xC1E tut_sub</translation>
-    </message>
-    <message>
-        <source>0x01</source>
-        <translation type="obsolete">0x01</translation>
-    </message>
-    <message>
-        <source>0x02 </source>
-        <translation type="obsolete">0x02</translation>
-    </message>
-    <message>
-        <source>0x04 - Played Sub Tutorial</source>
-        <translation type="obsolete">0x04 - Spielte U-Boot Tutorial</translation>
-    </message>
-    <message>
-        <source>0x40 - Battle Targets</source>
-        <translation type="obsolete">0x40 - Schlacht Ziele</translation>
-    </message>
-    <message>
         <source>Misc</source>
         <translation>Verschiedenes</translation>
     </message>
@@ -5931,20 +5567,8 @@ The km/h speeds are calculated while playing </source>
         <translation>Platziere Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
-        <source>Keycard 66</source>
-        <translation type="obsolete">Code-Karte 66</translation>
-    </message>
-    <message>
         <source>Mystery panties</source>
         <translation>Geheimnisvolles Höschen</translation>
-    </message>
-    <message>
-        <source>Bikini briefs</source>
-        <translation type="obsolete">Bikinislip</translation>
-    </message>
-    <message>
-        <source>Key to Ancients</source>
-        <translation type="obsolete">Schlüssel zum alten Volk</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -5955,10 +5579,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Brief an die Ehefrau</translation>
     </message>
     <message>
-        <source>Midgar parts</source>
-        <translation type="obsolete">Teil von Midgar</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>Füge Maximum aller Items hinzu</translation>
     </message>
@@ -5967,20 +5587,12 @@ The km/h speeds are calculated while playing </source>
         <translation>Setze alle Items zurück</translation>
     </message>
     <message>
-        <source>Clear Key Items</source>
-        <translation type="obsolete">Setze Schlüsselobjekte zurück</translation>
-    </message>
-    <message>
         <source>The Church In The Slums</source>
         <translation>Kirche in den Slums</translation>
     </message>
     <message>
         <source>Aeris Death</source>
         <translation>Aeris Tod</translation>
-    </message>
-    <message>
-        <source>Save Location</source>
-        <translation type="obsolete">Speichere Ort</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
@@ -5997,10 +5609,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>Wiederhole Bomben Mission gleich nach Sprung aus dem Zug.</translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>Diese Einstellung wird Cloud zum jungen Cloud kopieren (caitsith&apos;s Schacht). Sephiroth&apos;s Stats werden direkt von Vincent übernommen.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
@@ -6232,10 +5840,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Aeris hat über kranken Mann geredet</translation>
     </message>
     <message>
-        <source>Stole The Kids 5 Gil</source>
-        <translation type="obsolete">Kind 5 Gil gestohlen</translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation>cb_s5_1</translation>
     </message>
@@ -6334,22 +5938,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Goldener Chocobo</translation>
     </message>
     <message>
-        <source>0xBEF (farmitems)</source>
-        <translation type="obsolete">0xBEF (farmitems)</translation>
-    </message>
-    <message>
-        <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="obsolete">0x01 - Nachdem Choco/Mog erhalten wurde (noch einmal) ?</translation>
-    </message>
-    <message>
-        <source>2nd Floor Sector 5 House</source>
-        <translation type="obsolete">2nd Floor Sektor 5 Haus</translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="obsolete">Wutai - Vor dem Schildkrötenparadies</translation>
-    </message>
-    <message>
         <source>Load Failed</source>
         <translation>Laden gescheitert</translation>
     </message>
@@ -6370,10 +5958,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
         <translation type="unfinished">Ausgewählte Charakter Max Stats / Waffen / Materia</translation>
-    </message>
-    <message>
-        <source>Black Chococbo</source>
-        <translation type="obsolete">Schwarzer Chocobo</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
@@ -6496,12 +6080,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>/</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PS3 will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bombing Mission Start Flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6519,7 +6097,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
+        <translation type="obsolete">Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
     </message>
     <message>
         <source>PSP/PsVita Save Notice</source>
@@ -6541,7 +6119,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="unfinished">FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+        <translation type="obsolete">FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
@@ -6554,10 +6132,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>PSP (*.vmp)</source>
         <translation type="unfinished">FF7 PSP Spielstand(*.vmp)</translation>
-    </message>
-    <message>
-        <source>PS3 Save Notice</source>
-        <translation>PS3 Speicher Notiz</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -6585,10 +6159,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import:: %1 -&gt; Slot:%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6720,10 +6290,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is under heavy development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6810,6 +6376,48 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Selected Replay </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imported %1 -&gt; Slot:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error Loading File %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
+ ps3Key: %1
+ ps3Seed: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyItem</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7210,6 +6818,10 @@ trigger showing that tutorial</source>
         <source>Full Cure</source>
         <translation>Komplettheilung</translation>
     </message>
+    <message>
+        <source>EMPTY</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Skills</name>
@@ -7504,22 +7116,6 @@ trigger showing that tutorial</source>
     <message>
         <source>MP Turbo 10%</source>
         <translation>MP-Turbo 10%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 20%</source>
-        <translation type="obsolete">MP-Turbo 20%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 30%</source>
-        <translation type="obsolete">MP-Turbo 30%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 40%</source>
-        <translation type="obsolete">MP-Turbo 40%</translation>
-    </message>
-    <message>
-        <source>Mp Turbo 50%</source>
-        <translation type="obsolete">MP-Turbo 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -8506,6 +8102,14 @@ trigger showing that tutorial</source>
         <source>Create Cloud Save Folder</source>
         <translation type="unfinished">Neues Cloud-Save Folder</translation>
     </message>
+    <message>
+        <source>File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failure to write the File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -8536,10 +8140,6 @@ trigger showing that tutorial</source>
     <message>
         <source>Options</source>
         <translation>Optionen</translation>
-    </message>
-    <message>
-        <source>Set File Paths For Saving and Loading</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
@@ -8599,6 +8199,34 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Path Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Editable Combo for Materia and Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signing Keys:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Key in HEX ex( 00010203AABF )</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ps3Seed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input Seed in Hex ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9018,18 +8646,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Newest Features</source>
         <translation>Neueste Features</translation>
     </message>
@@ -9044,10 +8660,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Programmers</source>
         <translation>Programmierer</translation>
-    </message>
-    <message>
-        <source>Main Programmer</source>
-        <translation type="obsolete">Haupt-Programmierer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -9092,10 +8704,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Früher Win32 Tester</translation>
-    </message>
-    <message>
-        <source>inital psx save/load; fixed checksum</source>
-        <translation type="obsolete">Anfangs-PSX speichern/laden; checksum-Fehler behoben</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -9185,6 +8793,10 @@ p, li { white-space: pre-wrap; }
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New: Psv Signing Place Keys in Options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>achievementDialog</name>
@@ -9220,14 +8832,6 @@ File:%1</source>
 </context>
 <context>
     <name>errbox</name>
-    <message>
-        <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="obsolete">Nicht-Final Fantasy VII Steckplatz erkannt</translation>
-    </message>
-    <message>
-        <source>View Anyway </source>
-        <translation type="obsolete">Zeige trotzdem </translation>
-    </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
         <translation>&amp;Exportiere als Raw PSX</translation>
@@ -9269,10 +8873,6 @@ File:%1</source>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>Fehler beim Speichern der Datei, zurück zum Auswahl-Dialog</translation>
-    </message>
-    <message>
-        <source>&amp;Previous Slot </source>
-        <translation type="obsolete">&amp;Vorheriger Steckplatz</translation>
     </message>
     <message>
         <source>Slot:%1

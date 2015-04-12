@@ -19,6 +19,7 @@
 
 errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 {
+	singleSlot=false;
 	setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
 	setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
 	setWindowTitle(tr("Non Final Fantasy VII Slot"));
@@ -147,3 +148,19 @@ void errbox::btnExportClicked()
 		}
 	}
 }
+void errbox::setSingleSlot(bool single)
+{
+	if(single)
+	{
+		btnNext->setEnabled(false);
+		btnPrev->setEnabled(false);
+		singleSlot= true;
+	}
+	else
+	{
+		btnNext->setEnabled(true);
+		btnPrev->setEnabled(true);
+		singleSlot= false;
+	}
+}
+bool errbox::isSingleSlot(){return singleSlot;}

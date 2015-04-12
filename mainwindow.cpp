@@ -407,7 +407,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
 	}
 	QString fileName = QFileDialog::getOpenFileName(this,
 	tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
 	if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 }
 void MainWindow::on_actionReload_triggered(){if(!ff7->fileName().isEmpty()){loadFileFull(ff7->fileName(),1);}}
@@ -434,6 +434,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 	{
 		if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_triggered();}
 	}
+
 	else{/*UNKNOWN FILETYPE*/}
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -442,7 +443,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 
 	QString fileName = QFileDialog::getOpenFileName(this,
 	tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
 	if(!fileName.isEmpty())
 	{
 		int fileSlot=0;
@@ -512,7 +513,7 @@ void MainWindow::on_actionSave_File_As_triggered()
 	QString selectedType;
 	QString pc = tr("FF7 PC (*.ff7)");
 	QString psx= tr("Raw PSX Save(*FF7-S*)");
-	QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)");
+	QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)");
 	QString vgs= tr("Virtual Game Station(*.vgs *.mem)");
 	QString dex= tr("DEX (*.gme)");
 	QString psv= tr("PSV (*.psv)");
@@ -610,8 +611,8 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; CheckGame(); guirefresh(0);}}}
-void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; CheckGame(); guirefresh(0);}}}
+void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
 void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
@@ -634,7 +635,6 @@ void MainWindow::on_actionShow_Selection_Dialog_triggered()
 	else
 	{
 		s=i;
-		CheckGame();
 		guirefresh(0);
 	}
 }
@@ -867,6 +867,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 void MainWindow::setmenu(bool newgame)
 {
 	load=true;
+	qDebug() <<QString("setMenu");
 	/*~~Disable All Items that are dependent on File Type~~*/
 	ui->actionClear_Slot->setEnabled(0);
 	ui->action_Region_USA->setChecked(Qt::Unchecked);    ui->action_Region_PAL_Generic->setChecked(Qt::Unchecked);  ui->action_Region_PAL_German->setChecked(Qt::Unchecked);
@@ -880,9 +881,10 @@ void MainWindow::setmenu(bool newgame)
 	//new game should always be exported. no header...
 
 	//if not FF7 user is stuck in the hex editor tab.
-
-	if ( !ff7->isFF7(s) && !_init && !ff7->region(s).isEmpty())
+	qDebug() <<QString("Region:%1").arg(ff7->region(s));
+	if ( !ff7->isFF7(s) && !ff7->region(s).isEmpty())
 	{
+		qDebug() <<QString("setMenu: non FF7");
 		if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
 		ui->tabWidget->setCurrentIndex(8);
 		for(int i=0;i<8;i++){ui->tabWidget->setTabEnabled(i,false);}
@@ -1062,14 +1064,19 @@ void MainWindow::materia_id_changed(qint8 id)
 void MainWindow::CheckGame()
 {
 	if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-	  ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
+	  ((!ff7->isFF7(s))&& (ff7->type() != "PC")
 					   && (ff7->psx_block_type(s) !=0xA0)))
 	{// NOT FF7
 		errbox error(0,ff7,s);
+		if ( (ff7->type()=="PSX") || (ff7->type()=="PSV"))
+		{
+			error.setSingleSlot(true);
+		}
 		switch(error.exec())
 		{
 		case 0://View Anyway..
 			setmenu(0);
+
 			hexEditor->setData(ff7->slotPsxRawData(s));
 		break;
 
@@ -1084,7 +1091,8 @@ void MainWindow::CheckGame()
 		break;
 
 		case 3://exported as psx
-			on_actionShow_Selection_Dialog_triggered();
+			if(!error.isSingleSlot()){on_actionShow_Selection_Dialog_triggered();}
+			else{on_actionOpen_Save_File_triggered();}
 		break;
 		}
 	}
@@ -1315,10 +1323,10 @@ void MainWindow::guirefresh(bool newgame)
 	load=true;
 	/*~~~~Check for SG type and ff7~~~~*/
 	if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-	  ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
+	  ((!ff7->isFF7(s))&& (ff7->type() !="PC")
 					   && (ff7->psx_block_type(s) !=0xA0)))
 	{
-		//Not FF7! Handled By CheckGame()
+		CheckGame();//Not FF7! Handled By CheckGame()
 	}
 	else
 	{//IS FF7 Slot

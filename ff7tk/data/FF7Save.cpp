@@ -53,12 +53,12 @@ bool FF7Save::loadFile(const QString &fileName)
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	//decide the file type
 	if((file_size == FF7_PC_SAVE_GAME_SIZE)&& (file.peek(PC_SAVE_GAME_FILE_ID.length()))==PC_SAVE_GAME_FILE_ID){setType("PC");}
-	else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& (file.peek(PSX_SAVE_GAME_FILE_ID.length()))==PSX_SAVE_GAME_FILE_ID){setType("PSX");}
 	else if((file_size == FF7_MC_SAVE_GAME_SIZE)&& (file.peek(MC_SAVE_GAME_FILE_ID.length()))==MC_SAVE_GAME_FILE_ID){setType("MC");}
 	else if((file_size == FF7_PSV_SAVE_GAME_SIZE)&& (file.peek(PSV_SAVE_GAME_FILE_ID.length()))==PSV_SAVE_GAME_FILE_ID){setType("PSV");}
 	else if((file_size ==FF7_PSP_SAVE_GAME_SIZE)&& (file.peek(PSP_SAVE_GAME_FILE_ID.length()))==PSP_SAVE_GAME_FILE_ID){setType("PSP");}
 	else if((file_size ==FF7_VGS_SAVE_GAME_SIZE)&& (file.peek(VGS_SAVE_GAME_FILE_ID.length()))==VGS_SAVE_GAME_FILE_ID){setType("VGS");}
 	else if((file_size ==FF7_DEX_SAVE_GAME_SIZE)&& (file.peek(DEX_SAVE_GAME_FILE_ID.length()))==DEX_SAVE_GAME_FILE_ID){setType("DEX");}
+	else if(file_size % FF7_PSX_SAVE_GAME_SIZE ==0) {setType("PSX");}
 	else{return false;}
 	/*~~~~~~~~~~Start Load~~~~~~~~~~*/
 	setFileHeader(file.read(SG_HEADER));
@@ -88,7 +88,7 @@ bool FF7Save::loadFile(const QString &fileName)
 			string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
 			SG_Region_String[0]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
 		}
-		else {SG_Region_String[0].clear();}
+		else {SG_Region_String[0] = file.fileName();}
 		for(int i=1;i<14;i++){clearSlot(i);}
 	}
 

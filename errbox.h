@@ -35,6 +35,8 @@ class errbox : public QDialog
 
 public:
 	explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
+	bool isSingleSlot();
+	void setSingleSlot(bool single);
 protected:
 	void keyPressEvent(QKeyEvent *e);
 private slots:
@@ -53,6 +55,7 @@ private:
 	QPushButton * btnExport;
 	QLabel *lblRegionString;
 	QLabel *lblIcon;
+	bool singleSlot;
 };
 
 #endif // ERRBOX_H
