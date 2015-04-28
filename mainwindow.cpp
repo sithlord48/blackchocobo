@@ -867,7 +867,6 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 void MainWindow::setmenu(bool newgame)
 {
 	load=true;
-	qDebug() <<QString("setMenu");
 	/*~~Disable All Items that are dependent on File Type~~*/
 	ui->actionClear_Slot->setEnabled(0);
 	ui->action_Region_USA->setChecked(Qt::Unchecked);    ui->action_Region_PAL_Generic->setChecked(Qt::Unchecked);  ui->action_Region_PAL_German->setChecked(Qt::Unchecked);
@@ -881,10 +880,8 @@ void MainWindow::setmenu(bool newgame)
 	//new game should always be exported. no header...
 
 	//if not FF7 user is stuck in the hex editor tab.
-	qDebug() <<QString("Region:%1").arg(ff7->region(s));
 	if ( !ff7->isFF7(s) && !ff7->region(s).isEmpty())
 	{
-		qDebug() <<QString("setMenu: non FF7");
 		if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
 		ui->tabWidget->setCurrentIndex(8);
 		for(int i=0;i<8;i++){ui->tabWidget->setTabEnabled(i,false);}

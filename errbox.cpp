@@ -20,16 +20,15 @@
 errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 {
 	singleSlot=false;
-	setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+	setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
 	setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
 	setWindowTitle(tr("Non Final Fantasy VII Slot"));
 	//set up Gui
 	lblRegionString = new QLabel;
-	lblRegionString->setFixedHeight(64);
 	lblRegionString->setAlignment(Qt::AlignTop);
 
 	lblIcon = new QLabel;
-	lblIcon->setFixedSize(64,64);
+	lblIcon->setMinimumSize(64,64);
 	lblIcon->setScaledContents(true);
 
 	btnPrev = new QPushButton(QIcon::fromTheme("go-previous",QIcon(":/icon/prev")),"");
@@ -66,8 +65,6 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 	finalLayout->addLayout(btnLayout);
 	finalLayout->addWidget(btnExport);
 	setLayout(finalLayout);
-
-	setFixedHeight(finalLayout->sizeHint().height());
 
 	connect(btnPrev,SIGNAL(clicked()),this,SLOT(btnPrevClicked()));
 	connect(btnNext,SIGNAL(clicked()),this,SLOT(btnNextClicked()));
