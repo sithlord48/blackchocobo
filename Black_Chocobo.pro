@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010-2014 Chris Rizzitello <sithlord48@gmail.com>           //
+# //    copyright 2010-2015 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -27,8 +27,7 @@ SOURCES += \
 	options.cpp \
 	errbox.cpp \
 	achievementdialog.cpp \
-	qhexedit/xbytearray.cpp \
-	qhexedit/qhexedit_p.cpp \
+	qhexedit/chunks.cpp \
 	qhexedit/qhexedit.cpp \
 	qhexedit/commands.cpp \
 	ff7tk/data/SaveIcon.cpp \
@@ -65,8 +64,7 @@ HEADERS += \
 	options.h \
 	errbox.h \
 	version.h \
-	qhexedit/xbytearray.h \
-	qhexedit/qhexedit_p.h \
+	qhexedit/chunks.h \
 	qhexedit/qhexedit.h \
 	qhexedit/commands.h \
 	achievementdialog.h \
