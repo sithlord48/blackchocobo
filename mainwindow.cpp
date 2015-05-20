@@ -118,6 +118,7 @@ void MainWindow::init_display()
 	#ifdef Q_OS_MAC
 		hexEditor->setFont(this->font());
 	#endif
+		hexEditor->setReadOnly(false);
 	QVBoxLayout *hexLayout = new QVBoxLayout;
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
