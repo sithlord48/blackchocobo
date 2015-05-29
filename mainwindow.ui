@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>767</width>
-    <height>609</height>
+    <width>829</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1247,8 +1247,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>73</width>
+             <height>16</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1292,7 +1292,7 @@
              <x>0</x>
              <y>0</y>
              <width>747</width>
-             <height>428</height>
+             <height>434</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2518,7 +2518,7 @@
                      <x>15</x>
                      <y>5</y>
                      <width>411</width>
-                     <height>26</height>
+                     <height>34</height>
                     </rect>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_166">
@@ -2852,8 +2852,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
-                  <height>1914</height>
+                  <width>351</width>
+                  <height>2049</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -5331,7 +5331,7 @@ location.</string>
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>G-Bike High Score</string>
+                <string>G-Bi&amp;ke High Score</string>
                </property>
                <property name="buddy">
                 <cstring>sb_BikeHighScore</cstring>
@@ -5482,110 +5482,15 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QFrame" name="unknownGroup">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>35</height>
-           </size>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <property name="leftMargin">
-            <number>6</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <spacer name="horizontalSpacer_11">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Fixed</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>65</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_232">
-             <property name="maximumSize">
-              <size>
-               <width>75</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Show:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="combo_hexEditor">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="frame">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>PSX Save Data</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">FF7 Save Data</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
          <widget class="QFrame" name="frame_2">
           <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
+           <enum>QFrame::NoFrame</enum>
           </property>
           <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_13">
            <property name="spacing">
@@ -5617,6 +5522,177 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              <property name="frameShadow">
               <enum>QFrame::Plain</enum>
              </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="vgroup">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_19">
+              <item>
+               <spacer name="spacer_23">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="psxExtras">
+                <property name="title">
+                 <string>Playstation Save Info</string>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_12">
+                   <property name="spacing">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="lblPsxIcon">
+                     <property name="minimumSize">
+                      <size>
+                       <width>64</width>
+                       <height>64</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>64</width>
+                       <height>64</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>TextLabel</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="lblRegionString">
+                     <property name="text">
+                      <string>PsxName:</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="linePsxDesc">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maxLength">
+                    <number>60</number>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>No Description Text</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QGroupBox" name="groupBox12">
+                   <property name="title">
+                    <string/>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_15">
+                    <item>
+                     <layout class="QHBoxLayout" name="Hgroup">
+                      <item>
+                       <widget class="QLabel" name="label_232">
+                        <property name="maximumSize">
+                         <size>
+                          <width>75</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Show:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="combo_hexEditor">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>150</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="frame">
+                         <bool>true</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>PSX Save Data</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">FF7 Save Data</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -6961,13 +7037,13 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>767</width>
-     <height>20</height>
+     <width>829</width>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>Hel&amp;p</string>
+     <string>He&amp;lp</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
@@ -6992,7 +7068,7 @@ Var And Scrolling Synced To Left Table</string>
    </widget>
    <widget class="QMenu" name="menuSlot">
     <property name="title">
-     <string>Vie&amp;w</string>
+     <string>&amp;View</string>
     </property>
     <addaction name="actionReload"/>
     <addaction name="separator"/>
@@ -7008,7 +7084,7 @@ Var And Scrolling Synced To Left Table</string>
     </property>
     <widget class="QMenu" name="menuLang">
      <property name="title">
-      <string>Language</string>
+      <string>&amp;Language</string>
      </property>
     </widget>
     <addaction name="action_auto_char_growth"/>
@@ -7023,7 +7099,7 @@ Var And Scrolling Synced To Left Table</string>
     </property>
     <widget class="QMenu" name="menuRegion">
      <property name="title">
-      <string>Slot Region</string>
+      <string>&amp;Slot Region</string>
      </property>
      <addaction name="action_Region_USA"/>
      <addaction name="separator"/>
@@ -7098,7 +7174,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/save_as</normaloff>:/icon/save_as</iconset>
    </property>
    <property name="text">
-    <string>Save As</string>
+    <string>Sa&amp;ve As</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+S</string>
@@ -7113,7 +7189,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
    </property>
    <property name="text">
-    <string>About</string>
+    <string>&amp;About</string>
    </property>
    <property name="shortcut">
     <string notr="true">F1</string>
@@ -7134,7 +7210,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/slot_sel</normaloff>:/icon/slot_sel</iconset>
    </property>
    <property name="text">
-    <string>Show Selection Dialog</string>
+    <string>&amp;Show Selection Dialog</string>
    </property>
   </action>
   <action name="actionCopy_Slot">
@@ -7200,7 +7276,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
    </property>
    <property name="text">
-    <string>Previous Slot</string>
+    <string>&amp;Previous Slot</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Left</string>
@@ -7218,7 +7294,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
    </property>
    <property name="text">
-    <string>Next Slot</string>
+    <string>&amp;Next Slot</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Right</string>
@@ -7241,7 +7317,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
    </property>
    <property name="text">
-    <string>More Options...</string>
+    <string>&amp;More Options...</string>
    </property>
    <property name="menuRole">
     <enum>QAction::PreferencesRole</enum>
@@ -7252,7 +7328,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Us English (Ntsc-U)</string>
+    <string>&amp;Us English (Ntsc-U)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BASCUS-94163</string>
@@ -7263,7 +7339,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Uk English (PAL)</string>
+    <string>Uk &amp;English (PAL)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BESCES-00867</string>
@@ -7274,7 +7350,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>German (PAL)</string>
+    <string>&amp;German (PAL)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BESCES-00869</string>
@@ -7285,7 +7361,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Spanish (PAL)</string>
+    <string>&amp;Spanish (PAL)</string>
    </property>
    <property name="iconText">
     <string>Spanish (PAL)</string>
@@ -7299,7 +7375,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Japanese (Ntsc-J)</string>
+    <string>&amp;Japanese (Ntsc-J)</string>
    </property>
    <property name="iconText">
     <string>Japanese (Ntsc-J)</string>
@@ -7313,7 +7389,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>International (Ntsc-J)</string>
+    <string>&amp;International (Ntsc-J)</string>
    </property>
    <property name="iconText">
     <string>International (Ntsc-J)</string>
@@ -7346,7 +7422,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/new_plus</normaloff>:/icon/new_plus</iconset>
    </property>
    <property name="text">
-    <string>New Game+ </string>
+    <string>New &amp;Game+ </string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+Ins</string>
@@ -7396,7 +7472,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Calculate Stats</string>
+    <string>&amp;Calculate Stats</string>
    </property>
   </action>
   <action name="actionReload">
@@ -7408,7 +7484,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/refresh</normaloff>:/icon/refresh</iconset>
    </property>
    <property name="text">
-    <string>Reload</string>
+    <string>&amp;Reload</string>
    </property>
    <property name="shortcut">
     <string notr="true">F5</string>
@@ -7422,7 +7498,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>French (PAL)</string>
+    <string>&amp;French (PAL)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BESCES-00868</string>
@@ -7434,7 +7510,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
    </property>
    <property name="text">
-    <string>Create Cloud Save Folder</string>
+    <string>&amp;Create Cloud Save Folder</string>
    </property>
   </action>
   <action name="actionImport_Slot_From_File">
@@ -7455,7 +7531,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/achievements</normaloff>:/icon/achievements</iconset>
    </property>
    <property name="text">
-    <string>Open Achievement File</string>
+    <string>Open Achievement &amp;File</string>
    </property>
   </action>
  </widget>
@@ -7526,12 +7602,12 @@ Var And Scrolling Synced To Left Table</string>
    <slot>setCurrentIndex(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>242</x>
-     <y>376</y>
+     <x>261</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
-     <x>166</x>
-     <y>380</y>
+     <x>194</x>
+     <y>243</y>
     </hint>
    </hints>
   </connection>
@@ -7542,12 +7618,12 @@ Var And Scrolling Synced To Left Table</string>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>191</x>
-     <y>367</y>
+     <x>194</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
-     <x>231</x>
-     <y>370</y>
+     <x>261</x>
+     <y>243</y>
     </hint>
    </hints>
   </connection>

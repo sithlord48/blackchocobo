@@ -118,11 +118,14 @@ void MainWindow::init_display()
 	#ifdef Q_OS_MAC
 		hexEditor->setFont(this->font());
 	#endif
-		hexEditor->setReadOnly(false);
+	hexEditor->setReadOnly(false);
+	//hexEditor->setFont(this->font());
 	QVBoxLayout *hexLayout = new QVBoxLayout;
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
+	ui->lblPsxIcon->setScaledContents(true);
 	ui->group_hexedit->setLayout(hexLayout);
+	//ui->psxExtras->setVisible(false);
 
 	locationViewer = new LocationViewer;
 	locationViewer->setTranslationBaseFile(settings->value("langPath").toString() +"/"+ "lang/bchoco_");
@@ -169,11 +172,8 @@ void MainWindow::init_style()
 
 	char_editor->setToolBoxStyle(tabStyle);
 	ui->locationToolBox->setStyleSheet(tabStyle);
-
-	//hexEditor->setStyleSheet(this->styleSheet());
 	ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
 	ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
-//    ui->world_map_view->setStyleSheet(QString("background-image: url(:/icon/world_map);"));
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
@@ -294,12 +294,12 @@ void MainWindow::init_connections()
 		connect(optionsWidget,SIGNAL(BtnDownChanged(int)),this,SLOT(setButtonDown(int)));
 		connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
 		connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
-		//HexEditor.
 		connect(phsList,SIGNAL(allowedToggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
 		connect(phsList,SIGNAL(visibleToggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(visibleToggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(lockedToggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
-		connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
+		//HexEditor.
+//		connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::init_settings()
 {
@@ -408,7 +408,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
 	}
 	QString fileName = QFileDialog::getOpenFileName(this,
 	tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+	tr("Known FF7 Save Types (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
 	if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 }
 void MainWindow::on_actionReload_triggered(){if(!ff7->fileName().isEmpty()){loadFileFull(ff7->fileName(),1);}}
@@ -444,7 +444,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 
 	QString fileName = QFileDialog::getOpenFileName(this,
 	tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
 	if(!fileName.isEmpty())
 	{
 		int fileSlot=0;
@@ -514,7 +514,7 @@ void MainWindow::on_actionSave_File_As_triggered()
 	QString selectedType;
 	QString pc = tr("FF7 PC (*.ff7)");
 	QString psx= tr("Raw PSX Save(*FF7-S*)");
-	QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)");
+	QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)");
 	QString vgs= tr("Virtual Game Station(*.vgs *.mem)");
 	QString dex= tr("DEX (*.gme)");
 	QString psv= tr("PSV (*.psv)");
@@ -1074,8 +1074,7 @@ void MainWindow::CheckGame()
 		{
 		case 0://View Anyway..
 			setmenu(0);
-
-			hexEditor->setData(ff7->slotPsxRawData(s));
+			hexTabUpdate(0);
 		break;
 
 		case 1://Previous Clicked
@@ -1195,6 +1194,39 @@ void MainWindow::othersUpdate()
 	ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
 	load=false;
 }
+void MainWindow::update_hexEditor_PSXInfo(void)
+{
+	SaveIcon *save_icon = new SaveIcon(ff7->slotIcon(s));
+	ui->lblPsxIcon->setPixmap(save_icon->icon());
+	//connect(save_icon, SIGNAL(nextIcon(QPixmap)), ui->lblPsxIcon, SLOT(setPixmap(QPixmap)));
+
+	QByteArray desc;
+	QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+	desc = ff7->slotHeader(s).mid(4,64);
+	int index;
+	if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
+	ui->psxExtras->setTitle(ff7->region(s));
+	//QString Slottext= QString("%1\n").arg(ff7->region(s));
+	QString Slottext;
+
+	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){ui->linePsxDesc->setText(codec->toUnicode(desc));}
+
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext.append(tr("\n Mid-Linked Block "));}
+
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("\n End Of Linked Data"));}
+
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
+	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(tr("Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));}
+	if(ff7->psx_block_size(s) !=1)
+	{
+			if(ff7->psx_block_next(s)!=0xFF)
+			{
+				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
+				else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
+			}
+	}
+	ui->lblRegionString->setText(Slottext);
+}
 void MainWindow::on_tabWidget_currentChanged(int index)
 {//Update the shown tab.
 	load =true;
@@ -1277,11 +1309,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 		break;
 
 		case 8://HexEditor Tab
-			switch(ui->combo_hexEditor->currentIndex())
-			{
-				case 0:hexEditor->setData(ff7->slotPsxRawData(s)); break;
-				case 1:hexEditor->setData(ff7->slotFF7Data(s)); break;
-			}
+			hexTabUpdate(ui->combo_hexEditor->currentIndex());
 		break;
 
 		case 9: //Test Data Tab
@@ -1290,7 +1318,30 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 	}
 	load=false;
 }
-
+void MainWindow::hexTabUpdate(int viewMode)
+{
+	disconnect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
+	if(ff7->type()=="PC" || ff7->type() =="")
+	{
+		hexEditor->setData(ff7->slotFF7Data(s));
+		ui->psxExtras->setVisible(false);
+	}
+	else
+	{
+		ui->psxExtras->setVisible(true);
+		switch(viewMode)
+		{
+			case 0:
+				hexEditor->setData(ff7->slotPsxRawData(s));
+				update_hexEditor_PSXInfo();
+			break;
+			case 1:
+				hexEditor->setData(ff7->slotFF7Data(s));
+			break;
+		}
+	}
+	connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
+}
 void MainWindow::setControllerMappingVisible(bool Visible)
 {
 	if(Visible)
@@ -2887,22 +2938,26 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s,arg1);}}
 
-
-void MainWindow::on_combo_hexEditor_currentIndexChanged(int index)
-{
-	switch(index)
-	{
-		case 0:hexEditor->setData(ff7->slotPsxRawData(s)); break;
-		case 1:hexEditor->setData(ff7->slotFF7Data(s)); break;
-	}
-}
+void MainWindow::on_combo_hexEditor_currentIndexChanged(int index){hexTabUpdate(index);}
 
 void MainWindow::hexEditorChanged(void)
 {
-	switch(ui->combo_hexEditor->currentIndex())
+	if(ff7->type()=="PC")
 	{
-		case 0: ff7->setSlotPsxRawData(s,hexEditor->data()); break;
-		case 1: ff7->setSlotFF7Data(s,hexEditor->data());   break;
+		ff7->setSlotFF7Data(s,hexEditor->data());
+	}
+	else
+	{
+		switch(ui->combo_hexEditor->currentIndex())
+		{
+			case 0:
+				ff7->setSlotPsxRawData(s,hexEditor->data());
+				update_hexEditor_PSXInfo();
+			break;
+			case 1:
+				ff7->setSlotFF7Data(s,hexEditor->data());
+			break;
+		}
 	}
 	fileModified(true);
 }

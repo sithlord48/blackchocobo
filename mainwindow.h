@@ -147,6 +147,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_action_Region_PAL_Spanish_triggered(bool checked);
 	void on_action_Region_JPN_triggered(bool checked);
 	void on_action_Region_JPN_International_triggered(bool checked);
+
 	/*GuiFunctions*/
 	void setmenu(bool newgame);
 	void materiaupdate(void);
@@ -161,6 +162,12 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_locationToolBox_currentChanged(int index);
 	void on_testDataTabWidget_currentChanged(int index);
 	void fileModified(bool changed);
+
+	/*HexEditor Tab */
+	void hexTabUpdate(int viewMode);
+	void on_combo_hexEditor_currentIndexChanged(int index);
+	void hexEditorChanged(void);
+	void update_hexEditor_PSXInfo(void);
 	//QString avatar_style(int);
 
 	/*CharButtons*/
@@ -487,8 +494,8 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_sb_BikeHighScore_valueChanged(int arg1);
 	void on_sb_BattlePoints_valueChanged(int arg1);
 	void on_actionCreateNewMetadata_triggered();
-	void on_combo_hexEditor_currentIndexChanged(int index);
-	void hexEditorChanged(void);
+
+
 	void phsList_box_allowed_toggled(int row, bool checked);
 	void phsList_box_visible_toggled(int row, bool checked);
 	void menuList_box_locked_toggled(int row, bool checked);
