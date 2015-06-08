@@ -79,16 +79,10 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 	save_icon.setAll(ff7->slotIcon(s));
 	lblIcon->setPixmap(save_icon.icon());
 	connect(&save_icon, SIGNAL(nextIcon(QPixmap)), lblIcon, SLOT(setPixmap(QPixmap)));
-	// Get the games desc string
-	QByteArray desc;
-	QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-	desc = ff7->slotHeader(s).mid(4,64);
-	int index;
-	if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
-	//assume NOT PC SAVE.
 
+	//assume NOT PC SAVE.
 	QString Slottext= QString(tr("Slot:%1\n").arg(QString::number(s+1),2,QChar('0')));
-	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(codec->toUnicode(desc));}
+	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(ff7->psxDesc(s));}
 
 	else if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext.append(tr("\n Mid-Linked Block "));}
 

@@ -150,17 +150,8 @@ void SlotSelect::setSlotPreview(int s)
 	{// all other psx saves.
 		preview[s]->setMode(SlotPreview::MODE_PSXGAME);
 		preview[s]->setPsxIcon(ff7->slotIcon(s));
-		QByteArray desc;
-		QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-		desc = ff7->slotHeader(s).mid(4,64);
-		int desc_end;
-		if((desc_end = desc.indexOf('\x00')) != -1) {desc.truncate(desc_end);}
-
-		QString Slottext="";
-		if(codec == 0){}//codec fail (probably due missing codec qjpcodecs). TODO: A) make a legacy class to handle it. B) show a dialog that file can't be opened due a missing plugin required to decode. C) Leave it this way and show empty title.
-		else {Slottext=codec->toUnicode(desc);}
+		QString Slottext= ff7->psxDesc(s);
 		Slottext.prepend("      ");
-
 		if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK) || (ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
 		Slottext.append(tr("\n\t Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));
 		if(ff7->psx_block_next(s)!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}

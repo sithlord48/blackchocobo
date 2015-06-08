@@ -24,6 +24,7 @@
 #include <QDateTime>
 #include <QVector>
 #include <QtXml/QDomDocument>
+#include <QTextCodec>
 //FF7tk Includes
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
@@ -946,6 +947,21 @@ class FF7Save: public QObject{
 
 	bool subMiniGameVictory(int s);
 	void setSubMiniGameVictory(int s,bool won);
+
+	/**	\brief Get Description Text for PSX Slot.
+	 *
+	 * This text is the text shown when you view the save slot in the memory manager on the playstation. It is also visible in many programs that work with psx memory cards.
+	 * \param s slot number (0-14)
+	 */
+	QString psxDesc(int s);
+
+	/**	\brief Set The Description Text for PSX Slot (text shows in memory card manager of playstation)
+	 *
+	 * This text is the text shown when you view the save slot in the memory manager on the playstation. It is also visible in many programs that work with psx memory cards.
+	 * \param newDesc your new text
+	 * \param s slot number (0-14)
+	 */
+	void setPsxDesc(QString newDesc, int s);
 
 	inline void setPs3Key(QByteArray key){PS3Key=key;}
 	inline void setPs3Seed(QByteArray seed){PS3Seed=seed;}

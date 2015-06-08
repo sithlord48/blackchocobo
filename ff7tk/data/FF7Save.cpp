@@ -13,7 +13,7 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-//#include <QDebug>
+#include <QDebug>
 #include "FF7Save.h"
 #include <QObject>
 #include <QFile>
@@ -1227,6 +1227,36 @@ quint8 FF7Save::psx_block_size(int s)
 	 }
 	else{return 0; }
 }
+
+QString FF7Save::psxDesc(int s)
+{
+	QByteArray desc;
+	QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+	desc = slotHeader(s).mid(4,64);
+	int index;
+	if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
+	if(codec == 0){return "";}//if the codec can't be loaded for some reason.
+	else{return codec->toUnicode(desc);}
+}
+void FF7Save::setPsxDesc(QString newDesc, int s)
+{
+	QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+	if(codec == 0)
+	{
+		qDebug() <<"Failed to Load Codec";
+		return;
+	}//if the codec can't be loaded for some reason.
+	QByteArray temp = codec->fromUnicode(newDesc);
+
+	QByteArray codedText;
+	codedText.fill('\x00',64);
+	codedText.replace(0,temp.size(),temp);
+
+	QByteArray header = slotHeader(s);
+	header.replace(4,64,codedText);
+	if(setSlotHeader(s,header)){setFileModified(true,s);}
+}
+
 bool FF7Save::isFileModified(void){return fileHasChanged;}
 bool FF7Save::isSlotModified(int s){return slotChanged[s];}
 bool FF7Save::isSlotEmpty(int s)

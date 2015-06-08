@@ -1200,32 +1200,24 @@ void MainWindow::update_hexEditor_PSXInfo(void)
 	ui->lblPsxIcon->setPixmap(save_icon->icon());
 	//connect(save_icon, SIGNAL(nextIcon(QPixmap)), ui->lblPsxIcon, SLOT(setPixmap(QPixmap)));
 
-	QByteArray desc;
-	QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-	desc = ff7->slotHeader(s).mid(4,64);
-	int index;
-	if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
-	ui->psxExtras->setTitle(ff7->region(s));
-	//QString Slottext= QString("%1\n").arg(ff7->region(s));
-	QString Slottext;
+	ui->lblRegionString->setText(ff7->region(s));
+	QString SlotSizeText;
 
-	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){ui->linePsxDesc->setText(codec->toUnicode(desc));}
+	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){ui->linePsxDesc->setText(ff7->psxDesc(s));}
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){SlotSizeText.append(tr("\n Mid-Linked Block "));}
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){SlotSizeText.append(tr("\n End Of Linked Data"));}
 
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){Slottext.append(tr("\n Mid-Linked Block "));}
-
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("\n End Of Linked Data"));}
-
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){Slottext.append(tr("(Deleted)"));}
-	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(tr("Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));}
+	if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){SlotSizeText.append(tr("(Deleted)"));}
+	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){SlotSizeText.append(tr("Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));}
 	if(ff7->psx_block_size(s) !=1)
 	{
 			if(ff7->psx_block_next(s)!=0xFF)
 			{
-				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
-				else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
+				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){SlotSizeText.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
+				else{SlotSizeText.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
 			}
 	}
-	ui->lblRegionString->setText(Slottext);
+	ui->lblSlotSize->setText(SlotSizeText);
 }
 void MainWindow::on_tabWidget_currentChanged(int index)
 {//Update the shown tab.
@@ -1320,6 +1312,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 }
 void MainWindow::hexTabUpdate(int viewMode)
 {
+	ui->psxExtras->setVisible(false);
 	disconnect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 	if(ff7->type()=="PC" || ff7->type() =="")
 	{
@@ -1329,11 +1322,11 @@ void MainWindow::hexTabUpdate(int viewMode)
 	else
 	{
 		ui->psxExtras->setVisible(true);
+		update_hexEditor_PSXInfo();
 		switch(viewMode)
 		{
 			case 0:
 				hexEditor->setData(ff7->slotPsxRawData(s));
-				update_hexEditor_PSXInfo();
 			break;
 			case 1:
 				hexEditor->setData(ff7->slotFF7Data(s));
@@ -3188,3 +3181,5 @@ void MainWindow::on_btnSearchKeyItems_clicked()
 	ui->locationToolBox->setCurrentIndex(0);
 	locationViewer->setFilterString(tr("KeyItem"),LocationViewer::ITEM);
 }
+
+void MainWindow::on_linePsxDesc_textChanged(const QString &arg1){if(!load){ff7->setPsxDesc(arg1,s); update_hexEditor_PSXInfo();}}
