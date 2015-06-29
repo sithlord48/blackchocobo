@@ -63,6 +63,7 @@ class FF7Materia
 	QImage imageEmptyStar(int id);
 	QImage imageFullStar(int id);
 	QIcon icon(int id);
+    QPixmap pixmap (int id);
 	QString statString(int id);
 	qint8 statSTR(int id);
 	qint8 statVIT(int id);

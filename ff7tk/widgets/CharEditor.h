@@ -365,6 +365,8 @@ private:
 	bool advancedMode;
 	int mslotsel;//select materia slot
 	qint32 ap;
+    qreal scaleX;
+    qreal scaleY;
 };
 
 #endif // CHAREDITOR_H

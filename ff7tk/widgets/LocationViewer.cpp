@@ -65,12 +65,12 @@ void LocationViewer::init_display(void)
 
 	newItem = new QTableWidgetItem(tr("Filename"),0);
 	locationTable->setHorizontalHeaderItem(0,newItem);
-	locationTable->setColumnWidth(0,fontMetrics().width(QChar('W'))*8);
+    locationTable->setColumnWidth(0,fontMetrics().width(QChar('W'))*6);
 	newItem = new QTableWidgetItem(tr("Location Name"),0);
 	locationTable->setHorizontalHeaderItem(1,newItem);
 	locationTable->setColumnWidth(1,fontMetrics().width(QChar('W'))*15);
 	newItem = new QTableWidgetItem(tr("LocID"),0);
-	locationTable->setColumnWidth(2,fontMetrics().width(QChar('W'))*6);
+    locationTable->setColumnWidth(2,fontMetrics().width(QChar('W'))*4);
 	locationTable->setHorizontalHeaderItem(2,newItem);
 
 	for (int i=0;i<locationTable->rowCount();i++)
@@ -95,11 +95,12 @@ void LocationViewer::init_display(void)
 		newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);
 		newItem->setTextAlignment(Qt::AlignHCenter);
 		locationTable->setItem(i,2,newItem);
-        locationTable->setRowHeight(i,font().pointSizeF()*3+2);
+        locationTable->setRowHeight(i,font().pointSize()*3+2);
 	}
 	locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+    locationTable->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	locationTable->adjustSize();
-	locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->contentsMargins().left()+locationTable->contentsMargins().right()+locationTable->verticalScrollBar()->widthMM()-fontMetrics().width("W")+4);
+    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()+fontMetrics().width(QChar('W')));
 	locationTable->setCurrentCell(-1,-1);
 	locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 

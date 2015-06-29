@@ -36,6 +36,7 @@ qint8 FF7Materia::levels(int id){return Materias(id).levels;}
 quint8 FF7Materia::type(int id){return Materias(id).type;}
 qint32 FF7Materia::ap(int id,int lvl){return Materias(id).ap[lvl];}
 QIcon FF7Materia::icon(int id){return QIcon(QPixmap(Materias(id).imageString));}
+QPixmap FF7Materia::pixmap(int id){return QPixmap(Materias(id).imageString);}
 QImage FF7Materia::image(int id){return QImage(Materias(id).imageString);}
 QImage FF7Materia::imageEmptyStar(int id){return QImage(Materias(id).emptyStarString);}
 QImage FF7Materia::imageFullStar(int id){return QImage(Materias(id).fullStarString);}

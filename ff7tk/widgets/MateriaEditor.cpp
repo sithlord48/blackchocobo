@@ -32,6 +32,8 @@ MateriaEditor::MateriaEditor(quint8 materia_id,qint32 materia_ap,QWidget *parent
 void MateriaEditor::init_display()
 {//Make Widgets and set Properties.
 	//Widget Creation.
+    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
+    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
 	combo_type =new QComboBox;
 	combo_materia = new QComboBox;
 	sb_ap = new QSpinBox;
@@ -108,12 +110,12 @@ void MateriaEditor::init_display()
 	box_stats->setHidden(true);
 
 	//set Minimum Sizes.
-	btn_copy_materia->setFixedSize(24,24);
-	btn_paste_materia->setFixedSize(24,24);
-	btn_rm_materia->setFixedSize(24,24);
-	lbl_materiaIcon->setFixedSize(24,24);
-	combo_type->setMinimumHeight(24);
-	combo_materia->setMinimumHeight(24);
+    btn_copy_materia->setFixedSize(24*scaleX,24*scaleY);
+    btn_paste_materia->setFixedSize(24*scaleX,24*scaleY);
+    btn_rm_materia->setFixedSize(24*scaleX,24*scaleY);
+    lbl_materiaIcon->setFixedSize(24*scaleX,24*scaleY);
+    combo_type->setMinimumHeight(24*scaleY);
+    combo_materia->setMinimumHeight(24*scaleY);
 
 	list_skills->addItem(new QListWidgetItem("Item"));
 	list_skills->setFixedHeight(list_skills->sizeHintForRow(0)*5 +list_skills->contentsMargins().top()+ list_skills->contentsMargins().bottom()+3);
@@ -124,7 +126,7 @@ void MateriaEditor::init_display()
 	//size policies
 	combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
 	combo_type->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
-	sb_ap->setMinimumWidth(this->font().pointSize()*7);
+    sb_ap->setMinimumWidth(fontMetrics().width(QChar('W'))*7);
 	sb_ap->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
 	btn_rm_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
 	btn_copy_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
