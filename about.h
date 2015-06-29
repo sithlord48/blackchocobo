@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2015 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -18,21 +18,27 @@
 #define ABOUT_H
 
 #include <QDialog>
+#include <QSettings>
 
 namespace Ui {
-    class about;
+    class About;
 }
 
-class about : public QDialog {
+class About : public QDialog {
     Q_OBJECT
 public:
-    about(QWidget *parent = 0);
-    ~about();
+    explicit About(QWidget *parent = 0, QSettings* config_data =0);
+    ~About();
+
 
 protected:
     void changeEvent(QEvent *e);
+    void closeEvent(QCloseEvent *);
+    void resizeEvent(QResizeEvent *);
+    void moveEvent(QMoveEvent *);
 
 private:
-    Ui::about *ui;
+    Ui::About *ui;
+    QSettings *settings;
 };
 #endif // ABOUT_H

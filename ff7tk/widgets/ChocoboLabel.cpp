@@ -24,8 +24,10 @@ bool ChocoboLabel::event(QEvent *ev)
 ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
 	QWidget(parent)
 {
+    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
+    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
 	lblType = new QLabel("");
-	lblType->setFixedSize(48,48);
+    lblType->setFixedSize(48*scaleX,48*scaleY);
 	lblType->setScaledContents(true);
 
 	lblName = new QLabel("");
@@ -34,34 +36,34 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
 
 	chkOccupied = new QCheckBox();
 	chkOccupied->setText(titleText);
-	chkOccupied->setMaximumHeight(20);
+    chkOccupied->setMaximumHeight(20*scaleY);
 	chkOccupied->setProperty("HoverStyled",QVariant(true));
 
 	btnCopy = new QPushButton();
 	btnCopy->setFlat(true);
-	btnCopy->setFixedSize(20,20);
-	btnCopy->setIconSize(QSize(16,16));
+    btnCopy->setFixedSize(20*scaleX,20*scaleY);
+    btnCopy->setIconSize(QSize(16*scaleX,16*scaleY));
 	btnCopy->setToolTip(QString(tr("Copy")));
 	btnCopy->setProperty("HoverStyled",QVariant(true));
 	btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
 
 	btnPaste = new QPushButton();
 	btnPaste->setFlat(true);
-	btnPaste->setFixedSize(20,20);
-	btnPaste->setIconSize(QSize(16,16));
+    btnPaste->setFixedSize(20*scaleX,20*scaleY);
+    btnPaste->setIconSize(QSize(16*scaleX,16*scaleY));
 	btnPaste->setToolTip(QString(tr("Paste")));
 	btnPaste->setProperty("HoverStyled",QVariant(true));
 	btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
 
 	btnRemove = new QPushButton();
 	btnRemove->setFlat(true);
-	btnRemove->setFixedSize(20,20);
-	btnRemove->setIconSize(QSize(16,16));
+    btnRemove->setFixedSize(20*scaleX,20*scaleY);
+    btnRemove->setIconSize(QSize(16*scaleX,16*scaleY));
 	btnRemove->setToolTip(QString(tr("Remove")));
 	btnRemove->setProperty("HoverStyled",QVariant(true));
 	btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 
-	setFontSize(14);
+    setFontSize(14);
 	chkOccupied->setChecked(occupied);
 
 	QHBoxLayout *btnLayout = new QHBoxLayout;

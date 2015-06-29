@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2015 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -17,22 +17,25 @@
 #include "about.h"
 #include "ui_about.h"
 
-about::about(QWidget *parent) :
+
+About::About(QWidget *parent,QSettings *config_data) :
     QDialog(parent),
-    ui(new Ui::about)
+    ui(new Ui::About)
 {
     ui->setupUi(this);
+    settings = config_data;
+    restoreGeometry(settings->value("AboutGeometry").toByteArray());
     ui->lbl_name->setText(QCoreApplication::applicationName().toLatin1());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
     ui->lbl_qt_version->setText(QString(tr("Using Qt: %1")).arg(qVersion()));
 }
 
-about::~about()
+About::~About()
 {
     delete ui;
 }
 
-void about::changeEvent(QEvent *e)
+void About::changeEvent(QEvent *e)
 {
     QDialog::changeEvent(e);
     switch (e->type()) {
@@ -44,3 +47,6 @@ void about::changeEvent(QEvent *e)
     }
 }
 
+void About::closeEvent(QCloseEvent *){settings->setValue("AboutGeometry",saveGeometry());}
+void About::moveEvent(QMoveEvent *){settings->setValue("AboutGeometry",saveGeometry());}
+void About::resizeEvent(QResizeEvent *){settings->setValue("AboutGeometry",saveGeometry());}

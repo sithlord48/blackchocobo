@@ -85,6 +85,8 @@ private:
 	QVBoxLayout * Final;
 	QVBoxLayout *top_layout;
 	bool not_pc;
+    qreal scaleX;
+    qreal scaleY;
 protected:
 	void mousePressEvent(QMouseEvent *ev);
 signals:

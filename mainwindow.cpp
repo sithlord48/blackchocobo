@@ -614,7 +614,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
-void MainWindow::on_actionAbout_triggered(){about adialog; adialog.exec();}
+void MainWindow::on_actionAbout_triggered(){About adialog(0,settings); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered()

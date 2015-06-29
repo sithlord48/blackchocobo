@@ -238,7 +238,7 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(row,1,newItem);
-        setRowHeight(row,22);
+        //setRowHeight(row,22);
         newItem = new QTableWidgetItem("",0);
         setItem(row,2,newItem);
     }
@@ -248,7 +248,7 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
         setItem(row,1,newItem);
-        setRowHeight(row,22);
+        //setRowHeight(row,22);
         newItem = new QTableWidgetItem("",0);
         setItem(row,2,newItem);
     }
@@ -260,7 +260,7 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(row))),0);
         setItem(row,1, newItem);
-        setRowHeight(row,22);
+        //setRowHeight(row,22);
         newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
         setItem(row,2,newItem);
     }

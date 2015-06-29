@@ -46,7 +46,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data, bool showLoad):QDialog(par
 	this->showLoad(showLoad); //by defalut hide the load new save button
 	this->setLayout(dialog_layout);
 	this->setContentsMargins(0,0,0,0);
-	setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());
+    if(qApp->desktop()->logicalDpiX()/96 > 1 ){setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM()+25);}
+    else{setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());}
 }
 void SlotSelect::button_clicked(int s){this->done(s);}
 
