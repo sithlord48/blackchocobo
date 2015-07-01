@@ -46,10 +46,13 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 
 void LocationViewer::init_display(void)
 {
+    qreal scaleX= qApp->desktop()->logicalDpiX()/96;
+    qreal scaleY= qApp->desktop()->logicalDpiY()/96;
+
 	lblLocationPreview = new QLabel;
-	lblLocationPreview->setScaledContents(true);
-	lblLocationPreview->setMinimumSize(320,240);
-	lblLocationPreview->setBaseSize(640,480);
+    //lblLocationPreview->setScaledContents(true);
+    lblLocationPreview->setMinimumSize(320*scaleX,240*scaleY);
+    lblLocationPreview->setBaseSize(640*scaleX,480*scaleY);
 	lblLocationPreview->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 	QTableWidgetItem *newItem;
 
@@ -95,12 +98,12 @@ void LocationViewer::init_display(void)
 		newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);
 		newItem->setTextAlignment(Qt::AlignHCenter);
 		locationTable->setItem(i,2,newItem);
-        locationTable->setRowHeight(i,font().pointSize()*3+2);
+		locationTable->setRowHeight(i,font().pointSize()*3+2);
 	}
 	locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    locationTable->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	locationTable->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	locationTable->adjustSize();
-    locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()+fontMetrics().width(QChar('W')));
+	locationTable->setFixedWidth(locationTable->columnWidth(0)+locationTable->columnWidth(1)+locationTable->columnWidth(2)+locationTable->verticalScrollBar()->widthMM()+fontMetrics().width(QChar('W')));
 	locationTable->setCurrentCell(-1,-1);
 	locationTable->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
 
@@ -121,8 +124,10 @@ void LocationViewer::init_display(void)
 	actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
 	actionCaseSensitive->setCheckable(true);
 
+	QString menuStyle = QString("QCheckbox::indicator { width: %1px; height: %2px;}").arg(QString::number(16*scaleX),QString::number(16*scaleY));
+
 	QMenu * newMenu=new QMenu;
-	newMenu->setStyleSheet(this->styleSheet());
+	newMenu->setStyleSheet(menuStyle);
 	newMenu->addAction(actionNameSearch);
 	newMenu->addAction(actionItemSearch);
 	newMenu->addSeparator();
@@ -130,7 +135,7 @@ void LocationViewer::init_display(void)
 	newMenu->addAction(actionCaseSensitive);
 
 	btnSearchOptions->setMenu(newMenu);
-	btnSearchOptions->setFixedWidth(36);
+	btnSearchOptions->setFixedWidth(36*scaleX);
 
 	lineTableFilter = new QLineEdit;
 	lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());
@@ -335,7 +340,7 @@ void LocationViewer::setLocation(int mapId,int locId)
 	if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
 	else
 	{
-		lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))));
+        lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 		QString oldStr = Locations->locationString(fileName);
 		QString newStr = translate(oldStr);
 		if(oldStr !=newStr && autoUpdate)

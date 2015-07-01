@@ -53,7 +53,7 @@ private:
     void init_connections();
     void init_data();
     int type_offset(int type);
-    FF7Item Items;
+    FF7Item *Items;
     QComboBox *combo_type;
     QComboBox *combo_item;
     QSpinBox  *sb_qty;

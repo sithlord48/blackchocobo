@@ -65,5 +65,7 @@ Q_OBJECT
     QListWidget *status_effects;
     FF7Item data;
     int _id;
+    qreal scaleX;
+    qreal scaleY;
 };
 #endif//ITEMPREVIEW_H

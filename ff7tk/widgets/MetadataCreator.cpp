@@ -26,14 +26,14 @@ MetadataCreator::MetadataCreator(QWidget *parent,FF7Save *ff7save) :    QDialog(
 	initDisplay();
 	initConnections();
 	for(int i=0;i<15;i++){InFiles.append(QString(""));}
-	 ff7 = ff7save;
-	 buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-	 this->setWindowTitle(tr("Create Cloud Save Folder"));
-	 this->setFocus();// prevents lineOutPath from Having Focus and hiding its placeholder text.
+	ff7 = ff7save;
+	buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+	this->setWindowTitle(tr("Create Cloud Save Folder"));
+	this->setFocus();// prevents lineOutPath from Having Focus and hiding its placeholder text.
 }
 void MetadataCreator::initDisplay(void)
 {
-	this->setMinimumSize(458,438);
+	this->setMinimumSize(458*qApp->desktop()->logicalDpiX()/96,438*qApp->desktop()->logicalDpiY()/96);
 	lblOut= new QLabel(tr("Output Path:"));
 	lineOutPath = new QLineEdit;
 	lineOutPath->setPlaceholderText(tr("Folder To Write Files Into"));

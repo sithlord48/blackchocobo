@@ -30,11 +30,13 @@ DoubleCheckBox::DoubleCheckBox(const QString &text,QWidget *parent) :
 }
 void DoubleCheckBox::init_display()
 {
+    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
+    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
 	cb_one = new QCheckBox;
 	cb_two = new QCheckBox;
 	label = new QLabel;
-	cb_one->setMaximumSize(22,22);
-	cb_two->setMaximumSize(22,22);
+    cb_one->setMaximumSize(22*scaleX,22*scaleY);
+    cb_two->setMaximumSize(22*scaleX,22*scaleY);
 	QHBoxLayout *boxLayout = new QHBoxLayout;
 	boxLayout->addWidget(cb_one);
 	boxLayout->addWidget(cb_two);

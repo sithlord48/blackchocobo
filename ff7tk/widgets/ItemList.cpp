@@ -150,7 +150,7 @@ void ItemList::itemSelector_changed(quint16 item)
         setItem(sender()->objectName().toInt(),0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(sender()->objectName().toInt(),1,newItem);
-        setRowHeight(sender()->objectName().toInt(),22);
+        setRowHeight(sender()->objectName().toInt(),font().pointSize()*3+2);
         newItem = new QTableWidgetItem("",0);
         setItem(sender()->objectName().toInt(),2,newItem);
     }
@@ -238,7 +238,6 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(row,1,newItem);
-        //setRowHeight(row,22);
         newItem = new QTableWidgetItem("",0);
         setItem(row,2,newItem);
     }
@@ -248,7 +247,6 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
         setItem(row,1,newItem);
-        //setRowHeight(row,22);
         newItem = new QTableWidgetItem("",0);
         setItem(row,2,newItem);
     }
@@ -260,9 +258,9 @@ void ItemList::updateItem(int row)
         setItem(row,0,newItem);
         newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(row))),0);
         setItem(row,1, newItem);
-        //setRowHeight(row,22);
         newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
         setItem(row,2,newItem);
     }
+    setRowHeight(row,font().pointSize()*3+2);
 }
 void ItemList::setEditableItemCombo(bool editable){editableItemCombo=editable;}
