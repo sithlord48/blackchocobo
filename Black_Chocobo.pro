@@ -146,10 +146,22 @@ system (lrelease Black_Chocobo.pro)#release the .qm files
 
 #set up for unix os
 unix:!macx:!symbian:!android {
-	LIBS += -lcrypto
+        #remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
+        LIBS += -lcrypto
+	
 	TARGET = blackchocobo
-	target.path = /usr/bin #place our binary in /usr/bin
-	INSTALLS +=target
+	target.path = /usr/bin
+	
+	langfiles.files= lang/*.qm
+	langfiles.path= /usr/share/blackchocobo/lang
+	
+	icon.files = icon/Black_Chocobo.png
+	icon.path = /usr/share/pixmaps
+	
+	desktop.files =Black_Chocobo.desktop
+	desktop.path = /usr/share/applications
+	
+	INSTALLS += target #langfiles icon desktop
 }
 android:{
 	INCLUDEPATH += /home/chris/Downloads/openssl-1.0.1i/include
