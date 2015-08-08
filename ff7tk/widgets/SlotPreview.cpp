@@ -78,8 +78,8 @@ void SlotPreview::set_empty(void)
 {
 	init_display();
 	btn_paste->setHidden(false);
-    lbl_Slot->setStyleSheet(QString("font: 75 %1pt \"Verdana\";").arg(QString::number(14*scaleY)));
-    QString style=QString("font: 75 %1pt \"Verdana\"; color:yellow;").arg(QString::number(14*scaleY));
+	lbl_Slot->setStyleSheet(QString("font: 75 14pt \"Verdana\";"));
+	QString style=QString("font: 75 14pt \"Verdana\"; color:yellow;");
 	location=new QLabel(tr("-Empty-"));
 	location->setStyleSheet(style);
 	QVBoxLayout *empty_layout = new QVBoxLayout;
@@ -95,7 +95,7 @@ void SlotPreview::set_empty(void)
 void SlotPreview::set_psx_game(void)
 {
 	init_display();
-    lbl_Slot->setStyleSheet(QString("font: 75 %1pt \"Verdana\";").arg(QString::number(14*scaleY)));
+	lbl_Slot->setStyleSheet(QString("font: 75 14pt \"Verdana\";"));
 	btn_remove->setHidden(false);
 	btn_paste->setHidden(false);
 	icon= new SaveIcon;
@@ -121,8 +121,8 @@ void SlotPreview::set_psx_game(void)
 void SlotPreview::set_ff7_save(void)
 {
 	init_display();
-    lbl_Slot->setStyleSheet(QString("background-color:rgba(0,0,0,0);font: 75 %1pt \"Verdana\";color:white").arg(QString::number(14*scaleY)));
-    QString style=QString("background-color:rgba(0,0,0,0);font: 75 %1pt \"Verdana\";color:white").arg(QString::number(14*scaleY));
+	lbl_Slot->setStyleSheet(QString("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";color:white"));
+	QString style=QString("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";color:white");
 
 	party1 = new QLabel;
     party1->setFixedSize(84*scaleX,96*scaleY);
