@@ -161,7 +161,7 @@ unix:!macx:!symbian:!android {
 	desktop.files =Black_Chocobo.desktop
 	desktop.path = /usr/share/applications
 	
-	INSTALLS += target #langfiles icon desktop
+	INSTALLS += target langfiles icon desktop
 }
 android:{
 	INCLUDEPATH += /home/chris/Downloads/openssl-1.0.1i/include
