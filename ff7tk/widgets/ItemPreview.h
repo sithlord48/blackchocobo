@@ -31,7 +31,7 @@ class ItemPreview : public QWidget
 {
 Q_OBJECT
   public:
-    ItemPreview(QWidget *parent=0,QFlags<Qt::WindowType> WindowFlags=Qt::Widget);
+	ItemPreview(QFlags<Qt::WindowType> WindowFlags=Qt::Widget,qreal Scale=1,QWidget *parent=0);
     int id(void);//return shown id.
   public slots:
     void setItem(quint16);
@@ -65,7 +65,6 @@ Q_OBJECT
     QListWidget *status_effects;
     FF7Item data;
     int _id;
-    qreal scaleX;
-    qreal scaleY;
+	qreal scale;
 };
 #endif//ITEMPREVIEW_H

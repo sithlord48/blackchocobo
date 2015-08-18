@@ -29,7 +29,7 @@ class ChocoboManager : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ChocoboManager(QWidget *parent = 0);
+	explicit ChocoboManager(qreal Scale=1,QWidget *parent=0);
 signals:
     void ownedChanged(qint8);
     void occupiedChanged(qint8);
@@ -109,5 +109,6 @@ private:
     bool cantMate[7];
     quint16 chocoboStamina[7];
     QComboBox *comboChocoPen[4];
+	qreal scale;
 };
 #endif // CHOCOBOMANAGER_H

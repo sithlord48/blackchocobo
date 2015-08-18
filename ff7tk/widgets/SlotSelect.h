@@ -41,11 +41,12 @@ class SlotSelect : public QDialog
 public:
 
 	/** \brief create a new SlotSelect Dialog.
-	 *	\param parent Dialogs Parent
+	 *	\param scale Scale Fixed contents by this number (hidpi screens)
 	 *	\param data Pointer to a FF7Save object
 	 *  \param showLoad show the load new file button
+	 *	\param parent Dialogs Parent
 	 */
-	explicit SlotSelect(QWidget *parent = 0,FF7Save *data=0,bool showLoad=false);
+	explicit SlotSelect(qreal Scale=1,FF7Save *data=0,bool showLoad=false,QWidget *parent = 0);
 private slots:
 	void button_clicked(int s);
 	void remove_slot(int s);
@@ -64,6 +65,7 @@ private:
 	//Private Data
 	FF7Save *ff7;
 	FF7Char Chars;
+	qreal scale;
 };
 
 #endif // SLOTSELECT_H

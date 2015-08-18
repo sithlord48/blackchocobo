@@ -22,6 +22,9 @@
 MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
 {
+
+	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96);}
+	scale = configdata->value("scale").toReal();
 	this->setAcceptDrops(true);
 	//Get Font Info Before Setting up the GUI!
 	settings =configdata;
@@ -36,8 +39,8 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 	init_display();
 	init_style();
-	init_connections();
 	init_settings();
+	init_connections();
 	on_actionNew_Game_triggered();
 	ff7->setFileModified(false,0);
 }
@@ -73,17 +76,17 @@ void MainWindow::init_display()
 	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
 	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
-	phsList = new PhsListWidget;
+	phsList = new PhsListWidget(scale);
 	QHBoxLayout *phsLayout = new QHBoxLayout;
 	phsLayout->addWidget(phsList);
 	ui->Phs_Box->setLayout(phsLayout);
 
-	menuList = new MenuListWidget;
+	menuList = new MenuListWidget(scale);
 	QHBoxLayout *menuLayout = new QHBoxLayout;
 	menuLayout->addWidget(menuList);
 	ui->Menu_Box->setLayout(menuLayout);
 
-	chocoboManager = new ChocoboManager;
+	chocoboManager = new ChocoboManager(scale);
 	chocoboManager->setContentsMargins(0,20,0,0);
 	ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
 
@@ -91,7 +94,7 @@ void MainWindow::init_display()
 	optionsWidget->setControllerMappingVisible(false);
 	ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
 
-	materia_editor = new MateriaEditor(this);
+	materia_editor = new MateriaEditor(scale,this);
 	materia_editor->setStarsSize(48);
 	QVBoxLayout *materia_editor_layout = new QVBoxLayout();
 	mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
@@ -99,14 +102,14 @@ void MainWindow::init_display()
 	materia_editor_layout->addSpacerItem(mat_spacer);
 	ui->group_materia->setLayout(materia_editor_layout);
 
-	char_editor = new CharEditor;
+	char_editor = new CharEditor(scale);
 	QHBoxLayout *char_editor_layout = new QHBoxLayout;
 	char_editor_layout->setContentsMargins(0,0,0,0);
 	char_editor_layout->setSpacing(0);
 	char_editor_layout->addWidget(char_editor);
 	ui->group_char_editor_box->setLayout(char_editor_layout);
 
-	itemlist= new ItemList;
+	itemlist= new ItemList(scale);
 
 	ui->group_items->layout()->removeWidget(ui->group_item_options);
 	ui->group_items->layout()->addWidget(itemlist);
@@ -127,7 +130,7 @@ void MainWindow::init_display()
 	ui->group_hexedit->setLayout(hexLayout);
 	//ui->psxExtras->setVisible(false);
 
-	locationViewer = new LocationViewer;
+	locationViewer = new LocationViewer(scale);
 	locationViewer->setTranslationBaseFile(settings->value("langPath").toString() +"/"+ "lang/bchoco_");
 	locationViewer->setRegion("BASCUS-94163FF7-S00");
 	QVBoxLayout *locLayout = new QVBoxLayout;
@@ -453,7 +456,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 		{
 			if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
 			{
-				SlotSelect * SSelect= new SlotSelect(this,tempSave,false);
+				SlotSelect * SSelect= new SlotSelect(scale,tempSave,false);
 				fileSlot = SSelect->exec();
 				if(fileSlot == -1)
 				{
@@ -627,7 +630,7 @@ void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(t
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
-	SlotSelect slotselect(this,ff7,true);
+	SlotSelect slotselect(scale,ff7,true);
 	int i =slotselect.exec();
 	if(i==-1)
 	{
@@ -654,7 +657,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 	if(temp.isEmpty()){ff7->setFileModified(c2,s);return;}
 	else
 	{
-		achievementDialog achDialog(this,temp);
+		achievementDialog achDialog(scale,temp);
 		achDialog.exec();
 	}
 	ff7->setFileModified(c2,s);

@@ -51,7 +51,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
              //the width() function returns inner size so it stops at scrollbar
                 if(mapFromGlobal(cursor().pos()).x()>viewport()->width()){return true;}
                 //make an ItemPreview, but give it A ToolTip Flags so it looks/acts as one
-                itemPreview = new ItemPreview(this,Qt::ToolTip);
+				itemPreview = new ItemPreview(Qt::ToolTip,scale);
                 itemPreview->setItem(Items.itemId(itemlist.at(row)));
                 itemPreview->setGeometry(QRect(cursor().pos(),itemPreview->size()));
                 itemPreview->show();
@@ -86,8 +86,9 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
     }
     else{return false;}
 }
-ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
+ItemList::ItemList(qreal Scale,QWidget *parent) : QTableWidget(parent)
 {
+	scale = Scale;
     setObjectName("ItemList");
     installEventFilter(this);
     createdTooltip=false;

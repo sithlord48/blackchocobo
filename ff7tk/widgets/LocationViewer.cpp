@@ -15,8 +15,9 @@
 /****************************************************************************/
 #include "LocationViewer.h"
 
-LocationViewer::LocationViewer(QWidget *parent) :  QWidget(parent)
+LocationViewer::LocationViewer(qreal Scale,QWidget *parent) :  QWidget(parent)
 {
+	scale=Scale;
 	region="";
 	transBasePath="";
 	autoUpdate=false;
@@ -46,13 +47,11 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 
 void LocationViewer::init_display(void)
 {
-    qreal scaleX= qApp->desktop()->logicalDpiX()/96;
-    qreal scaleY= qApp->desktop()->logicalDpiY()/96;
 
 	lblLocationPreview = new QLabel;
     //lblLocationPreview->setScaledContents(true);
-    lblLocationPreview->setMinimumSize(320*scaleX,240*scaleY);
-    lblLocationPreview->setBaseSize(640*scaleX,480*scaleY);
+	lblLocationPreview->setMinimumSize(320*scale,240*scale);
+	lblLocationPreview->setBaseSize(640*scale,480*scale);
 	lblLocationPreview->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
 	QTableWidgetItem *newItem;
 
@@ -124,7 +123,7 @@ void LocationViewer::init_display(void)
 	actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
 	actionCaseSensitive->setCheckable(true);
 
-	QString menuStyle = QString("QCheckbox::indicator { width: %1px; height: %2px;}").arg(QString::number(16*scaleX),QString::number(16*scaleY));
+	QString menuStyle = QString("QCheckbox::indicator { width: %1px; height: %2px;}").arg(QString::number(16*scale),QString::number(16*scale));
 
 	QMenu * newMenu=new QMenu;
 	newMenu->setStyleSheet(menuStyle);
@@ -135,7 +134,7 @@ void LocationViewer::init_display(void)
 	newMenu->addAction(actionCaseSensitive);
 
 	btnSearchOptions->setMenu(newMenu);
-	btnSearchOptions->setFixedWidth(36*scaleX);
+	btnSearchOptions->setFixedWidth(36*scale);
 
 	lineTableFilter = new QLineEdit;
 	lineTableFilter->setFixedWidth( locationTable->width() - btnSearchOptions->width());

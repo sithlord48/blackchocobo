@@ -34,7 +34,7 @@ public:
 	 *	\brief Acces to Visible and Locked boxes without knowing their index
 	 */
 	enum Box {MENUVISIBLE=1,MENULOCKED=2};
-	explicit MenuListWidget(QWidget *parent = 0);
+	explicit MenuListWidget(qreal Scale=1, QWidget * parent=0);
 
 signals:
 	/** \brief SIGNAL: The visible box has changed its checked state
@@ -91,6 +91,7 @@ private:
 	void init_display();
 	void connectAll();
 	void disconnectAll();
+	qreal scale;
 };
 
 #endif // MENULISTWIDGET_H

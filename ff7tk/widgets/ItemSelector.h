@@ -30,7 +30,7 @@ class ItemSelector : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ItemSelector(QWidget *parent = 0);
+	explicit ItemSelector(qreal Scale=1,QWidget *parent = 0);
     int id();// current id
     int combo_item_width();//width of the item box.
     int combo_type_width();//width of the type box.
@@ -59,5 +59,6 @@ private:
     QSpinBox  *sb_qty;
     QPushButton *btn_remove;
     quint16 current_item;
+	qreal scale;
 };
 #endif // ITEMSELECTOR_H

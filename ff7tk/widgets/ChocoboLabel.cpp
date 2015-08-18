@@ -21,13 +21,12 @@ bool ChocoboLabel::event(QEvent *ev)
 	if (ev->type()==QEvent::MouseButtonPress && isEnabled){emit(clicked());return true;}
 	else{return false;}
 }
-ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
+ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *parent) :
 	QWidget(parent)
 {
-    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
-    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
+	scale = Scale;
 	lblType = new QLabel("");
-    lblType->setFixedSize(48*scaleX,48*scaleY);
+	lblType->setFixedSize(48*scale,48*scale);
 	lblType->setScaledContents(true);
 
 	lblName = new QLabel("");
@@ -36,29 +35,29 @@ ChocoboLabel::ChocoboLabel(QWidget *parent,QString titleText,bool occupied) :
 
 	chkOccupied = new QCheckBox();
 	chkOccupied->setText(titleText);
-    chkOccupied->setMaximumHeight(20*scaleY);
+	chkOccupied->setMaximumHeight(20*scale);
 	chkOccupied->setProperty("HoverStyled",QVariant(true));
 
 	btnCopy = new QPushButton();
 	btnCopy->setFlat(true);
-    btnCopy->setFixedSize(20*scaleX,20*scaleY);
-    btnCopy->setIconSize(QSize(16*scaleX,16*scaleY));
+	btnCopy->setFixedSize(20*scale,20*scale);
+	btnCopy->setIconSize(QSize(16*scale,16*scale));
 	btnCopy->setToolTip(QString(tr("Copy")));
 	btnCopy->setProperty("HoverStyled",QVariant(true));
 	btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
 
 	btnPaste = new QPushButton();
 	btnPaste->setFlat(true);
-    btnPaste->setFixedSize(20*scaleX,20*scaleY);
-    btnPaste->setIconSize(QSize(16*scaleX,16*scaleY));
+	btnPaste->setFixedSize(20*scale,20*scale);
+	btnPaste->setIconSize(QSize(16*scale,16*scale));
 	btnPaste->setToolTip(QString(tr("Paste")));
 	btnPaste->setProperty("HoverStyled",QVariant(true));
 	btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
 
 	btnRemove = new QPushButton();
 	btnRemove->setFlat(true);
-    btnRemove->setFixedSize(20*scaleX,20*scaleY);
-    btnRemove->setIconSize(QSize(16*scaleX,16*scaleY));
+	btnRemove->setFixedSize(20*scale,20*scale);
+	btnRemove->setIconSize(QSize(16*scale,16*scale));
 	btnRemove->setToolTip(QString(tr("Remove")));
 	btnRemove->setProperty("HoverStyled",QVariant(true));
 	btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));

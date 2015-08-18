@@ -15,9 +15,10 @@
 /****************************************************************************/
 #include "AchievementEditor.h"
 
-AchievementEditor::AchievementEditor(QWidget *parent) :
+AchievementEditor::AchievementEditor(qreal Scale,QWidget *parent) :
 	QWidget(parent)
 {
+	scale = Scale;
 	initDisplay();
 	initConnect();
 }
@@ -32,7 +33,7 @@ void AchievementEditor::initDisconnect(void)
 void AchievementEditor::initDisplay(void)
 {
 	achievementList = new QListWidget;
-	achievementList->setIconSize(QSize(24,24));
+	achievementList->setIconSize(QSize(24*scale,24*scale));
 
 	QGridLayout * layout = new QGridLayout;
 	for(int i=63;i>27;--i)

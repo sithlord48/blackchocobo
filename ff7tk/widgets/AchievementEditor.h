@@ -37,7 +37,7 @@ class AchievementEditor : public QWidget
 {
 	Q_OBJECT
 public:
-	explicit AchievementEditor(QWidget *parent = 0); /**< \brief create a new AchievementEditor */
+	explicit AchievementEditor(qreal Scale=1,QWidget *parent=0); /**< \brief create a new AchievementEditor */
 public slots:
 	/*!	\brief open a file.
 	 *	\param fileName an achievements.dat file that you want to open
@@ -63,6 +63,7 @@ private:
 	void initDisconnect(void); /**< \brief Disconnect object*/
 	FF7Achievements achievements; /**< \brief data class for widget*/
 	QListWidget *achievementList; /**< \brief QListWidget that will contain the list of achievements.*/
+	qreal scale; /**< \brief Scale value for hidpi systems. */
 };
 
 #endif // ACHIEVEMENTEDITOR_H

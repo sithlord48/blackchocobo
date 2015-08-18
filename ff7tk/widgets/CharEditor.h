@@ -38,7 +38,7 @@ class CharEditor : public QWidget
 {
 	Q_OBJECT
 public:
-	explicit CharEditor(QWidget *parent = 0);
+	explicit CharEditor(qreal Scale=1,QWidget *parent=0);
 	void setChar(FF7CHAR Chardata,QString Processed_Name="");
 	bool AutoLevel();
 	bool AutoStatCalc();
@@ -365,8 +365,7 @@ private:
 	bool advancedMode;
 	int mslotsel;//select materia slot
 	qint32 ap;
-    qreal scaleX;
-    qreal scaleY;
+	qreal scale;
 };
 
 #endif // CHAREDITOR_H

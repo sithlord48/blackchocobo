@@ -22,12 +22,10 @@ bool ItemPreview::eventFilter(QObject *obj, QEvent *ev)
 	else{return event(ev);}
 
 }
-ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QWidget(parent)
+ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget *parent) :QWidget(parent)
 {
   setWindowFlags(WindowFlags);
-  scaleX = qApp->desktop()->logicalDpiX()/96;
-  scaleY = qApp->desktop()->logicalDpiY()/96;
-
+  scale = Scale;
   Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
   if(WidgetType ==Qt::Popup || WidgetType ==Qt::ToolTip)
   {// if popup or tooltip install the eventFilter
@@ -37,20 +35,20 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   lbl_name=new QLabel();
   lbl_desc=new QLabel();
   lbl_icon=new QLabel();
-  lbl_icon->setFixedSize(24*scaleX,24*scaleY);
+  lbl_icon->setFixedSize(24*scale,24*scale);
   lbl_icon->setScaledContents(1);
   QSpacerItem *spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
   lbl_slot_1= new QLabel();
-  lbl_slot_1->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_1->setFixedSize(24*scale,24*scale);
   lbl_slot_1->setScaledContents(1);
   lbl_slot_1->setHidden(true);
 
   lbl_m_link_1= new QLabel();
-  lbl_m_link_1->setFixedSize(12*scaleX,24*scaleY);
+  lbl_m_link_1->setFixedSize(12*scale,24*scale);
   lbl_m_link_1->setScaledContents(1);
 
   lbl_slot_2 = new QLabel();
-  lbl_slot_2->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_2->setFixedSize(24*scale,24*scale);
   lbl_slot_2->setScaledContents(1);
   lbl_slot_2->setHidden(true);
 
@@ -62,16 +60,16 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   slots_1_and_2->setSpacing(0);
 
   lbl_slot_3 = new QLabel();
-  lbl_slot_3->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_3->setFixedSize(24*scale,24*scale);
   lbl_slot_3->setScaledContents(1);
   lbl_slot_3->setHidden(true);
 
   lbl_m_link_2 = new QLabel();
-  lbl_m_link_2->setFixedSize(12*scaleX,24*scaleY);
+  lbl_m_link_2->setFixedSize(12*scale,24*scale);
   lbl_m_link_2->setScaledContents(1);
 
   lbl_slot_4 = new QLabel();
-  lbl_slot_4->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_4->setFixedSize(24*scale,24*scale);
   lbl_slot_4->setScaledContents(1);
   lbl_slot_4->setHidden(true);
 
@@ -83,16 +81,16 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   slots_3_and_4->setSpacing(0);
 
   lbl_slot_5 = new QLabel();
-  lbl_slot_5->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_5->setFixedSize(24*scale,24*scale);
   lbl_slot_5->setScaledContents(1);
   lbl_slot_5->setHidden(true);
 
   lbl_m_link_3 = new QLabel();
-  lbl_m_link_3->setFixedSize(12*scaleX,24*scaleY);
+  lbl_m_link_3->setFixedSize(12*scale,24*scale);
   lbl_m_link_3->setScaledContents(1);
 
   lbl_slot_6 = new QLabel();
-  lbl_slot_6->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_6->setFixedSize(24*scale,24*scale);
   lbl_slot_6->setScaledContents(1);
   lbl_slot_6->setHidden(true);
 
@@ -104,16 +102,16 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
   slots_5_and_6->setSpacing(0);
 
   lbl_slot_7 = new QLabel();
-  lbl_slot_7->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_7->setFixedSize(24*scale,24*scale);
   lbl_slot_7->setScaledContents(1);
   lbl_slot_7->setHidden(true);
 
   lbl_m_link_4 = new QLabel();
-  lbl_m_link_4->setFixedSize(12*scaleX,24*scaleY);
+  lbl_m_link_4->setFixedSize(12*scale,24*scale);
   lbl_m_link_4->setScaledContents(1);
 
   lbl_slot_8 = new QLabel();
-  lbl_slot_8->setFixedSize(24*scaleX,24*scaleY);
+  lbl_slot_8->setFixedSize(24*scale,24*scale);
   lbl_slot_8->setScaledContents(1);
   lbl_slot_8->setHidden(true);
 
@@ -126,7 +124,7 @@ ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QW
 
   materia_slot_box = new QGroupBox();
   materia_slot_box->setContentsMargins(0,0,0,0);
-  materia_slot_box->setFixedSize(320*scaleX,48*scaleY);
+  materia_slot_box->setFixedSize(320*scale,48*scale);
 
   QHBoxLayout *materia_slots = new QHBoxLayout();
   materia_slots->setContentsMargins(0,0,0,0);
@@ -341,14 +339,14 @@ void ItemPreview::elemental_info(int id)
 			if(elemental_effects->count() <6)
 			{
 				//elemental_effects->setFixedHeight(y);
-                elemental_box->setFixedSize(160*scaleX,elemental_effects->height()+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
+				elemental_box->setFixedSize(160*scale,elemental_effects->height()+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
 				//elemental_box->setFixedSize(160,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
 			}
-            else{elemental_box->setFixedSize(160*scaleX,elemental_effects->sizeHintForRow(0)*5 +elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());}
+			else{elemental_box->setFixedSize(160*scale,elemental_effects->sizeHintForRow(0)*5 +elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());}
 		}
 		else
 		{
-            elemental_box->setFixedSize(160*scaleX,y + elemental_box->contentsMargins().top() +elemental_box->contentsMargins().bottom());
+			elemental_box->setFixedSize(160*scale,y + elemental_box->contentsMargins().top() +elemental_box->contentsMargins().bottom());
 		}}//end of else
    elemental_box->setVisible(show);
    elemental_box->adjustSize();
@@ -412,11 +410,11 @@ void ItemPreview::status_info(int id)
 		{//make the combo box smaller if not a popup or tooltip
 			if(status_effects->count()<6)
 			{
-                status_box->setFixedSize(160*scaleX,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());
+				status_box->setFixedSize(160*scale,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());
 			}
-            else{status_box->setFixedSize(160*scaleX,status_effects->sizeHintForRow(0)*5 +status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
+			else{status_box->setFixedSize(160*scale,status_effects->sizeHintForRow(0)*5 +status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
 		}
-        else{status_box->setFixedSize(160*scaleX,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
+		else{status_box->setFixedSize(160*scale,y+status_box->contentsMargins().top()+status_box->contentsMargins().bottom());}
 	}//end of else
 	status_box->setVisible(show);
 	status_box->adjustSize();

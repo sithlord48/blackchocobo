@@ -14,9 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "PhsListWidget.h"
-PhsListWidget::PhsListWidget(QWidget *parent) :
+PhsListWidget::PhsListWidget(qreal Scale, QWidget * parent) :
 	QWidget(parent)
 {
+	scale=Scale;
 	init_display();
 	connectAll();
 }
@@ -28,47 +29,47 @@ void PhsListWidget::init_display()
 	layout->addWidget(lbl_phs);
 	layout->setSpacing(3);
 	layout->setContentsMargins(0,0,0,0);
-	cb_cloud= new DoubleCheckBox(QString(tr("Cloud")));
+	cb_cloud= new DoubleCheckBox(QString(tr("Cloud")),scale);
 	cb_cloud->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cloud->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cloud);
 
-	cb_barret= new DoubleCheckBox(QString(tr("Barret")));
+	cb_barret= new DoubleCheckBox(QString(tr("Barret")),scale);
 	cb_barret->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_barret->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_barret);
 
-	cb_tifa= new DoubleCheckBox(QString(tr("Tifa")));
+	cb_tifa= new DoubleCheckBox(QString(tr("Tifa")),scale);
 	cb_tifa->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_tifa->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_tifa);
 
-	cb_aerith= new DoubleCheckBox(QString(tr("Aerith")));
+	cb_aerith= new DoubleCheckBox(QString(tr("Aerith")),scale);
 	cb_aerith->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_aerith->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_aerith);
 
-	cb_red= new DoubleCheckBox(QString(tr("Red XIII")));
+	cb_red= new DoubleCheckBox(QString(tr("Red XIII")),scale);
 	cb_red->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_red->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_red);
 
-	cb_yuffie= new DoubleCheckBox(QString(tr("Yuffie")));
+	cb_yuffie= new DoubleCheckBox(QString(tr("Yuffie")),scale);
 	cb_yuffie->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_yuffie->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_yuffie);
 
-	cb_cait= new DoubleCheckBox(QString(tr("Cait Sith")));
+	cb_cait= new DoubleCheckBox(QString(tr("Cait Sith")),scale);
 	cb_cait->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cait->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cait);
 
-	cb_vincent= new DoubleCheckBox(QString(tr("Vincent")));
+	cb_vincent= new DoubleCheckBox(QString(tr("Vincent")),scale);
 	cb_vincent->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_vincent->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_vincent);
 
-	cb_cid= new DoubleCheckBox(QString(tr("Cid")));
+	cb_cid= new DoubleCheckBox(QString(tr("Cid")),scale);
 	cb_cid->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cid->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cid);

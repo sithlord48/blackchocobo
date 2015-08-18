@@ -34,12 +34,12 @@ public:
 	/** \brief create a new empty Double Checkbox
 	 *	\param parent parent of this widget
 	*/
-	explicit DoubleCheckBox(QWidget *parent = 0);
+	explicit DoubleCheckBox(qreal Scale=1,QWidget *parent = 0);
 	/** \brief create a new empty Double Checkbox
 	 *	\param text Text for this checkbox
 	 *	\param parent parent of this widget
 	 */
-	explicit DoubleCheckBox(const QString &text,QWidget *parent = 0);
+	explicit DoubleCheckBox(const QString &text,qreal Scale=1,QWidget *parent = 0);
 
 	/** \brief set the text displayed
 	 *	\param text Text for this checkbox
@@ -88,6 +88,7 @@ private:
 	QCheckBox *cb_one;
 	QCheckBox *cb_two;
 	QLabel * label;
+	qreal scale;
 };
 
 #endif // DOUBLECHECKBOX_H

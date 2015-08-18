@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>829</width>
-    <height>660</height>
+    <width>1200</width>
+    <height>1062</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -204,8 +204,8 @@
             <widget class="QGroupBox" name="groupBox_5">
              <property name="maximumSize">
               <size>
-               <width>300</width>
-               <height>350</height>
+               <width>600</width>
+               <height>700</height>
               </size>
              </property>
              <property name="title">
@@ -1085,7 +1085,7 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>250</width>
+            <width>500</width>
             <height>16777215</height>
            </size>
           </property>
@@ -1119,9 +1119,6 @@
                <height>0</height>
               </size>
              </property>
-             <property name="verticalScrollBarPolicy">
-              <enum>Qt::ScrollBarAsNeeded</enum>
-             </property>
              <property name="editTriggers">
               <set>QAbstractItemView::NoEditTriggers</set>
              </property>
@@ -1148,9 +1145,6 @@
              </attribute>
              <attribute name="verticalHeaderVisible">
               <bool>false</bool>
-             </attribute>
-             <attribute name="verticalHeaderDefaultSectionSize">
-              <number>22</number>
              </attribute>
              <column>
               <property name="text">
@@ -1247,8 +1241,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>805</width>
-             <height>481</height>
+             <width>73</width>
+             <height>16</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1291,8 +1285,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>434</height>
+             <width>769</width>
+             <height>469</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2517,8 +2511,8 @@
                     <rect>
                      <x>15</x>
                      <y>5</y>
-                     <width>411</width>
-                     <height>34</height>
+                     <width>620</width>
+                     <height>51</height>
                     </rect>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_166">
@@ -2727,7 +2721,7 @@ location.</string>
            <widget class="QGroupBox" name="groupBox_13">
             <property name="minimumSize">
              <size>
-              <width>375</width>
+              <width>666</width>
               <height>0</height>
              </size>
             </property>
@@ -2852,8 +2846,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>351</width>
-                  <height>2049</height>
+                  <width>671</width>
+                  <height>3116</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -3758,8 +3752,8 @@ location.</string>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
-                   <height>68</height>
+                   <width>100</width>
+                   <height>124</height>
                   </size>
                  </property>
                  <property name="frameShape">
@@ -3787,12 +3781,12 @@ location.</string>
                  <property name="minimumSize">
                   <size>
                    <width>50</width>
-                   <height>18</height>
+                   <height>24</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
+                   <width>100</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -3830,8 +3824,8 @@ location.</string>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
-                   <height>68</height>
+                   <width>100</width>
+                   <height>124</height>
                   </size>
                  </property>
                  <property name="text">
@@ -3856,12 +3850,12 @@ location.</string>
                  <property name="minimumSize">
                   <size>
                    <width>50</width>
-                   <height>18</height>
+                   <height>24</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
+                   <width>100</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -3896,8 +3890,8 @@ location.</string>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
-                   <height>68</height>
+                   <width>100</width>
+                   <height>124</height>
                   </size>
                  </property>
                  <property name="text">
@@ -3922,12 +3916,12 @@ location.</string>
                  <property name="minimumSize">
                   <size>
                    <width>50</width>
-                   <height>18</height>
+                   <height>24</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
+                   <width>100</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -3962,8 +3956,8 @@ location.</string>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
-                   <height>68</height>
+                   <width>100</width>
+                   <height>124</height>
                   </size>
                  </property>
                  <property name="text">
@@ -3991,12 +3985,12 @@ location.</string>
                  <property name="minimumSize">
                   <size>
                    <width>50</width>
-                   <height>18</height>
+                   <height>24</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>50</width>
+                   <width>100</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -4609,18 +4603,6 @@ location.</string>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>275</height>
-             </size>
-            </property>
             <property name="title">
              <string>SnowBoard Mini Game </string>
             </property>
@@ -4642,6 +4624,12 @@ location.</string>
              </property>
              <item>
               <widget class="QGroupBox" name="groupBox_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>152</height>
+                </size>
+               </property>
                <property name="title">
                 <string>Beginner Course</string>
                </property>
@@ -4770,6 +4758,12 @@ location.</string>
              </item>
              <item>
               <widget class="QGroupBox" name="groupBox_7">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>151</height>
+                </size>
+               </property>
                <property name="title">
                 <string>Expert Course</string>
                </property>
@@ -4898,6 +4892,12 @@ location.</string>
              </item>
              <item>
               <widget class="QGroupBox" name="groupBox_8">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>151</height>
+                </size>
+               </property>
                <property name="title">
                 <string>Crazy Course</string>
                </property>
@@ -5118,7 +5118,7 @@ location.</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>24</height>
+                    <height>48</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -5189,7 +5189,7 @@ location.</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>24</height>
+                    <height>48</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -5266,7 +5266,7 @@ location.</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>24</height>
+                    <height>48</height>
                    </size>
                   </property>
                   <property name="wrapping">
@@ -5293,12 +5293,6 @@ location.</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>24</height>
-             </size>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
@@ -5340,6 +5334,12 @@ location.</string>
              </item>
              <item>
               <widget class="QSpinBox" name="sb_BikeHighScore">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>48</height>
+                </size>
+               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5362,7 +5362,7 @@ location.</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>24</height>
+              <height>48</height>
              </size>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -5396,6 +5396,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </item>
              <item>
               <widget class="QSpinBox" name="sb_BattlePoints">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>48</height>
+                </size>
+               </property>
                <property name="toolTip">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena
@@ -5458,6 +5464,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </item>
              <item>
               <widget class="QSpinBox" name="sb_steps">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>48</height>
+                </size>
+               </property>
                <property name="wrapping">
                 <bool>true</bool>
                </property>
@@ -5512,7 +5524,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             <widget class="QFrame" name="group_hexedit">
              <property name="maximumSize">
               <size>
-               <width>591</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
@@ -7047,8 +7059,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>829</width>
-     <height>30</height>
+     <width>1200</width>
+     <height>47</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -7090,7 +7102,7 @@ Var And Scrolling Synced To Left Table</string>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
-     <string>&amp;Options</string>
+     <string>Optio&amp;ns</string>
     </property>
     <widget class="QMenu" name="menuLang">
      <property name="title">

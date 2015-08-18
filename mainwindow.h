@@ -74,6 +74,7 @@ protected:
 	void moveEvent(QMoveEvent *);
 private:
 	Ui::MainWindow *ui;
+	qreal scale;
 	bool skip_slot_mask;
 	bool _init; //set true then false after a file load.
 	bool load; // are we loading data? if so don't save it to the file.
@@ -522,5 +523,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_btnSearchKeyItems_clicked();
 	void on_btnReplay_clicked();
 	void on_linePsxDesc_textChanged(const QString &arg1);
+
 };
 #endif // MAINWINDOW_H

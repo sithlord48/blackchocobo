@@ -30,8 +30,8 @@ class MateriaEditor : public QWidget
 {
     Q_OBJECT
 public:
-    MateriaEditor(QWidget *parent=0);
-    MateriaEditor(quint8 materia_id=0,qint32 ap=0,QWidget *parent=0);
+	MateriaEditor(qreal Scale=1,QWidget *parent=0);
+	MateriaEditor(quint8 materia_id=0,qint32 ap=0,qreal Scale=1,QWidget *parent=0);
     void setMateria(quint8 materia_id=0,qint32 materia_ap=0);
     void setAP (qint32 current_ap=0);
     void setStarsSize(int);
@@ -95,18 +95,10 @@ private:
     qint32 buffer_ap;
     qint8 _level;//current level
     qint32 _current_ap;// current ap amount
-    //quint8 _type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
-    //qint8 _max_level;// max level of materia
-    //qint32 _level_ap[5];// hold ap requirement for each level.
-    //QString _name;
-    //QPixmap _full_star_icon;// hold current full star icon
-    //QPixmap _empty_star_icon;//hold current empty star icon
-    //QPixmap _type_icon; // materia type icon.
-    //QStringList _skill_list;
-
     QLabel *lbl_materiaIcon;
     QLabel *lbl_materiaName;
     bool editable;
+	qreal scale;
 private slots:
     void btn_star1_clicked();
     void btn_star2_clicked();

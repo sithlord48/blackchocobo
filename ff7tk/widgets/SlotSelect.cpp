@@ -15,8 +15,9 @@
 /****************************************************************************/
 #include "SlotSelect.h"
 
-SlotSelect::SlotSelect(QWidget *parent,FF7Save *data, bool showLoad):QDialog(parent)
+SlotSelect::SlotSelect(qreal Scale,FF7Save *data, bool showLoad,QWidget *parent):QDialog(parent)
 {
+	scale=Scale;
 	list_preview = new QScrollArea();
 	btnNew = new QPushButton (QIcon::fromTheme(QString("document-open"),QPixmap()),tr("Load Another File"));
 	connect (btnNew,SIGNAL(clicked()),this, SLOT(newFile()));
@@ -31,7 +32,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data, bool showLoad):QDialog(par
 	ff7 = data;
 	for(int i=0;i<15;i++)
 	{
-		preview[i] = new SlotPreview(i);
+		preview[i] = new SlotPreview(i,scale);
 		preview_layout->addWidget(preview[i]);
 		setSlotPreview(i);
 	}
@@ -46,8 +47,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data, bool showLoad):QDialog(par
 	this->showLoad(showLoad); //by defalut hide the load new save button
 	this->setLayout(dialog_layout);
 	this->setContentsMargins(0,0,0,0);
-    if(qApp->desktop()->logicalDpiX()/96 > 1 ){setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM()+25);}
-    else{setFixedWidth(preview[1]->width()+list_preview->contentsMargins().left()+list_preview->contentsMargins().right()+list_preview->verticalScrollBar()->widthMM());}
+	setFixedWidth(preview[1]->contentsRect().size().width() +contentsMargins().left()+contentsMargins().right()+ list_preview->verticalScrollBar()->widthMM()*2*scale+6*scale);
 }
 void SlotSelect::button_clicked(int s){this->done(s);}
 
@@ -102,7 +102,7 @@ void SlotSelect::paste_slot(int s)
 void SlotSelect::ReIntSlot(int s)
 {
 	preview[s]->~SlotPreview();
-	preview[s]= new SlotPreview(s);
+	preview[s]= new SlotPreview(s,scale);
 	preview_layout->insertWidget(s,preview[s]);
 	setSlotPreview(s);
 }

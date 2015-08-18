@@ -15,12 +15,12 @@
 /****************************************************************************/
 #include "achievementdialog.h"
 
-achievementDialog::achievementDialog(QWidget *parent,QString FileName) :
+achievementDialog::achievementDialog(qreal Scale,QString FileName,QWidget *parent) :
     QDialog(parent)
 {   
     fileName=FileName;
     this->setWindowTitle(tr("Achievement Editor"));
-    achEditor = new AchievementEditor;
+	achEditor = new AchievementEditor(Scale);
     achEditor->openFile(fileName);
     btnSave = new QPushButton(QIcon(QPixmap("://icon/save")),tr("  &Save"));
     btnNo = new QPushButton(QIcon(QPixmap("://icon/quit")),tr("  &Cancel"));

@@ -32,7 +32,7 @@ class achievementDialog : public QDialog
 {
 	Q_OBJECT
 public:
-	explicit achievementDialog(QWidget *parent = 0,QString FileName="");
+	explicit achievementDialog(qreal Scale=1,QString FileName="",QWidget *parent=0);
 
 signals:
 

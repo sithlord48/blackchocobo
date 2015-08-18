@@ -15,25 +15,25 @@
 /****************************************************************************/
 #include "MateriaEditor.h"
 
-MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
+MateriaEditor::MateriaEditor(qreal Scale,QWidget *parent):QWidget(parent)
 {
+	scale=Scale;
 	init_display();
 	init_data();
 	init_connections();
 	setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//Smallest Possible Size. ready for use now.
 }
-MateriaEditor::MateriaEditor(quint8 materia_id,qint32 materia_ap,QWidget *parent):QWidget(parent)
+MateriaEditor::MateriaEditor(quint8 materia_id,qint32 materia_ap,qreal Scale,QWidget *parent):QWidget(parent)
 {
-   init_display();
-   init_data();
-   init_connections();
-   setMateria(materia_id,materia_ap);
+	scale=Scale;
+	init_display();
+	init_data();
+	init_connections();
+	setMateria(materia_id,materia_ap);
 }
 void MateriaEditor::init_display()
 {//Make Widgets and set Properties.
 	//Widget Creation.
-    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
-    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
 	combo_type =new QComboBox;
 	combo_materia = new QComboBox;
 	sb_ap = new QSpinBox;
@@ -110,12 +110,12 @@ void MateriaEditor::init_display()
 	box_stats->setHidden(true);
 
 	//set Minimum Sizes.
-    btn_copy_materia->setFixedSize(24*scaleX,24*scaleY);
-    btn_paste_materia->setFixedSize(24*scaleX,24*scaleY);
-    btn_rm_materia->setFixedSize(24*scaleX,24*scaleY);
-    lbl_materiaIcon->setFixedSize(24*scaleX,24*scaleY);
-    combo_type->setMinimumHeight(24*scaleY);
-    combo_materia->setMinimumHeight(24*scaleY);
+	btn_copy_materia->setFixedSize(24*scale,24*scale);
+	btn_paste_materia->setFixedSize(24*scale,24*scale);
+	btn_rm_materia->setFixedSize(24*scale,24*scale);
+	lbl_materiaIcon->setFixedSize(24*scale,24*scale);
+	combo_type->setMinimumHeight(24*scale);
+	combo_materia->setMinimumHeight(24*scale);
 
 	list_skills->addItem(new QListWidgetItem("Item"));
 	list_skills->setFixedHeight(list_skills->sizeHintForRow(0)*5 +list_skills->contentsMargins().top()+ list_skills->contentsMargins().bottom()+3);

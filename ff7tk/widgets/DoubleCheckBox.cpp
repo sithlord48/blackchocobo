@@ -15,28 +15,28 @@
 /****************************************************************************/
 
 #include "DoubleCheckBox.h"
-DoubleCheckBox::DoubleCheckBox(QWidget *parent) :
+DoubleCheckBox::DoubleCheckBox(qreal Scale,QWidget *parent) :
 	QWidget(parent)
 {
+	scale=Scale;
 	init_display();
 	init_connections();
 }
-DoubleCheckBox::DoubleCheckBox(const QString &text,QWidget *parent) :
+DoubleCheckBox::DoubleCheckBox(const QString &text,qreal Scale,QWidget *parent ) :
 	QWidget(parent)
 {
+	scale=Scale;
 	init_display();
 	init_connections();
 	setText(text);
 }
 void DoubleCheckBox::init_display()
 {
-    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
-    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
 	cb_one = new QCheckBox;
 	cb_two = new QCheckBox;
 	label = new QLabel;
-    cb_one->setMaximumSize(22*scaleX,22*scaleY);
-    cb_two->setMaximumSize(22*scaleX,22*scaleY);
+	cb_one->setMaximumSize(22*scale,22*scale);
+	cb_two->setMaximumSize(22*scale,22*scale);
 	QHBoxLayout *boxLayout = new QHBoxLayout;
 	boxLayout->addWidget(cb_one);
 	boxLayout->addWidget(cb_two);

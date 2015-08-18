@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
-    <height>550</height>
+    <width>882</width>
+    <height>1029</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -285,8 +285,35 @@
               <string>Reset to Default</string>
              </property>
              <property name="icon">
-              <iconset theme="edit-clear" resource="FF7tk/icons/common.qrc">
+              <iconset theme="edit-clear" resource="ff7tk/icons/common.qrc">
                <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Scale Widgets by: </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="sbScale">
+             <property name="minimum">
+              <double>0.500000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>5.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.250000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -357,7 +384,7 @@
  </widget>
  <resources>
   <include location="images.qrc"/>
-  <include location="FF7tk/icons/common.qrc"/>
+  <include location="ff7tk/icons/common.qrc"/>
  </resources>
  <connections>
   <connection>

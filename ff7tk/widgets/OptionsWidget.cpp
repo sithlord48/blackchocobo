@@ -174,6 +174,7 @@ void OptionsWidget::init_Display()
 	BtnUpLayout->addWidget(lblBtnUp);
 	BtnUpLayout->addWidget(comboBtnUp);
 
+
 	QLabel *lblBtnRight = new QLabel(tr("Right"));
 	lblBtnRight->setAlignment(Qt::AlignRight);
 	comboBtnRight = new QComboBox;

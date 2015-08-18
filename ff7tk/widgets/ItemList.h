@@ -31,7 +31,7 @@ class ItemList : public QTableWidget
 {
     Q_OBJECT
 public:
-    explicit ItemList(QWidget *parent = 0);
+	explicit ItemList(qreal Scale=1,QWidget *parent=0);
 protected:
     bool eventFilter(QObject *, QEvent *);
 signals:
@@ -54,5 +54,6 @@ private:
     bool createdSelector;
     bool createdTooltip;
     bool editableItemCombo;
+	qreal scale;
 };
 #endif // ITEMLIST_H

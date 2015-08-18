@@ -14,9 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "MenuListWidget.h"
-MenuListWidget::MenuListWidget(QWidget *parent) :
+MenuListWidget::MenuListWidget(qreal Scale, QWidget * parent) :
 	QWidget(parent)
 {
+	scale=Scale;
 	init_display();
 	connectAll();
 }
@@ -28,52 +29,52 @@ void MenuListWidget::init_display()
 	layout->addWidget(lbl_title);
 	layout->setSpacing(3);
 	layout->setContentsMargins(0,0,0,0);
-	cb_item= new DoubleCheckBox(QString(tr("Item")));
+	cb_item= new DoubleCheckBox(QString(tr("Item")),scale);
 	cb_item->setBoxToolTip(1,QString(tr("Visible")));
 	cb_item->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_item);
 
-	cb_magic= new DoubleCheckBox(QString(tr("Magic")));
+	cb_magic= new DoubleCheckBox(QString(tr("Magic")),scale);
 	cb_magic->setBoxToolTip(1,QString(tr("Visible")));
 	cb_magic->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_magic);
 
-	cb_materia= new DoubleCheckBox(QString(tr("Materia")));
+	cb_materia= new DoubleCheckBox(QString(tr("Materia")),scale);
 	cb_materia->setBoxToolTip(1,QString(tr("Visible")));
 	cb_materia->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_materia);
 
-	cb_equip= new DoubleCheckBox(QString(tr("Equip")));
+	cb_equip= new DoubleCheckBox(QString(tr("Equip")),scale);
 	cb_equip->setBoxToolTip(1,QString(tr("Visible")));
 	cb_equip->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_equip);
 
-	cb_status= new DoubleCheckBox(QString(tr("Status")));
+	cb_status= new DoubleCheckBox(QString(tr("Status")),scale);
 	cb_status->setBoxToolTip(1,QString(tr("Visible")));
 	cb_status->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_status);
 
-	cb_order= new DoubleCheckBox(QString(tr("Order")));
+	cb_order= new DoubleCheckBox(QString(tr("Order")),scale);
 	cb_order->setBoxToolTip(1,QString(tr("Visible")));
 	cb_order->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_order);
 
-	cb_limit= new DoubleCheckBox(QString(tr("Limit")));
+	cb_limit= new DoubleCheckBox(QString(tr("Limit")),scale);
 	cb_limit->setBoxToolTip(1,QString(tr("Visible")));
 	cb_limit->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_limit);
 
-	cb_config= new DoubleCheckBox(QString(tr("Config")));
+	cb_config= new DoubleCheckBox(QString(tr("Config")),scale);
 	cb_config->setBoxToolTip(1,QString(tr("Visible")));
 	cb_config->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_config);
 
-	cb_phs= new DoubleCheckBox(QString(tr("P.H.S")));
+	cb_phs= new DoubleCheckBox(QString(tr("P.H.S")),scale);
 	cb_phs->setBoxToolTip(1,QString(tr("Visible")));
 	cb_phs->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_phs);
 
-	cb_save= new DoubleCheckBox(QString(tr("Save")));
+	cb_save= new DoubleCheckBox(QString(tr("Save")),scale);
 	cb_save->setBoxToolTip(1,QString(tr("Visible")));
 	cb_save->setBoxToolTip(2,QString(tr("Locked")));
 	layout->addWidget(cb_save);

@@ -15,9 +15,10 @@
 /****************************************************************************/
 #include "ChocoboManager.h"
 
-ChocoboManager::ChocoboManager(QWidget *parent) :
+ChocoboManager::ChocoboManager(qreal Scale,QWidget *parent) :
     QWidget(parent)
 {
+	scale= Scale;
     initDisplay();
     initData();
     initConnections();
@@ -26,20 +27,18 @@ ChocoboManager::ChocoboManager(QWidget *parent) :
 void ChocoboManager::initDisplay(void)
 {
 
-    qreal scaleX = qApp->desktop()->logicalDpiX()/96;
-    qreal scaleY = qApp->desktop()->logicalDpiY()/96;
     lblStablesOwned = new QLabel(QString(tr("Stables Owned")));
     sbStablesOwned = new QSpinBox;
     sbStablesOwned->setMaximum(6);
     sbStablesOwned->setWrapping(true);
-    sbStablesOwned->setMaximumHeight(24*scaleY);
+	sbStablesOwned->setMaximumHeight(24*scale);
 
     lblStablesOccupied = new QLabel(QString(tr("Stables Occupied")));
     lcdStablesOccupied = new QLCDNumber;
     lcdStablesOccupied->setSegmentStyle(QLCDNumber::Flat);
-    lcdStablesOccupied->setMaximumHeight(24*scaleY);
+	lcdStablesOccupied->setMaximumHeight(24*scale);
     lcdStablesOccupied->setDigitCount(1);
-    lcdStablesOccupied->setMaximumWidth(24*scaleX);
+	lcdStablesOccupied->setMaximumWidth(24*scale);
 
     QHBoxLayout *ownedLayout = new QHBoxLayout();
     ownedLayout->setContentsMargins(0,0,0,0);
@@ -61,7 +60,7 @@ void ChocoboManager::initDisplay(void)
     QGridLayout *stableGridLayout =new QGridLayout();
     for(int i=0;i<6;i++)
     {
-        chocoboLabel[i] = new ChocoboLabel(this,QString(tr("Stable:%1")).arg(QString::number(i+1)));
+		chocoboLabel[i] = new ChocoboLabel(scale,QString(tr("Stable:%1")).arg(QString::number(i+1)));
         chocoboLabel[i]->setObjectName(QString::number(i));
         stableGridLayout->addWidget(chocoboLabel[i],(i/2),(i%2),1,1,Qt::AlignCenter);
         chocoboLabel[i]->setEnabled(false);
@@ -77,7 +76,7 @@ void ChocoboManager::initDisplay(void)
     chocoboEditor->setHidden(true);
 
     QGroupBox *penBox = new QGroupBox(tr("Fenced Chocobos"));
-    penBox->setMaximumHeight(80*scaleY);
+	penBox->setMaximumHeight(80*scale);
     QGridLayout *comboGrid = new QGridLayout;
     comboGrid->setContentsMargins(0,0,0,0);
     penBox->setLayout(comboGrid);

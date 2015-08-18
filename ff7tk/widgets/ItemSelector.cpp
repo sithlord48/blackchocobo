@@ -15,8 +15,9 @@
 /****************************************************************************/
 #include "ItemSelector.h"
 
-ItemSelector::ItemSelector(QWidget *parent): QWidget(parent)
+ItemSelector::ItemSelector(qreal Scale,QWidget *parent): QWidget(parent)
 {
+	scale=Scale;
     Items = new FF7Item;
 	init_display();
 	init_connections();
@@ -38,7 +39,7 @@ void ItemSelector::init_display()
 	btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 
 	btn_remove->setToolTip(tr("Empty Item"));
-    btn_remove->setFixedSize(22*qApp->desktop()->logicalDpiX()/96,font().pointSize()*3+2);
+	btn_remove->setFixedSize(22*scale,font().pointSize()*3+2);
 	btn_remove->setShortcut(QKeySequence::Delete);
 	init_data(); //before setting layout set dat
 	QHBoxLayout *layout = new QHBoxLayout;
