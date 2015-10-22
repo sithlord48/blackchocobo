@@ -38,7 +38,6 @@ set ( blackchocobo_SRCS
 	options.cpp
 	errbox.cpp
 	achievementdialog.cpp
-	qhexedit/xbytearray.cpp
 	qhexedit/qhexedit_p.cpp
 	qhexedit/qhexedit.cpp
 	qhexedit/commands.cpp

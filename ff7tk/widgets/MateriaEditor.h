@@ -57,7 +57,7 @@ private:
     void setSkills(void);
     void setLevel(void);
     //Private Gui Parts.
-    QLCDNumber * lcd_max_ap;
+	QLabel * lbl_max_ap;
     QLabel * lbl_slash;
     QHBoxLayout *Final;
     QComboBox *combo_type;

@@ -97,7 +97,7 @@ void LocationViewer::init_display(void)
 		newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);
 		newItem->setTextAlignment(Qt::AlignHCenter);
 		locationTable->setItem(i,2,newItem);
-		locationTable->setRowHeight(i,font().pointSize()*3+2);
+		locationTable->setRowHeight(i,(fontMetrics().height()));
 	}
 	locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
 	locationTable->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

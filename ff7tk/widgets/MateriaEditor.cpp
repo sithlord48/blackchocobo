@@ -37,8 +37,8 @@ void MateriaEditor::init_display()
 	combo_type =new QComboBox;
 	combo_materia = new QComboBox;
 	sb_ap = new QSpinBox;
-	lbl_slash = new QLabel;
-	lcd_max_ap = new QLCDNumber;
+	lbl_slash = new QLabel("/");
+	lbl_max_ap = new QLabel;
 	btn_rm_materia = new QPushButton;
 	btn_rm_materia->setShortcut(QKeySequence::Delete);
 	btn_copy_materia = new QPushButton;
@@ -71,8 +71,6 @@ void MateriaEditor::init_display()
 	//Special Properties Of Above Widgets
 	sb_ap->setWrapping(1);
 	sb_ap->setAlignment(Qt::AlignCenter);
-	lcd_max_ap->setDigitCount(8);
-	lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
 	btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 	btn_copy_materia->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
 	btn_paste_materia->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
@@ -151,7 +149,7 @@ void MateriaEditor::init_display()
 	ap_layout->addWidget(sb_ap);
 	ap_layout->addWidget(lbl_slash);
 	lbl_slash->setFixedWidth(this->font().pointSize());
-	ap_layout->addWidget(lcd_max_ap);
+	ap_layout->addWidget(lbl_max_ap);
 	ap_layout->setContentsMargins(0,0,0,0);
 	frm_ap->setLayout(ap_layout);
 
@@ -316,7 +314,8 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
 }
 void MateriaEditor::setAP(qint32 ap)
 {
-	sb_ap->setMaximum(MaxAP());lcd_max_ap->display(MaxAP());
+	sb_ap->setMaximum(MaxAP());
+	lbl_max_ap->setText(QString(" %1").arg(QString::number(MaxAP())));
 
 	if( (_id ==FF7Materia::Underwater) || (_id==FF7Materia::MasterCommand) || (_id==FF7Materia::MasterMagic) ||(_id==FF7Materia::MasterSummon) ||(_id==FF7Materia::EnemySkill))
 	{
@@ -334,7 +333,7 @@ void MateriaEditor::setAP(qint32 ap)
 	else if(_id ==FF7Materia::EmptyId)
 	{
 		frm_ap_stars->setHidden(true);
-		lcd_max_ap->display("");
+		lbl_max_ap->setText("");
 	}
 	else
 	{//All Other Materia
@@ -559,7 +558,7 @@ void MateriaEditor::setStarsSize(int size)
 	frm_ap_stars->layout()->removeWidget(box_stars);
 	frm_ap_stars->layout()->removeWidget(frm_ap);
 
-	if(size<=32)
+	if(size<=32*scale)
 	{
 	ap_stars_layout->addWidget(box_stars,0,0,1,1,0);
 		ap_stars_layout->addWidget(frm_ap,0,1,1,1,0);

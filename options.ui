@@ -9,9 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>882</width>
-    <height>1029</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Options</string>
@@ -19,6 +25,9 @@
   <property name="windowIcon">
    <iconset theme="preferences-system" resource="images.qrc">
     <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -30,16 +39,7 @@
       <string>Path Options</string>
      </property>
      <layout class="QVBoxLayout" name="_3">
-      <property name="leftMargin">
-       <number>3</number>
-      </property>
-      <property name="topMargin">
-       <number>3</number>
-      </property>
-      <property name="rightMargin">
-       <number>3</number>
-      </property>
-      <property name="bottomMargin">
+      <property name="margin">
        <number>3</number>
       </property>
       <item>
@@ -154,173 +154,164 @@
         </item>
        </layout>
       </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Editor Options</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="margin">
+       <number>3</number>
+      </property>
       <item>
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="title">
-         <string>Editor Options</string>
+       <widget class="QCheckBox" name="cbEditableCombos">
+        <property name="text">
+         <string>Editable Combo for Materia and Items</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>3</number>
-         </property>
-         <property name="topMargin">
-          <number>3</number>
-         </property>
-         <property name="rightMargin">
-          <number>3</number>
-         </property>
-         <property name="bottomMargin">
-          <number>3</number>
-         </property>
-         <item>
-          <widget class="QCheckBox" name="cbEditableCombos">
-           <property name="text">
-            <string>Editable Combo for Materia and Items</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbCharEditorAdvanced">
-           <property name="text">
-            <string>CharEditor - Advanced Mode</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbChocoboEditorAdvanced">
-           <property name="text">
-            <string>Chocobo Manager - Show Pcount / Personality</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbLocationViewerAdvanced">
-           <property name="text">
-            <string>Field Location - Show Map/X/Y/T/D</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbWorldMapAdvanced">
-           <property name="text">
-            <string>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbGameProgressAdvanced">
-           <property name="text">
-            <string>Game Progress - Show Untested</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbOptionsShowMapping">
-           <property name="text">
-            <string>Options - Always Show Controller Mapping </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cbTestDataEnabled">
-           <property name="text">
-            <string>Enable Experimental TestData </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="cb_skip_slot_mask">
-           <property name="text">
-            <string notr="true">Don't update the slot mask (pc version only) </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="_4">
-           <item>
-            <widget class="QCheckBox" name="cb_override_def_save">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Override Builtin New Game Data</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="line_default_save">
-             <property name="placeholderText">
-              <string>Use Only Raw Psx Files</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_set_default_save">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="text">
-              <string notr="true">...</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="reset_default_save_location">
-             <property name="maximumSize">
-              <size>
-               <width>24</width>
-               <height>24</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Reset to Default</string>
-             </property>
-             <property name="icon">
-              <iconset theme="edit-clear" resource="ff7tk/icons/common.qrc">
-               <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>Scale Widgets by: </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDoubleSpinBox" name="sbScale">
-             <property name="minimum">
-              <double>0.500000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>5.000000000000000</double>
-             </property>
-             <property name="singleStep">
-              <double>0.250000000000000</double>
-             </property>
-             <property name="value">
-              <double>1.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
        </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbCharEditorAdvanced">
+        <property name="text">
+         <string>CharEditor - Advanced Mode</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbChocoboEditorAdvanced">
+        <property name="text">
+         <string>Chocobo Manager - Show Pcount / Personality</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbLocationViewerAdvanced">
+        <property name="text">
+         <string>Field Location - Show Map/X/Y/T/D</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbWorldMapAdvanced">
+        <property name="text">
+         <string>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbGameProgressAdvanced">
+        <property name="text">
+         <string>Game Progress - Show Untested</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbOptionsShowMapping">
+        <property name="text">
+         <string>Options - Always Show Controller Mapping </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbTestDataEnabled">
+        <property name="text">
+         <string>Enable Experimental TestData </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cb_skip_slot_mask">
+        <property name="text">
+         <string notr="true">Don't update the slot mask (pc version only) </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_4">
+        <item>
+         <widget class="QCheckBox" name="cb_override_def_save">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Override Builtin New Game Data</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="line_default_save">
+          <property name="placeholderText">
+           <string>Use Only Raw Psx Files</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_set_default_save">
+          <property name="maximumSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="text">
+           <string notr="true">...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="reset_default_save_location">
+          <property name="maximumSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Reset to Default</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-clear" resource="ff7tk/icons/common.qrc">
+            <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Scale Widgets by: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="sbScale">
+          <property name="minimum">
+           <double>0.500000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>5.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.250000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -372,6 +363,19 @@
       </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton">

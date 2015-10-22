@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>602</width>
-    <height>735</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,18 +28,6 @@
     <layout class="QHBoxLayout" name="_2">
      <item>
       <widget class="QLabel" name="lbl_icon">
-       <property name="minimumSize">
-        <size>
-         <width>32</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>128</width>
-         <height>128</height>
-        </size>
-       </property>
        <property name="pixmap">
         <pixmap resource="images.qrc">:/icon/bchoco</pixmap>
        </property>
@@ -143,7 +131,7 @@
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string notr="true">(C) 2010 - 2014 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2015 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
@@ -232,7 +220,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>New: Begin HiDpi Adjustments</string>
+           <string>New: Scaling support for HiDpi</string>
           </property>
          </item>
          <item>
@@ -297,8 +285,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>719</width>
-            <height>875</height>
+            <width>738</width>
+            <height>885</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_8">
@@ -889,8 +877,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>250</width>
-            <height>2361</height>
+            <width>560</width>
+            <height>1206</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">

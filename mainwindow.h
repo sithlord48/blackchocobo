@@ -466,7 +466,6 @@ private slots://try to keep these in the same order as the .cpp file
 
 	void on_btn_add_all_materia_clicked();
 	void on_combo_compare_slot_currentIndexChanged(int index);
-	void on_btn_all_z_diffs_clicked();
 	void on_sb_steps_valueChanged(int );
 	void on_combo_s7_slums_currentIndexChanged(int index);
 	void on_cb_visible_buggy_toggled(bool checked);

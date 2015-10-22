@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	//Get Font Info Before Setting up the GUI!
 	settings =configdata;
 	ui->setupUi(this);
+	ui->frame_status->setFixedHeight(fontMetrics().height()+2);
 	_init=true;
 	ff7 = new FF7Save;
 	load=true;
@@ -48,9 +49,27 @@ void MainWindow::init_display()
 {
 	//Hide the stuff that needs to be hidden.
 	ui->compare_table->setEnabled(false);
-	ui->tbl_diff->setVisible(0);
 
 	load=false;
+	//adjust some stuff for scale
+	ui->groupBox_11->setFixedWidth(375*scale);
+	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
+	//world map tab controlls
+	ui->scrollArea->setFixedWidth(273*scale);
+	ui->scrollAreaWidgetContents->adjustSize();
+	ui->world_map_frame->setFixedSize(446*scale,381*scale);
+	ui->combo_map_controls->setFixedHeight(32);
+	ui->world_map_view->setGeometry(5*scale,32*scale,432*scale,336*scale);
+	ui->slide_world_x->setGeometry(-1,369*scale,443*scale,10*scale);
+	ui->slide_world_y->setGeometry(437*scale,26*scale,10*scale,347*scale);
+	//Compare table
+	ui->table_unknown->setFixedWidth(234*scale);
+	ui->compare_table->setFixedWidth(234*scale);
+
+	ui->lbl_love_aeris->setFixedSize(50*scale,68*scale);
+	ui->lbl_love_barret->setFixedSize(50*scale,68*scale);
+	ui->lbl_love_tifa->setFixedSize(50*scale,68*scale);
+	ui->lbl_love_yuffie->setFixedSize(50*scale,68*scale);
 
 	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
 	ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
@@ -95,7 +114,7 @@ void MainWindow::init_display()
 	ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
 
 	materia_editor = new MateriaEditor(scale,this);
-	materia_editor->setStarsSize(48);
+	materia_editor->setStarsSize(48*scale);
 	QVBoxLayout *materia_editor_layout = new QVBoxLayout();
 	mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
 	materia_editor_layout->addWidget(materia_editor);
@@ -1009,6 +1028,7 @@ void MainWindow::materiaupdate(void)
 
 	for(int mat=0;mat<200;mat++)// partys materias
 	{
+		ui->tbl_materia->setRowHeight(mat,fontMetrics().height());
 		qint32 current_ap= ff7->partyMateriaAp(s,mat);
 		quint8 current_id= ff7->partyMateriaId(s,mat);
 		QString ap;
@@ -1176,6 +1196,7 @@ void MainWindow::othersUpdate()
 			newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
 			ui->tbl_materia_2->setItem(mat,0,newItem);
 		}
+		ui->tbl_materia_2->setRowHeight(mat,fontMetrics().height());
 	}
 	//SnowBoard Mini Game Data.
 	ui->sbSnowBegMin->setValue(ff7->snowboardTime(s,0).mid(0,2).toInt());
@@ -1391,15 +1412,42 @@ void MainWindow::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-	ui->btn_cloud->setIcon(Chars.icon(ff7->charID(s,0)));
-	ui->btn_barret->setIcon(Chars.icon(ff7->charID(s,1)));
-	ui->btn_tifa->setIcon(Chars.icon(ff7->charID(s,2)));
-	ui->btn_aeris->setIcon(Chars.icon(ff7->charID(s,3)));
-	ui->btn_red->setIcon(Chars.icon(ff7->charID(s,4)));
-	ui->btn_yuffie->setIcon(Chars.icon(ff7->charID(s,5)));
-	ui->btn_cait->setIcon(Chars.icon(ff7->charID(s,6)));
-	ui->btn_vincent->setIcon(Chars.icon(ff7->charID(s,7)));
-	ui->btn_cid->setIcon(Chars.icon(ff7->charID(s,8)));
+	ui->btn_cloud->setFixedSize(98*scale,106*scale);
+	ui->btn_cloud->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_cloud->setIcon(QIcon(Chars.pixmap(ff7->charID(s,0)).scaledToHeight(ui->btn_cloud->height(),Qt::SmoothTransformation)));
+
+	ui->btn_barret->setFixedSize(98*scale,106*scale);
+	ui->btn_barret->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_barret->setIcon(QIcon(Chars.pixmap(ff7->charID(s,1)).scaledToHeight(ui->btn_barret->height(),Qt::SmoothTransformation)));
+
+	ui->btn_tifa->setFixedSize(98*scale,106*scale);
+	ui->btn_tifa->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_tifa->setIcon(QIcon(Chars.pixmap(ff7->charID(s,2)).scaledToHeight(ui->btn_tifa->height(),Qt::SmoothTransformation)));
+
+	ui->btn_aeris->setFixedSize(98*scale,106*scale);
+	ui->btn_aeris->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_aeris->setIcon(QIcon(Chars.pixmap(ff7->charID(s,3)).scaledToHeight(ui->btn_aeris->height(),Qt::SmoothTransformation)));
+
+	ui->btn_red->setFixedSize(98*scale,106*scale);
+	ui->btn_red->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_red->setIcon(QIcon(Chars.pixmap(ff7->charID(s,4)).scaledToHeight(ui->btn_red->height(),Qt::SmoothTransformation)));
+
+	ui->btn_yuffie->setFixedSize(98*scale,106*scale);
+	ui->btn_yuffie->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_yuffie->setIcon(QIcon(Chars.pixmap(ff7->charID(s,5)).scaledToHeight(ui->btn_yuffie->height(),Qt::SmoothTransformation)));
+
+	ui->btn_cait->setFixedSize(98*scale,106*scale);
+	ui->btn_cait->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_cait->setIcon(QIcon(Chars.pixmap(ff7->charID(s,6)).scaledToHeight(ui->btn_cait->height(),Qt::SmoothTransformation)));
+
+	ui->btn_vincent->setFixedSize(98*scale,106*scale);
+	ui->btn_vincent->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_vincent->setIcon(QIcon(Chars.pixmap(ff7->charID(s,7)).scaledToHeight(ui->btn_vincent->height(),Qt::SmoothTransformation)));
+
+	ui->btn_cid->setFixedSize(98*scale,106*scale);
+	ui->btn_cid->setIconSize(QSize(98*scale,106*scale));
+	ui->btn_cid->setIcon(QIcon(Chars.pixmap(ff7->charID(s,8)).scaledToHeight(ui->btn_cid->height(),Qt::SmoothTransformation)));
+
 }
 void MainWindow::progress_update()
 {
@@ -2417,44 +2465,44 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
 {//Need to create a Paint System Here To put Dots where Chars Are Placed.
 	QMenu menu(this);
 	QAction *sel;
-	menu.addAction(tr("Place Leader"));
-	menu.addAction(tr("Place Tiny Bronco/Chocobo"));
-	menu.addAction(tr("Place Buggy/Highwind"));
-	menu.addAction(tr("Place Sub"));
-	menu.addAction(tr("Place Wild Chocobo"));
-	menu.addAction(tr("Place Diamond/Ultimate/Ruby Weapon"));
+	menu.addAction(tr("&Place Leader"));
+	menu.addAction(tr("Place &Tiny Bronco/Chocobo"));
+	menu.addAction(tr("Place &Buggy/Highwind"));
+	menu.addAction(tr("Place &Sub"));
+	menu.addAction(tr("Place &Wild Chocobo"));
+	menu.addAction(tr("Place &Diamond/Ultimate/Ruby Weapon"));
 	/* Do Nothing. Don't know emerald weapon Coords
 	menu.addAction(tr("Place Emerald Weapon?"));
 	*/
 	sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
-	if(sel==0){return;}
+	if(sel==0){;return;}
 	fileModified(true);
-	if(sel->text()==tr("Place Leader"))
+	if(sel->text()==tr("&Place Leader"))
 	{
 		ui->leader_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		ui->leader_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
 	}
-	else if(sel->text()==tr("Place Tiny Bronco/Chocobo"))
+	else if(sel->text()==tr("Place &Tiny Bronco/Chocobo"))
 	{
 		ui->tc_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		ui->tc_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
 	}
-	else if(sel->text()==tr("Place Buggy/Highwind"))
+	else if(sel->text()==tr("Place &Buggy/Highwind"))
 	{
 		 ui->bh_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		 ui->bh_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
 	}
-	else if(sel->text()==tr("Place Sub"))
+	else if(sel->text()==tr("Place &Sub"))
 	{
 		 ui->sub_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		 ui->sub_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
 	}
-	else if(sel->text()==tr("Place Wild Chocobo"))
+	else if(sel->text()==tr("Place &Wild Chocobo"))
 	{
 		 ui->wc_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		 ui->wc_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
 	}
-	else if(sel->text()==tr("Place Diamond/Ultimate/Ruby Weapon"))
+	else if(sel->text()==tr("Place &Diamond/Ultimate/Ruby Weapon"))
 	{
 		 ui->durw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
 		 ui->durw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
@@ -2498,21 +2546,18 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 	int s2;
 
 	ui->tbl_unknown->reset();
-	ui->tbl_unknown->setColumnWidth(0,40);
-	ui->tbl_unknown->setColumnWidth(1,40);
-	ui->tbl_unknown->setColumnWidth(2,40);
-	ui->tbl_unknown->setColumnWidth(3,70);
-	ui->tbl_unknown->setColumnWidth(4,20);
+	ui->tbl_unknown->setColumnWidth(0,fontMetrics().width("DDDD",4));
+	ui->tbl_unknown->setColumnWidth(1,fontMetrics().width("HEXX",4));
+	ui->tbl_unknown->setColumnWidth(2,fontMetrics().width("DECX",4));
+	ui->tbl_unknown->setColumnWidth(3,fontMetrics().width("QQQQQQQQQ",9));
+	ui->tbl_unknown->setColumnWidth(4,fontMetrics().width("WW",2));
 
 	ui->tbl_compare_unknown->reset();
-	ui->tbl_compare_unknown->setColumnWidth(0,40);
-	ui->tbl_compare_unknown->setColumnWidth(1,40);
-	ui->tbl_compare_unknown->setColumnWidth(2,40);
-	ui->tbl_compare_unknown->setColumnWidth(3,70);
-	ui->tbl_compare_unknown->setColumnWidth(4,20);
-
-	if(ui->combo_compare_slot->currentIndex()==0){ui->btn_all_z_diffs->setEnabled(0);}
-	else {ui->btn_all_z_diffs->setEnabled(1);}
+	ui->tbl_compare_unknown->setColumnWidth(0,fontMetrics().width("DDDD",4));
+	ui->tbl_compare_unknown->setColumnWidth(1,fontMetrics().width("HEXX",4));
+	ui->tbl_compare_unknown->setColumnWidth(2,fontMetrics().width("DECX",4));
+	ui->tbl_compare_unknown->setColumnWidth(3,fontMetrics().width("QQQQQQQQQ",9));
+	ui->tbl_compare_unknown->setColumnWidth(4,fontMetrics().width("WW",2));
 
 	if(z <= unknown_zmax){temp = ff7->unknown(s,z);}
 	else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
@@ -2552,6 +2597,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 		//Write Char
 		newItem = new QTableWidgetItem(QChar(value),0);
 		ui->tbl_unknown->setItem(i,4,newItem);
+		//Set Height
+		ui->tbl_unknown->setRowHeight(i,fontMetrics().height());
 
 		if(ui->combo_compare_slot->currentIndex()!=0)
 		{//do the same for the compare slot if one has been selected.
@@ -2570,8 +2617,6 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 			s2 = ui->combo_compare_slot->currentIndex()-1;
 			if(z <= unknown_zmax){temp2 = ff7->unknown(s2,z);}
 			else if(z == unknown_zmax+1){temp2 = ff7->slotFF7Data(s2);}
-
-			//rows=temp2.size();
 			value = temp2.at(i);
 
 			//Write Hex
@@ -2588,7 +2633,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 			//Write Char
 			newItem = new QTableWidgetItem(QChar(value),0);
 			ui->tbl_compare_unknown->setItem(i,4,newItem);
-
+			ui->tbl_compare_unknown->setRowHeight(i,fontMetrics().height());
 			if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
 			{
 				for (int c=0;c<5;c++)
@@ -2627,12 +2672,8 @@ void MainWindow::on_combo_compare_slot_currentIndexChanged(int index)
 	{
 		ui->tbl_compare_unknown->clearContents();
 		ui->tbl_compare_unknown->setRowCount(0);
-		ui->tbl_diff->clearContents();
-		ui->tbl_diff->setRowCount(0);
-		ui->btn_all_z_diffs->setEnabled(0);
 	}
 	else{unknown_refresh(ui->combo_z_var->currentIndex());}
-	ui->tbl_diff->setVisible(0);
 }
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 {if(!load){
@@ -2654,93 +2695,6 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 
 	unknown_refresh(z);
 }}
-void MainWindow::on_btn_all_z_diffs_clicked()
-{
-	ui->tbl_diff->reset();
-
-	int num_diff=0;
-	qint16 diff =0;
-	QString text;
-	QTableWidgetItem *newItem;
-	int z_index= ui->combo_z_var->currentIndex();
-	if(z_index==ui->combo_z_var->count()-1)
-	{//if last item in list (SLOT mode)
-		for(int i=0;i<ui->tbl_unknown->rowCount();i++)
-		{
-			if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
-			{
-
-				num_diff++;
-				ui->tbl_diff->setRowCount(num_diff);
-				text.clear();
-
-				//Offset
-				QString hex_str = QString("%1").arg(i,4,16,QChar('0')).toUpper(); //Format: 0000C
-				newItem = new QTableWidgetItem(hex_str,0);
-				ui->tbl_diff->setItem(num_diff-1,0,newItem);
-
-				//Decimal
-				diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
-				newItem = new QTableWidgetItem(text.number(diff,10),0);
-				ui->tbl_diff->setItem(num_diff-1,1,newItem);
-
-				//Write Bin
-				QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
-				newItem = new QTableWidgetItem(binary_str,0);
-				ui->tbl_diff->setItem(num_diff-1,2,newItem);
-				//set properites for the tableitems
-				ui->tbl_diff->setVisible(1);
-				ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
-				ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
-				ui->tbl_diff->item(num_diff-1,2)->setFlags(Qt::ItemIsEnabled);
-				ui->tbl_diff->setRowHeight(num_diff-1,20);
-			}
-		}
-	}
-	else
-	{
-		for(int z=0;z<ui->combo_z_var->count()-1;z++)
-		{
-			ui->combo_z_var->setCurrentIndex(z);
-			for(int i=0;i<ui->tbl_unknown->rowCount();i++)
-			{
-				if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
-				{
-					num_diff++;
-					ui->tbl_diff->setRowCount(num_diff);
-					text.clear();
-					text.append("z_");  text.append(QString::number(z));
-					text.append(":");   text.append(QString::number(i));
-					newItem = new QTableWidgetItem(text,0);
-					ui->tbl_diff->setItem(num_diff-1,0,newItem);
-					diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
-					newItem = new QTableWidgetItem(text.number(diff,10),0);
-					ui->tbl_diff->setItem(num_diff-1,1,newItem);
-					//Write Bin
-					QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
-					newItem = new QTableWidgetItem(binary_str,0);
-					ui->tbl_diff->setItem(num_diff-1,2,newItem);
-
-					//set properites for the tableitems
-					ui->tbl_diff->setVisible(1);
-					ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
-					ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
-					ui->tbl_diff->item(num_diff-1,2)->setFlags(Qt::ItemIsEnabled);
-					ui->tbl_diff->setRowHeight(num_diff-1,20);
-				}
-			}
-		}
-	}
-	ui->tbl_diff->setColumnWidth(0,70);
-	ui->tbl_diff->setColumnWidth(1,40);
-	ui->tbl_diff->setColumnWidth(2,70);
-	ui->tbl_diff->setVisible(1);
-	if(num_diff<16){ui->tbl_diff->setFixedHeight((num_diff*21)+20);ui->tbl_diff->setFixedWidth(185);}
-	else{ui->tbl_diff->setFixedHeight((15*21)+23);ui->tbl_diff->setFixedWidth(200);}
-	ui->combo_z_var->setCurrentIndex(z_index);
-	if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
-}
-
 
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
 {if(!load){

@@ -216,12 +216,12 @@ private:
 	QSpinBox *sb_curHp;
 	QSpinBox *sb_maxHp;
 	QSpinBox *sb_kills;
-	QLCDNumber *lcdMaxHp;
-	QLCDNumber *lcdMaxMp;
 	QLabel *lbl_hp;
 	QLabel *lbl_hp_slash;
+	QLabel *lbl_hp_max;
 	QLabel *lbl_mp;
 	QLabel *lbl_mp_slash;
+	QLabel *lbl_mp_max;
 	QCheckBox *cb_fury;
 	QCheckBox *cb_sadness;
 	QCheckBox *cb_front_row;

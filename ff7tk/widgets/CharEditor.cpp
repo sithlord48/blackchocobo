@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-#include <QDebug>
+//#include <QDebug>
 CharEditor::CharEditor(qreal Scale,QWidget *parent) : QWidget(parent)
 {
 	scale = Scale;
@@ -41,6 +41,8 @@ void CharEditor::init_display()
 	lbl_mp = new QLabel(tr("MP"));
 	lbl_mp_slash = new QLabel("/");
 	lbl_hp_slash = new QLabel("/");
+	lbl_hp_max = new QLabel("");
+	lbl_mp_max = new QLabel("");
 	sb_level = new QSpinBox;
 	sb_level->setPrefix(tr("Level").append(": "));
 	sb_curMp = new QSpinBox;
@@ -51,14 +53,7 @@ void CharEditor::init_display()
 	sb_maxHp = new QSpinBox;
 	sb_maxHp->setToolTip(tr("value calculated ingame; edit BaseHp"));
 	sb_maxHp->setVisible(false);
-	lcdMaxHp = new QLCDNumber;
-	lcdMaxMp = new QLCDNumber;
-	lcdMaxMp->setSegmentStyle(QLCDNumber::Flat);
-	lcdMaxHp->setSegmentStyle(QLCDNumber::Flat);
-	lcdMaxHp->setDigitCount(5);
-	lcdMaxMp->setDigitCount(5);
-	lcdMaxHp->setMaximumHeight(24*scale);
-	lcdMaxMp->setMaximumHeight(24*scale);
+
 	sb_kills = new QSpinBox;
 	sb_kills->setPrefix(tr("Kills").append(": "));
 	cb_fury=new QCheckBox(tr("Fury"));
@@ -303,8 +298,8 @@ void CharEditor::init_display()
 	hp_layout->addWidget(lbl_hp);
 	hp_layout->addWidget(sb_curHp);
 	hp_layout->addWidget(lbl_hp_slash);
+	hp_layout->addWidget(lbl_hp_max);
 	hp_layout->addWidget(sb_maxHp);
-	hp_layout->addWidget(lcdMaxHp);
 	QSpacerItem *hp_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
 	hp_layout->addSpacerItem(hp_spacer1);
 	QSpacerItem *hp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
@@ -314,8 +309,8 @@ void CharEditor::init_display()
 	mp_layout->addWidget(lbl_mp);
 	mp_layout->addWidget(sb_curMp);
 	mp_layout->addWidget(lbl_mp_slash);
+	mp_layout->addWidget(lbl_mp_max);
 	mp_layout->addWidget(sb_maxMp);
-	mp_layout->addWidget(lcdMaxMp);
 	QSpacerItem *mp_spacer1 = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
 	mp_layout->addSpacerItem(mp_spacer1);
 	QSpacerItem *mp_spacer = new QSpacerItem(20,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
@@ -1305,9 +1300,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 	sb_curMp->setValue(data.curMP);
 	sb_curHp->setValue(data.curHP);
 	sb_maxHp->setValue(data.maxHP);
-	lcdMaxHp->display(data.maxHP);
+	lbl_hp_max->setText(QString(" %1").arg(QString::number(data.maxHP)));
 	sb_maxMp->setValue(data.maxMP);
-	lcdMaxMp->display(data.maxMP);
+	lbl_mp_max->setText(QString(" %1").arg(QString::number(data.maxMP)));
 	sb_kills->setValue(data.kills);
 	combo_id->setCurrentIndex(data.id);
 	if(data.flags[0]==FF7Char::Fury){cb_fury->setChecked(Qt::Checked);}else{cb_fury->setChecked(Qt::Unchecked);}
@@ -1856,8 +1851,8 @@ void CharEditor::setAdvancedMode(bool new_advancedMode)
 	combo_id->setVisible(advancedMode);
 	sb_maxHp->setVisible(advancedMode);
 	sb_maxMp->setVisible(advancedMode);
-	lcdMaxHp->setVisible(!advancedMode);
-	lcdMaxMp->setVisible(!advancedMode);
+	lbl_hp_max->setVisible(!advancedMode);
+	lbl_mp_max->setVisible(!advancedMode);
 	//if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
 	if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth ){cb_idChanger->setHidden(advancedMode);}
 }
@@ -2129,9 +2124,10 @@ void CharEditor::calc_stats(void)
 	else{lbl_base_mp_bonus->setText(QString(""));}
 
 	sb_maxHp->setValue(data.baseHP + (data.baseHP * (hp_bonus*.01)));
-	lcdMaxHp->display(sb_maxHp->value());
+	lbl_hp_max->setText(QString(" %1").arg(QString::number(sb_maxHp->value())));
 	sb_maxMp->setValue(data.baseMP + (data.baseMP *(mp_bonus *.01)));
-	lcdMaxMp->display(sb_maxMp->value());
+	lbl_mp_max->setText(QString(" %1").arg(QString::number(sb_maxMp->value())));
+
 }
 
 void CharEditor::level_up(int pre_level)
