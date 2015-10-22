@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1272</width>
-    <height>1133</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1247,8 +1247,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>1262</width>
+             <height>872</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3921,7 +3921,7 @@ location.</string>
                <item>
                 <widget class="QLabel" name="label_23">
                  <property name="text">
-                  <string>Ho&amp;ur</string>
+                  <string>Hour</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -4020,6 +4020,12 @@ location.</string>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_3">
+            <property name="minimumSize">
+             <size>
+              <width>216</width>
+              <height>216</height>
+             </size>
+            </property>
             <property name="title">
              <string>Love Points</string>
             </property>
