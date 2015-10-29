@@ -34,6 +34,7 @@ void AchievementEditor::initDisplay(void)
 {
 	achievementList = new QListWidget;
 	achievementList->setIconSize(QSize(24*scale,24*scale));
+	//achievementList->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Preferred);
 
 	QGridLayout * layout = new QGridLayout;
 	for(int i=63;i>27;--i)
@@ -45,6 +46,7 @@ void AchievementEditor::initDisplay(void)
 	}
 	layout->addWidget(achievementList);
 	this->setLayout(layout);
+	this->setFixedWidth(achievementList->width());
 
 }
 bool AchievementEditor::openFile(QString fileName)
