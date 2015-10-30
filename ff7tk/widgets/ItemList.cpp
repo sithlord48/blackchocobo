@@ -151,7 +151,7 @@ void ItemList::itemSelector_changed(quint16 item)
         setItem(sender()->objectName().toInt(),0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(sender()->objectName().toInt(),1,newItem);
-        setRowHeight(sender()->objectName().toInt(),font().pointSize()*3+2);
+		setRowHeight(sender()->objectName().toInt(),fontMetrics().height()+2);
         newItem = new QTableWidgetItem("",0);
         setItem(sender()->objectName().toInt(),2,newItem);
     }
@@ -236,7 +236,7 @@ void ItemList::updateItem(int row)
     if (itemlist.at(row) == FF7Item::EmptyItemData)
     {
         newItem = new QTableWidgetItem("",0);
-        setItem(row,0,newItem);
+		setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(row,1,newItem);
         newItem = new QTableWidgetItem("",0);
@@ -262,6 +262,6 @@ void ItemList::updateItem(int row)
         newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
         setItem(row,2,newItem);
     }
-    setRowHeight(row,font().pointSize()*3+2);
+	setRowHeight(row,fontMetrics().height()+2);
 }
 void ItemList::setEditableItemCombo(bool editable){editableItemCombo=editable;}
