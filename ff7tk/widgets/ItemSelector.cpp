@@ -25,23 +25,22 @@ ItemSelector::ItemSelector(qreal Scale,QWidget *parent): QWidget(parent)
 void ItemSelector::init_display()
 {
 	combo_type = new QComboBox;
-	combo_type->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
 	combo_item = new QComboBox;
-	combo_item->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
+
 	sb_qty = new QSpinBox;
 	sb_qty->setAlignment(Qt::AlignCenter);
 	sb_qty->setMinimum(1);
 	sb_qty->setMaximum(127);
 	sb_qty->setToolTip("");
 	sb_qty->setWrapping(true);
-	sb_qty->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Preferred);
-	btn_remove = new QPushButton();
-	btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 
+    btn_remove = new QPushButton();
+	btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 	btn_remove->setToolTip(tr("Empty Item"));
-	btn_remove->setFixedSize(22*scale,font().pointSize()*3+2);
+    btn_remove->setFixedWidth(fontMetrics().width(QString("WW")));
 	btn_remove->setShortcut(QKeySequence::Delete);
-	init_data(); //before setting layout set dat
+
+    init_data(); //before setting layout set dat
 	QHBoxLayout *layout = new QHBoxLayout;
 	layout->setContentsMargins(0,0,0,0);
 	layout->setSpacing(0);
@@ -206,11 +205,13 @@ int ItemSelector::id(void){return (int)Items->itemId(current_item);}
 int ItemSelector::combo_item_width(){return combo_item->width();}
 int ItemSelector::combo_type_width(){return combo_type->width();}
 int ItemSelector::qty_width(){return sb_qty->width()+btn_remove->width();}
+
 void ItemSelector::setFixedHeight(int h)
 {
 	sb_qty->setFixedHeight(h);
 	combo_type->setFixedHeight(h);
 	combo_item->setFixedHeight(h);
+    btn_remove->setFixedHeight(h);
 }
 void ItemSelector::setEditableItemCombo(bool editable)
 {
