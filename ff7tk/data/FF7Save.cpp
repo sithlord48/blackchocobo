@@ -21,9 +21,13 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 //Includes From OpenSSL
+#if defined(OPENSSL) && (OPENSSL == 1)
 #include <openssl/evp.h>
 #include <openssl/hmac.h>
 #include <openssl/aes.h>
+#else
+#define OPENSSL 0
+#endif
 // This Class should contain NO Gui Parts
 
 FF7Save::FF7Save()
@@ -829,53 +833,55 @@ void FF7Save::fix_psx_header(int s)
 	hf[s].sl_header[33] = ((slot[s].time/60%60)/10)+0x4F;
 	hf[s].sl_header[35] = ((slot[s].time/60%60)%10)+0x4F;
 }}
+
 void FF7Save::fix_psv_header(int s)
 {
 	fix_psx_header(s);//adjust time.
+	#if (OPENSSL == 1)
+		/* do signing stuff */
+		//qDebug() << QString("key:	%1 (%2 bytes)").arg(ps3Key().toHex().toUpper(),QString::number(ps3Key().length()));
+		//qDebug() << QString("Ps3Seed:	%1 (%2 bytes)").arg(ps3Seed().toHex().toUpper(),QString::number(ps3Seed().length()));
 
-	/* do signing stuff */
-	//qDebug() << QString("key:	%1 (%2 bytes)").arg(ps3Key().toHex().toUpper(),QString::number(ps3Key().length()));
-	//qDebug() << QString("Ps3Seed:	%1 (%2 bytes)").arg(ps3Seed().toHex().toUpper(),QString::number(ps3Seed().length()));
+		QByteArray keySeed = fileHeader().mid(0x08,20);
+		//qDebug() << QString("Encrypted KeySeed:    %1 (%2 bytes)").arg(keySeed.toHex().toUpper(),QString::number(keySeed.length()));
 
-	QByteArray keySeed = fileHeader().mid(0x08,20);
-	//qDebug() << QString("Encrypted KeySeed:    %1 (%2 bytes)").arg(keySeed.toHex().toUpper(),QString::number(keySeed.length()));
+		QByteArray hmacDigest = fileHeader().mid(0x1C,20);
+		QByteArray signedData = fileHeader().mid(0x30);
+		signedData.append(slotPsxRawData(0));
+		QByteArray decryptedKeySeed;decryptedKeySeed.resize(keySeed.size()+16);
 
-	QByteArray hmacDigest = fileHeader().mid(0x1C,20);
-	QByteArray signedData = fileHeader().mid(0x30);
-	signedData.append(slotPsxRawData(0));
-	QByteArray decryptedKeySeed;decryptedKeySeed.resize(keySeed.size()+16);
+		const EVP_CIPHER *cipher = EVP_aes_128_cbc();
+		int inLen=keySeed.length();
+		int outLen=0x10;
 
-	const EVP_CIPHER *cipher = EVP_aes_128_cbc();
-	int inLen=keySeed.length();
-	int outLen=0x10;
+		EVP_CIPHER_CTX ctx;
+		EVP_CIPHER_CTX_init(&ctx);
+		EVP_DecryptInit(&ctx, cipher, (const unsigned char*)ps3Key().data(), (const unsigned char*)ps3Seed().data()); //Working on unix
+		EVP_DecryptUpdate(&ctx, (unsigned char*)decryptedKeySeed.data(), &outLen, (const unsigned char*)keySeed.data(), inLen);
+		int tempLen=outLen;
+		EVP_DecryptFinal(&ctx,(unsigned char*)decryptedKeySeed.data()+tempLen,&outLen);
+		EVP_CIPHER_CTX_cleanup(&ctx);
 
-	EVP_CIPHER_CTX ctx;
-	EVP_CIPHER_CTX_init(&ctx);
-	EVP_DecryptInit(&ctx, cipher, (const unsigned char*)ps3Key().data(), (const unsigned char*)ps3Seed().data()); //Working on unix
-	EVP_DecryptUpdate(&ctx, (unsigned char*)decryptedKeySeed.data(), &outLen, (const unsigned char*)keySeed.data(), inLen);
-	int tempLen=outLen;
-	EVP_DecryptFinal(&ctx,(unsigned char*)decryptedKeySeed.data()+tempLen,&outLen);
-	EVP_CIPHER_CTX_cleanup(&ctx);
+		decryptedKeySeed.resize(tempLen);
 
-	decryptedKeySeed.resize(tempLen);
+		//qDebug() << QString("Decrypted KeySeed:	%1 (%2 bytes)").arg(decryptedKeySeed.toHex().toUpper(),QString::number(decryptedKeySeed.length()));
 
-	//qDebug() << QString("Decrypted KeySeed:	%1 (%2 bytes)").arg(decryptedKeySeed.toHex().toUpper(),QString::number(decryptedKeySeed.length()));
+		QByteArray newHMAC; newHMAC.resize(0x14);
+		unsigned int result_len = 0x14;
+		//qDebug() << QString("Signed Data Size:%1 bytes").arg(QString::number(signedData.length()));
 
-	QByteArray newHMAC; newHMAC.resize(0x14);
-	unsigned int result_len = 0x14;
-	//qDebug() << QString("Signed Data Size:%1 bytes").arg(QString::number(signedData.length()));
+		HMAC_CTX ctx2;
+		HMAC_CTX_init(&ctx2);
+		HMAC_Init(&ctx2, decryptedKeySeed.data(), decryptedKeySeed.length(), EVP_sha1());
+		HMAC_Update(&ctx2, (unsigned char *)signedData.data(), signedData.length());
+		HMAC_Final(&ctx2, ( unsigned char*)newHMAC.data(), &result_len);
+		HMAC_CTX_cleanup(&ctx2);
+		//qDebug() << QString("Files HMAC Digest:	%1 (%2 bytes)").arg(hmacDigest.toHex().toUpper(),QString::number(hmacDigest.length()));
+		//qDebug() << QString("New HMAC Digest:	%1 (%2 bytes)").arg(newHMAC.toHex().toUpper(), QString::number(newHMAC.length()));
 
-	HMAC_CTX ctx2;
-	HMAC_CTX_init(&ctx2);
-	HMAC_Init(&ctx2, decryptedKeySeed.data(), decryptedKeySeed.length(), EVP_sha1());
-	HMAC_Update(&ctx2, (unsigned char *)signedData.data(), signedData.length());
-	HMAC_Final(&ctx2, ( unsigned char*)newHMAC.data(), &result_len);
-	HMAC_CTX_cleanup(&ctx2);
-	//qDebug() << QString("Files HMAC Digest:	%1 (%2 bytes)").arg(hmacDigest.toHex().toUpper(),QString::number(hmacDigest.length()));
-	//qDebug() << QString("New HMAC Digest:	%1 (%2 bytes)").arg(newHMAC.toHex().toUpper(), QString::number(newHMAC.length()));
-
- QByteArray temp = fileHeader().replace(0x1C,0x14,newHMAC);
- setFileHeader(temp);
+	 QByteArray temp = fileHeader().replace(0x1C,0x14,newHMAC);
+	 setFileHeader(temp);
+	#endif
 }
 
 void FF7Save::fix_vmc_header(void)
