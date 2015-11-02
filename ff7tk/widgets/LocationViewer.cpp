@@ -78,7 +78,7 @@ void LocationViewer::init_display(void)
 	for (int i=0;i<locationTable->rowCount();i++)
 	{
 		//set the tooltip to the needed file
-		QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations->mapID(i),Locations->locationID(i)));
+		QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\" width=\"%3\" height\"%4\" /></p></body></html>").arg(Locations->mapID(i),Locations->locationID(i),QString::number(320*scale),QString::number(480*scale)));
 
 		newItem = new QTableWidgetItem(Locations->fileName(i),0);
 		newItem->setFlags(newItem->flags()&=~Qt::ItemIsEditable);

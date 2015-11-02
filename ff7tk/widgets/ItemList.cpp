@@ -111,7 +111,7 @@ ItemList::ItemList(qreal Scale,QWidget *parent) : QTableWidget(parent)
     verticalHeader()->hide();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
     for(int i=0;i<320;i++){itemlist.append(FF7Item::EmptyItemData);}//initlize the data.
-    itemSelector->setFixedHeight(this->sizeHintForRow(0)+contentsMargins().top()+contentsMargins().bottom());
+	itemSelector->setFixedHeight(fontMetrics().height());
     setFixedWidth(itemSelector->frameGeometry().width()+ verticalScrollBar()->width() + contentsMargins().left() + contentsMargins().right()+6);
     itemSelector->close();
     createdSelector = false;
@@ -151,7 +151,7 @@ void ItemList::itemSelector_changed(quint16 item)
         setItem(sender()->objectName().toInt(),0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(sender()->objectName().toInt(),1,newItem);
-		setRowHeight(sender()->objectName().toInt(),fontMetrics().height()+2);
+		setRowHeight(sender()->objectName().toInt(),fontMetrics().height()+9);
         newItem = new QTableWidgetItem("",0);
         setItem(sender()->objectName().toInt(),2,newItem);
     }
@@ -262,6 +262,6 @@ void ItemList::updateItem(int row)
         newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
         setItem(row,2,newItem);
     }
-	setRowHeight(row,fontMetrics().height()+2);
+	setRowHeight(row,fontMetrics().height()+9);
 }
 void ItemList::setEditableItemCombo(bool editable){editableItemCombo=editable;}

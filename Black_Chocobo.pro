@@ -150,8 +150,8 @@ system (lrelease Black_Chocobo.pro)#release the .qm files
 unix:!macx:!symbian:!android {
 	#remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
 
-	#DEFINES += OPENSSL=1							# Enable openSSL support
-	#LIBS += -lcrypto								# Enable crypto lib
+	DEFINES += OPENSSL=1							# Enable openSSL support
+	LIBS += -lcrypto								# Enable crypto lib
 	
 	TARGET = blackchocobo
 	target.path = /usr/bin

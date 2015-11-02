@@ -1028,7 +1028,8 @@ void MainWindow::materiaupdate(void)
 
 	for(int mat=0;mat<200;mat++)// partys materias
 	{
-		ui->tbl_materia->setRowHeight(mat,fontMetrics().height());
+		ui->tbl_materia->setRowHeight(mat,fontMetrics().height()+9);
+		//ui->tbl_materia->setIconSize(QSize(24*scale,24*scale));
 		qint32 current_ap= ff7->partyMateriaAp(s,mat);
 		quint8 current_id= ff7->partyMateriaId(s,mat);
 		QString ap;
@@ -1196,7 +1197,7 @@ void MainWindow::othersUpdate()
 			newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
 			ui->tbl_materia_2->setItem(mat,0,newItem);
 		}
-		ui->tbl_materia_2->setRowHeight(mat,fontMetrics().height());
+		ui->tbl_materia_2->setRowHeight(mat,fontMetrics().height()+9);
 	}
 	//SnowBoard Mini Game Data.
 	ui->sbSnowBegMin->setValue(ff7->snowboardTime(s,0).mid(0,2).toInt());
@@ -2598,7 +2599,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 		newItem = new QTableWidgetItem(QChar(value),0);
 		ui->tbl_unknown->setItem(i,4,newItem);
 		//Set Height
-		ui->tbl_unknown->setRowHeight(i,fontMetrics().height());
+		ui->tbl_unknown->setRowHeight(i,fontMetrics().height()+9);
 
 		if(ui->combo_compare_slot->currentIndex()!=0)
 		{//do the same for the compare slot if one has been selected.
@@ -2633,7 +2634,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 			//Write Char
 			newItem = new QTableWidgetItem(QChar(value),0);
 			ui->tbl_compare_unknown->setItem(i,4,newItem);
-			ui->tbl_compare_unknown->setRowHeight(i,fontMetrics().height());
+			ui->tbl_compare_unknown->setRowHeight(i,fontMetrics().height()+9);
 			if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
 			{
 				for (int c=0;c<5;c++)

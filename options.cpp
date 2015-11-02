@@ -27,7 +27,10 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	ui->line_default_save->setVisible(false);
 	ui->btn_set_default_save->setVisible(false);
 	ui->reset_default_save_location->setVisible(false);
-
+	//Hide the ps3 signing area if not built with openssl support.
+	#if(OPENSSL==0)
+	ui->groupBox_3->setTitle(tr("Signing is disabled! Build with OpenSSL support to enable"));
+	#endif
 	settings = config_data;
 	restoreGeometry(settings->value("OptionsGeometry").toByteArray());
 	set_path_lbls();
