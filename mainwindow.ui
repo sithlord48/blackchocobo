@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1216</width>
-    <height>983</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -81,12 +81,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>145</height>
-                 </size>
                 </property>
                 <property name="title">
                  <string>In Party</string>
@@ -190,24 +184,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="1" column="1">
@@ -221,24 +197,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="0" column="1">
@@ -248,24 +206,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -277,24 +217,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="0" column="0">
@@ -304,24 +226,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -333,24 +237,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="1" column="0">
@@ -360,24 +246,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -389,24 +257,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="2" column="1">
@@ -416,24 +266,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>94</width>
-                  <height>106</height>
-                 </size>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>98</width>
-                  <height>106</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -2799,12 +2631,6 @@ location.</string>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_13">
-            <property name="minimumSize">
-             <size>
-              <width>375</width>
-              <height>0</height>
-             </size>
-            </property>
             <property name="title">
              <string>Global Progress</string>
             </property>

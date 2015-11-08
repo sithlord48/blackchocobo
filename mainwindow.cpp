@@ -52,6 +52,27 @@ void MainWindow::init_display()
 
 	load=false;
 	//adjust some stuff for scale
+
+	ui->btn_cloud->setFixedSize(98*scale,110*scale);
+	ui->btn_barret->setFixedSize(98*scale,110*scale);
+	ui->btn_tifa->setFixedSize(98*scale,110*scale);
+	ui->btn_aeris->setFixedSize(98*scale,110*scale);
+	ui->btn_red->setFixedSize(98*scale,110*scale);
+	ui->btn_yuffie->setFixedSize(98*scale,110*scale);
+	ui->btn_cait->setFixedSize(98*scale,110*scale);
+	ui->btn_vincent->setFixedSize(98*scale,110*scale);
+	ui->btn_cid->setFixedSize(98*scale,110*scale);
+
+	ui->btn_cloud->setIconSize(ui->btn_cloud->size());
+	ui->btn_barret->setIconSize(ui->btn_barret->size());
+	ui->btn_tifa->setIconSize(ui->btn_tifa->size());
+	ui->btn_aeris->setIconSize(ui->btn_aeris->size());
+	ui->btn_red->setIconSize(ui->btn_red->size());
+	ui->btn_yuffie->setIconSize(ui->btn_yuffie->size());
+	ui->btn_cait->setIconSize(ui->btn_cait->size());
+	ui->btn_vincent->setIconSize(ui->btn_vincent->size());
+	ui->btn_cid->setIconSize(ui->btn_cid->size());
+
 	ui->groupBox_11->setFixedWidth(375*scale);
 	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
 	//world map tab controlls
@@ -80,6 +101,14 @@ void MainWindow::init_display()
 	ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
 	ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith));
 	ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie));
+
+	ui->combo_party1->setFixedHeight(32*scale);
+	ui->combo_party2->setFixedHeight(32*scale);
+	ui->combo_party3->setFixedHeight(32*scale);
+	ui->combo_party1->setIconSize(QSize(32*scale,32*scale));
+	ui->combo_party2->setIconSize(QSize(32*scale,32*scale));
+	ui->combo_party3->setIconSize(QSize(32*scale,32*scale));
+
 
 	for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));}
 	for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.icon(i),Chars.defaultName(i));}
@@ -1413,42 +1442,15 @@ void MainWindow::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-	ui->btn_cloud->setFixedSize(98*scale,106*scale);
-	ui->btn_cloud->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_cloud->setIcon(QIcon(Chars.pixmap(ff7->charID(s,0)).scaledToHeight(ui->btn_cloud->height(),Qt::SmoothTransformation)));
-
-	ui->btn_barret->setFixedSize(98*scale,106*scale);
-	ui->btn_barret->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_barret->setIcon(QIcon(Chars.pixmap(ff7->charID(s,1)).scaledToHeight(ui->btn_barret->height(),Qt::SmoothTransformation)));
-
-	ui->btn_tifa->setFixedSize(98*scale,106*scale);
-	ui->btn_tifa->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_tifa->setIcon(QIcon(Chars.pixmap(ff7->charID(s,2)).scaledToHeight(ui->btn_tifa->height(),Qt::SmoothTransformation)));
-
-	ui->btn_aeris->setFixedSize(98*scale,106*scale);
-	ui->btn_aeris->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_aeris->setIcon(QIcon(Chars.pixmap(ff7->charID(s,3)).scaledToHeight(ui->btn_aeris->height(),Qt::SmoothTransformation)));
-
-	ui->btn_red->setFixedSize(98*scale,106*scale);
-	ui->btn_red->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_red->setIcon(QIcon(Chars.pixmap(ff7->charID(s,4)).scaledToHeight(ui->btn_red->height(),Qt::SmoothTransformation)));
-
-	ui->btn_yuffie->setFixedSize(98*scale,106*scale);
-	ui->btn_yuffie->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_yuffie->setIcon(QIcon(Chars.pixmap(ff7->charID(s,5)).scaledToHeight(ui->btn_yuffie->height(),Qt::SmoothTransformation)));
-
-	ui->btn_cait->setFixedSize(98*scale,106*scale);
-	ui->btn_cait->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_cait->setIcon(QIcon(Chars.pixmap(ff7->charID(s,6)).scaledToHeight(ui->btn_cait->height(),Qt::SmoothTransformation)));
-
-	ui->btn_vincent->setFixedSize(98*scale,106*scale);
-	ui->btn_vincent->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_vincent->setIcon(QIcon(Chars.pixmap(ff7->charID(s,7)).scaledToHeight(ui->btn_vincent->height(),Qt::SmoothTransformation)));
-
-	ui->btn_cid->setFixedSize(98*scale,106*scale);
-	ui->btn_cid->setIconSize(QSize(98*scale,106*scale));
-	ui->btn_cid->setIcon(QIcon(Chars.pixmap(ff7->charID(s,8)).scaledToHeight(ui->btn_cid->height(),Qt::SmoothTransformation)));
-
+	ui->btn_cloud->setIcon(QIcon(Chars.pixmap(ff7->charID(s,0)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_barret->setIcon(QIcon(Chars.pixmap(ff7->charID(s,1)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_tifa->setIcon(QIcon(Chars.pixmap(ff7->charID(s,2)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_aeris->setIcon(QIcon(Chars.pixmap(ff7->charID(s,3)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_red->setIcon(QIcon(Chars.pixmap(ff7->charID(s,4)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_yuffie->setIcon(QIcon(Chars.pixmap(ff7->charID(s,5)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_cait->setIcon(QIcon(Chars.pixmap(ff7->charID(s,6)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_vincent->setIcon(QIcon(Chars.pixmap(ff7->charID(s,7)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
+	ui->btn_cid->setIcon(QIcon(Chars.pixmap(ff7->charID(s,8)).scaled(ui->btn_cloud->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)));
 }
 void MainWindow::progress_update()
 {
