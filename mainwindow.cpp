@@ -76,9 +76,10 @@ void MainWindow::init_display()
 	ui->groupBox_11->setFixedWidth(375*scale);
 	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
 	//world map tab controlls
-	ui->scrollArea->setFixedWidth(273*scale);
+	ui->scrollArea->setFixedWidth(280*scale);
 	ui->scrollAreaWidgetContents->adjustSize();
 	ui->world_map_frame->setFixedSize(446*scale,381*scale);
+	ui->world_map_view->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->combo_map_controls->setFixedHeight(32);
 	ui->world_map_view->setGeometry(5*scale,32*scale,432*scale,336*scale);
 	ui->slide_world_x->setGeometry(-1,369*scale,443*scale,10*scale);
@@ -92,15 +93,20 @@ void MainWindow::init_display()
 	ui->lbl_love_tifa->setFixedSize(50*scale,68*scale);
 	ui->lbl_love_yuffie->setFixedSize(50*scale,68*scale);
 
-	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
-	ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
-	ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith));
-	ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie));
+	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 
-	ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret));
-	ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa));
-	ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith));
-	ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie));
+	ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(),74*scale);
+	ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(),74*scale);
+	ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(),74*scale);
+	ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(),74*scale);
+
+	ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 
 	ui->combo_party1->setFixedHeight(32*scale);
 	ui->combo_party2->setFixedHeight(32*scale);
@@ -174,7 +180,7 @@ void MainWindow::init_display()
 	QVBoxLayout *hexLayout = new QVBoxLayout;
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
-	ui->lblPsxIcon->setScaledContents(true);
+	//ui->lblPsxIcon->setScaledContents(true);
 	ui->group_hexedit->setLayout(hexLayout);
 	//ui->psxExtras->setVisible(false);
 
@@ -1251,7 +1257,7 @@ void MainWindow::othersUpdate()
 void MainWindow::update_hexEditor_PSXInfo(void)
 {
 	SaveIcon *save_icon = new SaveIcon(ff7->slotIcon(s));
-	ui->lblPsxIcon->setPixmap(save_icon->icon());
+	ui->lblPsxIcon->setPixmap(save_icon->icon().scaled(ui->lblPsxIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	//connect(save_icon, SIGNAL(nextIcon(QPixmap)), ui->lblPsxIcon, SLOT(setPixmap(QPixmap)));
 
 	ui->lblRegionString->setText(ff7->region(s));
@@ -3055,7 +3061,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 			ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
 			if (ff7->type() != "PC" && ff7->type() !="") //we Display an icon. for all formats except for pc
 			{
-				ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaledToHeight(64,Qt::SmoothTransformation));
+				ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 			}
 			load=false;
 		break;

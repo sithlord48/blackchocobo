@@ -101,8 +101,7 @@ void SlotPreview::set_psx_game(void)
 	QString style="font-size: 10pt;";
 	party1 = new QLabel;
 	party1->setFixedSize(90*scale,100*scale);
-	party1->setScaledContents(1);
-	connect(icon,SIGNAL(nextIcon(QPixmap)),party1,SLOT(setPixmap(QPixmap)));
+	connect(icon,SIGNAL(nextIcon(QPixmap)),this,SLOT(set_Party1(QPixmap)));
 	location = new QLabel;
 	location->setStyleSheet(style);
 	QHBoxLayout *layout = new QHBoxLayout;
@@ -210,11 +209,11 @@ void SlotPreview::setParty(QString p1_style,QString p2_style,QString p3_style)
 
 void SlotPreview::setIndex(int index){this->setObjectName(QString::number(index));}
 int SlotPreview::index(void){return this->objectName().toInt();}
-void SlotPreview::set_Party1(QPixmap pix){party1->setPixmap(pix);}
+void SlotPreview::set_Party1(QPixmap pix){party1->setPixmap(pix.scaled(party1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 void SlotPreview::set_Party1(QString style){party1->setStyleSheet(style);}
-void SlotPreview::set_Party2(QPixmap pix){party2->setPixmap(pix);}
+void SlotPreview::set_Party2(QPixmap pix){party2->setPixmap(pix.scaled(party2->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 void SlotPreview::set_Party2(QString style){party2->setStyleSheet(style);}
-void SlotPreview::set_Party3(QPixmap pix){party3->setPixmap(pix);}
+void SlotPreview::set_Party3(QPixmap pix){party3->setPixmap(pix.scaled(party3->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 void SlotPreview::set_Party3(QString style){party3->setStyleSheet(style);}
 void SlotPreview::setName(QString Name){name->setText(Name);}
 void SlotPreview::setLevel(int lvl){lbl_level->setText(QString(tr("Level:%1")).arg(QString::number(lvl)));}
@@ -224,6 +223,6 @@ void SlotPreview::setTime(int hr,int min){lbl_time->setText(QString(tr("Time:%1:
 void SlotPreview::removed(void){emit btn_remove_clicked(index());}
 void SlotPreview::copy(void){emit btn_copy_clicked(index());}
 void SlotPreview::paste(void){emit btn_paste_clicked(index());}
-void SlotPreview::setPsxIcon(QByteArray icon_data,quint8 frames){icon->setAll(icon_data,frames);party1->setPixmap(icon->icon());}
-void SlotPreview::setPsxIcon(QList<QByteArray> icon_data){icon->setAll(icon_data);party1->setPixmap(icon->icon());}
+void SlotPreview::setPsxIcon(QByteArray icon_data,quint8 frames){icon->setAll(icon_data,frames);party1->setPixmap(icon->icon().scaled(party1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
+void SlotPreview::setPsxIcon(QList<QByteArray> icon_data){icon->setAll(icon_data);party1->setPixmap(icon->icon().scaled(party1->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));}
 void SlotPreview::mousePressEvent(QMouseEvent *ev){if(ev->button() ==Qt::LeftButton){emit clicked(index());}}

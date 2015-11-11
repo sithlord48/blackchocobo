@@ -40,6 +40,7 @@ public:
 protected:
 	void keyPressEvent(QKeyEvent *e);
 private slots:
+	void setIcon(QPixmap);
 	void btnPrevClicked();
 	void btnExportClicked();
 	void btnViewClicked();

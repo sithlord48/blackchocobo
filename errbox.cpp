@@ -29,7 +29,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 
 	lblIcon = new QLabel;
 	lblIcon->setMinimumSize(64,64);
-	lblIcon->setScaledContents(true);
+	lblIcon->setMaximumSize(128,128);
 
 	btnPrev = new QPushButton(QIcon::fromTheme("go-previous",QIcon(":/icon/prev")),"");
 	btnPrev->setShortcut(QKeySequence::Back);
@@ -77,8 +77,8 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 	int nextslot;
 
 	save_icon.setAll(ff7->slotIcon(s));
-	lblIcon->setPixmap(save_icon.icon());
-	connect(&save_icon, SIGNAL(nextIcon(QPixmap)), lblIcon, SLOT(setPixmap(QPixmap)));
+	lblIcon->setPixmap(save_icon.icon().scaled(lblIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+	connect(&save_icon, SIGNAL(nextIcon(QPixmap)), this, SLOT(setIcon(QPixmap)));
 
 	//assume NOT PC SAVE.
 	QString Slottext= QString(tr("Slot:%1\n").arg(QString::number(s+1),2,QChar('0')));
@@ -155,3 +155,8 @@ void errbox::setSingleSlot(bool single)
 	}
 }
 bool errbox::isSingleSlot(){return singleSlot;}
+
+void errbox::setIcon(QPixmap pix)
+{
+	lblIcon->setPixmap(pix.scaled(lblIcon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+}

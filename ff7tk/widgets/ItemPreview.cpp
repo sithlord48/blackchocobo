@@ -36,20 +36,16 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget
   lbl_desc=new QLabel();
   lbl_icon=new QLabel();
   lbl_icon->setFixedSize(24*scale,24*scale);
-  lbl_icon->setScaledContents(1);
   QSpacerItem *spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
   lbl_slot_1= new QLabel();
   lbl_slot_1->setFixedSize(24*scale,24*scale);
-  lbl_slot_1->setScaledContents(1);
   lbl_slot_1->setHidden(true);
 
   lbl_m_link_1= new QLabel();
   lbl_m_link_1->setFixedSize(12*scale,24*scale);
-  lbl_m_link_1->setScaledContents(1);
 
   lbl_slot_2 = new QLabel();
   lbl_slot_2->setFixedSize(24*scale,24*scale);
-  lbl_slot_2->setScaledContents(1);
   lbl_slot_2->setHidden(true);
 
   QHBoxLayout *slots_1_and_2 = new QHBoxLayout();
@@ -61,16 +57,13 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget
 
   lbl_slot_3 = new QLabel();
   lbl_slot_3->setFixedSize(24*scale,24*scale);
-  lbl_slot_3->setScaledContents(1);
   lbl_slot_3->setHidden(true);
 
   lbl_m_link_2 = new QLabel();
   lbl_m_link_2->setFixedSize(12*scale,24*scale);
-  lbl_m_link_2->setScaledContents(1);
 
   lbl_slot_4 = new QLabel();
   lbl_slot_4->setFixedSize(24*scale,24*scale);
-  lbl_slot_4->setScaledContents(1);
   lbl_slot_4->setHidden(true);
 
   QHBoxLayout *slots_3_and_4 = new QHBoxLayout();
@@ -82,16 +75,13 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget
 
   lbl_slot_5 = new QLabel();
   lbl_slot_5->setFixedSize(24*scale,24*scale);
-  lbl_slot_5->setScaledContents(1);
   lbl_slot_5->setHidden(true);
 
   lbl_m_link_3 = new QLabel();
   lbl_m_link_3->setFixedSize(12*scale,24*scale);
-  lbl_m_link_3->setScaledContents(1);
 
   lbl_slot_6 = new QLabel();
   lbl_slot_6->setFixedSize(24*scale,24*scale);
-  lbl_slot_6->setScaledContents(1);
   lbl_slot_6->setHidden(true);
 
   QHBoxLayout *slots_5_and_6 = new QHBoxLayout();
@@ -103,16 +93,13 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget
 
   lbl_slot_7 = new QLabel();
   lbl_slot_7->setFixedSize(24*scale,24*scale);
-  lbl_slot_7->setScaledContents(1);
   lbl_slot_7->setHidden(true);
 
   lbl_m_link_4 = new QLabel();
   lbl_m_link_4->setFixedSize(12*scale,24*scale);
-  lbl_m_link_4->setScaledContents(1);
 
   lbl_slot_8 = new QLabel();
   lbl_slot_8->setFixedSize(24*scale,24*scale);
-  lbl_slot_8->setScaledContents(1);
   lbl_slot_8->setHidden(true);
 
   QHBoxLayout *slots_7_and_8 = new QHBoxLayout();
@@ -181,7 +168,7 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale,QWidget
 }
 void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjustSize();}
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}
-void ItemPreview::setIcon(QPixmap picture){lbl_icon->setPixmap(picture);lbl_icon->adjustSize();}
+void ItemPreview::setIcon(QPixmap picture){lbl_icon->setPixmap(picture.scaled(lbl_icon->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation));lbl_icon->adjustSize();}
 
 void ItemPreview::setItem(quint16 itemraw)
 {//see FF7Save::itemDecode(quint16) for proper comments.

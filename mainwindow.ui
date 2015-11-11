@@ -2429,12 +2429,6 @@
                    <property name="contextMenuPolicy">
                     <enum>Qt::CustomContextMenu</enum>
                    </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/world_map</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
                    <property name="textInteractionFlags">
                     <set>Qt::NoTextInteraction</set>
                    </property>
@@ -3617,9 +3611,6 @@ location.</string>
                  <property name="text">
                   <string/>
                  </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_aeris</cstring>
                  </property>
@@ -3671,9 +3662,6 @@ location.</string>
                  <property name="text">
                   <string/>
                  </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_tifa</cstring>
                  </property>
@@ -3722,9 +3710,6 @@ location.</string>
                  <property name="text">
                   <string/>
                  </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_yuffie</cstring>
                  </property>
@@ -3772,9 +3757,6 @@ location.</string>
                 <widget class="QLabel" name="lbl_love_barret">
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -5580,9 +5562,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
                     </widget>
                    </item>
                    <item>
@@ -5601,10 +5580,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   <layout class="QVBoxLayout" name="verticalLayout_119">
                    <item>
                     <widget class="QLabel" name="lbl_battle_love_tifa">
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
+                     </widget>
                    </item>
                    <item>
                     <widget class="QSpinBox" name="sb_b_love_tifa">
@@ -5622,10 +5598,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   <layout class="QVBoxLayout" name="verticalLayout_120">
                    <item>
                     <widget class="QLabel" name="lbl_battle_love_yuffie">
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
+                     </widget>
                    </item>
                    <item>
                     <widget class="QSpinBox" name="sb_b_love_yuffie">
@@ -5643,9 +5616,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   <layout class="QVBoxLayout" name="verticalLayout_123">
                    <item>
                     <widget class="QLabel" name="lbl_battle_love_barret">
-                     <property name="scaledContents">
-                      <bool>true</bool>
-                     </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
@@ -6086,9 +6056,6 @@ rgb(255, 255, 255)</string>
                    <width>64</width>
                    <height>64</height>
                   </size>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
                  </property>
                 </widget>
                </item>

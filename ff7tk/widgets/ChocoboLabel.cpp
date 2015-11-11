@@ -27,7 +27,6 @@ ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *
 	scale = Scale;
 	lblType = new QLabel("");
 	lblType->setFixedSize(48*scale,48*scale);
-	lblType->setScaledContents(true);
 
 	lblName = new QLabel("");
 	lblSex = new QLabel("");
@@ -124,11 +123,11 @@ void ChocoboLabel::setType(int type)
 {
 	switch(type)
 	{
-		case 0: lblType->setPixmap(QPixmap("://chocobo/yellow")); break;
-		case 1: lblType->setPixmap(QPixmap("://chocobo/green")); break;
-		case 2: lblType->setPixmap(QPixmap("://chocobo/blue")); break;
-		case 3: lblType->setPixmap(QPixmap("://chocobo/black")); break;
-		case 4: lblType->setPixmap(QPixmap("://chocobo/gold")); break;
+		case 0: lblType->setPixmap(QPixmap("://chocobo/yellow").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
+		case 1: lblType->setPixmap(QPixmap("://chocobo/green").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
+		case 2: lblType->setPixmap(QPixmap("://chocobo/blue").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
+		case 3: lblType->setPixmap(QPixmap("://chocobo/black").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
+		case 4: lblType->setPixmap(QPixmap("://chocobo/gold").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
 		default: lblType->setPixmap(QPixmap("")); break;
 	}
 }
