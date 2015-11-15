@@ -63,15 +63,15 @@ void MainWindow::init_display()
 	ui->btn_vincent->setFixedSize(98*scale,110*scale);
 	ui->btn_cid->setFixedSize(98*scale,110*scale);
 
-	ui->btn_cloud->setIconSize(ui->btn_cloud->size());
-	ui->btn_barret->setIconSize(ui->btn_barret->size());
-	ui->btn_tifa->setIconSize(ui->btn_tifa->size());
-	ui->btn_aeris->setIconSize(ui->btn_aeris->size());
-	ui->btn_red->setIconSize(ui->btn_red->size());
-	ui->btn_yuffie->setIconSize(ui->btn_yuffie->size());
-	ui->btn_cait->setIconSize(ui->btn_cait->size());
-	ui->btn_vincent->setIconSize(ui->btn_vincent->size());
-	ui->btn_cid->setIconSize(ui->btn_cid->size());
+	ui->btn_cloud->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_barret->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_tifa->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_aeris->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_red->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_yuffie->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_cait->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_vincent->setIconSize(QSize(92*scale,104*scale));
+	ui->btn_cid->setIconSize(QSize(92*scale,104*scale));
 
 	ui->groupBox_11->setFixedWidth(375*scale);
 	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
@@ -180,7 +180,6 @@ void MainWindow::init_display()
 	QVBoxLayout *hexLayout = new QVBoxLayout;
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
-	//ui->lblPsxIcon->setScaledContents(true);
 	ui->group_hexedit->setLayout(hexLayout);
 	//ui->psxExtras->setVisible(false);
 

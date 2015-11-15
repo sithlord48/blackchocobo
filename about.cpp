@@ -26,6 +26,7 @@ About::About(QWidget *parent,QSettings *config_data) :
     settings = config_data;
     restoreGeometry(settings->value("AboutGeometry").toByteArray());
 	ui->lbl_icon->setFixedSize(64*settings->value("scale").toReal(),64*settings->value("scale").toReal());
+	ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_name->setText(QCoreApplication::applicationName().toLatin1());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
     ui->lbl_qt_version->setText(QString(tr("Using Qt: %1")).arg(qVersion()));

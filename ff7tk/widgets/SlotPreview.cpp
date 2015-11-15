@@ -100,7 +100,7 @@ void SlotPreview::set_psx_game(void)
 	icon= new SaveIcon;
 	QString style="font-size: 10pt;";
 	party1 = new QLabel;
-	party1->setFixedSize(90*scale,100*scale);
+	party1->setFixedSize(100*scale,100*scale);
 	connect(icon,SIGNAL(nextIcon(QPixmap)),this,SLOT(set_Party1(QPixmap)));
 	location = new QLabel;
 	location->setStyleSheet(style);

@@ -22,8 +22,8 @@ achievementDialog::achievementDialog(qreal Scale,QString FileName,QWidget *paren
     this->setWindowTitle(tr("Achievement Editor"));
 	achEditor = new AchievementEditor(Scale);
     achEditor->openFile(fileName);
-    btnSave = new QPushButton(QIcon(QPixmap("://icon/save")),tr("  &Save"));
-    btnNo = new QPushButton(QIcon(QPixmap("://icon/quit")),tr("  &Cancel"));
+	btnSave = new QPushButton(QIcon::fromTheme("document-save",QIcon(":/icon/save")),tr("  &Save"));
+	btnNo = new QPushButton(QIcon::fromTheme("window-close",QIcon(":/icon/quit")),tr("  &Cancel"));
     QHBoxLayout * btnLayout = new QHBoxLayout;
     btnLayout->setContentsMargins(0,0,0,0);
     btnLayout->setSpacing(2);
@@ -36,7 +36,7 @@ achievementDialog::achievementDialog(qreal Scale,QString FileName,QWidget *paren
     layout->addLayout(btnLayout);
     this->setLayout(layout);
     this->adjustSize();
-    this->setFixedSize(this->size());
+	//this->setFixedSize(this->size());
     connect(btnSave,SIGNAL(clicked()),this,SLOT(accept()));
     connect(btnNo,SIGNAL(clicked()),this,SLOT(close()));
 }

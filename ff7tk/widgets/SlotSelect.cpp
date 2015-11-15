@@ -18,6 +18,7 @@
 SlotSelect::SlotSelect(qreal Scale,FF7Save *data, bool showLoad,QWidget *parent):QDialog(parent)
 {
 	scale=Scale;
+	ff7 = data;
 	list_preview = new QScrollArea();
 	btnNew = new QPushButton (QIcon::fromTheme(QString("document-open"),QPixmap()),tr("Load Another File"));
 	connect (btnNew,SIGNAL(clicked()),this, SLOT(newFile()));
@@ -29,14 +30,13 @@ SlotSelect::SlotSelect(qreal Scale,FF7Save *data, bool showLoad,QWidget *parent)
 	frm_preview->setContentsMargins(0,0,0,0);
 	preview_layout->setContentsMargins(0,0,0,0);
 	preview_layout->setSpacing(3);
-	ff7 = data;
 	for(int i=0;i<15;i++)
 	{
 		preview[i] = new SlotPreview(i,scale);
 		preview_layout->addWidget(preview[i]);
 		setSlotPreview(i);
 	}
-	frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Expanding);
+	//frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Preferred);
 	list_preview->setWidget(frm_preview);
 	list_preview->setContentsMargins(0,0,0,0);
 	QVBoxLayout *dialog_layout = new QVBoxLayout;
@@ -46,8 +46,8 @@ SlotSelect::SlotSelect(qreal Scale,FF7Save *data, bool showLoad,QWidget *parent)
 	dialog_layout->addWidget(btnNew);
 	this->showLoad(showLoad); //by defalut hide the load new save button
 	this->setLayout(dialog_layout);
-	this->setContentsMargins(0,0,0,0);
-	setFixedWidth(preview[1]->contentsRect().size().width() +contentsMargins().left()+contentsMargins().right()+ list_preview->verticalScrollBar()->widthMM()*2*scale+6*scale);
+	setFixedWidth(preview[1]->contentsRect().size().width() +contentsMargins().left()+contentsMargins().right()+ list_preview->verticalScrollBar()->widthMM()+14*scale);
+	this->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Preferred);
 }
 void SlotSelect::button_clicked(int s){this->done(s);}
 
