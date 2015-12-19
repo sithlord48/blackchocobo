@@ -2554,8 +2554,8 @@ void CharEditor::MaxStats()
 	else
 	{
 		sb_level->setValue(99);
-		sb_base_hp->setValue(32767);
-		sb_base_mp->setValue(32767);
+		sb_base_hp->setValue(10000); //set to 10k to prevent overflow
+		sb_base_mp->setValue(10000); //set to 10k to prevent overflow 
 		sb_str_bonus->setValue(255);
 		sb_dex_bonus->setValue(255);
 		sb_spi_bonus->setValue(255);
