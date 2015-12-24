@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
+//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -100,7 +100,7 @@ void SlotPreview::set_psx_game(void)
 	icon= new SaveIcon;
 	QString style="font-size: 10pt;";
 	party1 = new QLabel;
-	party1->setFixedSize(100*scale,100*scale);
+	party1->setFixedSize(96*scale,96*scale);
 	connect(icon,SIGNAL(nextIcon(QPixmap)),this,SLOT(set_Party1(QPixmap)));
 	location = new QLabel;
 	location->setStyleSheet(style);

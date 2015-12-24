@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2014  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -192,11 +192,19 @@ QByteArray FF7Save::slotPsxRawData(int s)
 {
 	if(filename.isEmpty()){return QByteArray("\x00");}
 	else if (type() == "PC"){return QByteArray("\x00");}
+	else if ((type() == "PSV") || (type() == "PSX"))
+	{
+		QFile file(fileName());
+		if(!file.open(QIODevice::ReadOnly)){return QByteArray("\x00");}
+		QByteArray temp(file.readAll());
+		if(type()=="PSV"){temp.remove(0,0x84);}
+		file.close();
+		return temp;
+	}
 	else
 	{
 		QByteArray temp;
 		int blocks = psx_block_size(s);
-		if((type()=="PSV") || (type() =="PSX")){blocks =1;}
 		for(int i=0; i<blocks;i++)
 		{
 			temp.append(slotHeader(s));
@@ -204,7 +212,7 @@ QByteArray FF7Save::slotPsxRawData(int s)
 			temp.append(slotFooter(s));
 			s= psx_block_next(s);
 		}
-			return temp;
+		return temp;
 	}
 }
 bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
@@ -1150,7 +1158,7 @@ void FF7Save::pasteSlot(int s)
 
 quint8 FF7Save::psx_block_type(int s)
 {
-	if(type()!="PC")
+	if(type()!="PC" && type()!="PSX" && type()!="PSV")
 	{
 		int index=128+(128*s);
 		if (type() =="PSP"){index+=0x80;}
@@ -1163,7 +1171,7 @@ quint8 FF7Save::psx_block_type(int s)
 }
 void FF7Save::setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type)
 {
-	if(type()!="PC")
+	if(type()!="PC" && type()!="PSX" && type()!="PSV")
 	{
 		int index=128+(128*s);
 		if (type() =="PSP"){index+=0x80;}
@@ -1176,7 +1184,7 @@ void FF7Save::setPsx_block_type(int s,FF7Save::PSXBLOCKTYPE block_type)
 }
 void FF7Save::setPsx_block_next(int s,int next)
 {
-	if(type()=="PC"){return;}
+	if(type()=="PC" || type()=="PSX" || type()=="PSV"){return;}
 	if(next <0 || next >14){return;}
 	if(s <0 || s >14){return;}
 	if(next==s){return;}
@@ -1191,7 +1199,7 @@ void FF7Save::setPsx_block_next(int s,int next)
 
 quint8 FF7Save::psx_block_next(int s)
 {
-	if(type()!="PC")
+	if(type()!="PC" && type() != "PSX" && type() !="PSV")
 	{
 		int index=128+(128*s);
 		if (type() =="PSP"){index+=0x80;}
@@ -1205,7 +1213,7 @@ quint8 FF7Save::psx_block_next(int s)
 
 void FF7Save::setPsx_block_size(int s,int blockSize)
 {
-	if(type()=="PC"){return;}
+	if(type()=="PC" || type()=="PSX" || type()=="PSV"){return;}
 	if(s <0 || s >14){return;}
 	if(blockSize>15){return;}
 
@@ -1221,7 +1229,19 @@ void FF7Save::setPsx_block_size(int s,int blockSize)
 }
 quint8 FF7Save::psx_block_size(int s)
 {
-	if(type() !="PC")
+	if(type() =="PC"){return 0;}
+	else if(type()=="PSV")
+	{
+		qint64 size = QFile(fileName()).size();
+		size -= 0x84;
+		quint8 v = size / 0x2000;
+		return v;
+	}
+	else if(type()=="PSX")
+	{
+		return QFile(fileName()).size() / FF7_PSX_SAVE_GAME_SIZE;
+	}
+	else
 	{
 		int index=128+(128*s);
 		if (type() =="PSP"){index+=0x80;}
@@ -1230,8 +1250,7 @@ quint8 FF7Save::psx_block_size(int s)
 		else {}
 		qint32 value = file_headerp[index+0x04] | (file_headerp[index+0x05] << 8) | (file_headerp[index+0x06] <<16);
 		return value/0x2000;
-	 }
-	else{return 0; }
+	}
 }
 
 QString FF7Save::psxDesc(int s)

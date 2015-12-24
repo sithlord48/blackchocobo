@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2014 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
 //                        Black Chocobo Dev Team                            //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -22,6 +22,9 @@
 MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
 {
+ qDebug() <<QString("p.DpiX: %1x%2").arg(QString::number(qApp->desktop()->physicalDpiX()),QString::number(qApp->desktop()->physicalDpiY()));
+ qDebug() <<QString("l.DpiX: %1x%2").arg(QString::number(qApp->desktop()->logicalDpiX()),QString::number(qApp->desktop()->logicalDpiY()));
+
 
 	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96);}
 	scale = configdata->value("scale").toReal();
@@ -1350,7 +1353,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 			optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
 			optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
 			optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
-			if((ff7->type() !="PC" && ff7->type() !="")|| ui->action_AdvancedMode->isChecked())
+			if((ff7->type() !="PC" && ff7->type() !="")|| settings->value("optionsShowMapping").toBool())
 			{
 				setControllerMappingVisible(true);
 				if(optionsWidget->verticalScrollBar()->isVisible())

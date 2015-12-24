@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2013 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -92,9 +92,9 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :QDialog(parent)
 	numslots = ff7->psx_block_size(s);
 	nextslot= ff7->psx_block_next(s)+1;
 	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
-	if(numslots !=1)
+	if(numslots >1)
 	{
-			if(ff7->psx_block_next(s)!=0xFF)
+			if(ff7->type()!="PSX" && ff7->type()!="PSV" && ff7->psx_block_next(s)!=0xFF )
 			{
 				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){Slottext.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
 				else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
