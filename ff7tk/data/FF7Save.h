@@ -947,6 +947,23 @@ class FF7Save: public QObject{
 
 	bool subMiniGameVictory(int s);
 	void setSubMiniGameVictory(int s,bool won);
+	/**	\brief Get Chocobo Bill's Rating of a chocobo.
+	 *
+	 * This is the rating that chocobo bill give to a chocobo it follows the same format as FF7Save::chocoboPen()
+	 * \param s slot number (0-14)
+	 * \param stable stable number (0-5)
+	 */
+	quint8 chocoboRating(int s,int stable);
+
+	/**	\brief Set Chocobo Bill's Rating of a chocobo.
+	 *
+	 * This is the rating that chocobo bill give to a chocobo it follows the same format as FF7Save::chocoboPen()
+	 * \param s slot number (0-14)
+	 * \param stable stable number 0-5
+	 * \param rating (0-8) 0:empty 1: wonderful 8:terrible
+	 */
+	void setChocoboRating(int s,int stable,int rating);
+	QList<quint8> chocoboRatings(int s);
 
 	/**	\brief Get Description Text for PSX Slot.
 	 *

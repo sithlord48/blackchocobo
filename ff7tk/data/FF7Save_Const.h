@@ -18,7 +18,7 @@
 #define FF7_SAVE_CONSTS_H
 #include <QByteArray>
 /*~~~~~~~~~~~~~~~~~Unknown Tracking~~~~~~~~*/
-static const int unknown_zmax = 40; //Number of "z" vars.
+static const int unknown_zmax = 46; //Number of "z" vars.
 /*~~~~~~~~~~~~~~~~~~PC Save File ~~~~~~~~~~~~*/
 static const int FF7_PC_SAVE_GAME_SIZE = 0xFE55;
 static const int FF7_PC_SAVE_GAME_HEADER = 0x09;

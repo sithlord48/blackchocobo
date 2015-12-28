@@ -49,13 +49,14 @@ signals:
     void personalityChanged(int,quint8);
     void pCountChanged(int,quint8);
     void winsChanged(int,quint8);
+	void ratingChanged(int,quint8);
     void cantMateChanged(int,bool);
     void penChanged(int,int);
 public slots:
     void setAdvancedMode(bool advanced);
-    void setData(FF7CHOCOBO choco[6],QString name[6],quint16 stamina[6],bool cMate[6],qint8 owned,qint8 occupied,qint8 mask,qint8 chocoPens[4]);
-    void setData(QList<FF7CHOCOBO> chocos,QList<QString> names,QList<quint16> staminas,QList<bool> cMate,qint8 owned,qint8 occupied,qint8 mask,QList<qint8> chocoPens);
-    void setChocobo(int s,FF7CHOCOBO chocoData,QString chocoName,quint16 chocoStamina,bool chocoCmate);
+	void setData(FF7CHOCOBO choco[6],QString name[6],quint16 stamina[6],bool cMate[6],qint8 owned,qint8 occupied,qint8 mask,qint8 chocoPens[4],quint8 chocoRatings[6]);
+	void setData(QList<FF7CHOCOBO> chocos,QList<QString> names,QList<quint16> staminas,QList<bool> cMate,qint8 owned,qint8 occupied,qint8 mask,QList<qint8> chocoPens,QList<quint8> chocoRatings);
+	void setChocobo(int s,FF7CHOCOBO chocoData,QString chocoName,quint16 chocoStamina,bool chocoCmate,quint8 rating);
     void setChocoboPen(int pen, int value);
     void setOwned(int owned);
     void setOccupied(int occupied,int mask);
@@ -85,6 +86,7 @@ private slots:
     void WinsChanged(quint8);
     void CantMateChanged(bool);
     void ChocoPenIndexChanged(int);
+	void RatingChanged(quint8);
 private:
     bool isEmpty(FF7CHOCOBO choco);
     void initDisplay(void);
@@ -108,6 +110,7 @@ private:
     QString chocoboName[7];
     bool cantMate[7];
     quint16 chocoboStamina[7];
+	quint8 chocoboRatings[7];
     QComboBox *comboChocoPen[4];
 	qreal scale;
 };

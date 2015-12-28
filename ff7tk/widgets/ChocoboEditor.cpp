@@ -48,8 +48,16 @@ quint8 ChocoboEditor::pCount(void){return choco_data.pcount;}
 quint8 ChocoboEditor::wins(void){return choco_data.raceswon;}
 quint8 ChocoboEditor::sex(void){return choco_data.sex;}
 quint8 ChocoboEditor::type(void){return choco_data.type;}
+quint8 ChocoboEditor::rating(void){return choco_rating;}
 
 //Data Set Functions.
+void ChocoboEditor::setRating(int rating)
+{
+	if(rating <0){rating=0;}
+	else if (rating>8){rating=8;}
+	combo_rating->setCurrentIndex(rating);
+	choco_rating=rating;
+}
 void ChocoboEditor::setSprint(int sprint_speed)
 {
     if(sprint_speed <0){sprint_speed =0;}
@@ -155,6 +163,11 @@ void ChocoboEditor::setCantMate(bool cantMate)
 }
 
 //Same again but with the emits..
+void ChocoboEditor::RatingChanged(int rating)
+{
+	choco_rating=rating;
+	emit ratingChanged(choco_rating);
+}
 void ChocoboEditor::SprintChanged(int sprint_speed)
 {
     choco_data.sprintspd = sprint_speed;
@@ -269,6 +282,7 @@ void ChocoboEditor::init_display(void)
     lbl_pCount = new QLabel(tr("pCount"));
     lbl_intel = new QLabel(tr("Intelligence"));
     lbl_personality = new QLabel(tr("Personality"));
+	lbl_rating = new QLabel(tr("Chocobo Bill's Rating: "));
     //Set Widgets up
     line_name->setMaxLength(6);
     line_name->setPlaceholderText(tr("Name"));
@@ -306,6 +320,17 @@ void ChocoboEditor::init_display(void)
     sb_intel->setWrapping(true);
     sb_personality->setWrapping(true);
 
+	QStringList typeList;
+	typeList.append(tr("Empty"));
+	typeList.append(tr("Wonderful"));
+	typeList.append(tr("Great"));
+	typeList.append(tr("Good"));
+	typeList.append(tr("Fair"));
+	typeList.append(tr("Average"));
+	typeList.append(tr("Poor"));
+	typeList.append(tr("Bad"));
+	typeList.append(tr("Terrible"));
+
     //Fill Combos.
     combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
     combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
@@ -315,6 +340,11 @@ void ChocoboEditor::init_display(void)
     combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")),tr("Blue"));
     combo_type->addItem(QIcon(QPixmap(":/chocobo/black")),tr("Black"));
     combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")),tr("Gold"));
+
+	combo_rating = new QComboBox;
+	combo_rating->addItems(typeList);
+
+
     //Make Layouts
 
     QHBoxLayout *speed_layout = new QHBoxLayout;
@@ -361,6 +391,10 @@ void ChocoboEditor::init_display(void)
     pCount_personality_layout->addLayout(pCount_layout);
     pCount_personality_layout->addLayout(personality_layout);
 
+	QHBoxLayout *ratingLayout=new QHBoxLayout;
+	ratingLayout->addWidget(lbl_rating);
+	ratingLayout->addWidget(combo_rating);
+
     lblSpeedWarning = new QLabel(tr("Speed Values Are The Raw Values\nThe km/h speeds are calculated while playing "));
     advancedModeBox = new QFrame;
     advancedModeBox->setStyleSheet("QFrame:enabled{background-color: rgba(0,0,0,0);}");
@@ -385,17 +419,19 @@ void ChocoboEditor::init_display(void)
     Final->addLayout(stamina_layout,3,1);
     Final->addLayout(coop_layout,4,0);
     Final->addLayout(intel_layout,4,1);
-    Final->addWidget(advancedModeBox,9,0,1,2);
     Final->addLayout(speed_layout,5,0,1,2);
     Final->addLayout(sprint_layout,6,0,1,2);
-    Final->addWidget(lblSpeedWarning,7,0,2,2,Qt::AlignCenter);
-    Final->addItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding),10,0,1,2);
+	Final->addLayout(ratingLayout,7,0,1,2);
+	Final->addWidget(lblSpeedWarning,9,0,2,2,Qt::AlignCenter);
+	Final->addWidget(advancedModeBox,10,0,1,2);
+	Final->addItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding),11,0,1,2);
     this->setLayout(Final);
 }
 void ChocoboEditor::init_connections(void)
 {
     connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(TypeChanged(int)));
     connect(combo_sex,SIGNAL(currentIndexChanged(int)),this,SLOT(SexChanged(int)));
+	connect(combo_rating,SIGNAL(currentIndexChanged(int)),this,SLOT(RatingChanged(int)));
     connect(cb_cantMate,SIGNAL(toggled(bool)),this,SLOT(CantMateChanged(bool)));
     connect(line_name,SIGNAL(textChanged(QString)),this,SLOT(NameChanged(QString)));
     connect(sb_sprint,SIGNAL(valueChanged(int)),this,SLOT(SprintChanged(int)));
@@ -410,7 +446,7 @@ void ChocoboEditor::init_connections(void)
     connect(sb_pCount,SIGNAL(valueChanged(int)),this,SLOT(PcountChanged(int)));
     connect(sb_wins,SIGNAL(valueChanged(int)),this,SLOT(WinsChanged(int)));
 }
-void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina)
+void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina,quint8 rating)
 {
     choco_data = choco;
     if(Processed_Name =="      "){Processed_Name ="";}
@@ -418,7 +454,7 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
     choco_name = Processed_Name;
     choco_cant_mate = cant_mate;
     choco_stamina = stamina;
-
+	choco_rating = rating;
     line_name->setText(choco_name);
     combo_type->setCurrentIndex(choco_data.type);
     combo_sex->setCurrentIndex(choco_data.sex);
@@ -435,6 +471,7 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool ca
     sb_coop->setValue(choco_data.coop);
     sb_intel->setValue(choco_data.intelligence);
     sb_personality->setValue(choco_data.personality);
+	combo_rating->setCurrentIndex(choco_rating);
     getRank();
 }
 void ChocoboEditor::getRank(void)

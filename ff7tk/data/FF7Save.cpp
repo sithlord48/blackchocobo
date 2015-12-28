@@ -2333,14 +2333,16 @@ void FF7Save::setSnowboardScore(int s, int course,quint8 score)
 }
 quint16 FF7Save::bikeHighScore(int s){return slot[s].BikeHighScore;}
 void FF7Save::setBikeHighScore(int s,quint16 score){slot[s].BikeHighScore = score;setFileModified(true,s);}
-quint16 FF7Save::battlePoints(int s){return (slot[s].z_20[4] | (slot[s].z_20[5] << 8));}
+quint16 FF7Save::battlePoints(int s){return slot[s].battlepoints;}
 void FF7Save::setBattlePoints(int s,quint16 bp)
 {
-	int a = bp &0xFF;
-	int b = (bp &0xFF00) >>8;
-	slot[s].z_20[4]=a;
-	slot[s].z_20[5]=b;
-	setFileModified(true,s);
+	if(s<0 || s>14){return;}
+	else if(slot[s].battlepoints==bp){return;}
+	else
+	{
+		slot[s].battlepoints=bp;
+		setFileModified(true,s);
+	}
 }
 
 QString FF7Save::md5sum(QString fileName, QString UserID)
@@ -2789,6 +2791,12 @@ QByteArray FF7Save::unknown(int s,int z)
 		case 38: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_38),sizeof(slot[s].z_38)); break;
 		case 39: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_39),sizeof(slot[s].z_39)); break;
 		case 40: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_40),sizeof(slot[s].z_40)); break;
+		case 41: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_41),sizeof(slot[s].z_41)); break;
+		case 42: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_42),sizeof(slot[s].z_42)); break;
+		case 43: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_43),sizeof(slot[s].z_43)); break;
+		case 44: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_44),sizeof(slot[s].z_44)); break;
+		case 45: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_45),sizeof(slot[s].z_45)); break;
+		case 46: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_46),sizeof(slot[s].z_46)); break;
 		default: temp.setRawData(0x00,1); break;
 	}
 	return temp;
@@ -2921,6 +2929,24 @@ bool FF7Save::setUnknown(int s,int z,QByteArray data)
 		case 40:
 					if(data.size() != sizeof(slot[s].z_40)) {result=false; break;}
 					else{memcpy(&slot[s].z_40,data,sizeof(slot[s].z_40)); result=true;break;}
+		case 41:
+					if(data.size() != sizeof(slot[s].z_41)) {result=false; break;}
+					else{memcpy(&slot[s].z_41,data,sizeof(slot[s].z_41)); result=true;break;}
+		case 42:
+					if(data.size() != sizeof(slot[s].z_42)) {result=false; break;}
+					else{memcpy(&slot[s].z_42,data,sizeof(slot[s].z_42)); result=true;break;}
+		case 43:
+					if(data.size() != sizeof(slot[s].z_43)) {result=false; break;}
+					else{memcpy(&slot[s].z_43,data,sizeof(slot[s].z_43)); result=true;break;}
+		case 44:
+					if(data.size() != sizeof(slot[s].z_44)) {result=false; break;}
+					else{memcpy(&slot[s].z_44,data,sizeof(slot[s].z_44)); result=true;break;}
+		case 45:
+					if(data.size() != sizeof(slot[s].z_45)) {result=false; break;}
+					else{memcpy(&slot[s].z_45,data,sizeof(slot[s].z_45)); result=true;break;}
+		case 46:
+					if(data.size() != sizeof(slot[s].z_46)) {result=false; break;}
+					else{memcpy(&slot[s].z_46,data,sizeof(slot[s].z_46)); result=true;break;}
 		default: result=false; break;
 	}
 	setFileModified(true,s);
@@ -3401,8 +3427,7 @@ quint16 FF7Save::condorFunds(int s)
 	if(s<0 || s>14){return 0;}
 	else
 	{
-		quint16 a = (slot[s].z_16[52] | (slot[s].z_16[53] <<8));
-		return a;
+		return slot[s].condorfunds;
 	}
 }
 void FF7Save::setCondorFunds(int s,quint16 value)
@@ -3410,30 +3435,29 @@ void FF7Save::setCondorFunds(int s,quint16 value)
 	if(value==condorFunds(s)){return;}
 	else
 	{
-		slot[s].z_16[52] = (value & 0xff);
-		slot[s].z_16[53]= (value & 0xff00) >> 8;
+		slot[s].condorfunds=value;
 		setFileModified(true,s);
 	}
 }
 quint8 FF7Save::condorWins(int s)
 {
 	if(s<0 || s>14){return 0;}
-	else{return  quint8(slot[s].z_16[39]);}
+	else{return  slot[s].condorwins;}
 }
 void FF7Save::setCondorWins(int s,quint8 wins)
 {
 	if(wins ==condorWins(s)){return;}
-	else{slot[s].z_16[39] = wins;setFileModified(true,s);}
+	else{slot[s].condorwins = wins;setFileModified(true,s);}
 }
 quint8 FF7Save::condorLosses(int s)
 {
 	if(s<0 || s>14){return 0;}
-	else{return  quint8(slot[s].z_16[38]);}
+	else{return  slot[s].condorlosses;}
 }
 void FF7Save::setCondorLosses(int s, quint8 losses)
 {
 	if(losses ==condorLosses(s)){return;}
-	else{slot[s].z_16[38] = losses;setFileModified(true,s);}
+	else{slot[s].condorlosses = losses;setFileModified(true,s);}
 }
 
 QList<FF7CHOCOBO> FF7Save::chocobos(int s)
@@ -3537,12 +3561,12 @@ void FF7Save::setCountdownTimer(int s, quint32 time)
 bool FF7Save::seenPandorasBox(int s)
 {
 	if(s<0 ||s>14){return false;}
-	else{return (slot[s].z_14[0]&(1<<0));}
+	else{return (slot[s].seenpandora&(1<<0));}
 }
 void FF7Save::setSeenPandorasBox(int s,bool seen)
 {
-	if(seen){slot[s].z_14[0] |= (1<<0);}
-	else{slot[s].z_14[0] &= ~(1<<0);}
+	if(seen){slot[s].seenpandora |= (1<<0);}
+	else{slot[s].seenpandora &= ~(1<<0);}
 	setFileModified(true,s);
 }
 quint16 FF7Save::steps(int s)
@@ -4502,10 +4526,7 @@ quint16 FF7Save::craterSavePointMapID(int s)
 	if(s<0 || s>14){return 0;}
 	else
 	{
-		quint8 a=slotFF7Data(s).at(0xE5C);
-		quint8 b=slotFF7Data(s).at(0xE5D);
-		quint16 map = (a | (b <<8));
-		return map;
+		return slot[s].cratersaveMapId;
 	}
 }
 void FF7Save::setCraterSavePointMapID(int s, int value)
@@ -4514,8 +4535,7 @@ void FF7Save::setCraterSavePointMapID(int s, int value)
 	else if(value<0 || value>999){return;}
 	else
 	{
-		slot[s].z_30[33]=(value & 0xff);
-		slot[s].z_30[34]=(value & 0xff00) >> 8;
+		slot[s].cratersaveMapId=value;
 		setFileModified(true,s);
 	}
 }
@@ -4524,10 +4544,7 @@ qint16 FF7Save::craterSavePointX(int s)
 	if(s<0 || s>14){return 0;}
 	else
 	{
-		int a=slotFF7Data(s).at(0xE5E);
-		int b=slotFF7Data(s).at(0xE5F);
-		qint16 x = (a | (b <<8));
-		return x;
+		return slot[s].cratersaveX;
 	}
 }
 void FF7Save::setCraterSavePointX(int s,int value)
@@ -4536,8 +4553,7 @@ void FF7Save::setCraterSavePointX(int s,int value)
 	else if(value<-32767 || value > 32767){return;}
 	else
 	{
-		slot[s].z_30[35]=(value & 0xFF);
-		slot[s].z_30[36]=(value & 0xFF00) >> 8;
+	slot[s].cratersaveX=value;
 		setFileModified(true,s);
 	}
 }
@@ -4547,10 +4563,7 @@ qint16 FF7Save::craterSavePointY(int s)
 	if(s<0 || s>14){return 0;}
 	else
 	{
-		int a=slotFF7Data(s).at(0xE60);
-		int b=slotFF7Data(s).at(0xE61);
-		qint16 y = (a | (b <<8));
-		return y;
+		return slot[s].cratersaveY;
 	}
 }
 void FF7Save::setCraterSavePointY(int s,int value)
@@ -4559,8 +4572,7 @@ void FF7Save::setCraterSavePointY(int s,int value)
 	else if(value<-32767 || value > 32767){return;}
 	else
 	{
-		slot[s].z_30[37]=(value & 0xFF);
-		slot[s].z_30[38]=(value & 0xFF00) >> 8;
+		slot[s].cratersaveY=value;
 		setFileModified(true,s);
 	}
 }
@@ -4569,10 +4581,7 @@ qint16 FF7Save::craterSavePointZ(int s)
 	if(s<0 || s>14){return 0;}
 	else
 	{
-		int a=slotFF7Data(s).at(0xE62);
-		int b=slotFF7Data(s).at(0xE63);
-		qint16 z = (a | (b <<8));
-		return z;
+	return slot[s].cratersaveZ;
 	}
 }
 void FF7Save::setCraterSavePointZ(int s,int value)
@@ -4581,8 +4590,7 @@ void FF7Save::setCraterSavePointZ(int s,int value)
 	else if(value<-32767 || value > 32767){return;}
 	else
 	{
-		slot[s].z_30[39]=(value & 0xFF);
-		slot[s].z_30[40]=(value & 0xFF00) >> 8;
+		slot[s].cratersaveZ=value;
 		setFileModified(true,s);
 	}
 }
@@ -4691,14 +4699,42 @@ bool FF7Save::subMiniGameVictory(int s)
 {//0x0F38 in game saved as int 1 or int 0
 	if(s<0 || s>14){return false;}
 
-	if(slot[s].z_37[14] == 1){return true;}
+	if(slot[s].wonsubgame == 1){return true;}
 	else{return false;}
 }
 void FF7Save::setSubMiniGameVictory(int s, bool won)
 {
 	if(s<0 || s>14){return;}
-	int temp = slot[s].z_37[14];
-	if(won){slot[s].z_37[14] = 1; }
-	else{slot[s].z_37[14] = 0;}
-	if(temp != slot[s].z_37[14]){setFileModified(true,s);}
+	int temp = slot[s].wonsubgame;
+	if(won){slot[s].wonsubgame = 1; }
+	else{slot[s].wonsubgame = 0;}
+	if(temp != slot[s].wonsubgame){setFileModified(true,s);}
+}
+quint8 FF7Save::chocoboRating(int s,int stable)
+{
+	if(s<0 || s>14){return 0;}
+	else
+	{
+		return slot[s].stablechocorating[stable];
+	}
+}
+void FF7Save::setChocoboRating(int s,int stable,int rating)
+{
+	if(s<0 || s>14 || stable <0 || stable >5 || rating <0 || rating >8){return;}
+	else if(rating == slot[s].stablechocorating[stable]){return;}
+	else
+	{
+		slot[s].stablechocorating[stable] = rating;
+		setFileModified(true,s);
+	}
+}
+QList<quint8> FF7Save::chocoboRatings(int s)
+{
+	QList<quint8>ratings;
+	if(s<0 || s>14){for(int i=0;i<6;i++){ratings.append(0);};}
+	else
+	{
+		for(int i=0;i<6;i++){ratings.append(slot[s].stablechocorating[i]);}
+	}
+	return ratings;
 }

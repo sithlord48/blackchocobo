@@ -34,7 +34,7 @@ protected:
     void resizeEvent(QResizeEvent *ev);
 public:
     explicit ChocoboEditor(QWidget *parent = 0);
-    void SetChocobo(FF7CHOCOBO choco,QString Processed_Name="",bool cant_mate=false, quint16 stamina=0);
+	void SetChocobo(FF7CHOCOBO choco,QString Processed_Name="",bool cant_mate=false, quint16 stamina=0,quint8 rating=0);
     quint16 sprint(void);
     quint16 mSprint(void);
     quint16 speed(void);
@@ -50,6 +50,7 @@ public:
     quint8 type(void);
     QString name(void);
     bool cantMate(void);
+	quint8 rating(void);
 signals:    
     void sprintChanged(quint16);
     void mSprintChanged(quint16);
@@ -66,6 +67,7 @@ signals:
     void typeChanged(quint8);
     void nameChanged(QString);
     void cantMateChanged(bool);
+	void ratingChanged(quint8);
 public slots:
    void setSprint(int);
    void setMsprint(int);
@@ -82,6 +84,7 @@ public slots:
    void setType(int);
    void setName(QString);
    void setCantMate(bool);
+   void setRating(int);
    void setAdvancedMode(bool);
 private slots:
    void SprintChanged(int);
@@ -98,6 +101,7 @@ private slots:
    void SexChanged(int);
    void TypeChanged(int);
    void NameChanged(QString);
+   void RatingChanged(int);
    void CantMateChanged(bool);
 private:
     void init_display(void);
@@ -108,6 +112,7 @@ private:
     QFrame *advancedModeBox;
     QComboBox *combo_sex;
     QComboBox *combo_type;
+	QComboBox* combo_rating;
     QCheckBox *cb_cantMate;
     QLineEdit *line_name;
     QSpinBox *sb_speed;
@@ -121,7 +126,7 @@ private:
     QSpinBox *sb_pCount;
     QSpinBox *sb_intel;
     QSpinBox *sb_personality;
-
+	QLabel *lbl_rating;
     QLabel *lbl_speed;
     QLabel *lbl_div_speed;
     QLabel *lbl_stamina;
@@ -141,6 +146,7 @@ private:
     QString choco_name;
     bool choco_cant_mate;
     quint16 choco_stamina;
+	quint8 choco_rating;
 };
 
 #endif // CHOCOBOEDITOR_H

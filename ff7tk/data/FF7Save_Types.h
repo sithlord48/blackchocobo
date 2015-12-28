@@ -103,42 +103,50 @@ struct FF7SLOT {
 	qint8 pennedchocos[4];		/**< [0x0BF9] chocos in fenced area at farm rating*/
 	quint8 z_13[2];				/**< [0x0BFD] UNKNOWN DATA*/
 	quint8 u_weapon_hp[3];		/**< [0x0BFF] Ultimate Weapons Remaining Hp*/
-	quint8 z_14[28];			/**< [0x0C02] UNKNOWN DATA*/
+	quint8 seenpandora;			/**< [0x0C02] bit 0: seen pandoras box. more data on other bits?*/
+	quint8 z_14[27];			/**< [0x0C03] UNKNOWN DATA*/
 	quint8 tut_sub;				/**< [0x0C1E] Have we seen the sub tutorial 0x04 =on Show Battle Targets Label 0x40=on*/
 	quint8 ruby_emerald;		/**< [0x0C1F] WEAPONS ALIVE? 0x05=both 0x1D =non 0x0D = emerald*/
 	quint8 z_15[2];				/**< [0x0C20] UNKNOWN DATA*/
 	quint8 world_map_chocobos;	/**< [0x0C22] what is chocobos are visible on world map*/
 	quint8 world_map_vehicles;	/**< [0x0C23] what is vehicles are visible on world map 0x00 empty,0x01 buggy,0x04 tiny bronco,0x10 highwind (combineable; never 0x11)*/
-	quint8 z_16[97];			/**< [0x0C24] UNKNOWN DATA*/
+	quint8 z_16[38];			/**< [0x0C24] UNKNOWN DATA*/
+	quint8 condorlosses;		/**< [0x0C4A] Number of losses in condor game*/
+	quint8 condorwins;			/**< [0x0C4B] Number of wins in condor game*/
+	quint8 z_17[12];			/**< [0X0C4C] UNKNOWN DATA*/
+	quint16 condorfunds;		/**< [0x0C58] Funds for condor game*/
+	quint8 z_18[43];			/**< [0x0C5A] UNKNOWN DATA*/
 	quint8 bm_progress1;		/**< [0x0C85] Bombing Mission Flag 1*/
 	quint8 bm_progress2;		/**< [0x0C86] Bombing Mission Flag 2*/
-	quint8 z_17[45];			/**< [0X0C87] UNKNOWN DATA 45 50*/
+	quint8 z_19[45];			/**< [0X0C87] UNKNOWN DATA 45 50*/
 	quint8 aeris_chruch;		/**< [0x0CB4] aeris chruch*/
-	quint8 z_18[49];			/**< [0x0CB5] UNKNOWN DATA*/
+	quint8 z_20[49];			/**< [0x0CB5] UNKNOWN DATA*/
 	quint8 bm_progress3;		/**< [0X0CE6] Bombing mission flag 3*/
-	quint8 z_19[7];				/**< [0X0CE7] UNKNOWN DATA*/
+	quint8 z_21[7];				/**< [0X0CE7] UNKNOWN DATA*/
 	quint16 gp;					/**< [0x0CEE] Party GP (0-10000)*/
-	quint8 z_20[12];			/**< [0x0CF0] UNKNOWN DATA*/
+	quint8 z_22[4];				/**< [0x0CF0] UNKNOWN DATA*/
+	quint16 battlepoints;		/**< [0x0CF4] Battle Points*/
+	quint8 z_23[6];				/**< [0x0CF6] UNKNOWN DATA*/
 	qint8 stables;				/**< [0x0CFC] Number of chocobo stables owned*/
 	qint8 stablesoccupied;		/**< [0x0CFD] Number of occupied stables*/
-	quint8 z_21[1];				/**< [0x0CFE] UNKNOWN DATA*/
+	quint8 z_24[1];				/**< [0x0CFE] UNKNOWN DATA*/
 	qint8 chocobomask;			/**< [0x0CFF] Mask of occupied stables*/
 	quint8 chocomated;			/**< [0x0D00] what stalls can't mate*/
-	quint8 z_22[40];			/**< [0x0D01] UNKNOWN DATA*/
+	quint8 z_25[40];			/**< [0x0D01] UNKNOWN DATA*/
 	quint8 yuffieforest;		/**< [0x0D29] yuffie in forest if bit1 = 1 then yes.. others here too?*/
-	quint8 z_23[28];			/**< [0x0D2A] UNKNOWN DATA*/
+	quint8 z_26[28];			/**< [0x0D2A] UNKNOWN DATA*/
 	quint8 donprogress;			/**< [0x0D46] don's progress var. 00 - 03 when done*/
-	quint8 z_24[31];			/**< [0x0D47] UNKNOWN DATA*/
+	quint8 z_27[31];			/**< [0x0D47] UNKNOWN DATA*/
 	quint8 turtleflyers;		/**< [0x0D66] turtles paradice flyers.*/
-	quint8 z_25[12];			/**< [0X0D67] UNKNOWN DATA*/
+	quint8 z_28[12];			/**< [0X0D67] UNKNOWN DATA*/
 	quint8 reg_yuffie;			/**< [0x0D73] yuffie regular? 0x6F=yes 0x6E=no*/
-	quint8 z_26[15];			/**< [0x0D74] UNKNOWN DATA*/
+	quint8 z_29[15];			/**< [0x0D74] UNKNOWN DATA*/
 	quint8 midgartrainflags;	/**< [0x0D83] Midgar Train Flags.*/
-	quint8 z_27[64];		/**< [0x0D84] UNKNOWN DATA*/
+	quint8 z_30[64];			/**< [0x0D84] UNKNOWN DATA*/
 	FF7CHOCOBO chocobos[4];		/**< [0x0DC4] Chocobo slots*/
-	quint8 z_28[13];		/**< [0x0E04] UNKNOWN DATA*/
+	quint8 z_31[13];			/**< [0x0E04] UNKNOWN DATA*/
 	quint16 BikeHighScore;		/**< [0x0E11] Bike Mini Game High Score*/
-	quint8 SnowUnused;		/**< [0x0E13] Unused var for snowboard game?*/
+	quint8 SnowUnused;			/**< [0x0E13] Unused var for snowboard game?*/
 	quint32 SnowBegFastTime;	/**< [0x0E14] Fastest Time For Snowboard Beginner Course stored in Msec 3bytes byte[0] unused*/
 	quint32 SnowExpFastTime;	/**< [0x0E16] Fastest Time For Snowboard Expert Course Stored in Msec 3bytes byte[0] unused*/
 	quint32 SnowCrazyFastTime;	/**< [0x0E1C] Fastest Time For Snowboard Crazy Course Stored in Msec 3bytes byte[0] unused*/ quint8 SnowBegScore;		/**< [0x0E20] SnowBoard Minigame HighScore For Beginner Course*/
@@ -147,25 +155,34 @@ struct FF7SLOT {
 	quint8 Snowtempvar;	  		/**< [0x0E23] SnowBoard Minigame Temp var Not used.*/
 	quint16 coster_2;			/**< [0x0E24] Coster 2nd place score*/
 	quint16 coster_3;			/**< [0x0E26] Coster 3rd place score*/
-	quint8 z_29[17];			/**< [0x0E28] UNKNOWN DATA*/
+	quint8 z_32[17];			/**< [0x0E28] UNKNOWN DATA*/
 	quint16 coster_1;			/**< [0x0E39] Coster 1st place*/
-	quint8 z_30[105];			/**< [0x0E3C] UNKNOWN DATA*/
+	quint8 z_33[3];				/**< [0x0E3B] UNKNOWN DATA*/
+	quint8 stablechocorating[6];/**< [0x0E3E] Chocobo Bill's Rating for chocobo in stable 1-6 (same ranks as penned)*/
+	quint8 z_34[24];			/**< [0x0E44] UNKNOWN DATA*/
+	quint16 cratersaveMapId;	/**< [0x0E5C] Map id of location the portable save is on*/
+	quint16 cratersaveX;		/**< [0x0E5E] X coord of portable save*/
+	quint16 cratersaveY;		/**< [0x0E60] Y coord of portable save*/
+	quint16 cratersaveZ;		/**< [0x0E62] Z coord of portable save*/
+	quint8 z_35[64];			/**< [0x0E64] UNKNOWN DATA*/
 	qint8 disc;					/**< [0x0EA4] Current CD*/
-	quint8 z_31[1];				/**< [0x0EA5] UNKNOWN DATA*/
+	quint8 z_36[1];				/**< [0x0EA5] UNKNOWN DATA*/
 	quint8 intbombing;			/**< [0x0EA6] 0x14 On Start of Bombing Mission , 0x56 On first Save..*/
-	quint8 z_32[3];				/**< [0x0EA7] UNKNOWN DATA*/
+	quint8 z_37[3];				/**< [0x0EA7] UNKNOWN DATA*/
 	quint16 steps;				/**< [0x0EAA] Number of steps used in glacear to make you pass out @ 544 steps*/
-	quint8 z_33[22];			/**< [0x0EAC] UNKNOWN DATA*/
+	quint8 z_38[22];			/**< [0x0EAC] UNKNOWN DATA*/
 	quint8 field_help;			/**< [0x0EC2] Show field hand 1=on 0=off*/
-	quint8 z_34[1];				/**< [0x0EC3] UNKNOWN DATA*/
+	quint8 z_39[1];				/**< [0x0EC3] UNKNOWN DATA*/
 	quint8 chocobonames[6][6];	/**< [0x0EC4] <-OK Chocobo names*/
 	quint16 chocostaminas[6];	/**< [0x0EE8] Chocobo staminas 12 bytes*/
 	quint8 reg_vinny;			/**< [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)*/
-	quint8 z_35[23];			/**< [0x0EF5] UNKNOWN DATA*/
+	quint8 z_40[23];			/**< [0x0EF5] UNKNOWN DATA*/
 	quint8 location[24];		/**< [0x0F0C] Location String*/
-	quint8 z_36[5];				/**< [0x0F24] UNKNOWN DATA*/
+	quint8 z_41[5];				/**< [0x0F24] UNKNOWN DATA*/
 	quint8 tut_save;			/**< [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false*/
-	quint8 z_37[50];			/**< [0x0F2A] UNKNOWN DATA*/
+	quint8 z_42[14];			/**< [0x0F2A] UNKNOWN DATA*/
+	quint8 wonsubgame;			/**< [0x0F38] 1 If you ahve won the sub mini game*/
+	quint8 z_43[35];			/**< [0x0F39] UNKNOWN DATA*/
 	quint32 l_world;			/**< [0x0F5C] coords of the leader on the world map part 1 (X, id, angle)*/
 	quint32 l_world2;			/**< [0x0F60] leader coords part 2 (Y,Z)*/
 	quint32 wc_world;			/**< [0x0F64] Caught Wild Chocobo coords part 1*/
@@ -184,17 +201,17 @@ struct FF7SLOT {
 	quint16 pole2_y;			/**< [0x0F92] 2nd Snow Pole Y Coordinate.*/
 	quint16 pole3_x;			/**< [0x0F94] 3rd Snow Pole X Coordinate.*/
 	quint16 pole3_y;			/**< [0x0F96] 3rd Snow Pole Y Coordinate.*/
-	quint8 z_38[236];			/**< [0x0F98] UNKNOWN DATA*/
+	quint8 z_44[236];			/**< [0x0F98] UNKNOWN DATA*/
 	FF7CHOCOBO choco56[2];		/**< [0x1084] Chocobo slots 5-6*/
 	quint16 phsallowed;			/**< [0x10A4] who is allowed in the phs*/
 	quint16 phsvisible;			/**< [0x10A6] who is visible in the phs*/
-	quint8 z_39[48];			/**< [0x10A8] UNKNOWN DATA*/
+	quint8 z_45[48];			/**< [0x10A8] UNKNOWN DATA*/
 	quint8 battlespeed;			/**< [0x10D8] Battle Speed*/
 	quint8 battlemspeed;		/**< [0x10D9] Battle Message Speed*/
 	quint16 options;			/**< [0x10DA] Options*/
 	quint8 controller_map[16];	/**< [0x10DC] controller mapping (only used in psx save)*/
 	quint8 fieldmspeed;			/**< [0x10EC] Message Speed On field*/
-	quint8 z_40[8];				/**< [0x10ED] UNKNOWN DATA*/
+	quint8 z_46[8];				/**< [0x10ED] UNKNOWN DATA*/
 }__attribute__((__packed__));
 
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/

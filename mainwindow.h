@@ -210,6 +210,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void cm_personalityChanged(int,quint8);
 	void cm_mated_toggled(int,bool);
 	void cm_pensChanged(int pen,int index);
+	void cm_ratingChanged(int,quint8);
 
 	//The Chocobo pens.
 

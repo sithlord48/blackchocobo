@@ -22,8 +22,8 @@
 MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
 {
- qDebug() <<QString("p.DpiX: %1x%2").arg(QString::number(qApp->desktop()->physicalDpiX()),QString::number(qApp->desktop()->physicalDpiY()));
- qDebug() <<QString("l.DpiX: %1x%2").arg(QString::number(qApp->desktop()->logicalDpiX()),QString::number(qApp->desktop()->logicalDpiY()));
+// qDebug() <<QString("p.DpiX: %1x%2").arg(QString::number(qApp->desktop()->physicalDpiX()),QString::number(qApp->desktop()->physicalDpiY()));
+// qDebug() <<QString("l.DpiX: %1x%2").arg(QString::number(qApp->desktop()->logicalDpiX()),QString::number(qApp->desktop()->logicalDpiY()));
 
 
 	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96);}
@@ -306,6 +306,7 @@ void MainWindow::init_connections()
 		connect(chocoboManager,SIGNAL(pCountChanged(int,quint8)),this,SLOT(cm_pcountChanged(int,quint8)));
 		connect(chocoboManager,SIGNAL(winsChanged(int,quint8)),this,SLOT(cm_raceswonChanged(int,quint8)));
 		connect(chocoboManager,SIGNAL(penChanged(int,int)),this,SLOT(cm_pensChanged(int,int)));
+		connect(chocoboManager,SIGNAL(ratingChanged(int,quint8)),this,SLOT(cm_ratingChanged(int,quint8)));
 
 		//locations
 		connect(locationViewer,SIGNAL(locationStringChanged(QString)),this,SLOT(location_textChanged(QString)));
@@ -1273,7 +1274,7 @@ void MainWindow::update_hexEditor_PSXInfo(void)
 	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){SlotSizeText.append(tr("Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));}
 	if(ff7->psx_block_size(s) !=1)
 	{
-			if(ff7->psx_block_next(s)!=0xFF)
+			if(ff7->type()!="PSX" && ff7->type()!="PSV" && ff7->psx_block_next(s)!=0xFF )
 			{
 				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){SlotSizeText.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
 				else{SlotSizeText.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
@@ -1324,7 +1325,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 		break;
 
 		case 3://Chocobo Tab
-			chocoboManager->setData(ff7->chocobos(s),ff7->chocobosNames(s),ff7->chocobosStaminas(s),ff7->chocoboCantMates(s),ff7->stablesOwned(s),ff7->stablesOccupied(s),ff7->stableMask(s),ff7->chocoboPens(s));
+			chocoboManager->setData(ff7->chocobos(s),ff7->chocobosNames(s),ff7->chocobosStaminas(s),ff7->chocoboCantMates(s),ff7->stablesOwned(s),ff7->stablesOccupied(s),ff7->stableMask(s),ff7->chocoboPens(s),ff7->chocoboRatings(s));
 			break;
 
 		case 4://Location Tab
@@ -1657,6 +1658,7 @@ void MainWindow::cm_raceswonChanged(int stable,quint8 value){if(!load){ ff7->set
 void MainWindow::cm_pcountChanged(int stable,quint8 value){if(!load){ ff7->setChocoPCount(s,stable,value);}}
 void MainWindow::cm_personalityChanged(int stable,quint8 value){if(!load){ ff7->setChocoPersonality(s,stable,value);}}
 void MainWindow::cm_mated_toggled(int stable,bool checked){if(!load){ff7->setChocoCantMate(s,stable,checked);}}
+void MainWindow::cm_ratingChanged(int stable, quint8 rating){if(!load){ff7->setChocoboRating(s,stable,rating);}}
 //set data for pens outside
 void MainWindow::cm_pensChanged(int pen,int index){if(!load){ff7->setChocoboPen(s,pen,index);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
