@@ -49,7 +49,7 @@ struct FF7DESC {
 	quint8 location[32];/**< [0x0024] Save location (ff7 string)*/
 }__attribute__((__packed__));
 
-struct FF7XYT {// size of 6. used for coords
+struct FF7XYT {// size of 7. used for coords
 	qint16 x;
 	qint16 y;
 	quint16 t;
