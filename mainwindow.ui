@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>777</width>
-    <height>697</height>
+    <width>838</width>
+    <height>648</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1079,8 +1079,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>767</width>
-             <height>538</height>
+             <width>828</width>
+             <height>490</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1123,8 +1123,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>472</height>
+             <width>828</width>
+             <height>490</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1135,6 +1135,9 @@
             <string>Worldmap Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_127">
+            <property name="spacing">
+             <number>3</number>
+            </property>
             <property name="leftMargin">
              <number>3</number>
             </property>
@@ -1157,7 +1160,7 @@
               </property>
               <property name="minimumSize">
                <size>
-                <width>273</width>
+                <width>310</width>
                 <height>0</height>
                </size>
               </property>
@@ -1170,12 +1173,15 @@
               <property name="horizontalScrollBarPolicy">
                <enum>Qt::ScrollBarAlwaysOff</enum>
               </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
               <widget class="QWidget" name="scrollAreaWidgetContents">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>256</width>
+                 <width>305</width>
                  <height>615</height>
                 </rect>
                </property>
@@ -1184,6 +1190,12 @@
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>300</width>
+                 <height>0</height>
+                </size>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
                 <property name="spacing">
@@ -1203,6 +1215,12 @@
                 </property>
                 <item>
                  <widget class="QGroupBox" name="groupBox_42">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Visible On World Map</string>
                   </property>
@@ -1326,6 +1344,9 @@
                         </property>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_yellow_chocobo">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1339,6 +1360,9 @@
                         </item>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_green_chocobo">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1352,6 +1376,9 @@
                         </item>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_blue_chocobo">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1365,6 +1392,9 @@
                         </item>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_black_chocobo">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                             <horstretch>0</horstretch>
@@ -1378,6 +1408,9 @@
                         </item>
                         <item>
                          <widget class="QCheckBox" name="cb_visible_gold_chocobo">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1399,6 +1432,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Party leader</string>
                   </property>
@@ -1584,6 +1623,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_4">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
@@ -1785,6 +1830,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_3">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Buggy / Highwind</string>
                   </property>
@@ -2003,6 +2054,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_5">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Sub</string>
                   </property>
@@ -2204,6 +2261,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_7">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Wild Chocobo</string>
                   </property>
@@ -2405,6 +2468,12 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="title">
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
@@ -2609,228 +2678,233 @@
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_96">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_126">
-                <item>
-                 <spacer name="horizontalSpacer_48">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QFrame" name="world_map_frame">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>446</width>
-                    <height>381</height>
-                   </size>
-                  </property>
-                  <widget class="QLabel" name="world_map_view">
-                   <property name="geometry">
-                    <rect>
-                     <x>5</x>
-                     <y>32</y>
-                     <width>432</width>
-                     <height>336</height>
-                    </rect>
-                   </property>
-                   <property name="cursor">
-                    <cursorShape>CrossCursor</cursorShape>
-                   </property>
-                   <property name="contextMenuPolicy">
-                    <enum>Qt::CustomContextMenu</enum>
-                   </property>
-                   <property name="textInteractionFlags">
-                    <set>Qt::NoTextInteraction</set>
-                   </property>
-                  </widget>
-                  <widget class="QSlider" name="slide_world_x">
-                   <property name="geometry">
-                    <rect>
-                     <x>-1</x>
-                     <y>369</y>
-                     <width>443</width>
-                     <height>10</height>
-                    </rect>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="maximum">
-                    <number>295000</number>
-                   </property>
-                   <property name="singleStep">
-                    <number>100</number>
-                   </property>
-                   <property name="pageStep">
-                    <number>1000</number>
-                   </property>
-                   <property name="tracking">
-                    <bool>true</bool>
-                   </property>
+             <widget class="QFrame" name="frm_map">
+              <layout class="QVBoxLayout" name="verticalLayout_96">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_126">
+                 <item>
+                  <spacer name="horizontalSpacer_48">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
-                   <property name="regular" stdset="0">
-                    <bool>true</bool>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
                    </property>
-                  </widget>
-                  <widget class="QSlider" name="slide_world_y">
-                   <property name="geometry">
-                    <rect>
-                     <x>437</x>
-                     <y>26</y>
-                     <width>10</width>
-                     <height>347</height>
-                    </rect>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="world_map_frame">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>0</width>
-                     <height>0</height>
+                     <width>446</width>
+                     <height>381</height>
                     </size>
                    </property>
-                   <property name="maximumSize">
+                   <widget class="QLabel" name="world_map_view">
+                    <property name="geometry">
+                     <rect>
+                      <x>5</x>
+                      <y>32</y>
+                      <width>432</width>
+                      <height>336</height>
+                     </rect>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>CrossCursor</cursorShape>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::CustomContextMenu</enum>
+                    </property>
+                    <property name="textInteractionFlags">
+                     <set>Qt::NoTextInteraction</set>
+                    </property>
+                   </widget>
+                   <widget class="QSlider" name="slide_world_x">
+                    <property name="geometry">
+                     <rect>
+                      <x>-1</x>
+                      <y>369</y>
+                      <width>443</width>
+                      <height>10</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="maximum">
+                     <number>295000</number>
+                    </property>
+                    <property name="singleStep">
+                     <number>100</number>
+                    </property>
+                    <property name="pageStep">
+                     <number>1000</number>
+                    </property>
+                    <property name="tracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="regular" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                   <widget class="QSlider" name="slide_world_y">
+                    <property name="geometry">
+                     <rect>
+                      <x>437</x>
+                      <y>26</y>
+                      <width>10</width>
+                      <height>347</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>ArrowCursor</cursorShape>
+                    </property>
+                    <property name="maximum">
+                     <number>230000</number>
+                    </property>
+                    <property name="singleStep">
+                     <number>100</number>
+                    </property>
+                    <property name="pageStep">
+                     <number>1000</number>
+                    </property>
+                    <property name="invertedAppearance">
+                     <bool>true</bool>
+                    </property>
+                    <property name="regular" stdset="0">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_49">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
                     <size>
-                     <width>16777215</width>
-                     <height>16777215</height>
+                     <width>40</width>
+                     <height>20</height>
                     </size>
                    </property>
-                   <property name="cursor">
-                    <cursorShape>ArrowCursor</cursorShape>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_166">
+                 <item>
+                  <widget class="QLabel" name="label_231">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
                    </property>
-                   <property name="maximum">
-                    <number>230000</number>
-                   </property>
-                   <property name="singleStep">
-                    <number>100</number>
-                   </property>
-                   <property name="pageStep">
-                    <number>1000</number>
-                   </property>
-                   <property name="invertedAppearance">
-                    <bool>true</bool>
-                   </property>
-                   <property name="regular" stdset="0">
-                    <bool>true</bool>
+                   <property name="text">
+                    <string>sliders show </string>
                    </property>
                   </widget>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_49">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_166">
-                <item>
-                 <widget class="QLabel" name="label_231">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="text">
-                   <string>sliders show </string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="combo_map_controls">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <item>
-                   <property name="text">
-                    <string>Party Leader</string>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="combo_map_controls">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
                    </property>
-                  </item>
-                  <item>
+                   <item>
+                    <property name="text">
+                     <string>Party Leader</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>TinyBronco/Chocobo</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Buggy/Highwind</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Sub</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wild Chocobo</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Diamond / Ultimate / Ruby Weapon</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_167">
+                 <item>
+                  <widget class="QLabel" name="label_233">
                    <property name="text">
-                    <string>TinyBronco/Chocobo</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Buggy/Highwind</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Sub</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Wild Chocobo</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Diamond / Ultimate / Ruby Weapon</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_167">
-                <item>
-                 <widget class="QLabel" name="label_233">
-                  <property name="text">
-                   <string>Right click on map to easily set an item's
+                    <string>Right clic&amp;k on map to easily set an item's
 location.</string>
-                  </property>
-                  <property name="indent">
-                   <number>5</number>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+                   </property>
+                   <property name="indent">
+                    <number>5</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -2971,8 +3045,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
-                  <height>2178</height>
+                  <width>386</width>
+                  <height>1976</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -7105,8 +7179,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>777</width>
-     <height>24</height>
+     <width>838</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

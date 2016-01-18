@@ -79,7 +79,7 @@ void MainWindow::init_display()
 	ui->groupBox_11->setFixedWidth(375*scale);
 	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
 	//world map tab controlls
-	ui->scrollArea->setFixedWidth(280*scale);
+	ui->scrollArea->setFixedWidth(310*scale);
 	ui->scrollAreaWidgetContents->adjustSize();
 	ui->world_map_frame->setFixedSize(446*scale,381*scale);
 	ui->world_map_view->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
@@ -2283,8 +2283,25 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
 			}
 		}
 }}
-void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked){if(!load){ff7->setWorldChocobo(s,FF7Save::WCHOCO_WILD,checked);}}
+void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
+{
+	if(!load){ff7->setWorldChocobo(s,FF7Save::WCHOCO_WILD,checked);}
 
+	if(!checked)
+	{
+		ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+		ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+		ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+		ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+		ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+	}
+	ui->cb_visible_yellow_chocobo->setEnabled(checked);
+	ui->cb_visible_green_chocobo->setEnabled(checked);
+	ui->cb_visible_blue_chocobo->setEnabled(checked);
+	ui->cb_visible_black_chocobo->setEnabled(checked);
+	ui->cb_visible_gold_chocobo->setEnabled(checked);
+
+}
 void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
 {if(!load){
 		ff7->setWorldChocobo(s,FF7Save::WCHOCO_YELLOW,checked);
