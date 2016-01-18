@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>838</width>
-    <height>648</height>
+    <width>836</width>
+    <height>646</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1079,8 +1079,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>828</width>
-             <height>490</height>
+             <width>826</width>
+             <height>488</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1123,8 +1123,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>828</width>
-             <height>490</height>
+             <width>826</width>
+             <height>488</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1172,9 +1172,6 @@
               </property>
               <property name="horizontalScrollBarPolicy">
                <enum>Qt::ScrollBarAlwaysOff</enum>
-              </property>
-              <property name="sizeAdjustPolicy">
-               <enum>QAbstractScrollArea::AdjustToContents</enum>
               </property>
               <widget class="QWidget" name="scrollAreaWidgetContents">
                <property name="geometry">
@@ -7179,7 +7176,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>838</width>
+     <width>836</width>
      <height>26</height>
     </rect>
    </property>
@@ -7717,8 +7714,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_sec</tabstop>
  </tabstops>
  <resources>
-  <include location="images.qrc"/>
   <include location="ff7tk/icons/common.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>
