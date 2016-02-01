@@ -185,3 +185,8 @@ static:{ # everything below takes effect with CONFIG += static
 }
 # change the name of the binary, if it is build in debug mode
 CONFIG(debug, debug|release) {TARGET = $$join(TARGET,,,-debug)}
+
+#Prevent ms padding on packed structures on gcc compiler
+contains(QMAKE_COMPILER, gcc) {
+QMAKE_CXXFLAGS += -mno-ms-bitfields
+}
