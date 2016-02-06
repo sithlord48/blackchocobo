@@ -195,9 +195,10 @@ static const FieldItemList FILIST[]=
 
 	{QList<quint16>()<<0x0C4C<<0x0F05,QList<quint8>()<<5<<1,QStringList()<<"convil_4"<<"bonevil",QT_TRANSLATE_NOOP("FieldItems","Phoenix")},
 
-	{QList<quint16>()<<0x0C54,QList<quint8>()<<5,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Peace Ring")},
-	{QList<quint16>()<<0x0C54,QList<quint8>()<<6,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Megalixir")},
-	{QList<quint16>()<<0x0C54,QList<quint8>()<<7,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Super Ball")},
+	{QList<quint16>()<<0x0C55,QList<quint8>()<<4,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Magic Comb")},
+	{QList<quint16>()<<0x0C55,QList<quint8>()<<5,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Peace Ring")},
+	{QList<quint16>()<<0x0C55,QList<quint8>()<<6,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Megalixir")},
+	{QList<quint16>()<<0x0C55,QList<quint8>()<<7,QStringList()<<"convil_2",QT_TRANSLATE_NOOP("FieldItems","Super Ball")},
 
 	{QList<quint16>()<<0x0C6B,QList<quint8>()<<4,QStringList()<<"hyou13_2",QT_TRANSLATE_NOOP("FieldItems","Alexander")},
 	{QList<quint16>()<<0x0C6B,QList<quint8>()<<5,QStringList()<<"move_d",QT_TRANSLATE_NOOP("FieldItems","Added Cut")},
@@ -443,7 +444,7 @@ static const FieldItemList FILIST[]=
 	{QList<quint16>()<<0x1015,QList<quint8>()<<2,QStringList()<<"kuro_1",QT_TRANSLATE_NOOP("FieldItems","Trident")},
 	{QList<quint16>()<<0x1015,QList<quint8>()<<3,QStringList()<<"kuro_1",QT_TRANSLATE_NOOP("FieldItems","Rocket Punch")},
 	{QList<quint16>()<<0x1015,QList<quint8>()<<4,QStringList()<<"kuro_1",QT_TRANSLATE_NOOP("FieldItems","Ribbon")},
-	{QList<quint16>()<<0x1015,QList<quint8>()<<5,QStringList()<<"kuro_2",QT_TRANSLATE_NOOP("FieldItems","Silver Rifle")},
+	{QList<quint16>()<<0x1015,QList<quint8>()<<6,QStringList()<<"kuro_2",QT_TRANSLATE_NOOP("FieldItems","Silver Rifle")},
 
 	{QList<quint16>()<<0x1016,QList<quint8>()<<0,QStringList()<<"delmin12",QT_TRANSLATE_NOOP("FieldItems","Motor Drive")},
 	{QList<quint16>()<<0x1016,QList<quint8>()<<1,QStringList()<<"delmin12",QT_TRANSLATE_NOOP("FieldItems","Fire Ring")},
