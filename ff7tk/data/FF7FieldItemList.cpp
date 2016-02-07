@@ -18,6 +18,7 @@
 #include <QCoreApplication>
 
 FF7FieldItemList::FF7FieldItemList(){}
+int FF7FieldItemList::count(){return sizeof(FILIST)/sizeof(FILIST[0]);}
 QList<quint16> FF7FieldItemList::offset(int index){return FILIST[index].Offset;}
 QList<quint8> FF7FieldItemList::bit(int index){return FILIST[index].Bit;}
 QStringList FF7FieldItemList::maps(int index){return FILIST[index].Maps;}
