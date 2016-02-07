@@ -16,6 +16,14 @@
 
 #ifndef TYPE_FF7CHOCOBO_H
 #define TYPE_FF7CHOCOBO_H
+#ifdef _MSC_VER
+#	define PACK(structure)			\
+		__pragma(pack(push, 1))		\
+		structure					\
+		__pragma(pack(pop))
+#else
+#	define PACK(structure) structure Q_PACKED
+#endif
 /*! \struct FF7CHOCOBO
  *  \brief a chocobo in save game
  *
@@ -23,6 +31,7 @@
  *  \todo Research The Personality byte
  *  \todo Research the pcount byte
  */
+PACK(
 struct FF7CHOCOBO {
 	quint16 sprintspd;		/**< [0x0000] Speed */
 	quint16 maxsprintspd;	/**< [0x0002] Max Speed*/
@@ -36,6 +45,6 @@ struct FF7CHOCOBO {
 	quint8 raceswon;		/**< [0x000D] Number of races won*/
 	quint8 sex;				/**< [0x000E] Sex (0=male,1=female)*/
 	quint8 type;			/**< [0x000F] Type (Yellow,Green,Blue,Black,Gold)*/
-}Q_PACKED;
+});
 
 #endif // TYPE_FF7CHOCOBO_H

@@ -25,6 +25,7 @@
  * 132 Bytes total size 128 Bytes Known, 4 Bytes Unknown (possibly unused)
  * \todo Check Unknown bits to see if ever used
  */
+PACK(
 struct FF7CHAR {
 	quint8 id;				/**< [0x0000] Character id (used by Sephiroth/Vincent slot)*/
 	quint8 level;			/**< [0x0001] Level (0-99)*/
@@ -62,5 +63,5 @@ struct FF7CHAR {
 	quint32 exp;			/**< [0x003C] Current EXP*/
 	materia materias[16];	/**< [0x0040] Materia slots (0-7=weapon,8-15=armor)*/
 	quint32 expNext;		/**< [0x0080] EXP to next level*/
-}Q_PACKED;
+});
 #endif //< TYPE_FF7CHAR_H

@@ -16,14 +16,22 @@
 
 #ifndef TYPE_MATERIA_H
 #define TYPE_MATERIA_H
-#endif // TYPE_MATERIA_H
-
+#ifdef _MSC_VER
+#	define PACK(structure)			\
+		__pragma(pack(push, 1))		\
+		structure					\
+		__pragma(pack(pop))
+#else
+#	define PACK(structure) structure Q_PACKED
+#endif
 /*! \struct materia
  *  \brief materia format saved in materia list or on a character
  *
  * Total Size 4 Bytes 100% known!
  */
+PACK(
 struct materia{// sizeof 4
 quint8 id;      /**< materias id */
 quint8 ap[3];   /** Ap Storage is done as a 24bit int. */
-}Q_PACKED;
+});
+#endif // TYPE_MATERIA_H

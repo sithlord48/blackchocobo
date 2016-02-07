@@ -16,26 +16,34 @@
 
 #ifndef FF7SAVE_TYPES_H
 #define FF7SAVE_TYPES_H
-
+#ifdef _MSC_VER
+#	define PACK(structure)			\
+		__pragma(pack(push, 1))		\
+		structure					\
+		__pragma(pack(pop))
+#else
+#	define PACK(structure) structure Q_PACKED
+#endif
 #include <QVector>
 #include "Type_FF7CHAR.h"
 #include "Type_FF7CHOCOBO.h"
 //Materia Type is included as part of FF7Char
 /*~~~~~~~~~~~~~~~~~~~~~~~~STRUCT TYPES AND SAVE STRUCT~~~~~~~~~~~~~~~~*/
-
+PACK(
 struct LOVE
 {
 qint8 aeris;
 qint8 tifa;
 qint8 yuffie;
 qint8 barret;
-}Q_PACKED;
+});
 
 /*! \struct FF7DESC
  *  \brief Description of savegame used for previews
  *
  *  68 Bytes total size All known
  */
+PACK(
 struct FF7DESC {
 	quint8 level;		/**< [0x0000] Lead character's level*/
 	quint8 party[3];	/**< [0x0001] Party*/
@@ -47,14 +55,14 @@ struct FF7DESC {
 	quint32 gil;		/**< [0x001C] Amount of gil*/
 	quint32 time;		/**< [0x0020] Total number of seconds played*/
 	quint8 location[32];/**< [0x0024] Save location (ff7 string)*/
-}Q_PACKED;
-
+});
+PACK(
 struct FF7XYT {// size of 7. used for coords
 	qint16 x;
 	qint16 y;
 	quint16 t;
 	quint8 d;
-}Q_PACKED;
+});
 
 /*! \struct FF7SLOT
  *  \brief Main FF7 Save Data Structure
@@ -63,6 +71,7 @@ struct FF7XYT {// size of 7. used for coords
  * \todo merge FF7FieldItemList offset data when possible.
  * \todo Discover more bytes then before
  */
+PACK(
 struct FF7SLOT {
 	quint16 checksum;			/**< [0x0000] Checksum */
 	quint8 z_1[2];				/**< [0x0002] UNKNOWN DATA*/
@@ -212,13 +221,14 @@ struct FF7SLOT {
 	quint8 controller_map[16];	/**< [0x10DC] controller mapping (only used in psx save)*/
 	quint8 fieldmspeed;			/**< [0x10EC] Message Speed On field*/
 	quint8 z_46[8];				/**< [0x10ED] UNKNOWN DATA*/
-}Q_PACKED;
+});
 
+PACK(
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
 	struct FF7HEADFOOT {
 	quint8 sl_header[0x0200];	// [0x0000] Slot Header
 	quint8 sl_footer[0x0D0C];	// [0x0000] Slot Footer
-}Q_PACKED;
+});
 
 typedef QVector< QString > SubContainer;
 #endif // FF7SAVE_TYPES_H

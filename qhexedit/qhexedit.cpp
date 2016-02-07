@@ -22,7 +22,7 @@ QHexEdit::QHexEdit(QWidget *parent) : QAbstractScrollArea(parent)
     setFont(QFont("Monospace", 10));
 #endif
     setAddressAreaColor(this->palette().alternateBase().color());
-    setHighlightingColor(QColor(0xff, 0xff, 0x99, 0xff));
+	setHighlightingColor(this->palette().linkVisited().color());
     setSelectionColor(this->palette().highlight().color());
 
     connect(&_cursorTimer, SIGNAL(timeout()), this, SLOT(updateCursor()));
@@ -722,7 +722,7 @@ void QHexEdit::paintEvent(QPaintEvent *event)
             for (int row=0, pxPosY = _pxCharHeight; row <= (_dataShown.size()/BYTES_PER_LINE); row++, pxPosY +=_pxCharHeight)
             {
                 address = QString("%1").arg(_bPosFirst + row*BYTES_PER_LINE + _addressOffset, _addrDigits, 16, QChar('0'));
-                painter.drawText(_pxPosAdrX - pxOfsX, pxPosY, address);
+				painter.drawText(_pxPosAdrX - pxOfsX, pxPosY, address.toUpper());
             }
         }
 
@@ -765,7 +765,7 @@ void QHexEdit::paintEvent(QPaintEvent *event)
                 else
                     r.setRect(pxPosX - _pxCharWidth, pxPosY - _pxCharHeight + _pxSelectionSub, 3*_pxCharWidth, _pxCharHeight);
                 painter.fillRect(r, c);
-                hex = _hexDataShown.mid((bPosLine + colIdx) * 2, 2);
+				hex = _hexDataShown.mid((bPosLine + colIdx) * 2, 2).toUpper();
                 painter.drawText(pxPosX, pxPosY, hex);
                 pxPosX += 3*_pxCharWidth;
 
@@ -790,7 +790,7 @@ void QHexEdit::paintEvent(QPaintEvent *event)
     if (_blink && !_readOnly && hasFocus())
         painter.fillRect(_cursorRect, this->palette().color(QPalette::WindowText));
     else
-        painter.drawText(_pxCursorX, _pxCursorY, _hexDataShown.mid(_cursorPosition - _bPosFirst * 2, 1));
+		painter.drawText(_pxCursorX, _pxCursorY, _hexDataShown.mid(_cursorPosition - _bPosFirst * 2, 1).toUpper());
 
     // emit event, if size has changed
     if (_lastEventSize != _chunks->size())
