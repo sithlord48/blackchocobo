@@ -6,7 +6,7 @@
 
 #define BUFFER_SIZE 0x10000
 #define CHUNK_SIZE 0x1000
-#define READ_CHUNK_MASK 0xfffffffffffff000
+#define READ_CHUNK_MASK Q_INT64_C(0xfffffffffffff000)
 
 // ***************************************** Constructors and file settings
 
@@ -69,7 +69,7 @@ QByteArray Chunks::data(qint64 pos, qint64 maxSize, QByteArray *highlighted)
 
     while (maxSize > 0)
     {
-        chunk.absPos = LONG_LONG_MAX;
+        chunk.absPos = LLONG_MAX;
         bool chunksLoopOngoing = true;
         while ((chunkIdx < _chunks.count()) && chunksLoopOngoing)
         {
