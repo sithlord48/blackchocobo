@@ -36,6 +36,6 @@ struct FF7CHOCOBO {
 	quint8 raceswon;		/**< [0x000D] Number of races won*/
 	quint8 sex;				/**< [0x000E] Sex (0=male,1=female)*/
 	quint8 type;			/**< [0x000F] Type (Yellow,Green,Blue,Black,Gold)*/
-}__attribute__((__packed__));
+}Q_PACKED;
 
 #endif // TYPE_FF7CHOCOBO_H

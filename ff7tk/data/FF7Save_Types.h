@@ -29,7 +29,7 @@ qint8 aeris;
 qint8 tifa;
 qint8 yuffie;
 qint8 barret;
-}__attribute__((__packed__));
+}Q_PACKED;
 
 /*! \struct FF7DESC
  *  \brief Description of savegame used for previews
@@ -47,14 +47,14 @@ struct FF7DESC {
 	quint32 gil;		/**< [0x001C] Amount of gil*/
 	quint32 time;		/**< [0x0020] Total number of seconds played*/
 	quint8 location[32];/**< [0x0024] Save location (ff7 string)*/
-}__attribute__((__packed__));
+}Q_PACKED;
 
 struct FF7XYT {// size of 7. used for coords
 	qint16 x;
 	qint16 y;
 	quint16 t;
 	quint8 d;
-}__attribute__((__packed__));
+}Q_PACKED;
 
 /*! \struct FF7SLOT
  *  \brief Main FF7 Save Data Structure
@@ -212,13 +212,13 @@ struct FF7SLOT {
 	quint8 controller_map[16];	/**< [0x10DC] controller mapping (only used in psx save)*/
 	quint8 fieldmspeed;			/**< [0x10EC] Message Speed On field*/
 	quint8 z_46[8];				/**< [0x10ED] UNKNOWN DATA*/
-}__attribute__((__packed__));
+}Q_PACKED;
 
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
 	struct FF7HEADFOOT {
 	quint8 sl_header[0x0200];	// [0x0000] Slot Header
 	quint8 sl_footer[0x0D0C];	// [0x0000] Slot Footer
-}__attribute__((__packed__));
+}Q_PACKED;
 
 typedef QVector< QString > SubContainer;
 #endif // FF7SAVE_TYPES_H
