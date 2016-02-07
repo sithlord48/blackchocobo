@@ -994,19 +994,21 @@ private:
 	quint8 * file_headerp;	//pointer to file header
 	quint8 * file_footerp;							//pointer to file footer
 	quint8 file_header_pc [0x0009];		// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-	quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-	quint8 file_header_psv[0x0000];
+	//FF7tk Bug Fix #11
+	//quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
+	//quint8 file_header_psv[0x0000];
 	quint8 file_header_psp[0x2080];
 	quint8 file_header_vgs[0x2040]; //header for vgs/mem ext format.
 	quint8 file_header_dex[0x2F40]; //header for gme (dex-drive format)
 	quint8 file_header_mc [0x2000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-	quint8 file_footer_pc [0x0000];	// [0x0000] 0x06277371
-	quint8 file_footer_psx[0x0000];	// [0x0000] 0x06277371
-	quint8 file_footer_psv[0x0000];
-	quint8 file_footer_vgs[0x0000];
-	quint8 file_footer_dex[0x0000];
-	quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
-	quint8 file_footer_psp[0x0000];
+	//FF7tk Bug Fix #11
+	//quint8 file_footer_pc [0x0000];	// [0x0000] 0x06277371
+	//quint8 file_footer_psx[0x0000];	// [0x0000] 0x06277371
+	//quint8 file_footer_psv[0x0000];
+	//quint8 file_footer_vgs[0x0000];
+	//quint8 file_footer_dex[0x0000];
+	//quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
+	//quint8 file_footer_psp[0x0000];
 	FF7SLOT buffer_slot;// hold a buffer slot
 	QString buffer_region; // hold the buffers region data.
 	QString SG_Region_String[15];

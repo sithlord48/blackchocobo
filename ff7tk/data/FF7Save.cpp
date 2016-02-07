@@ -43,8 +43,8 @@ FF7Save::FF7Save()
 	SG_SLOT_SIZE=0;
 	SG_SLOT_NUMBER=0;
 	SG_TYPE="";
-	file_footerp=0;
 	file_headerp=0;
+	file_footerp=0;
 	memcpy(&buffer_slot,&default_save,0x10F4);
 }
 bool FF7Save::loadFile(const QString &fileName)
@@ -128,7 +128,7 @@ bool FF7Save::loadFile(const QString &fileName)
 QByteArray FF7Save::fileHeader(void)
 {
 	QByteArray temp;
-	temp.setRawData(reinterpret_cast<char *>(file_headerp),SG_HEADER);
+	if(SG_HEADER > 0) {temp.setRawData(reinterpret_cast<char *>(file_headerp),SG_HEADER);}
 	return temp;
 }
 
@@ -137,7 +137,7 @@ bool FF7Save::setFileHeader(QByteArray data)
 	if(data.size() != SG_HEADER){return false;}
 	else
 	{
-		memcpy(file_headerp,data,SG_HEADER);
+		if(SG_HEADER > 0){memcpy(file_headerp,data,SG_HEADER);}
 		return true;
 	}
 
@@ -161,7 +161,7 @@ bool FF7Save::setSlotHeader(int s, QByteArray data)
 QByteArray FF7Save::fileFooter(void)
 {
 	QByteArray temp;
-	temp.setRawData(reinterpret_cast<char *>(file_footerp),SG_FOOTER);
+	if(SG_FOOTER > 0){temp.setRawData(reinterpret_cast<char *>(file_footerp),SG_FOOTER);}
 	return temp;
 }
 
@@ -170,7 +170,7 @@ bool FF7Save::setFileFooter(QByteArray data)
 	if(data.size() != SG_FOOTER){return false;}
 	else
 	{
-		memcpy(file_footerp,data,SG_FOOTER);
+		if(SG_FOOTER > 0){memcpy(file_footerp,data,SG_FOOTER);}
 		return true;
 	}
 }
@@ -1342,7 +1342,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "PC";
 		file_headerp     = file_header_pc;           //pointer to pc file header
-		file_footerp     = file_footer_pc;           //pointer to pc file footer
+		//file_footerp     = file_footer_pc;           //pointer to pc file footer
 
 	}
 	else if(type =="PSX")
@@ -1356,8 +1356,8 @@ void FF7Save::setType(QString type)
 		SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
 		SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "PSX";
-		file_headerp     = file_header_psx;          //pointer to psx file header
-		file_footerp     = file_footer_psx;          //pointer to psx file footer
+		//file_headerp     = file_header_psx;          //pointer to psx file header
+		//file_footerp     = file_footer_psx;          //pointer to psx file footer
 	}
 	else if(type=="MC")
 	{
@@ -1371,7 +1371,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "MC";
 		file_headerp     = file_header_mc;           //pointer to mc file header
-		file_footerp     = file_footer_mc;           //pointer to mc file footer
+		//file_footerp     = file_footer_mc;           //pointer to mc file footer
 	}
 	else if(type=="PSV")
 	{
@@ -1384,8 +1384,8 @@ void FF7Save::setType(QString type)
 		SG_SLOT_SIZE     = FF7_PSV_SAVE_GAME_SLOT_SIZE;
 		SG_SLOT_NUMBER   = FF7_PSV_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "PSV";
-		file_headerp     = file_header_psv;          //pointer to psv file header
-		file_footerp     = file_footer_psv;          //pointer to psv file footer
+		//file_headerp     = file_header_psv;          //pointer to psv file header
+		//file_footerp     = file_footer_psv;          //pointer to psv file footer
 	}
 	else if(type=="PSP")
 	{
@@ -1399,7 +1399,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_NUMBER   = FF7_PSP_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "PSP";
 		file_headerp     = file_header_psp;          //pointer to psp file header
-		file_footerp     = file_footer_psp;          //pointer to psp file footer
+		//file_footerp     = file_footer_psp;          //pointer to psp file footer
 	}
 	else if(type=="VGS")
 	{
@@ -1413,7 +1413,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_NUMBER   = FF7_VGS_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "VGS";
 		file_headerp     = file_header_vgs;          //pointer to vgs file header
-		file_footerp     = file_footer_vgs;          //pointer to vgs file footer
+		//file_footerp     = file_footer_vgs;          //pointer to vgs file footer
 	}
 	else if(type=="DEX")
 	{
@@ -1427,7 +1427,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "DEX";
 		file_headerp     = file_header_dex;          //pointer to dex file header
-		file_footerp     = file_footer_dex;          //pointer to dex file footer
+		//file_footerp     = file_footer_dex;          //pointer to dex file footer
 	}
 }
 void FF7Save::newGame(int s,QString fileName)
