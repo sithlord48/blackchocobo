@@ -134,6 +134,10 @@ win32: {
         #LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32	# Be sure to update this to your openSSL lib path
 	RC_FILE = bchoco.rc #program icon for windows
 	TARGET = Black_Chocobo
+	#Prevent ms padding on packed structures on gcc compiler
+	contains(QMAKE_COMPILER, gcc) {
+	QMAKE_CXXFLAGS += -mno-ms-bitfields
+	}
 }
 
 #set up for mac os
@@ -185,8 +189,3 @@ static:{ # everything below takes effect with CONFIG += static
 }
 # change the name of the binary, if it is build in debug mode
 CONFIG(debug, debug|release) {TARGET = $$join(TARGET,,,-debug)}
-
-#Prevent ms padding on packed structures on gcc compiler
-contains(QMAKE_COMPILER, gcc) {
-QMAKE_CXXFLAGS += -mno-ms-bitfields
-}

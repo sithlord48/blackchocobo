@@ -16,14 +16,18 @@
 
 #ifndef FF7SAVE_TYPES_H
 #define FF7SAVE_TYPES_H
+
 #ifdef _MSC_VER
 #	define PACK(structure)			\
 		__pragma(pack(push, 1))		\
 		structure					\
 		__pragma(pack(pop))
+#elif defined(__MINGW32__) || defined(__GNUC__)
+	#define PACK(structure) structure __attribute__ ((gcc_struct, __packed__))
 #else
-#	define PACK(structure) structure Q_PACKED
+	#define PACK(structure) structure Q_PACKED
 #endif
+
 #include <QVector>
 #include "Type_FF7CHAR.h"
 #include "Type_FF7CHOCOBO.h"
