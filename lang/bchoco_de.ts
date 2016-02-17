@@ -1,6 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
+<context>
+    <name>About</name>
+    <message>
+        <source>About Black Chocobo</source>
+        <translation type="unfinished">Über Black Chocobo</translation>
+    </message>
+    <message>
+        <source>Black Chocobo </source>
+        <translation type="unfinished">Black Chocobo</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation type="unfinished">&amp;Über</translation>
+    </message>
+    <message>
+        <source>The Final Fantasy VII Save Game Editor</source>
+        <translation type="unfinished">Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Newest Features</source>
+        <translation type="unfinished">Neueste Features</translation>
+    </message>
+    <message>
+        <source>New: Scaling support for HiDpi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Psv Signing Place Keys in Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Save/Restore Geometry for MainWindow and Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Auto guess Slot location for VMC formats.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Menu Editor Backward Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Achievement Editor.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Credits</source>
+        <translation type="unfinished">Credits</translation>
+    </message>
+    <message>
+        <source>Giving Credit Where Credit is Due</source>
+        <translation type="unfinished">Giving Credit Where Credit is Due</translation>
+    </message>
+    <message>
+        <source>Programmers</source>
+        <translation type="unfinished">Programmierer</translation>
+    </message>
+    <message>
+        <source>Almost All code and GUI design; </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Various code help/debug; Windows QA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <translation type="unfinished">PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
+    </message>
+    <message>
+        <source>Bug Testers</source>
+        <translation type="unfinished">Fehler-Tester</translation>
+    </message>
+    <message>
+        <source>Main Bug Tester, for win/gnome + ingame</source>
+        <translation type="unfinished">Haupt-Fehler-Tester, für win/gnome + ingame</translation>
+    </message>
+    <message>
+        <source>Early Win32 Tester</source>
+        <translation type="unfinished">Früher Win32 Tester</translation>
+    </message>
+    <message>
+        <source>Mac Os Tester</source>
+        <translation type="unfinished">Mac Os Tester</translation>
+    </message>
+    <message>
+        <source>Windows Tester</source>
+        <translation type="unfinished">Windows Tester</translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <translation type="unfinished">Übersetzer</translation>
+    </message>
+    <message>
+        <source>Spanish Translation:</source>
+        <translation type="unfinished">Spanische Übersetzung:</translation>
+    </message>
+    <message>
+        <source>French Translation:</source>
+        <translation type="unfinished">Französische Übersetzung:</translation>
+    </message>
+    <message>
+        <source>Japanese Translation:</source>
+        <translation type="unfinished">Japanische Übersetzung:</translation>
+    </message>
+    <message>
+        <source>German Translation:</source>
+        <translation type="unfinished">Deutsche Übersetzung:</translation>
+    </message>
+    <message>
+        <source>Icons Used In this Program</source>
+        <translation type="unfinished">Symbole benutzt in diesem Programm</translation>
+    </message>
+    <message>
+        <source>Buff Icons (and one or two more) by </source>
+        <translation type="unfinished">Buff Icons (eins mehr oder auch zwei) von </translation>
+    </message>
+    <message>
+        <source>Thanks</source>
+        <translation type="unfinished">Danke</translation>
+    </message>
+    <message>
+        <source>A Big Thank You  To:</source>
+        <translation type="unfinished">Ein großes Danke  an:</translation>
+    </message>
+    <message>
+        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
+        <translation type="unfinished">Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
+    </message>
+    <message>
+        <source>Thank you for the old checksum program</source>
+        <translation type="unfinished">Danke Dir für das alte checksum-Programm</translation>
+    </message>
+    <message>
+        <source>Thank you for helping me see the light of stupid errors.</source>
+        <translation type="unfinished">Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
+    </message>
+    <message>
+        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
+        <translation type="unfinished">Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
+    </message>
+    <message>
+        <source>Cause she&apos;s just awesome!</source>
+        <translation type="unfinished">Weil Sie einfach fantastisch ist!</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Qt: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 <context>
     <name>Achievement_Names</name>
     <message>
@@ -899,6 +1098,46 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Intelligence</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Bill&apos;s Rating: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty</source>
+        <translation type="unfinished">Leer</translation>
+    </message>
+    <message>
+        <source>Wonderful</source>
+        <translation type="unfinished">Fabelhaft</translation>
+    </message>
+    <message>
+        <source>Great</source>
+        <translation type="unfinished">Großartig</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">Gut</translation>
+    </message>
+    <message>
+        <source>Fair</source>
+        <translation type="unfinished">Ganz brauchbar</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="unfinished">Durchschnitt</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation type="unfinished">Nicht übel</translation>
+    </message>
+    <message>
+        <source>Bad</source>
+        <translation type="unfinished">Nichts besonderes</translation>
+    </message>
+    <message>
+        <source>Terrible</source>
+        <translation type="unfinished">Nicht empfehlenswert</translation>
     </message>
 </context>
 <context>
@@ -2037,6 +2276,10 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Chocobo Lure</source>
         <translation type="unfinished">Chocobo-Köder</translation>
+    </message>
+    <message>
+        <source>Magic Comb</source>
+        <translation type="unfinished">Zauberkamm</translation>
     </message>
 </context>
 <context>
@@ -5230,7 +5473,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show Selection Dialog</source>
-        <translation>Zeige Auswahl-Dialog</translation>
+        <translation type="vanished">Zeige Auswahl-Dialog</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5278,11 +5521,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation>Vorheriger Steckplatz</translation>
+        <translation type="vanished">Vorheriger Steckplatz</translation>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation>Nächster Steckplatz</translation>
+        <translation type="vanished">Nächster Steckplatz</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5360,15 +5603,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation>Steckplatz Region</translation>
+        <translation type="vanished">Steckplatz Region</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation>Hilf&amp;e</translation>
+        <translation type="vanished">Hilf&amp;e</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation>Zeig&amp;e</translation>
+        <translation type="vanished">Zeig&amp;e</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -5376,11 +5619,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>More Options...</source>
-        <translation>Mehr Optionen...</translation>
+        <translation type="vanished">Mehr Optionen...</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation>Neues Spiel+ </translation>
+        <translation type="vanished">Neues Spiel+ </translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5478,7 +5721,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save As</source>
-        <translation>Speichern als</translation>
+        <translation type="vanished">Speichern als</translation>
     </message>
     <message>
         <source>&amp;Save</source>
@@ -5536,19 +5779,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation>Platziere Führer</translation>
+        <translation type="vanished">Platziere Führer</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation>Platziere Tiny Bronco/Chocobo</translation>
+        <translation type="vanished">Platziere Tiny Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation>Platziere Buggy/Highwind</translation>
+        <translation type="vanished">Platziere Buggy/Highwind</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation>Platziere U-Boot</translation>
+        <translation type="vanished">Platziere U-Boot</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5560,11 +5803,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Place Wild Chocobo</source>
-        <translation>Platziere Wild Chocobo</translation>
+        <translation type="vanished">Platziere Wild Chocobo</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>Platziere Diamond / Ultimate / Ruby Weapon</translation>
+        <translation type="vanished">Platziere Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5632,7 +5875,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Reload</source>
-        <translation>Nachladen</translation>
+        <translation type="vanished">Nachladen</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -5668,7 +5911,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Diff</source>
-        <translation>Diff</translation>
+        <translation type="vanished">Diff</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
@@ -5676,7 +5919,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation>Zeige alle &apos;Z&apos; Veränderungen</translation>
+        <translation type="vanished">Zeige alle &apos;Z&apos; Veränderungen</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -5899,7 +6142,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation>Berechne Stats</translation>
+        <translation type="vanished">Berechne Stats</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -6013,7 +6256,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished">Neues Cloud-Save Folder</translation>
+        <translation type="obsolete">Neues Cloud-Save Folder</translation>
     </message>
     <message>
         <source>Money</source>
@@ -6250,10 +6493,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Open Achievement File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select Achievement File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6275,7 +6514,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Sprache</translation>
+        <translation type="vanished">Sprache</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
@@ -6294,18 +6533,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Us English (Ntsc-U)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Uk English (PAL)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>German (PAL)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Spanish (PAL)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6318,19 +6545,11 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>French (PAL)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>About</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="obsolete">Info</translation>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G-Bike High Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6359,11 +6578,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Field Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right click on map to easily set an item&apos;s
-location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6413,11 +6627,210 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <source>Right clic&amp;k on map to easily set an item&apos;s
+location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin,*.srm)</source>
+        <source>Ho&amp;ur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bi&amp;ke High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Playstation Save Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PsxName:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No Description Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_41</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_42</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_43</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_44</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_45</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_46</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>He&amp;lp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Slot Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sa&amp;ve As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation type="unfinished">&amp;Über</translation>
+    </message>
+    <message>
+        <source>&amp;Show Selection Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Next Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;More Options...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Us English (Ntsc-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uk &amp;English (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;German (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Spanish (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Japanese (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;International (Ntsc-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Calculate Stats</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;French (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Create Cloud Save Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Achievement &amp;File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block </source>
+        <translation type="unfinished">
+ Mid Linked Block </translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Data</source>
+        <translation type="unfinished">
+ Ende von verlinkten Daten</translation>
+    </message>
+    <message>
+        <source>(Deleted)</source>
+        <translation type="unfinished">(Gelöscht)</translation>
+    </message>
+    <message>
+        <source>Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s
+   Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished">s
+   Nächstes Datenstück @ Steckplatz:%1</translation>
+    </message>
+    <message>
+        <source>Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished">Nächstes Datenstück @ Steckplatz:%1</translation>
+    </message>
+    <message>
+        <source>&amp;Place Leader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place &amp;Tiny Bronco/Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place &amp;Buggy/Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place &amp;Sub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place &amp;Wild Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8214,19 +8627,35 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ps3Key</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Input Key in HEX ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ps3Seed</source>
+        <source>Input Seed in Hex ex( 00010203AABF )</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Input Seed in Hex ex( 00010203AABF )</source>
+        <source>Scale Widgets by: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Keys&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Key&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Seeds&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Seed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Signing is disabled! Build with OpenSSL support to enable</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8604,22 +9033,37 @@ trigger showing that tutorial</source>
     </message>
 </context>
 <context>
+    <name>UndoStack</name>
+    <message>
+        <source>Inserting %1 bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete %1 chars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Overwrite %1 chars</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>about</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Über Black Chocobo</translation>
+        <translation type="vanished">Über Black Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo</translation>
+        <translation type="vanished">Black Chocobo</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;Über</translation>
+        <translation type="vanished">&amp;Über</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
+        <translation type="vanished">Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -8627,7 +9071,7 @@ trigger showing that tutorial</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -8639,7 +9083,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -8647,155 +9091,99 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Newest Features</source>
-        <translation>Neueste Features</translation>
+        <translation type="vanished">Neueste Features</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation type="vanished">Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation>Giving Credit Where Credit is Due</translation>
+        <translation type="vanished">Giving Credit Where Credit is Due</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation>Programmierer</translation>
+        <translation type="vanished">Programmierer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation>Fehler-Tester</translation>
+        <translation type="vanished">Fehler-Tester</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Haupt-Fehler-Tester, für win/gnome + ingame</translation>
+        <translation type="vanished">Haupt-Fehler-Tester, für win/gnome + ingame</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation>Mac Os Tester</translation>
+        <translation type="vanished">Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation>Windows Tester</translation>
+        <translation type="vanished">Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation>Übersetzer</translation>
+        <translation type="vanished">Übersetzer</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation>Spanische Übersetzung:</translation>
+        <translation type="vanished">Spanische Übersetzung:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation>Französische Übersetzung:</translation>
+        <translation type="vanished">Französische Übersetzung:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation>Symbole benutzt in diesem Programm</translation>
+        <translation type="vanished">Symbole benutzt in diesem Programm</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation>Buff Icons (eins mehr oder auch zwei) von </translation>
+        <translation type="vanished">Buff Icons (eins mehr oder auch zwei) von </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation>Ein großes Danke  an:</translation>
+        <translation type="vanished">Ein großes Danke  an:</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation>Früher Win32 Tester</translation>
+        <translation type="vanished">Früher Win32 Tester</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation>Japanische Übersetzung:</translation>
+        <translation type="vanished">Japanische Übersetzung:</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
+        <translation type="vanished">PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation>Deutsche Übersetzung:</translation>
-    </message>
-    <message>
-        <source>Fixed: Menu Editor Backward Columns</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Achievement Editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Version: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Using Qt: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Deutsche Übersetzung:</translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation type="unfinished">Danke</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Danke</translation>
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
+        <translation type="vanished">Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
-        <translation>Danke Dir für das alte checksum-Programm</translation>
+        <translation type="vanished">Danke Dir für das alte checksum-Programm</translation>
     </message>
     <message>
         <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
+        <translation type="vanished">Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
     </message>
     <message>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
+        <translation type="vanished">Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
     </message>
     <message>
         <source>Cause she&apos;s just awesome!</source>
-        <translation>Weil Sie einfach fantastisch ist!</translation>
-    </message>
-    <message>
-        <source>New: Save/Restore Geometry for MainWindow and Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Auto guess Slot location for VMC formats.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Almost All code and GUI design; </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Psv Signing Place Keys in Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Weil Sie einfach fantastisch ist!</translation>
     </message>
 </context>
 <context>
