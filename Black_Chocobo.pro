@@ -129,9 +129,9 @@ TRANSLATIONS += \
 win32: {
 	#Set OpenSSL include & lib paths
 	#THIS MUST BE CHANGED WITH YOUR OPENSSL PATHS OR YOUR BUILD WILL FAIL!!!
-        #DEFINES += OPENSSL=1							# Enable openSSL support
-        #INCLUDEPATH += C:/OpenSSL-Win32/include		# Be sure to change this to your openSSL include path
-        #LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32	# Be sure to update this to your openSSL lib path
+	#DEFINES += OPENSSL=1							# Enable openSSL support
+	#INCLUDEPATH += C:/OpenSSL-Win32/include		# Be sure to change this to your openSSL include path
+	#LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32	# Be sure to update this to your openSSL lib path
 	RC_FILE = bchoco.rc #program icon for windows
 	TARGET = Black_Chocobo
 	#Prevent ms padding on packed structures on gcc compiler
@@ -154,7 +154,7 @@ system (lrelease Black_Chocobo.pro)#release the .qm files
 unix:!macx:!symbian:!android {
 	#remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
 
-        DEFINES += OPENSSL=1						# Enable openSSL support
+	DEFINES += OPENSSL=1							# Enable openSSL support
 	LIBS += -lcrypto								# Enable crypto lib
 	
 	TARGET = blackchocobo
@@ -173,7 +173,7 @@ unix:!macx:!symbian:!android {
 }
 android:{
 	INCLUDEPATH += /home/chris/Downloads/openssl-1.0.1i/include
-        #DEFINES += OPENSSL=1						# Enable openSSL support
+	#DEFINES += OPENSSL=1						# Enable openSSL support
 	#LIBS += -L "" -lcrypto						# Enable crypto lib
 	TARGET = blackchocobo
 	target.path = /usr/bin
