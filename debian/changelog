@@ -1,3 +1,18 @@
+blackchocobo (1.9.90) trusty; urgency=low
+  *New: Items Tab now Contains command buttons for keyitems and flyers for easier access.
+  *New: Advanced modes for different ff7tk widgets can be set indpendently in options.
+  *New: Apply Button for Replay Missions;Browse the options without changing your data.
+  *Fixed: Cloud's Flashback now set Sephiroth's char data for you
+  *Fixed: Snowboard times are now saved / read correctly.
+  *Fixed: Backwards label for turtle paradise / keyItems
+  *Fixed: Option Dialog didn't restoreGeometry
+  *ff7tk: Compiler Check for GCC on Win32 to adjust packing mode
+  *ff7tk: Scaling for HiDpi in all widgets.
+  *ff7tk: Fixed incorrect width for base HP/ base MP boxes on charEditor
+  *ff7tk: Editable Combos for ItemSelector and MateriaEditor.
+  *ff7tk: fix coverity detected defects. (0.00 Defect Rate for ff7tk !!)
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 20 Feb 2016 07:48:56 -0400
+
 blackchocobo (1.9.831) trusty; urgency=low
   *build from git hub
   *Various Fixes and updates
