@@ -791,7 +791,7 @@ class FF7Save: public QObject{
 	bool setUnknown(int s,int z,QByteArray data);
 	quint16 steps(int s);
 	void setSteps(int s,int steps);
-	quint8 chruchProgress(int s);
+	quint8 churchProgress(int s);
 	void setChurchProgress(int s,int progress);
 	quint8 donProgress(int s);
 	void setDonProgress(int s,int progress);

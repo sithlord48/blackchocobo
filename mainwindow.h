@@ -294,7 +294,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_sb_b_love_tifa_valueChanged(int);
 	void on_sb_b_love_aeris_valueChanged(int);
 
-	void on_sb_turkschruch_valueChanged(int );
+	void on_sb_turkschurch_valueChanged(int );
 
 	void on_btn_remove_all_materia_clicked();
 	void on_btn_remove_all_stolen_clicked();

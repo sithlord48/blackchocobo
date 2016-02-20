@@ -2187,6 +2187,11 @@ The km/h speeds are calculated while playing </source>
         <translation>Double Summon</translation>
     </message>
     <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="236"/>
+        <source>Initialized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ff7tk/data/FF7FieldItemList.h" line="292"/>
         <source>Enhance Sword</source>
         <translation></translation>
@@ -2520,11 +2525,6 @@ The km/h speeds are calculated while playing </source>
         <location filename="../ff7tk/data/FF7FieldItemList.h" line="234"/>
         <source>KeyItem: Keycard 60</source>
         <translation>KeyItem: Keycard 60</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7FieldItemList.h" line="236"/>
-        <source>Initilized the Machine</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7FieldItemList.h" line="237"/>
@@ -7822,11 +7822,6 @@ location.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3403"/>
-        <source>ChruchProgress</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="3417"/>
         <source>DonProgress</source>
         <translation></translation>
@@ -8128,12 +8123,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="6153"/>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will
-trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="6272"/>
         <source>Save Point Location In North Crater</source>
         <translation type="unfinished"></translation>
@@ -8299,6 +8288,11 @@ trigger showing that tutorial</source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="3403"/>
+        <source>ChurchProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="4327"/>
         <source>Number Steps</source>
         <translation></translation>
@@ -8358,6 +8352,12 @@ trigger showing that tutorial</source>
         <location filename="../mainwindow.ui" line="6113"/>
         <source>Ultimate Weapons Hp</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="6153"/>
+        <source>When Box is Partally Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6174"/>
@@ -8689,7 +8689,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="566"/>
         <location filename="../mainwindow.cpp" line="620"/>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
@@ -8745,6 +8744,13 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <location filename="../mainwindow.cpp" line="529"/>
         <source>Error Loading File %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="566"/>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP/PsVita will reject this save as corrupted
+ This is normal please see the User Guide for more information.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

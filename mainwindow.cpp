@@ -563,7 +563,7 @@ void MainWindow::on_action_Save_triggered()
 	if(_init || ff7->fileName().isEmpty()){on_actionSave_File_As_triggered();}
 	else
 	{
-		if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+		if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
 		else if(ff7->type()=="PSV"){QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
 		saveFileFull(ff7->fileName());
 	}
@@ -1467,7 +1467,7 @@ void MainWindow::progress_update()
 	ui->sb_curdisc->setValue(ff7->disc(s));
 	ui->sb_mprogress->setValue(ff7->mainProgress(s));
 
-	ui->sb_turkschruch->setValue(ff7->chruchProgress(s));
+	ui->sb_turkschurch->setValue(ff7->churchProgress(s));
 	ui->sb_donprog->setValue(ff7->donProgress(s));
 	ui->combo_s7_slums->setCurrentIndex(0);
 
@@ -1780,7 +1780,7 @@ void MainWindow::setButtonRight(int index){if(!load){ff7->setControllerMapping(s
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ ff7->setDisc(s,value);}}
 void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){ff7->setMainProgress(s,value);}}
-void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7->setChurchProgress(s,value);}}
+void MainWindow::on_sb_turkschurch_valueChanged(int value){if(!load){ff7->setChurchProgress(s,value);}}
 void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7->setDonProgress(s,value);}}
 void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){ff7->setBmProgress1(s,0,checked);}}
 void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){ff7->setBmProgress1(s,1,checked);}}
@@ -2046,9 +2046,9 @@ void MainWindow::on_btnReplay_clicked()
 		ff7->setMidgarTrainFlags(s,0);
 		ui->cb_bombing_int->setChecked(Qt::Checked);
 		ui->combo_s7_slums->setCurrentIndex(1);
-		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
-		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
-		ui->sb_turkschruch->setValue(0); // reset turks.
+		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of church durring script
+		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after church scene.
+		ui->sb_turkschurch->setValue(0); // reset turks.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(116);
 		if(!locationViewer->locationChangesSaved())
@@ -2062,13 +2062,13 @@ void MainWindow::on_btnReplay_clicked()
 	{
 		ui->sb_curdisc->setValue(1);
 		ui->sb_mprogress->setValue(130);
-		ui->sb_turkschruch->setValue(0);
+		ui->sb_turkschurch->setValue(0);
 		ff7->setBmProgress1(s,120);
 		ff7->setBmProgress2(s,198);
 		ff7->setBmProgress3(s,3);
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
-		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
-		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
+		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of church durring script
+		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after church scene.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(183);
 		if(!locationViewer->locationChangesSaved())

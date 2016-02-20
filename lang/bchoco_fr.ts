@@ -2128,7 +2128,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Initilized the Machine</source>
-        <translation>Lancé la machine</translation>
+        <translation type="vanished">Lancé la machine</translation>
     </message>
     <message>
         <source>KeyItem: A Coupon</source>
@@ -2286,6 +2286,10 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Magic Comb</source>
         <translation>Peigne magique</translation>
+    </message>
+    <message>
+        <source>Initialized the Machine</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6432,7 +6436,7 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     </message>
     <message>
         <source>ChruchProgress</source>
-        <translation>ProgressionÉglise</translation>
+        <translation type="vanished">ProgressionÉglise</translation>
     </message>
     <message>
         <source>DonProgress</source>
@@ -6599,7 +6603,7 @@ quand vous dépassez la porte du Battle Square, définir le lieu &amp;quot;Entr�
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
-        <translation>Quand la case est partiellement cochée (&quot;-&quot;)
+        <translation type="vanished">Quand la case est partiellement cochée (&quot;-&quot;)
 le tutoriel sera affiché directement</translation>
     </message>
     <message>
@@ -6845,6 +6849,22 @@ d&apos;un objet facilement.</translation>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
         <translation>Placer &amp;Dernière Arme / Diamant / Rubis</translation>
+    </message>
+    <message>
+        <source>ChurchProgress</source>
+        <translation type="unfinished">ChurchProgress</translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">Quand la case est partiellement cochée (&quot;-&quot;)
+le tutoriel sera affiché directement</translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP/PsVita will reject this save as corrupted
+ This is normal please see the User Guide for more information.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

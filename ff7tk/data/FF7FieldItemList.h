@@ -233,7 +233,7 @@ static const FieldItemList FILIST[]=
 
 	{QList<quint16>()<<0x0D4C<<0x0BE7,QList<quint8>()<<1<<6,QStringList()<<"blin59",QT_TRANSLATE_NOOP("FieldItems","KeyItem: Keycard 60")},
 
-	{QList<quint16>()<<0x0D55,QList<quint8>()<<4,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","Initilized the Machine")},
+	{QList<quint16>()<<0x0D55,QList<quint8>()<<4,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","Initialized the Machine")},
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<1<<5,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: A Coupon")},
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<3<<6,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: B Coupon")},
 	{QList<quint16>()<<0x0D55<<0x0BE9,QList<quint8>()<<2<<7,QStringList()<<"blin63_1",QT_TRANSLATE_NOOP("FieldItems","KeyItem: C Coupon")},

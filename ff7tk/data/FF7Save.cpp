@@ -3588,10 +3588,10 @@ void FF7Save::setSteps(int s,int steps)
 		}
 	}
 }
-quint8 FF7Save::chruchProgress(int s)
+quint8 FF7Save::churchProgress(int s)
 {
 	if(s<0 || s>14){return 0;}
-	else{return slot[s].aeris_chruch;}
+	else{return slot[s].aeris_church;}
 }
 void FF7Save::setChurchProgress(int s,int progress)
 {
@@ -3600,9 +3600,9 @@ void FF7Save::setChurchProgress(int s,int progress)
 	{
 		if(progress<0){progress=0;}
 		if(progress>0xFF){progress=0xFF;}
-		if(progress != slot[s].aeris_chruch)
+		if(progress != slot[s].aeris_church)
 		{
-			slot[s].aeris_chruch = progress;
+			slot[s].aeris_church = progress;
 			setFileModified(true,s);
 		}
 	}

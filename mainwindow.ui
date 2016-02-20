@@ -3400,12 +3400,12 @@ location.</string>
                       <item>
                        <widget class="QLabel" name="label_229">
                         <property name="text">
-                         <string>ChruchProgress</string>
+                         <string>ChurchProgress</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="sb_turkschruch"/>
+                       <widget class="QSpinBox" name="sb_turkschurch"/>
                       </item>
                      </layout>
                     </item>
@@ -6150,7 +6150,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             <item>
              <widget class="QLabel" name="label_187">
               <property name="text">
-               <string>When Box is Partally Checked (&quot;-&quot;)it will
+               <string>When Box is Partally Checked (&quot;-&quot;) it will
 trigger showing that tutorial</string>
               </property>
               <property name="wordWrap">

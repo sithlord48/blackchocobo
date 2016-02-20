@@ -132,7 +132,7 @@ struct FF7SLOT {
 	quint8 bm_progress1;		/**< [0x0C85] Bombing Mission Flag 1*/
 	quint8 bm_progress2;		/**< [0x0C86] Bombing Mission Flag 2*/
 	quint8 z_19[45];			/**< [0X0C87] UNKNOWN DATA 45 50*/
-	quint8 aeris_chruch;		/**< [0x0CB4] aeris chruch*/
+	quint8 aeris_church;		/**< [0x0CB4] aeris church*/
 	quint8 z_20[49];			/**< [0x0CB5] UNKNOWN DATA*/
 	quint8 bm_progress3;		/**< [0X0CE6] Bombing mission flag 3*/
 	quint8 z_21[7];				/**< [0X0CE7] UNKNOWN DATA*/

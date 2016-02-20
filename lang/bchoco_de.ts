@@ -2127,10 +2127,6 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Initilized the Machine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>KeyItem: A Coupon</source>
         <translation>Schlüsselgegenstände: A-Coupon</translation>
     </message>
@@ -2285,6 +2281,10 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
     <message>
         <source>Magic Comb</source>
         <translation type="unfinished">Zauberkamm</translation>
+    </message>
+    <message>
+        <source>Initialized the Machine</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6437,7 +6437,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
-        <translation type="unfinished">Kirche Fortschritt</translation>
+        <translation type="obsolete">Kirche Fortschritt</translation>
     </message>
     <message>
         <source>DonProgress</source>
@@ -6600,7 +6600,7 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
-        <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
+        <translation type="obsolete">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
 Trigger, Tutorial zeigt</translation>
     </message>
     <message>
@@ -6846,6 +6846,22 @@ Lage.</translation>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
         <translation type="unfinished">Platziere &amp;Diamond / Ultimate / Ruby Weapon</translation>
+    </message>
+    <message>
+        <source>ChurchProgress</source>
+        <translation type="unfinished">Kirche Fortschritt</translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
+Trigger, Tutorial zeigt</translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP/PsVita will reject this save as corrupted
+ This is normal please see the User Guide for more information.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

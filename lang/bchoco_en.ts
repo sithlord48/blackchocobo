@@ -2114,10 +2114,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Initilized the Machine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>KeyItem: A Coupon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2271,6 +2267,10 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Magic Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initialized the Machine</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6313,10 +6313,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>ChruchProgress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>DonProgress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6465,11 +6461,6 @@ Table Entries are Editable</source>
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will
-trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6708,6 +6699,21 @@ location.</source>
     </message>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ChurchProgress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Signature
+ Because of this your PSP/PsVita will reject this save as corrupted
+ This is normal please see the User Guide for more information.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
