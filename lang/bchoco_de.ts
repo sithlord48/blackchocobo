@@ -5,19 +5,19 @@
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation type="unfinished">Über Black Chocobo</translation>
+        <translation>Über Black Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation type="unfinished">Black Chocobo</translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;Über</translation>
+        <translation>&amp;Über</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="unfinished">Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
+        <translation>Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -25,7 +25,7 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -37,7 +37,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -49,11 +49,15 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Unterstützen Sie dieses Projekt&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="unfinished">Neueste Features</translation>
+        <translation>Neueste Features</translation>
     </message>
     <message>
         <source>New: Scaling support for HiDpi</source>
@@ -85,15 +89,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished">Credits</translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="unfinished">Giving Credit Where Credit is Due</translation>
+        <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="unfinished">Programmierer</translation>
+        <translation>Programmierer</translation>
     </message>
     <message>
         <source>Almost All code and GUI design; </source>
@@ -105,63 +109,63 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="unfinished">PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
+        <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="unfinished">Fehler-Tester</translation>
+        <translation>Fehler-Tester</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished">Haupt-Fehler-Tester, für win/gnome + ingame</translation>
+        <translation>Haupt-Fehler-Tester, für win/gnome + ingame</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished">Früher Win32 Tester</translation>
+        <translation>Früher Win32 Tester</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="unfinished">Mac Os Tester</translation>
+        <translation>Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="unfinished">Windows Tester</translation>
+        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished">Übersetzer</translation>
+        <translation>Übersetzer</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="unfinished">Spanische Übersetzung:</translation>
+        <translation>Spanische Übersetzung:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="unfinished">Französische Übersetzung:</translation>
+        <translation>Französische Übersetzung:</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished">Japanische Übersetzung:</translation>
+        <translation>Japanische Übersetzung:</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished">Deutsche Übersetzung:</translation>
+        <translation>Deutsche Übersetzung:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="unfinished">Symbole benutzt in diesem Programm</translation>
+        <translation>Symbole benutzt in diesem Programm</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="unfinished">Buff Icons (eins mehr oder auch zwei) von </translation>
+        <translation>Buff Icons (eins mehr oder auch zwei) von </translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation type="unfinished">Danke</translation>
+        <translation>Danke</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished">Ein großes Danke  an:</translation>
+        <translation>Ein großes Danke  an:</translation>
     </message>
     <message>
         <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
@@ -189,7 +193,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schließen</translation>
     </message>
     <message>
         <source>Version: %1</source>
@@ -197,7 +201,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mit Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -228,15 +232,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation type="unfinished">Ritter der Runde</translation>
+        <translation>Ritter der Runde</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">Katastrophe</translation>
+        <translation>Katastrophe</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">Chaos</translation>
+        <translation>Chaos</translation>
     </message>
     <message>
         <source>Great Gospel</source>
@@ -244,7 +248,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Highwind</translation>
+        <translation>Highwind</translation>
     </message>
     <message>
         <source>Final Heaven</source>
@@ -260,11 +264,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Slots</source>
-        <translation type="unfinished">Räder</translation>
+        <translation>Räder</translation>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished">Bahamut ZERO</translation>
+        <translation>Bahamut ZERO</translation>
     </message>
     <message>
         <source>Ultimate Weapon</source>
@@ -284,11 +288,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Vincent</source>
-        <translation type="unfinished">Vincent</translation>
+        <translation>Vincent</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation type="unfinished">Yuffie</translation>
+        <translation>Yuffie</translation>
     </message>
     <message>
         <source>Materia Overlord</source>
@@ -296,11 +300,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Battle Square</source>
-        <translation type="unfinished">Battle Square</translation>
+        <translation>Battle Square</translation>
     </message>
     <message>
         <source>Gold Chocobo</source>
-        <translation type="unfinished">Goldener Chocobo</translation>
+        <translation>Goldener Chocobo</translation>
     </message>
     <message>
         <source>First Battle</source>
@@ -308,43 +312,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Braver</source>
-        <translation type="unfinished">Mutattacke</translation>
+        <translation>Mutattacke</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation type="unfinished">Feuerball</translation>
+        <translation>Feuerball</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation type="unfinished">Galianische Bestie</translation>
+        <translation>Galianische Bestie</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation type="unfinished">Heilender Wind</translation>
+        <translation>Heilender Wind</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation type="unfinished">Megasprung</translation>
+        <translation>Megasprung</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation type="unfinished">Fausthagel</translation>
+        <translation>Fausthagel</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation type="unfinished">Geölter Blitz</translation>
+        <translation>Geölter Blitz</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation type="unfinished">Reißzahn</translation>
+        <translation>Reißzahn</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation type="unfinished">Würfel</translation>
+        <translation>Würfel</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">Omnischlag</translation>
+        <translation>Omnischlag</translation>
     </message>
 </context>
 <context>
@@ -431,7 +435,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Limit Uses</source>
-        <translation type="unfinished">Benutzte Limit</translation>
+        <translation>Benutzte Limit</translation>
     </message>
     <message>
         <source>1-1</source>
@@ -447,7 +451,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Limit Level</source>
-        <translation type="unfinished">Limit Level</translation>
+        <translation>Limit Level</translation>
     </message>
     <message>
         <source>-NONE-</source>
@@ -475,7 +479,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Status Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Statusinfo</translation>
     </message>
     <message>
         <source>Equipment</source>
@@ -515,7 +519,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation type="unfinished"> Mp:+%1%</translation>
+        <translation> Mp:+%1%</translation>
     </message>
     <message>
         <source>Restoration</source>
@@ -531,7 +535,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished">Blitz</translation>
+        <translation>Blitz</translation>
     </message>
     <message>
         <source>Earth</source>
@@ -587,7 +591,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Attack:</source>
-        <translation type="unfinished">Angreifen:</translation>
+        <translation>Angreifen:</translation>
     </message>
     <message>
         <source>Death</source>
@@ -647,7 +651,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished">Beenden</translation>
+        <translation>Beenden</translation>
     </message>
     <message>
         <source>Barrier</source>
@@ -667,7 +671,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Regen</source>
-        <translation type="unfinished">Regenerieren</translation>
+        <translation>Regenerieren</translation>
     </message>
     <message>
         <source>Protect:</source>
@@ -707,27 +711,27 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished">Junger Cloud</translation>
+        <translation>Junger Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation type="unfinished">Sephiroth</translation>
+        <translation>Sephiroth</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Name</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wert berechnet im Spiel; bearbeiten BaseMp</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wert berechnet im Spiel; bearbeiten BaseHp</translation>
     </message>
     <message>
         <source>Exp: </source>
-        <translation type="unfinished"></translation>
+        <translation>Exp:</translation>
     </message>
     <message>
         <source>Next: %1</source>
@@ -1065,79 +1069,80 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geschwindigkeitswerte werden die Rohwerte
+Die km / h beschleunigt berechnet werden während des Spielens</translation>
     </message>
     <message>
         <source>Rank: C</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung:C</translation>
     </message>
     <message>
         <source>Rank: B</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: B</translation>
     </message>
     <message>
         <source>Rank: A</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: A</translation>
     </message>
     <message>
         <source>Rank: S</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung:S</translation>
     </message>
     <message>
         <source>Acceleration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beschleunigung</translation>
     </message>
     <message>
         <source>Races Won</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gewonnene Rennen</translation>
     </message>
     <message>
         <source>Cooperation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kooperation</translation>
     </message>
     <message>
         <source>Intelligence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Intelligenz</translation>
     </message>
     <message>
         <source>Chocobo Bill&apos;s Rating: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chocobo Bills Bewertung: </translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="unfinished">Leer</translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">Fabelhaft</translation>
+        <translation>Fabelhaft</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">Großartig</translation>
+        <translation>Großartig</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">Gut</translation>
+        <translation>Gut</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">Ganz brauchbar</translation>
+        <translation>Ganz brauchbar</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">Durchschnitt</translation>
+        <translation>Durchschnitt</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">Nicht übel</translation>
+        <translation>Nicht übel</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">Nichts besonderes</translation>
+        <translation>Nichts besonderes</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">Nicht empfehlenswert</translation>
+        <translation>Nicht empfehlenswert</translation>
     </message>
 </context>
 <context>
@@ -1156,19 +1161,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Rank:C</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: C</translation>
     </message>
     <message>
         <source>Rank:B</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: B</translation>
     </message>
     <message>
         <source>Rank:A</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: A</translation>
     </message>
     <message>
         <source>Rank:S</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einstufung: S</translation>
     </message>
 </context>
 <context>
@@ -1187,43 +1192,43 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation type="unfinished">Eingezäunte Chocobos</translation>
+        <translation>Eingezäunte Chocobos</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="unfinished">Leer</translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">Fabelhaft</translation>
+        <translation>Fabelhaft</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">Großartig</translation>
+        <translation>Großartig</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">Gut</translation>
+        <translation>Gut</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">Ganz brauchbar</translation>
+        <translation>Ganz brauchbar</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">Durchschnitt</translation>
+        <translation>Durchschnitt</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">Nicht übel</translation>
+        <translation>Nicht übel</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">Nichts besonderes</translation>
+        <translation>Nichts besonderes</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">Nicht empfehlenswert</translation>
+        <translation>Nicht empfehlenswert</translation>
     </message>
 </context>
 <context>
@@ -4277,11 +4282,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dateiname</translation>
     </message>
     <message>
         <source>Process Regular Expressions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prozess Regular Expressions</translation>
     </message>
     <message>
         <source>Case Sensitive</source>
@@ -4289,19 +4294,21 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Field Items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Feld Artikel</translation>
     </message>
     <message>
         <source>Filter Mode: Name / Location String</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+Did you mean: Filter Model: Name / Location String
+Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filtermodus : Einzelteile an Ort gefunden</translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Save S&amp;tandort Änderungen</translation>
     </message>
 </context>
 <context>
@@ -6208,7 +6215,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snowboard Mini-Spiel</translation>
     </message>
     <message>
         <source>Beginner Course</source>
@@ -6252,7 +6259,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Battle Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schlachtpunkte</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
@@ -6264,7 +6271,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fortgeschrittener Modus</translation>
     </message>
     <message>
         <source>Hex Editor</source>
@@ -6276,35 +6283,35 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">unbekannt vars</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Replay the Date-Szene, wird Ihre Position zur Seilbahn -Station Diskussion gesetzt werden durch die Tram auf den Menschen Ereignis zu starten. Wenn Ihr für ein besonderes Datum der Suche sollten Sie Ihre Liebe Punkte zu setzen.</translation>
     </message>
     <message>
         <source>PSX Save Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSX Daten speichern</translation>
     </message>
     <message>
         <source>Game Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spieloptionen</translation>
     </message>
     <message>
         <source>Character Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Character Export erfolgreich</translation>
     </message>
     <message>
         <source>Character Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Character Export fehlgeschlagen</translation>
     </message>
     <message>
         <source>Export Successful</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Export erfolgreich</translation>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Export fehlgeschlagen</translation>
     </message>
     <message>
         <source>Fort Condor</source>
@@ -6312,11 +6319,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Funds </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mittel</translation>
     </message>
     <message>
         <source>Record </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aufzeichnen</translation>
     </message>
     <message>
         <source>/</source>
@@ -6324,19 +6331,19 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bombenmission starten Flagge</translation>
     </message>
     <message>
         <source>Builtin Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Erbaut in den Daten</translation>
     </message>
     <message>
         <source>New Game Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neues Spiel Erstellt - Verwendung:%1</translation>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neues Spiel Plus Erstellt - Verwendung:%1</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -6350,7 +6357,7 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diese Datei enthält keine aktualisierte Signatur haben, weil dieser die PSP / PS Vita wird lehnen dies Dies ist normal, da beschädigte sparen finden Sie für weitere Informationen in der Bedienungsanleitung.</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
@@ -6378,31 +6385,31 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSV Export Versuchte</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSV Exporte werden nicht erlaubt.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">VMP Export Versuchte</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">VMP Exporte werden nicht erlaubt.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sie wollen auch%1 der Ausrüstung und Materia ersetzen?</translation>
     </message>
     <message>
         <source>Have Seen Pandora&apos;s Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Haben die Büchse der Pandora gesehen</translation>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importierte Slot:%2 von%1 -&gt; Slot:%3</translation>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
@@ -6430,7 +6437,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>ChruchProgress</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kirche Fortschritt</translation>
     </message>
     <message>
         <source>DonProgress</source>
@@ -6466,19 +6473,19 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>All Materia Added!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alle Materia hinzugefügt!</translation>
     </message>
     <message>
         <source>Set Save Location: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Setzen Sie auf Position speichern:%1</translation>
     </message>
     <message>
         <source>Progression Reset Complete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Progression Zurücksetzen abgeschlossen</translation>
     </message>
     <message>
         <source>All Items Added</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alle Artikel hinzugefügt</translation>
     </message>
     <message>
         <source>Map Id: </source>
@@ -6494,11 +6501,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Select Achievement File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Achievement Datei</translation>
     </message>
     <message>
         <source>Dat File (*.dat);</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DAT-Datei (*.dat);</translation>
     </message>
     <message>
         <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
@@ -6518,7 +6525,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuelle Slot:%1</translation>
     </message>
     <message>
         <source>Disc  #</source>
@@ -6526,23 +6533,23 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Team Avalanche had meeting after Bombing Mission</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Team Avalanche hatte Sitzung nach Mission Bombardierung</translation>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cait Sith und Vincent sollte nicht verwendet werden, wenn sie in der Partei Registerkarte deaktiviert sind.</translation>
     </message>
     <message>
         <source>Spanish (PAL)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spanisch (PAL)</translation>
     </message>
     <message>
         <source>Japanese (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Japanisch (NTSC-J)</translation>
     </message>
     <message>
         <source>International (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Internationale (NTSC-J)</translation>
     </message>
     <message>
         <source>About</source>
@@ -6550,98 +6557,105 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suche nach &quot;Schildkrötenparadies&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Haben die U-Boot-Spiel gewonnen</translation>
     </message>
     <message>
         <source>Unlocked Vincent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">entriegelte Vincent</translation>
     </message>
     <message>
         <source>Unlocked Yuffie </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">entriegelte Yuffie</translation>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Save Point Lage im Nordkrater</translation>
     </message>
     <message>
         <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suche nach &quot;KeyItem&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
     </message>
     <message>
         <source>Unused KeyItems</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ungenutzte KeyItems</translation>
     </message>
     <message>
         <source>Field Location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Feld Ort</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Setzt
+Wenn Sie Durchschlüpfschnalle Tür Set Ort der Battle-Platz auf &amp;quot; Arena
+Lobby &amp;quot; so können Sie verbringen
+Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
+Trigger, Tutorial zeigt</translation>
     </message>
     <message>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stellen Replay Mission unter das Spiel zu setzen zurück zu dieser Mission. Dies führt automatisch zum Speicherort und Disc # gesetzt sowie Quest-Progression Vars. NICHT IHRE AKTUELLE SPAREN überschreiben , wenn Sie diese Funktion verwenden; Ich kann nicht versprechen, dass Sie in der Lage sein wird, das Spiel bis zum Ende von jeder Wiederholung zu spielen, oder dass eine bestimmte Wiedergabe in Ihrem speichern funktioniert. Diese Funktion ist noch in der Entwicklung.</translation>
     </message>
     <message>
         <source>Apply Selected Replay </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Übernehmen Ausgewählte Replay</translation>
     </message>
     <message>
         <source>Imported %1 -&gt; Slot:%2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importierte%1 -&gt; Slot:%2</translation>
     </message>
     <message>
         <source>Error Loading File %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fehler beim Laden von Datei%1</translation>
     </message>
     <message>
         <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
  ps3Key: %1
  ps3Seed: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schwarze Chocobo wird versuchen, Ihre Abwehr zu Anmeldung unter Verwendung der in den Optionen zur Verfügung gestellt Tasten Dialog.
+ PS3Key:%1
+ Ps3Seed:%2</translation>
     </message>
     <message>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dies wird Cloud Kopieren als zu jung Wolke (Caitsith der Schlitz) ist. Sephiroths Statistiken werden direkt von der Standard-Speichern. Seien Sie sicher, dass Ihre Caitsith und Vincent zu sichern, wenn Sie wollen, wieder zu verwenden,</translation>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schildkrötenparadies</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">KeyItem</translation>
     </message>
     <message>
         <source>Right clic&amp;k on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rechts &amp;klicken auf der Karte auf einfache Weise ein Element des eingestellt
+Lage.</translation>
     </message>
     <message>
         <source>Ho&amp;ur</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">St&amp;unde</translation>
     </message>
     <message>
         <source>G-Bi&amp;ke High Score</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">G-Bi&amp;ke High Score</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Playstation speichern Infos</translation>
     </message>
     <message>
         <source>PsxName:</source>
@@ -6653,7 +6667,7 @@ location.</source>
     </message>
     <message>
         <source>No Description Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Keine Beschreibung Text</translation>
     </message>
     <message>
         <source>z_41</source>
@@ -6681,15 +6695,15 @@ location.</source>
     </message>
     <message>
         <source>He&amp;lp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hi&amp;lfe</translation>
     </message>
     <message>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Aussicht</translation>
     </message>
     <message>
         <source>&amp;Language</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sprac&amp;he</translation>
     </message>
     <message>
         <source>&amp;Slot Region</source>
@@ -6697,7 +6711,7 @@ location.</source>
     </message>
     <message>
         <source>Sa&amp;ve As</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Speichern a&amp;ls</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -6705,39 +6719,39 @@ location.</source>
     </message>
     <message>
         <source>&amp;Show Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zeige Au&amp;swahl-Dialog</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vorheriger Steck&amp;platz</translation>
     </message>
     <message>
         <source>&amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Nächster Steckplatz</translation>
     </message>
     <message>
         <source>&amp;More Options...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Mehr Optionen...</translation>
     </message>
     <message>
         <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Us Englisch (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">UK &amp;Englisch (PAL)</translation>
     </message>
     <message>
         <source>&amp;German (PAL)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Deutsch (PAL)</translation>
     </message>
     <message>
         <source>&amp;Spanish (PAL)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Spanisch (PAL)</translation>
     </message>
     <message>
         <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Japanisch (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;International (Ntsc-J)</source>
@@ -6745,39 +6759,39 @@ location.</source>
     </message>
     <message>
         <source>New &amp;Game+ </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Neu &amp; Game +</translation>
     </message>
     <message>
         <source>&amp;Calculate Stats</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bere&amp;chnen Statistik</translation>
     </message>
     <message>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">N&amp;eu laden</translation>
     </message>
     <message>
         <source>&amp;French (PAL)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Französisch (PAL)</translation>
     </message>
     <message>
         <source>&amp;Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Erstellen &amp;Cloud-Speicher-Ordner</translation>
     </message>
     <message>
         <source>Open Achievement &amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O&amp;ffene Leistung Datei</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -6797,7 +6811,7 @@ location.</source>
     </message>
     <message>
         <source>Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spiel verwendet%1 Block speichern</translation>
     </message>
     <message>
         <source>s
@@ -6811,27 +6825,27 @@ location.</source>
     </message>
     <message>
         <source>&amp;Place Leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Place Führer</translation>
     </message>
     <message>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Platziere &amp;Tiny Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Buggy/Highwind</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Platziere &amp;Buggy/Highwind</translation>
     </message>
     <message>
         <source>Place &amp;Sub</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plat&amp;ziere U-Boot</translation>
     </message>
     <message>
         <source>Place &amp;Wild Chocobo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Platziere &amp;Wild Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Platziere &amp;Diamond / Ultimate / Ruby Weapon</translation>
     </message>
 </context>
 <context>
@@ -6854,15 +6868,15 @@ location.</source>
     </message>
     <message>
         <source>Skills</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fähigkeiten</translation>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stat Änderungen</translation>
     </message>
     <message>
         <source>All Materia</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">alle Materia</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -7233,7 +7247,7 @@ location.</source>
     </message>
     <message>
         <source>EMPTY</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEER</translation>
     </message>
 </context>
 <context>
@@ -8342,7 +8356,7 @@ location.</source>
     <name>MenuListWidget</name>
     <message>
         <source>Menu Manager</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menü-Manager</translation>
     </message>
     <message>
         <source>Item</source>
@@ -8350,11 +8364,11 @@ location.</source>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sichtbar</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">verschlossen</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8397,19 +8411,19 @@ location.</source>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ausgabepfad :</translation>
     </message>
     <message>
         <source>Folder To Write Files Into</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ordner zu schreiben Dateien in</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anmeldung mit Benutzerkennung </translation>
     </message>
     <message>
         <source>Your SE Id number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ihre SE ID-Nummer</translation>
     </message>
     <message>
         <source>Save00</source>
@@ -8441,7 +8455,8 @@ location.</source>
     </message>
     <message>
         <source>Add Files For each Save you want in your cloud data.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+In-Dateien für jede Speichern Sie in Ihrer Cloud-Daten wollen.</translation>
     </message>
     <message>
         <source>Save07</source>
@@ -8449,7 +8464,7 @@ location.</source>
     </message>
     <message>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sie können eine beliebige Format Das Schwarze Chocobo-Can Open Verwenden</translation>
     </message>
     <message>
         <source>Save08</source>
@@ -8457,7 +8472,7 @@ location.</source>
     </message>
     <message>
         <source>Unused files will be Looked for in the Save Path</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nicht genutzte Dateien werden in der Speicherpfad gesucht werden</translation>
     </message>
     <message>
         <source>Save09</source>
@@ -8465,51 +8480,51 @@ location.</source>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ok drücken, werden alle Metadaten in den Speicherpfad überschreiben </translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie ein Verzeichnis zum Speichern In</translation>
     </message>
     <message>
         <source>Select A File To Use As Save00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save00</translation>
     </message>
     <message>
         <source>Select A File To Use As Save01</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save01</translation>
     </message>
     <message>
         <source>Select A File To Use As Save02</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save02</translation>
     </message>
     <message>
         <source>Select A File To Use As Save03</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save03</translation>
     </message>
     <message>
         <source>Select A File To Use As Save04</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save04</translation>
     </message>
     <message>
         <source>Select A File To Use As Save05</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save05</translation>
     </message>
     <message>
         <source>Select A File To Use As Save06</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save06</translation>
     </message>
     <message>
         <source>Select A File To Use As Save07</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save07</translation>
     </message>
     <message>
         <source>Select A File To Use As Save08</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save08</translation>
     </message>
     <message>
         <source>Select A File To Use As Save09</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wählen Sie eine Datei zu verwenden, wie Save09</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
@@ -8517,11 +8532,11 @@ location.</source>
     </message>
     <message>
         <source>File Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dateifehler</translation>
     </message>
     <message>
         <source>Failure to write the File: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bei Nichtbeachtung der Datei zu schreiben: %1</translation>
     </message>
 </context>
 <context>
@@ -8556,87 +8571,87 @@ location.</source>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardpfad für Loading Alle Speichert</translation>
     </message>
     <message>
         <source>Path For Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pfad für Emulator-Speicherkarten</translation>
     </message>
     <message>
         <source>Path For PC (.ff7) Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pfad für PC (.ff7) Speichert</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pfad für Charakter Stat-Dateien</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Überschreiben Builtin Neue Spieldaten</translation>
     </message>
     <message>
         <source>Use Only Raw Psx Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verwenden Sie nur Raw Psx Files</translation>
     </message>
     <message>
         <source>Editor Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Editor-Optionen</translation>
     </message>
     <message>
         <source>CharEditor - Advanced Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CharEditor - Erweiterter Modus</translation>
     </message>
     <message>
         <source>Chocobo Manager - Show Pcount / Personality</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chocobo-Manager - Zeige pCount / Personality</translation>
     </message>
     <message>
         <source>Field Location - Show Map/X/Y/T/D</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Feld Location - Karte anzeigen / X / Y / T / D</translation>
     </message>
     <message>
         <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Weltkarte Viewer-Karte int Spinboxen für Leader-ID und Buggy-ID</translation>
     </message>
     <message>
         <source>Game Progress - Show Untested</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spielfortschritt - anzeigen Ungeprüfte</translation>
     </message>
     <message>
         <source>Options - Always Show Controller Mapping </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Optionen - Immer Show Controller Mapping</translation>
     </message>
     <message>
         <source>Enable Experimental TestData </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivieren Experimentelle Testdata</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schließen</translation>
     </message>
     <message>
         <source>Path Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pfadoptionen </translation>
     </message>
     <message>
         <source>Editable Combo for Materia and Items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Editierbare Combo für Materia und Artikel</translation>
     </message>
     <message>
         <source>Signing Keys:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Signaturschlüssel:</translation>
     </message>
     <message>
         <source>Input Key in HEX ex( 00010203AABF )</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">INPUT-Taste in HEX ex( 00010203AABF )</translation>
     </message>
     <message>
         <source>Input Seed in Hex ex( 00010203AABF )</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eingangs Seed in Hex ex( 00010203AABF )</translation>
     </message>
     <message>
         <source>Scale Widgets by: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skalieren Widgets nach:</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -8644,7 +8659,11 @@ location.</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Keys&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Key&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Keys&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Key&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -8652,11 +8671,15 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Seeds&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Seed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Seeds&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Seed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Signing is disabled! Build with OpenSSL support to enable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Unterschreiben ist deaktiviert! Bauen Sie mit OpenSSL-Unterstützung zu aktivieren</translation>
     </message>
 </context>
 <context>
@@ -8862,11 +8885,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dürfen</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sichtbar</translation>
     </message>
     <message>
         <source>Barret</source>
@@ -8902,7 +8925,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>PHS Manager</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PHS Manager</translation>
     </message>
 </context>
 <context>
@@ -8925,11 +8948,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopieren Slot</translation>
     </message>
     <message>
         <source>Paste Into Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fügen Sie in den Schlitz</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -8966,23 +8989,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">  Mid-Linked Block, Nächste Daten Chunk @ Slot:%1</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">    Mid-Linked-Block (gestrichen), Nächste Daten Chunk @ Slot:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">     End Of verknüpfte Blöcke (gestrichen)</translation>
     </message>
     <message>
         <source>Select A Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wähle einen Slot</translation>
     </message>
     <message>
         <source>Load Another File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Legen Sie eine andere Datei</translation>
     </message>
 </context>
 <context>
@@ -9036,15 +9059,15 @@ p, li { white-space: pre-wrap; }
     <name>UndoStack</name>
     <message>
         <source>Inserting %1 bytes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Einsetzen%1 Bytes</translation>
     </message>
     <message>
         <source>Delete %1 chars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Löschen%1 Zeichen</translation>
     </message>
     <message>
         <source>Overwrite %1 chars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Überschreiben %1 Zeichen</translation>
     </message>
 </context>
 <context>
@@ -9190,7 +9213,7 @@ p, li { white-space: pre-wrap; }
     <name>achievementDialog</name>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Achievement-Editor</translation>
     </message>
     <message>
         <source>  &amp;Save</source>
@@ -9206,16 +9229,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Dat Files (*.dat)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DAT-Dateien (*.dat)</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fehlgeschlagen Datei speichern</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Datei konnte nicht schreiben
+Datei:%1</translation>
     </message>
 </context>
 <context>
