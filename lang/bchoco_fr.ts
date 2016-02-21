@@ -8498,7 +8498,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation>En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
+        <translation type="vanished">En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
@@ -8555,6 +8555,10 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Failure to write the File: %1</source>
         <translation>Impossible d&apos;écrire dans le fichier : %1</translation>
+    </message>
+    <message>
+        <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
+        <translation type="unfinished">En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
     </message>
 </context>
 <context>

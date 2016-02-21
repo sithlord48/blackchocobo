@@ -8496,7 +8496,7 @@ In-Dateien für jede Speichern Sie in Ihrer Cloud-Daten wollen.</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="unfinished">Ok drücken, werden alle Metadaten in den Speicherpfad überschreiben </translation>
+        <translation type="obsolete">Ok drücken, werden alle Metadaten in den Speicherpfad überschreiben </translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
@@ -8553,6 +8553,10 @@ In-Dateien für jede Speichern Sie in Ihrer Cloud-Daten wollen.</translation>
     <message>
         <source>Failure to write the File: %1</source>
         <translation type="unfinished">Bei Nichtbeachtung der Datei zu schreiben: %1</translation>
+    </message>
+    <message>
+        <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
+        <translation type="unfinished">Ok drücken, werden alle Metadaten in den Speicherpfad überschreiben </translation>
     </message>
 </context>
 <context>

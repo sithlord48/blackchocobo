@@ -11132,8 +11132,8 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="144"/>
-        <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation></translation>
+        <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="227"/>

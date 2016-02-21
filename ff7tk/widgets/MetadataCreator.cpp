@@ -141,7 +141,7 @@ void MetadataCreator::initDisplay(void)
 
 	lblSave09=new QLabel(tr("Save09"));
 	lineSave09= new QLineEdit;
-	lineSave09->setPlaceholderText(tr("Pressing Ok WIll Overwrite Any Metadata in the save path"));
+	lineSave09->setPlaceholderText(tr("Pressing Ok Will Overwrite Any Metadata in the save path"));
 	btnSave09= new QPushButton("...");
 
 	QHBoxLayout *savegroup09 = new QHBoxLayout;

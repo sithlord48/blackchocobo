@@ -8347,10 +8347,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select A Directory To Save Into</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8404,6 +8400,10 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Failure to write the File: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

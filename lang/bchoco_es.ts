@@ -8474,7 +8474,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation>Pulsando Ok se sobreescribirá cualquier metadato en la ruta de guardado</translation>
+        <translation type="vanished">Pulsando Ok se sobreescribirá cualquier metadato en la ruta de guardado</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
@@ -8531,6 +8531,10 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Failure to write the File: %1</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
+        <translation type="unfinished">Pulsando Ok se sobreescribirá cualquier metadato en la ruta de guardado</translation>
     </message>
 </context>
 <context>
