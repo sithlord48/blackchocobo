@@ -7514,10 +7514,10 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Japanese (Ntsc-J)</string>
+    <string>&amp;Japanese (NTSC-J)</string>
    </property>
    <property name="iconText">
-    <string>Japanese (Ntsc-J)</string>
+    <string>Japanese (NTSC-J)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BISLPS-00700</string>
@@ -7528,10 +7528,10 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;International (Ntsc-J)</string>
+    <string>&amp;International (NTSC-J)</string>
    </property>
    <property name="iconText">
-    <string>International (Ntsc-J)</string>
+    <string>International (NTSC-J)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BISLPS-01057</string>
