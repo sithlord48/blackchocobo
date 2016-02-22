@@ -7467,7 +7467,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Us English (Ntsc-U)</string>
+    <string>&amp;Us English (NTSC-U)</string>
    </property>
    <property name="statusTip">
     <string notr="true">BASCUS-94163</string>
