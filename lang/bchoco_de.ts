@@ -208,27 +208,29 @@ p, li { white-space: pre-wrap; }
     <name>Achievement_Names</name>
     <message>
         <source>End of Part I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ende von Teil I</translation>
     </message>
     <message>
         <source>End of Part II</source>
-        <translation type="unfinished"></translation>
+        <translation>Ende von Teil II</translation>
     </message>
     <message>
         <source>End of Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Spielende</translation>
     </message>
     <message>
         <source>Master Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Master-Materia</translation>
     </message>
     <message>
         <source>Master of Gil</source>
-        <translation type="unfinished"></translation>
+        <translation>
+2.4%
+Gilmeister</translation>
     </message>
     <message>
         <source>Top Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Höchstes Level</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
@@ -244,7 +246,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished"></translation>
+        <translation>Große Lehre</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -252,15 +254,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation type="unfinished"></translation>
+        <translation>Fausthagel</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation type="unfinished"></translation>
+        <translation>Zorn der Götter</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Kosmo-Glut</translation>
     </message>
     <message>
         <source>Slots</source>
@@ -272,19 +274,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ultimate Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima-Weapon</translation>
     </message>
     <message>
         <source>Diamond Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Diamant-Weapon</translation>
     </message>
     <message>
         <source>Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Rubin-Weapon</translation>
     </message>
     <message>
         <source>Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Smaragd-Weapon</translation>
     </message>
     <message>
         <source>Vincent</source>
@@ -296,7 +298,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Materia Overlord</source>
-        <translation type="unfinished"></translation>
+        <translation>Meister der Materia</translation>
     </message>
     <message>
         <source>Battle Square</source>
@@ -308,7 +310,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>First Battle</source>
-        <translation type="unfinished"></translation>
+        <translation>Erster Kampf</translation>
     </message>
     <message>
         <source>Braver</source>
@@ -1106,7 +1108,7 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
     </message>
     <message>
         <source>Chocobo Bill&apos;s Rating: </source>
-        <translation type="unfinished">Chocobo Bills Bewertung: </translation>
+        <translation type="obsolete">Chocobo Bills Bewertung: </translation>
     </message>
     <message>
         <source>Empty</source>
@@ -1143,6 +1145,10 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
     <message>
         <source>Terrible</source>
         <translation>Nicht empfehlenswert</translation>
+    </message>
+    <message>
+        <source>Choco Billy&apos;s Rating: </source>
+        <translation type="unfinished">Choco Billy Bewertung :</translation>
     </message>
 </context>
 <context>
@@ -2272,7 +2278,7 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
     </message>
     <message>
         <source>Caldrun</source>
-        <translation type="unfinished">Kessel</translation>
+        <translation type="obsolete">Kessel</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -2285,6 +2291,10 @@ Die km / h beschleunigt berechnet werden während des Spielens</translation>
     <message>
         <source>Initialized the Machine</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cauldron</source>
+        <translation type="unfinished">Kessel</translation>
     </message>
 </context>
 <context>
@@ -6357,7 +6367,7 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished">Diese Datei enthält keine aktualisierte Signatur haben, weil dieser die PSP / PS Vita wird lehnen dies Dies ist normal, da beschädigte sparen finden Sie für weitere Informationen in der Bedienungsanleitung.</translation>
+        <translation type="obsolete">Diese Datei enthält keine aktualisierte Signatur haben, weil dieser die PSP / PS Vita wird lehnen dies Dies ist normal, da beschädigte sparen finden Sie für weitere Informationen in der Bedienungsanleitung.</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
@@ -6545,11 +6555,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Japanese (Ntsc-J)</source>
-        <translation type="unfinished">Japanisch (NTSC-J)</translation>
+        <translation type="obsolete">Japanisch (NTSC-J)</translation>
     </message>
     <message>
         <source>International (Ntsc-J)</source>
-        <translation type="unfinished">Internationale (NTSC-J)</translation>
+        <translation type="obsolete">Internationale (NTSC-J)</translation>
     </message>
     <message>
         <source>About</source>
@@ -6735,7 +6745,7 @@ Lage.</translation>
     </message>
     <message>
         <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="unfinished">&amp;Us Englisch (NTSC-U)</translation>
+        <translation type="obsolete">&amp;Us Englisch (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
@@ -6751,11 +6761,7 @@ Lage.</translation>
     </message>
     <message>
         <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="unfinished">&amp;Japanisch (NTSC-J)</translation>
-    </message>
-    <message>
-        <source>&amp;International (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">&amp;Japanisch (NTSC-J)</translation>
     </message>
     <message>
         <source>New &amp;Game+ </source>
@@ -6861,7 +6867,27 @@ Trigger, Tutorial zeigt</translation>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diese Datei enthält keine aktualisierte Signatur haben, weil dieser die PSP / PS Vita wird lehnen dies Dies ist normal, da beschädigte sparen finden Sie für weitere Informationen in der Bedienungsanleitung.</translation>
+    </message>
+    <message>
+        <source>&amp;Us English (NTSC-U)</source>
+        <translation>&amp;Us Englisch (NTSC-U)</translation>
+    </message>
+    <message>
+        <source>&amp;Japanese (NTSC-J)</source>
+        <translation type="unfinished">&amp;Japanisch (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>Japanese (NTSC-J)</source>
+        <translation type="unfinished">Japanisch (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>&amp;International (NTSC-J)</source>
+        <translation type="unfinished">&amp;Internationale (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>International (NTSC-J)</source>
+        <translation type="unfinished">Internationale (NTSC-J)</translation>
     </message>
 </context>
 <context>

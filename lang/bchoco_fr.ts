@@ -1106,7 +1106,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Chocobo Bill&apos;s Rating: </source>
-        <translation>Note de Choco Bill : </translation>
+        <translation type="vanished">Note de Choco Bill : </translation>
     </message>
     <message>
         <source>Empty</source>
@@ -1143,6 +1143,10 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Terrible</source>
         <translation>Non recommandé</translation>
+    </message>
+    <message>
+        <source>Choco Billy&apos;s Rating: </source>
+        <translation>Note de Choco Bill : </translation>
     </message>
 </context>
 <context>
@@ -2277,7 +2281,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Caldrun</source>
-        <translation>Chaudron</translation>
+        <translation type="vanished">Chaudron</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -2289,7 +2293,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Initialized the Machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Lancé la machine</translation>
+    </message>
+    <message>
+        <source>Cauldron</source>
+        <translation>Chaudron</translation>
     </message>
 </context>
 <context>
@@ -6354,7 +6362,7 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation>Ce fichier n&apos;a pas une signature à jour,
+        <translation type="vanished">Ce fichier n&apos;a pas une signature à jour,
 votre PSP/PSVita va donc rejeter cette sauvegarde comme si elle était corrompue.
 Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apos;informations.</translation>
     </message>
@@ -6549,11 +6557,11 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>Japanese (Ntsc-J)</source>
-        <translation>Japonais (NTSC-J)</translation>
+        <translation type="vanished">Japonais (NTSC-J)</translation>
     </message>
     <message>
         <source>International (Ntsc-J)</source>
-        <translation>International (NTSC-J)</translation>
+        <translation type="vanished">International (NTSC-J)</translation>
     </message>
     <message>
         <source>About</source>
@@ -6738,7 +6746,7 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>&amp;Us English (Ntsc-U)</source>
-        <translation>Anglais &amp;US (NTSC-U)</translation>
+        <translation type="vanished">Anglais &amp;US (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
@@ -6754,11 +6762,11 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>&amp;Japanese (Ntsc-J)</source>
-        <translation>&amp;Japonais (NTSC-J)</translation>
+        <translation type="vanished">&amp;Japonais (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;International (Ntsc-J)</source>
-        <translation>&amp;International (NTSC-J)</translation>
+        <translation type="vanished">&amp;International (NTSC-J)</translation>
     </message>
     <message>
         <source>New &amp;Game+ </source>
@@ -6857,14 +6865,36 @@ d&apos;un objet facilement.</translation>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;) it will
 trigger showing that tutorial</source>
-        <translation type="unfinished">Quand la case est partiellement cochée (&quot;-&quot;)
+        <translation>Quand la case est partiellement cochée (&quot;-&quot;)
 le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier n&apos;a pas une signature à jour,
+votre PSP/PSVita va donc rejeter cette sauvegarde comme si elle était corrompue.
+Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apos;informations.</translation>
+    </message>
+    <message>
+        <source>&amp;Us English (NTSC-U)</source>
+        <translation type="unfinished">Anglais &amp;US (NTSC-U)</translation>
+    </message>
+    <message>
+        <source>&amp;Japanese (NTSC-J)</source>
+        <translation>&amp;Japonais (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>Japanese (NTSC-J)</source>
+        <translation>Japonais (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>&amp;International (NTSC-J)</source>
+        <translation>&amp;International (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>International (NTSC-J)</source>
+        <translation>International (NTSC-J)</translation>
     </message>
 </context>
 <context>

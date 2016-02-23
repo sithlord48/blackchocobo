@@ -1092,10 +1092,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Chocobo Bill&apos;s Rating: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Empty</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1129,6 +1125,10 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Terrible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choco Billy&apos;s Rating: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2258,10 +2258,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Caldrun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Chocobo Lure</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2271,6 +2267,10 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Initialized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cauldron</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6235,12 +6235,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PSP/PsVita will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>FF7 PC (*.ff7)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6417,14 +6411,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Japanese (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>International (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6591,10 +6577,6 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Uk &amp;English (PAL)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6604,14 +6586,6 @@ location.</source>
     </message>
     <message>
         <source>&amp;Spanish (PAL)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;International (Ntsc-J)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6714,6 +6688,26 @@ trigger showing that tutorial</source>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Us English (NTSC-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Japanese (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;International (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>International (NTSC-J)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

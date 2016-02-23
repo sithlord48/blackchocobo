@@ -286,7 +286,7 @@ static const FieldItemList FILIST[]=
 	{QList<quint16>()<<0x0E38,QList<quint8>()<<7,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Dragon Fang")},
 
 	{QList<quint16>()<<0x0E3D,QList<quint8>()<<0,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Dragon Scales")},
-	{QList<quint16>()<<0x0E3D,QList<quint8>()<<1,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Caldrun")},
+	{QList<quint16>()<<0x0E3D,QList<quint8>()<<1,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Cauldron")},
 	{QList<quint16>()<<0x0E3D,QList<quint8>()<<2,QStringList()<<"farm",QT_TRANSLATE_NOOP("FieldItems","Chocobo Lure")},
 
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},

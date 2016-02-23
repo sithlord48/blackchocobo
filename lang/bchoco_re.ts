@@ -1357,7 +1357,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ff7tk/widgets/ChocoboEditor.cpp" line="285"/>
-        <source>Chocobo Bill&apos;s Rating: </source>
+        <source>Choco Billy&apos;s Rating: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2192,6 +2192,11 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="289"/>
+        <source>Cauldron</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ff7tk/data/FF7FieldItemList.h" line="292"/>
         <source>Enhance Sword</source>
         <translation></translation>
@@ -2654,11 +2659,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <location filename="../ff7tk/data/FF7FieldItemList.h" line="288"/>
         <source>Dragon Scales</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7FieldItemList.h" line="289"/>
-        <source>Caldrun</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7927,11 +7927,6 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="7470"/>
-        <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="7481"/>
         <source>Uk &amp;English (PAL)</source>
         <translation type="unfinished"></translation>
@@ -7944,6 +7939,26 @@ location.</source>
     <message>
         <location filename="../mainwindow.ui" line="7503"/>
         <source>&amp;Spanish (PAL)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="7517"/>
+        <source>&amp;Japanese (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="7520"/>
+        <source>Japanese (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="7531"/>
+        <source>&amp;International (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="7534"/>
+        <source>International (NTSC-J)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8530,28 +8545,13 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="7470"/>
+        <source>&amp;Us English (NTSC-U)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="7506"/>
         <source>Spanish (PAL)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="7517"/>
-        <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="7520"/>
-        <source>Japanese (Ntsc-J)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="7531"/>
-        <source>&amp;International (Ntsc-J)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="7534"/>
-        <source>International (Ntsc-J)</source>
         <translation></translation>
     </message>
     <message>
@@ -8689,13 +8689,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="620"/>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PSP/PsVita will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="567"/>
         <location filename="../mainwindow.cpp" line="619"/>
         <source>PSV Save Notice</source>
@@ -8748,6 +8741,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="566"/>
+        <location filename="../mainwindow.cpp" line="620"/>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more information.</source>

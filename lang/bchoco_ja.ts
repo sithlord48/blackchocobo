@@ -1104,7 +1104,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Chocobo Bill&apos;s Rating: </source>
-        <translation type="unfinished">チョコボビルの評価：</translation>
+        <translation type="obsolete">チョコボビルの評価：</translation>
     </message>
     <message>
         <source>Empty</source>
@@ -1141,6 +1141,10 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Terrible</source>
         <translation type="unfinished">おすすめできないチョコボ</translation>
+    </message>
+    <message>
+        <source>Choco Billy&apos;s Rating: </source>
+        <translation type="unfinished">チョコボビルの評価：</translation>
     </message>
 </context>
 <context>
@@ -2270,7 +2274,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Caldrun</source>
-        <translation>魔女の大釜</translation>
+        <translation type="vanished">魔女の大釜</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -2283,6 +2287,10 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Initialized the Machine</source>
         <translation type="unfinished">マシンを初期化</translation>
+    </message>
+    <message>
+        <source>Cauldron</source>
+        <translation type="unfinished">魔女の大釜</translation>
     </message>
 </context>
 <context>
@@ -6415,12 +6423,6 @@ Table Entries are Editable</source>
         <translation>PSP/PsVita セーブの警告</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PSP/PsVita will reject this save as corrupted
- This is normal please see the User Guide for more infomation.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>FF7 PC (*.ff7)</source>
         <translation type="unfinished">FF7 PC セーブ (*.ff7)</translation>
     </message>
@@ -6603,11 +6605,11 @@ VMPの輸出は許可されていません。</translation>
     </message>
     <message>
         <source>Japanese (Ntsc-J)</source>
-        <translation type="unfinished">日本（NTSC-J）</translation>
+        <translation type="obsolete">日本（NTSC-J）</translation>
     </message>
     <message>
         <source>International (Ntsc-J)</source>
-        <translation type="unfinished">インターナショナル（NTSC-J）</translation>
+        <translation type="obsolete">インターナショナル（NTSC-J）</translation>
     </message>
     <message>
         <source>About</source>
@@ -6787,7 +6789,7 @@ location.</source>
     </message>
     <message>
         <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="unfinished">アメリカ英語（NTSC-U）(&amp;U)</translation>
+        <translation type="obsolete">アメリカ英語（NTSC-U）(&amp;U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
@@ -6804,11 +6806,11 @@ location.</source>
     </message>
     <message>
         <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="unfinished">日本（NTSC-J）(&amp;J)</translation>
+        <translation type="obsolete">日本（NTSC-J）(&amp;J)</translation>
     </message>
     <message>
         <source>&amp;International (Ntsc-J)</source>
-        <translation type="unfinished">インターナショナル（NTSC-J）(&amp;I)</translation>
+        <translation type="obsolete">インターナショナル（NTSC-J）(&amp;I)</translation>
     </message>
     <message>
         <source>New &amp;Game+ </source>
@@ -6915,6 +6917,26 @@ trigger showing that tutorial</source>
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more information.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Us English (NTSC-U)</source>
+        <translation type="unfinished">アメリカ英語（NTSC-U）(&amp;U)</translation>
+    </message>
+    <message>
+        <source>&amp;Japanese (NTSC-J)</source>
+        <translation>日本（NTSC-J）(&amp;J)</translation>
+    </message>
+    <message>
+        <source>Japanese (NTSC-J)</source>
+        <translation>日本（NTSC-J）</translation>
+    </message>
+    <message>
+        <source>&amp;International (NTSC-J)</source>
+        <translation type="unfinished">インターナショナル（NTSC-J）(&amp;I)</translation>
+    </message>
+    <message>
+        <source>International (NTSC-J)</source>
+        <translation type="unfinished">インターナショナル（NTSC-J）</translation>
     </message>
 </context>
 <context>

@@ -617,7 +617,7 @@ void MainWindow::on_actionSave_File_As_triggered()
 	else if(selectedType ==vgs){newType = "VGS";}
 	else if(selectedType ==dex){newType = "DEX";}
 	else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
-	else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more infomation."));}
+	else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
 	else{newType ="";}
 
 	if(ff7->type()!=newType)
