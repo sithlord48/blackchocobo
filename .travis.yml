@@ -1,11 +1,8 @@
+sudo: required
+dist: trusty
+
 os:
  - linux
- 
- sudo: 
-  - required
- dist: 
-  - trusty
-
 matrix:
  exclude:
 # Only do coverity or coverage build on Linux when the compiler is gcc
