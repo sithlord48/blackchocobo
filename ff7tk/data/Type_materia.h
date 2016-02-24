@@ -22,7 +22,7 @@
 		__pragma(pack(push, 1))		\
 		structure					\
 		__pragma(pack(pop))
-#elif defined(__MINGW32__) || defined(__GNUC__)
+#elif defined(__MINGW32__)
 	#define PACK(structure) structure __attribute__ ((gcc_struct, __packed__))
 #else
 	#define PACK(structure) structure Q_PACKED
