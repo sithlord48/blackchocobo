@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.0" language="de">
 <context>
     <name>About</name>
     <message>
@@ -5490,7 +5490,7 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
-        <translation type="vanished">Zeige Auswahl-Dialog</translation>
+        <translation>Zeige Auswahl-Dialog</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5538,11 +5538,11 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation type="vanished">Vorheriger Steckplatz</translation>
+        <translation>Vorheriger Steckplatz</translation>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation type="vanished">Nächster Steckplatz</translation>
+        <translation>Nächster Steckplatz</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5620,15 +5620,15 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation type="vanished">Steckplatz Region</translation>
+        <translation>Steckplatz Region</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation type="vanished">Hilf&amp;e</translation>
+        <translation>Hilf&amp;e</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation type="vanished">Zeig&amp;e</translation>
+        <translation>Zeig&amp;e</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -5636,11 +5636,11 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation type="vanished">Mehr Optionen...</translation>
+        <translation>Mehr Optionen...</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="vanished">Neues Spiel+ </translation>
+        <translation>Neues Spiel+ </translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5738,7 +5738,7 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Save As</source>
-        <translation type="vanished">Speichern als</translation>
+        <translation>Speichern als</translation>
     </message>
     <message>
         <source>&amp;Save</source>
@@ -5796,19 +5796,19 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation type="vanished">Platziere Führer</translation>
+        <translation>Platziere Führer</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation type="vanished">Platziere Tiny Bronco/Chocobo</translation>
+        <translation>Platziere Tiny Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation type="vanished">Platziere Buggy/Highwind</translation>
+        <translation>Platziere Buggy/Highwind</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation type="vanished">Platziere U-Boot</translation>
+        <translation>Platziere U-Boot</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5820,11 +5820,11 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Place Wild Chocobo</source>
-        <translation type="vanished">Platziere Wild Chocobo</translation>
+        <translation>Platziere Wild Chocobo</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="vanished">Platziere Diamond / Ultimate / Ruby Weapon</translation>
+        <translation>Platziere Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5892,7 +5892,7 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="vanished">Nachladen</translation>
+        <translation>Nachladen</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -5928,7 +5928,7 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Diff</source>
-        <translation type="vanished">Diff</translation>
+        <translation>Diff</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
@@ -5936,7 +5936,7 @@ Filter Mode: Name / Lage String</translation>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation type="vanished">Zeige alle &apos;Z&apos; Veränderungen</translation>
+        <translation>Zeige alle &apos;Z&apos; Veränderungen</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -6159,7 +6159,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="vanished">Berechne Stats</translation>
+        <translation>Berechne Stats</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -6531,7 +6531,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation type="vanished">Sprache</translation>
+        <translation>Sprache</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
@@ -6652,16 +6652,16 @@ Trigger, Tutorial zeigt</translation>
     <message>
         <source>Right clic&amp;k on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished">Rechts &amp;klicken auf der Karte auf einfache Weise ein Element des eingestellt
+        <translation type="obsolete">Rechts &amp;klicken auf der Karte auf einfache Weise ein Element des eingestellt
 Lage.</translation>
     </message>
     <message>
         <source>Ho&amp;ur</source>
-        <translation type="unfinished">St&amp;unde</translation>
+        <translation type="obsolete">St&amp;unde</translation>
     </message>
     <message>
         <source>G-Bi&amp;ke High Score</source>
-        <translation type="unfinished">G-Bi&amp;ke High Score</translation>
+        <translation type="obsolete">G-Bi&amp;ke High Score</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
@@ -6717,7 +6717,7 @@ Lage.</translation>
     </message>
     <message>
         <source>&amp;Slot Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Steckplatz Region</translation>
     </message>
     <message>
         <source>Sa&amp;ve As</source>
@@ -6888,6 +6888,16 @@ Trigger, Tutorial zeigt</translation>
     <message>
         <source>International (NTSC-J)</source>
         <translation type="unfinished">Internationale (NTSC-J)</translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished">Rechts klicken auf der Karte auf einfache Weise ein Element des eingestellt
+Lage.</translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished">G-Bike High Score</translation>
     </message>
 </context>
 <context>
@@ -9120,19 +9130,19 @@ p, li { white-space: pre-wrap; }
     <name>about</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation type="vanished">Über Black Chocobo</translation>
+        <translation>Über Black Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation type="vanished">Black Chocobo</translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="vanished">&amp;Über</translation>
+        <translation>&amp;Über</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="vanished">Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
+        <translation>Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -9140,7 +9150,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9152,7 +9162,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9160,75 +9170,75 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="vanished">Neueste Features</translation>
+        <translation>Neueste Features</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="vanished">Credits</translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="vanished">Giving Credit Where Credit is Due</translation>
+        <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="vanished">Programmierer</translation>
+        <translation>Programmierer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="vanished">Fehler-Tester</translation>
+        <translation>Fehler-Tester</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="vanished">Haupt-Fehler-Tester, für win/gnome + ingame</translation>
+        <translation>Haupt-Fehler-Tester, für win/gnome + ingame</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="vanished">Mac Os Tester</translation>
+        <translation>Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="vanished">Windows Tester</translation>
+        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="vanished">Übersetzer</translation>
+        <translation>Übersetzer</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="vanished">Spanische Übersetzung:</translation>
+        <translation>Spanische Übersetzung:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="vanished">Französische Übersetzung:</translation>
+        <translation>Französische Übersetzung:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="vanished">Symbole benutzt in diesem Programm</translation>
+        <translation>Symbole benutzt in diesem Programm</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="vanished">Buff Icons (eins mehr oder auch zwei) von </translation>
+        <translation>Buff Icons (eins mehr oder auch zwei) von </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="vanished">Ein großes Danke  an:</translation>
+        <translation>Ein großes Danke  an:</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="vanished">Früher Win32 Tester</translation>
+        <translation>Früher Win32 Tester</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="vanished">Japanische Übersetzung:</translation>
+        <translation>Japanische Übersetzung:</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="vanished">PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
+        <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="vanished">Deutsche Übersetzung:</translation>
+        <translation>Deutsche Übersetzung:</translation>
     </message>
     <message>
         <source>Thanks</source>
@@ -9236,23 +9246,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation type="vanished">Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
+        <translation>Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
-        <translation type="vanished">Danke Dir für das alte checksum-Programm</translation>
+        <translation>Danke Dir für das alte checksum-Programm</translation>
     </message>
     <message>
         <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation type="vanished">Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
+        <translation>Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
     </message>
     <message>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation type="vanished">Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
+        <translation>Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
     </message>
     <message>
         <source>Cause she&apos;s just awesome!</source>
-        <translation type="vanished">Weil Sie einfach fantastisch ist!</translation>
+        <translation>Weil Sie einfach fantastisch ist!</translation>
     </message>
 </context>
 <context>

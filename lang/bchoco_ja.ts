@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja" sourcelanguage="en_US">
+<TS version="2.0" language="ja" sourcelanguage="en_US">
 <context>
     <name>About</name>
     <message>
@@ -2274,7 +2274,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Caldrun</source>
-        <translation type="vanished">魔女の大釜</translation>
+        <translation>魔女の大釜</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -5557,7 +5557,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show Selection Dialog</source>
-        <translation type="vanished">選択ダイアログを表示</translation>
+        <translation>選択ダイアログを表示</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5605,11 +5605,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation type="vanished">前のスロット</translation>
+        <translation>前のスロット</translation>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation type="vanished">次のスロット</translation>
+        <translation>次のスロット</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5687,15 +5687,15 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation type="vanished">スロットのリージョン</translation>
+        <translation>スロットのリージョン</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation type="vanished">ヘルプ(&amp;H)</translation>
+        <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation type="vanished">表示(&amp;V)</translation>
+        <translation>表示(&amp;V)</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -5703,11 +5703,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>More Options...</source>
-        <translation type="vanished">拡張オプション...</translation>
+        <translation>拡張オプション...</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="vanished">新規ゲーム＋</translation>
+        <translation>新規ゲーム＋</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5805,7 +5805,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save As</source>
-        <translation type="vanished">名前を付けて保存</translation>
+        <translation>名前を付けて保存</translation>
     </message>
     <message>
         <source>&amp;Save</source>
@@ -5861,19 +5861,19 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation type="vanished">リーダーを配置</translation>
+        <translation>リーダーを配置</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation type="vanished">タイニー・ブロンコ/チョコボを配置</translation>
+        <translation>タイニー・ブロンコ/チョコボを配置</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation type="vanished">バギー/ハイウィンドを配置</translation>
+        <translation>バギー/ハイウィンドを配置</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation type="vanished">潜水艦を配置</translation>
+        <translation>潜水艦を配置</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5885,11 +5885,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Place Wild Chocobo</source>
-        <translation type="vanished">野生のチョコボを配置</translation>
+        <translation>野生のチョコボを配置</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="vanished">ダイヤ/アルテマ/ルビー ウェポンを配置</translation>
+        <translation>ダイヤ/アルテマ/ルビー ウェポンを配置</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5957,7 +5957,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="vanished">再読み込み</translation>
+        <translation>再読み込み</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -5993,7 +5993,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Diff</source>
-        <translation type="vanished">差分</translation>
+        <translation>差分</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
@@ -6001,7 +6001,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation type="vanished">&apos;Z&apos; の変更をすべて表示</translation>
+        <translation>&apos;Z&apos; の変更をすべて表示</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -6221,7 +6221,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="vanished">能力値を算出</translation>
+        <translation>能力値を算出</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -6581,7 +6581,7 @@ VMPの輸出は許可されていません。</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation type="vanished">言語</translation>
+        <translation>言語</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
@@ -6696,16 +6696,16 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>Right clic&amp;k on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished">右簡単にアイテムのを設定するために地図をクリックしてください
+        <translation type="obsolete">右簡単にアイテムのを設定するために地図をクリックしてください
 ロケーション。 (&amp;K)</translation>
     </message>
     <message>
         <source>Ho&amp;ur</source>
-        <translation type="unfinished">時間 (&amp;U)</translation>
+        <translation type="obsolete">時間 (&amp;U)</translation>
     </message>
     <message>
         <source>G-Bi&amp;ke High Score</source>
-        <translation type="unfinished">G-バイクハイスコア (&amp;K)</translation>
+        <translation type="obsolete">G-バイクハイスコア (&amp;K)</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
@@ -6937,6 +6937,16 @@ trigger showing that tutorial</source>
     <message>
         <source>International (NTSC-J)</source>
         <translation type="unfinished">インターナショナル（NTSC-J）</translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished">右簡単にアイテムのを設定するために地図をクリックしてください
+ロケーション。</translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished">G-バイクハイスコア</translation>
     </message>
 </context>
 <context>
@@ -9161,19 +9171,19 @@ p, li { white-space: pre-wrap; }
     <name>about</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation type="vanished">Black Chocobo について</translation>
+        <translation>Black Chocobo について</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation type="vanished">黒チョコボ </translation>
+        <translation>黒チョコボ </translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="vanished">バージョン情報(&amp;A)</translation>
+        <translation>バージョン情報(&amp;A)</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="vanished">Final Fantasy VII ゲーム セーブ エディター</translation>
+        <translation>Final Fantasy VII ゲーム セーブ エディター</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -9181,7 +9191,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9193,7 +9203,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9201,95 +9211,95 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="vanished">最新の変更点</translation>
+        <translation>最新の変更点</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="vanished">クレジット</translation>
+        <translation>クレジット</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="vanished">しかるべきクレジット</translation>
+        <translation>しかるべきクレジット</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="vanished">プログラマー</translation>
+        <translation>プログラマー</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="vanished"> バグ テスター</translation>
+        <translation> バグ テスター</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="vanished"> メイン バグ テスター, Win/Gnome + ゲーム全般</translation>
+        <translation> メイン バグ テスター, Win/Gnome + ゲーム全般</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="vanished"> Mac OS テスター</translation>
+        <translation> Mac OS テスター</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="vanished"> Windows テスター</translation>
+        <translation> Windows テスター</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="vanished">翻訳者</translation>
+        <translation>翻訳者</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="vanished">スペイン語翻訳:</translation>
+        <translation>スペイン語翻訳:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="vanished">フランス語翻訳: </translation>
+        <translation>フランス語翻訳: </translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="vanished">プログラムの使用アイコン</translation>
+        <translation>プログラムの使用アイコン</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="vanished">バフ アイコン (その他・諸々) の作成: </translation>
+        <translation>バフ アイコン (その他・諸々) の作成: </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="vanished">大いなる感謝を:</translation>
+        <translation>大いなる感謝を:</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="vanished">Win32 の初期テスター</translation>
+        <translation>Win32 の初期テスター</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="vanished">日本語翻訳:</translation>
+        <translation>日本語翻訳:</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="vanished">PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
+        <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="vanished">ドイツ語翻訳:</translation>
+        <translation>ドイツ語翻訳:</translation>
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation type="vanished">彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
+        <translation>彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
-        <translation type="vanished">定番のチェックサム プログラムに感謝します。</translation>
+        <translation>定番のチェックサム プログラムに感謝します。</translation>
     </message>
     <message>
         <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation type="vanished">突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
+        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
     </message>
     <message>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation type="vanished">Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
+        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
     </message>
     <message>
         <source>Cause she&apos;s just awesome!</source>
-        <translation type="vanished">ともかく彼女は素晴らしい！</translation>
+        <translation>ともかく彼女は素晴らしい！</translation>
     </message>
 </context>
 <context>

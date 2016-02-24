@@ -7601,12 +7601,6 @@ The km/h speeds are calculated while playing </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="2893"/>
-        <source>Right clic&amp;k on map to easily set an item&apos;s
-location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="2914"/>
         <source>Game Progress</source>
         <translation></translation>
@@ -7852,11 +7846,6 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="3815"/>
-        <source>Ho&amp;ur</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="4196"/>
         <source>Unlocked Vincent</source>
         <translation type="unfinished"></translation>
@@ -7864,11 +7853,6 @@ location.</source>
     <message>
         <location filename="../mainwindow.ui" line="4203"/>
         <source>Unlocked Yuffie </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="5659"/>
-        <source>G-Bi&amp;ke High Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8032,6 +8016,7 @@ location.</source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="3815"/>
         <location filename="../mainwindow.ui" line="4379"/>
         <source>Hour</source>
         <translation></translation>
@@ -8303,6 +8288,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="2893"/>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="3403"/>
         <source>ChurchProgress</source>
         <translation type="unfinished"></translation>
@@ -8311,6 +8302,11 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <location filename="../mainwindow.ui" line="4327"/>
         <source>Number Steps</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="5659"/>
+        <source>G-Bike High Score</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5707"/>

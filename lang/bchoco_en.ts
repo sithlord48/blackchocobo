@@ -6484,19 +6484,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right clic&amp;k on map to easily set an item&apos;s
-location.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ho&amp;ur</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G-Bi&amp;ke High Score</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Playstation Save Info</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6708,6 +6695,15 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>International (NTSC-J)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s
+location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bike High Score</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

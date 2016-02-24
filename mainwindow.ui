@@ -2890,7 +2890,7 @@
                  <item>
                   <widget class="QLabel" name="label_233">
                    <property name="text">
-                    <string>Right clic&amp;k on map to easily set an item's
+                    <string>Right click on map to easily set an item's
 location.</string>
                    </property>
                    <property name="indent">
@@ -3812,7 +3812,7 @@ location.</string>
                <item>
                 <widget class="QLabel" name="label_23">
                  <property name="text">
-                  <string>Ho&amp;ur</string>
+                  <string>Hour</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -5656,7 +5656,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>G-Bi&amp;ke High Score</string>
+                   <string>G-Bike High Score</string>
                   </property>
                   <property name="buddy">
                    <cstring>sb_BikeHighScore</cstring>
