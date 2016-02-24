@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr" sourcelanguage="en_US">
+<TS version="2.1" language="fr" sourcelanguage="en_US">
 <context>
     <name>About</name>
     <message>
@@ -1106,7 +1106,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Chocobo Bill&apos;s Rating: </source>
-        <translation>Note de Choco Bill : </translation>
+        <translation type="vanished">Note de Choco Bill : </translation>
     </message>
     <message>
         <source>Empty</source>
@@ -2132,7 +2132,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Initilized the Machine</source>
-        <translation>Lancé la machine</translation>
+        <translation type="vanished">Lancé la machine</translation>
     </message>
     <message>
         <source>KeyItem: A Coupon</source>
@@ -2281,7 +2281,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Caldrun</source>
-        <translation>Chaudron</translation>
+        <translation type="vanished">Chaudron</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -5474,7 +5474,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Show Selection Dialog</source>
-        <translation>Afficher la fenêtre de sélection</translation>
+        <translation type="vanished">Afficher la fenêtre de sélection</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -5538,11 +5538,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation>Slot précédent</translation>
+        <translation type="vanished">Slot précédent</translation>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation>Slot suivant</translation>
+        <translation type="vanished">Slot suivant</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5620,15 +5620,15 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation>Format du slot</translation>
+        <translation type="vanished">Format du slot</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation>Aid&amp;e</translation>
+        <translation type="vanished">Aid&amp;e</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation>V&amp;ue</translation>
+        <translation type="vanished">V&amp;ue</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -5636,11 +5636,11 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation>Plus d&apos;options...</translation>
+        <translation type="vanished">Plus d&apos;options...</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation>Nouvelle partie +</translation>
+        <translation type="vanished">Nouvelle partie +</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5790,7 +5790,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Save As</source>
-        <translation>Enregistrer sous</translation>
+        <translation type="vanished">Enregistrer sous</translation>
     </message>
     <message>
         <source>&amp;Save</source>
@@ -5802,27 +5802,27 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation>Placer le chef d&apos;équipe</translation>
+        <translation type="vanished">Placer le chef d&apos;équipe</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation>Placer le Tiny Bronco / un Chocobo</translation>
+        <translation type="vanished">Placer le Tiny Bronco / un Chocobo</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation>Placer le Buggy / le Hautvent</translation>
+        <translation type="vanished">Placer le Buggy / le Hautvent</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation>Placer le sous-marin</translation>
+        <translation type="vanished">Placer le sous-marin</translation>
     </message>
     <message>
         <source>Place Wild Chocobo</source>
-        <translation>Placer le Chocobo Sauvage</translation>
+        <translation type="vanished">Placer le Chocobo Sauvage</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>Placer Dernière Arme / Diamant / Rubis</translation>
+        <translation type="vanished">Placer Dernière Arme / Diamant / Rubis</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5890,7 +5890,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation>Recharger</translation>
+        <translation type="vanished">Recharger</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -5926,7 +5926,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Diff</source>
-        <translation>Diff</translation>
+        <translation type="vanished">Diff</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
@@ -5934,7 +5934,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation>Afficher toutes les modifications</translation>
+        <translation type="vanished">Afficher toutes les modifications</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -6154,7 +6154,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation>Calculer les statistiques</translation>
+        <translation type="vanished">Calculer les statistiques</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -6268,7 +6268,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation>Créer un dossier de sauvegarde dans le cloud</translation>
+        <translation type="vanished">Créer un dossier de sauvegarde dans le cloud</translation>
     </message>
     <message>
         <source>Money</source>
@@ -6362,7 +6362,7 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>This File Does Not Have An Updated Signature
  Because of this your PSP/PsVita will reject this save as corrupted
  This is normal please see the User Guide for more infomation.</source>
-        <translation>Ce fichier n&apos;a pas une signature à jour,
+        <translation type="vanished">Ce fichier n&apos;a pas une signature à jour,
 votre PSP/PSVita va donc rejeter cette sauvegarde comme si elle était corrompue.
 Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apos;informations.</translation>
     </message>
@@ -6444,7 +6444,7 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     </message>
     <message>
         <source>ChruchProgress</source>
-        <translation>ProgressionÉglise</translation>
+        <translation type="vanished">ProgressionÉglise</translation>
     </message>
     <message>
         <source>DonProgress</source>
@@ -6508,7 +6508,7 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     </message>
     <message>
         <source>Open Achievement File</source>
-        <translation>Ouvrir le fichier des succès</translation>
+        <translation type="vanished">Ouvrir le fichier des succès</translation>
     </message>
     <message>
         <source>Select Achievement File</source>
@@ -6532,7 +6532,7 @@ Cela est tout à fait normal, merci de lire le guide utilisateur pour plus d&apo
     </message>
     <message>
         <source>Language</source>
-        <translation>Langue</translation>
+        <translation type="vanished">Langue</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
@@ -6557,11 +6557,11 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>Japanese (Ntsc-J)</source>
-        <translation>Japonais (NTSC-J)</translation>
+        <translation type="vanished">Japonais (NTSC-J)</translation>
     </message>
     <message>
         <source>International (Ntsc-J)</source>
-        <translation>International (NTSC-J)</translation>
+        <translation type="vanished">International (NTSC-J)</translation>
     </message>
     <message>
         <source>About</source>
@@ -6611,7 +6611,7 @@ quand vous dépassez la porte du Battle Square, définir le lieu &amp;quot;Entr�
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will
 trigger showing that tutorial</source>
-        <translation>Quand la case est partiellement cochée (&quot;-&quot;)
+        <translation type="vanished">Quand la case est partiellement cochée (&quot;-&quot;)
 le tutoriel sera affiché directement</translation>
     </message>
     <message>
@@ -6653,16 +6653,16 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Right clic&amp;k on map to easily set an item&apos;s
 location.</source>
-        <translation>Cli&amp;c droit sur la map pour définir la position
+        <translation type="vanished">Cli&amp;c droit sur la map pour définir la position
 d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>Ho&amp;ur</source>
-        <translation>He&amp;ure</translation>
+        <translation type="vanished">He&amp;ure</translation>
     </message>
     <message>
         <source>G-Bi&amp;ke High Score</source>
-        <translation>Meilleur score G-Bi&amp;ke</translation>
+        <translation type="vanished">Meilleur score G-Bi&amp;ke</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
@@ -6746,7 +6746,7 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>&amp;Us English (Ntsc-U)</source>
-        <translation>Anglais &amp;US (NTSC-U)</translation>
+        <translation type="vanished">Anglais &amp;US (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
@@ -6762,11 +6762,11 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>&amp;Japanese (Ntsc-J)</source>
-        <translation>&amp;Japonais (NTSC-J)</translation>
+        <translation type="vanished">&amp;Japonais (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;International (Ntsc-J)</source>
-        <translation>&amp;International (NTSC-J)</translation>
+        <translation type="vanished">&amp;International (NTSC-J)</translation>
     </message>
     <message>
         <source>New &amp;Game+ </source>
@@ -6794,7 +6794,7 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX Brute (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Sauvegarde PSV (*.psv);;Sauvegarde PSP/PSVita (*.vmp);;Sauvegarde VGS (*.vgs *.mem);;Sauvegarde Dex-Drive (*.gme);;Tous les fichiers (*)</translation>
+        <translation type="vanished">Types de Sauvegarde connus de FF7 (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX Brute (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Sauvegarde PSV (*.psv);;Sauvegarde PSP/PSVita (*.vmp);;Sauvegarde VGS (*.vgs *.mem);;Sauvegarde Dex-Drive (*.gme);;Tous les fichiers (*)</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -8538,7 +8538,7 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation>En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
+        <translation type="vanished">En appuyant sur Ok les méta-données dans le chemin de sauv. seront écrasées</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
@@ -9136,19 +9136,19 @@ p, li { white-space: pre-wrap; }
     <name>about</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>À propos de Black Chocobo</translation>
+        <translation type="vanished">À propos de Black Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo</translation>
+        <translation type="vanished">Black Chocobo</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;À propos</translation>
+        <translation type="vanished">&amp;À propos</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>L&apos;éditeur de sauvegardes FF7</translation>
+        <translation type="vanished">L&apos;éditeur de sauvegardes FF7</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -9156,7 +9156,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9168,7 +9168,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -9176,115 +9176,115 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Newest Features</source>
-        <translation>Nouveautés</translation>
+        <translation type="vanished">Nouveautés</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation>Crédits</translation>
+        <translation type="vanished">Crédits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation>Donner à César ce qui est raison</translation>
+        <translation type="vanished">Donner à César ce qui est raison</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation>Programmation</translation>
+        <translation type="vanished">Programmation</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation>Bug Testeurs</translation>
+        <translation type="vanished">Bug Testeurs</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Principal testeur de bugs pour win/gnome + en jeu</translation>
+        <translation type="vanished">Principal testeur de bugs pour win/gnome + en jeu</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation>Tester Mac Os</translation>
+        <translation type="vanished">Tester Mac Os</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation>Tester Windows</translation>
+        <translation type="vanished">Tester Windows</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation>Traducteurs</translation>
+        <translation type="vanished">Traducteurs</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation>Traduction espagnole:</translation>
+        <translation type="vanished">Traduction espagnole:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation>Traduction en Français:</translation>
+        <translation type="vanished">Traduction en Français:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation>Icônes utilisées dans ce Programme</translation>
+        <translation type="vanished">Icônes utilisées dans ce Programme</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation>Icônes spéciaux (et un ou deux de plus) par </translation>
+        <translation type="vanished">Icônes spéciaux (et un ou deux de plus) par </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation>Un grand merci à:</translation>
+        <translation type="vanished">Un grand merci à:</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation>Testeur Win32 de début</translation>
+        <translation type="vanished">Testeur Win32 de début</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation>Traduction Japonaise :</translation>
+        <translation type="vanished">Traduction Japonaise :</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>Classe d&apos;icône PSX et convertisseur de japonais pour PC</translation>
+        <translation type="vanished">Classe d&apos;icône PSX et convertisseur de japonais pour PC</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation>Traduction Allemande:</translation>
+        <translation type="vanished">Traduction Allemande:</translation>
     </message>
     <message>
         <source>New: Achievement Editor.</source>
-        <translation>Nouveau : éditeur de succès.</translation>
+        <translation type="vanished">Nouveau : éditeur de succès.</translation>
     </message>
     <message>
         <source>Version: %1</source>
-        <translation>Version : %1</translation>
+        <translation type="vanished">Version : %1</translation>
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation>Utilisation de Qt : %1</translation>
+        <translation type="vanished">Utilisation de Qt : %1</translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation>Merci</translation>
+        <translation type="vanished">Merci</translation>
     </message>
     <message>
         <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation> Merci pour avoir publié le code source de Jenova. Ce programme utilise une version modifiée des structures du fichier de sauvegarde et des listes d&apos;objets/matérias provenant de Jenova. Pouvoir consulter ces sources m&apos;a permis de gagner beaucoup de temps au cours des premiers stades de développement.</translation>
+        <translation type="vanished"> Merci pour avoir publié le code source de Jenova. Ce programme utilise une version modifiée des structures du fichier de sauvegarde et des listes d&apos;objets/matérias provenant de Jenova. Pouvoir consulter ces sources m&apos;a permis de gagner beaucoup de temps au cours des premiers stades de développement.</translation>
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, Aide pour trouver des données dans la savemap. Test des thèmes, etc. il a fait beaucoup pour aider.</translation>
+        <translation type="vanished">Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, Aide pour trouver des données dans la savemap. Test des thèmes, etc. il a fait beaucoup pour aider.</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
-        <translation>Merci pour l&apos;ancien programme de checksum</translation>
+        <translation type="vanished">Merci pour l&apos;ancien programme de checksum</translation>
     </message>
     <message>
         <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>Merci pour m&apos;avoir montré la solution à des erreurs stupides.</translation>
+        <translation type="vanished">Merci pour m&apos;avoir montré la solution à des erreurs stupides.</translation>
     </message>
     <message>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Merci pour m&apos;avoir donné une meilleure compréhension des fonctions de Qt lorsque les fichiers d&apos;aide se sont avérés inutiles.</translation>
+        <translation type="vanished">Merci pour m&apos;avoir donné une meilleure compréhension des fonctions de Qt lorsque les fichiers d&apos;aide se sont avérés inutiles.</translation>
     </message>
     <message>
         <source>Cause she&apos;s just awesome!</source>
-        <translation>Parce qu&apos;elle est tout simplement incroyable!</translation>
+        <translation type="vanished">Parce qu&apos;elle est tout simplement incroyable!</translation>
     </message>
 </context>
 <context>
