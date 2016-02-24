@@ -3,13 +3,17 @@ project( blackchocobo )
 # The version number.
 set(blackchocobo_VERSION_MAJOR 1)
 set(blackchocobo_VERSION_MINOR 9)
-set(blackchocobo_VERSION_PATCH 83)
-cmake_minimum_required( VERSION 2.6 )
+set(blackchocobo_VERSION_PATCH 90)
+cmake_minimum_required( VERSION 2.8.11 )
 set ( CMAKE_BUILD_TYPE Release )
 add_definitions ( -Wall )
-find_package ( Qt4 REQUIRED )
+find_package ( Qt5Widgets REQUIRED )
+find_package ( Qt5Gui REQUIRED )
+find_package ( Qt5Xml REQUIRED )
+find_package (Qt5Core REQUIRED )
 find_package ( OpenSSL REQUIRED )
-include ( ${QT_USE_FILE} )
+find_package(Qt5LinguistTools)
+#include ( ${QT_USE_FILE} )
 include_directories (
 	${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
 	${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
@@ -17,18 +21,19 @@ include_directories (
 	)
 set ( blackchocobo_HDRS
 	version.h
-	qhexedit/xbytearray.h
+	qhexedit/chunks.h
 	qhexedit/commands.h
-	FF7tk/data/Type_FF7CHOCOBO.h
-	FF7tk/data/FF7FieldItemList.h
-	FF7tk/data/Type_materia.h
-	FF7tk/data/Type_FF7CHAR.h
-	FF7tk/data/FF7Save_Types.h
-	FF7tk/data/FF7Save_Const.h
-	FF7tk/data/FF7Materia.h
-	FF7tk/data/FF7Location.h
-	FF7tk/data/FF7Item.h
-	FF7tk/data/FF7Char.h
+	qhexedit/qhexedit.h
+	ff7tk/data/Type_FF7CHOCOBO.h
+	ff7tk/data/FF7FieldItemList.h
+	ff7tk/data/Type_materia.h
+	ff7tk/data/Type_FF7CHAR.h
+	ff7tk/data/FF7Save_Types.h
+	ff7tk/data/FF7Save_Const.h
+	ff7tk/data/FF7Materia.h
+	ff7tk/data/FF7Location.h
+	ff7tk/data/FF7Item.h
+	ff7tk/data/FF7Char.h
 	)
 
 set ( blackchocobo_SRCS
@@ -38,36 +43,36 @@ set ( blackchocobo_SRCS
 	options.cpp
 	errbox.cpp
 	achievementdialog.cpp
-	qhexedit/qhexedit_p.cpp
-	qhexedit/qhexedit.cpp
+	qhexedit/chunks.cpp
 	qhexedit/commands.cpp
-	FF7tk/data/SaveIcon.cpp
-	FF7tk/data/FF7Text.cpp
-	FF7tk/data/FF7Save.cpp
-	FF7tk/data/FF7Materia.cpp
-	FF7tk/data/FF7Location.cpp
-	FF7tk/data/FF7Item.cpp
-	FF7tk/data/FF7Char.cpp
-	FF7tk/data/FF7FieldItemList.cpp
-	FF7tk/widgets/SlotSelect.cpp
-	FF7tk/widgets/SlotPreview.cpp
-	FF7tk/widgets/MateriaEditor.cpp
-	FF7tk/widgets/ItemPreview.cpp
-	FF7tk/widgets/DialogPreview.cpp
-	FF7tk/widgets/ChocoboEditor.cpp
-	FF7tk/widgets/CharEditor.cpp
-	FF7tk/widgets/ItemSelector.cpp
-	FF7tk/widgets/ItemList.cpp
-	FF7tk/widgets/MetadataCreator.cpp
-	FF7tk/widgets/DoubleCheckBox.cpp
-	FF7tk/widgets/MenuListWidget.cpp
-	FF7tk/widgets/OptionsWidget.cpp
-	FF7tk/widgets/ChocoboManager.cpp
-	FF7tk/widgets/ChocoboLabel.cpp
-	FF7tk/widgets/LocationViewer.cpp
-	FF7tk/widgets/AchievementEditor.cpp
-	FF7tk/widgets/PhsListWidget.cpp
-	FF7tk/data/FF7Achievements.cpp
+	qhexedit/qhexedit.cpp
+	ff7tk/data/SaveIcon.cpp
+	ff7tk/data/FF7Text.cpp
+	ff7tk/data/FF7Save.cpp
+	ff7tk/data/FF7Materia.cpp
+	ff7tk/data/FF7Location.cpp
+	ff7tk/data/FF7Item.cpp
+	ff7tk/data/FF7Char.cpp
+	ff7tk/data/FF7FieldItemList.cpp
+	ff7tk/widgets/SlotSelect.cpp
+	ff7tk/widgets/SlotPreview.cpp
+	ff7tk/widgets/MateriaEditor.cpp
+	ff7tk/widgets/ItemPreview.cpp
+	ff7tk/widgets/DialogPreview.cpp
+	ff7tk/widgets/ChocoboEditor.cpp
+	ff7tk/widgets/CharEditor.cpp
+	ff7tk/widgets/ItemSelector.cpp
+	ff7tk/widgets/ItemList.cpp
+	ff7tk/widgets/MetadataCreator.cpp
+	ff7tk/widgets/DoubleCheckBox.cpp
+	ff7tk/widgets/MenuListWidget.cpp
+	ff7tk/widgets/OptionsWidget.cpp
+	ff7tk/widgets/ChocoboManager.cpp
+	ff7tk/widgets/ChocoboLabel.cpp
+	ff7tk/widgets/LocationViewer.cpp
+	ff7tk/widgets/AchievementEditor.cpp
+	ff7tk/widgets/PhsListWidget.cpp
+	ff7tk/data/FF7Achievements.cpp
 	)
 
 set ( blackchocobo_UIS
@@ -75,20 +80,20 @@ set ( blackchocobo_UIS
 	about.ui
 	options.ui
 	)
-QT4_WRAP_UI(UIS ${blackchocobo_UIS})
+QT5_WRAP_UI(UIS ${blackchocobo_UIS})
 
 set ( blackchocobo_RSCS
 	images.qrc
-	FF7tk/icons/achievements.qrc
-	FF7tk/icons/characters.qrc
-	FF7tk/icons/chocobo.qrc
-	FF7tk/icons/common.qrc
-	FF7tk/icons/items.qrc
-	FF7tk/icons/locations.qrc
-	FF7tk/icons/materia.qrc
-	FF7tk/icons/psxButtons.qrc
+	ff7tk/icons/achievements.qrc
+	ff7tk/icons/characters.qrc
+	ff7tk/icons/chocobo.qrc
+	ff7tk/icons/common.qrc
+	ff7tk/icons/items.qrc
+	ff7tk/icons/locations.qrc
+	ff7tk/icons/materia.qrc
+	ff7tk/icons/psxButtons.qrc
 	)
-QT4_ADD_RESOURCES(RSCS ${blackchocobo_RSCS})
+QT5_ADD_RESOURCES(RSCS ${blackchocobo_RSCS})
 
 set ( blackchocobo_TRS
 	lang/bchoco_en.ts
@@ -98,43 +103,44 @@ set ( blackchocobo_TRS
 	lang/bchoco_ja.ts
 	lang/bchoco_re.ts
 	)
-QT4_ADD_TRANSLATION(TRS ${blackchocobo_TRS})
+QT5_CREATE_TRANSLATION(TRS ${blackchocobo_TRS})
 
 set ( blackchocobo_MOCS
 	mainwindow.h
 	about.h
 	options.h
 	errbox.h
-	qhexedit/qhexedit_p.h
+        qhexedit/chunks.h
 	qhexedit/qhexedit.h
+        qhexedit/commands.h
 	achievementdialog.h
-	FF7tk/data/FF7Achievements.h
-	FF7tk/data/SaveIcon.h
-	FF7tk/data/FF7Text.h
-	FF7tk/data/FF7Save.h
-	FF7tk/widgets/ItemSelector.h
-	FF7tk/widgets/ItemList.h
-	FF7tk/widgets/MetadataCreator.h
-	FF7tk/widgets/SlotSelect.h
-	FF7tk/widgets/SlotPreview.h
-	FF7tk/widgets/MateriaEditor.h
-	FF7tk/widgets/ItemPreview.h
-	FF7tk/widgets/DialogPreview.h
-	FF7tk/widgets/ChocoboEditor.h
-	FF7tk/widgets/CharEditor.h
-	FF7tk/widgets/PhsListWidget.h
-	FF7tk/widgets/DoubleCheckBox.h
-	FF7tk/widgets/MenuListWidget.h
-	FF7tk/widgets/OptionsWidget.h
-	FF7tk/widgets/ChocoboManager.h
-	FF7tk/widgets/ChocoboLabel.h
-	FF7tk/widgets/LocationViewer.h
-	FF7tk/widgets/AchievementEditor.h
+	ff7tk/data/FF7Achievements.h
+	ff7tk/data/SaveIcon.h
+	ff7tk/data/FF7Text.h
+	ff7tk/data/FF7Save.h
+	ff7tk/widgets/ItemSelector.h
+	ff7tk/widgets/ItemList.h
+	ff7tk/widgets/MetadataCreator.h
+	ff7tk/widgets/SlotSelect.h
+	ff7tk/widgets/SlotPreview.h
+	ff7tk/widgets/MateriaEditor.h
+	ff7tk/widgets/ItemPreview.h
+	ff7tk/widgets/DialogPreview.h
+	ff7tk/widgets/ChocoboEditor.h
+	ff7tk/widgets/CharEditor.h
+	ff7tk/widgets/PhsListWidget.h
+	ff7tk/widgets/DoubleCheckBox.h
+	ff7tk/widgets/MenuListWidget.h
+	ff7tk/widgets/OptionsWidget.h
+	ff7tk/widgets/ChocoboManager.h
+	ff7tk/widgets/ChocoboLabel.h
+	ff7tk/widgets/LocationViewer.h
+	ff7tk/widgets/AchievementEditor.h
 	)
-QT4_WRAP_CPP(MOCS ${blackchocobo_MOCS})
+QT5_WRAP_CPP(MOCS ${blackchocobo_MOCS})
 
 add_executable ( blackchocobo ${blackchocobo_SRCS} ${UIS} ${RSCS} ${TRS} ${MOCS} )
-target_link_libraries ( blackchocobo  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTXML_LIBRARY} ${OPENSSL_LIBRARIES} )
+target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets ${OPENSSL_LIBRARIES} )
 
 #install stuff
 INCLUDE (InstallRequiredSystemLibraries)
@@ -191,7 +197,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}-src")
 	  SET(CPACK_DEBIAN_PACKAGE_SECTION games)
 	  SET(CPACK_DEBIAN_PACKAGE_PRIORITY extra)
-	  SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libqtcore4,libqtgui4,libqt4-xml,libssl1.0.0")
+	  SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libqtcore5,libqtgui5,libqt5-xml,libqt5widgets, libssl1.0.0")
 
 	  SET(CPACK_RPM_PACKAGE_SUMMARY CPACK_PACKAGE_DESCRIPTION_SUMMARY)
 	  SET(CPACK_RPM_PACKAGE_NAME CPACK_PACKAGE_NAME)

@@ -737,6 +737,12 @@
                  </property>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_83">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>4</number>
+                   </property>
                    <item>
                     <widget class="QLabel" name="label_38">
                      <property name="text">
@@ -770,6 +776,12 @@
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_81">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>4</number>
+                   </property>
                    <item>
                     <widget class="QLabel" name="label_37">
                      <property name="text">
@@ -1079,8 +1091,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>826</width>
-             <height>488</height>
+             <width>763</width>
+             <height>470</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1123,8 +1135,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>826</width>
-             <height>488</height>
+             <width>791</width>
+             <height>476</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3042,8 +3054,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>386</width>
-                  <height>1976</height>
+                  <width>388</width>
+                  <height>1974</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -3812,7 +3824,7 @@ location.</string>
                <item>
                 <widget class="QLabel" name="label_23">
                  <property name="text">
-                  <string>Hour</string>
+                  <string>Ho&amp;ur</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -5656,7 +5668,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>G-Bike High Score</string>
+                   <string>G-Bi&amp;ke High Score</string>
                   </property>
                   <property name="buddy">
                    <cstring>sb_BikeHighScore</cstring>
@@ -7176,7 +7188,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>836</width>
+     <width>773</width>
      <height>26</height>
     </rect>
    </property>
