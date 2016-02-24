@@ -1103,48 +1103,44 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">インテリジェンス</translation>
     </message>
     <message>
-        <source>Chocobo Bill&apos;s Rating: </source>
-        <translation type="obsolete">チョコボビルの評価：</translation>
-    </message>
-    <message>
         <source>Empty</source>
         <translation type="unfinished">なし</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">す、すごいチョコボ！</translation>
+        <translation>すごい</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">すごくいいチョコボ</translation>
+        <translation>すごくいい</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">いい感じのチョコボ</translation>
+        <translation>いい感じの</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">まあまあのチョコボ</translation>
+        <translation>まあまあの</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">普通のチョコボ</translation>
+        <translation>普通の</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">わるくはないチョコボ</translation>
+        <translation>わるくはない</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">いい感じじゃないチョコボ</translation>
+        <translation>いい感じじゃない</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">おすすめできないチョコボ</translation>
+        <translation>おすすめできない</translation>
     </message>
     <message>
         <source>Choco Billy&apos;s Rating: </source>
-        <translation type="unfinished">チョコボビルの評価：</translation>
+        <translation type="unfinished">チョコボビルの評価： </translation>
     </message>
 </context>
 <context>
@@ -1182,55 +1178,55 @@ The km/h speeds are calculated while playing </source>
     <name>ChocoboManager</name>
     <message>
         <source>Stables Owned</source>
-        <translation type="unfinished">所有チョコ房</translation>
+        <translation>所有チョコ房</translation>
     </message>
     <message>
         <source>Stables Occupied</source>
-        <translation type="unfinished">使用中のチョコ房</translation>
+        <translation>使用中のチョコ房</translation>
     </message>
     <message>
         <source>Stable:%1</source>
-        <translation type="unfinished">チョコ房 %1</translation>
+        <translation>チョコ房: %1</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation type="unfinished">サクのチョコボ</translation>
+        <translation>サクのチョコボ</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation type="unfinished">なし</translation>
+        <translation>なし</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished">す、すごいチョコボ！</translation>
+        <translation>すごい</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished">すごくいいチョコボ</translation>
+        <translation>すごくいい</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished">いい感じのチョコボ</translation>
+        <translation>いい感じの</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished">まあまあのチョコボ</translation>
+        <translation>まあまあの</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished">普通のチョコボ</translation>
+        <translation>普通の</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished">わるくはないチョコボ</translation>
+        <translation>わるくはない</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished">いい感じじゃないチョコボ</translation>
+        <translation>いい感じじゃない</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished">おすすめできないチョコボ</translation>
+        <translation>おすすめできない</translation>
     </message>
 </context>
 <context>
@@ -1329,7 +1325,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>なんとか？？？？</translation>
+        <translation>なんとか？？？</translation>
     </message>
 </context>
 <context>
@@ -2271,10 +2267,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Dragon Scales</source>
         <translation>海龍のウロコ</translation>
-    </message>
-    <message>
-        <source>Caldrun</source>
-        <translation>魔女の大釜</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -5556,10 +5548,6 @@ The km/h speeds are calculated while playing </source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <source>Show Selection Dialog</source>
-        <translation>選択ダイアログを表示</translation>
-    </message>
-    <message>
         <source>Time Played</source>
         <translation>プレイ時間</translation>
     </message>
@@ -5602,14 +5590,6 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>&amp;Options</source>
         <translation>オプション(&amp;O)</translation>
-    </message>
-    <message>
-        <source>Previous Slot</source>
-        <translation>前のスロット</translation>
-    </message>
-    <message>
-        <source>Next Slot</source>
-        <translation>次のスロット</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -5686,28 +5666,8 @@ The km/h speeds are calculated while playing </source>
         <translation>カウントダウン タイマー</translation>
     </message>
     <message>
-        <source>Slot Region</source>
-        <translation>スロットのリージョン</translation>
-    </message>
-    <message>
-        <source>Hel&amp;p</source>
-        <translation>ヘルプ(&amp;H)</translation>
-    </message>
-    <message>
-        <source>Vie&amp;w</source>
-        <translation>表示(&amp;V)</translation>
-    </message>
-    <message>
         <source>&amp;Edit</source>
         <translation>編集(&amp;E)</translation>
-    </message>
-    <message>
-        <source>More Options...</source>
-        <translation>拡張オプション...</translation>
-    </message>
-    <message>
-        <source>New Game+ </source>
-        <translation>新規ゲーム＋</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
@@ -5804,10 +5764,6 @@ The km/h speeds are calculated while playing </source>
         <translation>開く(&amp;O)</translation>
     </message>
     <message>
-        <source>Save As</source>
-        <translation>名前を付けて保存</translation>
-    </message>
-    <message>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
@@ -5860,36 +5816,12 @@ The km/h speeds are calculated while playing </source>
         <translation>野生のチョコボ</translation>
     </message>
     <message>
-        <source>Place Leader</source>
-        <translation>リーダーを配置</translation>
-    </message>
-    <message>
-        <source>Place Tiny Bronco/Chocobo</source>
-        <translation>タイニー・ブロンコ/チョコボを配置</translation>
-    </message>
-    <message>
-        <source>Place Buggy/Highwind</source>
-        <translation>バギー/ハイウィンドを配置</translation>
-    </message>
-    <message>
-        <source>Place Sub</source>
-        <translation>潜水艦を配置</translation>
-    </message>
-    <message>
         <source>PSV Save Notice</source>
         <translation>PSV セーブ: 警告</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>ダイヤ / アルテマ / ルビー ウェポン</translation>
-    </message>
-    <message>
-        <source>Place Wild Chocobo</source>
-        <translation>野生のチョコボを配置</translation>
-    </message>
-    <message>
-        <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>ダイヤ/アルテマ/ルビー ウェポンを配置</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -5956,10 +5888,6 @@ The km/h speeds are calculated while playing </source>
         <translation>盗まれるマテリアをすべてクリア</translation>
     </message>
     <message>
-        <source>Reload</source>
-        <translation>再読み込み</translation>
-    </message>
-    <message>
         <source>-None-</source>
         <translation>-なし-</translation>
     </message>
@@ -5992,16 +5920,8 @@ The km/h speeds are calculated while playing </source>
         <translation>2進</translation>
     </message>
     <message>
-        <source>Diff</source>
-        <translation>差分</translation>
-    </message>
-    <message>
         <source>Compare To Slot</source>
         <translation>スロットの比較</translation>
-    </message>
-    <message>
-        <source>Show All &apos;Z&apos; Changes</source>
-        <translation>&apos;Z&apos; の変更をすべて表示</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -6220,10 +6140,6 @@ Table Entries are Editable</source>
         <translation>保存エラー</translation>
     </message>
     <message>
-        <source>Calculate Stats</source>
-        <translation>能力値を算出</translation>
-    </message>
-    <message>
         <source>Visible On World Map</source>
         <translation>ワールドマップ上の表示</translation>
     </message>
@@ -6415,10 +6331,6 @@ Table Entries are Editable</source>
         <translation type="unfinished">強くてニューゲームを作成 - 使用します： %1</translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="obsolete">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
-    </message>
-    <message>
         <source>PSP/PsVita Save Notice</source>
         <translation>PSP/PsVita セーブの警告</translation>
     </message>
@@ -6429,10 +6341,6 @@ Table Entries are Editable</source>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
         <translation type="unfinished">FF7 Raw PSX セーブ (*-S*)</translation>
-    </message>
-    <message>
-        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
-        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
@@ -6580,10 +6488,6 @@ VMPの輸出は許可されていません。</translation>
         <translation>プログラムを再起動して言語の変更を適用してください</translation>
     </message>
     <message>
-        <source>Language</source>
-        <translation>言語</translation>
-    </message>
-    <message>
         <source>Current Slot:%1</source>
         <translation type="unfinished">現在のスロット: %1</translation>
     </message>
@@ -6602,18 +6506,6 @@ VMPの輸出は許可されていません。</translation>
     <message>
         <source>Spanish (PAL)</source>
         <translation type="unfinished">スペイン語（PAL）</translation>
-    </message>
-    <message>
-        <source>Japanese (Ntsc-J)</source>
-        <translation type="obsolete">日本（NTSC-J）</translation>
-    </message>
-    <message>
-        <source>International (Ntsc-J)</source>
-        <translation type="obsolete">インターナショナル（NTSC-J）</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="obsolete">について</translation>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
@@ -6692,20 +6584,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     <message>
         <source>KeyItem</source>
         <translation type="unfinished">キーアイテム</translation>
-    </message>
-    <message>
-        <source>Right clic&amp;k on map to easily set an item&apos;s
-location.</source>
-        <translation type="obsolete">右簡単にアイテムのを設定するために地図をクリックしてください
-ロケーション。 (&amp;K)</translation>
-    </message>
-    <message>
-        <source>Ho&amp;ur</source>
-        <translation type="obsolete">時間 (&amp;U)</translation>
-    </message>
-    <message>
-        <source>G-Bi&amp;ke High Score</source>
-        <translation type="obsolete">G-バイクハイスコア (&amp;K)</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
@@ -6788,10 +6666,6 @@ location.</source>
         <translation type="unfinished">拡張オプション... (&amp;M)</translation>
     </message>
     <message>
-        <source>&amp;Us English (Ntsc-U)</source>
-        <translation type="obsolete">アメリカ英語（NTSC-U）(&amp;U)</translation>
-    </message>
-    <message>
         <source>Uk &amp;English (PAL)</source>
         <translation type="unfinished">イギリス英語（PAL）(&amp;E)</translation>
     </message>
@@ -6803,14 +6677,6 @@ location.</source>
     <message>
         <source>&amp;Spanish (PAL)</source>
         <translation type="unfinished">スペイン語（PAL）(&amp;S)</translation>
-    </message>
-    <message>
-        <source>&amp;Japanese (Ntsc-J)</source>
-        <translation type="obsolete">日本（NTSC-J）(&amp;J)</translation>
-    </message>
-    <message>
-        <source>&amp;International (Ntsc-J)</source>
-        <translation type="obsolete">インターナショナル（NTSC-J）(&amp;I)</translation>
     </message>
     <message>
         <source>New &amp;Game+ </source>
@@ -6835,10 +6701,6 @@ location.</source>
     <message>
         <source>Open Achievement &amp;File</source>
         <translation type="unfinished">オープン功績ファイル (&amp;F)</translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm *-S*);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="obsolete">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin *.srm);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -6941,12 +6803,11 @@ trigger showing that tutorial</source>
     <message>
         <source>Right click on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished">右簡単にアイテムのを設定するために地図をクリックしてください
-ロケーション。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation type="unfinished">G-バイクハイスコア</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8579,10 +8440,6 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="obsolete">[OK]を押すと、保存したパス内のすべてのメタデータが上書きされます</translation>
-    </message>
-    <message>
         <source>Select A Directory To Save Into</source>
         <translation type="unfinished">セーブの保存ディレクトリを選択</translation>
     </message>
@@ -9165,141 +9022,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Overwrite %1 chars</source>
         <translation type="unfinished">%1文字を上書き</translation>
-    </message>
-</context>
-<context>
-    <name>about</name>
-    <message>
-        <source>About Black Chocobo</source>
-        <translation>Black Chocobo について</translation>
-    </message>
-    <message>
-        <source>Black Chocobo </source>
-        <translation>黒チョコボ </translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>バージョン情報(&amp;A)</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>Final Fantasy VII ゲーム セーブ エディター</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;ライセンス: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;プロジェクト ホーム ページ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Newest Features</source>
-        <translation>最新の変更点</translation>
-    </message>
-    <message>
-        <source>Credits</source>
-        <translation>クレジット</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation>しかるべきクレジット</translation>
-    </message>
-    <message>
-        <source>Programmers</source>
-        <translation>プログラマー</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation> バグ テスター</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation> メイン バグ テスター, Win/Gnome + ゲーム全般</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation> Mac OS テスター</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation> Windows テスター</translation>
-    </message>
-    <message>
-        <source>Translators</source>
-        <translation>翻訳者</translation>
-    </message>
-    <message>
-        <source>Spanish Translation:</source>
-        <translation>スペイン語翻訳:</translation>
-    </message>
-    <message>
-        <source>French Translation:</source>
-        <translation>フランス語翻訳: </translation>
-    </message>
-    <message>
-        <source>Icons Used In this Program</source>
-        <translation>プログラムの使用アイコン</translation>
-    </message>
-    <message>
-        <source>Buff Icons (and one or two more) by </source>
-        <translation>バフ アイコン (その他・諸々) の作成: </translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation>大いなる感謝を:</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation>Win32 の初期テスター</translation>
-    </message>
-    <message>
-        <source>Japanese Translation:</source>
-        <translation>日本語翻訳:</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
-    </message>
-    <message>
-        <source>German Translation:</source>
-        <translation>ドイツ語翻訳:</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation>定番のチェックサム プログラムに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation>ともかく彼女は素晴らしい！</translation>
     </message>
 </context>
 <context>
