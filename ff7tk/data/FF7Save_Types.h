@@ -171,7 +171,7 @@ struct FF7SLOT {
 	quint8 z_32[17];			/**< [0x0E28] UNKNOWN DATA*/
 	quint16 coster_1;			/**< [0x0E39] Coster 1st place*/
 	quint8 z_33[3];				/**< [0x0E3B] UNKNOWN DATA*/
-	quint8 stablechocorating[6];/**< [0x0E3E] Chocobo Bill's Rating for chocobo in stable 1-6 (same ranks as penned)*/
+	quint8 stablechocorating[6];/**< [0x0E3E] Choco Billy's Rating for chocobo in stable 1-6 (same ranks as penned)*/
 	quint8 z_34[24];			/**< [0x0E44] UNKNOWN DATA*/
 	quint16 cratersaveMapId;	/**< [0x0E5C] Map id of location the portable save is on*/
 	quint16 cratersaveX;		/**< [0x0E5E] X coord of portable save*/

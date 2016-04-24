@@ -1089,7 +1089,7 @@ static ITEM Items[]=
    {QT_TRANSLATE_NOOP("Items","Death Penalty"),QT_TRANSLATE_NOOP("Item_desc","Long Range Weapon"),12,QString(":/items/gun"),
 	0,8,4,0,0,0,0,0,0,+34,0,0,0,0,0,0,0,0,0,0,0,0,+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
    //sepi weapon =255
-   {QT_TRANSLATE_NOOP("Items","Masamune"),QT_TRANSLATE_NOOP("Item_desc",""),0,QString(""),0,5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+   {QT_TRANSLATE_NOOP("Items","Masamune"),QT_TRANSLATE_NOOP("Item_desc",""),0,QString(""),0,6,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
    //armor  256-287
    {QT_TRANSLATE_NOOP("Items","Bronze Bangle"),QT_TRANSLATE_NOOP("Item_desc",""),2,QString(":/items/armor"),
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},

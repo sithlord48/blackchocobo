@@ -1384,7 +1384,7 @@ void FF7Save::setType(QString type)
 		SG_SLOT_SIZE     = FF7_PSV_SAVE_GAME_SLOT_SIZE;
 		SG_SLOT_NUMBER   = FF7_PSV_SAVE_GAME_SLOT_NUMBER;
 		SG_TYPE          = "PSV";
-		//file_headerp     = file_header_psv;          //pointer to psv file header
+		file_headerp     = file_header_psv;          //pointer to psv file header
 		//file_footerp     = file_footer_psv;          //pointer to psv file footer
 	}
 	else if(type=="PSP")

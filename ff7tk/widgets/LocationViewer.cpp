@@ -40,7 +40,7 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 		if(pix.isNull()){return;}
 		else
 		{
-			lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+			lblLocationPreview->setPixmap(pix.scaledToWidth(lblLocationPreview->width(),Qt::SmoothTransformation));
 		}
 	}
 }
@@ -339,7 +339,7 @@ void LocationViewer::setLocation(int mapId,int locId)
 	if(fileName.isEmpty()){lblLocationPreview->setPixmap(QString(""));}
 	else
 	{
-        lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaled(lblLocationPreview->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+		lblLocationPreview->setPixmap(QPixmap(QString("://locations/%1_%2").arg(QString::number(mapId),QString::number(locId))).scaledToWidth(lblLocationPreview->width(),Qt::SmoothTransformation));
 		QString oldStr = Locations->locationString(fileName);
 		QString newStr = translate(oldStr);
 		if(oldStr !=newStr && autoUpdate)

@@ -153,7 +153,7 @@ void ChocoboEditor::setType(int type)
 void ChocoboEditor::setName(QString new_name)
 {
 	choco_name=new_name.mid(0,6);
-	if(choco_name =="\xff\xff\xff\xff\xff\xff"){line_name->setText("");}
+	if(choco_name.startsWith('\xFF') || choco_name == QString(6,'\x20')){line_name->setText("");}
 	else{line_name->setText(choco_name);}
 }
 void ChocoboEditor::setCantMate(bool cantMate)
@@ -422,7 +422,7 @@ void ChocoboEditor::init_display(void)
 	Final->addLayout(speed_layout,5,0,1,2);
 	Final->addLayout(sprint_layout,6,0,1,2);
 	Final->addLayout(ratingLayout,7,0,1,2);
-	Final->addWidget(lblSpeedWarning,9,0,2,2,Qt::AlignCenter);
+	Final->addWidget(lblSpeedWarning,8,0,2,2,Qt::AlignCenter);
 	Final->addWidget(advancedModeBox,10,0,1,2);
 	Final->addItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding),11,0,1,2);
 	this->setLayout(Final);
@@ -449,8 +449,7 @@ void ChocoboEditor::init_connections(void)
 void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina,quint8 rating)
 {
 	choco_data = choco;
-	if(Processed_Name =="	  "){Processed_Name ="";}
-	else if(Processed_Name =="\xff\xff\xff\xff\xff\xff"){Processed_Name ="";}
+	if( Processed_Name.startsWith('\xff') || Processed_Name == QString(6,'\x20')){Processed_Name ="";}
 	choco_name = Processed_Name;
 	choco_cant_mate = cant_mate;
 	choco_stamina = stamina;

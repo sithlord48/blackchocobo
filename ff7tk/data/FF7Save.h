@@ -947,17 +947,17 @@ class FF7Save: public QObject{
 
 	bool subMiniGameVictory(int s);
 	void setSubMiniGameVictory(int s,bool won);
-	/**	\brief Get Chocobo Bill's Rating of a chocobo.
+	/**	\brief Get Choco Billy's Rating of a chocobo.
 	 *
-	 * This is the rating that chocobo bill give to a chocobo it follows the same format as FF7Save::chocoboPen()
+	 * This is the rating that Choco Billy give to a chocobo it follows the same format as FF7Save::chocoboPen()
 	 * \param s slot number (0-14)
 	 * \param stable stable number (0-5)
 	 */
 	quint8 chocoboRating(int s,int stable);
 
-	/**	\brief Set Chocobo Bill's Rating of a chocobo.
+	/**	\brief Set Choco Billy's Rating of a chocobo.
 	 *
-	 * This is the rating that chocobo bill give to a chocobo it follows the same format as FF7Save::chocoboPen()
+	 * This is the rating that Choco Billy give to a chocobo it follows the same format as FF7Save::chocoboPen()
 	 * \param s slot number (0-14)
 	 * \param stable stable number 0-5
 	 * \param rating (0-8) 0:empty 1: wonderful 8:terrible
@@ -996,7 +996,7 @@ private:
 	quint8 file_header_pc [0x0009];		// [0x0000] 0x06277371 this replace quint8 file_tag[9];
 	//FF7tk Bug Fix #11
 	//quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-	//quint8 file_header_psv[0x0000];
+	quint8 file_header_psv[0x0084];
 	quint8 file_header_psp[0x2080];
 	quint8 file_header_vgs[0x2040]; //header for vgs/mem ext format.
 	quint8 file_header_dex[0x2F40]; //header for gme (dex-drive format)
