@@ -5,8 +5,8 @@ A Save Editor for final fantasy 7 [![Download Black Chocobo](https://img.shields
        src="https://scan.coverity.com/projects/4594/badge.svg"/>
 </a>
 
-Requires: Qt and OpenSSL (to sign some save types)
-
+Requires: Qt and OpenSSL (to sign some save types)<br/>
+Black Chocobo is built using parts of [ff7tk](https://github.com/sithlord48/ff7tk)
 Linux Building: 
 ====
 Install Qt Dev Package(s) Qt4 or Qt5
