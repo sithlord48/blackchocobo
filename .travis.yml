@@ -26,7 +26,6 @@ before_script:
 - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install qt5; fi
 - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install openssl; fi
 - if [ "$TRAVIS_OS_NAME" == "osx" ]; then chmod -R 755 /usr/local/opt/qt5/*; fi
-- env
 - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export QTDIR="/usr/local/opt/qt5"; fi
 - if [ "$TRAVIS_OS_NAME" == "osx" ]; then export PATH="$QTDIR/bin:$PATH"; fi
 - $CXX --version
