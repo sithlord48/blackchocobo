@@ -75,6 +75,7 @@ protected:
 private:
 	Ui::MainWindow *ui;
 	qreal scale;
+	qint64 hexCursorPos;
 	bool skip_slot_mask;
 	bool _init; //set true then false after a file load.
 	bool load; // are we loading data? if so don't save it to the file.

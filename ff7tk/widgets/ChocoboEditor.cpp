@@ -153,7 +153,7 @@ void ChocoboEditor::setType(int type)
 void ChocoboEditor::setName(QString new_name)
 {
 	choco_name=new_name.mid(0,6);
-	if(choco_name.startsWith('\xFF') || choco_name == QString(6,'\x20')){line_name->setText("");}
+	if(choco_name.startsWith('\xFF') || choco_name == QString(6,' ')){line_name->setText("");}
 	else{line_name->setText(choco_name);}
 }
 void ChocoboEditor::setCantMate(bool cantMate)

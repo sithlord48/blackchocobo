@@ -39,6 +39,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	curchar =0;
 	mslotsel=-1;
 	s=0;
+	hexCursorPos=0;
 	buffer_materia.id=FF7Materia::EmptyId;
 	for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 	init_display();
@@ -153,6 +154,7 @@ void MainWindow::init_display()
 
 	materia_editor = new MateriaEditor(scale,this);
 	materia_editor->setStarsSize(48*scale);
+	//ui->tbl_materia->setFixedWidth(this->fontMetrics().width(QChar('W'))*20);
 	QVBoxLayout *materia_editor_layout = new QVBoxLayout();
 	mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
 	materia_editor_layout->addWidget(materia_editor);
@@ -179,7 +181,6 @@ void MainWindow::init_display()
 		hexEditor->setFont(this->font());
 	#endif
 	hexEditor->setReadOnly(false);
-	//hexEditor->setFont(this->font());
 	QVBoxLayout *hexLayout = new QVBoxLayout;
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
@@ -497,6 +498,8 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 	}
 
 	else{/*UNKNOWN FILETYPE*/}
+	hexEditor->setCursorPosition(0);
+	hexCursorPos=0;
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_Slot_From_File_triggered()
@@ -1285,6 +1288,7 @@ void MainWindow::update_hexEditor_PSXInfo(void)
 void MainWindow::on_tabWidget_currentChanged(int index)
 {//Update the shown tab.
 	load =true;
+	hexCursorPos=hexEditor->cursorPosition();
 	switch (index)
 	{
 		case 0://Party Tab
@@ -1396,6 +1400,7 @@ void MainWindow::hexTabUpdate(int viewMode)
 			break;
 		}
 	}
+	hexEditor->setCursorPosition(hexCursorPos);
 	connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::setControllerMappingVisible(bool Visible)
