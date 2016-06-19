@@ -3,6 +3,7 @@ dist: trusty
 
 os:
  - linux
+ - osx
 matrix:
  exclude:
 # Only do coverity or coverage build on Linux when the compiler is gcc
@@ -13,13 +14,20 @@ matrix:
 # Don't build with clang on Linux
   - os: linux
     compiler: clang
-compiler: 
-- gcc
+# Don't build with gcc on OSX
+  - os: osx
+    compiler: gcc
 
 before_script: 
 - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y; fi
 - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get update; fi
 - if [[ "$TRAVIS_OS_NAME" == "linux" && "$CXX" == "g++" ]]; then sudo apt-get -y install qt5-default qttools5-dev-tools libssl-dev; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew update > /dev/null; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install qt5; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install openssl; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then chmod -R 755 /usr/local/opt/qt5/*; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then export QTDIR="/usr/local/opt/qt5"; fi
+- if [ "$TRAVIS_OS_NAME" == "osx" ]; then export PATH="$QTDIR/bin:$PATH"; fi
 - $CXX --version
 
 
