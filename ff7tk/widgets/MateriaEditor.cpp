@@ -259,7 +259,7 @@ void MateriaEditor::init_data()
 		newItem->setCheckState(Qt::Unchecked);
 		eskill_list->addItem(newItem);
 	}
-	QString style=QString("QListWidget::item { padding-left: 0px; padding-top: 1px; padding-bottom: 1px;}QListView::indicator { width: 48px; height: 48px; }QListView::indicator:unchecked {image: url(:/materia/command_star_empty);} QListView::indicator:checked{image: url(:/materia/command_star_full);}");
+	QString style=QString("QListWidget::item { padding-left: 0px; padding-top: 1px; padding-bottom: 1px;}QListView::indicator { width: %1px; height: %1px; }QListView::indicator:unchecked {image: url(:/materia/command_star_empty);} QListView::indicator:checked{image: url(:/materia/command_star_full);}").arg(QString::number(24*scale));
 	eskill_list->setStyleSheet(style);
 	eskill_list->setMaximumHeight(eskill_list->sizeHintForRow(0)*48 +eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
 	eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
