@@ -4738,3 +4738,15 @@ QList<quint8> FF7Save::chocoboRatings(int s)
 	}
 	return ratings;
 }
+bool FF7Save::playedPianoOnFlashback(int s)
+{
+	if(s<0 || s>14){return false;}
+	return ((slot[s].z_36[0])& (1<<2) );
+}
+void FF7Save::setPlayedPianoOnFlashback(int s,bool played)
+{
+	if(s<0 || s>14){return;}
+	if(played){slot[s].z_36[0] |= (1<<2);}
+	else {slot[s].z_36[0] &= ~(1<<2);}
+	setFileModified(true,s);
+}

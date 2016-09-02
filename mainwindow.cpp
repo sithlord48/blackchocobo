@@ -1258,6 +1258,7 @@ void MainWindow::othersUpdate()
 
 	ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
 	ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
+	ui->cb_FlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
 	load=false;
 }
 void MainWindow::update_hexEditor_PSXInfo(void)
@@ -3175,3 +3176,4 @@ void MainWindow::on_btnSearchKeyItems_clicked()
 }
 
 void MainWindow::on_linePsxDesc_textChanged(const QString &arg1){if(!load){ff7->setPsxDesc(arg1,s); update_hexEditor_PSXInfo();}}
+void MainWindow::on_cb_FlashbackPiano_toggled(bool checked){if(!load){ff7->setPlayedPianoOnFlashback(s,checked);}}

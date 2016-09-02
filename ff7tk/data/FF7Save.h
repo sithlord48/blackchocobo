@@ -947,6 +947,22 @@ class FF7Save: public QObject{
 
 	bool subMiniGameVictory(int s);
 	void setSubMiniGameVictory(int s,bool won);
+
+	/**	\brief Did Cloud play piano durring the flashback?.
+	 *
+	 * \return True if the player played the piano durring the flashback
+	 * \param s slot number (0-14)
+	 */
+	bool playedPianoOnFlashback(int s);
+
+	/**	\brief Set if Cloud played piano durring the flashback.
+	 *
+	 * \param s slot number (0-14)
+	 * \param played True = Cloud Played piano
+	 */
+	void setPlayedPianoOnFlashback(int s,bool played);
+
+
 	/**	\brief Get Choco Billy's Rating of a chocobo.
 	 *
 	 * This is the rating that Choco Billy give to a chocobo it follows the same format as FF7Save::chocoboPen()

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>0</width>
-    <height>0</height>
+    <width>1257</width>
+    <height>954</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,22 +18,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_20">
-    <property name="spacing">
-     <number>3</number>
-    </property>
-    <property name="leftMargin">
-     <number>3</number>
-    </property>
-    <property name="topMargin">
-     <number>3</number>
-    </property>
-    <property name="rightMargin">
-     <number>3</number>
-    </property>
-    <property name="bottomMargin">
-     <number>3</number>
-    </property>
+   <layout class="QVBoxLayout" name="verticalLayout_24">
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
@@ -1091,8 +1076,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>763</width>
-             <height>470</height>
+             <width>1241</width>
+             <height>717</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1135,8 +1120,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>791</width>
-             <height>476</height>
+             <width>938</width>
+             <height>520</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3054,8 +3039,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>388</width>
-                  <height>1974</height>
+                  <width>665</width>
+                  <height>2963</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -5992,19 +5977,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            <attribute name="title">
             <string>Misc</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_125">
-            <property name="leftMargin">
-             <number>3</number>
-            </property>
-            <property name="topMargin">
-             <number>3</number>
-            </property>
-            <property name="rightMargin">
-             <number>3</number>
-            </property>
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
+           <layout class="QVBoxLayout" name="verticalLayout_20">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_157">
               <item>
@@ -6158,6 +6131,13 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </layout>
               </item>
              </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="cb_FlashbackPiano">
+              <property name="text">
+               <string>Played piano durring flashback</string>
+              </property>
+             </widget>
             </item>
             <item>
              <widget class="QLabel" name="label_187">
@@ -7188,8 +7168,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>773</width>
-     <height>26</height>
+     <width>1257</width>
+     <height>37</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

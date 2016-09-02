@@ -525,5 +525,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_btnReplay_clicked();
 	void on_linePsxDesc_textChanged(const QString &arg1);
 
+	void on_cb_FlashbackPiano_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

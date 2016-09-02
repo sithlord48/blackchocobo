@@ -69,7 +69,7 @@ public:
 };
 
 static const FieldItemList FILIST[]=
-{//don't forget to update count on entry
+{
 	{QList<quint16>()<<0x0BC8,QList<quint8>()<<0,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("FieldItems","Hi-Potion")},
 	{QList<quint16>()<<0x0BC8,QList<quint8>()<<1,QStringList()<<"mds7st1",QT_TRANSLATE_NOOP("FieldItems","Echo Screen")},
 	{QList<quint16>()<<0x0BC8,QList<quint8>()<<2,QStringList()<<"mds7st2",QT_TRANSLATE_NOOP("FieldItems","Potion")},
@@ -288,6 +288,10 @@ static const FieldItemList FILIST[]=
 	{QList<quint16>()<<0x0E3D,QList<quint8>()<<0,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Dragon Scales")},
 	{QList<quint16>()<<0x0E3D,QList<quint8>()<<1,QStringList()<<"games_2",QT_TRANSLATE_NOOP("FieldItems","Cauldron")},
 	{QList<quint16>()<<0x0E3D,QList<quint8>()<<2,QStringList()<<"farm",QT_TRANSLATE_NOOP("FieldItems","Chocobo Lure")},
+
+	{QList<quint16>()<<0x0EA5,QList<quint8>()<<1,QStringList()<<"niv_ti2",QT_TRANSLATE_NOOP("FieldItems","Final Heaven (+other stuff?)")},
+	//{QList<quint16>()<<0x0EA5,QList<quint8>()<<2,QStringList()<<"niv_ti2",QT_TRANSLATE_NOOP("FieldItems","Played piano durring flashback")},
+	{QList<quint16>()<<0x0EA5,QList<quint8>()<<4,QStringList()<<"niv_ti2",QT_TRANSLATE_NOOP("FieldItems","Elemental(+other stuff?)")},
 
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<1,QStringList()<<"gaiin_4",QT_TRANSLATE_NOOP("FieldItems","Enhance Sword")},
 	{QList<quint16>()<<0x0FA4,QList<quint8>()<<2,QStringList()<<"gaiin_5",QT_TRANSLATE_NOOP("FieldItems","Fire Armlet")},
