@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ja" sourcelanguage="en_US">
+<TS version="2.1" language="ja" sourcelanguage="en_US">
 <context>
     <name>About</name>
     <message>
@@ -2283,6 +2283,14 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Cauldron</source>
         <translation type="unfinished">魔女の大釜</translation>
+    </message>
+    <message>
+        <source>Final Heaven (+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elemental(+other stuff?)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5501,7 +5509,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Runs</source>
-        <translation>逃走回数</translation>
+        <translation type="vanished">逃走回数</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -5935,7 +5943,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation>フィールドの総歩数</translation>
+        <translation type="vanished">フィールドの総歩数</translation>
     </message>
     <message>
         <source>Y: </source>
@@ -6015,7 +6023,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translation>アバランチ チームがアジトへ向かう</translation>
+        <translation type="vanished">アバランチ チームがアジトへ向かう</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
@@ -6043,7 +6051,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation>ゲーム オーバー トリガー (カウントダウン タイマー)</translation>
+        <translation type="vanished">ゲーム オーバー トリガー (カウントダウン タイマー)</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
@@ -6095,7 +6103,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Jesse Has Been Unstuck</source>
-        <translation>ジェシーを助ける</translation>
+        <translation type="vanished">ジェシーを助ける</translation>
     </message>
     <message>
         <source>Talked to Biggs</source>
@@ -6103,7 +6111,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Talked to Jesse Before Looking At Map</source>
-        <translation>ジェシーと会話してマップを見る</translation>
+        <translation type="vanished">ジェシーと会話してマップを見る</translation>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
@@ -6204,7 +6212,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
-        <translation type="unfinished">スノーボードのミニゲーム</translation>
+        <translation type="obsolete">スノーボードのミニゲーム</translation>
     </message>
     <message>
         <source>Beginner Course</source>
@@ -6497,7 +6505,7 @@ VMPの輸出は許可されていません。</translation>
     </message>
     <message>
         <source>Team Avalanche had meeting after Bombing Mission</source>
-        <translation type="unfinished">チーム雪崩は、ミッションを爆撃した後にミーティングを行いました</translation>
+        <translation type="obsolete">チーム雪崩は、ミッションを爆撃した後にミーティングを行いました</translation>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
@@ -6806,7 +6814,47 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>G-Bike High Score</source>
+        <source>Escapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jessie Has Been Unstuck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown reached 0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Avalanche had meeting after Bombing Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Avalanche Has Run To Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ho&amp;ur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snowboard Mini Game </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bi&amp;ke High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

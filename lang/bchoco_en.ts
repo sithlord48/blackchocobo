@@ -2273,6 +2273,14 @@ The km/h speeds are calculated while playing </source>
         <source>Cauldron</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Final Heaven (+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elemental(+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemList</name>
@@ -5414,10 +5422,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Runs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Gil</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5839,10 +5843,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Number Steps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Y: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -5919,10 +5919,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Team Avalanche Has Run To Hideout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Can Show Pillar Pan Video</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5944,10 +5940,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Trigger Game Over (countdown timer out)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5997,15 +5989,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Jesse Has Been Unstuck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Talked to Biggs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked to Jesse Before Looking At Map</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6100,10 +6084,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SnowBoard Mini Game </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6396,10 +6376,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Disc  #</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Team Avalanche had meeting after Bombing Mission</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6699,7 +6675,47 @@ location.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>G-Bike High Score</source>
+        <source>Escapes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jessie Has Been Unstuck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown reached 0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Avalanche had meeting after Bombing Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Avalanche Has Run To Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ho&amp;ur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snowboard Mini Game </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bi&amp;ke High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

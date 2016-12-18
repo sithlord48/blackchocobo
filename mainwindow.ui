@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1257</width>
-    <height>954</height>
+    <width>1263</width>
+    <height>960</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -770,7 +770,7 @@
                    <item>
                     <widget class="QLabel" name="label_37">
                      <property name="text">
-                      <string>Runs</string>
+                      <string>Escapes</string>
                      </property>
                     </widget>
                    </item>
@@ -1076,8 +1076,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1241</width>
-             <height>717</height>
+             <width>1247</width>
+             <height>723</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3038,8 +3038,8 @@ location.</string>
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>0</y>
-                  <width>665</width>
+                  <y>-1245</y>
+                  <width>594</width>
                   <height>2963</height>
                  </rect>
                 </property>
@@ -3126,14 +3126,14 @@ location.</string>
                     <item>
                      <widget class="QCheckBox" name="cb_bm1_6">
                       <property name="text">
-                       <string>Jesse Has Been Unstuck</string>
+                       <string>Jessie Has Been Unstuck</string>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <widget class="QCheckBox" name="cb_bm1_8">
                       <property name="text">
-                       <string>Trigger Game Over (countdown timer out)</string>
+                       <string>Trigger Game Over (countdown reached 0)</string>
                       </property>
                      </widget>
                     </item>
@@ -3198,7 +3198,7 @@ location.</string>
                     <item>
                      <widget class="QCheckBox" name="cb_midgartrain_3">
                       <property name="text">
-                       <string>Talked to Jesse Before Looking At Map</string>
+                       <string>Talked to Jessie Before Looking At Map</string>
                       </property>
                      </widget>
                     </item>
@@ -3227,7 +3227,7 @@ location.</string>
                     <item>
                      <widget class="QCheckBox" name="cb_s7ts_1">
                       <property name="text">
-                       <string>Team Avalanche had meeting after Bombing Mission</string>
+                       <string>Avalanche had meeting after Bombing Mission</string>
                       </property>
                      </widget>
                     </item>
@@ -3270,7 +3270,7 @@ location.</string>
                     <item>
                      <widget class="QCheckBox" name="cb_s7pl_1">
                       <property name="text">
-                       <string>Team Avalanche Has Run To Hideout</string>
+                       <string>Avalanche Has Run To Hideout</string>
                       </property>
                      </widget>
                     </item>
@@ -4321,7 +4321,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>Number Steps</string>
+                <string>Number of Steps</string>
                </property>
               </widget>
              </item>
@@ -4724,7 +4724,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </size>
             </property>
             <property name="title">
-             <string>SnowBoard Mini Game </string>
+             <string>Snowboard Mini Game </string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <property name="spacing">
@@ -7168,7 +7168,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1257</width>
+     <width>1263</width>
      <height>37</height>
     </rect>
    </property>
@@ -7706,8 +7706,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_sec</tabstop>
  </tabstops>
  <resources>
-  <include location="ff7tk/icons/common.qrc"/>
   <include location="images.qrc"/>
+  <include location="ff7tk/icons/common.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr" sourcelanguage="en_US">
+<TS version="2.1" language="fr" sourcelanguage="en_US">
 <context>
     <name>About</name>
     <message>
@@ -2286,6 +2286,14 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     <message>
         <source>Cauldron</source>
         <translation>Chaudron</translation>
+    </message>
+    <message>
+        <source>Final Heaven (+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elemental(+other stuff?)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5426,7 +5434,7 @@ Les vitesses en km/h sont calculés pendant le jeu</translation>
     </message>
     <message>
         <source>Runs</source>
-        <translation>Fuites</translation>
+        <translation type="vanished">Fuites</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -5864,7 +5872,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation>Nombre de pas</translation>
+        <translation type="vanished">Nombre de pas</translation>
     </message>
     <message>
         <source>Y: </source>
@@ -5944,7 +5952,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translation>AVALANCHE s&apos;est dirigée vers la planque</translation>
+        <translation type="vanished">AVALANCHE s&apos;est dirigée vers la planque</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
@@ -5972,7 +5980,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation>Activer la Fin de Partie à 00:00</translation>
+        <translation type="vanished">Activer la Fin de Partie à 00:00</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
@@ -6024,7 +6032,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Jesse Has Been Unstuck</source>
-        <translation>Jambe de Jesse décoincée</translation>
+        <translation type="vanished">Jambe de Jesse décoincée</translation>
     </message>
     <message>
         <source>Talked to Biggs</source>
@@ -6032,7 +6040,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Talked to Jesse Before Looking At Map</source>
-        <translation>Parler à Jesse avant de regarder la carte</translation>
+        <translation type="vanished">Parler à Jesse avant de regarder la carte</translation>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
@@ -6132,7 +6140,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
-        <translation>Mini jeu de snowboard</translation>
+        <translation type="vanished">Mini jeu de snowboard</translation>
     </message>
     <message>
         <source>Beginner Course</source>
@@ -6424,7 +6432,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Team Avalanche had meeting after Bombing Mission</source>
-        <translation>L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
+        <translation type="vanished">L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
@@ -6736,7 +6744,51 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation type="unfinished">Meilleur score G-Bike</translation>
+        <translation type="obsolete">Meilleur score G-Bike</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation type="unfinished">Fuites</translation>
+    </message>
+    <message>
+        <source>Jessie Has Been Unstuck</source>
+        <translation type="unfinished">Jambe de Jesse décoincée</translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown reached 0)</source>
+        <translation type="unfinished">Activer la Fin de Partie à 00:00</translation>
+    </message>
+    <message>
+        <source>Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished">Parler à Jesse avant de regarder la carte</translation>
+    </message>
+    <message>
+        <source>Avalanche had meeting after Bombing Mission</source>
+        <translation type="unfinished">L&apos;équipe d&apos;AVALANCHE a fait une réunion après la première mission</translation>
+    </message>
+    <message>
+        <source>Avalanche Has Run To Hideout</source>
+        <translation type="unfinished">AVALANCHE s&apos;est dirigée vers la planque</translation>
+    </message>
+    <message>
+        <source>Ho&amp;ur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snowboard Mini Game </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-Bi&amp;ke High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Played piano durring flashback</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
