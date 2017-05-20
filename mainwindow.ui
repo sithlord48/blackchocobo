@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1263</width>
-    <height>960</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -625,7 +625,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_gil">
+                    <widget class="QDoubleSpinBox" name="sb_gil">
                      <property name="layoutDirection">
                       <enum>Qt::LeftToRight</enum>
                      </property>
@@ -641,8 +641,11 @@
                      <property name="correctionMode">
                       <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                      </property>
+                     <property name="decimals">
+                      <number>0</number>
+                     </property>
                      <property name="maximum">
-                      <number>2147483647</number>
+                      <double>4294967295.000000000000000</double>
                      </property>
                     </widget>
                    </item>
@@ -1076,8 +1079,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1247</width>
-             <height>723</height>
+             <width>0</width>
+             <height>0</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1121,7 +1124,7 @@
              <x>0</x>
              <y>0</y>
              <width>938</width>
-             <height>520</height>
+             <height>521</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3038,9 +3041,9 @@ location.</string>
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-1245</y>
+                  <y>0</y>
                   <width>594</width>
-                  <height>2963</height>
+                  <height>3028</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -7169,7 +7172,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>1263</width>
-     <height>37</height>
+     <height>38</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -7706,8 +7709,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_sec</tabstop>
  </tabstops>
  <resources>
-  <include location="images.qrc"/>
   <include location="ff7tk/icons/common.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>
