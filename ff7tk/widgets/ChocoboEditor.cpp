@@ -153,7 +153,7 @@ void ChocoboEditor::setType(int type)
 void ChocoboEditor::setName(QString new_name)
 {
 	choco_name=new_name.mid(0,6);
-	if(choco_name.startsWith('\xFF') || choco_name == QString(6,' ')){line_name->setText("");}
+    if(choco_name.startsWith(QString("\xff"),Qt::CaseInsensitive) || choco_name == QString(6,' ')){line_name->setText("");}
 	else{line_name->setText(choco_name);}
 }
 void ChocoboEditor::setCantMate(bool cantMate)
@@ -449,7 +449,7 @@ void ChocoboEditor::init_connections(void)
 void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, QString Processed_Name, bool cant_mate, quint16 stamina,quint8 rating)
 {
 	choco_data = choco;
-	if( Processed_Name.startsWith('\xff') || Processed_Name == QString(6,'\x20')){Processed_Name ="";}
+    if( Processed_Name.startsWith(QString("\xff"),Qt::CaseInsensitive) || Processed_Name == QString(6,'\x20')){Processed_Name ="";}
 	choco_name = Processed_Name;
 	choco_cant_mate = cant_mate;
 	choco_stamina = stamina;
