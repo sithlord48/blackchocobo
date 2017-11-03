@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 // qDebug() <<QString("l.DpiX: %1x%2").arg(QString::number(qApp->desktop()->logicalDpiX()),QString::number(qApp->desktop()->logicalDpiY()));
 
 
-	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96);}
+	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96.0f);}
 	scale = configdata->value("scale").toReal();
 	this->setAcceptDrops(true);
 	//Get Font Info Before Setting up the GUI!
