@@ -615,7 +615,7 @@ class FF7Save: public QObject{
 	QString location(int s);// return save location string
 	void setLocation(int s, QString new_location);//set save location string to new_location
 	quint32 gil(int s);
-	void setGil(int s,int gil);
+    void setGil(int s,quint32 gil);
 	quint16 gp (int s);
 	void setGp(int s,int gp);
 	quint16 battles (int s);

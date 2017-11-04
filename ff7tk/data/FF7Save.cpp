@@ -2230,7 +2230,7 @@ void FF7Save::setChocoCantMate(int s,int chocoSlot,bool cantMate)
 	setFileModified(true,s);
 }
 quint32 FF7Save::gil(int s){return slot[s].gil;}
-void FF7Save::setGil(int s,int gil)
+void FF7Save::setGil(int s,quint32 gil)
 {
 	if(gil<0){gil =0;}
 	slot[s].gil = gil;

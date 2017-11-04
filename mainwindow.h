@@ -183,7 +183,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_btn_vincent_clicked();
 	void on_btn_cid_clicked();
 	/*PARTY TAB*/
-	void on_sb_gil_valueChanged(int);
+    void on_sb_gil_valueChanged(double);
 	void on_sb_gp_valueChanged(int);
 	void on_sb_battles_valueChanged(int);
 	void on_sb_runs_valueChanged(int);

@@ -1681,7 +1681,7 @@ void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s
 void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,value);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7->setGil(s,value);}}
+void MainWindow::on_sb_gil_valueChanged(double value){if(!load){ff7->setGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
 void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
 void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
