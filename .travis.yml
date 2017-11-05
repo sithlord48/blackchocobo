@@ -1,3 +1,4 @@
+language: cpp
 sudo: required
 dist: trusty
 
@@ -19,25 +20,53 @@ matrix:
     compiler: gcc
 
 before_script: 
-- if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y; fi
-- if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get update; fi
-- if [[ "$TRAVIS_OS_NAME" == "linux" && "$CXX" == "g++" ]]; then sudo apt-get -y install qt5-default qttools5-dev-tools libssl-dev; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew update > /dev/null; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install qt5; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install openssl; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then chmod -R 755 /usr/local/opt/qt5/*; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then export QTDIR="/usr/local/opt/qt5"; fi
-- if [ "$TRAVIS_OS_NAME" == "osx" ]; then export PATH="$QTDIR/bin:$PATH"; fi
-- $CXX --version
+- if [ "${TRAVIS_OS_NAME}" = "linux" ]; then 
+    sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test; 
+    sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test;
+    sudo add-apt-repository --yes ppa:beineri/opt-qt591-trusty; 
+    sudo apt-get update -qq; 
+    sudo apt-get -y install build-essential qt5-default qt59tools qt59base g++-4.8 libssl-dev zsync; 
+    fi
 
-
+#MAC OS
+- if [ "${TRAVIS_OS_NAME}" = "osx" ]; then 
+    brew update > /dev/null; 
+    brew install qt5;  
+    brew install openssl; 
+    chmod -R 755 /usr/local/opt/qt5/*; 
+    export QTDIR="/usr/local/opt/qt5"; 
+    export PATH="/usr/local/opt/openssl/bin:$PATH"; 
+    export PATH="$QTDIR/bin:$PATH"; 
+    fi
 script: 
-- mkdir build_blackchocobo
-- cd build_blackchocobo
-- qmake ../Black_Chocobo.pro
-- make -j2
-
-language: cpp
+- if [ "$TRAVIS_OS_NAME" = "linux" ]; then 
+    source /opt/qt*/bin/qt*-env.sh; 
+    qmake "DEFINES+=OPENSSL=1" "LIBS+=-lcrypto" Black_Chocobo.pro; 
+    make -j2;
+    make INSTALL_ROOT=appdir install; find appdir/; 
+    mv appdir/usr/share/blackchocobo/lang appdir/usr/bin/lang; 
+    rm -rf appdir/usr/share/blackchocobo appdir/usr/share/menu; 
+    wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"; 
+    chmod a+x linuxdeployqt*.AppImage; 
+    unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH; 
+    ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -bundle-non-qt-libs; 
+    ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage; 
+    fi
+- if [ "${TRAVIS_OS_NAME}" = "osx" ]; then 
+    export LIBRARY_PATH=/usr/local/opt/openssl/lib;
+    qmake "DEFINES+=OPENSSL=1" "LIBS+=-lcrypto" "INCLUDEPATH+=/usr/local/opt/openssl/include" qmake Black_Chocobo.pro; 
+    make -j2;
+    mkdir -p Black_Chocobo.app/Contents/MacOS/lang; 
+    mv lang/*.qm Black_Chocobo.app/Contents/MacOS/lang/; 
+    macdeployqt Black_Chocobo.app/ -dmg; 
+    fi
+after_success:
+- wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+- if [ "${TRAVIS_OS_NAME}" = "linux" ]; then 
+    find ./appdir -executable -type f -exec ldd {} \; | grep " => /usr" | cut -d " " -f 2-3 | sort | uniq ; 
+    bash ./upload.sh Black_Chocobo*.AppImage*; 
+    fi
+- if [ "$TRAVIS_OS_NAME" = "osx" ]; then bash ./upload.sh Black_Chocobo*.dmg*; fi
 
 env:
   global:
@@ -50,7 +79,7 @@ addons:
     project:
       name: "sithlord48/blackchocobo"
       description: "Final Fantasy VII Save Editor"
-    notification_email: sithlord48@gmail.com
+    notication_email: sithlord48@gmail.com
     build_command_prepend: "qmake Black_Chocobo.pro"
     build_command:   "make -j 4"
     branch_pattern: coverity_scan
