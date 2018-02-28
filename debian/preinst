@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -e
 #DEBHELPER#
 echo -e "Checking for and removing old install...\c"
 if [ -d /opt/blackchocobo ];then 
