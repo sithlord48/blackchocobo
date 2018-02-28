@@ -8,3 +8,7 @@
 
 %:
 	dh $@ --parallel --buildsystem=cmake
+	
+override_dh_auto_install:
+	find . -name "COPYING.txt" -delete
+	dh_auto_install
