@@ -1,7 +1,10 @@
 blackchocobo (1.9.900) trusty; urgency=low
-  *New: Items Tab now Contains command buttons for keyitems and flyers for easier access.
-  *New: Advanced modes for different ff7tk widgets can be set indpendently in options.
-  *New: Apply Button for Replay Missions;Browse the options without changing your data.
+  *New: Items Tab now Contains command buttons for keyitems and flyers for 
+  easier access.
+  *New: Advanced modes for different ff7tk widgets can be set indpendently in 
+  options.
+  *New: Apply Button for Replay Missions;Browse the options without changing 
+  your data.
   *Fixed: Cloud's Flashback now set Sephiroth's char data for you
   *Fixed: Snowboard times are now saved / read correctly.
   *Fixed: Backwards label for turtle paradise / keyItems
