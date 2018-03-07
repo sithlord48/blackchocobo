@@ -1529,13 +1529,6 @@ void MainWindow::progress_update()
 	ui->cb_s7ts_7->setChecked((ff7->unknown(s,26).at(8) & (1<<6)));
 	ui->cb_s7ts_8->setChecked((ff7->unknown(s,26).at(8) & (1<<7)));
 
-	ui->cb_s5_1->setChecked((ff7->unknown(s,23).at(26) & (1<<0)));
-	ui->cb_s5_2->setChecked((ff7->unknown(s,23).at(26) & (1<<1)));
-	ui->cb_s5_3->setChecked((ff7->unknown(s,23).at(26) & (1<<2)));
-	ui->cb_s5_4->setChecked((ff7->unknown(s,23).at(26) & (1<<3)));
-	ui->cb_s5_5->setChecked((ff7->unknown(s,23).at(26) & (1<<4)));
-	ui->cb_s5_8->setChecked((ff7->unknown(s,23).at(26) & (1<<7)));
-
 	//When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
 	//to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
 
@@ -1950,60 +1943,6 @@ void MainWindow::on_cb_s7ts_8_toggled(bool checked)
 		ff7->setUnknown(s,26,temp);
 }}
 
-void MainWindow::on_cb_s5_1_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<0);}
-		else{t &= ~(1<<0);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_2_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<1);}
-		else{t &= ~(1<<1);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_3_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<2);}
-		else{t &= ~(1<<2);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_4_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<3);}
-		else{t &= ~(1<<3);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_5_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<4);}
-		else{t &= ~(1<<4);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
-void MainWindow::on_cb_s5_8_toggled(bool checked)
-{if(!load){
-		QByteArray temp = ff7->unknown(s,23); char t=temp.at(26);
-		if(checked){t |= (1<<7);}
-		else{t &= ~(1<<7);}
-		temp[26]=t;
-		ff7->setUnknown(s,23,temp);
-}}
-
 void MainWindow::on_cb_bombing_int_stateChanged(int checked){if(!load){ff7->setStartBombingMission(s,checked);}}
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
@@ -2052,8 +1991,6 @@ void MainWindow::on_btnReplay_clicked()
 		ff7->setMidgarTrainFlags(s,0);
 		ui->cb_bombing_int->setChecked(Qt::Checked);
 		ui->combo_s7_slums->setCurrentIndex(1);
-		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of church durring script
-		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after church scene.
 		ui->sb_turkschurch->setValue(0); // reset turks.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(116);
@@ -2073,8 +2010,6 @@ void MainWindow::on_btnReplay_clicked()
 		ff7->setBmProgress2(s,198);
 		ff7->setBmProgress3(s,3);
 		ui->cb_bombing_int->setChecked(Qt::Unchecked);
-		ui->cb_s5_5->setChecked(Qt::Unchecked);//show aeris on roof of church durring script
-		ui->cb_s5_8->setChecked(Qt::Unchecked);//not after church scene.
 		locationViewer->setMapId(1);
 		locationViewer->setLocationId(183);
 		if(!locationViewer->locationChangesSaved())

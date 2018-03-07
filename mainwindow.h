@@ -349,13 +349,6 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_cb_s7ts_7_toggled(bool checked);
 	void on_cb_s7ts_8_toggled(bool checked);
 
-	void on_cb_s5_1_toggled(bool checked);
-	void on_cb_s5_2_toggled(bool checked);
-	void on_cb_s5_3_toggled(bool checked);
-	void on_cb_s5_4_toggled(bool checked);
-	void on_cb_s5_5_toggled(bool checked);
-	void on_cb_s5_8_toggled(bool checked);
-
 	// game options tab
 
 	void setDialogColorUL(QColor color);

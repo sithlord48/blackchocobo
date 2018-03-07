@@ -3348,42 +3348,6 @@ location.</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QGroupBox" name="groupBox_24">
-                   <property name="title">
-                    <string>Sector 5</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_17">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_3">
-                      <property name="text">
-                       <string>Talked with Sick Man</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_4">
-                      <property name="text">
-                       <string>Aeris Talked About Sick Man</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_8">
-                      <property name="text">
-                       <string>After Aeris Church Scene</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QGroupBox" name="bm_unknown">
                    <property name="title">
                     <string>Unknowns / Unused</string>
@@ -3599,27 +3563,6 @@ location.</string>
                      <widget class="QCheckBox" name="cb_s7pl_8">
                       <property name="text">
                        <string notr="true">s7pl_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_1">
-                      <property name="text">
-                       <string>cb_s5_1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_2">
-                      <property name="text">
-                       <string>cb_s5_2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cb_s5_5">
-                      <property name="text">
-                       <string>cb_s5_5</string>
                       </property>
                      </widget>
                     </item>
