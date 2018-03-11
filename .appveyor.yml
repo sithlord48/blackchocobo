@@ -1,0 +1,81 @@
+version: '{branch}.{build}'
+image: Visual Studio 2015
+configuration: release
+platform: x86
+init:
+- ps: >-
+    $env:commit = $env:appveyor_repo_commit.SubString(0,7)
+    
+    Update-AppveyorBuild -Version ("{0}-{1}-{2}" -f $env:appveyor_repo_branch,$env:appveyor_build_number,$env:commit )
+environment:
+  VSVER: 14.0 
+  matrix:
+  - MSVC: 15
+    RUNTIME_LINKAGE: static
+    ICU_VERSION: 57.1
+    ICU_LINKAGE: static
+    QTDIR: C:\Qt\5.8\msvc2015
+    QT_VERSION: 5.8
+    QT_LINKAGE: static
+install:
+- cmd: >-
+    %QTDIR%\bin\qtenv2.bat
+    
+    qmake -v
+    
+    set QTDIR
+    
+    if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
+    
+    if %QTDIR:msvc=%==%QTDIR% g++ --version
+    
+    if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
+    
+    if %QTDIR:msvc=%==%QTDIR% %make% --version
+    
+    if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VSVER%\VC\vcvarsall.bat" %ARCH%
+    
+    if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
+    
+    if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+    
+    set QTBIN=%QTDIR%\bin
+build_script:
+- cmd: >-
+    cd C:\projects\blackchocobo
+    
+    qmake "DEFINES+=OPENSSL=1" "INCLUDEPATH += C:\OpenSSL-Win32\include" "LIBS += -L"C:\OpenSSL-Win32\lib" -llibeay32" Black_Chocobo.pro
+    
+    mkdir Black_Chocobo-%commit%-win32
+    
+    mkdir Black_Chocobo-%commit%-win32\lang
+    
+    move lang\*.qm Black_Chocobo-%commit%-win32\lang\
+    
+    move COPYING.TXT Black_Chocobo-%commit%-win32\
+    
+    copy C:\OpenSSL-Win32\libeay32.dll Black_Chocobo-%commit%-win32\
+    
+    dir Black_Chocobo-%commit%-win32
+    
+    %make%
+    
+    move release\Black_Chocobo.exe Black_Chocobo-%commit%-win32\
+    
+    windeployqt --compiler-runtime Black_Chocobo-%commit%-win32\Black_Chocobo.exe
+    
+    dir Black_Chocobo-%commit%-win32
+    
+    7z a -tzip Black_Chocobo-win32.zip Black_Chocobo-%commit%-win32 -r
+    
+artifacts:
+- path: Black_Chocobo-win32.zip
+  name: blackchocobo
+deploy:
+- provider: GitHub
+  tag: continuous
+  description: continuous
+  auth_token:
+    secure: yG66EEKasiTmuCDPStbz0nVsvcETsQlnpDD2ScfNWUwT81kKfALCVFRTPMrp6R6E
+  artifact: blackchocobo
+  force_update: true
