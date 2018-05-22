@@ -22,12 +22,16 @@
 MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
 {
-// qDebug() <<QString("p.DpiX: %1x%2").arg(QString::number(qApp->desktop()->physicalDpiX()),QString::number(qApp->desktop()->physicalDpiY()));
-// qDebug() <<QString("l.DpiX: %1x%2").arg(QString::number(qApp->desktop()->logicalDpiX()),QString::number(qApp->desktop()->logicalDpiY()));
 
+    if (configdata->value("scale").isNull()) {
+        double scale  = qApp->desktop()->logicalDpiX()/96.0f;
+        if (scale < 1) {
+            scale = 1;
+        }
+        configdata->setValue("scale",scale);
+    }
 
-	if(configdata->value("scale").isNull()){configdata->setValue("scale",qApp->desktop()->logicalDpiX()/96.0f);}
-	scale = configdata->value("scale").toReal();
+    scale = configdata->value("scale").toReal();
 	this->setAcceptDrops(true);
 	//Get Font Info Before Setting up the GUI!
 	settings =configdata;

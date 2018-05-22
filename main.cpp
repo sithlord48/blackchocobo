@@ -14,19 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets/QApplication>
-    #ifdef Q_OS_MAC
-        #include <QStyleFactory>
-    #endif
-#else
-    #include <QtGui/QApplication>
-    #ifdef Q_OS_MAC
-        #include <QMacStyle>
-        #include <QPlastiqueStyle>
-    #endif
-#endif
 
+#include <QtWidgets/QApplication>
 #include <QLocale>
 #include <QTranslator>
 #include <QTime>
@@ -62,10 +51,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     QSettings * settings;
-    #ifdef Q_OS_MAC
-        if(QT_VERSION < 0x50000){a.setStyle("Plastique");}
-        else{a.setStyle(QStyleFactory::create("fusion"));}
-    #endif
+
     a.setApplicationVersion(Version);
 
     #ifdef STATIC
@@ -106,7 +92,6 @@ int main(int argc, char *argv[])
         }
     }
     a.installTranslator(&translator);
-    //FF7Save* ff7=new FF7Save; //main ff7 data
     qsrand(QTime::currentTime().msec());
     MainWindow w(0,settings);
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
