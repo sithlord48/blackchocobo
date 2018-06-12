@@ -14,8 +14,8 @@ environment:
     RUNTIME_LINKAGE: static
     ICU_VERSION: 57.1
     ICU_LINKAGE: static
-    QTDIR: C:\Qt\5.8\msvc2015
-    QT_VERSION: 5.8
+    QTDIR: C:\Qt\5.11.0\msvc2015
+    QT_VERSION: 5.11
     QT_LINKAGE: static
 install:
 - cmd: >-
