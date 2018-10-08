@@ -189,7 +189,6 @@ void MainWindow::init_display()
 	hexLayout->setContentsMargins(0,0,0,0);
 	hexLayout->addWidget(hexEditor);
 	ui->group_hexedit->setLayout(hexLayout);
-	//ui->psxExtras->setVisible(false);
 
 	locationViewer = new LocationViewer(scale);
 	locationViewer->setTranslationBaseFile(settings->value("langPath").toString() +"/"+ "lang/bchoco_");
@@ -363,8 +362,6 @@ void MainWindow::init_connections()
 		connect(phsList,SIGNAL(visibleToggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(visibleToggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(lockedToggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
-		//HexEditor.
-//		connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
 void MainWindow::init_settings()
 {
@@ -681,7 +678,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
 void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
-void MainWindow::on_actionAbout_triggered(){About adialog(0,settings); adialog.exec();}
+void MainWindow::on_actionAbout_triggered(){About adialog(this,settings); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered()
@@ -1161,7 +1158,9 @@ void MainWindow::CheckGame()
 			else{on_actionOpen_Save_File_triggered();}
 		break;
 		}
-	}
+    } else {
+        guirefresh(0);
+    }
 }
 void MainWindow::othersUpdate()
 {
@@ -1385,25 +1384,27 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 void MainWindow::hexTabUpdate(int viewMode)
 {
 	ui->psxExtras->setVisible(false);
+    ui->boxHexData->setVisible(false);
 	disconnect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
-	if(ff7->type()=="PC" || ff7->type() =="")
-	{
+    if(ff7->type()=="PC" || ff7->type() =="") {
 		hexEditor->setData(ff7->slotFF7Data(s));
-		ui->psxExtras->setVisible(false);
-	}
-	else
-	{
+    } else {
 		ui->psxExtras->setVisible(true);
 		update_hexEditor_PSXInfo();
-		switch(viewMode)
-		{
-			case 0:
-				hexEditor->setData(ff7->slotPsxRawData(s));
-			break;
-			case 1:
-				hexEditor->setData(ff7->slotFF7Data(s));
-			break;
-		}
+        if(!ff7->isFF7(s)) {
+            ui->boxHexData->setVisible(true);
+            switch(viewMode)
+            {
+                case 0:
+                    hexEditor->setData(ff7->slotPsxRawData(s));
+                break;
+                case 1:
+                    hexEditor->setData(ff7->slotFF7Data(s));
+                break;
+            }
+        } else {
+            hexEditor->setData(ff7->slotPsxRawData(s));
+        }
 	}
 	hexEditor->setCursorPosition(hexCursorPos);
 	connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
