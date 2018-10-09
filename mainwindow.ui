@@ -1153,16 +1153,10 @@
             <item>
              <widget class="QScrollArea" name="scrollArea">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>310</width>
-                <height>0</height>
-               </size>
               </property>
               <property name="contextMenuPolicy">
                <enum>Qt::NoContextMenu</enum>
@@ -1173,6 +1167,9 @@
               <property name="horizontalScrollBarPolicy">
                <enum>Qt::ScrollBarAlwaysOff</enum>
               </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
               <widget class="QWidget" name="scrollAreaWidgetContents">
                <property name="geometry">
                 <rect>
@@ -1181,18 +1178,6 @@
                  <width>305</width>
                  <height>615</height>
                 </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>300</width>
-                 <height>0</height>
-                </size>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
                 <property name="spacing">
@@ -1212,12 +1197,6 @@
                 </property>
                 <item>
                  <widget class="QGroupBox" name="groupBox_42">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Visible On World Map</string>
                   </property>
@@ -1429,12 +1408,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Party leader</string>
                   </property>
@@ -1620,12 +1593,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_4">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
@@ -1827,12 +1794,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_3">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Buggy / Highwind</string>
                   </property>
@@ -2051,12 +2012,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_5">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Sub</string>
                   </property>
@@ -2258,12 +2213,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_7">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Wild Chocobo</string>
                   </property>
@@ -2465,12 +2414,6 @@
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_2">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
                   <property name="title">
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
