@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>485</width>
-    <height>605</height>
+    <width>771</width>
+    <height>982</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,14 +59,29 @@
         </item>
         <item>
          <widget class="QPushButton" name="btn_set_load_path">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>32</width>
+            <height>33</height>
            </size>
           </property>
           <property name="text">
            <string notr="true">...</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -92,8 +107,8 @@
          <widget class="QPushButton" name="btn_set_save_emu">
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
            </size>
           </property>
           <property name="text">
@@ -119,8 +134,8 @@
          <widget class="QPushButton" name="btn_set_save_pc">
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
            </size>
           </property>
           <property name="text">
@@ -146,8 +161,8 @@
          <widget class="QPushButton" name="btn_set_char_stat_folder">
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
            </size>
           </property>
           <property name="text">
@@ -183,6 +198,9 @@
       </property>
       <item>
        <widget class="QCheckBox" name="cbEditableCombos">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
          <string>Editable Combo for Materia and Items</string>
         </property>
@@ -248,12 +266,6 @@
        <layout class="QHBoxLayout" name="_4">
         <item>
          <widget class="QCheckBox" name="cb_override_def_save">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>24</height>
-           </size>
-          </property>
           <property name="text">
            <string>Override Builtin New Game Data</string>
           </property>
@@ -270,8 +282,8 @@
          <widget class="QPushButton" name="btn_set_default_save">
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
            </size>
           </property>
           <property name="text">
@@ -283,8 +295,8 @@
          <widget class="QPushButton" name="reset_default_save_location">
           <property name="maximumSize">
            <size>
-            <width>24</width>
-            <height>24</height>
+            <width>32</width>
+            <height>48</height>
            </size>
           </property>
           <property name="toolTip">

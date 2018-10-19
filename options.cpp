@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
+#include <QStyle>
 #include "options.h"
 #include "ui_options.h"
 
@@ -22,13 +23,15 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	ui(new Ui::Options)
 {
 	ui->setupUi(this);
+    setStyleSheet(QString("QCheckBox::indicator {width: %1px; height: %1px;}").arg(fontMetrics().height()));
+    ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
 	load=false;
 	//Disable the defaut_save line and selector button unless override is checked
 	ui->line_default_save->setVisible(false);
 	ui->btn_set_default_save->setVisible(false);
 	ui->reset_default_save_location->setVisible(false);
 	//Hide the ps3 signing area if not built with openssl support.
-	#if(OPENSSL==0)
+    #if(!OPENSSL)
 	ui->groupBox_3->setTitle(tr("Signing is disabled! Build with OpenSSL support to enable"));
 	#endif
 	settings = config_data;
