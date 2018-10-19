@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>329</width>
-    <height>383</height>
+    <width>714</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -121,7 +121,7 @@
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string notr="true">(C) 2010 - 2015 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2018 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
@@ -275,8 +275,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>378</width>
-            <height>491</height>
+            <width>658</width>
+            <height>699</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_8">
@@ -867,8 +867,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>273</width>
-            <height>690</height>
+            <width>658</width>
+            <height>756</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">
