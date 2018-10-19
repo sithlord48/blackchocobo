@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -1061,7 +1061,7 @@ void MainWindow::materiaupdate(void)
 {
 	load=true;
 	QTableWidgetItem *newItem;
-	int j= ui->tbl_materia->currentRow();
+    int j= std::max(0, ui->tbl_materia->currentRow());
 	ui->tbl_materia->reset();
 	ui->tbl_materia->clearContents();
 	ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()*.65));
