@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	//Get Font Info Before Setting up the GUI!
 	settings =configdata;
 	ui->setupUi(this);
+    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
 	ui->frame_status->setFixedHeight(fontMetrics().height()+2);
 	_init=true;
 	ff7 = new FF7Save;

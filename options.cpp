@@ -23,7 +23,6 @@ Options::Options(QWidget *parent,QSettings *config_data) :
 	ui(new Ui::Options)
 {
 	ui->setupUi(this);
-    setStyleSheet(QString("QCheckBox::indicator {width: %1px; height: %1px;}").arg(fontMetrics().height()));
     ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
 	load=false;
 	//Disable the defaut_save line and selector button unless override is checked
