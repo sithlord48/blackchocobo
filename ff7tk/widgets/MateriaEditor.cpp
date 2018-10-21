@@ -71,8 +71,12 @@ void MateriaEditor::init_display()
 	//Special Properties Of Above Widgets
 	sb_ap->setWrapping(1);
 	sb_ap->setAlignment(Qt::AlignCenter);
-	btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
+    QSize iconSize = QSize(fontMetrics().height(),fontMetrics().height());
+    btn_rm_materia->setIconSize(iconSize);
+    btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
+    btn_copy_materia->setIconSize(iconSize);
 	btn_copy_materia->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
+    btn_paste_materia->setIconSize(iconSize);
 	btn_paste_materia->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
 
 	QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(%1,%2,%3,96);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
@@ -259,19 +263,19 @@ void MateriaEditor::init_data()
 		newItem->setCheckState(Qt::Unchecked);
 		eskill_list->addItem(newItem);
 	}
-	QString style=QString("QListWidget::item { padding-left: 0px; padding-top: 1px; padding-bottom: 1px;}QListView::indicator { width: %1px; height: %1px; }QListView::indicator:unchecked {image: url(:/materia/command_star_empty);} QListView::indicator:checked{image: url(:/materia/command_star_full);}").arg(QString::number(24*scale));
+    QString style=QString("QListWidget::item { padding-left: 0px; padding-top: 1px; padding-bottom: 1px;}QListView::indicator { width: %1px; height: %1px; }QListView::indicator:unchecked {image: url(:/materia/command_star_empty);} QListView::indicator:checked{image: url(:/materia/command_star_full);}").arg(fontMetrics().height());
 	eskill_list->setStyleSheet(style);
 	eskill_list->setMaximumHeight(eskill_list->sizeHintForRow(0)*48 +eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
 	eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
 	eskill_list->setUniformItemSizes(true);
 
 	//Fill Combo_type
-	combo_type->addItem(data->iconAllMateria(),tr("All Materia"));
-	combo_type->addItem(data->icon(FF7Materia::MasterMagic),tr("Magic"));
-	combo_type->addItem(data->icon(FF7Materia::MasterSummon),tr("Summon"));
-	combo_type->addItem(data->icon(FF7Materia::Underwater),tr("Independent"));
-	combo_type->addItem(data->icon(FF7Materia::StealAsWell),tr("Support"));
-	combo_type->addItem(data->icon(FF7Materia::MasterCommand),tr("Command"));
+    combo_type->addItem(QIcon(QPixmap::fromImage(data->imageAllMateria()).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("All Materia"));
+    combo_type->addItem(QIcon(data->pixmap(FF7Materia::MasterMagic).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("Magic"));
+    combo_type->addItem(QIcon(data->pixmap(FF7Materia::MasterSummon).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("Summon"));
+    combo_type->addItem(QIcon(data->pixmap(FF7Materia::Underwater).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("Independent"));
+    combo_type->addItem(QIcon(data->pixmap(FF7Materia::StealAsWell).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("Support"));
+    combo_type->addItem(QIcon(data->pixmap(FF7Materia::MasterCommand).scaledToWidth(fontMetrics().height(), Qt::SmoothTransformation)),tr("Command"));
 
 	//Set initial combo_materia info.
 	for(int i=0;i<91;i++)
@@ -474,10 +478,10 @@ void MateriaEditor::setSkills()
 		eskill_group->setHidden(true);
 		v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
 		v_spacer->invalidate();
-		switch (_level)
+        switch (_level)
 		{// no breaks on purpose
-			case 5:if(data->skills(_id).count()>4){list_skills->insertItem(0,data->skills(_id).at(4));}
-			case 4:if(data->skills(_id).count()>3){list_skills->insertItem(0,data->skills(_id).at(3));}
+            case 5: if(data->skills(_id).count()>4){list_skills->insertItem(0,data->skills(_id).at(4));}
+            case 4:if(data->skills(_id).count()>3){list_skills->insertItem(0,data->skills(_id).at(3));}
 			case 3:if(data->skills(_id).count()>2){list_skills->insertItem(0,data->skills(_id).at(2));}
 			case 2:if(data->skills(_id).count()>1){list_skills->insertItem(0,data->skills(_id).at(1));}
 			case 1:if(data->skills(_id).count()>0){list_skills->insertItem(0,data->skills(_id).at(0));}

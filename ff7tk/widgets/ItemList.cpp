@@ -205,9 +205,9 @@ void ItemList::itemupdate()
 }
 void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
 {
+    Q_UNUSED(prevColum)
     if(createdSelector){itemSelector->close();createdSelector=false;}
     if(createdTooltip){itemPreview->close();createdTooltip=false;}
-    if(prevColum>=0 ||prevColum<=0){/*Stop warning about unused var.*/}
     if(colum<0||row <0){return;}//Ingore if selecting -1 (clearContents)
     if (prevRow>=0){updateItem(prevRow);}//update the previews Row so its filled again.
     itemSelector = new ItemSelector;

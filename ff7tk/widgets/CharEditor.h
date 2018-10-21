@@ -47,8 +47,8 @@ public:
 	void setSliderStyle(QString style);
 	void MaxStats();
 	void MaxEquip();
-	qint8 id();
-	qint8 level();
+    quint8 id();
+    quint8 level();
 	quint8 str();
 	quint8 vit();
 	quint8 mag();
