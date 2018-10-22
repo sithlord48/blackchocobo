@@ -94,6 +94,7 @@ ItemList::ItemList(qreal Scale,QWidget *parent) : QTableWidget(parent)
     createdTooltip=false;
     itemQtyLimit=127;
     setRowCount(320);
+    setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
     setColumnCount(3);
     setStyleSheet(QString(";"));//set a style and itemSelector will have a normal size column 1
     setEditTriggers(QAbstractItemView::NoEditTriggers);// thats a long 0
@@ -183,15 +184,13 @@ void ItemList::itemupdate()
     {
         if(i == selectorLocation){continue;}
         else{updateItem(i);}
-
     }
     blockSignals(true);
     if(createdSelector)
     {
         setCurrentCell(j,0);
         setCellWidget(j,0,itemSelector);
-        if(itemlist.at(j)== FF7Item::EmptyItemData){/*nice empty under the selector*/}
-        else
+        if(itemlist.at(j) != FF7Item::EmptyItemData)
         {//wipe the data under the selector so its easier to read.
             for(int i=0;i<3;i++)
             {
@@ -215,10 +214,8 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     createdSelector = true;
     itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
-   
-    if(itemlist.at(row)==FF7Item::EmptyItemData){/*nice Empty Item under the selector*/}
-    else
-    {//Clear whats under the selector 
+    if(itemlist.at(row)!=FF7Item::EmptyItemData)
+    {//Clear whats under the selector
         for(int i=0;i<3;i++)
         {
             QTableWidgetItem *newItem = new QTableWidgetItem("",0);

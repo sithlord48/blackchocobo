@@ -38,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	ui->setupUi(this);
     setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
 	ui->frame_status->setFixedHeight(fontMetrics().height()+2);
+    ui->tbl_materia->setIconSize(QSize(fontMetrics().height(),fontMetrics().height()));
 	_init=true;
 	ff7 = new FF7Save;
 	load=true;
@@ -234,7 +235,7 @@ void MainWindow::init_style()
 
 	QString tabStyle = QString("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
 
-	char_editor->setToolBoxStyle(tabStyle);
+    char_editor->setToolBoxStyle(tabStyle);
 	ui->locationToolBox->setStyleSheet(tabStyle);
 	ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
 	ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
@@ -1072,30 +1073,27 @@ void MainWindow::materiaupdate(void)
 	for(int mat=0;mat<200;mat++)// partys materias
 	{
 		ui->tbl_materia->setRowHeight(mat,fontMetrics().height()+9);
-		//ui->tbl_materia->setIconSize(QSize(24*scale,24*scale));
 		qint32 current_ap= ff7->partyMateriaAp(s,mat);
 		quint8 current_id= ff7->partyMateriaId(s,mat);
 		QString ap;
 
-		if(current_id == FF7Materia::EnemySkill)
+        newItem = new QTableWidgetItem(QIcon(QPixmap::fromImage(Materias.image(current_id).scaledToHeight(fontMetrics().height(), Qt::SmoothTransformation))), Materias.name(current_id), 0);
+        ui->tbl_materia->setItem(mat,0,newItem);
+
+        if(current_id == FF7Materia::EnemySkill)
 		{
-			newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
-			ui->tbl_materia->setItem(mat,0,newItem);
 			if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
 			else{newItem =new QTableWidgetItem(QString(""),0);ui->tbl_materia->setItem(mat,1,newItem);}
 		}
 
 		else if(current_id==FF7Materia::MasterCommand || current_id==FF7Materia::MasterMagic || current_id==FF7Materia::MasterSummon || current_id==FF7Materia::Underwater)
 		{
-			newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
-			ui->tbl_materia->setItem(mat,0,newItem);
-			newItem =new QTableWidgetItem(QString(""),0);ui->tbl_materia->setItem(mat,1,newItem);
+            newItem =new QTableWidgetItem(QString(""),0);
+            ui->tbl_materia->setItem(mat,1,newItem);
 		}
 		else if (current_id !=FF7Materia::EmptyId)
 		{
-			newItem = new QTableWidgetItem(Materias.icon(current_id),Materias.name(current_id),0);
-			ui->tbl_materia->setItem(mat,0,newItem);
-			if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
+            if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
 			else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia->setItem(mat,1,newItem);}
 		}
 		else

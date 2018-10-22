@@ -252,6 +252,7 @@ void ChocoboEditor::init_display(void)
 	//create Gui Widgets.
 	combo_sex = new QComboBox;
 	combo_type = new QComboBox;
+    combo_type->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
 	line_name = new QLineEdit;
 	sb_speed = new QSpinBox;
 	sb_mSpeed = new QSpinBox;

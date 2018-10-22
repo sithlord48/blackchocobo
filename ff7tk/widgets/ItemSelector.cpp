@@ -24,8 +24,11 @@ ItemSelector::ItemSelector(qreal Scale,QWidget *parent): QWidget(parent)
 }
 void ItemSelector::init_display()
 {
+    QSize iconSize = QSize(fontMetrics().height(),fontMetrics().height());
 	combo_type = new QComboBox;
+    combo_type->setIconSize(iconSize);
 	combo_item = new QComboBox;
+    combo_item->setIconSize(iconSize);
 
 	sb_qty = new QSpinBox;
 	sb_qty->setAlignment(Qt::AlignCenter);
@@ -35,7 +38,8 @@ void ItemSelector::init_display()
 	sb_qty->setWrapping(true);
 
     btn_remove = new QPushButton();
-	btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
+    btn_remove->setIconSize(iconSize);
+    btn_remove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
 	btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedWidth(fontMetrics().width(QString("WW")));
 	btn_remove->setShortcut(QKeySequence::Delete);
@@ -62,6 +66,7 @@ void ItemSelector::init_connections()
 }
 void ItemSelector::init_data()
 {
+
     combo_type->addItem(Items->icon(FF7Item::Potion),tr(""));
     combo_type->addItem(Items->icon(FF7Item::BronzeBangle),tr(""));
     combo_type->addItem(Items->icon(FF7Item::Ribbon),tr(""));

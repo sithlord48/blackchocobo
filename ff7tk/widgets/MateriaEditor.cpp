@@ -34,8 +34,11 @@ MateriaEditor::MateriaEditor(quint8 materia_id,qint32 materia_ap,qreal Scale,QWi
 void MateriaEditor::init_display()
 {//Make Widgets and set Properties.
 	//Widget Creation.
+    QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
 	combo_type =new QComboBox;
+    combo_type->setIconSize(iconSize);
 	combo_materia = new QComboBox;
+    combo_materia->setIconSize(iconSize);
 	sb_ap = new QSpinBox;
 	lbl_slash = new QLabel("/");
 	lbl_max_ap = new QLabel;
@@ -71,7 +74,6 @@ void MateriaEditor::init_display()
 	//Special Properties Of Above Widgets
 	sb_ap->setWrapping(1);
 	sb_ap->setAlignment(Qt::AlignCenter);
-    QSize iconSize = QSize(fontMetrics().height(),fontMetrics().height());
     btn_rm_materia->setIconSize(iconSize);
     btn_rm_materia->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
     btn_copy_materia->setIconSize(iconSize);
