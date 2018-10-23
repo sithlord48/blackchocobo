@@ -123,10 +123,7 @@ void LocationViewer::init_display(void)
 	actionCaseSensitive = new QAction(tr("Case Sensitive"),btnSearchOptions);
 	actionCaseSensitive->setCheckable(true);
 
-	QString menuStyle = QString("QCheckbox::indicator { width: %1px; height: %2px;}").arg(QString::number(16*scale),QString::number(16*scale));
-
 	QMenu * newMenu=new QMenu;
-	newMenu->setStyleSheet(menuStyle);
 	newMenu->addAction(actionNameSearch);
 	newMenu->addAction(actionItemSearch);
 	newMenu->addSeparator();

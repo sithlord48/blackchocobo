@@ -21,7 +21,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
     {//our object will be the itemlist always in this event.
         int row=-1;//row @ -1 this way we can catch when were not over A QTableWidgetItem
         QTableWidgetItem *tbl_item=itemAt(mapFromGlobal(viewport()->cursor().pos()));
-        if(tbl_item !=0){row =tbl_item->row();}//And only update our row if vaild.
+        if(tbl_item){row =tbl_item->row();}//And only update our row if vaild.
         if(ev->type() == QEvent::ToolTip)
         {//ToolTip Event Popup.
             if(createdTooltip)
@@ -80,9 +80,17 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                     }
                 }
             }//End Of HoverLeave Processing
-            else{return event(ev);}
+            else {return true;}
         }
-        else{return event(ev);}
+        else if(ev->type() == QEvent::Resize)
+        {
+            if(createdSelector) {
+                itemupdate();
+            }
+            return event(ev);
+        }
+        else
+        {return event(ev);}
     }
     else{return false;}
 }
@@ -129,7 +137,6 @@ void ItemList::setMaximumItemQty(int maxQty)
         {//qty not above limit and item is not empty.
             itemlist.replace(i,Items.itemEncode(Items.itemId(itemlist.at(i)),itemQtyLimit));
         }
-        else{continue;}
     }
     itemupdate();
 }
@@ -137,7 +144,7 @@ void ItemList::setMaximumItemQty(int maxQty)
 void ItemList::setItems(QList<quint16> items)
 {
     itemlist = items;
-    if(createdSelector){itemSelector->close();createdSelector=false;}
+    if(createdSelector){itemSelector->setVisible(false);createdSelector=false;}
     if(createdTooltip){itemPreview->close();createdTooltip=false;}
     itemupdate();
 }
@@ -156,51 +163,17 @@ void ItemList::itemSelector_changed(quint16 item)
         newItem = new QTableWidgetItem("",0);
         setItem(sender()->objectName().toInt(),2,newItem);
     }
-    else if(createdSelector)
-    {
-        for(int i=0;i<3;i++)
-        {
-            QTableWidgetItem* newItem = new QTableWidgetItem("",0);
-            setItem(sender()->objectName().toInt(),i,newItem);
-        }
-    }
     emit(itemsChanged(itemlist));
 }
 
 void ItemList::itemupdate()
 {
-    int j= currentRow();
-    int column0width =columnWidth(0);
-    int column1width =columnWidth(1);
-    int column2width =columnWidth(2);
-    int selectorLocation=321;
+
     clearContents();
-    setColumnWidth(0,column0width);
-    setColumnWidth(1,column1width);
-    setColumnWidth(2,column2width);
-    setRowCount(320);
-    if(createdSelector){selectorLocation = itemSelector->objectName().toInt(); itemSelector->setMaximumQty(itemQtyLimit);}
     for (int i=0;i<320;i++) // set up items
     {
-        if(i == selectorLocation){continue;}
-        else{updateItem(i);}
+            updateItem(i);
     }
-    blockSignals(true);
-    if(createdSelector)
-    {
-        setCurrentCell(j,0);
-        setCellWidget(j,0,itemSelector);
-        if(itemlist.at(j) != FF7Item::EmptyItemData)
-        {//wipe the data under the selector so its easier to read.
-            for(int i=0;i<3;i++)
-            {
-                QTableWidgetItem *newItem = new QTableWidgetItem("",0);
-                setItem(j,i,newItem);
-            }
-        }
-        itemSelector->setCurrentItem(itemlist.at(j));
-    }
-    blockSignals(false);
 }
 void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
 {
@@ -214,14 +187,6 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     createdSelector = true;
     itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
-    if(itemlist.at(row)!=FF7Item::EmptyItemData)
-    {//Clear whats under the selector
-        for(int i=0;i<3;i++)
-        {
-            QTableWidgetItem *newItem = new QTableWidgetItem("",0);
-            setItem(row,i,newItem);
-        }
-    }
     itemSelector->setMinimumWidth(itemSelector->width());
     setCellWidget(row,0,itemSelector);
     itemSelector->setCurrentItem(itemlist.at(row));
@@ -233,7 +198,7 @@ void ItemList::updateItem(int row)
     if (itemlist.at(row) == FF7Item::EmptyItemData)
     {
         newItem = new QTableWidgetItem("",0);
-		setItem(row,0,newItem);
+        setItem(row,0,newItem);
         newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
         setItem(row,1,newItem);
         newItem = new QTableWidgetItem("",0);
@@ -259,6 +224,6 @@ void ItemList::updateItem(int row)
         newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))),0);
         setItem(row,2,newItem);
     }
-	setRowHeight(row,fontMetrics().height()+9);
+    setRowHeight(row,fontMetrics().height()+9);
 }
 void ItemList::setEditableItemCombo(bool editable){editableItemCombo=editable;}
