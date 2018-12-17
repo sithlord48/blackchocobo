@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	init_settings();
 	init_connections();
 	on_actionNew_Game_triggered();
+    ui->btn_cloud->clicked();
 	ff7->setFileModified(false,0);
 }
 void MainWindow::init_display()

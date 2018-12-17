@@ -21,7 +21,7 @@ CharEditor::CharEditor(qreal Scale,QWidget *parent) : QWidget(parent)
   , autostatcalc(true)
   , editable(true)
   , advancedMode(false)
-  , mslotsel(1)
+  , mslotsel(-1)
   , scale(Scale)
 {
 	init_display();
