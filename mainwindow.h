@@ -87,7 +87,7 @@ private:
 	FF7Item Items; //FF7Item Static Data
 	FF7Materia Materias;//FF7Materia Static Data.
 	FF7Location Locations; // FF7 Location Data
-	MATERIA buffer_materia; // buffer for a materia
+	materia buffer_materia; // buffer for a materia
 	//ITEM buffer_item; // for use later
 	int curchar; //keeps track of current character displayed
 	int mslotsel; //keeps track of materia slot on char selected
