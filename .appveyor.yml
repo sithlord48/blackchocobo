@@ -1,5 +1,5 @@
 version: '{branch}.{build}'
-image: Visual Studio 2015
+image: Visual Studio 2017
 configuration: release
 platform: x86
 init:
@@ -14,9 +14,8 @@ environment:
     RUNTIME_LINKAGE: static
     ICU_VERSION: 57.1
     ICU_LINKAGE: static
-    QTDIR: C:\Qt\5.11.2\mingw53_32
-    MGWDIR: C:\Qt\Tools\mingw530_32\bin
-    QT_VERSION: 5.11.2
+    QTDIR: C:\Qt\5.12.1\mingw73_64
+    QT_VERSION: 5.12.1
     QT_LINKAGE: static
 install:
 - cmd: >-
@@ -45,7 +44,7 @@ build_script:
 - cmd: >-
     cd C:\projects\blackchocobo
 
-    qmake "DEFINES+=OPENSSL=1" "INCLUDEPATH += C:\OpenSSL-Win32\include" "LIBS += -L"C:\OpenSSL-Win32\lib" -llibeay32" Black_Chocobo.pro
+    qmake "DEFINES+=OPENSSL=1" "INCLUDEPATH += C:\OpenSSL-Win64\include" "LIBS += -L"C:\OpenSSL-Win64\lib" -llibeay32" Black_Chocobo.pro
 
     mkdir Black_Chocobo-%commit%-win32
 
@@ -55,7 +54,7 @@ build_script:
 
     move COPYING.TXT Black_Chocobo-%commit%-win32\
 
-    copy C:\OpenSSL-Win32\libeay32.dll Black_Chocobo-%commit%-win32\
+    copy C:\OpenSSL-Win64\libeay32.dll Black_Chocobo-%commit%-win32\
 
     %make%
 
@@ -80,3 +79,8 @@ deploy:
     secure: yG66EEKasiTmuCDPStbz0nVsvcETsQlnpDD2ScfNWUwT81kKfALCVFRTPMrp6R6E
   artifact: blackchocobo
   force_update: true
+branches:
+  except:
+    - # Do not build tags that we create when we upload to GitHub Releases
+    - /^(?i:continuous)$/  
+

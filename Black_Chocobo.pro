@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+# //    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -17,8 +17,8 @@
 # Project created by QtCreator 2010-03-14T14:53:13
 # -------------------------------------------------
 TEMPLATE = app
-QT += core gui xml
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG += c++1z
+QT += core gui xml widgets
 
 SOURCES += \
 	main.cpp \
@@ -146,6 +146,7 @@ macx:{
 	#LIBS += -lcrypto								# Enable crypto lib
 	TARGET = Black_Chocobo
 	ICON = icon/bchoco_icon_osx.icns     #set program icon
+	QMAKE_CXXFLAGS += -stdlib=libc++
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
@@ -154,18 +155,17 @@ system (lrelease Black_Chocobo.pro)#release the .qm files
 unix:!macx:!symbian:!android {
 	#remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
 
-	#DEFINES += OPENSSL=1							# Enable openSSL support
-	#LIBS += -lcrypto								# Enable crypto lib
-	
-	TARGET = blackchocobo
-	target.path = /usr/bin
-	
-	langfiles.files= lang/*.qm
-	langfiles.path= /usr/share/blackchocobo/lang
-	
-	icon.files = icon/Black_Chocobo.png
-	icon.path = /usr/share/pixmaps
-	
+    DEFINES += OPENSSL=1							# Enable openSSL support
+    LIBS += -lcrypto								# Enable crypto lib
+
+    TARGET = blackchocobo
+    target.path = /usr/bin
+
+    langfiles.files= lang/*.qm
+    langfiles.path= /usr/share/blackchocobo/lang
+
+    icon.files = icon/Black_Chocobo.png
+    icon.path = /usr/share/pixmaps
 	desktop.files =Black_Chocobo.desktop
 	desktop.path = /usr/share/applications
 	
@@ -177,7 +177,14 @@ android:{
 	#LIBS += -L "" -lcrypto						# Enable crypto lib
 	TARGET = blackchocobo
 	target.path = /usr/bin
-	INSTALLS +=target
+
+    langfiles.files= lang/*.qm
+    langfiles.path= /usr/share/blackchocobo/lang
+
+    icon.files = icon/Black_Chocobo.png
+    icon.path = /usr/share/pixmaps
+
+    INSTALLS +=target langfiles icon
 }
 static:{ # everything below takes effect with CONFIG += static
 	CONFIG += static
