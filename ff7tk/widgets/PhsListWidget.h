@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -16,13 +16,9 @@
 #ifndef PHSLISTWIDGET_H
 #define PHSLISTWIDGET_H
 
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets>
-#else
-	#include <QtGui>
-#endif
+#include <QtWidgets>
 #include "DoubleCheckBox.h"
+
 /** \class PhsListWidget
  *	\brief Easily manage the who can be in the phs
  *
@@ -37,7 +33,7 @@ public:
 	 */
 	enum Box {PHSALLOWED=1/**< 1*/,PHSVISIBLE=2/**< 2*/};
 
-	explicit PhsListWidget(qreal Scale=1, QWidget * parent=0);
+    explicit PhsListWidget(QWidget * parent=0);
 
 signals:
 	/** \brief SIGNAL: The allowed box has changed its checked state
@@ -59,6 +55,7 @@ public slots:
 	 *	\param checked the new check state
 	 */
 	 void setChecked(int row,int box,bool checked);
+
 private slots:
 	void cb_cloud_allowedToggled(bool checked);
 	void cb_cloud_visibleToggled(bool checked);
@@ -93,7 +90,6 @@ private:
 	void init_display();
 	void connectAll();
 	void disconnectAll();
-	qreal scale;
 };
 
 #endif // PHSMENULIST_H

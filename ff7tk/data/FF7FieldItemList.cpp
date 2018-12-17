@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2018 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -17,9 +17,31 @@
 #include "FF7FieldItemList.h"
 #include <QCoreApplication>
 
-FF7FieldItemList::FF7FieldItemList(){}
-QList<quint16> FF7FieldItemList::offset(int index){return FILIST[index].Offset;}
-QList<quint8> FF7FieldItemList::bit(int index){return FILIST[index].Bit;}
-QStringList FF7FieldItemList::maps(int index){return FILIST[index].Maps;}
-QString FF7FieldItemList::text(int index){return qApp->translate("FieldItems",FILIST[index].Text.toLocal8Bit());}
-int FF7FieldItemList::count(){return sizeof(FILIST)/sizeof(FILIST[0]);}
+const QList<quint16>& FF7FieldItemList::offset(int index)
+{
+    index = std::clamp(index, 0, size() -1);
+    return _fieldItemList.at(index).Offset;
+}
+
+const QList<quint8>& FF7FieldItemList::bit(int index)
+{
+    index = std::clamp(index, 0, size() -1);
+    return _fieldItemList.at(index).Bit;
+}
+
+const QStringList& FF7FieldItemList::maps(int index)
+{
+    index = std::clamp(index, 0, size() -1);
+    return _fieldItemList.at(index).Maps;
+}
+
+QString FF7FieldItemList::text(int index)
+{
+    index = std::clamp(index, 0, size() -1);
+    return qApp->translate(_group.toLocal8Bit(), _fieldItemList.at(index).Text.toLocal8Bit());
+}
+
+const QList<FieldItem>& FF7FieldItemList::fieldItemList() const
+{
+    return _fieldItemList;
+}

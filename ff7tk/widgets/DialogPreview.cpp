@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -16,39 +16,84 @@
 
 #include "DialogPreview.h"
 
-DialogPreview::DialogPreview(QWidget *parent) : QLabel(parent)
+DialogPreview::DialogPreview(QWidget *parent) :
+    QLabel(parent)
+    , btn_ul(new QPushButton(this))
+    , btn_ur(new QPushButton(this))
+    , btn_ll(new QPushButton(this))
+    , btn_lr(new QPushButton(this))
 {
-    btn_ul = new QPushButton(this);
-    btn_ur = new QPushButton(this);
-    btn_ll = new QPushButton(this);
-    btn_lr = new QPushButton(this);
-    QString style=QString("QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(%1,%2,%3,96);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
-    btn_ul->setStyleSheet(style);
-    btn_ur->setStyleSheet(style);
-    btn_ll->setStyleSheet(style);
-    btn_lr->setStyleSheet(style);
+    QString style = QString("QPushButton:enabled{background-color: #00000000;border:0px;} QPushButton:hover{background-color: %1;}")
+            .arg(palette().highlight().color().name(QColor::HexRgb).insert(1,QString("60")));
+    setStyleSheet(style);
     setMinimumSize(60,30);
+
+    connect(btn_ul, &QPushButton::clicked, this, [this]{
+        QColor color = QColorDialog::getColor(upper_left,this);
+        if(color.isValid()) {
+            SetULeft(color);
+        }
+    });
+
+    connect(btn_ur, &QPushButton::clicked, this, [this]{
+        QColor color = QColorDialog::getColor(upper_right,this);
+        if(color.isValid()) {
+            SetLRight(color);
+        }
+    });
+
+    connect(btn_ll, &QPushButton::clicked, this, [this]{
+        QColor color = QColorDialog::getColor(lower_left,this);
+        if(color.isValid()) {
+            SetLLeft(color);
+        }
+    });
+
+    connect(btn_lr, &QPushButton::clicked, this, [this]{
+        QColor color = QColorDialog::getColor(lower_right,this);
+        if(color.isValid()) {
+            SetLRight(color);
+        }
+    });
+
     draw();
-    connect(btn_ul,SIGNAL(clicked()),this,SLOT(btn_ul_clicked()));
-    connect(btn_ur,SIGNAL(clicked()),this,SLOT(btn_ur_clicked()));
-    connect(btn_ll,SIGNAL(clicked()),this,SLOT(btn_ll_clicked()));
-    connect(btn_lr,SIGNAL(clicked()),this,SLOT(btn_lr_clicked()));
 }
 
-void DialogPreview::SetLLeft(QColor color)  {lower_left=color;  draw(); emit LL_ColorChanged(lower_left);}
-void DialogPreview::SetULeft(QColor color)  {upper_left=color;  draw(); emit UL_ColorChanged(upper_left);}
-void DialogPreview::SetLRight(QColor color) {lower_right=color; draw(); emit LR_ColorChanged(lower_right);}
-void DialogPreview::SetURight(QColor color) {upper_right=color; draw(); emit UR_ColorChanged(upper_right);}
+void DialogPreview::SetLLeft(QColor newColor)
+{
+    if(lower_left != newColor) {
+        lower_left = newColor;
+        emit LL_ColorChanged(newColor);
+        draw();
+    }
+}
 
-QColor DialogPreview::ll(){return lower_left;}
-QColor DialogPreview::lr(){return lower_right;}
-QColor DialogPreview::ul(){return upper_left;}
-QColor DialogPreview::ur(){return upper_right;}
+void DialogPreview::SetULeft(QColor newColor)
+{
+    if(upper_left != newColor) {
+        upper_left = newColor;
+        emit UL_ColorChanged(newColor);
+        draw();
+    }
+}
 
-void DialogPreview::btn_ll_clicked(){QColor color = QColorDialog::getColor(lower_left,this);    if(color.isValid()){SetLLeft(color);}}
-void DialogPreview::btn_lr_clicked(){QColor color = QColorDialog::getColor(lower_right,this); if(color.isValid()){SetLRight(color);}}
-void DialogPreview::btn_ul_clicked(){QColor color = QColorDialog::getColor(upper_left,this);  if(color.isValid()){SetULeft(color);}}
-void DialogPreview::btn_ur_clicked(){QColor color = QColorDialog::getColor(upper_right,this);if(color.isValid()){SetURight(color);}}
+void DialogPreview::SetLRight(QColor newColor)
+{
+    if(lower_right != newColor) {
+        lower_right = newColor;
+        emit LR_ColorChanged(newColor);
+        draw();
+    }
+}
+
+void DialogPreview::SetURight(QColor newColor)
+{
+    if(upper_right != newColor) {
+        upper_right = newColor;
+        emit UR_ColorChanged(newColor);
+        draw();
+    }
+}
 
 void DialogPreview::draw()
 {

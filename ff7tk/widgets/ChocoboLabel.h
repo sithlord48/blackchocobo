@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,15 +13,8 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef CHOCOBOLABEL_H
-#define CHOCOBOLABEL_H
-
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets>
-#else
-	#include <QtGui>
-#endif
+#pragma once
+#include <QtWidgets>
 
 /** \class ChocoboLabel
  * \brief A Label to display a single chocobo's brief data.
@@ -33,13 +26,13 @@ public:
 	/** \brief Create a new Chocobo label.
 	 *
 	 *  This Widget is designed to be part of a more complex chocobo manager (chocoboManager) it is useful on its own but will need to be
+     *  \param scale scale of pixmaps.
 	 * \param parent Parent of this widget
 	 * \param titleText Name for the box something like "Stable 1 "
 	 * \param occupied Is there a chocobo here? else set a blank label
 	 */
-	explicit ChocoboLabel(qreal Scale=1,QString titleText="",bool occupied=false,QWidget *parent = 0);
-	/** \brief style the checkboxes of this widget easily. */
-	void setCheckBoxStyle(QString styleSheet);
+    explicit ChocoboLabel(const QString &titleText = nullptr, bool occupied=false, QWidget *parent = nullptr);
+    ~ChocoboLabel() = default;
 signals:
 	void clicked();	/**< \brief Emit Signal: the widget has been clicked*/
 	void copy();	/**< \brief Emit Signal: the copy button pressed*/
@@ -54,31 +47,24 @@ public slots:
 	void setSex(bool Male); /**< \brief Set the sex of the chocobo. \param Male: is this chocobo a male? \sa setSex(int)*/
 	void setSex(int sex);  /**< \brief Set the sex of the chocobo. \param sex: 0:male 1:female \sa setSex(bool)*/
 	void setOccupied(bool occupied);/**< \brief Set if the stall is occupied \param occupied: is this stable occupied?*/
-	void setTitle(QString title); /**< \brief The occupied checkbox has been toggled \param title: String that will be shown as labels title*/
+    void setTitle(QString title); /**< \brief The occupied checkbox has been toggled \param title: String that will be shown as labels title*/
 	void setFontSize(int fontSize); /**< \brief Set the size of the labels font \param fontSize: pointSize of the font for this label*/
 	void clearLabel(void); /**< \brief Clear the labels data */
 	void setHoverColorStyle(QString backgroundColor); /**< \brief Set the style for when you hover \param backgroundColor A valid color for a style sheet either a predefined color or rgb(r,g,b) style string */
 	bool isOccupied(void); /**< \brief occupied state \return true if occupied*/
-private slots:
-	void chkOccupiedToggled(bool occupied); /**< \brief occupied clicked \param occupied state of checkbox */
-	void copyPushed(void); /**< \brief copy has been pressed */
-	void pastePushed(void);/**< \brief paste has been pressed */
-	void removePushed(void);/**< \brief remove has been pressed */
 private:
 	void enable(bool enabled); /**< \brief enable/disable inner part of the form when needed \param enabled enable the lower frame?*/
 	bool event(QEvent *ev);
 	bool isEnabled; /**< \brief isEnabled hold if enabled */
-	QPushButton *btnCopy; /**< \brief copy button */
-	QPushButton *btnPaste; /**< \brief paste button */
-	QPushButton *btnRemove; /**< \brief remove button */
-	QCheckBox *chkOccupied; /**< \brief checkbox to show if occupied */
-	QLabel *lblType;/**< \brief isEnabled hold if enabled */
-	QLabel *lblName;/**< \brief label to show name */
-	QLabel *lblRank;/**< \brief label to show rank */
-	QLabel *lblSex;/**< \brief label to show sex*/
-	QFrame *innerFrame;/**< \brief inner frame of widget contains all the chocobo into */
-	QFrame *outerFrame;/**< \brief outer frame of widget contains the label checkbox, copy,paste,remove buttons*/
+    QPushButton *btnCopy = nullptr; /**< \brief copy button */
+    QPushButton *btnPaste = nullptr; /**< \brief paste button */
+    QPushButton *btnRemove = nullptr; /**< \brief remove button */
+    QCheckBox *chkOccupied = nullptr; /**< \brief checkbox to show if occupied */
+    QLabel *lblType = nullptr;/**< \brief label to show type */
+    QLabel *lblName = nullptr;/**< \brief label to show name */
+    QLabel *lblRank = nullptr;/**< \brief label to show rank */
+    QLabel *lblSex = nullptr;/**< \brief label to show sex*/
+    QFrame *innerFrame = nullptr;/**< \brief inner frame of widget contains all the chocobo into */
+    QFrame *outerFrame = nullptr;/**< \brief outer frame of widget contains the label checkbox, copy,paste,remove buttons*/
 	QString SelectedBkStyle;/**< \brief style for background when selected */
-	qreal scale;
 };
-#endif // ChocoboLABEL_H

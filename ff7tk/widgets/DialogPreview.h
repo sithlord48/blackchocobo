@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2018 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,54 +14,39 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#ifndef DIALOGPREVIEW_H
-#define DIALOGPREVIEW_H
-
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-    #include <QtWidgets>
-#else
-    #include <QtGui>
-#endif
+#pragma once
+#include <QtWidgets>
 
 class DialogPreview : public QLabel
 {
     Q_OBJECT
 public:
-    DialogPreview(QWidget *parent = 0);
-    void SetLLeft(QColor);
-    void SetULeft(QColor);
-    void SetLRight(QColor);
-    void SetURight(QColor);
-    QColor ll();
-    QColor lr();
-    QColor ul();
-    QColor ur();
-    QPushButton *btn_ul;
-    QPushButton *btn_ur;
-    QPushButton *btn_ll;
-    QPushButton *btn_lr;
+    DialogPreview(QWidget *parent = nullptr);
+    ~DialogPreview() = default;
+    inline QColor ll(){return lower_left;}
+    inline QColor lr(){return lower_right;}
+    inline QColor ul(){return upper_left;}
+    inline QColor ur(){return upper_right;};
+    void SetLLeft(QColor newColor);
+    void SetULeft(QColor newColor);
+    void SetLRight(QColor newColor);
+    void SetURight(QColor newColor);
+signals:
+     void LL_ColorChanged(QColor color);
+     void LR_ColorChanged(QColor color);
+     void UL_ColorChanged(QColor color);
+     void UR_ColorChanged(QColor color);
 private:
     void draw();
     QColor upper_left;
     QColor upper_right;
     QColor lower_left;
     QColor lower_right;
-
-
+    QPushButton *btn_ul = nullptr;
+    QPushButton *btn_ur = nullptr;
+    QPushButton *btn_ll = nullptr;
+    QPushButton *btn_lr = nullptr;
 protected:
     void resizeEvent(QResizeEvent*);
-private slots:
-     void btn_ul_clicked();
-     void btn_ur_clicked();
-     void btn_ll_clicked();
-     void btn_lr_clicked();
-signals:
-     void LL_ColorChanged(QColor color);
-     void LR_ColorChanged(QColor color);
-     void UL_ColorChanged(QColor color);
-     void UR_ColorChanged(QColor color);
-
 };
 
-#endif

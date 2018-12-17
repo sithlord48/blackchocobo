@@ -21,48 +21,51 @@
 QTimer SaveIcon::timer;
 
 SaveIcon::SaveIcon()
-	: nbFrames(0), curFrame(0)
+    : nbFrames(0)
 {
 }
 
-SaveIcon::SaveIcon(QByteArray data, quint8 nbFrames)
-	: curFrame(0)
+SaveIcon::SaveIcon(const QByteArray &data, quint8 nbFrames)
 {
 	setAll(data, nbFrames);
 }
-SaveIcon::SaveIcon(QList<QByteArray> data)
-	: curFrame(0)
+
+SaveIcon::SaveIcon(const QList<QByteArray> &data)
 {
 	setAll(data);
 }
-void SaveIcon::setAll(QByteArray data, quint8 nbFrames)
+
+void SaveIcon::setAll(const QByteArray &data, quint8 nbFrames)
 {
-	this->data = data;
-	this->nbFrames = nbFrames;
-	if(nbFrames>1)
-	{
+    this->data = data;
+    this->nbFrames = nbFrames;
+    if(nbFrames > 1) {
 		connect(&timer, SIGNAL(timeout()), SLOT(nextFrame()));
 		timer.start(160);
 	}
 }
 
-void SaveIcon::setAll(QList<QByteArray> data)
+void SaveIcon::setAll(const QList<QByteArray> &data)
 {
 	this->data.clear();
-	this->nbFrames=data.size();
-	for(int i=0;i < this->nbFrames;i++)
-	{
+    nbFrames = quint8(data.size());
+    for(int i= 0; i < nbFrames; i++) {
 		this->data.append(data.at(i));
 	}
-	if(nbFrames>1)
-	{
+    if(nbFrames>1) {
 		connect(&timer, SIGNAL(timeout()), SLOT(nextFrame()));
 		timer.start(160);
 	}
 }
+
+const QByteArray& SaveIcon::save()
+{
+    return data;
+}
+
 QByteArray SaveIcon::sauver()
 {
-	return data;
+    return data;
 }
 
 QPixmap SaveIcon::icon(bool chocobo_world_icon)
@@ -70,18 +73,16 @@ QPixmap SaveIcon::icon(bool chocobo_world_icon)
 	quint16 i;
 	quint8 y=0, x=0;
 
-	if(data.isEmpty())	return QPixmap();
+    if(data.isEmpty()) return QPixmap();
 
-	if(!chocobo_world_icon)
-	{
+	if(!chocobo_world_icon)	{
 		//palette
 		const char *access_data = data.constData();
 		QList<QRgb> colors;
 		quint16 color;
-		for(i=0 ; i<16 ; ++i)
-		{
+        for(i=0 ; i<16 ; ++i) {
 			memcpy(&color, access_data, 2);
-			colors.append(qRgb((color & 31)*8.2258, (color>>5 & 31)*8.2258, (color>>10 & 31)*8.2258));
+            colors.append(qRgb(int((color & 31)*8.2258), int((color>>5 & 31)*8.2258), int((color>>10 & 31)*8.2258)));
 			access_data += 2;
 		}
 
@@ -91,66 +92,54 @@ QPixmap SaveIcon::icon(bool chocobo_world_icon)
 
 		if(data.size()<lastPos)	return QPixmap();
 
-		for(i=firstPos ; i<lastPos ; ++i)
-		{
-			index = (quint8)data.at(i);
-
+        for(i=firstPos ; i<lastPos ; ++i) {
+            index = quint8(data.at(i));
 			image.setPixel(x, y, colors.at(index & 0xF));
-
-			if(x == 15)
-			{
+            if(x == 15)	{
 				x = 0;
 				++y;
-			}
-			else
+            } else {
 				++x;
-
+            }
 			image.setPixel(x, y, colors.at(index >> 4));
 
-			if(x == 15)
-			{
+            if(x == 15)	{
 				x = 0;
 				++y;
-			}
-			else
+            } else {
 				++x;
+            }
 		}
-
 		return QPixmap::fromImage(image);
 	}
 
-	if(data.size()!=288)	return QPixmap();
+    if(data.size()!=288) return QPixmap();
 
-	QImage image(32, 32, QImage::Format_Mono);
+    QImage image(32, 32, QImage::Format_Mono);
 	quint8 j, curPx;
 
-	for(i=160 ; i<288 ; ++i)
-	{
-		curPx = (quint8)data.at(i);
-		for(j=0 ; j<8 ; ++j)
-		{
+    for(i=160 ; i<288 ; ++i) {
+        curPx = quint8(data.at(i));
+        for(j=0 ; j<8 ; ++j) {
 			image.setPixel(x, y, !((curPx >> j) & 1));
-
-			if(x == 31)
-			{
+            if(x == 31) {
 				x = 0;
 				++y;
-			}
-			else
+            } else {
 				++x;
+            }
 		}
 	}
-
 	return QPixmap::fromImage(image);
 }
 
 void SaveIcon::nextFrame()
 {
-	if(nbFrames==0)	return;
+    if(nbFrames != 0) {
+        curFrame = (curFrame + 1) % nbFrames;
+        QPixmap pix = icon();
 
-	curFrame = (curFrame + 1) % nbFrames;
-	QPixmap pix = icon();
-
-	if(!pix.isNull())
-		emit nextIcon(pix);
+        if(!pix.isNull())
+            emit nextIcon(pix);
+    }
 }

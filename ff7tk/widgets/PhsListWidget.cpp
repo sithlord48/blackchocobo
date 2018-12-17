@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,12 +14,11 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "PhsListWidget.h"
-PhsListWidget::PhsListWidget(qreal Scale, QWidget * parent) :
+PhsListWidget::PhsListWidget(QWidget * parent) :
 	QWidget(parent)
 {
-	scale=Scale;
 	init_display();
-	connectAll();
+    connectAll();
 }
 void PhsListWidget::init_display()
 {
@@ -29,47 +28,47 @@ void PhsListWidget::init_display()
 	layout->addWidget(lbl_phs);
 	layout->setSpacing(3);
 	layout->setContentsMargins(0,0,0,0);
-	cb_cloud= new DoubleCheckBox(QString(tr("Cloud")),scale);
+    cb_cloud= new DoubleCheckBox(QString(tr("Cloud")));
 	cb_cloud->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cloud->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cloud);
 
-	cb_barret= new DoubleCheckBox(QString(tr("Barret")),scale);
+    cb_barret= new DoubleCheckBox(QString(tr("Barret")));
 	cb_barret->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_barret->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_barret);
 
-	cb_tifa= new DoubleCheckBox(QString(tr("Tifa")),scale);
+    cb_tifa= new DoubleCheckBox(QString(tr("Tifa")));
 	cb_tifa->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_tifa->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_tifa);
 
-	cb_aerith= new DoubleCheckBox(QString(tr("Aerith")),scale);
+    cb_aerith= new DoubleCheckBox(QString(tr("Aerith")));
 	cb_aerith->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_aerith->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_aerith);
 
-	cb_red= new DoubleCheckBox(QString(tr("Red XIII")),scale);
+    cb_red= new DoubleCheckBox(QString(tr("Red XIII")));
 	cb_red->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_red->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_red);
 
-	cb_yuffie= new DoubleCheckBox(QString(tr("Yuffie")),scale);
+    cb_yuffie= new DoubleCheckBox(QString(tr("Yuffie")));
 	cb_yuffie->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_yuffie->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_yuffie);
 
-	cb_cait= new DoubleCheckBox(QString(tr("Cait Sith")),scale);
+    cb_cait= new DoubleCheckBox(QString(tr("Cait Sith")));
 	cb_cait->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cait->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cait);
 
-	cb_vincent= new DoubleCheckBox(QString(tr("Vincent")),scale);
+    cb_vincent= new DoubleCheckBox(QString(tr("Vincent")));
 	cb_vincent->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_vincent->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_vincent);
 
-	cb_cid= new DoubleCheckBox(QString(tr("Cid")),scale);
+    cb_cid= new DoubleCheckBox(QString(tr("Cid")));
 	cb_cid->setBoxToolTip(1,QString(tr("Allowed")));
 	cb_cid->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cid);
@@ -117,43 +116,43 @@ void PhsListWidget::cb_cid_visibleToggled(bool checked){emit(visibleToggled(8,ch
 
 void PhsListWidget::connectAll()
 {
-	connect(cb_cloud,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cloud_allowedToggled(bool)));
-	connect(cb_cloud,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cloud_visibleToggled(bool)));
-	connect(cb_barret,SIGNAL(box1_toggled(bool)),this,SLOT(cb_barret_allowedToggled(bool)));
-	connect(cb_barret,SIGNAL(box2_toggled(bool)),this,SLOT(cb_barret_visibleToggled(bool)));
-	connect(cb_tifa,SIGNAL(box1_toggled(bool)),this,SLOT(cb_tifa_allowedToggled(bool)));
-	connect(cb_tifa,SIGNAL(box2_toggled(bool)),this,SLOT(cb_tifa_visibleToggled(bool)));
-	connect(cb_aerith,SIGNAL(box1_toggled(bool)),this,SLOT(cb_aerith_allowedToggled(bool)));
-	connect(cb_aerith,SIGNAL(box2_toggled(bool)),this,SLOT(cb_aerith_visibleToggled(bool)));
-	connect(cb_red,SIGNAL(box1_toggled(bool)),this,SLOT(cb_red_allowedToggled(bool)));
-	connect(cb_red,SIGNAL(box2_toggled(bool)),this,SLOT(cb_red_visibleToggled(bool)));
-	connect(cb_yuffie,SIGNAL(box1_toggled(bool)),this,SLOT(cb_yuffie_allowedToggled(bool)));
-	connect(cb_yuffie,SIGNAL(box2_toggled(bool)),this,SLOT(cb_yuffie_visibleToggled(bool)));
-	connect(cb_cait,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cait_allowedToggled(bool)));
-	connect(cb_cait,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cait_visibleToggled(bool)));
-	connect(cb_vincent,SIGNAL(box1_toggled(bool)),this,SLOT(cb_vincent_allowedToggled(bool)));
-	connect(cb_vincent,SIGNAL(box2_toggled(bool)),this,SLOT(cb_vincent_visibleToggled(bool)));
-	connect(cb_cid,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cid_allowedToggled(bool)));
-	connect(cb_cid,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cid_visibleToggled(bool)));
+    connect(cb_cloud, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cloud_allowedToggled);
+    connect(cb_cloud, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cloud_visibleToggled);
+    connect(cb_barret, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_barret_allowedToggled);
+    connect(cb_barret, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_barret_visibleToggled);
+    connect(cb_tifa, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_tifa_allowedToggled);
+    connect(cb_tifa, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_tifa_visibleToggled);
+    connect(cb_aerith, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_aerith_allowedToggled);
+    connect(cb_aerith, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_aerith_visibleToggled);
+    connect(cb_red, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_red_allowedToggled);
+    connect(cb_red, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_red_visibleToggled);
+    connect(cb_yuffie, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_yuffie_allowedToggled);
+    connect(cb_yuffie, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_yuffie_visibleToggled);
+    connect(cb_cait, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cait_allowedToggled);
+    connect(cb_cait, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cait_visibleToggled);
+    connect(cb_vincent, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_vincent_allowedToggled);
+    connect(cb_vincent, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_vincent_visibleToggled);
+    connect(cb_cid, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cid_allowedToggled);
+    connect(cb_cid, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cid_visibleToggled);
 }
 void PhsListWidget::disconnectAll()
 {
-	disconnect(cb_cloud,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cloud_allowedToggled(bool)));
-	disconnect(cb_cloud,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cloud_visibleToggled(bool)));
-	disconnect(cb_barret,SIGNAL(box1_toggled(bool)),this,SLOT(cb_barret_allowedToggled(bool)));
-	disconnect(cb_barret,SIGNAL(box2_toggled(bool)),this,SLOT(cb_barret_visibleToggled(bool)));
-	disconnect(cb_tifa,SIGNAL(box1_toggled(bool)),this,SLOT(cb_tifa_allowedToggled(bool)));
-	disconnect(cb_tifa,SIGNAL(box2_toggled(bool)),this,SLOT(cb_tifa_visibleToggled(bool)));
-	disconnect(cb_aerith,SIGNAL(box1_toggled(bool)),this,SLOT(cb_aerith_allowedToggled(bool)));
-	disconnect(cb_aerith,SIGNAL(box2_toggled(bool)),this,SLOT(cb_aerith_visibleToggled(bool)));
-	disconnect(cb_red,SIGNAL(box1_toggled(bool)),this,SLOT(cb_red_allowedToggled(bool)));
-	disconnect(cb_red,SIGNAL(box2_toggled(bool)),this,SLOT(cb_red_visibleToggled(bool)));
-	disconnect(cb_yuffie,SIGNAL(box1_toggled(bool)),this,SLOT(cb_yuffie_allowedToggled(bool)));
-	disconnect(cb_yuffie,SIGNAL(box2_toggled(bool)),this,SLOT(cb_yuffie_visibleToggled(bool)));
-	disconnect(cb_cait,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cait_allowedToggled(bool)));
-	disconnect(cb_cait,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cait_visibleToggled(bool)));
-	disconnect(cb_vincent,SIGNAL(box1_toggled(bool)),this,SLOT(cb_vincent_allowedToggled(bool)));
-	disconnect(cb_vincent,SIGNAL(box2_toggled(bool)),this,SLOT(cb_vincent_visibleToggled(bool)));
-	disconnect(cb_cid,SIGNAL(box1_toggled(bool)),this,SLOT(cb_cid_allowedToggled(bool)));
-	disconnect(cb_cid,SIGNAL(box2_toggled(bool)),this,SLOT(cb_cid_visibleToggled(bool)));
+    disconnect(cb_cloud, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cloud_allowedToggled);
+    disconnect(cb_cloud, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cloud_visibleToggled);
+    disconnect(cb_barret, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_barret_allowedToggled);
+    disconnect(cb_barret, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_barret_visibleToggled);
+    disconnect(cb_tifa, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_tifa_allowedToggled);
+    disconnect(cb_tifa, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_tifa_visibleToggled);
+    disconnect(cb_aerith, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_aerith_allowedToggled);
+    disconnect(cb_aerith, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_aerith_visibleToggled);
+    disconnect(cb_red, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_red_allowedToggled);
+    disconnect(cb_red, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_red_visibleToggled);
+    disconnect(cb_yuffie, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_yuffie_allowedToggled);
+    disconnect(cb_yuffie, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_yuffie_visibleToggled);
+    disconnect(cb_cait, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cait_allowedToggled);
+    disconnect(cb_cait, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cait_visibleToggled);
+    disconnect(cb_vincent, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_vincent_allowedToggled);
+    disconnect(cb_vincent, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_vincent_visibleToggled);
+    disconnect(cb_cid, &DoubleCheckBox::box1_toggled, this, &PhsListWidget::cb_cid_allowedToggled);
+    disconnect(cb_cid, &DoubleCheckBox::box2_toggled, this, &PhsListWidget::cb_cid_visibleToggled);
 }

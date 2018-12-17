@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -17,50 +17,73 @@
 #include "FF7Materia.h"
 #include <QCoreApplication>
 
-MATERIA Materias(int id)
+const FF7Materia::MATERIA& FF7Materia::Materias(int id)
 {
-	if(id>=0 && id<=0x5A){return MateriasList[id];}
-	else {return EmptyMateria;}
+    if (id >= 0 && id <= 0x5A) {
+        return _materiaList.at(id);
+    }
+    return _emptyMateria;
 }
-QString FF7Materia::name(int id){return qApp->translate("Materia_Names",Materias(id).name.toLocal8Bit());}
-QString FF7Materia::statString(int id){return qApp->translate("Materia_Stats",Materias(id).stats.toLocal8Bit());}
-qint8 FF7Materia::statSTR(int id){return Materias(id).str;}
-qint8 FF7Materia::statVIT(int id){return Materias(id).vit;}
-qint8 FF7Materia::statDEX(int id){return Materias(id).dex;}
-qint8 FF7Materia::statMAG(int id){return Materias(id).mag;}
-qint8 FF7Materia::statSPI(int id){return Materias(id).spi;}
-qint8 FF7Materia::statLCK(int id){return Materias(id).lck;}
-qint8 FF7Materia::statHP(int id){return Materias(id).hp;}
-qint8 FF7Materia::statMP(int id){return Materias(id).mp;}
-qint8 FF7Materia::levels(int id){return Materias(id).levels;}
-quint8 FF7Materia::type(int id){return Materias(id).type;}
-qint32 FF7Materia::ap(int id,int lvl){return Materias(id).ap[lvl];}
-QIcon FF7Materia::icon(int id){return QIcon(QPixmap(Materias(id).imageString));}
-QPixmap FF7Materia::pixmap(int id){return QPixmap(Materias(id).imageString);}
-QImage FF7Materia::image(int id){return QImage(Materias(id).imageString);}
-QImage FF7Materia::imageEmptyStar(int id){return QImage(Materias(id).emptyStarString);}
-QImage FF7Materia::imageFullStar(int id){return QImage(Materias(id).fullStarString);}
-QIcon FF7Materia::iconAllMateria(){return QIcon(QPixmap(":/materia/all"));}
-QImage FF7Materia::imageAllMateria(){return QImage(":/materia/all");}
-QString FF7Materia::enemySkill(int i){return qApp->translate("E_skills",ESkills[i].toLocal8Bit());}
-QString FF7Materia::element(int i){return qApp->translate("Elements",Materias(i).elemental.toLocal8Bit());}
-QStringList FF7Materia::skills(int i)
+
+qint32 FF7Materia::ap(int id, int lvl)
 {
-	QStringList translated_list;
-	for(int j=0;j<Materias(i).skills.count();j++)
-	{
-		translated_list.append(qApp->translate("Materia_Skills",Materias(i).skills.at(j).toLocal8Bit()));
-	}
-	return translated_list;
+    lvl = std::clamp(lvl, 0 , 4);
+    return Materias(id).ap.at(lvl);
 }
-QStringList FF7Materia::status(int i)
+
+QString FF7Materia::name(int id)
 {
-	QStringList translated_list;
-	for (int j=0;j<Materias(i).status.count();j++)
-	{
-		translated_list.append(qApp->translate("Status",Materias(i).status.at(j).toLocal8Bit()));
-	}
-	return translated_list;
+    return qApp->translate(_nameGroup.toLocal8Bit(), Materias(id).name.toLocal8Bit());
 }
-quint32 FF7Materia::ap2num(quint8 ap[3]){return (ap[0] | (ap[1] << 8) | (ap[2]<<16));}
+
+QString FF7Materia::statString(int id)
+{
+    return qApp->translate(_statsGroup.toLocal8Bit(), Materias(id).stats.toLocal8Bit());
+}
+
+QString FF7Materia::enemySkill(int id)
+{
+    id = std::clamp(id, 0, _enemySkills.size() -1);
+    return qApp->translate(_eskillGroup.toLocal8Bit(), _enemySkills.at(id).toLocal8Bit());
+}
+
+QString FF7Materia::element(int id)
+{
+    return qApp->translate(_elementGroup.toLocal8Bit(), Materias(id).elemental.toLocal8Bit());
+}
+
+QStringList FF7Materia::skills(int id)
+{
+    QStringList translated_list;
+    for(const QString &skill : Materias(id).skills) {
+        translated_list.append(qApp->translate(_skillGroup.toLocal8Bit(), skill.toLocal8Bit()));
+    }
+    return translated_list;
+}
+
+QStringList FF7Materia::status(int id)
+{
+    QStringList translated_list;
+    for(const QString& stat : Materias(id).status) {
+        translated_list.append(qApp->translate(_statusGroup.toLocal8Bit(),  stat.toLocal8Bit()));
+    }
+    return translated_list;
+}
+QString FF7Materia::iconResource(int id)
+{
+    QString temp = Materias(id).imageString;
+    return temp.remove(QStringLiteral(":/"));
+}
+
+QString FF7Materia::fullStarResource(int id)
+{
+    QString temp = Materias(id).fullStarString;
+    return temp.remove(QStringLiteral(":/"));
+}
+
+QString FF7Materia::emptyStartResource(int id)
+{
+    QString temp = Materias(id).emptyStarString;
+    return temp.remove(QStringLiteral(":/"));
+}
 

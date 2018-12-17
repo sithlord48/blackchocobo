@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -15,45 +15,48 @@
 /****************************************************************************/
 
 #include "DoubleCheckBox.h"
-DoubleCheckBox::DoubleCheckBox(qreal Scale,QWidget *parent) :
+DoubleCheckBox::DoubleCheckBox(QWidget *parent) :
 	QWidget(parent)
 {
-	scale=Scale;
-	init_display();
-	init_connections();
+    init_display();
 }
-DoubleCheckBox::DoubleCheckBox(const QString &text,qreal Scale,QWidget *parent ) :
-	QWidget(parent)
+
+DoubleCheckBox::DoubleCheckBox(const QString &text, QWidget *parent ) :
+    QWidget(parent)
 {
-	scale=Scale;
-	init_display();
-	init_connections();
-	setText(text);
+    init_display();
+    setText(text);
 }
 void DoubleCheckBox::init_display()
 {
-	cb_one = new QCheckBox;
-	cb_two = new QCheckBox;
-	label = new QLabel;
-	cb_one->setMaximumSize(22*scale,22*scale);
-	cb_two->setMaximumSize(22*scale,22*scale);
-	QHBoxLayout *boxLayout = new QHBoxLayout;
-	boxLayout->addWidget(cb_one);
+    QString style = QStringLiteral("QCheckBox::indicator{width: %1px; height: %1px;}").arg(fontMetrics().height());
+    cb_one = new QCheckBox(this);
+    cb_one->setStyleSheet(style);
+    connect(cb_one, &QCheckBox::toggled, this, &DoubleCheckBox::box1_toggled);
+
+    cb_two = new QCheckBox(this);
+    cb_two->setStyleSheet(style);
+    connect(cb_two, &QCheckBox::toggled, this, &DoubleCheckBox::box2_toggled);
+    label = new QLabel(this);
+
+    auto boxLayout = new QHBoxLayout;
+    boxLayout->addWidget(cb_one);
 	boxLayout->addWidget(cb_two);
 	boxLayout->setContentsMargins(0,0,0,0);
 	boxLayout->setSpacing(2);
-	QHBoxLayout *Final = new QHBoxLayout;
-	Final->addWidget(label);
+
+    auto Final = new QHBoxLayout;
+    Final->addWidget(label);
 	Final->addLayout(boxLayout);
 	Final->setContentsMargins(0,0,0,0);
 	this->setLayout(Final);
 }
-void DoubleCheckBox::init_connections()
+
+void DoubleCheckBox::setText(const QString& text)
 {
-	connect(cb_one,SIGNAL(toggled(bool)),this,SLOT(cb_one_toggled(bool)));
-	connect(cb_two,SIGNAL(toggled(bool)),this,SLOT(cb_two_toggled(bool)));
+    label->setText(text);
 }
-void DoubleCheckBox::setText(QString text){label->setText(text);}
+
 void DoubleCheckBox::setChecked(int box, bool checked)
 {
 	switch(box)
@@ -63,19 +66,17 @@ void DoubleCheckBox::setChecked(int box, bool checked)
 		default: break;
 	}
 }
-bool DoubleCheckBox::checked(int box)
+bool DoubleCheckBox::isChecked(int box)
 {
 	switch(box)
 	{
-		case 1: return cb_one->isChecked(); break;
-		case 2: return cb_two->isChecked(); break;
-		default: return false; break;
+        case 1: return cb_one->isChecked();
+        case 2: return cb_two->isChecked();
+        default: return false;
 	}
 }
-void DoubleCheckBox::cb_one_toggled(bool checked){emit box1_toggled(checked);}
-void DoubleCheckBox::cb_two_toggled(bool checked){emit box2_toggled(checked);}
 
-void DoubleCheckBox::setBoxToolTip(int box,QString text)
+void DoubleCheckBox::setBoxToolTip(int box, const QString& text)
 {
 	switch(box)
 	{
@@ -84,4 +85,8 @@ void DoubleCheckBox::setBoxToolTip(int box,QString text)
 		default: break;
 	}
 }
-void DoubleCheckBox::setToolTip(QString text){label->setToolTip(text);}
+void DoubleCheckBox::setToolTip(const QString& text)
+{
+    label->setToolTip(text);
+}
+

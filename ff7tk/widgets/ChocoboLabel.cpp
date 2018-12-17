@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -18,53 +18,69 @@
 
 bool ChocoboLabel::event(QEvent *ev)
 {
-	if (ev->type()==QEvent::MouseButtonPress && isEnabled){emit(clicked());return true;}
-	else{return false;}
+    if (ev->type() == QEvent::MouseButtonPress && isEnabled) {
+        emit(clicked());
+        return true;
+    } else {
+        return false;
+    }
 }
-ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *parent) :
+
+ChocoboLabel::ChocoboLabel(const QString &titleText,bool occupied,QWidget *parent) :
 	QWidget(parent)
+    , lblType(new QLabel(this))
+    , lblName(new QLabel(this))
+    , lblRank(new QLabel(this))
+    , lblSex(new QLabel(this))
 {
-	scale = Scale;
-	lblType = new QLabel("");
-	lblType->setFixedSize(48*scale,48*scale);
+    QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
+    lblType->setScaledContents(true);
+    lblType->setFixedSize(fontMetrics().height() * 3, fontMetrics().height() * 3);
 
-	lblName = new QLabel("");
-	lblSex = new QLabel("");
-	lblRank = new QLabel("");
-
-	chkOccupied = new QCheckBox();
+    chkOccupied = new QCheckBox(this);
 	chkOccupied->setText(titleText);
-	chkOccupied->setMaximumHeight(20*scale);
 	chkOccupied->setProperty("HoverStyled",QVariant(true));
+    chkOccupied->setStyleSheet(QStringLiteral("QCheckBox::indicator{width: %1px; height: %1px;}").arg(QString::number(fontMetrics().height())));
+    chkOccupied->setChecked(occupied);
+    connect(chkOccupied, &QCheckBox::toggled, this, [this](bool checked){
+        emit occupiedToggled(checked);
+        enable(checked);
+    });
 
-	btnCopy = new QPushButton();
-	btnCopy->setFlat(true);
-	btnCopy->setFixedSize(20*scale,20*scale);
-	btnCopy->setIconSize(QSize(16*scale,16*scale));
+    btnCopy = new QPushButton(this);
+    btnCopy->setFlat(true);
 	btnCopy->setToolTip(QString(tr("Copy")));
 	btnCopy->setProperty("HoverStyled",QVariant(true));
 	btnCopy->setIcon(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy")));
+    btnCopy->setIconSize(iconSize);
+    btnCopy->setMaximumSize(iconSize);
+    connect (btnCopy, &QPushButton::clicked, this, &ChocoboLabel::copy);
 
-	btnPaste = new QPushButton();
-	btnPaste->setFlat(true);
-	btnPaste->setFixedSize(20*scale,20*scale);
-	btnPaste->setIconSize(QSize(16*scale,16*scale));
+    btnPaste = new QPushButton(this);
+    btnPaste->setFlat(true);
 	btnPaste->setToolTip(QString(tr("Paste")));
 	btnPaste->setProperty("HoverStyled",QVariant(true));
 	btnPaste->setIcon(QIcon::fromTheme(QString("edit-paste"),QPixmap(":/common/edit-paste")));
+    btnPaste->setIconSize(iconSize);
+    btnPaste->setMaximumSize(iconSize);
+    connect (btnPaste, &QPushButton::clicked, this, &ChocoboLabel::paste);
 
-	btnRemove = new QPushButton();
-	btnRemove->setFlat(true);
-	btnRemove->setFixedSize(20*scale,20*scale);
-	btnRemove->setIconSize(QSize(16*scale,16*scale));
+    btnRemove = new QPushButton(this);
+    btnRemove->setFlat(true);
 	btnRemove->setToolTip(QString(tr("Remove")));
 	btnRemove->setProperty("HoverStyled",QVariant(true));
 	btnRemove->setIcon(QIcon::fromTheme(QString("edit-clear"),QPixmap(":/common/edit-clear")));
+    btnRemove->setIconSize(iconSize);
+    btnRemove->setMaximumSize(iconSize);
+    connect(btnRemove, &QPushButton::clicked, this, [this]{
+        emit remove();
+        clearLabel();
+        chkOccupied->setChecked(false);
+    });
 
     setFontSize(14);
-	chkOccupied->setChecked(occupied);
 
-	QHBoxLayout *btnLayout = new QHBoxLayout;
+    auto btnLayout = new QHBoxLayout;
 	btnLayout->setContentsMargins(0,0,0,0);
 	btnLayout->addWidget(chkOccupied);
 	btnLayout->addWidget(btnCopy);
@@ -72,25 +88,25 @@ ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *
 	btnLayout->addWidget(btnRemove);
 	btnLayout->setSpacing(1);
 
-	QHBoxLayout *LeftTopLayout = new QHBoxLayout;
+    auto LeftTopLayout = new QHBoxLayout;
 	LeftTopLayout->setContentsMargins(0,0,0,0);
 	LeftTopLayout->addWidget(lblName);
 	LeftTopLayout->addWidget(lblSex);
 	LeftTopLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred));
 	LeftTopLayout->setSpacing(1);
 
-	QHBoxLayout *RightTopLayout = new QHBoxLayout;
+    auto RightTopLayout = new QHBoxLayout;
 	RightTopLayout->setContentsMargins(0,0,0,0);
 	RightTopLayout->addWidget(lblRank);
 	RightTopLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Preferred));
 	RightTopLayout->setSpacing(1);
 
-	QVBoxLayout *rightSideLayout = new QVBoxLayout;
+    auto rightSideLayout = new QVBoxLayout;
 	rightSideLayout->setContentsMargins(0,0,0,0);
 	rightSideLayout->addLayout(LeftTopLayout);
 	rightSideLayout->addLayout(RightTopLayout);
 
-	QHBoxLayout *innerFrameLayout = new QHBoxLayout;
+    auto innerFrameLayout = new QHBoxLayout;
 	innerFrameLayout->addWidget(lblType);
 	innerFrameLayout->addLayout(rightSideLayout);
 
@@ -98,7 +114,7 @@ ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *
 	innerFrame->setLayout(innerFrameLayout);
 	innerFrame->setProperty("HoverStyled",QVariant(true));
 
-	QVBoxLayout *outerFrameLayout = new QVBoxLayout;
+    auto outerFrameLayout = new QVBoxLayout;
 	outerFrameLayout->setContentsMargins(3,3,3,3);
 	outerFrameLayout->addLayout(btnLayout);
 	outerFrameLayout->addWidget(innerFrame);
@@ -106,17 +122,13 @@ ChocoboLabel::ChocoboLabel(qreal Scale,QString titleText,bool occupied,QWidget *
 	outerFrame = new QFrame;
 	outerFrame->setLayout(outerFrameLayout);
 
-	QVBoxLayout *finalLayout= new QVBoxLayout;
+    auto finalLayout= new QVBoxLayout;
 	finalLayout->setContentsMargins(0,0,0,0);
 	finalLayout->addWidget(outerFrame);
 
 	this->setLayout(finalLayout);
 	this->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Minimum);
 	enable(occupied);
-	connect(chkOccupied,SIGNAL(toggled(bool)),this,SLOT(chkOccupiedToggled(bool)));
-	connect(btnCopy,SIGNAL(clicked()),this,SLOT(copyPushed()));
-	connect(btnPaste,SIGNAL(clicked()),this,SLOT(pastePushed()));
-	connect(btnRemove,SIGNAL(clicked()),this,SLOT(removePushed()));
 }
 
 void ChocoboLabel::setType(int type)
@@ -128,34 +140,50 @@ void ChocoboLabel::setType(int type)
 		case 2: lblType->setPixmap(QPixmap("://chocobo/blue").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
 		case 3: lblType->setPixmap(QPixmap("://chocobo/black").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
 		case 4: lblType->setPixmap(QPixmap("://chocobo/gold").scaled(lblType->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation)); break;
-		default: lblType->setPixmap(QPixmap("")); break;
+        default: lblType->setPixmap(QPixmap()); break;
 	}
 }
 
-void ChocoboLabel::setTitle(QString title){chkOccupied->setText(title);}
+void ChocoboLabel::setTitle(QString title)
+{
+    chkOccupied->setText(title);
+}
 
 void ChocoboLabel::setName(QString decodedName){lblName->setText(decodedName.mid(0,6));/*only space for 6 chars*/}
 
 void ChocoboLabel::setSex(bool male)
 {
-	if(male){lblSex->setText(QString::fromUtf8("♂"));}
-	else{lblSex->setText(QString::fromUtf8("♀"));}
+    if (male) {
+        lblSex->setText(QString::fromUtf8("♂"));
+    } else {
+        lblSex->setText(QString::fromUtf8("♀"));
+    }
 }
 
 void ChocoboLabel::setSex(int sex)
 {
-	if (sex==0){lblSex->setText(QString::fromUtf8("♂"));}
-	else if(sex==1){lblSex->setText(QString::fromUtf8("♀"));}
-	else{lblSex->setText("");}
+    if (sex==0) {
+        lblSex->setText(QString::fromUtf8("♂"));
+    } else if (sex==1) {
+        lblSex->setText(QString::fromUtf8("♀"));
+    } else {
+        lblSex->setText(QString());
+    }
 }
 
 void ChocoboLabel::setRank(int wins)
 {
-	if(wins<0){lblRank->setText("");}
-	else if(wins<3){lblRank->setText(tr("Rank:C"));}
-	else if(wins<6){lblRank->setText(tr("Rank:B"));}
-	else if(wins<9){lblRank->setText(tr("Rank:A"));}
-	else{lblRank->setText(tr("Rank:S"));}
+    if (wins<0) {
+        lblRank->setText(QString());
+    } else if (wins<3) {
+        lblRank->setText(tr("Rank:C"));
+    } else if (wins<6) {
+        lblRank->setText(tr("Rank:B"));
+    } else if(wins<9) {
+        lblRank->setText(tr("Rank:A"));
+    } else {
+        lblRank->setText(tr("Rank:S"));
+    }
 }
 
 void ChocoboLabel::setOccupied(bool occupied)
@@ -166,34 +194,18 @@ void ChocoboLabel::setOccupied(bool occupied)
 	enable(occupied);
 }
 
-void ChocoboLabel::chkOccupiedToggled(bool occupied)
-{
-	emit occupiedToggled(occupied);
-	enable(occupied);
-}
-
-void ChocoboLabel::copyPushed(void){emit copy();}
-
-void ChocoboLabel::pastePushed(void){emit paste();}
-
-void ChocoboLabel::removePushed(void)
-{
-	emit remove();
-	clearLabel();
-	chkOccupied->setChecked(false);
-}
 
 void ChocoboLabel::clearLabel()
 {
 	setType(-1);
 	setRank(-1);
-	setName("");
+    setName(QString());
 	setSex(-1);
 }
 
 void ChocoboLabel::setFontSize(int fontSize)
 {
-	QString fontStyle =QString("font-size:%1pt;background-color:rgba(0,0,0,0);").arg(fontSize);
+    QString fontStyle =QString("font-size:%1pt;background-color:rgba(0,0,0,0);").arg(fontSize);
 	lblName->setStyleSheet(fontStyle);
 	lblSex->setStyleSheet(fontStyle);
 	lblRank->setStyleSheet(fontStyle);
@@ -204,14 +216,16 @@ void ChocoboLabel::enable(bool enabled)
 {
 	isEnabled=enabled;
 	innerFrame->setEnabled(enabled);
-	if(!enabled){setSelected(false);}
+    if(!enabled) {
+        setSelected(false);
+    }
 }
 
 void ChocoboLabel::setSelected(bool selected)
 {
-	if(selected){outerFrame->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);innerFrame->setStyleSheet(SelectedBkStyle);}
-	else
-	{
+    if(selected) {
+        outerFrame->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);innerFrame->setStyleSheet(SelectedBkStyle);
+    } else {
 		outerFrame->setFrameStyle(QFrame::NoFrame);
 		QString Style=SelectedBkStyle;
 		Style.append(Style.insert(Style.lastIndexOf("]")+1,":enabled:hover"));
@@ -220,9 +234,10 @@ void ChocoboLabel::setSelected(bool selected)
 	}
 }
 
-bool ChocoboLabel::isOccupied(void){return chkOccupied->isChecked();}
-
-void ChocoboLabel::setCheckBoxStyle(QString styleSheet){chkOccupied->setStyleSheet(styleSheet);}
+bool ChocoboLabel::isOccupied(void)
+{
+    return chkOccupied->isChecked();
+}
 
 void ChocoboLabel::setHoverColorStyle(QString backgroundColor)
 {
@@ -230,7 +245,7 @@ void ChocoboLabel::setHoverColorStyle(QString backgroundColor)
 	SelectedBkStyle.prepend("QWidget[HoverStyled=\"true\"]{background-color:");
 	SelectedBkStyle.append("}");
 
-	backgroundColor.prepend("QPushButton:enabled{background-color:rgba(0,0,0,0);border:0px solid;} QWidget[HoverStyled=\"true\"]:enabled:hover{background-color:");
+    backgroundColor.prepend("QPushButton:enabled{background-color:rgba(0,0,0,0);border:0px solid;} QWidget[HoverStyled=\"true\"]:enabled:hover{background-color:");
 	backgroundColor.append("}");
-	this->setStyleSheet(backgroundColor);
+    this->setStyleSheet(backgroundColor);
 }

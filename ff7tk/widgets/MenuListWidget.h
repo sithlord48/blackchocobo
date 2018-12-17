@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -16,13 +16,9 @@
 #ifndef MENULISTWIDGET_H
 #define MENULISTWIDGET_H
 
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets>
-#else
-	#include <QtGui>
-#endif
+#include <QtWidgets>
 #include "DoubleCheckBox.h"
+
 /** \class MenuListWidget
  *	\brief easily manage the menus in Final Fantasy 7
  */
@@ -34,7 +30,7 @@ public:
 	 *	\brief Acces to Visible and Locked boxes without knowing their index
 	 */
 	enum Box {MENUVISIBLE=1,MENULOCKED=2};
-	explicit MenuListWidget(qreal Scale=1, QWidget * parent=0);
+    explicit MenuListWidget(QWidget * parent=0);
 
 signals:
 	/** \brief SIGNAL: The visible box has changed its checked state
@@ -55,6 +51,7 @@ public slots:
 	 *	\param checked the new check state
 	 */
 	 void setChecked(int row,int box,bool checked);
+
 private slots:
 	void cb_item_one_toggled(bool checked);
 	void cb_item_two_toggled(bool checked);
@@ -91,7 +88,6 @@ private:
 	void init_display();
 	void connectAll();
 	void disconnectAll();
-	qreal scale;
 };
 
 #endif // MENULISTWIDGET_H

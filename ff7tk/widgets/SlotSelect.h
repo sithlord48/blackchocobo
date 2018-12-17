@@ -16,13 +16,7 @@
 #ifndef SLOTSELECT_H
 #define SLOTSELECT_H
 
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets>
-#else
-	#include <QtGui>
-#endif
-
+#include <QtWidgets>
 #include <QFrame>
 #include "../data/FF7Save.h"
 #include "../data/FF7Char.h"

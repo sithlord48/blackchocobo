@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -16,85 +16,101 @@
 
 #include "FF7Location.h"
 #include <QCoreApplication>
+const FF7Location::LOCATION& FF7Location::location(int index)
+{
+    if(index >= 0 && index < size()) {
+        return _locations.at(index);
+    }
+    return _emptyLocation;
+}
 
-QString FF7Location::fileName(int i){return Locations[i].filename;}
-QString FF7Location::locationString(int i){return qApp->translate("Locations",Locations[i].location.toLocal8Bit());}
-QString FF7Location::mapID(int i){return Locations[i].map_id;}
-QString FF7Location::locationID(int i){return Locations[i].loc_id;}
-QString FF7Location::x(int i){return Locations[i].x;}
-QString FF7Location::y(int i){return Locations[i].y;}
-QString FF7Location::t(int i){return Locations[i].t;}
-QString FF7Location::d(int i){return Locations[i].d;}
+int FF7Location::size() const
+{
+    return _locations.size();
+}
 
-QString FF7Location::fileName(int MapID,int LocID)
+const QString& FF7Location::fileName(int MapID,int LocID)
 {
-	QString temp;
-	for(int i =0;i < len(); i++)
-	{
-		if( (MapID==Locations[i].map_id.toInt()) && (LocID ==Locations[i].loc_id.toInt())){temp= Locations[i].filename;}
-	}
-	return temp;
+    for (const LOCATION &location : _locations) {
+        if((MapID == location.map_id.toInt())
+        &&(LocID == location.loc_id.toInt())) {
+            return location.filename;
+        }
+    }
+    return _emptyLocation.filename;
 }
-QString FF7Location::locationString(QString fileName)
+
+QString FF7Location::locationString(int index)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].location;}
-	}
-	return temp;
+    return qApp->translate(_group.toLocal8Bit(), location(index).location.toLocal8Bit());
 }
-QString FF7Location::mapID(QString fileName)
+
+QString FF7Location::locationString(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].map_id;}
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return qApp->translate(_group.toLocal8Bit(), location.location.toLocal8Bit());
+        }
 	}
-	return temp;
+    return _emptyLocation.filename;
 }
-QString FF7Location::locationID(QString fileName)
+
+const QString& FF7Location::mapID(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].loc_id;}
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.map_id;
+        }
 	}
-	return temp;
+    return _emptyLocation.map_id;
 }
-QString FF7Location::x(QString fileName)
+
+const QString& FF7Location::locationID(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].x;}
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.loc_id;
+        }
 	}
-	return temp;
+    return _emptyLocation.loc_id;
 }
-QString FF7Location::y(QString fileName)
+
+const QString& FF7Location::x(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].y;}
-	}
-	return temp;
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.x;
+        }
+    }
+    return _emptyLocation.x;
 }
-QString FF7Location::t(QString fileName)
+
+const QString& FF7Location::y(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].t;}
-	}
-	return temp;
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.y;
+        }
+    }
+    return _emptyLocation.y;
 }
-QString FF7Location::d(QString fileName)
+
+const QString& FF7Location::t(const QString &fileName)
 {
-	QString temp;
-	for (int i=0;i<len();i++)
-	{
-		if(fileName == Locations[i].filename){temp=Locations[i].d;}
-	}
-	return temp;
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.t;
+        }
+    }
+    return _emptyLocation.t;
+}
+
+const QString& FF7Location::d(const QString &fileName)
+{
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.d;
+        }
+    }
+    return _emptyLocation.d;
 }
