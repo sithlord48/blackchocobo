@@ -57,8 +57,6 @@ int main(int argc, char *argv[])
     #ifdef STATIC
         settings= new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
     #endif //STATIC
-    QString settingsString = QString(QCoreApplication::applicationDirPath() + QDir::separator() + "settings.ini");
-    qDebug()<<settingsString;
 
     if(QFile(QString(QCoreApplication::applicationDirPath() + QDir::separator() + "settings.ini")).exists())
     {

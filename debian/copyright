@@ -1,9 +1,9 @@
 Format: http://dep.debian.net/deps/dep5
 Upstream-Name: blackchocobo
-Source: http://blackchocobo.sourceforge.net
+Source: https://github.com/sithlord48/blackchocobo
 
 Files: debian/*
-Copyright: 2010 -2013 Chris Rizzitello <sithlord48@gmail.com>
+Copyright: 2010 -2018 Chris Rizzitello <sithlord48@gmail.com>
 License: GPL-3+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

@@ -60,34 +60,6 @@ p, li { white-space: pre-wrap; }
         <translation>Neueste Features</translation>
     </message>
     <message>
-        <source>New: Scaling support for HiDpi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Psv Signing Place Keys in Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Save/Restore Geometry for MainWindow and Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Auto guess Slot location for VMC formats.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Menu Editor Backward Columns</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Achievement Editor.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Credits</source>
         <translation>Credits</translation>
     </message>
@@ -202,6 +174,38 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Using Qt: %1</source>
         <translation type="unfinished">Mit Qt: %1</translation>
+    </message>
+    <message>
+        <source>New: Further Improve HiDpi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Track hex Editor&apos;s cursor on tab change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed Loading Psv file crashes host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/17</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed Chocobo  pCount / Personality layout was overlapping Speed Notes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Chocobo name not showing place holder text at right times</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6015,27 +6019,27 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation>Sektor 5</translation>
+        <translation type="vanished">Sektor 5</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
-        <translation>Mit krankem Mann geredet</translation>
+        <translation type="vanished">Mit krankem Mann geredet</translation>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation>Aeris hat über kranken Mann geredet</translation>
+        <translation type="vanished">Aeris hat über kranken Mann geredet</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
-        <translation>cb_s5_1</translation>
+        <translation type="vanished">cb_s5_1</translation>
     </message>
     <message>
         <source>cb_s5_2</source>
-        <translation>cb_s5_2</translation>
+        <translation type="vanished">cb_s5_2</translation>
     </message>
     <message>
         <source>cb_s5_5</source>
-        <translation>cb_s5_5</translation>
+        <translation type="vanished">cb_s5_5</translation>
     </message>
     <message>
         <source>Jesse Has Been Unstuck</source>
@@ -6051,7 +6055,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
-        <translation>Nach Aeris Kirchen Szene</translation>
+        <translation type="vanished">Nach Aeris Kirchen Szene</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>

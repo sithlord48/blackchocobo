@@ -61,31 +61,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Scaling support for HiDpi</source>
-        <translation>Nouveau : support de la mise à l&apos;échelle pour écran HiDPI</translation>
+        <translation type="vanished">Nouveau : support de la mise à l&apos;échelle pour écran HiDPI</translation>
     </message>
     <message>
         <source>New: Psv Signing Place Keys in Options</source>
-        <translation>Nouveau : Gestion des clés de signature PSV dans les options</translation>
+        <translation type="vanished">Nouveau : Gestion des clés de signature PSV dans les options</translation>
     </message>
     <message>
         <source>New: Save/Restore Geometry for MainWindow and Options</source>
-        <translation>Nouveau : Sauvegarder/restaurer la géométrie des fenêtres principale et options</translation>
+        <translation type="vanished">Nouveau : Sauvegarder/restaurer la géométrie des fenêtres principale et options</translation>
     </message>
     <message>
         <source>New: Auto guess Slot location for VMC formats.</source>
-        <translation>Nouveau : Deviner automatiquement l&apos;emplacement pour les formats VMC.</translation>
+        <translation type="vanished">Nouveau : Deviner automatiquement l&apos;emplacement pour les formats VMC.</translation>
     </message>
     <message>
         <source>Fixed: Menu Editor Backward Columns</source>
-        <translation>Corrigé : Colonnes arrières de l&apos;éditeur de menu</translation>
+        <translation type="vanished">Corrigé : Colonnes arrières de l&apos;éditeur de menu</translation>
     </message>
     <message>
         <source>New: Achievement Editor.</source>
-        <translation>Nouveau : éditeur de succès.</translation>
+        <translation type="vanished">Nouveau : éditeur de succès.</translation>
     </message>
     <message>
         <source>FF7tk: LocationViewer Contains Field Items (Finished!)</source>
-        <translation>FF7tk : Le visualisateur de lieux contient les écrans (terminé !)</translation>
+        <translation type="vanished">FF7tk : Le visualisateur de lieux contient les écrans (terminé !)</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -202,6 +202,38 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Using Qt: %1</source>
         <translation>Version de Qt : %1</translation>
+    </message>
+    <message>
+        <source>New: Further Improve HiDpi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Track hex Editor&apos;s cursor on tab change.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed Loading Psv file crashes host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/17</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Fixed Chocobo  pCount / Personality layout was overlapping Speed Notes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ff7tk: Chocobo name not showing place holder text at right times</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6008,27 +6040,27 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation>Secteur 5</translation>
+        <translation type="vanished">Secteur 5</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
-        <translation>Parlé avec l&apos;homme malade</translation>
+        <translation type="vanished">Parlé avec l&apos;homme malade</translation>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation>Aéris vous a parlé de l&apos;homme malade</translation>
+        <translation type="vanished">Aéris vous a parlé de l&apos;homme malade</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
-        <translation>cb_s5_1</translation>
+        <translation type="vanished">cb_s5_1</translation>
     </message>
     <message>
         <source>cb_s5_2</source>
-        <translation>cb_s5_2</translation>
+        <translation type="vanished">cb_s5_2</translation>
     </message>
     <message>
         <source>cb_s5_5</source>
-        <translation>cb_s5_5</translation>
+        <translation type="vanished">cb_s5_5</translation>
     </message>
     <message>
         <source>Jesse Has Been Unstuck</source>
@@ -6044,7 +6076,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
-        <translation>Passé la scène de l&apos;église d&apos;Aéris</translation>
+        <translation type="vanished">Passé la scène de l&apos;église d&apos;Aéris</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>

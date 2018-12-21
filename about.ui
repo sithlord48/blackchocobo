@@ -210,37 +210,42 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>New: Scaling support for HiDpi</string>
+           <string>New: Further Improve HiDpi</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>New: Psv Signing Place Keys in Options</string>
+           <string>Fixed: Track hex Editor's cursor on tab change.</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>New: Save/Restore Geometry for MainWindow and Options</string>
+           <string>ff7tk: Fixed Loading Psv file crashes host</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>New: Auto guess Slot location for VMC formats.</string>
+           <string>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/12</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Fixed: Menu Editor Backward Columns</string>
+           <string>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/17</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>New: Achievement Editor.</string>
+           <string>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/37</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>FF7tk: LocationViewer Contains Field Items (Finished!)</string>
+           <string>ff7tk: Fixed Chocobo  pCount / Personality layout was overlapping Speed Notes.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ff7tk: Chocobo name not showing place holder text at right times</string>
           </property>
          </item>
         </widget>

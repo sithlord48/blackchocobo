@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 {
 
     if (configdata->value("scale").isNull()) {
-        double scale  = qApp->desktop()->logicalDpiX()/96.0f;
+        double scale  = qApp->desktop()->logicalDpiX()/72.0f;
         if (scale < 1) {
             scale = 1;
         }
