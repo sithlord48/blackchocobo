@@ -19,12 +19,12 @@
 #include "ui_mainwindow.h"
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
+MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
 {
 
     if (configdata->value("scale").isNull()) {
-        double scale  = qApp->desktop()->logicalDpiX()/72.0f;
+        double scale  = double(qApp->desktop()->logicalDpiX()/ 72.0f);
         if (scale < 1) {
             scale = 1;
         }
@@ -40,14 +40,14 @@ MainWindow::MainWindow(QWidget *parent,QSettings *configdata)
 	ui->frame_status->setFixedHeight(fontMetrics().height()+2);
     ui->tbl_materia->setIconSize(QSize(fontMetrics().height(),fontMetrics().height()));
 	_init=true;
-	ff7 = new FF7Save;
+    ff7 = new FF7Save();
 	load=true;
 	curchar =0;
 	mslotsel=-1;
 	s=0;
 	hexCursorPos=0;
 	buffer_materia.id=FF7Materia::EmptyId;
-	for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
+    for(int i=0;i<3;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 	init_display();
 	init_style();
 	init_settings();
@@ -64,67 +64,67 @@ void MainWindow::init_display()
 	load=false;
 	//adjust some stuff for scale
 
-	ui->btn_cloud->setFixedSize(98*scale,110*scale);
-	ui->btn_barret->setFixedSize(98*scale,110*scale);
-	ui->btn_tifa->setFixedSize(98*scale,110*scale);
-	ui->btn_aeris->setFixedSize(98*scale,110*scale);
-	ui->btn_red->setFixedSize(98*scale,110*scale);
-	ui->btn_yuffie->setFixedSize(98*scale,110*scale);
-	ui->btn_cait->setFixedSize(98*scale,110*scale);
-	ui->btn_vincent->setFixedSize(98*scale,110*scale);
-	ui->btn_cid->setFixedSize(98*scale,110*scale);
+    ui->btn_cloud->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_barret->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_tifa->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_aeris->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_red->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_yuffie->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_cait->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_vincent->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_cid->setFixedSize(int(98*scale),int(110*scale));
 
-	ui->btn_cloud->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_barret->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_tifa->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_aeris->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_red->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_yuffie->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_cait->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_vincent->setIconSize(QSize(92*scale,104*scale));
-	ui->btn_cid->setIconSize(QSize(92*scale,104*scale));
+    ui->btn_cloud->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_barret->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_tifa->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_aeris->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_red->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_yuffie->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_cait->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_vincent->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_cid->setIconSize(QSize(int(92*scale),int(104*scale)));
 
-	ui->groupBox_11->setFixedWidth(375*scale);
-	ui->groupBox_18->setFixedWidth(273*scale);//materia table group.
+    ui->groupBox_11->setFixedWidth(int(375*scale));
+    ui->groupBox_18->setFixedWidth(int(273*scale));//materia table group.
 	//world map tab controlls
-	ui->scrollArea->setFixedWidth(310*scale);
+    ui->scrollArea->setFixedWidth(int(310*scale));
 	ui->scrollAreaWidgetContents->adjustSize();
-	ui->world_map_frame->setFixedSize(446*scale,381*scale);
+    ui->world_map_frame->setFixedSize(int(446*scale), int(381*scale));
 	ui->world_map_view->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->combo_map_controls->setFixedHeight(32);
-	ui->world_map_view->setGeometry(5*scale,32*scale,432*scale,336*scale);
-	ui->slide_world_x->setGeometry(-1,369*scale,443*scale,10*scale);
-	ui->slide_world_y->setGeometry(437*scale,26*scale,10*scale,347*scale);
+    ui->world_map_view->setGeometry(int(5*scale), int(32*scale), int(432*scale), int(336*scale));
+    ui->slide_world_x->setGeometry(-1, int(369*scale), int(443*scale), int(10*scale));
+    ui->slide_world_y->setGeometry(int(437*scale), int(26*scale), int(10*scale),int(347*scale));
 	//Compare table
-	ui->table_unknown->setFixedWidth(234*scale);
-	ui->compare_table->setFixedWidth(234*scale);
+    ui->table_unknown->setFixedWidth(int(234*scale));
+    ui->compare_table->setFixedWidth(int(234*scale));
 
-	ui->lbl_love_aeris->setFixedSize(50*scale,68*scale);
-	ui->lbl_love_barret->setFixedSize(50*scale,68*scale);
-	ui->lbl_love_tifa->setFixedSize(50*scale,68*scale);
-	ui->lbl_love_yuffie->setFixedSize(50*scale,68*scale);
+    ui->lbl_love_aeris->setFixedSize(int(50*scale), int(68*scale));
+    ui->lbl_love_barret->setFixedSize(int(50*scale),int(68*scale));
+    ui->lbl_love_tifa->setFixedSize(int(50*scale),int(8*scale));
+    ui->lbl_love_yuffie->setFixedSize(int(50*scale),int(68*scale));
 
 	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 
-	ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(),74*scale);
-	ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(),74*scale);
-	ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(),74*scale);
-	ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(),74*scale);
+    ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(), int(74*scale));
+    ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(), int(74*scale));
+    ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(), int(74*scale));
+    ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(), int(74*scale));
 
 	ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 
-	ui->combo_party1->setFixedHeight(32*scale);
-	ui->combo_party2->setFixedHeight(32*scale);
-	ui->combo_party3->setFixedHeight(32*scale);
-	ui->combo_party1->setIconSize(QSize(32*scale,32*scale));
-	ui->combo_party2->setIconSize(QSize(32*scale,32*scale));
-	ui->combo_party3->setIconSize(QSize(32*scale,32*scale));
+    ui->combo_party1->setFixedHeight(int(32*scale));
+    ui->combo_party2->setFixedHeight(int(32*scale));
+    ui->combo_party3->setFixedHeight(int(32*scale));
+    ui->combo_party1->setIconSize(QSize(int(32*scale), int(32*scale)));
+    ui->combo_party2->setIconSize(QSize(int(32*scale), int(32*scale)));
+    ui->combo_party3->setIconSize(QSize(int(32*scale), int(32*scale)));
 
 
 	for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));}
@@ -141,27 +141,43 @@ void MainWindow::init_display()
 	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
 	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
-	phsList = new PhsListWidget(scale);
+    phsList = new PhsListWidget();
 	QHBoxLayout *phsLayout = new QHBoxLayout;
 	phsLayout->addWidget(phsList);
 	ui->Phs_Box->setLayout(phsLayout);
 
-	menuList = new MenuListWidget(scale);
+    menuList = new MenuListWidget();
 	QHBoxLayout *menuLayout = new QHBoxLayout;
 	menuLayout->addWidget(menuList);
 	ui->Menu_Box->setLayout(menuLayout);
 
-	chocoboManager = new ChocoboManager(scale);
+    chocoboManager = new ChocoboManager();
 	chocoboManager->setContentsMargins(0,20,0,0);
 	ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
 
-	optionsWidget = new OptionsWidget;
-	optionsWidget->setControllerMappingVisible(false);
+    optionsWidget = new OptionsWidget;
+    connect(optionsWidget, &OptionsWidget::dialogColorLLChanged, this, &MainWindow::setDialogColorLL);
+    connect(optionsWidget, &OptionsWidget::dialogColorLRChanged, this, &MainWindow::setDialogColorLR);
+    connect(optionsWidget, &OptionsWidget::dialogColorULChanged, this, &MainWindow::setDialogColorUL);
+    connect(optionsWidget, &OptionsWidget::dialogColorURChanged, this, &MainWindow::setDialogColorUR);
+    connect(optionsWidget, &OptionsWidget::magicOrderChanged, this, &MainWindow::setMagicOrder);
+    connect(optionsWidget, &OptionsWidget::cameraChanged, this, &MainWindow::setCameraMode);
+    connect(optionsWidget, &OptionsWidget::atbChanged, this, &MainWindow::setAtbMode);
+    connect(optionsWidget, &OptionsWidget::cursorChanged, this, &MainWindow::setCursorMode);
+    connect(optionsWidget, &OptionsWidget::controllerModeChanged, this, &MainWindow::setControlMode);
+    connect(optionsWidget, &OptionsWidget::soundChanged, this, &MainWindow::setSoundMode);
+    connect(optionsWidget, &OptionsWidget::fieldMessageSpeedChanged, this, &MainWindow::setFieldMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleMessageSpeedChanged, this, &MainWindow::setBattleMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleSpeedChanged, this, &MainWindow::setBattleSpeed);
+    connect(optionsWidget, &OptionsWidget::fieldHelpChanged, this, &MainWindow::setFieldHelp);
+    connect(optionsWidget, &OptionsWidget::battleTargetsChanged, this, &MainWindow::setBattleTargets);
+    connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
+    connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
+    optionsWidget->setControllerMappingVisible(false);
 	ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
 
-	materia_editor = new MateriaEditor(scale,this);
-	materia_editor->setStarsSize(48*scale);
-	//ui->tbl_materia->setFixedWidth(this->fontMetrics().width(QChar('W'))*20);
+    materia_editor = new MateriaEditor(this);
+    materia_editor->setStarsSize(int(48*scale));
 	QVBoxLayout *materia_editor_layout = new QVBoxLayout();
 	mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
 	materia_editor_layout->addWidget(materia_editor);
@@ -328,40 +344,7 @@ void MainWindow::init_connections()
 		connect(locationViewer,SIGNAL(fieldItemCheck(int)),this,SLOT(checkFieldItem(int)));
 		connect(locationViewer,SIGNAL(fieldItemChanged(int,bool)),this,SLOT(fieldItemStateChanged(int,bool)));
 
-		//options
-		connect(optionsWidget,SIGNAL(dialogColorLLChanged(QColor)),this,SLOT(setDialogColorLL(QColor)));
-		connect(optionsWidget,SIGNAL(dialogColorLRChanged(QColor)),this,SLOT(setDialogColorLR(QColor)));
-		connect(optionsWidget,SIGNAL(dialogColorULChanged(QColor)),this,SLOT(setDialogColorUL(QColor)));
-		connect(optionsWidget,SIGNAL(dialogColorURChanged(QColor)),this,SLOT(setDialogColorUR(QColor)));
-		connect(optionsWidget,SIGNAL(MagicOrderChanged(int)),this,SLOT(setMagicOrder(int)));
-		connect(optionsWidget,SIGNAL(CameraChanged(int)),this,SLOT(setCameraMode(int)));
-		connect(optionsWidget,SIGNAL(AtbChanged(int)),this,SLOT(setAtbMode(int)));
-		connect(optionsWidget,SIGNAL(CursorChanged(int)),this,SLOT(setCursorMode(int)));
-		connect(optionsWidget,SIGNAL(ControllerModeChanged(int)),this,SLOT(setControlMode(int)));
-		connect(optionsWidget,SIGNAL(SoundChanged(int)),this,SLOT(setSoundMode(int)));
-		connect(optionsWidget,SIGNAL(FieldMessageSpeedChanged(int)),this,SLOT(setFieldMessageSpeed(int)));
-		connect(optionsWidget,SIGNAL(BattleMessageSpeedChanged(int)),this,SLOT(setBattleMessageSpeed(int)));
-		connect(optionsWidget,SIGNAL(BattleSpeedChanged(int)),this,SLOT(setBattleSpeed(int)));
-		connect(optionsWidget,SIGNAL(FieldHelpChanged(bool)),this,SLOT(setFieldHelp(bool)));
-		connect(optionsWidget,SIGNAL(BattleTargetsChanged(bool)),this,SLOT(setBattleTargets(bool)));
-		connect(optionsWidget,SIGNAL(BattleHelpChanged(bool)),this,SLOT(setBattleHelp(bool)));
-		connect(optionsWidget,SIGNAL(BtnCameraChanged(int)),this,SLOT(setButtonCamera(int)));
-		connect(optionsWidget,SIGNAL(BtnTargetChanged(int)),this,SLOT(setButtonTarget(int)));
-		connect(optionsWidget,SIGNAL(BtnPgUpChanged(int)),this,SLOT(setButtonPageUp(int)));
-		connect(optionsWidget,SIGNAL(BtnPgDnChanged(int)),this,SLOT(setButtonPageDown(int)));
-		connect(optionsWidget,SIGNAL(BtnMenuChanged(int)),this,SLOT(setButtonMenu(int)));
-		connect(optionsWidget,SIGNAL(BtnOkChanged(int)),this,SLOT(setButtonOk(int)));
-		connect(optionsWidget,SIGNAL(BtnCancelChanged(int)),this,SLOT(setButtonCancel(int)));
-		connect(optionsWidget,SIGNAL(BtnSwitchChanged(int)),this,SLOT(setButtonSwitch(int)));
-		connect(optionsWidget,SIGNAL(BtnHelpChanged(int)),this,SLOT(setButtonHelp(int)));
-		connect(optionsWidget,SIGNAL(Btn9Changed(int)),this,SLOT(setButtonUnknown1(int)));
-		connect(optionsWidget,SIGNAL(Btn10Changed(int)),this,SLOT(setButtonUnknown2(int)));
-		connect(optionsWidget,SIGNAL(BtnPauseChanged(int)),this,SLOT(setButtonPause(int)));
-		connect(optionsWidget,SIGNAL(BtnUpChanged(int)),this,SLOT(setButtonUp(int)));
-		connect(optionsWidget,SIGNAL(BtnDownChanged(int)),this,SLOT(setButtonDown(int)));
-		connect(optionsWidget,SIGNAL(BtnLeftChanged(int)),this,SLOT(setButtonLeft(int)));
-		connect(optionsWidget,SIGNAL(BtnRightChanged(int)),this,SLOT(setButtonRight(int)));
-		connect(phsList,SIGNAL(allowedToggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
+        connect(phsList,SIGNAL(allowedToggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
 		connect(phsList,SIGNAL(visibleToggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(visibleToggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
 		connect(menuList,SIGNAL(lockedToggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
@@ -388,7 +371,7 @@ void MainWindow::advancedSettings()
 	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
 	locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
 	ui->tabWidget->setTabEnabled(9,settings->value("show_test").toBool());
-	if(ff7->type() =="PC" || ff7->type() == ""){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
+    if(ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
 	ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
 	ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
 	ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
@@ -411,7 +394,7 @@ void MainWindow::changeEvent(QEvent *e)
 		break;
 	default:
 		break;
-	};
+    }
 }
 void MainWindow::dragEnterEvent(QDragEnterEvent *e) { e->accept(); }
 void MainWindow::dropEvent(QDropEvent *e)
@@ -492,11 +475,11 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 	}
 	else{QMessageBox::information(this,tr("Load Failed"),tr("Failed to Load File"));return;}
 
-	if (ff7->type() == "PC"){if(reload){guirefresh(0);}else{on_actionShow_Selection_Dialog_triggered();}}
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC){if(reload){guirefresh(0);}else{on_actionShow_Selection_Dialog_triggered();}}
 
-	else if (ff7->type() == "PSX" || ff7->type() =="PSV"){s=0;guirefresh(0);}
+    else if (ff7->format() == FF7SaveInfo::FORMAT::PSX || ff7->format() ==FF7SaveInfo::FORMAT::PS3){s=0;guirefresh(0);}
 
-	else if (ff7->type() == "MC" || ff7->type() =="PSP" || ff7->type() == "VGS" ||ff7->type()=="DEX")
+    else if (ff7->format() == FF7SaveInfo::FORMAT::VMC || ff7->format() ==FF7SaveInfo::FORMAT::PSP || ff7->format() == FF7SaveInfo::FORMAT::VGS ||ff7->format()==FF7SaveInfo::FORMAT::DEX)
 	{
 		if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_triggered();}
 	}
@@ -514,11 +497,11 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 	tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
 	if(!fileName.isEmpty())
 	{
-		int fileSlot=0;
 		FF7Save * tempSave = new FF7Save();
 		if(tempSave->loadFile(fileName))
 		{
-			if(tempSave->type()!="PSV" && tempSave->type()!="PSX")
+            int fileSlot=0;
+            if(tempSave->format() != FF7SaveInfo::FORMAT::PS3 && tempSave->format() != FF7SaveInfo::FORMAT::PSX)
 			{
 				SlotSelect * SSelect= new SlotSelect(scale,tempSave,false);
 				fileSlot = SSelect->exec();
@@ -570,8 +553,8 @@ void MainWindow::on_action_Save_triggered()
 	if(_init || ff7->fileName().isEmpty()){on_actionSave_File_As_triggered();}
 	else
 	{
-		if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
-		else if(ff7->type()=="PSV"){QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
+        if(ff7->format()==FF7SaveInfo::FORMAT::PSP){QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
+        else if(ff7->format()==FF7SaveInfo::FORMAT::PS3){QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
 		saveFileFull(ff7->fileName());
 	}
 }
@@ -581,35 +564,35 @@ void MainWindow::on_actionSave_File_As_triggered()
 	QString selectedType;
 	QString pc = tr("FF7 PC (*.ff7)");
 	QString psx= tr("Raw PSX Save(*FF7-S*)");
-	QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)");
+    QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)");
 	QString vgs= tr("Virtual Game Station(*.vgs *.mem)");
-	QString dex= tr("DEX (*.gme)");
-	QString psv= tr("PSV (*.psv)");
-	QString vmp= tr("PSP (*.vmp)");
+    QString dex= tr("DEX Drive Memory Card(*.gme)");
+    QString psv= tr("PSV Save File(*.psv)");
+    QString vmp= tr("PSP Memory Card(*.vmp)");
 	QString types = pc+";;"+mc+";;"+psx+";;"+vgs+";;"+dex+";;"+psv+";;"+vmp;
 	QString fileName;
 	QString path = QDir::homePath();
 
 	// check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
-	if(ff7->type() == "PC")
+    if(ff7->format() == FF7SaveInfo::FORMAT::PC)
 	{
 		selectedType = pc;
 		if(!settings->value("save_pc_path").isNull()){path=settings->value("save_pc_path").toString();}
 	}
-	else if(ff7->type() == "PSX"){selectedType = psx;}
-	else if(ff7->type() == "MC")
+    else if(ff7->format() == FF7SaveInfo::FORMAT::PSX){selectedType = psx;}
+    else if(ff7->format() == FF7SaveInfo::FORMAT::VMC)
 	{
 		selectedType = mc;
 		if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
 	}
-	else if(ff7->type() == "PSV"){selectedType=psv;}
-	else if(ff7->type() == "PSP"){selectedType=vmp;}
-	else if(ff7->type() == "VGS")
+    else if(ff7->format() == FF7SaveInfo::FORMAT::PS3){selectedType=psv;}
+    else if(ff7->format() == FF7SaveInfo::FORMAT::PSP){selectedType=vmp;}
+    else if(ff7->format() == FF7SaveInfo::FORMAT::VGS)
 	{
 		selectedType=vgs;
 		if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
 	}
-	else if(ff7->type() == "DEX")
+    else if(ff7->format() == FF7SaveInfo::FORMAT::DEX)
 	{
 		selectedType=dex;
 		if(!settings->value("save_emu_path").isNull()){path=settings->value("save_emu_path").toString();}
@@ -617,29 +600,29 @@ void MainWindow::on_actionSave_File_As_triggered()
 
 	fileName = QFileDialog::getSaveFileName(this,"Select A File To Save",path,types,&selectedType);
 	if(fileName.isEmpty()){return;}
-	QString newType;
-	if(selectedType ==pc){newType = "PC";}
-	else if(selectedType ==psx){newType ="PSX";}
-	else if(selectedType ==mc){newType = "MC";}
-	else if(selectedType ==vgs){newType = "VGS";}
-	else if(selectedType ==dex){newType = "DEX";}
-	else if(selectedType ==psv){newType = "PSV";QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
-	else if(selectedType ==vmp){newType = "VMP";QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
-	else{newType ="";}
+    FF7SaveInfo::FORMAT newType;
+    if(selectedType ==pc){newType = FF7SaveInfo::FORMAT::PC;}
+    else if(selectedType ==psx){newType =FF7SaveInfo::FORMAT::PSX;}
+    else if(selectedType ==mc){newType = FF7SaveInfo::FORMAT::VMC;}
+    else if(selectedType ==vgs){newType = FF7SaveInfo::FORMAT::VGS;}
+    else if(selectedType ==dex){newType = FF7SaveInfo::FORMAT::DEX;}
+    else if(selectedType ==psv){newType = FF7SaveInfo::FORMAT::PS3;QMessageBox::information(this,tr("PSV Save Notice"),QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()),QString(ff7->ps3Seed().toHex().toUpper()))));}
+    else if(selectedType ==vmp){newType = FF7SaveInfo::FORMAT::PSP;QMessageBox::information(this,tr("PSP/PsVita Save Notice"),tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));}
+    else{newType = FF7SaveInfo::FORMAT::UNKNOWN;}
 
-	if(ff7->type()!=newType)
+    if(ff7->format()!= newType)
 	{//Type Changed lets Export instead
-		if(ff7->exportFile(fileName,newType,s)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
+        if(ff7->exportFile(fileName, newType, s)){ui->statusBar->showMessage(tr("Export Successful"),1000);fileModified(false);}
 		else{ui->statusBar->showMessage(tr("Export Failed"),2000);}
-		if(newType =="PSV"){QMessageBox::information(this,tr("PSV Export Attempted"),tr("PSV Exports Are Not Allowed."));}
-		if(newType =="VMP"){QMessageBox::information(this,tr("VMP Export Attempted"),tr("VMP Exports Are Not Allowed."));}
+        if(newType ==FF7SaveInfo::FORMAT::PS3){QMessageBox::information(this,tr("PSV Export Attempted"),tr("PSV Exports Are Not Allowed."));}
+        if(newType ==FF7SaveInfo::FORMAT::PSP){QMessageBox::information(this,tr("VMP Export Attempted"),tr("VMP Exports Are Not Allowed."));}
 	}
 	else{saveFileFull(fileName);} //reguardless save the file of course if its has a string.
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
 {
-	if((ff7->type() =="PC") && !(settings->value("skip_slot_mask").toBool())){ff7->fix_pc_bytemask(s);}//fix starting slot on pc
+    if((ff7->format() ==FF7SaveInfo::FORMAT::PC) && !(settings->value("skip_slot_mask").toBool())){ff7->fix_pc_bytemask(s);}//fix starting slot on pc
 
 	if(ff7->saveFile(fileName))
 	{
@@ -655,11 +638,16 @@ void MainWindow::saveFileFull(QString fileName)
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
-	QString save_name ="";
-	if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
-	ff7->newGame(s,save_name);//call the new game function
-	if(save_name==""){save_name = QString(tr("Builtin Data"));}
-	ui->statusBar->showMessage(tr("New Game Created - Using: %1").arg(save_name),2000);
+    QString save_name;
+    if(settings->value("override_default_save").toBool()) {
+        save_name = settings->value("default_save_file").toString();
+    }
+    ff7->newGame(s, save_name);//call the new game function
+    //if(save_name.isEmpty()) {
+    //    save_name = QString(tr("Builtin Data"));
+    //}
+    ui->statusBar->showMessage(tr("New Game Created - Using: %1")
+                     .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
 	_init=false;
 	guirefresh(1);
 }
@@ -667,11 +655,14 @@ void MainWindow::on_actionNew_Game_triggered()
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
-	QString save_name ="";
-	if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
-	ff7->newGamePlus(s,ff7->fileName(),save_name);
-	if(save_name==""){save_name = QString(tr("Builtin Data"));}
-	ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1").arg(save_name),2000);
+    QString save_name;
+    if (settings->value("override_default_save").toBool()) {
+        save_name = settings->value("default_save_file").toString();
+    }
+    ff7->newGamePlus(s, ff7->fileName(), save_name);
+//	if(save_name==""){save_name = QString(tr("Builtin Data"));}
+    ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
+                      .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
 	guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
@@ -679,8 +670,8 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionClear_Slot_triggered(){ff7->clearSlot(s); guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
-void MainWindow::on_actionNext_Slot_triggered(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
+void MainWindow::on_actionPrevious_Slot_triggered(){if(ff7->format()== FF7SaveInfo::FORMAT::UNKNOWN){return;}else{if (s > 0) {s--; guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_triggered(){if(ff7->format()== FF7SaveInfo::FORMAT::UNKNOWN){return;}else{if (s<14){s++; guirefresh(0);}}}
 void MainWindow::on_actionAbout_triggered(){About adialog(this,settings); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_triggered(){ff7->copySlot(s);}
 void MainWindow::on_actionPaste_Slot_triggered(){ff7->pasteSlot(s); guirefresh(0);}
@@ -721,7 +712,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 	if(temp.isEmpty()){ff7->setFileModified(c2,s);return;}
 	else
 	{
-		achievementDialog achDialog(scale,temp);
+        achievementDialog achDialog(temp);
 		achDialog.exec();
 	}
 	ff7->setFileModified(c2,s);
@@ -976,7 +967,7 @@ void MainWindow::setmenu(bool newgame)
 		ui->actionNew_Game->setEnabled(1);
 	}
 
-	if ( (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) && (ff7->type()!="") ) //more then one slot, or unknown Type
+    if ( (ff7->format()!= FF7SaveInfo::FORMAT::PSX && ff7->format() !=FF7SaveInfo::FORMAT::PS3 && (!_init)) && (ff7->format()!= FF7SaveInfo::FORMAT::UNKNOWN) ) //more then one slot, or unknown Type
 	{
 		ui->actionNext_Slot->setEnabled(1);
 		ui->actionPrevious_Slot->setEnabled(1);
@@ -1025,11 +1016,11 @@ void MainWindow::set_ntsc_time(void)
 	switch(result)
 	{
 		case QMessageBox::Yes:
-			ff7->setTime(s,ff7->time(s)*1.2);
+            ff7->setTime(s,quint32(ff7->time(s)*1.2));
 			load=true;
 			ui->sb_time_hour->setValue(ff7->time(s) / 3600);
 			ui->sb_time_min->setValue(ff7->time(s)/60%60);
-			ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            ui->sb_time_sec->setValue(int(ff7->time(s)) - ( (ui->sb_time_hour->value()*3600) + ui->sb_time_min->value() * 60));
 			load=false;
 		break;
 		case QMessageBox::Cancel:break;
@@ -1050,11 +1041,11 @@ void MainWindow::set_pal_time(void)
 	switch(result)
 	{
 		case QMessageBox::Yes:
-		ff7->setTime(s,ff7->time(s)/1.2);
+        ff7->setTime(s,quint32(ff7->time(s)/1.2));
 			load=true;
 			ui->sb_time_hour->setValue(ff7->time(s) / 3600);
 			ui->sb_time_min->setValue(ff7->time(s)/60%60);
-			ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            ui->sb_time_sec->setValue(int(ff7->time(s)) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 			load=false;
 		break;
 		case QMessageBox::Cancel:break;
@@ -1063,16 +1054,16 @@ void MainWindow::set_pal_time(void)
 void MainWindow::materiaupdate(void)
 {
 	load=true;
-	QTableWidgetItem *newItem;
-    int j= std::max(0, ui->tbl_materia->currentRow());
+    int j = std::max(0, ui->tbl_materia->currentRow());
 	ui->tbl_materia->reset();
 	ui->tbl_materia->clearContents();
-	ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()*.65));
-	ui->tbl_materia->setColumnWidth(1,(ui->tbl_materia->width()*.25));
+    ui->tbl_materia->setColumnWidth(0, int(ui->tbl_materia->width()*.65));
+    ui->tbl_materia->setColumnWidth(1, int(ui->tbl_materia->width()*.25));
 	ui->tbl_materia->setRowCount(200);
 
 	for(int mat=0;mat<200;mat++)// partys materias
 	{
+        QTableWidgetItem *newItem;
 		ui->tbl_materia->setRowHeight(mat,fontMetrics().height()+9);
 		qint32 current_ap= ff7->partyMateriaAp(s,mat);
 		quint8 current_id= ff7->partyMateriaId(s,mat);
@@ -1084,12 +1075,12 @@ void MainWindow::materiaupdate(void)
         if(current_id == FF7Materia::EnemySkill)
 		{
 			if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
-			else{newItem =new QTableWidgetItem(QString(""),0);ui->tbl_materia->setItem(mat,1,newItem);}
+            else{newItem =new QTableWidgetItem(QString(),0);ui->tbl_materia->setItem(mat,1,newItem);}
 		}
 
 		else if(current_id==FF7Materia::MasterCommand || current_id==FF7Materia::MasterMagic || current_id==FF7Materia::MasterSummon || current_id==FF7Materia::Underwater)
 		{
-            newItem =new QTableWidgetItem(QString(""),0);
+            newItem =new QTableWidgetItem(QString(),0);
             ui->tbl_materia->setItem(mat,1,newItem);
 		}
 		else if (current_id !=FF7Materia::EmptyId)
@@ -1104,7 +1095,7 @@ void MainWindow::materiaupdate(void)
 			ff7->setPartyMateria(s,mat,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//invalid insure its clear.
 			newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
 			ui->tbl_materia->setItem(mat,0,newItem);
-			newItem = new QTableWidgetItem("",0);
+            newItem = new QTableWidgetItem(QString(), 0);
 			ui->tbl_materia->setItem(mat,1,newItem);
 			ff7->setFileModified(fileTemp,s);
 		}
@@ -1122,17 +1113,16 @@ void MainWindow::materia_ap_changed(qint32 ap)
 }}
 void MainWindow::materia_id_changed(qint8 id)
 {if(!load){
-	ff7->setPartyMateria(s,ui->tbl_materia->currentRow(),id,ff7->partyMateriaAp(s,ui->tbl_materia->currentRow()));
+    ff7->setPartyMateria(s, ui->tbl_materia->currentRow(), quint8(id), ff7->partyMateriaAp(s,ui->tbl_materia->currentRow()));
 	materiaupdate();
 }}
 void MainWindow::CheckGame()
 {
-	if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-	  ((!ff7->isFF7(s))&& (ff7->type() != "PC")
-					   && (ff7->psx_block_type(s) !=0xA0)))
-	{// NOT FF7
-		errbox error(0,ff7,s);
-		if ( (ff7->type()=="PSX") || (ff7->type()=="PSV"))
+    if((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
+     ||((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
+        // NOT FF7
+        errbox error(nullptr, ff7, s);
+        if ( (ff7->format()==FF7SaveInfo::FORMAT::PSX) || (ff7->format()==FF7SaveInfo::FORMAT::PS3))
 		{
 			error.setSingleSlot(true);
 		}
@@ -1208,11 +1198,11 @@ void MainWindow::othersUpdate()
 
 	ui->sb_time_hour->setValue(ff7->time(s) / 3600);
 	ui->sb_time_min->setValue(ff7->time(s)/60%60);
-	ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+    ui->sb_time_sec->setValue(int(ff7->time(s)) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 
 	ui->sb_timer_time_hour->setValue(ff7->countdownTimer(s) / 3600);
 	ui->sb_timer_time_min->setValue(ff7->countdownTimer(s)/60%60);
-	ui->sb_timer_time_sec->setValue(ff7->countdownTimer(s) -((ui->sb_timer_time_hour->value()*3600)+ui->sb_timer_time_min->value()*60));
+    ui->sb_timer_time_sec->setValue(int(ff7->countdownTimer(s)) -((ui->sb_timer_time_hour->value()*3600)+ui->sb_timer_time_min->value()*60));
 	ui->cb_yuffieforest->setChecked(ff7->canFightNinjaInForest(s));
 	ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
 	ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
@@ -1221,8 +1211,8 @@ void MainWindow::othersUpdate()
 	QTableWidgetItem *newItem;
 	ui->tbl_materia_2->reset();
 	ui->tbl_materia_2->clearContents();
-	ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
-	ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
+    ui->tbl_materia_2->setColumnWidth(0, int(ui->tbl_materia_2->width()*.65));
+    ui->tbl_materia_2->setColumnWidth(1, int(ui->tbl_materia_2->width()*.25));
 	ui->tbl_materia_2->setRowCount(48);
 	for(int mat=0;mat<48;mat++) //materias stolen by yuffie
 	{
@@ -1273,19 +1263,41 @@ void MainWindow::update_hexEditor_PSXInfo(void)
 	ui->lblRegionString->setText(ff7->region(s));
 	QString SlotSizeText;
 
-	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){ui->linePsxDesc->setText(ff7->psxDesc(s));}
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)){SlotSizeText.append(tr("\n Mid-Linked Block "));}
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_ENDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){SlotSizeText.append(tr("\n End Of Linked Data"));}
+    if(ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+        ui->linePsxDesc->setText(ff7->psxDesc(s));
+    }
 
-	if((ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MAIN)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_MIDLINK)||(ff7->psx_block_type(s)==FF7Save::BLOCK_DELETED_ENDLINK)){SlotSizeText.append(tr("(Deleted)"));}
-	if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_ENDLINK && ff7->psx_block_type(s) != FF7Save::BLOCK_DELETED_MIDLINK && ff7->psx_block_type(s) !=FF7Save::BLOCK_DELETED_ENDLINK){SlotSizeText.append(tr("Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));}
-	if(ff7->psx_block_size(s) !=1)
+    if(ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
+     || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)) {
+            SlotSizeText.append(tr("\n Mid-Linked Block "));
+    } else if(ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+       || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+        SlotSizeText.append(tr("\n End Of Linked Data"));
+    }
+
+    if(ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED)
+     || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+     || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+        SlotSizeText.append(tr("(Deleted)"));
+    }
+
+    if(ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+     && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+        SlotSizeText.append(tr("Game Uses %n Save Block(s)", nullptr, ff7->psx_block_size(s)));
+    }
+
+    if(ff7->psx_block_size(s) !=1)
 	{
-			if(ff7->type()!="PSX" && ff7->type()!="PSV" && ff7->psx_block_next(s)!=0xFF )
-			{
-				if(ff7->psx_block_type(s) != FF7Save::BLOCK_MIDLINK){SlotSizeText.append(tr("s\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
-				else{SlotSizeText.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
-			}
+        if(ff7->format()!= FF7SaveInfo::FORMAT::PSX
+         && ff7->format()!=FF7SaveInfo::FORMAT::PS3
+         && ff7->psx_block_next(s)!=0xFF ) {
+            SlotSizeText.append(tr("\n  Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));
+        }
 	}
 	ui->lblSlotSize->setText(SlotSizeText);
 }
@@ -1357,18 +1369,23 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 			optionsWidget->setControllerMode(ff7->controlMode(s));
 			optionsWidget->setCursor(ff7->cursorMode(s));
 			optionsWidget->setCamera(ff7->cameraMode(s));
-			optionsWidget->setAtb(ff7->atbMode(s));
+            optionsWidget->setAtbMode(ff7->atbMode(s));
 			optionsWidget->setMagicOrder(ff7->magicOrder(s));
 			optionsWidget->setBattleSpeed(ff7->battleSpeed(s));
 			optionsWidget->setBattleMessageSpeed(ff7->battleMessageSpeed(s));
 			optionsWidget->setFieldMessageSpeed(ff7->messageSpeed(s));
-			if((ff7->type() !="PC" && ff7->type() !="")|| settings->value("optionsShowMapping").toBool())
-			{
+            for(int i=0; i<16; i++) {
+                optionsWidget->setInput(i, ff7->controllerMapping(s, i));
+            }
+            if( (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
+                 || settings->value("optionsShowMapping").toBool()) {
 				setControllerMappingVisible(true);
-				if(optionsWidget->verticalScrollBar()->isVisible())
-				{optionsWidget->setFixedWidth(optionsWidget->width()-1);}
-			}
-			else{setControllerMappingVisible(false);}
+                if(optionsWidget->verticalScrollBar()->isVisible()) {
+                    optionsWidget->setFixedWidth(optionsWidget->width()-1);
+                }
+            } else {
+                setControllerMappingVisible(false);
+            }
 		break;
 
 		case 8://HexEditor Tab
@@ -1386,7 +1403,7 @@ void MainWindow::hexTabUpdate(int viewMode)
 	ui->psxExtras->setVisible(false);
     ui->boxHexData->setVisible(false);
 	disconnect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
-    if(ff7->type()=="PC" || ff7->type() =="") {
+    if(ff7->format()==FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
 		hexEditor->setData(ff7->slotFF7Data(s));
     } else {
 		ui->psxExtras->setVisible(true);
@@ -1411,27 +1428,7 @@ void MainWindow::hexTabUpdate(int viewMode)
 }
 void MainWindow::setControllerMappingVisible(bool Visible)
 {
-	if(Visible)
-	{
-		optionsWidget->setControllerMappingVisible(true);
-		optionsWidget->setBtnCamera(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
-		optionsWidget->setBtnTarget(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
-		optionsWidget->setBtnPgUp(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
-		optionsWidget->setBtnPgDn(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
-		optionsWidget->setBtnMenu(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
-		optionsWidget->setBtnOk(ff7->controllerMapping(s,FF7Save::ACTION_OK));
-		optionsWidget->setBtnCancel(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
-		optionsWidget->setBtnSwitch(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
-		optionsWidget->setBtnHelp(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
-		optionsWidget->setBtn9(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
-		optionsWidget->setBtn10(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
-		optionsWidget->setBtnPause(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
-		optionsWidget->setBtnUp(ff7->controllerMapping(s,FF7Save::ACTION_UP));
-		optionsWidget->setBtnDown(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
-		optionsWidget->setBtnLeft(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
-		optionsWidget->setBtnRight(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
-	}
-	else{optionsWidget->setControllerMappingVisible(false);}
+    optionsWidget->setControllerMappingVisible(Visible);
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(bool newgame)
@@ -1439,18 +1436,18 @@ void MainWindow::guirefresh(bool newgame)
 	load=true;
 	/*~~~~Check for SG type and ff7~~~~*/
 	if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-	  ((!ff7->isFF7(s))&& (ff7->type() !="PC")
-					   && (ff7->psx_block_type(s) !=0xA0)))
+      ((!ff7->isFF7(s))&& (ff7->format() !=FF7SaveInfo::FORMAT::PC)
+                       && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY))))
 	{
 		CheckGame();//Not FF7! Handled By CheckGame()
 	}
 	else
 	{//IS FF7 Slot
-		if((ff7->type()=="PC") || (ff7->type()=="")){if(ui->combo_hexEditor->currentIndex()!=1){ui->combo_hexEditor->setCurrentIndex(1);}}
+        if((ff7->format()==FF7SaveInfo::FORMAT::PC) || (ff7->format()== FF7SaveInfo::FORMAT::UNKNOWN)){if(ui->combo_hexEditor->currentIndex()!=1){ui->combo_hexEditor->setCurrentIndex(1);}}
 		//QByteArray text;
 		if(ff7->region(s).isEmpty()
-		   && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
-		   && ff7->psx_block_type(s)==0xA0)
+           && (ff7->format() ==FF7SaveInfo::FORMAT::VMC || ff7->format() ==FF7SaveInfo::FORMAT::VGS ||ff7->format() ==FF7SaveInfo::FORMAT::DEX ||ff7->format() ==FF7SaveInfo::FORMAT::PSP)
+           && ff7->psx_block_type(s)== char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY))
 		{//if empty region string and a virtual memcard format and dir frame says empty.
 			ff7->clearSlot(s); //fileModified(false);//checking only
 		}
@@ -1581,7 +1578,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
 		ff7->setDescCurMP(s,0);
 		ff7->setDescMaxMP(s,0);
 		ff7->setDescLevel(s,0);
-		ff7->setDescName(s,QString(QByteArray(16,0xFF)));
+        ff7->setDescName(s, QString(QByteArray(16, char(0xFF))));
 	}
 	else
 	{
@@ -1667,19 +1664,19 @@ void MainWindow::cm_ratingChanged(int stable, quint8 rating){if(!load){ff7->setC
 void MainWindow::cm_pensChanged(int pen,int index){if(!load){ff7->setChocoboPen(s,pen,index);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_BARRET,value);}}
-void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_AERIS,value);}}
-void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_TIFA,value);}}
-void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_YUFFIE,value);}}
+void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_BARRET, qint8(value));}}
+void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_AERIS, qint8(value));}}
+void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_TIFA, qint8(value));}}
+void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){ ff7->setLove(s,false,FF7Save::LOVE_YUFFIE, qint8(value));}}
 
-void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(s,((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())));}}
-void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s,( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
-void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s,((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
+void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(s, quint32((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())));}}
+void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s, quint32((ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
+void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s, quint32((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
 
 void MainWindow::on_sb_steps_valueChanged(int value){if(!load){ff7->setSteps(s,value);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_gil_valueChanged(double value){if(!load){ff7->setGil(s,value);}}
+void MainWindow::on_sb_gil_valueChanged(double value){if(!load){ff7->setGil(s, quint32(value));}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
 void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
 void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
@@ -1697,28 +1694,28 @@ void MainWindow::on_btn_add_all_materia_clicked()
 	//place one of each at lowest ossible point
 	for(int i=117;i<142;i++)
 	{//Starting With Magic Materia
-		if(i<132){ff7->setPartyMateria(s,i,(i-68),FF7Materia::MaxMateriaAp);}
-		else if((i>=132) && (i<136)){ff7->setPartyMateria(s,(i-1),(i-68),FF7Materia::MaxMateriaAp);}
-		else if((i>=136) && (i<142)){ff7->setPartyMateria(s,(i-3),(i-68),FF7Materia::MaxMateriaAp);}
+        if(i<132){ff7->setPartyMateria(s, i, quint8(i-68), FF7Materia::MaxMateriaAp);}
+        else if((i>=132) && (i<136)){ff7->setPartyMateria(s, (i-1), quint8(i-68), FF7Materia::MaxMateriaAp);}
+        else if((i>=136) && (i<142)){ff7->setPartyMateria(s, (i-3), quint8(i-68), FF7Materia::MaxMateriaAp);}
 	}
 	// Then Support
-	for(int i=139;i<152;i++){ff7->setPartyMateria(s,i,(i-116),FF7Materia::MaxMateriaAp);}
+    for(int i=139;i<152;i++){ff7->setPartyMateria(s, i, quint8(i-116), FF7Materia::MaxMateriaAp);}
 
 	for(int i=152;i<166;i++)
 	{//Then Command
-		if(i<154){ff7->setPartyMateria(s,i,(i-138),FF7Materia::MaxMateriaAp);}
-		else if(i<157){ff7->setPartyMateria(s,i,(i-135),FF7Materia::MaxMateriaAp);}
-		else if(i<159){ff7->setPartyMateria(s,i,(i-121),FF7Materia::MaxMateriaAp);}
-		else if(i<165){ff7->setPartyMateria(s,i,(i-120),FF7Materia::MaxMateriaAp);}
-		else {ff7->setPartyMateria(s,i,0x30,FF7Materia::MaxMateriaAp);}
+        if(i<154){ff7->setPartyMateria(s, i, quint8(i-138), FF7Materia::MaxMateriaAp);}
+        else if(i<157){ff7->setPartyMateria(s, i, quint8(i-135), FF7Materia::MaxMateriaAp);}
+        else if(i<159){ff7->setPartyMateria(s, i, quint8(i-121), FF7Materia::MaxMateriaAp);}
+        else if(i<165){ff7->setPartyMateria(s, i, quint8(i-120), FF7Materia::MaxMateriaAp);}
+        else {ff7->setPartyMateria(s, i, 0x30, FF7Materia::MaxMateriaAp);}
 	}
 	for(int i=166;i<183;i++)
 	{//And Independent
-		if(i<180){ff7->setPartyMateria(s,i,(i-166),FF7Materia::MaxMateriaAp);}
-		else{ff7->setPartyMateria(s,i,(i-164),FF7Materia::MaxMateriaAp);}
+        if(i<180){ff7->setPartyMateria(s, i,  quint8(i-166), FF7Materia::MaxMateriaAp);}
+        else{ff7->setPartyMateria(s, i,  quint8(i-164), FF7Materia::MaxMateriaAp);}
 	}
 	//Finish With Summons
-	for(int i=183;i<200;i++){ff7->setPartyMateria(s,i,(i-109),FF7Materia::MaxMateriaAp);}
+    for(int i=183;i<200;i++){ff7->setPartyMateria(s, i,  quint8(i-109), FF7Materia::MaxMateriaAp);}
 	materiaupdate();
 	statusBar()->showMessage(tr("All Materia Added!"),750);
 }
@@ -1726,21 +1723,21 @@ void MainWindow::on_btn_add_all_materia_clicked()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::locationSelectionChanged(QString fieldName)
 {if(!load){
-	ff7->setMapId(s,Locations.mapID(fieldName).toInt());
-	ff7->setLocationId(s,Locations.locationID(fieldName).toInt());
-	ff7->setLocationX(s,Locations.x(fieldName).toInt());
-	ff7->setLocationY(s,Locations.y(fieldName).toInt());
-	ff7->setLocationT(s,Locations.t(fieldName).toInt());
-	ff7->setLocationD(s,Locations.d(fieldName).toInt());
+    ff7->setMapId(s,Locations.mapID(fieldName).toUShort());
+    ff7->setLocationId(s,Locations.locationID(fieldName).toUShort());
+    ff7->setLocationX(s,Locations.x(fieldName).toShort());
+    ff7->setLocationY(s,Locations.y(fieldName).toShort());
+    ff7->setLocationT(s,Locations.t(fieldName).toUShort());
+    ff7->setLocationD(s, quint8 (Locations.d(fieldName).toInt()));
 	ff7->setLocation(s,Locations.locationString(fieldName));
 	statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName),750);
 }}
-void MainWindow::map_id_valueChanged(int value){if(!load){ff7->setMapId(s, value);}}
-void MainWindow::loc_id_valueChanged(int value){if(!load){ff7->setLocationId(s,value);}}
-void MainWindow::coord_x_valueChanged(int value){if(!load){ff7->setLocationX(s,value);}}
-void MainWindow::coord_y_valueChanged(int value){if(!load){ff7->setLocationY(s,value);}}
-void MainWindow::coord_t_valueChanged(int value){if(!load){ff7->setLocationT(s,value);}}
-void MainWindow::coord_d_valueChanged(int value){if(!load){ff7->setLocationD(s,value);}}
+void MainWindow::map_id_valueChanged(int value){if(!load){ff7->setMapId(s, quint16(value));}}
+void MainWindow::loc_id_valueChanged(int value){if(!load){ff7->setLocationId(s, quint16(value));}}
+void MainWindow::coord_x_valueChanged(int value){if(!load){ff7->setLocationX(s, qint16(value));}}
+void MainWindow::coord_y_valueChanged(int value){if(!load){ff7->setLocationY(s, qint16(value));}}
+void MainWindow::coord_t_valueChanged(int value){if(!load){ff7->setLocationT(s, quint16(value));}}
+void MainWindow::coord_d_valueChanged(int value){if(!load){ff7->setLocationD(s, quint8(value));}}
 void MainWindow::location_textChanged(QString text){if (!load){ff7->setLocation(s,text);}}
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
@@ -1763,23 +1760,6 @@ void MainWindow::setCursorMode(int mode){if(!load){ff7->setCursorMode(s,mode);}}
 void MainWindow::setAtbMode(int mode){if(!load){ff7->setAtbMode(s,mode);}}
 void MainWindow::setCameraMode(int mode){if(!load){ff7->setCameraMode(s,mode);}}
 void MainWindow::setMagicOrder(int order){if(!load){ff7->setMagicOrder(s,order);}}
-
-void MainWindow::setButtonCamera(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
-void MainWindow::setButtonTarget(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
-void MainWindow::setButtonPageUp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
-void MainWindow::setButtonPageDown(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
-void MainWindow::setButtonMenu(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
-void MainWindow::setButtonOk(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
-void MainWindow::setButtonCancel(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
-void MainWindow::setButtonSwitch(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
-void MainWindow::setButtonHelp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
-void MainWindow::setButtonUnknown1(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
-void MainWindow::setButtonUnknown2(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
-void MainWindow::setButtonPause(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
-void MainWindow::setButtonUp(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
-void MainWindow::setButtonDown(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
-void MainWindow::setButtonLeft(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
-void MainWindow::setButtonRight(int index){if(!load){ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ ff7->setDisc(s,value);}}
@@ -2047,7 +2027,7 @@ void MainWindow::on_btnReplay_clicked()
 		ff7->setCharID(s,FF7Char::CaitSith,FF7Char::YoungCloud);
 		//set up Sephiroth
 		FF7Save * temp = new FF7Save();
-		temp->newGame(s);
+        temp->newGame(s);
 		ff7->setCharacter(s,FF7Char::Vincent,temp->character(s,FF7Char::Vincent));
 		if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));}
 		else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
@@ -2120,16 +2100,16 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
 	guirefresh(0);
 }
 
-void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){ ff7->setLove(s,true,FF7Save::LOVE_AERIS,value);}}
-void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){ ff7->setLove(s,true,FF7Save::LOVE_TIFA,value);}}
-void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){ ff7->setLove(s,true,FF7Save::LOVE_YUFFIE,value);}}
-void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){ ff7->setLove(s,true,FF7Save::LOVE_BARRET,value);}}
-void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){ ff7->setSpeedScore(s,1,value);}}
-void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){ ff7->setSpeedScore(s,2,value);}}
-void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){ ff7->setSpeedScore(s,3,value);}}
-void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
-void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,( (ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
+void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){ ff7->setLove(s, true, FF7Save::LOVE_AERIS, qint8(value));}}
+void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){ ff7->setLove(s, true, FF7Save::LOVE_TIFA, qint8(value));}}
+void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){ ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, qint8(value));}}
+void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){ ff7->setLove(s, true, FF7Save::LOVE_BARRET, qint8(value));}}
+void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){ ff7->setSpeedScore(s, 1, quint16(value));}}
+void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){ ff7->setSpeedScore(s, 2, quint16(value));}}
+void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){ ff7->setSpeedScore(s, 3, quint16(value));}}
+void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7->setCountdownTimer(s,quint32((value*3600) + (ui->sb_timer_time_min->value()*60) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value()*3600) + ((value*60)) + (ui->sb_timer_time_sec->value())));}}
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value()*3600) + (ui->sb_timer_time_min->value()*60) + (value)));}}
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value){if(!load){ff7->setUWeaponHp(s,value);}}
 void MainWindow::on_cb_reg_vinny_toggled(bool checked){if(!load){ff7->setVincentUnlocked(s,checked);}}
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked){if(!load){ff7->setYuffieUnlocked(s,checked);}}
@@ -2155,7 +2135,7 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
 {if(!load){ if(!ff7->region(s).isEmpty()){
 		ff7->setSaveNumber(s,index+1);
-		if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
+        if(ff7->format()== FF7SaveInfo::FORMAT::VMC|| ff7->format()==FF7SaveInfo::FORMAT::PSP|| ff7->format()==FF7SaveInfo::FORMAT::VGS || ff7->format() ==FF7SaveInfo::FORMAT::DEX){guirefresh(0);}
 }}}
 
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
@@ -2451,7 +2431,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
 	menu.addAction(tr("Place Emerald Weapon?"));
 	*/
 	sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
-	if(sel==0){;return;}
+    if(!sel){return;}
 	fileModified(true);
 	if(sel->text()==tr("&Place Leader"))
 	{
@@ -2496,11 +2476,11 @@ void MainWindow::on_btn_item_add_each_item_clicked()
 		{
 			if(i<106)
 			{
-				ff7->setItem(s,i,i,127);
+                ff7->setItem(s,i, quint16(i),127);
 			}
 			else// after the block of empty items shift up 23 spots.
 			{
-				ff7->setItem(s,(i-23),i,127);
+                ff7->setItem(s,(i-23),quint16(i),127);
 			}
 		}
 		else{ff7->setItem(s,i,0x1FF,0x7F);}//exclude the test items
@@ -2517,7 +2497,6 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 	QString text;
 	int rows=0;
 	QTableWidgetItem *newItem;
-	quint8 value=0;
 	QByteArray temp,temp2;
 	int s2;
 
@@ -2535,8 +2514,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 	ui->tbl_compare_unknown->setColumnWidth(3,fontMetrics().width("QQQQQQQQQ",9));
 	ui->tbl_compare_unknown->setColumnWidth(4,fontMetrics().width("WW",2));
 
-	if(z <= unknown_zmax){temp = ff7->unknown(s,z);}
-	else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
+    if(z <= ff7->unknown_zmax()){temp = ff7->unknown(s,z);}
+    else if(z == ff7->unknown_zmax()+1){temp = ff7->slotFF7Data(s);}
 
 	rows=temp.size();
 
@@ -2557,18 +2536,16 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 			ui->tbl_unknown->setItem(i,0,newItem);
 		}
 
-		value = temp.at(i);
+        char value = temp.at(i);
 
 		//Write Hex
-		QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //Format: 000C
-		newItem = new QTableWidgetItem(hex_str,0);
+        newItem = new QTableWidgetItem(QString("%1").arg(value,2,16,QChar('0')).toUpper(), 0);
 		ui->tbl_unknown->setItem(i,1,newItem);
 		//Write Dec
 		newItem = new QTableWidgetItem(text.number(value,10),0);
 		ui->tbl_unknown->setItem(i,2,newItem);
 		//Write Bin
-		QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
-		newItem = new QTableWidgetItem(binary_str,0);
+        newItem = new QTableWidgetItem(QString("%1").arg(value,8,2,QChar('0')), 0);
 		ui->tbl_unknown->setItem(i,3,newItem);
 		//Write Char
 		newItem = new QTableWidgetItem(QChar(value),0);
@@ -2580,8 +2557,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 		{//do the same for the compare slot if one has been selected.
 			if(ui->combo_z_var->currentText()=="SLOT")
 			{
-				QString hex_str = QString("%1").arg(i,4,16,QChar('0')).toUpper();
-				newItem = new QTableWidgetItem(hex_str,0);
+                newItem = new QTableWidgetItem(QString("%1").arg(i,4,16,QChar('0')).toUpper(), 0);
 				ui->tbl_compare_unknown->setItem(i,0,newItem);
 			}
 			else
@@ -2591,20 +2567,18 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 			}
 
 			s2 = ui->combo_compare_slot->currentIndex()-1;
-			if(z <= unknown_zmax){temp2 = ff7->unknown(s2,z);}
-			else if(z == unknown_zmax+1){temp2 = ff7->slotFF7Data(s2);}
+            if(z <= ff7->unknown_zmax()){temp2 = ff7->unknown(s2,z);}
+            else if(z == ff7->unknown_zmax()+1){temp2 = ff7->slotFF7Data(s2);}
 			value = temp2.at(i);
 
 			//Write Hex
-			QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
-			newItem = new QTableWidgetItem(hex_str,0);
+            newItem = new QTableWidgetItem(QString("%1").arg(value,2,16,QChar('0')).toUpper(), 0);
 			ui->tbl_compare_unknown->setItem(i,1,newItem);
 			//Write Dec
 			newItem = new QTableWidgetItem(text.number(value,10),0);
 			ui->tbl_compare_unknown->setItem(i,2,newItem);
 			//Write Bin
-			QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
-			newItem = new QTableWidgetItem(binary_str,0);
+            newItem = new QTableWidgetItem(QString("%1").arg(value,8,2,QChar('0')), 0);
 			ui->tbl_compare_unknown->setItem(i,3,newItem);
 			//Write Char
 			newItem = new QTableWidgetItem(QChar(value),0);
@@ -2656,18 +2630,18 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 	QByteArray temp;
 
 	int z = ui->combo_z_var->currentIndex();
-	if(z <= unknown_zmax){temp = ff7->unknown(s,z);}
-	else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
+    if(z <= ff7->unknown_zmax()){temp = ff7->unknown(s,z);}
+    else if(z == ff7->unknown_zmax()+1){temp = ff7->slotFF7Data(s);}
 
 	switch(item->column())
 	{
-	case 1: temp[item->row()] = item->text().toInt(0,16);  break;
-	case 2: temp[item->row()] = item->text().toInt();      break;
-	case 3: temp[item->row()] = item->text().toInt(0,2);   break;
-	};
+    case 1: temp[item->row()] = char(item->text().toInt(nullptr, 16));  break;
+    case 2: temp[item->row()] = char(item->text().toInt());      break;
+    case 3: temp[item->row()] = char(item->text().toInt(nullptr, 2));   break;
+    }
 
-	if(z <= unknown_zmax){ff7->setUnknown(s,z,temp);}
-	else if(z == unknown_zmax+1){ff7->setSlotFF7Data(s,temp);}
+    if(z <= ff7->unknown_zmax()){ff7->setUnknown(s,z,temp);}
+    else if(z == ff7->unknown_zmax()+1){ff7->setSlotFF7Data(s,temp);}
 
 	unknown_refresh(z);
 }}
@@ -2795,9 +2769,9 @@ void MainWindow::on_btn_maxChar_clicked()
 
 }
 void MainWindow::Items_Changed(QList<quint16> items){ff7->setItems(s,items);}
-void MainWindow::on_sbSnowBegScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,0,value);}}
-void MainWindow::on_sbSnowExpScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,1,value);}}
-void MainWindow::on_sbSnowCrazyScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,2,value);}}
+void MainWindow::on_sbSnowBegScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,0, quint8(value));}}
+void MainWindow::on_sbSnowExpScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,1, quint8(value));}}
+void MainWindow::on_sbSnowCrazyScore_valueChanged(int value){if(!load){ff7->setSnowboardScore(s,2, quint8(value));}}
 
 void MainWindow::on_sbSnowBegMin_valueChanged(int value)
 {if(!load){
@@ -2861,14 +2835,14 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 		time.replace(4,3,QString("%1").arg(value, 3, 10, QChar('0')));
 		ff7->setSnowboardTime(s,2,time);
 }}
-void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}
-void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s,arg1);}}
+void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s, quint16(arg1));}}
+void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s, quint16(arg1));}}
 
 void MainWindow::on_combo_hexEditor_currentIndexChanged(int index){hexTabUpdate(index);}
 
 void MainWindow::hexEditorChanged(void)
 {
-	if(ff7->type()=="PC")
+    if(ff7->format()==FF7SaveInfo::FORMAT::PC)
 	{
 		ff7->setSlotFF7Data(s,hexEditor->data());
 	}
@@ -2981,7 +2955,7 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
 				default:QMessageBox::information(this,tr("Black Chocobo"),tr("Unknown Id in Buggy/Highwind Location"));break;
 			}
 
-			ui->bh_angle->setValue(ff7->worldCoordsBhAngle(s));;
+            ui->bh_angle->setValue(ff7->worldCoordsBhAngle(s));
 			ui->bh_y->setValue(ff7->worldCoordsBhY(s));
 			ui->bh_z->setValue(ff7->worldCoordsBhZ(s));
 
@@ -3006,7 +2980,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 			ui->sb_b_love_tifa->setValue(ff7->love(s,true,FF7Save::LOVE_TIFA));
 			ui->sb_b_love_yuffie->setValue(ff7->love(s,true,FF7Save::LOVE_YUFFIE));
 			ui->sb_b_love_barret->setValue(ff7->love(s,true,FF7Save::LOVE_BARRET));
-			ui->sb_u_weapon_hp->setValue(ff7->uWeaponHp(s));
+            ui->sb_u_weapon_hp->setValue(int(ff7->uWeaponHp(s)));
 			ui->cb_tut_sub->setChecked(ff7->tutSub(s,2));
 
 			ui->lcdTutSub->display(ff7->tutSub(s));
@@ -3026,7 +3000,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
 			ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
 			ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-			if (ff7->type() != "PC" && ff7->type() !="") //we Display an icon. for all formats except for pc
+            if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. for all formats except for pc
 			{
 				ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 			}
@@ -3037,9 +3011,9 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 	}
 }
 
-void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){ff7->setCondorFunds(s,arg1);}}
-void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){ff7->setCondorWins(s,arg1);}}
-void MainWindow::on_sbCondorLosses_valueChanged(int arg1){if(!load){ff7->setCondorLosses(s,arg1);}}
+void MainWindow::on_sbCondorFunds_valueChanged(int arg1){if(!load){ff7->setCondorFunds(s, quint16(arg1));}}
+void MainWindow::on_sbCondorWins_valueChanged(int arg1){if(!load){ff7->setCondorWins(s, quint8(arg1));}}
+void MainWindow::on_sbCondorLosses_valueChanged(int arg1){if(!load){ff7->setCondorLosses(s, quint8(arg1));}}
 void MainWindow::on_cbPandorasBox_toggled(bool checked){if(!load){ff7->setSeenPandorasBox(s,checked);}}
 void MainWindow::on_cbSubGameWon_toggled(bool checked){if(!load){ff7->setSubMiniGameVictory(s,checked);}}
 
@@ -3117,3 +3091,8 @@ void MainWindow::on_btnSearchKeyItems_clicked()
 
 void MainWindow::on_linePsxDesc_textChanged(const QString &arg1){if(!load){ff7->setPsxDesc(arg1,s); update_hexEditor_PSXInfo();}}
 void MainWindow::on_cb_FlashbackPiano_toggled(bool checked){if(!load){ff7->setPlayedPianoOnFlashback(s,checked);}}
+void MainWindow::setButtonMapping(int controlAction, int newButton) {
+    if(!load) {
+        ff7->setControllerMapping(s, controlAction, newButton);
+    }
+}

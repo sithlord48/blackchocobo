@@ -80,7 +80,7 @@ private:
 	bool _init; //set true then false after a file load.
 	bool load; // are we loading data? if so don't save it to the file.
 	//bool showLocPreview;
-	FF7Save *ff7; // our save file struct pointer.
+    FF7Save *ff7 =nullptr; // our save file struct pointer.
 	QSettings *settings;//Pointer To settings object.
 	int s; //track slot
 	FF7Char Chars; //FF7Char Static Data
@@ -355,24 +355,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void setDialogColorUR(QColor color);
 	void setDialogColorLL(QColor color);
 	void setDialogColorLR(QColor color);
-
-	void setButtonCamera(int index);
-	void setButtonTarget(int index);
-	void setButtonPageUp(int index);
-	void setButtonPageDown(int index);
-	void setButtonMenu(int index);
-	void setButtonOk(int index);
-	void setButtonCancel(int index);
-	void setButtonSwitch(int index);
-	void setButtonHelp(int index);
-	void setButtonUnknown1(int index);
-	void setButtonUnknown2(int index);
-	void setButtonPause(int index);
-	void setButtonUp(int index);
-	void setButtonDown(int index);
-	void setButtonLeft(int index);
-	void setButtonRight(int index);
-
+    void setButtonMapping(int controlAction, int newButton);
 	void setBattleHelp(bool checked);
 	void setBattleTargets(bool checked);
 	void setFieldHelp(bool checked);

@@ -46,17 +46,17 @@ private slots:
 	void btnViewClicked();
 	void btnNextClicked();
 private:
-	int s;
-	SaveIcon save_icon;
-	FF7Save *ff7;
+    int s;
+    SaveIcon *save_icon = nullptr;
+    FF7Save *ff7 = nullptr;
 	/* Gui Objects*/
-	QPushButton * btnNext;
-	QPushButton * btnPrev;
-	QPushButton * btnView;
-	QPushButton * btnExport;
-	QLabel *lblRegionString;
-	QLabel *lblIcon;
-	bool singleSlot;
+    QPushButton * btnNext = nullptr;
+    QPushButton * btnPrev = nullptr;
+    QPushButton * btnView = nullptr;
+    QPushButton * btnExport = nullptr;
+    QLabel *lblRegionString = nullptr;
+    QLabel *lblIcon = nullptr;
+    bool singleSlot = false;
 };
 
 #endif // ERRBOX_H

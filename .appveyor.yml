@@ -14,8 +14,8 @@ environment:
     RUNTIME_LINKAGE: static
     ICU_VERSION: 57.1
     ICU_LINKAGE: static
-    QTDIR: C:\Qt\5.12.1\mingw73_64
-    QT_VERSION: 5.12.1
+    QTDIR: C:\Qt\5.12.2\mingw73_64
+    QT_VERSION: 5.12.2
     QT_LINKAGE: static
 install:
 - cmd: >-

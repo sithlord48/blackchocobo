@@ -6,18 +6,24 @@ set(blackchocobo_VERSION_MINOR 9)
 set(blackchocobo_VERSION_PATCH 90)
 cmake_minimum_required( VERSION 2.8.11 )
 set ( CMAKE_BUILD_TYPE Release )
+add_definitions( -c++17)
 add_definitions ( -Wall )
+add_definitions (-DEnableopenSSL)
 find_package ( Qt5Widgets REQUIRED )
 find_package ( Qt5Gui REQUIRED )
 find_package ( Qt5Xml REQUIRED )
 find_package (Qt5Core REQUIRED )
-find_package ( OpenSSL REQUIRED )
+
+if(EnableOpenSSL)
+    find_package ( OpenSSL REQUIRED )
+    add_definitions(-DEnableOpenSSL)
+endif()
+
 find_package(Qt5LinguistTools)
 #include ( ${QT_USE_FILE} )
 include_directories (
 	${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
 	${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
-	${OPENSSL_INCLUDE_DIR}
 	)
 set ( blackchocobo_HDRS
 	version.h
@@ -82,6 +88,7 @@ set ( blackchocobo_UIS
 	)
 QT5_WRAP_UI(UIS ${blackchocobo_UIS})
 
+
 set ( blackchocobo_RSCS
 	images.qrc
 	ff7tk/icons/achievements.qrc
@@ -94,6 +101,13 @@ set ( blackchocobo_RSCS
 	ff7tk/icons/psxButtons.qrc
 	)
 QT5_ADD_RESOURCES(RSCS ${blackchocobo_RSCS})
+find_package(Qt5LinguistTools)
+
+set( translatables
+    ${blackchocobo_HDRS}
+    ${blackchocobo_SRCS}
+    ${blackchocobo_UIS}
+    )
 
 set ( blackchocobo_TRS
 	lang/bchoco_en.ts
@@ -103,8 +117,9 @@ set ( blackchocobo_TRS
 	lang/bchoco_ja.ts
 	lang/bchoco_re.ts
 	)
-QT5_CREATE_TRANSLATION(TRS ${blackchocobo_TRS})
+#qt5_create_translation(TRS ${translatables} ${blackchocobo_TRS})
 
+qt5_add_translation(TRS ${blackchocobo_TRS})
 set ( blackchocobo_MOCS
 	mainwindow.h
 	about.h
@@ -170,9 +185,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	SET(CPACK_SOURCE_GENERATOR "TGZ;TZ")
 	SET(CPACK_GENERATOR "TGZ")
 	#detect Distro Family DEB , RPM 
-	if(EXISTS "/etc/lsb-release")
-	    set(DistroType DEB)
-	elseif(EXISTS "/etc/debian_release")
+	if(EXISTS "/etc/debian_release")
 	    set(DistroType DEB)
 	elseif(EXISTS "/etc/fedora-release")
 	    set(DistroType RPM)

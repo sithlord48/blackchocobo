@@ -237,148 +237,104 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Achievement_Names</name>
     <message>
-        <source>End of Part I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>End of Part II</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>End of Game</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master of Gil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Top Level</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Knights of the Round</source>
-        <translation type="unfinished">ナイツオブラウンド</translation>
+        <translation type="obsolete">ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">カタストロフィ</translation>
+        <translation type="obsolete">カタストロフィ</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">カオス</translation>
+        <translation type="obsolete">カオス</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished">大いなる福音</translation>
+        <translation type="obsolete">大いなる福音</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">ハイウインド</translation>
+        <translation type="obsolete">ハイウインド</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation type="unfinished">ファイナルヘヴン</translation>
+        <translation type="obsolete">ファイナルヘヴン</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation type="unfinished">森羅万象</translation>
+        <translation type="obsolete">森羅万象</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation type="unfinished">コスモメモリー</translation>
+        <translation type="obsolete">コスモメモリー</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation type="unfinished">スロット</translation>
+        <translation type="obsolete">スロット</translation>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation type="unfinished">バハムート零式</translation>
+        <translation type="obsolete">バハムート零式</translation>
     </message>
     <message>
         <source>Ultimate Weapon</source>
-        <translation type="unfinished">アルテマウェポン</translation>
-    </message>
-    <message>
-        <source>Diamond Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">アルテマウェポン</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation type="unfinished">ヴィンセント</translation>
+        <translation type="obsolete">ヴィンセント</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation type="unfinished">ユフィ</translation>
-    </message>
-    <message>
-        <source>Materia Overlord</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">ユフィ</translation>
     </message>
     <message>
         <source>Battle Square</source>
-        <translation type="unfinished">バトルスクェア</translation>
+        <translation type="obsolete">バトルスクェア</translation>
     </message>
     <message>
         <source>Gold Chocobo</source>
-        <translation type="unfinished">海チョコボ</translation>
-    </message>
-    <message>
-        <source>First Battle</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">海チョコボ</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation type="unfinished">ブレイバー</translation>
+        <translation type="obsolete">ブレイバー</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation type="unfinished">ヘビーショット</translation>
+        <translation type="obsolete">ヘビーショット</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation type="unfinished">ガリアンビースト</translation>
+        <translation type="obsolete">ガリアンビースト</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation type="unfinished">癒しの風</translation>
+        <translation type="obsolete">癒しの風</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation type="unfinished">ブーストジャンプ</translation>
+        <translation type="obsolete">ブーストジャンプ</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation type="unfinished">掌打ラッシュ</translation>
+        <translation type="obsolete">掌打ラッシュ</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation type="unfinished">疾風迅雷</translation>
+        <translation type="obsolete">疾風迅雷</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation type="unfinished">スレッドファング</translation>
+        <translation type="obsolete">スレッドファング</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation type="unfinished">ダイス</translation>
+        <translation type="obsolete">ダイス</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">超究武神覇斬</translation>
+        <translation type="obsolete">超究武神覇斬</translation>
     </message>
 </context>
 <context>
@@ -772,270 +728,270 @@ p, li { white-space: pre-wrap; }
     <name>Char_Limits</name>
     <message>
         <source>Braver</source>
-        <translation>ブレイバー</translation>
+        <translation type="vanished">ブレイバー</translation>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation>凶斬り</translation>
+        <translation type="vanished">凶斬り</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation>破晄撃</translation>
+        <translation type="vanished">破晄撃</translation>
     </message>
     <message>
         <source>Climhazzard</source>
-        <translation>クライムハザード</translation>
+        <translation type="vanished">クライムハザード</translation>
     </message>
     <message>
         <source>Meteorain</source>
-        <translation>メテオレイン</translation>
+        <translation type="vanished">メテオレイン</translation>
     </message>
     <message>
         <source>Finishing Touch</source>
-        <translation>画龍点睛</translation>
+        <translation type="vanished">画龍点睛</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>超究武神覇斬</translation>
+        <translation type="vanished">超究武神覇斬</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation>ヘビーショット</translation>
+        <translation type="vanished">ヘビーショット</translation>
     </message>
     <message>
         <source>Mindblow</source>
-        <translation>マインドブレイク</translation>
+        <translation type="vanished">マインドブレイク</translation>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation>グレネードボム</translation>
+        <translation type="vanished">グレネードボム</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation>ハンマーブロウ</translation>
+        <translation type="vanished">ハンマーブロウ</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation>サテライトビーム</translation>
+        <translation type="vanished">サテライトビーム</translation>
     </message>
     <message>
         <source>Angermax</source>
-        <translation>アンガーマックス</translation>
+        <translation type="vanished">アンガーマックス</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>カタストロフィ</translation>
+        <translation type="vanished">カタストロフィ</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation>掌打ラッシュ</translation>
+        <translation type="vanished">掌打ラッシュ</translation>
     </message>
     <message>
         <source>Somersault</source>
-        <translation>サマーソルト</translation>
+        <translation type="vanished">サマーソルト</translation>
     </message>
     <message>
         <source>Waterkick</source>
-        <translation>水面蹴り</translation>
+        <translation type="vanished">水面蹴り</translation>
     </message>
     <message>
         <source>Meteodrive</source>
-        <translation>メテオドライヴ</translation>
+        <translation type="vanished">メテオドライヴ</translation>
     </message>
     <message>
         <source>Dolphin Blow</source>
-        <translation>ドルフィンブロウ</translation>
+        <translation type="vanished">ドルフィンブロウ</translation>
     </message>
     <message>
         <source>Meteor Strike</source>
-        <translation>メテオストライク</translation>
+        <translation type="vanished">メテオストライク</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>ファイナルヘヴン</translation>
+        <translation type="vanished">ファイナルヘヴン</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation>癒しの風</translation>
+        <translation type="vanished">癒しの風</translation>
     </message>
     <message>
         <source>Seal Evil</source>
-        <translation>邪気封印</translation>
+        <translation type="vanished">邪気封印</translation>
     </message>
     <message>
         <source>Breath of the Earth</source>
-        <translation>大地の息吹</translation>
+        <translation type="vanished">大地の息吹</translation>
     </message>
     <message>
         <source>Fury Brand</source>
-        <translation>怒りの烙印</translation>
+        <translation type="vanished">怒りの烙印</translation>
     </message>
     <message>
         <source>Planet Protector</source>
-        <translation>星の守護</translation>
+        <translation type="vanished">星の守護</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation>生命の鼓動</translation>
+        <translation type="vanished">生命の鼓動</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>大いなる福音</translation>
+        <translation type="vanished">大いなる福音</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation>スレッドファング</translation>
+        <translation type="vanished">スレッドファング</translation>
     </message>
     <message>
         <source>Lunatic High</source>
-        <translation>ルナティックハイ</translation>
+        <translation type="vanished">ルナティックハイ</translation>
     </message>
     <message>
         <source>Blood Fang</source>
-        <translation>ブラッドファング</translation>
+        <translation type="vanished">ブラッドファング</translation>
     </message>
     <message>
         <source>Stardust Ray</source>
-        <translation>スターダストレイ</translation>
+        <translation type="vanished">スターダストレイ</translation>
     </message>
     <message>
         <source>Howling Moon</source>
-        <translation>ハウリングムーン</translation>
+        <translation type="vanished">ハウリングムーン</translation>
     </message>
     <message>
         <source>Earth Rave</source>
-        <translation>アースレイヴ</translation>
+        <translation type="vanished">アースレイヴ</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>コスモメモリー</translation>
+        <translation type="vanished">コスモメモリー</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation>疾風迅雷</translation>
+        <translation type="vanished">疾風迅雷</translation>
     </message>
     <message>
         <source>Clear Tranquil</source>
-        <translation>明鏡止水</translation>
+        <translation type="vanished">明鏡止水</translation>
     </message>
     <message>
         <source>Landscaper</source>
-        <translation>抜山蓋世</translation>
+        <translation type="vanished">抜山蓋世</translation>
     </message>
     <message>
         <source>Bloodfest</source>
-        <translation>血祭</translation>
+        <translation type="vanished">血祭</translation>
     </message>
     <message>
         <source>Gauntlet</source>
-        <translation>鎧袖一触</translation>
+        <translation type="vanished">鎧袖一触</translation>
     </message>
     <message>
         <source>Doom of the Living</source>
-        <translation>生者必滅</translation>
+        <translation type="vanished">生者必滅</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>森羅万象</translation>
+        <translation type="vanished">森羅万象</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation>ダイス</translation>
+        <translation type="vanished">ダイス</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation>スロット</translation>
+        <translation type="vanished">スロット</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation>ガリアンビースト</translation>
+        <translation type="vanished">ガリアンビースト</translation>
     </message>
     <message>
         <source>Death Gigas</source>
-        <translation>デスギガス</translation>
+        <translation type="vanished">デスギガス</translation>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation>ヘルマスカー</translation>
+        <translation type="vanished">ヘルマスカー</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>カオス</translation>
+        <translation type="vanished">カオス</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation>ブーストジャンプ</translation>
+        <translation type="vanished">ブーストジャンプ</translation>
     </message>
     <message>
         <source>Dynamite</source>
-        <translation>ダイナマイト</translation>
+        <translation type="vanished">ダイナマイト</translation>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation>ハイパージャンプ</translation>
+        <translation type="vanished">ハイパージャンプ</translation>
     </message>
     <message>
         <source>Dragon</source>
-        <translation>ドラゴンモッド</translation>
+        <translation type="vanished">ドラゴンモッド</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation>ドラゴンダイヴ</translation>
+        <translation type="vanished">ドラゴンダイヴ</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation>大乱闘</translation>
+        <translation type="vanished">大乱闘</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>ハイウインド</translation>
+        <translation type="vanished">ハイウインド</translation>
     </message>
 </context>
 <context>
     <name>Char_Names</name>
     <message>
         <source>Cloud</source>
-        <translation>クラウド</translation>
+        <translation type="vanished">クラウド</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>バレット</translation>
+        <translation type="vanished">バレット</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>ティファ</translation>
+        <translation type="vanished">ティファ</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>レッドXIII</translation>
+        <translation type="vanished">レッドXIII</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>ユフィ</translation>
+        <translation type="vanished">ユフィ</translation>
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>ケット・シー</translation>
+        <translation type="vanished">ケット・シー</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>ヴィンセント</translation>
+        <translation type="vanished">ヴィンセント</translation>
     </message>
     <message>
         <source>Cid</source>
-        <translation>シド</translation>
+        <translation type="vanished">シド</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>昔のクラウド</translation>
+        <translation type="vanished">昔のクラウド</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation>セフィロス</translation>
+        <translation type="vanished">セフィロス</translation>
     </message>
     <message>
         <source>Aerith</source>
-        <translation>エアリス</translation>
+        <translation type="vanished">エアリス</translation>
     </message>
 </context>
 <context>
@@ -1265,138 +1221,321 @@ The km/h speeds are calculated while playing </source>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
-        <translation>カエルのうた</translation>
+        <translation type="vanished">カエルのうた</translation>
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>レベル４自爆</translation>
+        <translation type="vanished">レベル４自爆</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
-        <translation>マジックハンマー</translation>
+        <translation type="vanished">マジックハンマー</translation>
     </message>
     <message>
         <source>White Wind</source>
-        <translation>ホワイトウィンド</translation>
+        <translation type="vanished">ホワイトウィンド</translation>
     </message>
     <message>
         <source>Big Guard</source>
-        <translation>マイティガード</translation>
+        <translation type="vanished">マイティガード</translation>
     </message>
     <message>
         <source>Angel Whisper</source>
-        <translation>天使のささやき</translation>
+        <translation type="vanished">天使のささやき</translation>
     </message>
     <message>
         <source>Dragon Force</source>
-        <translation>ドラゴンフォース</translation>
+        <translation type="vanished">ドラゴンフォース</translation>
     </message>
     <message>
         <source>Death Force</source>
-        <translation>デスフォース</translation>
+        <translation type="vanished">デスフォース</translation>
     </message>
     <message>
         <source>Flame Thrower</source>
-        <translation>火炎放射</translation>
+        <translation type="vanished">火炎放射</translation>
     </message>
     <message>
         <source>Laser</source>
-        <translation>レーザー</translation>
+        <translation type="vanished">レーザー</translation>
     </message>
     <message>
         <source>Matra Magic</source>
-        <translation>マトラマジック</translation>
+        <translation type="vanished">マトラマジック</translation>
     </message>
     <message>
         <source>Bad Breath</source>
-        <translation>臭い息</translation>
+        <translation type="vanished">臭い息</translation>
     </message>
     <message>
         <source>Beta</source>
-        <translation>ベータ</translation>
+        <translation type="vanished">ベータ</translation>
     </message>
     <message>
         <source>Aqualung</source>
-        <translation>アクアブレス</translation>
+        <translation type="vanished">アクアブレス</translation>
     </message>
     <message>
         <source>Trine</source>
-        <translation>トライン</translation>
+        <translation type="vanished">トライン</translation>
     </message>
     <message>
         <source>Magic Breath</source>
-        <translation>マジカルブレス</translation>
+        <translation type="vanished">マジカルブレス</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>？？？？</translation>
+        <translation type="vanished">？？？？</translation>
     </message>
     <message>
         <source>Goblin Punch</source>
-        <translation>ゴブリンパンチ</translation>
+        <translation type="vanished">ゴブリンパンチ</translation>
     </message>
     <message>
         <source>Chocobuckle</source>
-        <translation>チョコボックル</translation>
+        <translation type="vanished">チョコボックル</translation>
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>レベル５デス</translation>
+        <translation type="vanished">レベル５デス</translation>
     </message>
     <message>
         <source>Death Sentence</source>
-        <translation>死の宣告</translation>
+        <translation type="vanished">死の宣告</translation>
     </message>
     <message>
         <source>Roulette</source>
-        <translation>死のルーレット</translation>
+        <translation type="vanished">死のルーレット</translation>
     </message>
     <message>
         <source>Shadow Flare</source>
-        <translation>シャドウフレア</translation>
+        <translation type="vanished">シャドウフレア</translation>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>なんとか？？？</translation>
+        <translation type="vanished">なんとか？？？</translation>
     </message>
 </context>
 <context>
     <name>Elements</name>
     <message>
         <source>[Fire]</source>
-        <translation>[炎]</translation>
+        <translation type="vanished">[炎]</translation>
     </message>
     <message>
         <source>[Ice]</source>
-        <translation>[冷気]</translation>
+        <translation type="vanished">[冷気]</translation>
     </message>
     <message>
         <source>[Earth]</source>
-        <translation>[大地]</translation>
+        <translation type="vanished">[大地]</translation>
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation>[雷]</translation>
+        <translation type="vanished">[雷]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation>[毒]</translation>
+        <translation type="vanished">[毒]</translation>
     </message>
     <message>
         <source>[Gravity]</source>
-        <translation>[重力]</translation>
+        <translation type="vanished">[重力]</translation>
     </message>
     <message>
         <source>[Wind]</source>
-        <translation>[風]</translation>
+        <translation type="vanished">[風]</translation>
     </message>
     <message>
         <source>[Water]</source>
-        <translation>[水]</translation>
+        <translation type="vanished">[水]</translation>
     </message>
     <message>
         <source>[Holy]</source>
-        <translation>[聖]</translation>
+        <translation type="vanished">[聖]</translation>
+    </message>
+</context>
+<context>
+    <name>FF7Item</name>
+    <message>
+        <source>Restoration</source>
+        <translation type="unfinished">回復</translation>
+    </message>
+    <message>
+        <source>Fire</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cold</source>
+        <translation type="unfinished">冷</translation>
+    </message>
+    <message>
+        <source>Lightning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wind</source>
+        <translation type="unfinished">風</translation>
+    </message>
+    <message>
+        <source>Water</source>
+        <translation type="unfinished">水</translation>
+    </message>
+    <message>
+        <source>Gravity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Holy</source>
+        <translation type="unfinished">聖</translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut</source>
+        <translation type="unfinished">斬る</translation>
+    </message>
+    <message>
+        <source>Shoot</source>
+        <translation type="unfinished">射撃</translation>
+    </message>
+    <message>
+        <source>Punch</source>
+        <translation type="unfinished">突く</translation>
+    </message>
+    <message>
+        <source>Hit</source>
+        <translation type="unfinished">殴る</translation>
+    </message>
+    <message>
+        <source>Absorb:</source>
+        <translation type="unfinished">吸収：</translation>
+    </message>
+    <message>
+        <source>Nullify:</source>
+        <translation type="unfinished">無効化：</translation>
+    </message>
+    <message>
+        <source>Halve:</source>
+        <translation type="unfinished">半減：</translation>
+    </message>
+    <message>
+        <source>Attack:</source>
+        <translation type="unfinished">アタック タイプ：</translation>
+    </message>
+    <message>
+        <source>Death</source>
+        <translation type="unfinished">戦闘不能</translation>
+    </message>
+    <message>
+        <source>Slow-Numb</source>
+        <translation type="unfinished">徐々に石化</translation>
+    </message>
+    <message>
+        <source>D.Sentence</source>
+        <translation type="unfinished">死の宣告</translation>
+    </message>
+    <message>
+        <source>Paralysis</source>
+        <translation type="unfinished">マヒ</translation>
+    </message>
+    <message>
+        <source>Petrify</source>
+        <translation type="unfinished">石化</translation>
+    </message>
+    <message>
+        <source>Silence</source>
+        <translation type="unfinished">沈黙</translation>
+    </message>
+    <message>
+        <source>Sleep</source>
+        <translation type="unfinished">睡眠</translation>
+    </message>
+    <message>
+        <source>Confusion</source>
+        <translation type="unfinished">混乱</translation>
+    </message>
+    <message>
+        <source>Berserk</source>
+        <translation type="unfinished">バーサク</translation>
+    </message>
+    <message>
+        <source>Frog</source>
+        <translation type="unfinished">カエル</translation>
+    </message>
+    <message>
+        <source>Mini</source>
+        <translation type="unfinished">ミニマム</translation>
+    </message>
+    <message>
+        <source>Fury</source>
+        <translation type="unfinished">怒り</translation>
+    </message>
+    <message>
+        <source>Sadness</source>
+        <translation type="unfinished">悲しい</translation>
+    </message>
+    <message>
+        <source>Darkness</source>
+        <translation type="unfinished">暗闇</translation>
+    </message>
+    <message>
+        <source>Haste</source>
+        <translation type="unfinished">ヘイスト</translation>
+    </message>
+    <message>
+        <source>Slow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation type="unfinished">ストップ</translation>
+    </message>
+    <message>
+        <source>Barrier</source>
+        <translation type="unfinished">バリア</translation>
+    </message>
+    <message>
+        <source>M.Barrier</source>
+        <translation type="unfinished">マバリア</translation>
+    </message>
+    <message>
+        <source>Reflect</source>
+        <translation type="unfinished">リフレク</translation>
+    </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Regen</source>
+        <translation type="unfinished">リジェネ</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">抵抗します</translation>
+    </message>
+    <message>
+        <source>Protect:</source>
+        <translation type="unfinished">無効化：</translation>
+    </message>
+    <message>
+        <source>Remove:</source>
+        <translation type="unfinished">解除：</translation>
+    </message>
+    <message>
+        <source>Inflict:</source>
+        <translation type="unfinished">追加：</translation>
+    </message>
+    <message>
+        <source>OnBattle:</source>
+        <translation type="unfinished">戦闘時：</translation>
     </message>
 </context>
 <context>
@@ -1410,919 +1549,911 @@ The km/h speeds are calculated while playing </source>
     <name>FieldItems</name>
     <message>
         <source>Hi-Potion</source>
-        <translation>ハイポーション</translation>
+        <translation type="vanished">ハイポーション</translation>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation>やまびこえんまく</translation>
+        <translation type="vanished">やまびこえんまく</translation>
     </message>
     <message>
         <source>Potion</source>
-        <translation>ポーション</translation>
+        <translation type="vanished">ポーション</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation>エーテル</translation>
+        <translation type="vanished">エーテル</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation>フェニックスの尾</translation>
+        <translation type="vanished">フェニックスの尾</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>かばう</translation>
+        <translation type="vanished">かばう</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation>ラムウ</translation>
+        <translation type="vanished">ラムウ</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>ものまね</translation>
+        <translation type="vanished">ものまね</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>ＨＰＭＰいれかえ</translation>
+        <translation type="vanished">ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>まほうみだれうち</translation>
+        <translation type="vanished">まほうみだれうち</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>エンハンスソード</translation>
+        <translation type="vanished">エンハンスソード</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>烈火の腕輪</translation>
+        <translation type="vanished">烈火の腕輪</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation>エリクサー</translation>
+        <translation type="vanished">エリクサー</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>スピードアップ</translation>
+        <translation type="vanished">スピードアップ</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation>ジャベリン</translation>
+        <translation type="vanished">ジャベリン</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>リボン</translation>
+        <translation type="vanished">リボン</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>カタストロフィ</translation>
+        <translation type="vanished">カタストロフィ</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>英雄の薬</translation>
+        <translation type="vanished">英雄の薬</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation>ワクチン</translation>
+        <translation type="vanished">ワクチン</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>ポイズンリング</translation>
+        <translation type="vanished">ポイズンリング</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>どく</translation>
+        <translation type="vanished">どく</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>天雷の腕輪</translation>
+        <translation type="vanished">天雷の腕輪</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation>ヒュプノクラウン</translation>
+        <translation type="vanished">ヒュプノクラウン</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>ラストエリクサー</translation>
+        <translation type="vanished">ラストエリクサー</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation>クジャタ</translation>
+        <translation type="vanished">クジャタ</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation>しょうめつ</translation>
+        <translation type="vanished">しょうめつ</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>てきのわざ</translation>
+        <translation type="vanished">てきのわざ</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation>オーディーン</translation>
+        <translation type="vanished">オーディーン</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation>コマンドカウンター</translation>
+        <translation type="vanished">コマンドカウンター</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>マジカル</translation>
+        <translation type="vanished">マジカル</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>ぬすむ</translation>
+        <translation type="vanished">ぬすむ</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>ツインヴァイパー</translation>
+        <translation type="vanished">ツインヴァイパー</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>エネミーランチャ</translation>
+        <translation type="vanished">エネミーランチャ</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>マジックアップ</translation>
+        <translation type="vanished">マジックアップ</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation>バントライン</translation>
+        <translation type="vanished">バントライン</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation>極光の腕輪</translation>
+        <translation type="vanished">極光の腕輪</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>蛇矛</translation>
+        <translation type="vanished">蛇矛</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>ルーンブレイド</translation>
+        <translation type="vanished">ルーンブレイド</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>プラチナバレッタ</translation>
+        <translation type="vanished">プラチナバレッタ</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>オーバーソウル</translation>
+        <translation type="vanished">オーバーソウル</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>スナイパーCR</translation>
+        <translation type="vanished">スナイパーCR</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>ぜんたいか</translation>
+        <translation type="vanished">ぜんたいか</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>ぞくせい</translation>
+        <translation type="vanished">ぞくせい</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation>パワーアップ</translation>
+        <translation type="vanished">パワーアップ</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>水の指輪</translation>
+        <translation type="vanished">水の指輪</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>ハイブロウST</translation>
+        <translation type="vanished">ハイブロウST</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>ぜんたいぎり</translation>
+        <translation type="vanished">ぜんたいぎり</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>ミネルバブレス</translation>
+        <translation type="vanished">ミネルバブレス</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation>アポカリプス</translation>
+        <translation type="vanished">アポカリプス</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>スプリガンクリップ</translation>
+        <translation type="vanished">スプリガンクリップ</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation>モップ</translation>
+        <translation type="vanished">モップ</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation>テント</translation>
+        <translation type="vanished">テント</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>えんきょりこうげき</translation>
+        <translation type="vanished">えんきょりこうげき</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation>タイタン</translation>
+        <translation type="vanished">タイタン</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation>いんせき</translation>
+        <translation type="vanished">いんせき</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>ひっさつ</translation>
+        <translation type="vanished">ひっさつ</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>ハーデス</translation>
+        <translation type="vanished">ハーデス</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>アウトサイダー</translation>
+        <translation type="vanished">アウトサイダー</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation>不倶戴天</translation>
+        <translation type="vanished">不倶戴天</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>ロンギヌス</translation>
+        <translation type="vanished">ロンギヌス</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>天の叢雲</translation>
+        <translation type="vanished">天の叢雲</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>ガードアップ</translation>
+        <translation type="vanished">ガードアップ</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>テトラエレメンタル</translation>
+        <translation type="vanished">テトラエレメンタル</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>マインドアップ</translation>
+        <translation type="vanished">マインドアップ</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>エクスポーション</translation>
+        <translation type="vanished">エクスポーション</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>ドリルアーム</translation>
+        <translation type="vanished">ドリルアーム</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation>陸奥守吉行</translation>
+        <translation type="vanished">陸奥守吉行</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>ビーナスゴスペル</translation>
+        <translation type="vanished">ビーナスゴスペル</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>セーブクリスタル</translation>
+        <translation type="vanished">セーブクリスタル</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation>ピースメーカー</translation>
+        <translation type="vanished">ピースメーカー</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>れんぞくぎり</translation>
+        <translation type="vanished">れんぞくぎり</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>ハイウインド</translation>
+        <translation type="vanished">ハイウインド</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation>ナイツオブラウンド</translation>
+        <translation type="vanished">ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation>チョコボ＆モーグリ</translation>
+        <translation type="vanished">チョコボ＆モーグリ</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>エスコートガード</translation>
+        <translation type="vanished">エスコートガード</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>みやぶる</translation>
+        <translation type="vanished">みやぶる</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>エーテルターボ</translation>
+        <translation type="vanished">エーテルターボ</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>バハムート改</translation>
+        <translation type="vanished">バハムート改</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation>ＭＰターボ</translation>
+        <translation type="vanished">ＭＰターボ</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>シルバーメガホン</translation>
+        <translation type="vanished">シルバーメガホン</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>テュポーン</translation>
+        <translation type="vanished">テュポーン</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation>ミスティール</translation>
+        <translation type="vanished">ミスティール</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>ホワイトメガホン</translation>
+        <translation type="vanished">ホワイトメガホン</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>フォースブレス</translation>
+        <translation type="vanished">フォースブレス</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>ＨＰきゅうしゅう</translation>
+        <translation type="vanished">ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>へんか</translation>
+        <translation type="vanished">へんか</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>ラッキー</translation>
+        <translation type="vanished">ラッキー</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>プリンセスガード</translation>
+        <translation type="vanished">プリンセスガード</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation>法螺貝</translation>
+        <translation type="vanished">法螺貝</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation>バハムート</translation>
+        <translation type="vanished">バハムート</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation>トライデント</translation>
+        <translation type="vanished">トライデント</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>ロケットパンチ</translation>
+        <translation type="vanished">ロケットパンチ</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>銀玉鉄砲</translation>
+        <translation type="vanished">銀玉鉄砲</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation>モータードライブ</translation>
+        <translation type="vanished">モータードライブ</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>炎の指輪</translation>
+        <translation type="vanished">炎の指輪</translation>
     </message>
     <message>
         <source>Purchased The House</source>
-        <translation type="unfinished">ハウス購入</translation>
+        <translation type="obsolete">ハウス購入</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>Wマシンガン</translation>
+        <translation type="vanished">Wマシンガン</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation>へんしん</translation>
+        <translation type="vanished">へんしん</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>ラックアップ</translation>
+        <translation type="vanished">ラックアップ</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>1/35神羅兵</translation>
+        <translation type="vanished">1/35神羅兵</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>ドラグーンランス</translation>
+        <translation type="vanished">ドラグーンランス</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Ｗアイテム</translation>
+        <translation type="vanished">Ｗアイテム</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>マキシマムレイ</translation>
+        <translation type="vanished">マキシマムレイ</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>エイジスの腕輪</translation>
+        <translation type="vanished">エイジスの腕輪</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation>青龍偃月刀</translation>
+        <translation type="vanished">青龍偃月刀</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>突撃ラッパ</translation>
+        <translation type="vanished">突撃ラッパ</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>リヴァイアサン</translation>
+        <translation type="vanished">リヴァイアサン</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation>折り鶴</translation>
+        <translation type="vanished">折り鶴</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>スターライトホン</translation>
+        <translation type="vanished">スターライトホン</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>ミッシングスコア</translation>
+        <translation type="vanished">ミッシングスコア</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">シールド</translation>
+        <translation type="obsolete">シールド</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Ｗまほう</translation>
+        <translation type="vanished">Ｗまほう</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>インペリアルガード</translation>
+        <translation type="vanished">インペリアルガード</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation>ふういん</translation>
+        <translation type="vanished">ふういん</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>ついでにぬすむ</translation>
+        <translation type="vanished">ついでにぬすむ</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation>万能薬</translation>
+        <translation type="vanished">万能薬</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>盗族の小手</translation>
+        <translation type="vanished">盗族の小手</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>プレミアムハート</translation>
+        <translation type="vanished">プレミアムハート</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation>まほうカウンター</translation>
+        <translation type="vanished">まほうカウンター</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>雷の指輪</translation>
+        <translation type="vanished">雷の指輪</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>金の腕輪</translation>
+        <translation type="vanished">金の腕輪</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>大いなる福音</translation>
+        <translation type="vanished">大いなる福音</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>アンブレラ</translation>
+        <translation type="vanished">アンブレラ</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation>方天画戟</translation>
+        <translation type="vanished">方天画戟</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>カオス</translation>
+        <translation type="vanished">カオス</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation>興奮剤</translation>
+        <translation type="vanished">興奮剤</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>風斬り</translation>
+        <translation type="vanished">風斬り</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>フェアリーリング</translation>
+        <translation type="vanished">フェアリーリング</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>ついかこうか</translation>
+        <translation type="vanished">ついかこうか</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>ブラックメガホン</translation>
+        <translation type="vanished">ブラックメガホン</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>風魔手裏剣</translation>
+        <translation type="vanished">風魔手裏剣</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>かんざし</translation>
+        <translation type="vanished">かんざし</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>セーフティビット</translation>
+        <translation type="vanished">セーフティビット</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>すべてぜんたいか</translation>
+        <translation type="vanished">すべてぜんたいか</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>雷迅</translation>
+        <translation type="vanished">雷迅</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>マスターフィスト</translation>
+        <translation type="vanished">マスターフィスト</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>ベヒーモスホーン</translation>
+        <translation type="vanished">ベヒーモスホーン</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation>フルケア</translation>
+        <translation type="vanished">フルケア</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>パイルバンカー</translation>
+        <translation type="vanished">パイルバンカー</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation>アルテマ</translation>
+        <translation type="vanished">アルテマ</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation>シヴァ</translation>
+        <translation type="vanished">シヴァ</translation>
     </message>
     <message>
         <source>Batteries</source>
-        <translation type="unfinished">ジンクバッテリー</translation>
+        <translation type="obsolete">ジンクバッテリー</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>安らぎの指輪</translation>
+        <translation type="vanished">安らぎの指輪</translation>
     </message>
     <message>
         <source>Super Ball</source>
-        <translation>スーパーボール</translation>
+        <translation type="vanished">スーパーボール</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation>アレクサンダー</translation>
+        <translation type="vanished">アレクサンダー</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>ついかぎり</translation>
+        <translation type="vanished">ついかぎり</translation>
     </message>
     <message>
         <source>Mind Plus</source>
-        <translation type="unfinished">マジカル</translation>
+        <translation type="obsolete">マジカル</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>プラチナフィスト</translation>
+        <translation type="vanished">プラチナフィスト</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>ギルアップ</translation>
+        <translation type="vanished">ギルアップ</translation>
     </message>
     <message>
         <source>Exp Plus</source>
-        <translation>けいけんちアップ</translation>
+        <translation type="vanished">けいけんちアップ</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation>エルメスのくつ</translation>
+        <translation type="vanished">エルメスのくつ</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Ｗしょうかん</translation>
+        <translation type="vanished">Ｗしょうかん</translation>
     </message>
     <message>
         <source>Show Underwater</source>
-        <translation type="unfinished">示す</translation>
+        <translation type="obsolete">示す</translation>
     </message>
     <message>
         <source>Show Master Command</source>
-        <translation type="unfinished">示す マスターコマンド</translation>
+        <translation type="obsolete">示す マスターコマンド</translation>
     </message>
     <message>
         <source>Show Master Magic</source>
-        <translation type="unfinished">示す マスターまほう</translation>
+        <translation type="obsolete">示す マスターまほう</translation>
     </message>
     <message>
         <source>Show Master Summon</source>
-        <translation type="unfinished">示す マスターしょうかん</translation>
+        <translation type="obsolete">示す マスターしょうかん</translation>
     </message>
     <message>
         <source>Show Gold Chocobo</source>
-        <translation type="unfinished">示す 海チョコボ</translation>
+        <translation type="obsolete">示す 海チョコボ</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>超究武神覇斬</translation>
+        <translation type="vanished">超究武神覇斬</translation>
     </message>
     <message>
         <source>KeyItem: Mythril</source>
-        <translation>キーアイテム: ミスリル</translation>
+        <translation type="vanished">キーアイテム: ミスリル</translation>
     </message>
     <message>
         <source>KeyItem: Midgar parts</source>
-        <translation>キーアイテム: ミッドガルパーツ</translation>
+        <translation type="vanished">キーアイテム: ミッドガルパーツ</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 66</source>
-        <translation>キーアイテム: カードキー６６</translation>
+        <translation type="vanished">キーアイテム: カードキー６６</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>キーアイテム: ヒュージマテリア (コレル)</translation>
+        <translation type="vanished">キーアイテム: ヒュージマテリア (コレル)</translation>
     </message>
     <message>
         <source>KeyItem: Snowboard</source>
-        <translation>キーアイテム: スノーボード</translation>
+        <translation type="vanished">キーアイテム: スノーボード</translation>
     </message>
     <message>
         <source>KeyItem: Glacier Map</source>
-        <translation>キーアイテム: 大氷河の地図</translation>
+        <translation type="vanished">キーアイテム: 大氷河の地図</translation>
     </message>
     <message>
         <source>KeyItem: Cologne</source>
-        <translation>キーアイテム: コロン</translation>
+        <translation type="vanished">キーアイテム: コロン</translation>
     </message>
     <message>
         <source>KeyItem: Flower Cologne</source>
-        <translation>キーアイテム: フラワーコロン</translation>
+        <translation type="vanished">キーアイテム: フラワーコロン</translation>
     </message>
     <message>
         <source>KeyItem: Sexy Cologne</source>
-        <translation>キーアイテム: セクシーコロン</translation>
+        <translation type="vanished">キーアイテム: セクシーコロン</translation>
     </message>
     <message>
         <source>KeyItem: Pharmacy Coupon</source>
-        <translation>キーアイテム: 薬屋商品クーポン</translation>
+        <translation type="vanished">キーアイテム: 薬屋商品クーポン</translation>
     </message>
     <message>
         <source>KeyItem: Wig</source>
-        <translation>キーアイテム: クセゲのかつら</translation>
+        <translation type="vanished">キーアイテム: クセゲのかつら</translation>
     </message>
     <message>
         <source>KeyItem: Dyed Wig</source>
-        <translation>キーアイテム: チャパツのかつら</translation>
+        <translation type="vanished">キーアイテム: チャパツのかつら</translation>
     </message>
     <message>
         <source>KeyItem: Blonde Wig</source>
-        <translation>キーアイテム: ブロンドのかつら</translation>
+        <translation type="vanished">キーアイテム: ブロンドのかつら</translation>
     </message>
     <message>
         <source>KeyItem: Cotton Dress</source>
-        <translation>キーアイテム: コットンのドレス</translation>
+        <translation type="vanished">キーアイテム: コットンのドレス</translation>
     </message>
     <message>
         <source>KeyItem: Satin Dress</source>
-        <translation>キーアイテム: サテンのドレス</translation>
+        <translation type="vanished">キーアイテム: サテンのドレス</translation>
     </message>
     <message>
         <source>KeyItem: Silk Dress</source>
-        <translation>キーアイテム: シルクのドレス</translation>
+        <translation type="vanished">キーアイテム: シルクのドレス</translation>
     </message>
     <message>
         <source>KeyItem: Disinfectant</source>
-        <translation>キーアイテム: 消毒薬</translation>
+        <translation type="vanished">キーアイテム: 消毒薬</translation>
     </message>
     <message>
         <source>KeyItem: Deodorant</source>
-        <translation>キーアイテム: 消臭薬</translation>
+        <translation type="vanished">キーアイテム: 消臭薬</translation>
     </message>
     <message>
         <source>KeyItem: Digestive</source>
-        <translation>キーアイテム: 消化薬</translation>
+        <translation type="vanished">キーアイテム: 消化薬</translation>
     </message>
     <message>
         <source>KeyItem: Glass Tiara</source>
-        <translation>キーアイテム: ガラスのティアラ</translation>
+        <translation type="vanished">キーアイテム: ガラスのティアラ</translation>
     </message>
     <message>
         <source>KeyItem: Ruby Tiara</source>
-        <translation>キーアイテム: ルビーのティアラ</translation>
+        <translation type="vanished">キーアイテム: ルビーのティアラ</translation>
     </message>
     <message>
         <source>KeyItem: Diamond Tiara</source>
-        <translation>キーアイテム: ダイヤのティアラ</translation>
+        <translation type="vanished">キーアイテム: ダイヤのティアラ</translation>
     </message>
     <message>
         <source>Can Advance</source>
-        <translation type="unfinished">進めることができます</translation>
+        <translation type="obsolete">進めることができます</translation>
     </message>
     <message>
         <source>KeyItem: KeyCard 68</source>
-        <translation>キーアイテム: カードキー６８</translation>
+        <translation type="vanished">キーアイテム: カードキー６８</translation>
     </message>
     <message>
         <source>KeyItem: Lunar Harp</source>
-        <translation>キーアイテム: ルナハープ</translation>
+        <translation type="vanished">キーアイテム: ルナハープ</translation>
     </message>
     <message>
         <source>KeyItem: Key To Basement</source>
-        <translation>キーアイテム: 地下室の鍵</translation>
+        <translation type="vanished">キーアイテム: 地下室の鍵</translation>
     </message>
     <message>
         <source>KeyItem: Gold Ticket</source>
-        <translation>キーアイテム: ゴールドチケット</translation>
+        <translation type="vanished">キーアイテム: ゴールドチケット</translation>
     </message>
     <message>
         <source>Found hidden draw</source>
-        <translation type="unfinished">見つかった隠しドロー</translation>
+        <translation type="obsolete">見つかった隠しドロー</translation>
     </message>
     <message>
         <source>Stole boys 5 gil</source>
-        <translation type="unfinished">男の子5ギルを盗みました男の子5ギルを盗みました</translation>
+        <translation type="obsolete">男の子5ギルを盗みました男の子5ギルを盗みました</translation>
     </message>
     <message>
         <source>KeyItem: A Coupon</source>
-        <translation>キーアイテム: Aクーポン</translation>
+        <translation type="vanished">キーアイテム: Aクーポン</translation>
     </message>
     <message>
         <source>KeyItem: B Coupon</source>
-        <translation>キーアイテム: Bクーポン</translation>
+        <translation type="vanished">キーアイテム: Bクーポン</translation>
     </message>
     <message>
         <source>KeyItem: C Coupon</source>
-        <translation>キーアイテム: Cクーポン</translation>
+        <translation type="vanished">キーアイテム: Cクーポン</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>星のペンダント</translation>
+        <translation type="vanished">星のペンダント</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>フォウスロット</translation>
+        <translation type="vanished">フォウスロット</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>グローランス</translation>
+        <translation type="vanished">グローランス</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 65</source>
-        <translation>キーアイテム: カードキー６５</translation>
+        <translation type="vanished">キーアイテム: カードキー６５</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>ＭＰきゅうしゅう</translation>
+        <translation type="vanished">ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #1</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #1</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #1</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #2</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #2</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #2</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #3</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #3</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #3</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #4</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #4</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #4</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #5</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #5</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #5</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #6</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #6</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #6</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #7</source>
-        <translation type="unfinished">タートルパラダイスフライヤー #7</translation>
+        <translation type="obsolete">タートルパラダイスフライヤー #7</translation>
     </message>
     <message>
         <source>Rewarded for viewing all Turtle Paradise Flyers</source>
-        <translation type="unfinished">すべてのタートルパラダイスチラシを見るための報い</translation>
+        <translation type="obsolete">すべてのタートルパラダイスチラシを見るための報い</translation>
     </message>
     <message>
         <source>KeyItem: Key To Sector 5</source>
-        <translation>キーアイテム: ５番街ゲートの鍵</translation>
+        <translation type="vanished">キーアイテム: ５番街ゲートの鍵</translation>
     </message>
     <message>
         <source>KeyItem: Leviathan Scales</source>
-        <translation>キーアイテム: 水神様のうろこ</translation>
+        <translation type="vanished">キーアイテム: 水神様のうろこ</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>キーアイテム: ヒュージマテリア (ロケット)</translation>
+        <translation type="vanished">キーアイテム: ヒュージマテリア (ロケット)</translation>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation>バハムート零式</translation>
+        <translation type="vanished">バハムート零式</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation>キーアイテム: ビキニパンツ</translation>
+        <translation type="vanished">キーアイテム: ビキニパンツ</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation>キーアイテム: ランジェリー</translation>
+        <translation type="vanished">キーアイテム: ランジェリー</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>軍手</translation>
+        <translation type="vanished">軍手</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation>釘バット</translation>
+        <translation type="vanished">釘バット</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 62</source>
-        <translation>キーアイテム: カードキー６２</translation>
+        <translation type="vanished">キーアイテム: カードキー６２</translation>
     </message>
     <message>
         <source>KeyItem: Member&apos;s Card</source>
-        <translation>キーアイテム: 会員カード</translation>
+        <translation type="vanished">キーアイテム: 会員カード</translation>
     </message>
     <message>
         <source>KeyItem: Key to Ancients</source>
-        <translation>キーアイテム: 古代種の鍵</translation>
+        <translation type="vanished">キーアイテム: 古代種の鍵</translation>
     </message>
     <message>
         <source>KeyItem: Keystone</source>
-        <translation>キーアイテム: キーストーン</translation>
+        <translation type="vanished">キーアイテム: キーストーン</translation>
     </message>
     <message>
         <source>KeyItem: Black Materia</source>
-        <translation>キーアイテム: 黒マテリア</translation>
+        <translation type="vanished">キーアイテム: 黒マテリア</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>フェニックス</translation>
+        <translation type="vanished">フェニックス</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 60</source>
-        <translation>キーアイテム: カードキー６０</translation>
+        <translation type="vanished">キーアイテム: カードキー６０</translation>
     </message>
     <message>
         <source>Rewards From Ester</source>
-        <translation type="unfinished">エステルから報酬</translation>
+        <translation type="obsolete">エステルから報酬</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation type="unfinished">インク</translation>
+        <translation type="obsolete">インク</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>時空弾</translation>
+        <translation type="vanished">時空弾</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>双龍の牙</translation>
+        <translation type="vanished">双龍の牙</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation>海龍のウロコ</translation>
+        <translation type="vanished">海龍のウロコ</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>チョコボよせ</translation>
+        <translation type="vanished">チョコボよせ</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation type="unfinished">マジックコーム</translation>
+        <translation type="obsolete">マジックコーム</translation>
     </message>
     <message>
         <source>Initialized the Machine</source>
-        <translation type="unfinished">マシンを初期化</translation>
+        <translation type="obsolete">マシンを初期化</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation type="unfinished">魔女の大釜</translation>
-    </message>
-    <message>
-        <source>Final Heaven (+other stuff?)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Elemental(+other stuff?)</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">魔女の大釜</translation>
     </message>
 </context>
 <context>
@@ -2542,1746 +2673,1746 @@ The km/h speeds are calculated while playing </source>
     <name>Item_desc</name>
     <message>
         <source>Restores 100 HP</source>
-        <translation>ＨＰを１００回復</translation>
+        <translation type="vanished">ＨＰを１００回復</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation>ＨＰを５００回復</translation>
+        <translation type="vanished">ＨＰを５００回復</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation>ＨＰを全回復</translation>
+        <translation type="vanished">ＨＰを全回復</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation>ＭＰを１００回復</translation>
+        <translation type="vanished">ＭＰを１００回復</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation>ＭＰを全回復</translation>
+        <translation type="vanished">ＭＰを全回復</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation>ＨＰ・ＭＰを全回復</translation>
+        <translation type="vanished">ＨＰ・ＭＰを全回復</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation>全員のＨＰ・ＭＰを全回復</translation>
+        <translation type="vanished">全員のＨＰ・ＭＰを全回復</translation>
     </message>
     <message>
         <source>Restores life</source>
-        <translation>戦闘不能を回復</translation>
+        <translation type="vanished">戦闘不能を回復</translation>
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation>毒状態を治す</translation>
+        <translation type="vanished">毒状態を治す</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation>石化状態を治す</translation>
+        <translation type="vanished">石化状態を治す</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation>カエル状態を治す</translation>
+        <translation type="vanished">カエル状態を治す</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation>沈黙状態を治す</translation>
+        <translation type="vanished">沈黙状態を治す</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation>いかり状態になる</translation>
+        <translation type="vanished">いかり状態になる</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation>かなしい状態になる</translation>
+        <translation type="vanished">かなしい状態になる</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation>ステータス異常を治す</translation>
+        <translation type="vanished">ステータス異常を治す</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation>戦闘中、敵から逃げられる</translation>
+        <translation type="vanished">戦闘中、敵から逃げられる</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation>味方一体にヘイストの効果</translation>
+        <translation type="vanished">味方一体にヘイストの効果</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation>戦闘中、一時的に能力アップ</translation>
+        <translation type="vanished">戦闘中、一時的に能力アップ</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation>ステータスを変化させなくする</translation>
+        <translation type="vanished">ステータスを変化させなくする</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation>敵一体に爆発ダメージ</translation>
+        <translation type="vanished">敵一体に爆発ダメージ</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation>敵全体に爆発ダメージ</translation>
+        <translation type="vanished">敵全体に爆発ダメージ</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation>敵全体にストップの効果</translation>
+        <translation type="vanished">敵全体にストップの効果</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation>敵全体にデスの効果</translation>
+        <translation type="vanished">敵全体にデスの効果</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation>敵全体にスロウの効果</translation>
+        <translation type="vanished">敵全体にスロウの効果</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation>敵全体にスリプルの効果</translation>
+        <translation type="vanished">敵全体にスリプルの効果</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation>敵全体にサイレスの効果</translation>
+        <translation type="vanished">敵全体にサイレスの効果</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation>敵全体にバーサクの効果</translation>
+        <translation type="vanished">敵全体にバーサクの効果</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation>敵全体にコンフュの効果</translation>
+        <translation type="vanished">敵全体にコンフュの効果</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation>敵全体にファイラの効果</translation>
+        <translation type="vanished">敵全体にファイラの効果</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation>敵全体にファイガの効果</translation>
+        <translation type="vanished">敵全体にファイガの効果</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
-        <translation>敵全体にブリザラの効果</translation>
+        <translation type="vanished">敵全体にブリザラの効果</translation>
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation>敵全体にブリザガの効果</translation>
+        <translation type="vanished">敵全体にブリザガの効果</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation>敵全体にサンダラの効果</translation>
+        <translation type="vanished">敵全体にサンダラの効果</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation>敵全体にサンダガの効果</translation>
+        <translation type="vanished">敵全体にサンダガの効果</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation>敵全体にクエイラの効果</translation>
+        <translation type="vanished">敵全体にクエイラの効果</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation>敵全体にクエイガの効果</translation>
+        <translation type="vanished">敵全体にクエイガの効果</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation>敵全体にバイオラの効果</translation>
+        <translation type="vanished">敵全体にバイオラの効果</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation>敵全体にバイオガの効果</translation>
+        <translation type="vanished">敵全体にバイオガの効果</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation>敵全体にコメテオの効果</translation>
+        <translation type="vanished">敵全体にコメテオの効果</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation>敵一体のＨＰを吸収</translation>
+        <translation type="vanished">敵一体のＨＰを吸収</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation>敵一体のＭＰを吸収</translation>
+        <translation type="vanished">敵一体のＭＰを吸収</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation>敵一体に石化の効果</translation>
+        <translation type="vanished">敵一体に石化の効果</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation>味方全体にバリアの効果</translation>
+        <translation type="vanished">味方全体にバリアの効果</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation>味方全体にマバリアの効果</translation>
+        <translation type="vanished">味方全体にマバリアの効果</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation>味方全体にリフレクの効果</translation>
+        <translation type="vanished">味方全体にリフレクの効果</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation>全体にデスペルの効果</translation>
+        <translation type="vanished">全体にデスペルの効果</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation>敵全体に大旋風の効果</translation>
+        <translation type="vanished">敵全体に大旋風の効果</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation>味方全体に水属性のダメージ</translation>
+        <translation type="vanished">味方全体に水属性のダメージ</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation>敵一体をカエルにする</translation>
+        <translation type="vanished">敵一体をカエルにする</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation>敵一体をミニマムにする</translation>
+        <translation type="vanished">敵一体をミニマムにする</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation>暗闇状態ウを治す</translation>
+        <translation type="vanished">暗闇状態ウを治す</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation>敵一体に炎のダメージ</translation>
+        <translation type="vanished">敵一体に炎のダメージ</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation>敵全体に爆発ダメージ</translation>
+        <translation type="vanished">敵全体に爆発ダメージ</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation>敵一体にグラビデの効果</translation>
+        <translation type="vanished">敵一体にグラビデの効果</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation>敵一体にグラビラの効果</translation>
+        <translation type="vanished">敵一体にグラビラの効果</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation>敵一体に暗闇の効果</translation>
+        <translation type="vanished">敵一体に暗闇の効果</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation>敵一体にマヒの効果</translation>
+        <translation type="vanished">敵一体にマヒの効果</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation>敵全体に雷のダメージ</translation>
+        <translation type="vanished">敵全体に雷のダメージ</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation>敵一体を毒・混乱・眠り・沈黙・ミニマムカエルにする</translation>
+        <translation type="vanished">敵一体を毒・混乱・眠り・沈黙・ミニマムカエルにする</translation>
     </message>
     <message>
         <source>When you want a chocobo...</source>
-        <translation>チョコボに使うと……</translation>
+        <translation type="vanished">チョコボに使うと……</translation>
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation>全員のＨＰ・ＭＰが全回復。セーブできる所でしか使えない。</translation>
+        <translation type="vanished">全員のＨＰ・ＭＰが全回復。セーブできる所でしか使えない。</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation>「ちから」を上げる</translation>
+        <translation type="vanished">「ちから」を上げる</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation>「たいりょく」を上げる</translation>
+        <translation type="vanished">「たいりょく」を上げる</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation>「まりょく」を上げる</translation>
+        <translation type="vanished">「まりょく」を上げる</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation>「せいしん」を上げる</translation>
+        <translation type="vanished">「せいしん」を上げる</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation>「すばやさ」を上げる</translation>
+        <translation type="vanished">「すばやさ」を上げる</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation>「うん」を上げる</translation>
+        <translation type="vanished">「うん」を上げる</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation>チョコボを育てるときに……</translation>
+        <translation type="vanished">チョコボを育てるときに……</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation>なにかの機械を動かせそうだ</translation>
+        <translation type="vanished">なにかの機械を動かせそうだ</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation>ちょっとせつない……</translation>
+        <translation type="vanished">ちょっとせつない……</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation>究極リミット技「超究武神覇斬」を覚える</translation>
+        <translation type="vanished">究極リミット技「超究武神覇斬」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation>究極リミット技「カタストロフィ」を覚える</translation>
+        <translation type="vanished">究極リミット技「カタストロフィ」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation>究極リミット技「ファイナルヘブン」を覚える</translation>
+        <translation type="vanished">究極リミット技「ファイナルヘブン」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation>究極リミット技「大いなる福音」を覚える</translation>
+        <translation type="vanished">究極リミット技「大いなる福音」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation>究極リミット技「コスモメモリー」を覚える</translation>
+        <translation type="vanished">究極リミット技「コスモメモリー」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation>究極リミット技「森羅万象」を覚える</translation>
+        <translation type="vanished">究極リミット技「森羅万象」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation>究極リミット技「カオス」を覚える</translation>
+        <translation type="vanished">究極リミット技「カオス」を覚える</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation>究極リミット技「ハイウィンド」を覚える</translation>
+        <translation type="vanished">究極リミット技「ハイウィンド」を覚える</translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation>神羅軍装甲擲弾兵「突撃」セット 12体入。</translation>
+        <translation type="vanished">神羅軍装甲擲弾兵「突撃」セット 12体入。</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation>魔洸炉を守る最新メカ！ 両手からミサイルを発射！</translation>
+        <translation type="vanished">魔洸炉を守る最新メカ！ 両手からミサイルを発射！</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation>本物そっくりな「セフィロス」の剣！ 君もソルジャー気分！</translation>
+        <translation type="vanished">本物そっくりな「セフィロス」の剣！ 君もソルジャー気分！</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation>メニューで使うと大空洞内部でセーブポイントを一回作れる</translation>
+        <translation type="vanished">メニューで使うと大空洞内部でセーブポイントを一回作れる</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation>熱血ディオ先生の激闘人生日記</translation>
+        <translation type="vanished">熱血ディオ先生の激闘人生日記</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
-        <translation>超人ディオ先生のサイン色紙</translation>
+        <translation type="vanished">超人ディオ先生のサイン色紙</translation>
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation>無敵ディオ先生の激闘日記PART2 ゴールドソーサー時代</translation>
+        <translation type="vanished">無敵ディオ先生の激闘日記PART2 ゴールドソーサー時代</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation>１０００年にいちど、砂ばくにさく花</translation>
+        <translation type="vanished">１０００年にいちど、砂ばくにさく花</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation>聞く者の心をおだやかにするハープ</translation>
+        <translation type="vanished">聞く者の心をおだやかにするハープ</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation>沈んだ船とともに眠る、異世界の地図</translation>
+        <translation type="vanished">沈んだ船とともに眠る、異世界の地図</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation>最初から持っている剣</translation>
+        <translation type="vanished">最初から持っている剣</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation>味方が倒れると力を発揮</translation>
+        <translation type="vanished">味方が倒れると力を発揮</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation>瀕死時にパワーアップ</translation>
+        <translation type="vanished">瀕死時にパワーアップ</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation>ステータス異常時にパワーアップ</translation>
+        <translation type="vanished">ステータス異常時にパワーアップ</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation>最初から持っているガン. 後列からでも通常の威力</translation>
+        <translation type="vanished">最初から持っているガン. 後列からでも通常の威力</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation>後列からでも通常の威力</translation>
+        <translation type="vanished">後列からでも通常の威力</translation>
     </message>
     <message>
         <source>Memento of father</source>
-        <translation>父のかたみ</translation>
+        <translation type="vanished">父のかたみ</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation>守るべき者がいるとパワーアップ</translation>
+        <translation type="vanished">守るべき者がいるとパワーアップ</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation>炎属性の攻撃を吸収する腕輪</translation>
+        <translation type="vanished">炎属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation>冷気属性の攻撃を吸収する腕輪</translation>
+        <translation type="vanished">冷気属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation>雷属性の攻撃を吸収する腕輪</translation>
+        <translation type="vanished">雷属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation>炎、冷気、雷属性の攻撃を半減する腕輪</translation>
+        <translation type="vanished">炎、冷気、雷属性の攻撃を半減する腕輪</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation>炎、冷気、重力、聖属性の攻撃を無効にする女性用腕輪</translation>
+        <translation type="vanished">炎、冷気、重力、聖属性の攻撃を無効にする女性用腕輪</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation>雷、土、水、毒属性の攻撃を無効にする男性用腕輪</translation>
+        <translation type="vanished">雷、土、水、毒属性の攻撃を無効にする男性用腕輪</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation>全ての属性の攻撃を半減にする腕輪</translation>
+        <translation type="vanished">全ての属性の攻撃を半減にする腕輪</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation>ゴージャスな腕時計</translation>
+        <translation type="vanished">ゴージャスな腕時計</translation>
     </message>
     <message>
         <source>Strength +10</source>
-        <translation>「ちから」が１０アップ</translation>
+        <translation type="vanished">「ちから」が１０アップ</translation>
     </message>
     <message>
         <source>Vitality +10</source>
-        <translation>「たいりょく」が１０アップ</translation>
+        <translation type="vanished">「たいりょく」が１０アップ</translation>
     </message>
     <message>
         <source>Magic +10</source>
-        <translation>「まりょく」が１０アップ</translation>
+        <translation type="vanished">「まりょく」が１０アップ</translation>
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation>「せいしん」が１０アップ</translation>
+        <translation type="vanished">「せいしん」が１０アップ</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
-        <translation>「すばやさ」が１０アップ</translation>
+        <translation type="vanished">「すばやさ」が１０アップ</translation>
     </message>
     <message>
         <source>Luck +10</source>
-        <translation>「うん」が１０アップ</translation>
+        <translation type="vanished">「うん」が１０アップ</translation>
     </message>
     <message>
         <source>Power &amp; Vitality +30</source>
-        <translation>「ちから」と「たいりょく」が３０アップ</translation>
+        <translation type="vanished">「ちから」と「たいりょく」が３０アップ</translation>
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation>毒属性の攻撃を吸収し、毒状態を防ぐ</translation>
+        <translation type="vanished">毒属性の攻撃を吸収し、毒状態を防ぐ</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation>「たいりょく」と「せいしん」が５０アップ</translation>
+        <translation type="vanished">「たいりょく」と「せいしん」が５０アップ</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation>「まりょく」と「せいしん」が３０アップ</translation>
+        <translation type="vanished">「まりょく」と「せいしん」が３０アップ</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation>毒状態を防ぐ</translation>
+        <translation type="vanished">毒状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation>暗闇状態を防ぐ</translation>
+        <translation type="vanished">暗闇状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation>睡眠状態を防ぐ</translation>
+        <translation type="vanished">睡眠状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation>毒・暗闇状態を防ぐ</translation>
+        <translation type="vanished">毒・暗闇状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation>マヒ・石化・徐々に石化状態を防ぐ</translation>
+        <translation type="vanished">マヒ・石化・徐々に石化状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation>カエル・ミニマム状態を防ぐ</translation>
+        <translation type="vanished">カエル・ミニマム状態を防ぐ</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation>戦闘時に自動的にヘイスト状態になる</translation>
+        <translation type="vanished">戦闘時に自動的にヘイスト状態になる</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation>混乱・バーサク・いかり・かなしい状態を防ぐ</translation>
+        <translation type="vanished">混乱・バーサク・いかり・かなしい状態を防ぐ</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation>全てのステータス異常を防ぐ</translation>
+        <translation type="vanished">全てのステータス異常を防ぐ</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation>炎属性の攻撃を無効化する</translation>
+        <translation type="vanished">炎属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation>冷気属性の攻撃を無効化する</translation>
+        <translation type="vanished">冷気属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation>雷属性の攻撃を無効化する</translation>
+        <translation type="vanished">雷属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation>炎、冷気、雷、土属性の攻撃を吸収する</translation>
+        <translation type="vanished">炎、冷気、雷、土属性の攻撃を吸収する</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation>一撃死・石化・徐々に石化・死の宣告状態を防ぐ</translation>
+        <translation type="vanished">一撃死・石化・徐々に石化・死の宣告状態を防ぐ</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation>戦闘時に自動的にバーサク状態になる</translation>
+        <translation type="vanished">戦闘時に自動的にバーサク状態になる</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation>全てのステータスがアップするが……</translation>
+        <translation type="vanished">全てのステータスがアップするが……</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation>戦闘開始時に自動的にバリア・マバリア状態になる</translation>
+        <translation type="vanished">戦闘開始時に自動的にバリア・マバリア状態になる</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation>歩くとＨＰが回復する</translation>
+        <translation type="vanished">歩くとＨＰが回復する</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation>戦闘時に自動的にリフレク状態になる</translation>
+        <translation type="vanished">戦闘時に自動的にリフレク状態になる</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation>水属性の攻撃を吸収する</translation>
+        <translation type="vanished">水属性の攻撃を吸収する</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation>盗む確率アップ</translation>
+        <translation type="vanished">盗む確率アップ</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation>あやつりの確率アップ</translation>
+        <translation type="vanished">あやつりの確率アップ</translation>
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation>ミニマム状態を治す</translation>
+        <translation type="vanished">ミニマム状態を治す</translation>
     </message>
 </context>
 <context>
     <name>Items</name>
     <message>
         <source>Potion</source>
-        <translation>ポーション</translation>
+        <translation type="vanished">ポーション</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation>ハイポーション</translation>
+        <translation type="vanished">ハイポーション</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>エクスポーション</translation>
+        <translation type="vanished">エクスポーション</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation>エーテル</translation>
+        <translation type="vanished">エーテル</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>エーテルターボ</translation>
+        <translation type="vanished">エーテルターボ</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation>エリクサー</translation>
+        <translation type="vanished">エリクサー</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>ラストエリクサー</translation>
+        <translation type="vanished">ラストエリクサー</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation>フェニックスの尾</translation>
+        <translation type="vanished">フェニックスの尾</translation>
     </message>
     <message>
         <source>Antidote</source>
-        <translation>毒消し</translation>
+        <translation type="vanished">毒消し</translation>
     </message>
     <message>
         <source>Soft</source>
-        <translation>金の針</translation>
+        <translation type="vanished">金の針</translation>
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation>乙女のキッス</translation>
+        <translation type="vanished">乙女のキッス</translation>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation>うちでのこづち</translation>
+        <translation type="vanished">うちでのこづち</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation>興奮剤</translation>
+        <translation type="vanished">興奮剤</translation>
     </message>
     <message>
         <source>Tranquilizer</source>
-        <translation>鎮静剤</translation>
+        <translation type="vanished">鎮静剤</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation>万能薬</translation>
+        <translation type="vanished">万能薬</translation>
     </message>
     <message>
         <source>Smoke Bomb</source>
-        <translation>けむりだま</translation>
+        <translation type="vanished">けむりだま</translation>
     </message>
     <message>
         <source>Speed Drink</source>
-        <translation>スピードドリンク</translation>
+        <translation type="vanished">スピードドリンク</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>英雄の薬</translation>
+        <translation type="vanished">英雄の薬</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation>ワクチン</translation>
+        <translation type="vanished">ワクチン</translation>
     </message>
     <message>
         <source>Grenade</source>
-        <translation>手榴弾</translation>
+        <translation type="vanished">手榴弾</translation>
     </message>
     <message>
         <source>Shrapnel</source>
-        <translation>ボムのかけら</translation>
+        <translation type="vanished">ボムのかけら</translation>
     </message>
     <message>
         <source>Hourglass</source>
-        <translation>金の砂時計</translation>
+        <translation type="vanished">金の砂時計</translation>
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>死神のキッス</translation>
+        <translation type="vanished">死神のキッス</translation>
     </message>
     <message>
         <source>Spider Web</source>
-        <translation>クモの糸</translation>
+        <translation type="vanished">クモの糸</translation>
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation>ドリームパウダー</translation>
+        <translation type="vanished">ドリームパウダー</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation>サイレントマスク</translation>
+        <translation type="vanished">サイレントマスク</translation>
     </message>
     <message>
         <source>War Gong</source>
-        <translation>戦いのゴング</translation>
+        <translation type="vanished">戦いのゴング</translation>
     </message>
     <message>
         <source>Loco weed</source>
-        <translation>惑わし草</translation>
+        <translation type="vanished">惑わし草</translation>
     </message>
     <message>
         <source>Fire Fang</source>
-        <translation>火龍の牙</translation>
+        <translation type="vanished">火龍の牙</translation>
     </message>
     <message>
         <source>Fire Veil</source>
-        <translation>火とん</translation>
+        <translation type="vanished">火とん</translation>
     </message>
     <message>
         <source>Antarctic Wind</source>
-        <translation>南極の風</translation>
+        <translation type="vanished">南極の風</translation>
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation>冷気の結晶</translation>
+        <translation type="vanished">冷気の結晶</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
-        <translation>電撃鳥の角</translation>
+        <translation type="vanished">電撃鳥の角</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>雷迅</translation>
+        <translation type="vanished">雷迅</translation>
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation>大地のドラム</translation>
+        <translation type="vanished">大地のドラム</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
-        <translation>大地のハンマー</translation>
+        <translation type="vanished">大地のハンマー</translation>
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation>有害物質</translation>
+        <translation type="vanished">有害物質</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation>モルボルの触手</translation>
+        <translation type="vanished">モルボルの触手</translation>
     </message>
     <message>
         <source>Stardust</source>
-        <translation>星の砂</translation>
+        <translation type="vanished">星の砂</translation>
     </message>
     <message>
         <source>Vampire Fang</source>
-        <translation>バンパイアの牙</translation>
+        <translation type="vanished">バンパイアの牙</translation>
     </message>
     <message>
         <source>Ghost Hand</source>
-        <translation>ゴーストハンド</translation>
+        <translation type="vanished">ゴーストハンド</translation>
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation>バジリスクの爪</translation>
+        <translation type="vanished">バジリスクの爪</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation>光のカーテン</translation>
+        <translation type="vanished">光のカーテン</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation>月のカーテン</translation>
+        <translation type="vanished">月のカーテン</translation>
     </message>
     <message>
         <source>Mirror</source>
-        <translation>反射ミラー</translation>
+        <translation type="vanished">反射ミラー</translation>
     </message>
     <message>
         <source>Holy Torch</source>
-        <translation>聖なるトーチ</translation>
+        <translation type="vanished">聖なるトーチ</translation>
     </message>
     <message>
         <source>Bird Wing</source>
-        <translation>巨鳥のハネ</translation>
+        <translation type="vanished">巨鳥のハネ</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation>海龍のウロコ</translation>
+        <translation type="vanished">海龍のウロコ</translation>
     </message>
     <message>
         <source>Impaler</source>
-        <translation>モズのはやにえ</translation>
+        <translation type="vanished">モズのはやにえ</translation>
     </message>
     <message>
         <source>Shrivel</source>
-        <translation>チヂマール</translation>
+        <translation type="vanished">チヂマール</translation>
     </message>
     <message>
         <source>Eye drop</source>
-        <translation>目薬</translation>
+        <translation type="vanished">目薬</translation>
     </message>
     <message>
         <source>Molotov</source>
-        <translation>ファイアカクテル</translation>
+        <translation type="vanished">ファイアカクテル</translation>
     </message>
     <message>
         <source>S-mine</source>
-        <translation>Sマイン</translation>
+        <translation type="vanished">Sマイン</translation>
     </message>
     <message>
         <source>Graviball</source>
-        <translation>重力球</translation>
+        <translation type="vanished">重力球</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>時空弾</translation>
+        <translation type="vanished">時空弾</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation>イカスミ</translation>
+        <translation type="vanished">イカスミ</translation>
     </message>
     <message>
         <source>Dazers</source>
-        <translation>しびれ針</translation>
+        <translation type="vanished">しびれ針</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>双龍の牙</translation>
+        <translation type="vanished">双龍の牙</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation>魔女の大釜</translation>
+        <translation type="vanished">魔女の大釜</translation>
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation>シルキスの野菜</translation>
+        <translation type="vanished">シルキスの野菜</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation>レイゲンの野菜</translation>
+        <translation type="vanished">レイゲンの野菜</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation>ミメットの野菜</translation>
+        <translation type="vanished">ミメットの野菜</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation>クリーエの野菜</translation>
+        <translation type="vanished">クリーエの野菜</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation>パサーナの野菜</translation>
+        <translation type="vanished">パサーナの野菜</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation>タンタルの野菜</translation>
+        <translation type="vanished">タンタルの野菜</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>カラッカの野菜</translation>
+        <translation type="vanished">カラッカの野菜</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation>ギザールの野菜</translation>
+        <translation type="vanished">ギザールの野菜</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation>テント</translation>
+        <translation type="vanished">テント</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation>パワーアップ</translation>
+        <translation type="vanished">パワーアップ</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>ガードアップ</translation>
+        <translation type="vanished">ガードアップ</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>マジックアップ</translation>
+        <translation type="vanished">マジックアップ</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>マインドアップ</translation>
+        <translation type="vanished">マインドアップ</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>スピードアップ</translation>
+        <translation type="vanished">スピードアップ</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>ラックアップ</translation>
+        <translation type="vanished">ラックアップ</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
-        <translation>ゼイオの実</translation>
+        <translation type="vanished">ゼイオの実</translation>
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation>カラブの実</translation>
+        <translation type="vanished">カラブの実</translation>
     </message>
     <message>
         <source>Porov Nut</source>
-        <translation>ポロフの実</translation>
+        <translation type="vanished">ポロフの実</translation>
     </message>
     <message>
         <source>Pram Nut</source>
-        <translation>パラムの実</translation>
+        <translation type="vanished">パラムの実</translation>
     </message>
     <message>
         <source>Lasan Nut</source>
-        <translation>ラサンの実</translation>
+        <translation type="vanished">ラサンの実</translation>
     </message>
     <message>
         <source>Luchile Nut</source>
-        <translation>ルチルの実</translation>
+        <translation type="vanished">ルチルの実</translation>
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation>ピピオの実</translation>
+        <translation type="vanished">ピピオの実</translation>
     </message>
     <message>
         <source>Battery</source>
-        <translation>ジンクバッテリー</translation>
+        <translation type="vanished">ジンクバッテリー</translation>
     </message>
     <message>
         <source>Tissue</source>
-        <translation>ポケットティッシュ</translation>
+        <translation type="vanished">ポケットティッシュ</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>超究武神覇斬</translation>
+        <translation type="vanished">超究武神覇斬</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>カタストロフィ</translation>
+        <translation type="vanished">カタストロフィ</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>ファイナルヘヴン</translation>
+        <translation type="vanished">ファイナルヘヴン</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>大いなる福音</translation>
+        <translation type="vanished">大いなる福音</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>コスモメモリー</translation>
+        <translation type="vanished">コスモメモリー</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>森羅万象</translation>
+        <translation type="vanished">森羅万象</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>カオス</translation>
+        <translation type="vanished">カオス</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>ハイウインド</translation>
+        <translation type="vanished">ハイウインド</translation>
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation>超合金スイーパー</translation>
+        <translation type="vanished">超合金スイーパー</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation>マサムネブレード</translation>
+        <translation type="vanished">マサムネブレード</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>セーブクリスタル</translation>
+        <translation type="vanished">セーブクリスタル</translation>
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation>ディオ激闘日記</translation>
+        <translation type="vanished">ディオ激闘日記</translation>
     </message>
     <message>
         <source>Autograph</source>
-        <translation>サイン色紙</translation>
+        <translation type="vanished">サイン色紙</translation>
     </message>
     <message>
         <source>Gambler</source>
-        <translation>人生バクチ打ち</translation>
+        <translation type="vanished">人生バクチ打ち</translation>
     </message>
     <message>
         <source>Desert Rose</source>
-        <translation>デザートローズ</translation>
+        <translation type="vanished">デザートローズ</translation>
     </message>
     <message>
         <source>Earth Harp</source>
-        <translation>アースハープ</translation>
+        <translation type="vanished">アースハープ</translation>
     </message>
     <message>
         <source>Guide Book</source>
-        <translation>ガイドブック</translation>
+        <translation type="vanished">ガイドブック</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>使用不可</translation>
+        <translation type="vanished">使用不可</translation>
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation>バスターソード</translation>
+        <translation type="vanished">バスターソード</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
-        <translation>ミスリルセイバー</translation>
+        <translation type="vanished">ミスリルセイバー</translation>
     </message>
     <message>
         <source>Hardedge</source>
-        <translation>ハードブレイカー</translation>
+        <translation type="vanished">ハードブレイカー</translation>
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation>バタフライエッジ</translation>
+        <translation type="vanished">バタフライエッジ</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>エンハンスソード</translation>
+        <translation type="vanished">エンハンスソード</translation>
     </message>
     <message>
         <source>Organics</source>
-        <translation>オーガニクス</translation>
+        <translation type="vanished">オーガニクス</translation>
     </message>
     <message>
         <source>Crystal Sword</source>
-        <translation>クリスタルソード</translation>
+        <translation type="vanished">クリスタルソード</translation>
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation>フォースイーター</translation>
+        <translation type="vanished">フォースイーター</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>ルーンブレイド</translation>
+        <translation type="vanished">ルーンブレイド</translation>
     </message>
     <message>
         <source>Murasame</source>
-        <translation>村雨</translation>
+        <translation type="vanished">村雨</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation>釘バット</translation>
+        <translation type="vanished">釘バット</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation>陸奥守吉行</translation>
+        <translation type="vanished">陸奥守吉行</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation>アポカリプス</translation>
+        <translation type="vanished">アポカリプス</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>天の叢雲</translation>
+        <translation type="vanished">天の叢雲</translation>
     </message>
     <message>
         <source>Ragnarok</source>
-        <translation>ラグナロク</translation>
+        <translation type="vanished">ラグナロク</translation>
     </message>
     <message>
         <source>Ultima Weapon</source>
-        <translation>アルテマウェポン</translation>
+        <translation type="vanished">アルテマウェポン</translation>
     </message>
     <message>
         <source>Leather Glove</source>
-        <translation>レザーグローブ</translation>
+        <translation type="vanished">レザーグローブ</translation>
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation>メタルナックル</translation>
+        <translation type="vanished">メタルナックル</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation>ミスリルクロー</translation>
+        <translation type="vanished">ミスリルクロー</translation>
     </message>
     <message>
         <source>Grand Glove</source>
-        <translation>グランドグラブ</translation>
+        <translation type="vanished">グランドグラブ</translation>
     </message>
     <message>
         <source>Tiger Fang</source>
-        <translation>タイガーファング</translation>
+        <translation type="vanished">タイガーファング</translation>
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation>ダイアナックル</translation>
+        <translation type="vanished">ダイアナックル</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation>ドラゴンクロー</translation>
+        <translation type="vanished">ドラゴンクロー</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
-        <translation>クリスタルグラブ</translation>
+        <translation type="vanished">クリスタルグラブ</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation>モータードライブ</translation>
+        <translation type="vanished">モータードライブ</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>プラチナフィスト</translation>
+        <translation type="vanished">プラチナフィスト</translation>
     </message>
     <message>
         <source>Kaiser Knuckle</source>
-        <translation>カイザーナックル</translation>
+        <translation type="vanished">カイザーナックル</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>軍手</translation>
+        <translation type="vanished">軍手</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>オーバーソウル</translation>
+        <translation type="vanished">オーバーソウル</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>マスターフィスト</translation>
+        <translation type="vanished">マスターフィスト</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation>ゴッドハンド</translation>
+        <translation type="vanished">ゴッドハンド</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>プレミアムハート</translation>
+        <translation type="vanished">プレミアムハート</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
-        <translation>ガトリングガン</translation>
+        <translation type="vanished">ガトリングガン</translation>
     </message>
     <message>
         <source>Assault Gun</source>
-        <translation>アサルトガン</translation>
+        <translation type="vanished">アサルトガン</translation>
     </message>
     <message>
         <source>Cannon Ball</source>
-        <translation>キャノンボール</translation>
+        <translation type="vanished">キャノンボール</translation>
     </message>
     <message>
         <source>Atomic Scissors</source>
-        <translation>アトミックシザー</translation>
+        <translation type="vanished">アトミックシザー</translation>
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation>ハードバルカン</translation>
+        <translation type="vanished">ハードバルカン</translation>
     </message>
     <message>
         <source>Chainsaw</source>
-        <translation>チェーンソー</translation>
+        <translation type="vanished">チェーンソー</translation>
     </message>
     <message>
         <source>Microlaser</source>
-        <translation>マイクロレーザー</translation>
+        <translation type="vanished">マイクロレーザー</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>Wマシンガン</translation>
+        <translation type="vanished">Wマシンガン</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>ドリルアーム</translation>
+        <translation type="vanished">ドリルアーム</translation>
     </message>
     <message>
         <source>Solid Bazooka</source>
-        <translation>ソリッドバズーカ</translation>
+        <translation type="vanished">ソリッドバズーカ</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>ロケットパンチ</translation>
+        <translation type="vanished">ロケットパンチ</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>エネミーランチャ</translation>
+        <translation type="vanished">エネミーランチャ</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>パイルバンカー</translation>
+        <translation type="vanished">パイルバンカー</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>マキシマムレイ</translation>
+        <translation type="vanished">マキシマムレイ</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>ミッシングスコア</translation>
+        <translation type="vanished">ミッシングスコア</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
-        <translation>ミスリルクリップ</translation>
+        <translation type="vanished">ミスリルクリップ</translation>
     </message>
     <message>
         <source>Diamond Pin</source>
-        <translation>ギヤマンヘアピン</translation>
+        <translation type="vanished">ギヤマンヘアピン</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
-        <translation>アダマンクリップ</translation>
+        <translation type="vanished">アダマンクリップ</translation>
     </message>
     <message>
         <source>Crystal Comb</source>
-        <translation>クリスタルコーム</translation>
+        <translation type="vanished">クリスタルコーム</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation>マジックコーム</translation>
+        <translation type="vanished">マジックコーム</translation>
     </message>
     <message>
         <source>Centclip</source>
-        <translation>セントクリップ</translation>
+        <translation type="vanished">セントクリップ</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>かんざし</translation>
+        <translation type="vanished">かんざし</translation>
     </message>
     <message>
         <source>Seraph Comb</source>
-        <translation>セラフコーム</translation>
+        <translation type="vanished">セラフコーム</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>ベヒーモスホーン</translation>
+        <translation type="vanished">ベヒーモスホーン</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>スプリガンクリップ</translation>
+        <translation type="vanished">スプリガンクリップ</translation>
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation>リミテッドムーン</translation>
+        <translation type="vanished">リミテッドムーン</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation>ガードロッド</translation>
+        <translation type="vanished">ガードロッド</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
-        <translation>ミスリルロッド</translation>
+        <translation type="vanished">ミスリルロッド</translation>
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>フルメタルロッド</translation>
+        <translation type="vanished">フルメタルロッド</translation>
     </message>
     <message>
         <source>Striking Staff</source>
-        <translation>ストライクロッド</translation>
+        <translation type="vanished">ストライクロッド</translation>
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation>プリズムロッド</translation>
+        <translation type="vanished">プリズムロッド</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation>オーロラロッド</translation>
+        <translation type="vanished">オーロラロッド</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
-        <translation>ウィザードロッド</translation>
+        <translation type="vanished">ウィザードロッド</translation>
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation>ワイザーロッド</translation>
+        <translation type="vanished">ワイザーロッド</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation>フェアリーテイル</translation>
+        <translation type="vanished">フェアリーテイル</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>アンブレラ</translation>
+        <translation type="vanished">アンブレラ</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>プリンセスガード</translation>
+        <translation type="vanished">プリンセスガード</translation>
     </message>
     <message>
         <source>Spear</source>
-        <translation>スピア</translation>
+        <translation type="vanished">スピア</translation>
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation>スラッシュパイク</translation>
+        <translation type="vanished">スラッシュパイク</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation>トライデント</translation>
+        <translation type="vanished">トライデント</translation>
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation>ポールアックス</translation>
+        <translation type="vanished">ポールアックス</translation>
     </message>
     <message>
         <source>Partisan</source>
-        <translation>パルチザン</translation>
+        <translation type="vanished">パルチザン</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>蛇矛</translation>
+        <translation type="vanished">蛇矛</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation>ジャベリン</translation>
+        <translation type="vanished">ジャベリン</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>グローランス</translation>
+        <translation type="vanished">グローランス</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation>モップ</translation>
+        <translation type="vanished">モップ</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>ドラグーンランス</translation>
+        <translation type="vanished">ドラグーンランス</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation>青龍偃月刀</translation>
+        <translation type="vanished">青龍偃月刀</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation>方天画戟</translation>
+        <translation type="vanished">方天画戟</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>ロンギヌス</translation>
+        <translation type="vanished">ロンギヌス</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>ビーナスゴスペル</translation>
+        <translation type="vanished">ビーナスゴスペル</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
-        <translation>十字手裏剣</translation>
+        <translation type="vanished">十字手裏剣</translation>
     </message>
     <message>
         <source>Boomerang</source>
-        <translation>ブーメラン</translation>
+        <translation type="vanished">ブーメラン</translation>
     </message>
     <message>
         <source>Pinwheel</source>
-        <translation>風車</translation>
+        <translation type="vanished">風車</translation>
     </message>
     <message>
         <source>Razor Ring</source>
-        <translation>円月輪</translation>
+        <translation type="vanished">円月輪</translation>
     </message>
     <message>
         <source>Hawkeye</source>
-        <translation>ホークアイ</translation>
+        <translation type="vanished">ホークアイ</translation>
     </message>
     <message>
         <source>Crystal Cross</source>
-        <translation>クリスタルクロス</translation>
+        <translation type="vanished">クリスタルクロス</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>風斬り</translation>
+        <translation type="vanished">風斬り</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>ツインヴァイパー</translation>
+        <translation type="vanished">ツインヴァイパー</translation>
     </message>
     <message>
         <source>Spiral Shuriken</source>
-        <translation>卍手裏剣</translation>
+        <translation type="vanished">卍手裏剣</translation>
     </message>
     <message>
         <source>Superball</source>
-        <translation>スーパーボール</translation>
+        <translation type="vanished">スーパーボール</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>風魔手裏剣</translation>
+        <translation type="vanished">風魔手裏剣</translation>
     </message>
     <message>
         <source>Rising Sun</source>
-        <translation>ライジングサン</translation>
+        <translation type="vanished">ライジングサン</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation>折り鶴</translation>
+        <translation type="vanished">折り鶴</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation>不倶戴天</translation>
+        <translation type="vanished">不倶戴天</translation>
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation>イエローメガホン</translation>
+        <translation type="vanished">イエローメガホン</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation>グリーンメガホン</translation>
+        <translation type="vanished">グリーンメガホン</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation>ブルーメガホン</translation>
+        <translation type="vanished">ブルーメガホン</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation>レッドメガホン</translation>
+        <translation type="vanished">レッドメガホン</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation>クリスタルメガホン</translation>
+        <translation type="vanished">クリスタルメガホン</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>ホワイトメガホン</translation>
+        <translation type="vanished">ホワイトメガホン</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>ブラックメガホン</translation>
+        <translation type="vanished">ブラックメガホン</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>シルバーメガホン</translation>
+        <translation type="vanished">シルバーメガホン</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation>法螺貝</translation>
+        <translation type="vanished">法螺貝</translation>
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation>ゴールドメガホン</translation>
+        <translation type="vanished">ゴールドメガホン</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>突撃ラッパ</translation>
+        <translation type="vanished">突撃ラッパ</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>スターライトホン</translation>
+        <translation type="vanished">スターライトホン</translation>
     </message>
     <message>
         <source>HP Shout</source>
-        <translation>マーベラスチアー</translation>
+        <translation type="vanished">マーベラスチアー</translation>
     </message>
     <message>
         <source>Quicksilver</source>
-        <translation>クイックシルバー</translation>
+        <translation type="vanished">クイックシルバー</translation>
     </message>
     <message>
         <source>Shotgun</source>
-        <translation>スパス</translation>
+        <translation type="vanished">スパス</translation>
     </message>
     <message>
         <source>Shortbarrel</source>
-        <translation>ランダル</translation>
+        <translation type="vanished">ランダル</translation>
     </message>
     <message>
         <source>Lariat</source>
-        <translation>ライアット</translation>
+        <translation type="vanished">ライアット</translation>
     </message>
     <message>
         <source>Winchester</source>
-        <translation>ウィンチェスター</translation>
+        <translation type="vanished">ウィンチェスター</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation>ピースメーカー</translation>
+        <translation type="vanished">ピースメーカー</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation>バントライン</translation>
+        <translation type="vanished">バントライン</translation>
     </message>
     <message>
         <source>Long Barrel R</source>
-        <translation>ロングバレルR</translation>
+        <translation type="vanished">ロングバレルR</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>銀玉鉄砲</translation>
+        <translation type="vanished">銀玉鉄砲</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>スナイパーCR</translation>
+        <translation type="vanished">スナイパーCR</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>ハイブロウST</translation>
+        <translation type="vanished">ハイブロウST</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>アウトサイダー</translation>
+        <translation type="vanished">アウトサイダー</translation>
     </message>
     <message>
         <source>Death Penalty</source>
-        <translation>デスペナルティ</translation>
+        <translation type="vanished">デスペナルティ</translation>
     </message>
     <message>
         <source>Masamune</source>
-        <translation>正宗</translation>
+        <translation type="vanished">正宗</translation>
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation>ブロンズバングル</translation>
+        <translation type="vanished">ブロンズバングル</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
-        <translation>アイアンバングル</translation>
+        <translation type="vanished">アイアンバングル</translation>
     </message>
     <message>
         <source>Titan Bangle</source>
-        <translation>チタンバングル</translation>
+        <translation type="vanished">チタンバングル</translation>
     </message>
     <message>
         <source>Mythril Armlet</source>
-        <translation>ミスリルの腕輪</translation>
+        <translation type="vanished">ミスリルの腕輪</translation>
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation>カーボンバングル</translation>
+        <translation type="vanished">カーボンバングル</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation>銀の腕輪</translation>
+        <translation type="vanished">銀の腕輪</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>金の腕輪</translation>
+        <translation type="vanished">金の腕輪</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation>ダイアバングル</translation>
+        <translation type="vanished">ダイアバングル</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>クリスタルバングル</translation>
+        <translation type="vanished">クリスタルバングル</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation>プラチナバングル</translation>
+        <translation type="vanished">プラチナバングル</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation>ルーンの腕輪</translation>
+        <translation type="vanished">ルーンの腕輪</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation>エジンコート</translation>
+        <translation type="vanished">エジンコート</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
-        <translation>ウィザードブレス</translation>
+        <translation type="vanished">ウィザードブレス</translation>
     </message>
     <message>
         <source>Adaman Bangle</source>
-        <translation>アダマンバングル</translation>
+        <translation type="vanished">アダマンバングル</translation>
     </message>
     <message>
         <source>Gigas Armlet</source>
-        <translation>ギガースの腕輪</translation>
+        <translation type="vanished">ギガースの腕輪</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>インペリアルガード</translation>
+        <translation type="vanished">インペリアルガード</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>エイジスの腕輪</translation>
+        <translation type="vanished">エイジスの腕輪</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>フォースブレス</translation>
+        <translation type="vanished">フォースブレス</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation>ウォーリアバングル</translation>
+        <translation type="vanished">ウォーリアバングル</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
-        <translation>神羅安式防具</translation>
+        <translation type="vanished">神羅安式防具</translation>
     </message>
     <message>
         <source>Shinra Alpha</source>
-        <translation>神羅甲型防具改</translation>
+        <translation type="vanished">神羅甲型防具改</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>フォウスロット</translation>
+        <translation type="vanished">フォウスロット</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>烈火の腕輪</translation>
+        <translation type="vanished">烈火の腕輪</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation>極光の腕輪</translation>
+        <translation type="vanished">極光の腕輪</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>天雷の腕輪</translation>
+        <translation type="vanished">天雷の腕輪</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation>ドラゴンの腕輪</translation>
+        <translation type="vanished">ドラゴンの腕輪</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>ミネルバブレス</translation>
+        <translation type="vanished">ミネルバブレス</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>エスコートガード</translation>
+        <translation type="vanished">エスコートガード</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation>ミスティール</translation>
+        <translation type="vanished">ミスティール</translation>
     </message>
     <message>
         <source>Ziedrich</source>
-        <translation>ザイドリッツ</translation>
+        <translation type="vanished">ザイドリッツ</translation>
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation>高級腕時計</translation>
+        <translation type="vanished">高級腕時計</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
-        <translation>チョコボの腕輪</translation>
+        <translation type="vanished">チョコボの腕輪</translation>
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation>パワーリスト</translation>
+        <translation type="vanished">パワーリスト</translation>
     </message>
     <message>
         <source>Protect Vest</source>
-        <translation>防弾チョッキ</translation>
+        <translation type="vanished">防弾チョッキ</translation>
     </message>
     <message>
         <source>Earring</source>
-        <translation>イヤリング</translation>
+        <translation type="vanished">イヤリング</translation>
     </message>
     <message>
         <source>Talisman</source>
-        <translation>タリスマン</translation>
+        <translation type="vanished">タリスマン</translation>
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation>チョコボのはね</translation>
+        <translation type="vanished">チョコボのはね</translation>
     </message>
     <message>
         <source>Amulet</source>
-        <translation>お守り</translation>
+        <translation type="vanished">お守り</translation>
     </message>
     <message>
         <source>Champion Belt</source>
-        <translation>チャンピオンベルト</translation>
+        <translation type="vanished">チャンピオンベルト</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>ポイズンリング</translation>
+        <translation type="vanished">ポイズンリング</translation>
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation>タフネスリング</translation>
+        <translation type="vanished">タフネスリング</translation>
     </message>
     <message>
         <source>Circlet</source>
-        <translation>サークレット</translation>
+        <translation type="vanished">サークレット</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>星のペンダント</translation>
+        <translation type="vanished">星のペンダント</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
-        <translation>銀縁メガネ</translation>
+        <translation type="vanished">銀縁メガネ</translation>
     </message>
     <message>
         <source>Headband</source>
-        <translation>ハチマキ</translation>
+        <translation type="vanished">ハチマキ</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>フェアリーリング</translation>
+        <translation type="vanished">フェアリーリング</translation>
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation>ジュエルリング</translation>
+        <translation type="vanished">ジュエルリング</translation>
     </message>
     <message>
         <source>White Cape</source>
-        <translation>ホワイトケープ</translation>
+        <translation type="vanished">ホワイトケープ</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation>エルメスのくつ</translation>
+        <translation type="vanished">エルメスのくつ</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>安らぎの指輪</translation>
+        <translation type="vanished">安らぎの指輪</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>リボン</translation>
+        <translation type="vanished">リボン</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>炎の指輪</translation>
+        <translation type="vanished">炎の指輪</translation>
     </message>
     <message>
         <source>Ice Ring</source>
-        <translation>冷気の指輪</translation>
+        <translation type="vanished">冷気の指輪</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>雷の指輪</translation>
+        <translation type="vanished">雷の指輪</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>テトラエレメンタル</translation>
+        <translation type="vanished">テトラエレメンタル</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>セーフティビット</translation>
+        <translation type="vanished">セーフティビット</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation>怒りの指輪</translation>
+        <translation type="vanished">怒りの指輪</translation>
     </message>
     <message>
         <source>Curse Ring</source>
-        <translation>呪いの指輪</translation>
+        <translation type="vanished">呪いの指輪</translation>
     </message>
     <message>
         <source>Protect Ring</source>
-        <translation>守りの指輪</translation>
+        <translation type="vanished">守りの指輪</translation>
     </message>
     <message>
         <source>Cat&apos;s Bell</source>
-        <translation>タマのすず</translation>
+        <translation type="vanished">タマのすず</translation>
     </message>
     <message>
         <source>Reflect Ring</source>
-        <translation>リフレクトリング</translation>
+        <translation type="vanished">リフレクトリング</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>水の指輪</translation>
+        <translation type="vanished">水の指輪</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>盗族の小手</translation>
+        <translation type="vanished">盗族の小手</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation>ヒュプノクラウン</translation>
+        <translation type="vanished">ヒュプノクラウン</translation>
     </message>
     <message>
         <source>Right arm</source>
-        <translation>ボムの右腕</translation>
+        <translation type="vanished">ボムの右腕</translation>
     </message>
     <message>
         <source>8-inch Cannon</source>
-        <translation>203ミリ砲弾</translation>
+        <translation type="vanished">203ミリ砲弾</translation>
     </message>
     <message>
         <source>Saraha Nut</source>
-        <translation>サラハの実</translation>
+        <translation type="vanished">サラハの実</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>1/35神羅兵</translation>
+        <translation type="vanished">1/35神羅兵</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>プラチナバレッタ</translation>
+        <translation type="vanished">プラチナバレッタ</translation>
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation>Ａ・Ｍキャノン</translation>
+        <translation type="vanished">Ａ・Ｍキャノン</translation>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation>やまびこえんまく</translation>
+        <translation type="vanished">やまびこえんまく</translation>
     </message>
     <message>
         <source>Silver Barrette</source>
-        <translation>シルバーバレッタ</translation>
+        <translation type="vanished">シルバーバレッタ</translation>
     </message>
     <message>
         <source>Gold Barrette</source>
-        <translation>ゴールドバレッタ</translation>
+        <translation type="vanished">ゴールドバレッタ</translation>
     </message>
 </context>
 <context>
@@ -4351,1166 +4482,1162 @@ The km/h speeds are calculated while playing </source>
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation>１番街駅ホーム</translation>
+        <translation type="vanished">１番街駅ホーム</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation>ジュノン・場末の宿屋</translation>
+        <translation type="vanished">ジュノン・場末の宿屋</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation>列車墓場</translation>
+        <translation type="vanished">列車墓場</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation>海底魔晄炉</translation>
+        <translation type="vanished">海底魔晄炉</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>ジュノン支社２階</translation>
+        <translation type="vanished">ジュノン支社２階</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>エアリスの家</translation>
+        <translation type="vanished">エアリスの家</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation>ウォールマーケット</translation>
+        <translation type="vanished">ウォールマーケット</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>初心者の館</translation>
+        <translation type="vanished">初心者の館</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation>竜巻の迷宮</translation>
+        <translation type="vanished">竜巻の迷宮</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>ニブル山</translation>
+        <translation type="vanished">ニブル山</translation>
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation>コレルプリズン</translation>
+        <translation type="vanished">コレルプリズン</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation>コンドルフォート</translation>
+        <translation type="vanished">コンドルフォート</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation>潜水艦内部</translation>
+        <translation type="vanished">潜水艦内部</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation>神羅飛空艇・通路</translation>
+        <translation type="vanished">神羅飛空艇・通路</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation>コスモキャニオン</translation>
+        <translation type="vanished">コスモキャニオン</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation>４番街プレート下部</translation>
+        <translation type="vanished">４番街プレート下部</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation>コレル山・西</translation>
+        <translation type="vanished">コレル山・西</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation>デバッグ・ルーム</translation>
+        <translation type="vanished">デバッグ・ルーム</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translation>デバッグ・イージタイプ！</translation>
+        <translation type="vanished">デバッグ・イージタイプ！</translation>
     </message>
     <message>
         <source>Test Fight</source>
-        <translation>バトル・テスト</translation>
+        <translation type="vanished">バトル・テスト</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>ロープウェイ乗り場</translation>
+        <translation type="vanished">ロープウェイ乗り場</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation>ジュノン空港通路</translation>
+        <translation type="vanished">ジュノン空港通路</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>ミッドガル８番街地下</translation>
+        <translation type="vanished">ミッドガル８番街地下</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>神羅ビル</translation>
+        <translation type="vanished">神羅ビル</translation>
     </message>
     <message>
         <source>Wutai</source>
-        <translation>ウータイ</translation>
+        <translation type="vanished">ウータイ</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>忘らるる都＊</translation>
+        <translation type="vanished">忘らるる都＊</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>チョコボ小屋</translation>
+        <translation type="vanished">チョコボ小屋</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>ハイウインド</translation>
+        <translation type="vanished">ハイウインド</translation>
     </message>
     <message>
         <source>7th Heaven</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>セブンスヘブン</translation>
+        <translation type="vanished">セブンスヘブン</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>アバランチアジト</translation>
+        <translation type="vanished">アバランチアジト</translation>
     </message>
     <message>
         <source>Mideel,Clinic</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ミディール&#x3000;治療所</translation>
+        <translation type="vanished">ミディール&#x3000;治療所</translation>
     </message>
     <message>
         <source>Sector 6</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>6番街</translation>
+        <translation type="vanished">6番街</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>蜜蜂の館</translation>
+        <translation type="vanished">蜜蜂の館</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>コルネオの館</translation>
+        <translation type="vanished">コルネオの館</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>闘技場ロビー</translation>
+        <translation type="vanished">闘技場ロビー</translation>
     </message>
     <message>
         <source>Sector 1 Station</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>１番街駅</translation>
+        <translation type="vanished">１番街駅</translation>
     </message>
     <message>
         <source>Sector 1</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>１番街</translation>
+        <translation type="vanished">１番街</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>１番魔晄炉</translation>
+        <translation type="vanished">１番魔晄炉</translation>
     </message>
     <message>
         <source>Sector 8</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>８番街</translation>
+        <translation type="vanished">８番街</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ミッドガル発最終列車</translation>
+        <translation type="vanished">ミッドガル発最終列車</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>７番街スラム駅</translation>
+        <translation type="vanished">７番街スラム駅</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>７番街スラム</translation>
+        <translation type="vanished">７番街スラム</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>７番街・道具屋</translation>
+        <translation type="vanished">７番街・道具屋</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>７番街・武器屋１階</translation>
+        <translation type="vanished">７番街・武器屋１階</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ジョニーの家</translation>
+        <translation type="vanished">ジョニーの家</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>螺旋トンネル</translation>
+        <translation type="vanished">螺旋トンネル</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>４番街プレート内部</translation>
+        <translation type="vanished">４番街プレート内部</translation>
     </message>
     <message>
         <source>No.5 Reactor</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>５番魔晄炉</translation>
+        <translation type="vanished">５番魔晄炉</translation>
     </message>
     <message>
         <source>church in the slums</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>スラムの教会</translation>
+        <translation type="vanished">スラムの教会</translation>
     </message>
     <message>
         <source>Inside the Church</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>教会奥</translation>
+        <translation type="vanished">教会奥</translation>
     </message>
     <message>
         <source>Church Roof</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>教会屋根裏</translation>
+        <translation type="vanished">教会屋根裏</translation>
     </message>
     <message>
         <source>Sector 5 Slum</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>５番街スラム</translation>
+        <translation type="vanished">５番街スラム</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ドカン</translation>
+        <translation type="vanished">ドカン</translation>
     </message>
     <message>
         <source>Materia store</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>マテリア屋</translation>
+        <translation type="vanished">マテリア屋</translation>
     </message>
     <message>
         <source>Item Store</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>アイテム屋</translation>
+        <translation type="vanished">アイテム屋</translation>
     </message>
     <message>
         <source>House 1f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>民家１階</translation>
+        <translation type="vanished">民家１階</translation>
     </message>
     <message>
         <source>House 2f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>民家２階</translation>
+        <translation type="vanished">民家２階</translation>
     </message>
     <message>
         <source>Weapon Store</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>武器屋</translation>
+        <translation type="vanished">武器屋</translation>
     </message>
     <message>
         <source>Church</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>教会</translation>
+        <translation type="vanished">教会</translation>
     </message>
     <message>
         <source>Sector 6 park</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>６番街公園</translation>
+        <translation type="vanished">６番街公園</translation>
     </message>
     <message>
         <source>Inn</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>宿屋</translation>
+        <translation type="vanished">宿屋</translation>
     </message>
     <message>
         <source>Pharmacy</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>薬屋</translation>
+        <translation type="vanished">薬屋</translation>
     </message>
     <message>
         <source>Diner</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>定食屋</translation>
+        <translation type="vanished">定食屋</translation>
     </message>
     <message>
         <source>Boutique</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ブティック</translation>
+        <translation type="vanished">ブティック</translation>
     </message>
     <message>
         <source>Materia Store</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>マテリアショップ</translation>
+        <translation type="vanished">マテリアショップ</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>男の館</translation>
+        <translation type="vanished">男の館</translation>
     </message>
     <message>
         <source>Bar</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>酒場</translation>
+        <translation type="vanished">酒場</translation>
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>コルネオの館１階</translation>
+        <translation type="vanished">コルネオの館１階</translation>
     </message>
     <message>
         <source>Torture Room</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>おしおき部屋</translation>
+        <translation type="vanished">おしおき部屋</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>コルネオの館２階</translation>
+        <translation type="vanished">コルネオの館２階</translation>
     </message>
     <message>
         <source>Sewer</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>地下下水道</translation>
+        <translation type="vanished">地下下水道</translation>
     </message>
     <message>
         <source>Plate Support</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>プレート支柱</translation>
+        <translation type="vanished">プレート支柱</translation>
     </message>
     <message>
         <source>Plate Section</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>プレート断面</translation>
+        <translation type="vanished">プレート断面</translation>
     </message>
     <message>
         <source>Sector 0</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>５番街バせゲだそ</translation>
+        <translation type="vanished">５番街バせゲだそ</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・階段</translation>
+        <translation type="vanished">神羅ビル・階段</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・５９階</translation>
+        <translation type="vanished">神羅ビル・５９階</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>外観エレベーター</translation>
+        <translation type="vanished">外観エレベーター</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６０階</translation>
+        <translation type="vanished">神羅ビル・６０階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６１階</translation>
+        <translation type="vanished">神羅ビル・６１階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６２階</translation>
+        <translation type="vanished">神羅ビル・６２階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６３階</translation>
+        <translation type="vanished">神羅ビル・６３階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６４階</translation>
+        <translation type="vanished">神羅ビル・６４階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６５階</translation>
+        <translation type="vanished">神羅ビル・６５階</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６６階</translation>
+        <translation type="vanished">神羅ビル・６６階</translation>
     </message>
     <message>
         <source>Elevator</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>エレベーター</translation>
+        <translation type="vanished">エレベーター</translation>
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６７階</translation>
+        <translation type="vanished">神羅ビル・６７階</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６８階</translation>
+        <translation type="vanished">神羅ビル・６８階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・６９階</translation>
+        <translation type="vanished">神羅ビル・６９階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・７０階</translation>
+        <translation type="vanished">神羅ビル・７０階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・１階ロビー</translation>
+        <translation type="vanished">神羅ビル・１階ロビー</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・２階ロビー</translation>
+        <translation type="vanished">神羅ビル・２階ロビー</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>神羅ビル・３階ロビー</translation>
+        <translation type="vanished">神羅ビル・３階ロビー</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>スラム外辺</translation>
+        <translation type="vanished">スラム外辺</translation>
     </message>
     <message>
         <source>Midgar Area</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>ミッドガルエリア</translation>
+        <translation type="vanished">ミッドガルエリア</translation>
     </message>
     <message>
         <source>Kalm</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>カーム</translation>
+        <translation type="vanished">カーム</translation>
     </message>
     <message>
         <source>House: 1f</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>民家１階</translation>
+        <translation type="vanished">民家１階</translation>
     </message>
     <message>
         <source>House: 2f</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>民家２階</translation>
+        <translation type="vanished">民家２階</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>裏の塔</translation>
+        <translation type="vanished">裏の塔</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>宿屋１階</translation>
+        <translation type="vanished">宿屋１階</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>宿屋２階</translation>
+        <translation type="vanished">宿屋２階</translation>
     </message>
     <message>
         <source>Nibelheim House</source>
-        <translation>小さな姉弟がいた家</translation>
+        <translation type="vanished">小さな姉弟がいた家</translation>
     </message>
     <message>
         <source>Tifa&apos;s House</source>
-        <translation>ティファの家</translation>
+        <translation type="vanished">ティファの家</translation>
     </message>
     <message>
         <source>Cloud&apos;s House</source>
-        <translation>クラウドの家</translation>
+        <translation type="vanished">クラウドの家</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
-        <translation>ニブルヘイムのよろず屋</translation>
+        <translation type="vanished">ニブルヘイムのよろず屋</translation>
     </message>
     <message>
         <source>Nibelheim Inn</source>
-        <translation>ニブルヘイムの宿</translation>
+        <translation type="vanished">ニブルヘイムの宿</translation>
     </message>
     <message>
         <source>Mt. Nibel Cave</source>
-        <translation>ニブル山洞窟</translation>
+        <translation type="vanished">ニブル山洞窟</translation>
     </message>
     <message>
         <source>Nibel Reactor</source>
-        <translation>ニブル魔晄炉</translation>
+        <translation type="vanished">ニブル魔晄炉</translation>
     </message>
     <message>
         <source>Nibel Reactor(Int.)</source>
-        <translation>ニブル魔晄炉内部</translation>
+        <translation type="vanished">ニブル魔晄炉内部</translation>
     </message>
     <message>
         <source>Mansion, 1f.</source>
-        <translation>神羅屋敷１階</translation>
+        <translation type="vanished">神羅屋敷１階</translation>
     </message>
     <message>
         <source>Mansion, 2f.</source>
-        <translation>神羅屋敷２階</translation>
+        <translation type="vanished">神羅屋敷２階</translation>
     </message>
     <message>
         <source>Mansion, Hidden Steps</source>
-        <translation>神羅屋敷隠し階段</translation>
+        <translation type="vanished">神羅屋敷隠し階段</translation>
     </message>
     <message>
         <source>Mansion, Basement</source>
-        <translation>神羅屋敷地下</translation>
+        <translation type="vanished">神羅屋敷地下</translation>
     </message>
     <message>
         <source>Nibelheim</source>
-        <translation>ニブルヘイム</translation>
+        <translation type="vanished">ニブルヘイム</translation>
     </message>
     <message>
         <source>Chocobo farm</source>
-        <translation>チョコボファーム</translation>
+        <translation type="vanished">チョコボファーム</translation>
     </message>
     <message>
         <source>Marshes</source>
-        <translation>湿地帯</translation>
+        <translation type="vanished">湿地帯</translation>
     </message>
     <message>
         <source>Mythril Mine</source>
-        <translation>ミスリルマイン</translation>
+        <translation type="vanished">ミスリルマイン</translation>
     </message>
     <message>
         <source>Base of Fort Condor</source>
         <translatorcomment>has no translation.</translatorcomment>
-        <translation>コンドルフォートふもと</translation>
+        <translation type="vanished">コンドルフォートふもと</translation>
     </message>
     <message>
         <source>Entrance to Fort Condor</source>
         <translatorcomment>has no translation</translatorcomment>
-        <translation>コンドルフォート入口</translation>
+        <translation type="vanished">コンドルフォート入口</translation>
     </message>
     <message>
         <source>Watch Room</source>
-        <translation>見張り小屋</translation>
+        <translation type="vanished">見張り小屋</translation>
     </message>
     <message>
         <source>Plains</source>
-        <translation>草原</translation>
+        <translation type="vanished">草原</translation>
     </message>
     <message>
         <source>Under Junon</source>
-        <translation>アンダージュノン</translation>
+        <translation type="vanished">アンダージュノン</translation>
     </message>
     <message>
         <source>Priscilla&apos;s House</source>
-        <translation>プリシラの家</translation>
+        <translation type="vanished">プリシラの家</translation>
     </message>
     <message>
         <source>Dolphin Offing</source>
-        <translation>イルカの入りえ</translation>
+        <translation type="vanished">イルカの入りえ</translation>
     </message>
     <message>
         <source>Airport</source>
-        <translation>エアポート</translation>
+        <translation type="vanished">エアポート</translation>
     </message>
     <message>
         <source>Locker Room</source>
-        <translation>ひかえ室</translation>
+        <translation type="vanished">ひかえ室</translation>
     </message>
     <message>
         <source>Upper Junon</source>
-        <translation>アルジュノン</translation>
+        <translation type="vanished">アルジュノン</translation>
     </message>
     <message>
         <source>Barracks</source>
-        <translation>兵舎</translation>
+        <translation type="vanished">兵舎</translation>
     </message>
     <message>
         <source>Junon Path</source>
-        <translation>ジュノン・通路</translation>
+        <translation type="vanished">ジュノン・通路</translation>
     </message>
     <message>
         <source>Lower Junon</source>
-        <translation>エルジュノン</translation>
+        <translation type="vanished">エルジュノン</translation>
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
-        <translation>神羅会員制ＢＡＲ</translation>
+        <translation type="vanished">神羅会員制ＢＡＲ</translation>
     </message>
     <message>
         <source>Junon Dock</source>
-        <translation>ジュノン港</translation>
+        <translation type="vanished">ジュノン港</translation>
     </message>
     <message>
         <source>Cargo Ship</source>
-        <translation>運搬船</translation>
+        <translation type="vanished">運搬船</translation>
     </message>
     <message>
         <source>Costa del Sol Harbor</source>
-        <translation>コスタ・デル・ソル港</translation>
+        <translation type="vanished">コスタ・デル・ソル港</translation>
     </message>
     <message>
         <source>Costa del Sol</source>
-        <translation>コスタ・デル・ソル</translation>
+        <translation type="vanished">コスタ・デル・ソル</translation>
     </message>
     <message>
         <source>House for Sale</source>
-        <translation>売り家（旧神羅べっそう</translation>
+        <translation type="vanished">売り家（旧神羅べっそう</translation>
     </message>
     <message>
         <source>Cellar</source>
-        <translation>地下室</translation>
+        <translation type="vanished">地下室</translation>
     </message>
     <message>
         <source>Costa del Sol Inn</source>
-        <translation>コスタデルソル・イン</translation>
+        <translation type="vanished">コスタデルソル・イン</translation>
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
-        <translation>クラウドの過去</translation>
+        <translation type="vanished">クラウドの過去</translation>
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
-        <translation>クラウドべっそう</translation>
+        <translation type="vanished">クラウドべっそう</translation>
     </message>
     <message>
         <source>Grasslands Area</source>
-        <translation>グラスランドエリア</translation>
+        <translation type="vanished">グラスランドエリア</translation>
     </message>
     <message>
         <source>Junon Area</source>
-        <translation>ジュノンエリア</translation>
+        <translation type="vanished">ジュノンエリア</translation>
     </message>
     <message>
         <source>Corel Area</source>
-        <translation>コレルエリア</translation>
+        <translation type="vanished">コレルエリア</translation>
     </message>
     <message>
         <source>Corel Reactor</source>
-        <translation>コレル魔晄炉</translation>
+        <translation type="vanished">コレル魔晄炉</translation>
     </message>
     <message>
         <source>North Corel</source>
-        <translation>北コレル</translation>
+        <translation type="vanished">北コレル</translation>
     </message>
     <message>
         <source>North Corel Inn</source>
-        <translation>宿屋</translation>
+        <translation type="vanished">宿屋</translation>
     </message>
     <message>
         <source>Terminal Floor</source>
-        <translation>ターミナルフロア</translation>
+        <translation type="vanished">ターミナルフロア</translation>
     </message>
     <message>
         <source>Chocobo Square</source>
-        <translation>チョコボスクェア</translation>
+        <translation type="vanished">チョコボスクェア</translation>
     </message>
     <message>
         <source>Ticket Office</source>
-        <translation>チケットオフィス</translation>
+        <translation type="vanished">チケットオフィス</translation>
     </message>
     <message>
         <source>Wonder Square</source>
-        <translation>ワンダースクェア</translation>
+        <translation type="vanished">ワンダースクェア</translation>
     </message>
     <message>
         <source>Building 1f.</source>
-        <translation>建物１Ｆ</translation>
+        <translation type="vanished">建物１Ｆ</translation>
     </message>
     <message>
         <source>Building 2f.</source>
-        <translation>建物２Ｆ</translation>
+        <translation type="vanished">建物２Ｆ</translation>
     </message>
     <message>
         <source>Event square</source>
-        <translation>イベントスクェア</translation>
+        <translation type="vanished">イベントスクェア</translation>
     </message>
     <message>
         <source>Speed square</source>
-        <translation>スピードスクェア</translation>
+        <translation type="vanished">スピードスクェア</translation>
     </message>
     <message>
         <source>Ghost Hotel</source>
-        <translation>ゴーストホテル</translation>
+        <translation type="vanished">ゴーストホテル</translation>
     </message>
     <message>
         <source>Hotel Lobby</source>
-        <translation>ホテルロビー</translation>
+        <translation type="vanished">ホテルロビー</translation>
     </message>
     <message>
         <source>Hotel Shop</source>
-        <translation>ホテルショップ</translation>
+        <translation type="vanished">ホテルショップ</translation>
     </message>
     <message>
         <source>Round Square</source>
-        <translation>ラウンドスクェア</translation>
+        <translation type="vanished">ラウンドスクェア</translation>
     </message>
     <message>
         <source>Basement</source>
-        <translation>地下室</translation>
+        <translation type="vanished">地下室</translation>
     </message>
     <message>
         <source>Container</source>
-        <translation>コーツのコンテナ</translation>
+        <translation type="vanished">コーツのコンテナ</translation>
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
-        <translation>旧村長の家</translation>
+        <translation type="vanished">旧村長の家</translation>
     </message>
     <message>
         <source>Prison Pub</source>
-        <translation>プリズンパブ</translation>
+        <translation type="vanished">プリズンパブ</translation>
     </message>
     <message>
         <source>Corel Desert</source>
-        <translation>コレルサバク</translation>
+        <translation type="vanished">コレルサバク</translation>
     </message>
     <message>
         <source>Jungle</source>
-        <translation>ジャングル</translation>
+        <translation type="vanished">ジャングル</translation>
     </message>
     <message>
         <source>Meltdown Reactor</source>
-        <translation>メルトダウン魔晄炉</translation>
+        <translation type="vanished">メルトダウン魔晄炉</translation>
     </message>
     <message>
         <source>Gongaga Village</source>
-        <translation>ゴンガガ</translation>
+        <translation type="vanished">ゴンガガ</translation>
     </message>
     <message>
         <source>Weapons Store</source>
-        <translation>武器屋</translation>
+        <translation type="vanished">武器屋</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
-        <translation>村長の家</translation>
+        <translation type="vanished">村長の家</translation>
     </message>
     <message>
         <source>Gold Saucer Area</source>
-        <translation>ゴールドソーサーエリア</translation>
+        <translation type="vanished">ゴールドソーサーエリア</translation>
     </message>
     <message>
         <source>Gongaga Area</source>
-        <translation>ゴンガガエリア</translation>
+        <translation type="vanished">ゴンガガエリア</translation>
     </message>
     <message>
         <source>Cosmo Area</source>
-        <translation>コスモエリア</translation>
+        <translation type="vanished">コスモエリア</translation>
     </message>
     <message>
         <source>Battle Square</source>
-        <translation>バトルスクェア</translation>
+        <translation type="vanished">バトルスクェア</translation>
     </message>
     <message>
         <source>Dio&apos;s Museum</source>
-        <translation>ディオの展示場</translation>
+        <translation type="vanished">ディオの展示場</translation>
     </message>
     <message>
         <source>Inside Train</source>
-        <translation>客車内</translation>
+        <translation type="vanished">客車内</translation>
     </message>
     <message>
         <source>Pub &quot;Starlet&quot; </source>
-        <translation>パブ『スターレット』</translation>
+        <translation type="vanished">パブ『スターレット』</translation>
     </message>
     <message>
         <source>Shildra Inn</source>
-        <translation>シルドラ・イン</translation>
+        <translation type="vanished">シルドラ・イン</translation>
     </message>
     <message>
         <source>Elder&apos;s Room</source>
-        <translation>長老の部屋</translation>
+        <translation type="vanished">長老の部屋</translation>
     </message>
     <message>
         <source>Gate of Naught</source>
-        <translation>『無用の扉』前</translation>
+        <translation type="vanished">『無用の扉』前</translation>
     </message>
     <message>
         <source>Materia Shop</source>
-        <translation>マテリアショップ</translation>
+        <translation type="vanished">マテリアショップ</translation>
     </message>
     <message>
         <source>Observatory</source>
-        <translation>天文台</translation>
+        <translation type="vanished">天文台</translation>
     </message>
     <message>
         <source>Bugen Research Center</source>
-        <translation>ブーゲンの研究所</translation>
+        <translation type="vanished">ブーゲンの研究所</translation>
     </message>
     <message>
         <source>Cosmo Candle</source>
-        <translation>コスモキャンドル</translation>
+        <translation type="vanished">コスモキャンドル</translation>
     </message>
     <message>
         <source>Sealed Cave</source>
-        <translation>封印の洞窟</translation>
+        <translation type="vanished">封印の洞窟</translation>
     </message>
     <message>
         <source>Cave of the Gi</source>
-        <translation>ギ族の洞窟</translation>
+        <translation type="vanished">ギ族の洞窟</translation>
     </message>
     <message>
         <source>Nibel Area</source>
-        <translation>ニブルエリア</translation>
+        <translation type="vanished">ニブルエリア</translation>
     </message>
     <message>
         <source>Rocket Town</source>
-        <translation>ロケット村</translation>
+        <translation type="vanished">ロケット村</translation>
     </message>
     <message>
         <source>Shanghai Inn</source>
         <translatorcomment>first floor (english has only one string for this) will fix on load  if floor 2</translatorcomment>
-        <translation>上海亭1階</translation>
+        <translation type="vanished">上海亭1階</translation>
     </message>
     <message>
         <source>House</source>
-        <translation>民家</translation>
+        <translation type="vanished">民家</translation>
     </message>
     <message>
         <source>Rocket Launching Pad</source>
-        <translation>ロケット発射台</translation>
+        <translation type="vanished">ロケット発射台</translation>
     </message>
     <message>
         <source>Ship Hallway</source>
-        <translation>船内通路</translation>
+        <translation type="vanished">船内通路</translation>
     </message>
     <message>
         <source>Rocket Launch Pad Area</source>
-        <translation>ロケットポートエリア</translation>
+        <translation type="vanished">ロケットポートエリア</translation>
     </message>
     <message>
         <source>Weapon seller</source>
-        <translation>武器職人の小屋</translation>
+        <translation type="vanished">武器職人の小屋</translation>
     </message>
     <message>
         <source>Hotel</source>
-        <translation>客室</translation>
+        <translation type="vanished">客室</translation>
     </message>
     <message>
         <source>Wilderness</source>
-        <translation>荒れ地</translation>
+        <translation type="vanished">荒れ地</translation>
     </message>
     <message>
         <source>Wutai, Old Man&apos;s House</source>
-        <translation>ウータイ・おじじの家</translation>
+        <translation type="vanished">ウータイ・おじじの家</translation>
     </message>
     <message>
         <source>Wutai, Cat&apos;s House</source>
-        <translation>ウータイ・ネコ屋敷</translation>
+        <translation type="vanished">ウータイ・ネコ屋敷</translation>
     </message>
     <message>
         <source>Bar [Turtle Paradise]</source>
-        <translation>のみどころ「かめ道楽」</translation>
+        <translation type="vanished">のみどころ「かめ道楽」</translation>
     </message>
     <message>
         <source>Wutai, Pagoda</source>
-        <translation>ウータイ五強聖の塔</translation>
+        <translation type="vanished">ウータイ五強聖の塔</translation>
     </message>
     <message>
         <source>Wutai, Main Mtn.</source>
-        <translation>ウータイ総本山</translation>
+        <translation type="vanished">ウータイ総本山</translation>
     </message>
     <message>
         <source>Hidden Passage</source>
-        <translation>かくし通路</translation>
+        <translation type="vanished">かくし通路</translation>
     </message>
     <message>
         <source>Wutai, Godo&apos;s Pagoda</source>
-        <translation>ウータイ 五強の塔</translation>
+        <translation type="vanished">ウータイ 五強の塔</translation>
     </message>
     <message>
         <source>Wutai, Da-chao Statue</source>
-        <translation>ウータイ ダチャオ像</translation>
+        <translation type="vanished">ウータイ ダチャオ像</translation>
     </message>
     <message>
         <source>Yuffie&apos;s House</source>
-        <translation>ユフィの家</translation>
+        <translation type="vanished">ユフィの家</translation>
     </message>
     <message>
         <source>Hidden Room</source>
-        <translation>かくし部屋</translation>
+        <translation type="vanished">かくし部屋</translation>
     </message>
     <message>
         <source>Wutai Area</source>
-        <translation>ウータイエリア</translation>
+        <translation type="vanished">ウータイエリア</translation>
     </message>
     <message>
         <source>Temple of the Ancients</source>
-        <translation>古代種の神殿</translation>
+        <translation type="vanished">古代種の神殿</translation>
     </message>
     <message>
         <source>Woodlands Area</source>
-        <translation>ウッドランドエリア</translation>
+        <translation type="vanished">ウッドランドエリア</translation>
     </message>
     <message>
         <source>Bone Village</source>
-        <translation>ボーンビレッジ</translation>
+        <translation type="vanished">ボーンビレッジ</translation>
     </message>
     <message>
         <source>Sleeping Forest</source>
-        <translation>眠りの森</translation>
+        <translation type="vanished">眠りの森</translation>
     </message>
     <message>
         <source>Forgotten Capital</source>
-        <translation>忘らるる都</translation>
+        <translation type="vanished">忘らるる都</translation>
     </message>
     <message>
         <source>Water Altar</source>
-        <translation>水の祭壇</translation>
+        <translation type="vanished">水の祭壇</translation>
     </message>
     <message>
         <source>Icicle Area</source>
-        <translation>アイシクルエリア</translation>
+        <translation type="vanished">アイシクルエリア</translation>
     </message>
     <message>
         <source>Outside Plates</source>
-        <translation>プレート外辺</translation>
+        <translation type="vanished">プレート外辺</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Shop</source>
-        <translation>神羅ビル２階ショップ</translation>
+        <translation type="vanished">神羅ビル２階ショップ</translation>
     </message>
     <message>
         <source>Zack&apos;s Home</source>
-        <translation>ザックスの実家</translation>
+        <translation type="vanished">ザックスの実家</translation>
     </message>
     <message>
         <source>Path 2</source>
-        <translation>通路２</translation>
+        <translation type="vanished">通路２</translation>
     </message>
     <message>
         <source>Junon Branch, 1f.</source>
-        <translation>ジュノン支社１階</translation>
+        <translation type="vanished">ジュノン支社１階</translation>
     </message>
     <message>
         <source>Office</source>
-        <translation>オフィス</translation>
+        <translation type="vanished">オフィス</translation>
     </message>
     <message>
         <source>Dr.&apos;s Office</source>
-        <translation>医務室</translation>
+        <translation type="vanished">医務室</translation>
     </message>
     <message>
         <source>Press Room</source>
-        <translation>報道室</translation>
+        <translation type="vanished">報道室</translation>
     </message>
     <message>
         <source>Gas Room</source>
-        <translation>ガス室</translation>
+        <translation type="vanished">ガス室</translation>
     </message>
     <message>
         <source>Canon</source>
-        <translation>キャノン</translation>
+        <translation type="vanished">キャノン</translation>
     </message>
     <message>
         <source>Junon branch,(ext.)</source>
-        <translation>ジュノン支社外観</translation>
+        <translation type="vanished">ジュノン支社外観</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
-        <translation>アイシクルロッジ</translation>
+        <translation type="vanished">アイシクルロッジ</translation>
     </message>
     <message>
         <source>Icicle Inn Bar</source>
-        <translation>バブ</translation>
+        <translation type="vanished">バブ</translation>
     </message>
     <message>
         <source>Gast&apos;s House</source>
-        <translation>ガストの家</translation>
+        <translation type="vanished">ガストの家</translation>
     </message>
     <message>
         <source>Great Glacier</source>
-        <translation>大氷河</translation>
+        <translation type="vanished">大氷河</translation>
     </message>
     <message>
         <source>Frostbite Cave</source>
-        <translation>千年霜柱の洞窟</translation>
+        <translation type="vanished">千年霜柱の洞窟</translation>
     </message>
     <message>
         <source>Cave</source>
-        <translation>ほら穴&quot;</translation>
+        <translation type="vanished">ほら穴&quot;</translation>
     </message>
     <message>
         <source>Great Glacier Map</source>
-        <translation>大氷河の地図</translation>
+        <translation type="vanished">大氷河の地図</translation>
     </message>
     <message>
         <source>Base of Gaea&apos;s Cliff</source>
-        <translation>絶壁のふもと</translation>
+        <translation type="vanished">絶壁のふもと</translation>
     </message>
     <message>
         <source>Gaea&apos;s Cliff</source>
-        <translation>ガイアの絶壁</translation>
+        <translation type="vanished">ガイアの絶壁</translation>
     </message>
     <message>
         <source>Inside of Gaea&apos;s Cliff</source>
-        <translation>絶壁内部</translation>
+        <translation type="vanished">絶壁内部</translation>
     </message>
     <message>
         <source>Crater</source>
-        <translation>クレーター</translation>
+        <translation type="vanished">クレーター</translation>
     </message>
     <message>
         <source>Mideel</source>
-        <translation>海流の村 ミディール</translation>
+        <translation type="vanished">海流の村 ミディール</translation>
     </message>
     <message>
         <source>Mideel,Weapon Store</source>
-        <translation>ミディール 武器屋</translation>
+        <translation type="vanished">ミディール 武器屋</translation>
     </message>
     <message>
         <source>Mideel,Item Store</source>
-        <translation>ミディール アイテム屋</translation>
+        <translation type="vanished">ミディール アイテム屋</translation>
     </message>
     <message>
         <source>Mideel,Materia Store</source>
-        <translation>ミディール マテリア屋</translation>
+        <translation type="vanished">ミディール マテリア屋</translation>
     </message>
     <message>
         <source>Mideel,House1</source>
-        <translation>ミディール 民家</translation>
+        <translation type="vanished">ミディール 民家</translation>
     </message>
     <message>
         <source>Coal Train</source>
-        <translation>炭鉱列車</translation>
+        <translation type="vanished">炭鉱列車</translation>
     </message>
     <message>
         <source>Aljunon</source>
-        <translation>アルジュノン</translation>
+        <translation type="vanished">アルジュノン</translation>
     </message>
     <message>
         <source>Research Room</source>
-        <translation>神羅飛空艇・研究室</translation>
+        <translation type="vanished">神羅飛空艇・研究室</translation>
     </message>
     <message>
         <source>Cargo Room</source>
-        <translation>神羅飛空艇・カーゴルーム</translation>
-    </message>
-    <message>
-        <source>top of the mountian</source>
-        <translation></translation>
+        <translation type="vanished">神羅飛空艇・カーゴルーム</translation>
     </message>
     <message>
         <source>Submarine Dock</source>
-        <translation>ジュノン潜水艦ドック</translation>
+        <translation type="vanished">ジュノン潜水艦ドック</translation>
     </message>
     <message>
         <source>Submarine Bridge</source>
-        <translation>潜水艦・ブリッジ</translation>
+        <translation type="vanished">潜水艦・ブリッジ</translation>
     </message>
     <message>
         <source>Duct</source>
-        <translation>ダクト</translation>
+        <translation type="vanished">ダクト</translation>
     </message>
     <message>
         <source>Materia Room</source>
-        <translation>マテリアルーム</translation>
+        <translation type="vanished">マテリアルーム</translation>
     </message>
     <message>
         <source>Cockpit</source>
-        <translation>コクピット</translation>
+        <translation type="vanished">コクピット</translation>
     </message>
     <message>
         <source>Engine Room</source>
-        <translation>エンジンルーム</translation>
+        <translation type="vanished">エンジンルーム</translation>
     </message>
     <message>
         <source>Escape Pod</source>
-        <translation>脱出ポッド</translation>
+        <translation type="vanished">脱出ポッド</translation>
     </message>
     <message>
         <source>deck</source>
-        <translation>甲板</translation>
+        <translation type="vanished">甲板</translation>
     </message>
     <message>
         <source>Bridge</source>
-        <translation>ブリッジ</translation>
+        <translation type="vanished">ブリッジ</translation>
     </message>
     <message>
         <source>Inside airship</source>
-        <translation>飛空てい内部</translation>
+        <translation type="vanished">飛空てい内部</translation>
     </message>
     <message>
         <source>Old man&apos;s house</source>
-        <translation>オヤジ小屋</translation>
+        <translation type="vanished">オヤジ小屋</translation>
     </message>
     <message>
         <source>Chocobo Sage&apos;s house</source>
-        <translation>チョコボせんにんの家</translation>
+        <translation type="vanished">チョコボせんにんの家</translation>
     </message>
     <message>
         <source>???</source>
-        <translation>？？？</translation>
+        <translation type="vanished">？？？</translation>
     </message>
     <message>
         <source>Materia Cave</source>
-        <translation>マテリアの洞窟</translation>
+        <translation type="vanished">マテリアの洞窟</translation>
     </message>
     <message>
         <source>Ancient Forest</source>
-        <translation>古えの森</translation>
+        <translation type="vanished">古えの森</translation>
     </message>
     <message>
         <source>Mideel,House2</source>
-        <translation>ミディール 民家</translation>
+        <translation type="vanished">ミディール 民家</translation>
     </message>
     <message>
         <source>8th Street</source>
-        <translation>８番街</translation>
+        <translation type="vanished">８番街</translation>
     </message>
     <message>
         <source>Midgar, Sector 8</source>
-        <translation>ミッドガル８番街</translation>
+        <translation type="vanished">ミッドガル８番街</translation>
     </message>
     <message>
         <source>Mako Cannon</source>
-        <translation>魔晄キャノン</translation>
+        <translation type="vanished">魔晄キャノン</translation>
     </message>
     <message>
         <source>Highwind, on deck</source>
-        <translation>ハイウインド・甲板</translation>
+        <translation type="vanished">ハイウインド・甲板</translation>
     </message>
     <message>
         <source>Inside the Planet</source>
-        <translation>星の体内</translation>
+        <translation type="vanished">星の体内</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>？？？？</translation>
+        <translation type="vanished">？？？？</translation>
     </message>
     <message>
         <source>Northern Cave Crater</source>
-        <translation>大空洞火口</translation>
+        <translation type="vanished">大空洞火口</translation>
     </message>
     <message>
         <source>Northern Cave</source>
-        <translation>大空洞</translation>
+        <translation type="vanished">大空洞</translation>
     </message>
     <message>
         <source>Inside Northern Cave</source>
-        <translation>大空洞内部</translation>
+        <translation type="vanished">大空洞内部</translation>
     </message>
     <message>
         <source>Bottom of Northern Cave</source>
-        <translation>大空洞最下部</translation>
+        <translation type="vanished">大空洞最下部</translation>
     </message>
     <message>
         <source>Corel Valley</source>
-        <translation>サンゴの谷</translation>
+        <translation type="vanished">サンゴの谷</translation>
     </message>
     <message>
         <source>Corel Valley Cave</source>
-        <translation>サンゴの谷洞窟</translation>
+        <translation type="vanished">サンゴの谷洞窟</translation>
     </message>
     <message>
         <source>Respectable Inn</source>
-        <translation>上級者の館</translation>
+        <translation type="vanished">上級者の館</translation>
     </message>
 </context>
 <context>
@@ -6388,11 +6515,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PSV (*.psv)</source>
-        <translation type="unfinished">PSV FF7 セーブ (*.psv)</translation>
+        <translation type="obsolete">PSV FF7 セーブ (*.psv)</translation>
     </message>
     <message>
         <source>PSP (*.vmp)</source>
-        <translation type="unfinished">FF7 PSP セーブ (*.vmp)</translation>
+        <translation type="obsolete">FF7 PSP セーブ (*.vmp)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
@@ -6453,7 +6580,7 @@ VMPの輸出は許可されていません。</translation>
     </message>
     <message>
         <source>DEX (*.gme)</source>
-        <translation type="unfinished">FF7 Dex Drive セーブ (*.gme)</translation>
+        <translation type="obsolete">FF7 Dex Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>Party</source>
@@ -6768,17 +6895,17 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Game Uses %1 Save Block</source>
-        <translation type="unfinished">ゲームは、%1の保存ブロックを使用します</translation>
+        <translation type="obsolete">ゲームは、%1の保存ブロックを使用します</translation>
     </message>
     <message>
         <source>s
    Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
    次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">; 次のデータ チャンク @ スロット:%1</translation>
+        <translation type="obsolete">; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>&amp;Place Leader</source>
@@ -6889,6 +7016,29 @@ location.</source>
         <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>DEX Drive Memory Card(*.gme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV Save File(*.psv)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSP Memory Card(*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>Game Uses %n Save Block(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>
+  Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
@@ -6953,1445 +7103,1441 @@ location.</source>
     <name>Materia_Names</name>
     <message>
         <source>MP Plus</source>
-        <translation>ＭＰアップ</translation>
+        <translation type="vanished">ＭＰアップ</translation>
     </message>
     <message>
         <source>HP Plus</source>
-        <translation>ＨＰアップ</translation>
+        <translation type="vanished">ＨＰアップ</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation>スピード</translation>
+        <translation type="vanished">スピード</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>マジカル</translation>
+        <translation type="vanished">マジカル</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>ラッキー</translation>
+        <translation type="vanished">ラッキー</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation>けいけんちアップ</translation>
+        <translation type="vanished">けいけんちアップ</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>ギルアップ</translation>
+        <translation type="vanished">ギルアップ</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation>てきよけ</translation>
+        <translation type="vanished">てきよけ</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation>てきよせ</translation>
+        <translation type="vanished">てきよせ</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>チョコボよせ</translation>
+        <translation type="vanished">チョコボよせ</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation>せんせいこうげき</translation>
+        <translation type="vanished">せんせいこうげき</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>えんきょりこうげき</translation>
+        <translation type="vanished">えんきょりこうげき</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>すべてぜんたいか</translation>
+        <translation type="vanished">すべてぜんたいか</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation>カウンター</translation>
+        <translation type="vanished">カウンター</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>ぜんたいぎり</translation>
+        <translation type="vanished">ぜんたいぎり</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>れんぞくぎり</translation>
+        <translation type="vanished">れんぞくぎり</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>かばう</translation>
+        <translation type="vanished">かばう</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>せんすい</translation>
+        <translation type="vanished">せんすい</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>ＨＰＭＰいれかえ</translation>
+        <translation type="vanished">ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Ｗまほう</translation>
+        <translation type="vanished">Ｗまほう</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Ｗしょうかん</translation>
+        <translation type="vanished">Ｗしょうかん</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Ｗアイテム</translation>
+        <translation type="vanished">Ｗアイテム</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>使用不可</translation>
+        <translation type="vanished">使用不可</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>ぜんたいか</translation>
+        <translation type="vanished">ぜんたいか</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation>コマンドカウンター</translation>
+        <translation type="vanished">コマンドカウンター</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation>まほうカウンター</translation>
+        <translation type="vanished">まほうカウンター</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation>ＭＰターボ</translation>
+        <translation type="vanished">ＭＰターボ</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>ＭＰきゅうしゅう</translation>
+        <translation type="vanished">ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>ＨＰきゅうしゅう</translation>
+        <translation type="vanished">ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>ぞくせい</translation>
+        <translation type="vanished">ぞくせい</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>ついかこうか</translation>
+        <translation type="vanished">ついかこうか</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation>ふいうち</translation>
+        <translation type="vanished">ふいうち</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation>ファイナルアタック</translation>
+        <translation type="vanished">ファイナルアタック</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>ついかぎり</translation>
+        <translation type="vanished">ついかぎり</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>ついでにぬすむ</translation>
+        <translation type="vanished">ついでにぬすむ</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>まほうみだれうち</translation>
+        <translation type="vanished">まほうみだれうち</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>ぬすむ</translation>
+        <translation type="vanished">ぬすむ</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>みやぶる</translation>
+        <translation type="vanished">みやぶる</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation>なげる</translation>
+        <translation type="vanished">なげる</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>へんか</translation>
+        <translation type="vanished">へんか</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>あやつる</translation>
+        <translation type="vanished">あやつる</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>ものまね</translation>
+        <translation type="vanished">ものまね</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>てきのわざ</translation>
+        <translation type="vanished">てきのわざ</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>マスターコマンド</translation>
+        <translation type="vanished">マスターコマンド</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>ほのお</translation>
+        <translation type="vanished">ほのお</translation>
     </message>
     <message>
         <source>Ice</source>
-        <translation>れいき</translation>
+        <translation type="vanished">れいき</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>だいち</translation>
+        <translation type="vanished">だいち</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>いかずち</translation>
+        <translation type="vanished">いかずち</translation>
     </message>
     <message>
         <source>Restore</source>
-        <translation>かいふく</translation>
+        <translation type="vanished">かいふく</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation>ちりょう</translation>
+        <translation type="vanished">ちりょう</translation>
     </message>
     <message>
         <source>Revive</source>
-        <translation>そせい</translation>
+        <translation type="vanished">そせい</translation>
     </message>
     <message>
         <source>Seal</source>
-        <translation>ふうじる</translation>
+        <translation type="vanished">ふうじる</translation>
     </message>
     <message>
         <source>Mystify</source>
-        <translation>まどわす</translation>
+        <translation type="vanished">まどわす</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation>へんしん</translation>
+        <translation type="vanished">へんしん</translation>
     </message>
     <message>
         <source>Exit</source>
-        <translation>りだつ</translation>
+        <translation type="vanished">りだつ</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>どく</translation>
+        <translation type="vanished">どく</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>バリア</translation>
+        <translation type="vanished">バリア</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation>いんせき</translation>
+        <translation type="vanished">いんせき</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>じかん</translation>
+        <translation type="vanished">じかん</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation>しょうめつ</translation>
+        <translation type="vanished">しょうめつ</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation>ふういん</translation>
+        <translation type="vanished">ふういん</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>シールド</translation>
+        <translation type="vanished">シールド</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation>アルテマ</translation>
+        <translation type="vanished">アルテマ</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>マスターまほう</translation>
+        <translation type="vanished">マスターまほう</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation>チョコボ＆モーグリ</translation>
+        <translation type="vanished">チョコボ＆モーグリ</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation>シヴァ</translation>
+        <translation type="vanished">シヴァ</translation>
     </message>
     <message>
         <source>Ifrit</source>
-        <translation>イフリート</translation>
+        <translation type="vanished">イフリート</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation>ラムウ</translation>
+        <translation type="vanished">ラムウ</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation>タイタン</translation>
+        <translation type="vanished">タイタン</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation>オーディーン</translation>
+        <translation type="vanished">オーディーン</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>リヴァイアサン</translation>
+        <translation type="vanished">リヴァイアサン</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation>バハムート</translation>
+        <translation type="vanished">バハムート</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation>クジャタ</translation>
+        <translation type="vanished">クジャタ</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation>アレクサンダー</translation>
+        <translation type="vanished">アレクサンダー</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>フェニックス</translation>
+        <translation type="vanished">フェニックス</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>バハムート改</translation>
+        <translation type="vanished">バハムート改</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>ハーデス</translation>
+        <translation type="vanished">ハーデス</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation>バハムート零式</translation>
+        <translation type="vanished">バハムート零式</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>マスターしょうかん</translation>
+        <translation type="vanished">マスターしょうかん</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>ひっさつ</translation>
+        <translation type="vanished">ひっさつ</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>じゅうりょく</translation>
+        <translation type="vanished">じゅうりょく</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>テュポーン</translation>
+        <translation type="vanished">テュポーン</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation>ナイツオブラウンド</translation>
+        <translation type="vanished">ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation>フルケア</translation>
-    </message>
-    <message>
-        <source>EMPTY</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">フルケア</translation>
     </message>
 </context>
 <context>
     <name>Materia_Skills</name>
     <message>
         <source>MP Plus +10%</source>
-        <translation>MAXMP 10%UP</translation>
+        <translation type="vanished">MAXMP 10%UP</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation>MAXMP 20%UP</translation>
+        <translation type="vanished">MAXMP 20%UP</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation>MAXMP 30%UP</translation>
+        <translation type="vanished">MAXMP 30%UP</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation>MAXMP 40%UP</translation>
+        <translation type="vanished">MAXMP 40%UP</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation>MAXMP 50%UP</translation>
+        <translation type="vanished">MAXMP 50%UP</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation>MAXHP 10%UP</translation>
+        <translation type="vanished">MAXHP 10%UP</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation>MAXHP 20%UP</translation>
+        <translation type="vanished">MAXHP 20%UP</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation>MAXHP 30%UP</translation>
+        <translation type="vanished">MAXHP 30%UP</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation>MAXHP 40%UP</translation>
+        <translation type="vanished">MAXHP 40%UP</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation>MAXHP 50%UP</translation>
+        <translation type="vanished">MAXHP 50%UP</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation>すばやさ 10%UP</translation>
+        <translation type="vanished">すばやさ 10%UP</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation>すばやさ 20%UP</translation>
+        <translation type="vanished">すばやさ 20%UP</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation>すばやさ 30%UP</translation>
+        <translation type="vanished">すばやさ 30%UP</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation>すばやさ 40%UP</translation>
+        <translation type="vanished">すばやさ 40%UP</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation>すばやさ 50%UP</translation>
+        <translation type="vanished">すばやさ 50%UP</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation>まりょく 10%UP</translation>
+        <translation type="vanished">まりょく 10%UP</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation>まりょく 20%UP</translation>
+        <translation type="vanished">まりょく 20%UP</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation>まりょく 30%UP</translation>
+        <translation type="vanished">まりょく 30%UP</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation>まりょく 40%UP</translation>
+        <translation type="vanished">まりょく 40%UP</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation>まりょく 50%UP</translation>
+        <translation type="vanished">まりょく 50%UP</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation>うん 10%UP</translation>
+        <translation type="vanished">うん 10%UP</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation>うん 20%UP</translation>
+        <translation type="vanished">うん 20%UP</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation>うん 30%UP</translation>
+        <translation type="vanished">うん 30%UP</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation>うん 40%UP</translation>
+        <translation type="vanished">うん 40%UP</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation>うん 50%UP</translation>
+        <translation type="vanished">うん 50%UP</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation>けいけんち 50%UP</translation>
+        <translation type="vanished">けいけんち 50%UP</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation>けいけんち 100%UP</translation>
+        <translation type="vanished">けいけんち 100%UP</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation>ギルUP 50%</translation>
+        <translation type="vanished">ギルUP 50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation>ギルUP 100%</translation>
+        <translation type="vanished">ギルUP 100%</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation>エンカウントりつDOWN 50%</translation>
+        <translation type="vanished">エンカウントりつDOWN 50%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation>エンカウントりつDOWN 75%</translation>
+        <translation type="vanished">エンカウントりつDOWN 75%</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation>エンカウントりつUP 50%</translation>
+        <translation type="vanished">エンカウントりつUP 50%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation>エンカウントりつUP 100%</translation>
+        <translation type="vanished">エンカウントりつUP 100%</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>チョコボよせ</translation>
+        <translation type="vanished">チョコボよせ</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation>チョコボにあえる 50%UP</translation>
+        <translation type="vanished">チョコボにあえる 50%UP</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation>チョコボにあえる 100%UP</translation>
+        <translation type="vanished">チョコボにあえる 100%UP</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation>チョコボにあえる 200%UP</translation>
+        <translation type="vanished">チョコボにあえる 200%UP</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation>せんせいりつUP 6%</translation>
+        <translation type="vanished">せんせいりつUP 6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation>せんせいりつUP 12%</translation>
+        <translation type="vanished">せんせいりつUP 12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation>せんせいりつUP 24%</translation>
+        <translation type="vanished">せんせいりつUP 24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation>せんせいりつUP 36%</translation>
+        <translation type="vanished">せんせいりつUP 36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation>せんせいりつUP 48%</translation>
+        <translation type="vanished">せんせいりつUP 48%</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>えんきょりこうげき</translation>
+        <translation type="vanished">えんきょりこうげき</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation>ぜんたいこうげき x1</translation>
+        <translation type="vanished">ぜんたいこうげき x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation>ぜんたいこうげき x2</translation>
+        <translation type="vanished">ぜんたいこうげき x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation>ぜんたいこうげき x3</translation>
+        <translation type="vanished">ぜんたいこうげき x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation>ぜんたいこうげき x4</translation>
+        <translation type="vanished">ぜんたいこうげき x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation>ぜんたいこうげき x5</translation>
+        <translation type="vanished">ぜんたいこうげき x5</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation>たたかうカウンター 20%</translation>
+        <translation type="vanished">たたかうカウンター 20%</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation>たたかうカウンター 40%</translation>
+        <translation type="vanished">たたかうカウンター 40%</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation>たたかうカウンター 60%</translation>
+        <translation type="vanished">たたかうカウンター 60%</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation>たたかうカウンター 80%</translation>
+        <translation type="vanished">たたかうカウンター 80%</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation>たたかうカウンター 100%</translation>
+        <translation type="vanished">たたかうカウンター 100%</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>ぜんたいぎり</translation>
+        <translation type="vanished">ぜんたいぎり</translation>
     </message>
     <message>
         <source>Flash</source>
-        <translation>いあいぬき</translation>
+        <translation type="vanished">いあいぬき</translation>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation>れんぞくぎり</translation>
+        <translation type="vanished">れんぞくぎり</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation>みだれうち</translation>
+        <translation type="vanished">みだれうち</translation>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation>かばう 20%UP</translation>
+        <translation type="vanished">かばう 20%UP</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation>かばう 40%UP</translation>
+        <translation type="vanished">かばう 40%UP</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation>かばう 60%UP</translation>
+        <translation type="vanished">かばう 60%UP</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation>かばう 80%UP</translation>
+        <translation type="vanished">かばう 80%UP</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation>かばう 100%UP</translation>
+        <translation type="vanished">かばう 100%UP</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>せんすい</translation>
+        <translation type="vanished">せんすい</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>ＨＰＭＰいれかえ</translation>
+        <translation type="vanished">ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Ｗまほう</translation>
+        <translation type="vanished">Ｗまほう</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Ｗしょうかん</translation>
+        <translation type="vanished">Ｗしょうかん</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Ｗアイテム</translation>
+        <translation type="vanished">Ｗアイテム</translation>
     </message>
     <message>
         <source>All x1</source>
-        <translation>ぜんたいか x1</translation>
+        <translation type="vanished">ぜんたいか x1</translation>
     </message>
     <message>
         <source>All x2</source>
-        <translation>ぜんたいか x2</translation>
+        <translation type="vanished">ぜんたいか x2</translation>
     </message>
     <message>
         <source>All x3</source>
-        <translation>ぜんたいか x3</translation>
+        <translation type="vanished">ぜんたいか x3</translation>
     </message>
     <message>
         <source>All x4</source>
-        <translation>ぜんたいか x4</translation>
+        <translation type="vanished">ぜんたいか x4</translation>
     </message>
     <message>
         <source>All x5</source>
-        <translation>ぜんたいか x5</translation>
+        <translation type="vanished">ぜんたいか x5</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation>ＭＰターボ 10%</translation>
+        <translation type="vanished">ＭＰターボ 10%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>ＭＰきゅうしゅう</translation>
+        <translation type="vanished">ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>ＨＰきゅうしゅう</translation>
+        <translation type="vanished">ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation>ぞくせい 50%</translation>
+        <translation type="vanished">ぞくせい 50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation>ぞくせい 100%</translation>
+        <translation type="vanished">ぞくせい 100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation>ぞくせい 200%</translation>
+        <translation type="vanished">ぞくせい 200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>ついかこうか</translation>
+        <translation type="vanished">ついかこうか</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
-        <translation>ふいうち 20%</translation>
+        <translation type="vanished">ふいうち 20%</translation>
     </message>
     <message>
         <source>Sneak Attack 35%</source>
-        <translation>ふいうち 35%</translation>
+        <translation type="vanished">ふいうち 35%</translation>
     </message>
     <message>
         <source>Sneak Attack 50%</source>
-        <translation>ふいうち 50%</translation>
+        <translation type="vanished">ふいうち 50%</translation>
     </message>
     <message>
         <source>Sneak Attack 65%</source>
-        <translation>ふいうち 65%</translation>
+        <translation type="vanished">ふいうち 65%</translation>
     </message>
     <message>
         <source>Sneak Attack 80%</source>
-        <translation>ふいうち 80%</translation>
+        <translation type="vanished">ふいうち 80%</translation>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation>ファイナルアタック x1</translation>
+        <translation type="vanished">ファイナルアタック x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation>ファイナルアタック x2</translation>
+        <translation type="vanished">ファイナルアタック x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation>ファイナルアタック x3</translation>
+        <translation type="vanished">ファイナルアタック x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation>ファイナルアタック x4</translation>
+        <translation type="vanished">ファイナルアタック x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation>ファイナルアタック x5</translation>
+        <translation type="vanished">ファイナルアタック x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>ついかぎり</translation>
+        <translation type="vanished">ついかぎり</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
-        <translation>まほうみだれうち x1</translation>
+        <translation type="vanished">まほうみだれうち x1</translation>
     </message>
     <message>
         <source>Quadra Magic x2</source>
-        <translation>まほうみだれうち x2</translation>
+        <translation type="vanished">まほうみだれうち x2</translation>
     </message>
     <message>
         <source>Quadra Magic x3</source>
-        <translation>まほうみだれうち x3</translation>
+        <translation type="vanished">まほうみだれうち x3</translation>
     </message>
     <message>
         <source>Quadra Magic x4</source>
-        <translation>まほうみだれうち x4</translation>
+        <translation type="vanished">まほうみだれうち x4</translation>
     </message>
     <message>
         <source>Quadra Magic x5</source>
-        <translation>まほうみだれうち x5</translation>
+        <translation type="vanished">まほうみだれうち x5</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>ぬすむ</translation>
+        <translation type="vanished">ぬすむ</translation>
     </message>
     <message>
         <source>Mug</source>
-        <translation>ぶんどる</translation>
+        <translation type="vanished">ぶんどる</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation>なげる</translation>
+        <translation type="vanished">なげる</translation>
     </message>
     <message>
         <source>Coin</source>
-        <translation>ぜになげ</translation>
+        <translation type="vanished">ぜになげ</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>へんか</translation>
+        <translation type="vanished">へんか</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation>ひっさつ</translation>
+        <translation type="vanished">ひっさつ</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>あやつる</translation>
+        <translation type="vanished">あやつる</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>ものまね</translation>
+        <translation type="vanished">ものまね</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>てきのわざ</translation>
+        <translation type="vanished">てきのわざ</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>マスターコマンド</translation>
+        <translation type="vanished">マスターコマンド</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
-        <translation>ファイア (4MP)</translation>
+        <translation type="vanished">ファイア (4MP)</translation>
     </message>
     <message>
         <source>Fire2 (22mp)</source>
-        <translation>ファイラ (22MP)</translation>
+        <translation type="vanished">ファイラ (22MP)</translation>
     </message>
     <message>
         <source>Fire3 (52mp)</source>
-        <translation>ファイガ (52MP)</translation>
+        <translation type="vanished">ファイガ (52MP)</translation>
     </message>
     <message>
         <source>Ice (4mp)</source>
-        <translation>ブリザド (4MP)</translation>
+        <translation type="vanished">ブリザド (4MP)</translation>
     </message>
     <message>
         <source>Ice2 (22mp)</source>
-        <translation>ブリザラ (22MP)</translation>
+        <translation type="vanished">ブリザラ (22MP)</translation>
     </message>
     <message>
         <source>Ice3 (52mp)</source>
-        <translation>ブリザガ (52MP)</translation>
+        <translation type="vanished">ブリザガ (52MP)</translation>
     </message>
     <message>
         <source>Quake (6mp)</source>
-        <translation>クエイク (6MP)</translation>
+        <translation type="vanished">クエイク (6MP)</translation>
     </message>
     <message>
         <source>Quake2 (28mp)</source>
-        <translation>クエイラ (28MP)</translation>
+        <translation type="vanished">クエイラ (28MP)</translation>
     </message>
     <message>
         <source>Quake3 (68mp)</source>
-        <translation>クエイガ (68MP)</translation>
+        <translation type="vanished">クエイガ (68MP)</translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
-        <translation>サンダー (4MP)</translation>
+        <translation type="vanished">サンダー (4MP)</translation>
     </message>
     <message>
         <source>Bolt2 (22mp)</source>
-        <translation>サンダラ (22MP)</translation>
+        <translation type="vanished">サンダラ (22MP)</translation>
     </message>
     <message>
         <source>Cure (5mp)</source>
-        <translation>ケアル (5MP)</translation>
+        <translation type="vanished">ケアル (5MP)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation>ケアルラ (24MP)</translation>
+        <translation type="vanished">ケアルラ (24MP)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
-        <translation>ケアルガ (64MP)</translation>
+        <translation type="vanished">ケアルガ (64MP)</translation>
     </message>
     <message>
         <source>Poisona (3mp)</source>
-        <translation>ポイゾナ (3MP)</translation>
+        <translation type="vanished">ポイゾナ (3MP)</translation>
     </message>
     <message>
         <source>Esuna (15mp)</source>
-        <translation>エスナ (15MP)</translation>
+        <translation type="vanished">エスナ (15MP)</translation>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation>レジスト (120MP)</translation>
+        <translation type="vanished">レジスト (120MP)</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
-        <translation>レイズ (34MP)</translation>
+        <translation type="vanished">レイズ (34MP)</translation>
     </message>
     <message>
         <source>Life2 (100mp)</source>
-        <translation>アレイズ (100MP)</translation>
+        <translation type="vanished">アレイズ (100MP)</translation>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation>スリプル (8MP)</translation>
+        <translation type="vanished">スリプル (8MP)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
-        <translation>サイレス (24MP)</translation>
+        <translation type="vanished">サイレス (24MP)</translation>
     </message>
     <message>
         <source>Mini (10mp)</source>
-        <translation>ミニマム (10MP)</translation>
+        <translation type="vanished">ミニマム (10MP)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation>トード (14MP)</translation>
+        <translation type="vanished">トード (14MP)</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation>エスケプ (16MP)</translation>
+        <translation type="vanished">エスケプ (16MP)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
-        <translation>デジョン (99MP)</translation>
+        <translation type="vanished">デジョン (99MP)</translation>
     </message>
     <message>
         <source>Bio (8mp)</source>
-        <translation>バイオ (8MP)</translation>
+        <translation type="vanished">バイオ (8MP)</translation>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation>バイオラ (36MP)</translation>
+        <translation type="vanished">バイオラ (36MP)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
-        <translation>バイオガ (80MP)</translation>
+        <translation type="vanished">バイオガ (80MP)</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation>グラビデ (14MP)</translation>
+        <translation type="vanished">グラビデ (14MP)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
-        <translation>グラビラ (33MP)</translation>
+        <translation type="vanished">グラビラ (33MP)</translation>
     </message>
     <message>
         <source>Demi3 (48mp)</source>
-        <translation>グラビガ (48MP)</translation>
+        <translation type="vanished">グラビガ (48MP)</translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation>バリア (16MP)</translation>
+        <translation type="vanished">バリア (16MP)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
-        <translation>リフレク (30MP)</translation>
+        <translation type="vanished">リフレク (30MP)</translation>
     </message>
     <message>
         <source>Wall (58mp)</source>
-        <translation>ウォール (58MP)</translation>
+        <translation type="vanished">ウォール (58MP)</translation>
     </message>
     <message>
         <source>Comet (70mp)</source>
-        <translation>コメット (70MP)</translation>
+        <translation type="vanished">コメット (70MP)</translation>
     </message>
     <message>
         <source>Comet2 (110mp)</source>
-        <translation>コメテオ (110MP)</translation>
+        <translation type="vanished">コメテオ (110MP)</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
-        <translation>ヘイスト (18MP)</translation>
+        <translation type="vanished">ヘイスト (18MP)</translation>
     </message>
     <message>
         <source>Slow (20mp)</source>
-        <translation>スロウ (20MP)</translation>
+        <translation type="vanished">スロウ (20MP)</translation>
     </message>
     <message>
         <source>Stop (34mp)</source>
-        <translation>ストップ (34MP)</translation>
+        <translation type="vanished">ストップ (34MP)</translation>
     </message>
     <message>
         <source>DeBarrier (12mp)</source>
-        <translation>デバリア (12MP)</translation>
+        <translation type="vanished">デバリア (12MP)</translation>
     </message>
     <message>
         <source>DeSpell (20mp)</source>
-        <translation>デスペル (20MP)</translation>
+        <translation type="vanished">デスペル (20MP)</translation>
     </message>
     <message>
         <source>Death (30mp)</source>
-        <translation>デス (30MP)</translation>
+        <translation type="vanished">デス (30MP)</translation>
     </message>
     <message>
         <source>Freeze (82mp)</source>
-        <translation>フリーズ (82MP)</translation>
+        <translation type="vanished">フリーズ (82MP)</translation>
     </message>
     <message>
         <source>Break (86mp)</source>
-        <translation>ブレイク (86MP)</translation>
+        <translation type="vanished">ブレイク (86MP)</translation>
     </message>
     <message>
         <source>Tornado (90mp)</source>
-        <translation>トルネド (90MP)</translation>
+        <translation type="vanished">トルネド (90MP)</translation>
     </message>
     <message>
         <source>Full Cure (99mp)</source>
-        <translation>フルケア (99MP)</translation>
+        <translation type="vanished">フルケア (99MP)</translation>
     </message>
     <message>
         <source>Shield (180mp)</source>
-        <translation>シールド (180MP)</translation>
+        <translation type="vanished">シールド (180MP)</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation>アルテマ (130MP)</translation>
+        <translation type="vanished">アルテマ (130MP)</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>マスターまほう</translation>
+        <translation type="vanished">マスターまほう</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>マスターしょうかん</translation>
+        <translation type="vanished">マスターしょうかん</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation>サンダガ (52MP)</translation>
+        <translation type="vanished">サンダガ (52MP)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
-        <translation>リジェネ (30MP)</translation>
+        <translation type="vanished">リジェネ (30MP)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
-        <translation>フレア (100MP)</translation>
+        <translation type="vanished">フレア (100MP)</translation>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation>バーサク (28MP)</translation>
+        <translation type="vanished">バーサク (28MP)</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation>コマンドカウンターりつ 20%</translation>
+        <translation type="vanished">コマンドカウンターりつ 20%</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation>コマンドカウンターりつ 40%</translation>
+        <translation type="vanished">コマンドカウンターりつ 40%</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation>コマンドカウンターりつ 60%</translation>
+        <translation type="vanished">コマンドカウンターりつ 60%</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation>コマンドカウンターりつ 80%</translation>
+        <translation type="vanished">コマンドカウンターりつ 80%</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation>コマンドカウンターりつ 100%</translation>
+        <translation type="vanished">コマンドカウンターりつ 100%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation>まほうカウンターりつ 30%</translation>
+        <translation type="vanished">まほうカウンターりつ 30%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation>まほうカウンターりつ 40%</translation>
+        <translation type="vanished">まほうカウンターりつ 40%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation>まほうカウンターりつ 60%</translation>
+        <translation type="vanished">まほうカウンターりつ 60%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation>まほうカウンターりつ 80%</translation>
+        <translation type="vanished">まほうカウンターりつ 80%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation>まほうカウンターりつ 100%</translation>
+        <translation type="vanished">まほうカウンターりつ 100%</translation>
     </message>
     <message>
         <source>Steal as well</source>
-        <translation>ついでにぬすむ</translation>
+        <translation type="vanished">ついでにぬすむ</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>みやぶる</translation>
+        <translation type="vanished">みやぶる</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
-        <translation>コンフュ (18MP)</translation>
+        <translation type="vanished">コンフュ (18MP)</translation>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
-        <translation>マバリア (24MP)</translation>
+        <translation type="vanished">マバリア (24MP)</translation>
     </message>
     <message>
         <source>Choco/Mog x1 (14mp)</source>
-        <translation>チョコボ＆モーグリ x1 (14MP)</translation>
+        <translation type="vanished">チョコボ＆モーグリ x1 (14MP)</translation>
     </message>
     <message>
         <source>Choco/Mog x2 (14mp)</source>
-        <translation>チョコボ＆モーグリ x2 (14MP)</translation>
+        <translation type="vanished">チョコボ＆モーグリ x2 (14MP)</translation>
     </message>
     <message>
         <source>Choco/Mog x3 (14mp)</source>
-        <translation>チョコボ＆モーグリ x3 (14MP)</translation>
+        <translation type="vanished">チョコボ＆モーグリ x3 (14MP)</translation>
     </message>
     <message>
         <source>Choco/Mog x4 (14mp)</source>
-        <translation>チョコボ＆モーグリ x4 (14MP)</translation>
+        <translation type="vanished">チョコボ＆モーグリ x4 (14MP)</translation>
     </message>
     <message>
         <source>Choco/Mog x5 (14mp)</source>
-        <translation>チョコボ＆モーグリ x5 (14MP)</translation>
+        <translation type="vanished">チョコボ＆モーグリ x5 (14MP)</translation>
     </message>
     <message>
         <source>Shiva x1 (32mp)</source>
-        <translation>シヴァ x1 (32MP)</translation>
+        <translation type="vanished">シヴァ x1 (32MP)</translation>
     </message>
     <message>
         <source>Shiva x2 (32mp)</source>
-        <translation>シヴァ x2 (32MP)</translation>
+        <translation type="vanished">シヴァ x2 (32MP)</translation>
     </message>
     <message>
         <source>Shiva x3 (32mp)</source>
-        <translation>シヴァ x3 (32MP)</translation>
+        <translation type="vanished">シヴァ x3 (32MP)</translation>
     </message>
     <message>
         <source>Shiva x4 (32mp)</source>
-        <translation>シヴァ x4 (32MP)</translation>
+        <translation type="vanished">シヴァ x4 (32MP)</translation>
     </message>
     <message>
         <source>Shiva x5 (32mp)</source>
-        <translation>シヴァ x5 (32MP)</translation>
+        <translation type="vanished">シヴァ x5 (32MP)</translation>
     </message>
     <message>
         <source>Ifrit x1 (34mp)</source>
-        <translation>イフリート x1 (34MP)</translation>
+        <translation type="vanished">イフリート x1 (34MP)</translation>
     </message>
     <message>
         <source>Ifrit x2 (34mp)</source>
-        <translation>イフリート x2 (34MP)</translation>
+        <translation type="vanished">イフリート x2 (34MP)</translation>
     </message>
     <message>
         <source>Ifrit x3 (34mp)</source>
-        <translation>イフリート x3 (34MP)</translation>
+        <translation type="vanished">イフリート x3 (34MP)</translation>
     </message>
     <message>
         <source>Ifrit x4 (34mp)</source>
-        <translation>イフリート x4 (34MP)</translation>
+        <translation type="vanished">イフリート x4 (34MP)</translation>
     </message>
     <message>
         <source>Ifrit x5 (34mp)</source>
-        <translation>イフリート x5 (34MP)</translation>
+        <translation type="vanished">イフリート x5 (34MP)</translation>
     </message>
     <message>
         <source>Ramuh x1 (40mp)</source>
-        <translation>ラムウ x1 (40MP)</translation>
+        <translation type="vanished">ラムウ x1 (40MP)</translation>
     </message>
     <message>
         <source>Ramuh x2 (40mp)</source>
-        <translation>ラムウ x2 (40MP)</translation>
+        <translation type="vanished">ラムウ x2 (40MP)</translation>
     </message>
     <message>
         <source>Ramuh x3 (40mp)</source>
-        <translation>ラムウ x3 (40MP)</translation>
+        <translation type="vanished">ラムウ x3 (40MP)</translation>
     </message>
     <message>
         <source>Ramuh x4 (40mp)</source>
-        <translation>ラムウ x4 (40MP)</translation>
+        <translation type="vanished">ラムウ x4 (40MP)</translation>
     </message>
     <message>
         <source>Ramuh x5 (40mp)</source>
-        <translation>ラムウ x5 (40MP)</translation>
+        <translation type="vanished">ラムウ x5 (40MP)</translation>
     </message>
     <message>
         <source>Titan x1 (46mp)</source>
-        <translation>タイタン x1 (46MP)</translation>
+        <translation type="vanished">タイタン x1 (46MP)</translation>
     </message>
     <message>
         <source>Titan x2 (46mp)</source>
-        <translation>タイタン x2 (46MP)</translation>
+        <translation type="vanished">タイタン x2 (46MP)</translation>
     </message>
     <message>
         <source>Titan x3 (46mp)</source>
-        <translation>タイタン x3 (46MP)</translation>
+        <translation type="vanished">タイタン x3 (46MP)</translation>
     </message>
     <message>
         <source>Titan x4 (46mp)</source>
-        <translation>タイタン x4 (46MP)</translation>
+        <translation type="vanished">タイタン x4 (46MP)</translation>
     </message>
     <message>
         <source>Titan x5 (46mp)</source>
-        <translation>タイタン x5 (46MP)</translation>
+        <translation type="vanished">タイタン x5 (46MP)</translation>
     </message>
     <message>
         <source>Odin x1 (80mp)</source>
-        <translation>オーディーン x1 (80MP)</translation>
+        <translation type="vanished">オーディーン x1 (80MP)</translation>
     </message>
     <message>
         <source>Odin x2 (80mp)</source>
-        <translation>オーディーン x2 (80MP)</translation>
+        <translation type="vanished">オーディーン x2 (80MP)</translation>
     </message>
     <message>
         <source>Odin x3 (80mp)</source>
-        <translation>オーディーン x3 (80MP)</translation>
+        <translation type="vanished">オーディーン x3 (80MP)</translation>
     </message>
     <message>
         <source>Odin x4 (80mp)</source>
-        <translation>オーディーン x4 (80MP)</translation>
+        <translation type="vanished">オーディーン x4 (80MP)</translation>
     </message>
     <message>
         <source>Odin x5 (80mp)</source>
-        <translation>オーディーン x5 (80MP)</translation>
+        <translation type="vanished">オーディーン x5 (80MP)</translation>
     </message>
     <message>
         <source>Leviathan x1 (78mp)</source>
-        <translation>リヴァイアサン x1 (78MP)</translation>
+        <translation type="vanished">リヴァイアサン x1 (78MP)</translation>
     </message>
     <message>
         <source>Leviathan x2 (78mp)</source>
-        <translation>リヴァイアサン x2 (78MP)</translation>
+        <translation type="vanished">リヴァイアサン x2 (78MP)</translation>
     </message>
     <message>
         <source>Leviathan x3 (78mp)</source>
-        <translation>リヴァイアサン x3 (78MP)</translation>
+        <translation type="vanished">リヴァイアサン x3 (78MP)</translation>
     </message>
     <message>
         <source>Leviathan x4 (78mp)</source>
-        <translation>リヴァイアサン x4 (78MP)</translation>
+        <translation type="vanished">リヴァイアサン x4 (78MP)</translation>
     </message>
     <message>
         <source>Leviathan x5 (78mp)</source>
-        <translation>リヴァイアサン x5 (78MP)</translation>
+        <translation type="vanished">リヴァイアサン x5 (78MP)</translation>
     </message>
     <message>
         <source>Bahamut x1 (100mp)</source>
-        <translation>バハムート x1 (100MP)</translation>
+        <translation type="vanished">バハムート x1 (100MP)</translation>
     </message>
     <message>
         <source>Bahamut x2 (100mp)</source>
-        <translation>バハムート x2 (100MP)</translation>
+        <translation type="vanished">バハムート x2 (100MP)</translation>
     </message>
     <message>
         <source>Bahamut x3 (100mp)</source>
-        <translation>バハムート x3 (100MP)</translation>
+        <translation type="vanished">バハムート x3 (100MP)</translation>
     </message>
     <message>
         <source>Bahamut x4 (100mp)</source>
-        <translation>バハムート x4 (100MP)</translation>
+        <translation type="vanished">バハムート x4 (100MP)</translation>
     </message>
     <message>
         <source>Bahamut x5 (100mp)</source>
-        <translation>バハムート x5 (100MP)</translation>
+        <translation type="vanished">バハムート x5 (100MP)</translation>
     </message>
     <message>
         <source>Kujata x1 (110mp)</source>
-        <translation>クジャタ x1 (110MP)</translation>
+        <translation type="vanished">クジャタ x1 (110MP)</translation>
     </message>
     <message>
         <source>Kujata x2 (110mp)</source>
-        <translation>クジャタ x2 (110MP)</translation>
+        <translation type="vanished">クジャタ x2 (110MP)</translation>
     </message>
     <message>
         <source>Kujata x3 (110mp)</source>
-        <translation>クジャタ x3 (110MP)</translation>
+        <translation type="vanished">クジャタ x3 (110MP)</translation>
     </message>
     <message>
         <source>Kujata x4 (110mp)</source>
-        <translation>クジャタ x4 (110MP)</translation>
+        <translation type="vanished">クジャタ x4 (110MP)</translation>
     </message>
     <message>
         <source>Kujata x5 (110mp)</source>
-        <translation>クジャタ x5 (110MP)</translation>
+        <translation type="vanished">クジャタ x5 (110MP)</translation>
     </message>
     <message>
         <source>Alexander x1 (120mp)</source>
-        <translation>アレクサンダー x1 (120MP)</translation>
+        <translation type="vanished">アレクサンダー x1 (120MP)</translation>
     </message>
     <message>
         <source>Alexander x2 (120mp)</source>
-        <translation>アレクサンダー x2 (120MP)</translation>
+        <translation type="vanished">アレクサンダー x2 (120MP)</translation>
     </message>
     <message>
         <source>Alexander x3 (120mp)</source>
-        <translation>アレクサンダー x3 (120MP)</translation>
+        <translation type="vanished">アレクサンダー x3 (120MP)</translation>
     </message>
     <message>
         <source>Alexander x4 (120mp)</source>
-        <translation>アレクサンダー x4 (120MP)</translation>
+        <translation type="vanished">アレクサンダー x4 (120MP)</translation>
     </message>
     <message>
         <source>Alexander x5 (120mp)</source>
-        <translation>アレクサンダー x5 (120MP)</translation>
+        <translation type="vanished">アレクサンダー x5 (120MP)</translation>
     </message>
     <message>
         <source>Phoenix x1 (180mp)</source>
-        <translation>フェニックス x1 (180MP)</translation>
+        <translation type="vanished">フェニックス x1 (180MP)</translation>
     </message>
     <message>
         <source>Phoenix x2 (180mp)</source>
-        <translation>フェニックス x2 (180MP)</translation>
+        <translation type="vanished">フェニックス x2 (180MP)</translation>
     </message>
     <message>
         <source>Phoenix x3 (180mp)</source>
-        <translation>フェニックス x3 (180MP)</translation>
+        <translation type="vanished">フェニックス x3 (180MP)</translation>
     </message>
     <message>
         <source>Phoenix x4 (180mp)</source>
-        <translation>フェニックス x4 (180MP)</translation>
+        <translation type="vanished">フェニックス x4 (180MP)</translation>
     </message>
     <message>
         <source>Phoenix x5 (180mp)</source>
-        <translation>フェニックス x5 (180MP)</translation>
+        <translation type="vanished">フェニックス x5 (180MP)</translation>
     </message>
     <message>
         <source>Neo Bahamut x1 (140mp)</source>
-        <translation>バハムート改 x1 (140MP)</translation>
+        <translation type="vanished">バハムート改 x1 (140MP)</translation>
     </message>
     <message>
         <source>Neo Bahamut x2 (140mp)</source>
-        <translation>バハムート改 x2 (140MP)</translation>
+        <translation type="vanished">バハムート改 x2 (140MP)</translation>
     </message>
     <message>
         <source>Neo Bahamut x3 (140mp)</source>
-        <translation>バハムート改 x3 (140MP)</translation>
+        <translation type="vanished">バハムート改 x3 (140MP)</translation>
     </message>
     <message>
         <source>Neo Bahamut x4 (140mp)</source>
-        <translation>バハムート改 x4 (140MP)</translation>
+        <translation type="vanished">バハムート改 x4 (140MP)</translation>
     </message>
     <message>
         <source>Neo Bahamut x5 (140mp)</source>
-        <translation>バハムート改 x5 (140MP)</translation>
+        <translation type="vanished">バハムート改 x5 (140MP)</translation>
     </message>
     <message>
         <source>Hades x1 (150mp)</source>
-        <translation>ハーデス x1 (150MP)</translation>
+        <translation type="vanished">ハーデス x1 (150MP)</translation>
     </message>
     <message>
         <source>Hades x2 (150mp)</source>
-        <translation>ハーデス x2 (150MP)</translation>
+        <translation type="vanished">ハーデス x2 (150MP)</translation>
     </message>
     <message>
         <source>Hades x3 (150mp)</source>
-        <translation>ハーデス x3 (150MP)</translation>
+        <translation type="vanished">ハーデス x3 (150MP)</translation>
     </message>
     <message>
         <source>Hades x4 (150mp)</source>
-        <translation>ハーデス x4 (150MP)</translation>
+        <translation type="vanished">ハーデス x4 (150MP)</translation>
     </message>
     <message>
         <source>Hades x5 (150mp)</source>
-        <translation>ハーデス x5 (150MP)</translation>
+        <translation type="vanished">ハーデス x5 (150MP)</translation>
     </message>
     <message>
         <source>Typhon x1 (160mp)</source>
-        <translation>テュポーン x1 (160MP)</translation>
+        <translation type="vanished">テュポーン x1 (160MP)</translation>
     </message>
     <message>
         <source>Typhon x2 (160mp)</source>
-        <translation>テュポーン x2 (160MP)</translation>
+        <translation type="vanished">テュポーン x2 (160MP)</translation>
     </message>
     <message>
         <source>Typhon x3 (160mp)</source>
-        <translation>テュポーン x3 (160MP)</translation>
+        <translation type="vanished">テュポーン x3 (160MP)</translation>
     </message>
     <message>
         <source>Typhon x4 (160mp)</source>
-        <translation>テュポーン x4 (160MP)</translation>
+        <translation type="vanished">テュポーン x4 (160MP)</translation>
     </message>
     <message>
         <source>Typhon x5 (160mp)</source>
-        <translation>テュポーン x5 (160MP)</translation>
+        <translation type="vanished">テュポーン x5 (160MP)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x1 (180mp)</source>
-        <translation>バハムート零式 x1 (180MP)</translation>
+        <translation type="vanished">バハムート零式 x1 (180MP)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x2 (180mp)</source>
-        <translation>バハムート零式 x2 (180MP)</translation>
+        <translation type="vanished">バハムート零式 x2 (180MP)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x3 (180mp)</source>
-        <translation>バハムート零式 x3 (180MP)</translation>
+        <translation type="vanished">バハムート零式 x3 (180MP)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x4 (180mp)</source>
-        <translation>バハムート零式 x4 (180MP)</translation>
+        <translation type="vanished">バハムート零式 x4 (180MP)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x5 (180mp)</source>
-        <translation>バハムート零式 x5 (180MP)</translation>
+        <translation type="vanished">バハムート零式 x5 (180MP)</translation>
     </message>
     <message>
         <source>KOTR x1 (250mp)</source>
-        <translation>ナイツオブラウンド x1 (250MP)</translation>
+        <translation type="vanished">ナイツオブラウンド x1 (250MP)</translation>
     </message>
     <message>
         <source>KOTR x2 (250mp)</source>
-        <translation>ナイツオブラウンド x2 (250MP)</translation>
+        <translation type="vanished">ナイツオブラウンド x2 (250MP)</translation>
     </message>
     <message>
         <source>KOTR x3 (250mp)</source>
-        <translation>ナイツオブラウンド x3 (250MP)</translation>
+        <translation type="vanished">ナイツオブラウンド x3 (250MP)</translation>
     </message>
     <message>
         <source>KOTR x4 (250mp)</source>
-        <translation>ナイツオブラウンド x4 (250MP)</translation>
+        <translation type="vanished">ナイツオブラウンド x4 (250MP)</translation>
     </message>
     <message>
         <source>KOTR x5 (250mp)</source>
-        <translation>ナイツオブラウンド x5 (250MP)</translation>
+        <translation type="vanished">ナイツオブラウンド x5 (250MP)</translation>
     </message>
     <message>
         <source>MP Turbo 20%</source>
-        <translation>ＭＰターボ 20%</translation>
+        <translation type="vanished">ＭＰターボ 20%</translation>
     </message>
     <message>
         <source>MP Turbo 30%</source>
-        <translation>ＭＰターボ 30%</translation>
+        <translation type="vanished">ＭＰターボ 30%</translation>
     </message>
     <message>
         <source>MP Turbo 40%</source>
-        <translation>ＭＰターボ 40%</translation>
+        <translation type="vanished">ＭＰターボ 40%</translation>
     </message>
     <message>
         <source>MP Turbo 50%</source>
-        <translation>ＭＰターボ 50%</translation>
+        <translation type="vanished">ＭＰターボ 50%</translation>
     </message>
 </context>
 <context>
     <name>Materia_Stats</name>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation>素早さ: レベルに比例 (%) UP</translation>
+        <translation type="vanished">素早さ: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation>魔力: レベルに比例 (%) UP</translation>
+        <translation type="vanished">魔力: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation>運: レベルに比例 (%) UP</translation>
+        <translation type="vanished">運: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation>運 + 1</translation>
+        <translation type="vanished">運 + 1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation>運 - 1</translation>
+        <translation type="vanished">運 - 1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation>素早さ + 2</translation>
+        <translation type="vanished">素早さ + 2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation>体力 + 1</translation>
+        <translation type="vanished">体力 + 1</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation>MAXHP: レベルに比例 (%) UP</translation>
+        <translation type="vanished">MAXHP: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation>MAXMP: レベルに比例 (%) UP</translation>
+        <translation type="vanished">MAXMP: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation>MAXHP:-2% MAXMP:+2% 力:-1 魔力:+1</translation>
+        <translation type="vanished">MAXHP:-2% MAXMP:+2% 力:-1 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>MAXHP:-5% MAXMP:+5% 力:-2 体力:-1 魔力:+2 魔防:+1</translation>
+        <translation type="vanished">MAXHP:-5% MAXMP:+5% 力:-2 体力:-1 魔力:+2 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>MAXHP:-10% MAXMP:+10% 力:-4 体力:-2 魔力:+4 魔防:+2</translation>
+        <translation type="vanished">MAXHP:-10% MAXMP:+10% 力:-4 体力:-2 魔力:+4 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation>MAXHP:-2% MAXMP:+2% 魔力:+1</translation>
+        <translation type="vanished">MAXHP:-2% MAXMP:+2% 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation>MAXHP:-5% MAXMP:+5% 魔力:+1 魔防:+1</translation>
+        <translation type="vanished">MAXHP:-5% MAXMP:+5% 魔力:+1 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation>MAXHP:-10% MAXMP:+10% 魔力:+2 魔防:+2</translation>
+        <translation type="vanished">MAXHP:-10% MAXMP:+10% 魔力:+2 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation>MAXHP:-10% MAXMP:+15% 魔力:+4 魔防:+4</translation>
+        <translation type="vanished">MAXHP:-10% MAXMP:+15% 魔力:+4 魔防:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation>MAXHP:-10% MAXMP:+20% 魔力:+8 魔防:+8</translation>
+        <translation type="vanished">MAXHP:-10% MAXMP:+20% 魔力:+8 魔防:+8</translation>
     </message>
 </context>
 <context>
@@ -8468,56 +8614,16 @@ location.</source>
         <translation type="unfinished">あなたのSE ID番号</translation>
     </message>
     <message>
-        <source>Save00</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save01</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save02</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save03</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save04</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save05</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save06</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add Files For each Save you want in your cloud data.</source>
         <translation type="unfinished">それぞれがあなたのクラウド・データに必要な保存のためにファイルを追加します。</translation>
-    </message>
-    <message>
-        <source>Save07</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
         <translation type="unfinished">黒チョコボが開くことができるあなたは、任意のフォーマットを使うことができ</translation>
     </message>
     <message>
-        <source>Save08</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unused files will be Looked for in the Save Path</source>
         <translation type="unfinished">未使用のファイルが保存パスで探されます</translation>
-    </message>
-    <message>
-        <source>Save09</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
@@ -8525,43 +8631,43 @@ location.</source>
     </message>
     <message>
         <source>Select A File To Use As Save00</source>
-        <translation type="unfinished">Save00として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save00として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save01</source>
-        <translation type="unfinished">Save01として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save01として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save02</source>
-        <translation type="unfinished">Save02として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save02として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save03</source>
-        <translation type="unfinished">Save03として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save03として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save04</source>
-        <translation type="unfinished">Save04として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save04として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save05</source>
-        <translation type="unfinished">Save05として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save05として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save06</source>
-        <translation type="unfinished">Save06として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save06として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save07</source>
-        <translation type="unfinished">Save07として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save07として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save08</source>
-        <translation type="unfinished">Save08として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save08として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Select A File To Use As Save09</source>
-        <translation type="unfinished">Save09として使用するファイルを選択します</translation>
+        <translation type="obsolete">Save09として使用するファイルを選択します</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
@@ -8578,6 +8684,14 @@ location.</source>
     <message>
         <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
         <translation type="unfinished">[OK]を押すと、保存したパス内のすべてのメタデータが上書きされます</translation>
+    </message>
+    <message>
+        <source>Save0%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save0%1</source>
+        <translation type="unfinished">Save0%1として使用するファイルを選択します</translation>
     </message>
 </context>
 <context>
@@ -8832,71 +8946,71 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Up</source>
-        <translation>上</translation>
+        <translation type="vanished">上</translation>
     </message>
     <message>
         <source>? 9</source>
-        <translation>? 9</translation>
+        <translation type="vanished">? 9</translation>
     </message>
     <message>
         <source>? 10</source>
-        <translation>? 10</translation>
+        <translation type="vanished">? 10</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>右</translation>
+        <translation type="vanished">右</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation>下</translation>
+        <translation type="vanished">下</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>左</translation>
+        <translation type="vanished">左</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation>メニュー</translation>
+        <translation type="vanished">メニュー</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation>けってい</translation>
+        <translation type="vanished">けってい</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>キャンセル</translation>
+        <translation type="vanished">キャンセル</translation>
     </message>
     <message>
         <source>Switch</source>
-        <translation>ＥＸＴ</translation>
+        <translation type="vanished">ＥＸＴ</translation>
     </message>
     <message>
         <source>Target</source>
-        <translation>ターゲットマーク</translation>
+        <translation type="vanished">ターゲットマーク</translation>
     </message>
     <message>
         <source>Page Up</source>
-        <translation>ページ順送り</translation>
+        <translation type="vanished">ページ順送り</translation>
     </message>
     <message>
         <source>Page Down</source>
-        <translation>ページ逆送り</translation>
+        <translation type="vanished">ページ逆送り</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation>ヘルプ</translation>
+        <translation type="vanished">ヘルプ</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation>ポーズ</translation>
+        <translation type="vanished">ポーズ</translation>
     </message>
     <message>
         <source>Unknown (9)</source>
-        <translation>不明 (9)</translation>
+        <translation type="vanished">不明 (9)</translation>
     </message>
     <message>
         <source>Unknown(10)</source>
-        <translation>不明 (10)</translation>
+        <translation type="vanished">不明 (10)</translation>
     </message>
     <message>
         <source>Custom Controller Mapping (PSX Only)</source>
@@ -8909,6 +9023,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Field Message Speed:</source>
         <translation>フィールドメッセージ:</translation>
+    </message>
+    <message>
+        <source>9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>10</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8990,22 +9112,26 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-なし-</translation>
+        <translation type="obsolete">-なし-</translation>
     </message>
     <message>
         <source>Slot: %1</source>
         <translation>スロット:%1</translation>
+    </message>
+    <message>
+        <source>-Empty Slot-</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SlotSelect</name>
     <message>
         <source>(Deleted)</source>
-        <translation>(削除済み)</translation>
+        <translation type="vanished">(削除済み)</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation>; 次のデータ チャンク @ スロット:%1</translation>
+        <translation type="vanished">; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
@@ -9018,16 +9144,16 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>
 	 Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="vanished">
 	 ゲームに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>       Mid-Linked Block, Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">ミッドリンクブロック、次のデータ・チャンク@スロット：%1</translation>
+        <translation type="obsolete">ミッドリンクブロック、次のデータ・チャンク@スロット：%1</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted), Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">%1：、次のデータチャンク@スロットブロック（削除済み）ミッドリンク</translation>
+        <translation type="obsolete">%1：、次のデータチャンク@スロットブロック（削除済み）ミッドリンク</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
@@ -9041,52 +9167,72 @@ p, li { white-space: pre-wrap; }
         <source>Load Another File</source>
         <translation type="unfinished">別のファイルのロード</translation>
     </message>
+    <message>
+        <source>       Mid-Linked Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>
+	 Game Uses %n Save Block(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>
+	   Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Status</name>
     <message>
         <source>[Sleep]</source>
-        <translation>[睡眠]</translation>
+        <translation type="vanished">[睡眠]</translation>
     </message>
     <message>
         <source>[Silence]</source>
-        <translation>[沈黙]</translation>
+        <translation type="vanished">[沈黙]</translation>
     </message>
     <message>
         <source>[Confusion]</source>
-        <translation>[混乱]</translation>
+        <translation type="vanished">[混乱]</translation>
     </message>
     <message>
         <source>[Berserk]</source>
-        <translation>[バーサク]</translation>
+        <translation type="vanished">[バーサク]</translation>
     </message>
     <message>
         <source>[Frog]</source>
-        <translation>[カエル]</translation>
+        <translation type="vanished">[カエル]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation>[毒]</translation>
+        <translation type="vanished">[毒]</translation>
     </message>
     <message>
         <source>[Slow]</source>
-        <translation>[スロウ]</translation>
+        <translation type="vanished">[スロウ]</translation>
     </message>
     <message>
         <source>[Stop]</source>
-        <translation>[ストップ]</translation>
+        <translation type="vanished">[ストップ]</translation>
     </message>
     <message>
         <source>[Death]</source>
-        <translation>[戦闘不能]</translation>
+        <translation type="vanished">[戦闘不能]</translation>
     </message>
     <message>
         <source>[Petrify]</source>
-        <translation>[石化]</translation>
+        <translation type="vanished">[石化]</translation>
     </message>
     <message>
         <source>[Mini]</source>
-        <translation>[ミニマム]</translation>
+        <translation type="vanished">[ミニマム]</translation>
     </message>
 </context>
 <context>
@@ -9161,17 +9307,17 @@ File:%1</source>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation>(削除済み)</translation>
+        <translation type="vanished">(削除済み)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="vanished">
  セーブに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translation>; 次のデータ チャンク @ スロット:%1</translation>
+        <translation type="vanished">; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>Save Error</source>
@@ -9190,19 +9336,19 @@ File:%1</source>
     <message>
         <source>
  Mid-Linked Block </source>
-        <translation>
+        <translation type="vanished">
  中間リンク ブロック</translation>
     </message>
     <message>
         <source>
  End Of Linked Data</source>
-        <translation>
+        <translation type="vanished">
  最終リンク データ</translation>
     </message>
     <message>
         <source>s
    Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="vanished">
    次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
@@ -9212,6 +9358,38 @@ File:%1</source>
     <message>
         <source>View Anyway</source>
         <translation>かまわず表示</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    Mid-Linked Block (Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished">      最後のリンク ブロック</translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks (Deleted)</source>
+        <translation type="unfinished">リンクされたブロックの終了（削除済み</translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished">エラー</translation>
+    </message>
+    <message numerus="yes">
+        <source>
+ Game Uses %n Save Block(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>
+   Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
