@@ -166,29 +166,90 @@ private:
     const FF7Location::LOCATION& location(int index);
     inline static const auto _group = QStringLiteral("Locations");
     inline static const LOCATION _emptyLocation {QString(),QString(),QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")};
-    /*!
-     * \var _worldLocations List of world locations
-     */
-    inline static const QStringList _worldLocationNames{
-        /****************World Map Places  Don't Display For Text Only***********/
-        {QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Grasslands Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Junon Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Corel Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Gold Saucer Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Gongaga Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Cosmo Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Rocket Launch Pad Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Wutai Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Woodlands Area"))}
-        , {QT_TRANSLATE_NOOP(_group, QStringLiteral("Gongaga Area"))}
-        };
 
+    /*!
+     * \var _duplicateLocations List of reused locations with different names
+     */
+    inline static const QList<LOCATION> _duplicateLocations{
+    /****************Dupilcate Field Strings Don't Display************/
+    {QStringLiteral("elminn_2"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cloud's Past")), QStringLiteral("1"), QStringLiteral("332"), QStringLiteral("164"), QStringLiteral("125"), QStringLiteral("8"), QStringLiteral("32")}
+    , {QStringLiteral("delmin1"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cloud's Villa")), QStringLiteral("1"), QStringLiteral("446"), QStringLiteral("-40"), QStringLiteral("-43"), QStringLiteral("10"), QStringLiteral("32")}
+    };
+
+    /*!
+     * \var _locations List of all locations
+     */
     inline static const QList<LOCATION> _locations {
         /************************Every Location In The Game With Stock Translation******************/
-        {QStringLiteral("startmap"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Debug Room [ja]")), QStringLiteral("1"), QStringLiteral("65"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("32")}
+        /**********************************Test Fight All Non valid Maps  *********/
+        {QStringLiteral("testfight"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Test Fight")), QStringLiteral("2"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("32")}
+        /****************World Map Strings *************/
+        , {QStringLiteral("WM0"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("1"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM1"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("2"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM2"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Grasslands Area")), QStringLiteral("3"), QStringLiteral("3"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM3"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Grasslands Area")), QStringLiteral("3"), QStringLiteral("4"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM4"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junon Area")), QStringLiteral("3"), QStringLiteral("5"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM5"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junon Area")), QStringLiteral("3"), QStringLiteral("6"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM6"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junon Area")), QStringLiteral("3"), QStringLiteral("7"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM7"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Woodlands Area")), QStringLiteral("3"), QStringLiteral("8"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM8"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junon Area")), QStringLiteral("3"), QStringLiteral("9"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM9"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Gongaga Area")), QStringLiteral("3"), QStringLiteral("10"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM10"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Mideel Area")), QStringLiteral("3"), QStringLiteral("11"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM11"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Mideel Area")), QStringLiteral("3"), QStringLiteral("12"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM12"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Corel Area")), QStringLiteral("3"), QStringLiteral("13"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM13"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Corel Area")), QStringLiteral("3"), QStringLiteral("14"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM14"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Gold Saucer Area")), QStringLiteral("3"), QStringLiteral("15"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM15"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("16"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM16"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Gongaga Area")), QStringLiteral("3"), QStringLiteral("17"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM17"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cosmo Area")), QStringLiteral("3"), QStringLiteral("18"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM18"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area")), QStringLiteral("3"), QStringLiteral("19"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM19"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Rocket Launch Pad Area")), QStringLiteral("3"), QStringLiteral("20"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM20"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area")), QStringLiteral("3"), QStringLiteral("21"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM21"), QT_TRANSLATE_NOOP(_group, QStringLiteral("North Corel Area")), QStringLiteral("3"), QStringLiteral("22"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM22"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Wutai Area")), QStringLiteral("3"), QStringLiteral("23"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM23"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Wutai Area")), QStringLiteral("3"), QStringLiteral("24"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM24"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("25"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM25"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("26"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM26"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("27"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM27"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("28"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM28"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Round Island")), QStringLiteral("3"), QStringLiteral("29"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM29"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Underwater Location")), QStringLiteral("3"), QStringLiteral("30"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM30"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Underwater (Gelnika)")), QStringLiteral("3"), QStringLiteral("31"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM31"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("32"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM32"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("33"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM33"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("34"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM34"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("35"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM35"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Start of Juion Ship Sequence")), QStringLiteral("3"), QStringLiteral("36"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM36"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Almost at Costa del Sol")), QStringLiteral("3"), QStringLiteral("37"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM37"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junion -> Costa Del Sol")), QStringLiteral("3"), QStringLiteral("38"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM38"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Costa del Sol -> Junion")), QStringLiteral("3"), QStringLiteral("39"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM39"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("40"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM40"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junion Area (Highwind)")), QStringLiteral("3"), QStringLiteral("41"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM41"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Junion Area (Underwater)")), QStringLiteral("3"), QStringLiteral("42"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM42"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area")), QStringLiteral("3"), QStringLiteral("43"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM43"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area")), QStringLiteral("3"), QStringLiteral("44"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM44"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("45"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM45"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Nibel Area")), QStringLiteral("3"), QStringLiteral("46"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM46"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("47"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM47"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("48"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM48"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Rocket Launch Pad Area")), QStringLiteral("3"), QStringLiteral("49"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM49"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("50"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM50"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("51"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM51"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("52"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM52"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Worldmap Location")), QStringLiteral("3"), QStringLiteral("53"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM53"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Midgar Area")), QStringLiteral("3"), QStringLiteral("54"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM54"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cosmo Area")), QStringLiteral("3"), QStringLiteral("55"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM55"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Last Underwater Location")), QStringLiteral("3"), QStringLiteral("56"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM56"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("57"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM57"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icile Area")), QStringLiteral("3"), QStringLiteral("58"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM58"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Crater Area")), QStringLiteral("3"), QStringLiteral("59"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM59"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("60"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM60"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("61"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM61"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("62"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM62"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("63"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        , {QStringLiteral("WM63"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Icicle Area")), QStringLiteral("3"), QStringLiteral("64"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+        /************************Field Map Locations ******************/
+        , {QStringLiteral("startmap"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Debug Room [ja]")), QStringLiteral("1"), QStringLiteral("65"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("32")}
         , {QStringLiteral("fship_1"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Highwind")), QStringLiteral("1"), QStringLiteral("66"), QStringLiteral("125"), QStringLiteral("64275"), QStringLiteral("27"), QStringLiteral("32")}
         , {QStringLiteral("fship_12"), QT_TRANSLATE_NOOP(_group, QStringLiteral("deck")), QStringLiteral("1"), QStringLiteral("67"), QStringLiteral("-149"), QStringLiteral("-1026"), QStringLiteral("23"), QStringLiteral("192")}
         , {QStringLiteral("fship_2"), QString(), QStringLiteral("1"), QStringLiteral("68"), QStringLiteral("-256"), QStringLiteral("-3635"), QStringLiteral("33"), QStringLiteral("32")}
@@ -835,12 +896,5 @@ private:
         , {QStringLiteral("hill2"), QString(), QStringLiteral("1"), QStringLiteral("771"), QStringLiteral("-50"), QStringLiteral("-24"), QStringLiteral("284"), QStringLiteral("56")}
         , {QStringLiteral("las4_42"), QString(), QStringLiteral("1"), QStringLiteral("777"), QStringLiteral("406"), QStringLiteral("945"), QStringLiteral("43"), QStringLiteral("96")}
         , {QStringLiteral("tunnel_6"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Winding Tunnel")), QStringLiteral("1"), QStringLiteral("778"), QStringLiteral("166"), QStringLiteral("-376"), QStringLiteral("106"), QStringLiteral("128")}
-
-        /**********************************Map 2 Entries  *********/
-        , {QStringLiteral("testfight"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Test Fight")), QStringLiteral("2"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("32")}
-
-        /****************Dupilcate Field Strings Don't Display************/
-        , {QStringLiteral("elminn_2"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cloud's Past")), QStringLiteral("1"), QStringLiteral("332"), QStringLiteral("164"), QStringLiteral("125"), QStringLiteral("8"), QStringLiteral("32")}
-        , {QStringLiteral("delmin1"), QT_TRANSLATE_NOOP(_group, QStringLiteral("Cloud's Villa")), QStringLiteral("1"), QStringLiteral("446"), QStringLiteral("-40"), QStringLiteral("-43"), QStringLiteral("10"), QStringLiteral("32")}
     };
 };
