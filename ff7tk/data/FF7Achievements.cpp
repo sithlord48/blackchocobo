@@ -16,7 +16,6 @@
 
 #include "FF7Achievements.h"
 #include <QFile>
-#include <QCoreApplication>
 
 bool FF7Achievements::openFile(const QString &fileName)
 {
@@ -72,7 +71,7 @@ QString FF7Achievements::name(int bit)
 {
     QString temp;
     if (bit >=28 && bit <=63) {
-        temp = qApp->translate(_group.toLocal8Bit(), _names.at(bit - 28).toLocal8Bit());
+        temp = tr(_names.at(bit - 28).toLocal8Bit());
     }
     return temp;
 }

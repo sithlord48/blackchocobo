@@ -15,7 +15,6 @@
 /****************************************************************************/
 
 #include "FF7Materia.h"
-#include <QCoreApplication>
 
 const FF7Materia::MATERIA& FF7Materia::Materias(int id)
 {
@@ -33,30 +32,30 @@ qint32 FF7Materia::ap(int id, int lvl)
 
 QString FF7Materia::name(int id)
 {
-    return qApp->translate(_nameGroup.toLocal8Bit(), Materias(id).name.toLocal8Bit());
+    return tr(Materias(id).name.toLocal8Bit());
 }
 
 QString FF7Materia::statString(int id)
 {
-    return qApp->translate(_statsGroup.toLocal8Bit(), Materias(id).stats.toLocal8Bit());
+    return tr(Materias(id).stats.toLocal8Bit());
 }
 
 QString FF7Materia::enemySkill(int id)
 {
     id = std::clamp(id, 0, _enemySkills.size() -1);
-    return qApp->translate(_eskillGroup.toLocal8Bit(), _enemySkills.at(id).toLocal8Bit());
+    return tr(_enemySkills.at(id).toLocal8Bit());
 }
 
 QString FF7Materia::element(int id)
 {
-    return qApp->translate(_elementGroup.toLocal8Bit(), Materias(id).elemental.toLocal8Bit());
+    return tr(Materias(id).elemental.toLocal8Bit());
 }
 
 QStringList FF7Materia::skills(int id)
 {
     QStringList translated_list;
     for(const QString &skill : Materias(id).skills) {
-        translated_list.append(qApp->translate(_skillGroup.toLocal8Bit(), skill.toLocal8Bit()));
+        translated_list.append(tr(skill.toLocal8Bit()));
     }
     return translated_list;
 }
@@ -65,7 +64,7 @@ QStringList FF7Materia::status(int id)
 {
     QStringList translated_list;
     for(const QString& stat : Materias(id).status) {
-        translated_list.append(qApp->translate(_statusGroup.toLocal8Bit(),  stat.toLocal8Bit()));
+        translated_list.append(tr(stat.toLocal8Bit()));
     }
     return translated_list;
 }

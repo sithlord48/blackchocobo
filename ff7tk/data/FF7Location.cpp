@@ -15,7 +15,6 @@
 /****************************************************************************/
 
 #include "FF7Location.h"
-#include <QCoreApplication>
 const FF7Location::LOCATION& FF7Location::location(int index)
 {
     if(index >= 0 && index < size()) {
@@ -42,14 +41,14 @@ const QString& FF7Location::fileName(int MapID,int LocID)
 
 QString FF7Location::locationString(int index)
 {
-    return qApp->translate(_group.toLocal8Bit(), location(index).location.toLocal8Bit());
+    return tr(_locations.at(index).location.toLocal8Bit());
 }
 
 QString FF7Location::locationString(const QString &fileName)
 {
     for (const LOCATION &location : _locations) {
         if(fileName == location.filename) {
-            return qApp->translate(_group.toLocal8Bit(), location.location.toLocal8Bit());
+            return tr(location.location.toLocal8Bit());
         }
 	}
     return _emptyLocation.filename;

@@ -565,8 +565,6 @@ private:
     inline static const auto _resourceSlotNoGrowth = QStringLiteral("items/m_no_grow_slot");
     inline static const auto _resourceSlot = QStringLiteral("items/m_grow_slot");
     inline static const auto _resourceLink = QStringLiteral("items/m_link");
-    inline static const auto _groupNames = QStringLiteral("Items");
-    inline static const auto _groupDesc = QStringLiteral("Item_desc");
     inline static const auto _styleSlotNoGrowth = QStringLiteral("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.079096 rgba(77, 77, 77, 255), stop:0.152542 rgba(11, 28, 19, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
     inline static const auto _styleSlot = QStringLiteral("QPushButton:enabled{border: 0px;border-radius:16px;background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.814, fx:0.5, fy:0.5, stop:0 rgba(0, 1, 0, 255), stop:0.429379 rgba(37, 37, 37, 255), stop:0.514124 rgba(200, 195, 194, 255), stop:0.576271 rgba(153, 152, 152, 255), stop:0.655367 rgba(185, 181, 179, 255), stop:0.677966 rgba(37, 37, 37, 0));}QPushButton:hover{}");
     inline static const auto _styleLink = QStringLiteral("QLabel:enabled{background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0.0225989 rgba(37, 37, 37, 255), stop:0.231638 rgba(153, 152, 152, 255), stop:0.389831 rgba(200, 195, 194, 255), stop:0.502825 rgba(138, 137, 137, 255), stop:0.621469 rgba(200, 195, 194, 255), stop:0.768362 rgba(138, 137, 137, 255), stop:0.932584 rgba(37, 37, 37, 0));}");
@@ -659,1227 +657,1227 @@ private:
      */
     inline static const QList<ITEM> _items{
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Potion")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores 100 HP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Potion"), QT_TR_NOOP("Restores 100 HP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hi-Potion")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores 500 HP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Hi-Potion"), QT_TR_NOOP("Restores 500 HP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("X-Potion")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores all lost HP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("X-Potion"), QT_TR_NOOP("Restores all lost HP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ether")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores 100 MP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Ether"), QT_TR_NOOP("Restores 100 MP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Turbo Ether")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores all lost MP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Turbo Ether"), QT_TR_NOOP("Restores all lost MP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Elixir")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Fully Restores HP/MP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Elixir"), QT_TR_NOOP("Fully Restores HP/MP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Megalixir")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Fully Restores all Members HP/MP")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Megalixir"), QT_TR_NOOP("Fully Restores all Members HP/MP"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Phoenix Down")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores life")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Phoenix Down"), QT_TR_NOOP("Restores life"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Antidote")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Poison]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Antidote"), QT_TR_NOOP("Cures [Poison]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Soft")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Petrify]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Soft"), QT_TR_NOOP("Cures [Petrify]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Maiden's Kiss")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Frog]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Maiden's Kiss"), QT_TR_NOOP("Cures [Frog]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Cornucopia")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Mini]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Cornucopia"), QT_TR_NOOP("Cures [Mini]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Echo Screen")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Silence]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Echo Screen"), QT_TR_NOOP("Cures [Silence]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hyper")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Sadness]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Hyper"), QT_TR_NOOP("Cures [Sadness]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tranquilizer")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Fury]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Tranquilizer"), QT_TR_NOOP("Cures [Fury]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Remedy")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures abnormal status")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Remedy"), QT_TR_NOOP("Cures abnormal status"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Smoke Bomb")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Can escape from opponents during battle")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Smoke Bomb"), QT_TR_NOOP("Can escape from opponents during battle"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Speed Drink")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Casts [Haste] on one ally")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Speed Drink"), QT_TR_NOOP("Casts [Haste] on one ally"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hero Drink")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises ability once during battle")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Hero Drink"), QT_TR_NOOP("Raises ability once during battle"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Vaccine")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against transformations")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Vaccine"), QT_TR_NOOP("Protects against transformations"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Grenade")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Explosive damage against one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Grenade"), QT_TR_NOOP("Explosive damage against one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shrapnel")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Explosive damage against all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Shrapnel"), QT_TR_NOOP("Explosive damage against all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Right arm")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Explosive damage against all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Right arm"), QT_TR_NOOP("Explosive damage against all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hourglass")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Stops all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Hourglass"), QT_TR_NOOP("Stops all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Kiss of Death")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Death] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Kiss of Death"), QT_TR_NOOP("Uses [Death] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Spider Web")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Slows all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Spider Web"), QT_TR_NOOP("Slows all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dream Powder")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Sleepel] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Dream Powder"), QT_TR_NOOP("Uses [Sleepel] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mute Mask")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Silence] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Mute Mask"), QT_TR_NOOP("Uses [Silence] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("War Gong")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Berserk] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("War Gong"), QT_TR_NOOP("Uses [Berserk] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Loco weed")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Confu] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Loco weed"), QT_TR_NOOP("Uses [Confu] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fire Fang")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Fire2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Fire Fang"), QT_TR_NOOP("Uses [Fire2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fire Veil")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Fire3] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Fire Veil"), QT_TR_NOOP("Uses [Fire3] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Antarctic Wind")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Ice2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Antarctic Wind"), QT_TR_NOOP("Uses [Ice2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ice Crystal")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Ice3] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Ice Crystal"), QT_TR_NOOP("Uses [Ice3] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Bolt Plume")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Bolt2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Bolt Plume"), QT_TR_NOOP("Uses [Bolt2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Swift Bolt")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Bolt3] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Swift Bolt"), QT_TR_NOOP("Uses [Bolt3] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Earth Drum")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Quake2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Earth Drum"), QT_TR_NOOP("Uses [Quake2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Earth Mallet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Quake3] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Earth Mallet"), QT_TR_NOOP("Uses [Quake3] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Deadly Waste")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Bio2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Deadly Waste"), QT_TR_NOOP("Uses [Bio2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("M-Tentacles")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Bio3] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("M-Tentacles"), QT_TR_NOOP("Uses [Bio3] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Stardust")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Comet2] on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Stardust"), QT_TR_NOOP("Uses [Comet2] on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Vampire Fang")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains HP out of one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Vampire Fang"), QT_TR_NOOP("Drains HP out of one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ghost Hand")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains MP out of one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Ghost Hand"), QT_TR_NOOP("Drains MP out of one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Vagyrisk Claw")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Petrifies one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Vagyrisk Claw"), QT_TR_NOOP("Petrifies one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Light Curtain")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Creates [Barrier] around all allies")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Light Curtain"), QT_TR_NOOP("Creates [Barrier] around all allies"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Lunar Curtain")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Creates [MBarrier] around all allies")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Lunar Curtain"), QT_TR_NOOP("Creates [MBarrier] around all allies"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mirror")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Reflect] on all allies")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Mirror"), QT_TR_NOOP("Uses [Reflect] on all allies"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Holy Torch")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [DeSpell] on all allies")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Holy Torch"), QT_TR_NOOP("Uses [DeSpell] on all allies"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Bird Wing")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses whirlwind on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Bird Wing"), QT_TR_NOOP("Uses whirlwind on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dragon Scales")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Water damage on all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Dragon Scales"), QT_TR_NOOP("Water damage on all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Impaler")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Changes one opponent to a frog")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Impaler"), QT_TR_NOOP("Changes one opponent to a frog"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shrivel")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Mini] on one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Shrivel"), QT_TR_NOOP("Uses [Mini] on one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Eye drop")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Cures [Darkness]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Eye drop"), QT_TR_NOOP("Cures [Darkness]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Molotov")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Fire damage on one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Molotov"), QT_TR_NOOP("Fire damage on one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("S-mine")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Explosive damage on one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("S-mine"), QT_TR_NOOP("Explosive damage on one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("8-inch Cannon")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Explosive damage against one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("8-inch Cannon"), QT_TR_NOOP("Explosive damage against one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Graviball")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Demi] against one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Graviball"), QT_TR_NOOP("Uses [Demi] against one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("T/S Bomb")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Demi2] against one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("T/S Bomb"), QT_TR_NOOP("Uses [Demi2] against one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ink")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Darkness] against one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Ink"), QT_TR_NOOP("Uses [Darkness] against one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dazers")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Paralyzes one opponent")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Dazers"), QT_TR_NOOP("Paralyzes one opponent"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dragon Fang")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Lightning damage against all opponents")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Dragon Fang"), QT_TR_NOOP("Lightning damage against all opponents"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Cauldron")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Uses [Poison/Confu/Sleepel/Silence/Small/Frog]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Cauldron"), QT_TR_NOOP("Uses [Poison/Confu/Sleepel/Silence/Small/Frog]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, +1, +1, 0, +1, +1, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Sylkis Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Sylkis Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Reagan Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Reagan Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mimett Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Mimett Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Curiel Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Curiel Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Pahsana Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Pahsana Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tantal Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Tantal Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Krakka Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Krakka Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gysahl Greens")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want a chocobo...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Gysahl Greens"), QT_TR_NOOP("When you want a chocobo..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tent")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores ally's max HP/MP. Use at Save Point.")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Tent"), QT_TR_NOOP("Restores ally's max HP/MP. Use at Save Point."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Power Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Strength]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Power Source"), QT_TR_NOOP("Raises [Strength]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Guard Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Vitality]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Guard Source"), QT_TR_NOOP("Raises [Vitality]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Magic Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Magic Power]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Magic Source"), QT_TR_NOOP("Raises [Magic Power]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mind Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Spirit]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Mind Source"), QT_TR_NOOP("Raises [Spirit]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Speed Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Dexterity]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Speed Source"), QT_TR_NOOP("Raises [Dexterity]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Luck Source")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises [Luck]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Luck Source"), QT_TR_NOOP("Raises [Luck]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Zeio Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Zeio Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Carob Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Carob Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Porov Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Porov Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Pram Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Pram Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Lasan Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Lasan Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Saraha Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Saraha Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Luchile Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Luchile Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Pepio Nut")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("When you want to breed Chocobos...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Pepio Nut"), QT_TR_NOOP("When you want to breed Chocobos..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Battery")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Looks like it can start some sort of machine")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Battery"), QT_TR_NOOP("Looks like it can start some sort of machine"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tissue")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("This one's a little tough...")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Tissue"), QT_TR_NOOP("This one's a little tough..."), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Omnislash")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Omnislash]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Omnislash"), QT_TR_NOOP("Learn Limit Skill [Omnislash]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Catastrophe")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Catastrophe]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Catastrophe"), QT_TR_NOOP("Learn Limit Skill [Catastrophe]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Final Heaven")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Final Heaven]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Final Heaven"), QT_TR_NOOP("Learn Limit Skill [Final Heaven]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Great Gospel")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Great Gospel]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Great Gospel"), QT_TR_NOOP("Learn Limit Skill [Great Gospel]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Cosmo Memory")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Cosmo Memory]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Cosmo Memory"), QT_TR_NOOP("Learn Limit Skill [Cosmo Memory]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("All Creation")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [All Creation]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("All Creation"), QT_TR_NOOP("Learn Limit Skill [All Creation]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Chaos")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Chaos]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Chaos"), QT_TR_NOOP("Learn Limit Skill [Chaos]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Highwind")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Learn Limit Skill [Highwind]")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Highwind"), QT_TR_NOOP("Learn Limit Skill [Highwind]"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("1/35 soldier")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Shinra armored 'attack' soldiers: 12 in the Set!")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("1/35 soldier"), QT_TR_NOOP("Shinra armored 'attack' soldiers: 12 in the Set!"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Super Sweeper")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("A new machine to protect the reactor!")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Super Sweeper"), QT_TR_NOOP("A new machine to protect the reactor!"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Masamune Blade")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("A prefect copy of Sephiroth's sword!")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Masamune Blade"), QT_TR_NOOP("A prefect copy of Sephiroth's sword!"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Save Crystal")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Use This to create a SAVE Point in the 'North Cave'")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Save Crystal"), QT_TR_NOOP("Use This to create a SAVE Point in the 'North Cave'"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Combat Diary")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("A record of Master Dio's fiercest battles")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Combat Diary"), QT_TR_NOOP("A record of Master Dio's fiercest battles"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Autograph")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Dio's autograph")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Autograph"), QT_TR_NOOP("Dio's autograph"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gambler")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Second part of Dio's diary: The Gold Saucer years")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Gambler"), QT_TR_NOOP("Second part of Dio's diary: The Gold Saucer years"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Desert Rose")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Blooms once every 1000 years")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Desert Rose"), QT_TR_NOOP("Blooms once every 1000 years"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Earth Harp")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Calms the hearts of all who hear it")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Earth Harp"), QT_TR_NOOP("Calms the hearts of all who hear it"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Guide Book")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Map of another world. It Slumbers with sunken ships")), 1, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Guide Book"), QT_TR_NOOP("Map of another world. It Slumbers with sunken ships"), 1, QStringLiteral(":/items/item"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //nothing 106-127
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("DON'T USE")), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {QT_TR_NOOP("DON'T USE"), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         //cloud weapons 128 -143
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Buster Sword")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Initial equiping")), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Buster Sword"), QT_TR_NOOP("Initial equiping"), 4, QStringLiteral(":/items/sword"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mythril Saber")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Mythril Saber"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hardedge")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Hardedge"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Butterfly Edge")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Butterfly Edge"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Enhance Sword")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Enhance Sword"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 8, 4, 0, 0, 0, 0, 0, 0, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Organics")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Organics"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal Sword")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Crystal Sword"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Force Stealer")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Force Stealer"), QString(), 4, QStringLiteral(":/items/sword"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Rune Blade")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Rune Blade"), QString(), 4, QStringLiteral(":/items/sword"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Murasame")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Murasame"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Nail Bat")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Nail Bat"), QString(), 4, QStringLiteral(":/items/sword"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Yoshiyuki")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Sword is used when an ally is down")), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Yoshiyuki"), QT_TR_NOOP("Sword is used when an ally is down"), 4, QStringLiteral(":/items/sword"),
             0, 2, 0, 0, 0, 0, 0, 0, 0, +9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Apocalypse")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Apocalypse"), QString(), 4, QStringLiteral(":/items/sword"),
             3, 3, 0, 0, 0, 0, 0, 0, 0, +43, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Heaven's Cloud")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Heaven's Cloud"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 6, 0, 0, 0, 0, 0, 0, 0, +31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ragnarok")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Ragnarok"), QString(), 4, QStringLiteral(":/items/sword"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +43, +35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ultima Weapon")), QString(), 4, QStringLiteral(":/items/sword"),
+            QT_TR_NOOP("Ultima Weapon"), QString(), 4, QStringLiteral(":/items/sword"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +51, +24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //tifa's weapons 144-159/tifa's weapons 144-159
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Leather Glove")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Leather Glove"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Metal Knuckle")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Metal Knuckle"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mythril Claw")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Mythril Claw"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Grand Glove")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Grand Glove"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tiger Fang")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Tiger Fang"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Diamond Knuckle")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Diamond Knuckle"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dragon Claw")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Dragon Claw"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal Glove")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Crystal Glove"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Motor Drive")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Motor Drive"), QString(), 6, QStringLiteral(":/items/glove"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Platinum Fist")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Platinum Fist"), QString(), 6, QStringLiteral(":/items/glove"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Kaiser Knuckle")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Kaiser Knuckle"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 8, 1, 0, 0, 0, 0, 0, 0, +13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Work Glove")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Work Glove"), QString(), 6, QStringLiteral(":/items/glove"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Powersoul")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Power up when [Near death]")), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Powersoul"), QT_TR_NOOP("Power up when [Near death]"), 6, QStringLiteral(":/items/glove"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Master Fist")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Power up when condition changes")), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Master Fist"), QT_TR_NOOP("Power up when condition changes"), 6, QStringLiteral(":/items/glove"),
             1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("God's Hand")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("God's Hand"), QString(), 6, QStringLiteral(":/items/glove"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Premium Heart")), QString(), 6, QStringLiteral(":/items/glove"),
+            QT_TR_NOOP("Premium Heart"), QString(), 6, QStringLiteral(":/items/glove"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //barret's weapons 160-175
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gatling Gun")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Initial equip. Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Gatling Gun"), QT_TR_NOOP("Initial equip. Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Assault Gun")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Assault Gun"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Cannon Ball")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Cannon Ball"), QString(), 5, QStringLiteral(":/items/gunarm"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Atomic Scissors")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Atomic Scissors"), QString(), 5, QStringLiteral(":/items/gunarm"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Heavy Vulcan")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Heavy Vulcan"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Chainsaw")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Chainsaw"), QString(), 5, QStringLiteral(":/items/gunarm"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Microlaser")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Microlaser"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("A M Cannon")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("A M Cannon"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("W Machine Gun")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("W Machine Gun"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Drill Arm")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Drill Arm"), QString(), 5, QStringLiteral(":/items/gunarm"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Solid Bazooka")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Solid Bazooka"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 8, 4, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Rocket Punch")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Rocket Punch"), QString(), 5, QStringLiteral(":/items/gunarm"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Enemy Launcher")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Enemy Launcher"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 5, 1, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Pile Banger")), QString(), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Pile Banger"), QString(), 5, QStringLiteral(":/items/gunarm"),
             0, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Max Ray")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Max Ray"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Missing Score")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 5, QStringLiteral(":/items/gunarm"),
+            QT_TR_NOOP("Missing Score"), QT_TR_NOOP("Long Range Weapon"), 5, QStringLiteral(":/items/gunarm"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //red's weapons 176-189
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mythril Clip")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Mythril Clip"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Diamond Pin")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Diamond Pin"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Silver Barrette")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Silver Barrette"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gold Barrette")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Gold Barrette"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Adaman Clip")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Adaman Clip"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal Comb")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Crystal Comb"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Magic Comb")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Magic Comb"), QString(), 7, QStringLiteral(":/items/clip"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Plus Barrette")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Plus Barrette"), QString(), 7, QStringLiteral(":/items/clip"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Centclip")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Centclip"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 8, 0, 0, 0, 0, 0, 0, 0, +22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hairpin")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Hairpin"), QT_TR_NOOP("Long Range Weapon"), 7, QStringLiteral(":/items/clip"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Seraph Comb")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Memento of father")), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Seraph Comb"), QT_TR_NOOP("Memento of father"), 7, QStringLiteral(":/items/clip"),
             1, 4, 0, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Behemoth Horn")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Behemoth Horn"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 6, 0, 0, 0, 0, +35, 0, 0, +26, +18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Spring Gun Clip")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Spring Gun Clip"), QString(), 7, QStringLiteral(":/items/clip"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Limited Moon")), QString(), 7, QStringLiteral(":/items/clip"),
+            QT_TR_NOOP("Limited Moon"), QString(), 7, QStringLiteral(":/items/clip"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //aeris weapons 190-200
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Guard Stick")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Guard Stick"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 1, 0, 0, 0, 0, +1, 0, 0, +2, +4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mythril Rod")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Mythril Rod"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, +3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Full Metal Staff")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Full Metal Staff"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Striking Staff")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Striking Staff"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Prism Staff")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Prism Staff"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Aurora Rod")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Aurora Rod"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Wizard Staff")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Wizard Staff"), QString(), 8, QStringLiteral(":/items/staff"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Wizer Staff")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Wizer Staff"), QString(), 8, QStringLiteral(":/items/staff"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fairy Tale")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Fairy Tale"), QString(), 8, QStringLiteral(":/items/staff"),
             1, 7, 0, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Umbrella")), QString(), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Umbrella"), QString(), 8, QStringLiteral(":/items/staff"),
             0, 0, 0, 0, 0, 0, +20, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Princess Guard")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Raises Power when you need to protect others nearby")), 8, QStringLiteral(":/items/staff"),
+            QT_TR_NOOP("Princess Guard"), QT_TR_NOOP("Raises Power when you need to protect others nearby"), 8, QStringLiteral(":/items/staff"),
             1, 7, 3, 0, 0, 0, +12, 0, 0, +22, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //cid weapons 201-214
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Spear")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Spear"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Slash Lance")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Slash Lance"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Trident")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Trident"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 6, 0, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mast Ax")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Mast Ax"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Partisan")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Partisan"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Viper Halberd")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Viper Halberd"), QString(), 9, QStringLiteral(":/items/spear"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Javelin")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Javelin"), QString(), 9, QStringLiteral(":/items/spear"),
             2, 5, 2, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Grow Lance")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Grow Lance"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mop")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Mop"), QString(), 9, QStringLiteral(":/items/spear"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dragoon Lance")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Dragoon Lance"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 8, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Scimitar")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Scimitar"), QString(), 9, QStringLiteral(":/items/spear"),
             3, 2, 1, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Flayer")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Flayer"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 6, 0, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Spirit Lance")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Spirit Lance"), QString(), 9, QStringLiteral(":/items/spear"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +43, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Venus Gospel")), QString(), 9, QStringLiteral(":/items/spear"),
+            QT_TR_NOOP("Venus Gospel"), QString(), 9, QStringLiteral(":/items/spear"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //yuffie weapons 215-228
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("4-point Shuriken")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("4-point Shuriken"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, +6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Boomerang")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Boomerang"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Pinwheel")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Pinwheel"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Razor Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Razor Ring"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Hawkeye")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Hawkeye"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal Cross")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Crystal Cross"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Wind Slash")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Wind Slash"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Twin Viper")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Twin Viper"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Spiral Shuriken")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Spiral Shuriken"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 8, 1, 0, 0, 0, 0, 0, 0, +18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Superball")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Superball"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Magic Shuriken")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Magic Shuriken"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 3, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Rising Sun")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Rising Sun"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             2, 4, 2, 0, 0, 0, 0, 0, 0, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Oritsuru")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Oritsuru"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             1, 8, 2, 0, 0, 0, 0, 0, 0, +38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Conformer")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 10, QStringLiteral(":/items/star"),
+            QT_TR_NOOP("Conformer"), QT_TR_NOOP("Long Range Weapon"), 10, QStringLiteral(":/items/star"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //cait sith weapons 229-241
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Yellow M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Yellow M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Green M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Green M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Blue M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Blue M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Red M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Red M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Crystal M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("White M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("White M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             2, 3, 0, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Black M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Black M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Silver M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Silver M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 8, 0, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Trumpet Shell")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Trumpet Shell"), QString(), 11, QStringLiteral(":/items/mphone"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gold M-phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Gold M-phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 8, 4, 0, 0, 0, 0, 0, 0, +28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Battle Trumpet")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Battle Trumpet"), QString(), 11, QStringLiteral(":/items/mphone"),
             0, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Starlight Phone")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("Starlight Phone"), QString(), 11, QStringLiteral(":/items/mphone"),
             1, 8, 4, 0, 0, 0, +30, 0, 0, +31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("HP Shout")), QString(), 11, QStringLiteral(":/items/mphone"),
+            QT_TR_NOOP("HP Shout"), QString(), 11, QStringLiteral(":/items/mphone"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //vincent weapons... 242-254
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Quicksilver")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Quicksilver"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shotgun")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Shotgun"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shortbarrel")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Shortbarrel"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Lariat")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Lariat"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 6, 2, 0, 0, 0, 0, 0, 0, +16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Winchester")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Winchester"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, +18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Peacemaker")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Peacemaker"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             2, 3, 1, 0, 0, 0, 0, 0, 0, +8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Buntline")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Buntline"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             2, 4, 2, 0, 0, 0, 0, 0, 0, +18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Long Barrel R")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Long Barrel R"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 8, 4, 0, 0, 0, 0, 0, 0, +14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Silver Rifle")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Silver Rifle"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Sniper CR")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Sniper CR"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, +7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Supershot ST")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Supershot ST"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             0, 6, 3, 0, 0, 0, 0, 0, 0, +52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Outsider")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Outsider"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             1, 8, 2, 0, 0, 0, 0, 0, 0, +48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Death Penalty")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Long Range Weapon")), 12, QStringLiteral(":/items/gun"),
+            QT_TR_NOOP("Death Penalty"), QT_TR_NOOP("Long Range Weapon"), 12, QStringLiteral(":/items/gun"),
             0, 8, 4, 0, 0, 0, 0, 0, 0, +34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //sepi weapon =255
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Masamune")), QString(), 0, QStringLiteral(":/items/item"),
+            QT_TR_NOOP("Masamune"), QString(), 0, QStringLiteral(":/items/item"),
             0, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //armor  256-287
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Bronze Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Bronze Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Iron Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Iron Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Titan Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Titan Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mythril Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Mythril Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Carbon Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Carbon Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Silver Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Silver Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gold Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Gold Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Diamond Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Diamond Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Crystal Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Crystal Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Platinum Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Platinum Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Rune Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Rune Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Edincoat")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Edincoat"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 7, 0, 0, 0, 0, 0, 0, 0, +5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Wizard Bracelet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Wizard Bracelet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 8, 4, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Adaman Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Adaman Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Gigas Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Gigas Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             0, 5, 2, 0, 0, +30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Imperial Guard")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Imperial Guard"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Aegis Armlet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Aegis Armlet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fourth Bracelet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Fourth Bracelet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 5, 2, 0, 0, 0, 0, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Warrior Bangle")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Warrior Bangle"), QString(), 2, QStringLiteral(":/items/armor"),
             0, 4, 2, 0, 0, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shinra Beta")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Shinra Beta"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Shinra Alpha")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Shinra Alpha"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Four Slots")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Four Slots"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fire Armlet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains [Fire] attacks")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Fire Armlet"), QT_TR_NOOP("Drains [Fire] attacks"), 2, QStringLiteral(":/items/armor"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Aurora Armlet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains [Cold] attacks")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Aurora Armlet"), QT_TR_NOOP("Drains [Cold] attacks"), 2, QStringLiteral(":/items/armor"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Bolt Armlet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains [Lightning] attacks")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Bolt Armlet"), QT_TR_NOOP("Drains [Lightning] attacks"), 2, QStringLiteral(":/items/armor"),
             1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Dragon Armlet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains 1/2 [Fire/Cold/Lightning] attack")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Dragon Armlet"), QT_TR_NOOP("Drains 1/2 [Fire/Cold/Lightning] attack"), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Minerva Band")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Women's Armlet nullifies [Fire/Cold/Gravity/Holy]")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Minerva Band"), QT_TR_NOOP("Women's Armlet nullifies [Fire/Cold/Gravity/Holy]"), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, 0, 0, 0, 0, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Escort Guard")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Man's Armlet nullifies [Lightning/Earth/Water/Poison]")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Escort Guard"), QT_TR_NOOP("Man's Armlet nullifies [Lightning/Earth/Water/Poison]"), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, 0, -2, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Mystile")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Mystile"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ziedrich")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Decreases all elemental attacks by 1/2")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Ziedrich"), QT_TR_NOOP("Decreases all elemental attacks by 1/2"), 2, QStringLiteral(":/items/armor"),
             0, 0, 0, 0, 0, +20, 0, 0, 0, +20, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Precious Watch")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("A gorgeous watch")), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Precious Watch"), QT_TR_NOOP("A gorgeous watch"), 2, QStringLiteral(":/items/armor"),
             1, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Chocobracelet")), QString(), 2, QStringLiteral(":/items/armor"),
+            QT_TR_NOOP("Chocobracelet"), QString(), 2, QStringLiteral(":/items/armor"),
             1, 4, 0, 0, 0, 0, 0, +30, +20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         //accessorys 288-319
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Power Wrist")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Strength +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Power Wrist"), QT_TR_NOOP("Strength +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Protect Vest")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Vitality +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Protect Vest"), QT_TR_NOOP("Vitality +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Earring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Magic +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Earring"), QT_TR_NOOP("Magic +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Talisman")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Spirit +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Talisman"), QT_TR_NOOP("Spirit +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Choco Feather")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Dexterity +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Choco Feather"), QT_TR_NOOP("Dexterity +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Amulet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Luck +10")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Amulet"), QT_TR_NOOP("Luck +10"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, +10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Champion Belt")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Power & Vitality +30")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Champion Belt"), QT_TR_NOOP("Power & Vitality +30"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, +30, +30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Poison Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains [Poison] attacks, protects against [Poison]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Poison Ring"), QT_TR_NOOP("Drains [Poison] attacks, protects against [Poison]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tough Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Vitality & Spirit +50")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Tough Ring"), QT_TR_NOOP("Vitality & Spirit +50"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, +50, 0, 0, 0, +50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Circlet")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Magic & Spirit +30")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Circlet"), QT_TR_NOOP("Magic & Spirit +30"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, +30, +30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Star Pendant")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Poison]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Star Pendant"), QT_TR_NOOP("Protects against [Poison]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Silver Glasses")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Darkness]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Silver Glasses"), QT_TR_NOOP("Protects against [Darkness]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Headband")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Sleep]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Headband"), QT_TR_NOOP("Protects against [Sleep]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fairy Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Poison/Darkness]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Fairy Ring"), QT_TR_NOOP("Protects against [Poison/Darkness]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Jem Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Paralyze/Petrify/Slow-numb]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Jem Ring"), QT_TR_NOOP("Protects against [Paralyze/Petrify/Slow-numb]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("White Cape")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Frog/Small]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("White Cape"), QT_TR_NOOP("Protects against [Frog/Small]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Sprint Shoes")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Automatically put you in [Haste]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Sprint Shoes"), QT_TR_NOOP("Automatically put you in [Haste]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Peace Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Berserk/Fury/Sadness]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Peace Ring"), QT_TR_NOOP("Protects against [Berserk/Fury/Sadness]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, 0, 0, 0, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ribbon")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against all abnormal status")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Ribbon"), QT_TR_NOOP("Protects against all abnormal status"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fire Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Nullifies [Fire] attacks")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Fire Ring"), QT_TR_NOOP("Nullifies [Fire] attacks"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Ice Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Nullifies [Cold] attacks")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Ice Ring"), QT_TR_NOOP("Nullifies [Cold] attacks"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Bolt Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Nullifies [Lightning] attacks")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Bolt Ring"), QT_TR_NOOP("Nullifies [Lightning] attacks"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Tetra Elemental")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains [Fire/Cold/Lightning/Earth] attacks")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Tetra Elemental"), QT_TR_NOOP("Drains [Fire/Cold/Lightning/Earth] attacks"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Safety Bit")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Protects against [Sudden Death/Petrify/Slow-numb]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Safety Bit"), QT_TR_NOOP("Protects against [Sudden Death/Petrify/Slow-numb]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, -2, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Fury Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Automatically puts you in [Berserk]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Fury Ring"), QT_TR_NOOP("Automatically puts you in [Berserk]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Curse Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("It increases each status but...")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Curse Ring"), QT_TR_NOOP("It increases each status but..."), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Protect Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Automatically sets up [Barrier/MBarrier]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Protect Ring"), QT_TR_NOOP("Automatically sets up [Barrier/MBarrier]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +2, +2, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Cat's Bell")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Restores HP as you walk")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Cat's Bell"), QT_TR_NOOP("Restores HP as you walk"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Reflect Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Automatically sets up [Reflect]")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Reflect Ring"), QT_TR_NOOP("Automatically sets up [Reflect]"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, +2, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Water Ring")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Drains Water attacks")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Water Ring"), QT_TR_NOOP("Drains Water attacks"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("Sneak Glove")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Increases Stealing rate")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("Sneak Glove"), QT_TR_NOOP("Increases Stealing rate"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         },
         {
-            QT_TRANSLATE_NOOP(_groupNames, QStringLiteral("HypnoCrown")), QT_TRANSLATE_NOOP(_groupDesc, QStringLiteral("Increases Manipulation rate")), 3, QStringLiteral(":/items/accessory"),
+            QT_TR_NOOP("HypnoCrown"), QT_TR_NOOP("Increases Manipulation rate"), 3, QStringLiteral(":/items/accessory"),
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         }
     };

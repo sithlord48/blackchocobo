@@ -15,11 +15,10 @@
 /****************************************************************************/
 
 #include "FF7Char.h"
-#include <QCoreApplication>
 
 const FF7Char::Character& FF7Char::character(int who)
 {
-    if(who >= 0 && who <= _charData.size() -1) {
+    if(who >= 0 && who <= 11) {
         return _charData.at(who);
     }
     return _emptyChar;
@@ -40,7 +39,7 @@ quint32 FF7Char::tnlForLevel(int who, int level)
 QString FF7Char::defaultName(int who)
 {
     who = std::clamp(who, 0, 10);
-    return qApp->translate(_nameGroup.toLocal8Bit(), _charData.at(who)._def_name.toLocal8Bit());
+    return tr(_charData.at(who)._def_name.toLocal8Bit());
 }
 
 QStringList FF7Char::limits(int who)
@@ -48,7 +47,7 @@ QStringList FF7Char::limits(int who)
     who = std::clamp(who, 0, 10);
     QStringList translated_list;
     for (const QString &limit : qAsConst(_charData.at(who)._limits)) {
-        translated_list.append(qApp->translate(_limitGroup.toLocal8Bit(), limit.toLocal8Bit()));
+        translated_list.append(tr(limit.toLocal8Bit()));
     }
     return translated_list;
 }

@@ -304,13 +304,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ff7tk/widgets/CharEditor.cpp" line="59"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2466"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2287"/>
         <source>Fury</source>
         <translation>Anger</translation>
     </message>
     <message>
         <location filename="../ff7tk/widgets/CharEditor.cpp" line="60"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2467"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2288"/>
         <source>Sadness</source>
         <translation></translation>
     </message>
@@ -320,108 +320,108 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="72"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="70"/>
         <source>Base HP</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="76"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="74"/>
         <source>Base MP</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="81"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="79"/>
         <source>Level Progress</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="87"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="85"/>
         <source>Next</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="89"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="87"/>
         <source>Exp: </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="94"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="92"/>
         <source>Limit Bar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="102"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="100"/>
         <source>Str</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="105"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="109"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="118"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="122"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="131"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="135"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="144"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="148"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="157"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="161"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="170"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="174"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="103"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="107"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="116"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="120"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="129"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="133"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="142"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="146"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="155"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="159"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="168"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="172"/>
         <source>+</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="112"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="125"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="138"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="151"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="164"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="177"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="110"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="123"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="136"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="149"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="162"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="175"/>
         <source>=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="115"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="113"/>
         <source>Vit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="128"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="126"/>
         <source>Mag</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="141"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="139"/>
         <source>Spi</source>
         <translation>Int</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="154"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="152"/>
         <source>Dex</source>
         <translation>Agi</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="167"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="165"/>
         <source>Lck</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="191"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="190"/>
         <source>Limit Uses</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="193"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="192"/>
         <source>1-1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="194"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="193"/>
         <source>2-1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="195"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="194"/>
         <source>3-1</source>
         <translation></translation>
     </message>
@@ -431,376 +431,376 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="475"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="476"/>
         <source>0x34</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="487"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="488"/>
         <source>0x35</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="499"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="500"/>
         <source>0x36</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="511"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="512"/>
         <source>0x37</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="580"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="577"/>
         <source>-NONE-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="592"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="589"/>
         <source>Elemental Effects</source>
         <translation>Force Effects</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="608"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="605"/>
         <source>Status Effects</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="834"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="830"/>
         <source>Weapon</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1047"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1043"/>
         <source>Armor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1054"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2127"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2155"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1050"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2005"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2040"/>
         <source>Accessory</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1083"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1079"/>
         <source>Status Info</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1088"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1084"/>
         <source>Equipment</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1449"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2376"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1315"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2185"/>
         <source>Next: %1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1475"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1338"/>
         <source>Young Cloud</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1478"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1339"/>
         <source>Sephiroth</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2053"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2090"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2709"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2730"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1914"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1959"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2404"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2425"/>
         <source>AP:x%1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2056"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2092"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2129"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1918"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1962"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2008"/>
         <source> Str:+%1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2059"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2095"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2132"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1922"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1966"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2012"/>
         <source> Vit:+%1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2062"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2098"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2135"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1926"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1970"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2016"/>
         <source> Dex:+%1</source>
         <translation> Agi:+%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2065"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2101"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2138"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1930"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1974"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2020"/>
         <source> Spi:+%1</source>
         <translation> Int:+%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2068"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2104"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2141"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1934"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1978"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2024"/>
         <source> Mag:+%1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2071"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2107"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2144"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1938"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1982"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2028"/>
         <source> Lck:+%1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2074"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2110"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2147"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1942"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1986"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2032"/>
         <source> Hp:+%1%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2077"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2113"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2150"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1946"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="1990"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2036"/>
         <source> Mp:+%1%</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2398"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2212"/>
         <source>Restoration</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2399"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2213"/>
         <source>Fire</source>
         <translation>Flame</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2400"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2214"/>
         <source>Cold</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2401"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2215"/>
         <source>Lightning</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2402"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2216"/>
         <source>Earth</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2403"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2217"/>
         <source>Wind</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2404"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2218"/>
         <source>Water</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2405"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2219"/>
         <source>Gravity</source>
         <translation>Gravity</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2406"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2220"/>
         <source>Holy</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2407"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2465"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2221"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2286"/>
         <source>Poison</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2408"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2222"/>
         <source>Cut</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2409"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2223"/>
         <source>Shoot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2410"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2224"/>
         <source>Punch</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2411"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2225"/>
         <source>Hit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2414"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2229"/>
         <source>Absorb:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2415"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2230"/>
         <source>Nullify:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2416"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2231"/>
         <source>Halve:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2418"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2233"/>
         <source>Attack:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2454"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2275"/>
         <source>Death</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2455"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2276"/>
         <source>Slow-Numb</source>
         <translation>Gradual-Petrif.</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2456"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2277"/>
         <source>D.Sentence</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2457"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2278"/>
         <source>Paralysis</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2458"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2279"/>
         <source>Petrify</source>
         <translation>Petrification</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2459"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2280"/>
         <source>Silence</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2460"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2281"/>
         <source>Sleep</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2461"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2282"/>
         <source>Confusion</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2462"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2283"/>
         <source>Berserk</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2463"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2284"/>
         <source>Frog</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2464"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2285"/>
         <source>Mini</source>
         <translation>Minimum</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2468"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2289"/>
         <source>Darkness</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2469"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2290"/>
         <source>Haste</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2470"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2291"/>
         <source>Slow</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2471"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2292"/>
         <source>Stop</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2472"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2293"/>
         <source>Barrier</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2473"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2294"/>
         <source>M.Barrier</source>
         <translation>Magic-Barrier</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2474"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2295"/>
         <source>Reflect</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2475"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2296"/>
         <source>Shield</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2476"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2477"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2297"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2298"/>
         <source>Regen</source>
         <translation>Regenerate</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2480"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2302"/>
         <source>Protect:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2481"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2303"/>
         <source>Remove:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2483"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2305"/>
         <source>Inflict:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2484"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2306"/>
         <source>OnBattle:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2555"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2565"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2575"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2585"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2595"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2605"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2615"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2625"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2635"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2645"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2655"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2665"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2675"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2685"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2695"/>
-        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2705"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2371"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2373"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2375"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2377"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2379"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2381"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2383"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2385"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2387"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2389"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2391"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2393"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2395"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2397"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2399"/>
+        <location filename="../ff7tk/widgets/CharEditor.cpp" line="2401"/>
         <source>-Empty-</source>
         <translation></translation>
     </message>
@@ -1217,232 +1217,8035 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
-    <name>FF7Item</name>
+    <name>FF7Achievements</name>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="127"/>
-        <source>Restoration</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="71"/>
+        <source>Dice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="128"/>
-        <source>Fire</source>
-        <translation type="unfinished">Flame</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="129"/>
-        <source>Cold</source>
-        <translation type="unfinished">Cold</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="130"/>
-        <source>Lightning</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="72"/>
+        <source>Sled Fang</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="131"/>
-        <source>Earth</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="73"/>
+        <source>Greased Lightning</source>
+        <translation>Flash Lightning</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="74"/>
+        <source>Beat Rush</source>
+        <translation type="unfinished">Palm Rush</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="75"/>
+        <source>Boost Jump</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="132"/>
-        <source>Wind</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="76"/>
+        <source>Healing Wind</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="133"/>
-        <source>Water</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="77"/>
+        <source>Galian Beast</source>
+        <translation type="unfinished">Gallian Beast</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="78"/>
+        <source>Big Shot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="134"/>
-        <source>Gravity</source>
-        <translation type="unfinished">Gravity</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="135"/>
-        <source>Holy</source>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="79"/>
+        <source>Braver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="136"/>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="178"/>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="80"/>
+        <source>First Battle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="81"/>
+        <source>Gold Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="82"/>
+        <source>Battle Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="83"/>
+        <source>Materia Overlord</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="84"/>
+        <source>Yuffie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="85"/>
+        <source>Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="86"/>
+        <source>Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="87"/>
+        <source>Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="88"/>
+        <source>Diamond Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="89"/>
+        <source>Ultimate Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="90"/>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished">Bahamut Zero</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="91"/>
+        <source>Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="92"/>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="93"/>
+        <source>All Creation</source>
+        <translation type="unfinished">All of Creation</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="94"/>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="95"/>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="96"/>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="97"/>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="98"/>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="99"/>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="100"/>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Knights of Round</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="101"/>
+        <source>Top Level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="102"/>
+        <source>Master of Gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="103"/>
+        <source>Master Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="104"/>
+        <source>End of Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="105"/>
+        <source>End of Part II</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Achievements.h" line="106"/>
+        <source>End of Part I</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FF7Char</name>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="253"/>
+        <source>Cloud</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Braver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Cross-Slash</source>
+        <translation type="unfinished">Curse Slash</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Blade Beam</source>
+        <translation type="unfinished">Rending Light</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Climhazzard</source>
+        <translation type="unfinished">Crime Hazard</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Meteorain</source>
+        <translation type="unfinished">Meteor Rain</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Finishing Touch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="254"/>
+        <location filename="../ff7tk/data/FF7Char.h" line="325"/>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="261"/>
+        <source>Barret</source>
+        <translation type="unfinished">Barrett</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Big Shot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Mindblow</source>
+        <translation type="unfinished">Mind Break</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Grenade Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Hammerblow</source>
+        <translation type="unfinished">Hammer Blow</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Satellite Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Angermax</source>
+        <translation type="unfinished">Anger Max</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="262"/>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="268"/>
+        <source>Tifa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Beat Rush</source>
+        <translation type="unfinished">Palm Rush</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Somersault</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Waterkick</source>
+        <translation type="unfinished">Surface Sweep</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Meteodrive</source>
+        <translation type="unfinished">Meteor Drive</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Dolphin Blow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Meteor Strike</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="269"/>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="276"/>
+        <source>Aerith</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Healing Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Seal Evil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Breath of the Earth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Fury Brand</source>
+        <translation type="unfinished">Brand of Fury</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Planet Protector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Pulse of Life</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="277"/>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="284"/>
+        <source>Red XIII</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Sled Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Lunatic High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Blood Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Stardust Ray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Howling Moon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Earth Rave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="285"/>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="292"/>
+        <source>Yuffie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Greased Lightning</source>
+        <translation type="unfinished">Flash Lightning</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Clear Tranquil</source>
+        <translation type="unfinished">Tranquil Mind</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Landscaper</source>
+        <translation type="unfinished">Heroic Strength</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Bloodfest</source>
+        <translation type="unfinished">Blood Sacrifice</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Gauntlet</source>
+        <translation type="unfinished">Killer Blow</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>Doom of the Living</source>
+        <translation type="unfinished">Ashes to Ashes</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="293"/>
+        <source>All Creation</source>
+        <translation type="unfinished">All of Creation</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="300"/>
+        <source>Cait Sith</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="301"/>
+        <source>Dice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="301"/>
+        <source>Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="308"/>
+        <source>Vincent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="309"/>
+        <source>Galian Beast</source>
+        <translation type="unfinished">Gallian Beast</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="309"/>
+        <source>Death Gigas</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="309"/>
+        <source>Hellmasker</source>
+        <translation type="unfinished">Hell Masker</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="309"/>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="316"/>
+        <source>Cid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Boost Jump</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Dynamite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Hyper Jump</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Dragon</source>
+        <translation type="unfinished">Dragon Mod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Dragon Dive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Big Brawl</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="317"/>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="324"/>
+        <source>Y.Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Char.h" line="332"/>
+        <source>Sephiroth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FF7FieldItemList</name>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="82"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="86"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="89"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="381"/>
+        <source>Hi-Potion</source>
+        <translation type="unfinished">High Potion</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="83"/>
+        <source>Echo Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="84"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="87"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="88"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="92"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="98"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="276"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="323"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="324"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="325"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="328"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="329"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="331"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="332"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="333"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="378"/>
+        <source>Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="85"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="100"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="133"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="146"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="153"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="278"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="311"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="337"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="379"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="380"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="386"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="423"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="426"/>
+        <source>Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="91"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="111"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="130"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="136"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="137"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="154"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="162"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="224"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="305"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="308"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="359"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="370"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="382"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="398"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="401"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="409"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="494"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="495"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="505"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="522"/>
+        <source>Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="93"/>
+        <source>Safety Bit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="94"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="411"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="435"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="447"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="469"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="473"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="500"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="519"/>
+        <source>Mind Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="95"/>
+        <source>Sneak Glove</source>
+        <translation type="unfinished">Thief&apos;s Gauntlet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="96"/>
+        <source>Premium Heart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="99"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="135"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="326"/>
+        <source>Phoenix Down</source>
+        <translation type="unfinished">Phoenix Tail</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="101"/>
+        <source>Cover</source>
+        <translation type="unfinished">Protect</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="102"/>
+        <source>Choco/Mog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="103"/>
+        <source>Sense</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="104"/>
+        <source>Ramuh</source>
+        <translation type="unfinished">Ramu</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="105"/>
+        <source>KeyItem: Mythril</source>
+        <translation type="unfinished">KeyItem: Mithril</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="107"/>
+        <source>Mime</source>
+        <translation type="unfinished">Mimic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="108"/>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="109"/>
+        <source>Quadra Magic</source>
+        <translation type="unfinished">Tetra Magic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="110"/>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Knights of Round</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="112"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="119"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="150"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="315"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="414"/>
+        <source>X-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="113"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="118"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="225"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="239"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="265"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="316"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="446"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="467"/>
+        <source>Turbo Ether</source>
+        <translation type="unfinished">Ether Turbo</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="114"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="314"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="513"/>
+        <source>Vaccine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="116"/>
+        <source>Magic Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="117"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="290"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="306"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="404"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="478"/>
+        <source>Speed Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="120"/>
+        <source>Mega All</source>
+        <translation type="unfinished">Omni All</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="121"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="222"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="227"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="476"/>
+        <source>Luck Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="122"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="511"/>
+        <source>Remedy</source>
+        <translation type="unfinished">Panacea</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="123"/>
+        <source>Bolt Ring</source>
+        <translation type="unfinished">Lightning Ring</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="125"/>
+        <source>Gold Armlet</source>
+        <translation type="unfinished">Gold Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="126"/>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="127"/>
+        <source>Umbrella</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="128"/>
+        <source>Flayer</source>
+        <translation type="unfinished">Fangtian Hua Ji</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="129"/>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="131"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="283"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="341"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="422"/>
+        <source>Enemy Skill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="134"/>
+        <source>Hyper</source>
+        <translation type="unfinished">Stimulant</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="137"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="350"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="400"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="424"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="496"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="510"/>
+        <source>Magic Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="138"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="139"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="141"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="142"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="143"/>
+        <source>KeyItem: Midgar parts</source>
+        <translation type="unfinished">KeyItem: Midgar Parts</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="144"/>
+        <source>KeyItem: Keycard 66</source>
+        <translation type="unfinished">KeyItem: Keycard 66</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="145"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="213"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="252"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="277"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="360"/>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="147"/>
+        <source>Wind Slash</source>
+        <translation type="unfinished">Kazekiri</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="148"/>
+        <source>Fairy Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="151"/>
+        <source>Added Effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="152"/>
+        <source>Black M-phone</source>
+        <translation type="unfinished">Black Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="155"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="160"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="434"/>
+        <source>HP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="156"/>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished">Fūma Shuriken</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="157"/>
+        <source>Hairpin</source>
+        <translation type="unfinished">Kanzashi</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="159"/>
+        <source>KeyItem: Keycard 62</source>
+        <translation type="unfinished">KeyItem: Keycard 62</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="161"/>
+        <source>Swift Bolt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="163"/>
+        <source>Pile Banger</source>
+        <translation type="unfinished">Pile Bunker</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="164"/>
+        <source>Master Fist</source>
+        <translation type="unfinished">Master Fist</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="165"/>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="166"/>
+        <source>Full Cure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="168"/>
+        <source>KeyItem: Member&apos;s Card</source>
+        <translation type="unfinished">KeyItem: Membership Card</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="169"/>
+        <source>KeyItem: Key to Ancients</source>
+        <translation type="unfinished">KeyItem: Key of the Ancients</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="170"/>
+        <source>KeyItem: Keystone</source>
+        <translation type="unfinished">KeyItem: Keystone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="171"/>
+        <source>KeyItem: Black Materia</source>
+        <translation type="unfinished">KeyItem: Black Materia</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="173"/>
+        <source>KeyItem: Huge Materia:Corel</source>
+        <translation type="unfinished">KeyItem: Huge Materia: Corel Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="174"/>
+        <source>Ultima</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="176"/>
+        <source>KeyItem: Snowboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="177"/>
+        <source>KeyItem: Glacier Map</source>
+        <translation type="unfinished">KeyItem: Map of Great Glacier</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="179"/>
+        <source>Shiva</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="181"/>
+        <source>KeyItem: Cologne</source>
+        <translation type="unfinished">KeyItem: Cologne</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="182"/>
+        <source>KeyItem: Flower Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="183"/>
+        <source>KeyItem: Sexy Cologne</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="185"/>
+        <source>KeyItem: Pharmacy Coupon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="186"/>
+        <source>KeyItem: Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="187"/>
+        <source>KeyItem: Dyed Wig</source>
+        <translation type="unfinished">KeyItem: Brown Wig</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="188"/>
+        <source>KeyItem: Blonde Wig</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="190"/>
+        <source>KeyItem: Cotton Dress</source>
+        <translation type="unfinished">KeyItem: Cotton Dress</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="191"/>
+        <source>KeyItem: Satin Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="192"/>
+        <source>KeyItem: Silk Dress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="194"/>
+        <source>KeyItem: Disinfectant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="195"/>
+        <source>KeyItem: Deodorant</source>
+        <translation type="unfinished">KeyItem: Deodorant</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="196"/>
+        <source>KeyItem: Digestive</source>
+        <translation type="unfinished">KeyItem: Digestive</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="198"/>
+        <source>KeyItem: Glass Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="199"/>
+        <source>KeyItem: Ruby Tiara</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="200"/>
+        <source>KeyItem: Diamond Tiara</source>
+        <translation type="unfinished">KeyItem: Diamond Tiara</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="202"/>
+        <source>Batteries</source>
+        <translation type="unfinished">Zinc Batteries</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="204"/>
+        <source>Phoenix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="206"/>
+        <source>Magic Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="207"/>
+        <source>Peace Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="208"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="336"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="374"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="396"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="397"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="406"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="407"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="429"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="453"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="491"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="506"/>
+        <source>Megalixir</source>
+        <translation type="unfinished">Last Elixir</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="209"/>
+        <source>Super Ball</source>
+        <translation type="unfinished">Bouncy Ball</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="211"/>
+        <source>Alexander</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="212"/>
+        <source>Added Cut</source>
+        <translation type="unfinished">Added Attack</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="215"/>
+        <source>Can Advance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="217"/>
+        <source>KeyItem: KeyCard 68</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="218"/>
+        <source>KeyItem: Lunar Harp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="219"/>
+        <source>KeyItem: Key To Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="221"/>
+        <source>Mind Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="226"/>
+        <source>Platinum Fist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="229"/>
+        <source>KeyItem: Gold Ticket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="230"/>
+        <source>Gil Plus</source>
+        <translation type="unfinished">Gil Plus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="231"/>
+        <source>Exp Plus</source>
+        <translation type="unfinished">Experience Plus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="232"/>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished">Hermes&apos; Sandles</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="233"/>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="234"/>
+        <source>W-Summon</source>
+        <translation type="unfinished">Double Summon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="236"/>
+        <source>Found hidden draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="238"/>
+        <source>Stole boys 5 gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="241"/>
+        <source>KeyItem: Keycard 60</source>
+        <translation type="unfinished">KeyItem: Keycard 60</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="243"/>
+        <source>Initialized the Machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="244"/>
+        <source>KeyItem: A Coupon</source>
+        <translation type="unfinished">KeyItem: Coupon A</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="245"/>
+        <source>KeyItem: B Coupon</source>
+        <translation type="unfinished">KeyItem: Coupon B</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="246"/>
+        <source>KeyItem: C Coupon</source>
+        <translation type="unfinished">KeyItem: Coupon C</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="251"/>
+        <source>Star Pendant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="253"/>
+        <source>Four Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="256"/>
+        <source>Grow Lance</source>
+        <translation type="unfinished">Glow Lance</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="258"/>
+        <source>KeyItem: Keycard 65</source>
+        <translation type="unfinished">KeyItem: Keycard 65</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="260"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="361"/>
+        <source>Elemental</source>
+        <translation type="unfinished">Force</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="262"/>
+        <source>MP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="264"/>
+        <source>Bahamut Zero</source>
+        <translation type="unfinished">Bahamut Zero</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="267"/>
+        <source>Turtle Paradise Flyer #1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="268"/>
+        <source>Turtle Paradise Flyer #2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="269"/>
+        <source>Turtle Paradise Flyer #3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="270"/>
+        <source>Turtle Paradise Flyer #4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="271"/>
+        <source>Turtle Paradise Flyer #5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="272"/>
+        <source>Turtle Paradise Flyer #6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="273"/>
+        <source>Turtle Paradise Flyer #7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="274"/>
+        <source>Rewarded for viewing all Turtle Paradise Flyers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="280"/>
+        <source>KeyItem: Bikini briefs</source>
+        <translation type="unfinished">KeyItem: Bikini Underwear</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="281"/>
+        <source>KeyItem: Lingerie</source>
+        <translation type="unfinished">KeyItem: Lingerie</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="285"/>
+        <source>Work Glove</source>
+        <translation type="unfinished">Work Glove</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="286"/>
+        <source>Nail Bat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="288"/>
+        <source>Rewards From Ester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="291"/>
+        <source>Ink</source>
+        <translation type="unfinished">Cuttlefish Ink</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="292"/>
+        <source>T/S Bomb</source>
+        <translation type="unfinished">Spacetime Bomb</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="293"/>
+        <source>Dragon Fang</source>
+        <translation type="unfinished">Twin Dragon Fang</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="295"/>
+        <source>Dragon Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="296"/>
+        <source>Cauldron</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="297"/>
+        <source>Chocobo Lure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="299"/>
+        <source>Final Heaven (+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="301"/>
+        <source>Elemental(+other stuff?)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="303"/>
+        <source>Enhance Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="304"/>
+        <source>Fire Armlet</source>
+        <translation type="unfinished">Inferno Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="307"/>
+        <source>Javelin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="309"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="457"/>
+        <source>Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="312"/>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="313"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="320"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="512"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="520"/>
+        <source>Hero Drink</source>
+        <translation type="unfinished">Hero Medicine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="318"/>
+        <source>Neo Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="319"/>
+        <source>Poison Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="321"/>
+        <source>MP Turbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="327"/>
         <source>Poison</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="137"/>
-        <source>Cut</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="334"/>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished">Thunder Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="335"/>
+        <source>HypnoCrown</source>
+        <translation type="unfinished">Hypno Crown</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="338"/>
+        <source>Kujata</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="138"/>
-        <source>Shoot</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="340"/>
+        <source>Destruct</source>
+        <translation type="unfinished">Extinguish</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="342"/>
+        <source>Odin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="139"/>
-        <source>Punch</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="343"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="515"/>
+        <source>Counter</source>
+        <translation type="unfinished">Command Counter</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="344"/>
+        <source>Magic Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="140"/>
-        <source>Hit</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="346"/>
+        <source>Steal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="143"/>
-        <source>Absorb:</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="347"/>
+        <source>Twin Viper</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="144"/>
-        <source>Nullify:</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="348"/>
+        <source>Silver M-phone</source>
+        <translation type="unfinished">Silver Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="349"/>
+        <source>Enemy Launcher</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="145"/>
-        <source>Halve:</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="351"/>
+        <source>Buntline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="147"/>
-        <source>Attack:</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="352"/>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished">Aurora Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="353"/>
+        <source>Viper Halberd</source>
+        <translation type="unfinished">She Mao</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="355"/>
+        <source>Rune Blade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="167"/>
-        <source>Death</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="356"/>
+        <source>Plus Barrette</source>
+        <translation type="unfinished">Platinum Barrette</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="357"/>
+        <source>Powersoul</source>
+        <translation type="unfinished">Oversoul</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="358"/>
+        <source>Sniper CR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="168"/>
-        <source>Slow-Numb</source>
-        <translation type="unfinished">Gradual-Petrif.</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="169"/>
-        <source>D.Sentence</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="363"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="408"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="416"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="462"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="470"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="474"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="501"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="507"/>
+        <source>Power Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="170"/>
-        <source>Paralysis</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="364"/>
+        <source>Water Ring</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="171"/>
-        <source>Petrify</source>
-        <translation type="unfinished">Petrification</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="172"/>
-        <source>Silence</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="365"/>
+        <source>Typhon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="173"/>
-        <source>Sleep</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="366"/>
+        <source>Supershot ST</source>
+        <translation type="unfinished">Highbrow ST</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="367"/>
+        <source>Slash-All</source>
+        <translation type="unfinished">Strike All</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="368"/>
+        <source>Minerva Band</source>
+        <translation type="unfinished">Minerva Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="369"/>
+        <source>Apocalypse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="174"/>
-        <source>Confusion</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="372"/>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished">Spriggan Clip</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="373"/>
+        <source>Mop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="175"/>
-        <source>Berserk</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="375"/>
+        <source>KeyItem: Key To Sector 5</source>
+        <translation type="unfinished">KeyItem: District 5 Gate Key</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="377"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="436"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="471"/>
+        <source>Tent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="176"/>
-        <source>Frog</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="383"/>
+        <source>Long Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="177"/>
-        <source>Mini</source>
-        <translation type="unfinished">Minimum</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="179"/>
-        <source>Fury</source>
-        <translation type="unfinished">Anger</translation>
-    </message>
-    <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="180"/>
-        <source>Sadness</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="384"/>
+        <source>Titan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="181"/>
-        <source>Darkness</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="387"/>
+        <source>Comet</source>
+        <translation type="unfinished">Meteorite</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="388"/>
+        <source>Deathblow</source>
+        <translation type="unfinished">Death Blow</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="389"/>
+        <source>Hades</source>
+        <translation type="unfinished">Hades</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="390"/>
+        <source>Outsider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="182"/>
-        <source>Haste</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="391"/>
+        <source>Escort Guard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="183"/>
-        <source>Slow</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="392"/>
+        <source>Conformer</source>
+        <translation type="unfinished">Eternal Nemesis</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="393"/>
+        <source>Spirit Lance</source>
+        <translation type="unfinished">Longinus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="395"/>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished">Ama no Murakumo</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="399"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="410"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="425"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="428"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="431"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="475"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="502"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="509"/>
+        <source>Guard Source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="184"/>
-        <source>Stop</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="402"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="503"/>
+        <source>Mystile</source>
+        <translation type="unfinished">Mystère</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="405"/>
+        <source>Tetra Elemental</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="185"/>
-        <source>Barrier</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="413"/>
+        <source>White M-phone</source>
+        <translation type="unfinished">White Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="415"/>
+        <source>Drill Arm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="186"/>
-        <source>M.Barrier</source>
-        <translation type="unfinished">Magic-Barrier</translation>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="417"/>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished">Mutsunokami Yoshiyuki</translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="187"/>
-        <source>Reflect</source>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="418"/>
+        <source>Venus Gospel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="188"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="419"/>
+        <source>Save Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="420"/>
+        <source>Peacemaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="427"/>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished">Force Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="432"/>
+        <source>Double Cut</source>
+        <translation type="unfinished">Consecutive Cut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="433"/>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="438"/>
+        <source>Show Underwater</source>
+        <translation type="unfinished">Show Diving</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="439"/>
+        <source>Show Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="440"/>
+        <source>Show Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="441"/>
+        <source>Show Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="442"/>
+        <source>Show Gold Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="444"/>
+        <source>Morph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="445"/>
+        <source>Luck Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="450"/>
+        <source>Princess Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="451"/>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished">Triton Trumpet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="454"/>
+        <source>Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="455"/>
+        <source>Trident</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="456"/>
+        <source>Rocket Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="458"/>
+        <source>Silver Rifle</source>
+        <translation type="unfinished">BB Gun</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="460"/>
+        <source>Motor Drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="461"/>
+        <source>Fire Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="463"/>
+        <source>Purchased The House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="465"/>
+        <source>W Machine Gun</source>
+        <translation type="unfinished">Machine Gun</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="466"/>
+        <source>Transform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="477"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="479"/>
+        <source>1/35 soldier</source>
+        <translation type="unfinished">1:35 Soldier</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="481"/>
+        <source>KeyItem: Leviathan Scales</source>
+        <translation type="unfinished">KeyItem: Scales of Levathan</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="482"/>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">Added Steal</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="483"/>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="484"/>
+        <source>W-Item</source>
+        <translation type="unfinished">Double Item</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="485"/>
+        <source>Max Ray</source>
+        <translation type="unfinished">Maximum Ray</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="486"/>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">Aegis Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="487"/>
+        <source>Scimitar</source>
+        <translation type="unfinished">Qing Long</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="489"/>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="490"/>
+        <source>Leviathan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="492"/>
+        <source>Oritsuru</source>
+        <translation type="unfinished">Orizuru</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="493"/>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">Starlight Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="498"/>
+        <source>KeyItem: Huge Materia:Rocket</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="504"/>
+        <source>Missing Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="514"/>
         <source>Shield</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="189"/>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="516"/>
+        <source>W-Magic</source>
+        <translation type="unfinished">Double Magic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="518"/>
+        <source>Imperial Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7FieldItemList.h" line="523"/>
+        <source>Contain</source>
+        <translation type="unfinished">Forbidden</translation>
+    </message>
+</context>
+<context>
+    <name>FF7Item</name>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="126"/>
+        <source>Restoration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="127"/>
+        <source>Fire</source>
+        <translation type="unfinished">Flame</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="128"/>
+        <source>Cold</source>
+        <translation type="unfinished">Cold</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="129"/>
+        <source>Lightning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="130"/>
+        <source>Earth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="131"/>
+        <source>Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="132"/>
+        <source>Water</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="133"/>
+        <source>Gravity</source>
+        <translation type="unfinished">Gravity</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="134"/>
+        <source>Holy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="135"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="177"/>
+        <source>Poison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="136"/>
+        <source>Cut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="137"/>
+        <source>Shoot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="138"/>
+        <source>Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="139"/>
+        <source>Hit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="142"/>
+        <source>Absorb:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="143"/>
+        <source>Nullify:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="144"/>
+        <source>Halve:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="146"/>
+        <source>Attack:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="166"/>
+        <source>Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="167"/>
+        <source>Slow-Numb</source>
+        <translation type="unfinished">Gradual-Petrif.</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="168"/>
+        <source>D.Sentence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="169"/>
+        <source>Paralysis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="170"/>
+        <source>Petrify</source>
+        <translation type="unfinished">Petrification</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="171"/>
+        <source>Silence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="172"/>
+        <source>Sleep</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="173"/>
+        <source>Confusion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="174"/>
+        <source>Berserk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="175"/>
+        <source>Frog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="176"/>
+        <source>Mini</source>
+        <translation type="unfinished">Minimum</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="178"/>
+        <source>Fury</source>
+        <translation type="unfinished">Anger</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="179"/>
+        <source>Sadness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="180"/>
+        <source>Darkness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="181"/>
+        <source>Haste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="182"/>
+        <source>Slow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="183"/>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="184"/>
+        <source>Barrier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="185"/>
+        <source>M.Barrier</source>
+        <translation type="unfinished">Magic-Barrier</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="186"/>
+        <source>Reflect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="187"/>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="188"/>
         <source>Regen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="190"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="189"/>
         <source>Resist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="193"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="192"/>
         <source>Protect:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="194"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="193"/>
         <source>Remove:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="196"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="195"/>
         <source>Inflict:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Item.cpp" line="197"/>
+        <location filename="../ff7tk/data/FF7Item.cpp" line="196"/>
         <source>OnBattle:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="660"/>
+        <source>Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="660"/>
+        <source>Restores 100 HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="664"/>
+        <source>Hi-Potion</source>
+        <translation type="unfinished">High Potion</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="664"/>
+        <source>Restores 500 HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="668"/>
+        <source>X-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="668"/>
+        <source>Restores all lost HP</source>
+        <translation type="unfinished">Fully restores HP</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="672"/>
+        <source>Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="672"/>
+        <source>Restores 100 MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="676"/>
+        <source>Turbo Ether</source>
+        <translation type="unfinished">Ether Turbo</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="676"/>
+        <source>Restores all lost MP</source>
+        <translation type="unfinished">Fully restores MP</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="680"/>
+        <source>Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="680"/>
+        <source>Fully Restores HP/MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="684"/>
+        <source>Megalixir</source>
+        <translation type="unfinished">Last Elixir</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="684"/>
+        <source>Fully Restores all Members HP/MP</source>
+        <translation type="unfinished">Fully restores HP/MP for all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="688"/>
+        <source>Phoenix Down</source>
+        <translation type="unfinished">Phoenix Tail</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="688"/>
+        <source>Restores life</source>
+        <translation type="unfinished">Restores an ally who is Knocked Out</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="692"/>
+        <source>Antidote</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="692"/>
+        <source>Cures [Poison]</source>
+        <translation type="unfinished">Cures Poison</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="696"/>
+        <source>Soft</source>
+        <translation type="unfinished">Gold Needle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="696"/>
+        <source>Cures [Petrify]</source>
+        <translation type="unfinished">Cures Petrification</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="700"/>
+        <source>Maiden&apos;s Kiss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="700"/>
+        <source>Cures [Frog]</source>
+        <translation type="unfinished">Cures Frog</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="704"/>
+        <source>Cornucopia</source>
+        <translation type="unfinished">Uchide Mallet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="704"/>
+        <source>Cures [Mini]</source>
+        <translation type="unfinished">Cures Minimum</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="708"/>
+        <source>Echo Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="708"/>
+        <source>Cures [Silence]</source>
+        <translation type="unfinished">Cures Silence</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="712"/>
+        <source>Hyper</source>
+        <translation type="unfinished">Stimulant</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="712"/>
+        <source>Cures [Sadness]</source>
+        <translation type="unfinished">Cures Sadness</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="716"/>
+        <source>Tranquilizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="716"/>
+        <source>Cures [Fury]</source>
+        <translation type="unfinished">Cures Anger</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="720"/>
+        <source>Remedy</source>
+        <translation type="unfinished">Panacea</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="720"/>
+        <source>Cures abnormal status</source>
+        <translation type="unfinished">Cures status abnormalities</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="724"/>
+        <source>Smoke Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="724"/>
+        <source>Can escape from opponents during battle</source>
+        <translation type="unfinished">Escape from battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="728"/>
+        <source>Speed Drink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="728"/>
+        <source>Casts [Haste] on one ally</source>
+        <translation type="unfinished">Causes [Haste] to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="732"/>
+        <source>Hero Drink</source>
+        <translation type="unfinished">Hero Medicine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="732"/>
+        <source>Raises ability once during battle</source>
+        <translation type="unfinished">Temporarily raises ability during battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="736"/>
+        <source>Vaccine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="736"/>
+        <source>Protects against transformations</source>
+        <translation type="unfinished">Provides immunity to status changes</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="740"/>
+        <source>Grenade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="740"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="880"/>
+        <source>Explosive damage against one opponent</source>
+        <translation type="unfinished">Explosive damage to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="744"/>
+        <source>Shrapnel</source>
+        <translation type="unfinished">Bomb&apos;s Fragment</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="744"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="748"/>
+        <source>Explosive damage against all opponents</source>
+        <translation type="unfinished">Explosive damage to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="748"/>
+        <source>Right arm</source>
+        <translation type="unfinished">Bomb&apos;s Right Arm</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="752"/>
+        <source>Hourglass</source>
+        <translation type="unfinished">Gold Hourglass</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="752"/>
+        <source>Stops all opponents</source>
+        <translation type="unfinished">Causes Stop to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="756"/>
+        <source>Kiss of Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="756"/>
+        <source>Uses [Death] on all opponents</source>
+        <translation type="unfinished">Causes Death to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="760"/>
+        <source>Spider Web</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="760"/>
+        <source>Slows all opponents</source>
+        <translation type="unfinished">Causes Slow to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="764"/>
+        <source>Dream Powder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="764"/>
+        <source>Uses [Sleepel] on all opponents</source>
+        <translation type="unfinished">Causes Sleep to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="768"/>
+        <source>Mute Mask</source>
+        <translation type="unfinished">Silence Mask</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="768"/>
+        <source>Uses [Silence] on all opponents</source>
+        <translation type="unfinished">Causes Silence to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="772"/>
+        <source>War Gong</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="772"/>
+        <source>Uses [Berserk] on all opponents</source>
+        <translation type="unfinished">Causes Berserk to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="776"/>
+        <source>Loco weed</source>
+        <translation type="unfinished">Confusion Weed</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="776"/>
+        <source>Uses [Confu] on all opponents</source>
+        <translation type="unfinished">Causes Confusion to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="780"/>
+        <source>Fire Fang</source>
+        <translation type="unfinished">Red Dragon Fang</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="780"/>
+        <source>Uses [Fire2] on all opponents</source>
+        <translation type="unfinished">Fira to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="784"/>
+        <source>Fire Veil</source>
+        <translation type="unfinished">Katon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="784"/>
+        <source>Uses [Fire3] on all opponents</source>
+        <translation type="unfinished">Firaga to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="788"/>
+        <source>Antarctic Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="788"/>
+        <source>Uses [Ice2] on all opponents</source>
+        <translation type="unfinished">Blizzara to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="792"/>
+        <source>Ice Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="792"/>
+        <source>Uses [Ice3] on all opponents</source>
+        <translation type="unfinished">Blizzaga to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="796"/>
+        <source>Bolt Plume</source>
+        <translation type="unfinished">Thunderbird Horn</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="796"/>
+        <source>Uses [Bolt2] on all opponents</source>
+        <translation type="unfinished">Thundara to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="800"/>
+        <source>Swift Bolt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="800"/>
+        <source>Uses [Bolt3] on all opponents</source>
+        <translation type="unfinished">Thundaga to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="804"/>
+        <source>Earth Drum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="804"/>
+        <source>Uses [Quake2] on all opponents</source>
+        <translation type="unfinished">Quara to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="808"/>
+        <source>Earth Mallet</source>
+        <translation type="unfinished">Earth Hammer</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="808"/>
+        <source>Uses [Quake3] on all opponents</source>
+        <translation type="unfinished">Quaga to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="812"/>
+        <source>Deadly Waste</source>
+        <translation type="unfinished">Toxic Waste</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="812"/>
+        <source>Uses [Bio2] on all opponents</source>
+        <translation type="unfinished">Biora to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="816"/>
+        <source>M-Tentacles</source>
+        <translation type="unfinished">Morbor Tentacles</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="816"/>
+        <source>Uses [Bio3] on all opponents</source>
+        <translation type="unfinished">Bioga to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="820"/>
+        <source>Stardust</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="820"/>
+        <source>Uses [Comet2] on all opponents</source>
+        <translation type="unfinished">Cometeor to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="824"/>
+        <source>Vampire Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="824"/>
+        <source>Drains HP out of one opponent</source>
+        <translation type="unfinished">Absorbs HP from one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="828"/>
+        <source>Ghost Hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="828"/>
+        <source>Drains MP out of one opponent</source>
+        <translation type="unfinished">Absorbs MP from one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="832"/>
+        <source>Vagyrisk Claw</source>
+        <translation type="unfinished">Basilisk Claw</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="832"/>
+        <source>Petrifies one opponent</source>
+        <translation type="unfinished">Causes Petrification to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="836"/>
+        <source>Light Curtain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="836"/>
+        <source>Creates [Barrier] around all allies</source>
+        <translation type="unfinished">Barrier to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="840"/>
+        <source>Lunar Curtain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="840"/>
+        <source>Creates [MBarrier] around all allies</source>
+        <translation type="unfinished">Magic Barrier to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="844"/>
+        <source>Mirror</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="844"/>
+        <source>Uses [Reflect] on all allies</source>
+        <translation type="unfinished">Reflect to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="848"/>
+        <source>Holy Torch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="848"/>
+        <source>Uses [DeSpell] on all allies</source>
+        <translation type="unfinished">Dispel to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="852"/>
+        <source>Bird Wing</source>
+        <translation type="unfinished">Feather</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="852"/>
+        <source>Uses whirlwind on all opponents</source>
+        <translation type="unfinished">Causes a great whirlwind to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="856"/>
+        <source>Dragon Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="856"/>
+        <source>Water damage on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="860"/>
+        <source>Impaler</source>
+        <translation type="unfinished">Shrike&apos;s Prey</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="860"/>
+        <source>Changes one opponent to a frog</source>
+        <translation type="unfinished">Causes Frog</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="864"/>
+        <source>Shrivel</source>
+        <translation type="unfinished">Miniaturizer</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="864"/>
+        <source>Uses [Mini] on one opponent</source>
+        <translation type="unfinished">Uses [Mini] on one opponent</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="868"/>
+        <source>Eye drop</source>
+        <translation type="unfinished">Eye Drops</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="868"/>
+        <source>Cures [Darkness]</source>
+        <translation type="unfinished">Cures Darkness</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="872"/>
+        <source>Molotov</source>
+        <translation type="unfinished">Firebomb</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="872"/>
+        <source>Fire damage on one opponent</source>
+        <translation type="unfinished">Flame damage to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="876"/>
+        <source>S-mine</source>
+        <translation type="unfinished">S-Mine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="876"/>
+        <source>Explosive damage on one opponent</source>
+        <translation type="unfinished">Explosive damage to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="880"/>
+        <source>8-inch Cannon</source>
+        <translation type="unfinished">203mm Shell</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="884"/>
+        <source>Graviball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="884"/>
+        <source>Uses [Demi] against one opponent</source>
+        <translation type="unfinished">Gravity to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="888"/>
+        <source>T/S Bomb</source>
+        <translation type="unfinished">Spacetime Bomb</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="888"/>
+        <source>Uses [Demi2] against one opponent</source>
+        <translation type="unfinished">Gravira to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="892"/>
+        <source>Ink</source>
+        <translation type="unfinished">Cuttlefish Ink</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="892"/>
+        <source>Uses [Darkness] against one opponent</source>
+        <translation type="unfinished">Causes Darkness to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="896"/>
+        <source>Dazers</source>
+        <translation type="unfinished">Numbing Needles</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="896"/>
+        <source>Paralyzes one opponent</source>
+        <translation type="unfinished">Causes Paralysis to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="900"/>
+        <source>Dragon Fang</source>
+        <translation type="unfinished">Twin Dragon Fang</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="900"/>
+        <source>Lightning damage against all opponents</source>
+        <translation type="unfinished">Lightning damage to all targets</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="904"/>
+        <source>Cauldron</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="904"/>
+        <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
+        <translation type="unfinished">Causes Poison/Confusion/Sleep/Silence/Minimum/Frog to one target</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="908"/>
+        <source>Sylkis Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="908"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="912"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="916"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="920"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="924"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="928"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="932"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="936"/>
+        <source>When you want a chocobo...</source>
+        <translation type="unfinished">When you give this to a chocobo…</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="912"/>
+        <source>Reagan Greens</source>
+        <translation type="unfinished">Miracle Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="916"/>
+        <source>Mimett Greens</source>
+        <translation type="unfinished">Mimetite Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="920"/>
+        <source>Curiel Greens</source>
+        <translation type="unfinished">Curie Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="924"/>
+        <source>Pahsana Greens</source>
+        <translation type="unfinished">Pashana Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="928"/>
+        <source>Tantal Greens</source>
+        <translation type="unfinished">Tantalum Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="932"/>
+        <source>Krakka Greens</source>
+        <translation type="unfinished">Karaka Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="936"/>
+        <source>Gysahl Greens</source>
+        <translation type="unfinished">Gysahl Greens</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="940"/>
+        <source>Tent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="940"/>
+        <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
+        <translation type="unfinished">Fully restores HP/MP of all allies (usable at Save Points)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="944"/>
+        <source>Power Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="944"/>
+        <source>Raises [Strength]</source>
+        <translation type="unfinished">Increases Strength</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="948"/>
+        <source>Guard Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="948"/>
+        <source>Raises [Vitality]</source>
+        <translation type="unfinished">Increases Vitality</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="952"/>
+        <source>Magic Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="952"/>
+        <source>Raises [Magic Power]</source>
+        <translation type="unfinished">Increases Magic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="956"/>
+        <source>Mind Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="956"/>
+        <source>Raises [Spirit]</source>
+        <translation type="unfinished">Increases Intellect</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="960"/>
+        <source>Speed Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="960"/>
+        <source>Raises [Dexterity]</source>
+        <translation type="unfinished">Increases Agility</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="964"/>
+        <source>Luck Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="964"/>
+        <source>Raises [Luck]</source>
+        <translation type="unfinished">Increases Luck</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="968"/>
+        <source>Zeio Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="968"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="972"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="976"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="980"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="984"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="988"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="992"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="996"/>
+        <source>When you want to breed Chocobos...</source>
+        <translation type="unfinished">When you are raising chocobos…</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="972"/>
+        <source>Carob Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="976"/>
+        <source>Porov Nut</source>
+        <translation type="unfinished">Polov Nut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="980"/>
+        <source>Pram Nut</source>
+        <translation type="unfinished">Paramu Nut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="984"/>
+        <source>Lasan Nut</source>
+        <translation type="unfinished">Lasan Nut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="988"/>
+        <source>Saraha Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="992"/>
+        <source>Luchile Nut</source>
+        <translation type="unfinished">Rutile Nut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="996"/>
+        <source>Pepio Nut</source>
+        <translation type="unfinished">Pipio Nut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1000"/>
+        <source>Battery</source>
+        <translation type="unfinished">Zinc Battery</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1000"/>
+        <source>Looks like it can start some sort of machine</source>
+        <translation type="unfinished">Looks like it will power some sort of machine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1004"/>
+        <source>Tissue</source>
+        <translation type="unfinished">Pocket Tissues</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1004"/>
+        <source>This one&apos;s a little tough...</source>
+        <translation type="unfinished">It&apos;s kind of depressing…</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1008"/>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1008"/>
+        <source>Learn Limit Skill [Omnislash]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Omnislash</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1012"/>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1012"/>
+        <source>Learn Limit Skill [Catastrophe]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Catastrophe</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1016"/>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1016"/>
+        <source>Learn Limit Skill [Final Heaven]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Final Heaven</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1020"/>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1020"/>
+        <source>Learn Limit Skill [Great Gospel]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Great Gospel</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1024"/>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1024"/>
+        <source>Learn Limit Skill [Cosmo Memory]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Cosmo Memory</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1028"/>
+        <source>All Creation</source>
+        <translation type="unfinished">All of Creation</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1028"/>
+        <source>Learn Limit Skill [All Creation]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: All of Creation</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1032"/>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1032"/>
+        <source>Learn Limit Skill [Chaos]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Chaos</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1036"/>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1036"/>
+        <source>Learn Limit Skill [Highwind]</source>
+        <translation type="unfinished">Teaches the ultimate Limit skill: Highwind</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1040"/>
+        <source>1/35 soldier</source>
+        <translation type="unfinished">1:35 Soldier</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1040"/>
+        <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
+        <translation type="unfinished">A scale model set: 12 Shin-Ra armored grenadiers</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1044"/>
+        <source>Super Sweeper</source>
+        <translation type="unfinished">Superalloy Sweeper</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1044"/>
+        <source>A new machine to protect the reactor!</source>
+        <translation type="unfinished">The latest in mechanized Mako reactor defences!</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1048"/>
+        <source>Masamune Blade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1048"/>
+        <source>A prefect copy of Sephiroth&apos;s sword!</source>
+        <translation type="unfinished">Replica of Sephiroth&apos;s sword! Feel like a real Soldier!</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1052"/>
+        <source>Save Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1052"/>
+        <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
+        <translation type="unfinished">Creates a Save Point in the Great Crater</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1056"/>
+        <source>Combat Diary</source>
+        <translation type="unfinished">Dio&apos;s Combat Diary</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1056"/>
+        <source>A record of Master Dio&apos;s fiercest battles</source>
+        <translation type="unfinished">Master Dio&apos;s Diary: Life as a Fierce Warrior</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1060"/>
+        <source>Autograph</source>
+        <translation type="unfinished">Signed Shikishi</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1060"/>
+        <source>Dio&apos;s autograph</source>
+        <translation type="unfinished">Signed Shikishi of the incredible Master Dio</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1064"/>
+        <source>Gambler</source>
+        <translation type="unfinished">Life of a Gambler</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1064"/>
+        <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
+        <translation type="unfinished">Master Dio&apos;s Diary - Part 2: The Gold Saucer Years</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1068"/>
+        <source>Desert Rose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1068"/>
+        <source>Blooms once every 1000 years</source>
+        <translation type="unfinished">Blooms in the desert once every 1000 years</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1072"/>
+        <source>Earth Harp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1072"/>
+        <source>Calms the hearts of all who hear it</source>
+        <translation type="unfinished">Calms the hearts of all who hear it</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1076"/>
+        <source>Guide Book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1076"/>
+        <source>Map of another world. It Slumbers with sunken ships</source>
+        <translation type="unfinished">Map of another world that slumbered with a sunken ship</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1080"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1081"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1082"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1083"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1084"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1085"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1086"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1087"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1088"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1089"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1090"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1091"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1092"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1093"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1094"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1095"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1096"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1097"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1098"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1099"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1100"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1101"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1102"/>
+        <source>DON&apos;T USE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1105"/>
+        <source>Buster Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1105"/>
+        <source>Initial equiping</source>
+        <translation type="unfinished">Initial sword</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1109"/>
+        <source>Mythril Saber</source>
+        <translation type="unfinished">Mithril Saber</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1113"/>
+        <source>Hardedge</source>
+        <translation type="unfinished">Hard Breaker</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1117"/>
+        <source>Butterfly Edge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1121"/>
+        <source>Enhance Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1125"/>
+        <source>Organics</source>
+        <translation type="unfinished">Ogrenyx</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1129"/>
+        <source>Crystal Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1133"/>
+        <source>Force Stealer</source>
+        <translation type="unfinished">Force Eater</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1137"/>
+        <source>Rune Blade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1141"/>
+        <source>Murasame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1145"/>
+        <source>Nail Bat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1149"/>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished">Mutsunokami Yoshiyuki</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1149"/>
+        <source>Sword is used when an ally is down</source>
+        <translation type="unfinished">Reveals its power when allies are Knocked Out</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1153"/>
+        <source>Apocalypse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1157"/>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished">Ama no Murakumo</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1161"/>
+        <source>Ragnarok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1165"/>
+        <source>Ultima Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1170"/>
+        <source>Leather Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1174"/>
+        <source>Metal Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1178"/>
+        <source>Mythril Claw</source>
+        <translation type="unfinished">Mithril Claw</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1182"/>
+        <source>Grand Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1186"/>
+        <source>Tiger Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1190"/>
+        <source>Diamond Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1194"/>
+        <source>Dragon Claw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1198"/>
+        <source>Crystal Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1202"/>
+        <source>Motor Drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1206"/>
+        <source>Platinum Fist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1210"/>
+        <source>Kaiser Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1214"/>
+        <source>Work Glove</source>
+        <translation type="unfinished">Work Glove</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1218"/>
+        <source>Powersoul</source>
+        <translation type="unfinished">Oversoul</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1218"/>
+        <source>Power up when [Near death]</source>
+        <translation type="unfinished">Powers up when user is at Critical</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1222"/>
+        <source>Master Fist</source>
+        <translation type="unfinished">Master Fist</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1222"/>
+        <source>Power up when condition changes</source>
+        <translation type="unfinished">Powers up when user is inflicted with status abnormalities</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1226"/>
+        <source>God&apos;s Hand</source>
+        <translation type="unfinished">God Hand</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1230"/>
+        <source>Premium Heart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1235"/>
+        <source>Gatling Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1235"/>
+        <source>Initial equip. Long Range Weapon</source>
+        <translation type="unfinished">Initial gun (long range weapon)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1239"/>
+        <source>Assault Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1239"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1251"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1259"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1263"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1267"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1275"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1283"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1291"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1295"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1336"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1459"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1463"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1467"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1471"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1475"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1479"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1483"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1487"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1491"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1495"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1499"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1503"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1507"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1511"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1569"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1573"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1577"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1581"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1585"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1589"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1593"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1597"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1601"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1605"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1609"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1613"/>
+        <location filename="../ff7tk/data/FF7Item.h" line="1617"/>
+        <source>Long Range Weapon</source>
+        <translation type="unfinished">Long range weapon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1243"/>
+        <source>Cannon Ball</source>
+        <translation type="unfinished">Cannonball</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1247"/>
+        <source>Atomic Scissors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1251"/>
+        <source>Heavy Vulcan</source>
+        <translation type="unfinished">Hard Vulcan</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1255"/>
+        <source>Chainsaw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1259"/>
+        <source>Microlaser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1263"/>
+        <source>A M Cannon</source>
+        <translation type="unfinished">A.M. Cannon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1267"/>
+        <source>W Machine Gun</source>
+        <translation type="unfinished">Machine Gun</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1271"/>
+        <source>Drill Arm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1275"/>
+        <source>Solid Bazooka</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1279"/>
+        <source>Rocket Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1283"/>
+        <source>Enemy Launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1287"/>
+        <source>Pile Banger</source>
+        <translation type="unfinished">Pile Bunker</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1291"/>
+        <source>Max Ray</source>
+        <translation type="unfinished">Maximum Ray</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1295"/>
+        <source>Missing Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1300"/>
+        <source>Mythril Clip</source>
+        <translation type="unfinished">Mithril Clip</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1304"/>
+        <source>Diamond Pin</source>
+        <translation type="unfinished">Glass Hairpin</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1308"/>
+        <source>Silver Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1312"/>
+        <source>Gold Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1316"/>
+        <source>Adaman Clip</source>
+        <translation type="unfinished">Adaman Clip</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1320"/>
+        <source>Crystal Comb</source>
+        <translation type="unfinished">Crystal Comb</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1324"/>
+        <source>Magic Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1328"/>
+        <source>Plus Barrette</source>
+        <translation type="unfinished">Platinum Barrette</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1332"/>
+        <source>Centclip</source>
+        <translation type="unfinished">Saint Clip</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1336"/>
+        <source>Hairpin</source>
+        <translation type="unfinished">Kanzashi</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1340"/>
+        <source>Seraph Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1340"/>
+        <source>Memento of father</source>
+        <translation type="unfinished">Memento of father</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1344"/>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1348"/>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished">Spriggan Clip</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1352"/>
+        <source>Limited Moon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1357"/>
+        <source>Guard Stick</source>
+        <translation type="unfinished">Guard Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1361"/>
+        <source>Mythril Rod</source>
+        <translation type="unfinished">Mithril Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1365"/>
+        <source>Full Metal Staff</source>
+        <translation type="unfinished">Full Metal Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1369"/>
+        <source>Striking Staff</source>
+        <translation type="unfinished">Striking Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1373"/>
+        <source>Prism Staff</source>
+        <translation type="unfinished">Prism Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1377"/>
+        <source>Aurora Rod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1381"/>
+        <source>Wizard Staff</source>
+        <translation type="unfinished">Wizard Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1385"/>
+        <source>Wizer Staff</source>
+        <translation type="unfinished">Wiser Rod</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1389"/>
+        <source>Fairy Tale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1393"/>
+        <source>Umbrella</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1397"/>
+        <source>Princess Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1397"/>
+        <source>Raises Power when you need to protect others nearby</source>
+        <translation type="unfinished">Powers up when allies are in need of protection</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1402"/>
+        <source>Spear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1406"/>
+        <source>Slash Lance</source>
+        <translation type="unfinished">Slash Pike</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1410"/>
+        <source>Trident</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1414"/>
+        <source>Mast Ax</source>
+        <translation type="unfinished">Pole Axe</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1418"/>
+        <source>Partisan</source>
+        <translation type="unfinished">Partizan</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1422"/>
+        <source>Viper Halberd</source>
+        <translation type="unfinished">She Mao</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1426"/>
+        <source>Javelin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1430"/>
+        <source>Grow Lance</source>
+        <translation type="unfinished">Glow Lance</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1434"/>
+        <source>Mop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1438"/>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1442"/>
+        <source>Scimitar</source>
+        <translation type="unfinished">Qing Long</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1446"/>
+        <source>Flayer</source>
+        <translation type="unfinished">Fangtian Hua Ji</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1450"/>
+        <source>Spirit Lance</source>
+        <translation type="unfinished">Longinus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1454"/>
+        <source>Venus Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1459"/>
+        <source>4-point Shuriken</source>
+        <translation type="unfinished">Cross Shuriken</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1463"/>
+        <source>Boomerang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1467"/>
+        <source>Pinwheel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1471"/>
+        <source>Razor Ring</source>
+        <translation type="unfinished">Chakram</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1475"/>
+        <source>Hawkeye</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1479"/>
+        <source>Crystal Cross</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1483"/>
+        <source>Wind Slash</source>
+        <translation type="unfinished">Kazekiri</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1487"/>
+        <source>Twin Viper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1491"/>
+        <source>Spiral Shuriken</source>
+        <translation type="unfinished">Manji Shuriken</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1495"/>
+        <source>Superball</source>
+        <translation type="unfinished">Bouncy Ball</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1499"/>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished">Fūma Shuriken</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1503"/>
+        <source>Rising Sun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1507"/>
+        <source>Oritsuru</source>
+        <translation type="unfinished">Orizuru</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1511"/>
+        <source>Conformer</source>
+        <translation type="unfinished">Eternal Nemesis</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1516"/>
+        <source>Yellow M-phone</source>
+        <translation type="unfinished">Yellow Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1520"/>
+        <source>Green M-phone</source>
+        <translation type="unfinished">Green Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1524"/>
+        <source>Blue M-phone</source>
+        <translation type="unfinished">Blue Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1528"/>
+        <source>Red M-phone</source>
+        <translation type="unfinished">Red Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1532"/>
+        <source>Crystal M-phone</source>
+        <translation type="unfinished">Crystal Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1536"/>
+        <source>White M-phone</source>
+        <translation type="unfinished">White Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1540"/>
+        <source>Black M-phone</source>
+        <translation type="unfinished">Black Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1544"/>
+        <source>Silver M-phone</source>
+        <translation type="unfinished">Silver Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1548"/>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished">Triton Trumpet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1552"/>
+        <source>Gold M-phone</source>
+        <translation type="unfinished">Gold Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1556"/>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1560"/>
+        <source>Starlight Phone</source>
+        <translation type="unfinished">Starlight Megaphone</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1564"/>
+        <source>HP Shout</source>
+        <translation type="unfinished">Marvelous Cheer</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1569"/>
+        <source>Quicksilver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1573"/>
+        <source>Shotgun</source>
+        <translation type="unfinished">SPAS</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1577"/>
+        <source>Shortbarrel</source>
+        <translation type="unfinished">Randall</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1581"/>
+        <source>Lariat</source>
+        <translation type="unfinished">Riot</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1585"/>
+        <source>Winchester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1589"/>
+        <source>Peacemaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1593"/>
+        <source>Buntline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1597"/>
+        <source>Long Barrel R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1601"/>
+        <source>Silver Rifle</source>
+        <translation type="unfinished">BB Gun</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1605"/>
+        <source>Sniper CR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1609"/>
+        <source>Supershot ST</source>
+        <translation type="unfinished">Highbrow ST</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1613"/>
+        <source>Outsider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1617"/>
+        <source>Death Penalty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1622"/>
+        <source>Masamune</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1627"/>
+        <source>Bronze Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1631"/>
+        <source>Iron Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1635"/>
+        <source>Titan Bangle</source>
+        <translation type="unfinished">Titanium Bangle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1639"/>
+        <source>Mythril Armlet</source>
+        <translation type="unfinished">Mithril Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1643"/>
+        <source>Carbon Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1647"/>
+        <source>Silver Armlet</source>
+        <translation type="unfinished">Silver Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1651"/>
+        <source>Gold Armlet</source>
+        <translation type="unfinished">Gold Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1655"/>
+        <source>Diamond Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1659"/>
+        <source>Crystal Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1663"/>
+        <source>Platinum Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1667"/>
+        <source>Rune Armlet</source>
+        <translation type="unfinished">Rune Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1671"/>
+        <source>Edincoat</source>
+        <translation type="unfinished">Agincourt</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1675"/>
+        <source>Wizard Bracelet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1679"/>
+        <source>Adaman Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1683"/>
+        <source>Gigas Armlet</source>
+        <translation type="unfinished">Gigas Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1687"/>
+        <source>Imperial Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1691"/>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished">Aegis Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1695"/>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished">Force Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1699"/>
+        <source>Warrior Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1703"/>
+        <source>Shinra Beta</source>
+        <translation type="unfinished">Cheap Armor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1707"/>
+        <source>Shinra Alpha</source>
+        <translation type="unfinished">Revised Armor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1711"/>
+        <source>Four Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1715"/>
+        <source>Fire Armlet</source>
+        <translation type="unfinished">Inferno Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1715"/>
+        <source>Drains [Fire] attacks</source>
+        <translation type="unfinished">Absorbs Flame damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1719"/>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished">Aurora Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1719"/>
+        <source>Drains [Cold] attacks</source>
+        <translation type="unfinished">Absorbs Cold damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1723"/>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished">Thunder Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1723"/>
+        <source>Drains [Lightning] attacks</source>
+        <translation type="unfinished">Absorbs Lightning damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1727"/>
+        <source>Dragon Armlet</source>
+        <translation type="unfinished">Dragon Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1727"/>
+        <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
+        <translation type="unfinished">Halves Flame/Cold/Lightning damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1731"/>
+        <source>Minerva Band</source>
+        <translation type="unfinished">Minerva Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1731"/>
+        <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
+        <translation type="unfinished">Women&apos;s Armlet nullifies [Flame/Cold/Gravity/Holy]</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1735"/>
+        <source>Escort Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1735"/>
+        <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
+        <translation type="unfinished">For men: Nullifies Lightning/Earth/Water/Poison damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1739"/>
+        <source>Mystile</source>
+        <translation type="unfinished">Mystère</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1743"/>
+        <source>Ziedrich</source>
+        <translation type="unfinished">Seydlitz</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1743"/>
+        <source>Decreases all elemental attacks by 1/2</source>
+        <translation type="unfinished">Halves all Force based damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1747"/>
+        <source>Precious Watch</source>
+        <translation type="unfinished">Luxury Watch</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1747"/>
+        <source>A gorgeous watch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1751"/>
+        <source>Chocobracelet</source>
+        <translation type="unfinished">Choco Bracelet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1756"/>
+        <source>Power Wrist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1756"/>
+        <source>Strength +10</source>
+        <translation type="unfinished">Strength +10</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1760"/>
+        <source>Protect Vest</source>
+        <translation type="unfinished">Bulletproof Vest</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1760"/>
+        <source>Vitality +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1764"/>
+        <source>Earring</source>
+        <translation type="unfinished">Earrings</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1764"/>
+        <source>Magic +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1768"/>
+        <source>Talisman</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1768"/>
+        <source>Spirit +10</source>
+        <translation type="unfinished">Intellect +10</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1772"/>
+        <source>Choco Feather</source>
+        <translation type="unfinished">Chocobo Feather</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1772"/>
+        <source>Dexterity +10</source>
+        <translation type="unfinished">Agility +10</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1776"/>
+        <source>Amulet</source>
+        <translation type="unfinished">Omamori</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1776"/>
+        <source>Luck +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1780"/>
+        <source>Champion Belt</source>
+        <translation type="unfinished">Championship Belt</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1780"/>
+        <source>Power &amp; Vitality +30</source>
+        <translation type="unfinished">Power / Vitality +30</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1784"/>
+        <source>Poison Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1784"/>
+        <source>Drains [Poison] attacks, protects against [Poison]</source>
+        <translation type="unfinished">Absorbs Poison damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1788"/>
+        <source>Tough Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1788"/>
+        <source>Vitality &amp; Spirit +50</source>
+        <translation type="unfinished">Vitality / Intellect +50</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1792"/>
+        <source>Circlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1792"/>
+        <source>Magic &amp; Spirit +30</source>
+        <translation type="unfinished">Magic / Intellect +30</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1796"/>
+        <source>Star Pendant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1796"/>
+        <source>Protects against [Poison]</source>
+        <translation type="unfinished">Protects against Poison</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1800"/>
+        <source>Silver Glasses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1800"/>
+        <source>Protects against [Darkness]</source>
+        <translation type="unfinished">Protects against Darkness</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1804"/>
+        <source>Headband</source>
+        <translation type="unfinished">Hachimaki</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1804"/>
+        <source>Protects against [Sleep]</source>
+        <translation type="unfinished">Protects against Sleep</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1808"/>
+        <source>Fairy Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1808"/>
+        <source>Protects against [Poison/Darkness]</source>
+        <translation type="unfinished">Protects against Poison/Darkness</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1812"/>
+        <source>Jem Ring</source>
+        <translation type="unfinished">Jewel Ring</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1812"/>
+        <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
+        <translation type="unfinished">Immunity to Paralysis/Petrification/Gradual Petrification</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1816"/>
+        <source>White Cape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1816"/>
+        <source>Protects against [Frog/Small]</source>
+        <translation type="unfinished">Protects against Frog/Minimum</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1820"/>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished">Hermes&apos; Sandles</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1820"/>
+        <source>Automatically put you in [Haste]</source>
+        <translation type="unfinished">Causes Haste automatically in battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1824"/>
+        <source>Peace Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1824"/>
+        <source>Protects against [Berserk/Fury/Sadness]</source>
+        <translation type="unfinished">Protects against Confusion/Berserk/Anger/Sadness</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1828"/>
+        <source>Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1828"/>
+        <source>Protects against all abnormal status</source>
+        <translation type="unfinished">Protects against most status abnormalities</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1832"/>
+        <source>Fire Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1832"/>
+        <source>Nullifies [Fire] attacks</source>
+        <translation type="unfinished">Nullifies Flame damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1836"/>
+        <source>Ice Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1836"/>
+        <source>Nullifies [Cold] attacks</source>
+        <translation type="unfinished">Nullifies Cold damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1840"/>
+        <source>Bolt Ring</source>
+        <translation type="unfinished">Lightning Ring</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1840"/>
+        <source>Nullifies [Lightning] attacks</source>
+        <translation type="unfinished">Nullifies Lightning damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1844"/>
+        <source>Tetra Elemental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1844"/>
+        <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
+        <translation type="unfinished">Absorbs Flame/Cold/Lightning/Earth damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1848"/>
+        <source>Safety Bit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1848"/>
+        <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
+        <translation type="unfinished">Immunity to Death/Death-Sentence/Petrification</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1852"/>
+        <source>Fury Ring</source>
+        <translation type="unfinished">Rage Ring</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1852"/>
+        <source>Automatically puts you in [Berserk]</source>
+        <translation type="unfinished">Causes Berserk automatically in battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1856"/>
+        <source>Curse Ring</source>
+        <translation type="unfinished">Cursed Ring</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1856"/>
+        <source>It increases each status but...</source>
+        <translation type="unfinished">Some stats are increased,but…</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1860"/>
+        <source>Protect Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1860"/>
+        <source>Automatically sets up [Barrier/MBarrier]</source>
+        <translation type="unfinished">Barrier/Magic Barrier automatically in battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1864"/>
+        <source>Cat&apos;s Bell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1864"/>
+        <source>Restores HP as you walk</source>
+        <translation type="unfinished">Restores HP when walking</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1868"/>
+        <source>Reflect Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1868"/>
+        <source>Automatically sets up [Reflect]</source>
+        <translation type="unfinished">Causes Reflect automatically in battle</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1872"/>
+        <source>Water Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1872"/>
+        <source>Drains Water attacks</source>
+        <translation type="unfinished">Absorbs Water damage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1876"/>
+        <source>Sneak Glove</source>
+        <translation type="unfinished">Thief&apos;s Gauntlet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1876"/>
+        <source>Increases Stealing rate</source>
+        <translation type="unfinished">Increases Steal rate</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1880"/>
+        <source>HypnoCrown</source>
+        <translation type="unfinished">Hypno Crown</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Item.h" line="1880"/>
+        <source>Increases Manipulation rate</source>
+        <translation type="unfinished">Increases Manipulation rate</translation>
+    </message>
+</context>
+<context>
+    <name>FF7Location</name>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="187"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="188"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="202"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="226"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="237"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="240"/>
+        <source>Midgar Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="189"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="190"/>
+        <source>Grasslands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="191"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="192"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="193"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="195"/>
+        <source>Junon Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="199"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="200"/>
+        <source>Corel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="201"/>
+        <source>Gold Saucer Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="196"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="203"/>
+        <source>Gongaga Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="204"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="241"/>
+        <source>Cosmo Area</source>
+        <translation type="unfinished">Cosmo Canyon Area</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="205"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="207"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="229"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="230"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="232"/>
+        <source>Nibel Area</source>
+        <translation type="unfinished">Nibl Area</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="206"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="235"/>
+        <source>Rocket Launch Pad Area</source>
+        <translation type="unfinished">Rocket Village Area</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="209"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="210"/>
+        <source>Wutai Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="211"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="212"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="213"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="214"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="233"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="234"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="243"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="246"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="247"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="248"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="249"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="250"/>
+        <source>Icicle Area</source>
+        <translation type="unfinished">Icicle Lodge Area</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="194"/>
+        <source>Woodlands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="197"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="198"/>
+        <source>Mideel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="208"/>
+        <source>North Corel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="215"/>
+        <source>Round Island</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="216"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="242"/>
+        <source>Last Underwater Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="217"/>
+        <source>Underwater (Gelnika)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="218"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="219"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="220"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="221"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="231"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="236"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="238"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="239"/>
+        <source>Last Worldmap Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="222"/>
+        <source>Start of Juion Ship Sequence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="223"/>
+        <source>Almost at Costa del Sol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="224"/>
+        <source>Junion -&gt; Costa Del Sol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="225"/>
+        <source>Costa del Sol -&gt; Junion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="227"/>
+        <source>Junion Area (Highwind)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="228"/>
+        <source>Junion Area (Underwater)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="244"/>
+        <source>Icile Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="245"/>
+        <source>Crater Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="252"/>
+        <source>Debug Room [ja]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="253"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="258"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="260"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="261"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="262"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="264"/>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="254"/>
+        <source>deck</source>
+        <translation type="unfinished">Deck</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="259"/>
+        <source>Bridge</source>
+        <translation type="unfinished">Highwind,Bridge</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="263"/>
+        <source>Inside airship</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="266"/>
+        <source>Old man&apos;s house</source>
+        <translation type="unfinished">Old Man&apos;s House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="267"/>
+        <source>Weapon seller</source>
+        <translation type="unfinished">Weaponsmith&apos;s Shack</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="269"/>
+        <source>Chocobo Sage&apos;s house</source>
+        <translation type="unfinished">Chocobo Sage&apos;s House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="270"/>
+        <source>???</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="271"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="272"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="273"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="274"/>
+        <source>Materia Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="276"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="277"/>
+        <source>Hallway</source>
+        <translation type="unfinished">Airship, Passageway</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="279"/>
+        <source>Research Room</source>
+        <translation type="unfinished">Airship, Laboratory</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="280"/>
+        <source>Cargo Room</source>
+        <translation type="unfinished">Airship, Cargo Room</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="281"/>
+        <source>Debug Room [en]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="283"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="466"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="467"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="468"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="470"/>
+        <source>Mt. Nibel</source>
+        <translation type="unfinished">Mt. Nibl</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="284"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="628"/>
+        <source>Platform</source>
+        <translation type="unfinished">District 1, Station</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="285"/>
+        <source>Sector 1 Station</source>
+        <translation type="unfinished">District 1, Station</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="286"/>
+        <source>Sector 1</source>
+        <translation type="unfinished">District 1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="287"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="289"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="290"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="291"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="292"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="293"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="294"/>
+        <source>No.1 Reactor</source>
+        <translation type="unfinished">Mako Reactor 1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="295"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="296"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="297"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="299"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="300"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="301"/>
+        <source>No.5 Reactor</source>
+        <translation type="unfinished">Mako Reactor 5</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="302"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="303"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="304"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="305"/>
+        <source>Sector 8</source>
+        <translation type="unfinished">District 8</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="306"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="307"/>
+        <source>Last Train From Midgar</source>
+        <translation type="unfinished">Last Train</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="309"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="310"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="311"/>
+        <source>Inside Train</source>
+        <translation type="unfinished">Passenger Car</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="312"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="313"/>
+        <source>Train Graveyard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="314"/>
+        <source>Sector 7 Station</source>
+        <translation type="unfinished">District 7 , Station</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="315"/>
+        <source>Sector 7 Weapon Shop</source>
+        <translation type="unfinished">Weapon Store, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="316"/>
+        <source>Beginner&apos;s Hall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="318"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="319"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="324"/>
+        <source>Sector 7 Slums</source>
+        <translation type="unfinished">District 7, Slums</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="320"/>
+        <source>Sector 7 Item Store</source>
+        <translation type="unfinished">General Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="321"/>
+        <source>Johnny&apos;s Home</source>
+        <translation type="unfinished">Johnny&apos;s Home</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="322"/>
+        <source>7th Heaven</source>
+        <translation type="unfinished">Seventh Heaven</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="323"/>
+        <source>AVALANCHE Hideout</source>
+        <translation type="unfinished">Avalanche Hideout</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="325"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="326"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="328"/>
+        <source>Plate Support</source>
+        <translation type="unfinished">Plate Support</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="329"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="330"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="861"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="862"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="898"/>
+        <source>Winding Tunnel</source>
+        <translation type="unfinished">Spiral Tunnel</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="331"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="332"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="333"/>
+        <source>4th Street Plate Int.</source>
+        <translation type="unfinished">Inside Plate</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="334"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="335"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="336"/>
+        <source>Lower Sector 4 Plate</source>
+        <translation type="unfinished">Underneath Plate 4</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="338"/>
+        <source>Slum Outskirts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="339"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="340"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="341"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="345"/>
+        <source>Sector 5 Slum</source>
+        <translation type="unfinished">District 5, Slums</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="342"/>
+        <source>House 1f.</source>
+        <translation type="unfinished">House, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="343"/>
+        <source>House 2f.</source>
+        <translation type="unfinished">House, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="344"/>
+        <source>Earthen Pipe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="346"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="363"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="477"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="511"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="520"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="580"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="778"/>
+        <source>Weapon Store</source>
+        <translation type="unfinished">Weapon Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="347"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="365"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="478"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="512"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="521"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="654"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="669"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="682"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="704"/>
+        <source>Item Store</source>
+        <translation type="unfinished">Item Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="349"/>
+        <source>Materia store</source>
+        <translation type="unfinished">Materia Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="350"/>
+        <source>Church</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="351"/>
+        <source>church in the slums</source>
+        <translation type="unfinished">Slum Church</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="352"/>
+        <source>Inside the Church</source>
+        <translation type="unfinished">Inside Church</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="353"/>
+        <source>Church Roof</source>
+        <translation type="unfinished">Church Attic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="354"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="355"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="357"/>
+        <source>Aerith&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="358"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="361"/>
+        <source>Sector 6</source>
+        <translation type="unfinished">District 6</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="359"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="360"/>
+        <source>Sector 6 park</source>
+        <translation type="unfinished">District 6, Park</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="362"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="373"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="388"/>
+        <source>Wall Market</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="364"/>
+        <source>Men&apos;s Hall</source>
+        <translation type="unfinished">The Manly Hall</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="366"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="655"/>
+        <source>Inn</source>
+        <translation type="unfinished">House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="368"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="513"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="522"/>
+        <source>Materia Store</source>
+        <translation type="unfinished">Materia Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="369"/>
+        <source>Boutique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="370"/>
+        <source>Diner</source>
+        <translation type="unfinished">Diner</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="371"/>
+        <source>Pharmacy</source>
+        <translation type="unfinished">Pharmacy</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="372"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="480"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="526"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="592"/>
+        <source>Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="374"/>
+        <source>Corneo Hall</source>
+        <translation type="unfinished">Corneo&apos;s Mansion</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="375"/>
+        <source>Corneo Hall,1f.</source>
+        <translation type="unfinished">Corneo Mansion, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="376"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="379"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="380"/>
+        <source>Corneo Hall,2f.</source>
+        <translation type="unfinished">Corneo Mansion, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="377"/>
+        <source>Torture Room</source>
+        <translation type="unfinished">Punishment Room</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="381"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="382"/>
+        <source>Sewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="383"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="384"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="385"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="387"/>
+        <source>Honey Bee Inn</source>
+        <translation type="unfinished">Honeybee Manor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="389"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="390"/>
+        <source>Plate Section</source>
+        <translation type="unfinished">Plate Cross Section</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="391"/>
+        <source>Sector 0</source>
+        <translation type="unfinished">District 0</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="392"/>
+        <source>Outside Plates</source>
+        <translation type="unfinished">Plate Outskirts</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="393"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="394"/>
+        <source>Shinra Bldg.</source>
+        <translation type="unfinished">Shin-Ra Building</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="395"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="397"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="398"/>
+        <source>Shinra Bldg. Stairs</source>
+        <translation type="unfinished">Shin-Ra Bldg. Staircase</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="399"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="536"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="540"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="544"/>
+        <source>Elevator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="400"/>
+        <source>Outside Elevator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="401"/>
+        <source>Shinra Bldg. 1f. lobby</source>
+        <translation type="unfinished">Shin-Ra Bldg. 1F, Lobby</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="402"/>
+        <source>Shinra Bldg. 2f. Lobby</source>
+        <translation type="unfinished">Shin-Ra Bldg. 2F, Lobby</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="403"/>
+        <source>Shinra Bldg. 2f. Shop</source>
+        <translation type="unfinished">Shin-Ra Bldg. 2F, Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="404"/>
+        <source>Shinra Bldg. 3f. Lobby</source>
+        <translation type="unfinished">Shin-Ra Bldg. 3F, Lobby</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="405"/>
+        <source>Shinra Bldg. 59f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 59F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="406"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="408"/>
+        <source>Shinra Bldg. 60f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 60F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="409"/>
+        <source>Shinra Bldg. 61f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 61F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="410"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="411"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="412"/>
+        <source>Shinra Bldg. 62f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 62F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="413"/>
+        <source>Shinra Bldg. 63f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 63F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="414"/>
+        <source>Shinra Bldg. 64f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 64F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="415"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="416"/>
+        <source>Shinra Bldg. 65f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 65F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="418"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="419"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="420"/>
+        <source>Shinra Bldg.66f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 66F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="421"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="422"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="423"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="424"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="426"/>
+        <source>Shinra Bldg.67f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 67F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="427"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="428"/>
+        <source>Shinra Bldg.68f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 68F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="429"/>
+        <source>Shinra Bldg. 69f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 69F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="430"/>
+        <source>Shinra Bldg. 70f.</source>
+        <translation type="unfinished">Shin-Ra Bldg. 70F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="432"/>
+        <source>Nibelheim Item Store</source>
+        <translation type="unfinished">Niblheim Item Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="433"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="434"/>
+        <source>Nibelheim House</source>
+        <translation type="unfinished">Niblheim House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="435"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="436"/>
+        <source>Nibelheim Inn</source>
+        <translation type="unfinished">Niblheim Inn</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="437"/>
+        <source>Cloud&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="443"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="444"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="448"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="449"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="450"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="452"/>
+        <source>Nibelheim</source>
+        <translation type="unfinished">Niblheim</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="445"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="446"/>
+        <source>Tifa&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="453"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="454"/>
+        <source>Mansion, 1f.</source>
+        <translation type="unfinished">Shin-Ra Mansion, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="455"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="457"/>
+        <source>Mansion, 2f.</source>
+        <translation type="unfinished">Shin-Ra Mansion, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="458"/>
+        <source>Mansion, Hidden Steps</source>
+        <translation type="unfinished">Hidden Stairway</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="459"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="460"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="461"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="462"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="463"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="464"/>
+        <source>Mansion, Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="469"/>
+        <source>Nibel Reactor</source>
+        <translation type="unfinished">Nibl Mako Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="471"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="472"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="474"/>
+        <source>Mt. Nibel Cave</source>
+        <translation type="unfinished">Mt. Nibl Cave</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="475"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="476"/>
+        <source>Nibel Reactor(Int.)</source>
+        <translation type="unfinished">Inside Nibl Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="481"/>
+        <source>Inn: 1f</source>
+        <translation type="unfinished">Inn, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="482"/>
+        <source>Inn: 2f</source>
+        <translation type="unfinished">Inn, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="483"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="486"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="488"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="492"/>
+        <source>House: 1f</source>
+        <translation type="unfinished">House, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="484"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="487"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="489"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="493"/>
+        <source>House: 2f</source>
+        <translation type="unfinished">House, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="485"/>
+        <source>Kalm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="491"/>
+        <source>Rear Tower (Pagoda)</source>
+        <translation type="unfinished">Rear Tower</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="494"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="495"/>
+        <source>Chocobo farm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="496"/>
+        <source>Chocobo Ranch</source>
+        <translation type="unfinished">Chocobo Stable</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="497"/>
+        <source>Marshes</source>
+        <translation type="unfinished">Marshland</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="498"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="500"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="501"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="502"/>
+        <source>Mythril Mine</source>
+        <translation type="unfinished">Mithril Mine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="503"/>
+        <source>Base of Fort Condor</source>
+        <translation type="unfinished">The Foot of Fort Condor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="504"/>
+        <source>Entrance to Fort Condor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="505"/>
+        <source>Fort Condor</source>
+        <translation type="unfinished">Fort Condor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="506"/>
+        <source>Watch Room</source>
+        <translation type="unfinished">Guardhouse</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="507"/>
+        <source>top of the mountian</source>
+        <translation type="unfinished">Mountain Top</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="509"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="510"/>
+        <source>Upper Junon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="514"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="515"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="516"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="528"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="529"/>
+        <source>Barracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="518"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="519"/>
+        <source>Lower Junon</source>
+        <translation type="unfinished">Junon (Left)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="523"/>
+        <source>Junon Inn</source>
+        <translation type="unfinished">Junon, Cheap Inn</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="524"/>
+        <source>Shinra Member&apos;s Bar</source>
+        <translation type="unfinished">Shin-Ra Members&apos; Bar</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="525"/>
+        <source>Respectable Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="530"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="531"/>
+        <source>Junon Dock</source>
+        <translation type="unfinished">Junon, Harbor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="532"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="533"/>
+        <source>Airport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="534"/>
+        <source>Junon Airport Path</source>
+        <translation type="unfinished">Junon Airport, Passage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="535"/>
+        <source>Locker Room</source>
+        <translation type="unfinished">Waiting Room</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="537"/>
+        <source>Path 2</source>
+        <translation type="unfinished">2nd Passage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="539"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="541"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="542"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="543"/>
+        <source>Junon Path</source>
+        <translation type="unfinished">Junon, Passage</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="545"/>
+        <source>Junon Branch, 1f.</source>
+        <translation type="unfinished">Junon Branch, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="546"/>
+        <source>Junon Office F2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="547"/>
+        <source>Office</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="549"/>
+        <source>Dr.&apos;s Office</source>
+        <translation type="unfinished">Doctor&apos;s Office</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="550"/>
+        <source>Press Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="551"/>
+        <source>Gas Room</source>
+        <translation type="unfinished">Gas Chamber</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="552"/>
+        <source>Submarine Dock</source>
+        <translation type="unfinished">Junon, Submarine Dock</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="554"/>
+        <source>Submarine Bridge</source>
+        <translation type="unfinished">Submarine, Bridge</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="555"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="556"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="557"/>
+        <source>Inside Submarine</source>
+        <translation type="unfinished">Submarine</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="559"/>
+        <source>Aljunon</source>
+        <translation type="unfinished">Junion (Right)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="560"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="562"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="563"/>
+        <source>Canon</source>
+        <translation type="unfinished">Cannon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="561"/>
+        <source>Junon branch,(ext.)</source>
+        <translation type="unfinished">Junon Branch, Exterior</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="564"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="565"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="566"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="568"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="569"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="570"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="571"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="572"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="573"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="574"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="575"/>
+        <source>Underwater Reactor</source>
+        <translation type="unfinished">Undersea Mako Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="576"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="581"/>
+        <source>Under Junon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="577"/>
+        <source>Dolphin Offing</source>
+        <translation type="unfinished">Dolphin&apos;s Cove</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="579"/>
+        <source>Priscilla&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="584"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="585"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="586"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="588"/>
+        <source>Cargo Ship</source>
+        <translation type="unfinished">Cargo Ship</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="589"/>
+        <source>Costa del Sol Harbor</source>
+        <translation type="unfinished">Costa del Sol, Harbor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="590"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="595"/>
+        <source>Costa del Sol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="591"/>
+        <source>Costa del Sol Inn</source>
+        <translation type="unfinished">Costa del Sol, Inn</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="593"/>
+        <source>House for Sale</source>
+        <translation type="unfinished">Former Shin-Ra Villa</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="594"/>
+        <source>Cellar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="597"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="598"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="599"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="600"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="601"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="602"/>
+        <source>North Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="603"/>
+        <source>North Corel Inn</source>
+        <translation type="unfinished">Rundown Tent</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="604"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="635"/>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">Ropeway Station</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="605"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="606"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="609"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="610"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="611"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="612"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="613"/>
+        <source>Mt. Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="608"/>
+        <source>Corel Reactor</source>
+        <translation type="unfinished">Corel Mako Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="615"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="617"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="621"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="622"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="624"/>
+        <source>Corel Prison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="616"/>
+        <source>Basement</source>
+        <translation type="unfinished">Cellar</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="618"/>
+        <source>Prison Pub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="619"/>
+        <source>Mayor&apos;s Old House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="620"/>
+        <source>Container</source>
+        <translation type="unfinished">Coates&apos; Container</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="625"/>
+        <source>Corel Desert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="626"/>
+        <source>Event square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="627"/>
+        <source>Speed square</source>
+        <translation type="unfinished">Speed Square</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="629"/>
+        <source>Round Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="631"/>
+        <source>Ghost Hotel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="632"/>
+        <source>Hotel Lobby</source>
+        <translation type="unfinished">Hotel Lobby</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="633"/>
+        <source>Hotel</source>
+        <translation type="unfinished">Guest Room</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="634"/>
+        <source>Hotel Shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="636"/>
+        <source>Terminal Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="637"/>
+        <source>Battle Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="639"/>
+        <source>Arena Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="640"/>
+        <source>Dio&apos;s Museum</source>
+        <translation type="unfinished">Dio&apos;s Showroom</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="641"/>
+        <source>Wonder Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="642"/>
+        <source>Building 1f.</source>
+        <translation type="unfinished">Building, 1F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="643"/>
+        <source>Building 2f.</source>
+        <translation type="unfinished">Building, 2F</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="644"/>
+        <source>Chocobo Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="646"/>
+        <source>Ticket Office</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="647"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="648"/>
+        <source>Jungle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="649"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="650"/>
+        <source>Meltdown Reactor</source>
+        <translation type="unfinished">Meltdown Mako Reactor</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="651"/>
+        <source>Gongaga Village</source>
+        <translation type="unfinished">Gongaga</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="652"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="681"/>
+        <source>Weapons Store</source>
+        <translation type="unfinished">Weapon Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="656"/>
+        <source>Zack&apos;s Home</source>
+        <translation type="unfinished">Zax&apos;s Home</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="657"/>
+        <source>Mayor&apos;s Home</source>
+        <translation type="unfinished">Mayor&apos;s House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="658"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="660"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="667"/>
+        <source>Cosmo Canyon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="659"/>
+        <source>Cosmo Candle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="662"/>
+        <source>Elder&apos;s Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="663"/>
+        <source>Gate of Naught</source>
+        <translation type="unfinished">&quot;Useless Door&quot;</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="664"/>
+        <source>Pub &quot;Starlet&quot; </source>
+        <translation type="unfinished">Pub: Starlet</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="665"/>
+        <source>Sealed Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="666"/>
+        <source>Materia Shop</source>
+        <translation type="unfinished">Materia Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="668"/>
+        <source>Shildra Inn</source>
+        <translation type="unfinished">Schildra Inn</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="671"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="672"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="673"/>
+        <source>Observatory</source>
+        <translation type="unfinished">Observatory</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="674"/>
+        <source>Bugen Research Center</source>
+        <translation type="unfinished">Bugen&apos;s Laboratory</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="675"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="676"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="677"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="678"/>
+        <source>Cave of the Gi</source>
+        <translation type="unfinished">Cave of the Gi Tribe</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="680"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="686"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="687"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="689"/>
+        <source>House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="683"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="684"/>
+        <source>Shanghai Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="685"/>
+        <source>Rocket Town</source>
+        <translation type="unfinished">Rocket Village</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="690"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="691"/>
+        <source>Rocket Launching Pad</source>
+        <translation type="unfinished">Launch Pad</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="692"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="700"/>
+        <source>Duct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="693"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="694"/>
+        <source>Ship Hallway</source>
+        <translation type="unfinished">Ship Passageway</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="695"/>
+        <source>Materia Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="696"/>
+        <source>Cockpit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="697"/>
+        <source>Engine Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="698"/>
+        <source>Escape Pod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="701"/>
+        <source>Wilderness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="702"/>
+        <source>Plains</source>
+        <translation type="unfinished">Plains</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="703"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="707"/>
+        <source>Wutai</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="705"/>
+        <source>Wutai, Cat&apos;s House</source>
+        <translation type="unfinished">Wutai, Cat&apos;s Mansion</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="706"/>
+        <source>Wutai, Old Man&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="709"/>
+        <source>Bar [Turtle Paradise]</source>
+        <translation type="unfinished">Bar: Turtle Lounge</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="710"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="711"/>
+        <source>Yuffie&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="712"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="713"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="714"/>
+        <source>Hidden Passage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="715"/>
+        <source>Wutai, Godo&apos;s Pagoda</source>
+        <translation type="unfinished">Pagoda of the 5 Masters</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="716"/>
+        <source>Wutai, Pagoda</source>
+        <translation type="unfinished">Pagoda of the 5 Masters</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="717"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="718"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="720"/>
+        <source>Wutai, Main Mtn.</source>
+        <translation type="unfinished">Wutai, Head Temple</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="721"/>
+        <source>Hidden Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="722"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="723"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="724"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="725"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="726"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="727"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="728"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="729"/>
+        <source>Wutai, Da-chao Statue</source>
+        <translation type="unfinished">Wutai, Da Zhao Statue</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="731"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="732"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="733"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="734"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="735"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="736"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="737"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="739"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="740"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="741"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="742"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="743"/>
+        <source>Temple of the Ancients</source>
+        <translation type="unfinished">Temple of the Ancients</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="744"/>
+        <source>Bone Village</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="745"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="746"/>
+        <source>Sleeping Forest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="747"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="748"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="749"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="750"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="751"/>
+        <source>Ancient Forest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="753"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="754"/>
+        <source>Corel Valley</source>
+        <translation type="unfinished">Corral Valley</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="755"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="760"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="766"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="767"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="769"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="770"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="774"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="775"/>
+        <source>Forgotten City</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="756"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="757"/>
+        <source>Corel Valley Cave</source>
+        <translation type="unfinished">Coral Valley Cave</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="759"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="761"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="762"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="763"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="764"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="765"/>
+        <source>Forgotten Capital</source>
+        <translation type="unfinished">Forgotten City</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="776"/>
+        <source>Water Altar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="779"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="780"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="782"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="783"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="784"/>
+        <source>Icicle Inn</source>
+        <translation type="unfinished">Icicle Lodge</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="781"/>
+        <source>Icicle Inn Bar</source>
+        <translation type="unfinished">Pub</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="785"/>
+        <source>Gast&apos;s House</source>
+        <translation type="unfinished">Gusto&apos;s House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="786"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="787"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="789"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="792"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="793"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="794"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="796"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="797"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="800"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="801"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="802"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="803"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="804"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="805"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="806"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="807"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="809"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="811"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="812"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="814"/>
+        <source>Great Glacier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="790"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="791"/>
+        <source>Frostbite Cave</source>
+        <translation type="unfinished">Cave of Ice Needles</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="795"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="808"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="813"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="815"/>
+        <source>Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="798"/>
+        <source>Great Glacier Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="816"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="817"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="818"/>
+        <source>Base of Gaea&apos;s Cliff</source>
+        <translation type="unfinished">Foot of the Cliff</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="819"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="823"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="825"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="826"/>
+        <source>Gaea&apos;s Cliff</source>
+        <translation type="unfinished">Gaia Cliff</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="821"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="822"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="824"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="827"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="828"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="829"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="830"/>
+        <source>Inside of Gaea&apos;s Cliff</source>
+        <translation type="unfinished">Inside Cliff</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="832"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="833"/>
+        <source>Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="834"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="835"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="836"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="837"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="838"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="840"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="841"/>
+        <source>Whirlwind Maze</source>
+        <translation type="unfinished">Tornado Labyrinth</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="842"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="843"/>
+        <source>Mideel</source>
+        <translation type="unfinished">Midhir Area</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="844"/>
+        <source>Mideel,Weapon Store</source>
+        <translation type="unfinished">Midhir, Weapon Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="845"/>
+        <source>Mideel,Item Store</source>
+        <translation type="unfinished">Midhir, Item Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="846"/>
+        <source>Mideel,Materia Store</source>
+        <translation type="unfinished">Midhir, Materia Store</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="848"/>
+        <source>Mideel,Clinic</source>
+        <translation type="unfinished">Midhir, Clinic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="849"/>
+        <source>Mideel,House1</source>
+        <translation type="unfinished">Midhir, House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="850"/>
+        <source>Mideel,House2</source>
+        <translation type="unfinished">Midhir, House</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="854"/>
+        <source>Coal Train</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="856"/>
+        <source>8th Street</source>
+        <translation type="unfinished">District 8</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="857"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="863"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="864"/>
+        <source>Midgar, Sector 8</source>
+        <translation type="unfinished">Midgar, District 8</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="858"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="859"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="860"/>
+        <source>Sector 8, Underground</source>
+        <translation type="unfinished">District 8, Underground</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="866"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="867"/>
+        <source>Mako Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="868"/>
+        <source>Highwind, on deck</source>
+        <translation type="unfinished">Highwind, Deck</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="869"/>
+        <source>Northern Cave Crater</source>
+        <translation type="unfinished">Great Crater, Entrance</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="870"/>
+        <source>Northern Cave</source>
+        <translation type="unfinished">Great Crater</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="871"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="872"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="873"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="875"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="876"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="877"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="878"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="879"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="880"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="881"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="882"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="883"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="884"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="886"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="887"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="888"/>
+        <source>Inside Northern Cave</source>
+        <translation type="unfinished">Inside the Great Crater</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="889"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="890"/>
+        <source>Bottom of Northern Cave</source>
+        <translation type="unfinished">Bottom of the Great Crater</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="891"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="892"/>
+        <source>Inside the Planet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="894"/>
+        <source>????</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="185"/>
+        <source>Test Fight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="175"/>
+        <source>Cloud&apos;s Past</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Location.h" line="176"/>
+        <source>Cloud&apos;s Villa</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FF7Materia</name>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="114"/>
+        <source>EMPTY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="121"/>
+        <source>MP Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="122"/>
+        <source>MP Plus +10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="122"/>
+        <source>MP Plus +20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="122"/>
+        <source>MP Plus +30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="122"/>
+        <source>MP Plus +40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="122"/>
+        <source>MP Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="123"/>
+        <source>MaxMp:+% depending on level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="126"/>
+        <source>HP Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="127"/>
+        <source>HP Plus +10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="127"/>
+        <source>HP Plus +20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="127"/>
+        <source>HP Plus +30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="127"/>
+        <source>HP Plus +40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="127"/>
+        <source>HP Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="128"/>
+        <source>MaxHp:+% depending on level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="132"/>
+        <source>Speed Plus</source>
+        <translation type="unfinished">Agility Plus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="133"/>
+        <source>Speed Plus +10%</source>
+        <translation type="unfinished">Agility Plus 10%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="133"/>
+        <source>Speed Plus +20%</source>
+        <translation type="unfinished">Agility Plus +20%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="133"/>
+        <source>Speed Plus +30%</source>
+        <translation type="unfinished">Agility Plus +30%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="133"/>
+        <source>Speed Plus +40%</source>
+        <translation type="unfinished">Agility Plus +40%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="133"/>
+        <source>Speed Plus +50%</source>
+        <translation type="unfinished">Agility Plus +50%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="134"/>
+        <source>Dex:+% depending on level</source>
+        <translation type="unfinished">Agi:+% depending on level</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="138"/>
+        <source>Magic Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="139"/>
+        <source>Magic Plus +10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="139"/>
+        <source>Magic Plus +20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="139"/>
+        <source>Magic Plus +30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="139"/>
+        <source>Magic Plus +40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="139"/>
+        <source>Magic Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="140"/>
+        <source>Mag:+% depending on level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="144"/>
+        <source>Luck Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="145"/>
+        <source>Luck Plus +10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="145"/>
+        <source>Luck Plus +20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="145"/>
+        <source>Luck Plus +30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="145"/>
+        <source>Luck Plus +40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="145"/>
+        <source>Luck Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="146"/>
+        <source>Lck:+% depending on level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="150"/>
+        <source>EXP Plus</source>
+        <translation type="unfinished">Experience Plus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="151"/>
+        <source>Exp Plus +50%</source>
+        <translation type="unfinished">Experience Plus +50%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="151"/>
+        <source>Exp Plus +100%</source>
+        <translation type="unfinished">Experience Plus +100%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="152"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="158"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="164"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="176"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="368"/>
+        <source>Lck:+1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="156"/>
+        <source>Gil Plus</source>
+        <translation type="unfinished">Gil Plus</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="157"/>
+        <source>Gil Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="157"/>
+        <source>Gil Plus +100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="162"/>
+        <source>Enemy Away</source>
+        <translation type="unfinished">Enemy Evade</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="163"/>
+        <source>Encounter Rate -50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="163"/>
+        <source>Encounter Rate -75%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="168"/>
+        <source>Enemy Lure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="169"/>
+        <source>Encounter Rate +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="169"/>
+        <source>Encounter Rate +100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="170"/>
+        <source>Lck:-1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="174"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="175"/>
+        <source>Chocobo Lure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="175"/>
+        <source>Chocobo Lure +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="175"/>
+        <source>Chocobo Lure +100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="175"/>
+        <source>Chocobo Lure +200%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="180"/>
+        <source>Pre-emptive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="181"/>
+        <source>Pre-emptive +6%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="181"/>
+        <source>Pre-emptive +12%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="181"/>
+        <source>Pre-emptive +24%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="181"/>
+        <source>Pre-emptive +36%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="181"/>
+        <source>Pre-emptive +48%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="182"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="212"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="338"/>
+        <source>Dex:+2</source>
+        <translation type="unfinished">Agi:+2</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="186"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="187"/>
+        <source>Long Range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="192"/>
+        <source>Mega All</source>
+        <translation type="unfinished">Omni All</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="193"/>
+        <source>Mega-all x1</source>
+        <translation type="unfinished">Omni All x1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="193"/>
+        <source>Mega-all x2</source>
+        <translation type="unfinished">Omni All x2</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="193"/>
+        <source>Mega-all x3</source>
+        <translation type="unfinished">Omni All x3</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="193"/>
+        <source>Mega-all x4</source>
+        <translation type="unfinished">Omni All x4</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="193"/>
+        <source>Mega-all x5</source>
+        <translation type="unfinished">Omni All x5</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="198"/>
+        <source>Counter Attack</source>
+        <translation type="unfinished">Counter</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="199"/>
+        <source>Counter Attack 20%</source>
+        <translation type="unfinished">Counter 20%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="199"/>
+        <source>Counter Attack 40%</source>
+        <translation type="unfinished">Counter 40%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="199"/>
+        <source>Counter Attack 60%</source>
+        <translation type="unfinished">Counter 60%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="199"/>
+        <source>Counter Attack 80%</source>
+        <translation type="unfinished">Counter 80%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="199"/>
+        <source>Counter Attack 100%</source>
+        <translation type="unfinished">Counter 100%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="204"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="205"/>
+        <source>Slash-All</source>
+        <translation type="unfinished">Strike All</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="205"/>
+        <source>Flash</source>
+        <translation type="unfinished">Iainuki</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="210"/>
+        <source>Double Cut</source>
+        <translation type="unfinished">Consecutive Cut</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="211"/>
+        <source>2x-Cut</source>
+        <translation type="unfinished">2x Atk</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="211"/>
+        <source>4x-Cut</source>
+        <translation type="unfinished">4x Atk</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="216"/>
+        <source>Cover</source>
+        <translation type="unfinished">Protect</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="217"/>
+        <source>Cover +20%</source>
+        <translation type="unfinished">Protect +20%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="217"/>
+        <source>Cover +40%</source>
+        <translation type="unfinished">Protect +40%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="217"/>
+        <source>Cover +60%</source>
+        <translation type="unfinished">Protect +60%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="217"/>
+        <source>Cover +80%</source>
+        <translation type="unfinished">Protect +80%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="217"/>
+        <source>Cover +100%</source>
+        <translation type="unfinished">Protect +100%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="218"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="356"/>
+        <source>Vit:+1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="222"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="223"/>
+        <source>Underwater</source>
+        <translation type="unfinished">Diving</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="228"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="229"/>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="234"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="235"/>
+        <source>W-Magic</source>
+        <translation type="unfinished">Double Magic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="240"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="241"/>
+        <source>W-Summon</source>
+        <translation type="unfinished">Double Summon</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="246"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="247"/>
+        <source>W-Item</source>
+        <translation type="unfinished">Double Item</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="252"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="348"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="390"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="396"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="402"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="498"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="516"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="522"/>
+        <source>DON&apos;T USE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="258"/>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="259"/>
+        <source>All x1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="259"/>
+        <source>All x2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="259"/>
+        <source>All x3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="259"/>
+        <source>All x4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="259"/>
+        <source>All x5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="264"/>
+        <source>Counter</source>
+        <translation type="unfinished">Command Counter</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="265"/>
+        <source>Counter Rate 20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="265"/>
+        <source>Counter Rate 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="265"/>
+        <source>Counter Rate 60%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="265"/>
+        <source>Counter Rate 80%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="265"/>
+        <source>Counter Rate 100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="270"/>
+        <source>Magic Counter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="271"/>
+        <source>Magic Counter Rate 30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="271"/>
+        <source>Magic Counter Rate 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="271"/>
+        <source>Magic Counter Rate 60%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="271"/>
+        <source>Magic Counter Rate 80%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="271"/>
+        <source>Magic Counter Rate 100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="276"/>
+        <source>MP Turbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="277"/>
+        <source>MP Turbo 10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="277"/>
+        <source>MP Turbo 20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="277"/>
+        <source>MP Turbo 30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="277"/>
+        <source>MP Turbo 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="277"/>
+        <source>MP Turbo 50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="282"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="283"/>
+        <source>MP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="288"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="289"/>
+        <source>HP Absorb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="294"/>
+        <source>Elemental</source>
+        <translation type="unfinished">Force</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="295"/>
+        <source>Elemental 50%</source>
+        <translation type="unfinished">Property 50%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="295"/>
+        <source>Elemental 100%</source>
+        <translation type="unfinished">Property 100%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="295"/>
+        <source>Elemental 200%</source>
+        <translation type="unfinished">Property 200%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="300"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="301"/>
+        <source>Added Effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="306"/>
+        <source>Sneak Attack</source>
+        <translation type="unfinished">Suprise Attack</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="307"/>
+        <source>Sneak Attack 20%</source>
+        <translation type="unfinished">Suprise Attack 20%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="307"/>
+        <source>Sneak Attack 35%</source>
+        <translation type="unfinished">Suprise Attack 35%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="307"/>
+        <source>Sneak Attack 50%</source>
+        <translation type="unfinished">Suprise Attack 50%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="307"/>
+        <source>Sneak Attack 65%</source>
+        <translation type="unfinished">Suprise Attack 65%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="307"/>
+        <source>Sneak Attack 80%</source>
+        <translation type="unfinished">Suprise Attack 80%</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="312"/>
+        <source>Final Attack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="313"/>
+        <source>Final Attack x1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="313"/>
+        <source>Final Attack x2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="313"/>
+        <source>Final Attack x3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="313"/>
+        <source>Final Attack x4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="313"/>
+        <source>Final Attack x5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="318"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="319"/>
+        <source>Added Cut</source>
+        <translation type="unfinished">Added Attack</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="324"/>
+        <source>Steal-As-Well</source>
+        <translation type="unfinished">Added Steal</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="325"/>
+        <source>Steal as well</source>
+        <translation type="unfinished">Added Steal</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="330"/>
+        <source>Quadra Magic</source>
+        <translation type="unfinished">Tetra Magic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="331"/>
+        <source>Quadra Magic x1</source>
+        <translation type="unfinished">Tetra Magic x1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="331"/>
+        <source>Quadra Magic x2</source>
+        <translation type="unfinished">Tetra Magic x2</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="331"/>
+        <source>Quadra Magic x3</source>
+        <translation type="unfinished">Tetra Magic x3</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="331"/>
+        <source>Quadra Magic x4</source>
+        <translation type="unfinished">Tetra Magic x4</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="331"/>
+        <source>Quadra Magic x5</source>
+        <translation type="unfinished">Tetra Magic x5</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="336"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="337"/>
+        <source>Steal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="337"/>
+        <source>Mug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="342"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="343"/>
+        <source>Sense</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="354"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="355"/>
+        <source>Throw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="355"/>
+        <source>Coin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="360"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="361"/>
+        <source>Morph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="366"/>
+        <source>Deathblow</source>
+        <translation type="unfinished">Death Blow</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="367"/>
+        <source>DeathBlow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="372"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="373"/>
+        <source>Manipulate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="378"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="379"/>
+        <source>Mime</source>
+        <translation type="unfinished">Mimic</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="384"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="385"/>
+        <source>Enemy Skill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="408"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="409"/>
+        <source>Master Command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="414"/>
+        <source>Fire</source>
+        <translation type="unfinished">Flame</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="415"/>
+        <source>Fire (4mp)</source>
+        <translation type="unfinished">Fire (4mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="415"/>
+        <source>Fire2 (22mp)</source>
+        <translation type="unfinished">Fira (22mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="415"/>
+        <source>Fire3 (52mp)</source>
+        <translation type="unfinished">Firaga (52mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="416"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="422"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="428"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="434"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="440"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="446"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="458"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="464"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="470"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="476"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="482"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="488"/>
+        <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="417"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="579"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="627"/>
+        <source>[Fire]</source>
+        <translation type="unfinished">[Fire]</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="420"/>
+        <source>Ice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="421"/>
+        <source>Ice (4mp)</source>
+        <translation type="unfinished">Blizzard (4mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="421"/>
+        <source>Ice2 (22mp)</source>
+        <translation type="unfinished">Blizzara (22mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="421"/>
+        <source>Ice3 (52mp)</source>
+        <translation type="unfinished">Blizzaga (52mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="423"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="573"/>
+        <source>[Ice]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="426"/>
+        <source>Earth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="427"/>
+        <source>Quake (6mp)</source>
+        <translation type="unfinished">Quake (6mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="427"/>
+        <source>Quake2 (28mp)</source>
+        <translation type="unfinished">Quara (28mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="427"/>
+        <source>Quake3 (68mp)</source>
+        <translation type="unfinished">Quaga (68mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="429"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="591"/>
+        <source>[Earth]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="432"/>
+        <source>Lightning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="433"/>
+        <source>Bolt (4mp)</source>
+        <translation type="unfinished">Thunder (4mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="433"/>
+        <source>Bolt2 (22mp)</source>
+        <translation type="unfinished">Thundara (22mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="433"/>
+        <source>Bolt3 (52mp)</source>
+        <translation type="unfinished">Thundaga (52mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="435"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="585"/>
+        <source>[Lightning]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="438"/>
+        <source>Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="439"/>
+        <source>Cure (5mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="439"/>
+        <source>Cure2 (24mp)</source>
+        <translation type="unfinished">Cura (24mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="439"/>
+        <source>Regen (30mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="439"/>
+        <source>Cure3 (64mp)</source>
+        <translation type="unfinished">Curaga (64mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="444"/>
+        <source>Heal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="445"/>
+        <source>Poisona (3mp)</source>
+        <translation type="unfinished">Poison Null (3mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="445"/>
+        <source>Esuna (15mp)</source>
+        <translation type="unfinished">Status Null (15mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="445"/>
+        <source>Resist (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="450"/>
+        <source>Revive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="451"/>
+        <source>Life (34mp)</source>
+        <translation type="unfinished">Rise (34mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="451"/>
+        <source>Life2 (100mp)</source>
+        <translation type="unfinished">Arise (100mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="452"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="494"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="506"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="512"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="530"/>
+        <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
+        <translation type="unfinished">MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Int:+1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="456"/>
+        <source>Seal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="457"/>
+        <source>Sleepel (8mp)</source>
+        <translation type="unfinished">Sleep (8mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="457"/>
+        <source>Silence (24mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="459"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Sleep]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="459"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Silence]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="462"/>
+        <source>Mystify</source>
+        <translation type="unfinished">Bewilder</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="463"/>
+        <source>Confu (18mp)</source>
+        <translation type="unfinished">Confusion (18mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="463"/>
+        <source>Berserk (28mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="465"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="537"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Confusion]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="465"/>
+        <source>[Berserk]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="468"/>
+        <source>Transform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="469"/>
+        <source>Mini (10mp)</source>
+        <translation type="unfinished">Minimum</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="469"/>
+        <source>Toad (14mp)</source>
+        <translation type="unfinished">Frog (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="471"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Mini]</source>
+        <translation type="unfinished">[Minimum]</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="471"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="474"/>
+        <source>Exit</source>
+        <translation type="unfinished">Withdraw</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="475"/>
+        <source>Exit (16mp)</source>
+        <translation type="unfinished">Withdraw (16mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="475"/>
+        <source>Remove (99mp)</source>
+        <translation type="unfinished">Dimension (99mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="480"/>
+        <source>Poison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="481"/>
+        <source>Bio (8mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="481"/>
+        <source>Bio2 (36mp)</source>
+        <translation type="unfinished">Biora (36mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="481"/>
+        <source>Bio3 (80mp)</source>
+        <translation type="unfinished">Bioga (80mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="483"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="639"/>
+        <source>[Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="486"/>
+        <source>Gravity</source>
+        <translation type="unfinished">Gravity</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="487"/>
+        <source>Demi (14mp)</source>
+        <translation type="unfinished">Gravity (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="487"/>
+        <source>Demi2 (33mp)</source>
+        <translation type="unfinished">Gravira (33mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="487"/>
+        <source>Demi3 (48mp)</source>
+        <translation type="unfinished">Graviga (48mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="489"/>
+        <source>[Gravity]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="492"/>
+        <source>Barrier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="493"/>
+        <source>Barrier (16mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="493"/>
+        <source>M-Barrier (24mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="493"/>
+        <source>Reflect (30mp)</source>
+        <translation type="unfinished">Reflect (30mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="493"/>
+        <source>Wall (58mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="504"/>
+        <source>Comet</source>
+        <translation type="unfinished">Meteorite</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="505"/>
+        <source>Comet (70mp)</source>
+        <translation type="unfinished">Comet (70mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="505"/>
+        <source>Comet2 (110mp)</source>
+        <translation type="unfinished">Cometeor (110mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="510"/>
+        <source>Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="511"/>
+        <source>Haste (18mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="511"/>
+        <source>Slow (20mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="511"/>
+        <source>Stop (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="513"/>
+        <source>[Slow]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="513"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="537"/>
+        <source>[Stop]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="528"/>
+        <source>Destruct</source>
+        <translation type="unfinished">Extinguish</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="529"/>
+        <source>DeBarrier (12mp)</source>
+        <translation type="unfinished">De-Barrier (12mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="529"/>
+        <source>DeSpell (20mp)</source>
+        <translation type="unfinished">Dispel (20mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="529"/>
+        <source>Death (30mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="531"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="597"/>
+        <source>[Death]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="534"/>
+        <source>Contain</source>
+        <translation type="unfinished">Forbidden</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="535"/>
+        <source>Freeze (82mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="535"/>
+        <source>Break (86mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="535"/>
+        <source>Tornado (90mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="535"/>
+        <source>Flare (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="536"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="542"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="548"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="554"/>
+        <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
+        <translation type="unfinished">MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Int:+2</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="537"/>
+        <source>[Petrify]</source>
+        <translation type="unfinished">[Petrification]</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="540"/>
+        <source>Full Cure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="541"/>
+        <source>Full Cure (99mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="546"/>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="547"/>
+        <source>Shield (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="552"/>
+        <source>Ultima</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="553"/>
+        <source>Ultima (130mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="558"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="559"/>
+        <source>Master Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="564"/>
+        <source>Choco/Mog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="565"/>
+        <source>Choco/Mog x1 (14mp)</source>
+        <translation type="unfinished">Chocobo x1 (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="565"/>
+        <source>Choco/Mog x2 (14mp)</source>
+        <translation type="unfinished">Chocobo x2 (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="565"/>
+        <source>Choco/Mog x3 (14mp)</source>
+        <translation type="unfinished">Chocobo x3 (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="565"/>
+        <source>Choco/Mog x4 (14mp)</source>
+        <translation type="unfinished">Chocobo x4 (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="565"/>
+        <source>Choco/Mog x5 (14mp)</source>
+        <translation type="unfinished">Chocobo x5 (14mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="566"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="572"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="578"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="584"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="590"/>
+        <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="567"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="645"/>
+        <source>[Wind]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="570"/>
+        <source>Shiva</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="571"/>
+        <source>Shiva x1 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="571"/>
+        <source>Shiva x2 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="571"/>
+        <source>Shiva x3 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="571"/>
+        <source>Shiva x4 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="571"/>
+        <source>Shiva x5 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="576"/>
+        <source>Ifrit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="577"/>
+        <source>Ifrit x1 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="577"/>
+        <source>Ifrit x2 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="577"/>
+        <source>Ifrit x3 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="577"/>
+        <source>Ifrit x4 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="577"/>
+        <source>Ifrit x5 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="582"/>
+        <source>Ramuh</source>
+        <translation type="unfinished">Ramu</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="583"/>
+        <source>Ramuh x1 (40mp)</source>
+        <translation type="unfinished">Ramu x1 (40mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="583"/>
+        <source>Ramuh x2 (40mp)</source>
+        <translation type="unfinished">Ramu x2 (40mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="583"/>
+        <source>Ramuh x3 (40mp)</source>
+        <translation type="unfinished">Ramu x3 (40mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="583"/>
+        <source>Ramuh x4 (40mp)</source>
+        <translation type="unfinished">Ramu x4 (40mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="583"/>
+        <source>Ramuh x5 (40mp)</source>
+        <translation type="unfinished">Ramu x5 (40mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="588"/>
+        <source>Titan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="589"/>
+        <source>Titan x1 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="589"/>
+        <source>Titan x2 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="589"/>
+        <source>Titan x3 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="589"/>
+        <source>Titan x4 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="589"/>
+        <source>Titan x5 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="594"/>
+        <source>Odin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="595"/>
+        <source>Odin x1 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="595"/>
+        <source>Odin x2 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="595"/>
+        <source>Odin x3 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="595"/>
+        <source>Odin x4 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="595"/>
+        <source>Odin x5 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="596"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="602"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="608"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="614"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="620"/>
+        <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
+        <translation type="unfinished">MaxHp:-5% MaxMp:+5% Mag:+1 Int:+1</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="600"/>
+        <source>Leviathan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="601"/>
+        <source>Leviathan x1 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="601"/>
+        <source>Leviathan x2 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="601"/>
+        <source>Leviathan x3 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="601"/>
+        <source>Leviathan x4 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="601"/>
+        <source>Leviathan x5 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="603"/>
+        <source>[Water]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="606"/>
+        <source>Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="607"/>
+        <source>Bahamut x1 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="607"/>
+        <source>Bahamut x2 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="607"/>
+        <source>Bahamut x3 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="607"/>
+        <source>Bahamut x4 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="607"/>
+        <source>Bahamut x5 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="612"/>
+        <source>Kujata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="613"/>
+        <source>Kujata x1 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="613"/>
+        <source>Kujata x2 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="613"/>
+        <source>Kujata x3 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="613"/>
+        <source>Kujata x4 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="613"/>
+        <source>Kujata x5 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="618"/>
+        <source>Alexander</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="619"/>
+        <source>Alexander x1 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="619"/>
+        <source>Alexander x2 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="619"/>
+        <source>Alexander x3 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="619"/>
+        <source>Alexander x4 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="619"/>
+        <source>Alexander x5 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="621"/>
+        <source>[Holy]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="624"/>
+        <source>Phoenix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="625"/>
+        <source>Phoenix x1 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="625"/>
+        <source>Phoenix x2 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="625"/>
+        <source>Phoenix x3 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="625"/>
+        <source>Phoenix x4 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="625"/>
+        <source>Phoenix x5 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="626"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="632"/>
+        <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
+        <translation type="unfinished">MaxHp:-10% MaxMp:+10% Mag:+2 Int:+2</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="630"/>
+        <source>Neo Bahamut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="631"/>
+        <source>Neo Bahamut x1 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="631"/>
+        <source>Neo Bahamut x2 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="631"/>
+        <source>Neo Bahamut x3 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="631"/>
+        <source>Neo Bahamut x4 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="631"/>
+        <source>Neo Bahamut x5 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="636"/>
+        <source>Hades</source>
+        <translation type="unfinished">Hades</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="637"/>
+        <source>Hades x1 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="637"/>
+        <source>Hades x2 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="637"/>
+        <source>Hades x3 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="637"/>
+        <source>Hades x4 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="637"/>
+        <source>Hades x5 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="638"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="644"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="650"/>
+        <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
+        <translation type="unfinished">MaxHp:-10% MaxMp:+15% Mag:+4 Int:+4</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="642"/>
+        <source>Typhon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="643"/>
+        <source>Typhon x1 (160mp)</source>
+        <translation type="unfinished">Typhon x1 (160mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="643"/>
+        <source>Typhon x2 (160mp)</source>
+        <translation type="unfinished">Typhon x1 (160mp) {2 (160m?}</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="643"/>
+        <source>Typhon x3 (160mp)</source>
+        <translation type="unfinished">Typhon x1 (160mp) {3 (160m?}</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="643"/>
+        <source>Typhon x4 (160mp)</source>
+        <translation type="unfinished">Typhon x1 (160mp) {4 (160m?}</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="643"/>
+        <source>Typhon x5 (160mp)</source>
+        <translation type="unfinished">Typhon x1 (160mp) {5 (160m?}</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="648"/>
+        <source>Bahamut ZERO</source>
+        <translation type="unfinished">Bahamut Zero</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="649"/>
+        <source>Bahamut ZERO x1 (180mp)</source>
+        <translation type="unfinished">Bahamut Zero x1 (180mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="649"/>
+        <source>Bahamut ZERO x2 (180mp)</source>
+        <translation type="unfinished">Bahamut Zero x2 (180mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="649"/>
+        <source>Bahamut ZERO x3 (180mp)</source>
+        <translation type="unfinished">Bahamut Zero x3 (180mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="649"/>
+        <source>Bahamut ZERO x4 (180mp)</source>
+        <translation type="unfinished">Bahamut Zero x4 (180mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="649"/>
+        <source>Bahamut ZERO x5 (180mp)</source>
+        <translation type="unfinished">Bahamut Zero x5 (180mp)</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="654"/>
+        <source>Knights of the Round</source>
+        <translation type="unfinished">Knights of Round</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="655"/>
+        <source>KOTR x1 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="655"/>
+        <source>KOTR x2 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="655"/>
+        <source>KOTR x3 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="655"/>
+        <source>KOTR x4 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="655"/>
+        <source>KOTR x5 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="656"/>
+        <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
+        <translation type="unfinished">MaxHp:-10% MaxMp:+20% Mag:+8 Int:+8</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="660"/>
+        <location filename="../ff7tk/data/FF7Materia.h" line="661"/>
+        <source>Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="667"/>
+        <source>Frog Song</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="668"/>
+        <source>L4 Suicide</source>
+        <translation type="unfinished">Lv4 Suicide</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="669"/>
+        <source>Magic Hammer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="670"/>
+        <source>White Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="671"/>
+        <source>Big Guard</source>
+        <translation type="unfinished">Mighty Guard</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="672"/>
+        <source>Angel Whisper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="673"/>
+        <source>Dragon Force</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="674"/>
+        <source>Death Force</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="675"/>
+        <source>Flame Thrower</source>
+        <translation type="unfinished">Flamethrower</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="676"/>
+        <source>Laser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="677"/>
+        <source>Matra Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="678"/>
+        <source>Bad Breath</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="679"/>
+        <source>Beta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="680"/>
+        <source>Aqualung</source>
+        <translation type="unfinished">Aqua Breath</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="681"/>
+        <source>Trine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="682"/>
+        <source>Magic Breath</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="683"/>
+        <source>????</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="684"/>
+        <source>Goblin Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="685"/>
+        <source>Chocobuckle</source>
+        <translation type="unfinished">Chocobokkuru</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="686"/>
+        <source>L5 Death</source>
+        <translation type="unfinished">Lv5 Death</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="687"/>
+        <source>Death Sentence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="688"/>
+        <source>Roulette</source>
+        <translation type="unfinished">Death Roulette</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="689"/>
+        <source>Shadow Flare</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/data/FF7Materia.h" line="690"/>
+        <source>Pandora&apos;s Box</source>
+        <translation type="unfinished">Enigma</translation>
     </message>
 </context>
 <context>
@@ -5670,9 +13473,9 @@ Var And Scrolling Synced To Left Table</source>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1292"/>
         <source>Game Uses %n Save Block(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Game Uses %n Save Block</numerusform>
+            <numerusform>Game Uses %n Save Blocks</numerusform>
         </translation>
     </message>
     <message>
@@ -7014,9 +14817,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ff7tk/widgets/SlotSelect.cpp" line="161"/>
         <source>
 	 Game Uses %n Save Block(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>
+	 Game Uses %n Save Block</numerusform>
+            <numerusform>
+	 Game Uses %n Save Blocks</numerusform>
         </translation>
     </message>
     <message>
@@ -7146,16 +14951,19 @@ File:%1</source>
         <location filename="../errbox.cpp" line="105"/>
         <source>
  Game Uses %n Save Block(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>
+ Game Uses %n Save Block</numerusform>
+            <numerusform>
+ Game Uses %n Save Blocks</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../errbox.cpp" line="109"/>
         <source>
    Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+   Next Data Chunk @ Slot:%1</translation>
     </message>
     <message>
         <location filename="../errbox.cpp" line="145"/>

@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "FF7Item.h"
-#include <QCoreApplication>
 
 const FF7Item::ITEM& FF7Item::item(int id)
 {
@@ -26,12 +25,12 @@ const FF7Item::ITEM& FF7Item::item(int id)
 
 QString FF7Item::name(int id)
 {
-    return qApp->translate(_groupNames.toLocal8Bit(), item(id).name.toLocal8Bit());
+    return tr(item(id).name.toLocal8Bit());
 }
 
 QString FF7Item::desc(int id)
 {
-    return qApp->translate(_groupDesc.toLocal8Bit(), item(id).desc.toLocal8Bit());
+    return tr(item(id).desc.toLocal8Bit());
 }
 
 QString FF7Item::iconResource(int id)

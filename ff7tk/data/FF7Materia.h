@@ -109,590 +109,584 @@ private:
     */
     const FF7Materia::MATERIA& Materias(int id);
     inline static const auto _resourceAllMateria = QStringLiteral("/materia/all");
-    inline static const auto _nameGroup = QStringLiteral("Materia_Names");
-    inline static const auto _skillGroup = QStringLiteral("Materia_Skills");
-    inline static const auto _statsGroup = QStringLiteral("Materia_Stats");
-    inline static const auto _elementGroup  = QStringLiteral("Elements");
-    inline static const auto _statusGroup  = QStringLiteral("Status");
 
     inline static const MATERIA _emptyMateria{
-        QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("EMPTY"))
+        QT_TR_NOOP("EMPTY")
         , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
         , QStringLiteral("ID:0xFF"), QString(), QString(), QString()
         , 0XFF, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
     };
     inline static const QList<MATERIA> _materiaList{
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("MP Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Plus +10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Plus +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Plus +30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Plus +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Plus +50%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxMp:+% depending on level")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("MP Plus")
+            , {QT_TR_NOOP("MP Plus +10%"), QT_TR_NOOP("MP Plus +20%"), QT_TR_NOOP("MP Plus +30%"), QT_TR_NOOP("MP Plus +40%"), QT_TR_NOOP("MP Plus +50%")}
+            , QT_TR_NOOP("MaxMp:+% depending on level"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x00, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 20000, 30000, 50000}, 3, 5, QString(), {QString()}
         },
-        {   QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("HP Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Plus +10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Plus +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Plus +30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Plus +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Plus +50%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:+% depending on level")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+        {   QT_TR_NOOP("HP Plus")
+            , {QT_TR_NOOP("HP Plus +10%"), QT_TR_NOOP("HP Plus +20%"), QT_TR_NOOP("HP Plus +30%"), QT_TR_NOOP("HP Plus +40%"), QT_TR_NOOP("HP Plus +50%")}
+            , QT_TR_NOOP("MaxHp:+% depending on level"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x01, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 20000, 30000, 50000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Speed Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Speed Plus +10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Speed Plus +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Speed Plus +30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Speed Plus +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Speed Plus +50%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Dex:+% depending on level")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Speed Plus")
+            , {QT_TR_NOOP("Speed Plus +10%"), QT_TR_NOOP("Speed Plus +20%"), QT_TR_NOOP("Speed Plus +30%"), QT_TR_NOOP("Speed Plus +40%"), QT_TR_NOOP("Speed Plus +50%")}
+            , QT_TR_NOOP("Dex:+% depending on level"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x02, 0, 0, 0, 0, 0, 0, 0, 0, {0, 15000, 30000, 60000, 100000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Magic Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Plus +10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Plus +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Plus +30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Plus +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Plus +50%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Mag:+% depending on level")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Magic Plus")
+            , {QT_TR_NOOP("Magic Plus +10%"), QT_TR_NOOP("Magic Plus +20%"), QT_TR_NOOP("Magic Plus +30%"), QT_TR_NOOP("Magic Plus +40%"), QT_TR_NOOP("Magic Plus +50%")}
+            , QT_TR_NOOP("Mag:+% depending on level"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x03, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 20000, 30000, 50000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Luck Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Luck Plus +10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Luck Plus +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Luck Plus +30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Luck Plus +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Luck Plus +50%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+% depending on level")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Luck Plus")
+            , {QT_TR_NOOP("Luck Plus +10%"), QT_TR_NOOP("Luck Plus +20%"), QT_TR_NOOP("Luck Plus +30%"), QT_TR_NOOP("Luck Plus +40%"), QT_TR_NOOP("Luck Plus +50%")}
+            , QT_TR_NOOP("Lck:+% depending on level"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x04, 0, 0, 0, 0, 0, 0, 0, 0, {0, 15000, 30000, 60000, 100000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("EXP Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Exp Plus +50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Exp Plus +100%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("EXP Plus")
+            , {QT_TR_NOOP("Exp Plus +50%"), QT_TR_NOOP("Exp Plus +100%")}
+            , QT_TR_NOOP("Lck:+1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x05, 0, 0, 0, 0, 0, +1, 0, 0, {0, 60000, 150000, 0, 0}, 3, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Gil Plus"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Gil Plus +50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Gil Plus +100%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Gil Plus")
+            , {QT_TR_NOOP("Gil Plus +50%"), QT_TR_NOOP("Gil Plus +100%")}
+            , QT_TR_NOOP("Lck:+1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x06, 0, 0, 0, 0, 0, +1, 0, 0, {0, 80000, 150000, 0, 0}, 3, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Enemy Away"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Encounter Rate -50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Encounter Rate -75%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Enemy Away")
+            , {QT_TR_NOOP("Encounter Rate -50%"), QT_TR_NOOP("Encounter Rate -75%")}
+            , QT_TR_NOOP("Lck:+1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x07, 0, 0, 0, 0, 0, +1, 0, 0, {0, 10000, 50000, 0, 0}, 3, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Enemy Lure"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Encounter Rate +50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Encounter Rate +100%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:-1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Enemy Lure")
+            , {QT_TR_NOOP("Encounter Rate +50%"), QT_TR_NOOP("Encounter Rate +100%")}
+            , QT_TR_NOOP("Lck:-1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x08, 0, 0, 0, 0, 0, -1, 0, 0, {0, 10000, 50000, 0, 0}, 3, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Chocobo Lure"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Chocobo Lure")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Chocobo Lure +50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Chocobo Lure +100%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Chocobo Lure +200%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Chocobo Lure")
+            , {QT_TR_NOOP("Chocobo Lure"), QT_TR_NOOP("Chocobo Lure +50%"), QT_TR_NOOP("Chocobo Lure +100%"), QT_TR_NOOP("Chocobo Lure +200%")}
+            , QT_TR_NOOP("Lck:+1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x09, 0, 0, 0, 0, 0, +1, 0, 0, {0, 3000, 10000, 30000, 0}, 3, 4, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Pre-emptive"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Pre-emptive +6%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Pre-emptive +12%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Pre-emptive +24%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Pre-emptive +36%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Pre-emptive +48%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Dex:+2")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Pre-emptive")
+            , {QT_TR_NOOP("Pre-emptive +6%"), QT_TR_NOOP("Pre-emptive +12%"), QT_TR_NOOP("Pre-emptive +24%"), QT_TR_NOOP("Pre-emptive +36%"), QT_TR_NOOP("Pre-emptive +48%")}
+            , QT_TR_NOOP("Dex:+2"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x0A, 0, 0, 0, 0, +2, 0, 0, 0, {0, 8000, 20000, 40000, 80000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Long Range"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Long Range"))}
+            QT_TR_NOOP("Long Range")
+            , {QT_TR_NOOP("Long Range")}
             , QString(), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x0B, 0, 0, 0, 0, 0, 0, 0, 0, {0, 80000, 0, 0, 0}, 3, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Mega All"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mega-all x1")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mega-all x2")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mega-all x3")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mega-all x4")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mega-all x5"))}
+            QT_TR_NOOP("Mega All")
+            , {QT_TR_NOOP("Mega-all x1"), QT_TR_NOOP("Mega-all x2"), QT_TR_NOOP("Mega-all x3"), QT_TR_NOOP("Mega-all x4"), QT_TR_NOOP("Mega-all x5")}
             , QString(), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x0C, 0, 0, 0, 0, 0, 0, 0, 0, {0, 20000, 40000, 80000, 160000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Counter Attack"))
-            ,{QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Attack 20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Attack 40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Attack 60%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Attack 80%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Attack 100%"))}
+            QT_TR_NOOP("Counter Attack")
+            ,{QT_TR_NOOP("Counter Attack 20%"), QT_TR_NOOP("Counter Attack 40%"), QT_TR_NOOP("Counter Attack 60%"), QT_TR_NOOP("Counter Attack 80%"), QT_TR_NOOP("Counter Attack 100%")}
             , QString(), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x0D, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 20000, 50000, 100000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Slash-All"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Slash-All")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Flash"))}
+            QT_TR_NOOP("Slash-All")
+            , {QT_TR_NOOP("Slash-All"), QT_TR_NOOP("Flash")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x0E, 0, 0, 0, 0, 0, 0, 0, 0, {0, 130000, 150000, 0, 0}, 5, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Double Cut"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("2x-Cut")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("4x-Cut"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Dex:+2")), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
+            QT_TR_NOOP("Double Cut")
+            , {QT_TR_NOOP("2x-Cut"), QT_TR_NOOP("4x-Cut")}
+            , QT_TR_NOOP("Dex:+2"), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x0F, 0, 0, 0, 0, +2, 0, 0, 0, {0, 100000, 150000, 0, 0}, 5, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Cover"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cover +20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cover +40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cover +60%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cover +80%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cover +100%"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Vit:+1")), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
+            QT_TR_NOOP("Cover")
+            , {QT_TR_NOOP("Cover +20%"), QT_TR_NOOP("Cover +40%"), QT_TR_NOOP("Cover +60%"), QT_TR_NOOP("Cover +80%"), QT_TR_NOOP("Cover +100%")}
+            , QT_TR_NOOP("Vit:+1"), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x10, 0, 0, 0, +1, 0, 0, 0, 0, {0, 2000, 10000, 25000, 40000}, 3, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Underwater"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Underwater"))}
+            QT_TR_NOOP("Underwater")
+            , {QT_TR_NOOP("Underwater")}
             , QString(), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x11, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 3, 1, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("HP <-> MP"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP <-> MP"))}
+            QT_TR_NOOP("HP <-> MP")
+            , {QT_TR_NOOP("HP <-> MP")}
             , QString(), QStringLiteral(":/materia/independent"), QStringLiteral(":/materia/independent_star_empty"), QStringLiteral(":/materia/independent_star_full")
             , 0x12, 0, 0, 0, 0, 0, 0, 0, 0, {0, 80000, 0, 0, 0}, 3, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("W-Magic"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("W-Magic"))}
+            QT_TR_NOOP("W-Magic")
+            , {QT_TR_NOOP("W-Magic")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x13, 0, 0, 0, 0, 0, 0, 0, 0, {0, 250000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("W-Summon"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("W-Summon"))}
+            QT_TR_NOOP("W-Summon")
+            , {QT_TR_NOOP("W-Summon")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x14, 0, 0, 0, 0, 0, 0, 0, 0, {0, 250000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("W-Item"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("W-Item"))}
+            QT_TR_NOOP("W-Item")
+            , {QT_TR_NOOP("W-Item")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x15, 0, 0, 0, 0, 0, 0, 0, 0, {0, 250000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x16"), QString(), QString(), QString()
             , 0X16, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("All"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("All x1")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("All x2")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("All x3")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("All x4")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("All x5"))}
+            QT_TR_NOOP("All")
+            , {QT_TR_NOOP("All x1"), QT_TR_NOOP("All x2"), QT_TR_NOOP("All x3"), QT_TR_NOOP("All x4"), QT_TR_NOOP("All x5")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x17, 0, 0, 0, 0, 0, 0, 0, 0, {0, 1500, 6000, 18000, 35000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Counter"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Rate 20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Rate 40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Rate 60%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Rate 80%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Counter Rate 100%"))}
+            QT_TR_NOOP("Counter")
+            , {QT_TR_NOOP("Counter Rate 20%"), QT_TR_NOOP("Counter Rate 40%"), QT_TR_NOOP("Counter Rate 60%"), QT_TR_NOOP("Counter Rate 80%"), QT_TR_NOOP("Counter Rate 100%")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x18, 0, 0, 0, 0, 0, 0, 0, 0, {0, 20000, 40000, 60000, 100000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Magic Counter"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Counter Rate 30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Counter Rate 40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Counter Rate 60%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Counter Rate 80%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Magic Counter Rate 100%"))}
+            QT_TR_NOOP("Magic Counter")
+            , {QT_TR_NOOP("Magic Counter Rate 30%"), QT_TR_NOOP("Magic Counter Rate 40%"), QT_TR_NOOP("Magic Counter Rate 60%"), QT_TR_NOOP("Magic Counter Rate 80%"), QT_TR_NOOP("Magic Counter Rate 100%")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x19, 0, 0, 0, 0, 0, 0, 0, 0, {0, 20000, 40000, 80000, 300000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("MP Turbo"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Turbo 10%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Turbo 20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Turbo 30%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Turbo 40%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Turbo 50%"))}
+            QT_TR_NOOP("MP Turbo")
+            , {QT_TR_NOOP("MP Turbo 10%"), QT_TR_NOOP("MP Turbo 20%"), QT_TR_NOOP("MP Turbo 30%"), QT_TR_NOOP("MP Turbo 40%"), QT_TR_NOOP("MP Turbo 50%")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1A, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 30000, 60000, 120000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("MP Absorb"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("MP Absorb"))}
+            QT_TR_NOOP("MP Absorb")
+            , {QT_TR_NOOP("MP Absorb")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1B, 0, 0, 0, 0, 0, 0, 0, 0, {0, 100000, 0, 0, 0}, 4, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("HP Absorb"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("HP Absorb"))}
+            QT_TR_NOOP("HP Absorb")
+            , {QT_TR_NOOP("HP Absorb")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1C, 0, 0, 0, 0, 0, 0, 0, 0, {0, 100000, 0, 0, 0}, 4, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Elemental"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Elemental 50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Elemental 100%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Elemental 200%"))}
+            QT_TR_NOOP("Elemental")
+            , {QT_TR_NOOP("Elemental 50%"), QT_TR_NOOP("Elemental 100%"), QT_TR_NOOP("Elemental 200%")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1D, 0, 0, 0, 0, 0, 0, 0, 0, {0, 10000, 40000, 80000, 0}, 4, 4, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Added Effect"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Added Effect"))}
+            QT_TR_NOOP("Added Effect")
+            , {QT_TR_NOOP("Added Effect")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1E, 0, 0, 0, 0, 0, 0, 0, 0, {0, 100000, 0, 0, 0}, 4, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Sneak Attack"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sneak Attack 20%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sneak Attack 35%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sneak Attack 50%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sneak Attack 65%")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sneak Attack 80%"))}
+            QT_TR_NOOP("Sneak Attack")
+            , {QT_TR_NOOP("Sneak Attack 20%"), QT_TR_NOOP("Sneak Attack 35%"), QT_TR_NOOP("Sneak Attack 50%"), QT_TR_NOOP("Sneak Attack 65%"), QT_TR_NOOP("Sneak Attack 80%")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x1F, 0, 0, 0, 0, 0, 0, 0, 0, {0, 20000, 60000, 100000, 150000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Final Attack"))
-            ,  {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Final Attack x1")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Final Attack x2")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Final Attack x3")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Final Attack x4")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Final Attack x5"))}
+            QT_TR_NOOP("Final Attack")
+            ,  {QT_TR_NOOP("Final Attack x1"), QT_TR_NOOP("Final Attack x2"), QT_TR_NOOP("Final Attack x3"), QT_TR_NOOP("Final Attack x4"), QT_TR_NOOP("Final Attack x5")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x20, 0, 0, 0, 0, 0, 0, 0, 0, {0, 20000, 40000, 80000, 160000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Added Cut"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Added Cut"))}
+            QT_TR_NOOP("Added Cut")
+            , {QT_TR_NOOP("Added Cut")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x21, 0, 0, 0, 0, 0, 0, 0, 0, {0, 200000, 0, 0, 0}, 4, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Steal-As-Well"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Steal as well"))}
+            QT_TR_NOOP("Steal-As-Well")
+            , {QT_TR_NOOP("Steal as well")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x22, 0, 0, 0, 0, 0, 0, 0, 0, {0, 200000, 0, 0, 0}, 4, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Quadra Magic"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quadra Magic x1")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quadra Magic x2")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quadra Magic x3")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quadra Magic x4")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quadra Magic x5"))}
+            QT_TR_NOOP("Quadra Magic")
+            , {QT_TR_NOOP("Quadra Magic x1"), QT_TR_NOOP("Quadra Magic x2"), QT_TR_NOOP("Quadra Magic x3"), QT_TR_NOOP("Quadra Magic x4"), QT_TR_NOOP("Quadra Magic x5")}
             , QString(), QStringLiteral(":/materia/support"), QStringLiteral(":/materia/support_star_empty"), QStringLiteral(":/materia/support_star_full")
             , 0x23, 0, 0, 0, 0, 0, 0, 0, 0, {0, 40000, 80000, 120000, 200000}, 4, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Steal"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Steal")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mug"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Dex:+2")), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
+            QT_TR_NOOP("Steal")
+            , {QT_TR_NOOP("Steal"), QT_TR_NOOP("Mug")}
+            , QT_TR_NOOP("Dex:+2"), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x24, 0, 0, 0, 0, +2, 0, 0, 0, {0, 40000, 50000, 0, 0}, 5, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Sense"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sense"))}
+            QT_TR_NOOP("Sense")
+            , {QT_TR_NOOP("Sense")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x25, 0, 0, 0, 0, 0, 0, 0, 0, {0, 40000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x26"), QString(), QString(), QString()
             , 0X26, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Throw"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Throw")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Coin"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Vit:+1")), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
+            QT_TR_NOOP("Throw")
+            , {QT_TR_NOOP("Throw"), QT_TR_NOOP("Coin")}
+            , QT_TR_NOOP("Vit:+1"), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x27, 0, 0, 0, +1, 0, 0, 0, 0, {0, 45000, 60000, 0, 0}, 5, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Morph"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Morph"))}
+            QT_TR_NOOP("Morph")
+            , {QT_TR_NOOP("Morph")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x28, 0, 0, 0, 0, 0, 0, 0, 0, {0, 100000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Deathblow"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("DeathBlow"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("Lck:+1")), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
+            QT_TR_NOOP("Deathblow")
+            , {QT_TR_NOOP("DeathBlow")}
+            , QT_TR_NOOP("Lck:+1"), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x29, 0, 0, 0, 0, 0, +1, 0, 0, {0, 40000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Manipulate"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Manipulate"))}
+            QT_TR_NOOP("Manipulate")
+            , {QT_TR_NOOP("Manipulate")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x2A, 0, 0, 0, 0, 0, 0, 0, 0, {0, 40000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Mime"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mime"))}
+            QT_TR_NOOP("Mime")
+            , {QT_TR_NOOP("Mime")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x2B, 0, 0, 0, 0, 0, 0, 0, 0, {0, 100000, 0, 0, 0}, 5, 2, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Enemy Skill"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Enemy Skill"))}
+            QT_TR_NOOP("Enemy Skill")
+            , {QT_TR_NOOP("Enemy Skill")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x2C, 0, 0, 0, 0, 0, 0, 0, 0, {16777215, 0, 0, 0, 0}, 5, 1, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x2D"), QString(), QString(), QString()
             , 0X2D, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x2E"), QString(), QString(), QString()
             , 0X2E, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x2F"), QString(), QString(), QString()
             , 0X2F, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Master Command"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Master Command"))}
+            QT_TR_NOOP("Master Command")
+            , {QT_TR_NOOP("Master Command")}
             , QString(), QStringLiteral(":/materia/command"), QStringLiteral(":/materia/command_star_empty"), QStringLiteral(":/materia/command_star_full")
             , 0x30, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 5, 1, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Fire"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Fire (4mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Fire2 (22mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Fire3 (52mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x31, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Fire]")), {QString()}
+            QT_TR_NOOP("Fire")
+            , {QT_TR_NOOP("Fire (4mp)"), QT_TR_NOOP("Fire2 (22mp)"), QT_TR_NOOP("Fire3 (52mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x31, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TR_NOOP("[Fire]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Ice"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ice (4mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ice2 (22mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ice3 (52mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x32, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Ice]")), {QString()}
+            QT_TR_NOOP("Ice")
+            , {QT_TR_NOOP("Ice (4mp)"), QT_TR_NOOP("Ice2 (22mp)"), QT_TR_NOOP("Ice3 (52mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x32, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TR_NOOP("[Ice]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Earth"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quake (6mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quake2 (28mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Quake3 (68mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x33, -2, +2, -1, 0, 0, 0, +1, 0, {0, 6000, 22000, 40000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Earth]")), {QString()}
+            QT_TR_NOOP("Earth")
+            , {QT_TR_NOOP("Quake (6mp)"), QT_TR_NOOP("Quake2 (28mp)"), QT_TR_NOOP("Quake3 (68mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x33, -2, +2, -1, 0, 0, 0, +1, 0, {0, 6000, 22000, 40000, 0}, 1, 4, QT_TR_NOOP("[Earth]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Lightning"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bolt (4mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bolt2 (22mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bolt3 (52mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x34, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Lightning]")), {QString()}
+            QT_TR_NOOP("Lightning")
+            , {QT_TR_NOOP("Bolt (4mp)"), QT_TR_NOOP("Bolt2 (22mp)"), QT_TR_NOOP("Bolt3 (52mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x34, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2000, 18000, 35000, 0}, 1, 4, QT_TR_NOOP("[Lightning]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Restore"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cure (5mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cure2 (24mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Regen (30mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Cure3 (64mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Restore")
+            , {QT_TR_NOOP("Cure (5mp)"), QT_TR_NOOP("Cure2 (24mp)"), QT_TR_NOOP("Regen (30mp)"), QT_TR_NOOP("Cure3 (64mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x35, -2, +2, -1, 0, 0, 0, +1, 0, {0, 2500, 17000, 25000, 40000}, 1, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Heal"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Poisona (3mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Esuna (15mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Resist (120mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Heal")
+            , {QT_TR_NOOP("Poisona (3mp)"), QT_TR_NOOP("Esuna (15mp)"), QT_TR_NOOP("Resist (120mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x36, -2, +2, -1, 0, 0, 0, +1, 0, {0, 12000, 52000, 60000, 0}, 1, 4, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Revive"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Life (34mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Life2 (100mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Revive")
+            , {QT_TR_NOOP("Life (34mp)"), QT_TR_NOOP("Life2 (100mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x37, -5, +5, -2, -1, 0, 0, +2, +1, {0, 45000, 55000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Seal"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Sleepel (8mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Silence (24mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x38, -2, +2, -1, 0, 0, 0, +1, 0, {0, 10000, 20000, 0, 0}, 1, 3, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Sleep]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Silence]"))}
+            QT_TR_NOOP("Seal")
+            , {QT_TR_NOOP("Sleepel (8mp)"), QT_TR_NOOP("Silence (24mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x38, -2, +2, -1, 0, 0, 0, +1, 0, {0, 10000, 20000, 0, 0}, 1, 3, QString(), {QT_TR_NOOP("[Sleep]"), QT_TR_NOOP("[Silence]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Mystify"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Confu (18mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Berserk (28mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x39, -2, +2, -1, 0, 0, 0, +1, 0, {0, 12000, 25000, 0, 0}, 1, 3, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Confusion]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Berserk]"))}
+            QT_TR_NOOP("Mystify")
+            , {QT_TR_NOOP("Confu (18mp)"), QT_TR_NOOP("Berserk (28mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x39, -2, +2, -1, 0, 0, 0, +1, 0, {0, 12000, 25000, 0, 0}, 1, 3, QString(), {QT_TR_NOOP("[Confusion]"), QT_TR_NOOP("[Berserk]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Transform"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Mini (10mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Toad (14mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x3A, -2, +2, -1, 0, 0, 0, +1, 0, {0, 8000, 24000, 0, 0}, 1, 3, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Mini]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Frog]"))}
+            QT_TR_NOOP("Transform")
+            , {QT_TR_NOOP("Mini (10mp)"), QT_TR_NOOP("Toad (14mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x3A, -2, +2, -1, 0, 0, 0, +1, 0, {0, 8000, 24000, 0, 0}, 1, 3, QString(), {QT_TR_NOOP("[Mini]"), QT_TR_NOOP("[Frog]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Exit"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Exit (16mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Remove (99mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Exit")
+            , {QT_TR_NOOP("Exit (16mp)"), QT_TR_NOOP("Remove (99mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x3B, -2, +2, -1, 0, 0, 0, +1, 0, {0, 10000, 30000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Poison"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bio (8mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bio2 (36mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bio3 (80mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x3C, -2, +2, -1, 0, 0, 0, +1, 0, {0, 5000, 20000, 38000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Poison]")), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Poison]"))}
+            QT_TR_NOOP("Poison")
+            , {QT_TR_NOOP("Bio (8mp)"), QT_TR_NOOP("Bio2 (36mp)"), QT_TR_NOOP("Bio3 (80mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x3C, -2, +2, -1, 0, 0, 0, +1, 0, {0, 5000, 20000, 38000, 0}, 1, 4, QT_TR_NOOP("[Poison]"), {QT_TR_NOOP("[Poison]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Gravity"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Demi (14mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Demi2 (33mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Demi3 (48mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x3D, -2, +2, -1, 0, 0, 0, +1, 0, {0, 10000, 20000, 40000, 0}, 1, 4, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Gravity]")), {QString()}
+            QT_TR_NOOP("Gravity")
+            , {QT_TR_NOOP("Demi (14mp)"), QT_TR_NOOP("Demi2 (33mp)"), QT_TR_NOOP("Demi3 (48mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x3D, -2, +2, -1, 0, 0, 0, +1, 0, {0, 10000, 20000, 40000, 0}, 1, 4, QT_TR_NOOP("[Gravity]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Barrier"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Barrier (16mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("M-Barrier (24mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Reflect (30mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Wall (58mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Barrier")
+            , {QT_TR_NOOP("Barrier (16mp)"), QT_TR_NOOP("M-Barrier (24mp)"), QT_TR_NOOP("Reflect (30mp)"), QT_TR_NOOP("Wall (58mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x3E, -5, +5, -2, -1, 0, 0, +2, +1, {0, 5000, 15000, 30000, 45000}, 1, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x3F"), QString(), QString(), QString()
             , 0X3F, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Comet"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Comet (70mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Comet2 (110mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Comet")
+            , {QT_TR_NOOP("Comet (70mp)"), QT_TR_NOOP("Comet2 (110mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x40, -5, +5, -2, -1, 0, 0, +2, +1, {0, 12000, 60000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Time"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Haste (18mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Slow (20mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Stop (34mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x41, -5, +5, -2, -1, 0, 0, +2, +1, {0, 10000, 20000, 42000, 0}, 1, 4, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Slow]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Stop]"))}
+            QT_TR_NOOP("Time")
+            , {QT_TR_NOOP("Haste (18mp)"), QT_TR_NOOP("Slow (20mp)"), QT_TR_NOOP("Stop (34mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x41, -5, +5, -2, -1, 0, 0, +2, +1, {0, 10000, 20000, 42000, 0}, 1, 4, QString(), {QT_TR_NOOP("[Slow]"), QT_TR_NOOP("[Stop]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x42"), QString(), QString(), QString()
             , 0X42, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("DON'T USE"))
+            QT_TR_NOOP("DON'T USE")
             , {QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?"), QStringLiteral("?")}
             , QStringLiteral("ID:0x43"), QString(), QString(), QString()
             , 0X43, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 0, 0, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Destruct"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("DeBarrier (12mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("DeSpell (20mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Death (30mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x44, -5, +5, -2, -1, 0, 0, +2, +1, {0, 6000, 10000, 45000, 0}, 1, 4, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Death]"))}
+            QT_TR_NOOP("Destruct")
+            , {QT_TR_NOOP("DeBarrier (12mp)"), QT_TR_NOOP("DeSpell (20mp)"), QT_TR_NOOP("Death (30mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x44, -5, +5, -2, -1, 0, 0, +2, +1, {0, 6000, 10000, 45000, 0}, 1, 4, QString(), {QT_TR_NOOP("[Death]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Contain"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Freeze (82mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Break (86mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Tornado (90mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Flare (100mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
-            , 0x45, -10, +10, -4, -2, 0, 0, +4, +2, {0, 5000, 10000, 15000, 60000}, 1, 5, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Confusion]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Petrify]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Stop]"))}
+            QT_TR_NOOP("Contain")
+            , {QT_TR_NOOP("Freeze (82mp)"), QT_TR_NOOP("Break (86mp)"), QT_TR_NOOP("Tornado (90mp)"), QT_TR_NOOP("Flare (100mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            , 0x45, -10, +10, -4, -2, 0, 0, +4, +2, {0, 5000, 10000, 15000, 60000}, 1, 5, QString(), {QT_TR_NOOP("[Confusion]"), QT_TR_NOOP("[Petrify]"), QT_TR_NOOP("[Stop]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Full Cure"))
-            , {QString(), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Full Cure (99mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Full Cure")
+            , {QString(), QT_TR_NOOP("Full Cure (99mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x46, -10, +10, -4, -2, 0, 0, +4, +2, {0, 3000, 100000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Shield"))
-            , {QString(), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shield (180mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Shield")
+            , {QString(), QT_TR_NOOP("Shield (180mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x47, -10, +10, -4, -2, 0, 0, +4, +2, {0, 10000, 100000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Ultima"))
-            , {QString(), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ultima (130mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2")), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
+            QT_TR_NOOP("Ultima")
+            , {QString(), QT_TR_NOOP("Ultima (130mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2"), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x48, -10, +10, -4, -2, 0, 0, +4, +2, {0, 5000, 100000, 0, 0}, 1, 3, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Master Magic"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Master Magic"))}
+            QT_TR_NOOP("Master Magic")
+            , {QT_TR_NOOP("Master Magic")}
             , QString(), QStringLiteral(":/materia/magic"), QStringLiteral(":/materia/magic_star_empty"), QStringLiteral(":/materia/magic_star_full")
             , 0x49, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 1, 1, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Choco/Mog"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Choco/Mog x1 (14mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Choco/Mog x2 (14mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Choco/Mog x3 (14mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Choco/Mog x4 (14mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Choco/Mog x5 (14mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Mag:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4A, -2, +2, 0, 0, 0, 0, +1, 0, {0, 2000, 14000, 25000, 35000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Wind]")), {QString()}
+            QT_TR_NOOP("Choco/Mog")
+            , {QT_TR_NOOP("Choco/Mog x1 (14mp)"), QT_TR_NOOP("Choco/Mog x2 (14mp)"), QT_TR_NOOP("Choco/Mog x3 (14mp)"), QT_TR_NOOP("Choco/Mog x4 (14mp)"), QT_TR_NOOP("Choco/Mog x5 (14mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Mag:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4A, -2, +2, 0, 0, 0, 0, +1, 0, {0, 2000, 14000, 25000, 35000}, 2, 5, QT_TR_NOOP("[Wind]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Shiva"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shiva x1 (32mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shiva x2 (32mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shiva x3 (32mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shiva x4 (32mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Shiva x5 (32mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Mag:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4B, -2, +2, 0, 0, 0, 0, +1, 0, {0, 4000, 15000, 30000, 50000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Ice]")), {QString()}
+            QT_TR_NOOP("Shiva")
+            , {QT_TR_NOOP("Shiva x1 (32mp)"), QT_TR_NOOP("Shiva x2 (32mp)"), QT_TR_NOOP("Shiva x3 (32mp)"), QT_TR_NOOP("Shiva x4 (32mp)"), QT_TR_NOOP("Shiva x5 (32mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Mag:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4B, -2, +2, 0, 0, 0, 0, +1, 0, {0, 4000, 15000, 30000, 50000}, 2, 5, QT_TR_NOOP("[Ice]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Ifrit"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ifrit x1 (34mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ifrit x2 (34mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ifrit x3 (34mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ifrit x4 (34mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ifrit x5 (34mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Mag:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4C, -2, +2, 0, 0, 0, 0, +1, 0, {0, 5000, 20000, 35000, 60000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Fire]")), {QString()}
+            QT_TR_NOOP("Ifrit")
+            , {QT_TR_NOOP("Ifrit x1 (34mp)"), QT_TR_NOOP("Ifrit x2 (34mp)"), QT_TR_NOOP("Ifrit x3 (34mp)"), QT_TR_NOOP("Ifrit x4 (34mp)"), QT_TR_NOOP("Ifrit x5 (34mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Mag:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4C, -2, +2, 0, 0, 0, 0, +1, 0, {0, 5000, 20000, 35000, 60000}, 2, 5, QT_TR_NOOP("[Fire]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Ramuh"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ramuh x1 (40mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ramuh x2 (40mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ramuh x3 (40mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ramuh x4 (40mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Ramuh x5 (40mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Mag:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4D, -2, +2, 0, 0, 0, 0, +1, 0, {0, 10000, 25000, 50000, 70000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Lightning]")), {QString()}
+            QT_TR_NOOP("Ramuh")
+            , {QT_TR_NOOP("Ramuh x1 (40mp)"), QT_TR_NOOP("Ramuh x2 (40mp)"), QT_TR_NOOP("Ramuh x3 (40mp)"), QT_TR_NOOP("Ramuh x4 (40mp)"), QT_TR_NOOP("Ramuh x5 (40mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Mag:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4D, -2, +2, 0, 0, 0, 0, +1, 0, {0, 10000, 25000, 50000, 70000}, 2, 5, QT_TR_NOOP("[Lightning]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Titan"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Titan x1 (46mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Titan x2 (46mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Titan x3 (46mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Titan x4 (46mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Titan x5 (46mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-2% MaxMp:+2% Mag:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4E, -2, +2, 0, 0, 0, 0, +1, 0, {0, 15000, 30000, 60000, 80000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Earth]")), {QString()}
+            QT_TR_NOOP("Titan")
+            , {QT_TR_NOOP("Titan x1 (46mp)"), QT_TR_NOOP("Titan x2 (46mp)"), QT_TR_NOOP("Titan x3 (46mp)"), QT_TR_NOOP("Titan x4 (46mp)"), QT_TR_NOOP("Titan x5 (46mp)")}
+            , QT_TR_NOOP("MaxHp:-2% MaxMp:+2% Mag:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4E, -2, +2, 0, 0, 0, 0, +1, 0, {0, 15000, 30000, 60000, 80000}, 2, 5, QT_TR_NOOP("[Earth]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Odin"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Odin x1 (80mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Odin x2 (80mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Odin x3 (80mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Odin x4 (80mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Odin x5 (80mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x4F, -5, +5, 0, 0, 0, 0, +1, +1, {0, 16000, 32000, 65000, 90000}, 2, 5, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Death]"))}
+            QT_TR_NOOP("Odin")
+            , {QT_TR_NOOP("Odin x1 (80mp)"), QT_TR_NOOP("Odin x2 (80mp)"), QT_TR_NOOP("Odin x3 (80mp)"), QT_TR_NOOP("Odin x4 (80mp)"), QT_TR_NOOP("Odin x5 (80mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x4F, -5, +5, 0, 0, 0, 0, +1, +1, {0, 16000, 32000, 65000, 90000}, 2, 5, QString(), {QT_TR_NOOP("[Death]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Leviathan"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Leviathan x1 (78mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Leviathan x2 (78mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Leviathan x3 (78mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Leviathan x4 (78mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Leviathan x5 (78mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x50, -5, +5, 0, 0, 0, 0, +1, +1, {0, 18000, 38000, 70000, 100000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Water]")), {QString()}
+            QT_TR_NOOP("Leviathan")
+            , {QT_TR_NOOP("Leviathan x1 (78mp)"), QT_TR_NOOP("Leviathan x2 (78mp)"), QT_TR_NOOP("Leviathan x3 (78mp)"), QT_TR_NOOP("Leviathan x4 (78mp)"), QT_TR_NOOP("Leviathan x5 (78mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x50, -5, +5, 0, 0, 0, 0, +1, +1, {0, 18000, 38000, 70000, 100000}, 2, 5, QT_TR_NOOP("[Water]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Bahamut"))
-            ,{QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut x1 (100mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut x2 (100mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut x3 (100mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut x4 (100mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut x5 (100mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            QT_TR_NOOP("Bahamut")
+            ,{QT_TR_NOOP("Bahamut x1 (100mp)"), QT_TR_NOOP("Bahamut x2 (100mp)"), QT_TR_NOOP("Bahamut x3 (100mp)"), QT_TR_NOOP("Bahamut x4 (100mp)"), QT_TR_NOOP("Bahamut x5 (100mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             , 0x51, -5, +5, 0, 0, 0, 0, +1, +1, {0, 20000, 50000, 80000, 120000}, 2, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Kujata"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Kujata x1 (110mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Kujata x2 (110mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Kujata x3 (110mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Kujata x4 (110mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Kujata x5 (110mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            QT_TR_NOOP("Kujata")
+            , {QT_TR_NOOP("Kujata x1 (110mp)"), QT_TR_NOOP("Kujata x2 (110mp)"), QT_TR_NOOP("Kujata x3 (110mp)"), QT_TR_NOOP("Kujata x4 (110mp)"), QT_TR_NOOP("Kujata x5 (110mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             , 0x52, -5, +5, 0, 0, 0, 0, +1, +1, {0, 22000, 60000, 90000, 140000}, 2, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Alexander"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Alexander x1 (120mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Alexander x2 (120mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Alexander x3 (120mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Alexander x4 (120mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Alexander x5 (120mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x53, -5, +5, 0, 0, 0, 0, +1, +1, {0, 25000, 65000, 100000, 150000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Holy]")), {QString()}
+            QT_TR_NOOP("Alexander")
+            , {QT_TR_NOOP("Alexander x1 (120mp)"), QT_TR_NOOP("Alexander x2 (120mp)"), QT_TR_NOOP("Alexander x3 (120mp)"), QT_TR_NOOP("Alexander x4 (120mp)"), QT_TR_NOOP("Alexander x5 (120mp)")}
+            , QT_TR_NOOP("MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x53, -5, +5, 0, 0, 0, 0, +1, +1, {0, 25000, 65000, 100000, 150000}, 2, 5, QT_TR_NOOP("[Holy]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Phoenix"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Phoenix x1 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Phoenix x2 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Phoenix x3 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Phoenix x4 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Phoenix x5 (180mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x54, -10, +10, 0, 0, 0, 0, +2, +2, {0, 28000, 70000, 120000, 180000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Fire]")), {QString()}
+            QT_TR_NOOP("Phoenix")
+            , {QT_TR_NOOP("Phoenix x1 (180mp)"), QT_TR_NOOP("Phoenix x2 (180mp)"), QT_TR_NOOP("Phoenix x3 (180mp)"), QT_TR_NOOP("Phoenix x4 (180mp)"), QT_TR_NOOP("Phoenix x5 (180mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x54, -10, +10, 0, 0, 0, 0, +2, +2, {0, 28000, 70000, 120000, 180000}, 2, 5, QT_TR_NOOP("[Fire]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Neo Bahamut"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Neo Bahamut x1 (140mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Neo Bahamut x2 (140mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Neo Bahamut x3 (140mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Neo Bahamut x4 (140mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Neo Bahamut x5 (140mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            QT_TR_NOOP("Neo Bahamut")
+            , {QT_TR_NOOP("Neo Bahamut x1 (140mp)"), QT_TR_NOOP("Neo Bahamut x2 (140mp)"), QT_TR_NOOP("Neo Bahamut x3 (140mp)"), QT_TR_NOOP("Neo Bahamut x4 (140mp)"), QT_TR_NOOP("Neo Bahamut x5 (140mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             , 0x55, -10, +10, 0, 0, 0, 0, +2, +2, {0, 30000, 80000, 140000, 200000}, 2, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Hades"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Hades x1 (150mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Hades x2 (150mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Hades x3 (150mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Hades x4 (150mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Hades x5 (150mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x56, -10, +15, 0, 0, 0, 0, +4, +4, {0, 35000, 120000, 150000, 250000}, 2, 5, QString(), {QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Sleep]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Poison]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Confusion]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Silence]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Frog]")), QT_TRANSLATE_NOOP(_statusGroup,  QStringLiteral("[Mini]"))}
+            QT_TR_NOOP("Hades")
+            , {QT_TR_NOOP("Hades x1 (150mp)"), QT_TR_NOOP("Hades x2 (150mp)"), QT_TR_NOOP("Hades x3 (150mp)"), QT_TR_NOOP("Hades x4 (150mp)"), QT_TR_NOOP("Hades x5 (150mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x56, -10, +15, 0, 0, 0, 0, +4, +4, {0, 35000, 120000, 150000, 250000}, 2, 5, QString(), {QT_TR_NOOP("[Sleep]"), QT_TR_NOOP("[Poison]"), QT_TR_NOOP("[Confusion]"), QT_TR_NOOP("[Silence]"), QT_TR_NOOP("[Frog]"), QT_TR_NOOP("[Mini]")}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Typhon"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Typhon x1 (160mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Typhon x2 (160mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Typhon x3 (160mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Typhon x4 (160mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Typhon x5 (160mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
-            , 0x57, -10, +15, 0, 0, 0, 0, +4, +4, {0, 35000, 120000, 150000, 250000}, 2, 5, QT_TRANSLATE_NOOP(_elementGroup, QStringLiteral("[Wind]")), {QString()}
+            QT_TR_NOOP("Typhon")
+            , {QT_TR_NOOP("Typhon x1 (160mp)"), QT_TR_NOOP("Typhon x2 (160mp)"), QT_TR_NOOP("Typhon x3 (160mp)"), QT_TR_NOOP("Typhon x4 (160mp)"), QT_TR_NOOP("Typhon x5 (160mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            , 0x57, -10, +15, 0, 0, 0, 0, +4, +4, {0, 35000, 120000, 150000, 250000}, 2, 5, QT_TR_NOOP("[Wind]"), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Bahamut ZERO"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut ZERO x1 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut ZERO x2 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut ZERO x3 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut ZERO x4 (180mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Bahamut ZERO x5 (180mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            QT_TR_NOOP("Bahamut ZERO")
+            , {QT_TR_NOOP("Bahamut ZERO x1 (180mp)"), QT_TR_NOOP("Bahamut ZERO x2 (180mp)"), QT_TR_NOOP("Bahamut ZERO x3 (180mp)"), QT_TR_NOOP("Bahamut ZERO x4 (180mp)"), QT_TR_NOOP("Bahamut ZERO x5 (180mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             ,0x58, -10, +15, 0, 0, 0, 0, +4, +4, {0, 35000, 120000, 150000, 250000}, 2, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Knights of the Round"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("KOTR x1 (250mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("KOTR x2 (250mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("KOTR x3 (250mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("KOTR x4 (250mp)")), QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("KOTR x5 (250mp)"))}
-            , QT_TRANSLATE_NOOP(_statsGroup, QStringLiteral("MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8")), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
+            QT_TR_NOOP("Knights of the Round")
+            , {QT_TR_NOOP("KOTR x1 (250mp)"), QT_TR_NOOP("KOTR x2 (250mp)"), QT_TR_NOOP("KOTR x3 (250mp)"), QT_TR_NOOP("KOTR x4 (250mp)"), QT_TR_NOOP("KOTR x5 (250mp)")}
+            , QT_TR_NOOP("MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8"), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             , 0x59, -10, +20, 0, 0, 0, 0, +8, +8, {0, 50000, 200000, 300000, 500000}, 2, 5, QString(), {QString()}
         },
         {
-            QT_TRANSLATE_NOOP(_nameGroup, QStringLiteral("Master Summon"))
-            , {QT_TRANSLATE_NOOP(_skillGroup, QStringLiteral("Master Summon"))}
+            QT_TR_NOOP("Master Summon")
+            , {QT_TR_NOOP("Master Summon")}
             , QString(), QStringLiteral(":/materia/summon"), QStringLiteral(":/materia/summon_star_empty"), QStringLiteral(":/materia/summon_star_full")
             , 0x5A, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0, 0, 0}, 2, 1, QString(), {QString()}
         }
     };
-    inline static const QString _eskillGroup = QStringLiteral("E_skills");
     inline static const QStringList _enemySkills{
-        QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Frog Song"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("L4 Suicide"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Magic Hammer"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("White Wind"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Big Guard"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Angel Whisper"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Dragon Force"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Death Force"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Flame Thrower"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Laser"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Matra Magic"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Bad Breath"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Beta"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Aqualung"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Trine"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Magic Breath"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("????"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Goblin Punch"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Chocobuckle"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("L5 Death"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Death Sentence"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Roulette"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Shadow Flare"))
-        , QT_TRANSLATE_NOOP(_eskillGroup, QStringLiteral("Pandora's Box"))
+        QT_TR_NOOP("Frog Song")
+        , QT_TR_NOOP("L4 Suicide")
+        , QT_TR_NOOP("Magic Hammer")
+        , QT_TR_NOOP("White Wind")
+        , QT_TR_NOOP("Big Guard")
+        , QT_TR_NOOP("Angel Whisper")
+        , QT_TR_NOOP("Dragon Force")
+        , QT_TR_NOOP("Death Force")
+        , QT_TR_NOOP("Flame Thrower")
+        , QT_TR_NOOP("Laser")
+        , QT_TR_NOOP("Matra Magic")
+        , QT_TR_NOOP("Bad Breath")
+        , QT_TR_NOOP("Beta")
+        , QT_TR_NOOP("Aqualung")
+        , QT_TR_NOOP("Trine")
+        , QT_TR_NOOP("Magic Breath")
+        , QT_TR_NOOP("????")
+        , QT_TR_NOOP("Goblin Punch")
+        , QT_TR_NOOP("Chocobuckle")
+        , QT_TR_NOOP("L5 Death")
+        , QT_TR_NOOP("Death Sentence")
+        , QT_TR_NOOP("Roulette")
+        , QT_TR_NOOP("Shadow Flare")
+        , QT_TR_NOOP("Pandora's Box")
     };
 };
