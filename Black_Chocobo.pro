@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
+# //    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -65,7 +65,6 @@ HEADERS += \
 	about.h \
 	options.h \
 	errbox.h \
-	version.h \
 	qhexedit/chunks.h \
 	qhexedit/qhexedit.h \
 	qhexedit/commands.h \

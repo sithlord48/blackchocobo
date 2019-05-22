@@ -21,7 +21,6 @@
 #include <QTime>
 #include <QSettings>
 #include "mainwindow.h"
-#include "version.h"                // contains the program version
 
 #if defined(STATIC) && (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
 #include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
@@ -34,17 +33,15 @@ Q_IMPORT_PLUGIN(qkrcodecs)
 
 int main(int argc, char *argv[])
 {
-    QString Version = QString::number(VER_MAJOR);
-    Version.append(QString("."));
-    Version.append(QString::number(VER_MINOR));
-    Version.append(QString("."));
-    Version.append(QString::number(VER_SP));
-    if(VER_BUILDNR>0){Version.append(QString("."));Version.append(QString::number(VER_BUILDNR));}
+    QVersionNumber version(1, 9, 92);
 
-    if(argc >1)
-    {//Check for and display help to the console :D
-        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");return 0;}
-        else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toLocal8Bit().constData());return 0;}
+    if(argc >1) {
+        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h") {
+            printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");
+        } else if(QString(argv[1]) == "--version") {
+            printf("Black Chocobo Version:%s \n",version.toString().toLocal8Bit().constData());
+        }
+        return 0;
     }
     //Start application init.
     Q_INIT_RESOURCE(images);
@@ -52,7 +49,7 @@ int main(int argc, char *argv[])
     a.setApplicationName("Black Chocobo");
     QSettings * settings;
 
-    a.setApplicationVersion(Version);
+    a.setApplicationVersion(version.toString());
 
     #ifdef STATIC
         settings= new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);

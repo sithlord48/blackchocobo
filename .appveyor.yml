@@ -66,10 +66,10 @@ build_script:
 
     dir Black_Chocobo-%commit%-win32
 
-    7z a -tzip Black_Chocobo-win32.zip Black_Chocobo-%commit%-win32 -r
+    7z a -tzip Black_Chocobo-continuous-win32.zip Black_Chocobo-%commit%-win32 -r
 
 artifacts:
-- path: Black_Chocobo-win32.zip
+- path: Black_Chocobo-continuous-win32.zip
   name: blackchocobo
 deploy:
 - provider: GitHub
