@@ -3826,9 +3826,6 @@ location.</string>
                  <property name="frameShape">
                   <enum>QFrame::NoFrame</enum>
                  </property>
-                 <property name="text">
-                  <string/>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_aeris</cstring>
                  </property>
@@ -3877,9 +3874,6 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="lbl_love_tifa">
-                 <property name="text">
-                  <string/>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_tifa</cstring>
                  </property>
@@ -3925,9 +3919,6 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="lbl_love_yuffie">
-                 <property name="text">
-                  <string/>
-                 </property>
                  <property name="buddy">
                   <cstring>sb_love_yuffie</cstring>
                  </property>
@@ -3973,9 +3964,6 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="lbl_love_barret">
-                 <property name="text">
-                  <string/>
-                 </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
@@ -5660,17 +5648,11 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     <width>64</width>
                     <height>64</height>
                    </size>
-                  </property>
-                  <property name="text">
-                   <string>TextLabel</string>
-                  </property>
+                 </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QLabel" name="lblSlotSize">
-                  <property name="text">
-                   <string>TextLabel</string>
-                  </property>
                  </widget>
                 </item>
                </layout>

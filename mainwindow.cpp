@@ -37,7 +37,28 @@ MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
 	settings =configdata;
 	ui->setupUi(this);
     setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
-	ui->frame_status->setFixedHeight(fontMetrics().height()+2);
+
+
+    //Dynamicly Populate The List of languages and pick one
+
+    QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
+    QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
+
+    for (const QString &translation : langList) {
+        QTranslator *translator = new QTranslator;
+        translator->load(translation, dir.absolutePath());
+        QString lang = translation.mid(7,2);
+        m_translations.insert(lang, translator);
+        auto langAction = ui->menuLang->addAction(translator->translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
+        langAction->setData(lang);
+        langAction->setCheckable(true);
+        langAction->setChecked(settings->value("lang").toString() == lang);
+        if (langAction->isChecked()) {
+            QApplication::installTranslator(translator);
+        }
+    }
+
+    ui->frame_status->setFixedHeight(fontMetrics().height()+2);
     ui->tbl_materia->setIconSize(QSize(fontMetrics().height(),fontMetrics().height()));
 	_init=true;
     ff7 = new FF7Save();
@@ -49,6 +70,7 @@ MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
 	buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<3;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 	init_display();
+    populateCombos();
 	init_style();
 	init_settings();
 	init_connections();
@@ -101,7 +123,7 @@ void MainWindow::init_display()
 
     ui->lbl_love_aeris->setFixedSize(int(50*scale), int(68*scale));
     ui->lbl_love_barret->setFixedSize(int(50*scale),int(68*scale));
-    ui->lbl_love_tifa->setFixedSize(int(50*scale),int(8*scale));
+    ui->lbl_love_tifa->setFixedSize(int(50*scale),int(68*scale));
     ui->lbl_love_yuffie->setFixedSize(int(50*scale),int(68*scale));
 
 	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
@@ -125,21 +147,6 @@ void MainWindow::init_display()
     ui->combo_party1->setIconSize(QSize(int(32*scale), int(32*scale)));
     ui->combo_party2->setIconSize(QSize(int(32*scale), int(32*scale)));
     ui->combo_party3->setIconSize(QSize(int(32*scale), int(32*scale)));
-
-
-	for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));}
-	for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.icon(i),Chars.defaultName(i));}
-	for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.icon(i),Chars.defaultName(i));}
-	ui->combo_party1->addItem(QString("0x0B"));
-	ui->combo_party1->addItem(tr("-Empty-"));
-	ui->combo_party2->addItem(QString("0x0B"));
-	ui->combo_party2->addItem(tr("-Empty-"));
-	ui->combo_party3->addItem(QString("0x0B"));
-	ui->combo_party3->addItem(tr("-Empty-"));
-
-	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
-	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
-	ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
     phsList = new PhsListWidget();
 	QHBoxLayout *phsLayout = new QHBoxLayout;
@@ -219,26 +226,42 @@ void MainWindow::init_display()
 
 	//Set up Status Bar..
 	ui->statusBar->addWidget(ui->frame_status,1);
-	//Dynamicly Populate The List of languages
-
-	QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
-	QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
-	QAction *langAction = ui->menuLang->addAction("English");
-	langAction->setData("en");
-	langAction->setCheckable(true);
-	langAction->setChecked(settings->value("lang").toString()=="en");
-
-	for(int i=0;i<langList.length();i++)
-	{
-		if(langList.at(i).mid(7,2)=="en"){continue;}
-		QTranslator translator;
-		translator.load(langList.at(i),dir.absolutePath());
-		QString lang = langList.at(i).mid(7,2);
-		langAction = ui->menuLang->addAction(translator.translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
-		langAction->setData(lang);
-		langAction->setCheckable(true);
-		langAction->setChecked(settings->value("lang").toString()==lang);
-	}
+}
+void MainWindow::populateCombos()
+{
+//Party Combos
+    if(ui->combo_party1->count() != 0) {
+        for (int i = 0; i < 11; i++) {
+            ui->combo_party1->setItemText(i, Chars.defaultName(i));
+            ui->combo_party2->setItemText(i, Chars.defaultName(i));
+            ui->combo_party3->setItemText(i, Chars.defaultName(i));
+        }
+        ui->combo_party1->setItemText(12, tr("-Empty-"));
+        ui->combo_party2->setItemText(12, tr("-Empty-"));
+        ui->combo_party3->setItemText(12, tr("-Empty-"));
+    } else {
+        for (int i = 0; i<11; i++) {
+            ui->combo_party1->addItem(Chars.icon(i),Chars.defaultName(i));
+            ui->combo_party2->addItem(Chars.icon(i),Chars.defaultName(i));
+            ui->combo_party3->addItem(Chars.icon(i),Chars.defaultName(i));
+        }
+        ui->combo_party1->addItem(QString("0x0B"));
+        ui->combo_party2->addItem(QString("0x0B"));
+        ui->combo_party3->addItem(QString("0x0B"));
+        ui->combo_party1->addItem(tr("-Empty-"));
+        ui->combo_party2->addItem(tr("-Empty-"));
+        ui->combo_party3->addItem(tr("-Empty-"));
+    }
+//World party leader Combo.
+    if (ui->cb_world_party_leader->count() != 0) {
+        ui->cb_world_party_leader->setItemText(0, Chars.defaultName(FF7Char::Cloud));
+        ui->cb_world_party_leader->setItemText(1, Chars.defaultName(FF7Char::Tifa));
+        ui->cb_world_party_leader->setItemText(2, Chars.defaultName(FF7Char::Cid));
+    } else {
+        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
+        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
+        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
+    }
 }
 void MainWindow::init_style()
 {
@@ -387,13 +410,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::changeEvent(QEvent *e)
 {
-	QMainWindow::changeEvent(e);
-	switch (e->type()) {
-	case QEvent::LanguageChange:
-		ui->retranslateUi(this);
-		break;
-	default:
-		break;
+    if (e->type() != QEvent::LanguageChange)
+        return;
+
+    ui->retranslateUi(this);
+    ui->tabWidget->setTabText(3, tr("Chocobo"));
+    ui->tabWidget->setTabText(7, tr("Game Options"));
+    populateCombos();
+    materiaupdate();
+    updateStolenMateria();
+    if(ui->combo_hexEditor->currentIndex() == 0) {
+        update_hexEditor_PSXInfo();
     }
 }
 void MainWindow::dragEnterEvent(QDragEnterEvent *e) { e->accept(); }
@@ -643,9 +670,6 @@ void MainWindow::on_actionNew_Game_triggered()
         save_name = settings->value("default_save_file").toString();
     }
     ff7->newGame(s, save_name);//call the new game function
-    //if(save_name.isEmpty()) {
-    //    save_name = QString(tr("Builtin Data"));
-    //}
     ui->statusBar->showMessage(tr("New Game Created - Using: %1")
                      .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
 	_init=false;
@@ -736,20 +760,12 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 
 void MainWindow::changeLanguage(QAction *action)
 {
-	settings->setValue("lang",action->data());
-	for(int i=0;i<ui->menuLang->actions().length();i++)
-	{
-		ui->menuLang->actions().at(i)->setChecked(false);
-	}
+    settings->setValue("lang", action->data());
+    for (QAction *menuEntry : ui->menuLang->actions()) {
+        menuEntry->setChecked(false);
+    }
 	action->setChecked(true);
-	QTranslator translator;
-	QString title,message;
-	translator.load(QString("bchoco_%1.qm").arg(settings->value("lang").toString()),QString("%1%2lang").arg(settings->value("langPath").toString(),QDir::separator()));
-	title= translator.translate("MainWindow","Language Changed");
-	if(title.isEmpty()){title = "Language Changed";}
-	message = translator.translate("MainWindow","You must restart for the language to change.");
-	if(message.isEmpty()){message = "You must restart for the language to change.";}
-	QMessageBox::information(this,title,message);
+    QApplication::installTranslator(m_translations.value(action->data().toString()));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
@@ -758,7 +774,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
 	{
 		ff7->setRegion(s,"");
 		ui->lbl_sg_region->clear();
-		itemlist->setMaximumItemQty(127);
+        itemlist->setMaximumItemQty(127);
 	}
 	else
 	{
@@ -1208,31 +1224,13 @@ void MainWindow::othersUpdate()
 	ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
 
 	/*~~~~~Stolen Materia~~~~~~~*/
-	QTableWidgetItem *newItem;
 	ui->tbl_materia_2->reset();
 	ui->tbl_materia_2->clearContents();
     ui->tbl_materia_2->setColumnWidth(0, int(ui->tbl_materia_2->width()*.65));
     ui->tbl_materia_2->setColumnWidth(1, int(ui->tbl_materia_2->width()*.25));
 	ui->tbl_materia_2->setRowCount(48);
-	for(int mat=0;mat<48;mat++) //materias stolen by yuffie
-	{
-		QString ap;
-		quint8 current_id = ff7->stolenMateriaId(s,mat);
-		if (current_id !=FF7Materia::EmptyId)
-		{
-			newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)),Materias.name(current_id),0);
-			ui->tbl_materia_2->setItem(mat,0,newItem);
-			qint32 current_ap = ff7->stolenMateriaAp(s,mat);
-			if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
-			else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
-		}
-		else
-		{
-			newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
-			ui->tbl_materia_2->setItem(mat,0,newItem);
-		}
-		ui->tbl_materia_2->setRowHeight(mat,fontMetrics().height()+9);
-	}
+    updateStolenMateria();
+
 	//SnowBoard Mini Game Data.
 	ui->sbSnowBegMin->setValue(ff7->snowboardTime(s,0).mid(0,2).toInt());
 	ui->sbSnowBegSec->setValue(ff7->snowboardTime(s,0).mid(2,2).toInt());
@@ -1253,6 +1251,29 @@ void MainWindow::othersUpdate()
 	ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
 	ui->cb_FlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
 	load=false;
+}
+void MainWindow::updateStolenMateria()
+{
+    for(int mat=0;mat<48;mat++) //materias stolen by yuffie
+    {
+        QString ap;
+        quint8 current_id = ff7->stolenMateriaId(s,mat);
+        QTableWidgetItem *newItem;
+        if (current_id !=FF7Materia::EmptyId)
+        {
+            newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)),Materias.name(current_id),0);
+            ui->tbl_materia_2->setItem(mat,0,newItem);
+            qint32 current_ap = ff7->stolenMateriaAp(s,mat);
+            if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
+            else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
+        }
+        else
+        {
+            newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
+            ui->tbl_materia_2->setItem(mat,0,newItem);
+        }
+        ui->tbl_materia_2->setRowHeight(mat,fontMetrics().height()+9);
+    }
 }
 void MainWindow::update_hexEditor_PSXInfo(void)
 {
@@ -1408,7 +1429,7 @@ void MainWindow::hexTabUpdate(int viewMode)
     } else {
 		ui->psxExtras->setVisible(true);
 		update_hexEditor_PSXInfo();
-        if(!ff7->isFF7(s)) {
+        if(ff7->isFF7(s)) {
             ui->boxHexData->setVisible(true);
             switch(viewMode)
             {
@@ -1426,6 +1447,7 @@ void MainWindow::hexTabUpdate(int viewMode)
 	hexEditor->setCursorPosition(hexCursorPos);
 	connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
 }
+
 void MainWindow::setControllerMappingVisible(bool Visible)
 {
     optionsWidget->setControllerMappingVisible(Visible);

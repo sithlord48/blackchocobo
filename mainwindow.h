@@ -67,7 +67,7 @@ public:
 
 protected:
 	void dragEnterEvent(QDragEnterEvent *e);
-	void dropEvent(QDropEvent *e);
+    void dropEvent(QDropEvent *e);
 	void changeEvent(QEvent *e);
 	void closeEvent(QCloseEvent *e);
 	void resizeEvent(QResizeEvent *);
@@ -101,6 +101,7 @@ private:
 	ChocoboManager *chocoboManager;
 	LocationViewer *locationViewer;
 	QString prevFile;
+    QMap<QString, QTranslator*> m_translations;
 
 	typedef QList<quint16> fieldItemOffsetList;
 	typedef QList<quint8> fieldItemBitList;
@@ -109,6 +110,7 @@ private:
 	QList<fieldItemBitList> *fieldItemBit;
 	QHexEdit *hexEditor;
 	void init_display();
+    void populateCombos();
 	void init_style();
 	void init_connections();
 	void init_settings();
@@ -164,6 +166,7 @@ private slots://try to keep these in the same order as the .cpp file
 	void on_locationToolBox_currentChanged(int index);
 	void on_testDataTabWidget_currentChanged(int index);
 	void fileModified(bool changed);
+    void updateStolenMateria();
 
 	/*HexEditor Tab */
 	void hexTabUpdate(int viewMode);
