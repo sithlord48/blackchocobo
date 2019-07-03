@@ -262,11 +262,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>+</source>
-        <translation>+</translation>
+        <translation type="vanished">+</translation>
     </message>
     <message>
         <source>=</source>
-        <translation>=</translation>
+        <translation type="vanished">=</translation>
     </message>
     <message>
         <source>Vit</source>
@@ -591,6 +591,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next: %1</source>
         <translation>次：%1</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">抵抗します</translation>
     </message>
 </context>
 <context>
@@ -6075,7 +6079,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
@@ -7699,8 +7703,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
-        <translation type="unfinished">
-株式に各マテリアを追加します（リストの末尾）</translation>
+        <translation type="unfinished">株式に各マテリアを追加します（リストの末尾）</translation>
     </message>
     <message>
         <source>Beginner Course</source>
@@ -8066,10 +8069,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">PSX名：</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No Description Text</source>
         <translation type="unfinished">いいえ説明テキストはありません</translation>
     </message>
@@ -8405,7 +8404,7 @@ location.</source>
     </message>
     <message>
         <source>Locked</source>
-        <translation type="unfinished">ロック</translation>
+        <translation type="obsolete">ロック</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8442,6 +8441,10 @@ location.</source>
     <message>
         <source>Save</source>
         <translation>セーブ</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished">許可されました</translation>
     </message>
 </context>
 <context>
@@ -8755,7 +8758,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Slow</source>
-        <translation>&#x3000;遅い</translation>
+        <translation type="unfinished">遅い</translation>
     </message>
     <message>
         <source>Battle Message Speed:</source>
@@ -8780,6 +8783,58 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>10</source>
         <translation type="unfinished">10</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>上</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>右</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>下</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>左</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>メニュー</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>けってい</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>キャンセル</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>ＥＸＴ</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>ターゲットマーク</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>ページ順送り</translation>
+    </message>
+    <message>
+        <source>PgDn</source>
+        <translation>ページ逆送り</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>ヘルプ</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>ポーズ</translation>
     </message>
 </context>
 <context>

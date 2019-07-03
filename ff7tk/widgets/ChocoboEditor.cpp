@@ -25,11 +25,78 @@ void ChocoboEditor::resizeEvent(QResizeEvent *ev)
 		Final->setColumnStretch(1,width()/4);
 	}
 }
+void ChocoboEditor::updateText()
+{
+    lbl_speed->setText(tr("Run Speed"));
+    lbl_sprint->setText(tr("Sprint Speed"));
+    lbl_accel->setText(tr("Acceleration"));
+    lbl_stamina->setText(tr("Stamina"));
+    lbl_wins->setText(tr("Races Won"));
+    lbl_coop->setText(tr("Cooperation"));
+    lbl_intel->setText(tr("Intelligence"));
+    lbl_pCount->setText(tr("pCount"));
+    lbl_personality->setText(tr("Personality"));
+    lbl_rating->setText(tr("Choco Billy's Rating: "));
+    lblSpeedWarning->setText(tr("Speed Values Are The Raw Values\nThe km/h speeds are calculated while playing "));
+    line_name->setPlaceholderText(tr("Name"));
+    cb_cantMate->setText(tr("Unable To Mate"));
+    getRank();
 
+    if (combo_sex->count() != 0) {
+        combo_sex->setItemText(0, tr("Male %1").arg(QString::fromUtf8("♂")));
+        combo_sex->setItemText(1, tr("Female %1").arg(QString::fromUtf8("♀")));
+    } else {
+        combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
+        combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
+    }
+
+    if (combo_type->count() != 0) {
+        combo_type->setItemText(0, tr("Yellow"));
+        combo_type->setItemText(1, tr("Green"));
+        combo_type->setItemText(2, tr("Blue"));
+        combo_type->setItemText(3, tr("Black"));
+        combo_type->setItemText(4, tr("Gold"));
+    } else {
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/yellow")),tr("Yellow"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/green")),tr("Green"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")),tr("Blue"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/black")),tr("Black"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")),tr("Gold"));
+    }
+
+    QStringList typelist {
+        tr("Empty"), tr("Wonderful"), tr("Great")
+        , tr("Good"), tr("Fair"), tr("Average")
+        , tr("Poor"), tr("Bad"), tr("Terrible")
+    };
+
+    if (combo_rating->count() != 0) {
+        for(int i = 0; i < typelist.count(); i++) {
+            combo_rating->setItemText(i, typelist.at(i));
+        }
+    } else {
+        combo_rating->addItems(typelist);
+    }
+}
 ChocoboEditor::ChocoboEditor(QWidget *parent) :
 	QWidget(parent)
-    , cb_cantMate(new QCheckBox(tr("Unable To Mate"), this))
-    , lbl_rank(new QLabel(this))
+    , lbl_rank(new QLabel)
+    , lbl_speed(new QLabel)
+    , lbl_sprint(new QLabel)
+    , lbl_accel(new QLabel)
+    , lbl_stamina(new QLabel)
+    , lbl_wins(new QLabel)
+    , lbl_coop(new QLabel)
+    , lbl_intel(new QLabel)
+    , lbl_pCount(new QLabel)
+    , lbl_personality(new QLabel)
+    , lbl_rating(new QLabel)
+    , lblSpeedWarning(new QLabel)
+    , combo_sex(new QComboBox(this))
+    , combo_type(new QComboBox(this))
+    , combo_rating(new QComboBox(this))
+    , cb_cantMate(new QCheckBox(this))
+    , line_name(new QLineEdit(this))
 {
     cb_cantMate->setStyleSheet(QStringLiteral("QCheckBox::indicator {width: %1px; height: %1px;}").arg(QString::number(fontMetrics().height())));
     //create Gui Widgets.
@@ -44,17 +111,8 @@ ChocoboEditor::ChocoboEditor(QWidget *parent) :
     sb_pCount = makeSpinBox(255);
     sb_intel = makeSpinBox(255);
     sb_personality = makeSpinBox(255);
-    auto lbl_speed = new QLabel(tr("Run Speed"), this);
-    auto lbl_sprint = new QLabel(tr("Sprint Speed"), this);
-    auto lbl_accel = new QLabel(tr("Acceleration"), this);
-    auto lbl_stamina = new QLabel(tr("Stamina"), this);
-    auto lbl_wins = new QLabel(tr("Races Won"), this);
-    auto lbl_coop = new QLabel(tr("Cooperation"), this);
-    auto lbl_intel = new QLabel(tr("Intelligence"), this);
-    auto lbl_pCount = new QLabel(tr("pCount"), this);
-    auto lbl_personality = new QLabel(tr("Personality"), this);
-    auto lbl_rating = new QLabel(tr("Choco Billy's Rating: "), this);
-    auto lblSpeedWarning = new QLabel(tr("Speed Values Are The Raw Values\nThe km/h speeds are calculated while playing "), this);
+    combo_type->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
+    line_name->setMaxLength(6);
 
     auto lbl_div_speed = new QLabel(QStringLiteral("/"), this);
     lbl_div_speed->setAlignment(Qt::AlignHCenter);
@@ -64,30 +122,7 @@ ChocoboEditor::ChocoboEditor(QWidget *parent) :
     lbl_div_sprint->setAlignment(Qt::AlignHCenter);
     lbl_div_sprint->setMaximumWidth(font().pointSize());
 
-    combo_sex = new QComboBox(this);
-    combo_sex->addItem(tr("Male %1").arg(QString::fromUtf8("♂")));
-    combo_sex->addItem(tr("Female %1").arg(QString::fromUtf8("♀")));
-
-    combo_type = new QComboBox(this);
-    combo_type->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
-    combo_type->addItem(QIcon(QPixmap(":/chocobo/yellow")),tr("Yellow"));
-    combo_type->addItem(QIcon(QPixmap(":/chocobo/green")),tr("Green"));
-    combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")),tr("Blue"));
-    combo_type->addItem(QIcon(QPixmap(":/chocobo/black")),tr("Black"));
-    combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")),tr("Gold"));
-
-    line_name = new QLineEdit(this);
-    line_name->setMaxLength(6);
-    line_name->setPlaceholderText(tr("Name"));
-
-    QStringList typelist {
-        tr("Empty"), tr("Wonderful"), tr("Great")
-        , tr("Good"), tr("Fair"), tr("Average")
-        , tr("Poor"), tr("Bad"), tr("Terrible")
-    };
-
-    combo_rating = new QComboBox(this);
-    combo_rating->addItems(typelist);
+    updateText();
 
     auto speed_layout = new QHBoxLayout;
     speed_layout->addWidget(lbl_speed);
@@ -458,4 +493,11 @@ QSpinBox* ChocoboEditor::makeSpinBox(int maxValue)
     spinbox->setAlignment(Qt::AlignHCenter);
     spinbox->setMaximum(maxValue);
     return spinbox;
+}
+
+void ChocoboEditor::changeEvent(QEvent *e)
+{
+    if( e->type() != QEvent::LanguageChange)
+        return;
+    updateText();
 }

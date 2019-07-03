@@ -264,11 +264,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>+</source>
-        <translation>+</translation>
+        <translation type="vanished">+</translation>
     </message>
     <message>
         <source>=</source>
-        <translation>=</translation>
+        <translation type="vanished">=</translation>
     </message>
     <message>
         <source>Vit</source>
@@ -593,6 +593,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next: %1</source>
         <translation>Next: %1</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">Resist</translation>
     </message>
 </context>
 <context>
@@ -8067,7 +8071,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation type="vanished">TextLabel</translation>
     </message>
     <message>
         <source>No Description Text</source>
@@ -8410,7 +8414,7 @@ location.</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation>Locked</translation>
+        <translation type="vanished">Locked</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8447,6 +8451,10 @@ location.</translation>
     <message>
         <source>Save</source>
         <translation>Save</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation>Allowed</translation>
     </message>
 </context>
 <context>
@@ -8792,6 +8800,58 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>10</source>
         <translation>10</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>Up</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Right</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Down</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Left</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menu</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>Switch</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>Target</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>PgUp</translation>
+    </message>
+    <message>
+        <source>PgDn</source>
+        <translation>PgDn</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Help</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
     </message>
 </context>
 <context>

@@ -66,5 +66,6 @@ private:
     QLabel *lblSex = nullptr;/**< \brief label to show sex*/
     QFrame *innerFrame = nullptr;/**< \brief inner frame of widget contains all the chocobo into */
     QFrame *outerFrame = nullptr;/**< \brief outer frame of widget contains the label checkbox, copy,paste,remove buttons*/
-	QString SelectedBkStyle;/**< \brief style for background when selected */
+    QString SelectedBkStyle;/**< \brief style for background when selected */
+    int m_wins = -1;
 };

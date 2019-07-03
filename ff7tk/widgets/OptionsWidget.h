@@ -28,6 +28,7 @@ class OptionsWidget : public QScrollArea
 	Q_OBJECT
 protected:
 	void resizeEvent(QResizeEvent *);
+    void changeEvent(QEvent *e);
 public:
     explicit OptionsWidget(QWidget *parent = nullptr);
     void setInput(int controlAction, int newButton);/**< \brief change action  to a PSXBUTTON \param controlAction Action to change See::FF7Save::CONTROLACTION\param newButton Button must be valid FF7Save::PSXBUTTON */
@@ -68,6 +69,7 @@ signals:
     void inputChanged(int controlAction, int newButton);/**< \brief Emit Signal: Mapping for FF7Save::CONTROLACTION has Changed to new FF7Save::PSXBUTTON */
 
 private:
+    void updateText();
     QGridLayout *makeControllerLayout();
     DialogPreview *dialogPreview = nullptr;
     QGroupBox *dialogBox = nullptr;
@@ -85,43 +87,93 @@ private:
     QSlider *slideBattleMessageSpeed = nullptr;
     QSlider *slideFieldMessageSpeed = nullptr;
     QGroupBox *controllerMappingBox = nullptr;
+    QLabel *labelAtb = nullptr;
+    QLabel *labelSound = nullptr;
+    QLabel *labelMagic = nullptr;
+    QLabel *labelCursor = nullptr;
+    QLabel *labelCamera = nullptr;
+    QLabel *labelControllerMode = nullptr;
+    QLabel *lblBattleSpeedMax = nullptr;
+    QLabel *lblBattleSpeedMin = nullptr;
+    QLabel *lblBattleMessageSpeedMax = nullptr;
+    QLabel *lblBattleMessageSpeedMin = nullptr;
+    QLabel *lblFieldMessageSpeedMax = nullptr;
+    QLabel *lblFieldMessageSpeedMin = nullptr;
+    QLabel *lblBattleSpeed = nullptr;
+    QLabel *lblBattleMessageSpeed = nullptr;
+    QLabel *lblFieldMessageSpeed = nullptr;
+    QList<QLabel *> lblInputs;
 
     inline static const QStringList _inputNames {
-        QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Up"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Right"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Down"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Left"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Menu"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Ok"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Cancel"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Switch"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Camera"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Target"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("PgUp"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("PgDn"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Help"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Pause"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("9"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("10"))
+        QT_TR_NOOP("Up")
+        , QT_TR_NOOP("Right")
+        , QT_TR_NOOP("Down")
+        , QT_TR_NOOP("Left")
+        , QT_TR_NOOP("Menu")
+        , QT_TR_NOOP("Ok")
+        , QT_TR_NOOP("Cancel")
+        , QT_TR_NOOP("Switch")
+        , QT_TR_NOOP("Camera")
+        , QT_TR_NOOP("Target")
+        , QT_TR_NOOP("PgUp")
+        , QT_TR_NOOP("PgDn")
+        , QT_TR_NOOP("Help")
+        , QT_TR_NOOP("Pause")
+        , QT_TR_NOOP("9")
+        , QT_TR_NOOP("10")
     };
 
     inline static const QStringList _actionNames {
-        QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Camera"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Target"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("PgUp"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("PgDn"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Menu"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Ok"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Cancel"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Switch"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Help"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("9"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("10"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Pause"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Up"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Right"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Down"))
-        , QT_TRANSLATE_NOOP(QStringLiteral("FF7Input"), QStringLiteral("Left"))
+        QT_TR_NOOP("Camera")
+        , QT_TR_NOOP("Target")
+        , QT_TR_NOOP("PgUp")
+        , QT_TR_NOOP("PgDn")
+        , QT_TR_NOOP("Menu")
+        , QT_TR_NOOP("Ok")
+        , QT_TR_NOOP("Cancel")
+        , QT_TR_NOOP("Switch")
+        , QT_TR_NOOP("Help")
+        , QT_TR_NOOP("9")
+        , QT_TR_NOOP("10")
+        , QT_TR_NOOP("Pause")
+        , QT_TR_NOOP("Up")
+        , QT_TR_NOOP("Right")
+        , QT_TR_NOOP("Down")
+        , QT_TR_NOOP("Left")
     };
+
+    inline static const QStringList _atbList {
+        QT_TR_NOOP("Active")
+        , QT_TR_NOOP("Recommended")
+        , QT_TR_NOOP("Wait")
+    };
+
+    inline static const QStringList _soundList {
+        QT_TR_NOOP("Mono")
+        , QT_TR_NOOP("Stereo")
+    };
+
+    inline static const QStringList _magicOrderList {
+        QT_TR_NOOP("Restore,Attack,Indirect")
+        , QT_TR_NOOP("Restore,Indirect,Attack")
+        , QT_TR_NOOP("Attack,Indirect,Restore")
+        , QT_TR_NOOP("Attack,Restore,Indirect")
+        , QT_TR_NOOP("Indirect,Restore,Attack")
+        , QT_TR_NOOP("Indirect,Attack,Restore")
+    };
+
+    inline static const QStringList _cursorCameraList {
+        QT_TR_NOOP("Initial")
+        , QT_TR_NOOP("Memory")
+    };
+
+    inline static const QStringList _controllerModeList {
+        QT_TR_NOOP("Normal")
+        , QT_TR_NOOP("Custom")
+    };
+
+    inline static const QString _fast =  QT_TR_NOOP("Fast");
+    inline static const QString _slow =  QT_TR_NOOP("Slow");
+
 };
 #endif // OPTIONSWIDGET_H

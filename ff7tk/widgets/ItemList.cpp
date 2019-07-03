@@ -94,6 +94,13 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
     }
     else{return false;}
 }
+
+void ItemList::changeEvent(QEvent *e)
+{
+    if(e->type() != QEvent::LanguageChange)
+        return;
+    itemupdate();
+}
 ItemList::ItemList(qreal Scale,QWidget *parent) : QTableWidget(parent)
 {
 	scale = Scale;

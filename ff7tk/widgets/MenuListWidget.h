@@ -31,7 +31,8 @@ public:
 	 */
 	enum Box {MENUVISIBLE=1,MENULOCKED=2};
     explicit MenuListWidget(QWidget * parent=0);
-
+protected:
+    void changeEvent(QEvent *e);
 signals:
 	/** \brief SIGNAL: The visible box has changed its checked state
 	 *	\param row the row (FF7Save::MENUITEMS)
@@ -88,6 +89,7 @@ private:
 	void init_display();
 	void connectAll();
 	void disconnectAll();
+    void updateText();
 };
 
 #endif // MENULISTWIDGET_H

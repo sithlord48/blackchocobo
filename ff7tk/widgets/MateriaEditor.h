@@ -35,6 +35,8 @@ public:
     bool isEditable(void);
     void setEditable(bool);
 //    qint32 raw_data(void);
+protected:
+    void changeEvent(QEvent *e);
 public slots:
     void setEditableMateriaCombo(bool enabled);
 private:
@@ -49,6 +51,7 @@ private:
     void setStats(void);
     void setSkills(void);
     void setLevel(void);
+    void updateESkillList();
     //Private Gui Parts.
     QLabel *lbl_max_ap = nullptr;
     QHBoxLayout *Final = nullptr;
@@ -56,6 +59,9 @@ private:
     QComboBox *combo_materia = nullptr;
     QPushButton *btn_paste_materia = nullptr;
     QPushButton *btn_rm_materia = nullptr;
+    QPushButton *btn_copy_materia = nullptr;
+    QPushButton *btn_eskill_master = nullptr;
+    QPushButton *btn_eskill_clear = nullptr;
     QSpinBox *sb_ap = nullptr;
     QFrame *frm_ap = nullptr;
     QFrame *frm_skill_status = nullptr;

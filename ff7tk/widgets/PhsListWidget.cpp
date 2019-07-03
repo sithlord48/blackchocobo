@@ -16,65 +16,81 @@
 #include "PhsListWidget.h"
 PhsListWidget::PhsListWidget(QWidget * parent) :
 	QWidget(parent)
+  , lbl_phs(new QLabel)
+  , cb_cloud(new DoubleCheckBox)
+  , cb_barret(new DoubleCheckBox)
+  , cb_tifa(new DoubleCheckBox)
+  , cb_aerith(new DoubleCheckBox)
+  , cb_red(new DoubleCheckBox)
+  , cb_yuffie(new DoubleCheckBox)
+  , cb_cait(new DoubleCheckBox)
+  , cb_vincent(new DoubleCheckBox)
+  , cb_cid(new DoubleCheckBox)
 {
-	init_display();
+    updateText();
+    init_display();
     connectAll();
 }
+
+void PhsListWidget::changeEvent(QEvent *e)
+{
+    if (e->type() != QEvent::LanguageChange)
+        return;
+
+    updateText();
+}
+
 void PhsListWidget::init_display()
 {
-	lbl_phs = new QLabel(QString(tr("PHS Manager")));
 	lbl_phs->setStyleSheet(QString("text-decoration: underline;"));
 	QVBoxLayout *layout = new QVBoxLayout;
 	layout->addWidget(lbl_phs);
 	layout->setSpacing(3);
 	layout->setContentsMargins(0,0,0,0);
-    cb_cloud= new DoubleCheckBox(QString(tr("Cloud")));
-	cb_cloud->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_cloud->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_cloud);
-
-    cb_barret= new DoubleCheckBox(QString(tr("Barret")));
-	cb_barret->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_barret->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_barret);
-
-    cb_tifa= new DoubleCheckBox(QString(tr("Tifa")));
-	cb_tifa->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_tifa->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_tifa);
-
-    cb_aerith= new DoubleCheckBox(QString(tr("Aerith")));
-	cb_aerith->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_aerith->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_aerith);
-
-    cb_red= new DoubleCheckBox(QString(tr("Red XIII")));
-	cb_red->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_red->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_red);
-
-    cb_yuffie= new DoubleCheckBox(QString(tr("Yuffie")));
-	cb_yuffie->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_yuffie->setBoxToolTip(2,QString(tr("Visible")));
 	layout->addWidget(cb_yuffie);
+    layout->addWidget(cb_cait);
+    layout->addWidget(cb_vincent);
+    layout->addWidget(cb_cid);
+    setLayout(layout);
+}
+void PhsListWidget::updateText()
+{
+    QString aString = tr("Allowed");
+    QString vString = tr("Visible");
 
-    cb_cait= new DoubleCheckBox(QString(tr("Cait Sith")));
-	cb_cait->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_cait->setBoxToolTip(2,QString(tr("Visible")));
-	layout->addWidget(cb_cait);
-
-    cb_vincent= new DoubleCheckBox(QString(tr("Vincent")));
-	cb_vincent->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_vincent->setBoxToolTip(2,QString(tr("Visible")));
-	layout->addWidget(cb_vincent);
-
-    cb_cid= new DoubleCheckBox(QString(tr("Cid")));
-	cb_cid->setBoxToolTip(1,QString(tr("Allowed")));
-	cb_cid->setBoxToolTip(2,QString(tr("Visible")));
-	layout->addWidget(cb_cid);
-
-	this->setLayout(layout);
-	this->adjustSize();
+    lbl_phs->setText(tr("PHS Manager"));
+    cb_cloud->setText(tr("Cloud"));
+    cb_cloud->setBoxToolTip(1, aString);
+    cb_cloud->setBoxToolTip(2, vString);
+    cb_barret->setText(tr("Barret"));
+    cb_barret->setBoxToolTip(1, aString);
+    cb_barret->setBoxToolTip(2, vString);
+    cb_tifa->setText(tr("Tifa"));
+    cb_tifa->setBoxToolTip(1, aString);
+    cb_tifa->setBoxToolTip(2, vString);
+    cb_aerith->setText(tr("Aerith"));
+    cb_aerith->setBoxToolTip(1, aString);
+    cb_aerith->setBoxToolTip(2, vString);
+    cb_red->setText(tr("Red XIII"));
+    cb_red->setBoxToolTip(1, aString);
+    cb_red->setBoxToolTip(2, vString);
+    cb_yuffie->setText(tr("Yuffie"));
+    cb_yuffie->setBoxToolTip(1, aString);
+    cb_yuffie->setBoxToolTip(2, vString);
+    cb_cait->setText(tr("Cait Sith"));
+    cb_cait->setBoxToolTip(1, aString);
+    cb_cait->setBoxToolTip(2, vString);
+    cb_vincent->setText(tr("Vincent"));
+    cb_vincent->setBoxToolTip(1, aString);
+    cb_vincent->setBoxToolTip(2, vString);
+    cb_cid->setText(tr("Cid"));
+    cb_cid->setBoxToolTip(1, aString);
+    cb_cid->setBoxToolTip(2, vString);
 }
 
 void PhsListWidget::setChecked(int row, int box, bool checked)

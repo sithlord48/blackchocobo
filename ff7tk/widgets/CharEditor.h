@@ -85,6 +85,9 @@ public:
 	quint32 expNext();
 	materia char_materia(int mat);
 
+protected:
+    void changeEvent(QEvent *e);
+
 signals:
 	void id_changed(qint8);
 	void level_changed(qint8);
@@ -206,165 +209,169 @@ private:
 	void status_info();
 	void update_materia_slots();
 	void setSlotFrame(void);
-	bool load;
-	QLabel *lbl_avatar;
-	QLineEdit *line_name;
-	QSpinBox *sb_level;
-	QSpinBox *sb_curMp;
-	QSpinBox *sb_maxMp;
-	QSpinBox *sb_curHp;
-	QSpinBox *sb_maxHp;
-	QSpinBox *sb_kills;
-	QLabel *lbl_hp;
-	QLabel *lbl_hp_slash;
-	QLabel *lbl_hp_max;
-	QLabel *lbl_mp;
-	QLabel *lbl_mp_slash;
-	QLabel *lbl_mp_max;
-	QCheckBox *cb_fury;
-	QCheckBox *cb_sadness;
-	QCheckBox *cb_front_row;
-	QComboBox *combo_id;
-
-	QSpinBox * sb_total_exp;
-	QLabel * lbl_level_progress;
-	QLabel * lbl_level_next;
-	QProgressBar *bar_tnl;
-	QLabel * lbl_limit_bar;
-	QSlider *slider_limit;
-	QLCDNumber *lcd_limit_value;
-
-	QLabel *lbl_str;
-	QSpinBox *sb_str;
-	QSpinBox *sb_str_bonus;
-	QLabel *lbl_str_mat_bonus;
-	QLabel *lbl_str_total;
-
-	QLabel *lbl_vit;
-	QSpinBox *sb_vit;
-	QSpinBox *sb_vit_bonus;
-	QLabel *lbl_vit_mat_bonus;
-	QLabel *lbl_vit_total;
-
-	QLabel *lbl_mag;
-	QSpinBox *sb_mag;
-	QSpinBox *sb_mag_bonus;
-	QLabel *lbl_mag_mat_bonus;
-	QLabel *lbl_mag_total;
-
-	QLabel *lbl_spi;
-	QSpinBox *sb_spi;
-	QSpinBox *sb_spi_bonus;
-	QLabel *lbl_spi_mat_bonus;
-	QLabel *lbl_spi_total;
-
-	QLabel *lbl_dex;
-	QSpinBox *sb_dex;
-	QSpinBox *sb_dex_bonus;
-	QLabel *lbl_dex_mat_bonus;
-	QLabel *lbl_dex_total;
-
-	QLabel *lbl_lck;
-	QSpinBox *sb_lck;
-	QSpinBox *sb_lck_bonus;
-	QLabel *lbl_lck_mat_bonus;
-	QLabel *lbl_lck_total;
-
-	QLabel * lbl_base_hp;
-	QSpinBox *sb_base_hp;
-	QLabel * lbl_base_hp_bonus;
-
-	QLabel * lbl_base_mp;
-	QSpinBox *sb_base_mp;
-	QLabel * lbl_base_mp_bonus;
-
-	QLabel *lbl_limit_level;
-	QSpinBox *sb_limit_level;
-	QSpinBox *sb_uses_limit_1_1;
-	QSpinBox *sb_uses_limit_2_1;
-	QSpinBox *sb_uses_limit_3_1;
-	QListWidget *list_limits;
-	QLabel *lbl_uses;
-	QLabel *lbl_1_1;
-	QLabel *lbl_2_1;
-	QLabel *lbl_3_1;
-	QLabel *lblWeaponStats;
-	QLabel *lblArmorStats;
-	QComboBox*weapon_selection;
-	QComboBox *armor_selection;
-	QComboBox *accessory_selection;
-	MateriaEditor *materia_edit;
-	QGroupBox *elemental_box;
-	QGroupBox *status_box;
-	QListWidget *elemental_effects;
-	QListWidget *status_effects;
-	QFrame * weapon_materia_box;
-	QFrame *armor_materia_box;
-	QGroupBox *weapon_box;
-	QGroupBox *armor_box;
-	QGroupBox *accessory_box;
-
-	QFrame *weapon_frm_1;
-	QFrame *weapon_frm_2;
-	QFrame *weapon_frm_3;
-	QFrame *weapon_frm_4;
-	QFrame *weapon_frm_5;
-	QFrame *weapon_frm_6;
-	QFrame *weapon_frm_7;
-	QFrame *weapon_frm_8;
-	QPushButton *weapon_slot_1;
-	QPushButton *weapon_slot_2;
-	QPushButton *weapon_slot_3;
-	QPushButton *weapon_slot_4;
-	QPushButton *weapon_slot_5;
-	QPushButton *weapon_slot_6;
-	QPushButton *weapon_slot_7;
-	QPushButton *weapon_slot_8;
-
-	QFrame *armor_frm_1;
-	QFrame *armor_frm_2;
-	QFrame *armor_frm_3;
-	QFrame *armor_frm_4;
-	QFrame *armor_frm_5;
-	QFrame *armor_frm_6;
-	QFrame *armor_frm_7;
-	QFrame *armor_frm_8;
-	QPushButton *armor_slot_1;
-	QPushButton *armor_slot_2;
-	QPushButton *armor_slot_3;
-	QPushButton *armor_slot_4;
-	QPushButton *armor_slot_5;
-	QPushButton *armor_slot_6;
-	QPushButton *armor_slot_7;
-	QPushButton *armor_slot_8;
-	QLabel *weapon_m_link_1;
-	QLabel *weapon_m_link_2;
-	QLabel *weapon_m_link_3;
-	QLabel *weapon_m_link_4;
-	QLabel *armor_m_link_1;
-	QLabel *armor_m_link_2;
-	QLabel *armor_m_link_3;
-	QLabel *armor_m_link_4;
-	QToolBox *toolbox;
-	QFrame *unknown_box;
-	QLCDNumber *lcd_0x34;
-	QLCDNumber *lcd_0x35;
-	QLCDNumber *lcd_0x36;
-	QLCDNumber *lcd_0x37;
-	QCheckBox * cb_idChanger;
+    void updateText();
 //Data
-	FF7Char Chars;
-	FF7Item Items;
-	FF7Materia Materias;
-	FF7CHAR data;
-	QString _name;
-	bool autolevel;
-	bool autostatcalc;
-	bool editable;
-	bool advancedMode;
-	int mslotsel;//select materia slot
-	qint32 ap;
-	qreal scale;
+    bool load;
+    FF7Char Chars;
+    FF7Item Items;
+    FF7Materia Materias;
+    FF7CHAR data;
+    QString _name;
+    bool autolevel;
+    bool autostatcalc;
+    bool editable;
+    bool advancedMode;
+    int mslotsel;//select materia slot
+    qint32 ap;
+    qreal scale;
+//GUI PARTS
+    QLabel *lbl_avatar = nullptr;
+    QLineEdit *line_name = nullptr;
+    QSpinBox *sb_level = nullptr;
+    QSpinBox *sb_curMp = nullptr;
+    QSpinBox *sb_maxMp = nullptr;
+    QSpinBox *sb_curHp = nullptr;
+    QSpinBox *sb_maxHp = nullptr;
+    QSpinBox *sb_kills = nullptr;
+    QLabel *lbl_hp = nullptr;
+    QLabel *lbl_hp_slash = nullptr;
+    QLabel *lbl_hp_max = nullptr;
+    QLabel *lbl_mp = nullptr;
+    QLabel *lbl_mp_slash = nullptr;
+    QLabel *lbl_mp_max = nullptr;
+    QCheckBox *cb_fury = nullptr;
+    QCheckBox *cb_sadness = nullptr;
+    QCheckBox *cb_front_row = nullptr;
+    QComboBox *combo_id = nullptr;
+
+    QSpinBox * sb_total_exp = nullptr;
+    QLabel * lbl_level_progress = nullptr;
+    QLabel * lbl_level_next = nullptr;
+    QProgressBar *bar_tnl = nullptr;
+    QLabel * lbl_limit_bar = nullptr;
+    QSlider *slider_limit = nullptr;
+    QLCDNumber *lcd_limit_value = nullptr;
+
+    QLabel *lbl_str = nullptr;
+    QSpinBox *sb_str = nullptr;
+    QSpinBox *sb_str_bonus = nullptr;
+    QLabel *lbl_str_mat_bonus = nullptr;
+    QLabel *lbl_str_total = nullptr;
+
+    QLabel *lbl_vit = nullptr;
+    QSpinBox *sb_vit = nullptr;
+    QSpinBox *sb_vit_bonus = nullptr;
+    QLabel *lbl_vit_mat_bonus = nullptr;
+    QLabel *lbl_vit_total = nullptr;
+
+    QLabel *lbl_mag = nullptr;
+    QSpinBox *sb_mag = nullptr;
+    QSpinBox *sb_mag_bonus = nullptr;
+    QLabel *lbl_mag_mat_bonus = nullptr;
+    QLabel *lbl_mag_total = nullptr;
+
+    QLabel *lbl_spi = nullptr;
+    QSpinBox *sb_spi = nullptr;
+    QSpinBox *sb_spi_bonus = nullptr;
+    QLabel *lbl_spi_mat_bonus = nullptr;
+    QLabel *lbl_spi_total = nullptr;
+
+    QLabel *lbl_dex = nullptr;
+    QSpinBox *sb_dex = nullptr;
+    QSpinBox *sb_dex_bonus = nullptr;
+    QLabel *lbl_dex_mat_bonus = nullptr;
+    QLabel *lbl_dex_total = nullptr;
+
+    QLabel *lbl_lck = nullptr;
+    QSpinBox *sb_lck = nullptr;
+    QSpinBox *sb_lck_bonus = nullptr;
+    QLabel *lbl_lck_mat_bonus = nullptr;
+    QLabel *lbl_lck_total = nullptr;
+
+    QLabel * lbl_base_hp = nullptr;
+    QSpinBox *sb_base_hp = nullptr;
+    QLabel * lbl_base_hp_bonus = nullptr;
+
+    QLabel * lbl_base_mp = nullptr;
+    QSpinBox *sb_base_mp = nullptr;
+    QLabel * lbl_base_mp_bonus = nullptr;
+
+    QLabel *lbl_limit_level = nullptr;
+    QSpinBox *sb_limit_level = nullptr;
+    QSpinBox *sb_uses_limit_1_1 = nullptr;
+    QSpinBox *sb_uses_limit_2_1 = nullptr;
+    QSpinBox *sb_uses_limit_3_1 = nullptr;
+    QListWidget *list_limits = nullptr;
+    QLabel *lbl_uses = nullptr;
+    QLabel *lbl_1_1 = nullptr;
+    QLabel *lbl_2_1 = nullptr;
+    QLabel *lbl_3_1 = nullptr;
+    QLabel *lbl_0x34= nullptr;
+    QLabel *lbl_0x35= nullptr;
+    QLabel *lbl_0x36= nullptr;
+    QLabel *lbl_0x37= nullptr;
+    QLabel *lblWeaponStats = nullptr;
+    QLabel *lblArmorStats = nullptr;
+    QComboBox*weapon_selection = nullptr;
+    QComboBox *armor_selection = nullptr;
+    QComboBox *accessory_selection = nullptr;
+    MateriaEditor *materia_edit = nullptr;
+    QGroupBox *elemental_box = nullptr;
+    QGroupBox *status_box = nullptr;
+    QListWidget *elemental_effects = nullptr;
+    QListWidget *status_effects = nullptr;
+    QFrame * weapon_materia_box = nullptr;
+    QFrame *armor_materia_box = nullptr;
+    QGroupBox *weapon_box = nullptr;
+    QGroupBox *armor_box = nullptr;
+    QGroupBox *accessory_box = nullptr;
+    QFrame *weapon_frm_1 = nullptr;
+    QFrame *weapon_frm_2 = nullptr;
+    QFrame *weapon_frm_3 = nullptr;
+    QFrame *weapon_frm_4 = nullptr;
+    QFrame *weapon_frm_5 = nullptr;
+    QFrame *weapon_frm_6 = nullptr;
+    QFrame *weapon_frm_7 = nullptr;
+    QFrame *weapon_frm_8 = nullptr;
+    QPushButton *weapon_slot_1 = nullptr;
+    QPushButton *weapon_slot_2 = nullptr;
+    QPushButton *weapon_slot_3 = nullptr;
+    QPushButton *weapon_slot_4 = nullptr;
+    QPushButton *weapon_slot_5 = nullptr;
+    QPushButton *weapon_slot_6 = nullptr;
+    QPushButton *weapon_slot_7 = nullptr;
+    QPushButton *weapon_slot_8 = nullptr;
+    QFrame *armor_frm_1 = nullptr;
+    QFrame *armor_frm_2 = nullptr;
+    QFrame *armor_frm_3 = nullptr;
+    QFrame *armor_frm_4 = nullptr;
+    QFrame *armor_frm_5 = nullptr;
+    QFrame *armor_frm_6 = nullptr;
+    QFrame *armor_frm_7 = nullptr;
+    QFrame *armor_frm_8 = nullptr;
+    QPushButton *armor_slot_1 = nullptr;
+    QPushButton *armor_slot_2 = nullptr;
+    QPushButton *armor_slot_3 = nullptr;
+    QPushButton *armor_slot_4 = nullptr;
+    QPushButton *armor_slot_5 = nullptr;
+    QPushButton *armor_slot_6 = nullptr;
+    QPushButton *armor_slot_7 = nullptr;
+    QPushButton *armor_slot_8 = nullptr;
+    QLabel *weapon_m_link_1 = nullptr;
+    QLabel *weapon_m_link_2 = nullptr;
+    QLabel *weapon_m_link_3 = nullptr;
+    QLabel *weapon_m_link_4 = nullptr;
+    QLabel *armor_m_link_1 = nullptr;
+    QLabel *armor_m_link_2 = nullptr;
+    QLabel *armor_m_link_3 = nullptr;
+    QLabel *armor_m_link_4 = nullptr;
+    QToolBox *toolbox = nullptr;
+    QFrame *unknown_box = nullptr;
+    QLCDNumber *lcd_0x34 = nullptr;
+    QLCDNumber *lcd_0x35 = nullptr;
+    QLCDNumber *lcd_0x36 = nullptr;
+    QLCDNumber *lcd_0x37 = nullptr;
+    QCheckBox * cb_idChanger = nullptr;
 };
 
 #endif // CHAREDITOR_H

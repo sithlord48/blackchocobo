@@ -422,7 +422,7 @@ QHBoxLayout* MateriaEditor::makeNameLayout()
     });
 
 
-    auto btn_copy_materia = newStyledButton(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy"))
+    btn_copy_materia = newStyledButton(QIcon::fromTheme(QString("edit-copy"),QPixmap(":/common/edit-copy"))
                 , QKeySequence::Copy
                 , tr("Copy")
                 , this);
@@ -515,19 +515,51 @@ QWidget* MateriaEditor::makeStarWidget()
     frm_ap_stars->setLayout(layout);
     return frm_ap_stars;
 }
+void MateriaEditor::changeEvent(QEvent *e)
+{
+    if (e->type() != QEvent::LanguageChange)
+        return;
 
+    updateESkillList();
+    box_skills->setTitle(tr("Skills"));
+    box_status_effects->setTitle(tr("Added Effect"));
+    box_stats->setTitle(tr("Stat Changes"));
+    btn_rm_materia->setToolTip(tr("Delete"));
+    btn_paste_materia->setToolTip(tr("Paste"));
+    btn_copy_materia->setToolTip(tr("Copy"));
+    btn_eskill_master->setText(tr("Master"));
+    btn_eskill_clear->setText(tr("Clear"));
+    combo_type->setItemText(0, tr("All Materia"));
+    combo_type->setItemText(1, tr("Magic"));
+    combo_type->setItemText(2, tr("Summon"));
+    combo_type->setItemText(3, tr("Independent"));
+    combo_type->setItemText(4, tr("Support"));
+    combo_type->setItemText(5, tr("Command"));
+    typeChanged(combo_type->currentIndex());
+    setStats();
+    setSkills();
+}
+void MateriaEditor::updateESkillList()
+{
+    if (eskill_list) {
+        for (int i = 0; i< 24; i++) {
+            eskill_list->item(i)->setText(data->enemySkill(i));
+        }
+    } else {
+        eskill_list = new QListWidget;
+        eskill_list->clear();
+        //Fill Eskill List.
+        for(int i=0;i<24;i++) {
+            QListWidgetItem *newItem = new QListWidgetItem();
+            newItem->setText(data->enemySkill(i));
+            newItem->setCheckState(Qt::Unchecked);
+            eskill_list->addItem(newItem);
+        }
+    }
+}
 QWidget* MateriaEditor::makeSkillWidget()
 {
-    eskill_list = new QListWidget;
-    //Fill Eskill List.
-    for(int i=0;i<24;i++)
-    {
-        QListWidgetItem *newItem = new QListWidgetItem();
-        newItem->setText(data->enemySkill(i));
-        newItem->setCheckState(Qt::Unchecked);
-        eskill_list->addItem(newItem);
-    }
-
+    updateESkillList();
     eskill_list->setStyleSheet(_itemStyle.arg(_highlightColor, QString::number(fontMetrics().height())));
     eskill_list->setMaximumHeight(eskill_list->sizeHintForRow(0)*48 +eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
     eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
@@ -549,23 +581,23 @@ QWidget* MateriaEditor::makeSkillWidget()
         emit(ap_changed(_current_ap));
     });
 
-    auto eSkillClear = new QPushButton(tr("Clear"));
-    connect(eSkillClear, &QPushButton::clicked, this, [this] {
+    btn_eskill_clear = new QPushButton(tr("Clear"));
+    connect(btn_eskill_clear, &QPushButton::clicked, this, [this] {
         if(_current_ap!=0) {
             setAP(0);
         }
     });
 
-    auto eSkillMaster = new QPushButton(tr("Master"));
-    connect(eSkillMaster, &QPushButton::clicked, this, [this] {
+    btn_eskill_master = new QPushButton(tr("Master"));
+    connect(btn_eskill_master, &QPushButton::clicked, this, [this] {
         if(_current_ap != FF7Materia::MaxMateriaAp) {
             setAP(FF7Materia::MaxMateriaAp);
         }
     });
 
     auto eSkillButtonLayout = new QHBoxLayout;
-    eSkillButtonLayout->addWidget(eSkillMaster);
-    eSkillButtonLayout->addWidget(eSkillClear);
+    eSkillButtonLayout->addWidget(btn_eskill_master);
+    eSkillButtonLayout->addWidget(btn_eskill_clear);
 
     eskillButtons = new QWidget;
     eskillButtons->setLayout(eSkillButtonLayout);

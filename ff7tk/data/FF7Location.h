@@ -42,6 +42,20 @@ public:
 	 */
     Q_INVOKABLE const QString& fileName(int MapID,int LocID);
 
+    /*! \brief locations String showing menu
+     * \param index Number on the locations list
+     * \return UnTranslated location string (as shown in menu/save preview)
+     * \sa locationString(QString)
+     */
+    Q_INVOKABLE QString rawLocationString(int index);
+
+    /*! \brief locations String showing menu
+     * \param fileName fileName of location
+     * \return UnTranslated location string (as shown in menu/save preview)
+     * \sa locationString(int)
+     */
+    Q_INVOKABLE QString rawLocationString(const QString &fileName);
+
 	/*! \brief locations String showing menu
 	 * \param index Number on the locations list
 	 * \return Translated location string (as shown in menu/save preview)

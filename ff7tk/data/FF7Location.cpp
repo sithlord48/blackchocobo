@@ -38,7 +38,20 @@ const QString& FF7Location::fileName(int MapID,int LocID)
     }
     return _emptyLocation.filename;
 }
+QString FF7Location::rawLocationString(int index)
+{
+    return _locations.at(index).location;
+}
 
+QString FF7Location::rawLocationString(const QString &fileName)
+{
+    for (const LOCATION &location : _locations) {
+        if(fileName == location.filename) {
+            return location.location;
+        }
+    }
+    return _emptyLocation.filename;
+}
 QString FF7Location::locationString(int index)
 {
     return tr(_locations.at(index).location.toLocal8Bit());

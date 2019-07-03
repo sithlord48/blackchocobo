@@ -210,6 +210,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Dynamic Language Switching</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Further Improve HiDpi</string>
           </property>
          </item>

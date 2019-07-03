@@ -35,6 +35,9 @@ public:
 
     explicit PhsListWidget(QWidget * parent=0);
 
+protected:
+    void changeEvent(QEvent *e);
+
 signals:
 	/** \brief SIGNAL: The allowed box has changed its checked state
 	 *	\param row the row its changed in (FF7Char::Char)
@@ -90,6 +93,7 @@ private:
 	void init_display();
 	void connectAll();
 	void disconnectAll();
+    void updateText();
 };
 
 #endif // PHSMENULIST_H

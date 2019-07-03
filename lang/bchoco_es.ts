@@ -264,11 +264,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>+</source>
-        <translation>+</translation>
+        <translation type="vanished">+</translation>
     </message>
     <message>
         <source>=</source>
-        <translation>=</translation>
+        <translation type="vanished">=</translation>
     </message>
     <message>
         <source>Vit</source>
@@ -593,6 +593,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next: %1</source>
         <translation>Siguiente: %1</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">Resiste</translation>
     </message>
 </context>
 <context>
@@ -8065,10 +8069,6 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
         <translation></translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>No Description Text</source>
         <translation>Sin Descripción</translation>
     </message>
@@ -8406,7 +8406,7 @@ location.</source>
     </message>
     <message>
         <source>Locked</source>
-        <translation>Bloqueado</translation>
+        <translation type="vanished">Bloqueado</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8443,6 +8443,10 @@ location.</source>
     <message>
         <source>Save</source>
         <translation>Guardar</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished">Permitido</translation>
     </message>
 </context>
 <context>
@@ -8504,12 +8508,12 @@ location.</source>
         <translation type="unfinished">Selecciona un archivo para usar como Save0%1</translation>
     </message>
     <message>
-        <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Cancelar</translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8789,6 +8793,58 @@ p, li { white-space: pre-wrap; }
         <source>10</source>
         <translation>10</translation>
     </message>
+    <message>
+        <source>Up</source>
+        <translation>Arriba</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Derecha</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Abajo</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Izquierda</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menú</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>Cambiar</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>Blancos</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>Página arriba</translation>
+    </message>
+    <message>
+        <source>PgDn</source>
+        <translation>Página abajo</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Ayuda</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pausa</translation>
+    </message>
 </context>
 <context>
     <name>PhsListWidget</name>
@@ -8873,7 +8929,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>-Empty Slot-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-Ranura vacía-</translation>
     </message>
 </context>
 <context>

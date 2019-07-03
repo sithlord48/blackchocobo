@@ -17,10 +17,36 @@
 
 OptionsWidget::OptionsWidget(QWidget *parent) :
 	QScrollArea(parent)
+  , dialogPreview(new DialogPreview)
+  , dialogBox(new QGroupBox)
+  , comboAtb(new QComboBox)
+  , comboSound(new QComboBox)
+  ,	comboMagicOrder(new QComboBox)
+  , comboCursor(new QComboBox)
+  , comboCamera(new QComboBox)
+  , comboControllerMode(new QComboBox)
+  , cbBattleTargets(new QCheckBox)
+  , cbBattleHelp(new QCheckBox)
+  , cbFieldHelp(new QCheckBox)
+  , controllerMappingBox(new QGroupBox)
+  , labelAtb(new QLabel)
+  , labelSound(new QLabel)
+  , labelMagic(new QLabel)
+  , labelCursor(new QLabel)
+  , labelCamera(new QLabel)
+  , labelControllerMode(new QLabel)
+  , lblBattleSpeedMax(new QLabel)
+  , lblBattleSpeedMin(new QLabel)
+  , lblBattleMessageSpeedMax(new QLabel)
+  , lblBattleMessageSpeedMin(new QLabel)
+  , lblFieldMessageSpeedMax(new QLabel)
+  , lblFieldMessageSpeedMin(new QLabel)
+  , lblBattleSpeed(new QLabel)
+  , lblBattleMessageSpeed(new QLabel)
+  , lblFieldMessageSpeed(new QLabel)
 {
+    updateText();
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-	dialogBox = new QGroupBox;
-	dialogPreview = new DialogPreview;
     connect(dialogPreview, &DialogPreview::UL_ColorChanged, this, &OptionsWidget::dialogColorULChanged);
     connect(dialogPreview, &DialogPreview::UR_ColorChanged, this, &OptionsWidget::dialogColorURChanged);
     connect(dialogPreview, &DialogPreview::LL_ColorChanged, this, &OptionsWidget::dialogColorLLChanged);
@@ -30,97 +56,61 @@ OptionsWidget::OptionsWidget(QWidget *parent) :
     layout->addWidget(dialogPreview);
     layout->setContentsMargins(0,0,0,0);
     dialogBox->setLayout(layout);
-	dialogBox->setTitle(tr("In-Game Dialog Preview"));
 
     auto centerLayout = new QVBoxLayout;
     centerLayout->addWidget(dialogBox);
     centerLayout->addSpacerItem(new QSpacerItem (0,6,QSizePolicy::Preferred,QSizePolicy::Preferred));
 
-    auto label = new QLabel(tr("ATB Style"));
-    label->setAlignment(Qt::AlignRight);
-	comboAtb= new QComboBox;
-	comboAtb->addItem(tr("Active"));
-	comboAtb->addItem(tr("Recommended"));
-	comboAtb->addItem(tr("Wait"));
+    labelAtb->setAlignment(Qt::AlignRight);
     connect(comboAtb, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &OptionsWidget::atbChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelAtb);
     layout->addWidget(comboAtb);
     centerLayout->addLayout(layout);
 
-    label = new QLabel(tr("Sound Mode"));
-    label->setAlignment(Qt::AlignRight);
-	comboSound = new QComboBox;
-	comboSound->addItem(tr("Mono"));
-	comboSound->addItem(tr("Stereo"));
+    labelSound->setAlignment(Qt::AlignRight);
     connect(comboSound, QOverload<int>::of(&QComboBox::currentIndexChanged),this, &OptionsWidget::soundChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelSound);
     layout->addWidget(comboSound);
     centerLayout->addLayout(layout);
 
-    label = new QLabel(tr("Magic Order"));
-    label->setAlignment(Qt::AlignRight);
-	comboMagicOrder= new QComboBox;
-	comboMagicOrder->addItem(tr("Restore,Attack,Indirect"));
-	comboMagicOrder->addItem(tr("Restore,Indirect,Attack"));
-	comboMagicOrder->addItem(tr("Attack,Indirect,Restore"));
-	comboMagicOrder->addItem(tr("Attack,Restore,Indirect"));
-	comboMagicOrder->addItem(tr("Indirect,Restore,Attack"));
-	comboMagicOrder->addItem(tr("Indirect,Attack,Restore"));
+    labelMagic->setAlignment(Qt::AlignRight);
     connect(comboMagicOrder, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &OptionsWidget::magicOrderChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelMagic);
     layout->addWidget(comboMagicOrder);
     centerLayout->addLayout(layout);
 
-    label = new QLabel(tr("Cursor Type"));
-    label->setAlignment(Qt::AlignRight);
-	comboCursor= new QComboBox;
-	comboCursor->addItem(tr("Initial"));
-	comboCursor->addItem(tr("Memory"));
+    labelCursor->setAlignment(Qt::AlignRight);
     connect(comboCursor, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &OptionsWidget::cursorChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelCursor);
     layout->addWidget(comboCursor);
     centerLayout->addLayout(layout);
 
-    label = new QLabel(tr("Camera"));
-    label->setAlignment(Qt::AlignRight);
-	comboCamera= new QComboBox;
-	comboCamera->addItem(tr("Initial"));
-	comboCamera->addItem(tr("Memory"));
+    labelCamera->setAlignment(Qt::AlignRight);
     connect(comboCamera, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &OptionsWidget::cameraChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelCamera);
     layout->addWidget(comboCamera);
     centerLayout->addLayout(layout);
 
-    label = new QLabel(tr("Controller Settings"));
-    label->setAlignment(Qt::AlignRight);
-	comboControllerMode= new QComboBox;
-	comboControllerMode->addItem(tr("Normal"));
-	comboControllerMode->addItem(tr("Custom"));
+    labelControllerMode->setAlignment(Qt::AlignRight);
     connect(comboControllerMode, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &OptionsWidget::controllerModeChanged);
 
     layout = new QHBoxLayout;
-    layout->addWidget(label);
+    layout->addWidget(labelControllerMode);
     layout->addWidget(comboControllerMode);
     centerLayout->addLayout(layout);
 
-	cbBattleTargets = new QCheckBox;
-	cbBattleTargets->setText(tr("Show Battle Targets Labels"));
     connect(cbBattleTargets, &QCheckBox::toggled, this, &OptionsWidget::battleTargetsChanged);
-	cbBattleHelp = new QCheckBox;
-	cbBattleHelp->setText(tr("Show Battle Help"));
     connect(cbBattleHelp, &QCheckBox::toggled, this, &OptionsWidget::battleHelpChanged);
-    cbFieldHelp = new QCheckBox;
-	cbFieldHelp->setText(tr("Show Field Help"));
     connect(cbFieldHelp, &QCheckBox::toggled, this, &OptionsWidget::fieldHelpChanged);
 
     layout = new QHBoxLayout;
@@ -138,39 +128,37 @@ OptionsWidget::OptionsWidget(QWidget *parent) :
     connect(slideBattleSpeed, &QSlider::valueChanged, this, &OptionsWidget::battleSpeedChanged);
 
     QHBoxLayout *battleSpeedLayout = new QHBoxLayout;
-    battleSpeedLayout->addWidget(new QLabel(tr("Fast")));
+    battleSpeedLayout->addWidget(lblBattleSpeedMax);
 	battleSpeedLayout->addWidget(slideBattleSpeed);
-    battleSpeedLayout->addWidget(new QLabel(tr("Slow")));
+    battleSpeedLayout->addWidget(lblBattleSpeedMin);
 
 	slideBattleMessageSpeed = new QSlider(Qt::Horizontal);
 	slideBattleMessageSpeed->setRange(0,256);
     connect(slideBattleMessageSpeed, &QSlider::valueChanged, this, &OptionsWidget::battleMessageSpeedChanged);
 
     QHBoxLayout *battleMessageSpeedLayout = new QHBoxLayout;
-    battleMessageSpeedLayout->addWidget(new QLabel (tr("Fast")));
+    battleMessageSpeedLayout->addWidget(lblBattleMessageSpeedMax);
 	battleMessageSpeedLayout->addWidget(slideBattleMessageSpeed);
-    battleMessageSpeedLayout->addWidget(new QLabel (tr("Slow")));
+    battleMessageSpeedLayout->addWidget(lblBattleMessageSpeedMin);
 
 	slideFieldMessageSpeed = new QSlider(Qt::Horizontal);
 	slideFieldMessageSpeed->setRange(0,256);
     connect(slideFieldMessageSpeed, &QSlider::valueChanged, this, &OptionsWidget::fieldMessageSpeedChanged);
 
     QHBoxLayout *fieldMessageSpeedLayout = new QHBoxLayout;
-    fieldMessageSpeedLayout->addWidget(new QLabel (tr("Fast")));
+    fieldMessageSpeedLayout->addWidget(lblFieldMessageSpeedMax);
 	fieldMessageSpeedLayout->addWidget(slideFieldMessageSpeed);
-    fieldMessageSpeedLayout->addWidget(new QLabel (tr("Slow")));
+    fieldMessageSpeedLayout->addWidget(lblFieldMessageSpeedMin);
 
     QGridLayout *speedLayout= new QGridLayout;
-    speedLayout->addWidget(new  QLabel(tr("Battle Speed:")), 0, 0);
-    speedLayout->addWidget(new QLabel(tr("Battle Message Speed:")), 1, 0);
-    speedLayout->addWidget(new QLabel(tr("Field Message Speed:")), 2, 0);
+    speedLayout->addWidget(lblBattleSpeed, 0, 0);
+    speedLayout->addWidget(lblBattleMessageSpeed, 1, 0);
+    speedLayout->addWidget(lblFieldMessageSpeed, 2, 0);
 	speedLayout->addLayout(battleSpeedLayout,0,1);
 	speedLayout->addLayout(battleMessageSpeedLayout,1,1);
 	speedLayout->addLayout(fieldMessageSpeedLayout,2,1);
     centerLayout->addLayout(speedLayout);
 
-	controllerMappingBox = new QGroupBox;
-	controllerMappingBox->setTitle(tr("Custom Controller Mapping (PSX Only)"));
     controllerMappingBox->setLayout(makeControllerLayout());
     centerLayout->addWidget(controllerMappingBox);
 
@@ -194,7 +182,93 @@ void OptionsWidget::resizeEvent(QResizeEvent *event)
 	centerWidget->adjustSize();
     event->accept();
 }
+void OptionsWidget::changeEvent(QEvent *e)
+{
+    if (e->type() != QEvent::LanguageChange)
+        return;
+    updateText();
+}
+void OptionsWidget::updateText()
+{
+    dialogBox->setTitle(tr("In-Game Dialog Preview"));
+    labelAtb->setText(tr("ATB Style"));
+    if(comboAtb->count() != 0) {
+        for(int i = 0; i < comboAtb->count(); i++) {
+            comboAtb->setItemText(i, tr(_atbList.at(i).toLatin1()));
+        }
+    } else {
+        comboAtb->addItems(_atbList);
+    }
 
+    labelSound->setText(tr("Sound Mode"));
+    if(comboSound->count() != 0) {
+        for(int i = 0; i < comboSound->count(); i++) {
+            comboSound->setItemText(i, tr(_soundList.at(i).toLatin1()));
+        }
+    } else {
+        comboSound->addItems(_soundList);
+    }
+
+    labelMagic->setText(tr("Magic Order"));
+    if(comboMagicOrder->count() != 0) {
+        for(int i = 0; i < comboMagicOrder->count(); i++) {
+            comboMagicOrder->setItemText(i, tr(_magicOrderList.at(i).toLatin1()));
+        }
+    } else {
+        comboMagicOrder->addItems(_magicOrderList);
+    }
+
+    labelCursor->setText(tr("Cursor Type"));
+    if(comboCursor->count() != 0) {
+        for(int i = 0; i < comboCursor->count(); i++) {
+            comboCursor->setItemText(i, tr(_cursorCameraList.at(i).toLatin1()));
+        }
+    } else {
+        comboCursor->addItems(_cursorCameraList);
+    }
+
+    labelCamera->setText(tr("Camera"));
+    if(comboCamera->count() != 0) {
+        for(int i = 0; i < comboCamera->count(); i++) {
+            comboCamera->setItemText(i, tr(_cursorCameraList.at(i).toLatin1()));
+        }
+    } else {
+        comboCamera->addItems(_cursorCameraList);
+    }
+
+    labelControllerMode->setText(tr("Controller Settings"));
+    if(comboControllerMode->count() != 0) {
+        for(int i = 0; i < comboControllerMode->count(); i++) {
+            comboControllerMode->setItemText(i, tr(_controllerModeList.at(i).toLatin1()));
+        }
+    } else {
+        comboControllerMode->addItems(_controllerModeList);
+    }
+
+    cbBattleTargets->setText(tr("Show Battle Targets Labels"));
+    cbBattleHelp->setText(tr("Show Battle Help"));
+    cbFieldHelp->setText(tr("Show Field Help"));
+    lblBattleSpeedMax->setText(tr(_fast.toLatin1()));
+    lblBattleMessageSpeedMax->setText(tr(_fast.toLatin1()));
+    lblFieldMessageSpeedMax->setText(tr(_fast.toLatin1()));
+    lblBattleSpeedMin->setText(tr(_slow.toLatin1()));
+    lblBattleMessageSpeedMin->setText(tr(_slow.toLatin1()));
+    lblFieldMessageSpeedMin->setText(tr(_slow.toLatin1()));
+    lblBattleSpeed->setText(tr("Battle Speed:"));
+    lblBattleMessageSpeed->setText(tr("Battle Message Speed:"));
+    lblFieldMessageSpeed->setText(tr("Field Message Speed:"));
+    controllerMappingBox->setTitle(tr("Custom Controller Mapping (PSX Only)"));
+
+    if(!lblInputs.isEmpty()) {
+        for(int i = 0; i < lblInputs.count(); i++) {
+            lblInputs[i]->setText(tr(_inputNames.at(i).toLatin1()));
+        }
+    } else {
+        for(int i = 0; i < 16; i++) {
+            lblInputs.append(new QLabel(tr(_inputNames.at(i).toLatin1())));
+        }
+    }
+}
 void OptionsWidget::setDialogColors(QColor ul, QColor ur, QColor ll, QColor lr)
 {
     dialogPreview->blockSignals(true);
@@ -305,8 +379,7 @@ QGridLayout* OptionsWidget::makeControllerLayout()
 {
     auto finalLayout = new QGridLayout;
     for (int i = 0; i < 16; i++) {
-        auto label = new QLabel(_inputNames.at(i));
-        label->setAlignment(Qt::AlignRight);
+        lblInputs[i]->setAlignment(Qt::AlignRight);
         auto comboBox = new QComboBox;
         comboBox->setObjectName(_inputNames.at(i));
         comboBox->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
@@ -332,7 +405,7 @@ QGridLayout* OptionsWidget::makeControllerLayout()
         });
 
         auto layout = new QHBoxLayout;
-        layout->addWidget(label);
+        layout->addWidget(lblInputs[i]);
         layout->addWidget(comboBox);
         finalLayout->addLayout(layout, i % 4, i / 4);
     }

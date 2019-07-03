@@ -263,14 +263,6 @@ p, li { white-space: pre-wrap; }
         <translation>FRC</translation>
     </message>
     <message>
-        <source>+</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>=</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Vit</source>
         <translation>VIT</translation>
     </message>
@@ -593,6 +585,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next: %1</source>
         <translation>Suivant : %1</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">Résist</translation>
     </message>
 </context>
 <context>
@@ -8066,10 +8062,6 @@ quand vous dépassez la porte du Battle Square, définir le lieu &amp;quot;Entr�
         <translation>Nom PSX :</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No Description Text</source>
         <translation>Pas de texte de description</translation>
     </message>
@@ -8410,7 +8402,7 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation>Vérrouillé</translation>
+        <translation type="vanished">Vérrouillé</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8447,6 +8439,10 @@ d&apos;un objet facilement.</translation>
     <message>
         <source>Save</source>
         <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished">Autorisé</translation>
     </message>
 </context>
 <context>
@@ -8508,12 +8504,12 @@ d&apos;un objet facilement.</translation>
         <translation type="unfinished">Sélectionnez un fichier pour l&apos;utiliser comme Sauv.0%1</translation>
     </message>
     <message>
-        <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Annuler</translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8792,6 +8788,58 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>10</source>
         <translation>10</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>Haut</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Droite</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Bas</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Gauche</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menu</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>Changer</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>Cible</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>Page Haut</translation>
+    </message>
+    <message>
+        <source>PgDn</source>
+        <translation>Page Bas</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Aide</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
     </message>
 </context>
 <context>

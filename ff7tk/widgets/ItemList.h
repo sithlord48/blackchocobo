@@ -28,6 +28,7 @@ public:
 	explicit ItemList(qreal Scale=1,QWidget *parent=0);
 protected:
     bool eventFilter(QObject *, QEvent *);
+    void changeEvent(QEvent *e);
 signals:
     void itemsChanged(QList<quint16> items);
 public slots:

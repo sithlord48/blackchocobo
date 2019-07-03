@@ -15,17 +15,37 @@
 /****************************************************************************/
 #include "LocationViewer.h"
 
-LocationViewer::LocationViewer(qreal Scale, QWidget *parent) :  QWidget(parent)
+LocationViewer::LocationViewer(qreal Scale, QWidget *parent)
+    : QWidget(parent)
+    , scale(Scale)
+    , region(QString())
+    , transBasePath(QString())
+    , autoUpdate(false)
+    , regExpSearch(false)
+    , caseSensitive(false)
+    , _advancedMode(false)
+    , Locations(new FF7Location())
+    , fieldItems(new FF7FieldItemList())
+    , locationTable(new QTableWidget)
+    , btnSearchOptions(new QToolButton)
+    , actionNameSearch(new QAction(btnSearchOptions))
+    , actionItemSearch(new QAction(btnSearchOptions))
+    , actionRegExpSearch(new QAction(btnSearchOptions))
+    , actionCaseSensitive(new QAction(btnSearchOptions))
+    , lblLocationPreview(new QLabel)
+    , lineTableFilter(new QLineEdit)
+    , lineLocationName(new QLineEdit)
+    , sbMapID(new QSpinBox)
+    , sbLocID(new QSpinBox)
+    , sbX(new QSpinBox)
+    , sbY(new QSpinBox)
+    , sbT(new QSpinBox)
+    , sbD(new QSpinBox)
+    , fieldItemList(new QListWidget)
+    , groupFieldItems(new QGroupBox)
+    , chkAutoUpdate(new QCheckBox)
 {
-    scale = Scale;
-    region = "";
-    transBasePath = "";
-    autoUpdate = false;
-    regExpSearch = false;
-    caseSensitive = false;
-    _advancedMode = false;
-    Locations = new FF7Location();
-    fieldItems = new FF7FieldItemList();
+    updateText();
     init_display();
     init_connections();
     actionNameSearch->setChecked(true);
@@ -45,23 +65,62 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 {
     if (ev->type() == QResizeEvent::Resize) {
         QPixmap pix(QStringLiteral(":/locations/%1_%2").arg(QString::number(sbMapID->value()), QString::number(sbLocID->value())));
-        if (pix.isNull()) {
+        if (pix.isNull())
             return;
-        } else {
-            lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
-        }
+        lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     }
+}
+
+void LocationViewer::changeEvent(QEvent *e)
+{
+    if (e->type() != QEvent::LanguageChange)
+        return;
+    updateText();
+}
+
+void LocationViewer::updateText()
+{
+    QStringList hozHeaderLabels = {tr("Filename"), tr("Location Name"), tr("LocID")};
+    locationTable->setHorizontalHeaderLabels(hozHeaderLabels);
+    for (int i = 0; i< locationTable->rowCount(); i++) {
+        QTableWidgetItem * newItem = new QTableWidgetItem(Locations->locationString(i), 0);
+        newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
+        newItem->setTextAlignment(Qt::AlignLeft);
+        newItem->setToolTip(_tooltip.arg(
+                                 Locations->mapID(i),
+                                 Locations->locationID(i),
+                                 QString::number(320 * scale),
+                                 QString::number(480 * scale)));
+        locationTable->setItem(i, 1, newItem);
+    }
+    actionNameSearch->setText(tr("Filter Mode: Name / Location String"));
+    actionItemSearch->setText(tr("Filter Mode: Items Found at Location"));
+    actionRegExpSearch->setText(tr("Process Regular Expressions"));
+    actionCaseSensitive->setText(tr("Case Sensitive"));
+    sbMapID->setPrefix(tr("MapID: "));
+    sbLocID->setPrefix(tr("LocID: "));
+    sbX->setPrefix(tr("X: "));
+    sbY->setPrefix(tr("Y: "));
+    sbT->setPrefix(tr("T: "));
+    sbD->setPrefix(tr("D: "));
+    lineLocationName->setPlaceholderText(tr("Location Name"));
+    chkAutoUpdate->setText(tr("Save &Location Changes"));
+    groupFieldItems->setTitle(tr("Field Items"));
+    if(locationTable->currentRow() > -1)
+        lineLocationName->setText(translate(Locations->rawLocationString(locationTable->item(locationTable->currentRow(), 0)->text())));
+    if(actionNameSearch->isChecked()) {
+        lineTableFilter->setPlaceholderText(actionNameSearch->text());
+    } else if(actionItemSearch)
+        lineTableFilter->setPlaceholderText(actionItemSearch->text());
+    init_fieldItems();
 }
 
 void LocationViewer::init_display(void)
 {
-
-    lblLocationPreview = new QLabel;
     lblLocationPreview->setMinimumSize(int(320 * scale), int(240 * scale));
     lblLocationPreview->setBaseSize(int(640 * scale), int(480 * scale));
     lblLocationPreview->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    locationTable = new QTableWidget;
     locationTable->setColumnCount(3);
     locationTable->setRowCount(Locations->size());
     locationTable->verticalHeader()->setHidden(true);
@@ -69,32 +128,19 @@ void LocationViewer::init_display(void)
     locationTable->setSelectionMode(QAbstractItemView::SingleSelection);
     locationTable->setSortingEnabled(true);
 
-    QTableWidgetItem *newItem = new QTableWidgetItem(tr("Filename"), 0);
-    locationTable->setHorizontalHeaderItem(0, newItem);
     locationTable->setColumnWidth(0, fontMetrics().width(QChar('W')) * 6);
-    newItem = new QTableWidgetItem(tr("Location Name"), 0);
-    locationTable->setHorizontalHeaderItem(1, newItem);
     locationTable->setColumnWidth(1, fontMetrics().width(QChar('W')) * 15);
-    newItem = new QTableWidgetItem(tr("LocID"), 0);
     locationTable->setColumnWidth(2, fontMetrics().width(QChar('W')) * 4);
-    locationTable->setHorizontalHeaderItem(2, newItem);
-
     for (int i = 0; i < locationTable->rowCount(); i++) {
-        //set the tooltip to the needed file
-        QString tooltip(QStringLiteral("<html><head/><body><p><img src=\":/locations/%1_%2\" width=\"%3\" height\"%4\" /></p></body></html>")
-                        .arg(Locations->mapID(i), Locations->locationID(i), QString::number(320 * scale), QString::number(480 * scale)));
-
-        newItem = new QTableWidgetItem(Locations->fileName(i), 0);
+        QTableWidgetItem *newItem = new QTableWidgetItem(Locations->fileName(i), 0);
         newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
-        newItem->setToolTip(tooltip);
+        newItem->setToolTip(_tooltip.arg(
+                                Locations->mapID(i),
+                                Locations->locationID(i),
+                                QString::number(320 * scale),
+                                QString::number(480 * scale)));
         newItem->setTextAlignment(Qt::AlignLeft);
         locationTable->setItem(i, 0, newItem);
-
-        newItem = new QTableWidgetItem(Locations->locationString(i), 0);
-        newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
-        newItem->setTextAlignment(Qt::AlignLeft);
-        newItem->setToolTip(tooltip);
-        locationTable->setItem(i, 1, newItem);
 
         //To assure proper numerical sorting of location IDs they should all contain the same number of characters.
         newItem = new QTableWidgetItem(QStringLiteral("%1").arg(Locations->locationID(i).toInt(), 3, 10, QChar('0')).toUpper());
@@ -110,21 +156,9 @@ void LocationViewer::init_display(void)
     locationTable->setCurrentCell(-1, -1);
     locationTable->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 
-    btnSearchOptions = new QToolButton;
-    btnSearchOptions->setLayoutDirection(Qt::RightToLeft);
-    btnSearchOptions->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear"), QPixmap(":/common/edit-clear")));
-    btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
-
-    actionNameSearch = new QAction(tr("Filter Mode: Name / Location String"), btnSearchOptions);
     actionNameSearch->setCheckable(true);
-
-    actionItemSearch = new QAction(tr("Filter Mode: Items Found at Location"), btnSearchOptions);
     actionItemSearch->setCheckable(true);
-
-    actionRegExpSearch = new QAction(tr("Process Regular Expressions"), btnSearchOptions);
     actionRegExpSearch->setCheckable(true);
-
-    actionCaseSensitive = new QAction(tr("Case Sensitive"), btnSearchOptions);
     actionCaseSensitive->setCheckable(true);
 
     QMenu *newMenu = new QMenu;
@@ -134,59 +168,41 @@ void LocationViewer::init_display(void)
     newMenu->addAction(actionRegExpSearch);
     newMenu->addAction(actionCaseSensitive);
 
+    btnSearchOptions->setLayoutDirection(Qt::RightToLeft);
+    btnSearchOptions->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear"), QPixmap(":/common/edit-clear")));
+    btnSearchOptions->setPopupMode(QToolButton::MenuButtonPopup);
     btnSearchOptions->setMenu(newMenu);
 
-    lineTableFilter = new QLineEdit;
-
-    lineLocationName = new QLineEdit;
-    lineLocationName->setPlaceholderText(tr("Location Name"));
-
-    sbMapID = new QSpinBox;
-    //sbMapID->setMaximum(3);
-    //setMax when varified
+    sbMapID->setMaximum(3);
     sbMapID->setWrapping(true);
-    sbMapID->setPrefix(tr("MapID: "));
+
     sbMapID->setAlignment(Qt::AlignCenter);
 
-    sbLocID = new QSpinBox;
     sbLocID->setMaximum(786);
     sbLocID->setWrapping(true);
-    sbLocID->setPrefix(tr("LocID: "));
     sbLocID->setAlignment(Qt::AlignCenter);
 
-    sbX = new QSpinBox;
-    sbX->setPrefix(tr("X: "));
     sbX->setMinimum(-32767);
     sbX->setMaximum(32767);
     sbX->setWrapping(true);
     sbX->setAlignment(Qt::AlignCenter);
 
-    sbY = new QSpinBox;
-    sbY->setPrefix(tr("Y: "));
     sbY->setMinimum(-32767);
     sbY->setMaximum(32767);
     sbY->setWrapping(true);
     sbY->setAlignment(Qt::AlignCenter);
 
-    sbT = new QSpinBox;
-    sbT->setPrefix(tr("T: "));
     sbT->setMaximum(65565);
     sbT->setWrapping(true);
     sbT->setAlignment(Qt::AlignCenter);
 
-    sbD = new QSpinBox;
     sbD->setMaximum(255);
-    sbD->setPrefix(tr("D: "));
     sbD->setWrapping(true);
     sbD->setAlignment(Qt::AlignCenter);
 
-    chkAutoUpdate = new QCheckBox;
-    chkAutoUpdate->setText(tr("Save &Location Changes"));
     chkAutoUpdate->setFixedWidth(locationTable->width());
-    //connect now and forget it
     connect(chkAutoUpdate, SIGNAL(clicked(bool)), this, SLOT(chkAutoUpdateChanged(bool)));
 
-    fieldItemList = new QListWidget();
     fieldItemList->setFixedHeight(0);
     fieldItemList->setUniformItemSizes(true);
     fieldItemList->setSelectionMode(QAbstractItemView::NoSelection);
@@ -195,7 +211,7 @@ void LocationViewer::init_display(void)
     fitemLayout->setContentsMargins(0, 0, 0, 0);
     fitemLayout->setSpacing(0);
     fitemLayout->addWidget(fieldItemList);
-    groupFieldItems = new QGroupBox(tr("Field Items"));
+
     groupFieldItems->setLayout(fitemLayout);
     groupFieldItems->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -361,7 +377,7 @@ void LocationViewer::setLocation(int mapId, int locId)
         lblLocationPreview->setPixmap(QString());
     } else {
         lblLocationPreview->setPixmap(QPixmap(QStringLiteral("://locations/%1_%2").arg(QString::number(mapId), QString::number(locId))).scaledToWidth(lblLocationPreview->width(), Qt::SmoothTransformation));
-        QString oldStr = Locations->locationString(fileName);
+        QString oldStr = Locations->rawLocationString(fileName);
         QString newStr = translate(oldStr);
         if (oldStr != newStr && autoUpdate) {
             emit(locationStringChanged(newStr));
@@ -451,11 +467,11 @@ void LocationViewer::setTranslationBaseFile(QString basePathName)
 
 QString LocationViewer::translate(QString text)
 {
-    if (region == "") {
+    if (region.isNull()) {
         qWarning() << "Translate: No Region"; return text;
     }
 
-    if (transBasePath == "") {
+    if (transBasePath.isNull()) {
         qWarning() << "Translate: No Base Path"; return text;
     } else {
         QString lang = transBasePath;
@@ -477,7 +493,7 @@ QString LocationViewer::translate(QString text)
             return text;
         }
         Translator.load(lang);
-        QString newText = Translator.translate("Locations", text.toUtf8());
+        QString newText = Translator.translate("FF7Location", text.toLatin1());
         if (newText.isEmpty()) {
             return text;
         } else {

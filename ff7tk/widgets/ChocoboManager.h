@@ -55,10 +55,13 @@ public slots:
     void setOwned(int owned);
     void setOccupied(int occupied,int mask);
     void setHoverStyle(QString Color);
+protected:
+    void changeEvent(QEvent *);
 private slots:
     void ChocoboChanged(int s);
     void setStablesOwned(int value);
 private:
+    void updateCombos();
     bool isEmpty(FF7CHOCOBO choco);
     void clearSelection();
     void disableChocoLabels();
@@ -76,6 +79,8 @@ private:
     qint8 stablesOwned = 0;
     qint8 stablesOccupied = 0;
     qint8 stableMask;
+    QLabel *lblStablesOwned = nullptr;
+    QLabel *lblStablesOccupied = nullptr;
     int selectedStable = -1;
     //one extra of each for a buffer.
     FF7CHOCOBO chocoboData[7];

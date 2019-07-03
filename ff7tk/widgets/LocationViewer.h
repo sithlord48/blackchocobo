@@ -83,24 +83,34 @@ private slots:
     void chkAutoUpdateChanged(bool checked);
 protected:
     void resizeEvent(QResizeEvent *ev);
+    void changeEvent(QEvent *e);
 private:
     void init_display(void);
     void init_connections(void);
     void init_disconnect(void);
+    void updateText();
     QString translate(QString text);
     void searchItem(QRegExp exp);
     void searchName(QRegExp exp);
+    qreal scale;
+    QString region;
+    QString transBasePath;
+    bool autoUpdate;
+    bool regExpSearch;
+    bool caseSensitive;
+    bool _advancedMode;
+    quint8 searchMode;
+    FF7Location *Locations;
+    FF7FieldItemList *fieldItems;
     QTableWidget *locationTable;
-    QLineEdit *lineTableFilter;
+    QToolButton *btnSearchOptions;
     QAction *actionNameSearch;
     QAction *actionItemSearch;
     QAction *actionRegExpSearch;
     QAction *actionCaseSensitive;
-    QToolButton *btnSearchOptions;
-    FF7Location *Locations;
-    FF7FieldItemList *fieldItems;
-    QLabel *lblLocationPreview;
     QWidget *CoordsWidget;
+    QLabel *lblLocationPreview;
+    QLineEdit *lineTableFilter;
     QLineEdit *lineLocationName;
     QSpinBox *sbMapID;
     QSpinBox *sbLocID;
@@ -108,17 +118,12 @@ private:
     QSpinBox *sbY;
     QSpinBox *sbT;
     QSpinBox *sbD;
-    QString region;
-    QString transBasePath;
     QListWidget *fieldItemList;
     QGroupBox *groupFieldItems;
     QCheckBox *chkAutoUpdate;
-    quint8 searchMode;
-    bool regExpSearch;
-    bool caseSensitive;
-    bool autoUpdate;
-    bool _advancedMode;
-    qreal scale;
+
+    inline static const QString _tooltip = QStringLiteral("<html><head/><body><p><img src=\":/locations/%1_%2\" width=\"%3\" height\"%4\" /></p></body></html>");
+
 };
 
 #endif // LOCATIONVIEWER_H

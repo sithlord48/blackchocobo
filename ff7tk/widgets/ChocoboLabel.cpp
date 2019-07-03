@@ -21,6 +21,12 @@ bool ChocoboLabel::event(QEvent *ev)
     if (ev->type() == QEvent::MouseButtonPress && isEnabled) {
         emit(clicked());
         return true;
+    } else if (ev->type() == QEvent::LanguageChange) {
+        btnCopy->setToolTip(QString(tr("Copy")));
+        btnPaste->setToolTip(QString(tr("Paste")));
+        btnRemove->setToolTip(QString(tr("Remove")));
+        setRank(m_wins);
+        return true;
     } else {
         return false;
     }
@@ -173,6 +179,7 @@ void ChocoboLabel::setSex(int sex)
 
 void ChocoboLabel::setRank(int wins)
 {
+    m_wins = wins;
     if (wins<0) {
         lblRank->setText(QString());
     } else if (wins<3) {

@@ -16,70 +16,95 @@
 #include "MenuListWidget.h"
 MenuListWidget::MenuListWidget(QWidget * parent) :
 	QWidget(parent)
+  , cb_item(new DoubleCheckBox)
+  , cb_magic(new DoubleCheckBox)
+  , cb_materia(new DoubleCheckBox)
+  , cb_equip(new DoubleCheckBox)
+  , cb_status(new DoubleCheckBox)
+  , cb_order(new DoubleCheckBox)
+  , cb_limit(new DoubleCheckBox)
+  , cb_config(new DoubleCheckBox)
+  , cb_phs(new DoubleCheckBox)
+  , cb_save(new DoubleCheckBox)
+  , lbl_title(new QLabel)
 {
+    updateText();
 	init_display();
 	connectAll();
 }
+void MenuListWidget::changeEvent(QEvent *e)
+{
+    if (e->type() != QEvent::LanguageChange)
+        return;
+
+    updateText();
+}
+
 void MenuListWidget::init_display()
 {
-	lbl_title = new QLabel(QString(tr("Menu Manager")));
-	lbl_title->setStyleSheet(QString("text-decoration: underline;"));
+    lbl_title->setStyleSheet(QString("text-decoration: underline;"));
 	QVBoxLayout *layout = new QVBoxLayout;
-	layout->addWidget(lbl_title);
 	layout->setSpacing(3);
 	layout->setContentsMargins(0,0,0,0);
-    cb_item= new DoubleCheckBox(QString(tr("Item")));
-	cb_item->setBoxToolTip(1,QString(tr("Visible")));
-	cb_item->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_item);
 
-    cb_magic= new DoubleCheckBox(QString(tr("Magic")));
-	cb_magic->setBoxToolTip(1,QString(tr("Visible")));
-	cb_magic->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_magic);
+    layout->addWidget(lbl_title);
+    layout->addWidget(cb_item);
+    layout->addWidget(cb_magic);
+    layout->addWidget(cb_materia);
+    layout->addWidget(cb_equip);
+    layout->addWidget(cb_status);
+    layout->addWidget(cb_order);
+    layout->addWidget(cb_limit);
+    layout->addWidget(cb_config);
+    layout->addWidget(cb_phs);
+    layout->addWidget(cb_save);
+    setLayout(layout);
+}
+void MenuListWidget::updateText()
+{
+    QString aString = tr("Allowed");
+    QString vString = tr("Visible");
 
-    cb_materia= new DoubleCheckBox(QString(tr("Materia")));
-	cb_materia->setBoxToolTip(1,QString(tr("Visible")));
-	cb_materia->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_materia);
+    lbl_title->setText(tr("Menu Manager"));
+    cb_item->setText(tr("Item"));
+    cb_item->setBoxToolTip(1, aString);
+    cb_item->setBoxToolTip(2, vString);
 
-    cb_equip= new DoubleCheckBox(QString(tr("Equip")));
-	cb_equip->setBoxToolTip(1,QString(tr("Visible")));
-	cb_equip->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_equip);
+    cb_magic->setText(tr("Magic"));
+    cb_magic->setBoxToolTip(1, aString);
+    cb_magic->setBoxToolTip(2, vString);
 
-    cb_status= new DoubleCheckBox(QString(tr("Status")));
-	cb_status->setBoxToolTip(1,QString(tr("Visible")));
-	cb_status->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_status);
+    cb_materia->setText(tr("Materia"));
+    cb_materia->setBoxToolTip(1, aString);
+    cb_materia->setBoxToolTip(2, vString);
 
-    cb_order= new DoubleCheckBox(QString(tr("Order")));
-	cb_order->setBoxToolTip(1,QString(tr("Visible")));
-	cb_order->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_order);
+    cb_equip->setText(tr("Equip"));
+    cb_equip->setBoxToolTip(1, aString);
+    cb_equip->setBoxToolTip(2, vString);
 
-    cb_limit= new DoubleCheckBox(QString(tr("Limit")));
-	cb_limit->setBoxToolTip(1,QString(tr("Visible")));
-	cb_limit->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_limit);
+    cb_status->setText(tr("Status"));
+    cb_status->setBoxToolTip(1, aString);
+    cb_status->setBoxToolTip(2, vString);
 
-    cb_config= new DoubleCheckBox(QString(tr("Config")));
-	cb_config->setBoxToolTip(1,QString(tr("Visible")));
-	cb_config->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_config);
+    cb_order->setText(tr("Order"));
+    cb_order->setBoxToolTip(1, aString);
+    cb_order->setBoxToolTip(2, vString);
 
-    cb_phs= new DoubleCheckBox(QString(tr("P.H.S")));
-	cb_phs->setBoxToolTip(1,QString(tr("Visible")));
-	cb_phs->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_phs);
+    cb_limit->setText(tr("Limit"));
+    cb_limit->setBoxToolTip(1, aString);
+    cb_limit->setBoxToolTip(2, vString);
 
-    cb_save= new DoubleCheckBox(QString(tr("Save")));
-	cb_save->setBoxToolTip(1,QString(tr("Visible")));
-	cb_save->setBoxToolTip(2,QString(tr("Locked")));
-	layout->addWidget(cb_save);
+    cb_config->setText(tr("Config"));
+    cb_config->setBoxToolTip(1, aString);
+    cb_config->setBoxToolTip(2, vString);
 
-	this->setLayout(layout);
-	this->adjustSize();
+    cb_phs->setText(tr("P.H.S"));
+    cb_phs->setBoxToolTip(1, aString);
+    cb_phs->setBoxToolTip(2, vString);
+
+    cb_save->setText(tr("Save"));
+    cb_save->setBoxToolTip(1, aString);
+    cb_save->setBoxToolTip(2, vString);
 }
 
 void MenuListWidget::setChecked(int row, int box, bool checked)

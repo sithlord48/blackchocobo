@@ -38,6 +38,8 @@ private:
     QStringList InFiles;
     QString OutPath;
     QString UserID;
+    QPushButton *btnOk = nullptr;
+    QPushButton *btnCancel = nullptr;
 };
 
 #endif // METADATACREATOR_H

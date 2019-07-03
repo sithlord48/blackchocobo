@@ -22,38 +22,40 @@
 #include <QHBoxLayout>
 #include <QMessageBox>
 
-MetadataCreator::MetadataCreator(QWidget *parent,FF7Save *ff7save) : QDialog(parent)
+MetadataCreator::MetadataCreator(QWidget *parent,FF7Save *ff7save)
+    : QDialog(parent)
+    , ff7(ff7save)
+    , btnOk(new QPushButton(QIcon::fromTheme(QStringLiteral("dialog-ok"), style()->standardIcon(QStyle::SP_DialogOkButton)), tr("&Ok")))
+    , btnCancel(new QPushButton(QIcon::fromTheme(QStringLiteral("dialog-cancel"), style()->standardIcon(QStyle::SP_DialogCancelButton)), tr("&Cancel")))
 {
 	initDisplay();
     for(int i=0;i<15;i++) {
         InFiles.append(QString());
     }
-    ff7 = ff7save;
     setMinimumWidth(fontMetrics().width("W") * 42);
     setWindowTitle(tr("Create Cloud Save Folder"));
     setFocus();// prevents lineOutPath from Having Focus and hiding its placeholder text.
 }
 void MetadataCreator::initDisplay(void)
 {
-    auto buttonBox = new QDialogButtonBox;
-    buttonBox->addButton(QDialogButtonBox::Ok);
-    buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-    buttonBox->addButton(QDialogButtonBox::Cancel);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &MetadataCreator::on_buttonBox_accepted);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &MetadataCreator::close);
+
+    btnOk->setEnabled(false);
+    connect(btnOk, &QPushButton::clicked, this, &MetadataCreator::on_buttonBox_accepted);
+
+    connect(btnCancel, &QPushButton::clicked, this, &MetadataCreator::close);
+
+    auto btnBox = new QHBoxLayout;
+    btnBox->addWidget(btnOk);
+    btnBox->addWidget(btnCancel);
 
     auto lblOut = new QLabel(tr("Output Path:"));
     auto lineOutPath = new QLineEdit;
     lineOutPath->setPlaceholderText(tr("Folder To Write Files Into"));
-    connect(lineOutPath, &QLineEdit::textChanged, this, [this, buttonBox] (const QString &string) {
+    connect(lineOutPath, &QLineEdit::textChanged, this, [this] (const QString &string) {
         if (!load) {
             OutPath = string;
         }
-        if (string.isEmpty()) {
-            buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        } else {
-            buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-        }
+        btnOk->setEnabled(!string.isEmpty());
     });
 
     auto lblUserID = new QLabel(tr("Sign With User Id"));
@@ -90,14 +92,14 @@ void MetadataCreator::initDisplay(void)
 	outpathLayout->addWidget(lineOutPath);
 	outpathLayout->addWidget(btnOutPath);
 
-    auto SaveGroup = new QGroupBox(tr(""));
+    auto SaveGroup = new QGroupBox();
     SaveGroup->setLayout(makeLineLayout());
 
     QVBoxLayout *FinalLayout=new QVBoxLayout;
 	FinalLayout->addLayout(outpathLayout);
 	FinalLayout->addLayout(userIDLayout);
 	FinalLayout->addWidget(SaveGroup);
-	FinalLayout->addWidget(buttonBox);
+    FinalLayout->addLayout(btnBox);
 
 	setLayout(FinalLayout);
 }

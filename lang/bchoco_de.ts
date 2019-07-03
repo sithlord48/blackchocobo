@@ -263,14 +263,6 @@ p, li { white-space: pre-wrap; }
         <translation>Str</translation>
     </message>
     <message>
-        <source>+</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>=</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Vit</source>
         <translation>Vit</translation>
     </message>
@@ -593,6 +585,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next: %1</source>
         <translation>Weiter: %1</translation>
+    </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished">Widerstand</translation>
     </message>
 </context>
 <context>
@@ -8071,10 +8067,6 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No Description Text</source>
         <translation type="unfinished">Keine Beschreibung Text</translation>
     </message>
@@ -8412,7 +8404,7 @@ Lage.</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation>verschlossen</translation>
+        <translation type="vanished">verschlossen</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8449,6 +8441,10 @@ Lage.</translation>
     <message>
         <source>Save</source>
         <translation>Speichern</translation>
+    </message>
+    <message>
+        <source>Allowed</source>
+        <translation type="unfinished">Dürfen</translation>
     </message>
 </context>
 <context>
@@ -8789,11 +8785,63 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">9</translation>
     </message>
     <message>
         <source>10</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">10</translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation>Hoch</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation>Runter</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation>Menü</translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation>Ok</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation>Wechseln</translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation>Ziel</translation>
+    </message>
+    <message>
+        <source>PgUp</source>
+        <translation>Seite hoch</translation>
+    </message>
+    <message>
+        <source>PgDn</source>
+        <translation>Seite runter</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Hilfe</translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation>Pause</translation>
     </message>
 </context>
 <context>

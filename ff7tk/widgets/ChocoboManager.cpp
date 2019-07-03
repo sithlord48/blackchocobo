@@ -14,9 +14,25 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ChocoboManager.h"
+void ChocoboManager::changeEvent(QEvent *e)
+{
+    if(e->type() != QEvent::LanguageChange)
+        return;
+
+    lblStablesOwned ->setText(tr("Stables Owned"));
+    lblStablesOccupied->setText(tr("Stables Occupied"));
+    penBox->setTitle(tr("Fenced Chocobos"));
+    updateCombos();
+    for(int i = 0; i < 6; i++) {
+        chocoboLabel[i]->setTitle(tr("Stable:%1").arg(QString::number(i+1)));
+    }
+}
 
 ChocoboManager::ChocoboManager(QWidget *parent) :
     QWidget(parent)
+  , penBox(new QGroupBox)
+  , lblStablesOwned(new QLabel)
+  , lblStablesOccupied(new QLabel)
 {
 
     sbStablesOwned = new QSpinBox(this);
@@ -31,13 +47,13 @@ ChocoboManager::ChocoboManager(QWidget *parent) :
     chocoboEditor->setHidden(true);
     connectEditor();
 
-    auto lblStablesOwned = new QLabel(tr("Stables Owned"));
+    lblStablesOwned ->setText(tr("Stables Owned"));
     QHBoxLayout *ownedLayout = new QHBoxLayout();
     ownedLayout->setContentsMargins(0,0,0,0);
     ownedLayout->addWidget(lblStablesOwned);
     ownedLayout->addWidget(sbStablesOwned);
 
-    auto lblStablesOccupied = new QLabel(tr("Stables Occupied"));
+    lblStablesOccupied->setText(tr("Stables Occupied"));
     auto occupiedLayout = new QHBoxLayout;
     occupiedLayout->setContentsMargins(0,0,0,0);
     occupiedLayout->addWidget(lblStablesOccupied);
@@ -56,7 +72,7 @@ ChocoboManager::ChocoboManager(QWidget *parent) :
     leftSideLayout->addLayout(createChocoboLabelGrid());
     leftSideLayout->addSpacerItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding));
 
-    penBox = new QGroupBox(tr("Fenced Chocobos"), this);
+    penBox->setTitle(tr("Fenced Chocobos"));
     penBox->setLayout(createChocoboPenGrid());
 
     auto rightSideLayout = new QVBoxLayout;
@@ -477,6 +493,22 @@ QGridLayout *ChocoboManager::createChocoboPenGrid()
 {
     auto gridLayout = new QGridLayout(this);
     gridLayout->setContentsMargins(0,0,0,0);
+
+    for(int i=0;i<4;i++)
+    {
+        comboChocoPen[i]= new QComboBox(this);
+        comboChocoPen[i]->setObjectName(QString::number(i));
+        gridLayout->addWidget(comboChocoPen[i],i/2,i%2,1,1);
+        connect(comboChocoPen[i], QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index){
+            emit(penChanged(sender()->objectName().toInt(), index));
+        });
+    }
+    updateCombos();
+    return gridLayout;
+}
+
+void ChocoboManager::updateCombos()
+{
     QStringList typeList{
         {tr("Empty")}
         , {tr("Wonderful")}
@@ -489,15 +521,13 @@ QGridLayout *ChocoboManager::createChocoboPenGrid()
         , {tr("Terrible")}
     };
 
-    for(int i=0;i<4;i++)
-    {
-        comboChocoPen[i]= new QComboBox(this);
-        comboChocoPen[i]->addItems(typeList);
-        comboChocoPen[i]->setObjectName(QString::number(i));
-        gridLayout->addWidget(comboChocoPen[i],i/2,i%2,1,1);
-        connect(comboChocoPen[i], QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index){
-            emit(penChanged(sender()->objectName().toInt(), index));
-        });
+    for (int i = 0; i < 4; i++ ) {
+        if(comboChocoPen[i]->count() != 0) {
+            for (int j = 0; j < comboChocoPen[i]->count(); j++) {
+                comboChocoPen[i]->setItemText(j, typeList.at(j));
+            }
+        } else {
+            comboChocoPen[i]->addItems(typeList);
+        }
     }
-    return gridLayout;
 }

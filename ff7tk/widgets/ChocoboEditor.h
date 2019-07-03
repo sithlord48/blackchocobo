@@ -25,10 +25,12 @@ class ChocoboEditor : public QWidget
     Q_OBJECT
 protected:
     void resizeEvent(QResizeEvent *ev);
+    void changeEvent(QEvent *e);
 public:
     explicit ChocoboEditor(QWidget *parent = nullptr);
     void SetChocobo(FF7CHOCOBO choco,const QString &Processed_Name= nullptr, bool cant_mate=false, quint16 stamina=0,quint8 rating=0);
 public slots:
+   void updateText();
    void setSprint(int);
    void setMsprint(int);
    void setSpeed(int);
@@ -69,6 +71,18 @@ private:
     QSpinBox* makeSpinBox(int maxValue);
     //Widgets
     QFrame *advancedModeBox = nullptr;
+    QLabel *lbl_rank = nullptr;
+    QLabel *lbl_speed = nullptr;
+    QLabel *lbl_sprint = nullptr;
+    QLabel *lbl_accel = nullptr;
+    QLabel *lbl_stamina = nullptr;
+    QLabel *lbl_wins = nullptr;
+    QLabel *lbl_coop = nullptr;
+    QLabel *lbl_intel = nullptr;
+    QLabel *lbl_pCount = nullptr;
+    QLabel *lbl_personality = nullptr;
+    QLabel *lbl_rating = nullptr;
+    QLabel *lblSpeedWarning = nullptr;
     QComboBox *combo_sex = nullptr;
     QComboBox *combo_type = nullptr;
     QComboBox* combo_rating = nullptr;
@@ -85,7 +99,6 @@ private:
     QSpinBox *sb_pCount = nullptr;
     QSpinBox *sb_intel = nullptr;
     QSpinBox *sb_personality = nullptr;
-    QLabel *lbl_rank = nullptr;
     QGridLayout *Final = nullptr;
     //Data
     FF7CHOCOBO choco_data;
