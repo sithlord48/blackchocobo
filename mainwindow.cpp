@@ -1085,8 +1085,11 @@ void MainWindow::materiaupdate(void)
 		quint8 current_id= ff7->partyMateriaId(s,mat);
 		QString ap;
 
-        newItem = new QTableWidgetItem(QIcon(QPixmap::fromImage(Materias.image(current_id).scaledToHeight(fontMetrics().height(), Qt::SmoothTransformation))), Materias.name(current_id), 0);
-        ui->tbl_materia->setItem(mat,0,newItem);
+        if (current_id <= 0x5A) {
+            newItem = new QTableWidgetItem(QIcon(QPixmap::fromImage(Materias.image(current_id).scaledToHeight(fontMetrics().height(), Qt::SmoothTransformation))), Materias.name(current_id), 0);
+            ui->tbl_materia->setItem(mat,0,newItem);
+        }
+
 
         if(current_id == FF7Materia::EnemySkill)
 		{
