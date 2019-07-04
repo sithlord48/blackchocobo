@@ -81,7 +81,7 @@ private:
 	bool load; // are we loading data? if so don't save it to the file.
 	//bool showLocPreview;
     FF7Save *ff7 =nullptr; // our save file struct pointer.
-	QSettings *settings;//Pointer To settings object.
+    QSettings *settings = nullptr;//Pointer To settings object.
 	int s; //track slot
 	FF7Char Chars; //FF7Char Static Data
 	FF7Item Items; //FF7Item Static Data

@@ -21,23 +21,22 @@
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
 	:QMainWindow(parent),ui(new Ui::MainWindow)
+    , settings(configdata)
 {
 
-    if (configdata->value("scale").isNull()) {
+    if (settings->value("scale").isNull()) {
         double scale  = double(qApp->desktop()->logicalDpiX()/ 72.0f);
         if (scale < 1) {
             scale = 1;
         }
-        configdata->setValue("scale",scale);
+        settings->setValue("scale", scale);
     }
 
-    scale = configdata->value("scale").toReal();
-	this->setAcceptDrops(true);
-	//Get Font Info Before Setting up the GUI!
-	settings =configdata;
-	ui->setupUi(this);
+    scale = settings->value("scale").toReal();
+    this->setAcceptDrops(true);
+    //Get Font Info Before Setting up the GUI!
+    ui->setupUi(this);
     setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
-
 
     //Dynamicly Populate The List of languages and pick one
 
@@ -52,8 +51,9 @@ MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
         auto langAction = ui->menuLang->addAction(translator->translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
         langAction->setData(lang);
         langAction->setCheckable(true);
-        langAction->setChecked(settings->value("lang").toString() == lang);
+        langAction->setChecked(settings->value("lang", "en").toString() == lang);
         if (langAction->isChecked()) {
+            settings->setValue("lang", lang);
             QApplication::installTranslator(translator);
         }
     }
@@ -394,7 +394,7 @@ void MainWindow::advancedSettings()
 	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
 	locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
 	ui->tabWidget->setTabEnabled(9,settings->value("show_test").toBool());
-        if(ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
+    if(ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
 	ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
 	ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
 	ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
@@ -760,7 +760,7 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 
 void MainWindow::changeLanguage(QAction *action)
 {
-    settings->setValue("lang", action->data());
+    settings->setValue(QStringLiteral("lang"), action->data());
     for (QAction *menuEntry : ui->menuLang->actions()) {
         menuEntry->setChecked(false);
     }

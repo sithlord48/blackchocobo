@@ -45,6 +45,9 @@ LocationViewer::LocationViewer(qreal Scale, QWidget *parent)
     , groupFieldItems(new QGroupBox)
     , chkAutoUpdate(new QCheckBox)
 {
+    locationTable->setRowCount(Locations->size());
+    locationTable->setColumnCount(3);
+
     updateText();
     init_display();
     init_connections();
@@ -82,7 +85,7 @@ void LocationViewer::updateText()
 {
     QStringList hozHeaderLabels = {tr("Filename"), tr("Location Name"), tr("LocID")};
     locationTable->setHorizontalHeaderLabels(hozHeaderLabels);
-    for (int i = 0; i< locationTable->rowCount(); i++) {
+    for (int i = 0; i < locationTable->rowCount(); i++) {
         QTableWidgetItem * newItem = new QTableWidgetItem(Locations->locationString(i), 0);
         newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
         newItem->setTextAlignment(Qt::AlignLeft);
@@ -121,13 +124,10 @@ void LocationViewer::init_display(void)
     lblLocationPreview->setBaseSize(int(640 * scale), int(480 * scale));
     lblLocationPreview->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    locationTable->setColumnCount(3);
-    locationTable->setRowCount(Locations->size());
     locationTable->verticalHeader()->setHidden(true);
     locationTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     locationTable->setSelectionMode(QAbstractItemView::SingleSelection);
     locationTable->setSortingEnabled(true);
-
     locationTable->setColumnWidth(0, fontMetrics().width(QChar('W')) * 6);
     locationTable->setColumnWidth(1, fontMetrics().width(QChar('W')) * 15);
     locationTable->setColumnWidth(2, fontMetrics().width(QChar('W')) * 4);

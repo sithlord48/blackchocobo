@@ -74,20 +74,6 @@ int main(int argc, char *argv[])
         settings->setValue("langPath",QCoreApplication::applicationDirPath());
     #endif
 
-//    QTranslator translator;
-//    QString lang = settings->value("langPath").toString() +"/"+ "lang/bchoco_";
-//    if(settings->value("lang").isNull()){settings->setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
-//    lang.append(settings->value("lang").toString());
-//    if(!translator.load(lang))
-//    {
-//        lang = QCoreApplication::applicationDirPath() +"/" +"lang/bchoco_";
-//        lang.append(settings->value("lang").toString());
-//        if(translator.load(lang))
-//        {//if we do load from here reset the path so it can be used by widgets later for autotranslated
-//            settings->setValue("langPath",QCoreApplication::applicationDirPath());
-//        }
-//    }
-//    a.installTranslator(&translator);
     QRandomGenerator(quint32(QTime::currentTime().msec()));
     MainWindow w(nullptr, settings);
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
