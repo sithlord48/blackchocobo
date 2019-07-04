@@ -350,24 +350,24 @@ private:
     qint64 _bPosCurrent;                        // current position
 
     // variables to store the property values
-    bool _addressArea;                          // left area of QHexEdit
+    bool _addressArea = true;                          // left area of QHexEdit
     QColor _addressAreaColor;
     int _addressWidth;
-    bool _asciiArea;
+    bool _asciiArea = true;
     qint64 _addressOffset;
-    bool _highlighting;
-    bool _overwriteMode;
+    bool _highlighting = false;
+    bool _overwriteMode = false;
     QBrush _brushSelection;
     QPen _penSelection;
     QBrush _brushHighlighted;
     QPen _penHighlighted;
-    bool _readOnly;
+    bool _readOnly = true;
 
     // other variables
     int _addrDigits;                            // real no of addressdigits, may be > addressWidth
-    bool _blink;                                // help get cursor blinking
+    bool _blink = true;                                // help get cursor blinking
     QBuffer _bData;                             // buffer, when setup with QByteArray
-    Chunks *_chunks;                            // IODevice based access to data
+    Chunks *_chunks = nullptr;                            // IODevice based access to data
     QTimer _cursorTimer;                        // for blinking cursor
     qint64 _cursorPosition;                     // absolute positioin of cursor, 1 Byte == 2 tics
     QRect _cursorRect;                          // physical dimensions of cursor
@@ -376,9 +376,9 @@ private:
     QByteArray _hexDataShown;                   // data in view, transformed to hex
     qint64 _lastEventSize;                      // size, which was emitted last time
     QByteArray _markedShown;                    // marked data in view
-    bool _modified;                             // Is any data in editor modified?
+    bool _modified = false;                             // Is any data in editor modified?
     int _rowsShown;                             // lines of text shown
-    UndoStack * _undoStack;                     // Stack to store edit actions for undo/redo
+    UndoStack * _undoStack = nullptr;                     // Stack to store edit actions for undo/redo
     /*! \endcond docNever */
 };
 

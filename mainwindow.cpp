@@ -394,7 +394,7 @@ void MainWindow::advancedSettings()
 	chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
 	locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
 	ui->tabWidget->setTabEnabled(9,settings->value("show_test").toBool());
-    if(ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
+        if(ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN){setControllerMappingVisible(settings->value("optionsShowMapping").toBool());}
 	ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
 	ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
 	ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());

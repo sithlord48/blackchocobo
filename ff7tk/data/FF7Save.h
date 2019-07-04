@@ -1024,7 +1024,7 @@ private:
     FF7SLOT buffer_slot;// hold a buffer slot
     FF7SLOT slot[15]; //core slot data.
     FF7HEADFOOT hf[15]; //slot header and footer.
-    FF7SaveInfo::FORMAT fileFormat;
+    FF7SaveInfo::FORMAT fileFormat = FF7SaveInfo::FORMAT::UNKNOWN;
     QByteArray _bufferFileHeader;
     QByteArray _fileHeader;
     //quint8 file_header_pc [0x0009];     // [0x0000] 0x06277371 this replace quint8 file_tag[9];

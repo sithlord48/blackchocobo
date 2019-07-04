@@ -19,16 +19,15 @@
 // the PC function is modified from Makou Reactor (thanks Myst6re)
 QString FF7TEXT::toPC(QByteArray text)
 {
-    int txt;
+    int txt = 0;
     if ((txt = text.indexOf('\xFF')) != -1) {
         text.truncate(txt);
     }
 
     QString String;
-    quint8 index;
 
     for (quint16 i = 0 ; i < text.size() ; ++i) {
-        index = quint8(text.at(i));
+        quint8 index = quint8(text.at(i));
         if (index == 0xFF) {
             break;
         }

@@ -12,10 +12,13 @@ const int BYTES_PER_LINE = 16;
 
 // ********************************************************************** Constructor, destructor
 
-QHexEdit::QHexEdit(QWidget *parent) : QAbstractScrollArea(parent)
+QHexEdit::QHexEdit(QWidget *parent)
+    : QAbstractScrollArea(parent)
+    , _chunks(new Chunks())
+    , _undoStack(new UndoStack(_chunks, this))
 {
-    _chunks = new Chunks();
-    _undoStack = new UndoStack(_chunks, this);
+//    _chunks = new Chunks();
+//    _undoStack = new UndoStack(_chunks, this);
 #ifdef Q_OS_WIN32
     setFont(QFont("Courier", 10));
 #else
@@ -126,13 +129,18 @@ void QHexEdit::setCursorPosition(qint64 position)
     _blink = false;
     viewport()->update(_cursorRect);
 
-    // 2. Check, if cursor in range?
-    if (_overwriteMode && (position > (_chunks->size() * 2 - 1)))
-        position = _chunks->size() * 2 - 1;
-    if (!_overwriteMode && (position > (_chunks->size() * 2)))
-        position = _chunks->size() * 2;
-    if (position < 0)
+    if(!_chunks) {
         position = 0;
+    } else {
+
+        // 2. Check, if cursor in range?
+        if (_overwriteMode && (position > (_chunks->size() * 2 - 1)))
+            position = _chunks->size() * 2 - 1;
+        if (!_overwriteMode && (position > (_chunks->size() * 2)))
+            position = _chunks->size() * 2;
+        if (position < 0)
+            position = 0;
+    }
 
     // 3. Calc new position of curser
     _cursorPosition = position;
