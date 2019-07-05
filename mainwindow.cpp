@@ -19,10 +19,32 @@
 #include "ui_mainwindow.h"
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-MainWindow::MainWindow(QWidget *parent, QSettings *configdata)
-	:QMainWindow(parent),ui(new Ui::MainWindow)
-    , settings(configdata)
+MainWindow::MainWindow(QWidget *parent)
+    :QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
+
+#ifdef STATIC
+    settings = new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
+#else //STATIC
+
+    if(QFile(QString(QCoreApplication::applicationDirPath() + QDir::separator() + "settings.ini")).exists()) {
+        settings = new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
+    } else {
+        settings = new QSettings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings", nullptr);
+    }
+#endif //STATIC
+#ifdef Q_OS_UNIX
+#ifndef Q_OS_MAC
+    if(QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
+    {//check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
+        settings->setValue("langPath",QString("/usr/share/blackchocobo"));
+    }
+    else{settings->setValue("langPath",QCoreApplication::applicationDirPath());}
+#endif
+#else
+    settings->setValue("langPath",QCoreApplication::applicationDirPath());
+#endif
 
     if (settings->value("scale").isNull()) {
         double scale  = double(qApp->desktop()->logicalDpiX()/ 72.0f);
