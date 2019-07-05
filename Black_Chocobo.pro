@@ -132,12 +132,18 @@ win32: {
         #DEFINES += EnableOpenSSL							# Enable openSSL support
 	#INCLUDEPATH += C:/OpenSSL-Win32/include		# Be sure to change this to your openSSL include path
 	#LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32	# Be sure to update this to your openSSL lib path
-	RC_FILE = bchoco.rc #program icon for windows
 	TARGET = Black_Chocobo
 	#Prevent ms padding on packed structures on gcc compiler
 	contains(QMAKE_COMPILER, gcc) {
 	QMAKE_CXXFLAGS += -mno-ms-bitfields
 	}
+	#Windows RC Info Below
+	VERSION = 1.9.92
+	QMAKE_TARGET_COMPANY = Black Chocobo Devs
+	QMAKE_TARGET_DESCRIPTION = Final Fantasy 7 Save Editor
+	QMAKE_TARGET_COPYRIGHT = 2010- 2019 Chris Rizzitello
+	QMAKE_TARGET_PRODUCT = Black_Chocobo
+	RC_ICONS = icon/bchoco_icon_win.ico
 }
 
 #set up for mac os
