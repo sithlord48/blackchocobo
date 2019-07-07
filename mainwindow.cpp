@@ -22,49 +22,46 @@
 MainWindow::MainWindow(QWidget *parent)
     :QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , hexCursorPos(0)
+    , _init(true)
+    , load(true)
+    , ff7(new FF7Save)
+    , s(0)
+    , curchar(0)
+    , mslotsel(-1)
 {
 
 #ifdef STATIC
-    settings = new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
+    settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
 #else //STATIC
-
-    if(QFile(QString(QCoreApplication::applicationDirPath() + QDir::separator() + "settings.ini")).exists()) {
-        settings = new QSettings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
+    if(QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists()) {
+        settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
     } else {
-        settings = new QSettings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings", nullptr);
+        settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
     }
 #endif //STATIC
+
 #ifdef Q_OS_UNIX
 #ifndef Q_OS_MAC
-    if(QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
-    {//check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
-        settings->setValue("langPath",QString("/usr/share/blackchocobo"));
+    if(QCoreApplication::applicationDirPath().startsWith("/usr/bin")) {
+        //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
+        settings->setValue("langPath", QStringLiteral("/usr/share/blackchocobo"));
+    } else {
+        settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
     }
-    else{settings->setValue("langPath",QCoreApplication::applicationDirPath());}
 #endif
 #else
-    settings->setValue("langPath",QCoreApplication::applicationDirPath());
+    settings->setValue(QStringLiterial("langPath"), QCoreApplication::applicationDirPath());
 #endif
 
-    if (settings->value("scale").isNull()) {
-        double scale  = double(qApp->desktop()->logicalDpiX()/ 72.0f);
-        if (scale < 1) {
-            scale = 1;
-        }
-        settings->setValue("scale", scale);
-    }
-
-    scale = settings->value("scale").toReal();
-    this->setAcceptDrops(true);
-    //Get Font Info Before Setting up the GUI!
+    settings->setValue(QStringLiteral("scale"), settings->value(QStringLiteral("scale"), std::max(double(qApp->desktop()->logicalDpiX()/ 72.0f), 1.0)).toReal());
+    scale = settings->value(QStringLiteral("scale")).toReal();
+    setAcceptDrops(true);
     ui->setupUi(this);
-    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
 
     //Dynamicly Populate The List of languages and pick one
-
     QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
-
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
@@ -82,13 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->frame_status->setFixedHeight(fontMetrics().height()+2);
     ui->tbl_materia->setIconSize(QSize(fontMetrics().height(),fontMetrics().height()));
-	_init=true;
-    ff7 = new FF7Save();
-	load=true;
-	curchar =0;
-	mslotsel=-1;
-	s=0;
-	hexCursorPos=0;
+
 	buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<3;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 	init_display();
@@ -98,7 +89,7 @@ MainWindow::MainWindow(QWidget *parent)
 	init_connections();
 	on_actionNew_Game_triggered();
     ui->btn_cloud->clicked();
-	ff7->setFileModified(false,0);
+    ff7->setFileModified(false, 0);
 }
 void MainWindow::init_display()
 {
@@ -185,23 +176,6 @@ void MainWindow::init_display()
 	ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
 
     optionsWidget = new OptionsWidget;
-    connect(optionsWidget, &OptionsWidget::dialogColorLLChanged, this, &MainWindow::setDialogColorLL);
-    connect(optionsWidget, &OptionsWidget::dialogColorLRChanged, this, &MainWindow::setDialogColorLR);
-    connect(optionsWidget, &OptionsWidget::dialogColorULChanged, this, &MainWindow::setDialogColorUL);
-    connect(optionsWidget, &OptionsWidget::dialogColorURChanged, this, &MainWindow::setDialogColorUR);
-    connect(optionsWidget, &OptionsWidget::magicOrderChanged, this, &MainWindow::setMagicOrder);
-    connect(optionsWidget, &OptionsWidget::cameraChanged, this, &MainWindow::setCameraMode);
-    connect(optionsWidget, &OptionsWidget::atbChanged, this, &MainWindow::setAtbMode);
-    connect(optionsWidget, &OptionsWidget::cursorChanged, this, &MainWindow::setCursorMode);
-    connect(optionsWidget, &OptionsWidget::controllerModeChanged, this, &MainWindow::setControlMode);
-    connect(optionsWidget, &OptionsWidget::soundChanged, this, &MainWindow::setSoundMode);
-    connect(optionsWidget, &OptionsWidget::fieldMessageSpeedChanged, this, &MainWindow::setFieldMessageSpeed);
-    connect(optionsWidget, &OptionsWidget::battleMessageSpeedChanged, this, &MainWindow::setBattleMessageSpeed);
-    connect(optionsWidget, &OptionsWidget::battleSpeedChanged, this, &MainWindow::setBattleSpeed);
-    connect(optionsWidget, &OptionsWidget::fieldHelpChanged, this, &MainWindow::setFieldHelp);
-    connect(optionsWidget, &OptionsWidget::battleTargetsChanged, this, &MainWindow::setBattleTargets);
-    connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
-    connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
     optionsWidget->setControllerMappingVisible(false);
 	ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
 
@@ -287,112 +261,131 @@ void MainWindow::populateCombos()
 }
 void MainWindow::init_style()
 {
+    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
+
 	QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
 	sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
 	sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
 	sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
 	sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
-
 	char_editor->setSliderStyle(sliderStyleSheet);
 
 	QString tabStyle = QString("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()),QString::number(this->palette().highlight().color().green()),QString::number(this->palette().highlight().color().blue()));
-
     char_editor->setToolBoxStyle(tabStyle);
 	ui->locationToolBox->setStyleSheet(tabStyle);
-	ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
+
+    ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
 	ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
 }
 void MainWindow::init_connections()
-{//check Qt Version and Connect With Apporate Method.
-		//connect language menu
-		connect(ui->menuLang,SIGNAL(triggered(QAction*)),this,SLOT(changeLanguage(QAction *)));
-		connect(ff7,SIGNAL(fileChanged(bool)),this,SLOT(fileModified(bool)));
-		connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
-		connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
-		//ItemList
-		connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
-		//Materia_Editor
-		connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
-		connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
-		//Char_Editor
-		connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
-		connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));
-		connect(char_editor,SIGNAL(str_changed(quint8)),this,SLOT(char_str_changed(quint8)));
-		connect(char_editor,SIGNAL(vit_changed(quint8)),this,SLOT(char_vit_changed(quint8)));
-		connect(char_editor,SIGNAL(mag_changed(quint8)),this,SLOT(char_mag_changed(quint8)));
-		connect(char_editor,SIGNAL(spi_changed(quint8)),this,SLOT(char_spi_changed(quint8)));
-		connect(char_editor,SIGNAL(dex_changed(quint8)),this,SLOT(char_dex_changed(quint8)));
-		connect(char_editor,SIGNAL(lck_changed(quint8)),this,SLOT(char_lck_changed(quint8)));
-		connect(char_editor,SIGNAL(strBonus_changed(quint8)),this,SLOT(char_strBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(vitBonus_changed(quint8)),this,SLOT(char_vitBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(magBonus_changed(quint8)),this,SLOT(char_magBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(spiBonus_changed(quint8)),this,SLOT(char_spiBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(dexBonus_changed(quint8)),this,SLOT(char_dexBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(lckBonus_changed(quint8)),this,SLOT(char_lckBonus_changed(quint8)));
-		connect(char_editor,SIGNAL(limitLevel_changed(qint8)),this,SLOT(char_limitLevel_changed(qint8)));
-		connect(char_editor,SIGNAL(limitBar_changed(quint8)),this,SLOT(char_limitBar_changed(quint8)));
-		connect(char_editor,SIGNAL(name_changed(QString)),this,SLOT(char_name_changed(QString)));
-		connect(char_editor,SIGNAL(weapon_changed(quint8)),this,SLOT(char_weapon_changed(quint8)));
-		connect(char_editor,SIGNAL(armor_changed(quint8)),this,SLOT(char_armor_changed(quint8)));
-		connect(char_editor,SIGNAL(accessory_changed(quint8)),this,SLOT(char_accessory_changed(quint8)));
-		connect(char_editor,SIGNAL(curHp_changed(quint16)),this,SLOT(char_curHp_changed(quint16)));
-		connect(char_editor,SIGNAL(maxHp_changed(quint16)),this,SLOT(char_maxHp_changed(quint16)));
-		connect(char_editor,SIGNAL(curMp_changed(quint16)),this,SLOT(char_curMp_changed(quint16)));
-		connect(char_editor,SIGNAL(maxMp_changed(quint16)),this,SLOT(char_maxMp_changed(quint16)));
-		connect(char_editor,SIGNAL(kills_changed(quint16)),this,SLOT(char_kills_changed(quint16)));
-		connect(char_editor,SIGNAL(row_changed(quint8)),this,SLOT(char_row_changed(quint8)));
-		connect(char_editor,SIGNAL(levelProgress_changed(quint8)),this,SLOT(char_levelProgress_changed(quint8)));
-		connect(char_editor,SIGNAL(sadnessfury_changed(quint8)),this,SLOT(char_sadnessfury_changed(quint8)));
-		connect(char_editor,SIGNAL(limits_changed(quint16)),this,SLOT(char_limits_changed(quint16)));
-		connect(char_editor,SIGNAL(timesused1_changed(quint16)),this,SLOT(char_timesused1_changed(quint16)));
-		connect(char_editor,SIGNAL(timesused2_changed(quint16)),this,SLOT(char_timeused2_changed(quint16)));
-		connect(char_editor,SIGNAL(timesused3_changed(quint16)),this,SLOT(char_timeused3_changed(quint16)));
-		connect(char_editor,SIGNAL(baseHp_changed(quint16)),this,SLOT(char_baseHp_changed(quint16)));
-		connect(char_editor,SIGNAL(baseMp_changed(quint16)),this,SLOT(char_baseMp_changed(quint16)));
-		connect(char_editor,SIGNAL(exp_changed(quint32)),this,SLOT(char_exp_changed(quint32)));
-		connect(char_editor,SIGNAL(mslotChanged(int)),this,SLOT(char_mslot_changed(int)));
-		connect(char_editor,SIGNAL(Materias_changed(materia)),this,SLOT(char_materia_changed(materia)));
-		connect(char_editor,SIGNAL(expNext_changed(quint32)),this,SLOT(char_expNext_changed(quint32)));
-		//ChocoboManager
-		connect(chocoboManager,SIGNAL(ownedChanged(qint8)),this,SLOT(cm_stablesOwnedChanged(qint8)));
-		connect(chocoboManager,SIGNAL(stableMaskChanged(qint8)),this,SLOT(cm_stableMaskChanged(qint8)));
-		connect(chocoboManager,SIGNAL(occupiedChanged(qint8)),this,SLOT(cm_stablesOccupiedChanged(qint8)));
+{
+    connect(ui->menuLang, &QMenu::triggered, this, &MainWindow::changeLanguage);
 
-		connect(chocoboManager,SIGNAL(nameChanged(int,QString)),this,SLOT(cm_nameChanged(int,QString)));
-		connect(chocoboManager,SIGNAL(cantMateChanged(int,bool)),this,SLOT(cm_mated_toggled(int,bool)));
-		connect(chocoboManager,SIGNAL(speedChanged(int,quint16)),this,SLOT(cm_speedChanged(int,quint16)));
-		connect(chocoboManager,SIGNAL(mSpeedChanged(int,quint16)),this,SLOT(cm_maxspeedChanged(int,quint16)));
-		connect(chocoboManager,SIGNAL(sprintChanged(int,quint16)),this,SLOT(cm_sprintChanged(int,quint16)));
-		connect(chocoboManager,SIGNAL(mSprintChanged(int,quint16)),this,SLOT(cm_maxsprintChanged(int,quint16)));
-		connect(chocoboManager,SIGNAL(staminaChanged(int,quint16)),this,SLOT(cm_staminaChanged(int,quint16)));
-		connect(chocoboManager,SIGNAL(sexChanged(int,quint8)),this,SLOT(cm_sexChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(typeChanged(int,quint8)),this,SLOT(cm_typeChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(accelChanged(int,quint8)),this,SLOT(cm_accelChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(coopChanged(int,quint8)),this,SLOT(cm_coopChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(intelligenceChanged(int,quint8)),this,SLOT(cm_intelChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(personalityChanged(int,quint8)),this,SLOT(cm_personalityChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(pCountChanged(int,quint8)),this,SLOT(cm_pcountChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(winsChanged(int,quint8)),this,SLOT(cm_raceswonChanged(int,quint8)));
-		connect(chocoboManager,SIGNAL(penChanged(int,int)),this,SLOT(cm_pensChanged(int,int)));
-		connect(chocoboManager,SIGNAL(ratingChanged(int,quint8)),this,SLOT(cm_ratingChanged(int,quint8)));
+    connect(ui->tbl_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::setValue);
+    connect(ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_unknown->verticalScrollBar(), &QScrollBar::setValue);
 
-		//locations
-		connect(locationViewer,SIGNAL(locationStringChanged(QString)),this,SLOT(location_textChanged(QString)));
-		connect(locationViewer,SIGNAL(locIdChanged(int)),this,SLOT(loc_id_valueChanged(int)));
-		connect(locationViewer,SIGNAL(mapIdChanged(int)),this,SLOT(map_id_valueChanged(int)));
-		connect(locationViewer,SIGNAL(xChanged(int)),this,SLOT(coord_x_valueChanged(int)));
-		connect(locationViewer,SIGNAL(yChanged(int)),this,SLOT(coord_y_valueChanged(int)));
-		connect(locationViewer,SIGNAL(tChanged(int)),this,SLOT(coord_t_valueChanged(int)));
-		connect(locationViewer,SIGNAL(dChanged(int)),this,SLOT(coord_d_valueChanged(int)));
-		connect(locationViewer,SIGNAL(locationChanged(QString)),this,SLOT(locationSelectionChanged(QString)));
-		connect(locationViewer,SIGNAL(fieldItemConnectRequest(quint8,QList<quint16>,QList<quint8>)),this,SLOT(connectFieldItem(quint8,QList<quint16>,QList<quint8>)));
-		connect(locationViewer,SIGNAL(fieldItemCheck(int)),this,SLOT(checkFieldItem(int)));
-		connect(locationViewer,SIGNAL(fieldItemChanged(int,bool)),this,SLOT(fieldItemStateChanged(int,bool)));
+    connect(ff7, &FF7Save::fileChanged, this, &MainWindow::fileModified);
 
-        connect(phsList,SIGNAL(allowedToggled(int,bool)),this,SLOT(phsList_box_allowed_toggled(int,bool)));
-		connect(phsList,SIGNAL(visibleToggled(int,bool)),this,SLOT(phsList_box_visible_toggled(int,bool)));
-		connect(menuList,SIGNAL(visibleToggled(int,bool)),this,SLOT(menuList_box_visible_toggled(int,bool)));
-		connect(menuList,SIGNAL(lockedToggled(int,bool)),this,SLOT(menuList_box_locked_toggled(int,bool)));
+    connect(itemlist, &ItemList::itemsChanged, this, &MainWindow::Items_Changed);
+
+    connect(materia_editor, &MateriaEditor::ap_changed, this, &MainWindow::materia_ap_changed);
+    connect(materia_editor, &MateriaEditor::id_changed, this, &MainWindow::materia_id_changed);
+
+    connect(phsList, &PhsListWidget::allowedToggled, this, &MainWindow::phsList_box_allowed_toggled);
+    connect(phsList, &PhsListWidget::visibleToggled,this, &MainWindow::phsList_box_visible_toggled);
+
+    connect(menuList, &MenuListWidget::lockedToggled, this, &MainWindow::menuList_box_locked_toggled);
+    connect(menuList, &MenuListWidget::visibleToggled,this, &MainWindow::menuList_box_visible_toggled);
+
+    connect(char_editor, &CharEditor::id_changed, this, &MainWindow::char_id_changed);
+    connect(char_editor, &CharEditor::level_changed, this, &MainWindow::char_level_changed);
+    connect(char_editor, &CharEditor::str_changed, this, &MainWindow::char_str_changed);
+    connect(char_editor, &CharEditor::vit_changed, this, &MainWindow::char_vit_changed);
+    connect(char_editor, &CharEditor::mag_changed, this, &MainWindow::char_mag_changed);
+    connect(char_editor, &CharEditor::spi_changed, this, &MainWindow::char_spi_changed);
+    connect(char_editor, &CharEditor::dex_changed, this, &MainWindow::char_dex_changed);
+    connect(char_editor, &CharEditor::lck_changed, this, &MainWindow::char_lck_changed);
+    connect(char_editor, &CharEditor::strBonus_changed, this, &MainWindow::char_strBonus_changed);
+    connect(char_editor, &CharEditor::vitBonus_changed, this, &MainWindow::char_vitBonus_changed);
+    connect(char_editor, &CharEditor::magBonus_changed, this, &MainWindow::char_magBonus_changed);
+    connect(char_editor, &CharEditor::spiBonus_changed, this, &MainWindow::char_spiBonus_changed);
+    connect(char_editor, &CharEditor::dexBonus_changed, this, &MainWindow::char_dexBonus_changed);
+    connect(char_editor, &CharEditor::lckBonus_changed, this, &MainWindow::char_lckBonus_changed);
+    connect(char_editor, &CharEditor::limitLevel_changed, this, &MainWindow::char_limitLevel_changed);
+    connect(char_editor, &CharEditor::limitBar_changed, this, &MainWindow::char_limitBar_changed);
+    connect(char_editor, &CharEditor::name_changed, this, &MainWindow::char_name_changed);
+    connect(char_editor, &CharEditor::weapon_changed, this, &MainWindow::char_weapon_changed);
+    connect(char_editor, &CharEditor::armor_changed, this, &MainWindow::char_armor_changed);
+    connect(char_editor, &CharEditor::accessory_changed, this, &MainWindow::char_accessory_changed);
+    connect(char_editor, &CharEditor::curHp_changed,this, &MainWindow::char_curHp_changed);
+    connect(char_editor, &CharEditor::maxHp_changed,this, &MainWindow::char_maxHp_changed);
+    connect(char_editor, &CharEditor::curMp_changed,this, &MainWindow::char_curMp_changed);
+    connect(char_editor, &CharEditor::maxMp_changed,this, &MainWindow::char_maxMp_changed);
+    connect(char_editor, &CharEditor::kills_changed,this, &MainWindow::char_kills_changed);
+    connect(char_editor, &CharEditor::row_changed,this, &MainWindow::char_row_changed);
+    connect(char_editor, &CharEditor::levelProgress_changed,this, &MainWindow::char_levelProgress_changed);
+    connect(char_editor, &CharEditor::sadnessfury_changed,this, &MainWindow::char_sadnessfury_changed);
+    connect(char_editor, &CharEditor::limits_changed,this, &MainWindow::char_limits_changed);
+    connect(char_editor, &CharEditor::timesused1_changed,this, &MainWindow::char_timesused1_changed);
+    connect(char_editor, &CharEditor::timesused2_changed, this, &MainWindow::char_timeused2_changed);
+    connect(char_editor, &CharEditor::timesused3_changed, this, &MainWindow::char_timeused3_changed);
+    connect(char_editor, &CharEditor::baseHp_changed, this, &MainWindow::char_baseHp_changed);
+    connect(char_editor, &CharEditor::baseMp_changed, this, &MainWindow::char_baseMp_changed);
+    connect(char_editor, &CharEditor::exp_changed, this, &MainWindow::char_exp_changed);
+    connect(char_editor, &CharEditor::mslotChanged, this, &MainWindow::char_mslot_changed);
+    connect(char_editor, &CharEditor::Materias_changed, this, &MainWindow::char_materia_changed);
+    connect(char_editor, &CharEditor::expNext_changed, this, &MainWindow::char_expNext_changed);
+
+    connect(chocoboManager, &ChocoboManager::ownedChanged, this, &MainWindow::cm_stablesOwnedChanged);
+    connect(chocoboManager, &ChocoboManager::stableMaskChanged, this, &MainWindow::cm_stableMaskChanged);
+    connect(chocoboManager, &ChocoboManager::occupiedChanged, this, &MainWindow::cm_stablesOccupiedChanged);
+    connect(chocoboManager, &ChocoboManager::nameChanged, this, &MainWindow::cm_nameChanged);
+    connect(chocoboManager, &ChocoboManager::cantMateChanged, this, &MainWindow::cm_mated_toggled);
+    connect(chocoboManager, &ChocoboManager::speedChanged, this, &MainWindow::cm_speedChanged);
+    connect(chocoboManager, &ChocoboManager::mSpeedChanged, this, &MainWindow::cm_maxspeedChanged);
+    connect(chocoboManager, &ChocoboManager::sprintChanged, this, &MainWindow::cm_sprintChanged);
+    connect(chocoboManager, &ChocoboManager::mSprintChanged, this, &MainWindow::cm_maxsprintChanged);
+    connect(chocoboManager, &ChocoboManager::staminaChanged, this, &MainWindow::cm_staminaChanged);
+    connect(chocoboManager, &ChocoboManager::sexChanged,this, &MainWindow::cm_sexChanged);
+    connect(chocoboManager, &ChocoboManager::typeChanged, this, &MainWindow::cm_typeChanged);
+    connect(chocoboManager, &ChocoboManager::accelChanged, this, &MainWindow::cm_accelChanged);
+    connect(chocoboManager, &ChocoboManager::coopChanged, this, &MainWindow::cm_coopChanged);
+    connect(chocoboManager, &ChocoboManager::intelligenceChanged, this, &MainWindow::cm_intelChanged);
+    connect(chocoboManager, &ChocoboManager::personalityChanged, this, &MainWindow::cm_personalityChanged);
+    connect(chocoboManager, &ChocoboManager::pCountChanged, this, &MainWindow::cm_pcountChanged);
+    connect(chocoboManager, &ChocoboManager::winsChanged, this, &MainWindow::cm_raceswonChanged);
+    connect(chocoboManager, &ChocoboManager::penChanged, this, &MainWindow::cm_pensChanged);
+    connect(chocoboManager, &ChocoboManager::ratingChanged, this, &MainWindow::cm_ratingChanged);
+
+    connect(locationViewer, &LocationViewer::locationStringChanged, this, &MainWindow::location_textChanged);
+    connect(locationViewer, &LocationViewer::locIdChanged, this, &MainWindow::loc_id_valueChanged);
+    connect(locationViewer, &LocationViewer::mapIdChanged, this, &MainWindow::map_id_valueChanged);
+    connect(locationViewer, &LocationViewer::xChanged, this, &MainWindow::coord_x_valueChanged);
+    connect(locationViewer, &LocationViewer::yChanged, this, &MainWindow::coord_y_valueChanged);
+    connect(locationViewer, &LocationViewer::tChanged, this, &MainWindow::coord_t_valueChanged);
+    connect(locationViewer, &LocationViewer::dChanged, this, &MainWindow::coord_d_valueChanged);
+    connect(locationViewer, &LocationViewer::locationChanged, this, &MainWindow::locationSelectionChanged);
+    connect(locationViewer, &LocationViewer::fieldItemConnectRequest, this, &MainWindow::connectFieldItem);
+    connect(locationViewer, &LocationViewer::fieldItemCheck, this, &MainWindow::checkFieldItem);
+    connect(locationViewer, &LocationViewer::fieldItemChanged, this, &MainWindow::fieldItemStateChanged);
+
+    connect(optionsWidget, &OptionsWidget::dialogColorLLChanged, this, &MainWindow::setDialogColorLL);
+    connect(optionsWidget, &OptionsWidget::dialogColorLRChanged, this, &MainWindow::setDialogColorLR);
+    connect(optionsWidget, &OptionsWidget::dialogColorULChanged, this, &MainWindow::setDialogColorUL);
+    connect(optionsWidget, &OptionsWidget::dialogColorURChanged, this, &MainWindow::setDialogColorUR);
+    connect(optionsWidget, &OptionsWidget::magicOrderChanged, this, &MainWindow::setMagicOrder);
+    connect(optionsWidget, &OptionsWidget::cameraChanged, this, &MainWindow::setCameraMode);
+    connect(optionsWidget, &OptionsWidget::atbChanged, this, &MainWindow::setAtbMode);
+    connect(optionsWidget, &OptionsWidget::cursorChanged, this, &MainWindow::setCursorMode);
+    connect(optionsWidget, &OptionsWidget::controllerModeChanged, this, &MainWindow::setControlMode);
+    connect(optionsWidget, &OptionsWidget::soundChanged, this, &MainWindow::setSoundMode);
+    connect(optionsWidget, &OptionsWidget::fieldMessageSpeedChanged, this, &MainWindow::setFieldMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleMessageSpeedChanged, this, &MainWindow::setBattleMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleSpeedChanged, this, &MainWindow::setBattleSpeed);
+    connect(optionsWidget, &OptionsWidget::fieldHelpChanged, this, &MainWindow::setFieldHelp);
+    connect(optionsWidget, &OptionsWidget::battleTargetsChanged, this, &MainWindow::setBattleTargets);
+    connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
+    connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
 }
 void MainWindow::init_settings()
 {
@@ -1448,7 +1441,7 @@ void MainWindow::hexTabUpdate(int viewMode)
 {
 	ui->psxExtras->setVisible(false);
     ui->boxHexData->setVisible(false);
-	disconnect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
+    disconnect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
     if(ff7->format()==FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
 		hexEditor->setData(ff7->slotFF7Data(s));
     } else {
@@ -1470,7 +1463,7 @@ void MainWindow::hexTabUpdate(int viewMode)
         }
 	}
 	hexEditor->setCursorPosition(hexCursorPos);
-	connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
+    connect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
 }
 
 void MainWindow::setControllerMappingVisible(bool Visible)
