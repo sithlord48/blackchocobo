@@ -8320,13 +8320,14 @@ location.</source>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>ゲームに %n ブロックを使用</numerusform>
         </translation>
     </message>
     <message>
         <source>
   Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+  次のデータ チャンク @ スロット:%1</translation>
     </message>
 </context>
 <context>

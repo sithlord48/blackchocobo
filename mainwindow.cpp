@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -29,200 +29,169 @@ MainWindow::MainWindow(QWidget *parent)
     , s(0)
     , curchar(0)
     , mslotsel(-1)
+    , phsList(new PhsListWidget)
+    , menuList(new MenuListWidget)
+    , optionsWidget(new OptionsWidget)
+    , materia_editor(new MateriaEditor(this))
+    , hexEditor(new QHexEdit)
+    , chocoboManager(new ChocoboManager)
 {
+//Initilze Remaining Data
+    buffer_materia.id=FF7Materia::EmptyId;
+    for(int i=0;i<3;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 
-#ifdef STATIC
-    settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
-#else //STATIC
-    if(QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists()) {
-        settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
-    } else {
-        settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
-    }
-#endif //STATIC
-
-#ifdef Q_OS_UNIX
-#ifndef Q_OS_MAC
-    if(QCoreApplication::applicationDirPath().startsWith("/usr/bin")) {
-        //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
-        settings->setValue("langPath", QStringLiteral("/usr/share/blackchocobo"));
-    } else {
-        settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
-    }
-#endif
-#else
-    settings->setValue(QStringLiterial("langPath"), QCoreApplication::applicationDirPath());
-#endif
-
-    settings->setValue(QStringLiteral("scale"), settings->value(QStringLiteral("scale"), std::max(double(qApp->desktop()->logicalDpiX()/ 72.0f), 1.0)).toReal());
-    scale = settings->value(QStringLiteral("scale")).toReal();
     setAcceptDrops(true);
     ui->setupUi(this);
+    loadBasicSettings();
+    populateLanguageMenu();
+    initDisplay();
+    setScale(settings->value(QStringLiteral("scale")).toDouble());
+    populateCombos();
+    init_style();
+    loadChildWidgetSettings();
+    init_connections();
+    on_actionNew_Game_triggered();
+    ui->btn_cloud->clicked();
+    ff7->setFileModified(false, 0);
+}
 
-    //Dynamicly Populate The List of languages and pick one
-    QDir dir(settings->value("langPath").toString()+ QDir::separator() + "lang");
+void MainWindow::populateLanguageMenu()
+{
+    ui->menuLang->clear();
+    m_translations.clear();
+    QDir dir(QStringLiteral("%1/lang").arg(settings->value(QStringLiteral("langPath")).toString()));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"),QDir::Files,QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7,2);
         m_translations.insert(lang, translator);
-        auto langAction = ui->menuLang->addAction(translator->translate("MainWindow","TRANSLATE TO YOUR LANGUAGE NAME"));
+        auto langAction = ui->menuLang->addAction(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"));
         langAction->setData(lang);
         langAction->setCheckable(true);
-        langAction->setChecked(settings->value("lang", "en").toString() == lang);
+        langAction->setChecked(settings->value(QStringLiteral("lang"), QStringLiteral("en")).toString() == lang);
         if (langAction->isChecked()) {
-            settings->setValue("lang", lang);
+            settings->setValue(QStringLiteral("lang"), lang);
             QApplication::installTranslator(translator);
         }
     }
+}
+void MainWindow::initDisplay()
+{
+    QHBoxLayout *phsLayout = new QHBoxLayout;
+    phsLayout->addWidget(phsList);
+    ui->Phs_Box->setLayout(phsLayout);
 
+    QHBoxLayout *menuLayout = new QHBoxLayout;
+    menuLayout->addWidget(menuList);
+    ui->Menu_Box->setLayout(menuLayout);
+
+    chocoboManager->setContentsMargins(0,20,0,0);
+    ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
+    ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
+
+    optionsWidget->setControllerMappingVisible(false);
+    QVBoxLayout *materia_editor_layout = new QVBoxLayout();
+    mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
+    materia_editor_layout->addWidget(materia_editor);
+    materia_editor_layout->addSpacerItem(mat_spacer);
+    ui->group_materia->setLayout(materia_editor_layout);
+
+#ifdef Q_OS_MAC
+    hexEditor->setFont(this->font());
+#endif
+    hexEditor->setReadOnly(false);
+    QVBoxLayout *hexLayout = new QVBoxLayout;
+    hexLayout->setContentsMargins(0,0,0,0);
+    hexLayout->addWidget(hexEditor);
+    ui->group_hexedit->setLayout(hexLayout);
+
+    double scale = settings->value(QStringLiteral("scale")).toDouble();
+    char_editor = new CharEditor(scale);
+    QHBoxLayout *char_editor_layout = new QHBoxLayout;
+    char_editor_layout->setContentsMargins(0,0,0,0);
+    char_editor_layout->setSpacing(0);
+    char_editor_layout->addWidget(char_editor);
+    ui->group_char_editor_box->setLayout(char_editor_layout);
+
+    itemlist = new ItemList(scale);
+    ui->group_items->layout()->removeWidget(ui->group_item_options);
+    ui->group_items->layout()->addWidget(itemlist);
+    ui->group_items->layout()->addWidget(ui->group_item_options);
+    ui->group_items->setFixedWidth(itemlist->width()+ itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
+
+    locationViewer = new LocationViewer(scale);
+    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(settings->value(QStringLiteral("langPath")).toString()));
+    locationViewer->setRegion("BASCUS-94163FF7-S00");
+    QVBoxLayout *locLayout = new QVBoxLayout;
+    locLayout->setContentsMargins(0,0,0,0);
+    locLayout->addWidget(locationViewer);
+    ui->fieldFrame->setLayout(locLayout);
+
+    ui->statusBar->addWidget(ui->frame_status,1);
     ui->frame_status->setFixedHeight(fontMetrics().height()+2);
     ui->tbl_materia->setIconSize(QSize(fontMetrics().height(),fontMetrics().height()));
-
-	buffer_materia.id=FF7Materia::EmptyId;
-    for(int i=0;i<3;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
-	init_display();
-    populateCombos();
-	init_style();
-	init_settings();
-	init_connections();
-	on_actionNew_Game_triggered();
-    ui->btn_cloud->clicked();
-    ff7->setFileModified(false, 0);
 }
-void MainWindow::init_display()
+void MainWindow::setScale (double scale)
 {
-	//Hide the stuff that needs to be hidden.
-	ui->compare_table->setEnabled(false);
-
-	load=false;
-	//adjust some stuff for scale
-
+    scale = std::max(scale, 1.0);
+    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
     ui->btn_cloud->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_barret->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_tifa->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_aeris->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_red->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_yuffie->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_cait->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_vincent->setFixedSize(int(98*scale),int(110*scale));
-    ui->btn_cid->setFixedSize(int(98*scale),int(110*scale));
-
     ui->btn_cloud->setIconSize(QSize(int(92*scale),int(104*scale)));
     ui->btn_barret->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_barret->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_tifa->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_tifa->setFixedSize(int(98*scale),int(110*scale));
+    ui->btn_aeris->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_aeris->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_red->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_red->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_yuffie->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_yuffie->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_cait->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_cait->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_vincent->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_vincent->setIconSize(QSize(int(92*scale),int(104*scale)));
+    ui->btn_cid->setFixedSize(int(98*scale),int(110*scale));
     ui->btn_cid->setIconSize(QSize(int(92*scale),int(104*scale)));
-
+    ui->combo_party1->setFixedHeight(int(32*scale));
+    ui->combo_party1->setIconSize(QSize(int(32*scale), int(32*scale)));
+    ui->combo_party2->setFixedHeight(int(32*scale));
+    ui->combo_party2->setIconSize(QSize(int(32*scale), int(32*scale)));
+    ui->combo_party3->setFixedHeight(int(32*scale));
+    ui->combo_party3->setIconSize(QSize(int(32*scale), int(32*scale)));
     ui->groupBox_11->setFixedWidth(int(375*scale));
     ui->groupBox_18->setFixedWidth(int(273*scale));//materia table group.
-	//world map tab controlls
     ui->scrollArea->setFixedWidth(int(310*scale));
 	ui->scrollAreaWidgetContents->adjustSize();
     ui->world_map_frame->setFixedSize(int(446*scale), int(381*scale));
 	ui->world_map_view->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->combo_map_controls->setFixedHeight(32);
     ui->world_map_view->setGeometry(int(5*scale), int(32*scale), int(432*scale), int(336*scale));
+    ui->combo_map_controls->setFixedHeight(32);
     ui->slide_world_x->setGeometry(-1, int(369*scale), int(443*scale), int(10*scale));
     ui->slide_world_y->setGeometry(int(437*scale), int(26*scale), int(10*scale),int(347*scale));
-	//Compare table
     ui->table_unknown->setFixedWidth(int(234*scale));
     ui->compare_table->setFixedWidth(int(234*scale));
-
+    ui->compare_table->setEnabled(false);
     ui->lbl_love_aeris->setFixedSize(int(50*scale), int(68*scale));
+    ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_love_barret->setFixedSize(int(50*scale),int(68*scale));
+    ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_love_tifa->setFixedSize(int(50*scale),int(68*scale));
-    ui->lbl_love_yuffie->setFixedSize(int(50*scale),int(68*scale));
-
-	ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
 	ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-
+    ui->lbl_love_yuffie->setFixedSize(int(50*scale),int(68*scale));
+    ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(), int(74*scale));
+    ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(), int(74*scale));
+    ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(), int(74*scale));
+    ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(), int(74*scale));
-
-	ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-	ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
-
-    ui->combo_party1->setFixedHeight(int(32*scale));
-    ui->combo_party2->setFixedHeight(int(32*scale));
-    ui->combo_party3->setFixedHeight(int(32*scale));
-    ui->combo_party1->setIconSize(QSize(int(32*scale), int(32*scale)));
-    ui->combo_party2->setIconSize(QSize(int(32*scale), int(32*scale)));
-    ui->combo_party3->setIconSize(QSize(int(32*scale), int(32*scale)));
-
-    phsList = new PhsListWidget();
-	QHBoxLayout *phsLayout = new QHBoxLayout;
-	phsLayout->addWidget(phsList);
-	ui->Phs_Box->setLayout(phsLayout);
-
-    menuList = new MenuListWidget();
-	QHBoxLayout *menuLayout = new QHBoxLayout;
-	menuLayout->addWidget(menuList);
-	ui->Menu_Box->setLayout(menuLayout);
-
-    chocoboManager = new ChocoboManager();
-	chocoboManager->setContentsMargins(0,20,0,0);
-	ui->tabWidget->insertTab(3,chocoboManager,tr("Chocobo"));
-
-    optionsWidget = new OptionsWidget;
-    optionsWidget->setControllerMappingVisible(false);
-	ui->tabWidget->insertTab(7,optionsWidget,tr("Game Options"));
-
-    materia_editor = new MateriaEditor(this);
+    ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
     materia_editor->setStarsSize(int(48*scale));
-	QVBoxLayout *materia_editor_layout = new QVBoxLayout();
-	mat_spacer = new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
-	materia_editor_layout->addWidget(materia_editor);
-	materia_editor_layout->addSpacerItem(mat_spacer);
-	ui->group_materia->setLayout(materia_editor_layout);
-
-	char_editor = new CharEditor(scale);
-	QHBoxLayout *char_editor_layout = new QHBoxLayout;
-	char_editor_layout->setContentsMargins(0,0,0,0);
-	char_editor_layout->setSpacing(0);
-	char_editor_layout->addWidget(char_editor);
-	ui->group_char_editor_box->setLayout(char_editor_layout);
-
-	itemlist= new ItemList(scale);
-
-	ui->group_items->layout()->removeWidget(ui->group_item_options);
-	ui->group_items->layout()->addWidget(itemlist);
-	ui->group_items->layout()->addWidget(ui->group_item_options);
-
-	ui->group_items->setFixedWidth(itemlist->width()+ itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
-
-	hexEditor = new QHexEdit;
-	#ifdef Q_OS_MAC
-		hexEditor->setFont(this->font());
-	#endif
-	hexEditor->setReadOnly(false);
-	QVBoxLayout *hexLayout = new QVBoxLayout;
-	hexLayout->setContentsMargins(0,0,0,0);
-	hexLayout->addWidget(hexEditor);
-	ui->group_hexedit->setLayout(hexLayout);
-
-	locationViewer = new LocationViewer(scale);
-	locationViewer->setTranslationBaseFile(settings->value("langPath").toString() +"/"+ "lang/bchoco_");
-	locationViewer->setRegion("BASCUS-94163FF7-S00");
-	QVBoxLayout *locLayout = new QVBoxLayout;
-	locLayout->setContentsMargins(0,0,0,0);
-	locLayout->addWidget(locationViewer);
-	ui->fieldFrame->setLayout(locLayout);
-
-	//Set up Status Bar..
-	ui->statusBar->addWidget(ui->frame_status,1);
 }
+
 void MainWindow::populateCombos()
 {
 //Party Combos
@@ -259,10 +228,9 @@ void MainWindow::populateCombos()
         ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
     }
 }
+
 void MainWindow::init_style()
 {
-    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 *scale));
-
 	QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
 	sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
 	sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
@@ -277,6 +245,7 @@ void MainWindow::init_style()
     ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
 	ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
 }
+
 void MainWindow::init_connections()
 {
     connect(ui->menuLang, &QMenu::triggered, this, &MainWindow::changeLanguage);
@@ -387,8 +356,34 @@ void MainWindow::init_connections()
     connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
     connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
 }
-void MainWindow::init_settings()
+void MainWindow::loadBasicSettings()
 {
+
+#ifdef STATIC
+    settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
+#else //STATIC
+    if(QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists()) {
+        settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
+    } else {
+        settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
+    }
+#endif //STATIC
+
+#ifdef Q_OS_UNIX
+#ifndef Q_OS_MAC
+    if(QCoreApplication::applicationDirPath().startsWith("/usr/bin")) {
+        //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
+        settings->setValue("langPath", QStringLiteral("/usr/share/blackchocobo"));
+    } else {
+        settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
+    }
+#endif
+#else
+    settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
+#endif
+
+    settings->setValue(QStringLiteral("scale"), settings->value(QStringLiteral("scale"), std::max(double(qApp->desktop()->logicalDpiX()/ 72.0f), 1.0)).toDouble());
+
 	//are any empty? if so set them accordingly.
 	if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",true);}
 	if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
@@ -396,10 +391,9 @@ void MainWindow::init_settings()
 	if(settings->value("editableCombos").isNull()){settings->setValue("editableCombos",true);}
 
 	ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
-	advancedSettings();
 	restoreGeometry(settings->value("MainGeometry").toByteArray());
 }
-void MainWindow::advancedSettings()
+void MainWindow::loadChildWidgetSettings()
 {
 	char_editor->setEditableComboBoxes(settings->value("editableCombos").toBool());
 	materia_editor->setEditableMateriaCombo(settings->value("editableCombos").toBool());
@@ -434,31 +428,25 @@ void MainWindow::changeEvent(QEvent *e)
     populateCombos();
     materiaupdate();
     updateStolenMateria();
-    if(ui->combo_hexEditor->currentIndex() == 0) {
+    if(ui->psxExtras->isVisible())
         update_hexEditor_PSXInfo();
-    }
 }
 void MainWindow::dragEnterEvent(QDragEnterEvent *e) { e->accept(); }
 void MainWindow::dropEvent(QDropEvent *e)
 {
-	if(ff7->isFileModified())
-	{
+    if(ff7->isFileModified()) {
 		switch(save_changes())
 		{
 			case 0: return;//cancel load.
 			case 1: break;//continue load
 		}
 	}
-	const QMimeData *mimeData = e->mimeData();
-	if(mimeData->hasUrls())
-	{
-		QStringList fileList;
-		QList<QUrl> urlList = mimeData->urls();
 
-		fileList.append(urlList.at(0).toLocalFile());
-		loadFileFull(fileList.at(0),0);
-	 }
+    auto mimeData = e->mimeData();
+    if(mimeData->hasUrls())
+        loadFileFull(mimeData->urls().at(0).toLocalFile(), 0);
 }
+
 int MainWindow::save_changes(void)
 {//return 0 to ingore the event/ return 1 to process event.
 	int result; int rtn=0;
@@ -545,7 +533,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
             int fileSlot=0;
             if(tempSave->format() != FF7SaveInfo::FORMAT::PS3 && tempSave->format() != FF7SaveInfo::FORMAT::PSX)
 			{
-				SlotSelect * SSelect= new SlotSelect(scale,tempSave,false);
+                SlotSelect * SSelect= new SlotSelect(settings->value(QStringLiteral("scale")).toDouble(), tempSave, false);
 				fileSlot = SSelect->exec();
 				if(fileSlot == -1)
 				{
@@ -718,20 +706,17 @@ void MainWindow::on_actionShow_Options_triggered()
 {
 	Options odialog(this,settings);
 	odialog.exec();
-	advancedSettings();
+    loadChildWidgetSettings();
 }
 void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7);mdata.exec();}
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
-	SlotSelect slotselect(scale,ff7,true);
+    SlotSelect slotselect(settings->value(QStringLiteral("scale")).toDouble(), ff7, true);
 	int i =slotselect.exec();
-	if(i==-1)
-	{
+    if(i==-1) {
 		on_actionOpen_Save_File_triggered();
-	}
-	else
-	{
+    } else {
 		s=i;
 		guirefresh(0);
 	}
@@ -744,13 +729,13 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 	temp.chop(temp.length()-(temp.lastIndexOf("/")));
 	temp.append(QString("%1achievement.dat").arg(QDir::separator()));
 	QFile tmp(temp);
-	if(!tmp.exists())
-	{
+    if(!tmp.exists()) {
 		temp = QFileDialog::getOpenFileName(this,tr("Select Achievement File"),QDir::homePath(),tr("Dat File (*.dat);"));
 	}
-	if(temp.isEmpty()){ff7->setFileModified(c2,s);return;}
-	else
-	{
+    if(temp.isEmpty()) {
+        ff7->setFileModified(c2,s);
+        return;
+    } else {
         achievementDialog achDialog(temp);
 		achDialog.exec();
 	}

@@ -62,7 +62,7 @@ namespace Ui {
 class MainWindow : public QMainWindow {
 	Q_OBJECT
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 
 protected:
@@ -74,7 +74,7 @@ protected:
 	void moveEvent(QMoveEvent *);
 private:
 	Ui::MainWindow *ui;
-	qreal scale;
+//	qreal scale;
 	qint64 hexCursorPos;
 	bool skip_slot_mask;
 	bool _init; //set true then false after a file load.
@@ -98,6 +98,7 @@ private:
 	QSpacerItem *mat_spacer;
 	CharEditor * char_editor;
 	ItemList *itemlist;
+    QHexEdit *hexEditor;
 	ChocoboManager *chocoboManager;
 	LocationViewer *locationViewer;
 	QString prevFile;
@@ -108,13 +109,14 @@ private:
 
 	QList<fieldItemOffsetList> *fieldItemOffset;
 	QList<fieldItemBitList> *fieldItemBit;
-	QHexEdit *hexEditor;
-	void init_display();
     void populateCombos();
+    void initDisplay();
+    void setScale(double newScale);
 	void init_style();
 	void init_connections();
-	void init_settings();
-	void advancedSettings();
+    void loadBasicSettings();
+    void loadChildWidgetSettings();
+    void populateLanguageMenu();
 public slots:
 	void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 

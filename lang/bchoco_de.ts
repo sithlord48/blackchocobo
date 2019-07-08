@@ -8319,14 +8319,15 @@ Lage.</translation>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Spiel verwendet%n Block speichern</numerusform>
+            <numerusform>Spiel verwendet%n Block speicherns</numerusform>
         </translation>
     </message>
     <message>
         <source>
   Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+  Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
 </context>
 <context>
