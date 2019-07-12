@@ -18,42 +18,42 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets/QDialog>
-	#include <QtWidgets/QLabel>
-	#include <QtWidgets/QPushButton>
-	#include <QtWidgets/QHBoxLayout>
-	#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #else
-	#include <QtGui/QDialog>
+#include <QtGui/QDialog>
 #endif
 #include "ff7tk/data/FF7Save.h"
 #include "ff7tk/data/SaveIcon.h"
 
 class errbox : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
-	bool isSingleSlot();
-	void setSingleSlot(bool single);
+    explicit errbox(QWidget *parent = 0, FF7Save *ff7data = 0, int slot = 0);
+    bool isSingleSlot();
+    void setSingleSlot(bool single);
 protected:
-	void keyPressEvent(QKeyEvent *e);
+    void keyPressEvent(QKeyEvent *e);
 private slots:
-	void setIcon(QPixmap);
-	void btnPrevClicked();
-	void btnExportClicked();
-	void btnViewClicked();
-	void btnNextClicked();
+    void setIcon(QPixmap);
+    void btnPrevClicked();
+    void btnExportClicked();
+    void btnViewClicked();
+    void btnNextClicked();
 private:
     int s;
     SaveIcon *save_icon = nullptr;
     FF7Save *ff7 = nullptr;
-	/* Gui Objects*/
-    QPushButton * btnNext = nullptr;
-    QPushButton * btnPrev = nullptr;
-    QPushButton * btnView = nullptr;
-    QPushButton * btnExport = nullptr;
+    /* Gui Objects*/
+    QPushButton *btnNext = nullptr;
+    QPushButton *btnPrev = nullptr;
+    QPushButton *btnView = nullptr;
+    QPushButton *btnExport = nullptr;
     QLabel *lblRegionString = nullptr;
     QLabel *lblIcon = nullptr;
     bool singleSlot = false;

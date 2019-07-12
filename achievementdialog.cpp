@@ -15,43 +15,44 @@
 /****************************************************************************/
 #include "achievementdialog.h"
 
-achievementDialog::achievementDialog(const QString &FileName,QWidget *parent) :
+achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     QDialog(parent)
-{   
-    fileName=FileName;
+{
+    fileName = FileName;
     this->setWindowTitle(tr("Achievement Editor"));
     achEditor = new AchievementEditor();
     achEditor->openFile(fileName);
-	btnSave = new QPushButton(QIcon::fromTheme("document-save",QIcon(":/icon/save")),tr("  &Save"));
-	btnNo = new QPushButton(QIcon::fromTheme("window-close",QIcon(":/icon/quit")),tr("  &Cancel"));
-    QHBoxLayout * btnLayout = new QHBoxLayout;
-    btnLayout->setContentsMargins(0,0,0,0);
+    btnSave = new QPushButton(QIcon::fromTheme("document-save", QIcon(":/icon/save")), tr("  &Save"));
+    btnNo = new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("  &Cancel"));
+    QHBoxLayout *btnLayout = new QHBoxLayout;
+    btnLayout->setContentsMargins(0, 0, 0, 0);
     btnLayout->setSpacing(2);
     btnLayout->addWidget(btnSave);
     btnLayout->addWidget(btnNo);
-    QVBoxLayout * layout = new QVBoxLayout;
-    layout->setContentsMargins(0,0,0,0);
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
     layout->addWidget(achEditor);
     layout->addLayout(btnLayout);
     this->setLayout(layout);
     this->adjustSize();
-	//this->setFixedSize(this->size());
-    connect(btnSave,SIGNAL(clicked()),this,SLOT(accept()));
-    connect(btnNo,SIGNAL(clicked()),this,SLOT(close()));
+    //this->setFixedSize(this->size());
+    connect(btnSave, SIGNAL(clicked()), this, SLOT(accept()));
+    connect(btnNo, SIGNAL(clicked()), this, SLOT(close()));
 }
 void achievementDialog::accept(void)
 {
-    if(fileName.isEmpty())
-    {
-        fileName = QFileDialog::getSaveFileName(this,tr("Save As"),QDir::homePath(),tr("Dat Files (*.dat)"));
+    if (fileName.isEmpty()) {
+        fileName = QFileDialog::getSaveFileName(this, tr("Save As"), QDir::homePath(), tr("Dat Files (*.dat)"));
     }
-    if(fileName.isEmpty()){return;}
-    else
-    {
-        if(achEditor->saveFile(fileName)){this->close();}
-        else{QMessageBox::critical(this,tr("Failed To Save File"),QString(tr("Failed To Write File\nFile:%1")).arg(fileName));}
+    if (fileName.isEmpty()) {
+        return;
+    } else {
+        if (achEditor->saveFile(fileName)) {
+            this->close();
+        } else {
+            QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
+        }
     }
-
 
 }

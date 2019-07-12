@@ -18,31 +18,31 @@
 
 #include "qglobal.h"
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-	#include <QtWidgets/QDialog>
-	#include <QtWidgets/QLabel>
-	#include <QtWidgets/QPushButton>
-	#include <QtWidgets/QHBoxLayout>
-	#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
 #else
-	#include <QtGui/QDialog>
+#include <QtGui/QDialog>
 #endif
 #include "ff7tk/widgets/AchievementEditor.h"
 
 class achievementDialog : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
-    explicit achievementDialog(const QString &FileName, QWidget *parent=nullptr);
+    explicit achievementDialog(const QString &FileName, QWidget *parent = nullptr);
 
 signals:
 
 public slots:
-	void accept();
+    void accept();
 private:
-   AchievementEditor *achEditor;
-   QPushButton *btnSave;
-   QPushButton *btnNo;
-   QString fileName;
+    AchievementEditor *achEditor;
+    QPushButton *btnSave;
+    QPushButton *btnNo;
+    QString fileName;
 };
 
 #endif // ACHIEVEMENTDIALOG_H

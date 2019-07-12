@@ -20,16 +20,17 @@
 #include <QDialog>
 #include <QSettings>
 
-namespace Ui {
-    class About;
+namespace Ui
+{
+class About;
 }
 
-class About : public QDialog {
+class About : public QDialog
+{
     Q_OBJECT
 public:
-    explicit About(QWidget *parent = 0, QSettings* config_data =0);
+    explicit About(QWidget *parent = 0, QSettings *config_data = 0);
     ~About();
-
 
 protected:
     void changeEvent(QEvent *e);

@@ -17,8 +17,7 @@
 #include "about.h"
 #include "ui_about.h"
 
-
-About::About(QWidget *parent,QSettings *config_data) :
+About::About(QWidget *parent, QSettings *config_data) :
     QDialog(parent),
     ui(new Ui::About)
 {
@@ -26,8 +25,8 @@ About::About(QWidget *parent,QSettings *config_data) :
     settings = config_data;
     restoreGeometry(settings->value("AboutGeometry").toByteArray());
     ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
-    ui->lbl_icon->setFixedSize(fontMetrics().height()* 3, fontMetrics().height() * 3);
-    ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(),Qt::KeepAspectRatio,Qt::SmoothTransformation));
+    ui->lbl_icon->setFixedSize(fontMetrics().height() * 3, fontMetrics().height() * 3);
+    ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_name->setText(QCoreApplication::applicationName().toLatin1());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
     ui->lbl_qt_version->setText(QString(tr("Using Qt: %1")).arg(qVersion()));
@@ -50,6 +49,15 @@ void About::changeEvent(QEvent *e)
     }
 }
 
-void About::closeEvent(QCloseEvent *){settings->setValue("AboutGeometry",saveGeometry());}
-void About::moveEvent(QMoveEvent *){settings->setValue("AboutGeometry",saveGeometry());}
-void About::resizeEvent(QResizeEvent *){settings->setValue("AboutGeometry",saveGeometry());}
+void About::closeEvent(QCloseEvent *)
+{
+    settings->setValue("AboutGeometry", saveGeometry());
+}
+void About::moveEvent(QMoveEvent *)
+{
+    settings->setValue("AboutGeometry", saveGeometry());
+}
+void About::resizeEvent(QResizeEvent *)
+{
+    settings->setValue("AboutGeometry", saveGeometry());
+}
