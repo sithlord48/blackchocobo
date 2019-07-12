@@ -25,7 +25,7 @@ class ItemList : public QTableWidget
 {
     Q_OBJECT
 public:
-	explicit ItemList(qreal Scale=1,QWidget *parent=0);
+    explicit ItemList(qreal Scale = 1, QWidget *parent = 0);
 protected:
     bool eventFilter(QObject *, QEvent *);
     void changeEvent(QEvent *e);
@@ -36,19 +36,19 @@ public slots:
     void setMaximumItemQty(int maxQty);
     void setEditableItemCombo(bool);
 private slots:
-    void listSelectionChanged(int row,int colum,int prevRow,int prevColum);
+    void listSelectionChanged(int row, int colum, int prevRow, int prevColum);
     void itemSelector_changed(quint16);
 private:
     void itemupdate();
     void updateItem(int row);
     FF7Item Items;
     int itemQtyLimit;
-    ItemSelector * itemSelector;
+    ItemSelector *itemSelector;
     ItemPreview *itemPreview;
     QList<quint16> itemlist;
     bool createdSelector;
     bool createdTooltip;
     bool editableItemCombo;
-	qreal scale;
+    qreal scale;
 };
 #endif // ITEMLIST_H

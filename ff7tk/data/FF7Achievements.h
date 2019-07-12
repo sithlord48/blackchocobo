@@ -26,45 +26,45 @@
 
 class FF7Achievements : public QObject
 {
-	Q_OBJECT
-	public:
-        FF7Achievements() = default;
-        ~FF7Achievements() = default;
-		/*! \brief Attempt to Open a file.
-		* Open a file and replace data with its contents.
-		* \param fileName file you want to open
-		* \return True is successful
-		* \sa saveFile()
-		*/
-        Q_INVOKABLE bool openFile(const QString &fileName);
+    Q_OBJECT
+public:
+    FF7Achievements() = default;
+    ~FF7Achievements() = default;
+    /*! \brief Attempt to Open a file.
+    * Open a file and replace data with its contents.
+    * \param fileName file you want to open
+    * \return True is successful
+    * \sa saveFile()
+    */
+    Q_INVOKABLE bool openFile(const QString &fileName);
 
-		/*! \brief Attempt to save a file.
-		 * Write data to a file
-		 * \param fileName file you want to open
-		 * \return TRUE if successful
-		 * \sa openFile()
-		*/
-        Q_INVOKABLE bool saveFile(const QString &fileName);
+    /*! \brief Attempt to save a file.
+     * Write data to a file
+     * \param fileName file you want to open
+     * \return TRUE if successful
+     * \sa openFile()
+    */
+    Q_INVOKABLE bool saveFile(const QString &fileName);
 
-		/*!	\brief is Achievement @ bit unlocked?
-		 *	 \param bit (28-63 are valid)
-		 *	 \return TRUE for Achievement unlocked
-		 *	\sa setAchievementUnlocked()
-		*/
-        Q_INVOKABLE bool achievmentUnlocked(int bit);
+    /*! \brief is Achievement @ bit unlocked?
+     *   \param bit (28-63 are valid)
+     *   \return TRUE for Achievement unlocked
+     *  \sa setAchievementUnlocked()
+    */
+    Q_INVOKABLE bool achievmentUnlocked(int bit);
 
-		/*! \brief set Achievement @ bit to unlocked
-			\param bit (28-63 are valid)
-			\param unlocked  True for Achievement Unlocked
-			\sa achievmentUnlocked()
-		*/
-        Q_INVOKABLE void setAchievementUnlocked(int bit,bool unlocked);
+    /*! \brief set Achievement @ bit to unlocked
+        \param bit (28-63 are valid)
+        \param unlocked  True for Achievement Unlocked
+        \sa achievmentUnlocked()
+    */
+    Q_INVOKABLE void setAchievementUnlocked(int bit, bool unlocked);
 
-		/*!	\brief Translate name for Achievement bit
-			\param bit (28-63 are valid)
-			\return Translated QString of Achievement Name.
-		*/
-        Q_INVOKABLE QString name(int bit);
+    /*! \brief Translate name for Achievement bit
+        \param bit (28-63 are valid)
+        \return Translated QString of Achievement Name.
+    */
+    Q_INVOKABLE QString name(int bit);
 private:
     QByteArray _achievements = QByteArray(8, '\x00');/**< Hold our Achievements.dat */
     inline static const QStringList _names{

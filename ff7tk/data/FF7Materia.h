@@ -52,29 +52,86 @@ public:
     Q_INVOKABLE QStringList skills(int id);
     Q_INVOKABLE QStringList status(int id);
     Q_INVOKABLE qint32 ap(int id, int lvl);
-    Q_INVOKABLE inline qint8 statSTR(int id){return Materias(id).str;}
-    Q_INVOKABLE inline qint8 statVIT(int id){return Materias(id).vit;}
-    Q_INVOKABLE inline qint8 statMAG(int id){return Materias(id).mag;}
-    Q_INVOKABLE inline qint8 statSPI(int id){return Materias(id).spi;}
-    Q_INVOKABLE inline qint8 statDEX(int id){return Materias(id).dex;}
-    Q_INVOKABLE inline qint8 statLCK(int id){return Materias(id).lck;}
-    Q_INVOKABLE inline qint8 statHP(int id){return Materias(id).hp;}
-    Q_INVOKABLE inline qint8 statMP(int id){return Materias(id).mp;}
-    Q_INVOKABLE inline qint8 levels(int id){return Materias(id).levels;}
-    Q_INVOKABLE inline qint8 type(int id){return Materias(id).type;}
-    Q_INVOKABLE inline quint32 ap2num(quint8 ap[3]){return quint32(ap[0] | (ap[1] << 8) | (ap[2] << 16));}
-    Q_INVOKABLE inline const QString& imageAllResource() const {return _resourceAllMateria;}
+    Q_INVOKABLE inline qint8 statSTR(int id)
+    {
+        return Materias(id).str;
+    }
+    Q_INVOKABLE inline qint8 statVIT(int id)
+    {
+        return Materias(id).vit;
+    }
+    Q_INVOKABLE inline qint8 statMAG(int id)
+    {
+        return Materias(id).mag;
+    }
+    Q_INVOKABLE inline qint8 statSPI(int id)
+    {
+        return Materias(id).spi;
+    }
+    Q_INVOKABLE inline qint8 statDEX(int id)
+    {
+        return Materias(id).dex;
+    }
+    Q_INVOKABLE inline qint8 statLCK(int id)
+    {
+        return Materias(id).lck;
+    }
+    Q_INVOKABLE inline qint8 statHP(int id)
+    {
+        return Materias(id).hp;
+    }
+    Q_INVOKABLE inline qint8 statMP(int id)
+    {
+        return Materias(id).mp;
+    }
+    Q_INVOKABLE inline qint8 levels(int id)
+    {
+        return Materias(id).levels;
+    }
+    Q_INVOKABLE inline qint8 type(int id)
+    {
+        return Materias(id).type;
+    }
+    Q_INVOKABLE inline quint32 ap2num(quint8 ap[3])
+    {
+        return quint32(ap[0] | (ap[1] << 8) | (ap[2] << 16));
+    }
+    Q_INVOKABLE inline const QString &imageAllResource() const
+    {
+        return _resourceAllMateria;
+    }
     Q_INVOKABLE QString iconResource(int id);
     Q_INVOKABLE QString fullStarResource(int id);
     Q_INVOKABLE QString emptyStartResource(int id);
     //Image Functions
-    inline QIcon icon(int id) {return QIcon(QPixmap(Materias(id).imageString));}
-    inline QPixmap pixmap(int id) {return QPixmap(Materias(id).imageString);}
-    inline QImage image(int id) {return QImage(Materias(id).imageString);}
-    inline QImage imageEmptyStar(int id) {return QImage(Materias(id).emptyStarString);}
-    inline QImage imageFullStar(int id) {return QImage(Materias(id).fullStarString);}
-    inline QIcon iconAllMateria() const {return QIcon(QPixmap(":/materia/all"));}
-    inline QImage imageAllMateria() const {return QImage(":/materia/all");}
+    inline QIcon icon(int id)
+    {
+        return QIcon(QPixmap(Materias(id).imageString));
+    }
+    inline QPixmap pixmap(int id)
+    {
+        return QPixmap(Materias(id).imageString);
+    }
+    inline QImage image(int id)
+    {
+        return QImage(Materias(id).imageString);
+    }
+    inline QImage imageEmptyStar(int id)
+    {
+        return QImage(Materias(id).emptyStarString);
+    }
+    inline QImage imageFullStar(int id)
+    {
+        return QImage(Materias(id).fullStarString);
+    }
+    inline QIcon iconAllMateria() const
+    {
+        return QIcon(QPixmap(":/materia/all"));
+    }
+    inline QImage imageAllMateria() const
+    {
+        return QImage(":/materia/all");
+    }
 private:
     /*! \struct MATERIA
      *  \brief MATERIA data storage
@@ -107,7 +164,7 @@ private:
     * \return Materia data for given id
     * \sa Materias(int)
     */
-    const FF7Materia::MATERIA& Materias(int id);
+    const FF7Materia::MATERIA &Materias(int id);
     inline static const auto _resourceAllMateria = QStringLiteral("/materia/all");
 
     inline static const MATERIA _emptyMateria{

@@ -114,7 +114,7 @@ QByteArray FF7TEXT::toFF7(const QString &string)
                 }
             }
         }
-        end:;
+    end:;
     }
     return ff7str;
 }

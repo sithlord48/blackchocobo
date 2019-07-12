@@ -20,35 +20,35 @@
 #include "DialogPreview.h"
 
 /** \class OptionsWidget
- *	\brief A Single widget to allow you to set all the options for the game
+ *  \brief A Single widget to allow you to set all the options for the game
  *   will save emit a signal when any option changes.
  **/
 class OptionsWidget : public QScrollArea
 {
-	Q_OBJECT
+    Q_OBJECT
 protected:
-	void resizeEvent(QResizeEvent *);
+    void resizeEvent(QResizeEvent *);
     void changeEvent(QEvent *e);
 public:
     explicit OptionsWidget(QWidget *parent = nullptr);
     void setInput(int controlAction, int newButton);/**< \brief change action  to a PSXBUTTON \param controlAction Action to change See::FF7Save::CONTROLACTION\param newButton Button must be valid FF7Save::PSXBUTTON */
 public slots:
-	void setSliderStyle(QString styleSheet);/**< \brief set style for the sliders on this widget \param styleSheet valid styleSheet for QSlider */
-	void setScrollAreaStyleSheet(QString styleSheet); /**< \brief set style for the center widget \param styleSheet valid styleSheet for QWidget */
-	void setDialogColors(QColor ul,QColor ur,QColor ll,QColor lr); /**< \brief set colors for dialog/menu background preview \param ul Upper Left Color \param ur Upper Right Color \param ll Lower Left Color \param lr Lower Right Color */
+    void setSliderStyle(QString styleSheet);/**< \brief set style for the sliders on this widget \param styleSheet valid styleSheet for QSlider */
+    void setScrollAreaStyleSheet(QString styleSheet); /**< \brief set style for the center widget \param styleSheet valid styleSheet for QWidget */
+    void setDialogColors(QColor ul, QColor ur, QColor ll, QColor lr); /**< \brief set colors for dialog/menu background preview \param ul Upper Left Color \param ur Upper Right Color \param ll Lower Left Color \param lr Lower Right Color */
     void setAtbMode(int mode); /**< \brief Set Atb Mode \param mode must be valid FF7Save::ATBMODE */
     void setSoundMode(int mode); /**< \brief Set Sound Mode \param mode must be valid FF7Save::SOUNDMODE */
-	void setMagicOrder(int order); /**< \brief Set Magic Order \param order  must be valid FF7Save::MAGICORDER */
+    void setMagicOrder(int order); /**< \brief Set Magic Order \param order  must be valid FF7Save::MAGICORDER */
     void setCursor(int mode); /**< \brief Set Cursor Mode \param mode must be valid FF7Save::CURSORMODE */
     void setCamera(int mode); /**< \brief Set Camera Mode \param mode must be valid FF7Save::CAMERAMODE */
     void setControllerMode(int mode); /**< \brief Set Controller Mode \param mode must be valid FF7Save::CONTROLMODE */
-	void setBattleTargets(bool shown); /**< \brief Set Battle Targets Visible \param shown are Target labels shown durring battle */
-	void setBattleHelp(bool shown); /**< \brief Set Battle Help Visible \param shown is Help shown durring battle */
-	void setFieldHelp(bool shown);  /**< \brief Set Field Help Visible \param shown is Field shown durring battle */
-	void setBattleSpeed(int speed); /**< \brief Set Battle Speed \param speed speed for Battles */
-	void setBattleMessageSpeed(int speed); /**< \brief Set Battle Message Speed \param speed speed for Battle Messages */
-	void setFieldMessageSpeed(int speed); /**< \brief Set Field Message Speed \param speed speed for Field Messages */
-	void setControllerMappingVisible(bool visible); /**< \brief Set if the controller mapping area is visible \param visible mapping shown  */
+    void setBattleTargets(bool shown); /**< \brief Set Battle Targets Visible \param shown are Target labels shown durring battle */
+    void setBattleHelp(bool shown); /**< \brief Set Battle Help Visible \param shown is Help shown durring battle */
+    void setFieldHelp(bool shown);  /**< \brief Set Field Help Visible \param shown is Field shown durring battle */
+    void setBattleSpeed(int speed); /**< \brief Set Battle Speed \param speed speed for Battles */
+    void setBattleMessageSpeed(int speed); /**< \brief Set Battle Message Speed \param speed speed for Battle Messages */
+    void setFieldMessageSpeed(int speed); /**< \brief Set Field Message Speed \param speed speed for Field Messages */
+    void setControllerMappingVisible(bool visible); /**< \brief Set if the controller mapping area is visible \param visible mapping shown  */
 signals:
     void dialogColorULChanged(QColor color); /**< \brief Emit Signal: Upper Left Color Has Changed */
     void dialogColorURChanged(QColor color); /**< \brief Emit Signal: Upper Right Color Has Changed */

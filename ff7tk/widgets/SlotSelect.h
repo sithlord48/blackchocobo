@@ -22,8 +22,8 @@
 #include "../data/FF7Char.h"
 #include "SlotPreview.h"
 
-/**	\class SlotSelect
- *	\brief Display a preview of the contents of a PSX memory card file or FF7 PC save.
+/** \class SlotSelect
+ *  \brief Display a preview of the contents of a PSX memory card file or FF7 PC save.
  *
  * When the dialog is run it will return the slot selected (0-14) or -1 if the load button was pushed.
  * Copy Paste and Remove are are internal so no need to worry about doing those.
@@ -31,35 +31,35 @@
  */
 class SlotSelect : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 public:
 
-	/** \brief create a new SlotSelect Dialog.
-	 *	\param scale Scale Fixed contents by this number (hidpi screens)
-	 *	\param data Pointer to a FF7Save object
-	 *  \param showLoad show the load new file button
-	 *	\param parent Dialogs Parent
-	 */
-	explicit SlotSelect(qreal Scale=1,FF7Save *data=0,bool showLoad=false,QWidget *parent = 0);
+    /** \brief create a new SlotSelect Dialog.
+     *  \param scale Scale Fixed contents by this number (hidpi screens)
+     *  \param data Pointer to a FF7Save object
+     *  \param showLoad show the load new file button
+     *  \param parent Dialogs Parent
+     */
+    explicit SlotSelect(qreal Scale = 1, FF7Save *data = 0, bool showLoad = false, QWidget *parent = 0);
 private slots:
-	void button_clicked(int s);
-	void remove_slot(int s);
-	void copy_slot(int s);
-	void paste_slot(int s);
-	void newFile(void);
+    void button_clicked(int s);
+    void remove_slot(int s);
+    void copy_slot(int s);
+    void paste_slot(int s);
+    void newFile(void);
 private:
-	void setSlotPreview(int s);
-	void showLoad(bool shown);
-	void ReIntSlot(int s);
-	QFrame *frm_preview;
-	QVBoxLayout *preview_layout;
-	QScrollArea *list_preview;
-	SlotPreview *preview[15];
-	QPushButton *btnNew;
-	//Private Data
-	FF7Save *ff7;
-	FF7Char Chars;
-	qreal scale;
+    void setSlotPreview(int s);
+    void showLoad(bool shown);
+    void ReIntSlot(int s);
+    QFrame *frm_preview;
+    QVBoxLayout *preview_layout;
+    QScrollArea *list_preview;
+    SlotPreview *preview[15];
+    QPushButton *btnNew;
+    //Private Data
+    FF7Save *ff7;
+    FF7Char Chars;
+    qreal scale;
 };
 
 #endif // SLOTSELECT_H

@@ -23,19 +23,31 @@ class DialogPreview : public QLabel
 public:
     DialogPreview(QWidget *parent = nullptr);
     ~DialogPreview() = default;
-    inline QColor ll(){return lower_left;}
-    inline QColor lr(){return lower_right;}
-    inline QColor ul(){return upper_left;}
-    inline QColor ur(){return upper_right;};
+    inline QColor ll()
+    {
+        return lower_left;
+    }
+    inline QColor lr()
+    {
+        return lower_right;
+    }
+    inline QColor ul()
+    {
+        return upper_left;
+    }
+    inline QColor ur()
+    {
+        return upper_right;
+    };
     void SetLLeft(QColor newColor);
     void SetULeft(QColor newColor);
     void SetLRight(QColor newColor);
     void SetURight(QColor newColor);
 signals:
-     void LL_ColorChanged(QColor color);
-     void LR_ColorChanged(QColor color);
-     void UL_ColorChanged(QColor color);
-     void UR_ColorChanged(QColor color);
+    void LL_ColorChanged(QColor color);
+    void LR_ColorChanged(QColor color);
+    void UL_ColorChanged(QColor color);
+    void UR_ColorChanged(QColor color);
 private:
     void draw();
     QColor upper_left;
@@ -47,6 +59,6 @@ private:
     QPushButton *btn_ll = nullptr;
     QPushButton *btn_lr = nullptr;
 protected:
-    void resizeEvent(QResizeEvent*);
+    void resizeEvent(QResizeEvent *);
 };
 

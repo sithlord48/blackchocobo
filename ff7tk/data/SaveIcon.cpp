@@ -27,12 +27,12 @@ SaveIcon::SaveIcon()
 
 SaveIcon::SaveIcon(const QByteArray &data, quint8 nbFrames)
 {
-	setAll(data, nbFrames);
+    setAll(data, nbFrames);
 }
 
 SaveIcon::SaveIcon(const QList<QByteArray> &data)
 {
-	setAll(data);
+    setAll(data);
 }
 
 void SaveIcon::setAll(const QByteArray &data, quint8 nbFrames)
@@ -40,25 +40,25 @@ void SaveIcon::setAll(const QByteArray &data, quint8 nbFrames)
     this->data = data;
     this->nbFrames = nbFrames;
     if(nbFrames > 1) {
-		connect(&timer, SIGNAL(timeout()), SLOT(nextFrame()));
-		timer.start(160);
-	}
+        connect(&timer, &QTimer::timeout, this, &SaveIcon::nextFrame);
+        timer.start(160);
+    }
 }
 
 void SaveIcon::setAll(const QList<QByteArray> &data)
 {
-	this->data.clear();
+    this->data.clear();
     nbFrames = quint8(data.size());
     for(int i= 0; i < nbFrames; i++) {
-		this->data.append(data.at(i));
-	}
+        this->data.append(data.at(i));
+    }
     if(nbFrames>1) {
-		connect(&timer, SIGNAL(timeout()), SLOT(nextFrame()));
-		timer.start(160);
-	}
+        connect(&timer, &QTimer::timeout, this, &SaveIcon::nextFrame);
+        timer.start(160);
+    }
 }
 
-const QByteArray& SaveIcon::save()
+const QByteArray &SaveIcon::save()
 {
     return data;
 }
@@ -70,76 +70,83 @@ QByteArray SaveIcon::sauver()
 
 QPixmap SaveIcon::icon(bool chocobo_world_icon)
 {
-	quint16 i;
-	quint8 y=0, x=0;
+    quint16 i;
+    quint8 y = 0, x = 0;
 
-    if(data.isEmpty()) return QPixmap();
+    if (data.isEmpty()) {
+        return QPixmap();
+    }
 
-	if(!chocobo_world_icon)	{
-		//palette
-		const char *access_data = data.constData();
-		QList<QRgb> colors;
-		quint16 color;
-        for(i=0 ; i<16 ; ++i) {
-			memcpy(&color, access_data, 2);
-            colors.append(qRgb(int((color & 31)*8.2258), int((color>>5 & 31)*8.2258), int((color>>10 & 31)*8.2258)));
-			access_data += 2;
-		}
+    if (!chocobo_world_icon) {
+        //palette
+        const char *access_data = data.constData();
+        QList<QRgb> colors;
+        quint16 color;
+        for (i = 0 ; i < 16 ; ++i) {
+            memcpy(&color, access_data, 2);
+            colors.append(qRgb(int((color & 31) * 8.2258), int((color >> 5 & 31) * 8.2258), int((color >> 10 & 31) * 8.2258)));
+            access_data += 2;
+        }
 
-		QImage image(16, 16, QImage::Format_RGB32);
-		quint8 index;
-		quint16 firstPos = 32+curFrame*128, lastPos = firstPos+128;
+        QImage image(16, 16, QImage::Format_RGB32);
+        quint8 index;
+        quint16 firstPos = 32 + curFrame * 128, lastPos = firstPos + 128;
 
-		if(data.size()<lastPos)	return QPixmap();
+        if (data.size() < lastPos) {
+            return QPixmap();
+        }
 
-        for(i=firstPos ; i<lastPos ; ++i) {
+        for (i = firstPos ; i < lastPos ; ++i) {
             index = quint8(data.at(i));
-			image.setPixel(x, y, colors.at(index & 0xF));
-            if(x == 15)	{
-				x = 0;
-				++y;
+            image.setPixel(x, y, colors.at(index & 0xF));
+            if (x == 15) {
+                x = 0;
+                ++y;
             } else {
-				++x;
+                ++x;
             }
-			image.setPixel(x, y, colors.at(index >> 4));
+            image.setPixel(x, y, colors.at(index >> 4));
 
-            if(x == 15)	{
-				x = 0;
-				++y;
+            if (x == 15) {
+                x = 0;
+                ++y;
             } else {
-				++x;
+                ++x;
             }
-		}
-		return QPixmap::fromImage(image);
-	}
+        }
+        return QPixmap::fromImage(image);
+    }
 
-    if(data.size()!=288) return QPixmap();
+    if (data.size() != 288) {
+        return QPixmap();
+    }
 
     QImage image(32, 32, QImage::Format_Mono);
-	quint8 j, curPx;
+    quint8 j, curPx;
 
-    for(i=160 ; i<288 ; ++i) {
+    for (i = 160 ; i < 288 ; ++i) {
         curPx = quint8(data.at(i));
-        for(j=0 ; j<8 ; ++j) {
-			image.setPixel(x, y, !((curPx >> j) & 1));
-            if(x == 31) {
-				x = 0;
-				++y;
+        for (j = 0 ; j < 8 ; ++j) {
+            image.setPixel(x, y, !((curPx >> j) & 1));
+            if (x == 31) {
+                x = 0;
+                ++y;
             } else {
-				++x;
+                ++x;
             }
-		}
-	}
-	return QPixmap::fromImage(image);
+        }
+    }
+    return QPixmap::fromImage(image);
 }
 
 void SaveIcon::nextFrame()
 {
-    if(nbFrames != 0) {
+    if (nbFrames != 0) {
         curFrame = (curFrame + 1) % nbFrames;
         QPixmap pix = icon();
 
-        if(!pix.isNull())
+        if (!pix.isNull()) {
             emit nextIcon(pix);
+        }
     }
 }

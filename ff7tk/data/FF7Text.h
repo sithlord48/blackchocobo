@@ -27,10 +27,16 @@ public:
     FF7TEXT() = default;
     ~FF7TEXT() = default;
     /*! \brief sets the text mode, if TRUE will return Japanese text */
-    inline void setJapanese(bool japanese){in_ja = japanese;}
+    inline void setJapanese(bool japanese)
+    {
+        in_ja = japanese;
+    }
 
     /*! \brief returns True if using japanese mode. */
-    inline bool isJapanese(){return in_ja;}
+    inline bool isJapanese()
+    {
+        return in_ja;
+    }
 
     /*! \brief convert ff7text to pc string
      *  \param text the raw ff7text to read

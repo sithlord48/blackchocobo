@@ -26,7 +26,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int PSX_FILE_SIZE = 0x2000;
     static const int PSX_SLOT_HEADER_SIZE = 0x0200;
     static const int PSX_SLOT_FOOTER_SIZE = 0x0D0C;
-    inline static const QByteArray PSX_FILE_ID = QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60",16);
+    inline static const QByteArray PSX_FILE_ID = QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60", 16);
     //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
     inline static const QByteArrayList PSX_SLOT_HEADER = {
         QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60\x82\x75\x82\x64\x82\x4F\x82\x50\x81\x5E\x82\x4F\x82\x58\x81\x46\x82\x54\x82\x4F\x00\x00\x00\x00\x62\x75\x31\x30\x3A\x00\x00\x00\x62\x75\x30\x30\x3A\x00\x00\x00\xA0\x3B\x1D\x80\x8C\x3C\x1D\x80\x00\x3F\x1D\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1D\x57\xDD\x3E\xBA\x42\xB7\x5E\x53\x5A\x38\x2E\xF8\x1D\xF3\x39\xEE\x59\xEC\x71\xB3\x1D\x8E\x39\x87\x7D\x08\x31\xFF\x7F\xFF\x15\x21\x76\xF3\xFF\xFF\xFF\xDF\x5D\x32\x63\x66\xDA\xDD\xFD\xDF\x8A\x66\x77\x77\x56\xDD\xFD\x4F\x71\x68\x13\x7B\x22\xD5\xFD\x55\x47\x11\x81\x3E\x22\xA2\xFD\xDF\x15\x11\xB3\x5E\x72\x52\xF8\xAF\x32\x31\x2B\x61\xB2\x77\xFD\x8F\x37\x62\x16\x61\x73\x67\xF8\xCF\x67\xBB\x32\xB8\x76\xBB\xFD\xBF\x76\xEB\xB3\xEC\xB7\xCB\xF8\x7F\xB7\x1B\x31\x11\xE7\xD7\xFD\x7F\x5B\x38\x31\x11\xEB\xD8\xFD\xBF\xAA\xB7\x11\x31\xEB\xDC\xFD\xAF\xDD\xB8\x18\xB3\xCE\xDE\xFD\xDF\xDD\xBA\xED\xCC\xCC\xDE\xFD\xFF\xFF\xBF\xEF\x5C\xEC\xEE\xFF", 256),
@@ -56,7 +56,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PSP_FILE_SIZE = 0x20080;
     static const int PSP_FILE_HEADER_SIZE = 0x2080;
-    inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56",4);
+    inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56", 4);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGS SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int VGS_FILE_SIZE = 0x20040;
     static const int VGS_FILE_HEADER_SIZE = 0x2040;
@@ -92,131 +92,122 @@ QObject *FF7SaveInfo::qmlSingletonRegister(QQmlEngine *engine, QJSEngine *script
 
 int FF7SaveInfo::fileSize(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX): return d->PSX_FILE_SIZE;
-        case (FORMAT::PC): return d->PC_FILE_SIZE;
-        case (FORMAT::VMC): return d->VMC_FILE_SIZE;
-        case (FORMAT::PSP): return d->PSP_FILE_SIZE;
-        case (FORMAT::PS3): return d->PS3_FILE_SIZE;
-        case (FORMAT::DEX): return d->DEX_FILE_SIZE;
-        case (FORMAT::VGS): return d->VGS_FILE_SIZE;
-        default: return 0;
+    switch (format) {
+    case (FORMAT::PSX): return d->PSX_FILE_SIZE;
+    case (FORMAT::PC): return d->PC_FILE_SIZE;
+    case (FORMAT::VMC): return d->VMC_FILE_SIZE;
+    case (FORMAT::PSP): return d->PSP_FILE_SIZE;
+    case (FORMAT::PS3): return d->PS3_FILE_SIZE;
+    case (FORMAT::DEX): return d->DEX_FILE_SIZE;
+    case (FORMAT::VGS): return d->VGS_FILE_SIZE;
+    default: return 0;
     }
 }
 
 int FF7SaveInfo::fileHeaderSize(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PC): return d->PC_FILE_HEADER_SIZE;
-        case (FORMAT::VMC): return d->VMC_FILE_HEADER_SIZE;
-        case (FORMAT::PSP): return d->PSP_FILE_HEADER_SIZE;
-        case (FORMAT::PS3): return d->PS3_FILE_HEADER_SIZE;
-        case (FORMAT::DEX): return d->DEX_FILE_HEADER_SIZE;
-        case (FORMAT::VGS): return d->VGS_FILE_HEADER_SIZE;
-        default: return 0;
+    switch (format) {
+    case (FORMAT::PC): return d->PC_FILE_HEADER_SIZE;
+    case (FORMAT::VMC): return d->VMC_FILE_HEADER_SIZE;
+    case (FORMAT::PSP): return d->PSP_FILE_HEADER_SIZE;
+    case (FORMAT::PS3): return d->PS3_FILE_HEADER_SIZE;
+    case (FORMAT::DEX): return d->DEX_FILE_HEADER_SIZE;
+    case (FORMAT::VGS): return d->VGS_FILE_HEADER_SIZE;
+    default: return 0;
     }
 }
 
 int FF7SaveInfo::slotHeaderSize(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX):
-        case (FORMAT::VMC):
-        case (FORMAT::PSP):
-        case (FORMAT::PS3):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS): return d->PSX_SLOT_HEADER_SIZE;
-        default: return 0;
+    switch (format) {
+    case (FORMAT::PSX):
+    case (FORMAT::VMC):
+    case (FORMAT::PSP):
+    case (FORMAT::PS3):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS): return d->PSX_SLOT_HEADER_SIZE;
+    default: return 0;
     }
 }
 
 int FF7SaveInfo::slotFooterSize(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX):
-        case (FORMAT::VMC):
-        case (FORMAT::PSP):
-        case (FORMAT::PS3):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS): return d->PSX_SLOT_FOOTER_SIZE;
-        default: return 0;
+    switch (format) {
+    case (FORMAT::PSX):
+    case (FORMAT::VMC):
+    case (FORMAT::PSP):
+    case (FORMAT::PS3):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS): return d->PSX_SLOT_FOOTER_SIZE;
+    default: return 0;
     }
 }
 
 int FF7SaveInfo::slotCount(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX):
-        case (FORMAT::PS3): return 1;
-        case (FORMAT::VMC):
-        case (FORMAT::PSP):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS):
-        case (FORMAT::PC): return 15;
-        default: return 0;
+    switch (format) {
+    case (FORMAT::PSX):
+    case (FORMAT::PS3): return 1;
+    case (FORMAT::VMC):
+    case (FORMAT::PSP):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS):
+    case (FORMAT::PC): return 15;
+    default: return 0;
     }
 }
 
 QByteArray FF7SaveInfo::fileIdentifier(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX): return d->PSX_FILE_ID;
-        case (FORMAT::PC): return d->PC_FILE_ID;
-        case (FORMAT::VMC): return d->VMC_FILE_ID;
-        case (FORMAT::PSP): return d->PSP_FILE_ID;
-        case (FORMAT::PS3): return d->PS3_FILE_ID;
-        case (FORMAT::DEX): return d->DEX_FILE_ID;
-        case (FORMAT::VGS): return d->VGS_FILE_ID;
-        default: return QByteArray();
+    switch (format) {
+    case (FORMAT::PSX): return d->PSX_FILE_ID;
+    case (FORMAT::PC): return d->PC_FILE_ID;
+    case (FORMAT::VMC): return d->VMC_FILE_ID;
+    case (FORMAT::PSP): return d->PSP_FILE_ID;
+    case (FORMAT::PS3): return d->PS3_FILE_ID;
+    case (FORMAT::DEX): return d->DEX_FILE_ID;
+    case (FORMAT::VGS): return d->VGS_FILE_ID;
+    default: return QByteArray();
     }
 }
 
 QByteArray FF7SaveInfo::fileHeader(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PC):
-        case (FORMAT::PSP):
-        case (FORMAT::PS3):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS):
-        case (FORMAT::VMC): return QByteArray(fileIdentifier(format)).append(fileHeaderSize(format) - fileIdentifier(format).length(), 0x00);
-        default: return QByteArray();
+    switch (format) {
+    case (FORMAT::PC):
+    case (FORMAT::PSP):
+    case (FORMAT::PS3):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS):
+    case (FORMAT::VMC): return QByteArray(fileIdentifier(format)).append(fileHeaderSize(format) - fileIdentifier(format).length(), 0x00);
+    default: return QByteArray();
     }
 }
 
 QByteArray FF7SaveInfo::slotHeader(FF7SaveInfo::FORMAT format, int slot) const
 {
     std::clamp(slot, 0, 14);
-    switch (format)
-    {
-        case (FORMAT::PSX):
-        case (FORMAT::PSP):
-        case (FORMAT::PS3):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS):
-        case (FORMAT::VMC): return QByteArray(d->PSX_SLOT_HEADER.at(slot)).append(256, 0x00);
-        default: return QByteArray();
+    switch (format) {
+    case (FORMAT::PSX):
+    case (FORMAT::PSP):
+    case (FORMAT::PS3):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS):
+    case (FORMAT::VMC): return QByteArray(d->PSX_SLOT_HEADER.at(slot)).append(256, 0x00);
+    default: return QByteArray();
     }
 }
 
 QByteArray FF7SaveInfo::slotFooter(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PSX):
-        case (FORMAT::PSP):
-        case (FORMAT::PS3):
-        case (FORMAT::DEX):
-        case (FORMAT::VGS):
-        case (FORMAT::VMC): return QByteArray(d->PSX_SLOT_FOOTER_SIZE, 0x00);
-        default: return QByteArray();
+    switch (format) {
+    case (FORMAT::PSX):
+    case (FORMAT::PSP):
+    case (FORMAT::PS3):
+    case (FORMAT::DEX):
+    case (FORMAT::VGS):
+    case (FORMAT::VMC): return QByteArray(d->PSX_SLOT_FOOTER_SIZE, 0x00);
+    default: return QByteArray();
     }
 }
 
@@ -227,15 +218,14 @@ int FF7SaveInfo::slotSize() const
 
 QString FF7SaveInfo::typeString(FF7SaveInfo::FORMAT format) const
 {
-    switch (format)
-    {
-        case (FORMAT::PC): return QStringLiteral("PC");
-        case (FORMAT::PSX): return QStringLiteral("PSX");
-        case (FORMAT::PSP): return QStringLiteral("PSP");
-        case (FORMAT::PS3): return QStringLiteral("PSV");
-        case (FORMAT::DEX): return QStringLiteral("DEX");
-        case (FORMAT::VGS): return QStringLiteral("VGS");
-        case (FORMAT::VMC): return QStringLiteral("VMC");
-        default: return QString("");
+    switch (format) {
+    case (FORMAT::PC): return QStringLiteral("PC");
+    case (FORMAT::PSX): return QStringLiteral("PSX");
+    case (FORMAT::PSP): return QStringLiteral("PSP");
+    case (FORMAT::PS3): return QStringLiteral("PSV");
+    case (FORMAT::DEX): return QStringLiteral("DEX");
+    case (FORMAT::VGS): return QStringLiteral("VGS");
+    case (FORMAT::VMC): return QStringLiteral("VMC");
+    default: return QString("");
     }
 }

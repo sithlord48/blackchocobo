@@ -133,113 +133,163 @@ public:
     */
     Q_INVOKABLE QString iconResource(int id);
 
-
     /*! \brief get an items type
     *   \param id valid FF7Item::ItemId
     *   \return Items type
     *   \sa ItemType
     */
-    Q_INVOKABLE inline int type(int id){return item(id).type;}
+    Q_INVOKABLE inline int type(int id)
+    {
+        return item(id).type;
+    }
 
     /*! \brief get an items picture as qicon
     *   \param id valid FF7Item::ItemId
     *   \return Items icon in qicon form
     *   \sa image()
     */
-    inline QIcon icon(int id){return QIcon(QPixmap::fromImage(image(id)));}
+    inline QIcon icon(int id)
+    {
+        return QIcon(QPixmap::fromImage(image(id)));
+    }
 
     /*! \brief get materia no growth slot picture as qstring
     *   \return Image resource in qstring form
     *   \sa materiaSlotResource(), materiaLinkResource()
     */
-    Q_INVOKABLE inline QString materiaSlotNoGrowthResource(){return _resourceSlotNoGrowth;}
+    Q_INVOKABLE inline QString materiaSlotNoGrowthResource()
+    {
+        return _resourceSlotNoGrowth;
+    }
 
     /*! \brief get materia slot picture as qstring
     *   \return Image resource in qstring form
     *   \sa materiaSlotNoGrowthResource(), materiaLinkResource()
     */
-    Q_INVOKABLE inline QString materiaSlotResource(){return _resourceSlot;}
+    Q_INVOKABLE inline QString materiaSlotResource()
+    {
+        return _resourceSlot;
+    }
 
     /*! \brief get materia no growth slot picture as qstring
     *   \return Image resource in qstring form
     *   \sa materiaSlotResource(), materiaSlotNoGrowthResource()
     */
-    Q_INVOKABLE inline QString materiaLinkResource(){return _resourceLink;}
+    Q_INVOKABLE inline QString materiaLinkResource()
+    {
+        return _resourceLink;
+    }
 
     /*! \brief get an items picture as qimage
     *   \param id valid FF7Item::ItemId
     *   \return Items icon in qimage form
     *   \sa icon()
     */
-    inline QImage image(int id){return QImage(item(id).imageString);}
+    inline QImage image(int id)
+    {
+        return QImage(item(id).imageString);
+    }
 
     /*! \brief total number of materia slots in item
     *   \param id valid FF7Item::ItemId
     *   \return number of materia slots in an item
     *   \sa linkedSlots() ,ItemId
     */
-    Q_INVOKABLE inline int materiaSlots(int id){return item(id).mslots;}
+    Q_INVOKABLE inline int materiaSlots(int id)
+    {
+        return item(id).mslots;
+    }
 
     /*! \brief total number  materia links in item
     *   \param id valid FF7Item::ItemId
     *   \return number of materia links in an item
     *   \sa materiaSlots()
     */
-    Q_INVOKABLE inline int linkedSlots(int id){return item(id).linked;}
+    Q_INVOKABLE inline int linkedSlots(int id)
+    {
+        return item(id).linked;
+    }
 
     /*! \brief ap multiplier for an item
     *   \param id valid FF7Item::ItemId
     *   \return ap muliplier for given item
     */
-    Q_INVOKABLE inline int materiaGrowthRate(int id){return item(id).mgrowth;}
+    Q_INVOKABLE inline int materiaGrowthRate(int id)
+    {
+        return item(id).mgrowth;
+    }
 
     /*! \brief change to HP when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount HP is changed when item is equipped
     */
-    Q_INVOKABLE inline int statHP(int id){return item(id).hp;}
+    Q_INVOKABLE inline int statHP(int id)
+    {
+        return item(id).hp;
+    }
 
     /*! \brief change to MP when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount MP is changed when item is equipped
     */
-    Q_INVOKABLE inline int statMP(int id){return item(id).mp;}
+    Q_INVOKABLE inline int statMP(int id)
+    {
+        return item(id).mp;
+    }
 
     /*! \brief change to strength when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount strength is changed when item is equipped
     */
-    Q_INVOKABLE inline int statSTR(int id){return item(id).str;}
+    Q_INVOKABLE inline int statSTR(int id)
+    {
+        return item(id).str;
+    }
 
     /*! \brief change to vitality when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount vitality is changed when item is equipped
     */
-    Q_INVOKABLE inline int statVIT(int id){return item(id).vit;}
+    Q_INVOKABLE inline int statVIT(int id)
+    {
+        return item(id).vit;
+    }
 
     /*! \brief change to dexterity when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount dexterity is changed when item is equipped
     */
-    Q_INVOKABLE inline int statDEX(int id){return item(id).dex;}
+    Q_INVOKABLE inline int statDEX(int id)
+    {
+        return item(id).dex;
+    }
 
     /*! \brief change to luck when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount luck is changed when item is equipped
     */
-    Q_INVOKABLE inline int statLCK(int id){return item(id).lck;}
+    Q_INVOKABLE inline int statLCK(int id)
+    {
+        return item(id).lck;
+    }
 
     /*! \brief change to magic when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount magic is changed when item is equipped
     */
-    Q_INVOKABLE inline int statMAG(int id){return item(id).mag;}
+    Q_INVOKABLE inline int statMAG(int id)
+    {
+        return item(id).mag;
+    }
 
     /*! \brief change to spirit when equipped
     *   \param id valid FF7Item::ItemId
     *   \return amount spirit is changed when item is equipped
     */
-    Q_INVOKABLE inline int statSPI(int id){return item(id).spi;}
+    Q_INVOKABLE inline int statSPI(int id)
+    {
+        return item(id).spi;
+    }
 
     //Elemental Functions
     /*! \brief get a list of the items elemental properties
@@ -253,98 +303,140 @@ public:
     *   \return Type of Effect for Element Restoration
     *   \sa ItemType
     */
-    Q_INVOKABLE inline int elementRestoration(int id){return item(id).e_restoration;}
+    Q_INVOKABLE inline int elementRestoration(int id)
+    {
+        return item(id).e_restoration;
+    }
 
     /*! \brief fire elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Fire
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementFire(int id){return item(id).e_fire;}
+    Q_INVOKABLE inline int elementFire(int id)
+    {
+        return item(id).e_fire;
+    }
 
     /*! \brief cold elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Cold
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementCold(int id){return item(id).e_cold;}
+    Q_INVOKABLE inline int elementCold(int id)
+    {
+        return item(id).e_cold;
+    }
 
     /*! \brief lightning elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Lightning
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementLightning(int id){return item(id).e_lightning;}
+    Q_INVOKABLE inline int elementLightning(int id)
+    {
+        return item(id).e_lightning;
+    }
 
     /*! \brief earth elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Earth
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementEarth(int id){return item(id).e_earth;}
+    Q_INVOKABLE inline int elementEarth(int id)
+    {
+        return item(id).e_earth;
+    }
 
     /*! \brief wind elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Wind
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementWind(int id){return item(id).e_wind;}
+    Q_INVOKABLE inline int elementWind(int id)
+    {
+        return item(id).e_wind;
+    }
 
     /*! \brief water elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Water
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementWater(int id){return item(id).e_water;}
+    Q_INVOKABLE inline int elementWater(int id)
+    {
+        return item(id).e_water;
+    }
 
     /*! \brief gravity elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Gravity
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementGravity(int id){return item(id).e_gravity;}
+    Q_INVOKABLE inline int elementGravity(int id)
+    {
+        return item(id).e_gravity;
+    }
 
     /*! \brief ho;y elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Holy
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementHoly(int id){return item(id).e_holy;}
+    Q_INVOKABLE inline int elementHoly(int id)
+    {
+        return item(id).e_holy;
+    }
 
     /*! \brief poison elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Poison
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementPoison(int id){return item(id).e_poison;}
+    Q_INVOKABLE inline int elementPoison(int id)
+    {
+        return item(id).e_poison;
+    }
 
     /*! \brief cut elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Cut
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementCut(int id){return item(id).e_cut;}
+    Q_INVOKABLE inline int elementCut(int id)
+    {
+        return item(id).e_cut;
+    }
 
     /*! \brief shoot elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Shoot
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementShoot(int id){return item(id).e_shoot;}
+    Q_INVOKABLE inline int elementShoot(int id)
+    {
+        return item(id).e_shoot;
+    }
 
     /*! \brief punch elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Punch
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementPunch(int id){return item(id).e_punch;}
+    Q_INVOKABLE inline int elementPunch(int id)
+    {
+        return item(id).e_punch;
+    }
 
     /*! \brief hit elemental effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Element Hit
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int elementHit(int id){return item(id).e_hit;}
+    Q_INVOKABLE inline int elementHit(int id)
+    {
+        return item(id).e_hit;
+    }
 
     //Status Functions
 
@@ -359,208 +451,301 @@ public:
     *   \return Type of Effect for Status Death
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusDeath(int id){return item(id).s_death;}
+    Q_INVOKABLE inline int statusDeath(int id)
+    {
+        return item(id).s_death;
+    }
 
     /*! \brief slow numb status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Slow Numb
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusSlowNumb(int id){return item(id).s_slow_numb;}
+    Q_INVOKABLE inline int statusSlowNumb(int id)
+    {
+        return item(id).s_slow_numb;
+    }
 
     /*! \brief death sentence status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Death Sentence
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusDeathSentence(int id){return item(id).s_d_sentence;}
+    Q_INVOKABLE inline int statusDeathSentence(int id)
+    {
+        return item(id).s_d_sentence;
+    }
 
     /*! \brief paralysis status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Paralysis
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusParalysis(int id){return item(id).s_paralysis;}
+    Q_INVOKABLE inline int statusParalysis(int id)
+    {
+        return item(id).s_paralysis;
+    }
 
     /*! \brief petrify status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Petrify
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusPetrify(int id){return item(id).s_petrify;}
+    Q_INVOKABLE inline int statusPetrify(int id)
+    {
+        return item(id).s_petrify;
+    }
 
     /*! \brief silence status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Silence
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusSilence(int id){return item(id).s_silence;}
+    Q_INVOKABLE inline int statusSilence(int id)
+    {
+        return item(id).s_silence;
+    }
 
     /*! \brief sleep status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Sleep
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusSleep(int id){return item(id).s_sleep;}
+    Q_INVOKABLE inline int statusSleep(int id)
+    {
+        return item(id).s_sleep;
+    }
 
     /*! \brief confusion status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Confusion
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusConfusion(int id){return item(id).s_confusion;}
+    Q_INVOKABLE inline int statusConfusion(int id)
+    {
+        return item(id).s_confusion;
+    }
 
     /*! \brief berserk status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Berserk
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusBerserk(int id){return item(id).s_berserk;}
+    Q_INVOKABLE inline int statusBerserk(int id)
+    {
+        return item(id).s_berserk;
+    }
 
     /*! \brief frog status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Frog
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusFrog(int id){return item(id).s_frog;}
+    Q_INVOKABLE inline int statusFrog(int id)
+    {
+        return item(id).s_frog;
+    }
 
     /*! \brief mini status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Mini
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusMini(int id){return item(id).s_mini;}
+    Q_INVOKABLE inline int statusMini(int id)
+    {
+        return item(id).s_mini;
+    }
 
     /*! \brief poison status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Poison
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusPoison(int id){return item(id).s_poison;}
+    Q_INVOKABLE inline int statusPoison(int id)
+    {
+        return item(id).s_poison;
+    }
 
     /*! \brief fury status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Fury
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusFury(int id){return item(id).s_fury;}
+    Q_INVOKABLE inline int statusFury(int id)
+    {
+        return item(id).s_fury;
+    }
 
     /*! \brief sadness status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Sadness
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusSadness(int id){return item(id).s_sadness;}
+    Q_INVOKABLE inline int statusSadness(int id)
+    {
+        return item(id).s_sadness;
+    }
 
     /*! \brief darkness status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Darkness
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusDarkness(int id){return item(id).s_darkness;}
+    Q_INVOKABLE inline int statusDarkness(int id)
+    {
+        return item(id).s_darkness;
+    }
 
     /*! \brief haste status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Haste
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusHaste(int id){return item(id).s_haste;}
+    Q_INVOKABLE inline int statusHaste(int id)
+    {
+        return item(id).s_haste;
+    }
 
     /*! \brief slow status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Slow
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusSlow(int id){return item(id).s_slow;}
+    Q_INVOKABLE inline int statusSlow(int id)
+    {
+        return item(id).s_slow;
+    }
 
     /*! \brief stop status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Stop
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusStop(int id){return item(id).s_stop;}
+    Q_INVOKABLE inline int statusStop(int id)
+    {
+        return item(id).s_stop;
+    }
 
     /*! \brief barrier status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Barrier
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusBarrier(int id){return item(id).s_barrier;}
+    Q_INVOKABLE inline int statusBarrier(int id)
+    {
+        return item(id).s_barrier;
+    }
 
     /*! \brief magic barrier status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Magic Barrier
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusMagicBarrier(int id){return item(id).s_m_barrier;}
+    Q_INVOKABLE inline int statusMagicBarrier(int id)
+    {
+        return item(id).s_m_barrier;
+    }
 
     /*! \brief reflect status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Reflect
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusReflect(int id){return item(id).s_reflect;}
+    Q_INVOKABLE inline int statusReflect(int id)
+    {
+        return item(id).s_reflect;
+    }
 
     /*! \brief shield status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Shield
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusShield(int id){return item(id).s_sheild;}
+    Q_INVOKABLE inline int statusShield(int id)
+    {
+        return item(id).s_sheild;
+    }
 
     /*! \brief regen status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Regen
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusRegen(int id){return item(id).s_regen;}
+    Q_INVOKABLE inline int statusRegen(int id)
+    {
+        return item(id).s_regen;
+    }
 
     /*! \brief resist status effect of an item
     *   \param id valid FF7Item::ItemId
     *   \return Type of Effect for Status Resist
     *   \sa ItemEffect
     */
-    Q_INVOKABLE inline int statusResist(int id){return item(id).s_resist;}
+    Q_INVOKABLE inline int statusResist(int id)
+    {
+        return item(id).s_resist;
+    }
 
     /*! \brief Return number if items in _items
      */
-    Q_INVOKABLE inline int size() const {return _items.size();}
+    Q_INVOKABLE inline int size() const
+    {
+        return _items.size();
+    }
 
     /*! \brief Image of a no growth materia slot
     *   \return QImage of a no growth materia slot
     *   \sa imageMateriaSlot(), styleMateriaSlotNoGrowth()
     */
-    inline QImage imageMateriaSlotNoGrowth() {return QImage(materiaSlotNoGrowthResource());}
+    inline QImage imageMateriaSlotNoGrowth()
+    {
+        return QImage(materiaSlotNoGrowthResource());
+    }
 
     /*! \brief Image of a normal materia slot
     *   \return QImage of a normal materia slot
     *   \sa imageMateriaNoGrowthSlot(), styleMateriaSlot()
     */
-    inline QImage imageMateriaSlot(){return QImage(materiaSlotResource());}
+    inline QImage imageMateriaSlot()
+    {
+        return QImage(materiaSlotResource());
+    }
 
     /*! \brief Image of a materia link
     *   \return QImage of a materia link
     *   \sa styleMateriaLink()
     */
-    inline QImage imageMateriaLink(){return QImage(materiaLinkResource());}
+    inline QImage imageMateriaLink()
+    {
+        return QImage(materiaLinkResource());
+    }
 
     /*! \brief QStyle of a no growth materia slot for use on a QPushButton
     *   \return QStyle of a no growth materia slot
     *   \sa styleMateriaSlot(), imageMateriaSlotNoGrowth()
     */
-    inline const QString& styleMateriaSlotNoGrowth(){return _styleSlotNoGrowth;}
+    inline const QString &styleMateriaSlotNoGrowth()
+    {
+        return _styleSlotNoGrowth;
+    }
 
     /*! \brief QStyle of a normal materia slot for use on a QPushButton
     *   \return QStyle of a normal materia slot
     *   \sa styleMateriaSlotNoGrowth(), imageMateriaSlot()
     */
-    inline const QString& styleMateriaSlot(){return _styleSlot;}
+    inline const QString &styleMateriaSlot()
+    {
+        return _styleSlot;
+    }
 
     /*! \brief QStyle of a materia link for use on a QLabel
     *   \return QStyle of a materia link
     *   \sa imageMateriaLink()
     */
-    inline const QString& styleMateriaLink(){return _styleLink;}
+    inline const QString &styleMateriaLink()
+    {
+        return _styleLink;
+    }
 private:
     inline static const auto _resourceSlotNoGrowth = QStringLiteral("items/m_no_grow_slot");
     inline static const auto _resourceSlot = QStringLiteral("items/m_grow_slot");
@@ -648,7 +833,7 @@ private:
      * \param id: item to get Or empty data if invalid.
      * \return item data.
      */
-    const FF7Item::ITEM& item(int id);
+    const FF7Item::ITEM &item(int id);
     inline static const ITEM _emptyitem{
         QString(), QString(), 0, QString(), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };

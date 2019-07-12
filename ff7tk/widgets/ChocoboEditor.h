@@ -28,27 +28,27 @@ protected:
     void changeEvent(QEvent *e);
 public:
     explicit ChocoboEditor(QWidget *parent = nullptr);
-    void SetChocobo(FF7CHOCOBO choco,const QString &Processed_Name= nullptr, bool cant_mate=false, quint16 stamina=0,quint8 rating=0);
+    void SetChocobo(FF7CHOCOBO choco, const QString &Processed_Name = nullptr, bool cant_mate = false, quint16 stamina = 0, quint8 rating = 0);
 public slots:
-   void updateText();
-   void setSprint(int);
-   void setMsprint(int);
-   void setSpeed(int);
-   void setMspeed(int);
-   void setStamina(int);
-   void setAccel(int);
-   void setCoop(int);
-   void setIntelligence(int);
-   void setPersonality (int);
-   void setPcount(int);
-   void setWins(int);
-   void setSex(int);
-   void setType(int);
-   void setName(const QString&);
-   void setCantMate(bool);
-   void setRating(int);
-   void setAdvancedMode(bool);
-signals:    
+    void updateText();
+    void setSprint(int);
+    void setMsprint(int);
+    void setSpeed(int);
+    void setMspeed(int);
+    void setStamina(int);
+    void setAccel(int);
+    void setCoop(int);
+    void setIntelligence(int);
+    void setPersonality(int);
+    void setPcount(int);
+    void setWins(int);
+    void setSex(int);
+    void setType(int);
+    void setName(const QString &);
+    void setCantMate(bool);
+    void setRating(int);
+    void setAdvancedMode(bool);
+signals:
     void sprintChanged(quint16);
     void mSprintChanged(quint16);
     void speedChanged(quint16);
@@ -64,11 +64,11 @@ signals:
     void typeChanged(quint8);
     void nameChanged(QString);
     void cantMateChanged(bool);
-	void ratingChanged(quint8);
+    void ratingChanged(quint8);
 private:
     void init_connections();
     void getRank(void);
-    QSpinBox* makeSpinBox(int maxValue);
+    QSpinBox *makeSpinBox(int maxValue);
     //Widgets
     QFrame *advancedModeBox = nullptr;
     QLabel *lbl_rank = nullptr;
@@ -85,7 +85,7 @@ private:
     QLabel *lblSpeedWarning = nullptr;
     QComboBox *combo_sex = nullptr;
     QComboBox *combo_type = nullptr;
-    QComboBox* combo_rating = nullptr;
+    QComboBox *combo_rating = nullptr;
     QCheckBox *cb_cantMate = nullptr;
     QLineEdit *line_name = nullptr;
     QSpinBox *sb_speed = nullptr;
@@ -105,6 +105,6 @@ private:
     QString choco_name;
     quint16 choco_stamina;
     bool choco_cant_mate;
-	quint8 choco_rating;
+    quint8 choco_rating;
 };
 

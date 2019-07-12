@@ -14,28 +14,29 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "MenuListWidget.h"
-MenuListWidget::MenuListWidget(QWidget * parent) :
-	QWidget(parent)
-  , cb_item(new DoubleCheckBox)
-  , cb_magic(new DoubleCheckBox)
-  , cb_materia(new DoubleCheckBox)
-  , cb_equip(new DoubleCheckBox)
-  , cb_status(new DoubleCheckBox)
-  , cb_order(new DoubleCheckBox)
-  , cb_limit(new DoubleCheckBox)
-  , cb_config(new DoubleCheckBox)
-  , cb_phs(new DoubleCheckBox)
-  , cb_save(new DoubleCheckBox)
-  , lbl_title(new QLabel)
+MenuListWidget::MenuListWidget(QWidget *parent) :
+    QWidget(parent)
+    , cb_item(new DoubleCheckBox)
+    , cb_magic(new DoubleCheckBox)
+    , cb_materia(new DoubleCheckBox)
+    , cb_equip(new DoubleCheckBox)
+    , cb_status(new DoubleCheckBox)
+    , cb_order(new DoubleCheckBox)
+    , cb_limit(new DoubleCheckBox)
+    , cb_config(new DoubleCheckBox)
+    , cb_phs(new DoubleCheckBox)
+    , cb_save(new DoubleCheckBox)
+    , lbl_title(new QLabel)
 {
     updateText();
-	init_display();
-	connectAll();
+    init_display();
+    connectAll();
 }
 void MenuListWidget::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange)
+    if (e->type() != QEvent::LanguageChange) {
         return;
+    }
 
     updateText();
 }
@@ -43,9 +44,9 @@ void MenuListWidget::changeEvent(QEvent *e)
 void MenuListWidget::init_display()
 {
     lbl_title->setStyleSheet(QString("text-decoration: underline;"));
-	QVBoxLayout *layout = new QVBoxLayout;
-	layout->setSpacing(3);
-	layout->setContentsMargins(0,0,0,0);
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->setSpacing(3);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     layout->addWidget(lbl_title);
     layout->addWidget(cb_item);
@@ -109,86 +110,145 @@ void MenuListWidget::updateText()
 
 void MenuListWidget::setChecked(int row, int box, bool checked)
 {
-	disconnectAll();
-	switch (row)
-	{
-		case 0: cb_item->setChecked(box,checked); break;
-		case 1: cb_magic->setChecked(box,checked); break;
-		case 2: cb_materia->setChecked(box,checked); break;
-		case 3: cb_equip->setChecked(box,checked); break;
-		case 4: cb_status->setChecked(box,checked); break;
-		case 5: cb_order->setChecked(box,checked); break;
-		case 6: cb_limit->setChecked(box,checked); break;
-		case 7: cb_config->setChecked(box,checked); break;
-		case 8: cb_phs->setChecked(box,checked); break;
-		case 9: cb_save->setChecked(box,checked);break;
-	};
-	connectAll( );
+    disconnectAll();
+    switch (row) {
+    case 0: cb_item->setChecked(box, checked); break;
+    case 1: cb_magic->setChecked(box, checked); break;
+    case 2: cb_materia->setChecked(box, checked); break;
+    case 3: cb_equip->setChecked(box, checked); break;
+    case 4: cb_status->setChecked(box, checked); break;
+    case 5: cb_order->setChecked(box, checked); break;
+    case 6: cb_limit->setChecked(box, checked); break;
+    case 7: cb_config->setChecked(box, checked); break;
+    case 8: cb_phs->setChecked(box, checked); break;
+    case 9: cb_save->setChecked(box, checked); break;
+    };
+    connectAll();
 }
-void MenuListWidget::cb_item_one_toggled(bool checked){emit(visibleToggled(0,checked));}
-void MenuListWidget::cb_item_two_toggled(bool checked){emit(lockedToggled(0,checked));}
-void MenuListWidget::cb_magic_one_toggled(bool checked){emit(visibleToggled(1,checked));}
-void MenuListWidget::cb_magic_two_toggled(bool checked){emit(lockedToggled(1,checked));}
-void MenuListWidget::cb_materia_one_toggled(bool checked){emit(visibleToggled(2,checked));}
-void MenuListWidget::cb_materia_two_toggled(bool checked){emit(lockedToggled(2,checked));}
-void MenuListWidget::cb_equip_one_toggled(bool checked){emit(visibleToggled(3,checked));}
-void MenuListWidget::cb_equip_two_toggled(bool checked){emit(lockedToggled(3,checked));}
-void MenuListWidget::cb_status_one_toggled(bool checked){emit(visibleToggled(4,checked));}
-void MenuListWidget::cb_status_two_toggled(bool checked){emit(lockedToggled(4,checked));}
-void MenuListWidget::cb_order_one_toggled(bool checked){emit(visibleToggled(5,checked));}
-void MenuListWidget::cb_order_two_toggled(bool checked){emit(lockedToggled(5,checked));}
-void MenuListWidget::cb_limit_one_toggled(bool checked){emit(visibleToggled(6,checked));}
-void MenuListWidget::cb_limit_two_toggled(bool checked){emit(lockedToggled(6,checked));}
-void MenuListWidget::cb_config_one_toggled(bool checked){emit(visibleToggled(7,checked));}
-void MenuListWidget::cb_config_two_toggled(bool checked){emit(lockedToggled(7,checked));}
-void MenuListWidget::cb_phs_one_toggled(bool checked){emit(visibleToggled(8,checked));}
-void MenuListWidget::cb_phs_two_toggled(bool checked){emit(lockedToggled(8,checked));}
-void MenuListWidget::cb_save_one_toggled(bool checked){emit(visibleToggled(9,checked));}
-void MenuListWidget::cb_save_two_toggled(bool checked){emit(lockedToggled(9,checked));}
+void MenuListWidget::cb_item_one_toggled(bool checked)
+{
+    emit(visibleToggled(0, checked));
+}
+void MenuListWidget::cb_item_two_toggled(bool checked)
+{
+    emit(lockedToggled(0, checked));
+}
+void MenuListWidget::cb_magic_one_toggled(bool checked)
+{
+    emit(visibleToggled(1, checked));
+}
+void MenuListWidget::cb_magic_two_toggled(bool checked)
+{
+    emit(lockedToggled(1, checked));
+}
+void MenuListWidget::cb_materia_one_toggled(bool checked)
+{
+    emit(visibleToggled(2, checked));
+}
+void MenuListWidget::cb_materia_two_toggled(bool checked)
+{
+    emit(lockedToggled(2, checked));
+}
+void MenuListWidget::cb_equip_one_toggled(bool checked)
+{
+    emit(visibleToggled(3, checked));
+}
+void MenuListWidget::cb_equip_two_toggled(bool checked)
+{
+    emit(lockedToggled(3, checked));
+}
+void MenuListWidget::cb_status_one_toggled(bool checked)
+{
+    emit(visibleToggled(4, checked));
+}
+void MenuListWidget::cb_status_two_toggled(bool checked)
+{
+    emit(lockedToggled(4, checked));
+}
+void MenuListWidget::cb_order_one_toggled(bool checked)
+{
+    emit(visibleToggled(5, checked));
+}
+void MenuListWidget::cb_order_two_toggled(bool checked)
+{
+    emit(lockedToggled(5, checked));
+}
+void MenuListWidget::cb_limit_one_toggled(bool checked)
+{
+    emit(visibleToggled(6, checked));
+}
+void MenuListWidget::cb_limit_two_toggled(bool checked)
+{
+    emit(lockedToggled(6, checked));
+}
+void MenuListWidget::cb_config_one_toggled(bool checked)
+{
+    emit(visibleToggled(7, checked));
+}
+void MenuListWidget::cb_config_two_toggled(bool checked)
+{
+    emit(lockedToggled(7, checked));
+}
+void MenuListWidget::cb_phs_one_toggled(bool checked)
+{
+    emit(visibleToggled(8, checked));
+}
+void MenuListWidget::cb_phs_two_toggled(bool checked)
+{
+    emit(lockedToggled(8, checked));
+}
+void MenuListWidget::cb_save_one_toggled(bool checked)
+{
+    emit(visibleToggled(9, checked));
+}
+void MenuListWidget::cb_save_two_toggled(bool checked)
+{
+    emit(lockedToggled(9, checked));
+}
 
 void MenuListWidget::connectAll()
 {
-	connect(cb_item,SIGNAL(box1_toggled(bool)),this,SLOT(cb_item_one_toggled(bool)));
-	connect(cb_item,SIGNAL(box2_toggled(bool)),this,SLOT(cb_item_two_toggled(bool)));
-	connect(cb_magic,SIGNAL(box1_toggled(bool)),this,SLOT(cb_magic_one_toggled(bool)));
-	connect(cb_magic,SIGNAL(box2_toggled(bool)),this,SLOT(cb_magic_two_toggled(bool)));
-	connect(cb_materia,SIGNAL(box1_toggled(bool)),this,SLOT(cb_materia_one_toggled(bool)));
-	connect(cb_materia,SIGNAL(box2_toggled(bool)),this,SLOT(cb_materia_two_toggled(bool)));
-	connect(cb_equip,SIGNAL(box1_toggled(bool)),this,SLOT(cb_equip_one_toggled(bool)));
-	connect(cb_equip,SIGNAL(box2_toggled(bool)),this,SLOT(cb_equip_two_toggled(bool)));
-	connect(cb_status,SIGNAL(box1_toggled(bool)),this,SLOT(cb_status_one_toggled(bool)));
-	connect(cb_status,SIGNAL(box2_toggled(bool)),this,SLOT(cb_status_two_toggled(bool)));
-	connect(cb_order,SIGNAL(box1_toggled(bool)),this,SLOT(cb_order_one_toggled(bool)));
-	connect(cb_order,SIGNAL(box2_toggled(bool)),this,SLOT(cb_order_two_toggled(bool)));
-	connect(cb_limit,SIGNAL(box1_toggled(bool)),this,SLOT(cb_limit_one_toggled(bool)));
-	connect(cb_limit,SIGNAL(box2_toggled(bool)),this,SLOT(cb_limit_two_toggled(bool)));
-	connect(cb_config,SIGNAL(box1_toggled(bool)),this,SLOT(cb_config_one_toggled(bool)));
-	connect(cb_config,SIGNAL(box2_toggled(bool)),this,SLOT(cb_config_two_toggled(bool)));
-	connect(cb_phs,SIGNAL(box1_toggled(bool)),this,SLOT(cb_phs_one_toggled(bool)));
-	connect(cb_phs,SIGNAL(box2_toggled(bool)),this,SLOT(cb_phs_two_toggled(bool)));
-	connect(cb_save,SIGNAL(box1_toggled(bool)),this,SLOT(cb_save_one_toggled(bool)));
-	connect(cb_save,SIGNAL(box2_toggled(bool)),this,SLOT(cb_save_two_toggled(bool)));
+    connect(cb_item, SIGNAL(box1_toggled(bool)), this, SLOT(cb_item_one_toggled(bool)));
+    connect(cb_item, SIGNAL(box2_toggled(bool)), this, SLOT(cb_item_two_toggled(bool)));
+    connect(cb_magic, SIGNAL(box1_toggled(bool)), this, SLOT(cb_magic_one_toggled(bool)));
+    connect(cb_magic, SIGNAL(box2_toggled(bool)), this, SLOT(cb_magic_two_toggled(bool)));
+    connect(cb_materia, SIGNAL(box1_toggled(bool)), this, SLOT(cb_materia_one_toggled(bool)));
+    connect(cb_materia, SIGNAL(box2_toggled(bool)), this, SLOT(cb_materia_two_toggled(bool)));
+    connect(cb_equip, SIGNAL(box1_toggled(bool)), this, SLOT(cb_equip_one_toggled(bool)));
+    connect(cb_equip, SIGNAL(box2_toggled(bool)), this, SLOT(cb_equip_two_toggled(bool)));
+    connect(cb_status, SIGNAL(box1_toggled(bool)), this, SLOT(cb_status_one_toggled(bool)));
+    connect(cb_status, SIGNAL(box2_toggled(bool)), this, SLOT(cb_status_two_toggled(bool)));
+    connect(cb_order, SIGNAL(box1_toggled(bool)), this, SLOT(cb_order_one_toggled(bool)));
+    connect(cb_order, SIGNAL(box2_toggled(bool)), this, SLOT(cb_order_two_toggled(bool)));
+    connect(cb_limit, SIGNAL(box1_toggled(bool)), this, SLOT(cb_limit_one_toggled(bool)));
+    connect(cb_limit, SIGNAL(box2_toggled(bool)), this, SLOT(cb_limit_two_toggled(bool)));
+    connect(cb_config, SIGNAL(box1_toggled(bool)), this, SLOT(cb_config_one_toggled(bool)));
+    connect(cb_config, SIGNAL(box2_toggled(bool)), this, SLOT(cb_config_two_toggled(bool)));
+    connect(cb_phs, SIGNAL(box1_toggled(bool)), this, SLOT(cb_phs_one_toggled(bool)));
+    connect(cb_phs, SIGNAL(box2_toggled(bool)), this, SLOT(cb_phs_two_toggled(bool)));
+    connect(cb_save, SIGNAL(box1_toggled(bool)), this, SLOT(cb_save_one_toggled(bool)));
+    connect(cb_save, SIGNAL(box2_toggled(bool)), this, SLOT(cb_save_two_toggled(bool)));
 }
 void MenuListWidget::disconnectAll()
 {
-	disconnect(cb_item,SIGNAL(box1_toggled(bool)),this,SLOT(cb_item_one_toggled(bool)));
-	disconnect(cb_item,SIGNAL(box2_toggled(bool)),this,SLOT(cb_item_two_toggled(bool)));
-	disconnect(cb_magic,SIGNAL(box1_toggled(bool)),this,SLOT(cb_magic_one_toggled(bool)));
-	disconnect(cb_magic,SIGNAL(box2_toggled(bool)),this,SLOT(cb_magic_two_toggled(bool)));
-	disconnect(cb_materia,SIGNAL(box1_toggled(bool)),this,SLOT(cb_materia_one_toggled(bool)));
-	disconnect(cb_materia,SIGNAL(box2_toggled(bool)),this,SLOT(cb_materia_two_toggled(bool)));
-	disconnect(cb_equip,SIGNAL(box1_toggled(bool)),this,SLOT(cb_equip_one_toggled(bool)));
-	disconnect(cb_equip,SIGNAL(box2_toggled(bool)),this,SLOT(cb_equip_two_toggled(bool)));
-	disconnect(cb_status,SIGNAL(box1_toggled(bool)),this,SLOT(cb_status_one_toggled(bool)));
-	disconnect(cb_status,SIGNAL(box2_toggled(bool)),this,SLOT(cb_status_two_toggled(bool)));
-	disconnect(cb_order,SIGNAL(box1_toggled(bool)),this,SLOT(cb_order_one_toggled(bool)));
-	disconnect(cb_order,SIGNAL(box2_toggled(bool)),this,SLOT(cb_order_two_toggled(bool)));
-	disconnect(cb_limit,SIGNAL(box1_toggled(bool)),this,SLOT(cb_limit_one_toggled(bool)));
-	disconnect(cb_limit,SIGNAL(box2_toggled(bool)),this,SLOT(cb_limit_two_toggled(bool)));
-	disconnect(cb_config,SIGNAL(box1_toggled(bool)),this,SLOT(cb_config_one_toggled(bool)));
-	disconnect(cb_config,SIGNAL(box2_toggled(bool)),this,SLOT(cb_config_two_toggled(bool)));
-	disconnect(cb_phs,SIGNAL(box1_toggled(bool)),this,SLOT(cb_phs_one_toggled(bool)));
-	disconnect(cb_phs,SIGNAL(box2_toggled(bool)),this,SLOT(cb_phs_two_toggled(bool)));
-	disconnect(cb_save,SIGNAL(box1_toggled(bool)),this,SLOT(cb_save_one_toggled(bool)));
-	disconnect(cb_save,SIGNAL(box2_toggled(bool)),this,SLOT(cb_save_two_toggled(bool)));
+    disconnect(cb_item, SIGNAL(box1_toggled(bool)), this, SLOT(cb_item_one_toggled(bool)));
+    disconnect(cb_item, SIGNAL(box2_toggled(bool)), this, SLOT(cb_item_two_toggled(bool)));
+    disconnect(cb_magic, SIGNAL(box1_toggled(bool)), this, SLOT(cb_magic_one_toggled(bool)));
+    disconnect(cb_magic, SIGNAL(box2_toggled(bool)), this, SLOT(cb_magic_two_toggled(bool)));
+    disconnect(cb_materia, SIGNAL(box1_toggled(bool)), this, SLOT(cb_materia_one_toggled(bool)));
+    disconnect(cb_materia, SIGNAL(box2_toggled(bool)), this, SLOT(cb_materia_two_toggled(bool)));
+    disconnect(cb_equip, SIGNAL(box1_toggled(bool)), this, SLOT(cb_equip_one_toggled(bool)));
+    disconnect(cb_equip, SIGNAL(box2_toggled(bool)), this, SLOT(cb_equip_two_toggled(bool)));
+    disconnect(cb_status, SIGNAL(box1_toggled(bool)), this, SLOT(cb_status_one_toggled(bool)));
+    disconnect(cb_status, SIGNAL(box2_toggled(bool)), this, SLOT(cb_status_two_toggled(bool)));
+    disconnect(cb_order, SIGNAL(box1_toggled(bool)), this, SLOT(cb_order_one_toggled(bool)));
+    disconnect(cb_order, SIGNAL(box2_toggled(bool)), this, SLOT(cb_order_two_toggled(bool)));
+    disconnect(cb_limit, SIGNAL(box1_toggled(bool)), this, SLOT(cb_limit_one_toggled(bool)));
+    disconnect(cb_limit, SIGNAL(box2_toggled(bool)), this, SLOT(cb_limit_two_toggled(bool)));
+    disconnect(cb_config, SIGNAL(box1_toggled(bool)), this, SLOT(cb_config_one_toggled(bool)));
+    disconnect(cb_config, SIGNAL(box2_toggled(bool)), this, SLOT(cb_config_two_toggled(bool)));
+    disconnect(cb_phs, SIGNAL(box1_toggled(bool)), this, SLOT(cb_phs_one_toggled(bool)));
+    disconnect(cb_phs, SIGNAL(box2_toggled(bool)), this, SLOT(cb_phs_two_toggled(bool)));
+    disconnect(cb_save, SIGNAL(box1_toggled(bool)), this, SLOT(cb_save_one_toggled(bool)));
+    disconnect(cb_save, SIGNAL(box2_toggled(bool)), this, SLOT(cb_save_two_toggled(bool)));
 }

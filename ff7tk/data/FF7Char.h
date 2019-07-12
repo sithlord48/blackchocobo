@@ -63,24 +63,36 @@ public:
      * \param who persons id  (they are almost always the same in stock game)
      * \return Chars[who].id
      */
-    Q_INVOKABLE inline quint8 id(int who){return character(who)._id;}
+    Q_INVOKABLE inline quint8 id(int who)
+    {
+        return character(who)._id;
+    }
     /*! \brief number of weapons for a Character
      * \param who Characters id number
      * \return Number of Weapons for the given character
      */
-    Q_INVOKABLE inline int numberOfWeapons(int who){return character(who)._num_weapons;}
+    Q_INVOKABLE inline int numberOfWeapons(int who)
+    {
+        return character(who)._num_weapons;
+    }
 
     /*! \brief find what item id is the first weapon for a Character
      * \param who Characters id number
      * \return Item Id of characters first weapon
      */
-    Q_INVOKABLE inline int weaponStartingId(int who){return character(who)._starting_weapon_id; }
+    Q_INVOKABLE inline int weaponStartingId(int who)
+    {
+        return character(who)._starting_weapon_id;
+    }
 
     /*! \brief find what weapon number is the first weapon for a Character
      * \param who Characters id number
      * \return Weapon number of characters first weapon
      */
-    Q_INVOKABLE inline int weaponOffset(int who){return character(who)._weapon_offset;}
+    Q_INVOKABLE inline int weaponOffset(int who)
+    {
+        return character(who)._weapon_offset;
+    }
 
     /*! \brief default name for a character
      * \param who Characters id number
@@ -93,21 +105,30 @@ public:
      * \return QImage of a characters menu icon
      * \sa icon(),pixmap()
      */
-    inline QImage image(int who){return QImage(character(who)._avatarString);}
+    inline QImage image(int who)
+    {
+        return QImage(character(who)._avatarString);
+    }
 
     /*! \brief Menu icon for a character
      * \param who Characters id number
      * \return QIcon of a characters menu icon
      * \sa image(),pixmap()
      */
-    inline QIcon icon(int who){return QIcon(pixmap(who));}
+    inline QIcon icon(int who)
+    {
+        return QIcon(pixmap(who));
+    }
 
     /*! \brief Menu icon for a character
      * \param who Characters id number
      * \return QPixmap of a characters menu icon
      * \sa icon(),image()
      */
-    inline QPixmap pixmap(int who){return QPixmap(character(who)._avatarString);}
+    inline QPixmap pixmap(int who)
+    {
+        return QPixmap(character(who)._avatarString);
+    }
 
     /*! \brief Limit list for a character
      * \param who Characters id number
@@ -150,63 +171,90 @@ private:
     * \param stat Stat you want to get grade for (stat: 0 str, 1 vit, 2 mag, 3 spi, 4 dex, 5 luck,6 hp,7mp)
     * \return characters grade in a stat
     */
-    inline int stat_grade(int who, int stat){return character(who)._stat_grade.at(stat);}
+    inline int stat_grade(int who, int stat)
+    {
+        return character(who)._stat_grade.at(stat);
+    }
 
     /*! \brief characters base mp for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters base mp for that bracket
     */
-    inline int mp_base(int who, int lvl_bracket){return character(who)._mp_base.at(lvl_bracket);}
+    inline int mp_base(int who, int lvl_bracket)
+    {
+        return character(who)._mp_base.at(lvl_bracket);
+    }
 
     /*! \brief characters mp gradent for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters mp gradent for bracket
     */
-    inline int mp_gradent(int who, int lvl_bracket){return character(who)._mp_gradent.at(lvl_bracket);}
+    inline int mp_gradent(int who, int lvl_bracket)
+    {
+        return character(who)._mp_gradent.at(lvl_bracket);
+    }
 
     /*! \brief characters base hp for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters base hp for that bracket
     */
-    inline int hp_base(int who, int lvl_bracket){return character(who)._hp_base.at(lvl_bracket);}
+    inline int hp_base(int who, int lvl_bracket)
+    {
+        return character(who)._hp_base.at(lvl_bracket);
+    }
 
     /*! \brief characters mp gradent for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters mp gradent for bracket
     */
-    inline int hp_gradent(int who, int lvl_bracket){return character(who)._hp_gradent.at(lvl_bracket);}
+    inline int hp_gradent(int who, int lvl_bracket)
+    {
+        return character(who)._hp_gradent.at(lvl_bracket);
+    }
 
     /*! \brief characters base luck for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters base luck for that bracket
     */
-    inline int luck_base(int who, int lvl_bracket){return character(who)._luck_base.at(lvl_bracket);}
+    inline int luck_base(int who, int lvl_bracket)
+    {
+        return character(who)._luck_base.at(lvl_bracket);
+    }
 
     /*! \brief characters luck gradent for set of levels
     * \param who Characters id number
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return characters luck gradent for bracket
     */
-    inline int luck_gradent(int who, int lvl_bracket){return character(who)._luck_gradent.at(lvl_bracket);}
+    inline int luck_gradent(int who, int lvl_bracket)
+    {
+        return character(who)._luck_gradent.at(lvl_bracket);
+    }
 
     /*! \brief base stat for rank in a set of levels
     * \param rank Rank character is at start (grade)
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return base stat for that bracket
     */
-    inline int stat_base(int rank, int lvl_bracket){return _stat_base.at(rank).at(lvl_bracket);}
+    inline int stat_base(int rank, int lvl_bracket)
+    {
+        return _stat_base.at(rank).at(lvl_bracket);
+    }
 
     /*! \brief characters mp gradent for set of levels
     * \param rank Rank character is at start (grade)
     * \param lvl_bracket bracket the level falls in (0: lvl 0-9 . 1: 10-19. etc..)
     * \return stat gradent for bracket
     */
-    inline int stat_gradent(int rank, int lvl_bracket){return _stat_gradent.at(rank).at(lvl_bracket);}
+    inline int stat_gradent(int rank, int lvl_bracket)
+    {
+        return _stat_gradent.at(rank).at(lvl_bracket);
+    }
 
     /*! \struct Character
      *  \brief Holds all data for a single Character
@@ -238,11 +286,11 @@ private:
      */
     const FF7Char::Character& character(int who);
     inline static const Character _emptyChar {
-            quint8(0), 0, 0, 0, QString(), QString(),
-            {QString(), QString(), QString(), QString(), QString(), QString(), QString()},
-            {quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0)},
-            {quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0)},
-            {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}
+        quint8(0), 0, 0, 0, QString(), QString(),
+        {QString(), QString(), QString(), QString(), QString(), QString(), QString()},
+        {quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0)},
+        {quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0), quint32(0)},
+        {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0}
     };
     /*! \static _charData
      * Holds data for each character in Final Fantasy 7

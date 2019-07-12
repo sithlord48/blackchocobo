@@ -14,18 +14,18 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "PhsListWidget.h"
-PhsListWidget::PhsListWidget(QWidget * parent) :
-	QWidget(parent)
-  , lbl_phs(new QLabel)
-  , cb_cloud(new DoubleCheckBox)
-  , cb_barret(new DoubleCheckBox)
-  , cb_tifa(new DoubleCheckBox)
-  , cb_aerith(new DoubleCheckBox)
-  , cb_red(new DoubleCheckBox)
-  , cb_yuffie(new DoubleCheckBox)
-  , cb_cait(new DoubleCheckBox)
-  , cb_vincent(new DoubleCheckBox)
-  , cb_cid(new DoubleCheckBox)
+PhsListWidget::PhsListWidget(QWidget *parent) :
+    QWidget(parent)
+    , lbl_phs(new QLabel)
+    , cb_cloud(new DoubleCheckBox)
+    , cb_barret(new DoubleCheckBox)
+    , cb_tifa(new DoubleCheckBox)
+    , cb_aerith(new DoubleCheckBox)
+    , cb_red(new DoubleCheckBox)
+    , cb_yuffie(new DoubleCheckBox)
+    , cb_cait(new DoubleCheckBox)
+    , cb_vincent(new DoubleCheckBox)
+    , cb_cid(new DoubleCheckBox)
 {
     updateText();
     init_display();
@@ -34,25 +34,26 @@ PhsListWidget::PhsListWidget(QWidget * parent) :
 
 void PhsListWidget::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange)
+    if (e->type() != QEvent::LanguageChange) {
         return;
+    }
 
     updateText();
 }
 
 void PhsListWidget::init_display()
 {
-	lbl_phs->setStyleSheet(QString("text-decoration: underline;"));
-	QVBoxLayout *layout = new QVBoxLayout;
-	layout->addWidget(lbl_phs);
-	layout->setSpacing(3);
-	layout->setContentsMargins(0,0,0,0);
-	layout->addWidget(cb_cloud);
-	layout->addWidget(cb_barret);
-	layout->addWidget(cb_tifa);
-	layout->addWidget(cb_aerith);
-	layout->addWidget(cb_red);
-	layout->addWidget(cb_yuffie);
+    lbl_phs->setStyleSheet(QString("text-decoration: underline;"));
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(lbl_phs);
+    layout->setSpacing(3);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->addWidget(cb_cloud);
+    layout->addWidget(cb_barret);
+    layout->addWidget(cb_tifa);
+    layout->addWidget(cb_aerith);
+    layout->addWidget(cb_red);
+    layout->addWidget(cb_yuffie);
     layout->addWidget(cb_cait);
     layout->addWidget(cb_vincent);
     layout->addWidget(cb_cid);
@@ -95,40 +96,93 @@ void PhsListWidget::updateText()
 
 void PhsListWidget::setChecked(int row, int box, bool checked)
 {
-	disconnectAll();
-	switch (row)
-	{
-		case 0: cb_cloud->setChecked(box,checked); break;
-		case 1: cb_barret->setChecked(box,checked); break;
-		case 2: cb_tifa->setChecked(box,checked); break;
-		case 3: cb_aerith->setChecked(box,checked); break;
-		case 4: cb_red->setChecked(box,checked); break;
-		case 5: cb_yuffie->setChecked(box,checked); break;
-		case 6: cb_cait->setChecked(box,checked); break;
-		case 7: cb_vincent->setChecked(box,checked); break;
-		case 8: cb_cid->setChecked(box,checked); break;
-	};
-	connectAll( );
+    disconnectAll();
+    switch (row) {
+    case 0: cb_cloud->setChecked(box, checked); break;
+    case 1: cb_barret->setChecked(box, checked); break;
+    case 2: cb_tifa->setChecked(box, checked); break;
+    case 3: cb_aerith->setChecked(box, checked); break;
+    case 4: cb_red->setChecked(box, checked); break;
+    case 5: cb_yuffie->setChecked(box, checked); break;
+    case 6: cb_cait->setChecked(box, checked); break;
+    case 7: cb_vincent->setChecked(box, checked); break;
+    case 8: cb_cid->setChecked(box, checked); break;
+    };
+    connectAll();
 }
 
-void PhsListWidget::cb_cloud_allowedToggled(bool checked){emit(allowedToggled(0,checked));}
-void PhsListWidget::cb_cloud_visibleToggled(bool checked){emit(visibleToggled(0,checked));}
-void PhsListWidget::cb_barret_allowedToggled(bool checked){emit(allowedToggled(1,checked));}
-void PhsListWidget::cb_barret_visibleToggled(bool checked){emit(visibleToggled(1,checked));}
-void PhsListWidget::cb_tifa_allowedToggled(bool checked){emit(allowedToggled(2,checked));}
-void PhsListWidget::cb_tifa_visibleToggled(bool checked){emit(visibleToggled(2,checked));}
-void PhsListWidget::cb_aerith_allowedToggled(bool checked){emit(allowedToggled(3,checked));}
-void PhsListWidget::cb_aerith_visibleToggled(bool checked){emit(visibleToggled(3,checked));}
-void PhsListWidget::cb_red_allowedToggled(bool checked){emit(allowedToggled(4,checked));}
-void PhsListWidget::cb_red_visibleToggled(bool checked){emit(visibleToggled(4,checked));}
-void PhsListWidget::cb_yuffie_allowedToggled(bool checked){emit(allowedToggled(5,checked));}
-void PhsListWidget::cb_yuffie_visibleToggled(bool checked){emit(visibleToggled(5,checked));}
-void PhsListWidget::cb_cait_allowedToggled(bool checked){emit(allowedToggled(6,checked));}
-void PhsListWidget::cb_cait_visibleToggled(bool checked){emit(visibleToggled(6,checked));}
-void PhsListWidget::cb_vincent_allowedToggled(bool checked){emit(allowedToggled(7,checked));}
-void PhsListWidget::cb_vincent_visibleToggled(bool checked){emit(visibleToggled(7,checked));}
-void PhsListWidget::cb_cid_allowedToggled(bool checked){emit(allowedToggled(8,checked));}
-void PhsListWidget::cb_cid_visibleToggled(bool checked){emit(visibleToggled(8,checked));}
+void PhsListWidget::cb_cloud_allowedToggled(bool checked)
+{
+    emit(allowedToggled(0, checked));
+}
+void PhsListWidget::cb_cloud_visibleToggled(bool checked)
+{
+    emit(visibleToggled(0, checked));
+}
+void PhsListWidget::cb_barret_allowedToggled(bool checked)
+{
+    emit(allowedToggled(1, checked));
+}
+void PhsListWidget::cb_barret_visibleToggled(bool checked)
+{
+    emit(visibleToggled(1, checked));
+}
+void PhsListWidget::cb_tifa_allowedToggled(bool checked)
+{
+    emit(allowedToggled(2, checked));
+}
+void PhsListWidget::cb_tifa_visibleToggled(bool checked)
+{
+    emit(visibleToggled(2, checked));
+}
+void PhsListWidget::cb_aerith_allowedToggled(bool checked)
+{
+    emit(allowedToggled(3, checked));
+}
+void PhsListWidget::cb_aerith_visibleToggled(bool checked)
+{
+    emit(visibleToggled(3, checked));
+}
+void PhsListWidget::cb_red_allowedToggled(bool checked)
+{
+    emit(allowedToggled(4, checked));
+}
+void PhsListWidget::cb_red_visibleToggled(bool checked)
+{
+    emit(visibleToggled(4, checked));
+}
+void PhsListWidget::cb_yuffie_allowedToggled(bool checked)
+{
+    emit(allowedToggled(5, checked));
+}
+void PhsListWidget::cb_yuffie_visibleToggled(bool checked)
+{
+    emit(visibleToggled(5, checked));
+}
+void PhsListWidget::cb_cait_allowedToggled(bool checked)
+{
+    emit(allowedToggled(6, checked));
+}
+void PhsListWidget::cb_cait_visibleToggled(bool checked)
+{
+    emit(visibleToggled(6, checked));
+}
+void PhsListWidget::cb_vincent_allowedToggled(bool checked)
+{
+    emit(allowedToggled(7, checked));
+}
+void PhsListWidget::cb_vincent_visibleToggled(bool checked)
+{
+    emit(visibleToggled(7, checked));
+}
+void PhsListWidget::cb_cid_allowedToggled(bool checked)
+{
+    emit(allowedToggled(8, checked));
+}
+void PhsListWidget::cb_cid_visibleToggled(bool checked)
+{
+    emit(visibleToggled(8, checked));
+}
 
 void PhsListWidget::connectAll()
 {

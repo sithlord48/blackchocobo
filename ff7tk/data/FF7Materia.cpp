@@ -16,7 +16,7 @@
 
 #include "FF7Materia.h"
 
-const FF7Materia::MATERIA& FF7Materia::Materias(int id)
+const FF7Materia::MATERIA &FF7Materia::Materias(int id)
 {
     if (id >= 0 && id <= 0x5A) {
         return _materiaList.at(id);
@@ -26,7 +26,7 @@ const FF7Materia::MATERIA& FF7Materia::Materias(int id)
 
 qint32 FF7Materia::ap(int id, int lvl)
 {
-    lvl = std::clamp(lvl, 0 , 4);
+    lvl = std::clamp(lvl, 0, 4);
     return Materias(id).ap.at(lvl);
 }
 

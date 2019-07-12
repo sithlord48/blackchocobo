@@ -18,12 +18,12 @@
 
 void ChocoboEditor::resizeEvent(QResizeEvent *ev)
 {
-    if(ev->type() == QEvent::Resize) {
-		Final->setColumnMinimumWidth(0,width()/4);
-		Final->setColumnMinimumWidth(1,width()/4);
-		Final->setColumnStretch(0,width()/4);
-		Final->setColumnStretch(1,width()/4);
-	}
+    if (ev->type() == QEvent::Resize) {
+        Final->setColumnMinimumWidth(0, width() / 4);
+        Final->setColumnMinimumWidth(1, width() / 4);
+        Final->setColumnStretch(0, width() / 4);
+        Final->setColumnStretch(1, width() / 4);
+    }
 }
 void ChocoboEditor::updateText()
 {
@@ -57,11 +57,11 @@ void ChocoboEditor::updateText()
         combo_type->setItemText(3, tr("Black"));
         combo_type->setItemText(4, tr("Gold"));
     } else {
-        combo_type->addItem(QIcon(QPixmap(":/chocobo/yellow")),tr("Yellow"));
-        combo_type->addItem(QIcon(QPixmap(":/chocobo/green")),tr("Green"));
-        combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")),tr("Blue"));
-        combo_type->addItem(QIcon(QPixmap(":/chocobo/black")),tr("Black"));
-        combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")),tr("Gold"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/yellow")), tr("Yellow"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/green")), tr("Green"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/blue")), tr("Blue"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/black")), tr("Black"));
+        combo_type->addItem(QIcon(QPixmap(":/chocobo/gold")), tr("Gold"));
     }
 
     QStringList typelist {
@@ -71,7 +71,7 @@ void ChocoboEditor::updateText()
     };
 
     if (combo_rating->count() != 0) {
-        for(int i = 0; i < typelist.count(); i++) {
+        for (int i = 0; i < typelist.count(); i++) {
             combo_rating->setItemText(i, typelist.at(i));
         }
     } else {
@@ -79,7 +79,7 @@ void ChocoboEditor::updateText()
     }
 }
 ChocoboEditor::ChocoboEditor(QWidget *parent) :
-	QWidget(parent)
+    QWidget(parent)
     , lbl_rank(new QLabel)
     , lbl_speed(new QLabel)
     , lbl_sprint(new QLabel)
@@ -126,47 +126,47 @@ ChocoboEditor::ChocoboEditor(QWidget *parent) :
 
     auto speed_layout = new QHBoxLayout;
     speed_layout->addWidget(lbl_speed);
-	speed_layout->addWidget(sb_speed);
+    speed_layout->addWidget(sb_speed);
     speed_layout->addWidget(lbl_div_speed);
-	speed_layout->addWidget(sb_mSpeed);
+    speed_layout->addWidget(sb_mSpeed);
 
     auto sprint_layout = new QHBoxLayout;
     sprint_layout->addWidget(lbl_sprint);
-	sprint_layout->addWidget(sb_sprint);
+    sprint_layout->addWidget(sb_sprint);
     sprint_layout->addWidget(lbl_div_sprint);
-	sprint_layout->addWidget(sb_mSprint);
+    sprint_layout->addWidget(sb_mSprint);
 
     auto accel_layout = new QHBoxLayout;
     accel_layout->addWidget(lbl_accel);
-	accel_layout->addWidget(sb_accel);
+    accel_layout->addWidget(sb_accel);
 
     auto stamina_layout = new QHBoxLayout;
     stamina_layout->addWidget(lbl_stamina);
-	stamina_layout->addWidget(sb_stamina);
+    stamina_layout->addWidget(sb_stamina);
 
     auto wins_layout = new QHBoxLayout;
     wins_layout->addWidget(lbl_wins);
-	wins_layout->addWidget(sb_wins);
+    wins_layout->addWidget(sb_wins);
 
     auto coop_layout = new QHBoxLayout;
     coop_layout->addWidget(lbl_coop);
-	coop_layout->addWidget(sb_coop);
+    coop_layout->addWidget(sb_coop);
 
     auto intel_layout = new QHBoxLayout;
     intel_layout->addWidget(lbl_intel);
-	intel_layout->addWidget(sb_intel);
+    intel_layout->addWidget(sb_intel);
 
     auto pCount_layout = new QHBoxLayout;
     pCount_layout->addWidget(lbl_pCount);
-	pCount_layout->addWidget(sb_pCount);
+    pCount_layout->addWidget(sb_pCount);
 
     auto personality_layout = new QHBoxLayout;
     personality_layout->addWidget(lbl_personality);
-	personality_layout->addWidget(sb_personality);
+    personality_layout->addWidget(sb_personality);
 
     auto pCount_personality_layout = new QHBoxLayout;
-	pCount_personality_layout->addLayout(pCount_layout);
-	pCount_personality_layout->addLayout(personality_layout);
+    pCount_personality_layout->addLayout(pCount_layout);
+    pCount_personality_layout->addLayout(personality_layout);
 
     advancedModeBox = new QFrame(this);
     advancedModeBox->setHidden(true);
@@ -174,126 +174,125 @@ ChocoboEditor::ChocoboEditor(QWidget *parent) :
 
     auto ratingLayout = new QHBoxLayout;
     ratingLayout->addWidget(lbl_rating);
-	ratingLayout->addWidget(combo_rating);
+    ratingLayout->addWidget(combo_rating);
 
     Final = new QGridLayout(this);
-	Final->setContentsMargins(0,0,0,0);
-	Final->setAlignment(Qt::AlignCenter);
-	Final->setColumnMinimumWidth(0,width()/4);
-	Final->setColumnMinimumWidth(1,width()/4);
-	Final->setColumnStretch(0,width()/4);
-	Final->setColumnStretch(1,width()/4);
-	Final->addWidget(line_name,0,0);
-	Final->addWidget(combo_sex,0,1);
-	Final->addWidget(lbl_rank,2,0);
-	Final->addWidget(combo_type,1,0);
-	Final->addWidget(cb_cantMate,1,1);
-	Final->addLayout(wins_layout,2,1);
-	Final->addLayout(accel_layout,3,0);
-	Final->addLayout(stamina_layout,3,1);
-	Final->addLayout(coop_layout,4,0);
-	Final->addLayout(intel_layout,4,1);
-	Final->addLayout(speed_layout,5,0,1,2);
-	Final->addLayout(sprint_layout,6,0,1,2);
-	Final->addLayout(ratingLayout,7,0,1,2);
-    Final->addWidget(lblSpeedWarning,8,0,2,2,Qt::AlignCenter);
-	Final->addWidget(advancedModeBox,10,0,1,2);
-	Final->addItem(new QSpacerItem(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding),11,0,1,2);
-	this->setLayout(Final);
+    Final->setContentsMargins(0, 0, 0, 0);
+    Final->setAlignment(Qt::AlignCenter);
+    Final->setColumnMinimumWidth(0, width() / 4);
+    Final->setColumnMinimumWidth(1, width() / 4);
+    Final->setColumnStretch(0, width() / 4);
+    Final->setColumnStretch(1, width() / 4);
+    Final->addWidget(line_name, 0, 0);
+    Final->addWidget(combo_sex, 0, 1);
+    Final->addWidget(lbl_rank, 2, 0);
+    Final->addWidget(combo_type, 1, 0);
+    Final->addWidget(cb_cantMate, 1, 1);
+    Final->addLayout(wins_layout, 2, 1);
+    Final->addLayout(accel_layout, 3, 0);
+    Final->addLayout(stamina_layout, 3, 1);
+    Final->addLayout(coop_layout, 4, 0);
+    Final->addLayout(intel_layout, 4, 1);
+    Final->addLayout(speed_layout, 5, 0, 1, 2);
+    Final->addLayout(sprint_layout, 6, 0, 1, 2);
+    Final->addLayout(ratingLayout, 7, 0, 1, 2);
+    Final->addWidget(lblSpeedWarning, 8, 0, 2, 2, Qt::AlignCenter);
+    Final->addWidget(advancedModeBox, 10, 0, 1, 2);
+    Final->addItem(new QSpacerItem(0, 0, QSizePolicy::Preferred, QSizePolicy::Expanding), 11, 0, 1, 2);
+    this->setLayout(Final);
     init_connections();
 }
 
 void ChocoboEditor::init_connections()
 {
-    connect(combo_sex, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int newSex){
+    connect(combo_sex, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int newSex) {
         if (choco_data.sex != newSex) {
             choco_data.sex = quint8(newSex);
             emit sexChanged(choco_data.sex);
         }
     });
-    connect(combo_type, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int newType){
+    connect(combo_type, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int newType) {
         if (choco_data.type != newType) {
             choco_data.type = quint8(newType);
             emit typeChanged(choco_data.type);
         }
     });
-    connect(line_name, &QLineEdit::textChanged, this, [this](QString newName){
-        if(newName !=choco_name)
-        {
-            choco_name=newName.mid(0,6);
+    connect(line_name, &QLineEdit::textChanged, this, [this](QString newName) {
+        if (newName != choco_name) {
+            choco_name = newName.mid(0, 6);
             emit nameChanged(newName);
         }
     });
-    connect(cb_cantMate, &QCheckBox::toggled, this, [this](bool checked){
-        if(choco_cant_mate != checked) {
-            choco_cant_mate=checked;
+    connect(cb_cantMate, &QCheckBox::toggled, this, [this](bool checked) {
+        if (choco_cant_mate != checked) {
+            choco_cant_mate = checked;
             emit cantMateChanged(checked);
         }
     });
     connect(sb_speed, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int speed)    {
-        if(choco_data.speed != speed) {
+        if (choco_data.speed != speed) {
             choco_data.speed = quint16(speed);
             emit speedChanged(choco_data.speed);
         }
     });
     connect(sb_mSpeed, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int max_speed) {
-        if(choco_data.maxspeed != max_speed) {
+        if (choco_data.maxspeed != max_speed) {
             choco_data.maxspeed = quint16(max_speed);
             emit mSpeedChanged(choco_data.maxspeed);
         }
     });
     connect(sb_sprint, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int sprint_speed)  {
-        if(choco_data.sprintspd != sprint_speed) {
+        if (choco_data.sprintspd != sprint_speed) {
             choco_data.sprintspd = quint16(sprint_speed);
             emit sprintChanged(choco_data.sprintspd);
         }
     });
     connect(sb_mSprint, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int max_sprint_speed)    {
-        if(choco_data.maxsprintspd != max_sprint_speed) {
+        if (choco_data.maxsprintspd != max_sprint_speed) {
             choco_data.maxsprintspd = quint16(max_sprint_speed);
             emit mSprintChanged(choco_data.maxsprintspd);
         }
     });
     connect(sb_accel, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int accel) {
-        if(choco_data.accel != accel) {
+        if (choco_data.accel != accel) {
             choco_data.accel = quint8(accel);
             emit accelChanged(choco_data.accel);
         }
     });
     connect(sb_stamina, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int stamina) {
-        if(choco_stamina != stamina) {
+        if (choco_stamina != stamina) {
             choco_stamina = quint16(stamina);
             emit staminaChanged(choco_stamina);
         }
     });
     connect(sb_wins, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int wins) {
-        if(choco_data.raceswon != wins) {
+        if (choco_data.raceswon != wins) {
             choco_data.raceswon = quint8(wins);
             getRank();
             emit winsChanged(choco_data.raceswon);
         }
     });
     connect(sb_coop, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int coop) {
-        if(choco_data.coop != coop) {
+        if (choco_data.coop != coop) {
             choco_data.coop = quint8(coop);
             emit coopChanged(choco_data.coop);
         }
     });
     connect(sb_intel, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int intel) {
-        if(choco_data.intelligence != intel) {
+        if (choco_data.intelligence != intel) {
             choco_data.intelligence = quint8(intel);
             emit intelligenceChanged(choco_data.intelligence);
         }
     });
     connect(sb_pCount, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int pCount) {
-        if(choco_data.pcount != pCount) {
+        if (choco_data.pcount != pCount) {
             choco_data.pcount = quint8(pCount);
             emit pCountChanged(choco_data.pcount);
         }
     });
     connect(sb_personality, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int personality) {
         //need to be researched further.
-        if( choco_data.personality != personality) {
+        if (choco_data.personality != personality) {
             choco_data.personality = quint8(personality);
             emit personalityChanged(choco_data.personality);
         }
@@ -306,7 +305,7 @@ void ChocoboEditor::init_connections()
         }
     });
 }
-void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, const QString &Processed_Name, bool cant_mate, quint16 stamina,quint8 rating)
+void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, const QString &Processed_Name, bool cant_mate, quint16 stamina, quint8 rating)
 {
     setName(Processed_Name);
     setType(choco.type);
@@ -327,11 +326,11 @@ void ChocoboEditor::SetChocobo(FF7CHOCOBO choco, const QString &Processed_Name, 
 }
 void ChocoboEditor::getRank(void)
 {
-    if (choco_data.raceswon <3) {
+    if (choco_data.raceswon < 3) {
         lbl_rank->setText(tr("Rank: C"));
-    } else if (choco_data.raceswon<6) {
+    } else if (choco_data.raceswon < 6) {
         lbl_rank->setText(tr("Rank: B"));
-    } else if (choco_data.raceswon<9) {
+    } else if (choco_data.raceswon < 9) {
         lbl_rank->setText(tr("Rank: A"));
     } else {
         lbl_rank->setText(tr("Rank: S"));
@@ -355,7 +354,7 @@ void ChocoboEditor::setRating(int rating)
 void ChocoboEditor::setSprint(int sprint_speed)
 {
     sprint_speed = std::clamp(sprint_speed, 0, 9999);
-    if(choco_data.sprintspd != sprint_speed) {
+    if (choco_data.sprintspd != sprint_speed) {
         sb_sprint->setValue(sprint_speed);
         choco_data.sprintspd = quint16(sprint_speed);
     }
@@ -363,7 +362,7 @@ void ChocoboEditor::setSprint(int sprint_speed)
 void ChocoboEditor::setMsprint(int max_sprint_speed)
 {
     max_sprint_speed = std::clamp(max_sprint_speed, 0, 9999);
-    if(choco_data.maxsprintspd != max_sprint_speed) {
+    if (choco_data.maxsprintspd != max_sprint_speed) {
         sb_mSprint->setValue(max_sprint_speed);
         choco_data.maxsprintspd = quint16(max_sprint_speed);
     }
@@ -372,7 +371,7 @@ void ChocoboEditor::setMsprint(int max_sprint_speed)
 void ChocoboEditor::setSpeed(int speed)
 {
     speed = std::clamp(speed, 0, 9999);
-    if(choco_data.speed != speed) {
+    if (choco_data.speed != speed) {
         sb_speed->setValue(speed);
         choco_data.speed = quint16(speed);
     }
@@ -390,16 +389,16 @@ void ChocoboEditor::setMspeed(int max_speed)
 void ChocoboEditor::setStamina(int stamina)
 {
     stamina = std::clamp(stamina, 0, 9999);
-    if(choco_stamina != stamina) {
-    sb_stamina->setValue(stamina);
-    choco_stamina = quint16(stamina);
+    if (choco_stamina != stamina) {
+        sb_stamina->setValue(stamina);
+        choco_stamina = quint16(stamina);
     }
 }
 
 void ChocoboEditor::setAccel(int accel)
 {
     accel = std::clamp(accel, 0, 255);
-    if(choco_data.accel != accel) {
+    if (choco_data.accel != accel) {
         sb_accel->setValue(accel);
         choco_data.accel = quint8(accel);
     }
@@ -408,7 +407,7 @@ void ChocoboEditor::setAccel(int accel)
 void ChocoboEditor::setCoop(int coop)
 {
     coop = std::clamp(coop, 0, 255);
-    if(choco_data.coop != coop) {
+    if (choco_data.coop != coop) {
         sb_coop->setValue(coop);
         choco_data.coop = quint8(coop);
     }
@@ -417,16 +416,17 @@ void ChocoboEditor::setCoop(int coop)
 void ChocoboEditor::setIntelligence(int intel)
 {
     intel = std::clamp(intel, 0, 255);
-    if(choco_data.intelligence != intel){
+    if (choco_data.intelligence != intel) {
         sb_intel->setValue(intel);
         choco_data.intelligence = quint8(intel);
     }
 }
 
-void ChocoboEditor::setPersonality (int personality)
-{//need to be researched further.
+void ChocoboEditor::setPersonality(int personality)
+{
+    //need to be researched further.
     personality = std::clamp(personality, 0, 255);
-    if(choco_data.personality != personality) {
+    if (choco_data.personality != personality) {
         sb_personality->setValue(personality);
         choco_data.personality = quint8(personality);
     }
@@ -435,16 +435,16 @@ void ChocoboEditor::setPersonality (int personality)
 void ChocoboEditor::setPcount(int pCount)
 {
     pCount = std::clamp(pCount, 0, 255);
-    if(choco_data.pcount != pCount) {
+    if (choco_data.pcount != pCount) {
         sb_pCount->setValue(pCount);
-        choco_data.pcount=quint8(pCount);
+        choco_data.pcount = quint8(pCount);
     }
 }
 
 void ChocoboEditor::setWins(int wins)
 {
     wins = std::clamp(wins, 0, 255);
-    if(choco_data.raceswon != wins) {
+    if (choco_data.raceswon != wins) {
         sb_wins->setValue(wins);
         choco_data.raceswon = quint8(wins);
         getRank();
@@ -453,7 +453,7 @@ void ChocoboEditor::setWins(int wins)
 void ChocoboEditor::setSex(int sex)
 {
     sex = std::clamp(sex, 0, 1);
-    if(choco_data.sex != sex) {
+    if (choco_data.sex != sex) {
         combo_sex->setCurrentIndex(sex);
         choco_data.sex = quint8(sex);
     }
@@ -461,16 +461,16 @@ void ChocoboEditor::setSex(int sex)
 void ChocoboEditor::setType(int type)
 {
     type = std::clamp(type, 0, 4);
-    if(choco_data.type != type) {
+    if (choco_data.type != type) {
         combo_type->setCurrentIndex(type);
         choco_data.type = quint8(type);
     }
 }
 void ChocoboEditor::setName(const QString &newName)
 {
-    if(choco_name != newName) {
-        choco_name = newName.mid(0,6);
-        if(choco_name.startsWith(QString("\xff"),Qt::CaseInsensitive) || choco_name == QString(6, '\x20')) {
+    if (choco_name != newName) {
+        choco_name = newName.mid(0, 6);
+        if (choco_name.startsWith(QString("\xff"), Qt::CaseInsensitive) || choco_name == QString(6, '\x20')) {
             line_name->setText(QString());
         } else {
             line_name->setText(choco_name);
@@ -480,13 +480,13 @@ void ChocoboEditor::setName(const QString &newName)
 
 void ChocoboEditor::setCantMate(bool cantMate)
 {
-    if(choco_cant_mate != cantMate) {
+    if (choco_cant_mate != cantMate) {
         cb_cantMate->setChecked(cantMate);
-        choco_cant_mate=cantMate;
+        choco_cant_mate = cantMate;
     }
 }
 
-QSpinBox* ChocoboEditor::makeSpinBox(int maxValue)
+QSpinBox *ChocoboEditor::makeSpinBox(int maxValue)
 {
     auto spinbox = new QSpinBox(this);
     spinbox->setWrapping(true);
@@ -497,7 +497,8 @@ QSpinBox* ChocoboEditor::makeSpinBox(int maxValue)
 
 void ChocoboEditor::changeEvent(QEvent *e)
 {
-    if( e->type() != QEvent::LanguageChange)
+    if (e->type() != QEvent::LanguageChange) {
         return;
+    }
     updateText();
 }

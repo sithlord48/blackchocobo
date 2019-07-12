@@ -24,34 +24,38 @@ DialogPreview::DialogPreview(QWidget *parent) :
     , btn_lr(new QPushButton(this))
 {
     QString style = QString("QPushButton:enabled{background-color: #00000000;border:0px;} QPushButton:hover{background-color: %1;}")
-            .arg(palette().highlight().color().name(QColor::HexRgb).insert(1,QString("60")));
+                    .arg(palette().highlight().color().name(QColor::HexRgb).insert(1, QString("60")));
     setStyleSheet(style);
-    setMinimumSize(60,30);
+    setMinimumSize(60, 30);
 
-    connect(btn_ul, &QPushButton::clicked, this, [this]{
-        QColor color = QColorDialog::getColor(upper_left,this);
-        if(color.isValid()) {
+    connect(btn_ul, &QPushButton::clicked, this, [this] {
+        QColor color = QColorDialog::getColor(upper_left, this);
+        if (color.isValid())
+        {
             SetULeft(color);
         }
     });
 
-    connect(btn_ur, &QPushButton::clicked, this, [this]{
-        QColor color = QColorDialog::getColor(upper_right,this);
-        if(color.isValid()) {
+    connect(btn_ur, &QPushButton::clicked, this, [this] {
+        QColor color = QColorDialog::getColor(upper_right, this);
+        if (color.isValid())
+        {
             SetLRight(color);
         }
     });
 
-    connect(btn_ll, &QPushButton::clicked, this, [this]{
-        QColor color = QColorDialog::getColor(lower_left,this);
-        if(color.isValid()) {
+    connect(btn_ll, &QPushButton::clicked, this, [this] {
+        QColor color = QColorDialog::getColor(lower_left, this);
+        if (color.isValid())
+        {
             SetLLeft(color);
         }
     });
 
-    connect(btn_lr, &QPushButton::clicked, this, [this]{
-        QColor color = QColorDialog::getColor(lower_right,this);
-        if(color.isValid()) {
+    connect(btn_lr, &QPushButton::clicked, this, [this] {
+        QColor color = QColorDialog::getColor(lower_right, this);
+        if (color.isValid())
+        {
             SetLRight(color);
         }
     });
@@ -61,7 +65,7 @@ DialogPreview::DialogPreview(QWidget *parent) :
 
 void DialogPreview::SetLLeft(QColor newColor)
 {
-    if(lower_left != newColor) {
+    if (lower_left != newColor) {
         lower_left = newColor;
         emit LL_ColorChanged(newColor);
         draw();
@@ -70,7 +74,7 @@ void DialogPreview::SetLLeft(QColor newColor)
 
 void DialogPreview::SetULeft(QColor newColor)
 {
-    if(upper_left != newColor) {
+    if (upper_left != newColor) {
         upper_left = newColor;
         emit UL_ColorChanged(newColor);
         draw();
@@ -79,7 +83,7 @@ void DialogPreview::SetULeft(QColor newColor)
 
 void DialogPreview::SetLRight(QColor newColor)
 {
-    if(lower_right != newColor) {
+    if (lower_right != newColor) {
         lower_right = newColor;
         emit LR_ColorChanged(newColor);
         draw();
@@ -88,7 +92,7 @@ void DialogPreview::SetLRight(QColor newColor)
 
 void DialogPreview::SetURight(QColor newColor)
 {
-    if(upper_right != newColor) {
+    if (upper_right != newColor) {
         upper_right = newColor;
         emit UR_ColorChanged(newColor);
         draw();
@@ -102,11 +106,14 @@ void DialogPreview::draw()
     image.setPixel(0, 1, lower_left.rgb());
     image.setPixel(1, 0, upper_right.rgb());
     image.setPixel(1, 1, lower_right.rgb());
-    QImage gradient = image.scaled(width(),height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    QImage gradient = image.scaled(width(), height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     setPixmap(QPixmap::fromImage(gradient));
-    btn_ul->setGeometry(0,0,width()/2,height()/2);
-    btn_ur->setGeometry(btn_ul->width(),0,width()/2,height()/2);
-    btn_ll->setGeometry(0,height()/2,width()/2,height()/2);
-    btn_lr->setGeometry(btn_ll->width(),height()/2,width()/2,height()/2);
+    btn_ul->setGeometry(0, 0, width() / 2, height() / 2);
+    btn_ur->setGeometry(btn_ul->width(), 0, width() / 2, height() / 2);
+    btn_ll->setGeometry(0, height() / 2, width() / 2, height() / 2);
+    btn_lr->setGeometry(btn_ll->width(), height() / 2, width() / 2, height() / 2);
 }
-void DialogPreview::resizeEvent(QResizeEvent*){draw();}
+void DialogPreview::resizeEvent(QResizeEvent *)
+{
+    draw();
+}

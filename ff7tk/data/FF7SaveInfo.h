@@ -23,7 +23,8 @@ class FF7SaveInfo : public QObject
     Q_OBJECT
 public:
     /**
-     * @brief KEYS enum Possible keys for the printer settings
+     * \enum FORMAT
+     * \brief Supported Data Types
      */
     enum class FORMAT {
         UNKNOWN = -1, //!< UNKNOWN FORMAT
@@ -32,7 +33,7 @@ public:
         VMC,      //!< Virtual Memory Card
         PSP,      //!< PSP Save Format
         PS3,      //!< PS3 Save Format
-        DEX,      //!< DexFormat
+        DEX,      //!< Dex Format
         VGS,      //!< VGS Format
     };
     Q_ENUM(FORMAT)
@@ -61,7 +62,6 @@ public:
      * @brief Register The FF7SaveInfo Singleton for QML
      */
     QObject *qmlSingletonRegister(QQmlEngine *engine, QJSEngine *scriptEngine);
-
 
     /**
      * @brief The Size of a Final Fantasy VII Save file

@@ -24,17 +24,17 @@ class ItemSelector : public QWidget
 {
     Q_OBJECT
 public:
-	explicit ItemSelector(qreal Scale=1,QWidget *parent = 0);
+    explicit ItemSelector(qreal Scale = 1, QWidget *parent = 0);
     int id();// current id
     int combo_item_width();//width of the item box.
     int combo_type_width();//width of the type box.
     int qty_width();//width of qty area.
     void setFixedHeight(int h);
 signals:
-    void item_changed(quint16);//return selected rawitem
+    void itemChanged(quint16);//return selected rawitem
 public slots:
     void setCurrentItem(quint16 ff7item);
-    void setCurrentItem(int id,int qty);
+    void setCurrentItem(int id, int qty);
     void setMaximumQty(int maxQty);
     void setEditableItemCombo(bool editable);
 private slots:
@@ -53,6 +53,6 @@ private:
     QSpinBox  *sb_qty;
     QPushButton *btn_remove;
     quint16 current_item;
-	qreal scale;
+    qreal scale;
 };
 #endif // ITEMSELECTOR_H

@@ -19,52 +19,51 @@
 
 bool FF7Achievements::openFile(const QString &fileName)
 {
-	if(!fileName.isEmpty())	{
-		QFile data(fileName);
-        if(data.open(QIODevice::ReadOnly)) {
+    if (!fileName.isEmpty()) {
+        QFile data(fileName);
+        if (data.open(QIODevice::ReadOnly)) {
             _achievements = data.readAll();
-			data.close();
-		}
-        else {
+            data.close();
+        } else {
             return false;
         }
-		return true;
-	}
-	return false;
+        return true;
+    }
+    return false;
 }
 
 bool FF7Achievements::saveFile(const QString &fileName)
 {
-    if(!fileName.isEmpty()) {
+    if (!fileName.isEmpty()) {
         QFile data(fileName);
-        if(data.open(QIODevice::WriteOnly))	{
-			data.seek(0);
-            data.write(_achievements.data(),8);
-			data.close();
+        if (data.open(QIODevice::WriteOnly)) {
+            data.seek(0);
+            data.write(_achievements.data(), 8);
+            data.close();
         } else {
             return false;
         }
-		return true;
-	}
-	return false;
+        return true;
+    }
+    return false;
 }
 
 bool FF7Achievements::achievmentUnlocked(int bit)
 {
     bit = std::clamp(bit, 28, 63);
-    return (_achievements.at(bit/8) &(1<< (7-(bit%8))));
+    return (_achievements.at(bit / 8) & (1 << (7 - (bit % 8))));
 }
 
-void FF7Achievements::setAchievementUnlocked(int bit,bool unlocked)
+void FF7Achievements::setAchievementUnlocked(int bit, bool unlocked)
 {
     bit = std::clamp(bit, 28, 63);
-    char temp = _achievements.at(bit/8);
-    if(unlocked) {
-        temp |= (1<< (7-(bit%8)));
+    char temp = _achievements.at(bit / 8);
+    if (unlocked) {
+        temp |= (1 << (7 - (bit % 8)));
     } else {
-        temp &= ~(1<< (7-(bit%8)));
+        temp &= ~(1 << (7 - (bit % 8)));
     }
-    _achievements[bit/8] = temp;
+    _achievements[bit / 8] = temp;
 }
 
 QString FF7Achievements::name(int bit)

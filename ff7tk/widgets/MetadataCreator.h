@@ -31,7 +31,7 @@ private slots:
     void on_buttonBox_accepted();
 
 private:
-    QVBoxLayout* makeLineLayout();
+    QVBoxLayout *makeLineLayout();
     //Data Parts
     bool load;
     FF7Save *ff7;

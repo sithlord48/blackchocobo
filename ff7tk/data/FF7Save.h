@@ -1009,7 +1009,7 @@ public:
      * @brief Returns the format of the loaded file
      * @return FF7SaveInfo::FORMAT
      */
-    void setFormat (FF7SaveInfo::FORMAT newFormat);
+    void setFormat(FF7SaveInfo::FORMAT newFormat);
 
     /**
      * @brief Returns the format of the loaded file

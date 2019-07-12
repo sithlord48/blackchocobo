@@ -16,21 +16,21 @@
 
 #include "FF7FieldItemList.h"
 
-const QList<quint16>& FF7FieldItemList::offset(int index)
+const QList<quint16> &FF7FieldItemList::offset(int index)
 {
-    index = std::clamp(index, 0, size() -1);
+    index = std::clamp(index, 0, size() - 1);
     return _fieldItemList.at(index).Offset;
 }
 
-const QList<quint8>& FF7FieldItemList::bit(int index)
+const QList<quint8> &FF7FieldItemList::bit(int index)
 {
-    index = std::clamp(index, 0, size() -1);
+    index = std::clamp(index, 0, size() - 1);
     return _fieldItemList.at(index).Bit;
 }
 
-const QStringList& FF7FieldItemList::maps(int index)
+const QStringList &FF7FieldItemList::maps(int index)
 {
-    index = std::clamp(index, 0, size() -1);
+    index = std::clamp(index, 0, size() - 1);
     return _fieldItemList.at(index).Maps;
 }
 
@@ -40,7 +40,7 @@ QString FF7FieldItemList::text(int index)
     return tr(_fieldItemList.at(index).Text.toLocal8Bit());
 }
 
-const QList<FieldItem>& FF7FieldItemList::fieldItemList() const
+const QList<FieldItem> &FF7FieldItemList::fieldItemList() const
 {
     return _fieldItemList;
 }

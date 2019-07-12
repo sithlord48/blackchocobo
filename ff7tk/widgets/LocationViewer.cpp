@@ -68,16 +68,18 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 {
     if (ev->type() == QResizeEvent::Resize) {
         QPixmap pix(QStringLiteral(":/locations/%1_%2").arg(QString::number(sbMapID->value()), QString::number(sbLocID->value())));
-        if (pix.isNull())
+        if (pix.isNull()) {
             return;
+        }
         lblLocationPreview->setPixmap(pix.scaled(lblLocationPreview->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     }
 }
 
 void LocationViewer::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange)
+    if (e->type() != QEvent::LanguageChange) {
         return;
+    }
     updateText();
 }
 
@@ -86,14 +88,14 @@ void LocationViewer::updateText()
     QStringList hozHeaderLabels = {tr("Filename"), tr("Location Name"), tr("LocID")};
     locationTable->setHorizontalHeaderLabels(hozHeaderLabels);
     for (int i = 0; i < locationTable->rowCount(); i++) {
-        QTableWidgetItem * newItem = new QTableWidgetItem(Locations->locationString(i), 0);
+        QTableWidgetItem *newItem = new QTableWidgetItem(Locations->locationString(i), 0);
         newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
         newItem->setTextAlignment(Qt::AlignLeft);
         newItem->setToolTip(_tooltip.arg(
-                                 Locations->mapID(i),
-                                 Locations->locationID(i),
-                                 QString::number(320 * scale),
-                                 QString::number(480 * scale)));
+                                Locations->mapID(i),
+                                Locations->locationID(i),
+                                QString::number(320 * scale),
+                                QString::number(480 * scale)));
         locationTable->setItem(i, 1, newItem);
     }
     actionNameSearch->setText(tr("Filter Mode: Name / Location String"));
@@ -109,12 +111,14 @@ void LocationViewer::updateText()
     lineLocationName->setPlaceholderText(tr("Location Name"));
     chkAutoUpdate->setText(tr("Save &Location Changes"));
     groupFieldItems->setTitle(tr("Field Items"));
-    if(locationTable->currentRow() > -1)
+    if (locationTable->currentRow() > -1) {
         lineLocationName->setText(translate(Locations->rawLocationString(locationTable->item(locationTable->currentRow(), 0)->text())));
-    if(actionNameSearch->isChecked()) {
+    }
+    if (actionNameSearch->isChecked()) {
         lineTableFilter->setPlaceholderText(actionNameSearch->text());
-    } else if(actionItemSearch)
+    } else if (actionItemSearch) {
         lineTableFilter->setPlaceholderText(actionItemSearch->text());
+    }
     init_fieldItems();
 }
 

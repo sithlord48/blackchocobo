@@ -257,8 +257,8 @@ void MainWindow::init_connections()
 
     connect(itemlist, &ItemList::itemsChanged, this, &MainWindow::Items_Changed);
 
-    connect(materia_editor, &MateriaEditor::ap_changed, this, &MainWindow::materia_ap_changed);
-    connect(materia_editor, &MateriaEditor::id_changed, this, &MainWindow::materia_id_changed);
+    connect(materia_editor, &MateriaEditor::apChanged, this, &MainWindow::materia_ap_changed);
+    connect(materia_editor, &MateriaEditor::idChanged, this, &MainWindow::materia_id_changed);
 
     connect(phsList, &PhsListWidget::allowedToggled, this, &MainWindow::phsList_box_allowed_toggled);
     connect(phsList, &PhsListWidget::visibleToggled,this, &MainWindow::phsList_box_visible_toggled);

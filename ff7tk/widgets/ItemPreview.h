@@ -23,14 +23,14 @@
 
 class ItemPreview : public QWidget
 {
-Q_OBJECT
-  public:
-	ItemPreview(QFlags<Qt::WindowType> WindowFlags=Qt::Widget,qreal Scale=1,QWidget *parent=0);
+    Q_OBJECT
+public:
+    ItemPreview(QFlags<Qt::WindowType> WindowFlags = Qt::Widget, qreal Scale = 1, QWidget *parent = 0);
     int id(void);//return shown id.
-  public slots:
+public slots:
     void setItem(quint16);
     void setItem(int);
-  private:
+private:
     void setName(QString);
     void setDesc(QString);
     void setIcon(QPixmap);
@@ -59,6 +59,6 @@ Q_OBJECT
     QListWidget *status_effects;
     FF7Item data;
     int _id;
-	qreal scale;
+    qreal scale;
 };
 #endif//ITEMPREVIEW_H

@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #ifndef MateriaEditor_H
-  #define MateriaEditor_H
+#define MateriaEditor_H
 
 #include <QtWidgets>
 /* SET FF7Materia PATH ACCORDINGLY*/
@@ -24,10 +24,10 @@ class MateriaEditor : public QWidget
 {
     Q_OBJECT
 public:
-    MateriaEditor(QWidget *parent=0);
-    MateriaEditor(quint8 materia_id=0,qint32 ap=0,QWidget *parent=0);
-    void setMateria(quint8 materia_id=0,qint32 materia_ap=0);
-    void setAP (qint32 current_ap=0);
+    MateriaEditor(QWidget *parent = 0);
+    MateriaEditor(quint8 materia_id = 0, qint32 ap = 0, QWidget *parent = 0);
+    void setMateria(quint8 materia_id = 0, qint32 materia_ap = 0);
+    void setAP(qint32 current_ap = 0);
     void setStarsSize(int);
     qint32 ap(void);
     qint32 MaxAP(void);
@@ -42,10 +42,10 @@ public slots:
 private:
     //Private Functions
     void init_display(void);
-    QHBoxLayout* makeNameLayout();
-    QWidget* makeStarWidget();
-    QWidget* makeSkillWidget();
-    QWidget* makeStatWidget();
+    QHBoxLayout *makeNameLayout();
+    QWidget *makeStarWidget();
+    QWidget *makeSkillWidget();
+    QWidget *makeStatWidget();
     void setStars(void);
     void setName(void);
     void setStats(void);
@@ -65,12 +65,12 @@ private:
     QSpinBox *sb_ap = nullptr;
     QFrame *frm_ap = nullptr;
     QFrame *frm_skill_status = nullptr;
-    QList<QPushButton*> btn_stars = {nullptr, nullptr, nullptr, nullptr, nullptr};
+    QList<QPushButton *> btn_stars = {nullptr, nullptr, nullptr, nullptr, nullptr};
     QFrame *box_stars = nullptr;
     QGroupBox *box_skills = nullptr;
     QGroupBox *eskill_group = nullptr;
     QListWidget *eskill_list = nullptr;
-    QWidget* eskillButtons = nullptr;
+    QWidget *eskillButtons = nullptr;
     QListWidget *list_skills = nullptr;
     QGroupBox *box_stats = nullptr;
     QGroupBox *box_status_effects = nullptr;
@@ -78,7 +78,7 @@ private:
     QListWidget *list_status = nullptr;
     FF7Materia *data = nullptr;
     QSpacerItem *v_spacer = nullptr;
-    QFrame * frm_ap_stars = nullptr;
+    QFrame *frm_ap_stars = nullptr;
     QLabel *lbl_materiaIcon = nullptr;
     QLabel *lbl_materiaName = nullptr;
     //Private Data Members
@@ -96,9 +96,9 @@ private slots:
     void typeChanged(int new_type);
     void materia_changed(QString new_name);
     void editMode(void);
-    QPushButton* newStyledButton(const QIcon &icon = QIcon(), QKeySequence shortcut = QKeySequence(), const QString &toolip = QString(), QWidget *parent = nullptr);
+    QPushButton *newStyledButton(const QIcon &icon = QIcon(), QKeySequence shortcut = QKeySequence(), const QString &toolip = QString(), QWidget *parent = nullptr);
 signals:
-    void ap_changed(qint32);
-    void id_changed(qint8);
+    void apChanged(qint32);
+    void idChanged(qint8);
 };
 #endif //MateriaEditor

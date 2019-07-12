@@ -18,11 +18,10 @@
 #include<QObject>
 #include<QStringList>
 
-struct FieldItem
-{
+struct FieldItem {
     QList<quint16> Offset; /**< list of offsets to change */
-    QList<quint8> Bit;	/**< list of bits to change (at offset of same index) */
-    QStringList Maps;	/**< list of maps (filename) the item is shown on */
+    QList<quint8> Bit;  /**< list of bits to change (at offset of same index) */
+    QStringList Maps;   /**< list of maps (filename) the item is shown on */
     QString Text;    /**< text to show. */
 };
 
@@ -40,44 +39,46 @@ public:
 
     FF7FieldItemList() = default;
     ~FF7FieldItemList() = default;
-	/*! \brief offset list for an entry (offset[x] bit[x] are pairs needed to read/write correctly
-	 *  \param index index in list
-	 *   \return List of Offsets where that control the item being shown
-	 */
-    Q_INVOKABLE const QList<quint16>& offset(int index);
-	/*! \brief bit list for an entry (one per offset)
-	 *  \param index index in list
-	 *  \return List of bits that control the item being shown
-	 */
-    Q_INVOKABLE const QList<quint8>& bit(int index);
+    /*! \brief offset list for an entry (offset[x] bit[x] are pairs needed to read/write correctly
+     *  \param index index in list
+     *   \return List of Offsets where that control the item being shown
+     */
+    Q_INVOKABLE const QList<quint16> &offset(int index);
+    /*! \brief bit list for an entry (one per offset)
+     *  \param index index in list
+     *  \return List of bits that control the item being shown
+     */
+    Q_INVOKABLE const QList<quint8> &bit(int index);
 
-	/*! \brief map list for an entry.
-	 *  \param index index in list
-	 *  \return List of maps that item is shown on
-	 */
-    Q_INVOKABLE const QStringList& maps(int index);
+    /*! \brief map list for an entry.
+     *  \param index index in list
+     *  \return List of maps that item is shown on
+     */
+    Q_INVOKABLE const QStringList &maps(int index);
 
-	/*! \brief item or desc of item
-	 *  \param index index in list
-	 *  \return text for item
-	 */
+    /*! \brief item or desc of item
+     *  \param index index in list
+     *  \return text for item
+     */
     Q_INVOKABLE QString text(int index);
 
-	/*! \brief total entries in FILIST
-	 *  \return number of entries in FILIST
-	 */
-    inline int size() const {return _fieldItemList.size();}
+    /*! \brief total entries in FILIST
+     *  \return number of entries in FILIST
+     */
+    inline int size() const
+    {
+        return _fieldItemList.size();
+    }
 
     /*!
      * \brief Referance to a fieldItem
      * \param index of item
      * \return info for one field item
      */
-    const QList<FieldItem>& fieldItemList() const;
+    const QList<FieldItem> &fieldItemList() const;
 
 private:
 
-    inline static const auto _group = QStringLiteral("FieldItems");
     inline static const QList<FieldItem> _fieldItemList {
         {{quint16(0x0BC8)}, {quint8(0)}, {QStringLiteral("mds7st1")}, QT_TR_NOOP("Hi-Potion")}
         , {{quint16(0x0BC8)}, {quint8(1)}, {QStringLiteral("mds7st1")}, QT_TR_NOOP("Echo Screen")}
