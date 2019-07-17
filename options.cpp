@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -19,8 +19,9 @@
 #include "ui_options.h"
 
 Options::Options(QWidget *parent, QSettings *config_data) :
-    QDialog(parent),
-    ui(new Ui::Options)
+    QDialog(parent)
+  , ui(new Ui::Options)
+  , settings(config_data)
 {
     ui->setupUi(this);
     ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
@@ -33,7 +34,6 @@ Options::Options(QWidget *parent, QSettings *config_data) :
 #if(!OPENSSL)
     ui->groupBox_3->setTitle(tr("Signing is disabled! Build with OpenSSL support to enable"));
 #endif
-    settings = config_data;
     restoreGeometry(settings->value("OptionsGeometry").toByteArray());
     set_path_lbls();
     load = true;

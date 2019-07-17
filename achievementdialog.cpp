@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -17,13 +17,14 @@
 
 achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     QDialog(parent)
+    , achEditor(new AchievementEditor)
+    , btnSave(new QPushButton(QIcon::fromTheme("document-save", QIcon(":/icon/save")), tr("  &Save")))
+    , btnNo(new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("  &Cancel")))
+    , fileName(FileName)
 {
-    fileName = FileName;
-    this->setWindowTitle(tr("Achievement Editor"));
-    achEditor = new AchievementEditor();
+    setWindowTitle(tr("Achievement Editor"));
     achEditor->openFile(fileName);
-    btnSave = new QPushButton(QIcon::fromTheme("document-save", QIcon(":/icon/save")), tr("  &Save"));
-    btnNo = new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("  &Cancel"));
+    achEditor->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     QHBoxLayout *btnLayout = new QHBoxLayout;
     btnLayout->setContentsMargins(0, 0, 0, 0);
     btnLayout->setSpacing(2);
@@ -34,11 +35,9 @@ achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     layout->setSpacing(0);
     layout->addWidget(achEditor);
     layout->addLayout(btnLayout);
-    this->setLayout(layout);
-    this->adjustSize();
-    //this->setFixedSize(this->size());
-    connect(btnSave, SIGNAL(clicked()), this, SLOT(accept()));
-    connect(btnNo, SIGNAL(clicked()), this, SLOT(close()));
+    setLayout(layout);
+    connect(btnSave, &QPushButton::clicked, this, &achievementDialog::accept);
+    connect(btnNo, &QPushButton::clicked, this, &achievementDialog::close);
 }
 void achievementDialog::accept(void)
 {
@@ -54,5 +53,4 @@ void achievementDialog::accept(void)
             QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
         }
     }
-
 }

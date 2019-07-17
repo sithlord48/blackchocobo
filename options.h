@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -30,7 +30,7 @@ class Options : public QDialog
     Q_OBJECT
 
 public:
-    explicit Options(QWidget *parent = 0, QSettings *config_data = 0);
+    explicit Options(QWidget *parent = nullptr, QSettings *config_data = nullptr);
     ~Options();
 
 protected:

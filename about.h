@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -14,8 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#ifndef ABOUT_H
-#define ABOUT_H
+#pragma once
 
 #include <QDialog>
 #include <QSettings>
@@ -29,7 +28,7 @@ class About : public QDialog
 {
     Q_OBJECT
 public:
-    explicit About(QWidget *parent = 0, QSettings *config_data = 0);
+    explicit About(QWidget *parent = nullptr, QSettings *config_data = nullptr);
     ~About();
 
 protected:
@@ -40,6 +39,5 @@ protected:
 
 private:
     Ui::About *ui;
-    QSettings *settings;
+    QSettings *settings = nullptr;
 };
-#endif // ABOUT_H

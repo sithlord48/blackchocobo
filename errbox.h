@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,19 +13,15 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef ERRBOX_H
-#define ERRBOX_H
+#pragma once
 
 #include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QVBoxLayout>
-#else
-#include <QtGui/QDialog>
-#endif
+
 #include "ff7tk/data/FF7Save.h"
 #include "ff7tk/data/SaveIcon.h"
 
@@ -34,7 +30,7 @@ class errbox : public QDialog
     Q_OBJECT
 
 public:
-    explicit errbox(QWidget *parent = 0, FF7Save *ff7data = 0, int slot = 0);
+    explicit errbox(QWidget *parent = nullptr, FF7Save *ff7data = nullptr, int slot = 0);
     bool isSingleSlot();
     void setSingleSlot(bool single);
 protected:
@@ -47,16 +43,13 @@ private slots:
     void btnNextClicked();
 private:
     int s;
+    bool singleSlot = false;
+    FF7Save *ff7save = nullptr;
     SaveIcon *save_icon = nullptr;
-    FF7Save *ff7 = nullptr;
-    /* Gui Objects*/
     QPushButton *btnNext = nullptr;
     QPushButton *btnPrev = nullptr;
     QPushButton *btnView = nullptr;
     QPushButton *btnExport = nullptr;
     QLabel *lblRegionString = nullptr;
     QLabel *lblIcon = nullptr;
-    bool singleSlot = false;
 };
-
-#endif // ERRBOX_H

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -21,24 +21,25 @@
 errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     : QDialog(parent)
     , s(slot)
+    , singleSlot(false)
+    , ff7save(ff7data)
     , save_icon(new SaveIcon(ff7data->slotIcon(s)))
-    , ff7(ff7data)
     , btnNext(new QPushButton(QIcon::fromTheme("go-next", QIcon(":/icon/next")), QString()))
     , btnPrev(new QPushButton(QIcon::fromTheme("go-previous", QIcon(":/icon/prev")), QString()))
     , btnView(new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("View Anyway")))
     , btnExport(new QPushButton(QIcon(":/icon/psxmc"), tr("&Export As Raw PSX")))
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
-    , singleSlot(false)
 {
     if (ff7data->format() == FF7SaveInfo::FORMAT::PC) {
         close();
     }
+    QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-    setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint) & ~Qt::WindowCloseButtonHint)); //remove close
+    setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint) & ~Qt::WindowCloseButtonHint)); //remove close
     setWindowTitle(tr("Non Final Fantasy VII Slot"));
 
-    connect(save_icon, SIGNAL(nextIcon(QPixmap)), this, SLOT(setIcon(QPixmap)));
+    connect(save_icon, &SaveIcon::nextIcon, this, &errbox::setIcon);
 
     lblRegionString->setAlignment(Qt::AlignTop);
     lblIcon->setMinimumSize(64, 64);
@@ -46,18 +47,18 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     lblIcon->setPixmap(save_icon->icon().scaled(lblIcon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
     btnPrev->setShortcut(QKeySequence::Back);
-    btnPrev->setFixedHeight(24);
-    connect(btnPrev, SIGNAL(clicked()), this, SLOT(btnPrevClicked()));
+    btnPrev->setIconSize(iconSize);
+    connect(btnPrev, &QPushButton::clicked, this, &errbox::btnPrevClicked);
     btnView->setShortcut(QKeySequence::Close);
-    btnView->setFixedHeight(24);
-    connect(btnView, SIGNAL(clicked()), this, SLOT(btnViewClicked()));
+    btnView->setIconSize(iconSize);
+    connect(btnView, &QPushButton::clicked, this, &errbox::btnViewClicked);
 
     btnNext->setShortcut(QKeySequence::Forward);
-    btnNext->setFixedHeight(24);
-    connect(btnNext, SIGNAL(clicked()), this, SLOT(btnNextClicked()));
+    btnNext->setIconSize(iconSize);
+    connect(btnNext, &QPushButton::clicked, this, &errbox::btnNextClicked);
 
-    btnExport->setFixedHeight(24);
-    connect(btnExport, SIGNAL(clicked()), this, SLOT(btnExportClicked()));
+    btnExport->setIconSize(iconSize);
+    connect(btnExport, &QPushButton::clicked, this, &errbox::btnExportClicked);
 
     QHBoxLayout *slotLayout = new QHBoxLayout;
     slotLayout->setContentsMargins(0, 0, 3, 0);
@@ -80,13 +81,13 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     setLayout(finalLayout);
 
     QString Slottext = QString(tr("Slot:%1\n").arg(QString::number(s + 1), 2, QChar('0')));
-    if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+    if (ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
+            || ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+            || ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+            || ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
         btnView->setEnabled(false);
         btnExport->setEnabled(false);
-        switch (ff7->psx_block_type(s)) {
+        switch (ff7save->psx_block_type(s)) {
         case char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK):   Slottext.append(tr("       Mid-Linked Block")); break;
         case char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK):  Slottext.append(tr("    Mid-Linked Block (Deleted)")); break;
         case char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK):  Slottext.append(tr("      End Of Linked Blocks")); break;
@@ -94,17 +95,17 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
         default: Slottext.append(tr("ERROR")); break;
         }
     }
-    Slottext.append(ff7->psxDesc(s));
+    Slottext.append(ff7save->psxDesc(s));
 
-    if (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
-        Slottext.append(tr("\n Game Uses %n Save Block(s)", nullptr, ff7->psx_block_size(s)));
+    if (ff7save->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
+            && ff7save->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+            && ff7save->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+            && ff7save->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+        Slottext.append(tr("\n Game Uses %n Save Block(s)", nullptr, ff7save->psx_block_size(s)));
     }
 
-    if (ff7->psx_block_next(s) != 0xFF) {
-        Slottext.append(tr("\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s) + 1)));
+    if (ff7save->psx_block_next(s) != 0xFF) {
+        Slottext.append(tr("\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7save->psx_block_next(s) + 1)));
     }
 
     lblRegionString->setText(Slottext);
@@ -125,31 +126,31 @@ void errbox::keyPressEvent(QKeyEvent *e)
 
 void errbox::btnViewClicked()
 {
-    this->done(0);
+    done(0);
 }
 
 void errbox::btnPrevClicked()
 {
-    this->done(1);
+    done(1);
 }
 
 void errbox::btnNextClicked()
 {
-    this->done(2);
+    done(2);
 }
 
 void errbox::btnExportClicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save Raw PSX File"), ff7->region(s), tr("All Files(*)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save Raw PSX File"), ff7save->region(s), tr("All Files(*)"));
     if (fileName.isEmpty()) {
         return;
     } else {
-        if (ff7->exportPSX(s, fileName)) {
+        if (ff7save->exportPSX(s, fileName)) {
             QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
-            this->done(3);
+            done(3);
         } else {
             QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
-            this->done(3);
+            done(3);
         }
     }
 }

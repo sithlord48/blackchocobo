@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,19 +13,13 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef ACHIEVEMENTDIALOG_H
-#define ACHIEVEMENTDIALOG_H
-
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
+#pragma once
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QVBoxLayout>
-#else
-#include <QtGui/QDialog>
-#endif
+
 #include "ff7tk/widgets/AchievementEditor.h"
 
 class achievementDialog : public QDialog
@@ -33,16 +27,11 @@ class achievementDialog : public QDialog
     Q_OBJECT
 public:
     explicit achievementDialog(const QString &FileName, QWidget *parent = nullptr);
-
-signals:
-
 public slots:
     void accept();
 private:
-    AchievementEditor *achEditor;
-    QPushButton *btnSave;
-    QPushButton *btnNo;
+    AchievementEditor *achEditor = nullptr;
+    QPushButton *btnSave = nullptr;
+    QPushButton *btnNo = nullptr;
     QString fileName;
 };
-
-#endif // ACHIEVEMENTDIALOG_H
