@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -16,12 +16,6 @@
 #ifndef CHAREDITOR_H
 #define CHAREDITOR_H
 
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-#include <QtWidgets>
-#else
-#include <QtGui>
-#endif
 
 //set path to FF7Item FF7Materia and FF7Char
 #include "../data/FF7Item.h"
@@ -37,13 +31,12 @@ class CharEditor : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CharEditor(qreal Scale = 1, QWidget *parent = 0);
-    void setChar(FF7CHAR Chardata, QString Processed_Name = "");
+    explicit CharEditor(qreal Scale = 1, QWidget *parent = nullptr);
+    void setChar(const FF7CHAR &Chardata, const QString &Processed_Name = "");
     bool AutoLevel();
     bool AutoStatCalc();
     bool Editable();
     bool AdvancedMode();
-    void setSliderStyle(QString style);
     void MaxStats();
     void MaxEquip();
     quint8 id();
@@ -85,7 +78,7 @@ public:
     materia char_materia(int mat);
 
 protected:
-    void changeEvent(QEvent *e);
+    void changeEvent(QEvent *e) override;
 
 signals:
     void id_changed(qint8);
@@ -132,10 +125,11 @@ public slots:
     void setAutoStatCalc(bool);
     void setEditable(bool);
     void setAdvancedMode(bool);
-    void setToolBoxStyle(QString);
+    void setToolBoxStyle(const QString &styleSheet);
+    void setSliderStyle(const QString &style);
     void setEditableComboBoxes(bool);
 
-private slots:
+private:
     void setId(int);
     void setLevel(int);
     void setStr(int);
@@ -152,7 +146,7 @@ private slots:
     void setLckBonus(int);
     void setLimitLevel(int);
     void setLimitBar(int);
-    void setName(QString);
+    void setName(const QString &name);
     void setWeapon(int);
     void setArmor(int);
     void setAccessory(int);
@@ -178,122 +172,141 @@ private slots:
     void calc_limit_value(QModelIndex);
     void Level_Changed(int);// used for tracking growth of char
     void Exp_Changed(int);// used for tracking growth of char
-    void weapon_slot_1_clicked();
-    void weapon_slot_2_clicked();
-    void weapon_slot_3_clicked();
-    void weapon_slot_4_clicked();
-    void weapon_slot_5_clicked();
-    void weapon_slot_6_clicked();
-    void weapon_slot_7_clicked();
-    void weapon_slot_8_clicked();
-    void armor_slot_1_clicked();
-    void armor_slot_2_clicked();
-    void armor_slot_3_clicked();
-    void armor_slot_4_clicked();
-    void armor_slot_5_clicked();
-    void armor_slot_6_clicked();
-    void armor_slot_7_clicked();
-    void armor_slot_8_clicked();
+    void materiaSlotClicked(int slotClicked);
     void matAp_changed(qint32);
     void matId_changed(qint8);
-private:
-    void mButtonPress(int Mslot);
-    void init_display(void);
-    void init_connections(void);
-    void disconnectAll(void);
-    void calc_stats(void);//calc stat changes if autostatcalc == true;
+    void init_display();
+    void init_connections();
+    void disconnectAll();
+    void calc_stats();//calc stat changes if autostatcalc == true;
     void level_up(int);
     void update_tnl_bar();
     void elemental_info();
     void status_info();
     void update_materia_slots();
-    void setSlotFrame(void);
+    void updateMateriaToolTips();
+    void setSlotFrame();
+    /**
+     * @brief Creates all items that have text or tooltips, Future calls updates the text on these widgets.
+     *  This is called once durring the constructor and again for languageChangeEvents to retranslate the text.
+     */
     void updateText();
+
+    /**
+     * @brief Create a Widget containing all the Items to calculate a stat
+     * @param statBaseSpinBox: QSpinBox* for the Base Stat.
+     * @param statSourceSpinBox: QSpinBox* for the Source Use for Stat, a nullptr will remove this from the layout.
+     * @param statLabel: Label containing the name of the stat
+     * @param statMateriaBonusLabel: Label containing bonuses to the stat given by equipment and / or materia
+     * @param statTotalLabel: Label containing the total value of the stat
+     * @return Constructed Widget that contains all Items used to calculate a stat.
+     */
+    QWidget* makeStatWidget(QSpinBox* statBaseSpinBox = nullptr, QSpinBox* statSourceSpinBox = nullptr
+            , QLabel* statLabel = nullptr, QLabel* statMateriaBonusLabel = nullptr, QLabel* statTotalLabel = nullptr);
+
+    /**
+     * @brief Create the a widget containing all the various stats Calls makeStatWidget once for each stat.
+     * @return Widget containing all the controls for all the stats
+     */
+    QFrame* makeStatFrame();
+
+    /**
+     * @brief Create a pair of materia slots.
+     * @param button1: First Materia Slot
+     * @param button2: Second Materia Slot
+     * @param frame1: Frame that will contain button1
+     * @param frame2: Frame that will contain button2
+     * @param linkLabel: Label Where the link will be shown if materia slots are linked
+     * @return: One set of materia slots.
+     */
+    QHBoxLayout * makeMateriaSlotPair(QPushButton* button1 = nullptr, QPushButton* button2 = nullptr, QFrame *frame1 = nullptr, QFrame *frame2 = nullptr, QLabel* linkLabel = nullptr);
+
+    /**
+     * @brief Creates the layout for the limit related controls.
+     * @return Layout containing the controls for the limit items.
+     */
+    QVBoxLayout * makeLimitLayout();
 //Data
-    bool load;
+    bool load{false};
+    bool autolevel{true};
+    bool autostatcalc{true};
+    bool editable{true};
+    bool advancedMode{false};
+    int mslotsel{-1};
+    qint32 ap{0};
     FF7Char Chars;
     FF7Item Items;
     FF7Materia Materias;
     FF7CHAR data;
     QString _name;
-    bool autolevel;
-    bool autostatcalc;
-    bool editable;
-    bool advancedMode;
-    int mslotsel;//select materia slot
-    qint32 ap;
     qreal scale;
 //GUI PARTS
-    QLabel *lbl_avatar = nullptr;
-    QLineEdit *line_name = nullptr;
-    QSpinBox *sb_level = nullptr;
-    QSpinBox *sb_curMp = nullptr;
-    QSpinBox *sb_maxMp = nullptr;
-    QSpinBox *sb_curHp = nullptr;
-    QSpinBox *sb_maxHp = nullptr;
-    QSpinBox *sb_kills = nullptr;
-    QLabel *lbl_hp = nullptr;
-    QLabel *lbl_hp_slash = nullptr;
-    QLabel *lbl_hp_max = nullptr;
-    QLabel *lbl_mp = nullptr;
-    QLabel *lbl_mp_slash = nullptr;
-    QLabel *lbl_mp_max = nullptr;
-    QCheckBox *cb_fury = nullptr;
-    QCheckBox *cb_sadness = nullptr;
-    QCheckBox *cb_front_row = nullptr;
-    QComboBox *combo_id = nullptr;
+    QLabel *lblAvatar = nullptr;
+    QLineEdit *lineName = nullptr;
+    QSpinBox *sbLevel = nullptr;
+    QSpinBox *sbCurrentMp = nullptr;
+    QSpinBox *sbCurrentHp = nullptr;
 
-    QSpinBox *sb_total_exp = nullptr;
-    QLabel *lbl_level_progress = nullptr;
+    QLabel *lblBaseHp = nullptr;
+    QSpinBox *sbBaseHp = nullptr;
+    QLabel *lblBaseHpBonus = nullptr;
+
+    QLabel *lblBaseMp = nullptr;
+    QSpinBox *sbBaseMp = nullptr;
+    QLabel *lblBaseMpBonus = nullptr;
+
+    QSpinBox *sbKills = nullptr;
+    QLabel *lblCurrentHp = nullptr;
+    QLabel *lblMaxHp = nullptr;
+    QLabel *lblCurrentMp = nullptr;
+    QLabel *lblMaxMp = nullptr;
+    QCheckBox *cbFury = nullptr;
+    QCheckBox *cbSadness = nullptr;
+    QCheckBox *cbFrontRow = nullptr;
+    QComboBox *comboId = nullptr;
+
+    QSpinBox *sbTotalExp = nullptr;
     QLabel *lbl_level_next = nullptr;
     QProgressBar *bar_tnl = nullptr;
     QLabel *lbl_limit_bar = nullptr;
     QSlider *slider_limit = nullptr;
-    QLCDNumber *lcd_limit_value = nullptr;
+    QLCDNumber *lcdLimitValue = nullptr;
 
-    QLabel *lbl_str = nullptr;
-    QSpinBox *sb_str = nullptr;
-    QSpinBox *sb_str_bonus = nullptr;
-    QLabel *lbl_str_mat_bonus = nullptr;
-    QLabel *lbl_str_total = nullptr;
+    QLabel *lblStr = nullptr;
+    QSpinBox *sbStr = nullptr;
+    QSpinBox *sbStrSourceUse = nullptr;
+    QLabel *lblStrMateriaBonus = nullptr;
+    QLabel *lblStrTotal = nullptr;
 
-    QLabel *lbl_vit = nullptr;
-    QSpinBox *sb_vit = nullptr;
-    QSpinBox *sb_vit_bonus = nullptr;
-    QLabel *lbl_vit_mat_bonus = nullptr;
-    QLabel *lbl_vit_total = nullptr;
+    QLabel *lblVit = nullptr;
+    QSpinBox *sbVit = nullptr;
+    QSpinBox *sbVitSourceUse = nullptr;
+    QLabel *lblVitMateriaBonus = nullptr;
+    QLabel *lblVitTotal = nullptr;
 
-    QLabel *lbl_mag = nullptr;
-    QSpinBox *sb_mag = nullptr;
-    QSpinBox *sb_mag_bonus = nullptr;
-    QLabel *lbl_mag_mat_bonus = nullptr;
-    QLabel *lbl_mag_total = nullptr;
+    QLabel *lblMag = nullptr;
+    QSpinBox *sbMag = nullptr;
+    QSpinBox *sbMagSourceUse = nullptr;
+    QLabel *lblMagMateriaBonus = nullptr;
+    QLabel *lblMagTotal = nullptr;
 
-    QLabel *lbl_spi = nullptr;
-    QSpinBox *sb_spi = nullptr;
-    QSpinBox *sb_spi_bonus = nullptr;
-    QLabel *lbl_spi_mat_bonus = nullptr;
-    QLabel *lbl_spi_total = nullptr;
+    QLabel *lblSpi = nullptr;
+    QSpinBox *sbSpi = nullptr;
+    QSpinBox *sbSpiSourceUse = nullptr;
+    QLabel *lblSpiMateriaBonus = nullptr;
+    QLabel *lblSpiTotal = nullptr;
 
-    QLabel *lbl_dex = nullptr;
-    QSpinBox *sb_dex = nullptr;
-    QSpinBox *sb_dex_bonus = nullptr;
-    QLabel *lbl_dex_mat_bonus = nullptr;
-    QLabel *lbl_dex_total = nullptr;
+    QLabel *lblDex = nullptr;
+    QSpinBox *sbDex = nullptr;
+    QSpinBox *sbDexSourceUse = nullptr;
+    QLabel *lblDexMateriaBonus = nullptr;
+    QLabel *lblDexTotal = nullptr;
 
-    QLabel *lbl_lck = nullptr;
-    QSpinBox *sb_lck = nullptr;
-    QSpinBox *sb_lck_bonus = nullptr;
-    QLabel *lbl_lck_mat_bonus = nullptr;
-    QLabel *lbl_lck_total = nullptr;
-
-    QLabel *lbl_base_hp = nullptr;
-    QSpinBox *sb_base_hp = nullptr;
-    QLabel *lbl_base_hp_bonus = nullptr;
-
-    QLabel *lbl_base_mp = nullptr;
-    QSpinBox *sb_base_mp = nullptr;
-    QLabel *lbl_base_mp_bonus = nullptr;
+    QLabel *lblLck = nullptr;
+    QSpinBox *sbLck = nullptr;
+    QSpinBox *sbLckSourceUse = nullptr;
+    QLabel *lblLckMateriaBonus = nullptr;
+    QLabel *lblLckTotal = nullptr;
 
     QLabel *lbl_limit_level = nullptr;
     QSpinBox *sb_limit_level = nullptr;
@@ -324,38 +337,8 @@ private:
     QGroupBox *weapon_box = nullptr;
     QGroupBox *armor_box = nullptr;
     QGroupBox *accessory_box = nullptr;
-    QFrame *weapon_frm_1 = nullptr;
-    QFrame *weapon_frm_2 = nullptr;
-    QFrame *weapon_frm_3 = nullptr;
-    QFrame *weapon_frm_4 = nullptr;
-    QFrame *weapon_frm_5 = nullptr;
-    QFrame *weapon_frm_6 = nullptr;
-    QFrame *weapon_frm_7 = nullptr;
-    QFrame *weapon_frm_8 = nullptr;
-    QPushButton *weapon_slot_1 = nullptr;
-    QPushButton *weapon_slot_2 = nullptr;
-    QPushButton *weapon_slot_3 = nullptr;
-    QPushButton *weapon_slot_4 = nullptr;
-    QPushButton *weapon_slot_5 = nullptr;
-    QPushButton *weapon_slot_6 = nullptr;
-    QPushButton *weapon_slot_7 = nullptr;
-    QPushButton *weapon_slot_8 = nullptr;
-    QFrame *armor_frm_1 = nullptr;
-    QFrame *armor_frm_2 = nullptr;
-    QFrame *armor_frm_3 = nullptr;
-    QFrame *armor_frm_4 = nullptr;
-    QFrame *armor_frm_5 = nullptr;
-    QFrame *armor_frm_6 = nullptr;
-    QFrame *armor_frm_7 = nullptr;
-    QFrame *armor_frm_8 = nullptr;
-    QPushButton *armor_slot_1 = nullptr;
-    QPushButton *armor_slot_2 = nullptr;
-    QPushButton *armor_slot_3 = nullptr;
-    QPushButton *armor_slot_4 = nullptr;
-    QPushButton *armor_slot_5 = nullptr;
-    QPushButton *armor_slot_6 = nullptr;
-    QPushButton *armor_slot_7 = nullptr;
-    QPushButton *armor_slot_8 = nullptr;
+    QList<QFrame *> materiaSlotFrames;
+    QList<QPushButton *> materiaSlots;
     QLabel *weapon_m_link_1 = nullptr;
     QLabel *weapon_m_link_2 = nullptr;
     QLabel *weapon_m_link_3 = nullptr;
@@ -371,6 +354,11 @@ private:
     QLCDNumber *lcd_0x36 = nullptr;
     QLCDNumber *lcd_0x37 = nullptr;
     QCheckBox *cb_idChanger = nullptr;
+    //Static Limits
+    inline static const int quint8Max = 255;
+    inline static const int qint16Max = 32767;
+    inline static const int quint16Max = 65535;
+
 };
 
 #endif // CHAREDITOR_H

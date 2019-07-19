@@ -207,6 +207,10 @@ p, li { white-space: pre-wrap; }
         <source>ff7tk: Chocobo name not showing place holder text at right times</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New: Dynamic Language Switching</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CharEditor</name>
@@ -572,11 +576,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
-        <translation>valeur calculée en jeu ; modifie BaseMp</translation>
+        <translation type="vanished">valeur calculée en jeu ; modifie BaseMp</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
-        <translation>valeur calculée en jeu ; modifie BaseHp</translation>
+        <translation type="vanished">valeur calculée en jeu ; modifie BaseHp</translation>
     </message>
     <message>
         <source>Exp: </source>
@@ -589,6 +593,98 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Resist</source>
         <translation type="unfinished">Résist</translation>
+    </message>
+    <message>
+        <source>Current HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Current MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Maximum HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia and Equipment Bonus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Maximum MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Strength</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Strength Stat Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Vitality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guard Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vitality Stat Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Magic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Stat Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Spirit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spirit Stat Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Dexterity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dexterity Stat Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Luck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck Sources Used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck Stat Total</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

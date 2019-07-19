@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,124 +14,18 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-//#include <QDebug>
+
 CharEditor::CharEditor(qreal Scale, QWidget *parent) : QWidget(parent)
-    , load(false)
-    , autolevel(true)
-    , autostatcalc(true)
-    , editable(true)
-    , advancedMode(false)
-    , mslotsel(-1)
+    , data(FF7CHAR())
     , scale(Scale)
-    , lbl_avatar(new QLabel)
-    , line_name(new QLineEdit)
-    , sb_level(new QSpinBox)
-    , sb_curMp(new QSpinBox)
-    , sb_maxMp(new QSpinBox)
-    , sb_curHp(new QSpinBox)
-    , sb_maxHp(new QSpinBox)
-    , sb_kills(new QSpinBox)
-    , lbl_hp(new QLabel)
-    , lbl_hp_slash(new QLabel(QStringLiteral("/")))
-    , lbl_hp_max(new QLabel)
-    , lbl_mp(new QLabel)
-    , lbl_mp_slash(new QLabel(QStringLiteral("/")))
-    , lbl_mp_max(new QLabel)
-    , cb_fury(new QCheckBox)
-    , cb_sadness(new QCheckBox)
-    , cb_front_row(new QCheckBox)
-    , combo_id(new QComboBox)
-    , sb_total_exp(new QSpinBox)
-    , lbl_level_progress(new QLabel)
-    , lbl_level_next(new QLabel)
-    , bar_tnl(new QProgressBar)
-    , lbl_limit_bar(new QLabel)
-    , slider_limit(new QSlider)
-    , lcd_limit_value(new QLCDNumber)
-    , lbl_str(new QLabel)
-    , sb_str(new QSpinBox)
-    , sb_str_bonus(new QSpinBox)
-    , lbl_str_mat_bonus(new QLabel)
-    , lbl_str_total(new QLabel)
-    , lbl_vit(new QLabel)
-    , sb_vit(new QSpinBox)
-    , sb_vit_bonus(new QSpinBox)
-    , lbl_vit_mat_bonus(new QLabel)
-    , lbl_vit_total(new QLabel)
-    , lbl_mag(new QLabel)
-    , sb_mag(new QSpinBox)
-    , sb_mag_bonus(new QSpinBox)
-    , lbl_mag_mat_bonus(new QLabel)
-    , lbl_mag_total(new QLabel)
-    , lbl_spi(new QLabel)
-    , sb_spi(new QSpinBox)
-    , sb_spi_bonus(new QSpinBox)
-    , lbl_spi_mat_bonus(new QLabel)
-    , lbl_spi_total(new QLabel)
-    , lbl_dex(new QLabel)
-    , sb_dex(new QSpinBox)
-    , sb_dex_bonus(new QSpinBox)
-    , lbl_dex_mat_bonus(new QLabel)
-    , lbl_dex_total(new QLabel)
-    , lbl_lck(new QLabel)
-    , sb_lck(new QSpinBox)
-    , sb_lck_bonus(new QSpinBox)
-    , lbl_lck_mat_bonus(new QLabel)
-    , lbl_lck_total(new QLabel)
-    , lbl_base_hp(new QLabel)
-    , sb_base_hp(new QSpinBox)
-    , lbl_base_hp_bonus(new QLabel)
-    , lbl_base_mp(new QLabel)
-    , sb_base_mp(new QSpinBox)
-    , lbl_base_mp_bonus(new QLabel)
-    , lbl_limit_level(new QLabel)
-    , sb_limit_level(new QSpinBox)
-    , list_limits(new QListWidget)
-    , lbl_uses(new QLabel)
-    , lbl_1_1(new QLabel)
-    , lbl_2_1(new QLabel)
-    , lbl_3_1(new QLabel)
-    , lbl_0x34(new QLabel)
-    , lbl_0x35(new QLabel)
-    , lbl_0x36(new QLabel)
-    , lbl_0x37(new QLabel)
-    , lblWeaponStats(new QLabel)
-    , lblArmorStats(new QLabel)
-    , weapon_selection(new QComboBox)
-    , armor_selection(new QComboBox)
-    , accessory_selection(new QComboBox)
-    , elemental_box(new QGroupBox)
-    , status_box(new QGroupBox)
     , elemental_effects(new QListWidget)
     , status_effects(new QListWidget)
-    , weapon_box(new QGroupBox)
-    , armor_box(new QGroupBox)
-    , accessory_box(new QGroupBox)
-    , weapon_slot_1(new QPushButton)
-    , weapon_slot_2(new QPushButton)
-    , weapon_slot_3(new QPushButton)
-    , weapon_slot_4(new QPushButton)
-    , weapon_slot_5(new QPushButton)
-    , weapon_slot_6(new QPushButton)
-    , weapon_slot_7(new QPushButton)
-    , weapon_slot_8(new QPushButton)
-    , armor_slot_1(new QPushButton)
-    , armor_slot_2(new QPushButton)
-    , armor_slot_3(new QPushButton)
-    , armor_slot_4(new QPushButton)
-    , armor_slot_5(new QPushButton)
-    , armor_slot_6(new QPushButton)
-    , armor_slot_7(new QPushButton)
-    , armor_slot_8(new QPushButton)
-    , toolbox(new QToolBox)
-    , cb_idChanger(new QCheckBox)
 {
     updateText();
     init_display();
     init_connections();
-    //auto level and auto stat calc are enabled by default.
-    //always check them when doing these actions.
 }
+
 void CharEditor::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
@@ -139,584 +33,495 @@ void CharEditor::changeEvent(QEvent *e)
     }
     updateText();
 }
+
 void CharEditor::updateText()
 {
-    line_name->setPlaceholderText(tr("Name"));
-    lbl_hp->setText(tr("HP"));
-    lbl_mp->setText(tr("MP"));
-    sb_level->setPrefix(tr("Level").append(": "));
-    sb_maxHp->setToolTip(tr("value calculated ingame; edit BaseHp"));
-    sb_maxMp->setToolTip(tr("value calculated ingame; edit BaseMp"));
-    sb_kills->setPrefix(tr("Kills").append(": "));
-    cb_fury->setText(tr("Fury"));
-    cb_sadness->setText(tr("Sadness"));
-    cb_front_row->setText(tr("Front Row"));
-    lbl_base_hp->setText(tr("Base HP"));
-    lbl_base_mp->setText(tr("Base MP"));
-    lbl_level_progress->setText(tr("Level Progress"));
+    if (!lineName) {
+        lineName = new QLineEdit(this);
+        lineName->setMaxLength(11);
+        lineName->setMaximumWidth(fontMetrics().horizontalAdvance(QChar('W')) * lineName->maxLength());
+    }
+    lineName->setPlaceholderText(tr("Name"));
+
+    if (!lblCurrentHp)
+        lblCurrentHp = new QLabel(this);
+    lblCurrentHp->setText(tr("Current HP"));
+
+    if (!sbCurrentHp) {
+        sbCurrentHp = new QSpinBox(this);
+        sbCurrentHp->setMaximum(qint16Max);
+        sbCurrentHp->setWrapping(true);
+    }
+    sbCurrentHp->setToolTip(tr("Current HP"));
+
+    if (!sbBaseHp)
+        sbBaseHp = new QSpinBox(this);
+    sbBaseHp->setToolTip(tr("Base HP"));
+
+    if (!lblBaseHp)
+        lblBaseHp = new QLabel(this);
+    lblBaseHp->setText(tr("HP"));
+
+    if (!lblBaseHpBonus)
+        lblBaseHpBonus = new QLabel(this);
+    lblBaseHpBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblMaxHp)
+        lblMaxHp = new QLabel(this);
+    lblMaxHp->setToolTip(tr("Maximum HP"));
+
+    if (!lblCurrentMp)
+        lblCurrentMp = new QLabel(this);
+    lblCurrentMp->setText(tr("Current MP"));
+
+    if (!sbCurrentMp) {
+        sbCurrentMp = new QSpinBox(this);
+        sbCurrentMp->setMaximum(qint16Max);
+        sbCurrentMp->setWrapping(true);
+    }
+    sbCurrentMp->setToolTip(tr("Current MP"));
+
+    if (!sbBaseMp)
+        sbBaseMp = new QSpinBox(this);
+    sbBaseMp->setToolTip(tr("Base MP"));
+
+    if (!lblBaseMp)
+        lblBaseMp = new QLabel(this);
+    lblBaseMp->setText(tr("MP"));
+
+    if (!lblBaseMpBonus)
+        lblBaseMpBonus = new QLabel(this);
+    lblBaseMpBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblMaxMp)
+        lblMaxMp = new QLabel(this);
+    lblMaxMp->setToolTip(tr("Maximum MP"));
+
+    if (!sbLevel) {
+        sbLevel = new QSpinBox(this);
+        sbLevel->setMaximum(99);
+    }
+    sbLevel->setPrefix(tr("Level").append(": "));
+
+    if (!sbKills) {
+        sbKills = new QSpinBox(this);
+        sbKills->setMaximum(quint16Max);
+        sbKills->setWrapping(true);
+    }
+    sbKills->setPrefix(tr("Kills").append(": "));
+
+    if (!cbFury)
+        cbFury = new QCheckBox(this);
+    cbFury->setText(tr("Fury"));
+
+    if (!cbSadness)
+        cbSadness = new QCheckBox(this);
+    cbSadness->setText(tr("Sadness"));
+
+    if (!cbFrontRow)
+        cbFrontRow = new QCheckBox(this);
+    cbFrontRow->setText(tr("Front Row"));
+
+    if (!lbl_level_next)
+        lbl_level_next = new QLabel(this);
     lbl_level_next->setText(tr("Next"));
-    sb_total_exp->setPrefix(tr("Exp: "));
-    lbl_limit_bar->setText(tr("Limit Bar"));
-    lbl_str->setText(tr("Str"));
-    lbl_vit->setText(tr("Vit"));
-    lbl_mag->setText(tr("Mag"));
-    lbl_spi->setText(tr("Spi"));
-    lbl_dex->setText(tr("Dex"));
-    lbl_lck->setText(tr("Lck"));
-    lbl_uses->setText(tr("Limit Uses"));
-    lbl_1_1->setText(tr("1-1"));
-    lbl_2_1->setText(tr("2-1"));
-    lbl_3_1->setText(tr("3-1"));
-    lbl_limit_level->setText(tr("Limit Level"));
+
+    if (!sbTotalExp) {
+        sbTotalExp = new QSpinBox(this);
+        sbTotalExp->setMaximumWidth(fontMetrics().horizontalAdvance(QChar('9')) * 16);
+        sbTotalExp->setMaximum(2147483647);
+        sbTotalExp->setWrapping(true);
+    }
+    sbTotalExp->setPrefix(tr("Exp: "));
+
+    if (!lbl_0x34)
+        lbl_0x34 = new QLabel(this);
     lbl_0x34->setText(tr("0x34"));
+
+    if (!lbl_0x35)
+        lbl_0x35 = new QLabel(this);
     lbl_0x35->setText(tr("0x35"));
+
+    if (!lbl_0x36)
+        lbl_0x36 = new QLabel(this);
     lbl_0x36->setText(tr("0x36"));
+
+    if (!lbl_0x37)
+        lbl_0x37 = new QLabel(this);
     lbl_0x37->setText(tr("0x37"));
 
+    if (!lblStr)
+        lblStr = new QLabel(this);
+    lblStr->setText(tr("Str"));
+
+    if (!sbStr)
+        sbStr = new QSpinBox(this);
+    sbStr->setToolTip(tr("Base Strength"));
+
+    if (!sbStrSourceUse)
+        sbStrSourceUse = new QSpinBox(this);
+    sbStrSourceUse->setToolTip(tr("Power Sources Used"));
+
+    if (!lblStrMateriaBonus)
+        lblStrMateriaBonus = new QLabel(this);
+    lblStrMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblStrTotal)
+        lblStrTotal = new QLabel(this);
+    lblStrTotal->setToolTip(tr("Strength Stat Total"));
+
+    if (!lblVit)
+        lblVit = new QLabel(this);
+    lblVit->setText(tr("Vit"));
+
+    if (!sbVit)
+        sbVit = new QSpinBox(this);
+    sbVit->setToolTip(tr("Base Vitality"));
+
+    if (!sbVitSourceUse)
+        sbVitSourceUse = new QSpinBox(this);
+    sbVitSourceUse->setToolTip(tr("Guard Sources Used"));
+
+    if (!lblVitMateriaBonus)
+        lblVitMateriaBonus = new QLabel(this);
+    lblVitMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblVitTotal)
+        lblVitTotal = new QLabel(this);
+    lblVitTotal->setToolTip(tr("Vitality Stat Total"));
+
+    if (!lblMag)
+        lblMag = new QLabel(this);
+    lblMag->setText(tr("Mag"));
+
+    if (!sbMag)
+        sbMag = new QSpinBox(this);
+    sbMag->setToolTip(tr("Base Magic"));
+
+    if (!sbMagSourceUse)
+        sbMagSourceUse = new QSpinBox(this);
+    sbMagSourceUse->setToolTip(tr("Magic Sources Used"));
+
+    if (!lblMagMateriaBonus)
+        lblMagMateriaBonus = new QLabel(this);
+    lblMagMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblMagTotal)
+        lblMagTotal = new QLabel(this);
+    lblMagTotal->setToolTip(tr("Magic Stat Total"));
+
+    if (!lblSpi)
+        lblSpi = new QLabel(this);
+    lblSpi->setText(tr("Spi"));
+
+    if (!sbSpi)
+        sbSpi = new QSpinBox(this);
+    sbSpi->setToolTip(tr("Base Spirit"));
+
+    if (!sbSpiSourceUse)
+        sbSpiSourceUse = new QSpinBox(this);
+    sbSpiSourceUse->setToolTip(tr("Mind Sources Used"));
+
+    if (!lblSpiMateriaBonus)
+        lblSpiMateriaBonus = new QLabel(this);
+    lblSpiMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblSpiTotal)
+        lblSpiTotal = new QLabel(this);
+    lblSpiTotal->setToolTip(tr("Spirit Stat Total"));
+
+    if (!lblDex)
+        lblDex = new QLabel(this);
+    lblDex->setText(tr("Dex"));
+
+    if (!sbDex)
+        sbDex = new QSpinBox(this);
+    sbDex->setToolTip(tr("Base Dexterity"));
+
+    if (!sbDexSourceUse)
+        sbDexSourceUse = new QSpinBox(this);
+    sbDexSourceUse->setToolTip(tr("Speed Sources Used"));
+
+    if (!lblDexMateriaBonus)
+        lblDexMateriaBonus = new QLabel(this);
+    lblDexMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblDexTotal)
+        lblDexTotal = new QLabel(this);
+    lblDexTotal->setToolTip(tr("Dexterity Stat Total"));
+
+    if (!lblLck)
+        lblLck = new QLabel(this);
+    lblLck->setText(tr("Lck"));
+
+    if (!sbLck)
+        sbLck = new QSpinBox(this);
+    sbLck->setToolTip(tr("Base Luck"));
+
+    if (!sbLckSourceUse)
+        sbLckSourceUse = new QSpinBox(this);
+    sbLckSourceUse->setToolTip(tr("Luck Sources Used"));
+
+    if (!lblLckMateriaBonus)
+        lblLckMateriaBonus = new QLabel(this);
+    lblLckMateriaBonus->setToolTip(tr("Materia and Equipment Bonus"));
+
+    if (!lblLckTotal)
+        lblLckTotal = new QLabel(this);
+    lblLckTotal->setToolTip(tr("Luck Stat Total"));
+
+    if (!toolbox) {
+        toolbox = new QToolBox(this);
+    }
     toolbox->setItemText(0, tr("Status Info"));
     toolbox->setItemText(1, tr("Equipment"));
 
+    if (!elemental_box)
+        elemental_box = new QGroupBox(this);
     elemental_box->setTitle(tr("Elemental Effects"));
+
+    if (!status_box)
+        status_box = new QGroupBox(this);
     status_box->setTitle(tr("Status Effects"));
+
+    if (!weapon_box)
+        weapon_box = new QGroupBox(this);
     weapon_box->setTitle(tr("Weapon"));
+
+    if (!armor_box)
+        armor_box = new QGroupBox(this);
     armor_box->setTitle(tr("Armor"));
+
+    if (!accessory_box)
+        accessory_box = new QGroupBox(this);
     accessory_box->setTitle(tr("Accessory"));
 
+    if (!lblWeaponStats)
+        lblWeaponStats = new QLabel(this);
     lblWeaponStats->setText(tr("AP:x%1").arg(Items.materiaGrowthRate(data.weapon + 128)));
+
+    if (!lblArmorStats)
+        lblArmorStats = new QLabel(this);
     lblArmorStats->setText(tr("AP:x%1").arg(Items.materiaGrowthRate(data.armor + 256)));
-    if (data.materias[0].id != FF7Materia::EmptyId) {
-        weapon_slot_1->setToolTip(Materias.name(data.materias[0].id));
+
+    if(!comboId) {
+        comboId = new QComboBox(this);
+        comboId->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        comboId->setHidden(true);
+        for (int i = 0; i < 11; i++)
+            comboId->addItem(Chars.icon(i), Chars.defaultName(i));
     } else {
-        weapon_slot_1->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[1].id != FF7Materia::EmptyId) {
-        weapon_slot_2->setToolTip(Materias.name(data.materias[1].id));
-    } else {
-        weapon_slot_2->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[2].id != FF7Materia::EmptyId) {
-        weapon_slot_3->setToolTip(Materias.name(data.materias[2].id));
-    } else {
-        weapon_slot_3->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[3].id != FF7Materia::EmptyId) {
-        weapon_slot_4->setToolTip(Materias.name(data.materias[3].id));
-    } else {
-        weapon_slot_4->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[4].id != FF7Materia::EmptyId) {
-        weapon_slot_5->setToolTip(Materias.name(data.materias[4].id));
-    } else {
-        weapon_slot_5->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[5].id != FF7Materia::EmptyId) {
-        weapon_slot_6->setToolTip(Materias.name(data.materias[5].id));
-    } else {
-        weapon_slot_6->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[6].id != FF7Materia::EmptyId) {
-        weapon_slot_7->setToolTip(Materias.name(data.materias[6].id));
-    } else {
-        weapon_slot_7->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[7].id != FF7Materia::EmptyId) {
-        weapon_slot_8->setToolTip(Materias.name(data.materias[7].id));
-    } else {
-        weapon_slot_8->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[8].id != FF7Materia::EmptyId) {
-        armor_slot_1->setToolTip(Materias.name(data.materias[8].id));
-    } else {
-        armor_slot_1->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[9].id != FF7Materia::EmptyId) {
-        armor_slot_2->setToolTip(Materias.name(data.materias[9].id));
-    } else {
-        armor_slot_2->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[10].id != FF7Materia::EmptyId) {
-        armor_slot_3->setToolTip(Materias.name(data.materias[10].id));
-    } else {
-        armor_slot_3->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[11].id != FF7Materia::EmptyId) {
-        armor_slot_4->setToolTip(Materias.name(data.materias[11].id));
-    } else {
-        armor_slot_4->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[12].id != FF7Materia::EmptyId) {
-        armor_slot_5->setToolTip(Materias.name(data.materias[12].id));
-    } else {
-        armor_slot_5->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[13].id != FF7Materia::EmptyId) {
-        armor_slot_6->setToolTip(Materias.name(data.materias[13].id));
-    } else {
-        armor_slot_6->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[14].id != FF7Materia::EmptyId) {
-        armor_slot_7->setToolTip(Materias.name(data.materias[14].id));
-    } else {
-        armor_slot_7->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[15].id != FF7Materia::EmptyId) {
-        armor_slot_8->setToolTip(Materias.name(data.materias[15].id));
-    } else {
-        armor_slot_8->setToolTip(QString(tr("-Empty-")));
+        for (int i = 0; i < 11; i++)
+            comboId->setItemText(i, Chars.defaultName(i));
     }
 
-    if (list_limits->count() != 0) {
-        for (int i = 0; i < list_limits->count(); i++) {
-            list_limits->item(i)->setText(Chars.limits(data.id).at(i));
-        }
-    } else {
-        list_limits->addItems(Chars.limits(data.id));
-    }
-    if (combo_id->count() != 0) {
-        for (int i = 0; i < 11; i++) {
-            combo_id->setItemText(i, Chars.defaultName(i));
-        }
-    } else {
-        for (int i = 0; i < 11; i++) {
-            combo_id->addItem(Chars.icon(i), Chars.defaultName(i));
-        }
-    }
-
-    if (armor_selection->count() != 0) {
-        for (int i = 0; i < armor_selection->count(); i++) {
-            armor_selection->setItemText(i, Items.name(i + 256));
-        }
-    } else {
-        for (int i = 256; i < 288; i++) {
-            armor_selection->addItem(QPixmap::fromImage(Items.image(i)), Items.name(i));
-        }
-    }
-
-    if (accessory_selection->count() != 0) {
-        for (int i = 0; i < accessory_selection->count() - 1; i++) {
-            accessory_selection->setItemText(i, Items.name(i + 288));
-        }
-        accessory_selection->setItemText(accessory_selection->count() - 1, tr("-NONE-"));
-    } else {
-        for (int i = 288; i < 320; i++) {
+    QSize iconSize(fontMetrics().height(), fontMetrics().height());
+    if (!accessory_selection) {
+        accessory_selection = new QComboBox(this);
+        accessory_selection->setInsertPolicy(QComboBox::NoInsert);
+        accessory_selection->setIconSize(iconSize);
+        for (int i = 288; i < 320; i++)
             accessory_selection->addItem(QPixmap::fromImage(Items.image(i)), Items.name(i));
-        }
         accessory_selection->addItem(QPixmap::fromImage(Items.image(288)), tr("-NONE-"));
+    } else {
+        for (int i = 0; i < accessory_selection->count() - 1; i++)
+            accessory_selection->setItemText(i, Items.name(i + 288));
+        accessory_selection->setItemText(accessory_selection->count() - 1, tr("-NONE-"));
     }
 
-    if (weapon_selection->count() != 0) {
-        for (int i = 0; i < weapon_selection->count(); i++) {
-            weapon_selection->setItemText(i, Items.name(Chars.weaponStartingId(data.id) + i));
-        }
+    if (!armor_selection) {
+        armor_selection = new QComboBox(this);
+        armor_selection->setInsertPolicy(QComboBox::NoInsert);
+        armor_selection->setIconSize(iconSize);
+        for (int i = 256; i < 288; i++)
+            armor_selection->addItem(QPixmap::fromImage(Items.image(i)), Items.name(i));
     } else {
-        for (int i = Chars.weaponStartingId(data.id); i < Chars.numberOfWeapons(data.id) + Chars.weaponStartingId(data.id); i++) {
-            weapon_selection->addItem(QPixmap::fromImage(Items.image(i)), Items.name(i));
-        }
+        for (int i = 0; i < armor_selection->count(); i++)
+            armor_selection->setItemText(i, Items.name(i + 256));
     }
+
+    if (!weapon_selection) {
+        weapon_selection = new QComboBox(this);
+        weapon_selection->setInsertPolicy(QComboBox::NoInsert);
+        weapon_selection->setIconSize(iconSize);
+    } else {
+        for (int i = 0; i < weapon_selection->count(); i++)
+            weapon_selection->setItemText(i, Items.name(Chars.weaponStartingId(data.id) + i));
+    }
+
+    if (!lbl_limit_bar)
+        lbl_limit_bar = new QLabel(this);
+    lbl_limit_bar->setText(tr("Limit Bar"));
+
+    if (!lbl_uses) {
+        lbl_uses = new QLabel(this);
+        lbl_uses->setAlignment(Qt::AlignHCenter);
+    }
+    lbl_uses->setText(tr("Limit Uses"));
+
+    if (!lbl_1_1) {
+        lbl_1_1 = new QLabel(this);
+        lbl_1_1->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWW")));
+        lbl_1_1->setAlignment(Qt::AlignHCenter);
+    }
+    lbl_1_1->setText(tr("1-1"));
+
+    if (!lbl_2_1) {
+        lbl_2_1 = new QLabel(this);
+        lbl_2_1->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWW")));
+        lbl_2_1->setAlignment(Qt::AlignHCenter);
+    }
+    lbl_2_1->setText(tr("2-1"));
+
+    if (!lbl_3_1) {
+        lbl_3_1 = new QLabel(this);
+        lbl_3_1->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWW")));
+        lbl_3_1->setAlignment(Qt::AlignHCenter);
+    }
+    lbl_3_1->setText(tr("3-1"));
+
+    if (!lbl_limit_level)
+        lbl_limit_level = new QLabel();
+    lbl_limit_level->setText(tr("Limit Level"));
+
+    if (!list_limits) {
+        list_limits = new QListWidget();
+        list_limits->addItems(Chars.limits(0));
+        list_limits->setFixedHeight( (list_limits->sizeHintForRow(0) * 7) + list_limits->contentsMargins().top() + list_limits->contentsMargins().bottom());
+    } else {
+        for (int i = 0; i < list_limits->count(); i++)
+            list_limits->item(i)->setText(Chars.limits(data.id).at(i));
+    }
+
+    updateMateriaToolTips();
     status_info();
     elemental_info();
 }
+
+void CharEditor::updateMateriaToolTips()
+{
+    int i =0;
+    for(auto button : qAsConst(materiaSlots)) {
+        if (data.materias[i].id != FF7Materia::EmptyId) {
+            button->setToolTip(Materias.name(data.materias[i].id));
+        } else {
+            button->setToolTip(QString(tr("-Empty-")));
+        }
+        i++;
+    }
+}
+
 void CharEditor::init_display()
 {
-    lbl_avatar->setFixedSize(int(86 * scale), int(98 * scale));
+    lblAvatar = new QLabel(this);
+    lblAvatar->setFixedSize(int(86 * scale), int(98 * scale));
 
-    sb_maxMp->setVisible(false);
-    sb_maxHp->setVisible(false);
+    cb_idChanger = new QCheckBox(this);
     cb_idChanger->setHidden(true);
 
-    combo_id->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
-    combo_id->setHidden(true);
-
-    sb_base_hp->setFixedWidth(fontMetrics().width(QChar('W')) * 5);
-    sb_base_mp->setFixedWidth(fontMetrics().width(QChar('W')) * 5);
-
+    bar_tnl = new QProgressBar(this);
     bar_tnl->setMaximum(61);//strange indeed..
     bar_tnl->setTextVisible(false);
     bar_tnl->setFixedHeight(int(10 * scale));
     bar_tnl->setFixedWidth(int(61 * scale));
 
-    sb_total_exp->setMaximumWidth(fontMetrics().width(QChar('9')) * 16);
-    sb_total_exp->setMaximum(2147483647);
-    sb_total_exp->setWrapping(true);
+    auto name_level_layout = new QHBoxLayout;
+    name_level_layout->addWidget(lineName);
+    name_level_layout->addSpacerItem(new QSpacerItem(20, 0, QSizePolicy::Fixed, QSizePolicy::Fixed));
+    name_level_layout->addWidget(sbLevel);
 
-    slider_limit->setMaximumHeight(int(20 * scale));
-    slider_limit->setMaximum(255);
-    slider_limit->setOrientation(Qt::Horizontal);
-    lcd_limit_value->setSegmentStyle(QLCDNumber::Flat);
+    auto hp_layout = new QHBoxLayout;
+    hp_layout->addWidget(lblCurrentHp);
+    hp_layout->addWidget(sbCurrentHp);
+    hp_layout->addSpacerItem(new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed));
 
-    sb_str->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_str_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_str_plus_1->setAlignment(Qt::AlignCenter);
-    sb_str_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_str_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_str_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_str_equals = new QLabel(QStringLiteral("="));
+    auto mp_layout = new QHBoxLayout;
+    mp_layout->addWidget(lblCurrentMp);
+    mp_layout->addWidget(sbCurrentMp);
+    mp_layout->addSpacerItem(new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed));
 
-    sb_vit->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_vit_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_vit_plus_1->setAlignment(Qt::AlignCenter);
-    sb_vit_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_vit_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_vit_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_vit_equals = new QLabel(QStringLiteral("="));
-
-    sb_mag->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_mag_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_mag_plus_1->setAlignment(Qt::AlignCenter);
-    sb_mag_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_mag_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_mag_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_mag_equals = new QLabel(QStringLiteral("="));
-
-    sb_spi->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_spi_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_spi_plus_1->setAlignment(Qt::AlignCenter);
-    sb_spi_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_spi_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_spi_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_spi_equals = new QLabel(QStringLiteral("="));
-
-    sb_dex->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_dex_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_dex_plus_1->setAlignment(Qt::AlignCenter);
-    sb_dex_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_dex_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_dex_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_dex_equals = new QLabel(QStringLiteral("="));
-
-    sb_lck->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_lck_plus_1 = new QLabel(QStringLiteral("+"));
-    lbl_lck_plus_1->setAlignment(Qt::AlignCenter);
-    sb_lck_bonus->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_lck_plus_2 = new QLabel(QStringLiteral("+"));
-    lbl_lck_plus_2->setAlignment(Qt::AlignCenter);
-    QLabel *lbl_lck_equals = new QLabel(QStringLiteral("="));
-
-    //Spin Boxes for limit uses.
-    sb_uses_limit_1_1 = new QSpinBox;
-    sb_uses_limit_2_1 = new QSpinBox;
-    sb_uses_limit_3_1 = new QSpinBox;
-    sb_uses_limit_1_1->setFixedWidth(fontMetrics().width(QChar('W')) * 5);
-    sb_uses_limit_2_1->setFixedWidth(fontMetrics().width(QChar('W')) * 5);
-    sb_uses_limit_3_1->setFixedWidth(fontMetrics().width(QChar('W')) * 5);
-    sb_uses_limit_1_1->setAlignment(Qt::AlignCenter);
-    sb_uses_limit_2_1->setAlignment(Qt::AlignCenter);
-    sb_uses_limit_3_1->setAlignment(Qt::AlignCenter);
-
-    lbl_uses->setAlignment(Qt::AlignHCenter);
-    lbl_1_1->setFixedWidth(fontMetrics().width(QChar('W')) * 3);
-    lbl_2_1->setFixedWidth(fontMetrics().width(QChar('W')) * 3);
-    lbl_3_1->setFixedWidth(fontMetrics().width(QChar('W')) * 3);
-    lbl_1_1->setAlignment(Qt::AlignHCenter);
-    lbl_2_1->setAlignment(Qt::AlignHCenter);
-    lbl_3_1->setAlignment(Qt::AlignHCenter);
-
-    QHBoxLayout *layout_1_1 = new QHBoxLayout;
-    layout_1_1->setContentsMargins(0, 0, 0, 0);
-    layout_1_1->addWidget(lbl_1_1);
-    layout_1_1->addWidget(sb_uses_limit_1_1);
-
-    QHBoxLayout *layout_2_1 = new QHBoxLayout;
-    layout_2_1->setContentsMargins(0, 0, 0, 0);
-    layout_2_1->addWidget(lbl_2_1);
-    layout_2_1->addWidget(sb_uses_limit_2_1);
-    QHBoxLayout *layout_3_1 = new QHBoxLayout;
-    layout_3_1->setContentsMargins(0, 0, 0, 0);
-    layout_3_1->addWidget(lbl_3_1);
-    layout_3_1->addWidget(sb_uses_limit_3_1);
-
-    QVBoxLayout *used_limits_layout = new QVBoxLayout;
-    used_limits_layout->setContentsMargins(0, 0, 0, 0);
-    used_limits_layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding));
-    used_limits_layout->addWidget(lbl_uses);
-    used_limits_layout->addLayout(layout_1_1);
-    used_limits_layout->addLayout(layout_2_1);
-    used_limits_layout->addLayout(layout_3_1);
-    used_limits_layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding));
-
-    sb_limit_level->setFixedWidth(fontMetrics().width(QChar('W')) * 4);
-
-    QHBoxLayout *limit_level_layout = new QHBoxLayout;
-    limit_level_layout->setContentsMargins(0, 0, 0, 0);
-    limit_level_layout->addWidget(lbl_limit_level);
-    limit_level_layout->addWidget(sb_limit_level);
-
-    sb_level->setMaximum(99);
-    sb_curMp->setMaximum(32767);
-    sb_curHp->setMaximum(32767);
-    sb_maxMp->setMaximum(32767);
-    sb_maxHp->setMaximum(32767);
-    sb_base_hp->setMaximum(32767);
-    sb_base_mp->setMaximum(32767);
-    sb_kills->setMaximum(65535);
-    sb_str->setMaximum(255);
-    sb_str_bonus->setMaximum(255);
-    sb_vit->setMaximum(255);
-    sb_vit_bonus->setMaximum(255);
-    sb_mag->setMaximum(255);
-    sb_mag_bonus->setMaximum(255);
-    sb_spi->setMaximum(255);
-    sb_spi_bonus->setMaximum(255);
-    sb_dex->setMaximum(255);
-    sb_dex_bonus->setMaximum(255);
-    sb_lck->setMaximum(255);
-    sb_lck_bonus->setMaximum(255);
-    sb_limit_level->setMaximum(4);
-    sb_uses_limit_1_1->setMaximum(32767);
-    sb_uses_limit_2_1->setMaximum(32767);
-    sb_uses_limit_3_1->setMaximum(32767);
-
-    sb_curMp->setWrapping(true);
-    sb_curHp->setWrapping(true);
-    sb_base_hp->setWrapping(true);
-    sb_base_mp->setWrapping(true);
-    sb_kills->setWrapping(true);
-    sb_str->setWrapping(true);
-    sb_str_bonus->setWrapping(true);
-    sb_vit->setWrapping(true);
-    sb_vit_bonus->setWrapping(true);
-    sb_mag->setWrapping(true);
-    sb_mag_bonus->setWrapping(true);
-    sb_spi->setWrapping(true);
-    sb_spi_bonus->setWrapping(true);
-    sb_dex->setWrapping(true);
-    sb_dex_bonus->setWrapping(true);
-    sb_lck->setWrapping(true);
-    sb_lck_bonus->setWrapping(true);
-    sb_limit_level->setWrapping(true);
-    sb_uses_limit_1_1->setWrapping(true);
-    sb_uses_limit_2_1->setWrapping(true);
-    sb_uses_limit_3_1->setWrapping(true);
-
-    line_name->setMaxLength(11);
-    line_name->setMaximumWidth(fontMetrics().width(QChar('W')) * 11);
-
-    QHBoxLayout *name_level_layout = new QHBoxLayout;
-    name_level_layout->addWidget(line_name);
-    QSpacerItem *name_spacer = new QSpacerItem(20, 0, QSizePolicy::Fixed, QSizePolicy::Fixed);
-    name_level_layout->addSpacerItem(name_spacer);
-    name_level_layout->addWidget(sb_level);
-
-    QHBoxLayout *hp_layout = new QHBoxLayout;
-    hp_layout->addWidget(lbl_hp);
-    hp_layout->addWidget(sb_curHp);
-    hp_layout->addWidget(lbl_hp_slash);
-    hp_layout->addWidget(lbl_hp_max);
-    hp_layout->addWidget(sb_maxHp);
-    QSpacerItem *hp_spacer1 = new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    hp_layout->addSpacerItem(hp_spacer1);
-    QSpacerItem *hp_spacer = new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    hp_layout->addSpacerItem(hp_spacer);
-
-    QHBoxLayout *mp_layout = new QHBoxLayout;
-    mp_layout->addWidget(lbl_mp);
-    mp_layout->addWidget(sb_curMp);
-    mp_layout->addWidget(lbl_mp_slash);
-    mp_layout->addWidget(lbl_mp_max);
-    mp_layout->addWidget(sb_maxMp);
-    QSpacerItem *mp_spacer1 = new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    mp_layout->addSpacerItem(mp_spacer1);
-    QSpacerItem *mp_spacer = new QSpacerItem(20, 0, QSizePolicy::Expanding, QSizePolicy::Fixed);
-    mp_layout->addSpacerItem(mp_spacer);
-
-    QHBoxLayout *barNextLayout = new QHBoxLayout();
+    auto barNextLayout = new QHBoxLayout();
     barNextLayout->setContentsMargins(0, 0, 0, 0);
     barNextLayout->addWidget(bar_tnl);
     barNextLayout->addWidget(lbl_level_next);
     barNextLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed));
 
-    QVBoxLayout *exp_layout = new QVBoxLayout;
+    auto exp_layout = new QVBoxLayout;
     exp_layout->setContentsMargins(0, 0, 0, 0);
-    exp_layout->addWidget(sb_total_exp);
+    exp_layout->addWidget(sbTotalExp);
     exp_layout->addLayout(barNextLayout);
 
-    QHBoxLayout *kills_layout = new QHBoxLayout;
+    auto kills_layout = new QHBoxLayout;
     kills_layout->setContentsMargins(0, 0, 0, 0);
-    kills_layout->addWidget(sb_kills);
+    kills_layout->addWidget(sbKills);
     kills_layout->addLayout(exp_layout);
 
-    QVBoxLayout *name_hp_mp_kills_layout = new QVBoxLayout;
+    auto name_hp_mp_kills_layout = new QVBoxLayout;
     name_hp_mp_kills_layout->addLayout(name_level_layout);
     name_hp_mp_kills_layout->addLayout(hp_layout);
     name_hp_mp_kills_layout->addLayout(mp_layout);
     name_hp_mp_kills_layout->addLayout(kills_layout);
 
-    QVBoxLayout *fury_sadness_layout = new QVBoxLayout;
+    auto fury_sadness_layout = new QVBoxLayout;
     fury_sadness_layout->setContentsMargins(0, 0, 0, 0);
-    fury_sadness_layout->addWidget(cb_fury);
-    fury_sadness_layout->addWidget(cb_sadness);
+    fury_sadness_layout->addWidget(cbFury);
+    fury_sadness_layout->addWidget(cbSadness);
 
-    QVBoxLayout *sadness_row_id_layout = new QVBoxLayout;
+    auto sadness_row_id_layout = new QVBoxLayout;
     sadness_row_id_layout->addLayout(fury_sadness_layout);
     sadness_row_id_layout->addSpacerItem(new QSpacerItem(0, 6, QSizePolicy::Preferred, QSizePolicy::Preferred));
-    sadness_row_id_layout->addWidget(cb_front_row);
+    sadness_row_id_layout->addWidget(cbFrontRow);
     sadness_row_id_layout->addWidget(cb_idChanger);
     sadness_row_id_layout->addSpacerItem(new QSpacerItem(0, 6, QSizePolicy::Preferred, QSizePolicy::Preferred));
-    sadness_row_id_layout->addWidget(combo_id);
+    sadness_row_id_layout->addWidget(comboId);
 
-    QHBoxLayout *avatar_name_layout = new QHBoxLayout;
+    auto avatar_name_layout = new QHBoxLayout;
     avatar_name_layout->setContentsMargins(0, 0, 0, 0);
-    avatar_name_layout->addWidget(lbl_avatar);
+    avatar_name_layout->addWidget(lblAvatar);
     avatar_name_layout->addLayout(name_hp_mp_kills_layout);
     avatar_name_layout->addLayout(sadness_row_id_layout);
 
-    QHBoxLayout *limit_bar_layout = new QHBoxLayout;
-    limit_bar_layout->setContentsMargins(0, 0, 0, 0);
-    limit_bar_layout->addLayout(limit_level_layout);
-
-    QSpacerItem *limitSpacer = new QSpacerItem(10, 0, QSizePolicy::Fixed, QSizePolicy::Fixed);
-    limit_bar_layout->addSpacerItem(limitSpacer);
-    limit_bar_layout->addWidget(lbl_limit_bar);
-    limit_bar_layout->addWidget(slider_limit);
-    limit_bar_layout->addWidget(lcd_limit_value);
-
-    QHBoxLayout *str_layout = new QHBoxLayout;
-    str_layout->setContentsMargins(0, 0, 0, 0);
-    str_layout->addWidget(lbl_str);
-    str_layout->addWidget(sb_str);
-    str_layout->addWidget(lbl_str_plus_1);
-    str_layout->addWidget(sb_str_bonus);
-    str_layout->addWidget(lbl_str_plus_2);
-    str_layout->addWidget(lbl_str_mat_bonus);
-    str_layout->addWidget(lbl_str_equals);
-    str_layout->addWidget(lbl_str_total);
-
-    QHBoxLayout *vit_layout = new QHBoxLayout;
-    vit_layout->setContentsMargins(0, 0, 0, 0);
-    vit_layout->addWidget(lbl_vit);
-    vit_layout->addWidget(sb_vit);
-    vit_layout->addWidget(lbl_vit_plus_1);
-    vit_layout->addWidget(sb_vit_bonus);
-    vit_layout->addWidget(lbl_vit_plus_2);
-    vit_layout->addWidget(lbl_vit_mat_bonus);
-    vit_layout->addWidget(lbl_vit_equals);
-    vit_layout->addWidget(lbl_vit_total);
-
-    QHBoxLayout *mag_layout = new QHBoxLayout;
-    mag_layout->setContentsMargins(0, 0, 0, 0);
-    mag_layout->addWidget(lbl_mag);
-    mag_layout->addWidget(sb_mag);
-    mag_layout->addWidget(lbl_mag_plus_1);
-    mag_layout->addWidget(sb_mag_bonus);
-    mag_layout->addWidget(lbl_mag_plus_2);
-    mag_layout->addWidget(lbl_mag_mat_bonus);
-    mag_layout->addWidget(lbl_mag_equals);
-    mag_layout->addWidget(lbl_mag_total);
-
-    QHBoxLayout *spi_layout = new QHBoxLayout;
-    spi_layout->setContentsMargins(0, 0, 0, 0);
-    spi_layout->addWidget(lbl_spi);
-    spi_layout->addWidget(sb_spi);
-    spi_layout->addWidget(lbl_spi_plus_1);
-    spi_layout->addWidget(sb_spi_bonus);
-    spi_layout->addWidget(lbl_spi_plus_2);
-    spi_layout->addWidget(lbl_spi_mat_bonus);
-    spi_layout->addWidget(lbl_spi_equals);
-    spi_layout->addWidget(lbl_spi_total);
-
-    QHBoxLayout *dex_layout = new QHBoxLayout;
-    dex_layout->setContentsMargins(0, 0, 0, 0);
-    dex_layout->addWidget(lbl_dex);
-    dex_layout->addWidget(sb_dex);
-    dex_layout->addWidget(lbl_dex_plus_1);
-    dex_layout->addWidget(sb_dex_bonus);
-    dex_layout->addWidget(lbl_dex_plus_2);
-    dex_layout->addWidget(lbl_dex_mat_bonus);
-    dex_layout->addWidget(lbl_dex_equals);
-    dex_layout->addWidget(lbl_dex_total);
-
-    QHBoxLayout *lck_layout = new QHBoxLayout;
-    lck_layout->setContentsMargins(0, 0, 0, 0);
-    lck_layout->addWidget(lbl_lck);
-    lck_layout->addWidget(sb_lck);
-    lck_layout->addWidget(lbl_lck_plus_1);
-    lck_layout->addWidget(sb_lck_bonus);
-    lck_layout->addWidget(lbl_lck_plus_2);
-    lck_layout->addWidget(lbl_lck_mat_bonus);
-    lck_layout->addWidget(lbl_lck_equals);
-    lck_layout->addWidget(lbl_lck_total);
-
-    QHBoxLayout *base_hp_layout = new QHBoxLayout;
-    base_hp_layout->setContentsMargins(0, 0, 0, 0);
-    base_hp_layout->addWidget(lbl_base_hp);
-    base_hp_layout->addWidget(sb_base_hp);
-    base_hp_layout->addWidget(lbl_base_hp_bonus);
-    base_hp_layout->addSpacerItem(new QSpacerItem(3, 0, QSizePolicy::Expanding, QSizePolicy::Fixed));
-
-    QHBoxLayout *base_mp_layout = new QHBoxLayout;
-    base_mp_layout->setContentsMargins(0, 0, 0, 0);
-    base_mp_layout->addWidget(lbl_base_mp);
-    base_mp_layout->addWidget(sb_base_mp);
-    base_mp_layout->addWidget(lbl_base_mp_bonus);
-    base_mp_layout->addSpacerItem(new QSpacerItem(3, 0, QSizePolicy::Expanding, QSizePolicy::Fixed));
-
-    QHBoxLayout *base_hp_mp_layout = new QHBoxLayout;
-    base_hp_mp_layout->setContentsMargins(0, 0, 0, 0);
-    base_hp_mp_layout->setSpacing(3);
-    base_hp_mp_layout->addLayout(base_hp_layout);
-    base_hp_mp_layout->addLayout(base_mp_layout);
-
-    QVBoxLayout *stat_layout = new QVBoxLayout;
-    stat_layout->setContentsMargins(0, 2, 0, 0);
-    stat_layout->setSpacing(0);
-    stat_layout->addLayout(str_layout);
-    stat_layout->addLayout(vit_layout);
-    stat_layout->addLayout(mag_layout);
-    stat_layout->addLayout(spi_layout);
-    stat_layout->addLayout(dex_layout);
-    stat_layout->addLayout(lck_layout);
-    stat_layout->addLayout(base_hp_mp_layout);
-
-    QFrame *stat_box = new QFrame;
-    stat_box->setLayout(stat_layout);
-    stat_box->adjustSize();
-
-    lcd_0x34 = new QLCDNumber;
-    lcd_0x34->setDigitCount(2);
+    lcd_0x34 = new QLCDNumber(2);
     lcd_0x34->setFixedSize(int(32 * scale), int(20 * scale));
     lcd_0x34->setHexMode();
     lcd_0x34->setSegmentStyle(QLCDNumber::Flat);
-    QVBoxLayout *_0x34_layout = new QVBoxLayout;
+    auto _0x34_layout = new QVBoxLayout;
     _0x34_layout->setContentsMargins(0, 0, 0, 0);
     _0x34_layout->setSpacing(0);
     _0x34_layout->addWidget(lbl_0x34);
     _0x34_layout->addWidget(lcd_0x34);
 
-    lcd_0x35 = new QLCDNumber;
-    lcd_0x35->setDigitCount(2);
+    lcd_0x35 = new QLCDNumber(2);
     lcd_0x35->setFixedSize(int (32 * scale), int(20 * scale));
     lcd_0x35->setHexMode();
     lcd_0x35->setSegmentStyle(QLCDNumber::Flat);
-    QVBoxLayout *_0x35_layout = new QVBoxLayout;
+    auto _0x35_layout = new QVBoxLayout;
     _0x35_layout->setContentsMargins(0, 0, 0, 0);
     _0x35_layout->setSpacing(0);
     _0x35_layout->addWidget(lbl_0x35);
     _0x35_layout->addWidget(lcd_0x35);
 
-    lcd_0x36 = new QLCDNumber;
-    lcd_0x36->setDigitCount(2);
+    lcd_0x36 = new QLCDNumber(2);
     lcd_0x36->setFixedSize(int(32 * scale), int(20 * scale));
     lcd_0x36->setHexMode();
     lcd_0x36->setSegmentStyle(QLCDNumber::Flat);
-    QVBoxLayout *_0x36_layout = new QVBoxLayout;
+    auto _0x36_layout = new QVBoxLayout;
     _0x36_layout->setContentsMargins(0, 0, 0, 0);
     _0x36_layout->setSpacing(0);
     _0x36_layout->addWidget(lbl_0x36);
     _0x36_layout->addWidget(lcd_0x36);
 
-    lcd_0x37 = new QLCDNumber;
-    lcd_0x37->setDigitCount(2);
+    lcd_0x37 = new QLCDNumber(2);
     lcd_0x37->setFixedSize(int(32 * scale), int(20 * scale));
     lcd_0x37->setHexMode();
-
     lcd_0x37->setSegmentStyle(QLCDNumber::Flat);
-    QVBoxLayout *_0x37_layout = new QVBoxLayout;
+    auto _0x37_layout = new QVBoxLayout;
     _0x37_layout->setContentsMargins(0, 0, 0, 0);
     _0x37_layout->setSpacing(0);
     _0x37_layout->addWidget(lbl_0x37);
     _0x37_layout->addWidget(lcd_0x37);
 
-    QVBoxLayout *unknown_layout = new QVBoxLayout;
+    auto unknown_layout = new QVBoxLayout;
     unknown_layout->setContentsMargins(0, 0, 0, 0);
     unknown_layout->setSpacing(0);
     unknown_layout->addLayout(_0x34_layout);
@@ -726,279 +531,89 @@ void CharEditor::init_display()
 
     unknown_box = new QFrame;
     unknown_box->setLayout(unknown_layout);
-    unknown_box->setFixedHeight(stat_box->height());
     unknown_box->setVisible(false);
 
-    QHBoxLayout *stat_layout_2 = new QHBoxLayout;
+    auto stat_layout_2 = new QHBoxLayout;
     stat_layout_2->setContentsMargins(0, 0, 0, 0);
-    stat_layout_2->addWidget(stat_box);
+    stat_layout_2->addWidget(makeStatFrame());
     stat_layout_2->addWidget(unknown_box);
 
-    QHBoxLayout *limit_use_list = new QHBoxLayout;
-    limit_use_list->addLayout(used_limits_layout);
-    limit_use_list->addWidget(list_limits);
-
-    QVBoxLayout *limit_box = new QVBoxLayout;
-    limit_box->setContentsMargins(0, 0, 0, 0);
-    limit_box->addLayout(limit_bar_layout);
-    limit_box->addLayout(limit_use_list);
-
-    QVBoxLayout *lower_section = new QVBoxLayout;
+    auto lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0, 0, 0, 0);
     lower_section->setSpacing(0);
     lower_section->addLayout(stat_layout_2);
-    lower_section->addLayout(limit_box);
+    lower_section->addLayout(makeLimitLayout());
 
-    QVBoxLayout *left_Final = new QVBoxLayout;
+    auto left_Final = new QVBoxLayout;
     left_Final->setContentsMargins(0, 0, 0, 0);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(lower_section);
     left_Final->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Preferred, QSizePolicy::MinimumExpanding));
-    QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
-
-    weapon_selection->setIconSize(iconSize);
-    armor_selection->setIconSize(iconSize);
-    accessory_selection->setIconSize(iconSize);
 
     materia_edit  = new MateriaEditor(this);
     materia_edit->setStarsSize(int(32 * scale));
 
-    QHBoxLayout *elemental = new QHBoxLayout();
+    auto elemental = new QHBoxLayout();
     elemental->setContentsMargins(0, 0, 0, 0);
     elemental->addWidget(elemental_effects);
 
     elemental_box->setContentsMargins(3, 3, 3, 3);
     elemental_box->setLayout(elemental);
-    elemental_box->setHidden(1);
+    elemental_box->setHidden(true);
 
-    QVBoxLayout *elemental_layout = new QVBoxLayout();
+    auto elemental_layout = new QVBoxLayout();
     elemental_layout->setContentsMargins(0, 0, 0, 0);
     elemental_layout->addWidget(elemental_box);
     elemental_layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding));
 
-    QHBoxLayout *status = new QHBoxLayout();
+    auto status = new QHBoxLayout();
     status->setContentsMargins(0, 0, 0, 0);
     status->addWidget(status_effects);
 
     status_box->setContentsMargins(3, 3, 3, 3);
     status_box->setLayout(status);
-    status_box->setHidden(1);
+    status_box->setHidden(true);
 
-    QVBoxLayout *status_layout = new QVBoxLayout();
+    auto status_layout = new QVBoxLayout();
     status_layout->setContentsMargins(0, 0, 0, 0);
     status_layout->addWidget(status_box);
     status_layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding));
 
-    QHBoxLayout *effects_layout = new QHBoxLayout();
+    auto effects_layout = new QHBoxLayout();
     effects_layout->setContentsMargins(0, 0, 0, 0);
     effects_layout->addLayout(elemental_layout);
     effects_layout->addLayout(status_layout);
-    QSpacerItem *spacer2 = new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    effects_layout->addSpacerItem(spacer2);
+    effects_layout->addSpacerItem(new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum));
     effects_layout->setSpacing(0);
 
-    //set up materia slots and box for weapon.
-    weapon_materia_box = new QFrame;
-    weapon_materia_box->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    QSpacerItem *weapon_spacer = new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    //I Like the No Growth Slots They Look Better so i always use them
-    // you can use FF7Item::Style_m_grow_slot() to get the style of that slot
+    for(int i = 0; i< 16; i++) {
+        materiaSlots.append(new QPushButton);
+        connect(materiaSlots.at(i), &QPushButton::clicked, this, [this, i] {
+            materiaSlotClicked(i);
+        });
+    }
 
-    QSize slotSize = QSize(int(32 * scale), int(32 * scale));
-    QSize linkSize = QSize(int(12 * scale), int(16 * scale));
-    weapon_slot_1 = new QPushButton();
-    weapon_slot_1->setFixedSize(slotSize);
-    weapon_slot_1->setIconSize(QSize(slotSize));
-    weapon_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_1->setHidden(1);
+    for(int i = 0; i< 16; i++)
+        materiaSlotFrames.append(new QFrame);
 
-    QHBoxLayout *weapon_slot_1_layout = new QHBoxLayout;
-    weapon_slot_1_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_1_layout->addWidget(weapon_slot_1);
-
-    weapon_frm_1 = new QFrame;
-    weapon_frm_1->setFixedSize(slotSize);
-    weapon_frm_1->setFrameShape(QFrame::NoFrame);
-    weapon_frm_1->setFrameShadow(QFrame::Plain);
-    weapon_frm_1->setLayout(weapon_slot_1_layout);
-
-    weapon_m_link_1 = new QLabel();
-    weapon_m_link_1->setFixedSize(linkSize);
-
-    weapon_slot_2 = new QPushButton();
-    weapon_slot_2->setFixedSize(slotSize);
-    weapon_slot_2->setIconSize(QSize(slotSize));
-    weapon_slot_2->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_2->setHidden(1);
-
-    QHBoxLayout *weapon_slot_2_layout = new QHBoxLayout;
-    weapon_slot_2_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_2_layout->addWidget(weapon_slot_2);
-
-    weapon_frm_2 = new QFrame;
-    weapon_frm_2->setFixedSize(slotSize);
-    weapon_frm_2->setFrameShape(QFrame::NoFrame);
-    weapon_frm_2->setFrameShadow(QFrame::Plain);
-    weapon_frm_2->setLayout(weapon_slot_2_layout);
-
-    QHBoxLayout *weapon_slots_1_and_2 = new QHBoxLayout();
-    weapon_slots_1_and_2->setContentsMargins(0, 0, 0, 0);
-    weapon_slots_1_and_2->addWidget(weapon_frm_1);
-    weapon_slots_1_and_2->addWidget(weapon_m_link_1);
-    weapon_slots_1_and_2->addWidget(weapon_frm_2);
-    weapon_slots_1_and_2->setSpacing(0);
-
-    weapon_slot_3 = new QPushButton();
-    weapon_slot_3->setFixedSize(slotSize);
-    weapon_slot_3->setFlat(true);
-    weapon_slot_3->setAutoFillBackground(true);
-    weapon_slot_3->setIconSize(QSize(slotSize));
-    weapon_slot_3->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_3->setHidden(1);
-
-    QHBoxLayout *weapon_slot_3_layout = new QHBoxLayout;
-    weapon_slot_3_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_3_layout->addWidget(weapon_slot_3);
-
-    weapon_frm_3 = new QFrame;
-    weapon_frm_3->setFixedSize(slotSize);
-    weapon_frm_3->setFrameShape(QFrame::NoFrame);
-    weapon_frm_3->setFrameShadow(QFrame::Plain);
-    weapon_frm_3->setLayout(weapon_slot_3_layout);
-
-    weapon_m_link_2 = new QLabel();
-    weapon_m_link_2->setFixedSize(linkSize);
-
-    weapon_slot_4 = new QPushButton();
-    weapon_slot_4->setFixedSize(slotSize);
-    weapon_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_4->setFlat(true);
-    weapon_slot_4->setAutoFillBackground(true);
-    weapon_slot_4->setIconSize(QSize(slotSize));
-    weapon_slot_4->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_4->setHidden(1);
-
-    QHBoxLayout *weapon_slot_4_layout = new QHBoxLayout;
-    weapon_slot_4_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_4_layout->addWidget(weapon_slot_4);
-
-    weapon_frm_4 = new QFrame;
-    weapon_frm_4->setFixedSize(slotSize);
-    weapon_frm_4->setFrameShape(QFrame::NoFrame);
-    weapon_frm_4->setFrameShadow(QFrame::Plain);
-    weapon_frm_4->setLayout(weapon_slot_4_layout);
-
-    QHBoxLayout *weapon_slots_3_and_4 = new QHBoxLayout();
-    weapon_slots_3_and_4->setContentsMargins(0, 0, 0, 0);
-    weapon_slots_3_and_4->addWidget(weapon_frm_3);
-    weapon_slots_3_and_4->addWidget(weapon_m_link_2);
-    weapon_slots_3_and_4->addWidget(weapon_frm_4);
-    weapon_slots_3_and_4->setSpacing(0);
-
-    weapon_slot_5 = new QPushButton();
-    weapon_slot_5->setFixedSize(slotSize);
-    weapon_slot_5->setFlat(true);
-    weapon_slot_5->setAutoFillBackground(true);
-    weapon_slot_5->setIconSize(QSize(slotSize));
-    weapon_slot_5->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_5->setHidden(1);
-
-    QHBoxLayout *weapon_slot_5_layout = new QHBoxLayout;
-    weapon_slot_5_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_5_layout->addWidget(weapon_slot_5);
-
-    weapon_frm_5 = new QFrame;
-    weapon_frm_5->setFixedSize(slotSize);
-    weapon_frm_5->setFrameShape(QFrame::NoFrame);
-    weapon_frm_5->setFrameShadow(QFrame::Plain);
-    weapon_frm_5->setLayout(weapon_slot_5_layout);
-
-    weapon_m_link_3 = new QLabel();
-    weapon_m_link_3->setFixedSize(linkSize);
-
-    weapon_slot_6 = new QPushButton();
-    weapon_slot_6->setFixedSize(slotSize);
-    weapon_slot_6->setFlat(true);
-    weapon_slot_6->setAutoFillBackground(true);
-    weapon_slot_6->setIconSize(QSize(slotSize));
-    weapon_slot_6->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_6->setHidden(1);
-
-    QHBoxLayout *weapon_slot_6_layout = new QHBoxLayout;
-    weapon_slot_6_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_6_layout->addWidget(weapon_slot_6);
-
-    weapon_frm_6 = new QFrame;
-    weapon_frm_6->setFixedSize(slotSize);
-    weapon_frm_6->setFrameShape(QFrame::NoFrame);
-    weapon_frm_6->setFrameShadow(QFrame::Plain);
-    weapon_frm_6->setLayout(weapon_slot_6_layout);
-
-    QHBoxLayout *weapon_slots_5_and_6 = new QHBoxLayout();
-    weapon_slots_5_and_6->setContentsMargins(0, 0, 0, 0);
-    weapon_slots_5_and_6->addWidget(weapon_frm_5);
-    weapon_slots_5_and_6->addWidget(weapon_m_link_3);
-    weapon_slots_5_and_6->addWidget(weapon_frm_6);
-    weapon_slots_5_and_6->setSpacing(0);
-
-    weapon_slot_7 = new QPushButton();
-    weapon_slot_7->setFixedSize(slotSize);
-    weapon_slot_7->setFlat(true);
-    weapon_slot_7->setAutoFillBackground(true);
-    weapon_slot_7->setIconSize(QSize(slotSize));
-    weapon_slot_7->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_7->setHidden(1);
-
-    QHBoxLayout *weapon_slot_7_layout = new QHBoxLayout;
-    weapon_slot_7_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_7_layout->addWidget(weapon_slot_7);
-
-    weapon_frm_7 = new QFrame;
-    weapon_frm_7->setFixedSize(slotSize);
-    weapon_frm_7->setFrameShape(QFrame::NoFrame);
-    weapon_frm_7->setFrameShadow(QFrame::Plain);
-    weapon_frm_7->setLayout(weapon_slot_7_layout);
-
-    weapon_m_link_4 = new QLabel();
-    weapon_m_link_4->setFixedSize(linkSize);
-
-    weapon_slot_8 = new QPushButton();
-    weapon_slot_8->setFixedSize(slotSize);
-    weapon_slot_8->setFlat(true);
-    weapon_slot_8->setAutoFillBackground(true);
-    weapon_slot_8->setIconSize(QSize(slotSize));
-    weapon_slot_8->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    weapon_slot_8->setHidden(1);
-
-    QHBoxLayout *weapon_slot_8_layout = new QHBoxLayout;
-    weapon_slot_8_layout->setContentsMargins(0, 0, 0, 0);
-    weapon_slot_8_layout->addWidget(weapon_slot_8);
-
-    weapon_frm_8 = new QFrame;
-    weapon_frm_8->setFixedSize(slotSize);
-    weapon_frm_8->setFrameShape(QFrame::NoFrame);
-    weapon_frm_8->setFrameShadow(QFrame::Plain);
-    weapon_frm_8->setLayout(weapon_slot_8_layout);
-
-    QHBoxLayout *weapon_slots_7_and_8 = new QHBoxLayout();
-    weapon_slots_7_and_8->setContentsMargins(0, 0, 0, 0);
-    weapon_slots_7_and_8->addWidget(weapon_frm_7);
-    weapon_slots_7_and_8->addWidget(weapon_m_link_4);
-    weapon_slots_7_and_8->addWidget(weapon_frm_8);
-    weapon_slots_7_and_8->setSpacing(0);
-
-    QHBoxLayout *weapon_materia_slots = new QHBoxLayout();
+    weapon_m_link_1 = new QLabel(this);
+    weapon_m_link_2 = new QLabel(this);
+    weapon_m_link_3 = new QLabel(this);
+    weapon_m_link_4 = new QLabel(this);
+    auto weapon_materia_slots = new QHBoxLayout;
     weapon_materia_slots->setContentsMargins(0, 0, 0, 0);
-    weapon_materia_slots->addLayout(weapon_slots_1_and_2);
-    weapon_materia_slots->addLayout(weapon_slots_3_and_4);
-    weapon_materia_slots->addLayout(weapon_slots_5_and_6);
-    weapon_materia_slots->addLayout(weapon_slots_7_and_8);
-    weapon_materia_slots->addSpacerItem(weapon_spacer);
+    weapon_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(0), materiaSlots.at(1), materiaSlotFrames.at(0), materiaSlotFrames.at(1), weapon_m_link_1));
+    weapon_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(2), materiaSlots.at(3), materiaSlotFrames.at(2), materiaSlotFrames.at(3), weapon_m_link_2));
+    weapon_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(4), materiaSlots.at(5), materiaSlotFrames.at(4), materiaSlotFrames.at(5), weapon_m_link_3));
+    weapon_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(6), materiaSlots.at(7), materiaSlotFrames.at(6), materiaSlotFrames.at(7), weapon_m_link_4));
+    weapon_materia_slots->addSpacerItem(new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum));
     weapon_materia_slots->setSpacing(12);
 
+    weapon_materia_box = new QFrame;
     weapon_materia_box->setLayout(weapon_materia_slots);
+    weapon_materia_box->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 
-    QVBoxLayout *weapon_layout = new QVBoxLayout;
+    auto weapon_layout = new QVBoxLayout;
     weapon_layout->setContentsMargins(0, 0, 0, 0);
     weapon_layout->addWidget(weapon_selection);
     weapon_layout->addWidget(lblWeaponStats);
@@ -1007,208 +622,25 @@ void CharEditor::init_display()
     weapon_box->setLayout(weapon_layout);
     weapon_box->adjustSize();
     //set up materia slots and box for armor.
-    armor_materia_box = new QFrame;
 
-    QSpacerItem *armor_spacer = new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    //I Like the No Growth Slots They Look Better so i always use them
-    // you can use FF7Item::Style_m_grow_slot() to get the style of that slot
-
-    armor_slot_1 = new QPushButton();
-    armor_slot_1->setFixedSize(slotSize);
-    armor_slot_1->setIconSize(QSize(slotSize));
-    armor_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_1->setHidden(1);
-
-    QHBoxLayout *armor_slot_1_layout = new QHBoxLayout;
-    armor_slot_1_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_1_layout->addWidget(armor_slot_1);
-
-    armor_frm_1 = new QFrame;
-    armor_frm_1->setFixedSize(slotSize);
-    armor_frm_1->setFrameShape(QFrame::NoFrame);
-    armor_frm_1->setFrameShadow(QFrame::Plain);
-    armor_frm_1->setLayout(armor_slot_1_layout);
-
-    armor_m_link_1 = new QLabel();
-    armor_m_link_1->setFixedSize(linkSize);
-
-    armor_slot_2 = new QPushButton();
-    armor_slot_2->setFixedSize(slotSize);
-    armor_slot_2->setIconSize(QSize(slotSize));
-    armor_slot_2->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_2->setHidden(1);
-
-    QHBoxLayout *armor_slot_2_layout = new QHBoxLayout;
-    armor_slot_2_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_2_layout->addWidget(armor_slot_2);
-
-    armor_frm_2 = new QFrame;
-    armor_frm_2->setFixedSize(slotSize);
-    armor_frm_2->setFrameShape(QFrame::NoFrame);
-    armor_frm_2->setFrameShadow(QFrame::Plain);
-    armor_frm_2->setLayout(armor_slot_2_layout);
-
-    QHBoxLayout *armor_slots_1_and_2 = new QHBoxLayout();
-    armor_slots_1_and_2->setContentsMargins(0, 0, 0, 0);
-    armor_slots_1_and_2->addWidget(armor_frm_1);
-    armor_slots_1_and_2->addWidget(armor_m_link_1);
-    armor_slots_1_and_2->addWidget(armor_frm_2);
-    armor_slots_1_and_2->setSpacing(0);
-
-    armor_slot_3 = new QPushButton();
-    armor_slot_3->setFixedSize(slotSize);
-    armor_slot_3->setFlat(true);
-    armor_slot_3->setAutoFillBackground(true);
-    armor_slot_3->setIconSize(QSize(slotSize));
-    armor_slot_3->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_3->setHidden(1);
-
-    QHBoxLayout *armor_slot_3_layout = new QHBoxLayout;
-    armor_slot_3_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_3_layout->addWidget(armor_slot_3);
-
-    armor_frm_3 = new QFrame;
-    armor_frm_3->setFixedSize(slotSize);
-    armor_frm_3->setFrameShape(QFrame::NoFrame);
-    armor_frm_3->setFrameShadow(QFrame::Plain);
-    armor_frm_3->setLayout(armor_slot_3_layout);
-
-    armor_m_link_2 = new QLabel();
-    armor_m_link_2->setFixedSize(linkSize);
-    armor_m_link_2->setScaledContents(1);
-
-    armor_slot_4 = new QPushButton();
-    armor_slot_4->setFixedSize(slotSize);
-    armor_slot_1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_4->setFlat(true);
-    armor_slot_4->setAutoFillBackground(true);
-    armor_slot_4->setIconSize(QSize(slotSize));
-    armor_slot_4->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_4->setHidden(1);
-
-    QHBoxLayout *armor_slot_4_layout = new QHBoxLayout;
-    armor_slot_4_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_4_layout->addWidget(armor_slot_4);
-
-    armor_frm_4 = new QFrame;
-    armor_frm_4->setFixedSize(slotSize);
-    armor_frm_4->setFrameShape(QFrame::NoFrame);
-    armor_frm_4->setFrameShadow(QFrame::Plain);
-    armor_frm_4->setLayout(armor_slot_4_layout);
-
-    QHBoxLayout *armor_slots_3_and_4 = new QHBoxLayout();
-    armor_slots_3_and_4->setContentsMargins(0, 0, 0, 0);
-    armor_slots_3_and_4->addWidget(armor_frm_3);
-    armor_slots_3_and_4->addWidget(armor_m_link_2);
-    armor_slots_3_and_4->addWidget(armor_frm_4);
-    armor_slots_3_and_4->setSpacing(0);
-
-    armor_slot_5 = new QPushButton();
-    armor_slot_5->setFixedSize(slotSize);
-    armor_slot_5->setFlat(true);
-    armor_slot_5->setAutoFillBackground(true);
-    armor_slot_5->setIconSize(QSize(slotSize));
-    armor_slot_5->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_5->setHidden(1);
-
-    QHBoxLayout *armor_slot_5_layout = new QHBoxLayout;
-    armor_slot_5_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_5_layout->addWidget(armor_slot_5);
-
-    armor_frm_5 = new QFrame;
-    armor_frm_5->setFixedSize(slotSize);
-    armor_frm_5->setFrameShape(QFrame::NoFrame);
-    armor_frm_5->setFrameShadow(QFrame::Plain);
-    armor_frm_5->setLayout(armor_slot_5_layout);
-
-    armor_m_link_3 = new QLabel();
-    armor_m_link_3->setFixedSize(linkSize);
-    armor_m_link_3->setScaledContents(1);
-
-    armor_slot_6 = new QPushButton();
-    armor_slot_6->setFixedSize(slotSize);
-    armor_slot_6->setFlat(true);
-    armor_slot_6->setAutoFillBackground(true);
-    armor_slot_6->setIconSize(QSize(slotSize));
-    armor_slot_6->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_6->setHidden(1);
-
-    QHBoxLayout *armor_slot_6_layout = new QHBoxLayout;
-    armor_slot_6_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_6_layout->addWidget(armor_slot_6);
-
-    armor_frm_6 = new QFrame;
-    armor_frm_6->setFixedSize(slotSize);
-    armor_frm_6->setFrameShape(QFrame::NoFrame);
-    armor_frm_6->setFrameShadow(QFrame::Plain);
-    armor_frm_6->setLayout(armor_slot_6_layout);
-
-    QHBoxLayout *armor_slots_5_and_6 = new QHBoxLayout();
-    armor_slots_5_and_6->setContentsMargins(0, 0, 0, 0);
-    armor_slots_5_and_6->addWidget(armor_frm_5);
-    armor_slots_5_and_6->addWidget(armor_m_link_3);
-    armor_slots_5_and_6->addWidget(armor_frm_6);
-    armor_slots_5_and_6->setSpacing(0);
-
-    armor_slot_7 = new QPushButton();
-    armor_slot_7->setFixedSize(slotSize);
-    armor_slot_7->setFlat(true);
-    armor_slot_7->setAutoFillBackground(true);
-    armor_slot_7->setIconSize(QSize(slotSize));
-    armor_slot_7->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_7->setHidden(1);
-
-    QHBoxLayout *armor_slot_7_layout = new QHBoxLayout;
-    armor_slot_7_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_7_layout->addWidget(armor_slot_7);
-
-    armor_frm_7 = new QFrame;
-    armor_frm_7->setFixedSize(slotSize);
-    armor_frm_7->setFrameShape(QFrame::NoFrame);
-    armor_frm_7->setFrameShadow(QFrame::Plain);
-    armor_frm_7->setLayout(armor_slot_7_layout);
-
-    armor_m_link_4 = new QLabel();
-    armor_m_link_4->setFixedSize(linkSize);
-    armor_m_link_4->setScaledContents(1);
-
-    armor_slot_8 = new QPushButton();
-    armor_slot_8->setFixedSize(slotSize);
-    armor_slot_8->setFlat(true);
-    armor_slot_8->setAutoFillBackground(true);
-    armor_slot_8->setIconSize(QSize(slotSize));
-    armor_slot_8->setStyleSheet(Items.styleMateriaSlotNoGrowth());
-    armor_slot_8->setHidden(1);
-
-    QHBoxLayout *armor_slot_8_layout = new QHBoxLayout;
-    armor_slot_8_layout->setContentsMargins(0, 0, 0, 0);
-    armor_slot_8_layout->addWidget(armor_slot_8);
-
-    armor_frm_8 = new QFrame;
-    armor_frm_8->setFixedSize(slotSize);
-    armor_frm_8->setFrameShape(QFrame::NoFrame);
-    armor_frm_8->setFrameShadow(QFrame::Plain);
-    armor_frm_8->setLayout(armor_slot_8_layout);
-
-    QHBoxLayout *armor_slots_7_and_8 = new QHBoxLayout();
-    armor_slots_7_and_8->setContentsMargins(0, 0, 0, 0);
-    armor_slots_7_and_8->addWidget(armor_frm_7);
-    armor_slots_7_and_8->addWidget(armor_m_link_4);
-    armor_slots_7_and_8->addWidget(armor_frm_8);
-    armor_slots_7_and_8->setSpacing(0);
-
-    QHBoxLayout *armor_materia_slots = new QHBoxLayout();
+    armor_m_link_1 = new QLabel(this);
+    armor_m_link_2 = new QLabel(this);
+    armor_m_link_3 = new QLabel(this);
+    armor_m_link_4 = new QLabel(this);
+    auto armor_materia_slots = new QHBoxLayout();
     armor_materia_slots->setContentsMargins(0, 0, 0, 0);
-    armor_materia_slots->addLayout(armor_slots_1_and_2);
-    armor_materia_slots->addLayout(armor_slots_3_and_4);
-    armor_materia_slots->addLayout(armor_slots_5_and_6);
-    armor_materia_slots->addLayout(armor_slots_7_and_8);
-    armor_materia_slots->addSpacerItem(armor_spacer);
+    armor_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(8), materiaSlots.at(9), materiaSlotFrames.at(8), materiaSlotFrames.at(9), armor_m_link_1));
+    armor_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(10), materiaSlots.at(11), materiaSlotFrames.at(10), materiaSlotFrames.at(11), armor_m_link_2));
+    armor_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(12), materiaSlots.at(13), materiaSlotFrames.at(12), materiaSlotFrames.at(13), armor_m_link_3));
+    armor_materia_slots->addLayout(makeMateriaSlotPair(materiaSlots.at(14), materiaSlots.at(15), materiaSlotFrames.at(14), materiaSlotFrames.at(15), armor_m_link_4));
+    armor_materia_slots->addSpacerItem(new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum));
     armor_materia_slots->setSpacing(12);
 
+    armor_materia_box = new QFrame(this);
     armor_materia_box->setLayout(armor_materia_slots);
+    armor_materia_box->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 
-    QVBoxLayout *armor_layout = new QVBoxLayout;
+    auto armor_layout = new QVBoxLayout;
     armor_layout->setContentsMargins(0, 0, 0, 0);
     armor_layout->addWidget(armor_selection);
     armor_layout->addWidget(lblArmorStats);
@@ -1216,54 +648,56 @@ void CharEditor::init_display()
 
     armor_box->setLayout(armor_layout);
 
-    QVBoxLayout *accessory_layout = new QVBoxLayout;
+    auto accessory_layout = new QVBoxLayout;
     accessory_layout->setContentsMargins(0, 0, 0, 0);
     accessory_layout->addWidget(accessory_selection);
 
     accessory_box->setLayout(accessory_layout);
 
-    QVBoxLayout *right_Top = new QVBoxLayout;
+    auto right_Top = new QVBoxLayout;
     right_Top->setContentsMargins(0, 0, 0, 0);
     right_Top->addWidget(weapon_box);
     right_Top->addWidget(armor_box);
     right_Top->addWidget(accessory_box);
 
-    QWidget *right_top = new QWidget;
+    auto right_top = new QWidget;
     right_top->setContentsMargins(0, 0, 0, 0);
     right_top->setLayout(right_Top);
 
-    QVBoxLayout *right_bottom = new QVBoxLayout;
+    auto right_bottom = new QVBoxLayout;
     right_bottom->setContentsMargins(0, 0, 0, 0);
     right_bottom->addWidget(materia_edit);
     right_bottom->addLayout(effects_layout);
 
-    QVBoxLayout *right_Final = new QVBoxLayout;
+    auto right_Final = new QVBoxLayout;
     right_Final->setContentsMargins(3, 0, 3, 0);
     right_Final->addWidget(right_top);
     right_Final->setSpacing(3);
     right_Final->addLayout(right_bottom);
 
-    QFrame *tabStatus = new QFrame;
+    auto tabStatus = new QFrame;
     tabStatus->setLayout(left_Final);
     tabStatus->adjustSize();
     toolbox->addItem(tabStatus, Chars.icon(0), tr("Status Info"));
 
-    QFrame *tabEquipment = new QFrame;
+    auto tabEquipment = new QFrame;
     tabEquipment->setLayout(right_Final);
     tabEquipment->adjustSize();
     toolbox->addItem(tabEquipment, QIcon(QPixmap::fromImage(Items.image(256))), tr("Equipment"));
 
-    QVBoxLayout *toolbox_layout = new QVBoxLayout;
+    auto toolbox_layout = new QVBoxLayout;
     toolbox_layout->setContentsMargins(0, 0, 0, 0);
     toolbox_layout->addWidget(toolbox);
 
-    this->setLayout(toolbox_layout);
+    setLayout(toolbox_layout);
 }
-void CharEditor::setToolBoxStyle(QString stylesheet)
+
+void CharEditor::setToolBoxStyle(const QString &stylesheet)
 {
     toolbox->setStyleSheet(stylesheet);
 }
-void CharEditor::setSliderStyle(QString style)
+
+void CharEditor::setSliderStyle(const QString &style)
 {
     slider_limit->setStyleSheet(style);
 }
@@ -1271,117 +705,81 @@ void CharEditor::setSliderStyle(QString style)
 void CharEditor::init_connections()
 {
     connect(cb_idChanger, &QCheckBox::toggled, this, &CharEditor::cb_idChanger_toggled);
-    connect(sb_level, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Level_Changed);
-    connect(sb_curMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurMp);
-    connect(sb_curHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurHp);
-    connect(sb_maxMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMaxMp);
-    connect(sb_maxHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMaxHp);
-    connect(sb_base_hp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseHp);
-    connect(sb_base_mp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseMp);
-    connect(sb_kills, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setKills);
-    connect(line_name, &QLineEdit::textChanged, this, &CharEditor::setName);
-    connect(cb_front_row, &QCheckBox::toggled, this, &CharEditor::setRow);
-    connect(cb_fury, &QCheckBox::toggled, this, &CharEditor::cb_fury_toggled);
-    connect(cb_sadness, &QCheckBox::toggled, this, &CharEditor::cb_sadness_toggled);
-    connect(sb_str, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStr);
-    connect(sb_str_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStrBonus);
-    connect(sb_vit, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVit);
-    connect(sb_vit_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVitBonus);
-    connect(sb_mag, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMag);
-    connect(sb_mag_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMagBonus);
-    connect(sb_spi, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpi);
-    connect(sb_spi_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpiBonus);
-    connect(sb_dex, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDex);
-    connect(sb_dex_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDexBonus);
-    connect(sb_lck, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLck);
-    connect(sb_lck_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLckBonus);
+    connect(sbLevel, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Level_Changed);
+    connect(sbCurrentMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurMp);
+    connect(sbCurrentHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurHp);
+    connect(sbBaseHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseHp);
+    connect(sbBaseMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseMp);
+    connect(sbKills, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setKills);
+    connect(lineName, &QLineEdit::textChanged, this, &CharEditor::setName);
+    connect(cbFrontRow, &QCheckBox::toggled, this, &CharEditor::setRow);
+    connect(cbFury, &QCheckBox::toggled, this, &CharEditor::cb_fury_toggled);
+    connect(cbSadness, &QCheckBox::toggled, this, &CharEditor::cb_sadness_toggled);
+    connect(sbStr, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStr);
+    connect(sbStrSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStrBonus);
+    connect(sbVit, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVit);
+    connect(sbVitSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVitBonus);
+    connect(sbMag, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMag);
+    connect(sbMagSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMagBonus);
+    connect(sbSpi, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpi);
+    connect(sbSpiSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpiBonus);
+    connect(sbDex, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDex);
+    connect(sbDexSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDexBonus);
+    connect(sbLck, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLck);
+    connect(sbLckSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLckBonus);
     connect(slider_limit, QOverload<int>::of(&QSlider::valueChanged), this, &CharEditor::setLimitBar);
-    connect(sb_total_exp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Exp_Changed);
-    connect(slider_limit, QOverload<int>::of(&QSlider::valueChanged),lcd_limit_value, QOverload<int>::of(&QLCDNumber::display));
+    connect(sbTotalExp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Exp_Changed);
+    connect(slider_limit, QOverload<int>::of(&QSlider::valueChanged),lcdLimitValue, QOverload<int>::of(&QLCDNumber::display));
     connect(list_limits, &QListWidget::clicked, this, &CharEditor::calc_limit_value);
     connect(sb_uses_limit_1_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused1);
     connect(sb_uses_limit_2_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused2);
     connect(sb_uses_limit_3_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused3);
     connect(sb_limit_level, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLimitLevel);
-    connect(combo_id, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setId);
+    connect(comboId, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setId);
     connect(weapon_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setWeapon);
     connect(armor_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setArmor);
     connect(accessory_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setAccessory);
-    connect(weapon_slot_1, &QPushButton::clicked, this, &CharEditor::weapon_slot_1_clicked);
-    connect(weapon_slot_2, &QPushButton::clicked, this, &CharEditor::weapon_slot_2_clicked);
-    connect(weapon_slot_3, &QPushButton::clicked, this, &CharEditor::weapon_slot_3_clicked);
-    connect(weapon_slot_4, &QPushButton::clicked, this, &CharEditor::weapon_slot_4_clicked);
-    connect(weapon_slot_5, &QPushButton::clicked, this, &CharEditor::weapon_slot_5_clicked);
-    connect(weapon_slot_6, &QPushButton::clicked, this, &CharEditor::weapon_slot_6_clicked);
-    connect(weapon_slot_7, &QPushButton::clicked, this, &CharEditor::weapon_slot_7_clicked);
-    connect(weapon_slot_8, &QPushButton::clicked, this, &CharEditor::weapon_slot_8_clicked);
-    connect(armor_slot_1, &QPushButton::clicked, this, &CharEditor::armor_slot_1_clicked);
-    connect(armor_slot_2, &QPushButton::clicked, this, &CharEditor::armor_slot_2_clicked);
-    connect(armor_slot_3, &QPushButton::clicked, this, &CharEditor::armor_slot_3_clicked);
-    connect(armor_slot_4, &QPushButton::clicked, this, &CharEditor::armor_slot_4_clicked);
-    connect(armor_slot_5, &QPushButton::clicked, this, &CharEditor::armor_slot_5_clicked);
-    connect(armor_slot_6, &QPushButton::clicked, this, &CharEditor::armor_slot_6_clicked);
-    connect(armor_slot_7, &QPushButton::clicked, this, &CharEditor::armor_slot_7_clicked);
-    connect(armor_slot_8, &QPushButton::clicked, this, &CharEditor::armor_slot_8_clicked);
     connect(materia_edit, &MateriaEditor::apChanged, this, &CharEditor::matAp_changed);
     connect(materia_edit, &MateriaEditor::idChanged, this, &CharEditor::matId_changed);
 }
 
-void CharEditor::disconnectAll(void)
+void CharEditor::disconnectAll()
 {
     disconnect(cb_idChanger, &QCheckBox::toggled, this, &CharEditor::cb_idChanger_toggled);
-    disconnect(sb_level, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Level_Changed);
-    disconnect(sb_curMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurMp);
-    disconnect(sb_curHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurHp);
-    disconnect(sb_maxMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMaxMp);
-    disconnect(sb_maxHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMaxHp);
-    disconnect(sb_base_hp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseHp);
-    disconnect(sb_base_mp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseMp);
-    disconnect(sb_kills, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setKills);
-    disconnect(line_name, &QLineEdit::textChanged, this, &CharEditor::setName);
-    disconnect(cb_front_row, &QCheckBox::toggled, this, &CharEditor::setRow);
-    disconnect(cb_fury, &QCheckBox::toggled, this, &CharEditor::cb_fury_toggled);
-    disconnect(cb_sadness, &QCheckBox::toggled, this, &CharEditor::cb_sadness_toggled);
-    disconnect(sb_str, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStr);
-    disconnect(sb_str_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStrBonus);
-    disconnect(sb_vit, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVit);
-    disconnect(sb_vit_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVitBonus);
-    disconnect(sb_mag, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMag);
-    disconnect(sb_mag_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMagBonus);
-    disconnect(sb_spi, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpi);
-    disconnect(sb_spi_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpiBonus);
-    disconnect(sb_dex, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDex);
-    disconnect(sb_dex_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDexBonus);
-    disconnect(sb_lck, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLck);
-    disconnect(sb_lck_bonus, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLckBonus);
+    disconnect(sbLevel, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Level_Changed);
+    disconnect(sbCurrentMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurMp);
+    disconnect(sbCurrentHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setCurHp);
+    disconnect(sbBaseHp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseHp);
+    disconnect(sbBaseMp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setBaseMp);
+    disconnect(sbKills, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setKills);
+    disconnect(lineName, &QLineEdit::textChanged, this, &CharEditor::setName);
+    disconnect(cbFrontRow, &QCheckBox::toggled, this, &CharEditor::setRow);
+    disconnect(cbFury, &QCheckBox::toggled, this, &CharEditor::cb_fury_toggled);
+    disconnect(cbSadness, &QCheckBox::toggled, this, &CharEditor::cb_sadness_toggled);
+    disconnect(sbStr, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStr);
+    disconnect(sbStrSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setStrBonus);
+    disconnect(sbVit, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVit);
+    disconnect(sbVitSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setVitBonus);
+    disconnect(sbMag, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMag);
+    disconnect(sbMagSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setMagBonus);
+    disconnect(sbSpi, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpi);
+    disconnect(sbSpiSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setSpiBonus);
+    disconnect(sbDex, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDex);
+    disconnect(sbDexSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setDexBonus);
+    disconnect(sbLck, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLck);
+    disconnect(sbLckSourceUse, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLckBonus);
     disconnect(slider_limit, QOverload<int>::of(&QSlider::valueChanged), this, &CharEditor::setLimitBar);
-    disconnect(sb_total_exp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Exp_Changed);
-    disconnect(slider_limit, QOverload<int>::of(&QSlider::valueChanged),lcd_limit_value, QOverload<int>::of(&QLCDNumber::display));
+    disconnect(sbTotalExp, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::Exp_Changed);
+    disconnect(slider_limit, QOverload<int>::of(&QSlider::valueChanged),lcdLimitValue, QOverload<int>::of(&QLCDNumber::display));
     disconnect(list_limits, &QListWidget::clicked, this, &CharEditor::calc_limit_value);
     disconnect(sb_uses_limit_1_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused1);
     disconnect(sb_uses_limit_2_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused2);
     disconnect(sb_uses_limit_3_1, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setTimesused3);
     disconnect(sb_limit_level, QOverload<int>::of(&QSpinBox::valueChanged), this, &CharEditor::setLimitLevel);
-    disconnect(combo_id, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setId);
+    disconnect(comboId, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setId);
     disconnect(weapon_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setWeapon);
     disconnect(armor_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setArmor);
     disconnect(accessory_selection, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &CharEditor::setAccessory);
-    disconnect(weapon_slot_1, &QPushButton::clicked, this, &CharEditor::weapon_slot_1_clicked);
-    disconnect(weapon_slot_2, &QPushButton::clicked, this, &CharEditor::weapon_slot_2_clicked);
-    disconnect(weapon_slot_3, &QPushButton::clicked, this, &CharEditor::weapon_slot_3_clicked);
-    disconnect(weapon_slot_4, &QPushButton::clicked, this, &CharEditor::weapon_slot_4_clicked);
-    disconnect(weapon_slot_5, &QPushButton::clicked, this, &CharEditor::weapon_slot_5_clicked);
-    disconnect(weapon_slot_6, &QPushButton::clicked, this, &CharEditor::weapon_slot_6_clicked);
-    disconnect(weapon_slot_7, &QPushButton::clicked, this, &CharEditor::weapon_slot_7_clicked);
-    disconnect(weapon_slot_8, &QPushButton::clicked, this, &CharEditor::weapon_slot_8_clicked);
-    disconnect(armor_slot_1, &QPushButton::clicked, this, &CharEditor::armor_slot_1_clicked);
-    disconnect(armor_slot_2, &QPushButton::clicked, this, &CharEditor::armor_slot_2_clicked);
-    disconnect(armor_slot_3, &QPushButton::clicked, this, &CharEditor::armor_slot_3_clicked);
-    disconnect(armor_slot_4, &QPushButton::clicked, this, &CharEditor::armor_slot_4_clicked);
-    disconnect(armor_slot_5, &QPushButton::clicked, this, &CharEditor::armor_slot_5_clicked);
-    disconnect(armor_slot_6, &QPushButton::clicked, this, &CharEditor::armor_slot_6_clicked);
-    disconnect(armor_slot_7, &QPushButton::clicked, this, &CharEditor::armor_slot_7_clicked);
-    disconnect(armor_slot_8, &QPushButton::clicked, this, &CharEditor::armor_slot_8_clicked);
     disconnect(materia_edit, &MateriaEditor::apChanged, this, &CharEditor::matAp_changed);
     disconnect(materia_edit, &MateriaEditor::idChanged, this, &CharEditor::matId_changed);
 }
@@ -1452,7 +850,7 @@ quint8 CharEditor::limitBar()
 }
 QString CharEditor::name()
 {
-    return line_name->text();
+    return lineName->text();
 }
 quint8 CharEditor::weapon()
 {
@@ -1548,10 +946,10 @@ void CharEditor::Exp_Changed(int exp)
                         level++;
                     }
                 }
-                sb_level->blockSignals(true);
-                sb_level->setValue(level);
+                sbLevel->blockSignals(true);
+                sbLevel->setValue(level);
                 setLevel(level);
-                sb_level->blockSignals(false);
+                sbLevel->blockSignals(false);
                 level_up(prev_level);
             }
             update_tnl_bar();
@@ -1561,742 +959,621 @@ void CharEditor::Exp_Changed(int exp)
 
 void CharEditor::Level_Changed(int level)
 {
-    //if(level != data.level)
-    // {
-    if (autolevel) {
-        int prev_level = data.level;
-        setLevel(level);
-        if (level <= 0) {
-            setExp(0);
+    if (level != data.level) {
+        if (autolevel) {
+            int prev_level = data.level;
+            setLevel(level);
+            if (level <= 0) {
+                setExp(0);
+            } else {
+                setExp(int(Chars.totalExpForLevel(data.id, level - 1)));
+            }
+            sbTotalExp->blockSignals(true);
+            sbTotalExp->setValue(int(data.exp));
+            sbTotalExp->blockSignals(false);
+            level_up(prev_level);
+            update_tnl_bar();
         } else {
-            setExp(Chars.totalExpForLevel(data.id, level - 1));
+            setLevel(level);
         }
-        sb_total_exp->blockSignals(true);
-        sb_total_exp->setValue(data.exp);
-        sb_total_exp->blockSignals(false);
-        level_up(prev_level);
-        update_tnl_bar();
-    } else {
-        setLevel(level);
     }
-    // }
 }
-void CharEditor::setChar(FF7CHAR Chardata, QString Processed_Name)
+void CharEditor::setChar(const FF7CHAR &Chardata, const QString &Processed_Name)
 {
     disconnectAll();// remove all connections. safer signal blocking!
     data = Chardata;
     _name = Processed_Name;
     //more here like setting the gui stuff.
-    lbl_avatar->setPixmap(Chars.pixmap(data.id).scaled(lbl_avatar->width(), lbl_avatar->height(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    line_name->setText(_name);
-    sb_level->setValue(data.level);
-    sb_curMp->setValue(data.curMP);
-    sb_curHp->setValue(data.curHP);
-    sb_maxHp->setValue(data.maxHP);
-    lbl_hp_max->setText(QString(" %1").arg(QString::number(data.maxHP)));
-    sb_maxMp->setValue(data.maxMP);
-    lbl_mp_max->setText(QString(" %1").arg(QString::number(data.maxMP)));
-    sb_kills->setValue(data.kills);
-    combo_id->setCurrentIndex(data.id);
-    if (data.flags[0] == FF7Char::Fury) {
-        cb_fury->setChecked(Qt::Checked);
-    } else {
-        cb_fury->setChecked(Qt::Unchecked);
-    }
-    if (data.flags[0] == FF7Char::Sadness) {
-        cb_sadness->setChecked(Qt::Checked);
-    } else {
-        cb_sadness->setChecked(Qt::Unchecked);
-    }
-    if (data.flags[1] == FF7Char::FrontRow) {
-        cb_front_row->setChecked(Qt::Checked);
-    } else {
-        cb_front_row->setChecked(Qt::Unchecked);
-    }
-    sb_total_exp->setValue(data.exp);
+    lblAvatar->setPixmap(Chars.pixmap(data.id).scaled(lblAvatar->width(), lblAvatar->height(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    lineName->setText(_name);
+    sbLevel->setValue(data.level);
+    sbCurrentMp->setValue(data.curMP);
+    sbCurrentHp->setValue(data.curHP);
+    lblMaxHp->setNum(data.maxHP);
+    lblMaxMp->setNum(data.maxMP);
+    sbKills->setValue(data.kills);
+    comboId->setCurrentIndex(data.id);
+    cbFury->setChecked(data.flags[0] == FF7Char::Fury);
+    cbSadness->setChecked(data.flags[0] == FF7Char::Sadness);
+    cbFrontRow->setChecked(data.flags[1] == FF7Char::FrontRow);
+    sbTotalExp->setValue(int(data.exp));
     lbl_level_next->setText(tr("Next: %1").arg(QString::number(data.expNext)));
     slider_limit->setValue(data.limitbar);
-    lcd_limit_value->display(int(data.limitbar));
+    lcdLimitValue->display(int(data.limitbar));
     bar_tnl->setValue(data.flags[2]);
-    sb_str->setValue(data.strength);
-    sb_str_bonus->setValue(data.strength_bonus);
-    sb_vit->setValue(data.vitality);
-    sb_vit_bonus->setValue(data.vitality_bonus);
-    sb_dex->setValue(data.dexterity);
-    sb_dex_bonus->setValue(data.dexterity_bonus);
-    sb_mag->setValue(data.magic);
-    sb_mag_bonus->setValue(data.magic_bonus);
-    sb_spi->setValue(data.spirit);
-    sb_spi_bonus->setValue(data.spirit_bonus);
-    sb_lck->setValue(data.luck);
-    sb_lck_bonus->setValue(data.luck_bonus);
-    sb_base_hp->setValue(data.baseHP);
-    sb_base_mp->setValue(data.baseMP);
+    sbStr->setValue(data.strength);
+    sbStrSourceUse->setValue(data.strength_bonus);
+    sbVit->setValue(data.vitality);
+    sbVitSourceUse->setValue(data.vitality_bonus);
+    sbDex->setValue(data.dexterity);
+    sbDexSourceUse->setValue(data.dexterity_bonus);
+    sbMag->setValue(data.magic);
+    sbMagSourceUse->setValue(data.magic_bonus);
+    sbSpi->setValue(data.spirit);
+    sbSpiSourceUse->setValue(data.spirit_bonus);
+    sbLck->setValue(data.luck);
+    sbLckSourceUse->setValue(data.luck_bonus);
+    sbBaseHp->setValue(data.baseHP);
+    sbBaseMp->setValue(data.baseMP);
 
     if (data.id == FF7Char::CaitSith || data.id == FF7Char::Vincent || data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth) {
-        if (!advancedMode) {
-            cb_idChanger->setHidden(false);
-        } else {
-            cb_idChanger->setHidden(true);
-        }
+        cb_idChanger->setHidden(advancedMode);
         if (data.id == FF7Char::CaitSith || data.id == FF7Char::YoungCloud) {
             cb_idChanger->setText(tr("Young Cloud"));
+            cb_idChanger->setCheckState((data.id == FF7Char::CaitSith) ? Qt::Unchecked : Qt::Checked);
         }
         if (data.id == FF7Char::Vincent || data.id == FF7Char::Sephiroth) {
             cb_idChanger->setText(tr("Sephiroth"));
-        }
-        if (data.id == FF7Char::CaitSith || data.id == FF7Char::Vincent) {
-            cb_idChanger->setCheckState(Qt::Unchecked);
-        }
-        if (data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth) {
-            cb_idChanger->setCheckState(Qt::Checked);
+            cb_idChanger->setCheckState((data.id == FF7Char::Vincent) ? Qt::Unchecked : Qt::Checked);
         }
     } else {
         cb_idChanger->setHidden(true);
     }
-    //Process the limits.
-    list_limits->clear();
-    list_limits->addItems(Chars.limits(data.id));
-    for (int i = 0; i < 7; i++) {
-        //Process the List. Hide "" entries, and Check Limts Learned.
 
-        if (list_limits->item(i)->text() == "") {
-            list_limits->item(i)->setHidden(true);
-        } else {
-            list_limits->item(i)->setHidden(false);
-        }
-
-        if (data.limits & (1 << Chars.limitBitConvert(i))) {
-            list_limits->item(i)->setCheckState(Qt::Checked);
-        } else {
-            list_limits->item(i)->setCheckState(Qt::Unchecked);
-        }
+    for(int i =0; i< list_limits->count(); i++) {
+        list_limits->item(i)->setText(Chars.limits(data.id).at(i));
+        list_limits->item(i)->setHidden((list_limits->item(i)->text().isEmpty()));
+        list_limits->item(i)->setCheckState((data.limits & (1 << Chars.limitBitConvert(i)))? Qt::Checked : Qt::Unchecked );
     }
-    list_limits->setFixedHeight(list_limits->sizeHintForRow(0)*list_limits->count() + list_limits->contentsMargins().top() + list_limits->contentsMargins().bottom());
-    sb_uses_limit_1_1->setValue(data.timesused1); //Vegeta_Ss4: Fixed limit timeused GUI
-    sb_uses_limit_2_1->setValue(data.timesused2); //Vegeta_Ss4: Fixed limit timeused GUI
-    sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
-    sb_limit_level->setValue(data.limitlevel); //Vegeta_Ss4: Fixed limitlevel GUI
 
-    quint8 weapon = data.weapon;
+    sb_uses_limit_1_1->setValue(data.timesused1);
+    sb_uses_limit_2_1->setValue(data.timesused2);
+    sb_uses_limit_3_1->setValue(data.timesused3);
+    sb_limit_level->setValue(data.limitlevel);
+
     weapon_selection->clear();
-
-    for (int i = Chars.weaponStartingId(data.id); i < Chars.numberOfWeapons(data.id) + Chars.weaponStartingId(data.id); i++) {
+    for (int i = Chars.weaponStartingId(data.id); i < Chars.numberOfWeapons(data.id) + Chars.weaponStartingId(data.id); i++)
         weapon_selection->addItem(QPixmap::fromImage(Items.image(i)), Items.name(i));
-    }
+    weapon_selection->setCurrentIndex(data.weapon - Chars.weaponOffset(data.id));
 
-    data.weapon = weapon;
-    if (data.id != FF7Char::Sephiroth) {
+    if (weapon_selection->currentText().isEmpty()) {
+        data.weapon = quint8(Chars.weaponOffset(data.id));
         weapon_selection->setCurrentIndex(data.weapon - Chars.weaponOffset(data.id));
-    } else {
-        weapon_selection->blockSignals(true);
-        weapon_selection->setCurrentIndex(0);
-        weapon_selection->blockSignals(false);
     }
 
     armor_selection->setCurrentIndex(data.armor);
 
-    if (data.accessory != FF7Char::EmptyAccessory) {
+    if (data.accessory != FF7Char::EmptyAccessory)
         accessory_selection->setCurrentIndex(data.accessory);
-    } else {
+    else
         accessory_selection->setCurrentIndex(32);
-    }
+
     //set the unknowns
     lcd_0x34->display(data.z_4[0]);
     lcd_0x35->display(data.z_4[1]);
     lcd_0x36->display(data.z_4[2]);
     lcd_0x37->display(data.z_4[3]);
-    calc_stats();
-    update_materia_slots();
     elemental_info();
     status_info();
-    mButtonPress(mslotsel);
+    materiaSlotClicked(mslotsel);
+    update_materia_slots();
     init_connections();//reconnect all
 }
 
 void CharEditor::setLevel(int level)
 {
-    if (data.level == level) {
+    if (data.level == level)
         return;
-    } else {
-        if (level < 0) {
-            data.level = 0;
-        } else if (level > 99) {
-            data.level = 99;
-        } else {
-            data.level = level;
-        }
-        emit level_changed(data.level);
-    }
+    if (level < 0)
+        data.level = 0;
+    else if (level > 99)
+        data.level = 99;
+    else
+        data.level = quint8(level);
+    emit level_changed(qint8(data.level));
 }
+
 void CharEditor::cb_sadness_toggled(bool sad)
 {
     if (sad) {
         setSadnessFury(FF7Char::Sadness);
-        cb_fury->blockSignals(true);
-        cb_fury->setChecked(Qt::Unchecked);
-        cb_fury->blockSignals(false);
+        cbFury->blockSignals(true);
+        cbFury->setChecked(false);
+        cbFury->blockSignals(false);
     } else {
         setSadnessFury(0);
     }
 }
+
 void CharEditor::cb_fury_toggled(bool fury)
 {
     if (fury) {
         setSadnessFury(FF7Char::Fury);
-        cb_sadness->blockSignals(true);
-        cb_sadness->setChecked(Qt::Unchecked);
-        cb_sadness->blockSignals(false);
+        cbSadness->blockSignals(true);
+        cbSadness->setChecked(false);
+        cbSadness->blockSignals(false);
     } else {
         setSadnessFury(0);
     }
 }
+
 void CharEditor::setMaxHp(int maxHp)
 {
-    if (data.maxHP == maxHp) {
+    if (data.maxHP == maxHp)
         return;
-    } else {
-        if (maxHp < 0) {
-            data.maxHP = 0;
-        } else if (maxHp > 32767) {
-            data.maxHP = 32767;
-        } else {
-            data.maxHP = maxHp;
-        }
-        emit maxHp_changed(data.maxHP);
-    }
+    if (maxHp < 0)
+        data.maxHP = 0;
+    else if (maxHp > qint16Max)
+        data.maxHP = qint16Max;
+    else
+        data.maxHP = quint16(maxHp);
+    emit maxHp_changed(data.maxHP);
 }
+
 void CharEditor::setCurHp(int curHp)
 {
-    if (data.curHP == curHp) {
+    if (data.curHP == curHp)
         return;
-    } else {
-        if (curHp < 0) {
-            data.curHP = 0;
-        } else if (curHp > 32767) {
-            data.curHP = 32767;
-        } else {
-            data.curHP = curHp;
-        }
-        emit curHp_changed(data.curHP);
-    }
+    if (curHp < 0)
+        data.curHP = 0;
+    else if (curHp > qint16Max)
+        data.curHP = qint16Max;
+    else
+        data.curHP = quint16(curHp);
+    emit curHp_changed(data.curHP);
 }
+
 void CharEditor::setMaxMp(int maxMp)
 {
-    if (data.maxMP == maxMp) {
+    if (data.maxMP == maxMp)
         return;
-    } else {
-        if (maxMp < 0) {
-            data.maxMP = 0;
-        } else if (maxMp > 32767) {
-            data.maxMP = 32767;
-        } else {
-            data.maxMP = maxMp;
-        }
-        emit maxMp_changed(data.maxMP);
-    }
+    std::clamp(maxMp, 0, qint16Max);
+    data.maxMP = quint16(maxMp);
+    emit maxMp_changed(data.maxMP);
 }
+
 void CharEditor::setCurMp(int curMp)
 {
-    if (data.curMP == curMp) {
+    if (data.curMP == curMp)
         return;
-    } else {
-        if (curMp < 0) {
-            data.curMP = 0;
-        } else if (curMp > 32767) {
-            data.curMP = 32767;
-        } else {
-            data.curMP = curMp;
-        }
-        emit curMp_changed(data.curMP);
-    }
+    if (curMp < 0)
+        data.curMP = 0;
+    else if (curMp > qint16Max)
+        data.curMP = qint16Max;
+    else
+        data.curMP = quint16(curMp);
+    emit curMp_changed(data.curMP);
 }
+
 void CharEditor::setKills(int kills)
 {
-    if (data.kills == kills) {
+    if (data.kills == kills)
         return;
-    } else {
-        if (kills < 0) {
-            data.kills = 0;
-        } else if (kills > 65535) {
-            data.kills = 65535;
-        } else {
-            data.kills = kills;
-        }
-        emit kills_changed(data.kills);
-    }
+    if (kills < 0)
+        data.kills = 0;
+    else if (kills > quint16Max)
+        data.kills = quint16Max;
+    else
+        data.kills = quint16(kills);
+    emit kills_changed(data.kills);
 }
-void CharEditor::setName(QString name)
+
+void CharEditor::setName(const QString &name)
 {
-    if (_name == name) {
+    if (_name == name)
         return;
-    } else {
-        _name = name;
-        emit name_changed(_name);
-    }
+    _name = name;
+    emit name_changed(_name);
 }
+
 void CharEditor::setId(int id)
 {
-    if (data.id == id) {
+    if (data.id == id)
         return;
-    } else {
-        if (id < 0) {
-            data.id = 0;
-        } else if (id > 0x0B) {
-            data.id = FF7Char::Empty;
-        } else {
-            data.id = id;
-        }
-        setChar(data, line_name->text());
-        emit id_changed(data.id);
-    }
+    if (id < 0)
+        data.id = 0;
+    else if (id > 0x0B)
+        data.id = FF7Char::Empty;
+    else
+        data.id = quint8(id);
+    setChar(data, lineName->text());
+    emit id_changed(qint8(data.id));
 }
+
 void CharEditor::setStr(int strength)
 {
-    if (data.strength == strength) {
+    if (data.strength == strength)
         return;
-    } else {
-        if (strength < 0) {
-            data.strength = 0;
-        } else if (strength > 0xFF) {
-            data.strength = 0xFF;
-        } else {
-            data.strength = strength;
-        }
-        emit str_changed(data.strength);
-        calc_stats();
-    }
+    if (strength < 0)
+        data.strength = 0;
+    else if (strength > quint8Max)
+        data.strength = quint8Max;
+    else
+        data.strength = quint8(strength);
+    emit str_changed(data.strength);
+    calc_stats();
 }
+
 void CharEditor::setVit(int vitality)
 {
-    if (data.vitality == vitality) {
+    if (data.vitality == vitality)
         return;
-    } else {
-        if (vitality < 0) {
-            data.vitality = 0;
-        } else if (vitality > 0xFF) {
-            data.vitality = 0xFF;
-        } else {
-            data.vitality = vitality;
-        }
-        emit vit_changed(data.vitality);
-        calc_stats();
-    }
+    if (vitality < 0)
+        data.vitality = 0;
+    else if (vitality > quint8Max)
+        data.vitality = quint8Max;
+    else
+        data.vitality = quint8(vitality);
+    emit vit_changed(data.vitality);
+    calc_stats();
 }
+
 void CharEditor::setMag(int magic)
 {
-    if (data.magic == magic) {
+    if (data.magic == magic)
         return;
-    } else {
-        if (magic < 0) {
-            data.magic = 0;
-        } else if (magic > 0xFF) {
-            data.magic = 0xFF;
-        } else {
-            data.magic = magic;
-        }
-        emit mag_changed(data.magic);
-        calc_stats();
-    }
+    if (magic < 0)
+        data.magic = 0;
+    else if (magic > quint8Max)
+        data.magic = quint8Max;
+    else
+        data.magic = quint8(magic);
+    emit mag_changed(data.magic);
+    calc_stats();
 }
-void CharEditor::setSpi(int spirit)
+
+    void CharEditor::setSpi(int spirit)
 {
-    if (data.spirit == spirit) {
+    if (data.spirit == spirit)
         return;
-    } else {
-        if (spirit < 0) {
-            data.spirit = 0;
-        } else if (spirit > 0xFF) {
-            data.spirit = 0xFF;
-        } else {
-            data.spirit = spirit;
-        }
-        emit spi_changed(data.spirit);
-        calc_stats();
-    }
+    if (spirit < 0)
+        data.spirit = 0;
+    else if (spirit > quint8Max)
+        data.spirit = quint8Max;
+    else
+        data.spirit = quint8(spirit);
+    emit spi_changed(data.spirit);
+    calc_stats();
 }
+
 void CharEditor::setDex(int dexterity)
 {
-    if (data.dexterity == dexterity) {
+    if (data.dexterity == dexterity)
         return;
-    } else {
-        if (dexterity < 0) {
-            data.dexterity = 0;
-        } else if (dexterity > 0xFF) {
-            data.dexterity = 0xFF;
-        } else {
-            data.dexterity = dexterity;
-        }
-        emit dex_changed(data.dexterity);
-        calc_stats();
-    }
+    if (dexterity < 0)
+        data.dexterity = 0;
+    else if (dexterity > quint8Max)
+        data.dexterity = quint8Max;
+    else
+        data.dexterity = quint8(dexterity);
+    emit dex_changed(data.dexterity);
+    calc_stats();
 }
+
 void CharEditor::setLck(int luck)
 {
-    if (data.luck == luck) {
+    if (data.luck == luck)
         return;
-    } else {
-        if (luck < 0) {
-            data.luck = 0;
-        } else if (luck > 0xFF) {
-            data.luck = 0xFF;
-        } else {
-            data.luck = luck;
-        }
-        emit lck_changed(data.luck);
-        calc_stats();
-    }
+    if (luck < 0)
+        data.luck = 0;
+    else if (luck > quint8Max)
+        data.luck = quint8Max;
+    else
+        data.luck = quint8(luck);
+    emit lck_changed(data.luck);
+    calc_stats();
 }
+
 void CharEditor::setStrBonus(int strength_bonus)
 {
-    if (data.strength_bonus == strength_bonus) {
+    if (data.strength_bonus == strength_bonus)
         return;
-    } else {
-        if (strength_bonus < 0) {
-            data.strength_bonus = 0;
-        } else if (strength_bonus > 0xFF) {
-            data.strength_bonus = 0xFF;
-        } else {
-            data.strength_bonus = strength_bonus;
-        }
-        emit strBonus_changed(data.strength_bonus);
-        calc_stats();
-    }
+    if (strength_bonus < 0)
+        data.strength_bonus = 0;
+    else if (strength_bonus > quint8Max)
+        data.strength_bonus = quint8Max;
+    else
+        data.strength_bonus = quint8(strength_bonus);
+    emit strBonus_changed(data.strength_bonus);
+    calc_stats();
 }
+
 void CharEditor::setVitBonus(int vitality_bonus)
 {
-    if (data.vitality_bonus == vitality_bonus) {
+    if (data.vitality_bonus == vitality_bonus)
         return;
-    } else {
-        if (vitality_bonus < 0) {
-            data.vitality_bonus = 0;
-        } else if (vitality_bonus > 0xFF) {
-            data.vitality_bonus = 0xFF;
-        } else {
-            data.vitality_bonus = vitality_bonus;
-        }
-        emit vitBonus_changed(data.vitality_bonus);
-        calc_stats();
-    }
+    if (vitality_bonus < 0)
+        data.vitality_bonus = 0;
+    else if (vitality_bonus > quint8Max)
+        data.vitality_bonus = quint8Max;
+    else
+        data.vitality_bonus = quint8(vitality_bonus);
+    emit vitBonus_changed(data.vitality_bonus);
+    calc_stats();
 }
+
 void CharEditor::setMagBonus(int magic_bonus)
 {
-    if (data.magic_bonus == magic_bonus) {
+    if (data.magic_bonus == magic_bonus)
         return;
-    } else {
-        if (magic_bonus < 0) {
-            data.magic_bonus = 0;
-        } else if (magic_bonus > 0xFF) {
-            data.magic_bonus = 0xFF;
-        } else {
-            data.magic_bonus = magic_bonus;
-        }
-        emit magBonus_changed(data.magic_bonus);
-        calc_stats();
-    }
+    if (magic_bonus < 0)
+        data.magic_bonus = 0;
+    else if (magic_bonus > quint8Max)
+        data.magic_bonus = quint8Max;
+    else
+        data.magic_bonus = quint8(magic_bonus);
+    emit magBonus_changed(data.magic_bonus);
+    calc_stats();
 }
+
 void CharEditor::setSpiBonus(int spirit_bonus)
 {
-    if (data.spirit_bonus == spirit_bonus) {
+    if (data.spirit_bonus == spirit_bonus)
         return;
-    } else {
-        if (spirit_bonus < 0) {
-            data.spirit_bonus = 0;
-        } else if (spirit_bonus > 0xFF) {
-            data.spirit_bonus = 0xFF;
-        } else {
-            data.spirit_bonus = spirit_bonus;
-        }
-        emit spiBonus_changed(data.spirit_bonus);
-        calc_stats();
-    }
+    if (spirit_bonus < 0)
+        data.spirit_bonus = 0;
+    else if (spirit_bonus > quint8Max)
+        data.spirit_bonus = quint8Max;
+    else
+        data.spirit_bonus = quint8(spirit_bonus);
+    emit spiBonus_changed(data.spirit_bonus);
+    calc_stats();
 }
+
 void CharEditor::setDexBonus(int dexterity_bonus)
 {
-    if (data.dexterity_bonus == dexterity_bonus) {
+    if (data.dexterity_bonus == dexterity_bonus)
         return;
-    } else {
-        if (dexterity_bonus < 0) {
-            data.dexterity_bonus = 0;
-        } else if (dexterity_bonus > 0xFF) {
-            data.dexterity_bonus = 0xFF;
-        } else {
-            data.dexterity_bonus = dexterity_bonus;
-        }
-        emit dexBonus_changed(data.dexterity_bonus);
-        calc_stats();
-    }
+    if (dexterity_bonus < 0)
+        data.dexterity_bonus = 0;
+    else if (dexterity_bonus > quint8Max)
+        data.dexterity_bonus = quint8Max;
+    else
+        data.dexterity_bonus = quint8(dexterity_bonus);
+    emit dexBonus_changed(data.dexterity_bonus);
+    calc_stats();
 }
+
 void CharEditor::setLckBonus(int luck_bonus)
 {
-    if (data.luck_bonus == luck_bonus) {
+    if (data.luck_bonus == luck_bonus)
         return;
-    } else {
-        if (luck_bonus < 0) {
-            data.luck_bonus = 0;
-        } else if (luck_bonus > 0xFF) {
-            data.luck_bonus = 0xFF;
-        } else {
-            data.luck_bonus = luck_bonus;
-        }
-        emit lckBonus_changed(data.luck_bonus);
-        calc_stats();
-    }
+    if (luck_bonus < 0)
+        data.luck_bonus = 0;
+    else if (luck_bonus > quint8Max)
+        data.luck_bonus = quint8Max;
+    else
+        data.luck_bonus = quint8(luck_bonus);
+    emit lckBonus_changed(data.luck_bonus);
+    calc_stats();
 }
+
 void CharEditor::setLimitLevel(int limitlevel)
 {
-    if (data.limitlevel == limitlevel) {
+    if (data.limitlevel == limitlevel)
         return;
-    } else {
-        if (limitlevel < 0) {
-            data.limitlevel = 0;
-        } else if (limitlevel > 4) {
-            data.limitlevel = 4;
-        } else {
-            data.limitlevel = limitlevel;
-        }
-        emit limitLevel_changed(data.limitlevel);
-    }
+    if (limitlevel < 0)
+        data.limitlevel = 0;
+    else if (limitlevel > 4)
+        data.limitlevel = 4;
+    else
+        data.limitlevel = qint8(limitlevel);
+    emit limitLevel_changed(data.limitlevel);
 }
+
 void CharEditor::setLimitBar(int limitbar)
 {
-    if (data.limitbar == limitbar) {
+    if (data.limitbar == limitbar)
         return;
-    } else {
-        if (limitbar < 0) {
-            data.limitbar = 0;
-        } else if (limitbar > 0xFF) {
-            data.limitbar = 0xFF;
-        } else {
-            data.limitbar = limitbar;
-        }
-        emit limitBar_changed(data.limitbar);
-    }
+    if (limitbar < 0)
+        data.limitbar = 0;
+    else if (limitbar > quint8Max)
+        data.limitbar = quint8Max;
+    else
+        data.limitbar = quint8(limitbar);
+    emit limitBar_changed(data.limitbar);
 }
+
 void CharEditor::setWeapon(int weapon)
 {
-    if (weapon == (data.weapon - Chars.weaponOffset(data.id))) {
+    if (weapon == (data.weapon - Chars.weaponOffset(data.id)))
         return;
-    } else {
-        if (weapon < 0) {
-            data.weapon = Chars.weaponOffset(data.id);
-        } else if (weapon > Chars.numberOfWeapons(data.id)) {
-            data.weapon = Chars.numberOfWeapons(data.id) + Chars.weaponOffset(data.id);
-        } else {
-            data.weapon = weapon + Chars.weaponOffset(data.id);
-        }
-        emit weapon_changed(data.weapon);
-        //Update the Widget.
-        elemental_info();
-        status_info();
-        update_materia_slots();
-        calc_stats();
-    }
+    if (weapon < 0)
+        data.weapon = quint8(Chars.weaponOffset(data.id));
+    else if (weapon > Chars.numberOfWeapons(data.id))
+        data.weapon = quint8(Chars.numberOfWeapons(data.id) + Chars.weaponOffset(data.id));
+    else
+        data.weapon = quint8(weapon + Chars.weaponOffset(data.id));
+    emit weapon_changed(data.weapon);
+
+    elemental_info();
+    status_info();
+    update_materia_slots();
 }
+
 void CharEditor::setArmor(int armor)
 {
-    if (armor == data.armor) {
+    if (armor == data.armor)
         return;
-    } else {
-        if (armor < 0) {
-            data.armor = 0;
-        } else if (armor > 32) {
-            data.armor = FF7Char::EmptyArmor;
-        } else {
-            data.armor = armor;
-        }
-        emit armor_changed(data.armor);
-        elemental_info();
-        status_info();
-        update_materia_slots();
-        calc_stats();
-    }
+    if (armor < 0)
+        data.armor = 0;
+    else if (armor > 32)
+        data.armor = FF7Char::EmptyArmor;
+    else
+        data.armor = quint8(armor);
+    emit armor_changed(data.armor);
+    elemental_info();
+    status_info();
+    update_materia_slots();
 }
+
 void CharEditor::setAccessory(int accessory)
 {
-    if (accessory == data.accessory) {
+    if (accessory == data.accessory)
         return;
-    } else {
-        if (accessory < 0) {
-            data.accessory = 0;
-        } else if (accessory > 32) {
-            data.accessory = FF7Char::EmptyAccessory;
-        } else {
-            data.accessory = accessory;
-        }
-        emit accessory_changed(data.accessory);
-        elemental_info();
-        status_info();
-        calc_stats();
-    }
+    if (accessory < 0)
+        data.accessory = 0;
+    else if (accessory > 32)
+        data.accessory = FF7Char::EmptyAccessory;
+    else
+        data.accessory = quint8(accessory);
+    emit accessory_changed(data.accessory);
+    elemental_info();
+    status_info();
+    calc_stats();
 }
+
 void CharEditor::setSadnessFury(int sad_fury)
 {
-    if (sad_fury == data.flags[0]) {
+    if (sad_fury == data.flags[0])
         return;
-    } else {
-        if (sad_fury == FF7Char::Fury) {
-            data.flags[0] = FF7Char::Fury;
-        } else if (sad_fury == FF7Char::Sadness) {
-            data.flags[0] = FF7Char::Sadness;
-        } else {
-            data.flags[0] = 0;
-        }
-        emit sadnessfury_changed(data.flags[0]);
-    }
-
+    if (sad_fury == FF7Char::Fury)
+        data.flags[0] = FF7Char::Fury;
+    else if (sad_fury == FF7Char::Sadness)
+        data.flags[0] = FF7Char::Sadness;
+    else
+        data.flags[0] = 0;
+    emit sadnessfury_changed(data.flags[0]);
 }
+
 void CharEditor::setRow(bool front_row)
 {
-    if ((front_row) && (data.flags[1] == FF7Char::FrontRow)) {
+    if ((front_row) && (data.flags[1] == FF7Char::FrontRow))
         return;
-    } else if ((!front_row) && (data.flags[1] == FF7Char::BackRow)) {
+    if ((!front_row) && (data.flags[1] == FF7Char::BackRow))
         return;
-    } else {
-        if (front_row) {
-            data.flags[1] = FF7Char::FrontRow;
-        } else {
-            data.flags[1] = FF7Char::BackRow;
-        }
-        emit row_changed(data.flags[1]);
-    }
+    if (front_row)
+        data.flags[1] = FF7Char::FrontRow;
+    else
+        data.flags[1] = FF7Char::BackRow;
+    emit row_changed(data.flags[1]);
 }
 
 void CharEditor::setLevelProgress(int level_progress)
 {
     //Level progress bar (0-63) game ingores values <4 4-63 are visible as "progress"
-    if (level_progress == data.flags[2]) {
+    if (level_progress == data.flags[2])
         return;
-    } else {
-        if (level_progress < 0) {
-            data.flags[2] = 0;
-        } else if (level_progress > 63) {
-            data.flags[2] = 63;
-        } else {
-            data.flags[2] = level_progress;
-        }
-        emit levelProgress_changed(data.flags[2]);
-    }
+    if (level_progress < 0)
+        data.flags[2] = 0;
+    else if (level_progress > 63)
+        data.flags[2] = 63;
+    else
+        data.flags[2] = quint8(level_progress);
+    emit levelProgress_changed(data.flags[2]);
 }
 
 void CharEditor::setLimits(int limits)
 {
-    if (limits == data.limits) {
+    if (limits == data.limits)
         return;
-    } else {
-        if (limits < 0) {
-            data.limits = 0;
-        } else if (limits > 32767) {
-            data.limits = 32767;
-        } else {
-            data.limits = limits;
-        }
-        emit limits_changed(data.limits);
-    }
+    if (limits < 0)
+        data.limits = 0;
+    else if (limits > qint16Max)
+        data.limits = qint16Max;
+    else
+        data.limits = quint16(limits);
+    emit limits_changed(data.limits);
 }
+
 void CharEditor::setTimesused1(int timesused)
 {
-    if (timesused == data.timesused1) {
+    if (timesused == data.timesused1)
         return;
-    } else {
-        if (timesused < 0) {
-            data.timesused1 = 0;
-        } else if (timesused > 65535) {
-            data.timesused1 = 65535;
-        } else {
-            data.timesused1 = timesused;
-        }
-        emit(timesused1_changed(data.timesused1));
-    }
+    if (timesused < 0)
+        data.timesused1 = 0;
+    else if (timesused > quint16Max)
+        data.timesused1 = quint16Max;
+    else
+        data.timesused1 = quint16(timesused);
+    emit(timesused1_changed(data.timesused1));
 }
 
 void CharEditor::setTimesused2(int timesused)
 {
-    if (timesused == data.timesused2) {
+    if (timesused == data.timesused2)
         return;
-    } else {
-        if (timesused < 0) {
-            data.timesused2 = 0;
-        } else if (timesused > 65535) {
-            data.timesused2 = 65535;
-        } else {
-            data.timesused2 = timesused;
-        }
-        emit(timesused2_changed(data.timesused2));
-    }
+    if (timesused < 0)
+        data.timesused2 = 0;
+    else if (timesused > quint16Max)
+        data.timesused2 = quint16Max;
+    else
+        data.timesused2 = quint16(timesused);
+    emit(timesused2_changed(data.timesused2));
 }
+
 void CharEditor::setTimesused3(int timesused)
 {
-    if (timesused == data.timesused3) {
+    if (timesused == data.timesused3)
         return;
-    } else {
-        if (timesused < 0) {
-            data.timesused3 = 0;
-        } else if (timesused > 65535) {
-            data.timesused3 = 65535;
-        } else {
-            data.timesused3 = timesused;
-        }
-        emit(timesused3_changed(data.timesused3));
-    }
+    if (timesused < 0)
+        data.timesused3 = 0;
+    else if (timesused > quint16Max)
+        data.timesused3 = quint16Max;
+    else
+        data.timesused3 = quint16(timesused);
+    emit(timesused3_changed(data.timesused3));
 }
+
 void CharEditor::setBaseHp(int baseHp)
 {
-    if (data.baseHP == baseHp) {
+    if (data.baseHP == baseHp)
         return;
-    } else {
-        if (baseHp < 0) {
-            data.baseHP = 0;
-        } else if (baseHp > 32767) {
-            data.baseHP = 32767;
-        } else {
-            data.baseHP = baseHp;
-        }
-        emit baseHp_changed(data.baseHP);
-        calc_stats();
-    }
+
+    if (baseHp < 0)
+        data.baseHP = 0;
+    else if (baseHp > qint16Max)
+        data.baseHP = qint16Max;
+    else
+        data.baseHP = quint16(baseHp);
+    emit baseHp_changed(data.baseHP);
+    calc_stats();
 }
+
 void CharEditor::setBaseMp(int baseMp)
 {
-    if (data.baseMP == baseMp) {
+    if (data.baseMP == baseMp)
         return;
-    } else {
-        if (baseMp < 0) {
-            data.baseMP = 0;
-        } else if (baseMp > 32767) {
-            data.baseMP = 32767;
-        } else {
-            data.baseMP = baseMp;
-        }
-        emit baseMp_changed(data.baseMP);
-        calc_stats();
-    }
+    if (baseMp < 0)
+        data.baseMP = 0;
+    else if (baseMp > qint16Max)
+        data.baseMP = qint16Max;
+    else
+        data.baseMP = quint16(baseMp);
+    emit baseMp_changed(data.baseMP);
+    calc_stats();
 }
+
 void CharEditor::setExp(int exp)
 {
-    if (data.exp == quint32(exp)) {
+    if (data.exp == quint32(exp))
         return;
-    } else {
-        if (exp < 0) {
-            data.exp = 0;
-        } else {
-            data.exp = exp;
-        }
-        emit exp_changed(data.exp);
-    }
+    if (exp < 0)
+        data.exp = 0;
+    else
+        data.exp = quint32(exp);
+    emit exp_changed(data.exp);
 }
+
 void CharEditor::setExpNext(int expNext)
 {
-    if (data.expNext == quint32(expNext)) {
+    if (data.expNext == quint32(expNext))
         return;
-    } else {
-        if (expNext < 0) {
-            data.expNext = 0;
-        } else {
-            data.expNext = expNext;
-        }
-        emit expNext_changed(data.expNext);
-    }
+    if (expNext < 0)
+        data.expNext = 0;
+    else
+        data.expNext = quint32(expNext);
+    emit expNext_changed(data.expNext);
 }
 
 void CharEditor::calc_limit_value(QModelIndex item)
@@ -2317,7 +1594,7 @@ void CharEditor::setAutoLevel(bool ans)
         Level_Changed(data.level);
     }
 }
-bool CharEditor::AutoLevel(void)
+bool CharEditor::AutoLevel()
 {
     return autolevel;
 }
@@ -2326,11 +1603,11 @@ void CharEditor::setAutoStatCalc(bool ans)
     autostatcalc = ans;    //Toggle stat calculation
     calc_stats();
 }
-bool CharEditor::AutoStatCalc(void)
+bool CharEditor::AutoStatCalc()
 {
     return autostatcalc;
 }
-bool CharEditor::AdvancedMode(void)
+bool CharEditor::AdvancedMode()
 {
     return advancedMode;
 }
@@ -2338,33 +1615,30 @@ void CharEditor::setAdvancedMode(bool new_advancedMode)
 {
     advancedMode = new_advancedMode;
     unknown_box->setVisible(advancedMode);
-    combo_id->setVisible(advancedMode);
-    sb_maxHp->setVisible(advancedMode);
-    sb_maxMp->setVisible(advancedMode);
-    lbl_hp_max->setVisible(!advancedMode);
-    lbl_mp_max->setVisible(!advancedMode);
+    comboId->setVisible(advancedMode);
+
     //if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
     if (data.id == FF7Char::CaitSith || data.id == FF7Char::Vincent || data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth) {
         cb_idChanger->setHidden(advancedMode);
     }
 }
+
 void CharEditor::setEditable(bool edit)
 {
     editable = edit;
     if (editable) {
-        // unlock all items, do this better later on.
-        this->setEnabled(true);
+        setEnabled(true);
     } else {
-        //lock all items
-        this->setEnabled(false);
+        setEnabled(false);
     }
 }
-bool CharEditor::Editable(void)
+
+bool CharEditor::Editable()
 {
     return editable;
 }
 
-void CharEditor::calc_stats(void)
+void CharEditor::calc_stats()
 {
     int str_total = 0;
     int vit_total = 0;
@@ -2509,95 +1783,49 @@ void CharEditor::calc_stats(void)
         //process materia
         for (int i = 0; i < 16; i++) {
             if (data.materias[i].id != FF7Materia::EmptyId) {
-                bool add = true;
                 int level = 0;
-                int aptemp = Materias.ap2num(data.materias[i].ap);
+                qint32 aptemp = (Materias.ap2num(data.materias[i].ap));
                 for (int m = 0; m < Materias.levels(data.materias[i].id); m++) {
                     if (aptemp >= Materias.ap(data.materias[i].id, m)) {
                         level++;
                     }
                 }
 
-                switch (i) {
-                case 0: if (weapon_slot_1->isHidden()) {
-                        add = false;
-                    }; break;
-                case 1: if (weapon_slot_2->isHidden()) {
-                        add = false;
-                    } break;
-                case 2: if (weapon_slot_3->isHidden()) {
-                        add = false;
-                    } break;
-                case 3: if (weapon_slot_4->isHidden()) {
-                        add = false;
-                    } break;
-                case 4: if (weapon_slot_5->isHidden()) {
-                        add = false;
-                    } break;
-                case 5: if (weapon_slot_6->isHidden()) {
-                        add = false;
-                    } break;
-                case 6: if (weapon_slot_7->isHidden()) {
-                        add = false;
-                    } break;
-                case 7: if (weapon_slot_8->isHidden()) {
-                        add = false;
-                    } break;
-                case 8: if (armor_slot_1->isHidden()) {
-                        add = false;
-                    } break;
-                case 9: if (armor_slot_2->isHidden()) {
-                        add = false;
-                    } break;
-                case 10: if (armor_slot_3->isHidden()) {
-                        add = false;
-                    } break;
-                case 11: if (armor_slot_4->isHidden()) {
-                        add = false;
-                    } break;
-                case 12: if (armor_slot_5->isHidden()) {
-                        add = false;
-                    } break;
-                case 13: if (armor_slot_6->isHidden()) {
-                        add = false;
-                    } break;
-                case 14: if (armor_slot_7->isHidden()) {
-                        add = false;
-                    } break;
-                case 15: if (armor_slot_8->isHidden()) {
-                        add = false;
-                    } break;
-                }
-                if (add) {
+                if (!materiaSlots.at(i)->isHidden()) {
                     // no special materia that affects these stats.
                     str_bonus += Materias.statSTR(data.materias[i].id);
                     vit_bonus += Materias.statVIT(data.materias[i].id);
                     spi_bonus += Materias.statSPI(data.materias[i].id);
+
                     //Show in Percentage.
-                    if (data.materias[i].id == 0x00) {
+                    if (data.materias[i].id == FF7Materia::MpPlus) {
                         mp_bonus += (10 * level);
-                    }                             else {
+                    } else {
                         mp_bonus += Materias.statMP(data.materias[i].id);
                     }
-                    if (data.materias[i].id == 0x01) {
+
+                    if (data.materias[i].id == FF7Materia::HpPlus) {
                         hp_bonus += (10 * level);
-                    }                            else {
+                    } else {
                         hp_bonus += Materias.statHP(data.materias[i].id);
                     }
+
                     //show exact numbers
-                    if (data.materias[i].id == 0x02) {
-                        dex_bonus += data.dexterity * (0.01 * (level * 10));
-                    }   else {
+                    if (data.materias[i].id == FF7Materia::SpeedPlus) {
+                        dex_bonus += data.dexterity * int(0.01 * (level * 10));
+                    } else {
                         dex_bonus += Materias.statDEX(data.materias[i].id);
                     }
-                    if (data.materias[i].id == 0x03) {
-                        mag_bonus += data.magic * (0.01 * (level * 10));
-                    }       else {
+
+                    if (data.materias[i].id == FF7Materia::MagicPlus) {
+                        mag_bonus += data.magic * int(0.01 * (level * 10));
+                    } else {
                         mag_bonus += Materias.statMAG(data.materias[i].id);
                     }
-                    if (data.materias[i].id == 0x04) {
-                        lck_bonus += data.luck * (0.01 * (level * 10));
-                    }        else {
+
+                    if (data.materias[i].id == FF7Materia::LuckPlus) {
+                        lck_bonus += data.luck * int(0.01 * (level * 10));
+                    } else {
                         lck_bonus += Materias.statLCK(data.materias[i].id);
                     }
                 }// end of add case.
@@ -2606,12 +1834,12 @@ void CharEditor::calc_stats(void)
 
     }
 
-    lbl_str_mat_bonus->setText(QString::number(str_bonus));
-    lbl_vit_mat_bonus->setText(QString::number(vit_bonus));
-    lbl_dex_mat_bonus->setText(QString::number(dex_bonus));
-    lbl_spi_mat_bonus->setText(QString::number(spi_bonus));
-    lbl_mag_mat_bonus->setText(QString::number(mag_bonus));
-    lbl_lck_mat_bonus->setText(QString::number(lck_bonus));
+    lblStrMateriaBonus->setText(QString::number(str_bonus));
+    lblVitMateriaBonus->setText(QString::number(vit_bonus));
+    lblDexMateriaBonus->setText(QString::number(dex_bonus));
+    lblSpiMateriaBonus->setText(QString::number(spi_bonus));
+    lblMagMateriaBonus->setText(QString::number(mag_bonus));
+    lblLckMateriaBonus->setText(QString::number(lck_bonus));
 
     str_total += str_bonus;
     vit_total += vit_bonus;
@@ -2620,63 +1848,27 @@ void CharEditor::calc_stats(void)
     mag_total += mag_bonus;
     lck_total += lck_bonus;
 
-    if (str_total < 256) {
-        lbl_str_total->setText(QString::number(str_total));
+    lblStrTotal->setText(QString::number(std::min(str_total, quint8Max)));
+    lblVitTotal->setText(QString::number(std::min(vit_total, quint8Max)));
+    lblMagTotal->setText(QString::number(std::min(mag_total, quint8Max)));
+    lblSpiTotal->setText(QString::number(std::min(spi_total, quint8Max)));
+    lblDexTotal->setText(QString::number(std::min(dex_total, quint8Max)));
+    lblLckTotal->setText(QString::number(std::min(lck_total, quint8Max)));
+
+    if (hp_bonus >= 0) {
+        lblBaseHpBonus->setText(QStringLiteral(" +%1%").arg(QString::number(hp_bonus)));
     } else {
-        lbl_str_total->setText(QString::number(255));
+        lblBaseHpBonus->setText(QStringLiteral(" %1%").arg(QString::number(hp_bonus)));
     }
 
-    if (vit_total  < 256) {
-        lbl_vit_total->setText(QString::number(vit_total));
+    if (mp_bonus >= 0) {
+        lblBaseMpBonus->setText(QStringLiteral(" +%1%").arg(QString::number(mp_bonus)));
     } else {
-        lbl_vit_total->setText(QString::number(255));
+        lblBaseMpBonus->setText(QString(" %1%").arg(QString::number(mp_bonus)));
     }
 
-    if (dex_total < 256) {
-        lbl_dex_total->setText(QString::number(dex_total));
-    } else {
-        lbl_dex_total->setText(QString::number(255));
-    }
-
-    if (spi_total < 256) {
-        lbl_spi_total->setText(QString::number(spi_total));
-    } else {
-        lbl_spi_total->setText(QString::number(255));
-    }
-
-    if (mag_total < 256) {
-        lbl_mag_total->setText(QString::number(mag_total));
-    } else {
-        lbl_mag_total->setText(QString::number(255));
-    }
-
-    if (lck_total < 256) {
-        lbl_lck_total->setText(QString::number(lck_total));
-    } else {
-        lbl_lck_total->setText(QString::number(255));
-    }
-
-    if (hp_bonus > 0) {
-        lbl_base_hp_bonus->setText(QString(" +%2 (+%1%)").arg(QString::number(hp_bonus), QString::number(int(data.baseHP * (hp_bonus * 0.01)))));
-    } else if (hp_bonus < 0) {
-        lbl_base_hp_bonus->setText(QString(" %2 (%1%)").arg(QString::number(hp_bonus), QString::number(int(data.baseHP * (hp_bonus * 0.01)))));
-    } else {
-        lbl_base_hp_bonus->setText(QString(""));
-    }
-
-    if (mp_bonus > 0) {
-        lbl_base_mp_bonus->setText(QString(" +%2 (+%1%)").arg(QString::number(mp_bonus), QString::number(int(data.baseMP * (mp_bonus * 0.01)))));
-    } else if (mp_bonus < 0) {
-        lbl_base_mp_bonus->setText(QString(" %2 (%1%)").arg(QString::number(mp_bonus), QString::number(int(data.baseMP * (mp_bonus * 0.01)))));
-    } else {
-        lbl_base_mp_bonus->setText(QString(""));
-    }
-
-    sb_maxHp->setValue(data.baseHP + (data.baseHP * (hp_bonus * .01)));
-    lbl_hp_max->setText(QString(" %1").arg(QString::number(sb_maxHp->value())));
-    sb_maxMp->setValue(data.baseMP + (data.baseMP * (mp_bonus * .01)));
-    lbl_mp_max->setText(QString(" %1").arg(QString::number(sb_maxMp->value())));
-
+    lblMaxHp->setNum(std::min(int(data.baseHP + (data.baseHP * (hp_bonus * .01))), qint16Max));
+    lblMaxMp->setNum(std::min(int(data.baseMP + (data.baseMP * (mp_bonus * .01))), qint16Max));
 }
 
 void CharEditor::level_up(int pre_level)
@@ -2685,37 +1877,37 @@ void CharEditor::level_up(int pre_level)
         //level up
         for (int i = pre_level; i < data.level; i++) {
             // for statGain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-            sb_str->setValue(data.strength + Chars.statGain(data.id, 0, data.strength, i, i + 1));
-            sb_vit->setValue(data.vitality + Chars.statGain(data.id, 1, data.vitality, i, i + 1));
-            sb_mag->setValue(data.magic + Chars.statGain(data.id, 2, data.magic, i, i + 1));
-            sb_spi->setValue(data.spirit + Chars.statGain(data.id, 3, data.spirit, i, i + 1));
-            sb_dex->setValue(data.dexterity + Chars.statGain(data.id, 4, data.dexterity, i, i + 1));
-            sb_lck->setValue(data.luck + Chars.statGain(data.id, 5, data.luck, i, i + 1));
-            sb_base_hp->setValue(data.baseHP + Chars.statGain(data.id, 6, data.baseHP, i, i + 1));
-            sb_base_mp->setValue(data.baseMP + Chars.statGain(data.id, 7, data.baseMP, i, i + 1));
+            sbStr->setValue(data.strength + Chars.statGain(data.id, 0, data.strength, i, i + 1));
+            sbVit->setValue(data.vitality + Chars.statGain(data.id, 1, data.vitality, i, i + 1));
+            sbMag->setValue(data.magic + Chars.statGain(data.id, 2, data.magic, i, i + 1));
+            sbSpi->setValue(data.spirit + Chars.statGain(data.id, 3, data.spirit, i, i + 1));
+            sbDex->setValue(data.dexterity + Chars.statGain(data.id, 4, data.dexterity, i, i + 1));
+            sbLck->setValue(data.luck + Chars.statGain(data.id, 5, data.luck, i, i + 1));
+            sbBaseHp->setValue(data.baseHP + Chars.statGain(data.id, 6, data.baseHP, i, i + 1));
+            sbBaseMp->setValue(data.baseMP + Chars.statGain(data.id, 7, data.baseMP, i, i + 1));
         }
     } else if (pre_level > data.level) {
         //level down
         for (int i = pre_level; i > data.level; i--) {
             // for statGain stat guide, 0=str; 1=vit; 2=mag; 3=spr; 4=dex; 5=lck; 6=basehp; 7basemp
-            sb_str->setValue(data.strength - Chars.statGain(data.id, 0, data.strength, i, i - 1));
-            sb_vit->setValue(data.vitality - Chars.statGain(data.id, 1, data.vitality, i, i - 1));
-            sb_mag->setValue(data.magic - Chars.statGain(data.id, 2, data.magic, i, i - 1));
-            sb_spi->setValue(data.spirit - Chars.statGain(data.id, 3, data.spirit, i, i - 1));
-            sb_dex->setValue(data.dexterity - Chars.statGain(data.id, 4, data.dexterity, i, i - 1));
-            sb_lck->setValue(data.luck - Chars.statGain(data.id, 5, data.luck, i, i - 1));
-            sb_base_hp->setValue(data.baseHP - Chars.statGain(data.id, 6, data.baseHP, i, i - 1));
-            sb_base_mp->setValue(data.baseMP - Chars.statGain(data.id, 7, data.baseMP, i, i - 1));
+            sbStr->setValue(data.strength - Chars.statGain(data.id, 0, data.strength, i, i - 1));
+            sbVit->setValue(data.vitality - Chars.statGain(data.id, 1, data.vitality, i, i - 1));
+            sbMag->setValue(data.magic - Chars.statGain(data.id, 2, data.magic, i, i - 1));
+            sbSpi->setValue(data.spirit - Chars.statGain(data.id, 3, data.spirit, i, i - 1));
+            sbDex->setValue(data.dexterity - Chars.statGain(data.id, 4, data.dexterity, i, i - 1));
+            sbLck->setValue(data.luck - Chars.statGain(data.id, 5, data.luck, i, i - 1));
+            sbBaseHp->setValue(data.baseHP - Chars.statGain(data.id, 6, data.baseHP, i, i - 1));
+            sbBaseMp->setValue(data.baseMP - Chars.statGain(data.id, 7, data.baseMP, i, i - 1));
         }
     }
     calc_stats();
 }
-void CharEditor::update_tnl_bar(void)
+void CharEditor::update_tnl_bar()
 {
     if (data.level != 99) {
-        setExpNext(Chars.totalExpForLevel(data.id, data.level) - data.exp);
+        setExpNext(int(Chars.totalExpForLevel(data.id, data.level) - data.exp));
         if (data.level > 0) {
-            setLevelProgress(((Chars.tnlForLevel(data.id, data.level) - data.expNext) * 62) / Chars.tnlForLevel(data.id, data.level));
+            setLevelProgress(int(((Chars.tnlForLevel(data.id, data.level) - data.expNext) * 62) / Chars.tnlForLevel(data.id, data.level)));
         }
     } else {
         setExpNext(0);
@@ -2728,7 +1920,7 @@ void CharEditor::update_tnl_bar(void)
     lbl_level_next->setText(tr("Next: %1").arg(QString::number(data.expNext)));
 }
 
-void CharEditor::elemental_info(void)
+void CharEditor::elemental_info()
 {
     int y = elemental_effects->contentsMargins().top() + elemental_effects->contentsMargins().bottom();
     bool show = false;
@@ -2776,14 +1968,14 @@ void CharEditor::elemental_info(void)
                 }
             }//end of for Loop
             elemental_effects->setFixedHeight(y);
-            elemental_box->setFixedSize(205 * scale, y + elemental_box->contentsMargins().top() + elemental_box->contentsMargins().bottom());
+            elemental_box->setFixedSize(int(205 * scale), y + elemental_box->contentsMargins().top() + elemental_box->contentsMargins().bottom());
         }//end of else.
     }//end of other loop.
     elemental_box->setVisible(show);
     elemental_box->adjustSize();
 }//end of function
 
-void CharEditor::status_info(void)
+void CharEditor::status_info()
 {
     int y = status_effects->contentsMargins().top() + status_effects->contentsMargins().bottom();
     bool show = false;
@@ -2842,273 +2034,82 @@ void CharEditor::status_info(void)
                 }
             }//end of for Loop
             status_effects->setFixedHeight(y);
-            status_box->setFixedSize(205 * scale, y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
+            status_box->setFixedSize(int(205 * scale), y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
         }//end of else.
     }//end of loop
     status_box->setVisible(show);
     status_box->adjustSize();
 }//end of function
+
 void CharEditor::update_materia_slots()
 {
-    weapon_slot_8->setHidden(1);
-    weapon_slot_7->setHidden(1);
-    weapon_slot_6->setHidden(1);
-    weapon_slot_5->setHidden(1);
-    weapon_slot_4->setHidden(1);
-    weapon_slot_3->setHidden(1);
-    weapon_slot_2->setHidden(1);
-    weapon_slot_1->setHidden(1);
-    armor_slot_8->setHidden(1);
-    armor_slot_7->setHidden(1);
-    armor_slot_6->setHidden(1);
-    armor_slot_5->setHidden(1);
-    armor_slot_4->setHidden(1);
-    armor_slot_3->setHidden(1);
-    armor_slot_2->setHidden(1);
-    armor_slot_1->setHidden(1);
+    QSize isize = QSize(int(24 * scale), int(24 * scale));
+
+    QList<QPushButton *> buttons = weapon_box->findChildren<QPushButton *>();
+    int i = 0;
+    for(auto button : qAsConst(buttons)) {
+        button->setVisible((i+1) <= Items.materiaSlots(data.weapon + 128));
+        if (data.materias[i].id != FF7Materia::EmptyId) {
+            button->setIcon(QIcon(Materias.pixmap(data.materias[i].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+        } else {
+            button->setIcon(QIcon());
+        }
+        i++;
+    }
+    buttons = armor_box->findChildren<QPushButton *>();
+    for(auto button : qAsConst(buttons)) {
+        button->setVisible((i-7) <= Items.materiaSlots(data.armor + 256));
+        if (data.materias[i].id != FF7Materia::EmptyId) {
+            button->setIcon(QIcon(Materias.pixmap(data.materias[i].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+        } else {
+            button->setIcon(QIcon());
+        }
+        i++;
+    }
 
     //reset style sheet for the outer slot frames and links to ensure they are not visible reguardless of hosts stylesheet.
-    armor_frm_1->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_2->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_3->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_4->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_5->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_6->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_7->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    armor_frm_8->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_8->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_7->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_6->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_5->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_4->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_3->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_2->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
-    weapon_frm_1->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
+    for(auto frame : qAsConst(materiaSlotFrames))
+        frame->setStyleSheet(QString("QFrame{background-color:rgba(0,0,0,0);}"));
 
-    weapon_m_link_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    weapon_m_link_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    weapon_m_link_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    weapon_m_link_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    armor_m_link_1->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    armor_m_link_2->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    armor_m_link_3->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
-    armor_m_link_4->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
+    QList<QLabel *> labels = weapon_box->findChildren<QLabel *>();
+    labels.append(armor_box->findChildren<QLabel *>());
+    for(auto label : qAsConst(labels))
+        label->setStyleSheet(QString("background-color:rgba(0,0,0,0);"));
 
-    //fill the slots.
-    QSize isize = QSize(int(24 * scale), int(24 * scale));
-    if (data.materias[0].id != FF7Materia::EmptyId) {
-        weapon_slot_1->setIcon(QIcon(Materias.pixmap(data.materias[0].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_1->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[0].id != FF7Materia::EmptyId) {
-        weapon_slot_1->setToolTip(Materias.name(data.materias[0].id));
-    } else {
-        weapon_slot_1->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[1].id != FF7Materia::EmptyId) {
-        weapon_slot_2->setIcon(QIcon(Materias.pixmap(data.materias[1].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_2->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[1].id != FF7Materia::EmptyId) {
-        weapon_slot_2->setToolTip(Materias.name(data.materias[1].id));
-    } else {
-        weapon_slot_2->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[2].id != FF7Materia::EmptyId) {
-        weapon_slot_3->setIcon(QIcon(Materias.pixmap(data.materias[2].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_3->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[2].id != FF7Materia::EmptyId) {
-        weapon_slot_3->setToolTip(Materias.name(data.materias[2].id));
-    } else {
-        weapon_slot_3->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[3].id != FF7Materia::EmptyId) {
-        weapon_slot_4->setIcon(QIcon(Materias.pixmap(data.materias[3].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_4->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[3].id != FF7Materia::EmptyId) {
-        weapon_slot_4->setToolTip(Materias.name(data.materias[3].id));
-    } else {
-        weapon_slot_4->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[4].id != FF7Materia::EmptyId) {
-        weapon_slot_5->setIcon(QIcon(Materias.pixmap(data.materias[4].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_5->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[4].id != FF7Materia::EmptyId) {
-        weapon_slot_5->setToolTip(Materias.name(data.materias[4].id));
-    } else {
-        weapon_slot_5->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[5].id != FF7Materia::EmptyId) {
-        weapon_slot_6->setIcon(QIcon(Materias.pixmap(data.materias[5].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_6->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[5].id != FF7Materia::EmptyId) {
-        weapon_slot_6->setToolTip(Materias.name(data.materias[5].id));
-    } else {
-        weapon_slot_6->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[6].id != FF7Materia::EmptyId) {
-        weapon_slot_7->setIcon(QIcon(Materias.pixmap(data.materias[6].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_7->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[6].id != FF7Materia::EmptyId) {
-        weapon_slot_7->setToolTip(Materias.name(data.materias[6].id));
-    } else {
-        weapon_slot_7->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[7].id != FF7Materia::EmptyId) {
-        weapon_slot_8->setIcon(QIcon(Materias.pixmap(data.materias[7].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        weapon_slot_8->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[7].id != FF7Materia::EmptyId) {
-        weapon_slot_8->setToolTip(Materias.name(data.materias[7].id));
-    } else {
-        weapon_slot_8->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[8].id != FF7Materia::EmptyId) {
-        armor_slot_1->setIcon(QIcon(Materias.pixmap(data.materias[8].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_1->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[8].id != FF7Materia::EmptyId) {
-        armor_slot_1->setToolTip(Materias.name(data.materias[8].id));
-    } else {
-        armor_slot_1->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[9].id != FF7Materia::EmptyId) {
-        armor_slot_2->setIcon(QIcon(Materias.pixmap(data.materias[9].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_2->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[9].id != FF7Materia::EmptyId) {
-        armor_slot_2->setToolTip(Materias.name(data.materias[9].id));
-    } else {
-        armor_slot_2->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[10].id != FF7Materia::EmptyId) {
-        armor_slot_3->setIcon(QIcon(Materias.pixmap(data.materias[10].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_3->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[10].id != FF7Materia::EmptyId) {
-        armor_slot_3->setToolTip(Materias.name(data.materias[10].id));
-    } else {
-        armor_slot_3->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[11].id != FF7Materia::EmptyId) {
-        armor_slot_4->setIcon(QIcon(Materias.pixmap(data.materias[11].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_4->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[11].id != FF7Materia::EmptyId) {
-        armor_slot_4->setToolTip(Materias.name(data.materias[11].id));
-    } else {
-        armor_slot_4->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[12].id != FF7Materia::EmptyId) {
-        armor_slot_5->setIcon(QIcon(Materias.pixmap(data.materias[12].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_5->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[12].id != FF7Materia::EmptyId) {
-        armor_slot_5->setToolTip(Materias.name(data.materias[12].id));
-    } else {
-        armor_slot_5->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[13].id != FF7Materia::EmptyId) {
-        armor_slot_6->setIcon(QIcon(Materias.pixmap(data.materias[13].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_6->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[13].id != FF7Materia::EmptyId) {
-        armor_slot_6->setToolTip(Materias.name(data.materias[13].id));
-    } else {
-        armor_slot_6->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[14].id != FF7Materia::EmptyId) {
-        armor_slot_7->setIcon(QIcon(Materias.pixmap(data.materias[14].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_7->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[14].id != FF7Materia::EmptyId) {
-        armor_slot_7->setToolTip(Materias.name(data.materias[14].id));
-    } else {
-        armor_slot_7->setToolTip(QString(tr("-Empty-")));
-    }
-    if (data.materias[15].id != FF7Materia::EmptyId) {
-        armor_slot_8->setIcon(QIcon(Materias.pixmap(data.materias[15].id).scaled(isize, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
-    } else {
-        armor_slot_8->setIcon(QIcon(QString("")));
-    }
-    if (data.materias[15].id != FF7Materia::EmptyId) {
-        armor_slot_8->setToolTip(Materias.name(data.materias[15].id));
-    } else {
-        armor_slot_8->setToolTip(QString(tr("-Empty-")));
-    }
-
+    updateMateriaToolTips();
     //set up weapon
     QString ap_rate = tr("AP:x%1").arg(Items.materiaGrowthRate(data.weapon + 128));
     lblWeaponStats->setText(ap_rate);
-    switch (Items.materiaSlots(data.weapon + 128)) {
-    case 8: weapon_slot_8->setHidden(0);
-    case 7: weapon_slot_7->setHidden(0);
-    case 6: weapon_slot_6->setHidden(0);
-    case 5: weapon_slot_5->setHidden(0);
-    case 4: weapon_slot_4->setHidden(0);
-    case 3: weapon_slot_3->setHidden(0);
-    case 2: weapon_slot_2->setHidden(0);
-    case 1: weapon_slot_1->setHidden(0);
-    };
+
     switch (Items.linkedSlots((data.weapon + 128))) {
-    case 4: weapon_m_link_4->setStyleSheet(Items.styleMateriaLink());
-    case 3: weapon_m_link_3->setStyleSheet(Items.styleMateriaLink());
-    case 2: weapon_m_link_2->setStyleSheet(Items.styleMateriaLink());
+    case 4: weapon_m_link_4->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
+    case 3: weapon_m_link_3->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
+    case 2: weapon_m_link_2->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
     case 1: weapon_m_link_1->setStyleSheet(Items.styleMateriaLink());
-    };
+    }
+
     //set up armor
     ap_rate = tr("AP:x%1").arg(Items.materiaGrowthRate(data.armor + 256));
     lblArmorStats->setText(ap_rate);
-    switch (Items.materiaSlots(data.armor + 256)) {
-    case 8: armor_slot_8->setHidden(0);
-    case 7: armor_slot_7->setHidden(0);
-    case 6: armor_slot_6->setHidden(0);
-    case 5: armor_slot_5->setHidden(0);
-    case 4: armor_slot_4->setHidden(0);
-    case 3: armor_slot_3->setHidden(0);
-    case 2: armor_slot_2->setHidden(0);
-    case 1: armor_slot_1->setHidden(0);
-    };
+
     switch (Items.linkedSlots((data.armor + 256))) {
-    case 4: armor_m_link_4->setStyleSheet(Items.styleMateriaLink());
-    case 3: armor_m_link_3->setStyleSheet(Items.styleMateriaLink());
-    case 2: armor_m_link_2->setStyleSheet(Items.styleMateriaLink());
+    case 4: armor_m_link_4->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
+    case 3: armor_m_link_3->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
+    case 2: armor_m_link_2->setStyleSheet(Items.styleMateriaLink()); [[fallthrough]];
     case 1: armor_m_link_1->setStyleSheet(Items.styleMateriaLink());
-    };
+    }
     calc_stats();
 }
 void CharEditor::matId_changed(qint8 id)
 {
-    if (id >= 0 && id < 91) {
-        data.materias[mslotsel].id = id;
-    } else {
+    if (id >= 0 && id < 91)
+        data.materias[mslotsel].id = quint8(id);
+    else
         data.materias[mslotsel].id = FF7Materia::EmptyId;
-    }
-    if (!load) {
+
+    if (!load)
         emit(Materias_changed(data.materias[mslotsel]));
-    }
     update_materia_slots();
-    calc_stats();
 }
 void CharEditor::matAp_changed(qint32 ap)
 {
@@ -3116,92 +2117,27 @@ void CharEditor::matAp_changed(qint32 ap)
         int a = (ap & 0xff);
         int b = (ap & 0xff00) >> 8;
         int c = (ap & 0xff0000) >> 16;
-        data.materias[mslotsel].ap[0] = a;
-        data.materias[mslotsel].ap[1] = b;
-        data.materias[mslotsel].ap[2] = c;
+        data.materias[mslotsel].ap[0] = quint8(a);
+        data.materias[mslotsel].ap[1] = quint8(b);
+        data.materias[mslotsel].ap[2] = quint8(c);
     } else {
-        data.materias[mslotsel].ap[0] = 0xFF;
-        data.materias[mslotsel].ap[1] = 0xFF;
-        data.materias[mslotsel].ap[2] = 0xFF;
+        data.materias[mslotsel].ap[0] = quint8Max;
+        data.materias[mslotsel].ap[1] = quint8Max;
+        data.materias[mslotsel].ap[2] = quint8Max;
     }
     if (!load) {
         emit(Materias_changed(data.materias[mslotsel]));
     }
     update_materia_slots();
 }
-void CharEditor::weapon_slot_1_clicked(void)
-{
-    mButtonPress(0);
-}
-void CharEditor::weapon_slot_2_clicked(void)
-{
-    mButtonPress(1);
-}
-void CharEditor::weapon_slot_3_clicked(void)
-{
-    mButtonPress(2);
-}
-void CharEditor::weapon_slot_4_clicked(void)
-{
-    mButtonPress(3);
-}
-void CharEditor::weapon_slot_5_clicked(void)
-{
-    mButtonPress(4);
-}
-void CharEditor::weapon_slot_6_clicked(void)
-{
-    mButtonPress(5);
-}
-void CharEditor::weapon_slot_7_clicked(void)
-{
-    mButtonPress(6);
-}
-void CharEditor::weapon_slot_8_clicked(void)
-{
-    mButtonPress(7);
-}
-void CharEditor::armor_slot_1_clicked(void)
-{
-    mButtonPress(8);
-}
-void CharEditor::armor_slot_2_clicked(void)
-{
-    mButtonPress(9);
-}
-void CharEditor::armor_slot_3_clicked(void)
-{
-    mButtonPress(10);
-}
-void CharEditor::armor_slot_4_clicked(void)
-{
-    mButtonPress(11);
-}
-void CharEditor::armor_slot_5_clicked(void)
-{
-    mButtonPress(12);
-}
-void CharEditor::armor_slot_6_clicked(void)
-{
-    mButtonPress(13);
-}
-void CharEditor::armor_slot_7_clicked(void)
-{
-    mButtonPress(14);
-}
-void CharEditor::armor_slot_8_clicked(void)
-{
-    mButtonPress(15);
-}
 
-void CharEditor::mButtonPress(int Mslot)
+void CharEditor::materiaSlotClicked(int slotClicked)
 {
     load = true;
-    if (Mslot < 0) {
+    if (slotClicked < 0)
         return;
-    }
-    if (Mslot != mslotsel) {
-        mslotsel = Mslot;
+    if (slotClicked != mslotsel) {
+        mslotsel = slotClicked;
         materia_edit->setMateria(char_materia(mslotsel).id, Materias.ap2num(char_materia(mslotsel).ap));
         setSlotFrame();
         emit(mslotChanged(mslotsel));
@@ -3211,134 +2147,315 @@ void CharEditor::mButtonPress(int Mslot)
     load = false;
 }
 
-void CharEditor::setSlotFrame(void)
+void CharEditor::setSlotFrame()
 {
-    weapon_frm_1->setFrameShape(QFrame::NoFrame);
-    weapon_frm_2->setFrameShape(QFrame::NoFrame);
-    weapon_frm_3->setFrameShape(QFrame::NoFrame);
-    weapon_frm_4->setFrameShape(QFrame::NoFrame);
-    weapon_frm_5->setFrameShape(QFrame::NoFrame);
-    weapon_frm_6->setFrameShape(QFrame::NoFrame);
-    weapon_frm_7->setFrameShape(QFrame::NoFrame);
-    weapon_frm_8->setFrameShape(QFrame::NoFrame);
-    armor_frm_1->setFrameShape(QFrame::NoFrame);
-    armor_frm_2->setFrameShape(QFrame::NoFrame);
-    armor_frm_3->setFrameShape(QFrame::NoFrame);
-    armor_frm_4->setFrameShape(QFrame::NoFrame);
-    armor_frm_5->setFrameShape(QFrame::NoFrame);
-    armor_frm_6->setFrameShape(QFrame::NoFrame);
-    armor_frm_7->setFrameShape(QFrame::NoFrame);
-    armor_frm_8->setFrameShape(QFrame::NoFrame);
-
-    switch (mslotsel) {
-    case 0: weapon_frm_1->setFrameShape(QFrame::Box); break;
-    case 1: weapon_frm_2->setFrameShape(QFrame::Box); break;
-    case 2: weapon_frm_3->setFrameShape(QFrame::Box); break;
-    case 3: weapon_frm_4->setFrameShape(QFrame::Box); break;
-    case 4: weapon_frm_5->setFrameShape(QFrame::Box); break;
-    case 5: weapon_frm_6->setFrameShape(QFrame::Box); break;
-    case 6: weapon_frm_7->setFrameShape(QFrame::Box); break;
-    case 7: weapon_frm_8->setFrameShape(QFrame::Box); break;
-    case 8:  armor_frm_1->setFrameShape(QFrame::Box); break;
-    case 9:  armor_frm_2->setFrameShape(QFrame::Box); break;
-    case 10: armor_frm_3->setFrameShape(QFrame::Box); break;
-    case 11: armor_frm_4->setFrameShape(QFrame::Box); break;
-    case 12: armor_frm_5->setFrameShape(QFrame::Box); break;
-    case 13: armor_frm_6->setFrameShape(QFrame::Box); break;
-    case 14: armor_frm_7->setFrameShape(QFrame::Box); break;
-    case 15: armor_frm_8->setFrameShape(QFrame::Box); break;
-    default: break;
-    };
+    for(auto frame : qAsConst(materiaSlotFrames)) {
+        frame->setFrameShape(QFrame::NoFrame);
+    }
+    materiaSlotFrames.at(mslotsel)->setFrameShape(QFrame::Box);
 }
+
 void CharEditor::cb_idChanger_toggled(bool checked)
 {
-    if (checked && data.id == FF7Char::CaitSith) {
-        combo_id->setCurrentIndex(FF7Char::YoungCloud);
-    }
-    if (checked && data.id == FF7Char::Vincent) {
-        combo_id->setCurrentIndex(FF7Char::Sephiroth);
-    }
-    if (!checked && data.id == FF7Char::YoungCloud) {
-        combo_id->setCurrentIndex(FF7Char::CaitSith);
-    }
-    if (!checked && data.id == FF7Char::Sephiroth) {
-        combo_id->setCurrentIndex(FF7Char::Vincent);
-    }
+    if (checked && data.id == FF7Char::CaitSith)
+        comboId->setCurrentIndex(FF7Char::YoungCloud);
+    if (checked && data.id == FF7Char::Vincent)
+        comboId->setCurrentIndex(FF7Char::Sephiroth);
+    if (!checked && data.id == FF7Char::YoungCloud)
+        comboId->setCurrentIndex(FF7Char::CaitSith);
+    if (!checked && data.id == FF7Char::Sephiroth)
+        comboId->setCurrentIndex(FF7Char::Vincent);
 }
+
 void CharEditor::MaxStats()
 {
-    if (data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth) {
+    if (data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth)
         return;
-    } else {
-        sb_level->setValue(99);
-        sb_base_hp->setValue(10000); //set to 10k to prevent overflow
-        sb_base_mp->setValue(10000); //set to 10k to prevent overflow
-        sb_str_bonus->setValue(255);
-        sb_dex_bonus->setValue(255);
-        sb_spi_bonus->setValue(255);
-        sb_vit_bonus->setValue(255);
-        sb_mag_bonus->setValue(255);
-        sb_lck_bonus->setValue(255);
-        sb_curHp->setValue(data.maxHP);
-        sb_curMp->setValue(data.maxMP);
 
-        //do limits.
-        if (data.id == FF7Char::CaitSith) {
-            sb_limit_level->setValue(2);
-            this->setLimits(0x09);
-        } else if (data.id == FF7Char::Vincent) {
-            sb_limit_level->setValue(4);
-            this->setLimits(0x249);
-        } else {
-            sb_limit_level->setValue(4);
-            this->setLimits(0x2DB);
-        }
+    sbLevel->setValue(99);
+    sbBaseHp->setValue(10000); //set to 10k to prevent overflow
+    sbBaseMp->setValue(10000); //set to 10k to prevent overflow
+    sbStrSourceUse->setValue(quint8Max);
+    sbDexSourceUse->setValue(quint8Max);
+    sbSpiSourceUse->setValue(quint8Max);
+    sbVitSourceUse->setValue(quint8Max);
+    sbMagSourceUse->setValue(quint8Max);
+    sbLckSourceUse->setValue(quint8Max);
+    sbCurrentHp->setValue(data.maxHP);
+    sbCurrentMp->setValue(data.maxMP);
+
+    if (data.id == FF7Char::CaitSith) {
+        sb_limit_level->setValue(2);
+        setLimits(0x09);
+    } else if (data.id == FF7Char::Vincent) {
+        sb_limit_level->setValue(4);
+        setLimits(0x249);
+    } else {
+        sb_limit_level->setValue(4);
+        setLimits(0x2DB);
     }
 }
+
 void CharEditor::MaxEquip()
 {
-    if (data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth) {
+    if (data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth)
         return;
-    } else {
-        //set up weapons/ armor
-        weapon_selection->setCurrentIndex(Chars.numberOfWeapons(data.id) - 1);
-        armor_selection->setCurrentIndex(29);
-        accessory_selection->setCurrentIndex(18);
-        for (int i = 15; i >= 0; i--) {
-            mslotsel = i;
-            quint8 new_id = FF7Materia::EmptyId;
-            switch (mslotsel) {
-            case 6: new_id = FF7Materia::MegaAll; break;
-            case 5: new_id = FF7Materia::LongRange; break;
-            case 4: new_id = FF7Materia::PreEmptive; break;
-            case 3: new_id = FF7Materia::MasterSummon; break;
-            case 2: new_id = FF7Materia::EnemySkill; break;
-            case 1: new_id = FF7Materia::MasterCommand; break;
-            case 0: weapon_slot_1_clicked(); new_id = FF7Materia::MasterMagic; break;
-            }
 
-            data.materias[mslotsel].id = new_id;
-            data.materias[mslotsel].ap[0] = 0xFF;
-            data.materias[mslotsel].ap[1] = 0xFF;
-            data.materias[mslotsel].ap[2] = 0xFF;
+    //set up weapons/ armor
+    weapon_selection->setCurrentIndex(Chars.numberOfWeapons(data.id) - 1);
+    armor_selection->setCurrentIndex(29);
+    accessory_selection->setCurrentIndex(18);
+    for (int i = 15; i >= 0; i--) {
+        mslotsel = i;
+        quint8 new_id = FF7Materia::EmptyId;
 
-            emit(mslotChanged(mslotsel));
-            emit(Materias_changed(data.materias[mslotsel]));
+        switch (mslotsel) {
+        case 6: new_id = FF7Materia::MegaAll;
+                break;
+        case 5: new_id = FF7Materia::LongRange;
+                break;
+        case 4: new_id = FF7Materia::PreEmptive;
+                break;
+        case 3: new_id = FF7Materia::MasterSummon;
+                break;
+        case 2: new_id = FF7Materia::EnemySkill;
+                break;
+        case 1: new_id = FF7Materia::MasterCommand;
+                break;
+        case 0: materiaSlotClicked(0);
+                new_id = FF7Materia::MasterMagic;
+                break;
         }
-        setSlotFrame();
-        update_materia_slots();
-        cb_front_row->setCheckState(Qt::Unchecked);
+
+        data.materias[mslotsel].id = new_id;
+        data.materias[mslotsel].ap[0] = quint8Max;
+        data.materias[mslotsel].ap[1] = quint8Max;
+        data.materias[mslotsel].ap[2] = quint8Max;
+
+        emit(mslotChanged(mslotsel));
+        emit(Materias_changed(data.materias[mslotsel]));
     }
+    update_materia_slots();
+    setSlotFrame();
+    cbFrontRow->setCheckState(Qt::Unchecked);
 }
+
 void CharEditor::setEditableComboBoxes(bool editable)
 {
     weapon_selection->setEditable(editable);
-    weapon_selection->setInsertPolicy(QComboBox::NoInsert);
-
     armor_selection->setEditable(editable);
-    armor_selection->setInsertPolicy(QComboBox::NoInsert);
-
     accessory_selection->setEditable(editable);
-    accessory_selection->setInsertPolicy(QComboBox::NoInsert);
     materia_edit->setEditableMateriaCombo(editable);
+}
+
+QWidget* CharEditor::makeStatWidget(QSpinBox* statBaseSpinBox, QSpinBox* statSourceSpinBox, QLabel* statLabel, QLabel* statMateriaBonusLabel, QLabel* statTotalLabel)
+{
+    QSizePolicy policy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+    int width = fontMetrics().horizontalAdvance(QStringLiteral("WWW"));
+
+    statBaseSpinBox->setMaximum(quint8Max);
+    statBaseSpinBox->setWrapping(true);
+    statBaseSpinBox->setAlignment(Qt::AlignCenter);
+
+    if (statSourceSpinBox) {
+        statSourceSpinBox->setMaximum(quint8Max);
+        statSourceSpinBox->setWrapping(true);
+        statSourceSpinBox->setAlignment(Qt::AlignCenter);
+    }
+
+    statLabel->setFixedWidth(width);
+    statLabel->setSizePolicy(policy);
+
+    statMateriaBonusLabel->setFixedWidth(width);
+    statMateriaBonusLabel->setSizePolicy(policy);
+
+    statTotalLabel->setFixedWidth(width);
+    statTotalLabel->setSizePolicy(policy);
+
+    auto lblEquals = new QLabel(QStringLiteral("= "));
+    lblEquals->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("= ")));
+
+    auto layout = new QHBoxLayout;
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(0);
+    layout->addWidget(statLabel);
+    layout->addWidget(statBaseSpinBox);
+
+    if (statSourceSpinBox) {
+        auto lblPlus_1 = new QLabel(QStringLiteral(" + "));
+        lblPlus_1->setAlignment(Qt::AlignCenter);
+        auto lblPlus_2 = new QLabel(QStringLiteral(" + "));
+        lblPlus_2->setAlignment(Qt::AlignCenter);
+        lblEquals->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral(" = ")));
+        layout->addWidget(lblPlus_1);
+        layout->addWidget(statSourceSpinBox);
+        layout->addWidget(lblPlus_2);
+    }
+
+    layout->addWidget(statMateriaBonusLabel);
+    layout->addWidget(lblEquals);
+    layout->addWidget(statTotalLabel);
+
+    auto widget = new QWidget();
+    widget->setSizePolicy(policy);
+    widget->setLayout(layout);
+
+    return widget;
+}
+
+QFrame * CharEditor::makeStatFrame()
+{
+    auto statLeftLayout = new QVBoxLayout;
+    statLeftLayout->addWidget(makeStatWidget(sbBaseHp, nullptr, lblBaseHp, lblBaseHpBonus, lblMaxHp), 0);
+    statLeftLayout->addWidget(makeStatWidget(sbStr, sbStrSourceUse, lblStr, lblStrMateriaBonus, lblStrTotal), 0);
+    statLeftLayout->addWidget(makeStatWidget(sbVit, sbVitSourceUse, lblVit, lblVitMateriaBonus, lblVitTotal), 0);
+    statLeftLayout->addWidget(makeStatWidget(sbMag, sbMagSourceUse, lblMag, lblMagMateriaBonus, lblMagTotal), 0);
+
+    sbBaseHp->setMaximum(qint16Max);
+    sbBaseHp->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWWWW")));
+    lblBaseHpBonus->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWWW")));
+
+    auto statRightLayout = new QVBoxLayout;
+    statRightLayout->addWidget(makeStatWidget(sbBaseMp, nullptr, lblBaseMp, lblBaseMpBonus, lblMaxMp), 0);
+    statRightLayout->addWidget(makeStatWidget(sbSpi, sbSpiSourceUse, lblSpi, lblSpiMateriaBonus, lblSpiTotal), 0);
+    statRightLayout->addWidget(makeStatWidget(sbDex, sbDexSourceUse, lblDex, lblDexMateriaBonus, lblDexTotal), 0);
+    statRightLayout->addWidget(makeStatWidget(sbLck, sbLckSourceUse, lblLck, lblLckMateriaBonus, lblLckTotal), 0);
+
+    sbBaseMp->setMaximum(qint16Max);
+    sbBaseMp->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWWWW")));
+    lblBaseMpBonus->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WWWW")));
+
+    auto statBox = new QFrame(this);
+    auto statLayout = new QHBoxLayout(statBox);
+    statLayout->addLayout(statLeftLayout, 0);
+    statLayout->addLayout(statRightLayout, 0);
+    statLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Expanding, QSizePolicy::Fixed));
+
+    return statBox;
+}
+
+QHBoxLayout * CharEditor::makeMateriaSlotPair(QPushButton* button1, QPushButton* button2, QFrame *frame1, QFrame *frame2, QLabel* linkLabel)
+{
+    QSize slotSize = QSize(int(32 * scale), int(32 * scale));
+    QSize linkSize = QSize(int(12 * scale), int(16 * scale));
+    button1->setFixedSize(slotSize);
+    button1->setIconSize(slotSize);
+    button1->setStyleSheet(Items.styleMateriaSlotNoGrowth());
+    button1->setHidden(1);
+
+    auto slotLayout = new QHBoxLayout;
+    slotLayout->setContentsMargins(0, 0, 0, 0);
+    slotLayout->addWidget(button1);
+
+    frame1->setFixedSize(slotSize);
+    frame1->setFrameShape(QFrame::NoFrame);
+    frame1->setFrameShadow(QFrame::Plain);
+    frame1->setLayout(slotLayout);
+
+    linkLabel->setFixedSize(linkSize);
+
+    button2->setFixedSize(slotSize);
+    button2->setIconSize(slotSize);
+    button2->setStyleSheet(Items.styleMateriaSlotNoGrowth());
+    button2->setHidden(1);
+
+    auto slotLayout2 = new QHBoxLayout;
+    slotLayout2->setContentsMargins(0, 0, 0, 0);
+    slotLayout2->addWidget(button2);
+
+    frame2->setFixedSize(slotSize);
+    frame2->setFrameShape(QFrame::NoFrame);
+    frame2->setFrameShadow(QFrame::Plain);
+    frame2->setLayout(slotLayout2);
+
+    auto finalLayout = new QHBoxLayout;
+    finalLayout->setContentsMargins(0, 0, 0, 0);
+    finalLayout->addWidget(frame1);
+    finalLayout->addWidget(linkLabel);
+    finalLayout->addWidget(frame2);
+    finalLayout->setSpacing(0);
+
+    return finalLayout;
+}
+
+QVBoxLayout * CharEditor::makeLimitLayout()
+{
+    int charWidth = fontMetrics().horizontalAdvance((QChar('W')));
+
+    sb_uses_limit_1_1 = new QSpinBox;
+    sb_uses_limit_1_1->setMaximum(qint16Max);
+    sb_uses_limit_1_1->setWrapping(true);
+    sb_uses_limit_1_1->setFixedWidth(charWidth * 5);
+    sb_uses_limit_1_1->setAlignment(Qt::AlignCenter);
+
+    auto layout_1_1 = new QHBoxLayout;
+    layout_1_1->setContentsMargins(0, 0, 0, 0);
+    layout_1_1->addWidget(lbl_1_1);
+    layout_1_1->addWidget(sb_uses_limit_1_1);
+
+    sb_uses_limit_2_1 = new QSpinBox;
+    sb_uses_limit_2_1->setWrapping(true);
+    sb_uses_limit_2_1->setMaximum(qint16Max);
+    sb_uses_limit_2_1->setFixedWidth(charWidth * 5);
+    sb_uses_limit_2_1->setAlignment(Qt::AlignCenter);
+
+    auto layout_2_1 = new QHBoxLayout;
+    layout_2_1->setContentsMargins(0, 0, 0, 0);
+    layout_2_1->addWidget(lbl_2_1);
+    layout_2_1->addWidget(sb_uses_limit_2_1);
+
+    sb_uses_limit_3_1 = new QSpinBox;
+    sb_uses_limit_3_1->setMaximum(qint16Max);
+    sb_uses_limit_3_1->setWrapping(true);
+    sb_uses_limit_3_1->setFixedWidth(charWidth * 5);
+    sb_uses_limit_3_1->setAlignment(Qt::AlignCenter);
+
+    auto layout_3_1 = new QHBoxLayout;
+    layout_3_1->setContentsMargins(0, 0, 0, 0);
+    layout_3_1->addWidget(lbl_3_1);
+    layout_3_1->addWidget(sb_uses_limit_3_1);
+
+    auto used_limits_layout = new QVBoxLayout;
+    used_limits_layout->setContentsMargins(0, 6, 0, 0);
+    used_limits_layout->addWidget(lbl_uses);
+    used_limits_layout->addLayout(layout_1_1);
+    used_limits_layout->addLayout(layout_2_1);
+    used_limits_layout->addLayout(layout_3_1);
+    used_limits_layout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::Preferred, QSizePolicy::Expanding));
+
+    sb_limit_level = new QSpinBox;
+    sb_limit_level->setMaximum(4);
+    sb_limit_level->setWrapping(true);
+    sb_limit_level->setFixedWidth(charWidth * 4);
+
+    auto limit_level_layout = new QHBoxLayout;
+    limit_level_layout->setContentsMargins(0, 0, 0, 0);
+    limit_level_layout->addWidget(lbl_limit_level);
+    limit_level_layout->addWidget(sb_limit_level);
+
+    slider_limit = new QSlider(Qt::Horizontal);
+    slider_limit->setMaximum(quint8Max);
+    slider_limit->setMaximumHeight(int(20 * scale));
+
+    lcdLimitValue = new QLCDNumber(3);
+    lcdLimitValue->setSegmentStyle(QLCDNumber::Flat);
+
+    auto limit_bar_layout = new QHBoxLayout;
+    limit_bar_layout->setContentsMargins(0, 0, 0, 0);
+    limit_bar_layout->addLayout(limit_level_layout);
+    limit_bar_layout->addSpacerItem(new QSpacerItem(10, 0, QSizePolicy::Fixed, QSizePolicy::Fixed));
+    limit_bar_layout->addWidget(lbl_limit_bar);
+    limit_bar_layout->addWidget(slider_limit);
+    limit_bar_layout->addWidget(lcdLimitValue);
+
+    auto limit_use_list = new QHBoxLayout;
+    limit_use_list->addLayout(used_limits_layout);
+    limit_use_list->addWidget(list_limits);
+
+    auto finalLayout = new QVBoxLayout;
+    finalLayout->setContentsMargins(0, 0, 0, 0);
+    finalLayout->addLayout(limit_bar_layout);
+    finalLayout->addLayout(limit_use_list);
+
+    return finalLayout;
 }

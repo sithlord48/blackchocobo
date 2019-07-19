@@ -92,9 +92,9 @@ public:
     {
         return Materias(id).type;
     }
-    Q_INVOKABLE inline quint32 ap2num(quint8 ap[3])
+    Q_INVOKABLE inline qint32 ap2num(quint8 ap[3])
     {
-        return quint32(ap[0] | (ap[1] << 8) | (ap[2] << 16));
+        return qint32(ap[0] | (ap[1] << 8) | (ap[2] << 16));
     }
     Q_INVOKABLE inline const QString &imageAllResource() const
     {

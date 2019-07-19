@@ -207,6 +207,10 @@ p, li { white-space: pre-wrap; }
         <source>ff7tk: Chocobo name not showing place holder text at right times</source>
         <translation>ff7tk: Chocobo name not showing place holder text at right times</translation>
     </message>
+    <message>
+        <source>New: Dynamic Language Switching</source>
+        <translation>New: Dynamic Language Switching</translation>
+    </message>
 </context>
 <context>
     <name>CharEditor</name>
@@ -580,11 +584,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>value calculated ingame; edit BaseMp</source>
-        <translation>value calculated ingame; edit BaseMp</translation>
+        <translation type="vanished">value calculated ingame; edit BaseMp</translation>
     </message>
     <message>
         <source>value calculated ingame; edit BaseHp</source>
-        <translation>value calculated ingame; edit BaseHp</translation>
+        <translation type="vanished">value calculated ingame; edit BaseHp</translation>
     </message>
     <message>
         <source>Exp: </source>
@@ -596,7 +600,99 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Resist</source>
-        <translation type="unfinished">Resist</translation>
+        <translation>Resist</translation>
+    </message>
+    <message>
+        <source>Current HP</source>
+        <translation>Current HP</translation>
+    </message>
+    <message>
+        <source>Current MP</source>
+        <translation>Current MP</translation>
+    </message>
+    <message>
+        <source>Maximum HP</source>
+        <translation>Maximum HP</translation>
+    </message>
+    <message>
+        <source>Materia and Equipment Bonus</source>
+        <translation>Materia and Equipment Bonus</translation>
+    </message>
+    <message>
+        <source>Maximum MP</source>
+        <translation>Maximum MP</translation>
+    </message>
+    <message>
+        <source>Base Strength</source>
+        <translation>Base Strength</translation>
+    </message>
+    <message>
+        <source>Power Sources Used</source>
+        <translation>Power Sources Used</translation>
+    </message>
+    <message>
+        <source>Strength Stat Total</source>
+        <translation>Strength Stat Total</translation>
+    </message>
+    <message>
+        <source>Base Vitality</source>
+        <translation>Base Vitality</translation>
+    </message>
+    <message>
+        <source>Guard Sources Used</source>
+        <translation>Guard Sources Used</translation>
+    </message>
+    <message>
+        <source>Vitality Stat Total</source>
+        <translation>Vitality Stat Total</translation>
+    </message>
+    <message>
+        <source>Base Magic</source>
+        <translation>Base Magic</translation>
+    </message>
+    <message>
+        <source>Magic Sources Used</source>
+        <translation>Magic Sources Used</translation>
+    </message>
+    <message>
+        <source>Magic Stat Total</source>
+        <translation>Magic Stat Total</translation>
+    </message>
+    <message>
+        <source>Base Spirit</source>
+        <translation>Base Spirit</translation>
+    </message>
+    <message>
+        <source>Mind Sources Used</source>
+        <translation>Mind Sources Used</translation>
+    </message>
+    <message>
+        <source>Spirit Stat Total</source>
+        <translation>Spirit Stat Total</translation>
+    </message>
+    <message>
+        <source>Base Dexterity</source>
+        <translation>Base Dexterity</translation>
+    </message>
+    <message>
+        <source>Speed Sources Used</source>
+        <translation>Speed Sources Used</translation>
+    </message>
+    <message>
+        <source>Dexterity Stat Total</source>
+        <translation>Dexterity Stat Total</translation>
+    </message>
+    <message>
+        <source>Base Luck</source>
+        <translation>Base Luck</translation>
+    </message>
+    <message>
+        <source>Luck Sources Used</source>
+        <translation>Luck Sources Used</translation>
+    </message>
+    <message>
+        <source>Luck Stat Total</source>
+        <translation>Luck Stat Total</translation>
     </message>
 </context>
 <context>
