@@ -6399,24 +6399,6 @@ rgb(255, 255, 255)</string>
             </property>
             <item>
              <widget class="QFrame" name="table_unknown">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>234</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>234</width>
-                <height>16777215</height>
-               </size>
-              </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
@@ -6657,32 +6639,32 @@ rgb(255, 255, 255)</string>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_41</string>
+                     <string notr="true">z_41</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_42</string>
+                     <string notr="true">z_42</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_43</string>
+                     <string notr="true">z_43</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_44</string>
+                     <string notr="true">z_44</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_45</string>
+                     <string notr="true">z_45</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_46</string>
+                     <string notr="true">z_46</string>
                     </property>
                    </item>
                    <item>
@@ -6742,7 +6724,7 @@ rgb(255, 255, 255)</string>
                  </column>
                  <column>
                   <property name="text">
-                   <string/>
+                    <string/>
                   </property>
                  </column>
                 </widget>

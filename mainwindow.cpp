@@ -38,9 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
 //Initilze Remaining Data
     buffer_materia.id = FF7Materia::EmptyId;
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
         buffer_materia.ap[i] = 0xFF;   //empty buffer incase
-    }
 
     setAcceptDrops(true);
     ui->setupUi(this);
@@ -133,7 +132,31 @@ void MainWindow::initDisplay()
     ui->statusBar->addWidget(ui->frame_status, 1);
     ui->frame_status->setFixedHeight(fontMetrics().height() + 2);
     ui->tbl_materia->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
+    ui->tbl_unknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
+    ui->tbl_unknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tbl_unknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tbl_unknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
+    ui->tbl_unknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+
+    ui->tbl_compare_unknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
+    ui->tbl_compare_unknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tbl_compare_unknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tbl_compare_unknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
+    ui->tbl_compare_unknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+
+    int width = 0;
+    for(int i = 0; i < 5; i++)
+        width += ui->tbl_unknown->columnWidth(i);
+
+    width +=ui->tbl_unknown->verticalScrollBar()->width();
+    ui->table_unknown->setFixedWidth(width);
+    ui->tbl_unknown->setFixedWidth(width);
+
+    width -=ui->tbl_unknown->verticalScrollBar()->width();
+    ui->compare_table->setFixedWidth(width);
+    ui->tbl_compare_unknown->setFixedWidth(width);
 }
+
 void MainWindow::setScale(double scale)
 {
     scale = std::max(scale, 1.0);
@@ -172,9 +195,6 @@ void MainWindow::setScale(double scale)
     ui->combo_map_controls->setFixedHeight(32);
     ui->slide_world_x->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
     ui->slide_world_y->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
-    ui->table_unknown->setFixedWidth(int(234 * scale));
-    ui->compare_table->setFixedWidth(int(234 * scale));
-    ui->compare_table->setEnabled(false);
     ui->lbl_love_aeris->setFixedSize(int(50 * scale), int(68 * scale));
     ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_barret->setFixedSize(int(50 * scale), int(68 * scale));
@@ -1086,9 +1106,9 @@ void MainWindow::setmenu(bool newgame)
     load = true;
     /*~~Disable All Items that are dependent on File Type~~*/
     ui->actionClear_Slot->setEnabled(0);
-    ui->action_Region_USA->setChecked(Qt::Unchecked);    ui->action_Region_PAL_Generic->setChecked(Qt::Unchecked);  ui->action_Region_PAL_German->setChecked(Qt::Unchecked);
-    ui->action_Region_PAL_French->setChecked(Qt::Unchecked); ui->action_Region_PAL_Spanish->setChecked(Qt::Unchecked);    ui->action_Region_JPN->setChecked(Qt::Unchecked);
-    ui->action_Region_JPN_International->setChecked(Qt::Unchecked);    ui->actionNext_Slot->setEnabled(0); ui->actionPrevious_Slot->setEnabled(0);
+    ui->action_Region_USA->setChecked(false);    ui->action_Region_PAL_Generic->setChecked(false);  ui->action_Region_PAL_German->setChecked(false);
+    ui->action_Region_PAL_French->setChecked(false); ui->action_Region_PAL_Spanish->setChecked(false);    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);    ui->actionNext_Slot->setEnabled(0); ui->actionPrevious_Slot->setEnabled(0);
     ui->actionShow_Selection_Dialog->setEnabled(0); ui->actionNew_Game->setEnabled(0); ui->compare_table->setEnabled(0);
     ui->lbl_current_slot_txt->clear(); ui->actionImport_char->setEnabled(1); ui->actionExport_char->setEnabled(1);
     /*~~End Clear Menu Items~~*/
@@ -1140,19 +1160,19 @@ void MainWindow::setmenu(bool newgame)
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
     if (ff7->region(s).contains("94163")) {
-        ui->action_Region_USA->setChecked(Qt::Checked);
+        ui->action_Region_USA->setChecked(true);
     } else if (ff7->region(s).contains("00867")) {
-        ui->action_Region_PAL_Generic->setChecked(Qt::Checked);
+        ui->action_Region_PAL_Generic->setChecked(true);
     } else if (ff7->region(s).contains("00868")) {
-        ui->action_Region_PAL_French->setChecked(Qt::Checked);
+        ui->action_Region_PAL_French->setChecked(true);
     } else if (ff7->region(s).contains("00869")) {
-        ui->action_Region_PAL_German->setChecked(Qt::Checked);
+        ui->action_Region_PAL_German->setChecked(true);
     } else if (ff7->region(s).contains("00900")) {
-        ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);
+        ui->action_Region_PAL_Spanish->setChecked(true);
     } else if (ff7->region(s).contains("00700")) {
-        ui->action_Region_JPN->setChecked(Qt::Checked);
+        ui->action_Region_JPN->setChecked(true);
     } else if (ff7->region(s).contains("01057")) {
-        ui->action_Region_JPN_International->setChecked(Qt::Checked);
+        ui->action_Region_JPN_International->setChecked(true);
     } else if (ff7->region(s).isEmpty()) {/*do nothing*/}
     /*~~End Detected Region~~*/
     else {
@@ -2014,25 +2034,25 @@ void MainWindow::cm_pensChanged(int pen, int index)
 void MainWindow::on_sb_love_barret_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, false, FF7Save::LOVE_BARRET, qint8(value));
+        ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
     }
 }
 void MainWindow::on_sb_love_aeris_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, false, FF7Save::LOVE_AERIS, qint8(value));
+        ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
     }
 }
 void MainWindow::on_sb_love_tifa_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, false, FF7Save::LOVE_TIFA, qint8(value));
+        ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
     }
 }
 void MainWindow::on_sb_love_yuffie_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, qint8(value));
+        ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
     }
 }
 
@@ -2759,7 +2779,7 @@ void MainWindow::on_btnReplay_clicked()
         ff7->setBmProgress2(s, 0);
         ff7->setBmProgress3(s, 0);
         ff7->setMidgarTrainFlags(s, 0);
-        ui->cb_bombing_int->setChecked(Qt::Checked);
+        ui->cb_bombing_int->setChecked(true);
         ui->combo_s7_slums->setCurrentIndex(1);
         ui->sb_turkschurch->setValue(0); // reset turks.
         locationViewer->setMapId(1);
@@ -2777,7 +2797,7 @@ void MainWindow::on_btnReplay_clicked()
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(Qt::Unchecked);
+        ui->cb_bombing_int->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(183);
         if (!locationViewer->locationChangesSaved()) {
@@ -2795,7 +2815,7 @@ void MainWindow::on_btnReplay_clicked()
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(Qt::Unchecked);
+        ui->cb_bombing_int->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(332);
         if (!locationViewer->locationChangesSaved()) {
@@ -2831,7 +2851,7 @@ void MainWindow::on_btnReplay_clicked()
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(Qt::Unchecked);
+        ui->cb_bombing_int->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(496);
         if (!locationViewer->locationChangesSaved()) {
@@ -2848,7 +2868,7 @@ void MainWindow::on_btnReplay_clicked()
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(Qt::Unchecked);
+        ui->cb_bombing_int->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(646);
         if (!locationViewer->locationChangesSaved()) {
@@ -2895,25 +2915,25 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
 void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, true, FF7Save::LOVE_AERIS, qint8(value));
+        ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
     }
 }
 void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, true, FF7Save::LOVE_TIFA, qint8(value));
+        ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
     }
 }
 void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, qint8(value));
+        ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
     }
 }
 void MainWindow::on_sb_b_love_barret_valueChanged(int value)
 {
     if (!load) {
-        ff7->setLove(s, true, FF7Save::LOVE_BARRET, qint8(value));
+        ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
     }
 }
 void MainWindow::on_sb_coster_1_valueChanged(int value)
@@ -3077,9 +3097,9 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
 {
     if (!load) {
         switch (index) {
-        case 0: ui->bh_id->setValue(0x00); ui->cb_visible_buggy->setChecked(Qt::Unchecked); ui->cb_visible_highwind->setChecked(Qt::Unchecked); break;
-        case 1: ui->bh_id->setValue(0x06); ui->cb_visible_buggy->setChecked(Qt::Checked); break; //buggy
-        case 2: ui->bh_id->setValue(0x03); ui->cb_visible_highwind->setChecked(Qt::Checked); break; //highwind
+        case 0: ui->bh_id->setValue(0x00); ui->cb_visible_buggy->setChecked(false); ui->cb_visible_highwind->setChecked(false); break;
+        case 1: ui->bh_id->setValue(0x06); ui->cb_visible_buggy->setChecked(true); break; //buggy
+        case 2: ui->bh_id->setValue(0x03); ui->cb_visible_highwind->setChecked(true); break; //highwind
         default: break;
         }
     }
@@ -3090,7 +3110,7 @@ void MainWindow::on_cb_visible_buggy_toggled(bool checked)
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_BUGGY, checked);
         if (checked) {
             if (ui->cb_visible_highwind->isChecked()) {
-                ui->cb_visible_highwind->setChecked(Qt::Unchecked);
+                ui->cb_visible_highwind->setChecked(false);
             }
             load = true;
             ui->combo_highwind_buggy->setCurrentIndex(1);
@@ -3119,7 +3139,7 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_HIGHWIND, checked);
         if (checked) {
             if (ui->cb_visible_buggy->isChecked()) {
-                ui->cb_visible_buggy->setChecked(Qt::Unchecked);
+                ui->cb_visible_buggy->setChecked(false);
             }
             load = true;
             ui->combo_highwind_buggy->setCurrentIndex(2);
@@ -3142,11 +3162,11 @@ void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
     }
 
     if (!checked) {
-        ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-        ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_yellow_chocobo->setChecked(false);
+        ui->cb_visible_green_chocobo->setChecked(false);
+        ui->cb_visible_blue_chocobo->setChecked(false);
+        ui->cb_visible_black_chocobo->setChecked(false);
+        ui->cb_visible_gold_chocobo->setChecked(false);
     }
     ui->cb_visible_yellow_chocobo->setEnabled(checked);
     ui->cb_visible_green_chocobo->setEnabled(checked);
@@ -3160,10 +3180,10 @@ void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_YELLOW, checked);
         if (checked) {
-            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_green_chocobo->setChecked(false);
+            ui->cb_visible_blue_chocobo->setChecked(false);
+            ui->cb_visible_black_chocobo->setChecked(false);
+            ui->cb_visible_gold_chocobo->setChecked(false);
         }
     }
 }
@@ -3172,10 +3192,10 @@ void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GREEN, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_yellow_chocobo->setChecked(false);
+            ui->cb_visible_blue_chocobo->setChecked(false);
+            ui->cb_visible_black_chocobo->setChecked(false);
+            ui->cb_visible_gold_chocobo->setChecked(false);
         }
     }
 }
@@ -3184,10 +3204,10 @@ void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLUE, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_yellow_chocobo->setChecked(false);
+            ui->cb_visible_green_chocobo->setChecked(false);
+            ui->cb_visible_black_chocobo->setChecked(false);
+            ui->cb_visible_gold_chocobo->setChecked(false);
         }
     }
 }
@@ -3197,10 +3217,10 @@ void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLACK, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_yellow_chocobo->setChecked(false);
+            ui->cb_visible_green_chocobo->setChecked(false);
+            ui->cb_visible_blue_chocobo->setChecked(false);
+            ui->cb_visible_gold_chocobo->setChecked(false);
         }
     }
 }
@@ -3210,10 +3230,10 @@ void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GOLD, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
-            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_yellow_chocobo->setChecked(false);
+            ui->cb_visible_green_chocobo->setChecked(false);
+            ui->cb_visible_blue_chocobo->setChecked(false);
+            ui->cb_visible_black_chocobo->setChecked(false);
         }
     }
 }
@@ -3578,68 +3598,57 @@ void MainWindow::on_btn_item_add_each_item_clicked()
 
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {
-    //for updating the unknown table(s)
     load = true;
 
-    QString text;
     int rows = 0;
     QTableWidgetItem *newItem;
     QByteArray temp, temp2;
     int s2;
 
     ui->tbl_unknown->reset();
-    ui->tbl_unknown->setColumnWidth(0, fontMetrics().width("DDDD", 4));
-    ui->tbl_unknown->setColumnWidth(1, fontMetrics().width("HEXX", 4));
-    ui->tbl_unknown->setColumnWidth(2, fontMetrics().width("DECX", 4));
-    ui->tbl_unknown->setColumnWidth(3, fontMetrics().width("QQQQQQQQQ", 9));
-    ui->tbl_unknown->setColumnWidth(4, fontMetrics().width("WW", 2));
-
     ui->tbl_compare_unknown->reset();
-    ui->tbl_compare_unknown->setColumnWidth(0, fontMetrics().width("DDDD", 4));
-    ui->tbl_compare_unknown->setColumnWidth(1, fontMetrics().width("HEXX", 4));
-    ui->tbl_compare_unknown->setColumnWidth(2, fontMetrics().width("DECX", 4));
-    ui->tbl_compare_unknown->setColumnWidth(3, fontMetrics().width("QQQQQQQQQ", 9));
-    ui->tbl_compare_unknown->setColumnWidth(4, fontMetrics().width("WW", 2));
 
-    if (z <= ff7->unknown_zmax()) {
+    if (z <= ff7->unknown_zmax())
         temp = ff7->unknown(s, z);
-    } else if (z == ff7->unknown_zmax() + 1) {
+    else if (z == ff7->unknown_zmax() + 1)
         temp = ff7->slotFF7Data(s);
-    }
 
     rows = temp.size();
 
     ui->tbl_unknown->setRowCount(rows);
-    if (ui->combo_compare_slot->currentIndex() != 0) {
+    if (ui->combo_compare_slot->currentIndex() != 0)
         ui->tbl_compare_unknown->setRowCount(rows);
-    }
+
     for (int i = 0; i < rows; i++) {
         if (ui->combo_z_var->currentText() == "SLOT") {
             QString hex_str = QString("%1").arg(i, 4, 16, QChar('0')).toUpper(); //format ex: 000C
             newItem = new QTableWidgetItem(hex_str, 0);
             ui->tbl_unknown->setItem(i, 0, newItem);
         } else {
-            text.setNum(i);
-            newItem = new QTableWidgetItem(text, 0);
+            newItem = new QTableWidgetItem(QString::number(i), 0);
             ui->tbl_unknown->setItem(i, 0, newItem);
         }
 
-        char value = temp.at(i);
+        quint8 value = quint8(temp.at(i));
 
         //Write Hex
         newItem = new QTableWidgetItem(QString("%1").arg(value, 2, 16, QChar('0')).toUpper(), 0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_unknown->setItem(i, 1, newItem);
         //Write Dec
-        newItem = new QTableWidgetItem(text.number(value, 10), 0);
+        newItem = new QTableWidgetItem(QString("%1").arg(value, 3, 10, QChar('0')), 0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_unknown->setItem(i, 2, newItem);
         //Write Bin
         newItem = new QTableWidgetItem(QString("%1").arg(value, 8, 2, QChar('0')), 0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_unknown->setItem(i, 3, newItem);
         //Write Char
-        newItem = new QTableWidgetItem(QChar(value), 0);
+        newItem = new QTableWidgetItem(QString("%1").arg(QChar(value)), 0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_unknown->setItem(i, 4, newItem);
         //Set Height
-        ui->tbl_unknown->setRowHeight(i, fontMetrics().height() + 9);
+        ui->tbl_unknown->setRowHeight(i, fontMetrics().height() + 6);
 
         if (ui->combo_compare_slot->currentIndex() != 0) {
             //do the same for the compare slot if one has been selected.
@@ -3647,7 +3656,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 newItem = new QTableWidgetItem(QString("%1").arg(i, 4, 16, QChar('0')).toUpper(), 0);
                 ui->tbl_compare_unknown->setItem(i, 0, newItem);
             } else {
-                newItem = new QTableWidgetItem(text, 0);
+                newItem = new QTableWidgetItem(QString::number(i), 0);
+                newItem->setTextAlignment(Qt::AlignHCenter);
                 ui->tbl_compare_unknown->setItem(i, 0, newItem);
             }
 
@@ -3657,28 +3667,33 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             } else if (z == ff7->unknown_zmax() + 1) {
                 temp2 = ff7->slotFF7Data(s2);
             }
-            value = temp2.at(i);
+            value = quint8(temp2.at(i));
 
             //Write Hex
             newItem = new QTableWidgetItem(QString("%1").arg(value, 2, 16, QChar('0')).toUpper(), 0);
+            newItem->setTextAlignment(Qt::AlignHCenter);
             ui->tbl_compare_unknown->setItem(i, 1, newItem);
             //Write Dec
-            newItem = new QTableWidgetItem(text.number(value, 10), 0);
+            newItem = new QTableWidgetItem(QString("%1").arg(value, 3, 10, QChar('0')), 0);
+            newItem->setTextAlignment(Qt::AlignHCenter);
             ui->tbl_compare_unknown->setItem(i, 2, newItem);
             //Write Bin
             newItem = new QTableWidgetItem(QString("%1").arg(value, 8, 2, QChar('0')), 0);
+            newItem->setTextAlignment(Qt::AlignHCenter);
             ui->tbl_compare_unknown->setItem(i, 3, newItem);
             //Write Char
             newItem = new QTableWidgetItem(QChar(value), 0);
+            newItem->setTextAlignment(Qt::AlignHCenter);
             ui->tbl_compare_unknown->setItem(i, 4, newItem);
-            ui->tbl_compare_unknown->setRowHeight(i, fontMetrics().height() + 9);
+
+            ui->tbl_compare_unknown->setRowHeight(i, fontMetrics().height() +6);
             if (ui->tbl_compare_unknown->item(i, 1)->text() != ui->tbl_unknown->item(i, 1)->text()) {
                 for (int c = 0; c < 5; c++) {
                     //color the diffs ;)
-                    ui->tbl_compare_unknown->item(i, c)->setBackgroundColor(Qt::yellow);
-                    ui->tbl_compare_unknown->item(i, c)->setTextColor(Qt::red);
-                    ui->tbl_unknown->item(i, c)->setBackgroundColor(Qt::yellow);
-                    ui->tbl_unknown->item(i, c)->setTextColor(Qt::red);
+                    ui->tbl_compare_unknown->item(i, c)->setBackground(Qt::yellow);
+                    ui->tbl_compare_unknown->item(i, c)->setForeground(Qt::red);
+                    ui->tbl_unknown->item(i, c)->setBackground(Qt::yellow);
+                    ui->tbl_unknown->item(i, c)->setForeground(Qt::red);
                 }
             }
         }
@@ -3700,30 +3715,31 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     }
     load = false;
 }
+
 void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 {
     unknown_refresh(z);
 }
+
 void MainWindow::on_combo_compare_slot_currentIndexChanged(int index)
 {
     if (index == 0) {
         ui->tbl_compare_unknown->clearContents();
         ui->tbl_compare_unknown->setRowCount(0);
-    } else {
+    } else
         unknown_refresh(ui->combo_z_var->currentIndex());
-    }
 }
+
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem *item)
 {
     if (!load) {
         QByteArray temp;
 
         int z = ui->combo_z_var->currentIndex();
-        if (z <= ff7->unknown_zmax()) {
+        if (z <= ff7->unknown_zmax())
             temp = ff7->unknown(s, z);
-        } else if (z == ff7->unknown_zmax() + 1) {
+        else if (z == ff7->unknown_zmax() + 1)
             temp = ff7->slotFF7Data(s);
-        }
 
         switch (item->column()) {
         case 1: temp[item->row()] = char(item->text().toInt(nullptr, 16));  break;
@@ -3731,11 +3747,10 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem *item)
         case 3: temp[item->row()] = char(item->text().toInt(nullptr, 2));   break;
         }
 
-        if (z <= ff7->unknown_zmax()) {
+        if (z <= ff7->unknown_zmax())
             ff7->setUnknown(s, z, temp);
-        } else if (z == ff7->unknown_zmax() + 1) {
+        else if (z == ff7->unknown_zmax() + 1)
             ff7->setSlotFF7Data(s, temp);
-        }
 
         unknown_refresh(z);
     }

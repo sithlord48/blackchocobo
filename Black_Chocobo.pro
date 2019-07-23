@@ -77,6 +77,7 @@ HEADERS += \
 	ff7tk/data/SaveIcon.h \
 	ff7tk/data/FF7Text.h \
         ff7tk/data/FF7SaveInfo.h \
+        ff7tk/data/FF7Save_Types.h \
 	ff7tk/data/FF7Save.h \
 	ff7tk/data/FF7Materia.h \
 	ff7tk/data/FF7Location.h \
