@@ -1,13 +1,39 @@
 <RCC>
    <qresource prefix="/achievements">
-        <file alias="63">achievements/63.png</file>
-        <file alias="62">achievements/62.png</file>
-	<file alias="61">achievements/61.png</file>
-	<file alias="60">achievements/60.png</file>
-	<file alias="59">achievements/59.png</file>
-	<file alias="58">achievements/58.png</file>
-	<file alias="57">achievements/57.png</file>
-	<file alias="56">achievements/56.png</file>	
-	<file alias="50">achievements/50.png</file>		
-      </qresource>
+    <file alias="63">achievements/63.png</file>
+    <file alias="62">achievements/62.png</file>
+    <file alias="61">achievements/61.png</file>
+    <file alias="60">achievements/60.png</file>
+    <file alias="59">achievements/59.png</file>
+    <file alias="58">achievements/58.png</file>
+    <file alias="57">achievements/57.png</file>
+    <file alias="56">achievements/56.png</file>	
+    <file alias="55">achievements/55.png</file>
+    <file alias="54">achievements/54.png</file>
+    <file alias="53">achievements/53.png</file>
+    <file alias="52">achievements/52.png</file>
+    <file alias="51">achievements/51.png</file>
+    <file alias="50">achievements/50.png</file>
+    <file alias="49">achievements/49.png</file>
+    <file alias="48">achievements/48.png</file>
+    <file alias="47">achievements/47.png</file>
+    <file alias="46">achievements/46.png</file>
+    <file alias="45">achievements/45.png</file>
+    <file alias="44">achievements/44.png</file>    
+    <file alias="43">achievements/43.png</file>
+    <file alias="42">achievements/42.png</file>
+    <file alias="41">achievements/41.png</file>
+    <file alias="40">achievements/40.png</file>
+    <file alias="39">achievements/39.png</file>
+    <file alias="38">achievements/38.png</file>
+    <file alias="36">achievements/36.png</file>
+    <file alias="35">achievements/35.png</file>
+    <file alias="34">achievements/34.png</file>
+    <file alias="33">achievements/33.png</file>
+    <file alias="32">achievements/32.png</file>
+    <file alias="31">achievements/31.png</file>
+    <file alias="30">achievements/30.png</file>
+    <file alias="29">achievements/29.png</file>
+    <file alias="28">achievements/28.png</file>
+   </qresource>
 </RCC>
