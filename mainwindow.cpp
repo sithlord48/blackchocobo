@@ -17,7 +17,6 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -461,9 +460,8 @@ void MainWindow::changeEvent(QEvent *e)
     populateCombos();
     materiaupdate();
     updateStolenMateria();
-    if (ui->psxExtras->isVisible()) {
+    if (ui->psxExtras->isVisible())
         update_hexEditor_PSXInfo();
-    }
 }
 void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 {
@@ -472,10 +470,8 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 void MainWindow::dropEvent(QDropEvent *e)
 {
     if (ff7->isFileModified()) {
-        switch (save_changes()) {
-        case 0: return;//cancel load.
-        case 1: break;//continue load
-        }
+        if (!saveChanges())
+            return;
     }
 
     auto mimeData = e->mimeData();
@@ -484,25 +480,27 @@ void MainWindow::dropEvent(QDropEvent *e)
     }
 }
 
-int MainWindow::save_changes(void)
+bool MainWindow::saveChanges(void)
 {
     //return 0 to ingore the event/ return 1 to process event.
-    int result; int rtn = 0;
+    int result;
     result = QMessageBox::question(this, tr("Unsaved Changes"), tr("Save Changes to the File:\n%1").arg(ff7->fileName()), QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel);
     switch (result) {
-    case QMessageBox::Yes: on_action_Save_triggered(); rtn = 1; break;
-    case QMessageBox::Cancel: rtn = 0; break;
-    case QMessageBox::No: rtn = 1; break;
+    case QMessageBox::Yes:
+        on_action_Save_triggered();
+        return true;
+    case QMessageBox::No:
+        return true;
+    default: return false;
     }
-    return rtn;
 }
 void MainWindow::closeEvent(QCloseEvent *e)
 {
     if (ff7->isFileModified()) {
-        switch (save_changes()) {
-        case 0: e->ignore(); break;
-        case 1: e->accept(); break;
-        }
+        if(!saveChanges())
+            e->ignore();
+        else
+            e->accept();
     }
     settings->setValue("MainGeometry", saveGeometry());
 }
@@ -518,10 +516,8 @@ void MainWindow::moveEvent(QMoveEvent *)
 void MainWindow::on_actionOpen_Save_File_triggered()
 {
     if (ff7->isFileModified()) {
-        switch (save_changes()) {
-        case 0: return;//cancel load.
-        case 1: break;//yes or no pressed..
-        }
+        if (!saveChanges())
+            return;//cancel load.
     }
     QString fileName = QFileDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), settings->value("load_path").toString(),
@@ -641,132 +637,103 @@ void MainWindow::on_actionExport_char_triggered()
                        tr("Save FF7 Character File"), settings->value("char_stat_folder").toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
-        if (ff7->exportCharacter(s, curchar, fileName)) {
+        if (ff7->exportCharacter(s, curchar, fileName))
             ui->statusBar->showMessage(tr("Character Export Successful"), 1000);
-        } else {
+        else
             ui->statusBar->showMessage(tr("Character Export Failed"), 2000);
-        }
     }
 }
-void MainWindow::on_action_Save_triggered()
+bool MainWindow::on_action_Save_triggered()
 {
-    if (_init || ff7->fileName().isEmpty()) {
-        on_actionSave_File_As_triggered();
-    } else {
-        if (ff7->format() == FF7SaveInfo::FORMAT::PSP) {
-            QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
-        } else if (ff7->format() == FF7SaveInfo::FORMAT::PS3) {
-            QMessageBox::information(this, tr("PSV Save Notice"), QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()), QString(ff7->ps3Seed().toHex().toUpper()))));
-        }
-        saveFileFull(ff7->fileName());
-    }
+    if (_init || ff7->fileName().isEmpty())
+        return on_actionSave_File_As_triggered();
+
+    if (ff7->format() == FF7SaveInfo::FORMAT::PSP)
+        QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
+    if (ff7->format() == FF7SaveInfo::FORMAT::PS3)
+        QMessageBox::information(this, tr("PSV Save Notice"), QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()), QString(ff7->ps3Seed().toHex().toUpper()))));
+
+    return saveFileFull(ff7->fileName());
 }
 
-void MainWindow::on_actionSave_File_As_triggered()
+bool MainWindow::on_actionSave_File_As_triggered()
 {
-    QString selectedType;
-    QString pc = tr("FF7 PC (*.ff7)");
-    QString psx = tr("Raw PSX Save(*FF7-S*)");
-    QString mc = tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)");
-    QString vgs = tr("Virtual Game Station(*.vgs *.mem)");
-    QString dex = tr("DEX Drive Memory Card(*.gme)");
-    QString psv = tr("PSV Save File(*.psv)");
-    QString vmp = tr("PSP Memory Card(*.vmp)");
-    QString types = pc + ";;" + mc + ";;" + psx + ";;" + vgs + ";;" + dex + ";;" + psv + ";;" + vmp;
+    QMap<QString, FF7SaveInfo::FORMAT> typeMap;
+    typeMap[tr("FF7 PC (*.ff7)")] = FF7SaveInfo::FORMAT::PC;
+    typeMap[tr("Raw PSX Save(*FF7-S*)")] = FF7SaveInfo::FORMAT::PSX;
+    typeMap[tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)")] = FF7SaveInfo::FORMAT::VMC;
+    typeMap[tr("Virtual Game Station(*.vgs *.mem)")] = FF7SaveInfo::FORMAT::VGS;
+    typeMap[tr("DEX Drive Memory Card(*.gme)")] = FF7SaveInfo::FORMAT::DEX;
+    typeMap[tr("PSV Save File(*.psv)")] = FF7SaveInfo::FORMAT::PS3;
+    typeMap[tr("PSP Memory Card(*.vmp)")] = FF7SaveInfo::FORMAT::PSP;
+    QString types = typeMap.keys().join(";;");
     QString fileName;
-    QString path = QDir::homePath();
+    QString selectedType = typeMap.key(ff7->format(), tr("FF7 PC (*.ff7)"));
+    QString path;
 
-    // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC) {
-        selectedType = pc;
-        if (!settings->value("save_pc_path").isNull()) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC)
             path = settings->value("save_pc_path").toString();
-        }
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::PSX) {
-        selectedType = psx;
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::VMC) {
-        selectedType = mc;
-        if (!settings->value("save_emu_path").isNull()) {
-            path = settings->value("save_emu_path").toString();
-        }
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::PS3) {
-        selectedType = psv;
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::PSP) {
-        selectedType = vmp;
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::VGS) {
-        selectedType = vgs;
-        if (!settings->value("save_emu_path").isNull()) {
-            path = settings->value("save_emu_path").toString();
-        }
-    } else if (ff7->format() == FF7SaveInfo::FORMAT::DEX) {
-        selectedType = dex;
-        if (!settings->value("save_emu_path").isNull()) {
-            path = settings->value("save_emu_path").toString();
-        }
-    }
+    else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
+             || (ff7->format() == FF7SaveInfo::FORMAT::VGS)
+             || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
+        path = settings->value("save_emu_path").toString();
+
+    if (path.isEmpty())
+        path = QDir::homePath();
 
     fileName = QFileDialog::getSaveFileName(this, "Select A File To Save", path, types, &selectedType);
-    if (fileName.isEmpty()) {
-        return;
-    }
-    FF7SaveInfo::FORMAT newType;
-    if (selectedType == pc) {
-        newType = FF7SaveInfo::FORMAT::PC;
-    } else if (selectedType == psx) {
-        newType = FF7SaveInfo::FORMAT::PSX;
-    } else if (selectedType == mc) {
-        newType = FF7SaveInfo::FORMAT::VMC;
-    } else if (selectedType == vgs) {
-        newType = FF7SaveInfo::FORMAT::VGS;
-    } else if (selectedType == dex) {
-        newType = FF7SaveInfo::FORMAT::DEX;
-    } else if (selectedType == psv) {
-        newType = FF7SaveInfo::FORMAT::PS3;
+
+    if (fileName.isEmpty())
+        return false;
+
+    FF7SaveInfo::FORMAT newType = typeMap[selectedType];
+
+    if (newType == FF7SaveInfo::FORMAT::PS3)
         QMessageBox::information(this, tr("PSV Save Notice"), QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()), QString(ff7->ps3Seed().toHex().toUpper()))));
-    } else if (selectedType == vmp) {
-        newType = FF7SaveInfo::FORMAT::PSP;
+
+    if (newType == FF7SaveInfo::FORMAT::PSP)
         QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
-    } else {
-        newType = FF7SaveInfo::FORMAT::UNKNOWN;
+
+    if (ff7->format() == newType)
+        return saveFileFull(fileName);
+
+    //Type Changed lets Export instead
+    if (newType == FF7SaveInfo::FORMAT::PS3 || newType == FF7SaveInfo::FORMAT::PSP) {
+        QMessageBox::information(this, tr("UnSupported Export Attempted"), tr("This format can not be Exported."));
+        return false;
     }
 
-    if (ff7->format() != newType) {
-        //Type Changed lets Export instead
-        if (ff7->exportFile(fileName, newType, s)) {
-            ui->statusBar->showMessage(tr("Export Successful"), 1000);
-            fileModified(false);
-        } else {
-            ui->statusBar->showMessage(tr("Export Failed"), 2000);
-        }
-        if (newType == FF7SaveInfo::FORMAT::PS3) {
-            QMessageBox::information(this, tr("PSV Export Attempted"), tr("PSV Exports Are Not Allowed."));
-        }
-        if (newType == FF7SaveInfo::FORMAT::PSP) {
-            QMessageBox::information(this, tr("VMP Export Attempted"), tr("VMP Exports Are Not Allowed."));
-        }
-    } else {
-        saveFileFull(fileName);   //reguardless save the file of course if its has a string.
+    if (ff7->exportFile(fileName, newType, s)) {
+        ui->statusBar->showMessage(tr("Export Successful"), 1000);
+        fileModified(false);
+        return true;
     }
+
+    ui->statusBar->showMessage(tr("Export Failed"), 2000);
+    return false;
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
-void MainWindow::saveFileFull(QString fileName)
+bool MainWindow::saveFileFull(const QString &fileName)
 {
     if ((ff7->format() == FF7SaveInfo::FORMAT::PC) && !(settings->value("skip_slot_mask").toBool())) {
         ff7->fix_pc_bytemask(s);   //fix starting slot on pc
     }
 
     if (ff7->saveFile(fileName)) {
-        if (_init) {
-            //if no save was loaded and new game was clicked be sure to act like a game was loaded.
+        //if no save was loaded and new game was clicked be sure to act like a game was loaded.
+        if (_init)
             _init = false;
-        }
+
         fileModified(false);
         guirefresh(0);
-    } else {
-        QMessageBox::information(this, tr("Save Error"), tr("Failed to save file\n%1").arg(fileName));
+        return true;
     }
+
+    QMessageBox::information(this, tr("Save Error"), tr("Failed to save file\n%1").arg(fileName));
+    return false;
 }
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
+
 void MainWindow::on_actionNew_Game_triggered()
 {
     QString save_name;

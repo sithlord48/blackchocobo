@@ -124,16 +124,25 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file
     /*Loading and Saving related Functions*/
-    int save_changes(void); //return 1 to accept and 0 to ingore the event
+    /**
+     * @brief Creates a dialog to ask user if they wish to save the file, saves if user chooses Yes.
+     * @return true to accept and false to ignore.
+     */
+    bool saveChanges(void);
     void setControllerMappingVisible(bool);
     void on_actionOpen_Save_File_triggered();
     void on_actionReload_triggered();
     void Items_Changed(QList<quint16>);
     void on_actionImport_char_triggered();
     void on_actionExport_char_triggered();
-    void on_action_Save_triggered();
-    void on_actionSave_File_As_triggered();
-    void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
+    bool on_action_Save_triggered();
+    bool on_actionSave_File_As_triggered();
+    /**
+     * @brief save thefile.
+     * @param fileName: path of the file to save.
+     * @return true if successful.
+     */
+    bool saveFileFull(const QString &fileName);
     void on_actionNew_Game_triggered();
     void on_actionNew_Game_Plus_triggered();
     /*Simple Menu Actions */
