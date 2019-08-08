@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>Level Fortschritt</translation>
+        <translation type="vanished">Level Fortschritt</translation>
     </message>
     <message>
         <source>Next</source>
@@ -6844,6 +6844,49 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     </message>
 </context>
 <context>
+    <name>FF7SaveInfo</name>
+    <message>
+        <source>PC Save File</source>
+        <translation type="unfinished">FF7 PC Spielstand</translation>
+    </message>
+    <message>
+        <source>Switch Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSX Save File</source>
+        <translation type="unfinished">Raw PSX Datei</translation>
+    </message>
+    <message>
+        <source>PSV Save File</source>
+        <translation type="unfinished">PSV Spielstand</translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card</source>
+        <translation type="unfinished">MC Spielstand</translation>
+    </message>
+    <message>
+        <source>PSP/Vita Virtual Memory Card</source>
+        <translation type="unfinished">PSP/PsVita Spielstand</translation>
+    </message>
+    <message>
+        <source>Virtual Game Station Memory Card</source>
+        <translation type="unfinished">FF7 VGS Spielstand</translation>
+    </message>
+    <message>
+        <source>DEX Drive Virtual Memory Card</source>
+        <translation type="unfinished">Dex-Drive Spielstand</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (%1)</source>
+        <translation type="unfinished">Bekannte FF7 Spielstand Typen (%1)</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation>Alle Dateien(*)</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -7930,31 +7973,31 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation>FF7 PC Spielstand(*.ff7)</translation>
+        <translation type="vanished">FF7 PC Spielstand(*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation>FF7 Raw PSX Spielstand(*-S*)</translation>
+        <translation type="vanished">FF7 Raw PSX Spielstand(*-S*)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished">FF7 VGS Spielstand(*.vgs *.mem)</translation>
+        <translation type="obsolete">FF7 VGS Spielstand(*.vgs *.mem)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation type="unfinished">PSV Export Versuchte</translation>
+        <translation type="obsolete">PSV Export Versuchte</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation type="unfinished">PSV Exporte werden nicht erlaubt.</translation>
+        <translation type="obsolete">PSV Exporte werden nicht erlaubt.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation type="unfinished">VMP Export Versuchte</translation>
+        <translation type="obsolete">VMP Export Versuchte</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation type="unfinished">VMP Exporte werden nicht erlaubt.</translation>
+        <translation type="obsolete">VMP Exporte werden nicht erlaubt.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
@@ -8167,30 +8210,6 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation type="unfinished">Keine Beschreibung Text</translation>
     </message>
     <message>
-        <source>z_41</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_42</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_43</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_44</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_45</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_46</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>He&amp;lp</source>
         <translation type="unfinished">Hi&amp;lfe</translation>
     </message>
@@ -8268,11 +8287,11 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin *.srm);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
+        <translation type="vanished">Bekannte FF7 Spielstand Typen (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin *.srm);;PC FF7 Spielstand (*.ff7);;Raw PSX FF7 Spielstand (*-S*);;MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV Spielstand (*.psv);;PSP/PsVita Spielstand (*.vmp);;VGS Spielstand(*.vgs *.mem);;Dex-Drive Spielstand(*.gme);;Alle Dateien(*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation type="unfinished">MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
+        <translation type="obsolete">MC Spielstand (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8382,7 +8401,7 @@ Lage.</translation>
     </message>
     <message>
         <source>Ho&amp;ur</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">St&amp;unde</translation>
     </message>
     <message>
         <source>Number of Steps</source>
@@ -8400,18 +8419,6 @@ Lage.</translation>
         <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>DEX Drive Memory Card(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV Save File(*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSP Memory Card(*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
@@ -8424,6 +8431,14 @@ Lage.</translation>
   Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished">
   Nächstes Datenstück @ Steckplatz:%1</translation>
+    </message>
+    <message>
+        <source>UnSupported Export Attempted</source>
+        <translation type="unfinished">Nicht unterstützt exportiert Versucht</translation>
+    </message>
+    <message>
+        <source>This format can not be Exported.</source>
+        <translation type="unfinished">Dieses Format kann nicht exportiert werden.</translation>
     </message>
 </context>
 <context>
@@ -9164,7 +9179,7 @@ Datei:%1</translation>
     </message>
     <message>
         <source>View Anyway</source>
-        <translation type="unfinished">Zeige trotzdem </translation>
+        <translation type="unfinished">Zeige trotzdem</translation>
     </message>
     <message>
         <source>       Mid-Linked Block</source>
@@ -9190,14 +9205,17 @@ Datei:%1</translation>
         <source>
  Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>
+ Spiel verwendet%n Block speichern</numerusform>
+            <numerusform>
+ Spiel verwendet%n Block speicherns</numerusform>
         </translation>
     </message>
     <message>
         <source>
    Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">
+   Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
 </context>
 </TS>

@@ -432,7 +432,7 @@ void MainWindow::loadChildWidgetSettings()
     chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
     locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
     ui->tabWidget->setTabEnabled(9, settings->value("show_test").toBool());
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         setControllerMappingVisible(settings->value("optionsShowMapping").toBool());
     }
     ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
@@ -521,7 +521,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
     }
     QString fileName = QFileDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), settings->value("load_path").toString(),
-                       tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+                       FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         loadFileFull(fileName, 0);
     }
@@ -552,28 +552,17 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
         return;
     }
 
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC) {
+    if (ff7->numberOfSlots() > 1) {
         if (reload) {
             guirefresh(0);
         } else {
             on_actionShow_Selection_Dialog_triggered();
         }
-    }
-
-    else if (ff7->format() == FF7SaveInfo::FORMAT::PSX || ff7->format() == FF7SaveInfo::FORMAT::PS3) {
+    } else {
         s = 0;
         guirefresh(0);
     }
 
-    else if (ff7->format() == FF7SaveInfo::FORMAT::VMC || ff7->format() == FF7SaveInfo::FORMAT::PSP || ff7->format() == FF7SaveInfo::FORMAT::VGS || ff7->format() == FF7SaveInfo::FORMAT::DEX) {
-        if (reload) {
-            guirefresh(0);
-        }   else {
-            on_actionShow_Selection_Dialog_triggered();
-        }
-    }
-
-    else {/*UNKNOWN FILETYPE*/}
     hexEditor->setCursorPosition(0);
     hexCursorPos = 0;
 }
@@ -583,7 +572,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 
     QString fileName = QFileDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), settings->value("load_path").toString(),
-                       tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+                       FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         FF7Save *tempSave = new FF7Save();
         if (tempSave->loadFile(fileName)) {
@@ -659,16 +648,17 @@ bool MainWindow::on_action_Save_triggered()
 bool MainWindow::on_actionSave_File_As_triggered()
 {
     QMap<QString, FF7SaveInfo::FORMAT> typeMap;
-    typeMap[tr("FF7 PC (*.ff7)")] = FF7SaveInfo::FORMAT::PC;
-    typeMap[tr("Raw PSX Save(*FF7-S*)")] = FF7SaveInfo::FORMAT::PSX;
-    typeMap[tr("Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)")] = FF7SaveInfo::FORMAT::VMC;
-    typeMap[tr("Virtual Game Station(*.vgs *.mem)")] = FF7SaveInfo::FORMAT::VGS;
-    typeMap[tr("DEX Drive Memory Card(*.gme)")] = FF7SaveInfo::FORMAT::DEX;
-    typeMap[tr("PSV Save File(*.psv)")] = FF7SaveInfo::FORMAT::PS3;
-    typeMap[tr("PSP Memory Card(*.vmp)")] = FF7SaveInfo::FORMAT::PSP;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::SWITCH)] = FF7SaveInfo::FORMAT::SWITCH;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VMC)] = FF7SaveInfo::FORMAT::VMC;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VGS)] = FF7SaveInfo::FORMAT::VGS;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::DEX)] = FF7SaveInfo::FORMAT::DEX;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSP)] = FF7SaveInfo::FORMAT::PSP;
     QString types = typeMap.keys().join(";;");
     QString fileName;
-    QString selectedType = typeMap.key(ff7->format(), tr("FF7 PC (*.ff7)"));
+    QString selectedType = typeMap.key(ff7->format(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC));
     QString path;
 
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
@@ -715,8 +705,8 @@ bool MainWindow::on_actionSave_File_As_triggered()
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 bool MainWindow::saveFileFull(const QString &fileName)
 {
-    if ((ff7->format() == FF7SaveInfo::FORMAT::PC) && !(settings->value("skip_slot_mask").toBool())) {
-        ff7->fix_pc_bytemask(s);   //fix starting slot on pc
+    if ((ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH) && !(settings->value("skip_slot_mask").toBool())) {
+        ff7->fix_pc_bytemask(s);   //fix starting slot on pc based formats.
     }
 
     if (ff7->saveFile(fileName)) {
@@ -751,11 +741,10 @@ void MainWindow::on_actionNew_Game_triggered()
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
     QString save_name;
-    if (settings->value("override_default_save").toBool()) {
+    if (settings->value("override_default_save").toBool())
         save_name = settings->value("default_save_file").toString();
-    }
+
     ff7->newGamePlus(s, ff7->fileName(), save_name);
-//  if(save_name==""){save_name = QString(tr("Builtin Data"));}
     ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
                                .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
     guirefresh(0);
@@ -1285,7 +1274,7 @@ void MainWindow::materia_id_changed(qint8 id)
 void MainWindow::CheckGame()
 {
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
-            || ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
+            || ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(nullptr, ff7, s);
         if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3)) {
@@ -1565,7 +1554,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         for (int i = 0; i < 16; i++) {
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
-        if ((ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
+        if ((ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
                 || settings->value("optionsShowMapping").toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
@@ -1591,7 +1580,7 @@ void MainWindow::hexTabUpdate(int viewMode)
     ui->psxExtras->setVisible(false);
     ui->boxHexData->setVisible(false);
     disconnect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         hexEditor->setData(ff7->slotFF7Data(s));
     } else {
         ui->psxExtras->setVisible(true);
@@ -1624,12 +1613,12 @@ void MainWindow::guirefresh(bool newgame)
     load = true;
     /*~~~~Check for SG type and ff7~~~~*/
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-            ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC)
+            ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH)
              && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         CheckGame();//Not FF7! Handled By CheckGame()
     } else {
         //IS FF7 Slot
-        if ((ff7->format() == FF7SaveInfo::FORMAT::PC) || (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)) {
+        if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
             if (ui->combo_hexEditor->currentIndex() != 1) {
                 ui->combo_hexEditor->setCurrentIndex(1);
             }
@@ -4073,7 +4062,7 @@ void MainWindow::on_combo_hexEditor_currentIndexChanged(int index)
 
 void MainWindow::hexEditorChanged(void)
 {
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH) {
         ff7->setSlotFF7Data(s, hexEditor->data());
     } else {
         switch (ui->combo_hexEditor->currentIndex()) {
@@ -4244,7 +4233,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) { //we Display an icon. for all formats except for pc
+        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) { //we Display an icon. for all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         }
         load = false;

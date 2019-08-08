@@ -37,24 +37,25 @@
  *
  *  FF7Save does it all. Open the file , edit then save. All of the file handling will be taken care of for you.
  *  the following are supported formats:
- *  |Flie   | Description
- *  |-------|-------------
- *  |*.ff7  |PC Format Save if with a metadata.xml file will attempt to sign it.
- *  |*.mcr  |Common Emulator format (Virtual Memory Card)
- *  |*.mcd  |Common Emulator format (Virtual Memory Card)
- *  |*.mci  |Common Emulator format (Virtual Memory Card)
- *  |*.mc   |Common Emulator format (Virtual Memory Card)
- *  |*.ddf  |Common Emulator format (Virtual Memory Card)
- *  |*.ps   |Common Emulator format (Virtual Memory Card)
- *  |*.psm  |Common Emulator format (Virtual Memory Card)
- *  |*.bin  |Common Emulator format (Virtual Memory Card)
- *  |*.vgs  |Memory Card from Virtual Game Station
- *  |*.mem  |Memory Card from Virtual Game Station
- *  |*.gme  |Dex drive format virtual memory card
- *  |*.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
- *  |*.vmp  |VMC format used by the PSP/PsVita. Can not sign this type yet;reimport to console will fail
- *  |*.psv  |Saves "Exported" by a PS3. Can sign this type with OpenSSL; Correct keys is unknown.
- *  |*FF7-S*|A Raw PSX memory card "file" extracted from a real or virtual memory card
+ *  | File   | Description
+ *  |--------|-------------
+ *  | *.ff7  |PC Format Save if with a metadata.xml file will attempt to sign it.
+ *  |ff7save*|Switch Format save, same as PC
+ *  | *.mcr  |Common Emulator format (Virtual Memory Card)
+ *  | *.mcd  |Common Emulator format (Virtual Memory Card)
+ *  | *.mci  |Common Emulator format (Virtual Memory Card)
+ *  | *.mc   |Common Emulator format (Virtual Memory Card)
+ *  | *.ddf  |Common Emulator format (Virtual Memory Card)
+ *  | *.ps   |Common Emulator format (Virtual Memory Card)
+ *  | *.psm  |Common Emulator format (Virtual Memory Card)
+ *  | *.bin  |Common Emulator format (Virtual Memory Card)
+ *  | *.vgs  |Memory Card from Virtual Game Station
+ *  | *.mem  |Memory Card from Virtual Game Station
+ *  | *.gme  |Dex drive format virtual memory card
+ *  | *.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
+ *  | *.vmp  |VMC format used by the PSP/PsVita. Can not sign this type yet;reimport to console will fail
+ *  | *.psv  |Saves "Exported" by a PS3. Can sign this type with OpenSSL; Correct keys is unknown.
+ *  | *FF7-S*|A Raw PSX memory card "file" extracted from a real or virtual memory card
  */
 class FF7Save: public QObject
 {
@@ -133,6 +134,12 @@ public:
      *  \return True if Successful
     */
     bool exportPC(const QString &fileName);
+
+    /** \brief attempt to save fileName as a Switch ff7slot
+     *  \param fileName file that will be saved
+     *  \return True if Successful
+    */
+    bool exportSWITCH(const QString &fileName);
 
     /** \brief attempt to save fileName as a PSX ff7save
      *  \param s slot in loaded file to export as psx

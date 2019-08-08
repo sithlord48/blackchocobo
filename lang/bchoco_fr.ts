@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>Progression du Niveau</translation>
+        <translation type="vanished">Progression du Niveau</translation>
     </message>
     <message>
         <source>Next</source>
@@ -6844,6 +6844,49 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     </message>
 </context>
 <context>
+    <name>FF7SaveInfo</name>
+    <message>
+        <source>PC Save File</source>
+        <translation type="unfinished">Sauvegarde PC</translation>
+    </message>
+    <message>
+        <source>Switch Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSX Save File</source>
+        <translation type="unfinished">Sauvegarde PSX brute</translation>
+    </message>
+    <message>
+        <source>PSV Save File</source>
+        <translation type="unfinished">Sauvegarde PSV</translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card</source>
+        <translation type="unfinished">Sauvegarde MC</translation>
+    </message>
+    <message>
+        <source>PSP/Vita Virtual Memory Card</source>
+        <translation type="unfinished">Sauvegarde PSP/PSVita</translation>
+    </message>
+    <message>
+        <source>Virtual Game Station Memory Card</source>
+        <translation type="unfinished">Virtual Game Station</translation>
+    </message>
+    <message>
+        <source>DEX Drive Virtual Memory Card</source>
+        <translation type="unfinished">Sauvegarde Dex-Drive</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (%1)</source>
+        <translation type="unfinished">Types de Sauvegarde connus de FF7 (%1)</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation type="unfinished">Tous les fichiers (*)</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -7925,31 +7968,31 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation>FF7 PC (*.ff7)</translation>
+        <translation type="vanished">FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation>Sauvegarde PSX brute (*FF7-S*)</translation>
+        <translation type="vanished">Sauvegarde PSX brute (*FF7-S*)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation>Virtual Game Station (*.vgs *.mem)</translation>
+        <translation type="vanished">Virtual Game Station (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation>Tentative d&apos;export vers PSV</translation>
+        <translation type="vanished">Tentative d&apos;export vers PSV</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation>Les exportations vers PSV ne sont pas permises.</translation>
+        <translation type="vanished">Les exportations vers PSV ne sont pas permises.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation>Tentative d&apos;export vers VMP</translation>
+        <translation type="vanished">Tentative d&apos;export vers VMP</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation>Les exportations vers VMP ne sont pas permises.</translation>
+        <translation type="vanished">Les exportations vers VMP ne sont pas permises.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
@@ -8162,30 +8205,6 @@ quand vous dépassez la porte du Battle Square, définir le lieu &amp;quot;Entr�
         <translation>Pas de texte de description</translation>
     </message>
     <message>
-        <source>z_41</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_42</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_43</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_44</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_45</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_46</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>He&amp;lp</source>
         <translation>Aid&amp;e</translation>
     </message>
@@ -8263,11 +8282,11 @@ quand vous dépassez la porte du Battle Square, définir le lieu &amp;quot;Entr�
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX Brute (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Sauvegarde PSV (*.psv);;Sauvegarde PSP/PSVita (*.vmp);;Sauvegarde VGS (*.vgs *.mem);;Sauvegarde Dex-Drive (*.gme);;Tous les fichiers (*)</translation>
+        <translation type="vanished">Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX Brute (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Sauvegarde PSV (*.psv);;Sauvegarde PSP/PSVita (*.vmp);;Sauvegarde VGS (*.vgs *.mem);;Sauvegarde Dex-Drive (*.gme);;Tous les fichiers (*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation>Virtual Memory Card (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
+        <translation type="vanished">Virtual Memory Card (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8397,18 +8416,6 @@ d&apos;un objet facilement.</translation>
         <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>DEX Drive Memory Card(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV Save File(*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSP Memory Card(*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
@@ -8421,6 +8428,14 @@ d&apos;un objet facilement.</translation>
   Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished">
   La prochaine sauvegarde est à l&apos;emplacement : %1</translation>
+    </message>
+    <message>
+        <source>UnSupported Export Attempted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This format can not be Exported.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

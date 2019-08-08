@@ -35,6 +35,7 @@ public:
         PS3,      //!< PS3 Save Format
         DEX,      //!< Dex Format
         VGS,      //!< VGS Format
+        SWITCH,   //!< Switch Format
     };
     Q_ENUM(FORMAT)
 
@@ -123,22 +124,42 @@ public:
     /**
      * @brief Standard Slot Footer for Format
      * @param format
-     * @return A Default File header
+     * @return A Default File footer
      */
     Q_INVOKABLE QByteArray slotFooter(FF7SaveInfo::FORMAT format) const;
 
     /**
-     * @brief Standard Slot Footer for Format
+     * @brief Description of the File type
      * @param format
-     * @return A Default File header
+     * @return Description of format
      */
-    Q_INVOKABLE QString typeString(FF7SaveInfo::FORMAT format) const;
+    Q_INVOKABLE QString typeDescription(FF7SaveInfo::FORMAT format) const;
 
     /**
-     * @brief Size of an FF7Save
-     * @return
+     * @brief Size of an FF7Slot
+     * @return size of 0X10F4
      */
     Q_INVOKABLE int slotSize() const;
+
+    /**
+     * @brief Valid Extensions for the File type
+     * @param format
+     * @return  List of valid Extensions for the chosen format.
+     */
+    Q_INVOKABLE QStringList typeExtension(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief Get a constructed filter string for use in save/ load dialogs.
+     * @param format: the format you want info about
+     * @return Constructed Filter string for chosen format or All Files for UNKNOWN TYPE
+     */
+    Q_INVOKABLE QString typeFilter(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief Get a constructed filter string for use in save/load Dialogs.
+     * @return Constructed Filter string
+     */
+    Q_INVOKABLE QString knownTypesFilter() const;
 
 private:
     FF7SaveInfo *operator = (FF7SaveInfo &other) = delete;

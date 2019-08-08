@@ -15,17 +15,30 @@
 /****************************************************************************/
 #include "FF7SaveInfo.h"
 #include <QByteArrayList>
-
+#include <QDebug>
 struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int _slotSize = 0x10F4;
     /*~~~~~~~~~~~~~~~~~~PC Save File ~~~~~~~~~~~~*/
     static const int PC_FILE_SIZE = 0xFE55;
     static const int PC_FILE_HEADER_SIZE = 0x09;
+    inline static const QString PC_FILE_DESCRIPTION = tr("PC Save File");
+    inline static const QStringList PC_VALID_EXTENSIONS { QStringLiteral("*.ff7") };
     inline static const QByteArray PC_FILE_ID = QByteArray::fromRawData("\x71\x73\x27\x06", 4);
+    /*~~~~~~~~~~~~~~~~~~ Switch Save File ~~~~~~~~~~~~~*/
+    static const int SWITCH_FILE_SIZE = PC_FILE_SIZE;
+    static const int SWITCH_FILE_HEADER_SIZE = PC_FILE_HEADER_SIZE;
+    inline static const QString SWITCH_FILE_DESCRIPTION = tr("Switch Save File");
+    inline static const QStringList SWITCH_VALID_EXTENSIONS {QStringLiteral("ff7slot*")};
+    inline static const QByteArray SWITCH_FILE_ID = PC_FILE_ID;
     /*~~~~~~~~~~~~~~~~~~ Psx save file ~~~~~~~~~~~~~~~~*/
     static const int PSX_FILE_SIZE = 0x2000;
     static const int PSX_SLOT_HEADER_SIZE = 0x0200;
     static const int PSX_SLOT_FOOTER_SIZE = 0x0D0C;
+    inline static const QString PSX_FILE_DESCRIPTION = tr("PSX Save File");
+    inline static const QStringList PSX_VALID_EXTENSIONS { QStringLiteral("BASCUS-94163FF7-S*"),
+        QStringLiteral("BESCES-00867FF7-S*"), QStringLiteral("BESCES-00868FF7-S*"),
+        QStringLiteral("BESCES-00869FF7-S*"), QStringLiteral("BESCES-00900FF7-S*"),
+        QStringLiteral("BISLPS-00700FF7-S*"), QStringLiteral("BIPSLPS-01057FF7-S*")};
     inline static const QByteArray PSX_FILE_ID = QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60", 16);
     //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
     inline static const QByteArrayList PSX_SLOT_HEADER = {
@@ -48,24 +61,38 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSV SAVE INFO~~~~~~~~~~~~~~~~~~~~~~~~~*/
     static const int PS3_FILE_SIZE = 0x2084;
     static const int PS3_FILE_HEADER_SIZE = 0x0084;
+    inline static const QString PS3_FILE_DESCRIPTION = tr("PSV Save File");
+    inline static const QStringList PS3_VALID_EXTENSIONS { QStringLiteral("*.psv")};
     inline static const QByteArray PS3_FILE_ID = QByteArray::fromRawData("\x00\x56\x53\x50", 4);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mem Card Format~~~~~~~~~~~~~~~~~~~*/
     static const int VMC_FILE_SIZE = 0x20000;
     static const int VMC_FILE_HEADER_SIZE = 0x2000;
+    inline static const QString VMC_FILE_DESCRIPTION = tr("Virtual Memory Card");
+    inline static const QStringList VMC_VALID_EXTENSIONS {
+        QStringLiteral("*.mcr"), QStringLiteral("*.mcd"), QStringLiteral("*.mci"),
+        QStringLiteral("*.mc"), QStringLiteral("*.ddf"), QStringLiteral("*.ps"),
+        QStringLiteral("*.psm"), QStringLiteral("*.VM1"), QStringLiteral("*.bin"), QStringLiteral("*.srm")};
     inline static const QByteArray VMC_FILE_ID = "\x4D\x43";
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PSP_FILE_SIZE = 0x20080;
     static const int PSP_FILE_HEADER_SIZE = 0x2080;
+    inline static const QString PSP_FILE_DESCRIPTION = tr("PSP/Vita Virtual Memory Card");
+    inline static const QStringList PSP_VALID_EXTENSIONS { QStringLiteral("*.vmp")};
     inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56", 4);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGS SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int VGS_FILE_SIZE = 0x20040;
     static const int VGS_FILE_HEADER_SIZE = 0x2040;
+    inline static const QString VGS_FILE_DESCRIPTION = tr("Virtual Game Station Memory Card");
+    inline static const QStringList VGS_VALID_EXTENSIONS { QStringLiteral("*.vgs"), QStringLiteral("*.mem")};
     inline static const QByteArray VGS_FILE_ID = "\x56\x67\x73\x4D";
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DEX SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int DEX_FILE_SIZE = 0x20F40;
     static const int DEX_FILE_HEADER_SIZE = 0x2F40;
+    inline static const QString DEX_FILE_DESCRIPTION = tr("DEX Drive Virtual Memory Card");
+    inline static const QStringList DEX_VALID_EXTENSIONS {QStringLiteral("*.gme")};
     inline static const QByteArray DEX_FILE_ID = QByteArray::fromRawData("\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x4D", 22);
 };
+
 FF7SaveInfo *FF7SaveInfo::instance()
 {
     static FF7SaveInfo m;
@@ -100,6 +127,7 @@ int FF7SaveInfo::fileSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PS3): return d->PS3_FILE_SIZE;
     case (FORMAT::DEX): return d->DEX_FILE_SIZE;
     case (FORMAT::VGS): return d->VGS_FILE_SIZE;
+    case (FORMAT::SWITCH): return d->SWITCH_FILE_SIZE;
     default: return 0;
     }
 }
@@ -113,6 +141,7 @@ int FF7SaveInfo::fileHeaderSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PS3): return d->PS3_FILE_HEADER_SIZE;
     case (FORMAT::DEX): return d->DEX_FILE_HEADER_SIZE;
     case (FORMAT::VGS): return d->VGS_FILE_HEADER_SIZE;
+    case (FORMAT::SWITCH): return d->SWITCH_FILE_HEADER_SIZE;
     default: return 0;
     }
 }
@@ -152,6 +181,7 @@ int FF7SaveInfo::slotCount(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PSP):
     case (FORMAT::DEX):
     case (FORMAT::VGS):
+    case (FORMAT::SWITCH):
     case (FORMAT::PC): return 15;
     default: return 0;
     }
@@ -167,6 +197,7 @@ QByteArray FF7SaveInfo::fileIdentifier(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PS3): return d->PS3_FILE_ID;
     case (FORMAT::DEX): return d->DEX_FILE_ID;
     case (FORMAT::VGS): return d->VGS_FILE_ID;
+    case (FORMAT::SWITCH): return d->SWITCH_FILE_ID;
     default: return QByteArray();
     }
 }
@@ -175,6 +206,7 @@ QByteArray FF7SaveInfo::fileHeader(FF7SaveInfo::FORMAT format) const
 {
     switch (format) {
     case (FORMAT::PC):
+    case (FORMAT::SWITCH):
     case (FORMAT::PSP):
     case (FORMAT::PS3):
     case (FORMAT::DEX):
@@ -216,16 +248,72 @@ int FF7SaveInfo::slotSize() const
     return d->_slotSize;
 }
 
-QString FF7SaveInfo::typeString(FF7SaveInfo::FORMAT format) const
+QString FF7SaveInfo::typeDescription(FF7SaveInfo::FORMAT format) const
 {
     switch (format) {
-    case (FORMAT::PC): return QStringLiteral("PC");
-    case (FORMAT::PSX): return QStringLiteral("PSX");
-    case (FORMAT::PSP): return QStringLiteral("PSP");
-    case (FORMAT::PS3): return QStringLiteral("PSV");
-    case (FORMAT::DEX): return QStringLiteral("DEX");
-    case (FORMAT::VGS): return QStringLiteral("VGS");
-    case (FORMAT::VMC): return QStringLiteral("VMC");
-    default: return QString("");
+    case (FORMAT::PC): return d->PC_FILE_DESCRIPTION;
+    case (FORMAT::PSX): return d->PSX_FILE_DESCRIPTION;
+    case (FORMAT::PSP): return d->PSP_FILE_DESCRIPTION;
+    case (FORMAT::PS3): return d->PS3_FILE_DESCRIPTION;
+    case (FORMAT::DEX): return d->DEX_FILE_DESCRIPTION;
+    case (FORMAT::VGS): return d->VGS_FILE_DESCRIPTION;
+    case (FORMAT::VMC): return d->VMC_FILE_DESCRIPTION;
+    case (FORMAT::SWITCH): return d->SWITCH_FILE_DESCRIPTION;
+    default: return QString();
     }
+}
+
+QStringList FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PC): return d->PC_VALID_EXTENSIONS;
+    case (FORMAT::PSX): return d->PSX_VALID_EXTENSIONS;
+    case (FORMAT::PSP): return d->PSP_VALID_EXTENSIONS;
+    case (FORMAT::PS3): return d->PS3_VALID_EXTENSIONS;
+    case (FORMAT::DEX): return d->DEX_VALID_EXTENSIONS;
+    case (FORMAT::VGS): return d->VGS_VALID_EXTENSIONS;
+    case (FORMAT::VMC): return d->VMC_VALID_EXTENSIONS;
+    case (FORMAT::SWITCH): return d->SWITCH_VALID_EXTENSIONS;
+    default: return QStringList();
+    }
+}
+
+QString FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PC): return QStringLiteral("%1 (%2)").arg(d->PC_FILE_DESCRIPTION, d->PC_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::PSX): return QStringLiteral("%1 (%2)").arg(d->PSX_FILE_DESCRIPTION, d->PSX_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::PSP): return QStringLiteral("%1 (%2)").arg(d->PSP_FILE_DESCRIPTION, d->PSP_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::PS3): return QStringLiteral("%1 (%2)").arg(d->PS3_FILE_DESCRIPTION, d->PS3_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::DEX): return QStringLiteral("%1 (%2)").arg(d->DEX_FILE_DESCRIPTION, d->DEX_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::VGS): return QStringLiteral("%1 (%2)").arg(d->VGS_FILE_DESCRIPTION, d->VGS_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::VMC): return QStringLiteral("%1 (%2)").arg(d->VMC_FILE_DESCRIPTION, d->VMC_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    case (FORMAT::SWITCH): return QStringLiteral("%1 (%2)").arg(d->SWITCH_FILE_DESCRIPTION, d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+    default: return tr("All Files (*)");
+    }
+}
+
+QString FF7SaveInfo::knownTypesFilter() const
+{
+    QString allTypes = QStringLiteral("%1 %2 %3 %4 %5 %6 %7 %8")
+        .arg(d->PC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->PSX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->PSP_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->PS3_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->DEX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->VGS_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->VMC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+
+    return QStringLiteral("%1;;%2;;%3;;%4;;%5;;%6;;%7;;%8;;%9;;%10")
+        .arg(tr("Known FF7 Save Types (%1)").arg(allTypes))
+        .arg(typeFilter(FORMAT::PC))
+        .arg(typeFilter(FORMAT::SWITCH))
+        .arg(typeFilter(FORMAT::VMC))
+        .arg(typeFilter(FORMAT::PSX))
+        .arg(typeFilter(FORMAT::PS3))
+        .arg(typeFilter(FORMAT::PSP))
+        .arg(typeFilter(FORMAT::DEX))
+        .arg(typeFilter(FORMAT::VGS))
+        .arg(typeFilter(FORMAT::UNKNOWN));
 }

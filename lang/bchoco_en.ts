@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>Level Progress</translation>
+        <translation type="vanished">Level Progress</translation>
     </message>
     <message>
         <source>Next</source>
@@ -6852,6 +6852,49 @@ The km/h speeds are calculated while playing </translation>
     </message>
 </context>
 <context>
+    <name>FF7SaveInfo</name>
+    <message>
+        <source>PC Save File</source>
+        <translation>PC Save File</translation>
+    </message>
+    <message>
+        <source>Switch Save File</source>
+        <translation>Switch Save File</translation>
+    </message>
+    <message>
+        <source>PSX Save File</source>
+        <translation>PSX Save File</translation>
+    </message>
+    <message>
+        <source>PSV Save File</source>
+        <translation>PSV Save File</translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card</source>
+        <translation>Virtual Memory Card</translation>
+    </message>
+    <message>
+        <source>PSP/Vita Virtual Memory Card</source>
+        <translation>PSP/Vita Virtual Memory Card</translation>
+    </message>
+    <message>
+        <source>Virtual Game Station Memory Card</source>
+        <translation>Virtual Game Station Memory Card</translation>
+    </message>
+    <message>
+        <source>DEX Drive Virtual Memory Card</source>
+        <translation>DEX Drive Virtual Memory Card</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (%1)</source>
+        <translation>Known FF7 Save Types (%1)</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation>All Files (*)</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -7929,31 +7972,31 @@ Table Entries are Editable</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation>FF7 PC (*.ff7)</translation>
+        <translation type="vanished">FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation>Raw PSX Save(*FF7-S*)</translation>
+        <translation type="vanished">Raw PSX Save(*FF7-S*)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation>Virtual Game Station(*.vgs *.mem)</translation>
+        <translation type="vanished">Virtual Game Station(*.vgs *.mem)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation>PSV Export Attempted</translation>
+        <translation type="vanished">PSV Export Attempted</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation>PSV Exports Are Not Allowed.</translation>
+        <translation type="vanished">PSV Exports Are Not Allowed.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation>VMP Export Attempted</translation>
+        <translation type="vanished">VMP Export Attempted</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation>VMP Exports Are Not Allowed.</translation>
+        <translation type="vanished">VMP Exports Are Not Allowed.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
@@ -8175,27 +8218,27 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>z_41</source>
-        <translation>z_41</translation>
+        <translation type="vanished">z_41</translation>
     </message>
     <message>
         <source>z_42</source>
-        <translation>z_42</translation>
+        <translation type="vanished">z_42</translation>
     </message>
     <message>
         <source>z_43</source>
-        <translation>z_43</translation>
+        <translation type="vanished">z_43</translation>
     </message>
     <message>
         <source>z_44</source>
-        <translation>z_44</translation>
+        <translation type="vanished">z_44</translation>
     </message>
     <message>
         <source>z_45</source>
-        <translation>z_45</translation>
+        <translation type="vanished">z_45</translation>
     </message>
     <message>
         <source>z_46</source>
-        <translation>z_46</translation>
+        <translation type="vanished">z_46</translation>
     </message>
     <message>
         <source>He&amp;lp</source>
@@ -8275,11 +8318,11 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</translation>
+        <translation type="vanished">Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
+        <translation type="vanished">Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8411,15 +8454,15 @@ location.</translation>
     </message>
     <message>
         <source>DEX Drive Memory Card(*.gme)</source>
-        <translation>DEX Drive Memory Card(*.gme)</translation>
+        <translation type="vanished">DEX Drive Memory Card(*.gme)</translation>
     </message>
     <message>
         <source>PSV Save File(*.psv)</source>
-        <translation>PSV Save File(*.psv)</translation>
+        <translation type="vanished">PSV Save File(*.psv)</translation>
     </message>
     <message>
         <source>PSP Memory Card(*.vmp)</source>
-        <translation>PSP Memory Card(*.vmp)</translation>
+        <translation type="vanished">PSP Memory Card(*.vmp)</translation>
     </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
@@ -8433,6 +8476,14 @@ location.</translation>
   Next Data Chunk @ Slot:%1</source>
         <translation>
   Next Data Chunk @ Slot:%1</translation>
+    </message>
+    <message>
+        <source>UnSupported Export Attempted</source>
+        <translation>UnSupported Export Attempted</translation>
+    </message>
+    <message>
+        <source>This format can not be Exported.</source>
+        <translation>This format can not be Exported.</translation>
     </message>
 </context>
 <context>

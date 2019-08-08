@@ -250,7 +250,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>レベル アップの進捗</translation>
+        <translation type="vanished">レベル アップの進捗</translation>
     </message>
     <message>
         <source>Next</source>
@@ -6850,6 +6850,49 @@ The km/h speeds are calculated while playing </source>
     </message>
 </context>
 <context>
+    <name>FF7SaveInfo</name>
+    <message>
+        <source>PC Save File</source>
+        <translation type="unfinished">PC FF7 セーブ</translation>
+    </message>
+    <message>
+        <source>Switch Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSX Save File</source>
+        <translation type="unfinished">Raw PSX FF7 セーブ</translation>
+    </message>
+    <message>
+        <source>PSV Save File</source>
+        <translation type="unfinished">PSV セーブ</translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card</source>
+        <translation type="unfinished">MC ゲーム セ－ブ</translation>
+    </message>
+    <message>
+        <source>PSP/Vita Virtual Memory Card</source>
+        <translation type="unfinished">PSP/PsVita セーブ</translation>
+    </message>
+    <message>
+        <source>Virtual Game Station Memory Card</source>
+        <translation type="unfinished">VGS セーブ</translation>
+    </message>
+    <message>
+        <source>DEX Drive Virtual Memory Card</source>
+        <translation type="unfinished">Dex-Drive セーブ</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (%1)</source>
+        <translation type="unfinished">対応済み FF7 セーブ (%1)</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation type="unfinished">すべてのファイル (*)</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -7931,31 +7974,31 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation type="unfinished">FF7 PC セーブ (*.ff7)</translation>
+        <translation type="obsolete">FF7 PC セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="unfinished">FF7 Raw PSX セーブ (*-S*)</translation>
+        <translation type="obsolete">FF7 Raw PSX セーブ (*-S*)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="unfinished">FF7 VGS セーブ (*.vgs *.mem)</translation>
+        <translation type="obsolete">FF7 VGS セーブ (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation type="unfinished">PSVエクスポートしようとしました</translation>
+        <translation type="obsolete">PSVエクスポートしようとしました</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation type="unfinished">PSVの輸出は許可されていません。</translation>
+        <translation type="obsolete">PSVの輸出は許可されていません。</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation type="unfinished">VMPエクスポートしようとしました</translation>
+        <translation type="obsolete">VMPエクスポートしようとしました</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation type="unfinished">
+        <translation type="obsolete">
 VMPの輸出は許可されていません。</translation>
     </message>
     <message>
@@ -8169,30 +8212,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">いいえ説明テキストはありません</translation>
     </message>
     <message>
-        <source>z_41</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_42</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_43</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_44</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_45</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_46</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>He&amp;lp</source>
         <translation type="unfinished">ヘルプ(&amp;L)</translation>
     </message>
@@ -8270,11 +8289,11 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin *.srm);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
+        <translation type="vanished">対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin *.srm);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV セーブ (*.psv);;PSP/PsVita セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation type="unfinished">MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
+        <translation type="obsolete">MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8401,18 +8420,6 @@ location.</source>
         <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>DEX Drive Memory Card(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV Save File(*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSP Memory Card(*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
@@ -8424,6 +8431,14 @@ location.</source>
   Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished">
   次のデータ チャンク @ スロット:%1</translation>
+    </message>
+    <message>
+        <source>UnSupported Export Attempted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This format can not be Exported.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

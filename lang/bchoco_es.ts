@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>Progreso de Nivel</translation>
+        <translation type="vanished">Progreso de Nivel</translation>
     </message>
     <message>
         <source>Next</source>
@@ -6852,6 +6852,49 @@ Los km/h son calculados mientras se juega </translation>
     </message>
 </context>
 <context>
+    <name>FF7SaveInfo</name>
+    <message>
+        <source>PC Save File</source>
+        <translation type="unfinished">Juego Guardado de FF7 PC</translation>
+    </message>
+    <message>
+        <source>Switch Save File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSX Save File</source>
+        <translation type="unfinished">Partida guardada FF7 PSX</translation>
+    </message>
+    <message>
+        <source>PSV Save File</source>
+        <translation type="unfinished">Partida Guardada PSV</translation>
+    </message>
+    <message>
+        <source>Virtual Memory Card</source>
+        <translation type="unfinished">Tarjeta de Memoria Virtual</translation>
+    </message>
+    <message>
+        <source>PSP/Vita Virtual Memory Card</source>
+        <translation type="unfinished">Partida Guardada PSP/PsVita</translation>
+    </message>
+    <message>
+        <source>Virtual Game Station Memory Card</source>
+        <translation type="unfinished">Archivo de guardado FF7 VGS</translation>
+    </message>
+    <message>
+        <source>DEX Drive Virtual Memory Card</source>
+        <translation type="unfinished">Partida Guardada Dex-Drive</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (%1)</source>
+        <translation type="unfinished">Tipos de archivo FF7 conocidos (%1)</translation>
+    </message>
+    <message>
+        <source>All Files (*)</source>
+        <translation type="unfinished">Todos los archivos(*)</translation>
+    </message>
+</context>
+<context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
@@ -7933,31 +7976,31 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>FF7 PC (*.ff7)</source>
-        <translation>Juego Guardado de FF7 PC (*.ff7)</translation>
+        <translation type="vanished">Juego Guardado de FF7 PC (*.ff7)</translation>
     </message>
     <message>
         <source>Raw PSX Save(*FF7-S*)</source>
-        <translation>Partida guardada FF7 PSX (Raw) (*-S*)</translation>
+        <translation type="vanished">Partida guardada FF7 PSX (Raw) (*-S*)</translation>
     </message>
     <message>
         <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation>Archivo de guardado FF7 VGS (*.vgs *.mem)</translation>
+        <translation type="vanished">Archivo de guardado FF7 VGS (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>PSV Export Attempted</source>
-        <translation>Intento de exportar PSV</translation>
+        <translation type="vanished">Intento de exportar PSV</translation>
     </message>
     <message>
         <source>PSV Exports Are Not Allowed.</source>
-        <translation>Exportar PSV no esta permitido.</translation>
+        <translation type="vanished">Exportar PSV no esta permitido.</translation>
     </message>
     <message>
         <source>VMP Export Attempted</source>
-        <translation>Intento de exportar VMP</translation>
+        <translation type="vanished">Intento de exportar VMP</translation>
     </message>
     <message>
         <source>VMP Exports Are Not Allowed.</source>
-        <translation>Exportar VMP no esta permitido.</translation>
+        <translation type="vanished">Exportar VMP no esta permitido.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
@@ -8169,30 +8212,6 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
         <translation>Sin Descripción</translation>
     </message>
     <message>
-        <source>z_41</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_42</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_43</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_44</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_45</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>z_46</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>He&amp;lp</source>
         <translation type="unfinished">Ayuda (&amp;L)</translation>
     </message>
@@ -8270,11 +8289,11 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Partida Guardada PSV (*.psv);;Partida Guardada PSP/PsVita (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los Archivos(*)</translation>
+        <translation type="vanished">Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;Partida Guardada PSV (*.psv);;Partida Guardada PSP/PsVita (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los Archivos(*)</translation>
     </message>
     <message>
         <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation>Tarjeta de Memoria Virtual(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
+        <translation type="vanished">Tarjeta de Memoria Virtual(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8402,18 +8421,6 @@ location.</source>
         <source>Played piano durring flashback</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>DEX Drive Memory Card(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV Save File(*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSP Memory Card(*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
@@ -8424,6 +8431,14 @@ location.</source>
     <message>
         <source>
   Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UnSupported Export Attempted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This format can not be Exported.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9165,11 +9180,11 @@ File:%1</source>
     </message>
     <message>
         <source>       Mid-Linked Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">   Bloque Intermedio Enlazado</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bloque Intermedio Enlazado (Borrado)</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
