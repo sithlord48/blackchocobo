@@ -167,11 +167,18 @@ private:
         , {{quint16(0x0BDF)}, {quint8(7)}, {QStringLiteral("cosmin7")}, QT_TR_NOOP("Full Cure")}
 
         , {{quint16(0x0BE5)}, {quint8(4)}, {QStringLiteral("mrkt2")}, QT_TR_NOOP("KeyItem: Member's Card")}
+
+        , {{quint16(0x0BE6)}, {quint8(4)}, {QStringLiteral("convil_1")}, QT_TR_NOOP("KeyItem: Huge Materia: Fort Condor")}
+        , {{quint16(0x0BE6)}, {quint8(6)}, {QStringLiteral("subin_1a"), QStringLiteral("subin_1b")}, QT_TR_NOOP("KeyItem: Huge Materia: UnderWater")}
+
         , {{quint16(0x0BE7)}, {quint8(0)}, {QStringLiteral("subin_1a"), QStringLiteral("subin_1b")}, QT_TR_NOOP("KeyItem: Key to Ancients")}
+
+        , {{quint16(0x0BE9)}, {quint8(0)}, {QStringLiteral("elminn_1")}, QT_TR_NOOP("KeyItem: PHS")}
         , {{quint16(0x0BE9)}, {quint8(2)}, {QStringLiteral("clsin2_2")}, QT_TR_NOOP("KeyItem: Keystone")}
         , {{quint16(0x0BEA)}, {quint8(0)}, {QStringLiteral("trnad_1")}, QT_TR_NOOP("KeyItem: Black Materia")}
 
-        , {{quint16(0x0C24), quint16(0x0BE6)}, {quint8(6), quint8(5)}, {QStringLiteral("ncorel3")}, QT_TR_NOOP("KeyItem: Huge Materia:Corel")}
+
+        , {{quint16(0x0C24), quint16(0x0BE6)}, {quint8(6), quint8(5)}, {QStringLiteral("ncorel3")}, QT_TR_NOOP("KeyItem: Huge Materia: Corel")}
         , {{quint16(0x0C24)}, {quint8(7)}, {QStringLiteral("ncorel2"), QStringLiteral("ncorel3")}, QT_TR_NOOP("Ultima")}
 
         , {{quint16(0x0C26), quint16(0x0C26), quint16(0x0BEA)}, {quint8(1), quint8(5), quint8(2)}, {QStringLiteral("snmin1")}, QT_TR_NOOP("KeyItem: Snowboard")}
@@ -496,7 +503,7 @@ private:
         , {{quint16(0x1032)}, {quint8(6)}, {QStringLiteral("md8_b1")}, QT_TR_NOOP("Elixir")}
         , {{quint16(0x1032)}, {quint8(7)}, {QStringLiteral("tunnel_5")}, QT_TR_NOOP("Magic Source")}
 
-        , {{quint16(0x1035), quint16(0x0BE6)}, {quint8(3), quint8(7)}, {QStringLiteral("rcktin4")}, QT_TR_NOOP("KeyItem: Huge Materia:Rocket")}
+        , {{quint16(0x1035), quint16(0x0BE6)}, {quint8(3), quint8(7)}, {QStringLiteral("rcktin4")}, QT_TR_NOOP("KeyItem: Huge Materia: Rocket")}
 
         , {{quint16(0x1036)}, {quint8(0)}, {QStringLiteral("tunnel_5")}, QT_TR_NOOP("Mind Source")}
         , {{quint16(0x1036)}, {quint8(1)}, {QStringLiteral("tunnel_5")}, QT_TR_NOOP("Power Source")}

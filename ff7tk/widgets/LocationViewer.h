@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,10 +13,17 @@
 //    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef LOCATIONVIEWER_H
-#define LOCATIONVIEWER_H
-
-#include <QtWidgets>
+#pragma once
+#include <QAction>
+#include <QCheckBox>
+#include <QEvent>
+#include <QGroupBox>
+#include <QLabel>
+#include <QLineEdit>
+#include <QListWidget>
+#include <QSpinBox>
+#include <QTableWidget>
+#include <QToolButton>
 // Include FF7tk Items.
 #include "../data/FF7Location.h"
 #include "../data/FF7FieldItemList.h"
@@ -123,7 +130,4 @@ private:
     QCheckBox *chkAutoUpdate;
 
     inline static const QString _tooltip = QStringLiteral("<html><head/><body><p><img src=\":/locations/%1_%2\" width=\"%3\" height\"%4\" /></p></body></html>");
-
 };
-
-#endif // LOCATIONVIEWER_H

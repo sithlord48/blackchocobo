@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,6 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ItemList.h"
+#include <QHeaderView>
+#include <QScrollBar>
 
 bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 {
@@ -105,7 +107,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 void ItemList::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QTableWidget::changeEvent(e);
     }
     itemupdate();
 }
@@ -119,26 +121,23 @@ ItemList::ItemList(qreal Scale, QWidget *parent) : QTableWidget(parent)
     setRowCount(320);
     setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
     setColumnCount(3);
-    setStyleSheet(QString(";"));//set a style and itemSelector will have a normal size column 1
     setEditTriggers(QAbstractItemView::NoEditTriggers);// thats a long 0
     setContextMenuPolicy(Qt::NoContextMenu);
     setSelectionMode(QAbstractItemView::NoSelection);
     itemSelector = new ItemSelector();
     createdSelector = true;
-    setCellWidget(0, 0, itemSelector);
     setColumnWidth(0, itemSelector->combo_type_width());
     setColumnWidth(1, itemSelector->combo_item_width());
     setColumnWidth(2, itemSelector->qty_width());
-    itemSelector->setFixedWidth(itemSelector->combo_type_width() + itemSelector->combo_item_width() + itemSelector->qty_width());
     connect(this, &QTableWidget::currentCellChanged, this, &ItemList::listSelectionChanged);
-    horizontalHeader()->hide();
-    verticalHeader()->hide();
+    horizontalHeader()->close();
+    verticalHeader()->close();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
     for (int i = 0; i < 320; i++) {
         itemlist.append(FF7Item::EmptyItemData);   //initlize the data.
     }
     itemSelector->setFixedHeight(fontMetrics().height());
-    setFixedWidth(itemSelector->frameGeometry().width() + verticalScrollBar()->width() + contentsMargins().left() + contentsMargins().right() + 6);
+    setFixedWidth(itemSelector->width() + (verticalScrollBar()->width() / 4) + contentsMargins().left() + contentsMargins().right());
     itemSelector->close();
     createdSelector = false;
     itemupdate();// redraw Display After data init.
@@ -151,7 +150,7 @@ void ItemList::setMaximumItemQty(int maxQty)
     for (int i = 0; i < 320; i++) {
         if ((Items.itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i) != FF7Item::EmptyItemData)) {
             //qty not above limit and item is not empty.
-            itemlist.replace(i, Items.itemEncode(Items.itemId(itemlist.at(i)), itemQtyLimit));
+            itemlist.replace(i, Items.itemEncode(Items.itemId(itemlist.at(i)), quint8(itemQtyLimit)));
         }
     }
     itemupdate();

@@ -17,7 +17,7 @@
 void ChocoboManager::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
 
     lblStablesOwned ->setText(tr("Stables Owned"));
@@ -295,7 +295,7 @@ void ChocoboManager::setData(QList<FF7CHOCOBO> chocos, QList<QString> names, QLi
         setChocoboPen(i, chocoPens[i]);
     }
 }
-void ChocoboManager::setChocobo(int s, FF7CHOCOBO chocoData, QString chocoName, quint16 chocoStamina, bool chocoCmate, quint8 rating)
+void ChocoboManager::setChocobo(int s, const FF7CHOCOBO &chocoData, const QString &chocoName, quint16 chocoStamina, bool chocoCmate, quint8 rating)
 {
     chocoboLabel[s]->clearLabel();
     chocoboData[s] = chocoData;

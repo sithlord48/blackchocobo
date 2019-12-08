@@ -15,6 +15,13 @@
 /****************************************************************************/
 #include "achievementdialog.h"
 
+#include <QFileDialog>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QMessageBox>
+#include <QPushButton>
+#include <QVBoxLayout>
+
 achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     QDialog(parent)
     , achEditor(new AchievementEditor)

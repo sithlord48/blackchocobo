@@ -13,10 +13,10 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef ITEMSELECTOR_H
-#define ITEMSELECTOR_H
-
-#include <QtWidgets>
+#pragma once
+#include <QComboBox>
+#include <QPushButton>
+#include <QSpinBox>
 //Include Data class
 #include "../data/FF7Item.h"
 
@@ -24,7 +24,7 @@ class ItemSelector : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ItemSelector(qreal Scale = 1, QWidget *parent = 0);
+    explicit ItemSelector(qreal Scale = 1, QWidget *parent = nullptr);
     int id();// current id
     int combo_item_width();//width of the item box.
     int combo_type_width();//width of the type box.
@@ -55,4 +55,3 @@ private:
     quint16 current_item;
     qreal scale;
 };
-#endif // ITEMSELECTOR_H

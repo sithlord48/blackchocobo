@@ -14,7 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QtWidgets>
+#include <QCheckBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QWidget>
 
 /** \class ChocoboLabel
  * \brief A Label to display a single chocobo's brief data.
@@ -55,7 +58,6 @@ public slots:
 private:
     void enable(bool enabled); /**< \brief enable/disable inner part of the form when needed \param enabled enable the lower frame?*/
     bool event(QEvent *ev);
-    bool isEnabled; /**< \brief isEnabled hold if enabled */
     QPushButton *btnCopy = nullptr; /**< \brief copy button */
     QPushButton *btnPaste = nullptr; /**< \brief paste button */
     QPushButton *btnRemove = nullptr; /**< \brief remove button */
@@ -68,4 +70,5 @@ private:
     QFrame *outerFrame = nullptr;/**< \brief outer frame of widget contains the label checkbox, copy,paste,remove buttons*/
     QString SelectedBkStyle;/**< \brief style for background when selected */
     int m_wins = -1;
+    bool isEnabled; /**< \brief isEnabled hold if enabled */
 };

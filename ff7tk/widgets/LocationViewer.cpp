@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,6 +14,14 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
+#include <QtDebug>
+#include <QHeaderView>
+#include <QHBoxLayout>
+#include <QMenu>
+#include <QResizeEvent>
+#include <QScrollBar>
+#include <QTranslator>
+#include <QVBoxLayout>
 
 LocationViewer::LocationViewer(qreal Scale, QWidget *parent)
     : QWidget(parent)
@@ -78,7 +86,7 @@ void LocationViewer::resizeEvent(QResizeEvent *ev)
 void LocationViewer::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
     updateText();
 }
@@ -132,9 +140,9 @@ void LocationViewer::init_display(void)
     locationTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     locationTable->setSelectionMode(QAbstractItemView::SingleSelection);
     locationTable->setSortingEnabled(true);
-    locationTable->setColumnWidth(0, fontMetrics().width(QChar('W')) * 6);
-    locationTable->setColumnWidth(1, fontMetrics().width(QChar('W')) * 15);
-    locationTable->setColumnWidth(2, fontMetrics().width(QChar('W')) * 4);
+    locationTable->setColumnWidth(0, fontMetrics().horizontalAdvance(QChar('W')) * 6);
+    locationTable->setColumnWidth(1, fontMetrics().horizontalAdvance(QChar('W')) * 15);
+    locationTable->setColumnWidth(2, fontMetrics().horizontalAdvance(QChar('W')) * 4);
     for (int i = 0; i < locationTable->rowCount(); i++) {
         QTableWidgetItem *newItem = new QTableWidgetItem(Locations->fileName(i), 0);
         newItem->setFlags(newItem->flags() &= ~Qt::ItemIsEditable);
@@ -156,7 +164,7 @@ void LocationViewer::init_display(void)
     locationTable->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     locationTable->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     locationTable->adjustSize();
-    locationTable->setFixedWidth(locationTable->columnWidth(0) + locationTable->columnWidth(1) + locationTable->columnWidth(2) + locationTable->verticalScrollBar()->widthMM() + fontMetrics().width(QChar('W')));
+    locationTable->setFixedWidth(locationTable->columnWidth(0) + locationTable->columnWidth(1) + locationTable->columnWidth(2) + locationTable->verticalScrollBar()->widthMM() + fontMetrics().horizontalAdvance(QChar('W')));
     locationTable->setCurrentCell(-1, -1);
     locationTable->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 
@@ -647,13 +655,9 @@ void LocationViewer::searchItem(QRegExp exp)
 {
     QStringList locationNames;
     for (const FieldItem &fieldItem : fieldItems->fieldItemList()) {
-        for (const QString &item : qAsConst(fieldItem.Maps)) {
-            if (item.contains(exp)) {
-                locationNames.append(item);
-            }
-        }
+            if (fieldItem.Text.contains(exp))
+                locationNames.append(fieldItem.Maps);
     }
-
     for (int i = 0; i < locationTable->rowCount(); i++) {
         bool hidden = true;
         for (int j = 0; j < locationNames.count(); j++) {

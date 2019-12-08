@@ -13,10 +13,9 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef MENULISTWIDGET_H
-#define MENULISTWIDGET_H
-
-#include <QtWidgets>
+#pragma once
+#include <QEvent>
+#include <QWidget>
 #include "DoubleCheckBox.h"
 
 /** \class MenuListWidget
@@ -91,5 +90,3 @@ private:
     void disconnectAll();
     void updateText();
 };
-
-#endif // MENULISTWIDGET_H

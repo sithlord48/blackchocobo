@@ -1558,7 +1558,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>キーアイテム: ヒュージマテリア (コレル)</translation>
+        <translation type="vanished">キーアイテム: ヒュージマテリア (コレル)</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -2226,7 +2226,7 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>キーアイテム: ヒュージマテリア (ロケット)</translation>
+        <translation type="vanished">キーアイテム: ヒュージマテリア (ロケット)</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -2247,6 +2247,26 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Contain</source>
         <translation>ふういん</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Fort Condor</source>
+        <translation type="unfinished">キーアイテム: ヒュージマテリア (コンドルフォート)</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: UnderWater</source>
+        <translation type="unfinished">キーアイテム: ヒュージマテリア (水中)</translation>
+    </message>
+    <message>
+        <source>KeyItem: PHS</source>
+        <translation type="unfinished">キーアイテム: ＰＨＳ</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Corel</source>
+        <translation type="unfinished">キーアイテム: ヒュージマテリア (コレル)</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Rocket</source>
+        <translation type="unfinished">キーアイテム: ヒュージマテリア (ロケット)</translation>
     </message>
 </context>
 <context>

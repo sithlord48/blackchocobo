@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,8 +14,9 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "SlotSelect.h"
+#include <QScrollBar>
 
-SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool showLoad, QWidget *parent): QDialog(parent)
+SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool loadVisible, QWidget *parent): QDialog(parent)
 {
     scale = Scale;
     ff7 = data;
@@ -35,7 +36,6 @@ SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool showLoad, QWidget *paren
         preview_layout->addWidget(preview[i]);
         setSlotPreview(i);
     }
-    //frm_preview->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Preferred);
     list_preview->setWidget(frm_preview);
     list_preview->setContentsMargins(0, 0, 0, 0);
     QVBoxLayout *dialog_layout = new QVBoxLayout;
@@ -43,10 +43,10 @@ SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool showLoad, QWidget *paren
     dialog_layout->setSpacing(2);
     dialog_layout->addWidget(list_preview);
     dialog_layout->addWidget(btnNew);
-    this->showLoad(showLoad); //by defalut hide the load new save button
-    this->setLayout(dialog_layout);
-    setFixedWidth(preview[1]->contentsRect().size().width() + contentsMargins().left() + contentsMargins().right() + list_preview->verticalScrollBar()->widthMM() + 14 * scale);
-    this->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    showLoad(loadVisible);
+    setLayout(dialog_layout);
+    setFixedWidth(int(preview[1]->contentsRect().size().width() + contentsMargins().left() + contentsMargins().right() + list_preview->verticalScrollBar()->widthMM() + 14 * scale));
+    setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
 }
 void SlotSelect::button_clicked(int s)
 {
@@ -128,7 +128,7 @@ void SlotSelect::setSlotPreview(int s)
         preview[s]->setLocation(ff7->descLocation(s));
         preview[s]->setName(ff7->descName(s));
         preview[s]->setLevel(ff7->descLevel(s));
-        preview[s]->setGil(ff7->descGil(s));
+        preview[s]->setGil(int(ff7->descGil(s)));
         preview[s]->setTime((ff7->descTime(s) / 3600), (ff7->descTime(s) / 60 % 60));
     } else if (ff7->isSlotEmpty(s)) {
         preview[s]->setMode(SlotPreview::MODE_EMPTY);

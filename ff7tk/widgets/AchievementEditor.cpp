@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "AchievementEditor.h"
+#include <QGridLayout>
 
 AchievementEditor::AchievementEditor(QWidget *parent) :
     QWidget(parent)

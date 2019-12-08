@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,10 +13,17 @@
 //    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef MateriaEditor_H
-#define MateriaEditor_H
+#pragma once
+#include <QComboBox>
+#include <QEvent>
+#include <QGroupBox>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QListWidget>
+#include <QPushButton>
+#include <QSpinBox>
+#include <QWidget>
 
-#include <QtWidgets>
 /* SET FF7Materia PATH ACCORDINGLY*/
 #include "../data/FF7Materia.h"
 
@@ -24,8 +31,8 @@ class MateriaEditor : public QWidget
 {
     Q_OBJECT
 public:
-    MateriaEditor(QWidget *parent = 0);
-    MateriaEditor(quint8 materia_id = 0, qint32 ap = 0, QWidget *parent = 0);
+    MateriaEditor(QWidget *parent = nullptr);
+    MateriaEditor(quint8 materia_id = 0, qint32 ap = 0, QWidget *parent = nullptr);
     void setMateria(quint8 materia_id = 0, qint32 materia_ap = 0);
     void setAP(qint32 current_ap = 0);
     void setStarsSize(int);
@@ -94,11 +101,10 @@ private:
     inline static const auto _itemStyle = QStringLiteral("QListWidget::item { padding-left: 0px; padding-top: 1px; padding-bottom: 1px;} QListView::item:hover { background-color: rgba(%1); } QListView::item:focus { background-color: rgba(%1); } QListView::indicator { width: %2px; height: %2px; } QListView::indicator:unchecked {image: url(:/materia/command_star_empty);} QListView::indicator:checked{image: url(:/materia/command_star_full);}");
 private slots:
     void typeChanged(int new_type);
-    void materia_changed(QString new_name);
+    void materia_changed(const QString &new_name);
     void editMode(void);
     QPushButton *newStyledButton(const QIcon &icon = QIcon(), QKeySequence shortcut = QKeySequence(), const QString &toolip = QString(), QWidget *parent = nullptr);
 signals:
     void apChanged(qint32);
     void idChanged(qint8);
 };
-#endif //MateriaEditor

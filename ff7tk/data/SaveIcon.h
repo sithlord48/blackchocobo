@@ -1,6 +1,7 @@
 /****************************************************************************
  **
  ** Copyright (C) 2010 Arzel Jérôme <myst6re@gmail.com>
+ **               2015 - 2019 Chris Rizzitello <sithlord48@gmail.com>
  **
  ** This program is free software: you can redistribute it and/or modify
  ** it under the terms of the GNU General Public License as published by
@@ -15,9 +16,7 @@
  ** You should have received a copy of the GNU General Public License
  ** along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
-
-#ifndef DEF_SAVEICON
-#define DEF_SAVEICON
+#pragma once
 
 #include <QByteArray>
 #include <QList>
@@ -86,5 +85,3 @@ private:
     quint8 curFrame = 0; /**< \brief current Frame*/
     static QTimer timer; /**< \brief frame change timer.*/
 };
-
-#endif

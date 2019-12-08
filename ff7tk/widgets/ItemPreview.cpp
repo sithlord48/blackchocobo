@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,124 +14,70 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ItemPreview.h"
+#include <QEvent>
+#include <QHBoxLayout>
+#include <QtEndian>
 
 bool ItemPreview::eventFilter(QObject *obj, QEvent *ev)
 {
     if (obj != this->parent() && (obj != this)) {
-        this->close();
+        close();
         return true;
-    } else if (ev->type() == QEvent::MouseButtonPress || ev->type() == QEvent::Leave) {
-        this->close();
-        return true;
-    } else {
-        return event(ev);
     }
+
+    if (ev->type() == QEvent::MouseButtonPress || ev->type() == QEvent::Leave) {
+        close();
+        return true;
+    }
+
+    return event(ev);
 
 }
-ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale, QWidget *parent) : QWidget(parent)
+ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, float Scale, QWidget *parent)
+    : QWidget(parent)
+    , lbl_name(new QLabel(this))
+    , lbl_desc(new QLabel(this))
+    , lbl_icon(new QLabel(this))
+    , scale(Scale)
+    , slotSize(fontMetrics().height(), fontMetrics().height())
+    , linkSize(fontMetrics().height() /2, fontMetrics().height())
 {
-    setWindowFlags(WindowFlags);
-    scale = Scale;
-    Qt::WindowFlags WidgetType = (this->windowFlags() & Qt::WindowType_Mask);
-    if (WidgetType == Qt::Popup || WidgetType == Qt::ToolTip) {
-        // if popup or tooltip install the eventFilter
-        installEventFilter(this);
+    for(int i= 0; i < 8; i++) {
+        slotLabels.append(new QLabel(this));
+        slotLabels.at(i)->setFixedSize(slotSize);
+        slotLabels.at(i)->setHidden(true);
     }
+
+    for(int i =0; i< 4; i++) {
+        slotLinks.append(new QLabel(this));
+        slotLinks.at(i)->setFixedSize(linkSize);
+    }
+
+    setWindowFlags(WindowFlags);
+    Qt::WindowFlags WidgetType = (this->windowFlags() & Qt::WindowType_Mask);
+    if (WidgetType == Qt::Popup || WidgetType == Qt::ToolTip)
+        installEventFilter(this);
+
     _id = FF7Item::EmptyItem;
-    lbl_name = new QLabel();
-    lbl_desc = new QLabel();
-    lbl_icon = new QLabel();
-    lbl_icon->setFixedSize(24 * scale, 24 * scale);
-    QSpacerItem *spacer = new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    lbl_slot_1 = new QLabel();
-    lbl_slot_1->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_1->setHidden(true);
+    lbl_icon->setFixedSize(slotSize);
 
-    lbl_m_link_1 = new QLabel();
-    lbl_m_link_1->setFixedSize(12 * scale, 24 * scale);
-
-    lbl_slot_2 = new QLabel();
-    lbl_slot_2->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_2->setHidden(true);
-
-    QHBoxLayout *slots_1_and_2 = new QHBoxLayout();
-    slots_1_and_2->setContentsMargins(0, 0, 0, 0);
-    slots_1_and_2->addWidget(lbl_slot_2);
-    slots_1_and_2->addWidget(lbl_m_link_1);
-    slots_1_and_2->addWidget(lbl_slot_1);
-    slots_1_and_2->setSpacing(0);
-
-    lbl_slot_3 = new QLabel();
-    lbl_slot_3->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_3->setHidden(true);
-
-    lbl_m_link_2 = new QLabel();
-    lbl_m_link_2->setFixedSize(12 * scale, 24 * scale);
-
-    lbl_slot_4 = new QLabel();
-    lbl_slot_4->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_4->setHidden(true);
-
-    QHBoxLayout *slots_3_and_4 = new QHBoxLayout();
-    slots_3_and_4->setContentsMargins(0, 0, 0, 0);
-    slots_3_and_4->addWidget(lbl_slot_4);
-    slots_3_and_4->addWidget(lbl_m_link_2);
-    slots_3_and_4->addWidget(lbl_slot_3);
-    slots_3_and_4->setSpacing(0);
-
-    lbl_slot_5 = new QLabel();
-    lbl_slot_5->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_5->setHidden(true);
-
-    lbl_m_link_3 = new QLabel();
-    lbl_m_link_3->setFixedSize(12 * scale, 24 * scale);
-
-    lbl_slot_6 = new QLabel();
-    lbl_slot_6->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_6->setHidden(true);
-
-    QHBoxLayout *slots_5_and_6 = new QHBoxLayout();
-    slots_5_and_6->setContentsMargins(0, 0, 0, 0);
-    slots_5_and_6->addWidget(lbl_slot_6);
-    slots_5_and_6->addWidget(lbl_m_link_3);
-    slots_5_and_6->addWidget(lbl_slot_5);
-    slots_5_and_6->setSpacing(0);
-
-    lbl_slot_7 = new QLabel();
-    lbl_slot_7->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_7->setHidden(true);
-
-    lbl_m_link_4 = new QLabel();
-    lbl_m_link_4->setFixedSize(12 * scale, 24 * scale);
-
-    lbl_slot_8 = new QLabel();
-    lbl_slot_8->setFixedSize(24 * scale, 24 * scale);
-    lbl_slot_8->setHidden(true);
-
-    QHBoxLayout *slots_7_and_8 = new QHBoxLayout();
-    slots_7_and_8->setContentsMargins(0, 0, 0, 0);
-    slots_7_and_8->addWidget(lbl_slot_8);
-    slots_7_and_8->addWidget(lbl_m_link_4);
-    slots_7_and_8->addWidget(lbl_slot_7);
-    slots_7_and_8->setSpacing(0);
-
-    materia_slot_box = new QGroupBox();
-    materia_slot_box->setContentsMargins(0, 0, 0, 0);
-    materia_slot_box->setFixedSize(320 * scale, 48 * scale);
-
-    QHBoxLayout *materia_slots = new QHBoxLayout();
+    auto materia_slots = new QHBoxLayout();
     materia_slots->setContentsMargins(0, 0, 0, 0);
-    materia_slots->addLayout(slots_1_and_2);
-    materia_slots->addLayout(slots_3_and_4);
-    materia_slots->addLayout(slots_5_and_6);
-    materia_slots->addLayout(slots_7_and_8);
-    materia_slots->addSpacerItem(spacer);
+    materia_slots->addLayout(makeMateriaPair(slotLabels.at(0), slotLabels.at(1), slotLinks.at(0)));
+    materia_slots->addLayout(makeMateriaPair(slotLabels.at(2), slotLabels.at(3), slotLinks.at(1)));
+    materia_slots->addLayout(makeMateriaPair(slotLabels.at(4), slotLabels.at(5), slotLinks.at(2)));
+    materia_slots->addLayout(makeMateriaPair(slotLabels.at(6), slotLabels.at(7), slotLinks.at(3)));
+    materia_slots->addSpacerItem(new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum));
     materia_slots->setSpacing(12);
 
+    materia_slot_box = new QGroupBox(this);
+    materia_slot_box->setMinimumWidth(int(320 * scale));
     materia_slot_box->setLayout(materia_slots);
     materia_slot_box->setHidden(true);
 
     elemental_effects = new QListWidget();
+    elemental_effects->setMinimumWidth(fontMetrics().horizontalAdvance(tr("Elemental Effects")));
+    elemental_effects->setResizeMode(QListView::Adjust);
     QHBoxLayout *elemental = new QHBoxLayout();
     elemental->setContentsMargins(0, 0, 0, 0);
     elemental->addWidget(elemental_effects);
@@ -143,6 +89,8 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale, QWidge
     elemental_box->setHidden(true);
 
     status_effects = new QListWidget();
+    status_effects->setMinimumWidth(fontMetrics().horizontalAdvance(tr("Status Effects")));
+    status_effects->setResizeMode(QListView::Adjust);
     QHBoxLayout *status = new QHBoxLayout();
     status->setContentsMargins(0, 0, 0, 0);
     status->addWidget(status_effects);
@@ -153,35 +101,37 @@ ItemPreview::ItemPreview(QFlags<Qt::WindowType> WindowFlags, qreal Scale, QWidge
     status_box->setTitle(tr("Status Effects"));
     status_box->setHidden(true);
 
-    QHBoxLayout *effects_layout = new QHBoxLayout();
+    auto effects_layout = new QHBoxLayout();
     effects_layout->setContentsMargins(0, 0, 0, 0);
     effects_layout->addWidget(elemental_box);
     effects_layout->addWidget(status_box);
-    QSpacerItem *spacer2 = new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum);
-    effects_layout->addSpacerItem(spacer2);
+    effects_layout->addSpacerItem(new QSpacerItem(-1, -1, QSizePolicy::Expanding, QSizePolicy::Minimum));
     effects_layout->setSpacing(0);
 
-    QHBoxLayout *top = new QHBoxLayout();
+    auto top = new QHBoxLayout();
     top->addWidget(lbl_icon);
     top->addWidget(lbl_name);
 
-    QVBoxLayout *main_layout = new QVBoxLayout(this);
+    auto main_layout = new QVBoxLayout(this);
     main_layout->setContentsMargins(3, 3, 3, 3);
     main_layout->addLayout(top);
     main_layout->addWidget(lbl_desc);
     main_layout->addWidget(materia_slot_box);
     main_layout->addLayout(effects_layout);
 }
+
 void ItemPreview::setName(QString text)
 {
     lbl_name->setText(text);
     lbl_name->adjustSize();
 }
+
 void ItemPreview::setDesc(QString text)
 {
     lbl_desc->setText(text);
     lbl_desc->adjustSize();
 }
+
 void ItemPreview::setIcon(QPixmap picture)
 {
     lbl_icon->setPixmap(picture.scaled(lbl_icon->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
@@ -190,32 +140,23 @@ void ItemPreview::setIcon(QPixmap picture)
 
 void ItemPreview::setItem(quint16 itemraw)
 {
-    //see FF7Save::itemDecode(quint16) for proper comments.
     quint16 item;
-    int one = 1;
-    if (*(char *)&one) {
+    if(QSysInfo::ByteOrder == QSysInfo::LittleEndian)
         item = itemraw;
-    } else {
-        item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
-    }
+    else
+        item = qToLittleEndian(itemraw);
+
     int id = (item & 0x1FF);
     setItem(id);
 }
+
 void ItemPreview::setItem(int id)
 {
-    lbl_slot_8->setHidden(true);
-    lbl_slot_7->setHidden(true);
-    lbl_slot_6->setHidden(true);
-    lbl_slot_5->setHidden(true);
-    lbl_slot_4->setHidden(true);
-    lbl_slot_3->setHidden(true);
-    lbl_slot_2->setHidden(true);
-    lbl_slot_1->setHidden(true);
+    for(auto slot : qAsConst(slotLabels))
+        slot->setHidden(true);
 
-    lbl_m_link_1->setPixmap(QPixmap());
-    lbl_m_link_2->setPixmap(QPixmap());
-    lbl_m_link_3->setPixmap(QPixmap());
-    lbl_m_link_4->setPixmap(QPixmap());
+    for(auto link : qAsConst(slotLinks))
+        link->clear();
 
     materia_slot_box->setHidden(true);
     lbl_desc->setHidden(true);
@@ -224,78 +165,49 @@ void ItemPreview::setItem(int id)
     status_box->setHidden(true);
     elemental_box->setHidden(true);
 
-    if (id < 0 || id > 319) {
+    if (id < 0 || id > 319)
         _id = FF7Item::EmptyItem;/*InValid Number..Do Nothing*/
-    } else {
+    else {
         _id = id;
-        if (data.name(id) != "") {
+        if (!data.name(id).isEmpty()) {
             lbl_name->setHidden(false);
             setName(data.name(id));
         }
 
-        if (data.desc(id) != "") {
+        if (!data.desc(id).isEmpty()) {
             setDesc(data.desc(id));
             lbl_desc->setHidden(false);
         }
+
         if (!data.image(id).isNull()) {
             lbl_icon->setHidden(false);
             setIcon(QPixmap::fromImage(data.image(id)));
         }
-        this->status_info(id);
-        this->elemental_info(id);
+
+        status_info(id);
+        elemental_info(id);
 
         if (data.type(id) > FF7Item::Item && data.type(id) != FF7Item::Accessory) {
-            if (data.materiaGrowthRate(id) == 0) {
-                //no growth slots
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_1->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_2->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_3->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_4->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_5->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_6->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_7->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlotNoGrowth()).scaled(lbl_slot_8->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            } else {
-                //growth slots.
-                lbl_slot_1->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_1->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_2->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_2->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_3->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_3->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_4->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_4->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_5->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_5->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_6->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_6->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_7->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_7->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                lbl_slot_8->setPixmap(QPixmap::fromImage(data.imageMateriaSlot()).scaled(lbl_slot_8->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            }
+            for (auto slot : qAsConst(slotLabels))
+               slot->setPixmap(QPixmap::fromImage(data.materiaGrowthRate(id) == 0 ? data.imageMateriaSlotNoGrowth() : data.imageMateriaSlot()).scaled(slot->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
             QString ap_rate = tr("APx%1").arg(data.materiaGrowthRate(id));
             materia_slot_box->setTitle(ap_rate);
             materia_slot_box->setHidden(false);
-            switch (data.materiaSlots(id)) {
-            case 8: lbl_slot_8->setHidden(false);
-            case 7: lbl_slot_7->setHidden(false);
-            case 6: lbl_slot_6->setHidden(false);
-            case 5: lbl_slot_5->setHidden(false);
-            case 4: lbl_slot_4->setHidden(false);
-            case 3: lbl_slot_3->setHidden(false);
-            case 2: lbl_slot_2->setHidden(false);
-            case 1: lbl_slot_1->setHidden(false);
-            };
 
-            switch (data.linkedSlots(id)) {
+            for(int i = 0; i < data.materiaSlots(id); i++)
+                slotLabels.at(i)->setHidden(false);
 
-            case 4: lbl_m_link_4->setPixmap(QPixmap::fromImage(data.imageMateriaLink()).scaled(lbl_m_link_4->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            case 3: lbl_m_link_3->setPixmap(QPixmap::fromImage(data.imageMateriaLink()).scaled(lbl_m_link_3->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            case 2: lbl_m_link_2->setPixmap(QPixmap::fromImage(data.imageMateriaLink()).scaled(lbl_m_link_2->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            case 1: lbl_m_link_1->setPixmap(QPixmap::fromImage(data.imageMateriaLink()).scaled(lbl_m_link_1->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            };
+            for(int i = 0; i < data.linkedSlots(id); i++)
+                slotLinks.at(i)->setPixmap(QPixmap::fromImage(data.imageMateriaLink().scaled(slotLinks.at(i)->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation)));
         }
     }
-    this->adjustSize();
+    adjustSize();
 }
 void ItemPreview::elemental_info(int id)
 {
-    int y = elemental_effects->contentsMargins().top() + elemental_effects->contentsMargins().bottom();
-    bool show = false;
     elemental_effects->clear();
+    bool show = false;
     if (id < 0 || id > 319) {/*invalid number*/}
     else {
         for (int i = 0; i < 14; i++) {
@@ -326,23 +238,20 @@ void ItemPreview::elemental_info(int id)
             }
             if (!effect.isNull()) {
                 elemental_effects->addItem(effect);
-                show = true; y += elemental_effects->sizeHintForRow(0);
-
+                show = true;
             }
         }//end of for Loop
+        int topMargin = elemental_box->contentsMargins().top() + elemental_effects->contentsMargins().top();
+        int bottomMargin = elemental_box->contentsMargins().bottom() + elemental_effects->contentsMargins().bottom();
+
         Qt::WindowFlags WidgetType = (this->windowFlags() & Qt::WindowType_Mask);
         if (WidgetType != Qt::Popup && WidgetType != Qt::ToolTip) {
-            //make the combo box smaller if not a popup or tooltip
-            if (elemental_effects->count() < 6) {
-                //elemental_effects->setFixedHeight(y);
-                elemental_box->setFixedSize(160 * scale, elemental_effects->height() + elemental_box->contentsMargins().top() + elemental_box->contentsMargins().bottom());
-                //elemental_box->setFixedSize(160,y+elemental_box->contentsMargins().top()+elemental_box->contentsMargins().bottom());
-            } else {
-                elemental_box->setFixedSize(160 * scale, elemental_effects->sizeHintForRow(0) * 5 + elemental_box->contentsMargins().top() + elemental_box->contentsMargins().bottom());
-            }
-        } else {
-            elemental_box->setFixedSize(160 * scale, y + elemental_box->contentsMargins().top() + elemental_box->contentsMargins().bottom());
-        }
+            if (elemental_effects->count() < 6)
+                elemental_box->setFixedHeight(elemental_effects->sizeHintForRow(0) * elemental_effects->count() + topMargin + bottomMargin);
+            else
+                elemental_box->setFixedHeight((elemental_effects->sizeHintForRow(0)) * 5 + topMargin + bottomMargin);
+        } else
+            elemental_box->setFixedHeight(elemental_effects->sizeHintForRow(0) * elemental_effects->count() + topMargin + bottomMargin);
     }//end of else
     elemental_box->setVisible(show);
     elemental_box->adjustSize();
@@ -351,8 +260,8 @@ void ItemPreview::elemental_info(int id)
 void ItemPreview::status_info(int id)
 {
     int y = status_effects->contentsMargins().top() + status_effects->contentsMargins().bottom();
-    bool show = false;
     status_effects->clear();
+    bool show = false;
     if (id < 0 || id > 319) {/*invalid number*/}
     else {
         for (int i = 0; i < 24; i++) {
@@ -384,34 +293,47 @@ void ItemPreview::status_info(int id)
             case 22: status = data.statusRegen(id); effect.append(tr("Regen")); break;
             case 23: status = data.statusResist(id); effect.append(tr("Resist")); break;
             }
+
             switch (status) {
             case FF7Item::Protect: effect.prepend(tr("Protect:")); break;
             case FF7Item::Remove: effect.prepend(tr("Remove:")); break;
-            case  FF7Item::NoEffect: effect.clear(); break;
+            case FF7Item::NoEffect: effect.clear(); break;
             case FF7Item::Infilict: effect.prepend(tr("Inflict:")); break;
             case FF7Item::SelfCast: effect.prepend(tr("OnBattle:")); break;
             }
+
             if (!effect.isNull()) {
                 status_effects->addItem(effect);
-                show = true; y += status_effects->sizeHintForRow(0);
+                show = true;
+                y += status_effects->sizeHintForRow(0);
             }
         }//end of for Loop
         Qt::WindowFlags WidgetType = (this->windowFlags() & Qt::WindowType_Mask);
         if (WidgetType != Qt::Popup && WidgetType != Qt::ToolTip) {
             //make the combo box smaller if not a popup or tooltip
-            if (status_effects->count() < 6) {
-                status_box->setFixedSize(160 * scale, y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
-            } else {
-                status_box->setFixedSize(160 * scale, status_effects->sizeHintForRow(0) * 5 + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
-            }
-        } else {
-            status_box->setFixedSize(160 * scale, y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
-        }
+            if (status_effects->count() < 6)
+                status_box->setFixedHeight(y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
+            else
+                status_box->setFixedHeight(status_effects->sizeHintForRow(0) * 5 + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
+        } else
+            status_box->setFixedHeight(y + status_box->contentsMargins().top() + status_box->contentsMargins().bottom());
     }//end of else
     status_box->setVisible(show);
     status_box->adjustSize();
 }//end of function
+
 int ItemPreview::id(void)
 {
     return _id;
+}
+
+QHBoxLayout * ItemPreview::makeMateriaPair(QLabel *slot1, QLabel *slot2, QLabel *link)
+{
+    auto finalLayout = new QHBoxLayout();
+    finalLayout->setContentsMargins(0, 0, 0, 0);
+    finalLayout->addWidget(slot1);
+    finalLayout->addWidget(link);
+    finalLayout->addWidget(slot2);
+    finalLayout->setSpacing(0);
+    return finalLayout;
 }

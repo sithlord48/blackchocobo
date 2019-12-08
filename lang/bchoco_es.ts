@@ -1560,7 +1560,7 @@ Los km/h son calculados mientras se juega </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>Element Clave: Materia Enorme:Corel</translation>
+        <translation type="vanished">Element Clave: Materia Enorme:Corel</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -2228,7 +2228,7 @@ Los km/h son calculados mientras se juega </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>Element Clave: Materia Enorme:Cohete</translation>
+        <translation type="vanished">Element Clave: Materia Enorme:Cohete</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -2249,6 +2249,26 @@ Los km/h son calculados mientras se juega </translation>
     <message>
         <source>Contain</source>
         <translation>Contener</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Fort Condor</source>
+        <translation type="unfinished">Element Clave: Materia Enorme: Fuerte Cóndor</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: UnderWater</source>
+        <translation type="unfinished">Element Clave: Materia Enorme: Submarino</translation>
+    </message>
+    <message>
+        <source>KeyItem: PHS</source>
+        <translation>Element Clave: PHS</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Corel</source>
+        <translation type="unfinished">Element Clave: Materia Enorme: Corel</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Rocket</source>
+        <translation type="unfinished">Element Clave: Materia Enorme: Cohete</translation>
     </message>
 </context>
 <context>
@@ -9067,11 +9087,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>       Mid-Linked Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">   Bloque Intermedio Enlazado</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bloque Intermedio Enlazado (Borrado)</translation>
     </message>
     <message numerus="yes">
         <source>

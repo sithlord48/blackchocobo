@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "OptionsWidget.h"
+#include <QScrollBar>
 
 OptionsWidget::OptionsWidget(QWidget *parent) :
     QScrollArea(parent)
@@ -185,7 +186,7 @@ void OptionsWidget::resizeEvent(QResizeEvent *event)
 void OptionsWidget::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
     updateText();
 }

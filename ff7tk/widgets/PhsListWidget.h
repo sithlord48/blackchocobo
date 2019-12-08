@@ -13,10 +13,9 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef PHSLISTWIDGET_H
-#define PHSLISTWIDGET_H
-
-#include <QtWidgets>
+#pragma once
+#include <QEvent>
+#include <QLabel>
 #include "DoubleCheckBox.h"
 
 /** \class PhsListWidget
@@ -95,5 +94,3 @@ private:
     void disconnectAll();
     void updateText();
 };
-
-#endif // PHSMENULIST_H

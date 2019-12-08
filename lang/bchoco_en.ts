@@ -1560,7 +1560,7 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>KeyItem: Huge Materia:Corel</translation>
+        <translation type="vanished">KeyItem: Huge Materia:Corel</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -2228,7 +2228,7 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>KeyItem: Huge Materia:Rocket</translation>
+        <translation type="vanished">KeyItem: Huge Materia:Rocket</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -2249,6 +2249,26 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <source>Contain</source>
         <translation>Contain</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Fort Condor</source>
+        <translation>KeyItem: Huge Materia: Fort Condor</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: UnderWater</source>
+        <translation>KeyItem: Huge Materia: UnderWater</translation>
+    </message>
+    <message>
+        <source>KeyItem: PHS</source>
+        <translation>KeyItem: PHS</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Corel</source>
+        <translation>KeyItem: Huge Materia: Corel</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Rocket</source>
+        <translation>KeyItem: Huge Materia: Rocket</translation>
     </message>
 </context>
 <context>

@@ -14,8 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-
-#include <QtWidgets>
+#include <QLCDNumber>
+#include <QGroupBox>
 //import friends from ff7tk
 #include "../widgets/ChocoboEditor.h"
 #include "../widgets/ChocoboLabel.h"
@@ -53,7 +53,7 @@ public slots:
     }
     void setData(FF7CHOCOBO choco[6], QString name[6], quint16 stamina[6], bool cMate[6], qint8 owned, qint8 occupied, qint8 mask, qint8 chocoPens[4], quint8 chocoRatings[6]);
     void setData(QList<FF7CHOCOBO> chocos, QList<QString> names, QList<quint16> staminas, QList<bool> cMate, qint8 owned, qint8 occupied, qint8 mask, QList<qint8> chocoPens, QList<quint8> chocoRatings);
-    void setChocobo(int s, FF7CHOCOBO chocoData, QString chocoName, quint16 chocoStamina, bool chocoCmate, quint8 rating);
+    void setChocobo(int s, const FF7CHOCOBO &chocoData, const QString &chocoName, quint16 chocoStamina, bool chocoCmate, quint8 rating);
     void setChocoboPen(int pen, int value);
     void setOwned(int owned);
     void setOccupied(int occupied, int mask);

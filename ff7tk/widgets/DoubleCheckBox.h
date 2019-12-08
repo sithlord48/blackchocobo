@@ -13,10 +13,9 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #pragma once
-
-#include <QtWidgets>
+#include <QCheckBox>
+#include <QLabel>
 
 /** \class DoubleCheckBox
  *  \brief one text two checkable boxes

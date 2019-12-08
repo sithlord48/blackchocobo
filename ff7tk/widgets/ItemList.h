@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,10 +13,9 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef ITEMLIST_H
-#define ITEMLIST_H
-
-#include <QtWidgets>
+#pragma once
+#include <QEvent>
+#include <QTableWidget>
 #include "ItemPreview.h"
 #include "ItemSelector.h"
 #include "../data/FF7Item.h"
@@ -25,7 +24,7 @@ class ItemList : public QTableWidget
 {
     Q_OBJECT
 public:
-    explicit ItemList(qreal Scale = 1, QWidget *parent = 0);
+    explicit ItemList(qreal Scale = 1, QWidget *parent = nullptr);
 protected:
     bool eventFilter(QObject *, QEvent *);
     void changeEvent(QEvent *e);
@@ -51,4 +50,3 @@ private:
     bool editableItemCombo;
     qreal scale;
 };
-#endif // ITEMLIST_H

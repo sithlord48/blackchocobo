@@ -14,8 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-
-#include <QtWidgets>
+#include <QListWidget>
+#include <QWidget>
 #include "../data/FF7Achievements.h"
 
 /*! \class AchievementEditor

@@ -14,14 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QtWidgets/QDialog>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QVBoxLayout>
-
+#include <QDialog>
 #include "ff7tk/widgets/AchievementEditor.h"
 
+class QPushButton;
 class achievementDialog : public QDialog
 {
     Q_OBJECT

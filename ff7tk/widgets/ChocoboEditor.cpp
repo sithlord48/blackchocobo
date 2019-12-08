@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ChocoboEditor.h"
-// Pull in Icons, Be Sure Paths Are Correct
+#include <QResizeEvent>
 
 void ChocoboEditor::resizeEvent(QResizeEvent *ev)
 {
@@ -498,7 +498,7 @@ QSpinBox *ChocoboEditor::makeSpinBox(int maxValue)
 void ChocoboEditor::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
     updateText();
 }

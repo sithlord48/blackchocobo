@@ -1552,7 +1552,7 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>Schlüsselgegenstände: Große Materia:Corel</translation>
+        <translation type="vanished">Schlüsselgegenstände: Große Materia:Corel</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -1804,7 +1804,7 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schlüsselgegenstände: Bikini-Slip</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
@@ -2220,7 +2220,7 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>Schlüsselgegenstände: Große Materia:Rakete</translation>
+        <translation type="vanished">Schlüsselgegenstände: Große Materia:Rakete</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -2241,6 +2241,26 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     <message>
         <source>Contain</source>
         <translation>Eindämmung</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Fort Condor</source>
+        <translation type="unfinished">Schlüsselgegenstände: Große Materia: Fort Condor</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: UnderWater</source>
+        <translation type="unfinished">Schlüsselgegenstände: Große Materia: Unterwasser</translation>
+    </message>
+    <message>
+        <source>KeyItem: PHS</source>
+        <translation type="unfinished">Schlüsselgegenstände: PHS</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Corel</source>
+        <translation type="unfinished">Schlüsselgegenstände: Große Materia: Corel</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Rocket</source>
+        <translation type="unfinished">Schlüsselgegenstände: Große Materia: Rakete</translation>
     </message>
 </context>
 <context>

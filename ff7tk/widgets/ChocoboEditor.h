@@ -14,8 +14,14 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-
-#include <QtWidgets>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QEvent>
+#include <QGridLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QSpinBox>
+#include <QWidget>
 //Be sure to set paths correctly for below.
 //ALSO CHECK ChocoboEditor.cpp for icons includes.
 #include "../data/Type_FF7CHOCOBO.h"

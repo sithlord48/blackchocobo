@@ -13,9 +13,13 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef CHAREDITOR_H
-#define CHAREDITOR_H
-
+#pragma once
+#include <QCheckBox>
+#include <QEvent>
+#include <QLCDNumber>
+#include <QLineEdit>
+#include <QProgressBar>
+#include <QToolBox>
 
 //set path to FF7Item FF7Materia and FF7Char
 #include "../data/FF7Item.h"
@@ -360,5 +364,3 @@ private:
     inline static const int quint16Max = 65535;
 
 };
-
-#endif // CHAREDITOR_H

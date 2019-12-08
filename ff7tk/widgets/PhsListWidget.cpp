@@ -14,9 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "PhsListWidget.h"
+#include <QVBoxLayout>
+
 PhsListWidget::PhsListWidget(QWidget *parent) :
     QWidget(parent)
-    , lbl_phs(new QLabel)
     , cb_cloud(new DoubleCheckBox)
     , cb_barret(new DoubleCheckBox)
     , cb_tifa(new DoubleCheckBox)
@@ -26,6 +27,7 @@ PhsListWidget::PhsListWidget(QWidget *parent) :
     , cb_cait(new DoubleCheckBox)
     , cb_vincent(new DoubleCheckBox)
     , cb_cid(new DoubleCheckBox)
+    , lbl_phs(new QLabel)
 {
     updateText();
     init_display();
@@ -35,7 +37,7 @@ PhsListWidget::PhsListWidget(QWidget *parent) :
 void PhsListWidget::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
 
     updateText();
@@ -107,7 +109,7 @@ void PhsListWidget::setChecked(int row, int box, bool checked)
     case 6: cb_cait->setChecked(box, checked); break;
     case 7: cb_vincent->setChecked(box, checked); break;
     case 8: cb_cid->setChecked(box, checked); break;
-    };
+    }
     connectAll();
 }
 

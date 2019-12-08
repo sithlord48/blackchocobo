@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,10 +13,12 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef SLOTPREVIEW_H
-#define SLOTPREVIEW_H
+#pragma once
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
-#include <QtWidgets>
 //set path to save icon class
 #include "../data/SaveIcon.h"
 
@@ -88,5 +90,3 @@ signals:
     void btn_copy_clicked(int); /**< \brief Signal: User Clicked on copy . \return index number */
     void btn_paste_clicked(int); /**< \brief Signal: User Clicked on paste . \return index number */
 };
-
-#endif

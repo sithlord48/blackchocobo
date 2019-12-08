@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,8 +13,8 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #include "DialogPreview.h"
+#include <QColorDialog>
 
 DialogPreview::DialogPreview(QWidget *parent) :
     QLabel(parent)
@@ -113,6 +113,7 @@ void DialogPreview::draw()
     btn_ll->setGeometry(0, height() / 2, width() / 2, height() / 2);
     btn_lr->setGeometry(btn_ll->width(), height() / 2, width() / 2, height() / 2);
 }
+
 void DialogPreview::resizeEvent(QResizeEvent *)
 {
     draw();

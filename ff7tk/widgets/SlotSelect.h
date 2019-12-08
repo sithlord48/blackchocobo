@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,11 +13,10 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef SLOTSELECT_H
-#define SLOTSELECT_H
-
-#include <QtWidgets>
+#pragma once
+#include <QDialog>
 #include <QFrame>
+#include <QScrollArea>
 #include "../data/FF7Save.h"
 #include "../data/FF7Char.h"
 #include "SlotPreview.h"
@@ -37,10 +36,10 @@ public:
     /** \brief create a new SlotSelect Dialog.
      *  \param scale Scale Fixed contents by this number (hidpi screens)
      *  \param data Pointer to a FF7Save object
-     *  \param showLoad show the load new file button
+     *  \param loadVisible show the load new file button
      *  \param parent Dialogs Parent
      */
-    explicit SlotSelect(qreal Scale = 1, FF7Save *data = 0, bool showLoad = false, QWidget *parent = 0);
+    explicit SlotSelect(qreal Scale = 1, FF7Save *data = nullptr, bool loadVisiable = false, QWidget *parent = nullptr);
 private slots:
     void button_clicked(int s);
     void remove_slot(int s);
@@ -61,5 +60,3 @@ private:
     FF7Char Chars;
     qreal scale;
 };
-
-#endif // SLOTSELECT_H

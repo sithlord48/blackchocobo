@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,6 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "SlotPreview.h"
+#include <QMouseEvent>
+
 SlotPreview::SlotPreview(int index, qreal Scale, QWidget *parent): QLabel(parent)
 {
     scale = Scale;
@@ -21,7 +23,7 @@ SlotPreview::SlotPreview(int index, qreal Scale, QWidget *parent): QLabel(parent
     Final->setContentsMargins(2, 2, 2, 2);
     setIndex(index);
     setLayout(Final);
-    setFixedSize(582 * scale, 135 * scale);
+    setFixedSize(int(582 * scale), int(135 * scale));
     setStyleSheet(QString("SlotPreview{border:%1px solid;}").arg(QString::number(3 * scale)));
     setCursor(Qt::PointingHandCursor);
 }
@@ -31,22 +33,23 @@ void SlotPreview::init_display(void)
     lbl_Slot = new QLabel;
     lbl_Slot->setText(QString(tr("Slot: %1")).arg(QString::number(index() + 1)));
 
+    QSize buttonSize(int(22 * scale), int(22 * scale));
     btn_remove = new QPushButton(QIcon::fromTheme(QString("edit-clear"), QPixmap(":/common/edit-clear")), "", this);
     btn_remove->setStyleSheet("QPushButton{border:1px solid;}");
     btn_remove->setToolTip(tr("Clear Slot"));
-    btn_remove->setMaximumSize(22 * scale, 22 * scale);
+    btn_remove->setMaximumSize(buttonSize);
     btn_remove->setCursor(Qt::BitmapCursor);
 
     btn_copy = new QPushButton(QIcon::fromTheme(QString("edit-copy"), QPixmap(":/common/edit-copy")), "", this);
     btn_copy->setStyleSheet("QPushButton{border:1px solid;}");
     btn_copy->setToolTip(tr("Copy Slot"));
-    btn_copy->setMaximumSize(22 * scale, 22 * scale);
+    btn_copy->setMaximumSize(buttonSize);
     btn_copy->setCursor(Qt::BitmapCursor);
 
     btn_paste = new QPushButton(QIcon::fromTheme(QString("edit-paste"), QPixmap(":/common/edit-paste")), "", this);
     btn_paste->setStyleSheet("QPushButton{border:1px solid;}");
     btn_paste->setToolTip(tr("Paste Into Slot"));
-    btn_paste->setMaximumSize(22 * scale, 22 * scale);
+    btn_paste->setMaximumSize(buttonSize);
     btn_paste->setCursor(Qt::BitmapCursor);
 
     btnLayout = new QHBoxLayout;
@@ -100,7 +103,7 @@ void SlotPreview::set_psx_game(void)
     icon = new SaveIcon;
     QString style = "font-size: 16pt;";
     party1 = new QLabel;
-    party1->setFixedSize(96 * scale, 96 * scale);
+    party1->setFixedSize(int(96 * scale), int(96 * scale));
     connect(icon, SIGNAL(nextIcon(QPixmap)), this, SLOT(set_Party1(QPixmap)));
     location = new QLabel;
     location->setStyleSheet(style);
@@ -119,19 +122,20 @@ void SlotPreview::set_psx_game(void)
 void SlotPreview::set_ff7_save(void)
 {
     init_display();
+    QSize avatarSize(int(84 * scale), int(96 * scale));
     lbl_Slot->setStyleSheet(QString("background-color:rgba(0,0,0,0);font: 75 14pt \"Verdana\";color:white"));
     QString style = QString("background-color:rgba(0,0,0,0);font: 75 16pt \"Verdana\";color:white");
 
     party1 = new QLabel;
-    party1->setFixedSize(84 * scale, 96 * scale);
+    party1->setFixedSize(avatarSize);
     party1->setStyleSheet(style);
 
     party2 = new QLabel;
-    party2->setFixedSize(84 * scale, 96 * scale);
+    party2->setFixedSize(avatarSize);
     party2->setStyleSheet(style);
 
     party3 = new QLabel;
-    party3->setFixedSize(84 * scale, 96 * scale);
+    party3->setFixedSize(avatarSize);
     party3->setStyleSheet(style);
 
     lbl_gil = new QLabel;

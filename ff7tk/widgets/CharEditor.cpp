@@ -29,7 +29,7 @@ CharEditor::CharEditor(qreal Scale, QWidget *parent) : QWidget(parent)
 void CharEditor::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
     updateText();
 }
@@ -304,9 +304,12 @@ void CharEditor::updateText()
         lblArmorStats = new QLabel(this);
     lblArmorStats->setText(tr("AP:x%1").arg(Items.materiaGrowthRate(data.armor + 256)));
 
+    QSize iconSize(fontMetrics().height(), fontMetrics().height());
+
     if(!comboId) {
         comboId = new QComboBox(this);
         comboId->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        comboId->setIconSize(iconSize);
         comboId->setHidden(true);
         for (int i = 0; i < 11; i++)
             comboId->addItem(Chars.icon(i), Chars.defaultName(i));
@@ -315,7 +318,6 @@ void CharEditor::updateText()
             comboId->setItemText(i, Chars.defaultName(i));
     }
 
-    QSize iconSize(fontMetrics().height(), fontMetrics().height());
     if (!accessory_selection) {
         accessory_selection = new QComboBox(this);
         accessory_selection->setInsertPolicy(QComboBox::NoInsert);

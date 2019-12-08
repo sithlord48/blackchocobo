@@ -6,7 +6,7 @@
 	<file alias="glove">items/glove.png</file>
 	<file alias="gun">items/gun.png</file>
 	<file alias="gunarm">items/gunarm.png</file>
-        <file alias="item">items/item.png</file>
+    <file alias="item">items/item.png</file>
 	<file alias="m_grow_slot">items/m_grow_slot.png</file>	
 	<file alias="m_no_grow_slot">items/m_no_grow_slot.png</file>		
 	<file alias="mlink">items/mlink.png</file>		

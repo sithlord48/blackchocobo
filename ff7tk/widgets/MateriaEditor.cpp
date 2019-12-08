@@ -273,7 +273,7 @@ void MateriaEditor::typeChanged(int new_type)
     combo_materia->blockSignals(0);
 }
 
-void MateriaEditor::materia_changed(QString new_name)
+void MateriaEditor::materia_changed(const QString &new_name)
 {
     for (quint8 i = 0; i < 91; i++) {
         if (data->name(i) == new_name) {
@@ -422,7 +422,7 @@ QHBoxLayout *MateriaEditor::makeNameLayout()
             combo_materia->addItem(data->pixmap(i), data->name(i));
         }
     }
-    connect(combo_materia, QOverload<const QString &>::of(&QComboBox::currentIndexChanged), this, &MateriaEditor::materia_changed);
+    connect(combo_materia, &QComboBox::currentTextChanged, this, &MateriaEditor::materia_changed);
 
     btn_rm_materia = newStyledButton(QIcon::fromTheme(QString("edit-clear"), QPixmap(":/common/edit-clear"))
                                      , QKeySequence::Delete
@@ -474,7 +474,7 @@ QWidget *MateriaEditor::makeStarWidget()
     sb_ap = new QSpinBox;
     sb_ap->setWrapping(1);
     sb_ap->setAlignment(Qt::AlignCenter);
-    sb_ap->setFixedSize(fontMetrics().width(QChar('W')) * 7, fontMetrics().height() + fontMetrics().xHeight());
+    sb_ap->setFixedSize(fontMetrics().horizontalAdvance(QChar('W')) * 7, fontMetrics().height() + fontMetrics().xHeight());
     connect(sb_ap, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](const qint32 ap) {
         setAP(ap);
     });
@@ -528,7 +528,7 @@ QWidget *MateriaEditor::makeStarWidget()
 void MateriaEditor::changeEvent(QEvent *e)
 {
     if (e->type() != QEvent::LanguageChange) {
-        return;
+        QWidget::changeEvent(e);
     }
 
     updateESkillList();

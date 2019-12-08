@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk.                                           //
 //                                                                          //
@@ -14,13 +14,18 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
-
 #include "MetadataCreator.h"
-#include "../data/FF7SaveInfo.h"
+#include <QDialogButtonBox>
 #include <QFileDialog>
-#include <QVBoxLayout>
+#include <QGroupBox>
 #include <QHBoxLayout>
+#include <QIcon>
+#include <QLabel>
+#include <QLineEdit>
 #include <QMessageBox>
+#include <QPushButton>
+#include <QStyle>
+#include "../data/FF7SaveInfo.h"
 
 MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
     : QDialog(parent)
@@ -32,7 +37,7 @@ MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
     for (int i = 0; i < 15; i++) {
         InFiles.append(QString());
     }
-    setMinimumWidth(fontMetrics().width("W") * 42);
+    setMinimumWidth(fontMetrics().horizontalAdvance("W") * 42);
     setWindowTitle(tr("Create Cloud Save Folder"));
     setFocus();// prevents lineOutPath from Having Focus and hiding its placeholder text.
 }

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -14,11 +14,9 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
-
-#ifndef METADATACREATOR_H
-#define METADATACREATOR_H
-
-#include <QtWidgets>
+#pragma once
+#include <QDialog>
+#include <QVBoxLayout>
 #include "../data/FF7Save.h"
 
 class MetadataCreator : public QDialog
@@ -41,5 +39,3 @@ private:
     QPushButton *btnOk = nullptr;
     QPushButton *btnCancel = nullptr;
 };
-
-#endif // METADATACREATOR_H

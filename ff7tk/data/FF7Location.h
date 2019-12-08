@@ -584,7 +584,7 @@ private:
         , {QStringLiteral("junbin4"), QT_TR_NOOP("Press Room"), QStringLiteral("1"), QStringLiteral("401"), QStringLiteral("-18"), QStringLiteral("0"), QStringLiteral("103"), QStringLiteral("0")}
         , {QStringLiteral("junbin5"), QT_TR_NOOP("Gas Room"), QStringLiteral("1"), QStringLiteral("402"), QStringLiteral("-57"), QStringLiteral("-137"), QStringLiteral("58"), QStringLiteral("32")}
         , {QStringLiteral("jumsbd1"), QT_TR_NOOP("Submarine Dock"), QStringLiteral("1"), QStringLiteral("404"), QStringLiteral("463"), QStringLiteral("-1211"), QStringLiteral("81"), QStringLiteral("192")}
-        , {QStringLiteral("subin_1a"), QString(), QStringLiteral("1"), QStringLiteral("405"), QStringLiteral("-91"), QStringLiteral("-173"), QStringLiteral("0"), QStringLiteral("128")}
+        , {QStringLiteral("subin_1a"), QT_TR_NOOP("Submarine Bridge"), QStringLiteral("1"), QStringLiteral("405"), QStringLiteral("-91"), QStringLiteral("-173"), QStringLiteral("0"), QStringLiteral("128")}
         , {QStringLiteral("subin_1b"), QT_TR_NOOP("Submarine Bridge"), QStringLiteral("1"), QStringLiteral("406"), QStringLiteral("2"), QStringLiteral("125"), QStringLiteral("13"), QStringLiteral("128")}
         , {QStringLiteral("subin_2a"), QT_TR_NOOP("Inside Submarine"), QStringLiteral("1"), QStringLiteral("407"), QStringLiteral("27"), QStringLiteral("97"), QStringLiteral("10"), QStringLiteral("128")}
         , {QStringLiteral("subin_2b"), QT_TR_NOOP("Inside Submarine"), QStringLiteral("1"), QStringLiteral("408"), QStringLiteral("-52"), QStringLiteral("433"), QStringLiteral("7"), QStringLiteral("128")}

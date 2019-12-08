@@ -13,10 +13,14 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#ifndef OPTIONSWIDGET_H
-#define OPTIONSWIDGET_H
-
-#include <QtWidgets>
+#pragma once
+#include <QComboBox>
+#include <QCheckBox>
+#include <QGridLayout>
+#include <QGroupBox>
+#include <QResizeEvent>
+#include <QScrollArea>
+#include <QSlider>
 #include "DialogPreview.h"
 
 /** \class OptionsWidget
@@ -176,4 +180,3 @@ private:
     inline static const QString _slow =  QT_TR_NOOP("Slow");
 
 };
-#endif // OPTIONSWIDGET_H

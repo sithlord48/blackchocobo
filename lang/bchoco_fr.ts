@@ -1552,7 +1552,7 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Corel</source>
-        <translation>Elément-clé: Méga-Matéria : Corel</translation>
+        <translation type="vanished">Elément-clé: Méga-Matéria : Corel</translation>
     </message>
     <message>
         <source>Ultima</source>
@@ -2220,7 +2220,7 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia:Rocket</source>
-        <translation>Elément-clé: Méga-Matéria : Fusée</translation>
+        <translation type="vanished">Elément-clé: Méga-Matéria : Fusée</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -2241,6 +2241,26 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     <message>
         <source>Contain</source>
         <translation>Contenir</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Fort Condor</source>
+        <translation type="unfinished">Elément-clé: Méga-Matéria : Fort Condor</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: UnderWater</source>
+        <translation type="unfinished">Elément-clé: Méga-Matéria : Sous-marin</translation>
+    </message>
+    <message>
+        <source>KeyItem: PHS</source>
+        <translation type="unfinished">Elément-clé: PHS</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Corel</source>
+        <translation>Elément-clé: Méga-Matéria : Corel</translation>
+    </message>
+    <message>
+        <source>KeyItem: Huge Materia: Rocket</source>
+        <translation>Elément-clé: Méga-Matéria : Fusée</translation>
     </message>
 </context>
 <context>

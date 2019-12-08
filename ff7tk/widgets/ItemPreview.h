@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2016 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -13,19 +13,20 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
-#ifndef ITEMPREVIEW_H
-#define ITEMPREVIEW_H
-
-#include <QtWidgets>
+#pragma once
+#include <QGroupBox>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QListWidget>
 //Besure to set FF7Item Path!
 #include "../data/FF7Item.h"
+
 
 class ItemPreview : public QWidget
 {
     Q_OBJECT
 public:
-    ItemPreview(QFlags<Qt::WindowType> WindowFlags = Qt::Widget, qreal Scale = 1, QWidget *parent = 0);
+    ItemPreview(QFlags<Qt::WindowType> WindowFlags = Qt::Widget, float Scale = 1, QWidget *parent = nullptr);
     int id(void);//return shown id.
 public slots:
     void setItem(quint16);
@@ -36,29 +37,21 @@ private:
     void setIcon(QPixmap);
     void elemental_info(int);
     void status_info(int);
+    QHBoxLayout *makeMateriaPair(QLabel *slot1, QLabel *slot2 , QLabel *link);
     bool eventFilter(QObject *obj, QEvent *ev);
-    QLabel *lbl_name;
-    QLabel *lbl_desc;
-    QLabel *lbl_icon;
-    QLabel *lbl_slot_1;
-    QLabel *lbl_slot_2;
-    QLabel *lbl_slot_3;
-    QLabel *lbl_slot_4;
-    QLabel *lbl_slot_5;
-    QLabel *lbl_slot_6;
-    QLabel *lbl_slot_7;
-    QLabel *lbl_slot_8;
-    QLabel *lbl_m_link_1;
-    QLabel *lbl_m_link_2;
-    QLabel *lbl_m_link_3;
-    QLabel *lbl_m_link_4;
-    QGroupBox *materia_slot_box;
-    QGroupBox *elemental_box;
-    QGroupBox *status_box;
-    QListWidget *elemental_effects;
-    QListWidget *status_effects;
+    QLabel *lbl_name = nullptr;
+    QLabel *lbl_desc = nullptr;
+    QLabel *lbl_icon = nullptr;
+    QList<QLabel *> slotLabels;
+    QList<QLabel *> slotLinks;
+    QGroupBox *materia_slot_box = nullptr;
+    QGroupBox *elemental_box = nullptr;
+    QGroupBox *status_box = nullptr;
+    QListWidget *elemental_effects = nullptr;
+    QListWidget *status_effects = nullptr;
     FF7Item data;
     int _id;
-    qreal scale;
+    float scale;
+    QSize slotSize;
+    QSize linkSize;
 };
-#endif//ITEMPREVIEW_H

@@ -14,8 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ChocoboLabel.h"
+#include <QHBoxLayout>
+#include <QMouseEvent>
+#include <QVBoxLayout>
 // Pull in Icons, Be Sure Paths Are Correct
-
 bool ChocoboLabel::event(QEvent *ev)
 {
     if (ev->type() == QEvent::MouseButtonPress && isEnabled) {
