@@ -1,5 +1,6 @@
+
 /****************************************************************************/
-//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -15,114 +16,174 @@
 /****************************************************************************/
 
 #include "FF7Location.h"
+#include <QQmlEngine>
+
+FF7Location *FF7Location::instance()
+{
+    static FF7Location m;
+    return &m;
+}
+
+FF7Location::FF7Location(QObject *parent) :
+    QObject(parent)
+    , dPtr(new FF7LocationPrivate)
+{
+}
+
+FF7Location::~FF7Location()
+{
+    delete dPtr;
+}
+
+QObject *FF7Location::qmlSingletonRegister(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine)
+    engine->setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
+}
+
+const QString &FF7Location::fileName(int index)
+{
+    return dPtr->_locations.at(index).filename;
+}
+
 const FF7Location::LOCATION &FF7Location::location(int index)
 {
     if (index >= 0 && index < size()) {
-        return _locations.at(index);
+        return dPtr->_locations.at(index);
     }
-    return _emptyLocation;
+    return dPtr->_emptyLocation;
 }
 
 int FF7Location::size() const
 {
-    return _locations.size();
+    return dPtr->_locations.size();
 }
 
 const QString &FF7Location::fileName(int MapID, int LocID)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if ((MapID == location.map_id.toInt())
                 && (LocID == location.loc_id.toInt())) {
             return location.filename;
         }
     }
-    return _emptyLocation.filename;
+    return dPtr->_emptyLocation.filename;
 }
 QString FF7Location::rawLocationString(int index)
 {
-    return _locations.at(index).location;
+    return dPtr->_locations.at(index).location;
 }
-
 QString FF7Location::rawLocationString(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.location;
         }
     }
-    return _emptyLocation.filename;
+    return dPtr->_emptyLocation.filename;
 }
 QString FF7Location::locationString(int index)
 {
-    return tr(_locations.at(index).location.toLocal8Bit());
+    return tr(dPtr->_locations.at(index).location.toLocal8Bit());
 }
 
 QString FF7Location::locationString(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return tr(location.location.toLocal8Bit());
         }
     }
-    return _emptyLocation.filename;
+    return dPtr->_emptyLocation.filename;
+}
+
+const QString &FF7Location::mapID(int index)
+{
+    return dPtr->_locations.at(index).map_id;
 }
 
 const QString &FF7Location::mapID(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.map_id;
         }
     }
-    return _emptyLocation.map_id;
+    return dPtr->_emptyLocation.map_id;
+}
+
+const QString &FF7Location::locationID(int index)
+{
+    return dPtr->_locations.at(index).loc_id;
 }
 
 const QString &FF7Location::locationID(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.loc_id;
         }
     }
-    return _emptyLocation.loc_id;
+    return dPtr->_emptyLocation.loc_id;
+}
+
+const QString &FF7Location::x(int index)
+{
+    return dPtr->_locations.at(index).x;
 }
 
 const QString &FF7Location::x(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.x;
         }
     }
-    return _emptyLocation.x;
+    return dPtr->_emptyLocation.x;
+}
+
+const QString &FF7Location::y(int index)
+{
+    return dPtr->_locations.at(index).y;
 }
 
 const QString &FF7Location::y(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.y;
         }
     }
-    return _emptyLocation.y;
+    return dPtr->_emptyLocation.y;
+}
+
+const QString &FF7Location::t(int index)
+{
+    return dPtr->_locations.at(index).t;
 }
 
 const QString &FF7Location::t(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.t;
         }
     }
-    return _emptyLocation.t;
+    return dPtr->_emptyLocation.t;
+}
+
+const QString &FF7Location::d(int index)
+{
+    return dPtr->_locations.at(index).d;
 }
 
 const QString &FF7Location::d(const QString &fileName)
 {
-    for (const LOCATION &location : _locations) {
+    for (const LOCATION &location : dPtr->_locations) {
         if (fileName == location.filename) {
             return location.d;
         }
     }
-    return _emptyLocation.d;
+    return dPtr->_emptyLocation.d;
 }

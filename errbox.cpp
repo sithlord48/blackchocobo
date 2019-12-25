@@ -17,6 +17,7 @@
 #include "ff7tk/data/FF7SaveInfo.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QKeyEvent>
 
 errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     : QDialog(parent)

@@ -36,11 +36,9 @@
 #include "achievementdialog.h"      // Dialog for editing achievement files
 //ff7tk Items
 #include "ff7tk/data/SaveIcon.h"
-#include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Save.h"
 #include "ff7tk/data/FF7Char.h"
 #include "ff7tk/data/FF7Materia.h"
-#include "ff7tk/data/FF7Location.h"
 #include "ff7tk/widgets/OptionsWidget.h"
 #include "ff7tk/widgets/MateriaEditor.h"
 #include "ff7tk/widgets/SlotSelect.h"
@@ -85,10 +83,7 @@ private:
     FF7Save *ff7 = nullptr; // our save file struct pointer.
     QSettings *settings = nullptr;//Pointer To settings object.
     int s; //track slot
-    FF7Char Chars; //FF7Char Static Data
-    FF7Item Items; //FF7Item Static Data
     FF7Materia Materias;//FF7Materia Static Data.
-    FF7Location Locations; // FF7 Location Data
     materia buffer_materia; // buffer for a materia
     //ITEM buffer_item; // for use later
     int curchar; //keeps track of current character displayed

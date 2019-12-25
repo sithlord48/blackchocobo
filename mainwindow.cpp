@@ -17,6 +17,11 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ff7tk/data/FF7Char.h"
+#include "ff7tk/data/FF7Item.h"
+#include "ff7tk/data/FF7Location.h"
+
+
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -195,21 +200,21 @@ void MainWindow::setScale(double scale)
     ui->slide_world_x->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
     ui->slide_world_y->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
     ui->lbl_love_aeris->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_barret->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_tifa->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_yuffie->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(), int(74 * scale));
-    ui->lbl_battle_love_aeris->setPixmap(Chars.pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_battle_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(), int(74 * scale));
-    ui->lbl_battle_love_barret->setPixmap(Chars.pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_battle_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(), int(74 * scale));
-    ui->lbl_battle_love_tifa->setPixmap(Chars.pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_battle_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(), int(74 * scale));
-    ui->lbl_battle_love_yuffie->setPixmap(Chars.pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     materia_editor->setStarsSize(int(48 * scale));
 }
 
@@ -218,18 +223,18 @@ void MainWindow::populateCombos()
 //Party Combos
     if (ui->combo_party1->count() != 0) {
         for (int i = 0; i < 11; i++) {
-            ui->combo_party1->setItemText(i, Chars.defaultName(i));
-            ui->combo_party2->setItemText(i, Chars.defaultName(i));
-            ui->combo_party3->setItemText(i, Chars.defaultName(i));
+            ui->combo_party1->setItemText(i, FF7Char::instance()->defaultName(i));
+            ui->combo_party2->setItemText(i, FF7Char::instance()->defaultName(i));
+            ui->combo_party3->setItemText(i, FF7Char::instance()->defaultName(i));
         }
         ui->combo_party1->setItemText(12, tr("-Empty-"));
         ui->combo_party2->setItemText(12, tr("-Empty-"));
         ui->combo_party3->setItemText(12, tr("-Empty-"));
     } else {
         for (int i = 0; i < 11; i++) {
-            ui->combo_party1->addItem(Chars.icon(i), Chars.defaultName(i));
-            ui->combo_party2->addItem(Chars.icon(i), Chars.defaultName(i));
-            ui->combo_party3->addItem(Chars.icon(i), Chars.defaultName(i));
+            ui->combo_party1->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
+            ui->combo_party2->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
+            ui->combo_party3->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
         }
         ui->combo_party1->addItem(QString("0x0B"));
         ui->combo_party2->addItem(QString("0x0B"));
@@ -240,13 +245,13 @@ void MainWindow::populateCombos()
     }
 //World party leader Combo.
     if (ui->cb_world_party_leader->count() != 0) {
-        ui->cb_world_party_leader->setItemText(0, Chars.defaultName(FF7Char::Cloud));
-        ui->cb_world_party_leader->setItemText(1, Chars.defaultName(FF7Char::Tifa));
-        ui->cb_world_party_leader->setItemText(2, Chars.defaultName(FF7Char::Cid));
+        ui->cb_world_party_leader->setItemText(0, FF7Char::instance()->defaultName(FF7Char::Cloud));
+        ui->cb_world_party_leader->setItemText(1, FF7Char::instance()->defaultName(FF7Char::Tifa));
+        ui->cb_world_party_leader->setItemText(2, FF7Char::instance()->defaultName(FF7Char::Cid));
     } else {
-        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cloud), Chars.defaultName(FF7Char::Cloud));
-        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Tifa), Chars.defaultName(FF7Char::Tifa));
-        ui->cb_world_party_leader->addItem(Chars.icon(FF7Char::Cid), Chars.defaultName(FF7Char::Cid));
+        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Cloud), FF7Char::instance()->defaultName(FF7Char::Cloud));
+        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Tifa), FF7Char::instance()->defaultName(FF7Char::Tifa));
+        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Cid), FF7Char::instance()->defaultName(FF7Char::Cid));
     }
 }
 
@@ -1638,15 +1643,15 @@ void MainWindow::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-    ui->btn_cloud->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 0)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_barret->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 1)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_tifa->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 2)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_aeris->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 3)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_red->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 4)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_yuffie->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 5)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_cait->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 6)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_vincent->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 7)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_cid->setIcon(QIcon(Chars.pixmap(ff7->charID(s, 8)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_cloud->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 0)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_barret->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 1)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_tifa->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 2)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_aeris->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 3)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_red->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 4)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_yuffie->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 5)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_cait->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 6)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_vincent->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 7)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btn_cid->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 8)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
 }
 void MainWindow::progress_update()
 {
@@ -2146,13 +2151,13 @@ void MainWindow::on_btn_add_all_materia_clicked()
 void MainWindow::locationSelectionChanged(QString fieldName)
 {
     if (!load) {
-        ff7->setMapId(s, Locations.mapID(fieldName).toUShort());
-        ff7->setLocationId(s, Locations.locationID(fieldName).toUShort());
-        ff7->setLocationX(s, Locations.x(fieldName).toShort());
-        ff7->setLocationY(s, Locations.y(fieldName).toShort());
-        ff7->setLocationT(s, Locations.t(fieldName).toUShort());
-        ff7->setLocationD(s, quint8(Locations.d(fieldName).toInt()));
-        ff7->setLocation(s, Locations.locationString(fieldName));
+        ff7->setMapId(s, FF7Location::instance()->mapID(fieldName).toUShort());
+        ff7->setLocationId(s, FF7Location::instance()->locationID(fieldName).toUShort());
+        ff7->setLocationX(s, FF7Location::instance()->x(fieldName).toShort());
+        ff7->setLocationY(s, FF7Location::instance()->y(fieldName).toShort());
+        ff7->setLocationT(s, FF7Location::instance()->t(fieldName).toUShort());
+        ff7->setLocationD(s, quint8(FF7Location::instance()->d(fieldName).toInt()));
+        ff7->setLocation(s, FF7Location::instance()->locationString(fieldName));
         statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName), 750);
     }
 }
@@ -3535,7 +3540,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     ui->btn_remove_all_items->click();
     for (int i = 0; i < 320; i++) {
         //Replaced by new item engine. (Vegeta_Ss4)
-        if (Items.name(i) != tr("DON'T USE")) {
+        if (FF7Item::instance()->name(i) != tr("DON'T USE")) {
             if (i < 106) {
                 ff7->setItem(s, i, quint16(i), 127);
             } else { // after the block of empty items shift up 23 spots.

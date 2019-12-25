@@ -15,7 +15,7 @@
 /****************************************************************************/
 #include "FF7SaveInfo.h"
 #include <QByteArrayList>
-#include <QDebug>
+
 struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int _slotSize = 0x10F4;
     /*~~~~~~~~~~~~~~~~~~PC Save File ~~~~~~~~~~~~*/
@@ -38,7 +38,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     inline static const QStringList PSX_VALID_EXTENSIONS { QStringLiteral("BASCUS-94163FF7-S*"),
         QStringLiteral("BESCES-00867FF7-S*"), QStringLiteral("BESCES-00868FF7-S*"),
         QStringLiteral("BESCES-00869FF7-S*"), QStringLiteral("BESCES-00900FF7-S*"),
-        QStringLiteral("BISLPS-00700FF7-S*"), QStringLiteral("BIPSLPS-01057FF7-S*")};
+        QStringLiteral("BISLPS-00700FF7-S*"), QStringLiteral("BISLPS-01057FF7-S*")};
     inline static const QByteArray PSX_FILE_ID = QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60", 16);
     //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
     inline static const QByteArrayList PSX_SLOT_HEADER = {

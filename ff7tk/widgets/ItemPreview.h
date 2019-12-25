@@ -18,9 +18,6 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QListWidget>
-//Besure to set FF7Item Path!
-#include "../data/FF7Item.h"
-
 
 class ItemPreview : public QWidget
 {
@@ -49,7 +46,6 @@ private:
     QGroupBox *status_box = nullptr;
     QListWidget *elemental_effects = nullptr;
     QListWidget *status_effects = nullptr;
-    FF7Item data;
     int _id;
     float scale;
     QSize slotSize;

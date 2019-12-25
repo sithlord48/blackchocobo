@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "SlotSelect.h"
+#include "../data/FF7Char.h"
 #include <QScrollBar>
 
 SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool loadVisible, QWidget *parent): QDialog(parent)
@@ -124,7 +125,7 @@ void SlotSelect::setSlotPreview(int s)
         image.setPixel(1, 1, ff7->dialogColorLR(s).rgb());
         QImage gradient = image.scaled(preview[s]->width(), preview[s]->height(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
         preview[s]->setPixmap(QPixmap::fromImage(gradient));
-        preview[s]->setParty(Chars.pixmap(ff7->descParty(s, 0)), Chars.pixmap(ff7->descParty(s, 1)), Chars.pixmap(ff7->descParty(s, 2)));
+        preview[s]->setParty(FF7Char::instance()->pixmap(ff7->descParty(s, 0)), FF7Char::instance()->pixmap(ff7->descParty(s, 1)), FF7Char::instance()->pixmap(ff7->descParty(s, 2)));
         preview[s]->setLocation(ff7->descLocation(s));
         preview[s]->setName(ff7->descName(s));
         preview[s]->setLevel(ff7->descLevel(s));

@@ -17,8 +17,6 @@
 #include <QComboBox>
 #include <QPushButton>
 #include <QSpinBox>
-//Include Data class
-#include "../data/FF7Item.h"
 
 class ItemSelector : public QWidget
 {
@@ -47,7 +45,6 @@ private:
     void init_connections();
     void init_data();
     int type_offset(int type);
-    FF7Item *Items;
     QComboBox *combo_type;
     QComboBox *combo_item;
     QSpinBox  *sb_qty;

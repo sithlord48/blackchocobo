@@ -239,7 +239,7 @@ void MateriaEditor::setSkills()
 
         for (int i = 0; i < _level; i++) {
             if (data->skills(_id).count() > i) {
-                list_skills->insertItem(0, data->skills(_id).at(i));
+                list_skills->addItem(data->skills(_id).at(i));
             }
         }
     }

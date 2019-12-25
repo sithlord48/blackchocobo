@@ -25,7 +25,6 @@
 #include <QTableWidget>
 #include <QToolButton>
 // Include FF7tk Items.
-#include "../data/FF7Location.h"
 #include "../data/FF7FieldItemList.h"
 
 /** \class LocationViewer
@@ -107,7 +106,6 @@ private:
     bool caseSensitive;
     bool _advancedMode;
     quint8 searchMode;
-    FF7Location *Locations;
     FF7FieldItemList *fieldItems;
     QTableWidget *locationTable;
     QToolButton *btnSearchOptions;

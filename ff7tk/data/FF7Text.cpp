@@ -15,8 +15,42 @@
 /****************************************************************************/
 
 #include "FF7Text.h"
+#include <QQmlEngine>
 /*~~~~~~~~TEXT CLASS~~~~~~~~~*/
 // the PC function is modified from Makou Reactor (thanks Myst6re)
+FF7TEXT *FF7TEXT::instance()
+{
+    static FF7TEXT m;
+    return &m;
+}
+
+FF7TEXT::FF7TEXT(QObject *parent) :
+    QObject(parent)
+    , d(new FF7TEXTPrivate)
+{
+}
+
+FF7TEXT::~FF7TEXT()
+{
+    delete d;
+}
+
+QObject *FF7TEXT::qmlSingletonRegister(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(scriptEngine)
+    engine->setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+    return instance();
+}
+
+void FF7TEXT::setJapanese(bool japanese)
+{
+    d->in_ja = japanese;
+}
+
+bool FF7TEXT::isJapanese()
+{
+    return d->in_ja;
+}
 QString FF7TEXT::toPC(QByteArray text)
 {
     int txt = 0;
@@ -31,33 +65,33 @@ QString FF7TEXT::toPC(QByteArray text)
         if (index == 0xFF) {
             break;
         }
-        if (in_ja) {
+        if (d->in_ja) {
             switch (index) {
             case 0xFA:
                 ++i;
-                String += jap_fa[quint8(text.at(i))];
+                String += d->jap_fa[quint8(text.at(i))];
                 break;
             case 0xFB:
                 ++i;
-                String += jap_fb[quint8(text.at(i))];
+                String += d->jap_fb[quint8(text.at(i))];
                 break;
             case 0xFC:
                 ++i;
-                String += jap_fc[quint8(text.at(i))];
+                String += d->jap_fc[quint8(text.at(i))];
                 break;
             case 0xFD:
                 ++i;
-                String += jap_fd[quint8(text.at(i))];
+                String += d->jap_fd[quint8(text.at(i))];
                 break;
             case 0xFE:
                 ++i;
                 if (quint8(text.at(i)) == 0xE2) {
                     i += 4;
                 }
-                String += jap_fe[quint8(text.at(i))];
+                String += d->jap_fe[quint8(text.at(i))];
                 break;
             default:
-                String.append(jap.at(index));
+                String.append(d->jap.at(index));
                 break;
             }
         } else {
@@ -74,7 +108,7 @@ QString FF7TEXT::toPC(QByteArray text)
                 String += "¶";
                 break;
             default:
-                String.append(eng.at(index));
+                String.append(d->eng.at(index));
                 break;
             }
         }
@@ -96,7 +130,7 @@ QByteArray FF7TEXT::toFF7(const QString &string)
                 goto end;
             }
         }
-        if (in_ja) {
+        if (d->in_ja) {
             for (table = 1 ; table < 7 ; ++table) {
                 for (i = 0 ; i <= 0xff ; ++i) {
                     if (!QString::compare(comp, character(quint8(i), quint8(table)))) {
@@ -123,18 +157,18 @@ QString FF7TEXT::character(quint8 ord, quint8 table)
 {
     switch (table) {
     case 1:
-        return jap.at(ord);
+        return d->jap.at(ord);
     case 2:
-        return jap_fa.at(ord);
+        return d->jap_fa.at(ord);
     case 3:
-        return jap_fb.at(ord);
+        return d->jap_fb.at(ord);
     case 4:
-        return jap_fc.at(ord);
+        return d->jap_fc.at(ord);
     case 5:
-        return jap_fd.at(ord);
+        return d->jap_fd.at(ord);
     case 6:
-        return jap_fe.at(ord);
+        return d->jap_fe.at(ord);
     default:
-        return eng.at(ord);
+        return d->eng.at(ord);
     }
 }

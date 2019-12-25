@@ -18,7 +18,6 @@
 #include <QFrame>
 #include <QScrollArea>
 #include "../data/FF7Save.h"
-#include "../data/FF7Char.h"
 #include "SlotPreview.h"
 
 /** \class SlotSelect
@@ -57,6 +56,5 @@ private:
     QPushButton *btnNew;
     //Private Data
     FF7Save *ff7;
-    FF7Char Chars;
     qreal scale;
 };

@@ -28,7 +28,6 @@
 //FF7tk Includes
 #include "FF7SaveInfo.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
-#include "FF7Text.h"
 /** \class FF7Save
  *  \todo add support for signing psv files.
  *  \todo add support for signing vmp files.
@@ -1048,7 +1047,6 @@ private:
     QString buffer_region; // hold the buffers region data.
     QString SG_Region_String[15];
     QString filename;//opened file;
-    FF7TEXT *Text;
     //private functions
     QString md5sum(QString fileName, QString UserID);
     QString fileblock(QString fileName);

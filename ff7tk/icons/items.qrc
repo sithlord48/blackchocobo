@@ -1,6 +1,6 @@
 <RCC>
    <qresource prefix="/items">
-        <file alias="accessory">items/accessory.png</file>
+	<file alias="accessory">items/accessory.png</file>
 	<file alias="armor">items/armor.png</file>
 	<file alias="clip">items/clip.png</file>
 	<file alias="glove">items/glove.png</file>
@@ -15,5 +15,5 @@
 	<file alias="staff">items/staff.png</file>		
 	<file alias="star">items/star.png</file>
 	<file alias="sword">items/sword.png</file>		
-      </qresource>
+   </qresource>
 </RCC> 

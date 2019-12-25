@@ -18,7 +18,6 @@
 #include <QTableWidget>
 #include "ItemPreview.h"
 #include "ItemSelector.h"
-#include "../data/FF7Item.h"
 
 class ItemList : public QTableWidget
 {
@@ -40,7 +39,6 @@ private slots:
 private:
     void itemupdate();
     void updateItem(int row);
-    FF7Item Items;
     int itemQtyLimit;
     ItemSelector *itemSelector;
     ItemPreview *itemPreview;

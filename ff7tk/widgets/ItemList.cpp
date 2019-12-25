@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ItemList.h"
+#include "../data/FF7Item.h"
 #include <QHeaderView>
 #include <QScrollBar>
 
@@ -38,7 +39,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                     return true;
                 } else {
                     //On a QTableWidgetItem if we are on the same one do nothing
-                    if (Items.itemId(itemlist.at(row)) == itemPreview->id()) {
+                    if (FF7Item::instance()->itemId(itemlist.at(row)) == itemPreview->id()) {
                         return true;
                     } else {
                         //otherwise close our old ItemPreview
@@ -49,7 +50,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                 }
             }//end of If(createdToolTip)
             //If our Entry is an Empty Item then don't show a tooltip
-            if (Items.itemId(itemlist.at(row)) == FF7Item::EmptyItem) {
+            if (FF7Item::instance()->itemId(itemlist.at(row)) == FF7Item::EmptyItem) {
                 return true;
             } else {
                 //unless our xcoord is off on the scrollbar) show for item in row
@@ -60,7 +61,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                 }
                 //make an ItemPreview, but give it A ToolTip Flags so it looks/acts as one
                 itemPreview = new ItemPreview(Qt::ToolTip, scale);
-                itemPreview->setItem(Items.itemId(itemlist.at(row)));
+                itemPreview->setItem(FF7Item::instance()->itemId(itemlist.at(row)));
                 itemPreview->setGeometry(QRect(cursor().pos(), itemPreview->size()));
                 itemPreview->show();
                 createdTooltip = true;
@@ -78,7 +79,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                     return true;
                 } else {
                     //This case is called when a tooltip is spawned as its placed under your cursor
-                    if (Items.itemId(itemlist.at(row)) == itemPreview->id()) {
+                    if (FF7Item::instance()->itemId(itemlist.at(row)) == itemPreview->id()) {
                         return true;
                     } else {
                         //if the item is the same do nothing, otherwise you have to close your tooltip
@@ -148,9 +149,9 @@ void ItemList::setMaximumItemQty(int maxQty)
     itemQtyLimit = maxQty;
     //check that any items Qty is not greater then the new Qty. if so fix it.
     for (int i = 0; i < 320; i++) {
-        if ((Items.itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i) != FF7Item::EmptyItemData)) {
+        if ((FF7Item::instance()->itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i) != FF7Item::EmptyItemData)) {
             //qty not above limit and item is not empty.
-            itemlist.replace(i, Items.itemEncode(Items.itemId(itemlist.at(i)), quint8(itemQtyLimit)));
+            itemlist.replace(i, FF7Item::instance()->itemEncode(FF7Item::instance()->itemId(itemlist.at(i)), quint8(itemQtyLimit)));
         }
     }
     itemupdate();
@@ -234,7 +235,7 @@ void ItemList::updateItem(int row)
         setItem(row, 1, newItem);
         newItem = new QTableWidgetItem("", 0);
         setItem(row, 2, newItem);
-    } else if (Items.itemId(itemlist.at(row)) > 319) {
+    } else if (FF7Item::instance()->itemId(itemlist.at(row)) > 319) {
         newItem = new QTableWidgetItem("", 0);
         setItem(row, 0, newItem);
         newItem = new QTableWidgetItem(tr("-------BAD ID-------"), 0);
@@ -244,11 +245,11 @@ void ItemList::updateItem(int row)
     } else {
         QString qty;
         //Replaced by new item engine. (Vegeta_Ss4)
-        newItem = new QTableWidgetItem(Items.icon(Items.itemId(itemlist.at(row))), "", 0);
+        newItem = new QTableWidgetItem(FF7Item::instance()->icon(FF7Item::instance()->itemId(itemlist.at(row))), "", 0);
         setItem(row, 0, newItem);
-        newItem = new QTableWidgetItem(Items.name(Items.itemId(itemlist.at(row))), 0);
+        newItem = new QTableWidgetItem(FF7Item::instance()->name(FF7Item::instance()->itemId(itemlist.at(row))), 0);
         setItem(row, 1, newItem);
-        newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(row))), 0);
+        newItem = new QTableWidgetItem(qty.setNum(FF7Item::instance()->itemQty(itemlist.at(row))), 0);
         setItem(row, 2, newItem);
     }
     setRowHeight(row, fontMetrics().height() + 9);

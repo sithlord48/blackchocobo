@@ -14,6 +14,8 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ItemPreview.h"
+//Besure to set FF7Item Path!
+#include "../data/FF7Item.h"
 #include <QEvent>
 #include <QHBoxLayout>
 #include <QtEndian>
@@ -169,37 +171,37 @@ void ItemPreview::setItem(int id)
         _id = FF7Item::EmptyItem;/*InValid Number..Do Nothing*/
     else {
         _id = id;
-        if (!data.name(id).isEmpty()) {
+        if (!FF7Item::instance()->name(id).isEmpty()) {
             lbl_name->setHidden(false);
-            setName(data.name(id));
+            setName(FF7Item::instance()->name(id));
         }
 
-        if (!data.desc(id).isEmpty()) {
-            setDesc(data.desc(id));
+        if (!FF7Item::instance()->desc(id).isEmpty()) {
+            setDesc(FF7Item::instance()->desc(id));
             lbl_desc->setHidden(false);
         }
 
-        if (!data.image(id).isNull()) {
+        if (!FF7Item::instance()->image(id).isNull()) {
             lbl_icon->setHidden(false);
-            setIcon(QPixmap::fromImage(data.image(id)));
+            setIcon(QPixmap::fromImage(FF7Item::instance()->image(id)));
         }
 
         status_info(id);
         elemental_info(id);
 
-        if (data.type(id) > FF7Item::Item && data.type(id) != FF7Item::Accessory) {
+        if (FF7Item::instance()->type(id) > FF7Item::Item && FF7Item::instance()->type(id) != FF7Item::Accessory) {
             for (auto slot : qAsConst(slotLabels))
-               slot->setPixmap(QPixmap::fromImage(data.materiaGrowthRate(id) == 0 ? data.imageMateriaSlotNoGrowth() : data.imageMateriaSlot()).scaled(slot->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+               slot->setPixmap(QPixmap::fromImage(FF7Item::instance()->materiaGrowthRate(id) == 0 ? FF7Item::instance()->imageMateriaSlotNoGrowth() : FF7Item::instance()->imageMateriaSlot()).scaled(slot->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-            QString ap_rate = tr("APx%1").arg(data.materiaGrowthRate(id));
+            QString ap_rate = tr("APx%1").arg(FF7Item::instance()->materiaGrowthRate(id));
             materia_slot_box->setTitle(ap_rate);
             materia_slot_box->setHidden(false);
 
-            for(int i = 0; i < data.materiaSlots(id); i++)
+            for(int i = 0; i < FF7Item::instance()->materiaSlots(id); i++)
                 slotLabels.at(i)->setHidden(false);
 
-            for(int i = 0; i < data.linkedSlots(id); i++)
-                slotLinks.at(i)->setPixmap(QPixmap::fromImage(data.imageMateriaLink().scaled(slotLinks.at(i)->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+            for(int i = 0; i < FF7Item::instance()->linkedSlots(id); i++)
+                slotLinks.at(i)->setPixmap(QPixmap::fromImage(FF7Item::instance()->imageMateriaLink().scaled(slotLinks.at(i)->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation)));
         }
     }
     adjustSize();
@@ -214,20 +216,20 @@ void ItemPreview::elemental_info(int id)
             QString effect;
             int element = 0;
             switch (i) {
-            case 0: element = data.elementRestoration(id); effect.append(tr("Restoration")); break;
-            case 1: element = data.elementFire(id); effect.append(tr("Fire")); break;
-            case 2: element = data.elementCold(id); effect.append(tr("Cold")); break;
-            case 3: element = data.elementLightning(id); effect.append(tr("Lightning")); break;
-            case 4: element = data.elementEarth(id); effect.append(tr("Earth")); break;
-            case 5: element = data.elementWind(id); effect.append(tr("Wind")); break;
-            case 6: element = data.elementWater(id); effect.append(tr("Water")); break;
-            case 7: element = data.elementGravity(id); effect.append(tr("Gravity")); break;
-            case 8: element = data.elementHoly(id); effect.append(tr("Holy")); break;
-            case 9: element = data.elementPoison(id); effect.append(tr("Poison")); break;
-            case 10: element = data.elementCut(id); effect.append(tr("Cut")); break;
-            case 11: element = data.elementShoot(id); effect.append(tr("Shoot")); break;
-            case 12: element = data.elementPunch(id); effect.append(tr("Punch")); break;
-            case 13: element = data.elementHit(id); effect.append(tr("Hit")); break;
+            case 0: element = FF7Item::instance()->elementRestoration(id); effect.append(tr("Restoration")); break;
+            case 1: element = FF7Item::instance()->elementFire(id); effect.append(tr("Fire")); break;
+            case 2: element = FF7Item::instance()->elementCold(id); effect.append(tr("Cold")); break;
+            case 3: element = FF7Item::instance()->elementLightning(id); effect.append(tr("Lightning")); break;
+            case 4: element = FF7Item::instance()->elementEarth(id); effect.append(tr("Earth")); break;
+            case 5: element = FF7Item::instance()->elementWind(id); effect.append(tr("Wind")); break;
+            case 6: element = FF7Item::instance()->elementWater(id); effect.append(tr("Water")); break;
+            case 7: element = FF7Item::instance()->elementGravity(id); effect.append(tr("Gravity")); break;
+            case 8: element = FF7Item::instance()->elementHoly(id); effect.append(tr("Holy")); break;
+            case 9: element = FF7Item::instance()->elementPoison(id); effect.append(tr("Poison")); break;
+            case 10: element = FF7Item::instance()->elementCut(id); effect.append(tr("Cut")); break;
+            case 11: element = FF7Item::instance()->elementShoot(id); effect.append(tr("Shoot")); break;
+            case 12: element = FF7Item::instance()->elementPunch(id); effect.append(tr("Punch")); break;
+            case 13: element = FF7Item::instance()->elementHit(id); effect.append(tr("Hit")); break;
             }
             switch (element) {
             case FF7Item::Absorb: effect.prepend(tr("Absorb:")); break;
@@ -268,30 +270,30 @@ void ItemPreview::status_info(int id)
             QString effect;
             int status = 0;
             switch (i) {
-            case 0: status = data.statusDeath(id); effect.append(tr("Death")); break;
-            case 1: status = data.statusSlowNumb(id); effect.append(tr("Slow-Numb")); break;
-            case 2: status = data.statusDeathSentence(id); effect.append(tr("D.Sentence")); break;
-            case 3: status = data.statusParalysis(id); effect.append(tr("Paralysis")); break;
-            case 4: status = data.statusPetrify(id); effect.append(tr("Petrify")); break;
-            case 5: status = data.statusSilence(id); effect.append(tr("Silence")); break;
-            case 6: status = data.statusSleep(id); effect.append(tr("Sleep")); break;
-            case 7: status = data.statusConfusion(id); effect.append(tr("Confusion")); break;
-            case 8: status = data.statusBerserk(id); effect.append(tr("Berserk")); break;
-            case 9: status = data.statusFrog(id); effect.append(tr("Frog")); break;
-            case 10: status = data.statusMini(id); effect.append(tr("Mini")); break;
-            case 11: status = data.statusPoison(id); effect.append(tr("Poison")); break;
-            case 12: status = data.statusFury(id); effect.append(tr("Fury")); break;
-            case 13: status = data.statusSadness(id); effect.append(tr("Sadness")); break;
-            case 14: status = data.statusDarkness(id); effect.append(tr("Darkness")); break;
-            case 15: status = data.statusHaste(id); effect.append(tr("Haste")); break;
-            case 16: status = data.statusSlow(id); effect.append(tr("Slow")); break;
-            case 17: status = data.statusStop(id); effect.append(tr("Stop")); break;
-            case 18: status = data.statusBarrier(id); effect.append(tr("Barrier")); break;
-            case 19: status = data.statusMagicBarrier(id); effect.append(tr("M.Barrier")); break;
-            case 20: status = data.statusReflect(id); effect.append(tr("Reflect")); break;
-            case 21: status = data.statusShield(id); effect.append(tr("Shield")); break;
-            case 22: status = data.statusRegen(id); effect.append(tr("Regen")); break;
-            case 23: status = data.statusResist(id); effect.append(tr("Resist")); break;
+            case 0: status = FF7Item::instance()->statusDeath(id); effect.append(tr("Death")); break;
+            case 1: status = FF7Item::instance()->statusSlowNumb(id); effect.append(tr("Slow-Numb")); break;
+            case 2: status = FF7Item::instance()->statusDeathSentence(id); effect.append(tr("D.Sentence")); break;
+            case 3: status = FF7Item::instance()->statusParalysis(id); effect.append(tr("Paralysis")); break;
+            case 4: status = FF7Item::instance()->statusPetrify(id); effect.append(tr("Petrify")); break;
+            case 5: status = FF7Item::instance()->statusSilence(id); effect.append(tr("Silence")); break;
+            case 6: status = FF7Item::instance()->statusSleep(id); effect.append(tr("Sleep")); break;
+            case 7: status = FF7Item::instance()->statusConfusion(id); effect.append(tr("Confusion")); break;
+            case 8: status = FF7Item::instance()->statusBerserk(id); effect.append(tr("Berserk")); break;
+            case 9: status = FF7Item::instance()->statusFrog(id); effect.append(tr("Frog")); break;
+            case 10: status = FF7Item::instance()->statusMini(id); effect.append(tr("Mini")); break;
+            case 11: status = FF7Item::instance()->statusPoison(id); effect.append(tr("Poison")); break;
+            case 12: status = FF7Item::instance()->statusFury(id); effect.append(tr("Fury")); break;
+            case 13: status = FF7Item::instance()->statusSadness(id); effect.append(tr("Sadness")); break;
+            case 14: status = FF7Item::instance()->statusDarkness(id); effect.append(tr("Darkness")); break;
+            case 15: status = FF7Item::instance()->statusHaste(id); effect.append(tr("Haste")); break;
+            case 16: status = FF7Item::instance()->statusSlow(id); effect.append(tr("Slow")); break;
+            case 17: status = FF7Item::instance()->statusStop(id); effect.append(tr("Stop")); break;
+            case 18: status = FF7Item::instance()->statusBarrier(id); effect.append(tr("Barrier")); break;
+            case 19: status = FF7Item::instance()->statusMagicBarrier(id); effect.append(tr("M.Barrier")); break;
+            case 20: status = FF7Item::instance()->statusReflect(id); effect.append(tr("Reflect")); break;
+            case 21: status = FF7Item::instance()->statusShield(id); effect.append(tr("Shield")); break;
+            case 22: status = FF7Item::instance()->statusRegen(id); effect.append(tr("Regen")); break;
+            case 23: status = FF7Item::instance()->statusResist(id); effect.append(tr("Resist")); break;
             }
 
             switch (status) {
