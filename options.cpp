@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -30,10 +30,7 @@ Options::Options(QWidget *parent, QSettings *config_data) :
     ui->line_default_save->setVisible(false);
     ui->btn_set_default_save->setVisible(false);
     ui->reset_default_save_location->setVisible(false);
-    //Hide the ps3 signing area if not built with openssl support.
-#if(!OPENSSL)
-    ui->groupBox_3->setTitle(tr("Signing is disabled! Build with OpenSSL support to enable"));
-#endif
+
     restoreGeometry(settings->value("OptionsGeometry").toByteArray());
     set_path_lbls();
     load = true;
@@ -48,8 +45,7 @@ Options::Options(QWidget *parent, QSettings *config_data) :
     ui->cbWorldMapAdvanced->setChecked(settings->value("worldMapAdvanced").toBool());
     ui->cb_override_def_save->setChecked(settings->value("override_default_save").toBool());
     ui->sbScale->setValue(settings->value("scale").toDouble());
-    ui->linePs3Key->setText(settings->value("ps3Key").toByteArray().toHex().toUpper());
-    ui->linePs3Seed->setText(settings->value("ps3Seed").toByteArray().toHex().toUpper());
+
     load = false;
 }
 
@@ -262,20 +258,3 @@ void Options::on_sbScale_valueChanged(double arg1)
         settings->setValue("scale", arg1);
     }
 }
-
-void Options::on_linePs3Key_editingFinished()
-{
-    if (!load) {
-        QByteArray temp = QByteArray::fromHex(ui->linePs3Key->text().toLocal8Bit());
-        settings->setValue("ps3Key", temp);
-    }
-}
-
-void Options::on_linePs3Seed_editingFinished()
-{
-    if (!load) {
-        QByteArray temp = QByteArray::fromHex(ui->linePs3Seed->text().toLocal8Bit());
-        settings->setValue("ps3Seed", temp);
-    }
-}
-

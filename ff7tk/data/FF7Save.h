@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -29,9 +29,8 @@
 #include "FF7SaveInfo.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 /** \class FF7Save
- *  \todo add support for signing psv files.
- *  \todo add support for signing vmp files.
- *  \todo add support for ps4 format saves.
+ *  \todo Support for PS4 Saves.
+ *  \todo Support for XBONE Saves
  *  \brief edit saves from Final Fantasy 7
  *
  *  FF7Save does it all. Open the file , edit then save. All of the file handling will be taken care of for you.
@@ -53,7 +52,7 @@
  *  | *.gme  |Dex drive format virtual memory card
  *  | *.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
  *  | *.vmp  |VMC format used by the PSP/PsVita. Can not sign this type yet;reimport to console will fail
- *  | *.psv  |Saves "Exported" by a PS3. Can sign this type with OpenSSL; Correct keys is unknown.
+ *  | *.psv  |Saves "Exported" by a PS3.
  *  | *FF7-S*|A Raw PSX memory card "file" extracted from a real or virtual memory card
  */
 class FF7Save: public QObject
@@ -124,7 +123,7 @@ public:
     *  \param newType Type of file to be saved  "PC","PSX","MC","VGS","DEX" are valid
     *  \param s Slot to export if exporting to a multi slot save type
     *  \return True if Successful
-    *  \sa exportPC(),exportPSX(),exportVMC(),exportDEX(),exportVGS()
+    *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS()
     */
     bool exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat, int s = 0);
 
@@ -146,6 +145,13 @@ public:
      *  \return True if Successful
     */
     bool exportPSX(int s, const QString &fileName);
+
+    /** \brief attempt to save fileName as a PS3 save
+     *  \param s slot in loaded file to export as ps3
+    *   \param fileName file that will be saved
+     *  \return True if Successful
+    */
+    bool exportPS3(int s, const QString &fileName);
 
     /** \brief attempt to save fileName as a Virtual Memory Card (slots without a region string will not be exported)
      *  \param fileName file that will be saved
@@ -230,6 +236,14 @@ public:
      *  \return True is Successful
     */
     bool fixMetaData(QString fileName = "", QString OutPath = "", QString UserID = "");
+
+    /**
+     * @brief generates a signature for PS3 or VMP based on input..
+     * @param format Format you will sign
+     * @param data to generate signature for
+     * @return new Signature for the file
+     */
+    QByteArray generatePsSaveSignature(QByteArray data, QByteArray keySeed);
 
     QByteArray fileHeader(void);/**< \brief file Header as QByteArray*/
 
@@ -985,23 +999,6 @@ public:
      */
     void setPsxDesc(QString newDesc, int s);
 
-    inline void setPs3Key(QByteArray key)
-    {
-        PS3Key = key;
-    }
-    inline void setPs3Seed(QByteArray seed)
-    {
-        PS3Seed = seed;
-    }
-    inline QByteArray ps3Key(void)
-    {
-        return PS3Key;
-    }
-    inline QByteArray ps3Seed(void)
-    {
-        return PS3Seed;
-    }
-
     /**
      * @brief the number of unknown z vars.
      * @return Number Of "z" vars in ff7save
@@ -1022,6 +1019,7 @@ public:
      * @return FF7SaveInfo::FORMAT
      */
     FF7SaveInfo::FORMAT format();
+
 signals:
     void fileChanged(bool);/**< \brief emits when internal data changes */
 private:
@@ -1033,17 +1031,8 @@ private:
     FF7SaveInfo::FORMAT fileFormat = FF7SaveInfo::FORMAT::UNKNOWN;
     QByteArray _bufferFileHeader;
     QByteArray _fileHeader;
-    //quint8 file_header_pc [0x0009];     // [0x0000] 0x06277371 this replace quint8 file_tag[9];
-    //quint8 file_header_psv[0x0084];
-    //quint8 file_header_mc [0x2000]; // [0x0000] 0x06277371 this replace quint8 file_tag[9];
-    //quint8 file_header_vgs[0x2040]; //header for vgs/mem ext format.
-    //quint8 file_header_psp[0x2080];
-    //quint8 file_header_dex[0x2F40]; //header for gme (dex-drive format)
-    //quint8 *file_headerp;   //pointer to file header
     bool slotChanged[15];
     bool fileHasChanged;
-    QByteArray PS3Seed;
-    QByteArray PS3Key;
     QString buffer_region; // hold the buffers region data.
     QString SG_Region_String[15];
     QString filename;//opened file;

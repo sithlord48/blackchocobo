@@ -443,9 +443,6 @@ void MainWindow::loadChildWidgetSettings()
     ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
     ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
     ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
-    //set Key data
-    ff7->setPs3Key(settings->value("ps3Key").toByteArray());
-    ff7->setPs3Seed(settings->value("ps3Seed").toByteArray());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -644,8 +641,6 @@ bool MainWindow::on_action_Save_triggered()
 
     if (ff7->format() == FF7SaveInfo::FORMAT::PSP)
         QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
-    if (ff7->format() == FF7SaveInfo::FORMAT::PS3)
-        QMessageBox::information(this, tr("PSV Save Notice"), QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()), QString(ff7->ps3Seed().toHex().toUpper()))));
 
     return saveFileFull(ff7->fileName());
 }
@@ -683,9 +678,6 @@ bool MainWindow::on_actionSave_File_As_triggered()
 
     FF7SaveInfo::FORMAT newType = typeMap[selectedType];
 
-    if (newType == FF7SaveInfo::FORMAT::PS3)
-        QMessageBox::information(this, tr("PSV Save Notice"), QString(tr("Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.\n ps3Key: %1\n ps3Seed: %2").arg(QString(ff7->ps3Key().toHex().toUpper()), QString(ff7->ps3Seed().toHex().toUpper()))));
-
     if (newType == FF7SaveInfo::FORMAT::PSP)
         QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
 
@@ -693,8 +685,8 @@ bool MainWindow::on_actionSave_File_As_triggered()
         return saveFileFull(fileName);
 
     //Type Changed lets Export instead
-    if (newType == FF7SaveInfo::FORMAT::PS3 || newType == FF7SaveInfo::FORMAT::PSP) {
-        QMessageBox::information(this, tr("UnSupported Export Attempted"), tr("This format can not be Exported."));
+    if (newType == FF7SaveInfo::FORMAT::PSP) {
+        QMessageBox::information(this, tr("UnSupported Export Attempted"), tr("This format can not be currently be Exported."));
         return false;
     }
 

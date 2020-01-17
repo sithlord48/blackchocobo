@@ -22,7 +22,7 @@ matrix:
 before_install: 
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y;
-    sudo add-apt-repository ppa:beineri/opt-qt-5.12.3-xenial -y;
+    sudo add-apt-repository ppa:beineri/opt-qt-5.12.6-xenial -y;
     sudo apt-get update -qq;
     fi
 
@@ -33,7 +33,7 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt512tools qt512base g++-8 libssl-dev zsync; 
+    sudo apt-get -y install build-essential qt5-default qt512tools qt512base g++-8 zsync; 
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
@@ -46,7 +46,7 @@ install:
 script:
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
-    qmake "DEFINES+=OPENSSL=1" "LIBS+=-lcrypto" Black_Chocobo.pro;
+    qmake Black_Chocobo.pro;
     make -j2;
     make INSTALL_ROOT=appdir install; find appdir/;
     mv appdir/usr/share/blackchocobo/lang appdir/usr/bin/lang;
@@ -60,10 +60,8 @@ script:
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
     export QTDIR="/usr/local/opt/qt5";
-    export PATH="/usr/local/opt/openssl/bin:$PATH";
     export PATH="$QTDIR/bin:$PATH";
-    export LIBRARY_PATH=/usr/local/opt/openssl/lib;
-    qmake "DEFINES+=OPENSSL=1" "LIBS+=-lcrypto" "INCLUDEPATH+=/usr/local/opt/openssl/include" qmake Black_Chocobo.pro;
+    qmake Black_Chocobo.pro;
     make -j2;
     mkdir -p Black_Chocobo.app/Contents/MacOS/lang;
     mv lang/*.qm Black_Chocobo.app/Contents/MacOS/lang/;
@@ -88,6 +86,8 @@ env:
    - secure: "B4xjY+hcZOob6hGLx8b5Ykxk+8sN9M+XwfnuhRReR1YRFvXZdcUUiL/VusDM0iapUGhkuvbO0AQEeLPaC69uBNdxQsBJFGFMzrHZGEtuBFl44SJB+lZGRTVemj3AZ4f5aQvTkKFbt7M+/sjkWa6ZP6EHdrAN2XCp4emrwKBApO4="
 
 addons:
+  apt:
+  
   coverity_scan:
     project:
       name: "sithlord48/blackchocobo"

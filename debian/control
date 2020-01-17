@@ -7,7 +7,6 @@ Build-Depends:
  debhelper (>= 9.0),
  qt5-default,
  qttools5-dev-tools,
- libssl-dev
 Standards-Version: 3.9.7
 Homepage: http://blackchocobo.sourceforge.net
 #Vcs-Git: git://git.debian.org/collab-maint/blackchocobo.git

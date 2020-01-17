@@ -44,7 +44,7 @@ build_script:
 - cmd: >-
     cd C:\projects\blackchocobo
 
-    qmake "DEFINES+=OPENSSL=1" "INCLUDEPATH += C:\OpenSSL-Win64\include" "LIBS += -L"C:\OpenSSL-Win64\lib" -llibeay32" Black_Chocobo.pro
+    qmake Black_Chocobo.pro
 
     mkdir Black_Chocobo-%commit%-win32
 
@@ -53,8 +53,6 @@ build_script:
     move lang\*.qm Black_Chocobo-%commit%-win32\lang\
 
     move COPYING.TXT Black_Chocobo-%commit%-win32\
-
-    copy C:\OpenSSL-Win64\libeay32.dll Black_Chocobo-%commit%-win32\
 
     %make%
 

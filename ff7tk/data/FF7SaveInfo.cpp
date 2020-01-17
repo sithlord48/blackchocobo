@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2019    Chris Rizzitello <sithlord48@gmail.com>             //
+//    copyright 2019-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -64,6 +64,13 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     inline static const QString PS3_FILE_DESCRIPTION = tr("PSV Save File");
     inline static const QStringList PS3_VALID_EXTENSIONS { QStringLiteral("*.psv")};
     inline static const QByteArray PS3_FILE_ID = QByteArray::fromRawData("\x00\x56\x53\x50", 4);
+    static const int PS3_SEED_OFFSET = 0x0008;
+    static const int PS3_SIGNATURE_OFFSET = 0x001C;
+    inline static const QByteArray PS3_FILE_HEADER = QByteArray::fromRawData("\x00\x56\x53\x50\x00\x00\x00\x00\x04\xbc\x97\x58\x11\x0f\x7e\x85\xc7\x4f\x2f\xd0\x5a\x28\xb6\x25\xe6\x9a\x6e\xa1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x00\x01\x00\x00\x00\x00\x20\x00\x00\x84\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x20\x00\x00\x03\x90\x00\x00\x42\x41\x53\x43\x55\x53\x2d\x39\x34\x31\x36\x33\x46\x46\x37\x2d\x53\x30\x31\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", PS3_FILE_HEADER_SIZE);
+    /*~~~~~~~ PSV / PSP Common Signing ~~~~~~~~~~~~~~*/
+    static const int PS_SIGNATURE_SIZE = 0x0014;
+    inline static const QByteArray PS_SIGNING_KEY= QByteArray::fromRawData("\xAB\x5A\xBC\x9F\xC1\xF4\x9D\xE6\xA0\x51\xDB\xAE\xFA\x51\x88\x59", 0x10);
+    inline static const QByteArray PS_SIGNING_IV= QByteArray::fromRawData("\xB3\x0F\xFE\xED\xB7\xDC\x5E\xB7\x13\x3D\xA6\x0D\x1B\x6B\x2C\xDC", 0x10);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mem Card Format~~~~~~~~~~~~~~~~~~~*/
     static const int VMC_FILE_SIZE = 0x20000;
     static const int VMC_FILE_HEADER_SIZE = 0x2000;
@@ -79,6 +86,8 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     inline static const QString PSP_FILE_DESCRIPTION = tr("PSP/Vita Virtual Memory Card");
     inline static const QStringList PSP_VALID_EXTENSIONS { QStringLiteral("*.vmp")};
     inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56", 4);
+    static const int PSP_SEED_OFFSET = 0x000C;
+    static const int PSP_SIGNATURE_OFFSET = 0x0020;
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGS SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int VGS_FILE_SIZE = 0x20040;
     static const int VGS_FILE_HEADER_SIZE = 0x2040;
@@ -208,10 +217,10 @@ QByteArray FF7SaveInfo::fileHeader(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PC):
     case (FORMAT::SWITCH):
     case (FORMAT::PSP):
-    case (FORMAT::PS3):
     case (FORMAT::DEX):
     case (FORMAT::VGS):
     case (FORMAT::VMC): return QByteArray(fileIdentifier(format)).append(fileHeaderSize(format) - fileIdentifier(format).length(), 0x00);
+    case (FORMAT::PS3): return d->PS3_FILE_HEADER;
     default: return QByteArray();
     }
 }
@@ -240,6 +249,52 @@ QByteArray FF7SaveInfo::slotFooter(FF7SaveInfo::FORMAT format) const
     case (FORMAT::VGS):
     case (FORMAT::VMC): return QByteArray(d->PSX_SLOT_FOOTER_SIZE, 0x00);
     default: return QByteArray();
+    }
+}
+
+QByteArray FF7SaveInfo::signingKey(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PSP):
+    case (FORMAT::PS3): return d->PS_SIGNING_KEY;
+    default: return QByteArray();
+    }
+}
+
+
+QByteArray FF7SaveInfo::signingIV(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PSP):
+    case (FORMAT::PS3): return d->PS_SIGNING_IV;
+    default: return QByteArray();
+    }
+}
+
+int FF7SaveInfo::fileSeedOffset(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PSP): return d->PSP_SEED_OFFSET;
+    case (FORMAT::PS3): return d->PS3_SEED_OFFSET;
+    default: return -1;
+    }
+}
+
+int FF7SaveInfo::fileSignatureOffset(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PSP): return d->PSP_SIGNATURE_OFFSET;
+    case (FORMAT::PS3): return d->PS3_SIGNATURE_OFFSET;
+    default: return -1;
+    }
+}
+
+int FF7SaveInfo::fileSignatureSize(FF7SaveInfo::FORMAT format) const
+{
+    switch (format) {
+    case (FORMAT::PSP):
+    case (FORMAT::PS3): return d->PS_SIGNATURE_SIZE;
+    default: return 0;
     }
 }
 

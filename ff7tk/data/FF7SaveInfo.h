@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2019  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2019-2020   Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -127,6 +127,42 @@ public:
      * @return A Default File footer
      */
     Q_INVOKABLE QByteArray slotFooter(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief Key Used to Sign The Format
+     * @param format
+     * @return The Key used to sign the format or an QByteArray() if none.
+     */
+    Q_INVOKABLE QByteArray signingKey(FF7SaveInfo::FORMAT format) const;
+
+
+    /**
+     * @brief IV Used to Sign The Format
+     * @param format
+     * @return The IV used to sign the format or an QByteArray() if none.
+     */
+    Q_INVOKABLE QByteArray signingIV(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief The offset for the seed for signed saves
+     * @param format
+     * @return offset of the seed or -1 if none
+     */
+    Q_INVOKABLE int fileSeedOffset(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief The offset for the signature for signed saves
+     * @param format
+     * @return offset of the signature or -1 if none
+     */
+    Q_INVOKABLE int fileSignatureOffset(FF7SaveInfo::FORMAT format) const;
+
+    /**
+     * @brief The size for the signature for signed saves
+     * @param format
+     * @return size of the signature
+     */
+    Q_INVOKABLE int fileSignatureSize(FF7SaveInfo::FORMAT format) const;
 
     /**
      * @brief Description of the File type

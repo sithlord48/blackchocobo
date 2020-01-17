@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -15,17 +15,14 @@
 /****************************************************************************/
 #include <QDebug>
 #include "FF7Save.h"
+#include "FF7Save.h"
 #include <QObject>
 #include <QFile>
 #include <QDataStream>
 #include <QTextStream>
 #include <QMessageAuthenticationCode>
 #include "FF7Text.h"
-//Includes From OpenSSL
-#if defined(EnableOpenSSL)
-#include <openssl/evp.h>
-#include <openssl/aes.h>
-#endif
+#include "crypto/aes.h"
 // This Class should contain NO Gui Parts
 
 FF7Save::FF7Save()
@@ -140,7 +137,6 @@ bool FF7Save::loadFile(const QString &fileName)
 }
 QByteArray FF7Save::fileHeader(void)
 {
-    //return QByteArray(reinterpret_cast<char *>(file_headerp), FF7SaveInfo::instance()->fileHeaderSize(fileFormat));
     return _fileHeader;
 }
 
@@ -150,7 +146,6 @@ bool FF7Save::setFileHeader(QByteArray data)
         return false;
     }
     if (FF7SaveInfo::instance()->fileHeaderSize(fileFormat) > 0) {
-        //memcpy(file_headerp, data, size_t(FF7SaveInfo::instance()->fileHeaderSize(fileFormat)));
         _fileHeader = data;
     }
     return true;
@@ -244,6 +239,7 @@ bool FF7Save::saveFile(const QString &fileName)
     if (fileName.isEmpty()) {
         return false;
     }
+    checksumSlots();
     //fix our headers before saving
     if (fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH) {/*PC Header Should be Fixed By Host*/}
     else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
@@ -253,7 +249,6 @@ bool FF7Save::saveFile(const QString &fileName)
     } else {
         fix_vmc_header();
     }
-    checksumSlots();
     // write the file
     QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite)) {
@@ -297,7 +292,7 @@ bool FF7Save::exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat,
     if (newFormat == FF7SaveInfo::FORMAT::DEX)
         return exportDEX(fileName);
     if(newFormat == FF7SaveInfo::FORMAT::PS3)
-        return false;
+        return exportPS3(s, fileName);
     if(newFormat == FF7SaveInfo::FORMAT::PSP)
         return false;
 
@@ -394,6 +389,9 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
     int blocks = 1;
     FF7SaveInfo::FORMAT prev_format = fileFormat;
     QString prev_fileName = filename;
+    QByteArray prev_fileHeader = fileHeader();
+    QByteArray prev_slotHeader = slotHeader(s);
+    QByteArray prev_slotFooter = slotFooter(s);
 
     if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH) && isFF7(s))
         setControlMode(s, CONTROL_NORMAL);
@@ -429,6 +427,61 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
     file.close();
     setFormat(prev_format);
     filename = prev_fileName;
+    setFileHeader(prev_fileHeader);
+    setSlotHeader(s, prev_slotHeader);
+    setSlotFooter(s, prev_slotFooter);
+    return true;
+}
+
+bool FF7Save::exportPS3(int s, const QString &fileName)
+{
+    if (fileName.isEmpty())
+        return false;
+
+    //currently can only export ff7 psv files.
+    if (!isFF7(s))
+        return false;
+
+    FF7SaveInfo::FORMAT prev_format = fileFormat;
+    QString prev_fileName = filename;
+    QByteArray prev_fileHeader = fileHeader();
+    QByteArray prev_slotHeader = slotHeader(s);
+    QByteArray prev_slotFooter = slotFooter(s);
+    bool fmodded = isSlotModified(s);
+
+    if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH))
+        setControlMode(s, CONTROL_NORMAL);
+
+    QString rslot = fileName.mid(fileName.lastIndexOf("533") +3, 3);
+    int slot = 10 * rslot.mid(0,1).toInt();
+    slot += rslot.mid(2, 1).toInt();
+
+    if (slot < 0 || slot > 14)
+        return false;
+
+    setFormat(FF7SaveInfo::FORMAT::PS3);
+    setFileHeader(FF7SaveInfo::instance()->fileHeader(FF7SaveInfo::FORMAT::PS3));
+    setSlotHeader(s, FF7SaveInfo::instance()->slotHeader(FF7SaveInfo::FORMAT::PS3, slot));
+    setSlotFooter(s, FF7SaveInfo::instance()->slotFooter(FF7SaveInfo::FORMAT::PS3));
+    checksumSlots();
+    fix_psv_header(s);
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly))
+        return false;
+
+    file.write(fileHeader(), FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PS3));
+    file.write(slotHeader(s), FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PS3));
+    file.write(slotFF7Data(s), FF7SaveInfo::instance()->slotSize());
+    file.write(slotFooter(s), FF7SaveInfo::instance()->slotFooterSize(FF7SaveInfo::FORMAT::PS3));
+
+    file.close();
+    setFormat(prev_format);
+    filename = prev_fileName;
+    setFileHeader(prev_fileHeader);
+    setSlotHeader(s, prev_slotHeader);
+    setSlotFooter(s, prev_slotFooter);
+    setFileModified(fmodded, s);
     return true;
 }
 
@@ -929,32 +982,17 @@ void FF7Save::fix_psx_header(int s)
 
 void FF7Save::fix_psv_header(int s)
 {
-#if defined(EnableOpenSSL)
-    /* do signing stuff */
-    QByteArray keySeed = fileHeader().mid(0x08, 20);
+    const int signatureOffset = FF7SaveInfo::instance()->fileSignatureOffset(FF7SaveInfo::FORMAT::PS3);
+    const int signatureSize = FF7SaveInfo::instance()->fileSignatureSize(FF7SaveInfo::FORMAT::PS3);
     fix_psx_header(s);//adjust time.
-    QByteArray hmacDigest = fileHeader().mid(0x1C, 20);
-    QByteArray signedData = fileHeader().mid(0x30);
-    signedData.append(slotPsxRawData(0));
-    QByteArray decryptedKeySeed;
-
-    int inLen = keySeed.length();
-    int outLen = 0x10;
-
-    EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
-    EVP_DecryptInit_ex(ctx, EVP_aes_128_cbc(), NULL, (const unsigned char *)ps3Key().data(), (const unsigned char *)ps3Seed().data());
-    EVP_DecryptUpdate(ctx, (unsigned char *)decryptedKeySeed.data(), &outLen, (const unsigned char *)keySeed.data(), inLen);
-    int tempLen = outLen;
-    EVP_DecryptFinal(ctx, (unsigned char *)decryptedKeySeed.data() + tempLen, &outLen);
-    EVP_CIPHER_CTX_free(ctx);
-
-    decryptedKeySeed.resize(tempLen);
-    QByteArray newHMAC = QMessageAuthenticationCode::hash(signedData, decryptedKeySeed, QCryptographicHash::Sha1).toHex();
-    qDebug() << QString("New HMAC Digest: %1 (%2 bytes)").arg(newHMAC.toHex().toUpper(), QString::number(newHMAC.length()));
-
-    QByteArray temp = fileHeader().replace(0x1C, 0x14, newHMAC);
-    setFileHeader(temp);
-#endif
+    setFileHeader(fileHeader().replace(0x64, 19, SG_Region_String[s].toLatin1()));
+    QByteArray data = fileHeader();
+    data.replace(signatureOffset, signatureSize, QByteArray(signatureSize, '\x00'));
+    data.append(slotHeader(s));
+    data.append(slotFF7Data(s));
+    data.append(slotFooter(s));
+    QByteArray keySeed = fileHeader().mid(FF7SaveInfo::instance()->fileSeedOffset(FF7SaveInfo::FORMAT::PS3), signatureSize);
+    setFileHeader(fileHeader().replace(signatureOffset, signatureSize, generatePsSaveSignature(data, keySeed)));
 }
 
 void FF7Save::fix_vmc_header(void)
@@ -2720,14 +2758,13 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
 void FF7Save::setFileModified(bool changed, int s)
 {
     fileHasChanged = changed;
-    if (changed) {
+    if (changed)
         slotChanged[s] = true;
-    } else {
-        for (int i = 0; i < 15; i++) {
-            slotChanged[i] = false;
-        }
+    else {
+        for (int i = 0; i < 15; i++)
+            slotChanged[i] = changed;
     }
-    emit(fileChanged(changed));
+    emit(fileChanged(fileHasChanged));
 }
 QVector< SubContainer > FF7Save::parseXML(QString fileName, QString metadataPath, QString UserID)
 {
@@ -2854,6 +2891,60 @@ bool FF7Save::fixMetaData(QString fileName, QString OutPath, QString UserID)
     Metadata.resize(Metadata.pos());
     Metadata.close();
     return 1;
+}
+
+QByteArray FF7Save::generatePsSaveSignature(QByteArray data, QByteArray keySeed)
+{
+    //based on dots-tb's work
+    FF7SaveInfo::FORMAT saveFormat;
+    if(data.size() == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PS3))
+        saveFormat = FF7SaveInfo::FORMAT::PS3;
+    else if (data.size() == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSP))
+        saveFormat = FF7SaveInfo::FORMAT::PSP;
+    else
+        return QByteArray();
+
+    /* do signing stuff */
+    const int signatureSize = FF7SaveInfo::instance()->fileSignatureSize(saveFormat);
+    QByteArray buffer = keySeed;
+    QByteArray decryptedKeySeed(0x40, '\x00');
+
+    struct AES_ctx ctx;
+    AES_init_ctx_iv(&ctx,
+                    reinterpret_cast<const uint8_t*>(FF7SaveInfo::instance()->signingKey(saveFormat).data()),
+                    reinterpret_cast<const uint8_t*>(FF7SaveInfo::instance()->signingIV(saveFormat).data()));
+
+    AES_ECB_decrypt(&ctx, reinterpret_cast<uint8_t*>(buffer.data()));
+
+    decryptedKeySeed.replace(0, 0x10, buffer);
+    buffer.replace(0, 0x10, keySeed);
+    AES_ECB_encrypt(&ctx, reinterpret_cast<uint8_t*>(buffer.data()));
+    decryptedKeySeed.replace(0x10, 0x10, buffer.data());
+    XorWithIv(reinterpret_cast<uint8_t*>(decryptedKeySeed.data()), reinterpret_cast<const uint8_t*>(FF7SaveInfo::instance()->signingIV(saveFormat).constData()));
+    buffer.resize(signatureSize);
+    buffer.fill('\xFF', signatureSize);
+    buffer.replace(0, 4, keySeed.mid(0x10, 4));
+    QByteArray temp = decryptedKeySeed.mid(0x10);
+    XorWithIv(reinterpret_cast<uint8_t*>(temp.data()), reinterpret_cast<const uint8_t*>(buffer.constData()));
+
+    decryptedKeySeed.replace(0x10, 0x10, temp);
+    temp = decryptedKeySeed;
+    temp.resize(signatureSize);
+    decryptedKeySeed.fill('\x00', 0x40);
+    decryptedKeySeed.replace(0, signatureSize, temp);
+    XorWithByte(reinterpret_cast<uint8_t*>(decryptedKeySeed.data()), 0x36, 0x40);
+
+    QCryptographicHash sha1(QCryptographicHash::Sha1);
+    sha1.addData(decryptedKeySeed);
+    sha1.addData(data);
+    buffer = sha1.result();
+
+    XorWithByte(reinterpret_cast<uint8_t*>(decryptedKeySeed.data()), 0x6A, 0x40);
+
+    sha1.reset();
+    sha1.addData(decryptedKeySeed);
+    sha1.addData(buffer);
+    return sha1.result();
 }
 QString FF7Save::fileName(void)
 {

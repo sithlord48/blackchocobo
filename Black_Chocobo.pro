@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+# //    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -30,10 +30,11 @@ SOURCES += \
 	qhexedit/chunks.cpp \
 	qhexedit/qhexedit.cpp \
 	qhexedit/commands.cpp \
+	ff7tk/data/crypto/aes.c \
 	ff7tk/data/SaveIcon.cpp \
 	ff7tk/data/FF7Text.cpp \
 	ff7tk/data/FF7Save.cpp \
-        ff7tk/data/FF7SaveInfo.cpp \
+	ff7tk/data/FF7SaveInfo.cpp \
 	ff7tk/data/FF7Materia.cpp \
 	ff7tk/data/FF7Location.cpp \
 	ff7tk/data/FF7Item.cpp \
@@ -60,7 +61,6 @@ SOURCES += \
 	ff7tk/data/FF7Achievements.cpp
 
 HEADERS += \
-	ff7tk/data/FF7SaveInfo.h \
 	mainwindow.h \
 	about.h \
 	options.h \
@@ -69,6 +69,7 @@ HEADERS += \
 	qhexedit/qhexedit.h \
 	qhexedit/commands.h \
 	achievementdialog.h \
+    ff7tk/data/crypto/aes.h \
 	ff7tk/data/Type_FF7CHOCOBO.h \
 	ff7tk/data/FF7FieldItemList.h \
 	ff7tk/data/FF7Achievements.h \
@@ -76,8 +77,8 @@ HEADERS += \
 	ff7tk/data/Type_FF7CHAR.h \
 	ff7tk/data/SaveIcon.h \
 	ff7tk/data/FF7Text.h \
-        ff7tk/data/FF7SaveInfo.h \
-        ff7tk/data/FF7Save_Types.h \
+	ff7tk/data/FF7SaveInfo.h \
+	ff7tk/data/FF7Save_Types.h \
 	ff7tk/data/FF7Save.h \
 	ff7tk/data/FF7Materia.h \
 	ff7tk/data/FF7Location.h \
@@ -128,30 +129,23 @@ TRANSLATIONS += \
 #Below Is OS Specific Stuff.
 #set up for windows
 win32: {
-	#Set OpenSSL include & lib paths
-	#THIS MUST BE CHANGED WITH YOUR OPENSSL PATHS OR YOUR BUILD WILL FAIL!!!
-        #DEFINES += EnableOpenSSL							# Enable openSSL support
-	#INCLUDEPATH += C:/OpenSSL-Win32/include		# Be sure to change this to your openSSL include path
-	#LIBS += -L"C:/OpenSSL-Win32/lib" -llibeay32	# Be sure to update this to your openSSL lib path
 	TARGET = Black_Chocobo
 	#Prevent ms padding on packed structures on gcc compiler
 	contains(QMAKE_COMPILER, gcc) {
 	QMAKE_CXXFLAGS += -mno-ms-bitfields
 	}
 	#Windows RC Info Below
-	VERSION = 1.9.92
+	VERSION = 1.9.94
 	QMAKE_TARGET_COMPANY = Black Chocobo Devs
 	QMAKE_TARGET_DESCRIPTION = Final Fantasy 7 Save Editor
-	QMAKE_TARGET_COPYRIGHT = 2010- 2019 Chris Rizzitello
+	QMAKE_TARGET_COPYRIGHT = 2010 - 2020 Chris Rizzitello
 	QMAKE_TARGET_PRODUCT = Black_Chocobo
 	RC_ICONS = icon/bchoco_icon_win.ico
 }
 
 #set up for mac os
 macx:{
-        #DEFINES += EnableOpenSSL							# Enable openSSL support
-	#LIBS += -lcrypto								# Enable crypto lib
-	TARGET = Black_Chocobo
+    TARGET = Black_Chocobo
 	ICON = icon/bchoco_icon_osx.icns     #set program icon
 	QMAKE_CXXFLAGS += -stdlib=libc++
 }
@@ -161,9 +155,6 @@ system (lrelease Black_Chocobo.pro)#release the .qm files
 #set up for unix os
 unix:!macx:!symbian:!android {
 	#remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
-
-    DEFINES += EnableOpenSSL							# Enable openSSL support
-    LIBS += -lcrypto								# Enable crypto lib
 
     TARGET = blackchocobo
     target.path = /usr/bin
@@ -179,9 +170,6 @@ unix:!macx:!symbian:!android {
 	INSTALLS += target langfiles icon desktop
 }
 android:{
-	#INCLUDEPATH += /home/chris/Downloads/openssl-1.0.1i/include
-        #DEFINES += EnableOpenSSL						# Enable openSSL support
-	#LIBS += -L "" -lcrypto						# Enable crypto lib
 	TARGET = blackchocobo
 	target.path = /usr/bin
 

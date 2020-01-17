@@ -210,6 +210,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>ff7tk: Working PSV Save Signing and Export</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Dynamic Language Switching</string>
           </property>
          </item>
@@ -285,8 +290,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>658</width>
-            <height>699</height>
+            <width>649</width>
+            <height>730</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_8">
@@ -877,8 +882,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>658</width>
-            <height>756</height>
+            <width>649</width>
+            <height>811</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">

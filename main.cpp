@@ -33,7 +33,7 @@ Q_IMPORT_PLUGIN(qkrcodecs)
 
 int main(int argc, char *argv[])
 {
-    QVersionNumber version(1, 9, 92);
+    QVersionNumber version(1, 9, 93);
 
     if(argc >1) {
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h") {
