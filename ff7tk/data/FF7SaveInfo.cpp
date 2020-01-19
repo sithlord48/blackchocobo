@@ -62,7 +62,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int PS3_FILE_SIZE = 0x2084;
     static const int PS3_FILE_HEADER_SIZE = 0x0084;
     inline static const QString PS3_FILE_DESCRIPTION = tr("PSV Save File");
-    inline static const QStringList PS3_VALID_EXTENSIONS { QStringLiteral("*.psv")};
+    inline static const QStringList PS3_VALID_EXTENSIONS { QStringLiteral("*.PSV")};
     inline static const QByteArray PS3_FILE_ID = QByteArray::fromRawData("\x00\x56\x53\x50", 4);
     static const int PS3_SEED_OFFSET = 0x0008;
     static const int PS3_SIGNATURE_OFFSET = 0x001C;
@@ -83,11 +83,12 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PSP_FILE_SIZE = 0x20080;
     static const int PSP_FILE_HEADER_SIZE = 0x2080;
-    inline static const QString PSP_FILE_DESCRIPTION = tr("PSP/Vita Virtual Memory Card");
-    inline static const QStringList PSP_VALID_EXTENSIONS { QStringLiteral("*.vmp")};
-    inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56", 4);
+    inline static const QString PSP_FILE_DESCRIPTION = tr("PSP and PsVita Virtual Memory Card");
+    inline static const QStringList PSP_VALID_EXTENSIONS { QStringLiteral("*.VMP")};
+    inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56\x80", 5);
     static const int PSP_SEED_OFFSET = 0x000C;
     static const int PSP_SIGNATURE_OFFSET = 0x0020;
+    inline static const QByteArray PSP_FILE_HEADER = QByteArray::fromRawData("\x00\x50\x4D\x56\x80\x00\x00\x00\x00\x00\x00\x00\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0A\x0B\x0C\x0D\x0E\x0F\x10\x11\x12\x13\x54\x37\x42\x51\xEE\xB0\x88\xDB\x2E\xBD\xA5\x09\x24\xB6\x5C\x17\x6D\xED\x87\x36\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", 128);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGS SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int VGS_FILE_SIZE = 0x20040;
     static const int VGS_FILE_HEADER_SIZE = 0x2040;
@@ -216,10 +217,10 @@ QByteArray FF7SaveInfo::fileHeader(FF7SaveInfo::FORMAT format) const
     switch (format) {
     case (FORMAT::PC):
     case (FORMAT::SWITCH):
-    case (FORMAT::PSP):
     case (FORMAT::DEX):
     case (FORMAT::VGS):
     case (FORMAT::VMC): return QByteArray(fileIdentifier(format)).append(fileHeaderSize(format) - fileIdentifier(format).length(), 0x00);
+    case (FORMAT::PSP): return d->PSP_FILE_HEADER;
     case (FORMAT::PS3): return d->PS3_FILE_HEADER;
     default: return QByteArray();
     }

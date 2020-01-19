@@ -246,6 +246,8 @@ bool FF7Save::saveFile(const QString &fileName)
         fix_psx_header(0);
     } else if (fileFormat == FF7SaveInfo::FORMAT::PS3) {
         fix_psv_header(0);
+    } else if (fileFormat == FF7SaveInfo::FORMAT::PSP) {
+        fix_vmp_header();
     } else {
         fix_vmc_header();
     }
@@ -294,8 +296,7 @@ bool FF7Save::exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat,
     if(newFormat == FF7SaveInfo::FORMAT::PS3)
         return exportPS3(s, fileName);
     if(newFormat == FF7SaveInfo::FORMAT::PSP)
-        return false;
-
+        return exportVMP(fileName);
     return false;
 }
 
@@ -492,6 +493,7 @@ bool FF7Save::exportVMC(const QString &fileName)
 
     FF7SaveInfo::FORMAT prev_format = fileFormat;
     QString prev_fileName = filename;
+
     if (fileFormat != FF7SaveInfo::FORMAT::VMC) {
         for (int i = 0; i < 15; i++) {
             if (isFF7(i))
@@ -515,6 +517,53 @@ bool FF7Save::exportVMC(const QString &fileName)
     } else {
         setFormat(prev_format);
         filename = prev_fileName;
+        return false;
+    }
+}
+bool FF7Save::exportVMP(const QString &fileName)
+{
+    if (fileName.isEmpty())
+        return false;
+
+    FF7SaveInfo::FORMAT prev_format = fileFormat;
+    QString prev_fileName = filename;
+    QByteArray prev_fileHeader = fileHeader();
+    bool fmodded = isFileModified();
+
+    if (format() == FF7SaveInfo::FORMAT::PC || format() == FF7SaveInfo::FORMAT::SWITCH) {
+        for (int i = 0; i < 15; i++) {
+            if (isFF7(i))
+                setControlMode(i, CONTROL_NORMAL);
+        }
+    }
+    setFormat(FF7SaveInfo::FORMAT::PSP);
+
+    //Check if from another kind of VMC and copy the header
+    if (prev_format == FF7SaveInfo::FORMAT::VMC)
+        _fileHeader.replace(0x80, 0x2000, _bufferFileHeader.mid(0, 0x2000));
+    else if (prev_format == FF7SaveInfo::FORMAT::VGS)
+        _fileHeader.replace(0x80, 0x2000, _bufferFileHeader.mid(0x40, 0x2000));
+    else if (prev_format == FF7SaveInfo::FORMAT::DEX)
+        _fileHeader.replace(0x80, 0x2000, _bufferFileHeader.mid(0xF40, 0x2000));
+    else {
+        _fileHeader.clear();
+        _fileHeader.resize(FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PSP));
+        _fileHeader.fill('\x00', FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PSP));
+        _fileHeader.replace(0, FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP).size(), FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP));
+        _fileHeader.replace(0x80, 2, "\x4D\x43");
+    }
+    fix_vmp_header();
+    if (saveFile(fileName)) {
+        setFormat(prev_format);
+        filename = prev_fileName;
+        setFileHeader(prev_fileHeader);
+        setFileModified(fmodded, 0);
+        return true;
+    } else {
+        setFormat(prev_format);
+        filename = prev_fileName;
+        setFileHeader(prev_fileHeader);
+        setFileModified(fmodded, 0);
         return false;
     }
 }
@@ -995,11 +1044,26 @@ void FF7Save::fix_psv_header(int s)
     setFileHeader(fileHeader().replace(signatureOffset, signatureSize, generatePsSaveSignature(data, keySeed)));
 }
 
+void FF7Save::fix_vmp_header()
+{
+    const int signatureOffset = FF7SaveInfo::instance()->fileSignatureOffset(FF7SaveInfo::FORMAT::PSP);
+    const int signatureSize = FF7SaveInfo::instance()->fileSignatureSize(FF7SaveInfo::FORMAT::PSP);
+    fix_vmc_header();
+    QByteArray data = fileHeader();
+    data.replace(signatureOffset, signatureSize, QByteArray(signatureSize, '\x00'));
+    for(int i=0; i < 15; i++) {
+        data.append(slotHeader(i));
+        data.append(slotFF7Data(i));
+        data.append(slotFooter(i));
+    }
+    QByteArray keySeed = fileHeader().mid(FF7SaveInfo::instance()->fileSeedOffset(FF7SaveInfo::FORMAT::PSP), signatureSize);
+    setFileHeader(fileHeader().replace(signatureOffset, signatureSize, generatePsSaveSignature(data, keySeed)));
+}
 void FF7Save::fix_vmc_header(void)
 {
     //Set The Index Section Up.
     int index = FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
-    QByteArray mc_header_2(FF7SaveInfo::instance()->fileHeader(fileFormat));
+    QByteArray mc_header_2 = fileHeader();
     char xor_byte = '\x00';
     for (int x = index; x < index + 127; x++) {
         xor_byte ^= mc_header_2[x];
@@ -1041,7 +1105,7 @@ void FF7Save::fix_vmc_header(void)
         }
     }
     _bufferFileHeader = _fileHeader;
-    _fileHeader = mc_header_2;
+    setFileHeader(mc_header_2);
 }
 
 void FF7Save::setSaveNumber(int s, int saveNum)

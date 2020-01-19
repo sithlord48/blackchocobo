@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -20,7 +20,6 @@
 #include "ff7tk/data/FF7Char.h"
 #include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Location.h"
-
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
@@ -639,9 +638,6 @@ bool MainWindow::on_action_Save_triggered()
     if (_init || ff7->fileName().isEmpty())
         return on_actionSave_File_As_triggered();
 
-    if (ff7->format() == FF7SaveInfo::FORMAT::PSP)
-        QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
-
     return saveFileFull(ff7->fileName());
 }
 
@@ -678,17 +674,8 @@ bool MainWindow::on_actionSave_File_As_triggered()
 
     FF7SaveInfo::FORMAT newType = typeMap[selectedType];
 
-    if (newType == FF7SaveInfo::FORMAT::PSP)
-        QMessageBox::information(this, tr("PSP/PsVita Save Notice"), tr("This File Does Not Have An Updated Signature\n Because of this your PSP/PsVita will reject this save as corrupted\n This is normal please see the User Guide for more information."));
-
     if (ff7->format() == newType)
         return saveFileFull(fileName);
-
-    //Type Changed lets Export instead
-    if (newType == FF7SaveInfo::FORMAT::PSP) {
-        QMessageBox::information(this, tr("UnSupported Export Attempted"), tr("This format can not be currently be Exported."));
-        return false;
-    }
 
     if (ff7->exportFile(fileName, newType, s)) {
         ui->statusBar->showMessage(tr("Export Successful"), 1000);

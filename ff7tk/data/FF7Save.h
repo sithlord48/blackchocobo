@@ -51,7 +51,7 @@
  *  | *.mem  |Memory Card from Virtual Game Station
  *  | *.gme  |Dex drive format virtual memory card
  *  | *.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
- *  | *.vmp  |VMC format used by the PSP/PsVita. Can not sign this type yet;reimport to console will fail
+ *  | *.vmp  |VMC format used by the PSP and PsVita
  *  | *.psv  |Saves "Exported" by a PS3.
  *  | *FF7-S*|A Raw PSX memory card "file" extracted from a real or virtual memory card
  */
@@ -123,7 +123,7 @@ public:
     *  \param newType Type of file to be saved  "PC","PSX","MC","VGS","DEX" are valid
     *  \param s Slot to export if exporting to a multi slot save type
     *  \return True if Successful
-    *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS()
+    *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS(),exportVMP()
     */
     bool exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat, int s = 0);
 
@@ -157,8 +157,13 @@ public:
      *  \param fileName file that will be saved
      *  \return True if Successful
     */
-
     bool exportVMC(const QString &fileName);
+
+    /** \brief attempt to save fileName as a VMP file (PSP / Vita Virtual Memory Card) slots without a region string will not be exported.
+     *  \param fileName file that will be saved
+     *  \return True if Successful
+    */
+    bool exportVMP(const QString &fileName);
 
     /** \brief attempt to save fileName as a DEX Drive format memory card file
      *  \param fileName file that will be saved
@@ -1044,6 +1049,7 @@ private:
     quint16 ff7Checksum(int s);
     void fix_psv_header(int s);
     void fix_psx_header(int s);
+    void fix_vmp_header(void);
     void fix_vmc_header(void);
     quint16 itemDecode(quint16 itemraw);
     quint16 itemEncode(quint16 id, quint8 qty);

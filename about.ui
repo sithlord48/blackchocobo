@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>714</width>
-    <height>660</height>
+    <height>693</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -121,7 +121,7 @@
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string notr="true">(C) 2010 - 2018 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2020 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
@@ -210,7 +210,12 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>ff7tk: Working PSV Save Signing and Export</string>
+           <string>ff7tk: Fixed VMP signing and export</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ff7tk: Fixed PSV signing and export</string>
           </property>
          </item>
          <item>
