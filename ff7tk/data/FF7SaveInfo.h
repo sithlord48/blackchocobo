@@ -53,6 +53,16 @@ public:
     };
     Q_ENUM(PSXBLOCKTYPE)
 
+    /** \enum PSVINFO
+     *  \brief Extra Header Info used for PSV format
+     */
+    enum class PSVINFO  {
+        SAVETYPE, /**< Type of Save in the file, 0x14 for ps1 0x2C for ps2*/
+        SIZEDISPLAY, /**< Size shown in XMB 4 bytes 00 20 00 00 */
+        SAVESIZE /**< Size of save data 4 bytes match SIZEDISPLAY's value */
+    };
+    Q_ENUM(PSVINFO)
+
     /**
      * @brief Get the FF7SaveInfo Instance.
      * @sa qmlSingletonRegister()
@@ -135,6 +145,12 @@ public:
      */
     Q_INVOKABLE QByteArray signingKey(FF7SaveInfo::FORMAT format) const;
 
+    /**
+     * @brief Extra off set data for psv format
+     * @param PsvInfo offset
+     * @return offset for the type of info requested
+     */
+    Q_INVOKABLE int extraPSVOffsets(FF7SaveInfo::PSVINFO info) const;
 
     /**
      * @brief IV Used to Sign The Format
@@ -176,6 +192,13 @@ public:
      * @return size of 0X10F4
      */
     Q_INVOKABLE int slotSize() const;
+
+    /**
+     * @brief Get a constructed RegExp to check for valid save name
+     * @param format: the format you wish to check .
+     * @return Constructed RegEx
+     */
+    Q_INVOKABLE QRegExp validNameRegExp(FF7SaveInfo::FORMAT format) const;
 
     /**
      * @brief Valid Extensions for the File type

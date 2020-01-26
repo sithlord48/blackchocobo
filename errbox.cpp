@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -28,7 +28,8 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     , btnNext(new QPushButton(QIcon::fromTheme("go-next", QIcon(":/icon/next")), QString()))
     , btnPrev(new QPushButton(QIcon::fromTheme("go-previous", QIcon(":/icon/prev")), QString()))
     , btnView(new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("View Anyway")))
-    , btnExport(new QPushButton(QIcon(":/icon/psxmc"), tr("&Export As Raw PSX")))
+    , btnPsxExport(new QPushButton(QIcon(":/icon/psxmc"), tr("Export as Raw PSX")))
+    , btnPsvExport(new QPushButton(tr("Export as PS&3 Save")))
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
 {
@@ -58,8 +59,10 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     btnNext->setIconSize(iconSize);
     connect(btnNext, &QPushButton::clicked, this, &errbox::btnNextClicked);
 
-    btnExport->setIconSize(iconSize);
-    connect(btnExport, &QPushButton::clicked, this, &errbox::btnExportClicked);
+    btnPsxExport->setIconSize(iconSize);
+    connect(btnPsxExport, &QPushButton::clicked, this, &errbox::btnPsxExportClicked);
+
+    connect(btnPsvExport, &QPushButton::clicked, this, &errbox::btnPsvExportClicked);
 
     QHBoxLayout *slotLayout = new QHBoxLayout;
     slotLayout->setContentsMargins(0, 0, 3, 0);
@@ -67,18 +70,23 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     slotLayout->addWidget(lblIcon);
     slotLayout->addWidget(lblRegionString);
 
-    QHBoxLayout *btnLayout = new QHBoxLayout;
+    auto *navLayout = new QHBoxLayout;
+    navLayout->setSpacing(3);
+    navLayout->addWidget(btnPrev);
+    navLayout->addWidget(btnView);
+    navLayout->addWidget(btnNext);
+
+    auto *btnLayout = new QHBoxLayout;
     btnLayout->setSpacing(3);
-    btnLayout->addWidget(btnPrev);
-    btnLayout->addWidget(btnView);
-    btnLayout->addWidget(btnNext);
+    btnLayout->addWidget(btnPsxExport);
+    btnLayout->addWidget(btnPsvExport);
 
     QVBoxLayout *finalLayout = new QVBoxLayout;
     finalLayout->setContentsMargins(3, 3, 3, 3);
     finalLayout->setSpacing(3);
     finalLayout->addLayout(slotLayout);
+    finalLayout->addLayout(navLayout);
     finalLayout->addLayout(btnLayout);
-    finalLayout->addWidget(btnExport);
     setLayout(finalLayout);
 
     QString Slottext = QString(tr("Slot:%1\n").arg(QString::number(s + 1), 2, QChar('0')));
@@ -87,7 +95,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
             || ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
             || ff7save->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
         btnView->setEnabled(false);
-        btnExport->setEnabled(false);
+        btnLayout->setEnabled(false);
         switch (ff7save->psx_block_type(s)) {
         case char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK):   Slottext.append(tr("       Mid-Linked Block")); break;
         case char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK):  Slottext.append(tr("    Mid-Linked Block (Deleted)")); break;
@@ -140,9 +148,9 @@ void errbox::btnNextClicked()
     done(2);
 }
 
-void errbox::btnExportClicked()
+void errbox::btnPsxExportClicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save Raw PSX File"), ff7save->region(s), tr("All Files(*)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save Raw PSX File"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7save->region(s)), tr("All Files(*)"));
     if (fileName.isEmpty()) {
         return;
     } else {
@@ -155,6 +163,26 @@ void errbox::btnExportClicked()
         }
     }
 }
+
+void errbox::btnPsvExportClicked()
+{
+    QString name = ff7save->region(s).mid(0, 12);
+    name.append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper());
+    name.append(QStringLiteral(".PSV"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save PSV File"), QStringLiteral("%1/%2").arg(QDir::homePath(), name), tr("PSV Files(*.PSV)"));
+    if (fileName.isEmpty()) {
+        return;
+    } else {
+        if (ff7save->exportPS3(s, fileName)) {
+            QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
+            done(3);
+        } else {
+            QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
+            done(3);
+        }
+    }
+}
+
 void errbox::setSingleSlot(bool single)
 {
     if (single) {

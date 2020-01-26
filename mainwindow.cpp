@@ -696,7 +696,7 @@ bool MainWindow::saveFileFull(const QString &fileName)
         ff7->fix_pc_bytemask(s);   //fix starting slot on pc based formats.
     }
 
-    if (ff7->saveFile(fileName)) {
+    if (ff7->saveFile(fileName, s)) {
         //if no save was loaded and new game was clicked be sure to act like a game was loaded.
         if (_init)
             _init = false;

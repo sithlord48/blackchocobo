@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -38,7 +38,8 @@ protected:
 private slots:
     void setIcon(QPixmap);
     void btnPrevClicked();
-    void btnExportClicked();
+    void btnPsxExportClicked();
+    void btnPsvExportClicked();
     void btnViewClicked();
     void btnNextClicked();
 private:
@@ -49,7 +50,8 @@ private:
     QPushButton *btnNext = nullptr;
     QPushButton *btnPrev = nullptr;
     QPushButton *btnView = nullptr;
-    QPushButton *btnExport = nullptr;
+    QPushButton *btnPsxExport = nullptr;
+    QPushButton *btnPsvExport = nullptr;
     QLabel *lblRegionString = nullptr;
     QLabel *lblIcon = nullptr;
 };

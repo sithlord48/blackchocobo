@@ -114,9 +114,10 @@ public:
 
     /** \brief attempt to save fileName as ff7save
      *  \param fileName file that will be saved
+     *  \param slot the slot to be saved in case of single slot export.
      *  \return True if Successful
     */
-    bool saveFile(const QString &fileName);
+    bool saveFile(const QString &fileName, int s = 0);
 
     /** \brief attempt to export a file as ff7save. A convenance function to call the proper export function
     *  \param fileName file that will be saved
@@ -1054,6 +1055,7 @@ private:
     quint16 itemDecode(quint16 itemraw);
     quint16 itemEncode(quint16 id, quint8 qty);
     void vmcRegionEval(int s);
+    int _blocks = 1;
     QVector< SubContainer > parseXML(QString fileName, QString metadataPath, QString UserID);
     QVector< SubContainer > createMetadata(QString fileName, QString UserID);
 
