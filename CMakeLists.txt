@@ -1,45 +1,42 @@
 project( blackchocobo )
-#version number
-# The version number.
 set(blackchocobo_VERSION_MAJOR 1)
 set(blackchocobo_VERSION_MINOR 9)
-set(blackchocobo_VERSION_PATCH 90)
-cmake_minimum_required( VERSION 2.8.11 )
+set(blackchocobo_VERSION_PATCH 93)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set ( CMAKE_BUILD_TYPE Release )
-add_definitions( -c++17)
+cmake_minimum_required( VERSION 3.8 )
+set(REQUIRED_QT_VERSION "5.11.0")
 add_definitions ( -Wall )
-add_definitions (-DEnableopenSSL)
-find_package ( Qt5Widgets REQUIRED )
-find_package ( Qt5Gui REQUIRED )
-find_package ( Qt5Xml REQUIRED )
-find_package (Qt5Core REQUIRED )
 
-if(EnableOpenSSL)
-    find_package ( OpenSSL REQUIRED )
-    add_definitions(-DEnableOpenSSL)
+if(WIN32)
+    if(CMAKE_COMPILER_IS_GNUCC)
+        #Prevent ms padding on packed structures on gcc compiler
+        add_definitions(-mno-ms-bitfields)
+    endif()
+elseif(APPLE)
+    add_definitions(-stdlib=libc++)
 endif()
 
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+        Widgets
+        Gui
+        Xml
+        Quick
+    )
 find_package(Qt5LinguistTools)
-#include ( ${QT_USE_FILE} )
-include_directories (
-	${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
-	${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
-	)
+
 set ( blackchocobo_HDRS
-	version.h
-	qhexedit/chunks.h
-	qhexedit/commands.h
-	qhexedit/qhexedit.h
 	ff7tk/data/Type_FF7CHOCOBO.h
 	ff7tk/data/FF7FieldItemList.h
 	ff7tk/data/Type_materia.h
 	ff7tk/data/Type_FF7CHAR.h
 	ff7tk/data/FF7Save_Types.h
 	ff7tk/data/FF7Save_Const.h
-	ff7tk/data/FF7Materia.h
-	ff7tk/data/FF7Location.h
-	ff7tk/data/FF7Item.h
-	ff7tk/data/FF7Char.h
 	)
 
 set ( blackchocobo_SRCS
@@ -52,9 +49,11 @@ set ( blackchocobo_SRCS
 	qhexedit/chunks.cpp
 	qhexedit/commands.cpp
 	qhexedit/qhexedit.cpp
+        ff7tk/data/crypto/aes.c
 	ff7tk/data/SaveIcon.cpp
 	ff7tk/data/FF7Text.cpp
 	ff7tk/data/FF7Save.cpp
+	ff7tk/data/FF7SaveInfo.cpp
 	ff7tk/data/FF7Materia.cpp
 	ff7tk/data/FF7Location.cpp
 	ff7tk/data/FF7Item.cpp
@@ -86,10 +85,9 @@ set ( blackchocobo_UIS
 	about.ui
 	options.ui
 	)
-QT5_WRAP_UI(UIS ${blackchocobo_UIS})
 
 
-set ( blackchocobo_RSCS
+set ( RESOURCES
 	images.qrc
 	ff7tk/icons/achievements.qrc
 	ff7tk/icons/characters.qrc
@@ -100,8 +98,6 @@ set ( blackchocobo_RSCS
 	ff7tk/icons/materia.qrc
 	ff7tk/icons/psxButtons.qrc
 	)
-QT5_ADD_RESOURCES(RSCS ${blackchocobo_RSCS})
-find_package(Qt5LinguistTools)
 
 set( translatables
     ${blackchocobo_HDRS}
@@ -120,42 +116,9 @@ set ( blackchocobo_TRS
 #qt5_create_translation(TRS ${translatables} ${blackchocobo_TRS})
 
 qt5_add_translation(TRS ${blackchocobo_TRS})
-set ( blackchocobo_MOCS
-	mainwindow.h
-	about.h
-	options.h
-	errbox.h
-        qhexedit/chunks.h
-	qhexedit/qhexedit.h
-        qhexedit/commands.h
-	achievementdialog.h
-	ff7tk/data/FF7Achievements.h
-	ff7tk/data/SaveIcon.h
-	ff7tk/data/FF7Text.h
-	ff7tk/data/FF7Save.h
-	ff7tk/widgets/ItemSelector.h
-	ff7tk/widgets/ItemList.h
-	ff7tk/widgets/MetadataCreator.h
-	ff7tk/widgets/SlotSelect.h
-	ff7tk/widgets/SlotPreview.h
-	ff7tk/widgets/MateriaEditor.h
-	ff7tk/widgets/ItemPreview.h
-	ff7tk/widgets/DialogPreview.h
-	ff7tk/widgets/ChocoboEditor.h
-	ff7tk/widgets/CharEditor.h
-	ff7tk/widgets/PhsListWidget.h
-	ff7tk/widgets/DoubleCheckBox.h
-	ff7tk/widgets/MenuListWidget.h
-	ff7tk/widgets/OptionsWidget.h
-	ff7tk/widgets/ChocoboManager.h
-	ff7tk/widgets/ChocoboLabel.h
-	ff7tk/widgets/LocationViewer.h
-	ff7tk/widgets/AchievementEditor.h
-	)
-QT5_WRAP_CPP(MOCS ${blackchocobo_MOCS})
 
-add_executable ( blackchocobo ${blackchocobo_SRCS} ${UIS} ${RSCS} ${TRS} ${MOCS} )
-target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets ${OPENSSL_LIBRARIES} )
+add_executable ( blackchocobo ${blackchocobo_SRCS} ${RESOURCES} ${TRS} )
+target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick )
 
 #install stuff
 INCLUDE (InstallRequiredSystemLibraries)
@@ -210,7 +173,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}-src")
 	  SET(CPACK_DEBIAN_PACKAGE_SECTION games)
 	  SET(CPACK_DEBIAN_PACKAGE_PRIORITY extra)
-	  SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libqtcore5,libqtgui5,libqt5-xml,libqt5widgets, libssl1.0.0")
+	  SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libqtcore5,libqtgui5,libqt5-xml,libqt5widgets")
 
 	  SET(CPACK_RPM_PACKAGE_SUMMARY CPACK_PACKAGE_DESCRIPTION_SUMMARY)
 	  SET(CPACK_RPM_PACKAGE_NAME CPACK_PACKAGE_NAME)
@@ -220,7 +183,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	  SET(CPACK_RPM_PACKAGE_GROUP games)
 	  SET(CPACK_RPM_PACKAGE_VENDOR)
 	  SET(CPACK_RPM_PACKAGE_DESCRIPTION)
-	  SET(CPACK_RPM_PACKAGE_REQUIRES "qt,openssl")
+	  SET(CPACK_RPM_PACKAGE_REQUIRES "qt")
 endif()
 
 INCLUDE (CPack)
