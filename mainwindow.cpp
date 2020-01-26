@@ -649,15 +649,15 @@ bool MainWindow::on_actionSave_File_As_triggered()
     QMap<QString, FF7SaveInfo::FORMAT> typeMap;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::SWITCH)] = FF7SaveInfo::FORMAT::SWITCH;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VMC)] = FF7SaveInfo::FORMAT::VMC;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VGS)] = FF7SaveInfo::FORMAT::VGS;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::DEX)] = FF7SaveInfo::FORMAT::DEX;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSP)] = FF7SaveInfo::FORMAT::PSP;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
     QString types = typeMap.keys().join(";;");
     QString fileName;
-    QString selectedType = typeMap.key(ff7->format(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC));
+    QString selectedType = typeMap.key(ff7->format(), QString());
     QString path;
 
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
@@ -670,11 +670,44 @@ bool MainWindow::on_actionSave_File_As_triggered()
     if (path.isEmpty())
         path = QDir::homePath();
 
-    fileName = QFileDialog::getSaveFileName(this, "Select A File To Save", path, types, &selectedType);
+    auto saveDialog = new QFileDialog(this, tr("Select A File to Save As"), path, types);
+    saveDialog->setAttribute(Qt::WA_DeleteOnClose);
+    saveDialog->selectNameFilter(selectedType);
+    saveDialog->setFileMode(QFileDialog::AnyFile);
+    saveDialog->setAcceptMode(QFileDialog::AcceptSave);
+
+    QString nameTemplate = QStringLiteral("%1/%2");
+
+    connect(saveDialog, &QFileDialog::filterSelected, this, [typeMap, saveDialog, nameTemplate, this](const QString &filter){
+        QString name;
+        if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" ")))
+            name = ff7->region(s);
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" ")))
+            name = ff7->region(s).mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7->region(s).mid(12)).toHex().toUpper());
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PC).join(" ")))
+            name = QStringLiteral("save00");
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::SWITCH).join(" ")))
+            name = QStringLiteral("ff7slot00");
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSP).join(" ")))
+            name = QStringLiteral("SCEVMC0");
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VMC).join(" ")))
+            name = QStringLiteral("vmcCard");
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::DEX).join(" ")))
+            name = QStringLiteral("dexCard");
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VGS).join(" ")))
+            name = QStringLiteral("vgsCard");
+        saveDialog->selectFile(nameTemplate.arg(saveDialog->directory().path(), name));
+    });
+
+    connect(saveDialog, &QFileDialog::fileSelected, this, [saveDialog, &fileName, &selectedType](const QString &fileSelected){
+        selectedType = saveDialog->selectedNameFilter();
+        fileName = fileSelected;
+    });
+
+    saveDialog->exec();
 
     if (fileName.isEmpty())
         return false;
-
     FF7SaveInfo::FORMAT newType = typeMap[selectedType];
 
     if (ff7->format() == newType)
