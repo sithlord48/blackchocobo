@@ -104,7 +104,10 @@ void MainWindow::initDisplay()
 #ifdef Q_OS_MAC
     hexEditor->setFont(this->font());
 #endif
-    hexEditor->setReadOnly(false);
+    hexEditor->setAddressAreaColor(palette().alternateBase().color());
+    hexEditor->setHighlightingColor(palette().linkVisited().color());
+    hexEditor->setSelectionColor(palette().highlight().color());
+    hexEditor->setHexCaps(true);
     QVBoxLayout *hexLayout = new QVBoxLayout;
     hexLayout->setContentsMargins(0, 0, 0, 0);
     hexLayout->addWidget(hexEditor);
