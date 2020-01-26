@@ -1601,7 +1601,7 @@ void MainWindow::guirefresh(bool newgame)
     /*~~~~Check for SG type and ff7~~~~*/
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
             ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH)
-             && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
+             && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)) && (ff7->psx_block_type(s) != '\x00'))) {
         CheckGame();//Not FF7! Handled By CheckGame()
     } else {
         //IS FF7 Slot
