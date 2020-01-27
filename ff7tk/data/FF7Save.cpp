@@ -403,7 +403,6 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
 
     if (isFF7(s)) {
         int slot = fileName.mid(fileName.lastIndexOf('S') +1, 2).toInt() - 1;
-        qDebug() << "SLOT NUMBER" << slot << "FILENAME" << fileName;
         if (slot < 0 || slot > 14)
             return false;
         setSlotHeader(s, FF7SaveInfo::instance()->slotHeader(FF7SaveInfo::FORMAT::PSX, slot));
@@ -669,8 +668,15 @@ void FF7Save::importSlot(int s, QString fileName, int fileSlot)
         offset = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::VMC) + FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::VMC);
         offset += (0x2000 * fileSlot);
     } else if ((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PS3)) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3)) {
-        inType = FF7SaveInfo::FORMAT::PS3;
-        offset = FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PS3) + FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PS3);
+        char psvType = file.peek(0x40).at(FF7SaveInfo::instance()->extraPSVOffsets(FF7SaveInfo::PSVINFO::SAVETYPE));
+        if (psvType == 0x14) {
+            inType = FF7SaveInfo::FORMAT::PS3;
+            offset = FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PS3) + FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PS3);
+        } else {
+            qInfo() << tr("Unable to open PSV of Type %2: 0x%1").arg(psvType, 2, 16, QChar('0')).arg(psvType == 0x14 ? QStringLiteral("PSX") : psvType == 0x2C ? QStringLiteral ("PS2") : QStringLiteral("Unknown"));
+            file.close();
+            return;
+        }
     } else if ((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSP)) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP)) {
         inType = FF7SaveInfo::FORMAT::PSP;
         offset = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PSP) + FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PSP);
@@ -693,42 +699,22 @@ void FF7Save::importSlot(int s, QString fileName, int fileSlot)
 
     /*~~~~~Set Region Data~~~~~~~~~*/
     if (inType == FF7SaveInfo::FORMAT::PC || inType == FF7SaveInfo::FORMAT::SWITCH) {
-        if (slot[s].checksum != 0x0000 && slot[s].checksum != 0x4D1D) {
+        if (slot[s].checksum != 0x0000 && slot[s].checksum != 0x4D1D)
             setRegion(s, QString("BASCUS-94163FF7-S%1").arg(QString::number(s).toInt(), 2, 10, QChar('0').toUpper()));
-        } else {
+        else
             setRegion(s, QString());
-        }
     } else if (inType == FF7SaveInfo::FORMAT::VMC || inType == FF7SaveInfo::FORMAT::PSP || inType == FF7SaveInfo::FORMAT::VGS || inType == FF7SaveInfo::FORMAT::DEX) {
-
         QByteArray mc_header;
         offset = 0;//raw psx card types
-        int headerSize = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::VMC);
-        if (inType == FF7SaveInfo::FORMAT::PSP) {
-            offset = 0x80;
-            headerSize = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PSP);
-        }
-        if (inType == FF7SaveInfo::FORMAT::VGS) {
-            offset = 0x40;
-            headerSize = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::VGS);
-        }
-        if (inType == FF7SaveInfo::FORMAT::DEX) {
-            offset = 0xF40;
-            headerSize = FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::DEX);
-        }
+        int headerSize = FF7SaveInfo::instance()->fileHeaderSize(inType);
+        offset = FF7SaveInfo::instance()->fileHeaderSize(inType) - 0x2000;
         file.seek(offset);
         mc_header = file.read(headerSize);
         int index = 0;
         index = (128 * fileSlot) + 138;
         setRegion(s, QString(mc_header.mid(index, 19)));
     } else if (inType == FF7SaveInfo::FORMAT::PSX) {
-        if ((file.fileName().contains("00867")) || (file.fileName().contains("00869")) || (file.fileName().contains("00900")) ||
-                (file.fileName().contains("94163")) || (file.fileName().contains("00700")) || (file.fileName().contains("01057")) || (file.fileName().contains("00868"))) {
-            QString string;
-            string = file.fileName().mid(file.fileName().lastIndexOf("/") + 1, file.fileName().lastIndexOf(".") - 1 - file.fileName().lastIndexOf("/"));
-            setRegion(s, string.mid(string.lastIndexOf("BA") - 1, string.lastIndexOf("FF7-S") + 8));
-        } else {
-            setRegion(s, QString());
-        }
+        setRegion(s, QFileInfo(file).fileName());
     } else if (inType == FF7SaveInfo::FORMAT::PS3) {
         file.seek(0x64);
         setRegion(s, QString(file.read(19)));
@@ -753,13 +739,7 @@ void FF7Save::clearSlot(int rmslot)
     if (fileFormat == FF7SaveInfo::FORMAT::VMC || fileFormat == FF7SaveInfo::FORMAT::PSP || fileFormat == FF7SaveInfo::FORMAT::VGS || fileFormat == FF7SaveInfo::FORMAT::DEX) {
         //clean the mem card header if needed.
         int index = (128 + (128 * rmslot));
-        if (fileFormat == FF7SaveInfo::FORMAT::PSP) {
-            index += 0x80;
-        } else if (fileFormat == FF7SaveInfo::FORMAT::VGS) {
-            index += 0x40;
-        } else if (fileFormat == FF7SaveInfo::FORMAT::DEX) {
-            index += 0xF40;
-        }
+        index += FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
         QByteArray temp(128, 0x00);
         temp[0] = '\xA0';
         temp[8] = '\xFF';
@@ -1100,7 +1080,7 @@ void FF7Save::fix_vmc_header(void)
         index += FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
         if (isFF7(i)) {
             mc_header_2.replace(index, 10, (QByteArray::fromRawData("\x51\x00\x00\x00\x00\x20\x00\x00\xFF\xFF", 10)));
-            mc_header_2.replace(index + 10, region(i).length(), QByteArray(region(i).toLocal8Bit()));
+            mc_header_2.replace(index + 10, region(i).length(), region(i).toLatin1());
             xor_byte = 0x00;
             for (int x = 0; x < 127; x++) {
                 xor_byte ^= mc_header_2[x + index];
@@ -1135,14 +1115,18 @@ void FF7Save::fix_vmc_header(void)
 
 void FF7Save::setSaveNumber(int s, int saveNum)
 {
-    if (FF7SaveInfo::instance()->slotCount(fileFormat) == 1 || fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH)
+    if (!isFF7(s))
         return;
 
-    if (isFF7(s)) {
-        SG_Region_String[s].chop(2);
-        SG_Region_String[s].append(QString("%1").arg(QString::number(saveNum), 2, QChar('0')));
-        fix_vmc_header();
-    }
+    SG_Region_String[s] = region(s).mid(0, region(s).size() - 2).append(QString("%1").arg(QString::number(saveNum), 2, QChar('0')));
+    switch(format()) {
+        default: break;
+        case FF7SaveInfo::FORMAT::VMC:
+        case FF7SaveInfo::FORMAT::DEX:
+        case FF7SaveInfo::FORMAT::VGS: fix_vmc_header(); break;
+        case FF7SaveInfo::FORMAT::PSP: fix_vmp_header(); break;
+        case FF7SaveInfo::FORMAT::PS3: fix_psv_header(s); break;
+   }
 }
 
 QString FF7Save::region(int s)
@@ -1306,37 +1290,26 @@ quint8 FF7Save::psx_block_size(int s)
 
 QString FF7Save::psxDesc(int s)
 {
-    QByteArray desc;
-    QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-    desc = slotHeader(s).mid(4, 64);
+    QByteArray desc = slotHeader(s).mid(4, 64);
+
     int index;
-    if ((index = desc.indexOf('\x00')) != -1) {
+    if ((index = desc.indexOf('\x00')) != -1)
         desc.truncate(index);
-    }
-    if (codec == 0) {
-        return "";   //if the codec can't be loaded for some reason.
-    } else {
-        return codec->toUnicode(desc);
-    }
+
+    return QTextCodec::codecForName("Shift-JIS")->toUnicode(desc);
 }
+
 void FF7Save::setPsxDesc(QString newDesc, int s)
 {
-    QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
-    if (codec == 0) {
-        qDebug() << "Failed to Load Codec";
-        return;
-    }//if the codec can't be loaded for some reason.
-    QByteArray temp = codec->fromUnicode(newDesc);
-
+    QByteArray temp = QTextCodec::codecForName("Shift-JIS")->fromUnicode(newDesc);
     QByteArray codedText;
     codedText.fill('\x00', 64);
     codedText.replace(0, temp.size(), temp);
 
     QByteArray header = slotHeader(s);
     header.replace(4, 64, codedText);
-    if (setSlotHeader(s, header)) {
+    if (setSlotHeader(s, header))
         setFileModified(true, s);
-    }
 }
 
 bool FF7Save::isFileModified(void)

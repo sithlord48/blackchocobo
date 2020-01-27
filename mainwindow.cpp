@@ -82,6 +82,8 @@ void MainWindow::populateLanguageMenu()
 }
 void MainWindow::initDisplay()
 {
+    ui->linePsxDesc->setReadOnly(true);
+
     QHBoxLayout *phsLayout = new QHBoxLayout;
     phsLayout->addWidget(phsList);
     ui->Phs_Box->setLayout(phsLayout);
@@ -3039,11 +3041,9 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
 {
     if (!load) {
-        if (!ff7->region(s).isEmpty()) {
-            ff7->setSaveNumber(s, index + 1);
-            if (ff7->format() == FF7SaveInfo::FORMAT::VMC || ff7->format() == FF7SaveInfo::FORMAT::PSP || ff7->format() == FF7SaveInfo::FORMAT::VGS || ff7->format() == FF7SaveInfo::FORMAT::DEX) {
-                guirefresh(0);
-            }
+        if (ff7->isFF7(s)) {
+            ff7->setSaveNumber(s, index);
+            guirefresh(0);
         }
     }
 }
