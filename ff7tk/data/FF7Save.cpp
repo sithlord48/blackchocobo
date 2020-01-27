@@ -91,7 +91,6 @@ bool FF7Save::loadFile(const QString &fileName)
 
     else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
         SG_Region_String[0] = QFileInfo(file).fileName();
-
         for (int i = 1; i < 15; i++) {
             clearSlot(i);
         }
@@ -107,16 +106,7 @@ bool FF7Save::loadFile(const QString &fileName)
 
     else if (fileFormat == FF7SaveInfo::FORMAT::VMC || fileFormat == FF7SaveInfo::FORMAT::PSP || fileFormat == FF7SaveInfo::FORMAT::VGS || fileFormat == FF7SaveInfo::FORMAT::DEX) {
         QByteArray mc_header;
-        int offset = 0;
-        if (fileFormat == FF7SaveInfo::FORMAT::PSP) {
-            offset = 0x80;
-        }
-        if (fileFormat == FF7SaveInfo::FORMAT::VGS) {
-            offset = 0x40;
-        }
-        if (fileFormat == FF7SaveInfo::FORMAT::DEX) {
-            offset = 0xF40;
-        }
+        int offset = FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
         file.seek(offset);
         mc_header = file.read(FF7SaveInfo::instance()->fileHeaderSize(fileFormat));
         for (int i = 0; i < 15; i++) {
@@ -233,21 +223,22 @@ bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
 }
 bool FF7Save::saveFile(const QString &fileName, int slot)
 {
-    if (fileName.isEmpty()) {
+    if (fileName.isEmpty())
         return false;
-    }
+
     checksumSlots();
     //fix our headers before saving
-    if (fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH) {/*PC Header Should be Fixed By Host*/}
-    else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
+    if (fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH)
+        fix_pc_bytemask(slot);
+    else if (fileFormat == FF7SaveInfo::FORMAT::PSX)
         fix_psx_header(slot);
-    } else if (fileFormat == FF7SaveInfo::FORMAT::PS3) {
+    else if (fileFormat == FF7SaveInfo::FORMAT::PS3)
         fix_psv_header(slot);
-    } else if (fileFormat == FF7SaveInfo::FORMAT::PSP) {
+    else if (fileFormat == FF7SaveInfo::FORMAT::PSP)
         fix_vmp_header();
-    } else {
+    else
         fix_vmc_header();
-    }
+
     // write the file
     QFile file(fileName);
     if (!file.open(QIODevice::ReadWrite)) {
@@ -1392,15 +1383,14 @@ int FF7Save::numberOfSlots(void)
     return FF7SaveInfo::instance()->slotCount(fileFormat);   //Return number of slots in the file_footer_dex
 }
 
-void FF7Save::newGame(int s, QString fileName)
+void FF7Save::newGame(int s, const QString &region, const QString &fileName)
 {
     if (fileName.isEmpty() || fileName.isNull()) {
         memcpy(&slot[s], defaultSave, size_t(FF7SaveInfo::instance()->slotSize()));
     } else {
         QFile file(fileName);
-        if (!file.open(QFile::ReadOnly)) {
+        if (!file.open(QFile::ReadOnly))
             return;
-        }
         QByteArray ff7file;
         ff7file = file.readAll(); //put all data in temp raw file
         QByteArray temp; // create a temp to be used when needed
@@ -1408,10 +1398,12 @@ void FF7Save::newGame(int s, QString fileName)
         temp = ff7file.mid(index, FF7SaveInfo::instance()->slotSize());
         memcpy(&slot[s], temp, size_t(FF7SaveInfo::instance()->slotSize()));
     }
+    setRegion(s, region);
     if (isJPN(s)) {
-        for (int c = 0; c < 9; c++) {
-            setCharName(s, c, "\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff");   // clear all names.
-        }
+        QByteArray emptyName = QByteArray('\xFF', 13);
+        for (int c = 0; c < 9; c++)
+            setCharName(s, c, emptyName);   // clear all names.
+
         FF7TEXT::instance()->setJapanese(true);
         setCharName(s, 0, QString::fromUtf8("元ソルジャー"));
         setCharName(s, 1, QString::fromUtf8("バレット"));
@@ -1425,7 +1417,7 @@ void FF7Save::newGame(int s, QString fileName)
         setDescName(s, QString::fromUtf8("元ソルジャー"));
         setDescLocation(s, QString::fromUtf8("１番街駅ホーム"));
         setLocation(s, QString::fromUtf8("１番街駅ホーム"));
-    } else if (region(s).isEmpty()) {
+    } else if (this->region(s).isEmpty()) {
         setRegion(s, QString("BASCUS-94163FF7-S%1").arg(QString::number(s + 1), 2, QChar('0')));
         FF7TEXT::instance()->setJapanese(false);
     }

@@ -4,8 +4,7 @@
         <file alias="prev">icon/previous.png</file>
         <file alias="next">icon/next.png</file>
         <file alias="config">icon/config.png</file>
-        <file alias="bchoco">icon/bchoco.png</file>
-        <file alias="qt_logo">icon/qt_logo.png</file>
+        <file alias="bchoco">icon/Black_Chocobo.png</file>
         <file alias="slot_sel">icon/slot_sel.png</file>
         <file alias="def_save">icon/default_save.png</file>
         <file alias="new_plus">icon/new_plus.png</file>

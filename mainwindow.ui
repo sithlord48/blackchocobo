@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>0</width>
-    <height>0</height>
+    <width>1146</width>
+    <height>1051</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,6 +19,18 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_24">
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
@@ -982,7 +994,7 @@
               <bool>false</bool>
              </attribute>
              <attribute name="verticalHeaderDefaultSectionSize">
-              <number>22</number>
+              <number>36</number>
              </attribute>
              <column>
               <property name="text">
@@ -1079,8 +1091,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>0</width>
-             <height>0</height>
+             <width>1130</width>
+             <height>814</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1123,8 +1135,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>938</width>
-             <height>521</height>
+             <width>707</width>
+             <height>520</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1175,8 +1187,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>305</width>
-                 <height>615</height>
+                 <width>420</width>
+                 <height>1109</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
@@ -2985,8 +2997,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>594</width>
-                  <height>3028</height>
+                  <width>561</width>
+                  <height>2721</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -4534,7 +4546,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 <bool>false</bool>
                </attribute>
                <attribute name="verticalHeaderDefaultSectionSize">
-                <number>22</number>
+                <number>36</number>
                </attribute>
                <attribute name="verticalHeaderHighlightSections">
                 <bool>true</bool>
@@ -5648,12 +5660,11 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     <width>64</width>
                     <height>64</height>
                    </size>
-                 </property>
+                  </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="lblSlotSize">
-                 </widget>
+                 <widget class="QLabel" name="lblSlotSize"/>
                 </item>
                </layout>
               </item>
@@ -6691,7 +6702,7 @@ rgb(255, 255, 255)</string>
                   <enum>Qt::ScrollBarAlwaysOff</enum>
                  </property>
                  <attribute name="horizontalHeaderDefaultSectionSize">
-                  <number>32</number>
+                  <number>69</number>
                  </attribute>
                  <attribute name="horizontalHeaderHighlightSections">
                   <bool>false</bool>
@@ -6700,7 +6711,7 @@ rgb(255, 255, 255)</string>
                   <bool>false</bool>
                  </attribute>
                  <attribute name="verticalHeaderDefaultSectionSize">
-                  <number>16</number>
+                  <number>36</number>
                  </attribute>
                  <column>
                   <property name="text">
@@ -6724,7 +6735,7 @@ rgb(255, 255, 255)</string>
                  </column>
                  <column>
                   <property name="text">
-                    <string/>
+                   <string/>
                   </property>
                  </column>
                 </widget>
@@ -6949,7 +6960,7 @@ Var And Scrolling Synced To Left Table</string>
                   <enum>Qt::ScrollBarAlwaysOff</enum>
                  </property>
                  <attribute name="horizontalHeaderDefaultSectionSize">
-                  <number>32</number>
+                  <number>69</number>
                  </attribute>
                  <attribute name="horizontalHeaderHighlightSections">
                   <bool>false</bool>
@@ -6958,7 +6969,7 @@ Var And Scrolling Synced To Left Table</string>
                   <bool>false</bool>
                  </attribute>
                  <attribute name="verticalHeaderDefaultSectionSize">
-                  <number>16</number>
+                  <number>36</number>
                  </attribute>
                  <column>
                   <property name="text">
@@ -7005,8 +7016,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1306</width>
-     <height>42</height>
+     <width>1146</width>
+     <height>37</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -7048,16 +7059,9 @@ Var And Scrolling Synced To Left Table</string>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
-     <string>&amp;Options</string>
+     <string>Settings</string>
     </property>
-    <widget class="QMenu" name="menuLang">
-     <property name="title">
-      <string>&amp;Language</string>
-     </property>
-    </widget>
-    <addaction name="action_auto_char_growth"/>
     <addaction name="separator"/>
-    <addaction name="menuLang"/>
     <addaction name="separator"/>
     <addaction name="actionShow_Options"/>
    </widget>
@@ -7285,7 +7289,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
    </property>
    <property name="text">
-    <string>&amp;More Options...</string>
+    <string>Configure...</string>
    </property>
    <property name="menuRole">
     <enum>QAction::PreferencesRole</enum>
@@ -7543,8 +7547,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_sec</tabstop>
  </tabstops>
  <resources>
-  <include location="images.qrc"/>
   <include location="ff7tk/icons/common.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>

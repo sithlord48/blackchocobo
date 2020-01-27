@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadBasicSettings();
     populateLanguageMenu();
     initDisplay();
-    setScale(settings->value(QStringLiteral("scale")).toDouble());
+    setScale(settings->value(SETTINGS::SCALE).toDouble());
     populateCombos();
     init_style();
     loadChildWidgetSettings();
@@ -61,21 +61,17 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::populateLanguageMenu()
 {
-    ui->menuLang->clear();
     m_translations.clear();
-    QDir dir(QStringLiteral("%1/lang").arg(settings->value(QStringLiteral("langPath")).toString()));
+    QDir dir(QStringLiteral("%1/lang").arg(settings->value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         m_translations.insert(lang, translator);
-        auto langAction = ui->menuLang->addAction(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"));
-        langAction->setData(lang);
-        langAction->setCheckable(true);
-        langAction->setChecked(settings->value(QStringLiteral("lang"), QStringLiteral("en")).toString() == lang);
-        if (langAction->isChecked()) {
-            settings->setValue(QStringLiteral("lang"), lang);
+        bool currentLang = (settings->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        if (currentLang) {
+            settings->setValue(SETTINGS::LANG, lang);
             QApplication::installTranslator(translator);
         }
     }
@@ -115,7 +111,7 @@ void MainWindow::initDisplay()
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 
-    double scale = settings->value(QStringLiteral("scale")).toDouble();
+    double scale = settings->value(SETTINGS::SCALE).toDouble();
     char_editor = new CharEditor(scale);
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
     char_editor_layout->setContentsMargins(0, 0, 0, 0);
@@ -130,7 +126,7 @@ void MainWindow::initDisplay()
     ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
     locationViewer = new LocationViewer(scale);
-    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(settings->value(QStringLiteral("langPath")).toString()));
+    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(settings->value(SETTINGS::LANGPATH).toString()));
     locationViewer->setRegion("BASCUS-94163FF7-S00");
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0, 0, 0, 0);
@@ -220,6 +216,7 @@ void MainWindow::setScale(double scale)
     ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(), int(74 * scale));
     ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     materia_editor->setStarsSize(int(48 * scale));
+    guirefresh(0);
 }
 
 void MainWindow::populateCombos()
@@ -278,8 +275,6 @@ void MainWindow::init_style()
 
 void MainWindow::init_connections()
 {
-    connect(ui->menuLang, &QMenu::triggered, this, &MainWindow::changeLanguage);
-
     connect(ui->tbl_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::setValue);
     connect(ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_unknown->verticalScrollBar(), &QScrollBar::setValue);
 
@@ -386,67 +381,65 @@ void MainWindow::init_connections()
     connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
     connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
 }
+
 void MainWindow::loadBasicSettings()
 {
-
 #ifdef STATIC
     settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
 #else //STATIC
-    if (QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists()) {
+    if (QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists())
         settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
-    } else {
+    else
         settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
-    }
 #endif //STATIC
 
 #ifdef Q_OS_UNIX
 #ifndef Q_OS_MAC
-    if (QCoreApplication::applicationDirPath().startsWith("/usr/bin")) {
-        //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
-        settings->setValue("langPath", QStringLiteral("/usr/share/blackchocobo"));
-    } else {
-        settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
-    }
+    //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
+    if (QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
+        settings->setValue(SETTINGS::LANGPATH, QStringLiteral("/usr/share/blackchocobo"));
+    else
+        settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
 #endif
 #else
-    settings->setValue(QStringLiteral("langPath"), QCoreApplication::applicationDirPath());
+    settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
 #endif
-
-    settings->setValue(QStringLiteral("scale"), settings->value(QStringLiteral("scale"), std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0)).toDouble());
-
     //are any empty? if so set them accordingly.
-    if (settings->value("autochargrowth").isNull()) {
-        settings->setValue("autochargrowth", true);
-    }
-    if (settings->value("load_path").isNull()) {
-        settings->setValue("load_path", QDir::homePath());
-    }
-    if (settings->value("char_stat_folder").isNull()) {
-        settings->setValue("char_stat_folder", QDir::homePath());
-    }
-    if (settings->value("editableCombos").isNull()) {
-        settings->setValue("editableCombos", true);
-    }
 
-    ui->action_auto_char_growth->setChecked(settings->value("autochargrowth").toBool());
-    restoreGeometry(settings->value("MainGeometry").toByteArray());
+    if (settings->value(SETTINGS::SCALE).isNull())
+        settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
+
+    if (settings->value(SETTINGS::LOADPATH).isNull())
+        settings->setValue(SETTINGS::LOADPATH, QDir::homePath());
+
+    if (settings->value(SETTINGS::STATFOLDER).isNull())
+        settings->setValue(SETTINGS::STATFOLDER, QDir::homePath());
+
+    if (settings->value(SETTINGS::EDITABLECOMBOS).isNull())
+        settings->setValue(SETTINGS::EDITABLECOMBOS, true);
+
+    if (settings->value(SETTINGS::REGION).isNull())
+        settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
+
+    restoreGeometry(settings->value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
+
 void MainWindow::loadChildWidgetSettings()
 {
-    char_editor->setEditableComboBoxes(settings->value("editableCombos").toBool());
-    materia_editor->setEditableMateriaCombo(settings->value("editableCombos").toBool());
-    itemlist->setEditableItemCombo(settings->value("editableCombos").toBool());
-    skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
-    char_editor->setAdvancedMode(settings->value("charEditorAdvanced").toBool());
-    chocoboManager->setAdvancedMode(settings->value("chocoboEditorAdvanced").toBool());
-    locationViewer->setAdvancedMode(settings->value("locationViewerAdvanced").toBool());
-    ui->tabWidget->setTabEnabled(9, settings->value("show_test").toBool());
-    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
-        setControllerMappingVisible(settings->value("optionsShowMapping").toBool());
-    }
-    ui->bm_unknown->setVisible(settings->value("gameProgressAdvanced").toBool());
-    ui->bh_id->setVisible(settings->value("worldMapAdvanced").toBool());
-    ui->leader_id->setVisible(settings->value("worldMapAdvanced").toBool());
+    char_editor->setEditableComboBoxes(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
+    materia_editor->setEditableMateriaCombo(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
+    itemlist->setEditableItemCombo(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
+    char_editor->setAdvancedMode(settings->value(SETTINGS::CHARADVANCED).toBool());
+    char_editor->setAutoLevel(settings->value(SETTINGS::AUTOGROWTH).toBool());
+    char_editor->setAutoStatCalc(settings->value(SETTINGS::AUTOGROWTH).toBool());
+    chocoboManager->setAdvancedMode(settings->value(SETTINGS::CHOCOADVANCED).toBool());
+    locationViewer->setAdvancedMode(settings->value(SETTINGS::LOCVIEWADVANCED).toBool());
+    ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST).toBool());
+    if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
+        setControllerMappingVisible(settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool());
+    ui->bm_unknown->setVisible(settings->value(SETTINGS::PROGRESSADVANCED).toBool());
+    ui->bh_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED).toBool());
+    ui->leader_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED).toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -508,15 +501,15 @@ void MainWindow::closeEvent(QCloseEvent *e)
         else
             e->accept();
     }
-    settings->setValue("MainGeometry", saveGeometry());
+    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 void MainWindow::resizeEvent(QResizeEvent *)
 {
-    settings->setValue("MainGeometry", saveGeometry());
+    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 void MainWindow::moveEvent(QMoveEvent *)
 {
-    settings->setValue("MainGeometry", saveGeometry());
+    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_triggered()
@@ -526,7 +519,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
             return;//cancel load.
     }
     QString fileName = QFileDialog::getOpenFileName(this,
-                       tr("Open Final Fantasy 7 Save"), settings->value("load_path").toString(),
+                       tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         loadFileFull(fileName, 0);
@@ -577,14 +570,14 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 {
 
     QString fileName = QFileDialog::getOpenFileName(this,
-                       tr("Open Final Fantasy 7 Save"), settings->value("load_path").toString(),
+                       tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         FF7Save *tempSave = new FF7Save();
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
             if (tempSave->format() != FF7SaveInfo::FORMAT::PS3 && tempSave->format() != FF7SaveInfo::FORMAT::PSX) {
-                SlotSelect *SSelect = new SlotSelect(settings->value(QStringLiteral("scale")).toDouble(), tempSave, false);
+                SlotSelect *SSelect = new SlotSelect(settings->value(SETTINGS::SCALE).toDouble(), tempSave, false);
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     on_actionImport_Slot_From_File_triggered();
@@ -605,7 +598,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), settings->value("char_stat_folder").toString(), tr("FF7 Character Stat File(*.char)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty()) {
         return;
     } else {
@@ -629,7 +622,7 @@ void MainWindow::on_actionImport_char_triggered()
 void MainWindow::on_actionExport_char_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-                       tr("Save FF7 Character File"), settings->value("char_stat_folder").toString(),
+                       tr("Save FF7 Character File"), settings->value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
         if (ff7->exportCharacter(s, curchar, fileName))
@@ -663,11 +656,11 @@ bool MainWindow::on_actionSave_File_As_triggered()
     QString path;
 
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
-            path = settings->value("save_pc_path").toString();
+            path = settings->value(SETTINGS::PCSAVEPATH).toString();
     else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
              || (ff7->format() == FF7SaveInfo::FORMAT::VGS)
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
-        path = settings->value("save_emu_path").toString();
+        path = settings->value(SETTINGS::EMUSAVEPATH).toString();
 
     if (path.isEmpty())
         path = QDir::homePath();
@@ -727,10 +720,6 @@ bool MainWindow::on_actionSave_File_As_triggered()
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 bool MainWindow::saveFileFull(const QString &fileName)
 {
-    if ((ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH) && !(settings->value("skip_slot_mask").toBool())) {
-        ff7->fix_pc_bytemask(s);   //fix starting slot on pc based formats.
-    }
-
     if (ff7->saveFile(fileName, s)) {
         //if no save was loaded and new game was clicked be sure to act like a game was loaded.
         if (_init)
@@ -748,11 +737,13 @@ bool MainWindow::saveFileFull(const QString &fileName)
 
 void MainWindow::on_actionNew_Game_triggered()
 {
-    QString save_name;
-    if (settings->value("override_default_save").toBool()) {
-        save_name = settings->value("default_save_file").toString();
-    }
-    ff7->newGame(s, save_name);//call the new game function
+    QString save_name = settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
+                settings->value(SETTINGS::DEFAULTSAVE).toString() : QString();
+
+    QString region = ff7->region(s).isEmpty() ?
+                settings->value(SETTINGS::REGION).toString() : ff7->region(s);
+
+    ff7->newGame(s, region, save_name);//call the new game function
     ui->statusBar->showMessage(tr("New Game Created - Using: %1")
                                .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
     _init = false;
@@ -763,8 +754,8 @@ void MainWindow::on_actionNew_Game_triggered()
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
     QString save_name;
-    if (settings->value("override_default_save").toBool())
-        save_name = settings->value("default_save_file").toString();
+    if (settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
+        save_name = settings->value(SETTINGS::DEFAULTSAVE).toString();
 
     ff7->newGamePlus(s, ff7->fileName(), save_name);
     ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
@@ -819,8 +810,13 @@ void MainWindow::on_actionPaste_Slot_triggered()
 void MainWindow::on_actionShow_Options_triggered()
 {
     Options odialog(this, settings);
-    odialog.exec();
-    loadChildWidgetSettings();
+    connect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
+    odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((height() - odialog.sizeHint().height()) / 2));
+    if (odialog.exec()) {
+        setScale(settings->value(SETTINGS::SCALE).toDouble());
+        loadChildWidgetSettings();
+    }
+    disconnect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
 }
 void MainWindow::on_actionCreateNewMetadata_triggered()
 {
@@ -830,7 +826,7 @@ void MainWindow::on_actionCreateNewMetadata_triggered()
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
-    SlotSelect slotselect(settings->value(QStringLiteral("scale")).toDouble(), ff7, true);
+    SlotSelect slotselect(settings->value(SETTINGS::SCALE).toDouble(), ff7, true);
     int i = slotselect.exec();
     if (i == -1) {
         on_actionOpen_Save_File_triggered();
@@ -860,30 +856,14 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     ff7->setFileModified(c2, s);
 }
 
-void MainWindow::on_action_auto_char_growth_triggered(bool checked)
-{
-    if (checked) {
-        settings->setValue("autochargrowth", 1);
-        if (!load) {
-            char_editor->setAutoLevel(1);
-            char_editor->setAutoStatCalc(1);
-        }
-    } else {
-        settings->setValue("autochargrowth", 0);
-        char_editor->setAutoLevel(0); char_editor->setAutoStatCalc(0);
-    }
-}
-
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
 
-void MainWindow::changeLanguage(QAction *action)
+void MainWindow::changeLanguage(const QVariant &data)
 {
-    settings->setValue(QStringLiteral("lang"), action->data());
-    for (QAction *menuEntry : ui->menuLang->actions()) {
-        menuEntry->setChecked(false);
-    }
-    action->setChecked(true);
-    QApplication::installTranslator(m_translations.value(action->data().toString()));
+    settings->setValue(SETTINGS::LANG, data);
+    if(!m_translations.contains(data.toString()))
+        populateLanguageMenu();
+    QApplication::installTranslator(m_translations.value(data.toString()));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
@@ -1110,7 +1090,7 @@ void MainWindow::setmenu(bool newgame)
         for (int i = 0; i < 9; i++) {
             ui->tabWidget->setTabEnabled(i, true);
         }
-        ui->tabWidget->setTabEnabled(9, settings->value("show_test").toBool());
+        ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST).toBool());
     }
 
     if (!newgame) {
@@ -1577,7 +1557,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
         if ((ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
-                || settings->value("optionsShowMapping").toBool()) {
+                || settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
                 optionsWidget->setFixedWidth(optionsWidget->width() - 1);

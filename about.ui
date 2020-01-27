@@ -210,6 +210,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Save as will suggest name for types that need it</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>ff7tk: Fixed VMP signing and export</string>
           </property>
          </item>

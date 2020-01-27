@@ -14,7 +14,9 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
+#include <QDebug>
 #include <QStyle>
+#include <QTranslator>
 #include "options.h"
 #include "ui_options.h"
 
@@ -24,29 +26,53 @@ Options::Options(QWidget *parent, QSettings *config_data) :
   , settings(config_data)
 {
     ui->setupUi(this);
-    ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
-    load = false;
-    //Disable the defaut_save line and selector button unless override is checked
-    ui->line_default_save->setVisible(false);
-    ui->btn_set_default_save->setVisible(false);
-    ui->reset_default_save_location->setVisible(false);
+    ui->comboRegion->setFixedWidth(fontMetrics().horizontalAdvance(QChar('W')) * 8);
+    ui->buttonBox->button(QDialogButtonBox::Help)->setText(tr("C&leanup"));
+    ui->buttonBox->button(QDialogButtonBox::Help)->setIcon(QIcon());
+    ui->buttonBox->button(QDialogButtonBox::Help)->setToolTip(tr("Remove invalid entries from the stored settings file"));
+    ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setToolTip(tr("Reset values to defaults"));
+    ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
+    ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
+    ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+    ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    QDir dir(QStringLiteral("%1/lang").arg(settings->value(SETTINGS::LANGPATH).toString()));
+    QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
+    for (const QString &translation : langList) {
+        auto translator = new QTranslator;
+        translator->load(translation, dir.absolutePath());
+        QString lang = translation.mid(7, 2);
+        ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
+        ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(settings->value(SETTINGS::LANG, QStringLiteral("en"))));
+    }
 
-    restoreGeometry(settings->value("OptionsGeometry").toByteArray());
-    set_path_lbls();
-    load = true;
-    ui->cbEditableCombos->setChecked(settings->value("editableCombos").toBool());
-    ui->cbCharEditorAdvanced->setChecked(settings->value("charEditorAdvanced").toBool());
-    ui->cbChocoboEditorAdvanced->setChecked(settings->value("chocoboEditorAdvanced").toBool());
-    ui->cbLocationViewerAdvanced->setChecked(settings->value("locationViewerAdvanced").toBool());
-    ui->cbTestDataEnabled->setChecked(settings->value("show_test").toBool());
-    ui->cbGameProgressAdvanced->setChecked(settings->value("gameProgressAdvanced").toBool());
-    ui->cbOptionsShowMapping->setChecked(settings->value("optionsShowMapping").toBool());
-    ui->cb_skip_slot_mask->setChecked(settings->value("skip_slot_mask").toBool());
-    ui->cbWorldMapAdvanced->setChecked(settings->value("worldMapAdvanced").toBool());
-    ui->cb_override_def_save->setChecked(settings->value("override_default_save").toBool());
-    ui->sbScale->setValue(settings->value("scale").toDouble());
+    connect(ui->sliderScale, &QSlider::valueChanged, this, [this](int value){
+        value = int(((value * 0.25) + 0.5) * 100);
+        ui->labelScale->setText(QStringLiteral("%1%").arg(value, 3, 10, QChar('0')));
+        value = int(64 * (value / 100.0));
+        ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(value, value, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    });
 
-    load = false;
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton * button){
+        if (button == ui->buttonBox->button(QDialogButtonBox::Apply)) {
+            saveSettings();
+            done(1);
+        }
+        if (button == ui->buttonBox->button(QDialogButtonBox::Cancel))
+            done(0);
+
+        if (button == ui->buttonBox->button(QDialogButtonBox::Reset))
+            loadSettings();
+
+        if (button == ui->buttonBox->button(QDialogButtonBox::RestoreDefaults))
+            restoreDefaultSettings();
+
+        if (button == ui->buttonBox->button(QDialogButtonBox::Help))
+            cleanSettings();
+    });
+
+    loadSettings();
+    setGeometry(x(), y(), width(), minimumHeight());
 }
 
 Options::~Options()
@@ -65,196 +91,121 @@ void Options::changeEvent(QEvent *e)
         break;
     }
 }
-
-void Options::closeEvent(QCloseEvent *)
+void Options::loadSettings()
 {
-    settings->setValue("OptionsGeometry", saveGeometry());
-}
-void Options::moveEvent(QMoveEvent *)
-{
-    settings->setValue("OptionsGeometry", saveGeometry());
-}
-void Options::resizeEvent(QResizeEvent *)
-{
-    settings->setValue("OptionsGeometry", saveGeometry());
-}
-
-void Options::set_path_lbls()
-{
-    if (!settings->value("default_save_file").isNull()) {
-        ui->line_default_save->setText(settings->value("default_save_file").toString());
-    }
-    if (!settings->value("char_stat_folder").isNull()) {
-        ui->line_char_stat_folder->setText(settings->value("char_stat_folder").toString());
-    }
-    if (!settings->value("save_pc_path").isNull()) {
-        ui->line_save_pc->setText(settings->value("save_pc_path").toString());
-    }
-    if (!settings->value("save_emu_path").isNull()) {
-        ui->line_save_emu->setText(settings->value("save_emu_path").toString());
-    }
-    if (!settings->value("load_path").isNull()) {
-        ui->line_load_path->setText(settings->value("load_path").toString());
-    }
+    ui->defaultSaveLayout->setVisible(false);
+    ui->line_default_save->setText(settings->value(SETTINGS::DEFAULTSAVE, QString()).toString());
+    ui->line_char_stat_folder->setText(settings->value(SETTINGS::STATFOLDER, QDir::homePath()).toString());
+    ui->line_save_pc->setText(settings->value(SETTINGS::PCSAVEPATH, QDir::homePath()).toString());
+    ui->line_save_emu->setText(settings->value(SETTINGS::EMUSAVEPATH, QDir::homePath()).toString());
+    ui->line_load_path->setText(settings->value(SETTINGS::LOADPATH, QDir::homePath()).toString());
+    ui->cbEditableCombos->setChecked(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    ui->cbCharEditorAdvanced->setChecked(settings->value(SETTINGS::CHARADVANCED, false).toBool());
+    ui->cbChocoboEditorAdvanced->setChecked(settings->value(SETTINGS::CHOCOADVANCED, false).toBool());
+    ui->cbLocationViewerAdvanced->setChecked(settings->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
+    ui->cbTestDataEnabled->setChecked(settings->value(SETTINGS::ENABLETEST, false).toBool());
+    ui->cbGameProgressAdvanced->setChecked(settings->value(SETTINGS::PROGRESSADVANCED, false).toBool());
+    ui->cbOptionsShowMapping->setChecked(settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
+    ui->cbWorldMapAdvanced->setChecked(settings->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->comboRegion->setCurrentText(settings->value (SETTINGS::REGION, QStringLiteral("NTSC-U")).toString());
+    ui->cb_override_def_save->setChecked(settings->value(SETTINGS::CUSTOMDEFAULTSAVE, false).toBool());
+    ui->sliderScale->setValue(int((settings->value(SETTINGS::SCALE, 1.00).toDouble() - 0.50) / 0.25));
+    ui->cbAutoGrowth->setChecked(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
+    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(settings->value(SETTINGS::LANG)));
 }
 
-void Options::on_line_save_pc_editingFinished()
+void Options::saveSettings()
 {
-    settings->setValue("save_pc", ui->line_save_pc->text());
+    settings->setValue(SETTINGS::PCSAVEPATH, ui->line_save_pc->text());
+    settings->setValue(SETTINGS::EMUSAVEPATH, ui->line_save_emu->text());
+    settings->setValue(SETTINGS::LOADPATH, ui->line_load_path->text());
+    settings->setValue(SETTINGS::DEFAULTSAVE, ui->line_default_save->text());
+    settings->setValue(SETTINGS::STATFOLDER, ui->line_char_stat_folder->text());
+    settings->setValue(SETTINGS::CUSTOMDEFAULTSAVE, ui->cb_override_def_save->isChecked());
+    settings->setValue(SETTINGS::CHARADVANCED, ui->cbCharEditorAdvanced->isChecked());
+    settings->setValue(SETTINGS::CHOCOADVANCED, ui->cbChocoboEditorAdvanced->isChecked());
+    settings->setValue(SETTINGS::PROGRESSADVANCED, ui->cbGameProgressAdvanced->isChecked());
+    settings->setValue(SETTINGS::ALWAYSSHOWCONTROLLERMAP, ui->cbOptionsShowMapping->isChecked());
+    settings->setValue(SETTINGS::ENABLETEST, ui->cbTestDataEnabled->isChecked());
+    settings->setValue(SETTINGS::LOCVIEWADVANCED, ui->cbLocationViewerAdvanced->isChecked());
+    settings->setValue(SETTINGS::WORLDMAPADVANCED, ui->cbWorldMapAdvanced->isChecked());
+    settings->setValue(SETTINGS::EDITABLECOMBOS, ui->cbEditableCombos->isChecked());
+    settings->setValue(SETTINGS::REGION, ui->comboRegion->currentText());
+    settings->setValue(SETTINGS::SCALE, ((ui->sliderScale->value() * 0.25) + 0.5));
+    settings->setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
+    settings->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
+}
+
+void Options::restoreDefaultSettings()
+{
+    ui->defaultSaveLayout->setVisible(false);
+    ui->line_default_save->setText(QString());
+    ui->line_char_stat_folder->setText(QDir::homePath());
+    ui->line_save_pc->setText(QDir::homePath());
+    ui->line_save_emu->setText(QDir::homePath());
+    ui->line_load_path->setText(QDir::homePath());
+    ui->cbEditableCombos->setChecked(true);
+    ui->cbCharEditorAdvanced->setChecked(false);
+    ui->cbChocoboEditorAdvanced->setChecked(false);
+    ui->cbLocationViewerAdvanced->setChecked(false);
+    ui->cbTestDataEnabled->setChecked(false);
+    ui->cbGameProgressAdvanced->setChecked(false);
+    ui->cbOptionsShowMapping->setChecked(false);
+    ui->cbWorldMapAdvanced->setChecked(false);
+    ui->comboRegion->setCurrentText(QStringLiteral("NTSC-U"));
+    ui->cb_override_def_save->setChecked(false);
+    ui->sliderScale->setValue(2);
+    ui->cbAutoGrowth->setChecked(true);
+    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(QStringLiteral("en")));
+}
+
+void Options::cleanSettings()
+{
+    for(const QString &key : settings->allKeys()) {
+        if(!validSettingsNames.contains(key))
+            settings->remove(key);
+    }
 }
 void Options::on_btn_set_save_pc_clicked()
 {
-    load = true;
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save FF7 PC Saves"), settings->value("save_pc_path").toString());
-    if (!temp.isNull()) {
-        settings->setValue("save_pc_path", temp);
-    }
-    set_path_lbls();
-    load = false;
+    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save FF7 PC Saves"), settings->value(SETTINGS::PCSAVEPATH).toString());
+    ui->line_save_pc->setText(temp);
 }
 
-void Options::on_line_save_emu_editingFinished()
-{
-    settings->setValue("save_emu", ui->line_save_emu->text());
-}
 void Options::on_btn_set_save_emu_clicked()
 {
-    load = true;
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save mcd/mcr saves"), settings->value("save_emu_path").toString());
-    if (!temp.isNull()) {
-        settings->setValue("save_emu_path", temp);
-    }
-    set_path_lbls();
-    load = false;
+    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save mcd/mcr saves"), settings->value(SETTINGS::EMUSAVEPATH).toString());
+    ui->line_save_emu->setText(temp);
 }
 
-void Options::on_line_load_path_editingFinished()
-{
-    settings->setValue("load_path", ui->line_load_path->text());
-}
 void Options::on_btn_set_load_path_clicked()
 {
-    load = true;
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Load FF7 PC Saves From"), settings->value("load_path").toString());
-    if (!temp.isNull()) {
-        settings->setValue("load_path", temp);
-    }
-    set_path_lbls();
-    load = false;
+    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Load FF7 PC Saves From"), settings->value(SETTINGS::LOADPATH).toString());
+    ui->btn_set_load_path->setText(temp);
 }
 
-void Options::on_line_default_save_editingFinished()
-{
-    settings->setValue("default_save_file", ui->line_default_save->text());
-}
 void Options::on_btn_set_default_save_clicked()
 {
-    load = true;
-    QString temp = QFileDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), settings->value("default_save_file").toString());
-    if (!temp.isNull()) {
-        settings->setValue("default_save_file", temp);
-    }
-    set_path_lbls();
-    load = false;
-}
-
-void Options::on_line_char_stat_folder_editingFinished()
-{
-    settings->setValue("char_stat_folder", ui->line_char_stat_folder->text());
+    QString temp = QFileDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toString());
+    ui->line_default_save->setText(temp);
 }
 
 void Options::on_btn_set_char_stat_folder_clicked()
 {
-    load = true;
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Location To Save Character Stat Files"), settings->value("char_stat_folder").toString());
-    if (!temp.isNull()) {
-        settings->setValue("char_stat_folder", temp);
-    } else {
-        settings->setValue("char_stat_folder", QString(QDir::homePath()));
-    }
-    set_path_lbls();
-    load = false;
-}
-/*~~~~~~~~~~~~~~~~~~RESET STUFF~~~~~~~~~~~~~~~~~~~*/
-void Options::on_reset_default_save_location_clicked()
-{
-    ui->cb_override_def_save->setChecked(Qt::Unchecked);
-    settings->remove("default_save_file");
-    ui->line_default_save->clear();
-}
-void Options::on_cb_skip_slot_mask_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("skip_slot_mask", checked);
-    }
-}
-void Options::on_cb_override_def_save_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("override_default_save", checked);
-    }
-    if (checked) {
-        ui->line_default_save->setVisible(true);
-        ui->btn_set_default_save->setVisible(true);
-        ui->reset_default_save_location->setVisible(true);
-    } else {
-        ui->line_default_save->setVisible(false);
-        ui->btn_set_default_save->setVisible(false);
-        ui->reset_default_save_location->setVisible(false);
-    }
+    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Location To Save Character Stat Files"), settings->value(SETTINGS::STATFOLDER).toString());
+    if (temp.isNull())
+        temp = QDir::homePath();
+    ui->line_char_stat_folder->setText(temp);
 }
 
-void Options::on_cbCharEditorAdvanced_toggled(bool checked)
+void Options::on_cb_override_def_save_toggled(bool checked)
 {
-    if (!load) {
-        settings->setValue("charEditorAdvanced", checked);
-    }
+    ui->defaultSaveLayout->setVisible(checked);
 }
-void Options::on_cbChocoboEditorAdvanced_toggled(bool checked)
+
+
+void Options::on_comboLanguage_currentIndexChanged(const QString &arg1)
 {
-    if (!load) {
-        settings->setValue("chocoboEditorAdvanced", checked);
-    }
-}
-void Options::on_cbGameProgressAdvanced_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("gameProgressAdvanced", checked);
-    }
-}
-void Options::on_cbOptionsShowMapping_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("optionsShowMapping", checked);
-    }
-}
-void Options::on_cbTestDataEnabled_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("show_test", checked);
-    }
-}
-void Options::on_cbLocationViewerAdvanced_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("locationViewerAdvanced", checked);
-    }
-}
-void Options::on_cbWorldMapAdvanced_toggled(bool checked)
-{
-    if (!load) {
-        settings->setValue("worldMapAdvanced", checked);
-    }
-}
-void Options::on_cbEditableCombos_clicked(bool checked)
-{
-    if (!load) {
-        settings->setValue("editableCombos", checked);
-    }
-}
-void Options::on_sbScale_valueChanged(double arg1)
-{
-    if (!load) {
-        settings->setValue("scale", arg1);
-    }
+    Q_UNUSED(arg1)
+    emit requestLanguageChange(ui->comboLanguage->currentData());
 }

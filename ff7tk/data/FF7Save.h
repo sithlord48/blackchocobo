@@ -204,9 +204,10 @@ public:
 
     /** \brief creates a new game in a slot
      * \param s slot number (0-14)
-     * \param fileName Raw PSX file to use instead of defalut data
+     * \param region: Region to make the save
+     * \param fileName Raw PSX file to use instead of default data
      */
-    void newGame(int s, QString fileName = ""); //new game in slot s (over load default w/ fileName must be RAW PSX)
+    void newGame(int s, const QString &region = QStringLiteral("NTSC-U"), const QString &fileName = QString()); //new game in slot s (over load default w/ fileName must be RAW PSX)
 
     /** \brief creates a new game + in a slot
      *
