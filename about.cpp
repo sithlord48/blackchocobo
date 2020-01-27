@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2018 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -17,13 +17,11 @@
 #include "about.h"
 #include "ui_about.h"
 
-About::About(QWidget *parent, QSettings *config_data) :
+About::About(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::About)
 {
     ui->setupUi(this);
-    settings = config_data;
-    restoreGeometry(settings->value("AboutGeometry").toByteArray());
     ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
     ui->lbl_icon->setFixedSize(fontMetrics().height() * 3, fontMetrics().height() * 3);
     ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
@@ -47,17 +45,4 @@ void About::changeEvent(QEvent *e)
     default:
         break;
     }
-}
-
-void About::closeEvent(QCloseEvent *)
-{
-    settings->setValue("AboutGeometry", saveGeometry());
-}
-void About::moveEvent(QMoveEvent *)
-{
-    settings->setValue("AboutGeometry", saveGeometry());
-}
-void About::resizeEvent(QResizeEvent *)
-{
-    settings->setValue("AboutGeometry", saveGeometry());
 }

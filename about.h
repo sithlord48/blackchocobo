@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2019 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -17,7 +17,6 @@
 #pragma once
 
 #include <QDialog>
-#include <QSettings>
 
 namespace Ui
 {
@@ -28,16 +27,12 @@ class About : public QDialog
 {
     Q_OBJECT
 public:
-    explicit About(QWidget *parent = nullptr, QSettings *config_data = nullptr);
+    explicit About(QWidget *parent = nullptr);
     ~About();
 
 protected:
     void changeEvent(QEvent *e);
-    void closeEvent(QCloseEvent *);
-    void resizeEvent(QResizeEvent *);
-    void moveEvent(QMoveEvent *);
 
 private:
     Ui::About *ui;
-    QSettings *settings = nullptr;
 };

@@ -26,7 +26,6 @@ class Options;
 }
 
 namespace SETTINGS {
-    inline const static QString ABOUTGEOMETRY = QStringLiteral("AboutGeometry");
     inline const static QString MAINGEOMETRY = QStringLiteral("MainGeometry");
     inline const static QString AUTOGROWTH = QStringLiteral("autochargrowth");
     inline const static QString CHARADVANCED = QStringLiteral("charEditorAdvanced");
@@ -78,7 +77,6 @@ private:
     void restoreDefaultSettings();
     void cleanSettings();
     inline static const QStringList validSettingsNames = {
-        SETTINGS::ABOUTGEOMETRY,
         SETTINGS::MAINGEOMETRY,
         SETTINGS::AUTOGROWTH,
         SETTINGS::CHARADVANCED,

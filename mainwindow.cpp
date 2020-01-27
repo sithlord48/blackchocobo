@@ -578,6 +578,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
             int fileSlot = 0;
             if (tempSave->format() != FF7SaveInfo::FORMAT::PS3 && tempSave->format() != FF7SaveInfo::FORMAT::PSX) {
                 SlotSelect *SSelect = new SlotSelect(settings->value(SETTINGS::SCALE).toDouble(), tempSave, false);
+                SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + (SSelect->height() /2));
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     on_actionImport_Slot_From_File_triggered();
@@ -795,7 +796,7 @@ void MainWindow::on_actionNext_Slot_triggered()
 }
 void MainWindow::on_actionAbout_triggered()
 {
-    About adialog(this, settings);
+    About adialog(this);
     adialog.exec();
 }
 void MainWindow::on_actionCopy_Slot_triggered()
@@ -818,6 +819,7 @@ void MainWindow::on_actionShow_Options_triggered()
     }
     disconnect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
 }
+
 void MainWindow::on_actionCreateNewMetadata_triggered()
 {
     MetadataCreator mdata(this, ff7);
@@ -827,6 +829,8 @@ void MainWindow::on_actionCreateNewMetadata_triggered()
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
     SlotSelect slotselect(settings->value(SETTINGS::SCALE).toDouble(), ff7, true);
+    slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + (slotselect.height() /2));
+
     int i = slotselect.exec();
     if (i == -1) {
         on_actionOpen_Save_File_triggered();
@@ -851,6 +855,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
         return;
     } else {
         achievementDialog achDialog(temp);
+        achDialog.move(x() + (width() - achDialog.width()) / 2, y() + (height() - achDialog.height())/2);
         achDialog.exec();
     }
     ff7->setFileModified(c2, s);
@@ -1279,9 +1284,9 @@ void MainWindow::CheckGame()
             || ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(nullptr, ff7, s);
-        if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3)) {
+        if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3))
             error.setSingleSlot(true);
-        }
+        error.move(x() + ((width() - error.width()) / 2), y() + (height() /2));
         switch (error.exec()) {
         case 0://View Anyway..
             setmenu(0);
@@ -1299,11 +1304,10 @@ void MainWindow::CheckGame()
             break;
 
         case 3://exported as psx
-            if (!error.isSingleSlot()) {
+            if (!error.isSingleSlot())
                 on_actionShow_Selection_Dialog_triggered();
-            } else {
+            else
                 on_actionOpen_Save_File_triggered();
-            }
             break;
         }
     } else {
@@ -1327,34 +1331,18 @@ void MainWindow::othersUpdate()
     ui->sb_coster_2->setValue(ff7->speedScore(s, 2));
     ui->sb_coster_3->setValue(ff7->speedScore(s, 3));
 
-    for (int i = 0; i < 9; i++) { //Allowed in Phs
-        if (ff7->phsAllowed(s, i)) {
-            phsList->setChecked(i, PhsListWidget::PHSALLOWED, false);
-        } else {
-            phsList->setChecked(i, PhsListWidget::PHSALLOWED, true);
-        }
-    }
-    for (int i = 0; i < 9; i++) { //Visible
-        if (ff7->phsVisible(s, i)) {
-            phsList->setChecked(i, PhsListWidget::PHSVISIBLE, true);
-        } else {
-            phsList->setChecked(i, PhsListWidget::PHSVISIBLE, false);
-        }
-    }
-    for (int i = 0; i < 10; i++) { //visible_menu
-        if (ff7->menuVisible(s, i)) {
-            menuList->setChecked(i, MenuListWidget::MENUVISIBLE, true);
-        } else {
-            menuList->setChecked(i, MenuListWidget::MENUVISIBLE, false);
-        }
-    }
-    for (int i = 0; i < 10; i++) { //menu_locked
-        if (ff7->menuLocked(s, i)) {
-            menuList->setChecked(i, MenuListWidget::MENULOCKED, true);
-        } else {
-            menuList->setChecked(i, MenuListWidget::MENULOCKED, false);
-        }
-    }
+    for (int i = 0; i < 9; i++) //Allowed in Phs
+            phsList->setChecked(i, PhsListWidget::PHSALLOWED, !ff7->phsAllowed(s, i));
+
+    for (int i = 0; i < 9; i++) //Visible
+            phsList->setChecked(i, PhsListWidget::PHSVISIBLE, ff7->phsVisible(s, i));
+
+    for (int i = 0; i < 10; i++) //visible_menu
+            menuList->setChecked(i, MenuListWidget::MENUVISIBLE, ff7->menuVisible(s, i));
+
+    for (int i = 0; i < 10; i++) //menu_locked
+            menuList->setChecked(i, MenuListWidget::MENULOCKED, ff7->menuLocked(s, i));
+
     ui->sb_steps->setValue(ff7->steps(s));
 
     ui->sb_love_barret->setValue(ff7->love(s, false, FF7Save::LOVE_BARRET));
@@ -1479,21 +1467,21 @@ void MainWindow::on_tabWidget_currentChanged(int index)
     hexCursorPos = hexEditor->cursorPosition();
     switch (index) {
     case 0://Party Tab
-        if (ff7->party(s, 0) >= 0x0C) {
+        if (ff7->party(s, 0) >= 0x0C)
             ui->combo_party1->setCurrentIndex(12);
-        } else {
+        else
             ui->combo_party1->setCurrentIndex(ff7->party(s, 0));
-        }
-        if (ff7->party(s, 1) >= 0x0C) {
+
+        if (ff7->party(s, 1) >= 0x0C)
             ui->combo_party2->setCurrentIndex(12);
-        } else {
+        else
             ui->combo_party2->setCurrentIndex(ff7->party(s, 1));
-        }
-        if (ff7->party(s, 2) >= 0x0C) {
+
+        if (ff7->party(s, 2) >= 0x0C)
             ui->combo_party3->setCurrentIndex(12);
-        } else {
+        else
             ui->combo_party3->setCurrentIndex(ff7->party(s, 2));
-        }
+
         set_char_buttons();
         switch (curchar) {
         case 0: ui->btn_cloud->click(); break;

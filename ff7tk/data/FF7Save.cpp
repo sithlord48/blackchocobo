@@ -1313,11 +1313,10 @@ bool FF7Save::isSlotModified(int s)
 }
 bool FF7Save::isSlotEmpty(int s)
 {
-    if (ff7Checksum(s) == 0x4D1D) {
-        return true;
-    } else {
-        return false;
-    }
+    bool check = true;
+    if (FF7SaveInfo::instance()->slotCount(format()) == 15 && format() != FF7SaveInfo::FORMAT::PC && format() != FF7SaveInfo::FORMAT::SWITCH)
+            check = (psx_block_type(s) == '\xA0');
+    return check && ff7Checksum(s) == 0x4D1D;
 }
 bool FF7Save::isFF7(int s)
 {

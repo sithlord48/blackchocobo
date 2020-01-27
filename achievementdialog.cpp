@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -30,6 +30,8 @@ achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     , fileName(FileName)
 {
     setWindowTitle(tr("Achievement Editor"));
+    setMinimumWidth(fontMetrics().horizontalAdvance(QChar('W')) * 25);
+    setMinimumHeight(fontMetrics().height() * 15);
     achEditor->openFile(fileName);
     achEditor->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     QHBoxLayout *btnLayout = new QHBoxLayout;
