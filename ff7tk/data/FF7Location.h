@@ -312,8 +312,25 @@ private:
 
             , {QStringLiteral("q_3"), QT_TR_NOOP("Research Room"), QStringLiteral("1"), QStringLiteral("90"), QStringLiteral("-239"), QStringLiteral("-392"), QStringLiteral("41"), QStringLiteral("128")}
             , {QStringLiteral("q_4"), QT_TR_NOOP("Cargo Room"), QStringLiteral("1"), QStringLiteral("91"), QStringLiteral("-856"), QStringLiteral("-707"), QStringLiteral("23"), QStringLiteral("128")}
-            , {QStringLiteral("blackbg2"), QT_TR_NOOP("Debug Room [en]"), QStringLiteral("1"), QStringLiteral("94"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("32")}
+            , {QStringLiteral("blackbg1"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("93"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg2"), QT_TR_NOOP("Debug Room [en]"), QStringLiteral("1"), QStringLiteral("94"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg3"), QT_TR_NOOP("DEBUG MODE"), QStringLiteral("1"), QStringLiteral("95"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg4"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("96"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg5"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("97"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg6"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("98"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg7"), QT_TR_NOOP("DEBUG"), QStringLiteral("1"), QStringLiteral("99"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
 
+            , {QStringLiteral("blackbg8"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("100"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbg9"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("101"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgb"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("103"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgc"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("104"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgd"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("105"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbge"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("106"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgh"), QT_TR_NOOP("BLACKBGH"), QStringLiteral("1"), QStringLiteral("109"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+
+            , {QStringLiteral("blackbgi"), QT_TR_NOOP("BLACKBGI"), QStringLiteral("1"), QStringLiteral("110"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgj"), QT_TR_NOOP(""), QStringLiteral("1"), QStringLiteral("111"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("blackbgk"), QT_TR_NOOP("Dark city fourth street"), QStringLiteral("1"), QStringLiteral("112"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("whitebg3"), QT_TR_NOOP("Mt. Nibel"), QStringLiteral("1"), QStringLiteral("115"), QStringLiteral("-61"), QStringLiteral("-726"), QStringLiteral("16"), QStringLiteral("0")}
             , {QStringLiteral("md1stin"), QT_TR_NOOP("Platform"), QStringLiteral("1"), QStringLiteral("116"), QStringLiteral("3655"), QStringLiteral("27432"), QStringLiteral("25"), QStringLiteral("96")}
             , {QStringLiteral("md1_1"), QT_TR_NOOP("Sector 1 Station"), QStringLiteral("1"), QStringLiteral("117"), QStringLiteral("1433"), QStringLiteral("386"), QStringLiteral("78"), QStringLiteral("32")}

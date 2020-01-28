@@ -380,7 +380,7 @@ private:
         , {{quint16(0x0FCA)}, {quint8(0)}, {QStringLiteral("anfrst_3")}, QT_TR_NOOP("Spring Gun Clip")}
         , {{quint16(0x0FCA)}, {quint8(1)}, {QStringLiteral("bonevil")}, QT_TR_NOOP("Mop")}
         , {{quint16(0x0FCA)}, {quint8(2)}, {QStringLiteral("bonevil")}, QT_TR_NOOP("Megalixir")}
-        , {{quint16(0x0FCA), quint16(0x0BE7)}, {quint8(3), quint8(5)}, {QStringLiteral("blackbg1"), QStringLiteral("mds5_5"), QStringLiteral("bonevil")}, QT_TR_NOOP("KeyItem: Key To Sector 5")}
+        , {{quint16(0x0FCA), quint16(0x0BE7)}, {quint8(3), quint8(5)}, {QStringLiteral("mds5_5"), QStringLiteral("bonevil")}, QT_TR_NOOP("KeyItem: Key To Sector 5")}
 
         , {{quint16(0x0FF4)}, {quint8(0)}, {QStringLiteral("sbwy4_6")}, QT_TR_NOOP("Tent")}
         , {{quint16(0x0FF4)}, {quint8(1)}, {QStringLiteral("sbwy4_3")}, QT_TR_NOOP("Potion")}
