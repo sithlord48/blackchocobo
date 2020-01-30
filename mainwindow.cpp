@@ -449,9 +449,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange) {
+    if (e->type() != QEvent::LanguageChange)
         return;
-    }
 
     ui->retranslateUi(this);
     ui->tabWidget->setTabText(3, tr("Chocobo"));
@@ -474,9 +473,8 @@ void MainWindow::dropEvent(QDropEvent *e)
     }
 
     auto mimeData = e->mimeData();
-    if (mimeData->hasUrls()) {
+    if (mimeData->hasUrls())
         loadFileFull(mimeData->urls().at(0).toLocalFile(), 0);
-    }
 }
 
 bool MainWindow::saveChanges(void)
@@ -521,15 +519,13 @@ void MainWindow::on_actionOpen_Save_File_triggered()
     QString fileName = QFileDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
-    if (!fileName.isEmpty()) {
+    if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
-    }
 }
 void MainWindow::on_actionReload_triggered()
 {
-    if (!ff7->fileName().isEmpty()) {
+    if (!ff7->fileName().isEmpty())
         loadFileFull(ff7->fileName(), 1);
-    }
 }
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName, int reload)
@@ -552,11 +548,10 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
     }
 
     if (ff7->numberOfSlots() > 1) {
-        if (reload) {
+        if (reload)
             guirefresh(0);
-        } else {
+        else
             on_actionShow_Selection_Dialog_triggered();
-        }
     } else {
         s = 0;
         guirefresh(0);
@@ -568,7 +563,6 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_Slot_From_File_triggered()
 {
-
     QString fileName = QFileDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
@@ -576,16 +570,15 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
         FF7Save *tempSave = new FF7Save();
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
-            if (tempSave->format() != FF7SaveInfo::FORMAT::PS3 && tempSave->format() != FF7SaveInfo::FORMAT::PSX) {
+            if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
                 SlotSelect *SSelect = new SlotSelect(settings->value(SETTINGS::SCALE).toDouble(), tempSave, false);
                 SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + (SSelect->height() /2));
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     on_actionImport_Slot_From_File_triggered();
                     return;
-                } else {
-                    ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
                 }
+                ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
             } else {
                 ui->statusBar->showMessage(QString(tr("Imported %1 -> Slot:%2")).arg(fileName, QString::number(s + 1)), 2000);
             }
@@ -600,22 +593,20 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 void MainWindow::on_actionImport_char_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
-    if (fileName.isEmpty()) {
+    if (fileName.isEmpty())
         return;
-    } else {
-        QFile file(fileName);
-        if (!file.open(QFile::ReadOnly)) {
-            QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.").arg(fileName).arg(file.errorString()));
-            return;
-        }
-        if (file.size() != 0x84) {
-            QMessageBox::warning(this, tr("Black Chocobo"), tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName).arg(file.errorString()));
-            return;
-        }
-        QByteArray new_char;
-        new_char = file.readAll();
-        ff7->importCharacter(s, curchar, new_char);
+    QFile file(fileName);
+    if (!file.open(QFile::ReadOnly)) {
+        QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.").arg(fileName).arg(file.errorString()));
+        return;
     }
+    if (file.size() != 0x84) {
+        QMessageBox::warning(this, tr("Black Chocobo"), tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName).arg(file.errorString()));
+        return;
+    }
+    QByteArray new_char;
+    new_char = file.readAll();
+    ff7->importCharacter(s, curchar, new_char);
     char_editor->setChar(ff7->character(s, curchar), ff7->charName(s, curchar));
     set_char_buttons();
 }
@@ -636,7 +627,6 @@ bool MainWindow::on_action_Save_triggered()
 {
     if (_init || ff7->fileName().isEmpty())
         return on_actionSave_File_As_triggered();
-
     return saveFileFull(ff7->fileName());
 }
 
@@ -774,24 +764,22 @@ void MainWindow::on_actionClear_Slot_triggered()
 }
 void MainWindow::on_actionPrevious_Slot_triggered()
 {
-    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
-    } else {
-        if (s > 0) {
-            s--;
-            guirefresh(0);
-        }
+
+    if (s > 0) {
+        s--;
+        guirefresh(0);
     }
 }
 void MainWindow::on_actionNext_Slot_triggered()
 {
-    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
-    } else {
-        if (s < 14) {
-            s++;
-            guirefresh(0);
-        }
+
+    if (s < 14) {
+        s++;
+        guirefresh(0);
     }
 }
 void MainWindow::on_actionAbout_triggered()
@@ -832,7 +820,7 @@ void MainWindow::on_actionShow_Selection_Dialog_triggered()
     slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + (slotselect.height() /2));
 
     int i = slotselect.exec();
-    if (i == -1) {
+    if(i == -1) {
         on_actionOpen_Save_File_triggered();
     } else {
         s = i;
@@ -847,9 +835,9 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
     temp.append(QString("%1achievement.dat").arg(QDir::separator()));
     QFile tmp(temp);
-    if (!tmp.exists()) {
+    if (!tmp.exists())
         temp = QFileDialog::getOpenFileName(this, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat);"));
-    }
+
     if (temp.isEmpty()) {
         ff7->setFileModified(c2, s);
         return;
@@ -875,13 +863,13 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isPAL(s)) {
+            if (ff7->isPAL(s))
                 set_ntsc_time();   //Convert Time?
-            }
+
             ff7->setRegion(s, "NTSC-U");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_PAL_Generic->setChecked(false);
@@ -903,13 +891,13 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isNTSC(s)) {
+            if (ff7->isNTSC(s))
                 set_pal_time();   //Call RegionTime Convertor
-            }
+
             ff7->setRegion(s, "PAL-E");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_USA->setChecked(false);
@@ -930,13 +918,13 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isNTSC(s)) {
+            if (ff7->isNTSC(s))
                 set_pal_time();   //Call RegionTime Convertor
-            }
+
             ff7->setRegion(s, "PAL-DE");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_USA->setChecked(false);
@@ -957,13 +945,13 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isNTSC(s)) {
+            if (ff7->isNTSC(s))
                 set_pal_time();   //Call RegionTime Convertor
-            }
+
             ff7->setRegion(s, "PAL-ES");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_USA->setChecked(false);
@@ -984,13 +972,13 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isNTSC(s)) {
+            if (ff7->isNTSC(s))
                 set_pal_time();   //Call RegionTime Convertor
-            }
+
             ff7->setRegion(s, "PAL-FR");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_USA->setChecked(false);
@@ -1011,14 +999,13 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
             //First Check If Coming From PAL
-            if (ff7->isPAL(s)) {
+            if (ff7->isPAL(s))
                 set_ntsc_time();   //Convert Time?
-            }
             ff7->setRegion(s, "NTSC-J");
             itemlist->setMaximumItemQty(99);
             ui->action_Region_USA->setChecked(false);
@@ -1039,13 +1026,12 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
-            ff7->setRegion(s, "");
+            ff7->setRegion(s, QString());
             ui->lbl_sg_region->clear();
             itemlist->setMaximumItemQty(127);
         } else {
-            if (ff7->isPAL(s)) {
+            if (ff7->isPAL(s))
                 set_ntsc_time();   //Convert Time?
-            }
             ff7->setRegion(s, "NTSC-JI");
             itemlist->setMaximumItemQty(127);
             ui->action_Region_USA->setChecked(false);
@@ -1069,11 +1055,21 @@ void MainWindow::setmenu(bool newgame)
     load = true;
     /*~~Disable All Items that are dependent on File Type~~*/
     ui->actionClear_Slot->setEnabled(0);
-    ui->action_Region_USA->setChecked(false);    ui->action_Region_PAL_Generic->setChecked(false);  ui->action_Region_PAL_German->setChecked(false);
-    ui->action_Region_PAL_French->setChecked(false); ui->action_Region_PAL_Spanish->setChecked(false);    ui->action_Region_JPN->setChecked(false);
-    ui->action_Region_JPN_International->setChecked(false);    ui->actionNext_Slot->setEnabled(0); ui->actionPrevious_Slot->setEnabled(0);
-    ui->actionShow_Selection_Dialog->setEnabled(0); ui->actionNew_Game->setEnabled(0); ui->compare_table->setEnabled(0);
-    ui->lbl_current_slot_txt->clear(); ui->actionImport_char->setEnabled(1); ui->actionExport_char->setEnabled(1);
+    ui->action_Region_USA->setChecked(false);
+    ui->action_Region_PAL_Generic->setChecked(false);
+    ui->action_Region_PAL_German->setChecked(false);
+    ui->action_Region_PAL_French->setChecked(false);
+    ui->action_Region_PAL_Spanish->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
+    ui->actionNext_Slot->setEnabled(0);
+    ui->actionPrevious_Slot->setEnabled(0);
+    ui->actionShow_Selection_Dialog->setEnabled(0);
+    ui->actionNew_Game->setEnabled(0);
+    ui->compare_table->setEnabled(0);
+    ui->lbl_current_slot_txt->clear();
+    ui->actionImport_char->setEnabled(1);
+    ui->actionExport_char->setEnabled(1);
     /*~~End Clear Menu Items~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
     //For first file load.Don't Bother to disable these again.
@@ -1081,33 +1077,32 @@ void MainWindow::setmenu(bool newgame)
 
     //if not FF7 user is stuck in the hex editor tab.
     if (!ff7->isFF7(s) && !ff7->region(s).isEmpty()) {
-        if (ui->combo_hexEditor->currentIndex() != 0) {
+        if (ui->combo_hexEditor->currentIndex() != 0)
             ui->combo_hexEditor->setCurrentIndex(0);
-        }
         ui->tabWidget->setCurrentIndex(8);
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++)
             ui->tabWidget->setTabEnabled(i, false);
-        }
         ui->tabWidget->setTabEnabled(9, false);
-    }
-
-    else {
-        for (int i = 0; i < 9; i++) {
+    } else {
+        for (int i = 0; i < 9; i++)
             ui->tabWidget->setTabEnabled(i, true);
-        }
         ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST).toBool());
     }
 
-    if (!newgame) {
+    if (!newgame && !ff7->fileName().isEmpty()) {
         ui->actionSave_File_As->setEnabled(1);
         ui->actionReload->setEnabled(1);
     }
-    ui->actionImport_char->setEnabled(1);       ui->action_Save->setEnabled(1);
 
+    ui->actionImport_char->setEnabled(1);
+    ui->action_Save->setEnabled(1);
+
+    //we haven't loaded a file yet.
     if (!_init) {
-        //we haven't loaded a file yet.
-        ui->actionNew_Game_Plus->setEnabled(1); ui->actionImport_Slot_From_File->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);     ui->actionPaste_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
+        ui->actionImport_Slot_From_File->setEnabled(1);
+        ui->actionCopy_Slot->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
         ui->actionNew_Game->setEnabled(1);
     }
 
@@ -1122,35 +1117,34 @@ void MainWindow::setmenu(bool newgame)
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
-    if (ff7->region(s).contains("94163")) {
+    if (ff7->region(s).contains("94163"))
         ui->action_Region_USA->setChecked(true);
-    } else if (ff7->region(s).contains("00867")) {
+    else if (ff7->region(s).contains("00867"))
         ui->action_Region_PAL_Generic->setChecked(true);
-    } else if (ff7->region(s).contains("00868")) {
+    else if (ff7->region(s).contains("00868"))
         ui->action_Region_PAL_French->setChecked(true);
-    } else if (ff7->region(s).contains("00869")) {
+    else if (ff7->region(s).contains("00869"))
         ui->action_Region_PAL_German->setChecked(true);
-    } else if (ff7->region(s).contains("00900")) {
+    else if (ff7->region(s).contains("00900"))
         ui->action_Region_PAL_Spanish->setChecked(true);
-    } else if (ff7->region(s).contains("00700")) {
+    else if (ff7->region(s).contains("00700"))
         ui->action_Region_JPN->setChecked(true);
-    } else if (ff7->region(s).contains("01057")) {
+    else if (ff7->region(s).contains("01057"))
         ui->action_Region_JPN_International->setChecked(true);
-    } else if (ff7->region(s).isEmpty()) {/*do nothing*/}
-    /*~~End Detected Region~~*/
-    else {
+    else if (!ff7->region(s).isEmpty()) {
         //not FF7 unset some menu options.
-        ui->actionNew_Game_Plus->setEnabled(0); ui->actionCopy_Slot->setEnabled(0);
-        ui->actionExport_char->setEnabled(0);   ui->actionImport_char->setEnabled(0);
+        ui->actionNew_Game_Plus->setEnabled(0);
+        ui->actionCopy_Slot->setEnabled(0);
+        ui->actionExport_char->setEnabled(0);
+        ui->actionImport_char->setEnabled(0);
     }
     load = false;
 }
 void MainWindow::fileModified(bool changed)
 {
     ui->lbl_fileName->setText(ff7->fileName());
-    if (changed) {
+    if (changed)
         ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
-    }
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
@@ -1255,11 +1249,10 @@ void MainWindow::materiaupdate(void)
             ff7->setFileModified(fileTemp, s);
         }
     }
-    if (ff7->partyMateriaId(s, j) == FF7Materia::EnemySkill) {
+    if (ff7->partyMateriaId(s, j) == FF7Materia::EnemySkill)
         mat_spacer->changeSize(0, 0, QSizePolicy::Fixed, QSizePolicy::Fixed);
-    } else {
+    else
         mat_spacer->changeSize(0, 0, QSizePolicy::Fixed, QSizePolicy::MinimumExpanding);
-    }
     materia_editor->setMateria(ff7->partyMateriaId(s, j), ff7->partyMateriaAp(s, j));
     ui->tbl_materia->setCurrentCell(j, 1); //so that right side is set correctly.
     load = false;
@@ -1416,6 +1409,7 @@ void MainWindow::updateStolenMateria()
 }
 void MainWindow::update_hexEditor_PSXInfo(void)
 {
+    load = true;
     SaveIcon *save_icon = new SaveIcon(ff7->slotIcon(s));
     ui->lblPsxIcon->setPixmap(save_icon->icon().scaled(ui->lblPsxIcon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     //connect(save_icon, SIGNAL(nextIcon(QPixmap)), ui->lblPsxIcon, SLOT(setPixmap(QPixmap)));
@@ -1424,32 +1418,29 @@ void MainWindow::update_hexEditor_PSXInfo(void)
     QString SlotSizeText;
 
     if (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK))
         ui->linePsxDesc->setText(ff7->psxDesc(s));
-    }
 
     if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)) {
+      || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK))
         SlotSizeText.append(tr("\n Mid-Linked Block "));
-    } else if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
-               || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+
+    else if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+      || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK))
         SlotSizeText.append(tr("\n End Of Linked Data"));
-    }
 
     if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+      || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+      || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK))
         SlotSizeText.append(tr("(Deleted)"));
-    }
 
     if (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
-            && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK)) {
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_MIDLINK)
+      && ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_DELETED_ENDLINK))
         SlotSizeText.append(tr("Game Uses %n Save Block(s)", nullptr, ff7->psx_block_size(s)));
-    }
 
     if (ff7->psx_block_size(s) != 1) {
         if (ff7->format() != FF7SaveInfo::FORMAT::PSX
@@ -1459,6 +1450,7 @@ void MainWindow::update_hexEditor_PSXInfo(void)
         }
     }
     ui->lblSlotSize->setText(SlotSizeText);
+    load = false;
 }
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
@@ -1609,9 +1601,8 @@ void MainWindow::guirefresh(bool newgame)
     } else {
         //IS FF7 Slot
         if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
-            if (ui->combo_hexEditor->currentIndex() != 1) {
+            if (ui->combo_hexEditor->currentIndex() != 1)
                 ui->combo_hexEditor->setCurrentIndex(1);
-            }
         }
         //QByteArray text;
         if (ff7->region(s).isEmpty()
@@ -1704,29 +1695,26 @@ void MainWindow::progress_update()
     //to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
 
     if (static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0x00 &&
-            static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x00 &&
-            static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x00 &&
-            static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x00 &&
-            static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x00 &&
-            static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x00) {
-        ui->combo_s7_slums->setCurrentIndex(1);
-    }
+      static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x00 &&
+      static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x00 &&
+      static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x00 &&
+      static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x00 &&
+      static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x00)
+            ui->combo_s7_slums->setCurrentIndex(1);
 
     else if (
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xBF) &&
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x51) &&
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x05) &&
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x17) &&
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x5D) &&
-        (static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0xEF)) {
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xBF) &&
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x51) &&
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x05) &&
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x17) &&
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x5D) &&
+      (static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0xEF))
         ui->combo_s7_slums->setCurrentIndex(2);
-    }
 
-    else if (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x13) {
+    else if (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x13)
         ui->combo_s7_slums->setCurrentIndex(3);
-    } else {
+    else
         ui->combo_s7_slums->setCurrentIndex(0);
-    }
     load = false;
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
@@ -1830,11 +1818,10 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
 {
     if (!load) {
-        if (index == 12) {
+        if (index == 12)
             ff7->setParty(s, 1, FF7Char::Empty);
-        } else {
+        else
             ff7->setParty(s, 1, index);
-        }
         //either way set the desc
         ff7->setDescParty(s, 1, ff7->party(s, 1));
     }
@@ -1843,11 +1830,10 @@ void MainWindow::on_combo_party2_currentIndexChanged(int index)
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {
     if (!load) {
-        if (index == 12) {
+        if (index == 12)
             ff7->setParty(s, 2, FF7Char::Empty);
-        } else {
+        else
             ff7->setParty(s, 2, index);
-        }
         //either way set the desc
         ff7->setDescParty(s, 2, ff7->party(s, 2));
     }
@@ -1855,222 +1841,187 @@ void MainWindow::on_combo_party3_currentIndexChanged(int index)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::cm_stablesOwnedChanged(qint8 owned)
 {
-    if (!load) {
+    if (!load)
         ff7->setStablesOwned(s, owned);
-    }
 }
 void MainWindow::cm_stableMaskChanged(qint8 mask)
 {
-    if (!load) {
+    if (!load)
         ff7->setStableMask(s, mask);
-    }
 }
 void MainWindow::cm_stablesOccupiedChanged(qint8 occupied)
 {
-    if (!load) {
+    if (!load)
         ff7->setStablesOccupied(s, occupied);
-    }
 }
 //set data for stables inside
 void MainWindow::cm_nameChanged(int stable, QString text)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoName(s, stable, text);
-    }
 }
 void MainWindow::cm_staminaChanged(int stable, quint16 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoStamina(s, stable, value);
-    }
 }
 void MainWindow::cm_speedChanged(int stable, quint16 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoSpeed(s, stable, value);
-    }
 }
 void MainWindow::cm_maxspeedChanged(int stable, quint16 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoMaxSpeed(s, stable, value);
-    }
 }
 void MainWindow::cm_sprintChanged(int stable, quint16 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoSprintSpeed(s, stable, value);
-    }
 }
 void MainWindow::cm_maxsprintChanged(int stable, quint16 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoMaxSprintSpeed(s, stable, value);
-    }
 }
 void MainWindow::cm_sexChanged(int stable, quint8 index)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoSex(s, stable, index);
-    }
 }
 void MainWindow::cm_typeChanged(int stable, quint8 index)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoType(s, stable, index);
-    }
 }
 void MainWindow::cm_coopChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoCoop(s, stable, value);
-    }
 }
 void MainWindow::cm_accelChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoAccel(s, stable, value);
-    }
 }
 void MainWindow::cm_intelChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoIntelligence(s, stable, value);
-    }
 }
 void MainWindow::cm_raceswonChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoRaceswon(s, stable, value);
-    }
 }
 void MainWindow::cm_pcountChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoPCount(s, stable, value);
-    }
 }
 void MainWindow::cm_personalityChanged(int stable, quint8 value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoPersonality(s, stable, value);
-    }
 }
 void MainWindow::cm_mated_toggled(int stable, bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoCantMate(s, stable, checked);
-    }
 }
 void MainWindow::cm_ratingChanged(int stable, quint8 rating)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoboRating(s, stable, rating);
-    }
 }
 //set data for pens outside
 void MainWindow::cm_pensChanged(int pen, int index)
 {
-    if (!load) {
+    if (!load)
         ff7->setChocoboPen(s, pen, index);
-    }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_sb_love_barret_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
-    }
 }
 void MainWindow::on_sb_love_aeris_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
-    }
 }
 void MainWindow::on_sb_love_tifa_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
-    }
 }
 void MainWindow::on_sb_love_yuffie_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
-    }
 }
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setTime(s, quint32((value * 3600) + (ui->sb_time_min->value() * 60) + (ui->sb_time_sec->value())));
-    }
 }
 void MainWindow::on_sb_time_min_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setTime(s, quint32((ui->sb_time_hour->value() * 3600) + ((value * 60)) + (ui->sb_time_sec->value())));
-    }
 }
 void MainWindow::on_sb_time_sec_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setTime(s, quint32((ui->sb_time_hour->value() * 3600) + (ui->sb_time_min->value() * 60) + (value)));
-    }
 }
 
 void MainWindow::on_sb_steps_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSteps(s, value);
-    }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_sb_gil_valueChanged(double value)
 {
-    if (!load) {
+    if (!load)
         ff7->setGil(s, quint32(value));
-    }
 }
 void MainWindow::on_sb_gp_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setGp(s, value);
-    }
 }
 void MainWindow::on_sb_battles_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattles(s, value);
-    }
 }
 void MainWindow::on_sb_runs_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setRuns(s, value);
-    }
 }
 
 void MainWindow::on_cb_mysteryPanties_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
-    }
 }
 void MainWindow::on_cb_letterToDaughter_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
-    }
 }
 void MainWindow::on_cb_letterToWife_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
-    }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2089,45 +2040,40 @@ void MainWindow::on_btn_add_all_materia_clicked()
     //place one of each at lowest ossible point
     for (int i = 117; i < 142; i++) {
         //Starting With Magic Materia
-        if (i < 132) {
+        if (i < 132)
             ff7->setPartyMateria(s, i, quint8(i - 68), FF7Materia::MaxMateriaAp);
-        } else if ((i >= 132) && (i < 136)) {
+        else if ((i >= 132) && (i < 136))
             ff7->setPartyMateria(s, (i - 1), quint8(i - 68), FF7Materia::MaxMateriaAp);
-        } else if ((i >= 136) && (i < 142)) {
+        else if ((i >= 136) && (i < 142))
             ff7->setPartyMateria(s, (i - 3), quint8(i - 68), FF7Materia::MaxMateriaAp);
-        }
     }
     // Then Support
-    for (int i = 139; i < 152; i++) {
+    for (int i = 139; i < 152; i++)
         ff7->setPartyMateria(s, i, quint8(i - 116), FF7Materia::MaxMateriaAp);
-    }
 
     for (int i = 152; i < 166; i++) {
         //Then Command
-        if (i < 154) {
+        if (i < 154)
             ff7->setPartyMateria(s, i, quint8(i - 138), FF7Materia::MaxMateriaAp);
-        } else if (i < 157) {
+        else if (i < 157)
             ff7->setPartyMateria(s, i, quint8(i - 135), FF7Materia::MaxMateriaAp);
-        } else if (i < 159) {
+        else if (i < 159)
             ff7->setPartyMateria(s, i, quint8(i - 121), FF7Materia::MaxMateriaAp);
-        } else if (i < 165) {
+        else if (i < 165)
             ff7->setPartyMateria(s, i, quint8(i - 120), FF7Materia::MaxMateriaAp);
-        } else {
+        else
             ff7->setPartyMateria(s, i, 0x30, FF7Materia::MaxMateriaAp);
-        }
     }
     for (int i = 166; i < 183; i++) {
         //And Independent
-        if (i < 180) {
+        if (i < 180)
             ff7->setPartyMateria(s, i,  quint8(i - 166), FF7Materia::MaxMateriaAp);
-        } else {
+        else
             ff7->setPartyMateria(s, i,  quint8(i - 164), FF7Materia::MaxMateriaAp);
-        }
     }
     //Finish With Summons
-    for (int i = 183; i < 200; i++) {
+    for (int i = 183; i < 200; i++)
         ff7->setPartyMateria(s, i,  quint8(i - 109), FF7Materia::MaxMateriaAp);
-    }
     materiaupdate();
     statusBar()->showMessage(tr("All Materia Added!"), 750);
 }
@@ -2148,326 +2094,274 @@ void MainWindow::locationSelectionChanged(QString fieldName)
 }
 void MainWindow::map_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setMapId(s, quint16(value));
-    }
 }
 void MainWindow::loc_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocationId(s, quint16(value));
-    }
 }
 void MainWindow::coord_x_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocationX(s, qint16(value));
-    }
 }
 void MainWindow::coord_y_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocationY(s, qint16(value));
-    }
 }
 void MainWindow::coord_t_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocationT(s, quint16(value));
-    }
 }
 void MainWindow::coord_d_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocationD(s, quint8(value));
-    }
 }
 void MainWindow::location_textChanged(QString text)
 {
-    if (!load) {
+    if (!load)
         ff7->setLocation(s, text);
-    }
 }
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void MainWindow::setDialogColorUL(QColor color)
 {
-    if (!load) {
+    if (!load)
         ff7->setDialogColorUL(s, color);
-    }
 }
 void MainWindow::setDialogColorUR(QColor color)
 {
-    if (!load) {
+    if (!load)
         ff7->setDialogColorUR(s, color);
-    }
 }
 void MainWindow::setDialogColorLL(QColor color)
 {
-    if (!load) {
+    if (!load)
         ff7->setDialogColorLL(s, color);
-    }
 }
 void MainWindow::setDialogColorLR(QColor color)
 {
-    if (!load) {
+    if (!load)
         ff7->setDialogColorLR(s, color);
-    }
 }
 
 void MainWindow::setBattleSpeed(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattleSpeed(s, value);
-    }
 }
 void MainWindow::setBattleMessageSpeed(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattleMessageSpeed(s, value);
-    }
 }
 void MainWindow::setFieldMessageSpeed(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setMessageSpeed(s, value);
-    }
 }
 void MainWindow::setBattleHelp(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattleHelp(s, checked);
-    }
 }
 void MainWindow::setFieldHelp(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setFieldHelp(s, checked);
-    }
 }
 void MainWindow::setBattleTargets(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattleTargets(s, checked);
-    }
 }
 
 void MainWindow::setControlMode(int mode)
 {
-    if (!load) {
+    if (!load)
         ff7->setControlMode(s, mode);
-    }
 }
 void MainWindow::setSoundMode(int mode)
 {
-    if (!load) {
+    if (!load)
         ff7->setSoundMode(s, mode);
-    }
 }
 void MainWindow::setCursorMode(int mode)
 {
-    if (!load) {
+    if (!load)
         ff7->setCursorMode(s, mode);
-    }
 }
 void MainWindow::setAtbMode(int mode)
 {
-    if (!load) {
+    if (!load)
         ff7->setAtbMode(s, mode);
-    }
 }
 void MainWindow::setCameraMode(int mode)
 {
-    if (!load) {
+    if (!load)
         ff7->setCameraMode(s, mode);
-    }
 }
 void MainWindow::setMagicOrder(int order)
 {
-    if (!load) {
+    if (!load)
         ff7->setMagicOrder(s, order);
-    }
 }
 
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setDisc(s, value);
-    }
 }
 void MainWindow::on_sb_mprogress_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setMainProgress(s, value);
-    }
 }
 void MainWindow::on_sb_turkschurch_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setChurchProgress(s, value);
-    }
 }
 void MainWindow::on_sb_donprog_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setDonProgress(s, value);
-    }
 }
 void MainWindow::on_cb_bm1_1_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 0, checked);
-    }
 }
 void MainWindow::on_cb_bm1_2_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 1, checked);
-    }
 }
 void MainWindow::on_cb_bm1_3_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 2, checked);
-    }
 }
 void MainWindow::on_cb_bm1_4_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 3, checked);
-    }
 }
 void MainWindow::on_cb_bm1_5_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 4, checked);
-    }
 }
 void MainWindow::on_cb_bm1_6_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 5, checked);
-    }
 }
 void MainWindow::on_cb_bm1_7_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 6, checked);
-    }
 }
 void MainWindow::on_cb_bm1_8_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress1(s, 7, checked);
-    }
 }
 void MainWindow::on_cb_bm2_1_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 0, checked);
-    }
 }
 void MainWindow::on_cb_bm2_2_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 1, checked);
-    }
 }
 void MainWindow::on_cb_bm2_3_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 2, checked);
-    }
 }
 void MainWindow::on_cb_bm2_4_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 3, checked);
-    }
 }
 void MainWindow::on_cb_bm2_5_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 4, checked);
-    }
 }
 void MainWindow::on_cb_bm2_6_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 5, checked);
-    }
 }
 void MainWindow::on_cb_bm2_7_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 6, checked);
-    }
 }
 void MainWindow::on_cb_bm2_8_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress2(s, 7, checked);
-    }
 }
 void MainWindow::on_cb_bm3_1_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 0, checked);
-    }
 }
 void MainWindow::on_cb_bm3_2_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 1, checked);
-    }
 }
 void MainWindow::on_cb_bm3_3_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 2, checked);
-    }
 }
 void MainWindow::on_cb_bm3_4_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 3, checked);
-    }
 }
 void MainWindow::on_cb_bm3_5_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 4, checked);
-    }
 }
 void MainWindow::on_cb_bm3_6_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 5, checked);
-    }
 }
 void MainWindow::on_cb_bm3_7_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 6, checked);
-    }
 }
 void MainWindow::on_cb_bm3_8_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setBmProgress3(s, 7, checked);
-    }
 }
 
 void MainWindow::on_cb_s7pl_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 0);
-        } else {
+        else
             t &= ~(1 << 0);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2476,11 +2370,10 @@ void MainWindow::on_cb_s7pl_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 1);
-        } else {
+        else
             t &= ~(1 << 1);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2489,11 +2382,10 @@ void MainWindow::on_cb_s7pl_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 2);
-        } else {
+        else
             t &= ~(1 << 2);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2502,11 +2394,10 @@ void MainWindow::on_cb_s7pl_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 3);
-        } else {
+        else
             t &= ~(1 << 3);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2515,11 +2406,10 @@ void MainWindow::on_cb_s7pl_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 4);
-        } else {
+        else
             t &= ~(1 << 4);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2528,11 +2418,10 @@ void MainWindow::on_cb_s7pl_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 5);
-        } else {
+        else
             t &= ~(1 << 5);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2541,11 +2430,10 @@ void MainWindow::on_cb_s7pl_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 6);
-        } else {
+        else
             t &= ~(1 << 6);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2554,11 +2442,10 @@ void MainWindow::on_cb_s7pl_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
-        if (checked) {
+        if (checked)
             t |= (1 << 7);
-        } else {
+        else
             t &= ~(1 << 7);
-        }
         temp[0] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2568,11 +2455,10 @@ void MainWindow::on_cb_s7ts_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 0);
-        } else {
+        else
             t &= ~(1 << 0);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2582,11 +2468,10 @@ void MainWindow::on_cb_s7ts_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 1);
-        } else {
+        else
             t &= ~(1 << 1);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2596,11 +2481,10 @@ void MainWindow::on_cb_s7ts_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 2);
-        } else {
+        else
             t &= ~(1 << 2);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2610,11 +2494,10 @@ void MainWindow::on_cb_s7ts_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 3);
-        } else {
+        else
             t &= ~(1 << 3);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2624,11 +2507,10 @@ void MainWindow::on_cb_s7ts_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 4);
-        } else {
+        else
             t &= ~(1 << 4);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2638,11 +2520,10 @@ void MainWindow::on_cb_s7ts_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 5);
-        } else {
+        else
             t &= ~(1 << 5);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2652,11 +2533,10 @@ void MainWindow::on_cb_s7ts_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 6);
-        } else {
+        else
             t &= ~(1 << 6);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2666,11 +2546,10 @@ void MainWindow::on_cb_s7ts_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
-        if (checked) {
+        if (checked)
             t |= (1 << 7);
-        } else {
+        else
             t &= ~(1 << 7);
-        }
         temp[8] = t;
         ff7->setUnknown(s, 26, temp);
     }
@@ -2678,43 +2557,31 @@ void MainWindow::on_cb_s7ts_8_toggled(bool checked)
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setStartBombingMission(s, checked);
-    }
 }
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
-    if (index > 0) {
+    if (index > 0)
         ui->btnReplay->setEnabled(true);
-    } else {
+    else
         ui->btnReplay->setEnabled(false);
-    }
 
     //Display Info on the Selected Reset
     //see on_btnReplay_clicked() for the reset data
-    if (index == 1) { //Bombing Mission Reset
+    if (index == 1) //Bombing Mission Reset
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
-    }
-
-    else if (index == 2) { //Church in the Slums Reset
+    else if (index == 2) //Church in the Slums Reset
         ui->label_replaynote->setText(tr("Meeting Aeris"));
-    }
-
-    else if (index == 3) { //Cloud's Flashback Reset
+    else if (index == 3) //Cloud's Flashback Reset
         ui->label_replaynote->setText(tr("This Will Copy Cloud as is to young cloud (caitsith's slot). Sephiroth's stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again"));
-    }
-
-    else if (index == 4) { //Date Scene
+    else if (index == 4) //Date Scene
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too."));
-    }
-
-    else if (index == 5) { //Aerith's Death
+    else if (index == 5) //Aerith's Death
         ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
-    } else {
+    else
         ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));
-    }
-
 }
 void MainWindow::on_btnReplay_clicked()
 {
@@ -2776,18 +2643,16 @@ void MainWindow::on_btnReplay_clicked()
         FF7Save *temp = new FF7Save();
         temp->newGame(s);
         ff7->setCharacter(s, FF7Char::Vincent, temp->character(s, FF7Char::Vincent));
-        if (ff7->region(s).contains("00700") || ff7->region(s).contains("01057")) {
+        if (ff7->isJPN(s))
             ff7->setCharName(s, 7, QString::fromUtf8("セフィロス"));
-        } else {
+        else
             ff7->setCharName(s, 7, QString::fromUtf8("Sephiroth"));
-        }
 
         set_char_buttons();
-        if (curchar == FF7Char::CaitSith) {
+        if (curchar == FF7Char::CaitSith)
             char_editor->setChar(ff7->character(s, 6), ff7->charName(s, 6));
-        } else if (curchar == FF7Char::Vincent) {
+        else if (curchar == FF7Char::Vincent)
             char_editor->setChar(ff7->character(s, 7), ff7->charName(s, 7));
-        }
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
@@ -2825,183 +2690,156 @@ void MainWindow::on_btnReplay_clicked()
         phsList->setChecked(FF7Char::Aerith, PhsListWidget::PHSALLOWED, false);
         phsList->setChecked(FF7Char::Aerith, PhsListWidget::PHSVISIBLE, false);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
-    } else {}
-    ui->cb_replay->setCurrentIndex(0);
-    if (!load) {
-        progress_update();
     }
+    ui->cb_replay->setCurrentIndex(0);
+    if (!load)
+        progress_update();
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_btn_remove_all_items_clicked()
 {
-    for (int i = 0; i < 320; i++) {
+    for (int i = 0; i < 320; i++)
         ff7->setItem(s, i, FF7Item::EmptyItemData);
-    }
     itemlist->setItems(ff7->items(s));
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
 {
-    for (int i = 0; i < 200; i++) {
+    for (int i = 0; i < 200; i++)
         ff7->setPartyMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
-    }
     materiaupdate();
 }
 
 void MainWindow::on_btn_remove_all_stolen_clicked()
 {
-    for (int i = 0; i < 48; i++) {
+    for (int i = 0; i < 48; i++)
         ff7->setStolenMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
-    }
-
     guirefresh(0);
 }
 
 void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
-    }
 }
 void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
-    }
 }
 void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
-    }
 }
 void MainWindow::on_sb_b_love_barret_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
-    }
 }
 void MainWindow::on_sb_coster_1_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSpeedScore(s, 1, quint16(value));
-    }
 }
 void MainWindow::on_sb_coster_2_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSpeedScore(s, 2, quint16(value));
-    }
 }
 void MainWindow::on_sb_coster_3_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSpeedScore(s, 3, quint16(value));
-    }
 }
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sb_timer_time_min->value() * 60) + (ui->sb_timer_time_sec->value())));
-    }
 }
 void MainWindow::on_sb_timer_time_min_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value() * 3600) + ((value * 60)) + (ui->sb_timer_time_sec->value())));
-    }
 }
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value() * 3600) + (ui->sb_timer_time_min->value() * 60) + (value)));
-    }
 }
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setUWeaponHp(s, value);
-    }
 }
 void MainWindow::on_cb_reg_vinny_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setVincentUnlocked(s, checked);
-    }
 }
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setYuffieUnlocked(s, checked);
-    }
 }
 void MainWindow::on_cb_yuffieforest_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setCanFightNinjaInForest(s, checked);
-    }
 }
 
 void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 0, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 1, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 2, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 3, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 4, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 5, checked);
-    }
 }
 void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 6, checked);
-    }
+
 }
 void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMidgarTrainFlags(s, 7, checked);
-    }
 }
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 {
     if (!load) {
-        if (value == 0) {
+        if (value == 0)
             ff7->setTutSave(s, 0x00);
-        } else if (value == 1) {
+        else if (value == 1)
             ff7->setTutSave(s, 0x32);
-        } else if (value == 2) {
+        else if (value == 2)
             ff7->setTutSave(s, 0x3A);
-        }
         ui->lcdNumber_7->display(ff7->tutSave(s));
     }
 }
@@ -3026,15 +2864,13 @@ void MainWindow::on_cb_tut_sub_toggled(bool checked)
 
 void MainWindow::on_cb_ruby_dead_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setKilledRubyWeapon(s, checked);
-    }
 }
 void MainWindow::on_cb_emerald_dead_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setKilledEmeraldWeapon(s, checked);
-    }
 }
 
 void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
@@ -3053,9 +2889,8 @@ void MainWindow::on_cb_visible_buggy_toggled(bool checked)
     if (!load) {
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_BUGGY, checked);
         if (checked) {
-            if (ui->cb_visible_highwind->isChecked()) {
+            if (ui->cb_visible_highwind->isChecked())
                 ui->cb_visible_highwind->setChecked(false);
-            }
             load = true;
             ui->combo_highwind_buggy->setCurrentIndex(1);
             ui->bh_id->setValue(0x06);
@@ -3073,9 +2908,8 @@ void MainWindow::on_cb_visible_buggy_toggled(bool checked)
 }
 void MainWindow::on_cb_visible_bronco_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
-    }
 }
 void MainWindow::on_cb_visible_highwind_toggled(bool checked)
 {
@@ -3101,9 +2935,8 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
 }
 void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_WILD, checked);
-    }
 
     if (!checked) {
         ui->cb_visible_yellow_chocobo->setChecked(false);
@@ -3184,21 +3017,18 @@ void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
 // Leader's world map stuff. 0
 void MainWindow::on_leader_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsLeaderID(s, value);
-    }
 }
 void MainWindow::on_leader_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsLeaderAngle(s, value);
-    }
 }
 void MainWindow::on_leader_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsLeaderZ(s, value);
-    }
 }
 void MainWindow::on_leader_x_valueChanged(int value)
 {
@@ -3227,21 +3057,18 @@ void MainWindow::on_leader_y_valueChanged(int value)
 //Tiny bronco / chocobo world 1
 void MainWindow::on_tc_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsTcID(s, value);
-    }
 }
 void MainWindow::on_tc_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsTcAngle(s, value);
-    }
 }
 void MainWindow::on_tc_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsTcZ(s, value);
-    }
 }
 void MainWindow::on_tc_x_valueChanged(int value)
 {
@@ -3269,21 +3096,18 @@ void MainWindow::on_tc_y_valueChanged(int value)
 //buggy / highwind world 2
 void MainWindow::on_bh_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsBhID(s, value);
-    }
 }
 void MainWindow::on_bh_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsBhAngle(s, value);
-    }
 }
 void MainWindow::on_bh_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsBhZ(s, value);
-    }
 }
 void MainWindow::on_bh_x_valueChanged(int value)
 {
@@ -3310,21 +3134,18 @@ void MainWindow::on_bh_y_valueChanged(int value)
 // sub world 3
 void MainWindow::on_sub_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsSubID(s, value);
-    }
 }
 void MainWindow::on_sub_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsSubAngle(s, value);
-    }
 }
 void MainWindow::on_sub_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsSubZ(s, value);
-    }
 }
 void MainWindow::on_sub_x_valueChanged(int value)
 {
@@ -3352,21 +3173,18 @@ void MainWindow::on_sub_y_valueChanged(int value)
 //Wild Chocobo 4
 void MainWindow::on_wc_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsWchocoID(s, value);
-    }
 }
 void MainWindow::on_wc_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsWchocoAngle(s, value);
-    }
 }
 void MainWindow::on_wc_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsWchocoZ(s, value);
-    }
 }
 void MainWindow::on_wc_x_valueChanged(int value)
 {
@@ -3394,21 +3212,18 @@ void MainWindow::on_wc_y_valueChanged(int value)
 //Ruby world stuff 5
 void MainWindow::on_durw_id_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsDurwID(s, value);
-    }
 }
 void MainWindow::on_durw_angle_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsDurwAngle(s, value);
-    }
 }
 void MainWindow::on_durw_z_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setWorldCoordsDurwZ(s, value);
-    }
 }
 void MainWindow::on_durw_x_valueChanged(int value)
 {
@@ -3491,9 +3306,9 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     menu.addAction(tr("Place Emerald Weapon?"));
     */
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
-    if (!sel) {
+    if (!sel)
         return;
-    }
+
     fileModified(true);
     if (sel->text() == tr("&Place Leader")) {
         ui->leader_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
@@ -3524,17 +3339,15 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     for (int i = 0; i < 320; i++) {
         //Replaced by new item engine. (Vegeta_Ss4)
         if (FF7Item::instance()->name(i) != tr("DON'T USE")) {
-            if (i < 106) {
+            if (i < 106)
                 ff7->setItem(s, i, quint16(i), 127);
-            } else { // after the block of empty items shift up 23 spots.
+            else // after the block of empty items shift up 23 spots.
                 ff7->setItem(s, (i - 23), quint16(i), 127);
-            }
         } else {
             ff7->setItem(s, i, 0x1FF, 0x7F);   //exclude the test items
         }
-        if (i > 296) {
+        if (i > 296)
             ff7->setItem(s, i, 0x1FF, 0x7F);   //replace the shifted ones w/ empty slots
-        }
     }
     itemlist->setItems(ff7->items(s));
     statusBar()->showMessage(tr("All Items Added"), 750);
@@ -3606,11 +3419,10 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             }
 
             s2 = ui->combo_compare_slot->currentIndex() - 1;
-            if (z <= ff7->unknown_zmax()) {
+            if (z <= ff7->unknown_zmax())
                 temp2 = ff7->unknown(s2, z);
-            } else if (z == ff7->unknown_zmax() + 1) {
+            else if (z == ff7->unknown_zmax() + 1)
                 temp2 = ff7->slotFF7Data(s2);
-            }
             value = quint8(temp2.at(i));
 
             //Write Hex
@@ -3746,32 +3558,25 @@ void MainWindow::char_baseMp_changed(quint16 mp)
 void MainWindow::char_curHp_changed(quint16 hp)
 {
     ff7->setCharCurrentHp(s, curchar, hp);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescCurHP(s, hp);
-    }
-
 }
 void MainWindow::char_curMp_changed(quint16 mp)
 {
     ff7->setCharCurrentMp(s, curchar, mp);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescCurMP(s, mp);
-    }
-
 }
 void MainWindow::char_id_changed(qint8 id)
 {
     ff7->setCharID(s, curchar, id);
-
     set_char_buttons();
 }
 void MainWindow::char_level_changed(qint8 level)
 {
     ff7->setCharLevel(s, curchar, level);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescLevel(s, level);
-    }
-
 }
 void MainWindow::char_str_changed(quint8 str)
 {
@@ -3881,34 +3686,28 @@ void MainWindow::char_mslot_changed(int slot)
 void MainWindow::char_name_changed(QString name)
 {
     ff7->setCharName(s, curchar, name);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescName(s, name);
-    }
-
 }
 
 void MainWindow::char_maxHp_changed(quint16 value)
 {
     ff7->setCharMaxHp(s, curchar, value);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescMaxHP(s, value);
-    }
-
 }
 void MainWindow::char_maxMp_changed(quint16 value)
 {
     ff7->setCharMaxMp(s, curchar, value);
-    if (curchar == ff7->party(s, 0)) {
+    if (curchar == ff7->party(s, 0))
         ff7->setDescMaxMP(s, value);
-    }
-
 }
 
 void MainWindow::on_btn_maxChar_clicked()
 {
-    if (ff7->charID(s, curchar) == FF7Char::YoungCloud || ff7->charID(s, curchar) == FF7Char::Sephiroth  ||  _init) {
+    if (ff7->charID(s, curchar) == FF7Char::YoungCloud || ff7->charID(s, curchar) == FF7Char::Sephiroth  ||  _init)
         return;   //no char selected, sephiroth and young cloud.
-    }
+
     int result = QMessageBox::question(this, tr("Black Chocobo"), tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(ff7->charName(s, curchar)), QMessageBox::Yes, QMessageBox::No);
     switch (result) {
     case QMessageBox::Yes: char_editor->MaxEquip(); char_editor->MaxStats(); break;
@@ -3933,21 +3732,18 @@ void MainWindow::Items_Changed(QList<quint16> items)
 }
 void MainWindow::on_sbSnowBegScore_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSnowboardScore(s, 0, quint8(value));
-    }
 }
 void MainWindow::on_sbSnowExpScore_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSnowboardScore(s, 1, quint8(value));
-    }
 }
 void MainWindow::on_sbSnowCrazyScore_valueChanged(int value)
 {
-    if (!load) {
+    if (!load)
         ff7->setSnowboardScore(s, 2, quint8(value));
-    }
 }
 
 void MainWindow::on_sbSnowBegMin_valueChanged(int value)
@@ -4032,15 +3828,13 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 }
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setBikeHighScore(s, quint16(arg1));
-    }
 }
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setBattlePoints(s, quint16(arg1));
-    }
 }
 
 void MainWindow::on_combo_hexEditor_currentIndexChanged(int index)
@@ -4068,27 +3862,23 @@ void MainWindow::hexEditorChanged(void)
 
 void MainWindow::phsList_box_allowed_toggled(int row, bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setPhsAllowed(s, row, !checked);
-    }
 }
 void MainWindow::phsList_box_visible_toggled(int row, bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setPhsVisible(s, row, checked);
-    }
 }
 void MainWindow::menuList_box_locked_toggled(int row, bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMenuLocked(s, row, checked);
-    }
 }
 void MainWindow::menuList_box_visible_toggled(int row, bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setMenuVisible(s, row, checked);
-    }
 }
 
 void MainWindow::on_locationToolBox_currentChanged(int index)
@@ -4202,13 +3992,13 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
         ui->lcdTutSub->display(ff7->tutSub(s));
 
-        if (ff7->tutSave(s) == 0x3A) {
+        if (ff7->tutSave(s) == 0x3A)
             ui->cb_tut_worldsave->setCheckState(Qt::Checked);
-        } else if (ff7->tutSave(s) == 0x32) {
+        else if (ff7->tutSave(s) == 0x32)
             ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);
-        } else {
+        else
             ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);
-        }
+
         ui->lcdNumber_7->display(ff7->tutSave(s));
 
         ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
@@ -4221,9 +4011,8 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) { //we Display an icon. for all formats except for pc and switch.
+        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. for all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-        }
         load = false;
         break;
 
@@ -4233,33 +4022,28 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
 void MainWindow::on_sbCondorFunds_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCondorFunds(s, quint16(arg1));
-    }
 }
 void MainWindow::on_sbCondorWins_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCondorWins(s, quint8(arg1));
-    }
 }
 void MainWindow::on_sbCondorLosses_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCondorLosses(s, quint8(arg1));
-    }
 }
 void MainWindow::on_cbPandorasBox_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setSeenPandorasBox(s, checked);
-    }
 }
 void MainWindow::on_cbSubGameWon_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setSubMiniGameVictory(s, checked);
-    }
 }
 
 void MainWindow::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<quint8> Bit)
@@ -4285,19 +4069,18 @@ void MainWindow::checkFieldItem(int boxID)
             //attempt to cope with multi bits.
             int offset = offsetList.at(i);
             int bit = bitList.at(i);
-            if ((ff7->slotFF7Data(s).at(offset) & (1 << bit))) {
+            if ((ff7->slotFF7Data(s).at(offset) & (1 << bit)))
                 check1 = true;
-            } else {
+            else
                 check1 = false;
-            }
-            if (i == 0) {
+
+            if (i == 0)
                 checked = check1;
-            } else {
+            else
                 checked = (check1 & checked);
-            }
         }
         locationViewer->setFieldItemChecked(boxID, checked);
-    } else {/*????*/}
+    }
 }
 void MainWindow::fieldItemStateChanged(int boxID, bool checked)
 {
@@ -4308,11 +4091,11 @@ void MainWindow::fieldItemStateChanged(int boxID, bool checked)
             int offset = offsetList.at(i);
             int bit = bitList.at(i);
             QByteArray temp = ff7->slotFF7Data(s); char t = temp.at(offset);
-            if (checked) {
+            if (checked)
                 t |= (1 << bit);
-            } else {
+            else
                 t &= ~(1 << bit);
-            }
+
             temp[offset] = t;
             ff7->setSlotFF7Data(s, temp);
         }
@@ -4321,27 +4104,23 @@ void MainWindow::fieldItemStateChanged(int boxID, bool checked)
 
 void MainWindow::on_sb_saveMapId_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCraterSavePointMapID(s, arg1);
-    }
 }
 void MainWindow::on_sb_saveX_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCraterSavePointX(s, arg1);
-    }
 }
 void MainWindow::on_sb_saveY_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCraterSavePointY(s, arg1);
-    }
 }
 void MainWindow::on_sb_saveZ_valueChanged(int arg1)
 {
-    if (!load) {
+    if (!load)
         ff7->setCraterSavePointZ(s, arg1);
-    }
 }
 
 void MainWindow::on_btnSearchFlyers_clicked()
@@ -4367,13 +4146,11 @@ void MainWindow::on_linePsxDesc_textChanged(const QString &arg1)
 }
 void MainWindow::on_cb_FlashbackPiano_toggled(bool checked)
 {
-    if (!load) {
+    if (!load)
         ff7->setPlayedPianoOnFlashback(s, checked);
-    }
 }
 void MainWindow::setButtonMapping(int controlAction, int newButton)
 {
-    if (!load) {
+    if (!load)
         ff7->setControllerMapping(s, controlAction, newButton);
-    }
 }

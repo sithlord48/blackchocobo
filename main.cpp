@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -36,11 +36,10 @@ int main(int argc, char *argv[])
     QVersionNumber version(1, 9, 95);
 
     if(argc >1) {
-        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h") {
+        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h")
             printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");
-        } else if(QString(argv[1]) == "--version") {
+        else if(QString(argv[1]) == "--version")
             printf("Black Chocobo Version:%s \n",version.toString().toLocal8Bit().constData());
-        }
         return 0;
     }
     //Start application init.
@@ -51,7 +50,8 @@ int main(int argc, char *argv[])
 
     QRandomGenerator(quint32(QTime::currentTime().msec()));
     MainWindow w;
-    if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
+    if(argc ==2)
+        w.loadFileFull(QString(argv[1]), 0);// if command is run w/ a filename after it , load that file.
     w.show();
     return a.exec();
 }

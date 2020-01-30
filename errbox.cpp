@@ -33,9 +33,9 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
 {
-    if (ff7data->format() == FF7SaveInfo::FORMAT::PC) {
+    if (ff7data->format() == FF7SaveInfo::FORMAT::PC)
         close();
-    }
+
     QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint) & ~Qt::WindowCloseButtonHint)); //remove close
@@ -113,24 +113,23 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
         Slottext.append(tr("\n Game Uses %n Save Block(s)", nullptr, ff7save->psx_block_size(s)));
     }
 
-    if (ff7save->psx_block_next(s) != 0xFF) {
+    if (ff7save->psx_block_next(s) != 0xFF)
         Slottext.append(tr("\n   Next Data Chunk @ Slot:%1").arg(QString::number(ff7save->psx_block_next(s) + 1)));
-    }
 
     lblRegionString->setText(Slottext);
-    if (s == 0 || s == 14) {
+    if (s == 0)
         btnPrev->setEnabled(false);
-    }
+    if (s == 15)
+        btnNext->setEnabled(false);
 }
 
 void errbox::keyPressEvent(QKeyEvent *e)
 {
     //catch esc press and send it to view button
-    if (e->key() != Qt::Key_Escape) {
+    if (e->key() != Qt::Key_Escape)
         QDialog::keyPressEvent(e);
-    } else {
+    else
         btnView->click();
-    }
 }
 
 void errbox::btnViewClicked()
@@ -170,16 +169,15 @@ void errbox::btnPsvExportClicked()
     name.append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper());
     name.append(QStringLiteral(".PSV"));
     QString fileName = QFileDialog::getSaveFileName(this, tr("Save PSV File"), QStringLiteral("%1/%2").arg(QDir::homePath(), name), tr("PSV Files(*.PSV)"));
-    if (fileName.isEmpty()) {
+    if (fileName.isEmpty())
         return;
+
+    if (ff7save->exportPS3(s, fileName)) {
+        QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
+        done(3);
     } else {
-        if (ff7save->exportPS3(s, fileName)) {
-            QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
-            done(3);
-        } else {
-            QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
-            done(3);
-        }
+        QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
+        done(3);
     }
 }
 
