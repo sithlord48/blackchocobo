@@ -38,7 +38,7 @@
  *  | File   | Description
  *  |--------|-------------
  *  | *.ff7  |PC Format Save if with a metadata.xml file will attempt to sign it.
- *  |ff7save*|Switch Format save, same as PC
+ *  |ff7slot*|Switch Format save, same as PC
  *  | *.mcr  |Common Emulator format (Virtual Memory Card)
  *  | *.mcd  |Common Emulator format (Virtual Memory Card)
  *  | *.mci  |Common Emulator format (Virtual Memory Card)
@@ -51,9 +51,11 @@
  *  | *.mem  |Memory Card from Virtual Game Station
  *  | *.gme  |Dex drive format virtual memory card
  *  | *.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
- *  | *.vmp  |VMC format used by the PSP and PsVita
- *  | *.psv  |Saves "Exported" by a PS3.
- *  | *FF7-S*|A Raw PSX memory card "file" extracted from a real or virtual memory card
+ *  | *.VMP  |VMC format used by the PSP and PsVita
+ *  | *.PSV  |Saves "Exported" by a PS3.
+ *  |   *    |A Raw PSX memory card "file" extracted from a real or virtual memory card
+ *  | *.mcs  |Psx Game Edit Save
+ *  | *.ps1  |Memory Juggle Save
  */
 class FF7Save: public QObject
 {
@@ -121,10 +123,9 @@ public:
 
     /** \brief attempt to export a file as ff7save. A convenance function to call the proper export function
     *  \param fileName file that will be saved
-    *  \param newType Type of file to be saved  "PC","PSX","MC","VGS","DEX" are valid
     *  \param s Slot to export if exporting to a multi slot save type
     *  \return True if Successful
-    *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS(),exportVMP()
+    *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS(),exportVMP(),exportPGE()
     */
     bool exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat, int s = 0);
 
@@ -153,6 +154,13 @@ public:
      *  \return True if Successful
     */
     bool exportPS3(int s, const QString &fileName);
+
+    /** \brief attempt to save fileName in PGE format
+     *  \param s slot in loaded file to export in PGE format
+    *   \param fileName file that will be saved
+     *  \return True if Successful
+    */
+    bool exportPGE(int s, const QString &fileName);
 
     /** \brief attempt to save fileName as a Virtual Memory Card (slots without a region string will not be exported)
      *  \param fileName file that will be saved
@@ -1050,6 +1058,7 @@ private:
     void checksumSlots();
     quint16 ff7Checksum(int s);
     void fix_psv_header(int s);
+    void fix_pge_header(int s);
     void fix_psx_header(int s);
     void fix_vmp_header(void);
     void fix_vmc_header(void);

@@ -38,8 +38,7 @@ protected:
 private slots:
     void setIcon(QPixmap);
     void btnPrevClicked();
-    void btnPsxExportClicked();
-    void btnPsvExportClicked();
+    void btnExportClicked();
     void btnViewClicked();
     void btnNextClicked();
 private:
@@ -50,8 +49,7 @@ private:
     QPushButton *btnNext = nullptr;
     QPushButton *btnPrev = nullptr;
     QPushButton *btnView = nullptr;
-    QPushButton *btnPsxExport = nullptr;
-    QPushButton *btnPsvExport = nullptr;
+    QPushButton *btnExport = nullptr;
     QLabel *lblRegionString = nullptr;
     QLabel *lblIcon = nullptr;
 };

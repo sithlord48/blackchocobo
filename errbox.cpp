@@ -28,8 +28,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     , btnNext(new QPushButton(QIcon::fromTheme("go-next", QIcon(":/icon/next")), QString()))
     , btnPrev(new QPushButton(QIcon::fromTheme("go-previous", QIcon(":/icon/prev")), QString()))
     , btnView(new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("View Anyway")))
-    , btnPsxExport(new QPushButton(QIcon(":/icon/psxmc"), tr("Export as Raw PSX")))
-    , btnPsvExport(new QPushButton(tr("Export as PS&3 Save")))
+    , btnExport(new QPushButton(tr("E&xport Slot")))
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
 {
@@ -59,10 +58,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     btnNext->setIconSize(iconSize);
     connect(btnNext, &QPushButton::clicked, this, &errbox::btnNextClicked);
 
-    btnPsxExport->setIconSize(iconSize);
-    connect(btnPsxExport, &QPushButton::clicked, this, &errbox::btnPsxExportClicked);
-
-    connect(btnPsvExport, &QPushButton::clicked, this, &errbox::btnPsvExportClicked);
+    connect(btnExport, &QPushButton::clicked, this, &errbox::btnExportClicked);
 
     QHBoxLayout *slotLayout = new QHBoxLayout;
     slotLayout->setContentsMargins(0, 0, 3, 0);
@@ -78,8 +74,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
 
     auto *btnLayout = new QHBoxLayout;
     btnLayout->setSpacing(3);
-    btnLayout->addWidget(btnPsxExport);
-    btnLayout->addWidget(btnPsvExport);
+    btnLayout->addWidget(btnExport);
 
     QVBoxLayout *finalLayout = new QVBoxLayout;
     finalLayout->setContentsMargins(3, 3, 3, 3);
@@ -147,38 +142,52 @@ void errbox::btnNextClicked()
     done(2);
 }
 
-void errbox::btnPsxExportClicked()
+void errbox::btnExportClicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save Raw PSX File"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7save->region(s)), tr("All Files(*)"));
-    if (fileName.isEmpty()) {
-        return;
-    } else {
-        if (ff7save->exportPSX(s, fileName)) {
-            QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
-            done(3);
-        } else {
-            QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
-            done(3);
-        }
-    }
-}
+    QMap<QString, FF7SaveInfo::FORMAT> typeMap;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
+    QString types = typeMap.keys().join(";;");
+    QString fileName;
+    QString selectedType = typeMap.key(ff7save->format());
+    QString path = QDir::homePath();
 
-void errbox::btnPsvExportClicked()
-{
-    QString name = ff7save->region(s).mid(0, 12);
-    name.append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper());
-    name.append(QStringLiteral(".PSV"));
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Save PSV File"), QStringLiteral("%1/%2").arg(QDir::homePath(), name), tr("PSV Files(*.PSV)"));
+    auto saveDialog = new QFileDialog(this, tr("Select A File to Save As"), path, types);
+    saveDialog->setAttribute(Qt::WA_DeleteOnClose);
+    saveDialog->selectNameFilter(selectedType);
+    saveDialog->setFileMode(QFileDialog::AnyFile);
+    saveDialog->setAcceptMode(QFileDialog::AcceptSave);
+
+    QString nameTemplate = QStringLiteral("%1/%2");
+
+    connect(saveDialog, &QFileDialog::filterSelected, this, [typeMap, saveDialog, nameTemplate, this](const QString &filter){
+        QString name;
+        if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" ")))
+            name = ff7save->region(s);
+        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" ")))
+            name = ff7save->region(s).append(QStringLiteral(".mcs"));
+        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" ")))
+            name = ff7save->region(s).mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper().append(QStringLiteral(".PSV")));
+        saveDialog->selectFile(nameTemplate.arg(saveDialog->directory().path(), name));
+    });
+
+    connect(saveDialog, &QFileDialog::fileSelected, this, [saveDialog, &fileName, &selectedType](const QString &fileSelected){
+        selectedType = saveDialog->selectedNameFilter();
+        fileName = fileSelected;
+    });
+
+    saveDialog->exec();
+
     if (fileName.isEmpty())
         return;
+    FF7SaveInfo::FORMAT newType = typeMap[selectedType];
 
-    if (ff7save->exportPS3(s, fileName)) {
+    if (ff7save->exportFile(fileName, newType, s))
         QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
-        done(3);
-    } else {
+    else
         QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
-        done(3);
-    }
+    done(3);
 }
 
 void errbox::setSingleSlot(bool single)

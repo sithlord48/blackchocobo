@@ -112,6 +112,12 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     inline static const QStringList DEX_VALID_EXTENSIONS {QStringLiteral("*.gme")};
     inline static const QRegExp DEX_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.gme"), Qt::CaseInsensitive);
     inline static const QByteArray DEX_FILE_ID = QByteArray::fromRawData("\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x4D", 22);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PGE SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
+    static const int PGE_FILE_SIZE = 0x2080;
+    static const int PGE_FILE_HEADER_SIZE = 0x0080;
+    inline static const QString PGE_FILE_DESCRIPTION = tr("PSXGameEdit Memory Juggler");
+    inline static const QStringList PGE_VALID_EXTENSIONS { QStringLiteral("*.mcs"), QStringLiteral("*.ps1")};
+    inline static const QRegExp PGE_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.(mcs|ps1)"), Qt::CaseInsensitive);
 };
 
 FF7SaveInfo *FF7SaveInfo::instance()
@@ -149,6 +155,7 @@ int FF7SaveInfo::fileSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::DEX): return d->DEX_FILE_SIZE;
     case (FORMAT::VGS): return d->VGS_FILE_SIZE;
     case (FORMAT::SWITCH): return d->SWITCH_FILE_SIZE;
+    case FORMAT::PGE: return d->PGE_FILE_SIZE;
     default: return 0;
     }
 }
@@ -163,6 +170,7 @@ int FF7SaveInfo::fileHeaderSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::DEX): return d->DEX_FILE_HEADER_SIZE;
     case (FORMAT::VGS): return d->VGS_FILE_HEADER_SIZE;
     case (FORMAT::SWITCH): return d->SWITCH_FILE_HEADER_SIZE;
+    case FORMAT::PGE: return d->PGE_FILE_HEADER_SIZE;
     default: return 0;
     }
 }
@@ -175,6 +183,7 @@ int FF7SaveInfo::slotHeaderSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PSP):
     case (FORMAT::PS3):
     case (FORMAT::DEX):
+    case FORMAT::PGE:
     case (FORMAT::VGS): return d->PSX_SLOT_HEADER_SIZE;
     default: return 0;
     }
@@ -188,6 +197,7 @@ int FF7SaveInfo::slotFooterSize(FF7SaveInfo::FORMAT format) const
     case (FORMAT::PSP):
     case (FORMAT::PS3):
     case (FORMAT::DEX):
+    case FORMAT::PGE:
     case (FORMAT::VGS): return d->PSX_SLOT_FOOTER_SIZE;
     default: return 0;
     }
@@ -196,6 +206,7 @@ int FF7SaveInfo::slotFooterSize(FF7SaveInfo::FORMAT format) const
 int FF7SaveInfo::slotCount(FF7SaveInfo::FORMAT format) const
 {
     switch (format) {
+    case FORMAT::PGE:
     case (FORMAT::PSX):
     case (FORMAT::PS3): return 1;
     case (FORMAT::VMC):
@@ -241,6 +252,7 @@ QByteArray FF7SaveInfo::slotHeader(FF7SaveInfo::FORMAT format, int slot) const
 {
     std::clamp(slot, 0, 14);
     switch (format) {
+    case FORMAT::PGE:
     case (FORMAT::PSX):
     case (FORMAT::PSP):
     case (FORMAT::PS3):
@@ -254,6 +266,7 @@ QByteArray FF7SaveInfo::slotHeader(FF7SaveInfo::FORMAT format, int slot) const
 QByteArray FF7SaveInfo::slotFooter(FF7SaveInfo::FORMAT format) const
 {
     switch (format) {
+    case FORMAT::PGE:
     case (FORMAT::PSX):
     case (FORMAT::PSP):
     case (FORMAT::PS3):
@@ -336,6 +349,7 @@ QRegExp FF7SaveInfo::validNameRegExp(FF7SaveInfo::FORMAT format) const
     case (FORMAT::VGS): return d->VGS_VALID_NAME_REGEX;
     case (FORMAT::VMC): return d->VMC_VALID_NAME_REGEX;
     case (FORMAT::SWITCH): return d->SWITCH_VALID_NAME_REGEX;
+    case FORMAT::PGE: return d->PGE_VALID_NAME_REGEX;
     default: return QRegExp(QStringLiteral(""));
     }
 }
@@ -351,6 +365,7 @@ QString FF7SaveInfo::typeDescription(FF7SaveInfo::FORMAT format) const
     case (FORMAT::VGS): return d->VGS_FILE_DESCRIPTION;
     case (FORMAT::VMC): return d->VMC_FILE_DESCRIPTION;
     case (FORMAT::SWITCH): return d->SWITCH_FILE_DESCRIPTION;
+    case FORMAT::PGE: return d->PGE_FILE_DESCRIPTION;
     default: return QString();
     }
 }
@@ -366,28 +381,21 @@ QStringList FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT format) const
     case (FORMAT::VGS): return d->VGS_VALID_EXTENSIONS;
     case (FORMAT::VMC): return d->VMC_VALID_EXTENSIONS;
     case (FORMAT::SWITCH): return d->SWITCH_VALID_EXTENSIONS;
+    case FORMAT::PGE: return d->PGE_VALID_EXTENSIONS;
     default: return QStringList();
     }
 }
 
 QString FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT format) const
 {
-    switch (format) {
-    case (FORMAT::PC): return QStringLiteral("%1 (%2)").arg(d->PC_FILE_DESCRIPTION, d->PC_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::PSX): return QStringLiteral("%1 (%2)").arg(d->PSX_FILE_DESCRIPTION, d->PSX_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::PSP): return QStringLiteral("%1 (%2)").arg(d->PSP_FILE_DESCRIPTION, d->PSP_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::PS3): return QStringLiteral("%1 (%2)").arg(d->PS3_FILE_DESCRIPTION, d->PS3_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::DEX): return QStringLiteral("%1 (%2)").arg(d->DEX_FILE_DESCRIPTION, d->DEX_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::VGS): return QStringLiteral("%1 (%2)").arg(d->VGS_FILE_DESCRIPTION, d->VGS_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::VMC): return QStringLiteral("%1 (%2)").arg(d->VMC_FILE_DESCRIPTION, d->VMC_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    case (FORMAT::SWITCH): return QStringLiteral("%1 (%2)").arg(d->SWITCH_FILE_DESCRIPTION, d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")));
-    default: return tr("All Files (*)");
-    }
+    if (format == FORMAT::UNKNOWN)
+        return tr("All Files (*)");
+    return QStringLiteral("%1 (%2)").arg(typeDescription(format), typeExtension(format).join(QStringLiteral(" ")));
 }
 
 QString FF7SaveInfo::knownTypesFilter() const
 {
-    QString allTypes = QStringLiteral("%1 %2 %3 %4 %5 %6 %7 %8")
+    QString allTypes = QStringLiteral("%1 %2 %3 %4 %5 %6 %7 %8 %9")
         .arg(d->PC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
         .arg(d->PSX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
         .arg(d->PSP_VALID_EXTENSIONS.join(QStringLiteral(" ")))
@@ -395,9 +403,10 @@ QString FF7SaveInfo::knownTypesFilter() const
         .arg(d->DEX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
         .arg(d->VGS_VALID_EXTENSIONS.join(QStringLiteral(" ")))
         .arg(d->VMC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+        .arg(d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")))
+        .arg(d->PGE_VALID_EXTENSIONS.join(QStringLiteral(" ")));
 
-    return QStringLiteral("%1;;%2;;%3;;%4;;%5;;%6;;%7;;%8;;%9;;%10")
+    return QStringLiteral("%1;;%2;;%3;;%4;;%5;;%6;;%7;;%8;;%9;;%10;;%11")
         .arg(tr("Known FF7 Save Types (%1)").arg(allTypes))
         .arg(typeFilter(FORMAT::PC))
         .arg(typeFilter(FORMAT::SWITCH))
@@ -407,5 +416,6 @@ QString FF7SaveInfo::knownTypesFilter() const
         .arg(typeFilter(FORMAT::PSP))
         .arg(typeFilter(FORMAT::DEX))
         .arg(typeFilter(FORMAT::VGS))
+        .arg(typeFilter(FORMAT::PGE))
         .arg(typeFilter(FORMAT::UNKNOWN));
 }

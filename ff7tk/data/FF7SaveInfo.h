@@ -36,6 +36,7 @@ public:
         DEX,      //!< Dex Format
         VGS,      //!< VGS Format
         SWITCH,   //!< Switch Format
+        PGE,      //!< Psx Game Edit Style Single Save
     };
     Q_ENUM(FORMAT)
 
