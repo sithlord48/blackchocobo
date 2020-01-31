@@ -50,16 +50,7 @@ achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
 }
 void achievementDialog::accept(void)
 {
-    if (fileName.isEmpty()) {
-        fileName = QFileDialog::getSaveFileName(this, tr("Save As"), QDir::homePath(), tr("Dat Files (*.dat)"));
-    }
-    if (fileName.isEmpty()) {
-        return;
-    } else {
-        if (achEditor->saveFile(fileName)) {
-            this->close();
-        } else {
-            QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
-        }
-    }
+    if (!achEditor->saveFile(fileName))
+        QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
+    close();
 }

@@ -16,7 +16,6 @@
 #include "errbox.h"
 #include "ff7tk/data/FF7SaveInfo.h"
 #include <QMessageBox>
-#include <QFileDialog>
 #include <QKeyEvent>
 
 errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
@@ -144,52 +143,6 @@ void errbox::btnNextClicked()
 
 void errbox::btnExportClicked()
 {
-    QMap<QString, FF7SaveInfo::FORMAT> typeMap;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
-    QString types = typeMap.keys().join(";;");
-    QString fileName;
-    QString selectedType = typeMap.key(ff7save->format());
-    QString path = QDir::homePath();
-
-    auto saveDialog = new QFileDialog(this, tr("Select A File to Save As"), path, types);
-    saveDialog->setAttribute(Qt::WA_DeleteOnClose);
-    saveDialog->selectNameFilter(selectedType);
-    saveDialog->setFileMode(QFileDialog::AnyFile);
-    saveDialog->setAcceptMode(QFileDialog::AcceptSave);
-
-    QString nameTemplate = QStringLiteral("%1/%2");
-
-    connect(saveDialog, &QFileDialog::filterSelected, this, [typeMap, saveDialog, nameTemplate, this](const QString &filter){
-        QString name;
-        if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" ")))
-            name = ff7save->region(s);
-        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" ")))
-            name = ff7save->region(s).append(QStringLiteral(".mcs"));
-        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PDA).join(" ")))
-            name = ff7save->region(s).append(QStringLiteral(".mcb"));
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" ")))
-            name = ff7save->region(s).mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper().append(QStringLiteral(".PSV")));
-        saveDialog->selectFile(nameTemplate.arg(saveDialog->directory().path(), name));
-    });
-
-    connect(saveDialog, &QFileDialog::fileSelected, this, [saveDialog, &fileName, &selectedType](const QString &fileSelected){
-        selectedType = saveDialog->selectedNameFilter();
-        fileName = fileSelected;
-    });
-
-    saveDialog->exec();
-
-    if (fileName.isEmpty())
-        return;
-    FF7SaveInfo::FORMAT newType = typeMap[selectedType];
-
-    if (ff7save->exportFile(fileName, newType, s))
-        QMessageBox::information(this, tr("Save Successfully"), tr("File Saved Successfully, Going Back To The Selection Dialog"));
-    else
-        QMessageBox::information(this, tr("Save Error"), tr("Error On File Save, Going Back To The Selection Dialog"));
     done(3);
 }
 

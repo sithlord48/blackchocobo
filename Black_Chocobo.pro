@@ -21,6 +21,7 @@ CONFIG += c++1z
 QT += core gui xml widgets qml
 
 SOURCES += \
+	filedialog.cpp \
 	main.cpp \
 	mainwindow.cpp \
 	about.cpp \
@@ -61,6 +62,7 @@ SOURCES += \
 	ff7tk/data/FF7Achievements.cpp
 
 HEADERS += \
+    filedialog.h \
 	mainwindow.h \
 	about.h \
 	options.h \

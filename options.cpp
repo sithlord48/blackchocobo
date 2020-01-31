@@ -14,11 +14,14 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#include <QDebug>
+#include <QStandardPaths>
 #include <QStyle>
 #include <QTranslator>
+#include <QUrl>
 #include "options.h"
+#include "filedialog.h"
 #include "ui_options.h"
+#include "ff7tk/data/FF7SaveInfo.h"
 
 Options::Options(QWidget *parent, QSettings *config_data) :
     QDialog(parent)
@@ -26,7 +29,8 @@ Options::Options(QWidget *parent, QSettings *config_data) :
   , settings(config_data)
 {
     ui->setupUi(this);
-    ui->comboRegion->setFixedWidth(fontMetrics().horizontalAdvance(QChar('W')) * 8);
+    int fmh = fontMetrics().height();
+    QSize iconSize(fmh, fmh);
     ui->buttonBox->button(QDialogButtonBox::Help)->setText(tr("C&leanup"));
     ui->buttonBox->button(QDialogButtonBox::Help)->setIcon(QIcon());
     ui->buttonBox->button(QDialogButtonBox::Help)->setToolTip(tr("Remove invalid entries from the stored settings file"));
@@ -34,6 +38,8 @@ Options::Options(QWidget *parent, QSettings *config_data) :
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+    for (QAbstractButton *btn : ui->buttonBox->buttons())
+         btn->setIconSize(iconSize);
     ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     QDir dir(QStringLiteral("%1/lang").arg(settings->value(SETTINGS::LANGPATH).toString()));
@@ -45,6 +51,8 @@ Options::Options(QWidget *parent, QSettings *config_data) :
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
         ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(settings->value(SETTINGS::LANG, QStringLiteral("en"))));
     }
+    ui->comboLanguage->setVisible(ui->comboLanguage->count());
+    ui->lblLanguage->setVisible(ui->comboLanguage->count());
 
     connect(ui->sliderScale, &QSlider::valueChanged, this, [this](int value){
         value = int(((value * 0.25) + 0.5) * 100);
@@ -95,10 +103,10 @@ void Options::loadSettings()
 {
     ui->defaultSaveLayout->setVisible(false);
     ui->line_default_save->setText(settings->value(SETTINGS::DEFAULTSAVE, QString()).toString());
-    ui->line_char_stat_folder->setText(settings->value(SETTINGS::STATFOLDER, QDir::homePath()).toString());
-    ui->line_save_pc->setText(settings->value(SETTINGS::PCSAVEPATH, QDir::homePath()).toString());
-    ui->line_save_emu->setText(settings->value(SETTINGS::EMUSAVEPATH, QDir::homePath()).toString());
-    ui->line_load_path->setText(settings->value(SETTINGS::LOADPATH, QDir::homePath()).toString());
+    ui->line_char_stat_folder->setText(settings->value(SETTINGS::STATFOLDER, QString()).toString());
+    ui->line_save_pc->setText(settings->value(SETTINGS::PCSAVEPATH, QString()).toString());
+    ui->line_save_emu->setText(settings->value(SETTINGS::EMUSAVEPATH, QString()).toString());
+    ui->line_load_path->setText(settings->value(SETTINGS::LOADPATH, QString()).toString());
     ui->cbEditableCombos->setChecked(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     ui->cbCharEditorAdvanced->setChecked(settings->value(SETTINGS::CHARADVANCED, false).toBool());
     ui->cbChocoboEditorAdvanced->setChecked(settings->value(SETTINGS::CHOCOADVANCED, false).toBool());
@@ -112,6 +120,8 @@ void Options::loadSettings()
     ui->sliderScale->setValue(int((settings->value(SETTINGS::SCALE, 1.00).toDouble() - 0.50) / 0.25));
     ui->cbAutoGrowth->setChecked(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(settings->value(SETTINGS::LANG)));
+    ui->cbNativeDialogs->setChecked(settings->value(SETTINGS::USENATIVEDIALOGS).toBool());
+    ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
 }
 
 void Options::saveSettings()
@@ -134,6 +144,7 @@ void Options::saveSettings()
     settings->setValue(SETTINGS::SCALE, ((ui->sliderScale->value() * 0.25) + 0.5));
     settings->setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
     settings->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
+    settings->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
 }
 
 void Options::restoreDefaultSettings()
@@ -157,6 +168,7 @@ void Options::restoreDefaultSettings()
     ui->sliderScale->setValue(2);
     ui->cbAutoGrowth->setChecked(true);
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(QStringLiteral("en")));
+    ui->cbNativeDialogs->setChecked(true);
 }
 
 void Options::cleanSettings()
@@ -168,34 +180,37 @@ void Options::cleanSettings()
 }
 void Options::on_btn_set_save_pc_clicked()
 {
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save FF7 PC Saves"), settings->value(SETTINGS::PCSAVEPATH).toString());
-    ui->line_save_pc->setText(temp);
+    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save FF7 PC Saves"), ui->line_save_pc->text(), ui->line_save_pc->text());
+    if (!temp.isEmpty())
+        ui->line_save_pc->setText(temp);
 }
 
 void Options::on_btn_set_save_emu_clicked()
 {
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save mcd/mcr saves"), settings->value(SETTINGS::EMUSAVEPATH).toString());
-    ui->line_save_emu->setText(temp);
+    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save mcd/mcr saves"), ui->line_save_emu->text(), ui->line_save_emu->text());
+    if (!temp.isEmpty())
+        ui->line_save_emu->setText(temp);
 }
 
 void Options::on_btn_set_load_path_clicked()
 {
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Load FF7 PC Saves From"), settings->value(SETTINGS::LOADPATH).toString());
-    ui->btn_set_load_path->setText(temp);
+    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Load FF7 PC Saves From"), ui->line_load_path->text(), ui->line_load_path->text());
+    if (!temp.isEmpty())
+        ui->line_load_path->setText(temp);
 }
 
 void Options::on_btn_set_default_save_clicked()
 {
-    QString temp = QFileDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toString());
-    ui->line_default_save->setText(temp);
+    QString temp = FileDialog::getOpenFileName(this, settings, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(settings->value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(settings->value(SETTINGS::DEFAULTSAVE).toString()).fileName());
+    if(!temp.isEmpty())
+        ui->line_default_save->setText(temp);
 }
 
 void Options::on_btn_set_char_stat_folder_clicked()
 {
-    QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Location To Save Character Stat Files"), settings->value(SETTINGS::STATFOLDER).toString());
-    if (temp.isNull())
-        temp = QDir::homePath();
-    ui->line_char_stat_folder->setText(temp);
+    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Location To Save Character Stat Files"), ui->line_char_stat_folder->text(), ui->line_char_stat_folder->text());
+    if (!temp.isNull())
+        ui->line_char_stat_folder->setText(temp);
 }
 
 void Options::on_cb_override_def_save_toggled(bool checked)
@@ -203,9 +218,19 @@ void Options::on_cb_override_def_save_toggled(bool checked)
     ui->defaultSaveLayout->setVisible(checked);
 }
 
-
 void Options::on_comboLanguage_currentIndexChanged(const QString &arg1)
 {
     Q_UNUSED(arg1)
     emit requestLanguageChange(ui->comboLanguage->currentData());
+}
+
+void Options::on_cbNativeDialogs_clicked(bool checked)
+{
+    ui->btnEditSideBarItems->setVisible(!checked);
+    emit requestChangeNativeDialog(checked);
+}
+
+void Options::on_btnEditSideBarItems_clicked()
+{
+    FileDialog::editSideBarPaths(this, settings);
 }

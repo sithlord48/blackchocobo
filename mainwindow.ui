@@ -3710,7 +3710,7 @@ location.</string>
                <item>
                 <widget class="QLabel" name="label_23">
                  <property name="text">
-                  <string>Ho&amp;ur</string>
+                  <string>Hour</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -5542,7 +5542,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>G-Bi&amp;ke High Score</string>
+                   <string>G-Bike High Score</string>
                   </property>
                   <property name="buddy">
                    <cstring>sb_BikeHighScore</cstring>
@@ -7041,7 +7041,6 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="actionExport_char"/>
     <addaction name="separator"/>
     <addaction name="actionCreateNewMetadata"/>
-    <addaction name="actionOpen_Achievement_File"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
@@ -7056,11 +7055,13 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="separator"/>
     <addaction name="actionShow_Selection_Dialog"/>
     <addaction name="separator"/>
+    <addaction name="actionOpen_Achievement_File"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
-     <string>Settings</string>
+     <string>&amp;Settings</string>
     </property>
+    <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionShow_Options"/>
@@ -7116,7 +7117,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Quit</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Q</string>
+    <string>Ctrl+Q</string>
    </property>
    <property name="menuRole">
     <enum>QAction::QuitRole</enum>
@@ -7149,7 +7150,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Sa&amp;ve As</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Shift+S</string>
+    <string>Ctrl+Shift+S</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7182,7 +7183,10 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/slot_sel</normaloff>:/icon/slot_sel</iconset>
    </property>
    <property name="text">
-    <string>&amp;Show Selection Dialog</string>
+    <string>&amp;Select Slot</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
    </property>
   </action>
   <action name="actionCopy_Slot">
@@ -7197,7 +7201,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Copy Current Slot</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+Shift+C</string>
+    <string>Ctrl+Shift+C</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7215,7 +7219,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Paste Slot</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+Shift+V</string>
+    <string>Ctrl+Shift+V</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7233,7 +7237,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Clea&amp;r Slot</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Del</string>
+    <string>Ctrl+Shift+Del</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7251,7 +7255,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Previous Slot</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Left</string>
+    <string>Alt+Left</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7269,18 +7273,10 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Next Slot</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Right</string>
+    <string>Alt+Right</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
-   </property>
-  </action>
-  <action name="action_AdvancedMode">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Advanced Mode</string>
    </property>
   </action>
   <action name="actionShow_Options">
@@ -7289,7 +7285,13 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
    </property>
    <property name="text">
-    <string>Configure...</string>
+    <string>&amp;Configure</string>
+   </property>
+   <property name="toolTip">
+    <string>Applicaion Preferences</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
    </property>
    <property name="menuRole">
     <enum>QAction::PreferencesRole</enum>
@@ -7379,7 +7381,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;New Game</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Ins</string>
+    <string>Ctrl+Shift+N</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7394,10 +7396,10 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/new_plus</normaloff>:/icon/new_plus</iconset>
    </property>
    <property name="text">
-    <string>New &amp;Game+ </string>
+    <string>New Game&amp;+ </string>
    </property>
    <property name="shortcut">
-    <string notr="true">Alt+Shift+Ins</string>
+    <string>Ctrl+Shift+=</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -7411,6 +7413,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="text">
     <string>E&amp;xport Current Character</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
   </action>
   <action name="actionImport_char">
    <property name="icon">
@@ -7419,6 +7424,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>I&amp;mport Current Character</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Ins</string>
    </property>
   </action>
   <action name="action_Save">
@@ -7437,14 +7445,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
-   </property>
-  </action>
-  <action name="action_auto_char_growth">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>&amp;Calculate Stats</string>
    </property>
   </action>
   <action name="actionReload">
@@ -7482,7 +7482,10 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
    </property>
    <property name="text">
-    <string>&amp;Create Cloud Save Folder</string>
+    <string>Create Cloud Save &amp;Folder</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
    </property>
   </action>
   <action name="actionImport_Slot_From_File">
@@ -7496,6 +7499,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="text">
     <string>&amp;Import To Current Slot</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Ins</string>
+   </property>
   </action>
   <action name="actionOpen_Achievement_File">
    <property name="icon">
@@ -7503,7 +7509,10 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/achievements</normaloff>:/icon/achievements</iconset>
    </property>
    <property name="text">
-    <string>Open Achievement &amp;File</string>
+    <string>&amp;Achievement Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
    </property>
   </action>
  </widget>
@@ -7547,8 +7556,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_sec</tabstop>
  </tabstops>
  <resources>
-  <include location="ff7tk/icons/common.qrc"/>
   <include location="images.qrc"/>
+  <include location="ff7tk/icons/common.qrc"/>
  </resources>
  <connections>
   <connection>

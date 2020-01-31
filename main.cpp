@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
     //Start application init.
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
+    a.setAttribute(Qt::AA_DontUseNativeDialogs);
     a.setApplicationName("Black Chocobo");
     a.setApplicationVersion(version.toString());
 

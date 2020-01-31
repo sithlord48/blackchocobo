@@ -20,7 +20,7 @@
 #include "ff7tk/data/FF7Char.h"
 #include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Location.h"
-
+#include "filedialog.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -76,6 +76,7 @@ void MainWindow::populateLanguageMenu()
         }
     }
 }
+
 void MainWindow::initDisplay()
 {
     ui->linePsxDesc->setReadOnly(true);
@@ -409,12 +410,6 @@ void MainWindow::loadBasicSettings()
     if (settings->value(SETTINGS::SCALE).isNull())
         settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
 
-    if (settings->value(SETTINGS::LOADPATH).isNull())
-        settings->setValue(SETTINGS::LOADPATH, QDir::homePath());
-
-    if (settings->value(SETTINGS::STATFOLDER).isNull())
-        settings->setValue(SETTINGS::STATFOLDER, QDir::homePath());
-
     if (settings->value(SETTINGS::EDITABLECOMBOS).isNull())
         settings->setValue(SETTINGS::EDITABLECOMBOS, true);
 
@@ -426,20 +421,31 @@ void MainWindow::loadBasicSettings()
 
 void MainWindow::loadChildWidgetSettings()
 {
-    char_editor->setEditableComboBoxes(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
-    materia_editor->setEditableMateriaCombo(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
-    itemlist->setEditableItemCombo(settings->value(SETTINGS::EDITABLECOMBOS).toBool());
-    char_editor->setAdvancedMode(settings->value(SETTINGS::CHARADVANCED).toBool());
-    char_editor->setAutoLevel(settings->value(SETTINGS::AUTOGROWTH).toBool());
-    char_editor->setAutoStatCalc(settings->value(SETTINGS::AUTOGROWTH).toBool());
-    chocoboManager->setAdvancedMode(settings->value(SETTINGS::CHOCOADVANCED).toBool());
-    locationViewer->setAdvancedMode(settings->value(SETTINGS::LOCVIEWADVANCED).toBool());
-    ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST).toBool());
+    QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !settings->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
+    QStringList defaultBarUrls {
+        QDir::rootPath(),
+        QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
+        settings->value(SETTINGS::LOADPATH).toString(),
+        settings->value(SETTINGS::PCSAVEPATH).toString(),
+        settings->value(SETTINGS::EMUSAVEPATH).toString(),
+        settings->value(SETTINGS::STATFOLDER).toString()
+    };
+    for(const QString &url : settings->value(SETTINGS::SIDEBARURLS, defaultBarUrls).toStringList())
+        m_sideBarUrls.append(QUrl::fromLocalFile(url));
+    char_editor->setEditableComboBoxes(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    materia_editor->setEditableMateriaCombo(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemlist->setEditableItemCombo(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    char_editor->setAdvancedMode(settings->value(SETTINGS::CHARADVANCED, false).toBool());
+    char_editor->setAutoLevel(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
+    char_editor->setAutoStatCalc(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
+    chocoboManager->setAdvancedMode(settings->value(SETTINGS::CHOCOADVANCED, false).toBool());
+    locationViewer->setAdvancedMode(settings->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
+    ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST, false).toBool());
     if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
-        setControllerMappingVisible(settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool());
-    ui->bm_unknown->setVisible(settings->value(SETTINGS::PROGRESSADVANCED).toBool());
-    ui->bh_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED).toBool());
-    ui->leader_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED).toBool());
+        setControllerMappingVisible(settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
+    ui->bm_unknown->setVisible(settings->value(SETTINGS::PROGRESSADVANCED, false).toBool());
+    ui->bh_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->leader_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -516,9 +522,8 @@ void MainWindow::on_actionOpen_Save_File_triggered()
         if (!saveChanges())
             return;//cancel load.
     }
-    QString fileName = QFileDialog::getOpenFileName(this,
-                       tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
-                       FF7SaveInfo::instance()->knownTypesFilter());
+
+    QString fileName = FileDialog::getOpenFileName(this, settings, tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
@@ -563,7 +568,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_Slot_From_File_triggered()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
+    QString fileName = FileDialog::getOpenFileName(this, settings,
                        tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
@@ -593,7 +598,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
+    QString fileName = FileDialog::getOpenFileName(this, settings, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
         return;
     QFile file(fileName);
@@ -614,7 +619,7 @@ void MainWindow::on_actionImport_char_triggered()
 
 void MainWindow::on_actionExport_char_triggered()
 {
-    QString fileName = QFileDialog::getSaveFileName(this,
+    QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s),
                        tr("Save FF7 Character File"), settings->value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
@@ -644,11 +649,9 @@ bool MainWindow::on_actionSave_File_As_triggered()
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
-    QString types = typeMap.keys().join(";;");
-    QString fileName;
     QString selectedType = typeMap.key(ff7->format(), QString());
-    QString path;
 
+    QString path;
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
             path = settings->value(SETTINGS::PCSAVEPATH).toString();
     else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
@@ -656,48 +659,7 @@ bool MainWindow::on_actionSave_File_As_triggered()
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
         path = settings->value(SETTINGS::EMUSAVEPATH).toString();
 
-    if (path.isEmpty())
-        path = QDir::homePath();
-
-    auto saveDialog = new QFileDialog(this, tr("Select A File to Save As"), path, types);
-    saveDialog->setAttribute(Qt::WA_DeleteOnClose);
-    saveDialog->selectNameFilter(selectedType);
-    saveDialog->setFileMode(QFileDialog::AnyFile);
-    saveDialog->setAcceptMode(QFileDialog::AcceptSave);
-
-    QString nameTemplate = QStringLiteral("%1/%2");
-
-    connect(saveDialog, &QFileDialog::filterSelected, this, [typeMap, saveDialog, nameTemplate, this](const QString &filter){
-        QString name;
-        if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" ")))
-            name = ff7->region(s);
-        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" ")))
-            name = ff7->region(s).append(QStringLiteral(".mcs"));
-        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PDA).join(" ")))
-            name = ff7->region(s).append(QStringLiteral(".mcb"));
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" ")))
-            name = ff7->region(s).mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7->region(s).mid(12)).toHex().toUpper());
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PC).join(" ")))
-            name = QStringLiteral("save00");
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::SWITCH).join(" ")))
-            name = QStringLiteral("ff7slot00");
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSP).join(" ")))
-            name = QStringLiteral("SCEVMC0");
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VMC).join(" ")))
-            name = QStringLiteral("vmcCard");
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::DEX).join(" ")))
-            name = QStringLiteral("dexCard");
-        else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VGS).join(" ")))
-            name = QStringLiteral("vgsCard");
-        saveDialog->selectFile(nameTemplate.arg(saveDialog->directory().path(), name));
-    });
-
-    connect(saveDialog, &QFileDialog::fileSelected, this, [saveDialog, &fileName, &selectedType](const QString &fileSelected){
-        selectedType = saveDialog->selectedNameFilter();
-        fileName = fileSelected;
-    });
-
-    saveDialog->exec();
+    QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
 
     if (fileName.isEmpty())
         return false;
@@ -806,13 +768,17 @@ void MainWindow::on_actionPaste_Slot_triggered()
 void MainWindow::on_actionShow_Options_triggered()
 {
     Options odialog(this, settings);
+    
     connect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
+    connect(&odialog, &Options::requestChangeNativeDialog, this, [] (bool useNative){
+        QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
+    });
     odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((height() - odialog.sizeHint().height()) / 2));
     if (odialog.exec()) {
         setScale(settings->value(SETTINGS::SCALE).toDouble());
         loadChildWidgetSettings();
     }
-    disconnect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
+    disconnect(&odialog, nullptr, nullptr, nullptr);
 }
 
 void MainWindow::on_actionCreateNewMetadata_triggered()
@@ -837,23 +803,19 @@ void MainWindow::on_actionShow_Selection_Dialog_triggered()
 
 void MainWindow::on_actionOpen_Achievement_File_triggered()
 {
-    bool c2 = ff7->isFileModified();
     QString temp = ff7->fileName();
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
     temp.append(QString("%1achievement.dat").arg(QDir::separator()));
     QFile tmp(temp);
     if (!tmp.exists())
-        temp = QFileDialog::getOpenFileName(this, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat);"));
+        temp = FileDialog::getOpenFileName(this, settings, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
 
-    if (temp.isEmpty()) {
-        ff7->setFileModified(c2, s);
+    if (temp.isEmpty())
         return;
-    } else {
-        achievementDialog achDialog(temp);
-        achDialog.move(x() + (width() - achDialog.width()) / 2, y() + (height() - achDialog.height())/2);
-        achDialog.exec();
-    }
-    ff7->setFileModified(c2, s);
+
+    achievementDialog achDialog(temp);
+    achDialog.move(x() + (width() - achDialog.width()) / 2, y() + (height() - achDialog.height())/2);
+    achDialog.exec();
 }
 
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
@@ -1284,7 +1246,7 @@ void MainWindow::CheckGame()
             || ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(nullptr, ff7, s);
-        if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3))
+        if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3) || ff7->format() == FF7SaveInfo::FORMAT::PDA || ff7->format() == FF7SaveInfo::FORMAT::PGE)
             error.setSingleSlot(true);
         error.move(x() + ((width() - error.width()) / 2), y() + (height() /2));
         switch (error.exec()) {
@@ -1303,11 +1265,24 @@ void MainWindow::CheckGame()
             CheckGame();
             break;
 
-        case 3://exported as psx
-            if (!error.isSingleSlot())
-                on_actionShow_Selection_Dialog_triggered();
-            else
-                on_actionOpen_Save_File_triggered();
+        case 3://exported Clicked
+            QMap<QString, FF7SaveInfo::FORMAT> typeMap;
+            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
+            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
+            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
+            QString selectedType = typeMap.key(FF7SaveInfo::FORMAT::PSX);
+
+            QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
+
+            if (fileName.isEmpty())
+                return;
+            FF7SaveInfo::FORMAT newType = typeMap[selectedType];
+
+            if (ff7->exportFile(fileName, newType, s))
+                ui->statusBar->showMessage(QString(tr("Exported Slot:%2 from %1 -> %3")).arg(ff7->fileName(), QString::number(s + 1), fileName), 2000);
+            else 
+                ui->statusBar->showMessage(tr("Export Failed"));
             break;
         }
     } else {

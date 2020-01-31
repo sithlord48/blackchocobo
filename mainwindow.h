@@ -24,7 +24,6 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QWidget>
 #include <QMessageBox>
-#include <QFileDialog>              // for file dialogs
 #endif
 
 #include <QDataStream>              // for data manip
@@ -100,6 +99,7 @@ private:
     LocationViewer *locationViewer;
     QString prevFile;
     QMap<QString, QTranslator *> m_translations;
+    QList<QUrl> m_sideBarUrls;
 
     typedef QList<quint16> fieldItemOffsetList;
     typedef QList<quint8> fieldItemBitList;
@@ -507,7 +507,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btnSearchKeyItems_clicked();
     void on_btnReplay_clicked();
     void on_linePsxDesc_textChanged(const QString &arg1);
-
     void on_cb_FlashbackPiano_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

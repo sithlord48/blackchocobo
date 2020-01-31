@@ -19,6 +19,8 @@
         <file alias="cloudsave">icon/cloudsave.png</file>
         <file alias="achievements">icon/achievements.png</file>
         <file alias="psxmc">icon/psxmc.png</file>
-	<file alias="import">icon/import.png</file>
+        <file alias="import">icon/import.png</file>
+        <file alias="list-add">icon/list-add.png</file>
+        <file alias="list-remove">icon/list-remove.png</file>
     </qresource>
 </RCC>

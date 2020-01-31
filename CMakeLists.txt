@@ -46,10 +46,11 @@ set ( blackchocobo_SRCS
 	options.cpp
 	errbox.cpp
 	achievementdialog.cpp
+	filedialog.cpp
 	qhexedit/chunks.cpp
 	qhexedit/commands.cpp
 	qhexedit/qhexedit.cpp
-        ff7tk/data/crypto/aes.c
+    ff7tk/data/crypto/aes.c
 	ff7tk/data/SaveIcon.cpp
 	ff7tk/data/FF7Text.cpp
 	ff7tk/data/FF7Save.cpp

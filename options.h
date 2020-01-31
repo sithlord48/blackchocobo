@@ -14,12 +14,11 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#ifndef OPTIONS_H
-#define OPTIONS_H
+#pragma once
 
 #include <QDialog>
-#include <QFileDialog>
 #include <QSettings>
+#include <QDir>
 namespace Ui
 {
 class Options;
@@ -46,6 +45,8 @@ namespace SETTINGS {
     inline const static QString SCALE = QStringLiteral("scale");
     inline const static QString ENABLETEST = QStringLiteral("show_test");
     inline const static QString WORLDMAPADVANCED = QStringLiteral("worldMapAdvanced");
+    inline const static QString USENATIVEDIALOGS = QStringLiteral("useNativeDialogs");
+    inline const static QString SIDEBARURLS = QStringLiteral("sidebarUrls");
 }
 
 class Options : public QDialog
@@ -61,6 +62,7 @@ protected:
     void changeEvent(QEvent *e);
 signals:
     void requestLanguageChange(const QVariant &data);
+    void requestChangeNativeDialog(bool UseNativeDialogs);
 private slots:
     void on_btn_set_char_stat_folder_clicked();
     void on_btn_set_default_save_clicked();
@@ -69,6 +71,8 @@ private slots:
     void on_btn_set_save_pc_clicked();
     void on_cb_override_def_save_toggled(bool checked);
     void on_comboLanguage_currentIndexChanged(const QString &arg1);
+    void on_cbNativeDialogs_clicked(bool checked);
+    void on_btnEditSideBarItems_clicked();
 private:
     Ui::Options *ui;
     QSettings *settings;
@@ -96,7 +100,8 @@ private:
         SETTINGS::PCSAVEPATH,
         SETTINGS::SCALE,
         SETTINGS::ENABLETEST,
-        SETTINGS::WORLDMAPADVANCED
+        SETTINGS::WORLDMAPADVANCED,
+        SETTINGS::USENATIVEDIALOGS,
+        SETTINGS::SIDEBARURLS
     };
 };
-#endif // OPTIONS_H
