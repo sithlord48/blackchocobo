@@ -148,6 +148,7 @@ void errbox::btnExportClicked()
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
+    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
     QString types = typeMap.keys().join(";;");
     QString fileName;
     QString selectedType = typeMap.key(ff7save->format());
@@ -167,6 +168,8 @@ void errbox::btnExportClicked()
             name = ff7save->region(s);
         else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" ")))
             name = ff7save->region(s).append(QStringLiteral(".mcs"));
+        else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PDA).join(" ")))
+            name = ff7save->region(s).append(QStringLiteral(".mcb"));
         else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" ")))
             name = ff7save->region(s).mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(ff7save->region(s).mid(12)).toHex().toUpper().append(QStringLiteral(".PSV")));
         saveDialog->selectFile(nameTemplate.arg(saveDialog->directory().path(), name));

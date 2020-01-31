@@ -69,6 +69,8 @@ bool FF7Save::loadFile(const QString &fileName)
         setFormat(FF7SaveInfo::FORMAT::PSX);
     else if ((file_size - 0x80) % FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX) == 0)
         setFormat(FF7SaveInfo::FORMAT::PGE);
+    else if ((file_size - 0x36) % FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX) == 0)
+        setFormat(FF7SaveInfo::FORMAT::PDA);
     else {
         setFormat(FF7SaveInfo::FORMAT::UNKNOWN);
         return false;
@@ -89,24 +91,18 @@ bool FF7Save::loadFile(const QString &fileName)
                 SG_Region_String[i].clear();
             }
         }
-    }
-
-    else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
+    } else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
         SG_Region_String[0] = QFileInfo(file).fileName();
         for (int i = 1; i < 15; i++) {
             clearSlot(i);
         }
-    }
-
-    else if (fileFormat == FF7SaveInfo::FORMAT::PS3) {
+    } else if (fileFormat == FF7SaveInfo::FORMAT::PS3) {
         file.seek(0x64);
         SG_Region_String[0] = QString(file.read(20));
         for (int i = 1; i < 15; i++) {
             clearSlot(i);
         }
-    }
-
-    else if (fileFormat == FF7SaveInfo::FORMAT::VMC || fileFormat == FF7SaveInfo::FORMAT::PSP || fileFormat == FF7SaveInfo::FORMAT::VGS || fileFormat == FF7SaveInfo::FORMAT::DEX) {
+    } else if (fileFormat == FF7SaveInfo::FORMAT::VMC || fileFormat == FF7SaveInfo::FORMAT::PSP || fileFormat == FF7SaveInfo::FORMAT::VGS || fileFormat == FF7SaveInfo::FORMAT::DEX) {
         QByteArray mc_header;
         int offset = FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
         file.seek(offset);
@@ -115,10 +111,13 @@ bool FF7Save::loadFile(const QString &fileName)
             int index = (128 * i) + 138;
             SG_Region_String[i] = QString(mc_header.mid(index, 20)); \
         }
-    }
-    else if (fileFormat == FF7SaveInfo::FORMAT::PGE) {
+    } else if (fileFormat == FF7SaveInfo::FORMAT::PGE) {
         file.seek(0x0A);
         SG_Region_String[0] = file.read(20);
+    } else if (fileFormat == FF7SaveInfo::FORMAT::PDA) {
+        file.seek(0);
+        SG_Region_String[0] = file.read(20);
+        qDebug() << SG_Region_String[0];
     } else {
         return false;
     }
@@ -182,7 +181,7 @@ QByteArray FF7Save::slotPsxRawData(int s)
         return QByteArray("\x00");
     else if (fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH)
         return QByteArray("\x00");
-    else if ((fileFormat == FF7SaveInfo::FORMAT::PS3) || (fileFormat == FF7SaveInfo::FORMAT::PSX) || (fileFormat == FF7SaveInfo::FORMAT::PGE)) {
+    else if ((fileFormat == FF7SaveInfo::FORMAT::PS3) || (fileFormat == FF7SaveInfo::FORMAT::PSX) || (fileFormat == FF7SaveInfo::FORMAT::PGE) || fileFormat == FF7SaveInfo::FORMAT::PDA) {
         QFile file(fileName());
         if (!file.open(QIODevice::ReadOnly))
             return QByteArray("\x00");
@@ -240,6 +239,8 @@ bool FF7Save::saveFile(const QString &fileName, int slot)
         fix_vmp_header();
     else if (fileFormat == FF7SaveInfo::FORMAT::PGE)
         fix_pge_header(slot);
+    else if (fileFormat == FF7SaveInfo::FORMAT::PDA)
+        fix_pda_header(slot);
     else
         fix_vmc_header();
 
@@ -291,6 +292,8 @@ bool FF7Save::exportFile(const QString &fileName, FF7SaveInfo::FORMAT newFormat,
         return exportPS3(s, fileName);
     if(newFormat == FF7SaveInfo::FORMAT::PSP)
         return exportVMP(fileName);
+    if(newFormat == FF7SaveInfo::FORMAT::PDA)
+        return exportPDA(s, fileName);
     return false;
 }
 
@@ -381,24 +384,18 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
     if (fileName.isEmpty())
         return false;
 
-    int blocks = 1;
+    int blocks = psx_block_size(s);
     FF7SaveInfo::FORMAT prev_format = fileFormat;
     QString prev_fileName = filename;
     QByteArray prev_fileHeader = fileHeader();
     QByteArray prev_slotHeader = slotHeader(s);
     QByteArray prev_slotFooter = slotFooter(s);
+    bool fmodded = isSlotModified(s);
 
-    if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH) && isFF7(s))
-        setControlMode(s, CONTROL_NORMAL);
-
-    if (prev_format != FF7SaveInfo::FORMAT::PSX) {
-        if (!isFF7(s))
-            blocks = psx_block_size(s);
-
-        setFormat(FF7SaveInfo::FORMAT::PSX);
-    }
-
-    if (isFF7(s)) {
+    setFormat(FF7SaveInfo::FORMAT::PSX);
+    if(isFF7(s)) {
+        if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH))
+            setControlMode(s, CONTROL_NORMAL);
         int slot = fileName.mid(fileName.lastIndexOf('S') +1, 2).toInt() - 1;
         if (slot < 0 || slot > 14)
             return false;
@@ -407,10 +404,10 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
         fix_psx_header(s);//only fix time for FF7 Slots.
         checksumSlots();
     }
+
     QFile file(fileName);
     if (!file.open(QIODevice::WriteOnly))
         return false;
-
     file.write(fileHeader(), FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PSX));
     int j = s;
     for (int i = 0; i < blocks; i++) {
@@ -419,12 +416,14 @@ bool FF7Save::exportPSX(int s, const QString &fileName)
         file.write(slotFooter(j), FF7SaveInfo::instance()->slotFooterSize(FF7SaveInfo::FORMAT::PSX));
         j = psx_block_next(j);
     }
+
     file.close();
     setFormat(prev_format);
     filename = prev_fileName;
     setFileHeader(prev_fileHeader);
     setSlotHeader(s, prev_slotHeader);
     setSlotFooter(s, prev_slotFooter);
+    setFileModified(fmodded, s);
     return true;
 }
 
@@ -433,22 +432,18 @@ bool FF7Save::exportPGE(int s, const QString &fileName)
     if (fileName.isEmpty())
         return false;
 
-    int blocks = 1;
+    int blocks = psx_block_size(s);
     FF7SaveInfo::FORMAT prev_format = fileFormat;
     QString prev_fileName = filename;
     QByteArray prev_fileHeader = fileHeader();
     QByteArray prev_slotHeader = slotHeader(s);
     QByteArray prev_slotFooter = slotFooter(s);
+    bool fmodded = isSlotModified(s);
 
-    if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH) && isFF7(s))
-        setControlMode(s, CONTROL_NORMAL);
-
-    if (prev_format != FF7SaveInfo::FORMAT::PGE) {
-        if (!isFF7(s))
-            blocks = psx_block_size(s);
-    }
     setFormat(FF7SaveInfo::FORMAT::PGE);
-    if (isFF7(s)) {
+    if(isFF7(s)) {
+        if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH))
+            setControlMode(s, CONTROL_NORMAL);
         int slot = fileName.mid(fileName.lastIndexOf('S') +1, 2).toInt() - 1;
         if (slot < 0 || slot > 14)
             return false;
@@ -456,12 +451,11 @@ bool FF7Save::exportPGE(int s, const QString &fileName)
         setSlotFooter(s, FF7SaveInfo::instance()->slotFooter(FF7SaveInfo::FORMAT::PGE));
         checksumSlots();
     }
-    
     fix_pge_header(s);
+
     QFile file(fileName);
     if (!file.open(QIODevice::WriteOnly))
         return false;
-
     file.write(fileHeader(), FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PGE));
     int j = s;
     for (int i = 0; i < blocks; i++) {
@@ -476,6 +470,54 @@ bool FF7Save::exportPGE(int s, const QString &fileName)
     setFileHeader(prev_fileHeader);
     setSlotHeader(s, prev_slotHeader);
     setSlotFooter(s, prev_slotFooter);
+    setFileModified(fmodded, s);
+    return true;
+}
+
+bool FF7Save::exportPDA(int s, const QString &fileName)
+{
+    if (fileName.isEmpty())
+        return false;
+
+    int blocks = psx_block_size(s);
+    FF7SaveInfo::FORMAT prev_format = fileFormat;
+    QString prev_fileName = filename;
+    QByteArray prev_fileHeader = fileHeader();
+    QByteArray prev_slotHeader = slotHeader(s);
+    QByteArray prev_slotFooter = slotFooter(s);
+    bool fmodded = isSlotModified(s);
+
+    setFormat(FF7SaveInfo::FORMAT::PDA);
+    if(isFF7(s)) {
+        if ((prev_format == FF7SaveInfo::FORMAT::PC || prev_format == FF7SaveInfo::FORMAT::SWITCH))
+            setControlMode(s, CONTROL_NORMAL);
+        int slot = fileName.mid(fileName.lastIndexOf('S') +1, 2).toInt() - 1;
+        if (slot < 0 || slot > 14)
+            return false;
+        setSlotHeader(s, FF7SaveInfo::instance()->slotHeader(FF7SaveInfo::FORMAT::PDA, slot));
+        setSlotFooter(s, FF7SaveInfo::instance()->slotFooter(FF7SaveInfo::FORMAT::PDA));
+        checksumSlots();
+    }
+    fix_pda_header(s);
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly))
+        return false;
+    file.write(fileHeader(), FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PDA));
+    int j = s;
+    for (int i = 0; i < blocks; i++) {
+        file.write(slotHeader(j), FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PDA));
+        file.write(slotFF7Data(j), FF7SaveInfo::instance()->slotSize());
+        file.write(slotFooter(j), FF7SaveInfo::instance()->slotFooterSize(FF7SaveInfo::FORMAT::PDA));
+        j = psx_block_next(j);
+    }
+    file.close();
+    setFormat(prev_format);
+    filename = prev_fileName;
+    setFileHeader(prev_fileHeader);
+    setSlotHeader(s, prev_slotHeader);
+    setSlotFooter(s, prev_slotFooter);
+    setFileModified(fmodded, s);
     return true;
 }
 
@@ -742,6 +784,9 @@ void FF7Save::importSlot(int s, QString fileName, int fileSlot)
     } else if (file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PGE)) {
         inType = FF7SaveInfo::FORMAT::PGE;
         offset = FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PGE) + FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PGE);
+    } else if (file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PDA)) {
+        inType = FF7SaveInfo::FORMAT::PDA;
+        offset = FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PDA) + FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PDA);
     } else {
         file.close();
         return;
@@ -773,6 +818,9 @@ void FF7Save::importSlot(int s, QString fileName, int fileSlot)
         setRegion(s, QString(file.read(20)));
     } else if (inType == FF7SaveInfo::FORMAT::PGE) {
         file.seek(0x0A);
+        setRegion(s, QString(file.read(20)));
+    } else if (inType == FF7SaveInfo::FORMAT::PDA) {
+        file.seek(0x00);
         setRegion(s, QString(file.read(20)));
     } else {
         //Unknown or Unspecified Type Abort.
@@ -1074,7 +1122,7 @@ void FF7Save::fix_pge_header(int s)
     newHeader.replace(10, region(s).length(), region(s).toLatin1());
     int xor_byte = 0x00;
     for (int x = 0; x < 127; x++)
-        xor_byte ^= newHeader[x];
+        xor_byte ^= newHeader.at(x);
     newHeader.replace(127, 1, QByteArray(1, char(xor_byte)));
     if (isFF7(s)) {
         QString temp = region(s).mid(region(s).lastIndexOf("S") + 1, 2);
@@ -1083,6 +1131,21 @@ void FF7Save::fix_pge_header(int s)
     }
     setFileHeader(newHeader.mid(0, 0x80));
 }
+
+void FF7Save::fix_pda_header(int s)
+{
+    QString desc = psxDesc(s).normalized(QString::NormalizationForm_KD);
+    QByteArray newHeader(0x36, '\x00');
+    newHeader.replace(0, region(s).length(), region(s).toLatin1());
+    newHeader.replace(0x15, desc.length(), desc.toLatin1());
+    if (isFF7(s)) {
+        QString temp = region(s).mid(region(s).lastIndexOf("S") + 1, 2);
+        setSlotHeader(s, FF7SaveInfo::instance()->slotHeader(FF7SaveInfo::FORMAT::PSX, temp.toInt() - 1));
+        fix_psx_header(s);
+    }
+    setFileHeader(newHeader.mid(0, 0x36));
+}
+
 void FF7Save::fix_psv_header(int s)
 {
     const int signatureOffset = FF7SaveInfo::instance()->fileSignatureOffset(FF7SaveInfo::FORMAT::PS3);
@@ -1198,6 +1261,7 @@ void FF7Save::setSaveNumber(int s, int saveNum)
         case FF7SaveInfo::FORMAT::PSP: fix_vmp_header(); break;
         case FF7SaveInfo::FORMAT::PS3: fix_psv_header(s); break;
         case FF7SaveInfo::FORMAT::PGE: fix_pge_header(s); break;
+        case FF7SaveInfo::FORMAT::PDA: fix_pda_header(s); break;
    }
 }
 
@@ -1253,6 +1317,7 @@ void FF7Save::pasteSlot(int s)
 char FF7Save::psx_block_type(int s)
 {
     switch (fileFormat) {
+    case FF7SaveInfo::FORMAT::PDA:
     case FF7SaveInfo::FORMAT::UNKNOWN:
     case FF7SaveInfo::FORMAT::PC:
     case FF7SaveInfo::FORMAT::SWITCH:
@@ -1269,6 +1334,7 @@ char FF7Save::psx_block_type(int s)
 void FF7Save::setPsx_block_type(int s, char block_type)
 {
     switch (fileFormat) {
+    case FF7SaveInfo::FORMAT::PDA:
     case FF7SaveInfo::FORMAT::UNKNOWN:
     case FF7SaveInfo::FORMAT::PC:
     case FF7SaveInfo::FORMAT::SWITCH:
@@ -1295,6 +1361,7 @@ void FF7Save::setPsx_block_next(int s, int next)
     }
 
     switch (fileFormat) {
+    case FF7SaveInfo::FORMAT::PDA:
     case FF7SaveInfo::FORMAT::UNKNOWN:
     case FF7SaveInfo::FORMAT::PC:
     case FF7SaveInfo::FORMAT::SWITCH:
@@ -1311,6 +1378,7 @@ void FF7Save::setPsx_block_next(int s, int next)
 quint8 FF7Save::psx_block_next(int s)
 {
     switch (fileFormat) {
+    case FF7SaveInfo::FORMAT::PDA:
     case FF7SaveInfo::FORMAT::UNKNOWN:
     case FF7SaveInfo::FORMAT::PC:
     case FF7SaveInfo::FORMAT::SWITCH:
@@ -1327,6 +1395,7 @@ quint8 FF7Save::psx_block_next(int s)
 void FF7Save::setPsx_block_size(int s, int blockSize)
 {
     switch (fileFormat) {
+    case FF7SaveInfo::FORMAT::PDA:
     case FF7SaveInfo::FORMAT::UNKNOWN:
     case FF7SaveInfo::FORMAT::PC:
     case FF7SaveInfo::FORMAT::SWITCH:
@@ -1357,6 +1426,7 @@ quint8 FF7Save::psx_block_size(int s)
     case FF7SaveInfo::FORMAT::PSX: return quint8(QFile(fileName()).size() / FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX));
     case FF7SaveInfo::FORMAT::PS3: return quint8((QFile(fileName()).size() - 0x84) / FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX));
     case FF7SaveInfo::FORMAT::PGE: return quint8((QFile(fileName()).size() - 0x80) / FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX));
+    case FF7SaveInfo::FORMAT::PDA: return quint8((QFile(fileName()).size() - 0x36) / FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX));
     default:
         int index = 128 + (128 * s);
         index += FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
@@ -1368,17 +1438,28 @@ quint8 FF7Save::psx_block_size(int s)
 QString FF7Save::psxDesc(int s)
 {
     QByteArray desc = slotHeader(s).mid(4, 64);
-
     int index;
     if ((index = desc.indexOf('\x00')) != -1)
         desc.truncate(index);
-
     return QTextCodec::codecForName("Shift-JIS")->toUnicode(desc);
 }
 
 void FF7Save::setPsxDesc(QString newDesc, int s)
 {
-    QByteArray temp = QTextCodec::codecForName("Shift-JIS")->fromUnicode(newDesc);
+    newDesc = newDesc.normalized(QString::NormalizationForm_KD);
+    QByteArray temp = newDesc.toLatin1();
+    QByteArray newArray("\xFE\xFF", 2);
+    for( int i = 0; i < temp.size(); i++) {
+        quint16 newChar = 0x0000;
+        if(temp.at(i) == 0x00)
+            return;
+        newChar = (quint8(temp.at(i) - 0x20));
+        newArray.append('\xFF');
+        newArray.append(char(newChar));
+    }
+    newDesc = QString::fromUtf16(reinterpret_cast<ushort*>(newArray.data()),newArray.size() -1);
+    temp = QTextCodec::codecForName("Shift-JIS")->fromUnicode(newDesc);
+
     QByteArray codedText;
     codedText.fill('\x00', 64);
     codedText.replace(0, temp.size(), temp);
@@ -6059,7 +6140,7 @@ void FF7Save::setFormat(FF7SaveInfo::FORMAT newFormat)
     if (newFormat != fileFormat) {
         fileFormat = newFormat;
         _bufferFileHeader = _fileHeader;
-        if(fileFormat != FF7SaveInfo::FORMAT::PGE)
+        if(fileFormat != FF7SaveInfo::FORMAT::PGE && fileFormat != FF7SaveInfo::FORMAT::PDA)
             _fileHeader = FF7SaveInfo::instance()->fileHeader(newFormat);
     }
 }

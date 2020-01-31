@@ -52,10 +52,14 @@
  *  | *.gme  |Dex drive format virtual memory card
  *  | *.VM1  |Internal PSX Memory Card on PS3 (Virtual Memory Card)
  *  | *.VMP  |VMC format used by the PSP and PsVita
- *  | *.PSV  |Saves "Exported" by a PS3.
+ *  | *.PSV  |Single save "Exported" by a PS3.
  *  |   *    |A Raw PSX memory card "file" extracted from a real or virtual memory card
  *  | *.mcs  |Psx Game Edit Save
  *  | *.ps1  |Memory Juggle Save
+ *  | *.psx  |XP AR GS Caetla Save
+ *  | *.mcb  |Smart Link format
+ *  | *.mcx  | Dantel Format
+ *  | *.pda  | Dantel Format
  */
 class FF7Save: public QObject
 {
@@ -161,6 +165,13 @@ public:
      *  \return True if Successful
     */
     bool exportPGE(int s, const QString &fileName);
+
+    /** \brief attempt to save fileName in PDA format
+     *  \param s slot in loaded file to export in PDA format
+    *   \param fileName file that will be saved
+     *  \return True if Successful
+    */
+    bool exportPDA(int s, const QString &fileName);
 
     /** \brief attempt to save fileName as a Virtual Memory Card (slots without a region string will not be exported)
      *  \param fileName file that will be saved
@@ -1006,9 +1017,10 @@ public:
      */
     QString psxDesc(int s);
 
-    /** \brief Set The Description Text for PSX Slot (text shows in memory card manager of playstation)
+    /** \brief Set The Description Text for PSX Slot (text shows in memory card manager of playstation) USE WITH CAUTION CAN RETURN JUNK DATA
      *
      * This text is the text shown when you view the save slot in the memory manager on the playstation. It is also visible in many programs that work with psx memory cards.
+     *
      * \param newDesc your new text
      * \param s slot number (0-14)
      */
@@ -1059,6 +1071,7 @@ private:
     quint16 ff7Checksum(int s);
     void fix_psv_header(int s);
     void fix_pge_header(int s);
+    void fix_pda_header(int s);
     void fix_psx_header(int s);
     void fix_vmp_header(void);
     void fix_vmc_header(void);

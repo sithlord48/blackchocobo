@@ -37,6 +37,7 @@ public:
         VGS,      //!< VGS Format
         SWITCH,   //!< Switch Format
         PGE,      //!< Psx Game Edit Style Single Save
+        PDA,      //!< GS , Dantel Style Save
     };
     Q_ENUM(FORMAT)
 
