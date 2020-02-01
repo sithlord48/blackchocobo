@@ -1,7 +1,7 @@
 project( blackchocobo )
 set(blackchocobo_VERSION_MAJOR 1)
 set(blackchocobo_VERSION_MINOR 9)
-set(blackchocobo_VERSION_PATCH 95)
+set(blackchocobo_VERSION_PATCH 96)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)

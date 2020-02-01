@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk.                                           //
 //                                                                          //
@@ -34,9 +34,9 @@ MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
     , btnCancel(new QPushButton(QIcon::fromTheme(QStringLiteral("dialog-cancel"), style()->standardIcon(QStyle::SP_DialogCancelButton)), tr("&Cancel")))
 {
     initDisplay();
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 15; i++)
         InFiles.append(QString());
-    }
+
     setMinimumWidth(fontMetrics().horizontalAdvance("W") * 42);
     setWindowTitle(tr("Create Cloud Save Folder"));
     setFocus();// prevents lineOutPath from Having Focus and hiding its placeholder text.
@@ -46,7 +46,6 @@ void MetadataCreator::initDisplay(void)
 
     btnOk->setEnabled(false);
     connect(btnOk, &QPushButton::clicked, this, &MetadataCreator::on_buttonBox_accepted);
-
     connect(btnCancel, &QPushButton::clicked, this, &MetadataCreator::close);
 
     auto btnBox = new QHBoxLayout;
@@ -57,9 +56,8 @@ void MetadataCreator::initDisplay(void)
     auto lineOutPath = new QLineEdit;
     lineOutPath->setPlaceholderText(tr("Folder To Write Files Into"));
     connect(lineOutPath, &QLineEdit::textChanged, this, [this](const QString & string) {
-        if (!load) {
+        if (!load)
             OutPath = string;
-        }
         btnOk->setEnabled(!string.isEmpty());
     });
 
@@ -78,18 +76,15 @@ void MetadataCreator::initDisplay(void)
     auto btnOutPath = new QPushButton("...");
     connect(btnOutPath, &QPushButton::clicked, this, [this, lineOutPath, lineUserID] {
         load = true;
+        QString temp = QFileDialog::getExistingDirectory(this, tr("Select A Directory To Save Into"), QString("%1/Square Enix/FINAL FANTASY VII/").arg(QDir::homePath()));
 
-        QString temp = QFileDialog::getExistingDirectory(
-            this
-            , tr("Select A Directory To Save Into")
-            , QString("%1/Square Enix/FINAL FANTASY VII/").arg(QDir::homePath()));
+        if (temp.isEmpty())
+            return;
 
-        if (!temp.isNull())
-        {
-            OutPath = temp;
-        }
+        OutPath = temp;
         lineOutPath->setText(OutPath);
-        lineUserID->setText(temp.remove(0, temp.lastIndexOf("_") + 1));
+        if (temp.contains(QStringLiteral("_")))
+            lineUserID->setText(temp.remove(0, temp.lastIndexOf("_") + 1));
         load = false;
     });
 
@@ -126,36 +121,28 @@ void MetadataCreator::on_buttonBox_accepted()
                 continue;
             }//empty and not found
         }
-        if (!ff7->loadFile(InFiles.at(i))) {
+        if (!ff7->loadFile(InFiles.at(i)))
             return;
-        }
-        if (ff7->format() != FF7SaveInfo::FORMAT::PC) {
+        if (ff7->format() != FF7SaveInfo::FORMAT::PC)
             ff7->exportPC(OutFile);
-        } else {
-            if (!ff7->saveFile(OutFile)) {
+        else if (!ff7->saveFile(OutFile))
                 QMessageBox::critical(this, QString(tr("File Error")), QString(tr("Failure to write the File: %1")).arg(OutFile));
-            }
-        }
         ff7->fixMetaData(OutFile, OutPath, UserID);
     }
     QString achievement(QString("%1/achievement.dat").arg(OutPath));
     QFile file(achievement);
     qint64 size = 0;
     if (file.exists()) {
-        if (!file.open(QIODevice::ReadOnly)) {
+        if (!file.open(QIODevice::ReadOnly))
             return;
-        } else {
-            size = file.size();
-            file.close();
-        }
+        size = file.size();
+        file.close();
     }
     if (size != 8) {
-        if (!file.open(QIODevice::WriteOnly)) {
+        if (!file.open(QIODevice::WriteOnly))
             return;
-        } else {
-            file.write(QByteArray("\x00\x00\x00\x00\x00\x00\x00\x00"));
-            file.close();
-        }
+        file.write(QByteArray("\x00\x00\x00\x00\x00\x00\x00\x00"));
+        file.close();
     }
     close();
 }
@@ -168,35 +155,27 @@ QVBoxLayout *MetadataCreator::makeLineLayout()
         auto lineSave = new QLineEdit;
         auto button = new QPushButton(QStringLiteral("..."));
 
-        if (i == 6) {
+        if (i == 6)
             lineSave->setPlaceholderText(tr("Add Files For each Save you want in your cloud data."));
-        } else if (i == 7) {
+        else if (i == 7)
             lineSave->setPlaceholderText(tr("You Can Use Any Format That Black Chocobo Can Open"));
-        } else if (i == 8) {
+        else if (i == 8)
             lineSave->setPlaceholderText(tr("Unused files will be Looked for in the Save Path"));
-        } else if (i == 9) {
+        else if (i == 9)
             lineSave->setPlaceholderText(tr("Pressing Ok Will Overwrite Any Metadata in the save path"));
-        }
 
         connect(lineSave, &QLineEdit::textChanged, this, [this, i](const QString & string) {
-            if (!load) {
+            if (!load)
                 InFiles.replace(i, string);
-            }
         });
 
-        connect(button, &QPushButton::clicked, this, [this, i, &lineSave] {
+        connect(button, &QPushButton::clicked, this, [this, i, lineSave] {
             load = true;
-            QString temp = QFileDialog::getOpenFileName(
-                this
-                , tr("Select A File To Use As Save0%1")
-                .arg(QString::number(i))
-                , QDir::homePath());
-            if (ff7->loadFile(temp))
-            {
+            QString temp = QFileDialog::getOpenFileName(this, tr("Select A File To Use As Save0%1").arg(QString::number(i)), QDir::homePath());
+            if (ff7->loadFile(temp)) {
                 InFiles.replace(i, temp);
                 lineSave->setText(InFiles.at(i));
-            } else
-            {
+            } else {
                 lineSave->clear();
             }
             load = false;

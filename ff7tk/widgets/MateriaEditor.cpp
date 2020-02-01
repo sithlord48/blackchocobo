@@ -37,7 +37,7 @@ void MateriaEditor::init_display()
     _highlightColor = QString("%1,%2,%3,128").arg(QString::number(this->palette().highlight().color().red()), QString::number(this->palette().highlight().color().green()), QString::number(this->palette().highlight().color().blue()));
     v_spacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 //Set up display
-    this->setContentsMargins(0, 0, 0, 0);
+    setContentsMargins(0, 0, 0, 0);
 
     auto main_layout = new QVBoxLayout;
     main_layout->setContentsMargins(3, 0, 0, 0);
@@ -66,9 +66,8 @@ void MateriaEditor::setMateria(quint8 materia_id, qint32 materia_ap)
         }
     } else {
         //Invalid Data Reset Materia.
-        if (_id != FF7Materia::EmptyId) {
+        if (_id != FF7Materia::EmptyId)
             emit idChanged(qint8(FF7Materia::EmptyId));
-        }
         _id = FF7Materia::EmptyId;
         sb_ap->setEnabled(0);
         sb_ap->setValue(FF7Materia::MaxMateriaAp);
@@ -76,9 +75,9 @@ void MateriaEditor::setMateria(quint8 materia_id, qint32 materia_ap)
         box_status_effects->setHidden(true);
         box_stats->setHidden(true);
     }
-    this->setName();
-    this->setAP(materia_ap);
-    this->setStats();
+    setName();
+    setAP(materia_ap);
+    setStats();
 }
 void MateriaEditor::setAP(qint32 ap)
 {
@@ -94,11 +93,10 @@ void MateriaEditor::setAP(qint32 ap)
         if (_id == FF7Materia::EnemySkill) {
             //Eskill Materia Specialness.
             for (int i = 0; i < 24; i++) {
-                if (_current_ap & (1 << i)) {
+                if (_current_ap & (1 << i))
                     eskill_list->item(i)->setCheckState(Qt::Checked);
-                } else {
+                else
                     eskill_list->item(i)->setCheckState(Qt::Unchecked);
-                }
             }
         }
     } else if (_id == FF7Materia::EmptyId) {
@@ -129,9 +127,8 @@ void MateriaEditor::setName()
     } else {
         lbl_materiaIcon->setPixmap(QPixmap::fromImage(data->image(_id)));
         lbl_materiaName->setText(data->name(_id));
-        if (combo_type->currentIndex() != FF7Materia::Unknown) {
+        if (combo_type->currentIndex() != FF7Materia::Unknown)
             combo_type->setCurrentIndex(data->type(_id));
-        }
         for (int i = 0; i < combo_materia->count(); i++) { //loop thru type and see if name matches if so set index and stop
             if (data->name(_id) == combo_materia->itemText(i)) {
                 combo_materia->setCurrentIndex(i);
@@ -175,9 +172,8 @@ void MateriaEditor::setLevel()
         _level = 1;
     } else {
         for (int i = 0; i < data->levels(_id); i++) {
-            if (_current_ap >= data->ap(_id, i)) {
+            if (_current_ap >= data->ap(_id, i))
                 _level++;
-            }
         }
     }
     setStars();
@@ -197,21 +193,16 @@ void MateriaEditor::setStars()
         return;
     } else {
         box_stars->setHidden(false);
-        for (QPushButton *button : qAsConst(btn_stars)) {
+        for (QPushButton *button : qAsConst(btn_stars))
             button->setHidden(true);
-        }
         if (data->type(_id) != 0) {
-            for (QPushButton *button : qAsConst(btn_stars)) {
+            for (QPushButton *button : qAsConst(btn_stars))
                 button->setIcon(QPixmap::fromImage(data->imageEmptyStar(_id)).scaled(button->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-            }
         }
-        for (int i = 0 ; i < _level ; i ++) {
+        for (int i = 0 ; i < _level ; i ++)
             btn_stars.at(i)->setIcon(QPixmap::fromImage(data->imageFullStar(_id)).scaled(btn_stars.at(i)->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-        }
-
-        for (int i = 0 ; i < data->levels(_id) ; i ++) {
+        for (int i = 0 ; i < data->levels(_id) ; i ++)
             btn_stars.at(i)->setHidden(false);
-        }
     }
 }
 
@@ -238,9 +229,8 @@ void MateriaEditor::setSkills()
         v_spacer->invalidate();
 
         for (int i = 0; i < _level; i++) {
-            if (data->skills(_id).count() > i) {
+            if (data->skills(_id).count() > i)
                 list_skills->addItem(data->skills(_id).at(i));
-            }
         }
     }
     frm_skill_status->adjustSize();
@@ -260,16 +250,14 @@ void MateriaEditor::typeChanged(int new_type)
         }
     } else {
         for (int i = 0; i < 91; i++) {
-            if (data->type(i) == new_type) {
+            if (data->type(i) == new_type)
                 combo_materia->addItem(data->icon(i), data->name(i));
-            }
         }
     }
-    if (_id != FF7Materia::EmptyId) {
+    if (_id != FF7Materia::EmptyId)
         combo_materia->setCurrentIndex(combo_materia->findText(data->name(_id)));
-    } else {
+    else
         combo_materia->setCurrentIndex(-1);
-    }
     combo_materia->blockSignals(0);
 }
 
@@ -277,9 +265,9 @@ void MateriaEditor::materia_changed(const QString &new_name)
 {
     for (quint8 i = 0; i < 91; i++) {
         if (data->name(i) == new_name) {
-            if (_id != i) {
+            if (_id != i)
                 setMateria(i, _current_ap);
-            } return;
+            return;
         }
     }
 }
@@ -295,11 +283,10 @@ qint8 MateriaEditor::id(void)
 
 qint32 MateriaEditor::MaxAP(void)
 {
-    if ((_id == FF7Materia::Underwater) || (_id == FF7Materia::MasterCommand) || (_id == FF7Materia::MasterMagic) || (_id == FF7Materia::MasterSummon) || (_id == FF7Materia::EnemySkill)) {
+    if ((_id == FF7Materia::Underwater) || (_id == FF7Materia::MasterCommand) || (_id == FF7Materia::MasterMagic) || (_id == FF7Materia::MasterSummon) || (_id == FF7Materia::EnemySkill))
         return FF7Materia::MaxMateriaAp;
-    } else {
+    else
         return data->ap(_id, data->levels(_id) - 1);
-    }
 }
 
 void MateriaEditor::setStarsSize(int size)
@@ -318,11 +305,10 @@ void MateriaEditor::setStarsSize(int size)
     if (size <= sb_ap->contentsRect().height()) {
         layout->addWidget(box_stars, 0, 0, 1, 1, Qt::AlignLeft);
         layout->addWidget(frm_ap, 0, 1, 1, 1, Qt::AlignRight);
-        if (box_stars->sizeHint().height() < frm_ap->sizeHint().height()) {
+        if (box_stars->sizeHint().height() < frm_ap->sizeHint().height())
             frm_ap_stars->setFixedHeight(frm_ap->sizeHint().height() + 6);
-        } else {
+        else
             frm_ap_stars->setFixedHeight(box_stars->sizeHint().height() + 6);
-        }
     } else {
         layout->addWidget(box_stars, 0, 0, 1, 1, Qt::AlignLeft);
         layout->addWidget(frm_ap, 1, 0, 1, 1, Qt::AlignLeft);
@@ -344,13 +330,12 @@ void MateriaEditor::setEditable(bool edit)
 
 void MateriaEditor::editMode(void)
 {
-    for (QPushButton *button : qAsConst(btn_stars)) {
+    for (QPushButton *button : qAsConst(btn_stars))
         button->blockSignals(!_editable);
-    }
 
-    if (_id != FF7Materia::EmptyId) {
+    if (_id != FF7Materia::EmptyId)
         sb_ap->setEnabled(_editable);
-    }
+
     btn_paste_materia->setHidden(!_editable);
     btn_rm_materia->setHidden(!_editable);
     combo_materia->setHidden(!_editable);
@@ -361,22 +346,19 @@ void MateriaEditor::editMode(void)
     eskillButtons->setHidden(!_editable);
 
     if (_editable) {
-        for (int i = 0; i < eskill_list->count(); i++) {
+        for (int i = 0; i < eskill_list->count(); i++)
             eskill_list->item(i)->setFlags(eskill_list->item(i)->flags() |= Qt::ItemIsUserCheckable);
-        }
+
         eskill_list->setStyleSheet(_itemStyle.arg(_highlightColor, QString::number(fontMetrics().height())));
-        for (QPushButton *button : qAsConst(btn_stars)) {
+        for (QPushButton *button : qAsConst(btn_stars))
             button->setStyleSheet(_buttonStyle.arg(_highlightColor));
-        }
     } else {
-        for (int i = 0; i < eskill_list->count(); i++) {
+        for (int i = 0; i < eskill_list->count(); i++)
             eskill_list->item(i)->setFlags(eskill_list->item(i)->flags() &= ~Qt::ItemIsUserCheckable);
-        }
         QString emptyColor = QStringLiteral("0,0,0,0");
         eskill_list->setStyleSheet(_itemStyle.arg(emptyColor, QString::number(fontMetrics().height())));
-        for (QPushButton *button : qAsConst(btn_stars)) {
+        for (QPushButton *button : qAsConst(btn_stars))
             button->setStyleSheet(_buttonStyle.arg(emptyColor));
-        }
     }
 }
 
@@ -418,9 +400,8 @@ QHBoxLayout *MateriaEditor::makeNameLayout()
     combo_materia->setMinimumHeight(fontMetrics().height());
     combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     for (int i = 0; i < 91; i++) {
-        if (data->name(i) != "DON'T USE") {
+        if (data->name(i) != "DON'T USE")
             combo_materia->addItem(data->pixmap(i), data->name(i));
-        }
     }
     connect(combo_materia, &QComboBox::currentTextChanged, this, &MateriaEditor::materia_changed);
 
@@ -527,9 +508,8 @@ QWidget *MateriaEditor::makeStarWidget()
 }
 void MateriaEditor::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange) {
+    if (e->type() != QEvent::LanguageChange)
         QWidget::changeEvent(e);
-    }
 
     updateESkillList();
     box_skills->setTitle(tr("Skills"));
@@ -553,9 +533,8 @@ void MateriaEditor::changeEvent(QEvent *e)
 void MateriaEditor::updateESkillList()
 {
     if (eskill_list) {
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < 24; i++)
             eskill_list->item(i)->setText(data->enemySkill(i));
-        }
     } else {
         eskill_list = new QListWidget;
         eskill_list->clear();
@@ -572,40 +551,35 @@ QWidget *MateriaEditor::makeSkillWidget()
 {
     updateESkillList();
     eskill_list->setStyleSheet(_itemStyle.arg(_highlightColor, QString::number(fontMetrics().height())));
+    eskill_list->setMinimumHeight(eskill_list->sizeHintForRow(0) * 5 + eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
     eskill_list->setMaximumHeight(eskill_list->sizeHintForRow(0) * 48 + eskill_list->contentsMargins().top() + eskill_list->contentsMargins().bottom());
     eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
     eskill_list->setUniformItemSizes(true);
 
     connect(eskill_list, &QListWidget::itemPressed, this, [](QListWidgetItem * item) {
-        if (item->flags() & Qt::ItemIsUserCheckable) {
+        if (item->flags() & Qt::ItemIsUserCheckable)
             item->setCheckState((item->checkState() ? Qt::Unchecked : Qt::Checked));
-        }
     });
 
     connect(eskill_list, &QListWidget::clicked, this, [this](QModelIndex index) {
         int i = index.row();
-        if (eskill_list->item(i)->checkState() == Qt::Checked) {
+        if (eskill_list->item(i)->checkState() == Qt::Checked)
             _current_ap |= (1 << i);
-        } else {
+        else
             _current_ap &= ~(1 << i);
-        }
         emit(apChanged(_current_ap));
     });
 
     btn_eskill_clear = new QPushButton(tr("Clear"));
     connect(btn_eskill_clear, &QPushButton::clicked, this, [this] {
         if (_current_ap != 0)
-        {
             setAP(0);
-        }
     });
 
     btn_eskill_master = new QPushButton(tr("Master"));
     connect(btn_eskill_master, &QPushButton::clicked, this, [this] {
         if (_current_ap != FF7Materia::MaxMateriaAp)
-        {
             setAP(FF7Materia::MaxMateriaAp);
-        }
     });
 
     auto eSkillButtonLayout = new QHBoxLayout;
@@ -623,7 +597,6 @@ QWidget *MateriaEditor::makeSkillWidget()
 
     eskill_group = new QGroupBox;
     eskill_group->setHidden(true);
-    eskill_group->setMinimumHeight(150);
     eskill_group->setLayout(eskill_layout);
     eskill_group->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 
