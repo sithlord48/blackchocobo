@@ -19,7 +19,7 @@
 #include <QTranslator>
 #include <QUrl>
 #include "options.h"
-#include "filedialog.h"
+#include "bcdialog.h"
 #include "ui_options.h"
 #include "ff7tk/data/FF7SaveInfo.h"
 
@@ -180,35 +180,35 @@ void Options::cleanSettings()
 }
 void Options::on_btn_set_save_pc_clicked()
 {
-    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save FF7 PC Saves"), ui->line_save_pc->text(), ui->line_save_pc->text());
+    QString temp = BCDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save FF7 PC Saves"), ui->line_save_pc->text(), ui->line_save_pc->text());
     if (!temp.isEmpty())
         ui->line_save_pc->setText(temp);
 }
 
 void Options::on_btn_set_save_emu_clicked()
 {
-    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save mcd/mcr saves"), ui->line_save_emu->text(), ui->line_save_emu->text());
+    QString temp = BCDialog::getExistingDirectory(this, settings, tr("Select A Directory To Save mcd/mcr saves"), ui->line_save_emu->text(), ui->line_save_emu->text());
     if (!temp.isEmpty())
         ui->line_save_emu->setText(temp);
 }
 
 void Options::on_btn_set_load_path_clicked()
 {
-    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Directory To Load FF7 PC Saves From"), ui->line_load_path->text(), ui->line_load_path->text());
+    QString temp = BCDialog::getExistingDirectory(this, settings, tr("Select A Directory To Load FF7 PC Saves From"), ui->line_load_path->text(), ui->line_load_path->text());
     if (!temp.isEmpty())
         ui->line_load_path->setText(temp);
 }
 
 void Options::on_btn_set_default_save_clicked()
 {
-    QString temp = FileDialog::getOpenFileName(this, settings, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(settings->value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(settings->value(SETTINGS::DEFAULTSAVE).toString()).fileName());
+    QString temp = BCDialog::getOpenFileName(this, settings, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(settings->value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(settings->value(SETTINGS::DEFAULTSAVE).toString()).fileName());
     if(!temp.isEmpty())
         ui->line_default_save->setText(temp);
 }
 
 void Options::on_btn_set_char_stat_folder_clicked()
 {
-    QString temp = FileDialog::getExistingDirectory(this, settings, tr("Select A Location To Save Character Stat Files"), ui->line_char_stat_folder->text(), ui->line_char_stat_folder->text());
+    QString temp = BCDialog::getExistingDirectory(this, settings, tr("Select A Location To Save Character Stat Files"), ui->line_char_stat_folder->text(), ui->line_char_stat_folder->text());
     if (!temp.isNull())
         ui->line_char_stat_folder->setText(temp);
 }
@@ -232,5 +232,5 @@ void Options::on_cbNativeDialogs_clicked(bool checked)
 
 void Options::on_btnEditSideBarItems_clicked()
 {
-    FileDialog::editSideBarPaths(this, settings);
+    BCDialog::editSideBarPaths(this, settings);
 }

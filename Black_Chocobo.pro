@@ -21,10 +21,10 @@ CONFIG += c++1z
 QT += core gui xml widgets qml
 
 SOURCES += \
-	filedialog.cpp \
 	main.cpp \
 	mainwindow.cpp \
 	about.cpp \
+	bcdialog.cpp \
 	options.cpp \
 	errbox.cpp \
 	achievementdialog.cpp \
@@ -62,9 +62,9 @@ SOURCES += \
 	ff7tk/data/FF7Achievements.cpp
 
 HEADERS += \
-    filedialog.h \
 	mainwindow.h \
 	about.h \
+        bcdialog.h \
 	options.h \
 	errbox.h \
 	qhexedit/chunks.h \

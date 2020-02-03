@@ -21,11 +21,12 @@
 class QWidget;
 class QSettings;
 class FF7Save;
-class FileDialog
+class BCDialog
 {
 public:
     static QString getOpenFileName(QWidget  *parent = nullptr, QSettings *settings = nullptr, const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), const QString &initSelection = QString());
     static QString getExistingDirectory(QWidget  *parent = nullptr, QSettings *settings = nullptr, const QString &title = QString(), const QString &path = QDir::homePath(), const QString &initSelection = QString());
     static QString getSaveFileName(QWidget  *parent = nullptr, QSettings *settings = nullptr, const QString &region = QString(), const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), QString * chosenType = nullptr, const QString &initSelection = QString());
     static void editSideBarPaths(QWidget *parent= nullptr, QSettings *settings = nullptr);
+    static int fixTimeDialog(QWidget* parent, bool slotPAL = false);
 };

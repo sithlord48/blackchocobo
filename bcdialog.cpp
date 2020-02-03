@@ -13,7 +13,7 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#include "filedialog.h"
+#include "bcdialog.h"
 #include "ff7tk/data/FF7Save.h"
 #include <QAction>
 #include <QDialogButtonBox>
@@ -25,6 +25,7 @@
 #include <QSettings>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QMessageBox>
 
 QRect readGeometry(const QByteArray &geometry)
 {
@@ -61,7 +62,7 @@ QRect readGeometry(const QByteArray &geometry)
     return restoredGeometry;
 }
 
-QString FileDialog::getOpenFileName(QWidget  *parent, QSettings *settings, const QString &title, const QString &path , const QString &nameFilters, const QString &initSelection)
+QString BCDialog::getOpenFileName(QWidget  *parent, QSettings *settings, const QString &title, const QString &path , const QString &nameFilters, const QString &initSelection)
 {
     if (!settings)
         return QString();
@@ -74,7 +75,7 @@ QString FileDialog::getOpenFileName(QWidget  *parent, QSettings *settings, const
     for(QAbstractButton * btn: dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively))
         btn->setIconSize(iconSize);
     dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
-    dialog.setLabelText(QFileDialog::LookIn, QStringLiteral("Places"));
+    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
     QString fileName = initSelection;
     if (!fileName.isEmpty())
         dialog.selectFile(fileName);
@@ -88,7 +89,7 @@ QString FileDialog::getOpenFileName(QWidget  *parent, QSettings *settings, const
     return QString();
 }
 
-QString FileDialog::getExistingDirectory(QWidget *parent, QSettings *settings, const QString &title, const QString &path, const QString &initSelection)
+QString BCDialog::getExistingDirectory(QWidget *parent, QSettings *settings, const QString &title, const QString &path, const QString &initSelection)
 {
     if (!settings)
         return QString();
@@ -106,7 +107,7 @@ QString FileDialog::getExistingDirectory(QWidget *parent, QSettings *settings, c
     QString fileName = initSelection;
     if (!fileName.isEmpty())
         dialog.selectFile(fileName);
-    dialog.setLabelText(QFileDialog::LookIn, QStringLiteral("Places"));
+    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
     QList<QUrl> sideBarUrls;
     for(const QString &url : settings->value("sidebarUrls").toStringList())
         sideBarUrls.append(QUrl::fromLocalFile(url));
@@ -117,7 +118,7 @@ QString FileDialog::getExistingDirectory(QWidget *parent, QSettings *settings, c
     return QString();
 }
 
-QString FileDialog::getSaveFileName(QWidget  *parent, QSettings *settings, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString * chosenType, const QString &initSelection)
+QString BCDialog::getSaveFileName(QWidget  *parent, QSettings *settings, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString * chosenType, const QString &initSelection)
 {
     if (!settings)
         return QString();
@@ -128,7 +129,7 @@ QString FileDialog::getSaveFileName(QWidget  *parent, QSettings *settings, const
     dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setLabelText(QFileDialog::LookIn, QStringLiteral("Places"));
+    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
     QString fileName = initSelection;
     if (!fileName.isEmpty())
         dialog.selectFile(fileName);
@@ -186,12 +187,13 @@ QString FileDialog::getSaveFileName(QWidget  *parent, QSettings *settings, const
     return QString();
 }
 
-void FileDialog::editSideBarPaths(QWidget *parent, QSettings * settings)
+void BCDialog::editSideBarPaths(QWidget *parent, QSettings * settings)
 {
     if (!settings)
         return;
     QDialog dialog(parent);
-    dialog.setWindowTitle(QStringLiteral("Edit Places"));
+    dialog.setWindowTitle(QObject::tr("Edit Places"));
+    dialog.setGeometry(parent->geometry());
     int fmw = dialog.fontMetrics().height();
     QSize iconSize = QSize(fmw, fmw);
     QListWidget listWidget;
@@ -260,4 +262,17 @@ void FileDialog::editSideBarPaths(QWidget *parent, QSettings * settings)
             urls.append(listWidget.item(i)->text());
         settings->setValue(QStringLiteral("sidebarUrls"), urls);
     }
+}
+
+
+int BCDialog::fixTimeDialog(QWidget *parent, bool slotPAL)
+{
+    QMessageBox dialog(parent);
+    dialog.setIconPixmap(QPixmap(":/icon/fix_time"));
+    dialog.setText(QObject::tr("Adjust the play time?"));
+    dialog.setInformativeText(QObject::tr("Old region was %1hz\nNew region is %2hz").arg(slotPAL ? 50 : 60).arg(!slotPAL ? 50 : 60));
+    dialog.setWindowTitle( slotPAL ? QObject::tr("PAL -> NTSC Conversion") : QObject::tr("NTSC -> PAL Conversion"));
+    dialog.addButton(QMessageBox::Yes);
+    dialog.addButton(QMessageBox::No);
+    return dialog.exec();
 }

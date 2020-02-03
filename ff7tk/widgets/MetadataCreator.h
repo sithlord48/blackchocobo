@@ -18,6 +18,7 @@
 #include <QDialog>
 #include <QVBoxLayout>
 #include "../data/FF7Save.h"
+#include "../data/FF7SaveInfo.h"
 
 class MetadataCreator : public QDialog
 {
@@ -29,6 +30,8 @@ private slots:
     void on_buttonBox_accepted();
 
 private:
+    QString getOpenFileName(QWidget  *parent = nullptr, const QString &title = QString(), const QString &path = QString(), const QString &nameFilters = QString(), const QString &initSelection = QString());
+    QString getExistingDirectory(QWidget *parent = nullptr, const QString &title = QString(), const QString &path = QString(), const QString &initSelection = QString());
     QVBoxLayout *makeLineLayout();
     //Data Parts
     bool load;

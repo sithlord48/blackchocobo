@@ -20,7 +20,7 @@
 #include "ff7tk/data/FF7Char.h"
 #include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Location.h"
-#include "filedialog.h"
+#include "bcdialog.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -523,7 +523,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
             return;//cancel load.
     }
 
-    QString fileName = FileDialog::getOpenFileName(this, settings, tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
+    QString fileName = BCDialog::getOpenFileName(this, settings, tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
@@ -568,7 +568,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_Slot_From_File_triggered()
 {
-    QString fileName = FileDialog::getOpenFileName(this, settings,
+    QString fileName = BCDialog::getOpenFileName(this, settings,
                        tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
@@ -598,7 +598,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
-    QString fileName = FileDialog::getOpenFileName(this, settings, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
+    QString fileName = BCDialog::getOpenFileName(this, settings, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
         return;
     QFile file(fileName);
@@ -619,7 +619,7 @@ void MainWindow::on_actionImport_char_triggered()
 
 void MainWindow::on_actionExport_char_triggered()
 {
-    QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s),
+    QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s),
                        tr("Save FF7 Character File"), settings->value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
@@ -659,7 +659,7 @@ bool MainWindow::on_actionSave_File_As_triggered()
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
         path = settings->value(SETTINGS::EMUSAVEPATH).toString();
 
-    QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
+    QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
 
     if (fileName.isEmpty())
         return false;
@@ -808,7 +808,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     temp.append(QString("%1achievement.dat").arg(QDir::separator()));
     QFile tmp(temp);
     if (!tmp.exists())
-        temp = FileDialog::getOpenFileName(this, settings, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
+        temp = BCDialog::getOpenFileName(this, settings, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
 
     if (temp.isEmpty())
         return;
@@ -1118,50 +1118,24 @@ void MainWindow::fileModified(bool changed)
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
 {
-    int result;
-    QMessageBox fixtime(this);
-    fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
-    fixtime.setText(tr("Would you like to correct the play time?"));
-    fixtime.setInformativeText(tr("In this region the game runs 60hz"));
-    fixtime.setWindowTitle(tr("PAL -> NTSC Conversion"));
-    fixtime.addButton(QMessageBox::Yes);
-    fixtime.addButton(QMessageBox::No);
-    result = fixtime.exec();
-
-    switch (result) {
-    case QMessageBox::Yes:
+    if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) * 1.2));
         load = true;
         ui->sb_time_hour->setValue(ff7->time(s) / 3600);
         ui->sb_time_min->setValue(ff7->time(s) / 60 % 60);
         ui->sb_time_sec->setValue(int(ff7->time(s)) - ((ui->sb_time_hour->value() * 3600) + ui->sb_time_min->value() * 60));
         load = false;
-        break;
-    case QMessageBox::Cancel: break;
     }
 }
 void MainWindow::set_pal_time(void)
 {
-    int result;
-    QMessageBox fixtime(this);
-    fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
-    fixtime.setText(tr("Would you like to correct the play time?"));
-    fixtime.setInformativeText(tr("In this region the game runs 50hz"));
-    fixtime.setWindowTitle(tr("NTSC -> PAL Conversion"));
-    fixtime.addButton(QMessageBox::Yes);
-    fixtime.addButton(QMessageBox::No);
-    result = fixtime.exec();
-
-    switch (result) {
-    case QMessageBox::Yes:
+    if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) / 1.2));
         load = true;
         ui->sb_time_hour->setValue(ff7->time(s) / 3600);
         ui->sb_time_min->setValue(ff7->time(s) / 60 % 60);
         ui->sb_time_sec->setValue(int(ff7->time(s)) - ((ui->sb_time_hour->value() * 3600) + ui->sb_time_min->value() * 60));
         load = false;
-        break;
-    case QMessageBox::Cancel: break;
     }
 }
 void MainWindow::materiaupdate(void)
@@ -1273,7 +1247,7 @@ void MainWindow::CheckGame()
             typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
             QString selectedType = typeMap.key(FF7SaveInfo::FORMAT::PSX);
 
-            QString fileName = FileDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
+            QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
 
             if (fileName.isEmpty())
                 return;
