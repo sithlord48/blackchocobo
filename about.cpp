@@ -23,7 +23,7 @@ About::About(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
-    ui->lbl_icon->setFixedSize(fontMetrics().height() * 3, fontMetrics().height() * 3);
+    ui->lbl_icon->setFixedSize(fontMetrics().height() * 4, fontMetrics().height() * 4);
     ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_name->setText(QCoreApplication::applicationName().toLatin1());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
