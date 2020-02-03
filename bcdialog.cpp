@@ -177,7 +177,7 @@ QString BCDialog::getSaveFileName(QWidget  *parent, QSettings *settings, const Q
             name = QStringLiteral("vgsCard");
         }
         QString ext = dialog.defaultSuffix().isEmpty() ? QString() : QStringLiteral(".%1").arg(dialog.defaultSuffix());
-        dialog.selectFile(QStringLiteral("%1%2%3%4").arg(dialog.directory().path(), QDir::separator(), name, ext));
+        dialog.selectFile(QStringLiteral("%1%2").arg(name, ext));
     });
 
     if(dialog.exec() == QFileDialog::Accepted) {

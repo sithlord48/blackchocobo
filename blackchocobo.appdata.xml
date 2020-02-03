@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>Black_Chocobo.desktop</id>
+  <name>Black Chocobo</name>
+  <summary>A Save Editor for Final Fantasy VII</summary>
+  <description>
+    <p>
+        Black Chocobo is a save editor for Final Fantasy VII.
+    </p>
+    <p>
+        Do alot of things with ff7 saves, Including Convert Region or Format. Start New Game+ and more.
+        Supports PC (98 + Steam), Emulators, PS3, PSP/ PsVita and Switch versions.
+    </p>
+  </description>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <url type="homepage">https://github.com/sithlord48/blackchocobo</url>
+  <url type="bugtracker">https://github.com/sithlord48/blackchocobo/issues</url>
+  <url type="donation">http://sourceforge.net/p/blackchocobo/donate/</url>
+  <project_group>Games</project_group>
+</component>

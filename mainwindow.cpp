@@ -407,30 +407,43 @@ void MainWindow::loadBasicSettings()
 #endif
     //are any empty? if so set them accordingly.
 
+    if (settings->value(SETTINGS::SIDEBARURLS).isNull()) {
+        QStringList defaultBarUrls;
+        defaultBarUrls.append(QDir::rootPath());
+        defaultBarUrls.append(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+        if (!settings->value(SETTINGS::LOADPATH).toString().isEmpty())
+            defaultBarUrls.append(settings->value(SETTINGS::LOADPATH).toString());
+        if (!settings->value(SETTINGS::PCSAVEPATH).toString().isEmpty())
+            defaultBarUrls.append(settings->value(SETTINGS::PCSAVEPATH).toString());
+        if (!settings->value(SETTINGS::EMUSAVEPATH).toString().isEmpty())
+            defaultBarUrls.append(settings->value(SETTINGS::EMUSAVEPATH).toString());
+        if (!settings->value(SETTINGS::STATFOLDER).toString().isEmpty())
+            defaultBarUrls.append(settings->value(SETTINGS::STATFOLDER).toString());
+        settings->setValue(SETTINGS::SIDEBARURLS, defaultBarUrls);
+    }
     if (settings->value(SETTINGS::SCALE).isNull())
+#ifndef Q_OS_MAC
+        settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 96.0f), 1.0));
+#else
         settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
-
+#endif
     if (settings->value(SETTINGS::EDITABLECOMBOS).isNull())
         settings->setValue(SETTINGS::EDITABLECOMBOS, true);
 
     if (settings->value(SETTINGS::REGION).isNull())
         settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
 
+    if (settings->value(SETTINGS::MAINGEOMETRY).isNull()) {
+        setGeometry(x(), y(), minimumWidth(), minimumHeight());
+        saveGeometry();
+    }
     restoreGeometry(settings->value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
 
 void MainWindow::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !settings->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
-    QStringList defaultBarUrls {
-        QDir::rootPath(),
-        QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
-        settings->value(SETTINGS::LOADPATH).toString(),
-        settings->value(SETTINGS::PCSAVEPATH).toString(),
-        settings->value(SETTINGS::EMUSAVEPATH).toString(),
-        settings->value(SETTINGS::STATFOLDER).toString()
-    };
-    for(const QString &url : settings->value(SETTINGS::SIDEBARURLS, defaultBarUrls).toStringList())
+    for(const QString &url : settings->value(SETTINGS::SIDEBARURLS).toStringList())
         m_sideBarUrls.append(QUrl::fromLocalFile(url));
     char_editor->setEditableComboBoxes(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     materia_editor->setEditableMateriaCombo(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());

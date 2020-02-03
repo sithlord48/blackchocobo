@@ -138,7 +138,7 @@ ItemList::ItemList(qreal Scale, QWidget *parent) : QTableWidget(parent)
         itemlist.append(FF7Item::EmptyItemData);   //initlize the data.
     }
     itemSelector->setFixedHeight(fontMetrics().height());
-    setFixedWidth(itemSelector->width() + (verticalScrollBar()->width() / 4) + contentsMargins().left() + contentsMargins().right());
+    setFixedWidth(itemSelector->width() + verticalScrollBar()->sizeHint().width() + 7);
     itemSelector->close();
     createdSelector = false;
     itemupdate();// redraw Display After data init.

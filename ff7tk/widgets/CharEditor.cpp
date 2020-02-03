@@ -391,7 +391,7 @@ void CharEditor::updateText()
     if (!list_limits) {
         list_limits = new QListWidget();
         list_limits->addItems(FF7Char::instance()->limits(0));
-        list_limits->setFixedHeight( (list_limits->sizeHintForRow(0) * 7) + list_limits->contentsMargins().top() + list_limits->contentsMargins().bottom());
+        list_limits->setFixedHeight( (list_limits->sizeHintForRow(0) * 7) + list_limits->contentsMargins().top() + list_limits->contentsMargins().bottom() + 4);
     } else {
         for (int i = 0; i < list_limits->count(); i++)
             list_limits->item(i)->setText(FF7Char::instance()->limits(data.id).at(i));

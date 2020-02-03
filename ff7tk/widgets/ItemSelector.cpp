@@ -29,6 +29,7 @@ void ItemSelector::init_display()
     QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
     combo_type = new QComboBox;
     combo_type->setIconSize(iconSize);
+
     combo_item = new QComboBox;
     combo_item->setIconSize(iconSize);
 
@@ -43,10 +44,13 @@ void ItemSelector::init_display()
     btn_remove->setIconSize(iconSize);
     btn_remove->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear"), QPixmap(":/common/edit-clear")));
     btn_remove->setToolTip(tr("Empty Item"));
-    btn_remove->setFixedWidth(fontMetrics().horizontalAdvance(QStringLiteral("WW")));
     btn_remove->setShortcut(QKeySequence::Delete);
 
     init_data(); //before setting layout set dat
+    btn_remove->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    combo_type->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    combo_item->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    combo_type->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
@@ -54,8 +58,8 @@ void ItemSelector::init_display()
     layout->addWidget(combo_item);
     layout->addWidget(sb_qty);
     layout->addWidget(btn_remove);
-    this->setLayout(layout);
-    this->adjustSize();
+    setLayout(layout);
+    adjustSize();
 }
 void ItemSelector::setMaximumQty(int maxQty)
 {
@@ -232,21 +236,22 @@ int ItemSelector::type_offset(int type)
     }
     return offset;
 }
+
 int ItemSelector::id(void)
 {
     return int(FF7Item::instance()->itemId(current_item));
 }
 int ItemSelector::combo_item_width()
 {
-    return combo_item->width();
+    return combo_item->sizeHint().width();
 }
 int ItemSelector::combo_type_width()
 {
-    return int(combo_type->width() * 0.2);
+    return combo_type->sizeHint().width();
 }
 int ItemSelector::qty_width()
 {
-    return int((sb_qty->width() + btn_remove->width()) * 0.55);
+    return sb_qty->sizeHint().width() + btn_remove->sizeHint().width();
 }
 
 void ItemSelector::setFixedHeight(int h)
