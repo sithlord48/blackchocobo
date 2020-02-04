@@ -19,7 +19,6 @@
 #include <QLocale>
 #include <QTranslator>
 #include <QTime>
-#include <QSettings>
 #include "mainwindow.h"
 
 #if defined(STATIC) && (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))

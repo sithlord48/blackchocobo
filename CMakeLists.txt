@@ -47,6 +47,7 @@ set ( blackchocobo_SRCS
 	errbox.cpp
 	achievementdialog.cpp
 	bcdialog.cpp
+	bcsettings.cpp
 	qhexedit/chunks.cpp
 	qhexedit/commands.cpp
 	qhexedit/qhexedit.cpp

@@ -21,6 +21,7 @@
 #include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Location.h"
 #include "bcdialog.h"
+#include "bcsettings.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadBasicSettings();
     populateLanguageMenu();
     initDisplay();
-    setScale(settings->value(SETTINGS::SCALE).toDouble());
+    setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
     populateCombos();
     init_style();
     loadChildWidgetSettings();
@@ -62,16 +63,16 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::populateLanguageMenu()
 {
     m_translations.clear();
-    QDir dir(QStringLiteral("%1/lang").arg(settings->value(SETTINGS::LANGPATH).toString()));
+    QDir dir(QStringLiteral("%1/lang").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         m_translations.insert(lang, translator);
-        bool currentLang = (settings->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang) {
-            settings->setValue(SETTINGS::LANG, lang);
+            BCSettings::instance()->setValue(SETTINGS::LANG, lang);
             QApplication::installTranslator(translator);
         }
     }
@@ -112,7 +113,7 @@ void MainWindow::initDisplay()
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 
-    double scale = settings->value(SETTINGS::SCALE).toDouble();
+    double scale = BCSettings::instance()->value(SETTINGS::SCALE).toDouble();
     char_editor = new CharEditor(scale);
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
     char_editor_layout->setContentsMargins(0, 0, 0, 0);
@@ -127,7 +128,7 @@ void MainWindow::initDisplay()
     ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
     locationViewer = new LocationViewer(scale);
-    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(settings->value(SETTINGS::LANGPATH).toString()));
+    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
     locationViewer->setRegion("BASCUS-94163FF7-S00");
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0, 0, 0, 0);
@@ -385,80 +386,39 @@ void MainWindow::init_connections()
 
 void MainWindow::loadBasicSettings()
 {
-#ifdef STATIC
-    settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
-#else //STATIC
-    if (QFile(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath())).exists())
-        settings = new QSettings(QStringLiteral("%1/settings.ini").arg(QCoreApplication::applicationDirPath()), QSettings::IniFormat);
-    else
-        settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
-#endif //STATIC
-
-#ifdef Q_OS_UNIX
+    if (BCSettings::instance()->value(SETTINGS::SCALE).isNull())
 #ifndef Q_OS_MAC
-    //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
-    if (QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
-        settings->setValue(SETTINGS::LANGPATH, QStringLiteral("/usr/share/blackchocobo"));
-    else
-        settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
-#endif
+        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 96.0f), 1.0));
 #else
-    settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
+        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
 #endif
-    //are any empty? if so set them accordingly.
 
-    if (settings->value(SETTINGS::SIDEBARURLS).isNull()) {
-        QStringList defaultBarUrls;
-        defaultBarUrls.append(QDir::rootPath());
-        defaultBarUrls.append(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
-        if (!settings->value(SETTINGS::LOADPATH).toString().isEmpty())
-            defaultBarUrls.append(settings->value(SETTINGS::LOADPATH).toString());
-        if (!settings->value(SETTINGS::PCSAVEPATH).toString().isEmpty())
-            defaultBarUrls.append(settings->value(SETTINGS::PCSAVEPATH).toString());
-        if (!settings->value(SETTINGS::EMUSAVEPATH).toString().isEmpty())
-            defaultBarUrls.append(settings->value(SETTINGS::EMUSAVEPATH).toString());
-        if (!settings->value(SETTINGS::STATFOLDER).toString().isEmpty())
-            defaultBarUrls.append(settings->value(SETTINGS::STATFOLDER).toString());
-        settings->setValue(SETTINGS::SIDEBARURLS, defaultBarUrls);
-    }
-    if (settings->value(SETTINGS::SCALE).isNull())
-#ifndef Q_OS_MAC
-        settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 96.0f), 1.0));
-#else
-        settings->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
-#endif
-    if (settings->value(SETTINGS::EDITABLECOMBOS).isNull())
-        settings->setValue(SETTINGS::EDITABLECOMBOS, true);
-
-    if (settings->value(SETTINGS::REGION).isNull())
-        settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
-
-    if (settings->value(SETTINGS::MAINGEOMETRY).isNull()) {
+    if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull()) {
         setGeometry(x(), y(), minimumWidth(), minimumHeight());
         saveGeometry();
     }
-    restoreGeometry(settings->value(SETTINGS::MAINGEOMETRY).toByteArray());
+    restoreGeometry(BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
 
 void MainWindow::loadChildWidgetSettings()
 {
-    QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !settings->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
-    for(const QString &url : settings->value(SETTINGS::SIDEBARURLS).toStringList())
+    QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
+    for(const QString &url : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
         m_sideBarUrls.append(QUrl::fromLocalFile(url));
-    char_editor->setEditableComboBoxes(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    materia_editor->setEditableMateriaCombo(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    itemlist->setEditableItemCombo(settings->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    char_editor->setAdvancedMode(settings->value(SETTINGS::CHARADVANCED, false).toBool());
-    char_editor->setAutoLevel(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
-    char_editor->setAutoStatCalc(settings->value(SETTINGS::AUTOGROWTH, true).toBool());
-    chocoboManager->setAdvancedMode(settings->value(SETTINGS::CHOCOADVANCED, false).toBool());
-    locationViewer->setAdvancedMode(settings->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
-    ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST, false).toBool());
+    char_editor->setEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    materia_editor->setEditableMateriaCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemlist->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    char_editor->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
+    char_editor->setAutoLevel(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
+    char_editor->setAutoStatCalc(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
+    chocoboManager->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHOCOADVANCED, false).toBool());
+    locationViewer->setAdvancedMode(BCSettings::instance()->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
+    ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST, false).toBool());
     if (ff7->format() == FF7SaveInfo::FORMAT::PC || ff7->format() == FF7SaveInfo::FORMAT::SWITCH || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
-        setControllerMappingVisible(settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
-    ui->bm_unknown->setVisible(settings->value(SETTINGS::PROGRESSADVANCED, false).toBool());
-    ui->bh_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
-    ui->leader_id->setVisible(settings->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+        setControllerMappingVisible(BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
+    ui->bm_unknown->setVisible(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
+    ui->bh_id->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->leader_id->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -518,15 +478,15 @@ void MainWindow::closeEvent(QCloseEvent *e)
         else
             e->accept();
     }
-    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 void MainWindow::resizeEvent(QResizeEvent *)
 {
-    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 void MainWindow::moveEvent(QMoveEvent *)
 {
-    settings->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_triggered()
@@ -536,7 +496,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
             return;//cancel load.
     }
 
-    QString fileName = BCDialog::getOpenFileName(this, settings, tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
+    QString fileName = BCDialog::getOpenFileName(this, tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
@@ -581,15 +541,15 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_Slot_From_File_triggered()
 {
-    QString fileName = BCDialog::getOpenFileName(this, settings,
-                       tr("Open Final Fantasy 7 Save"), settings->value(SETTINGS::LOADPATH).toString(),
+    QString fileName = BCDialog::getOpenFileName(this,
+                       tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         FF7Save *tempSave = new FF7Save();
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
             if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
-                SlotSelect *SSelect = new SlotSelect(settings->value(SETTINGS::SCALE).toDouble(), tempSave, false);
+                SlotSelect *SSelect = new SlotSelect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), tempSave, false);
                 SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + (SSelect->height() /2));
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
@@ -611,7 +571,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
-    QString fileName = BCDialog::getOpenFileName(this, settings, tr("Select FF7 Character Stat File"), settings->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
+    QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
         return;
     QFile file(fileName);
@@ -632,8 +592,8 @@ void MainWindow::on_actionImport_char_triggered()
 
 void MainWindow::on_actionExport_char_triggered()
 {
-    QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s),
-                       tr("Save FF7 Character File"), settings->value(SETTINGS::STATFOLDER).toString(),
+    QString fileName = BCDialog::getSaveFileName(this, ff7->region(s),
+                       tr("Save FF7 Character File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
         if (ff7->exportCharacter(s, curchar, fileName))
@@ -666,13 +626,13 @@ bool MainWindow::on_actionSave_File_As_triggered()
 
     QString path;
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
-            path = settings->value(SETTINGS::PCSAVEPATH).toString();
+            path = BCSettings::instance()->value(SETTINGS::PCSAVEPATH).toString();
     else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
              || (ff7->format() == FF7SaveInfo::FORMAT::VGS)
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
-        path = settings->value(SETTINGS::EMUSAVEPATH).toString();
+        path = BCSettings::instance()->value(SETTINGS::EMUSAVEPATH).toString();
 
-    QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
+    QString fileName = BCDialog::getSaveFileName(this, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
 
     if (fileName.isEmpty())
         return false;
@@ -710,11 +670,11 @@ bool MainWindow::saveFileFull(const QString &fileName)
 
 void MainWindow::on_actionNew_Game_triggered()
 {
-    QString save_name = settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
-                settings->value(SETTINGS::DEFAULTSAVE).toString() : QString();
+    QString save_name = BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
+                BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString() : QString();
 
     QString region = ff7->region(s).isEmpty() ?
-                settings->value(SETTINGS::REGION).toString() : ff7->region(s);
+                BCSettings::instance()->value(SETTINGS::REGION).toString() : ff7->region(s);
 
     ff7->newGame(s, region, save_name);//call the new game function
     ui->statusBar->showMessage(tr("New Game Created - Using: %1")
@@ -727,8 +687,8 @@ void MainWindow::on_actionNew_Game_triggered()
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
     QString save_name;
-    if (settings->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
-        save_name = settings->value(SETTINGS::DEFAULTSAVE).toString();
+    if (BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
+        save_name = BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString();
 
     ff7->newGamePlus(s, ff7->fileName(), save_name);
     ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
@@ -780,15 +740,14 @@ void MainWindow::on_actionPaste_Slot_triggered()
 }
 void MainWindow::on_actionShow_Options_triggered()
 {
-    Options odialog(this, settings);
-    
+    Options odialog(this);
     connect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
     connect(&odialog, &Options::requestChangeNativeDialog, this, [] (bool useNative){
         QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
     });
     odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((height() - odialog.sizeHint().height()) / 2));
     if (odialog.exec()) {
-        setScale(settings->value(SETTINGS::SCALE).toDouble());
+        setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
         loadChildWidgetSettings();
     }
     disconnect(&odialog, nullptr, nullptr, nullptr);
@@ -802,7 +761,7 @@ void MainWindow::on_actionCreateNewMetadata_triggered()
 
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
-    SlotSelect slotselect(settings->value(SETTINGS::SCALE).toDouble(), ff7, true);
+    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true);
     slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + (slotselect.height() /2));
 
     int i = slotselect.exec();
@@ -821,7 +780,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
     temp.append(QString("%1achievement.dat").arg(QDir::separator()));
     QFile tmp(temp);
     if (!tmp.exists())
-        temp = BCDialog::getOpenFileName(this, settings, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
+        temp = BCDialog::getOpenFileName(this, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
 
     if (temp.isEmpty())
         return;
@@ -835,7 +794,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 
 void MainWindow::changeLanguage(const QVariant &data)
 {
-    settings->setValue(SETTINGS::LANG, data);
+    BCSettings::instance()->setValue(SETTINGS::LANG, data);
     if(!m_translations.contains(data.toString()))
         populateLanguageMenu();
     QApplication::installTranslator(m_translations.value(data.toString()));
@@ -1068,7 +1027,7 @@ void MainWindow::setmenu(bool newgame)
     } else {
         for (int i = 0; i < 9; i++)
             ui->tabWidget->setTabEnabled(i, true);
-        ui->tabWidget->setTabEnabled(9, settings->value(SETTINGS::ENABLETEST).toBool());
+        ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST).toBool());
     }
 
     if (!newgame && !ff7->fileName().isEmpty()) {
@@ -1260,7 +1219,7 @@ void MainWindow::CheckGame()
             typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
             QString selectedType = typeMap.key(FF7SaveInfo::FORMAT::PSX);
 
-            QString fileName = BCDialog::getSaveFileName(this, settings, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
+            QString fileName = BCDialog::getSaveFileName(this, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
 
             if (fileName.isEmpty())
                 return;
@@ -1506,7 +1465,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
         if ((ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
-                || settings->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
+                || BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
                 optionsWidget->setFixedWidth(optionsWidget->width() - 1);

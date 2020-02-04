@@ -1,0 +1,87 @@
+/****************************************************************************/
+//    copyright 2020 Chris Rizzitello <sithlord48@gmail.com>                //
+//                                                                          //
+//    This file is part of Black Chocobo.                                   //
+//                                                                          //
+//    Black Chocobo is free software: you can redistribute it and/or modify //
+//    it under the terms of the GNU General Public License as published by  //
+//    the Free Software Foundation, either version 3 of the License, or     //
+//    (at your option) any later version.                                   //
+//                                                                          //
+//    Black Chocobo is distributed in the hope that it will be useful,      //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    GNU General Public License for more details.                          //
+/****************************************************************************/
+#pragma once
+#include <QObject>
+#include <QSettings>
+#include <QVariant>
+namespace SETTINGS {
+    inline const static QString MAINGEOMETRY = QStringLiteral("MainGeometry");
+    inline const static QString AUTOGROWTH = QStringLiteral("autochargrowth");
+    inline const static QString CHARADVANCED = QStringLiteral("charEditorAdvanced");
+    inline const static QString STATFOLDER = QStringLiteral("char_stat_folder");
+    inline const static QString CHOCOADVANCED = QStringLiteral("chocoboEditorAdvanced");
+    inline const static QString DEFAULTSAVE = QStringLiteral("default_save");
+    inline const static QString EDITABLECOMBOS = QStringLiteral("editableCombos");
+    inline const static QString PROGRESSADVANCED = QStringLiteral("gameProgressAdvanced");
+    inline const static QString LANG = QStringLiteral("lang");
+    inline const static QString LANGPATH = QStringLiteral("langPath");
+    inline const static QString LOADPATH = QStringLiteral("load_path");
+    inline const static QString LOCVIEWADVANCED = QStringLiteral("locationViewerAdvanced");
+    inline const static QString ALWAYSSHOWCONTROLLERMAP = QStringLiteral("optionsShowMapping");
+    inline const static QString CUSTOMDEFAULTSAVE = QStringLiteral("override_default_save");
+    inline const static QString REGION = QStringLiteral("region");
+    inline const static QString EMUSAVEPATH = QStringLiteral("save_emu_path");
+    inline const static QString PCSAVEPATH = QStringLiteral("save_pc_path");
+    inline const static QString SCALE = QStringLiteral("scale");
+    inline const static QString ENABLETEST = QStringLiteral("show_test");
+    inline const static QString WORLDMAPADVANCED = QStringLiteral("worldMapAdvanced");
+    inline const static QString USENATIVEDIALOGS = QStringLiteral("useNativeDialogs");
+    inline const static QString SIDEBARURLS = QStringLiteral("sidebarUrls");
+}
+
+class BCSettings : public QObject
+{
+    Q_OBJECT
+public:
+    static BCSettings *instance();
+    void setValue(const QString &setting = QString(), const QVariant &value = QVariant());
+    QVariant value(const QString &setting = QString(), const QVariant &defaultValue = QVariant());
+    void restoreDefaultSettings();
+signals:
+    void settingsChanged();
+private:
+    explicit BCSettings(QObject *parent = nullptr);
+    BCSettings *operator = (BCSettings &other) = delete;
+    BCSettings(const BCSettings &other) = delete;
+    ~BCSettings() = default;
+    void initSettings();
+    void cleanSettings();
+    QSettings *settings = nullptr;
+    inline static const QStringList validSettingsNames = {
+            SETTINGS::MAINGEOMETRY,
+            SETTINGS::AUTOGROWTH,
+            SETTINGS::CHARADVANCED,
+            SETTINGS::STATFOLDER,
+            SETTINGS::CHOCOADVANCED,
+            SETTINGS::DEFAULTSAVE,
+            SETTINGS::EDITABLECOMBOS,
+            SETTINGS::PROGRESSADVANCED,
+            SETTINGS::LANG,
+            SETTINGS::LANGPATH,
+            SETTINGS::LOADPATH,
+            SETTINGS::LOCVIEWADVANCED,
+            SETTINGS::ALWAYSSHOWCONTROLLERMAP,
+            SETTINGS::CUSTOMDEFAULTSAVE,
+            SETTINGS::REGION,
+            SETTINGS::EMUSAVEPATH,
+            SETTINGS::PCSAVEPATH,
+            SETTINGS::SCALE,
+            SETTINGS::ENABLETEST,
+            SETTINGS::WORLDMAPADVANCED,
+            SETTINGS::USENATIVEDIALOGS,
+            SETTINGS::SIDEBARURLS
+        };
+};
