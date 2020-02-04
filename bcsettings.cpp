@@ -19,7 +19,8 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QDir>
-
+#include <QApplication>
+#include <QStyle>
 
 BCSettings *BCSettings::instance()
 {
@@ -117,4 +118,35 @@ void BCSettings::restoreDefaultSettings()
     settings->setValue(SETTINGS::SCALE, 1.00);
     settings->setValue(SETTINGS::AUTOGROWTH, true);
     settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
+    settings->setValue(SETTINGS::COLORSCHEME, 0);
+}
+QPalette BCSettings::paletteForSetting()
+{
+    int index = settings->value(SETTINGS::COLORSCHEME).toInt();
+    QPalette newPalette;
+    if( index == 0)
+        newPalette = qApp->style()->standardPalette();
+    else {
+        newPalette.setColor(QPalette::Window, index == 1 ? darkWindow : lightWindow);
+        newPalette.setColor(QPalette::Base, index == 1 ? darkButton : lightButton);
+        newPalette.setColor(QPalette::Text, index == 1 ? darkText : lightText);
+        newPalette.setColor(QPalette::AlternateBase, index == 1 ? darkWindow : lightWindow);
+        newPalette.setColor(QPalette::WindowText, index == 1 ? darkText : lightText);
+        newPalette.setColor(QPalette::Button, index == 1 ? darkButton : lightButton);
+        newPalette.setColor(QPalette::ButtonText,index == 1 ? darkText : lightText);
+        newPalette.setColor(QPalette::PlaceholderText, index == 1 ? darkPlaceholderText : lightPlaceholderText);
+        newPalette.setColor(QPalette::Disabled, QPalette::Button, index == 1 ? darkDisableButton : lightDisableButton);
+        newPalette.setColor(QPalette::Disabled, QPalette::Window, index == 1 ? darkDisableButton : lightDisableButton);
+        newPalette.setColor(QPalette::Disabled, QPalette::WindowText, index == 1 ? darkInactiveText : lightInactiveText);
+        newPalette.setColor(QPalette::Disabled,QPalette::ButtonText, index == 1 ? darkInactiveText : lightInactiveText);
+        newPalette.setColor(QPalette::ToolTipBase, index == 1 ? darkText : lightText);
+        newPalette.setColor(QPalette::ToolTipText, index == 1 ? darkWindow : lightWindow);
+        newPalette.setColor(QPalette::Highlight,index == 1 ? darkHighlight : lightHighlight);
+        newPalette.setColor(QPalette::HighlightedText, index == 1 ? darkWindow : lightWindow);
+        newPalette.setColor(QPalette::Inactive, QPalette::HighlightedText, index == 1 ? darkButton : lightButton);
+        newPalette.setColor(QPalette::Active, QPalette::Text, index == 1 ? darkText : lightText);
+        newPalette.setColor(QPalette::Link, index == 1 ? darkLink : lightLink);
+        newPalette.setColor(QPalette::LinkVisited, index == 1 ? darkInactiveText : lightInactiveText);
+    }
+    return newPalette;
 }

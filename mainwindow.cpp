@@ -428,17 +428,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange)
-        return;
-
-    ui->retranslateUi(this);
-    ui->tabWidget->setTabText(3, tr("Chocobo"));
-    ui->tabWidget->setTabText(7, tr("Game Options"));
-    populateCombos();
-    materiaupdate();
-    updateStolenMateria();
-    if (ui->psxExtras->isVisible())
-        update_hexEditor_PSXInfo();
+    if (e->type() == QEvent::PaletteChange) {
+        QPalette palette = BCSettings::instance()->paletteForSetting();
+        for (QWidget * widget : findChildren<QWidget *>(QString(), Qt::FindChildrenRecursively))
+             widget->setPalette(palette);
+        hexEditor->setAddressAreaColor(palette.alternateBase().color());
+    } else if (e->type() == QEvent::LanguageChange) {
+        ui->retranslateUi(this);
+        ui->tabWidget->setTabText(3, tr("Chocobo"));
+        ui->tabWidget->setTabText(7, tr("Game Options"));
+        populateCombos();
+        materiaupdate();
+        updateStolenMateria();
+        if (ui->psxExtras->isVisible())
+            update_hexEditor_PSXInfo();
+    }
 }
 void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 {

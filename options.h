@@ -48,10 +48,11 @@ private slots:
     void on_comboLanguage_currentIndexChanged(const QString &arg1);
     void on_cbNativeDialogs_clicked(bool checked);
     void on_btnEditSideBarItems_clicked();
+    void on_comboColorScheme_currentIndexChanged(int index);
+    
 private:
     Ui::Options *ui;
     void loadSettings();
     void saveSettings();
     void restoreDefaultSettings();
-    void updateSettings();
 };

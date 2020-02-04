@@ -19,6 +19,7 @@
 #include <QLocale>
 #include <QTranslator>
 #include <QTime>
+#include "bcsettings.h"
 #include "mainwindow.h"
 
 #if defined(STATIC) && (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
@@ -47,7 +48,8 @@ int main(int argc, char *argv[])
 #ifndef Q_OS_LINUX
     a.setStyle(QStyleFactory::create("Fusion"));
 #endif
-    a.setAttribute(Qt::AA_DontUseNativeDialogs);
+    a.setPalette(BCSettings::instance()->paletteForSetting());
+    a.setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     a.setApplicationName("Black Chocobo");
     a.setApplicationVersion(version.toString());
 

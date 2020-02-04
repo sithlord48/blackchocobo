@@ -46,8 +46,8 @@ Options::Options(QWidget *parent) : QDialog(parent)
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
-        ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en"))));
     }
+    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en"))));
     ui->comboLanguage->setVisible(ui->comboLanguage->count());
     ui->lblLanguage->setVisible(ui->comboLanguage->count());
 
@@ -117,6 +117,7 @@ void Options::loadSettings()
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG)));
     ui->cbNativeDialogs->setChecked(BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
+    ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
 }
 
 void Options::saveSettings()
@@ -140,6 +141,7 @@ void Options::saveSettings()
     BCSettings::instance()->setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
     BCSettings::instance()->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
     BCSettings::instance()->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
+    BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
 }
 
 void Options::restoreDefaultSettings()
@@ -221,4 +223,10 @@ void Options::on_cbNativeDialogs_clicked(bool checked)
 void Options::on_btnEditSideBarItems_clicked()
 {
     BCDialog::editSideBarPaths(this);
+}
+
+void Options::on_comboColorScheme_currentIndexChanged(int index)
+{
+    BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, index);
+    qApp->setPalette(BCSettings::instance()->paletteForSetting());
 }

@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
+#include <QColor>
 #include <QObject>
 #include <QSettings>
 #include <QVariant>
@@ -40,6 +41,7 @@ namespace SETTINGS {
     inline const static QString WORLDMAPADVANCED = QStringLiteral("worldMapAdvanced");
     inline const static QString USENATIVEDIALOGS = QStringLiteral("useNativeDialogs");
     inline const static QString SIDEBARURLS = QStringLiteral("sidebarUrls");
+    inline const static QString COLORSCHEME = QStringLiteral("colorScheme");
 }
 
 class BCSettings : public QObject
@@ -50,6 +52,7 @@ public:
     void setValue(const QString &setting = QString(), const QVariant &value = QVariant());
     QVariant value(const QString &setting = QString(), const QVariant &defaultValue = QVariant());
     void restoreDefaultSettings();
+    QPalette paletteForSetting();
 signals:
     void settingsChanged();
 private:
@@ -61,27 +64,47 @@ private:
     void cleanSettings();
     QSettings *settings = nullptr;
     inline static const QStringList validSettingsNames = {
-            SETTINGS::MAINGEOMETRY,
-            SETTINGS::AUTOGROWTH,
-            SETTINGS::CHARADVANCED,
-            SETTINGS::STATFOLDER,
-            SETTINGS::CHOCOADVANCED,
-            SETTINGS::DEFAULTSAVE,
-            SETTINGS::EDITABLECOMBOS,
-            SETTINGS::PROGRESSADVANCED,
-            SETTINGS::LANG,
-            SETTINGS::LANGPATH,
-            SETTINGS::LOADPATH,
-            SETTINGS::LOCVIEWADVANCED,
-            SETTINGS::ALWAYSSHOWCONTROLLERMAP,
-            SETTINGS::CUSTOMDEFAULTSAVE,
-            SETTINGS::REGION,
-            SETTINGS::EMUSAVEPATH,
-            SETTINGS::PCSAVEPATH,
-            SETTINGS::SCALE,
-            SETTINGS::ENABLETEST,
-            SETTINGS::WORLDMAPADVANCED,
-            SETTINGS::USENATIVEDIALOGS,
-            SETTINGS::SIDEBARURLS
-        };
+        SETTINGS::MAINGEOMETRY,
+        SETTINGS::AUTOGROWTH,
+        SETTINGS::CHARADVANCED,
+        SETTINGS::STATFOLDER,
+        SETTINGS::CHOCOADVANCED,
+        SETTINGS::DEFAULTSAVE,
+        SETTINGS::EDITABLECOMBOS,
+        SETTINGS::PROGRESSADVANCED,
+        SETTINGS::LANG,
+        SETTINGS::LANGPATH,
+        SETTINGS::LOADPATH,
+        SETTINGS::LOCVIEWADVANCED,
+        SETTINGS::ALWAYSSHOWCONTROLLERMAP,
+        SETTINGS::CUSTOMDEFAULTSAVE,
+        SETTINGS::REGION,
+        SETTINGS::EMUSAVEPATH,
+        SETTINGS::PCSAVEPATH,
+        SETTINGS::SCALE,
+        SETTINGS::ENABLETEST,
+        SETTINGS::WORLDMAPADVANCED,
+        SETTINGS::USENATIVEDIALOGS,
+        SETTINGS::SIDEBARURLS,
+        SETTINGS::COLORSCHEME,
+    };
+    //Theme Colors
+    inline static const QColor lightWindow = QColor(252, 252, 252);
+    inline static const QColor lightDisableWindow = QColor(192, 192, 192);
+    inline static const QColor lightText = QColor(35, 38, 39);
+    inline static const QColor lightButton = QColor(239, 240, 241);
+    inline static const QColor lightDisableButton = QColor(180, 181, 182);
+    inline static const QColor lightHighlight = QColor(61,174,233);
+    inline static const QColor lightInactiveText = QColor(127,140,141);
+    inline static const QColor lightLink = QColor(41, 128, 185);
+    inline static const QColor lightPlaceholderText = QColor(96, 96, 96);
+    inline static const QColor darkWindow = QColor(35, 38, 41);
+    inline static const QColor darkDisableWindow = QColor(100, 100, 100);
+    inline static const QColor darkText = QColor(239, 240, 241);
+    inline static const QColor darkDisableButton = QColor(67, 74, 81);
+    inline static const QColor darkButton = QColor(49, 54, 59);
+    inline static const QColor darkHighlight = QColor(61,174,233);
+    inline static const QColor darkInactiveText = QColor(189, 195, 199);
+    inline static const QColor darkLink = QColor(41, 128, 185);
+    inline static const QColor darkPlaceholderText = QColor(196, 196, 196);
 };

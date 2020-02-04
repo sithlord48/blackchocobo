@@ -233,6 +233,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Simple light and dark color theme option</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Filename suggestion for Exports</string>
           </property>
          </item>
