@@ -24,30 +24,6 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -58,10 +34,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Newest Features</source>
         <translation>Newest Features</translation>
-    </message>
-    <message>
-        <source>Credits</source>
-        <translation>Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
@@ -132,10 +104,6 @@ p, li { white-space: pre-wrap; }
         <translation>Buff Icons (and one or two more) by </translation>
     </message>
     <message>
-        <source>Thanks</source>
-        <translation>Thanks</translation>
-    </message>
-    <message>
         <source>A Big Thank You  To:</source>
         <translation>A Big Thank You  To:</translation>
     </message>
@@ -164,10 +132,6 @@ p, li { white-space: pre-wrap; }
         <translation>Cause she&apos;s just awesome!</translation>
     </message>
     <message>
-        <source>Close</source>
-        <translation>Close</translation>
-    </message>
-    <message>
         <source>Version: %1</source>
         <translation>Version: %1</translation>
     </message>
@@ -176,40 +140,84 @@ p, li { white-space: pre-wrap; }
         <translation>Using Qt: %1</translation>
     </message>
     <message>
-        <source>New: Further Improve HiDpi</source>
-        <translation>New: Further Improve HiDpi</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Fixed: Track hex Editor&apos;s cursor on tab change.</source>
-        <translation>Fixed: Track hex Editor&apos;s cursor on tab change.</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>ff7tk: Fixed Loading Psv file crashes host</source>
-        <translation>ff7tk: Fixed Loading Psv file crashes host</translation>
+        <source>Simple light and dark color theme option</source>
+        <translation>Simple light and dark color theme option</translation>
     </message>
     <message>
-        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/12</source>
-        <translation>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/12</translation>
+        <source>Filename suggestion for Exports</source>
+        <translation>Filename suggestion for Exports</translation>
     </message>
     <message>
-        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/17</source>
-        <translation>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/17</translation>
+        <source>Improved Settings Dialog</source>
+        <translation>Improved Settings Dialog</translation>
     </message>
     <message>
-        <source>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/37</source>
-        <translation>ff7tk: Fixed https://github.com/sithlord48/ff7tk/issues/37</translation>
+        <source>Dynamic Language Switching</source>
+        <translation>Dynamic Language Switching</translation>
     </message>
     <message>
-        <source>ff7tk: Fixed Chocobo  pCount / Personality layout was overlapping Speed Notes.</source>
-        <translation>ff7tk: Fixed Chocobo  pCount / Personality layout was overlapping Speed Notes.</translation>
+        <source>Default to Non Native File Dialog</source>
+        <translation>Default to Non Native File Dialog</translation>
     </message>
     <message>
-        <source>ff7tk: Chocobo name not showing place holder text at right times</source>
-        <translation>ff7tk: Chocobo name not showing place holder text at right times</translation>
+        <source>Finalized format Support PSP exports (vmp) </source>
+        <translation>Finalized format Support PSP exports (vmp) </translation>
     </message>
     <message>
-        <source>New: Dynamic Language Switching</source>
-        <translation>New: Dynamic Language Switching</translation>
+        <source>New format Support Switch (ff7slot00 - ff7slot09)</source>
+        <translation>New format Support Switch (ff7slot00 - ff7slot09)</translation>
+    </message>
+    <message>
+        <source>New format Support PGE (ps1, mcs)</source>
+        <translation>New format Support PGE (ps1, mcs)</translation>
+    </message>
+    <message>
+        <source>New format Support PDA (psx, mcx, mcb, pda)</source>
+        <translation>New format Support PDA (psx, mcx, mcb, pda)</translation>
+    </message>
+    <message>
+        <source>Location Viewer: Added more locations</source>
+        <translation>Location Viewer: Added more locations</translation>
+    </message>
+    <message>
+        <source>C&amp;redits</source>
+        <translation>C&amp;redits</translation>
+    </message>
+    <message>
+        <source>&amp;Thanks</source>
+        <translation>&amp;Thanks</translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Close</translation>
+    </message>
+    <message>
+        <source>Finalized format Support PS3 export (psv)</source>
+        <translation>Finalized format Support PS3 export (psv)</translation>
     </message>
 </context>
 <context>
@@ -251,10 +259,6 @@ p, li { white-space: pre-wrap; }
         <translation>Base MP</translation>
     </message>
     <message>
-        <source>Level Progress</source>
-        <translation type="vanished">Level Progress</translation>
-    </message>
-    <message>
         <source>Next</source>
         <translation>Next</translation>
     </message>
@@ -265,14 +269,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Str</source>
         <translation>Str</translation>
-    </message>
-    <message>
-        <source>+</source>
-        <translation type="vanished">+</translation>
-    </message>
-    <message>
-        <source>=</source>
-        <translation type="vanished">=</translation>
     </message>
     <message>
         <source>Vit</source>
@@ -581,14 +577,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Name</source>
         <translation>Name</translation>
-    </message>
-    <message>
-        <source>value calculated ingame; edit BaseMp</source>
-        <translation type="vanished">value calculated ingame; edit BaseMp</translation>
-    </message>
-    <message>
-        <source>value calculated ingame; edit BaseHp</source>
-        <translation type="vanished">value calculated ingame; edit BaseHp</translation>
     </message>
     <message>
         <source>Exp: </source>
@@ -1559,10 +1547,6 @@ The km/h speeds are calculated while playing </translation>
         <translation>KeyItem: Black Materia</translation>
     </message>
     <message>
-        <source>KeyItem: Huge Materia:Corel</source>
-        <translation type="vanished">KeyItem: Huge Materia:Corel</translation>
-    </message>
-    <message>
         <source>Ultima</source>
         <translation>Ultima</translation>
     </message>
@@ -2225,10 +2209,6 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <source>Starlight Phone</source>
         <translation>Starlight Phone</translation>
-    </message>
-    <message>
-        <source>KeyItem: Huge Materia:Rocket</source>
-        <translation type="vanished">KeyItem: Huge Materia:Rocket</translation>
     </message>
     <message>
         <source>Missing Score</source>
@@ -5333,12 +5313,28 @@ The km/h speeds are calculated while playing </translation>
         <translation>Junion Area (Underwater)</translation>
     </message>
     <message>
-        <source>Icile Area</source>
-        <translation>Icile Area</translation>
-    </message>
-    <message>
         <source>Crater Area</source>
         <translation>Crater Area</translation>
+    </message>
+    <message>
+        <source>DEBUG MODE</source>
+        <translation>DEBUG MODE</translation>
+    </message>
+    <message>
+        <source>DEBUG</source>
+        <translation>DEBUG</translation>
+    </message>
+    <message>
+        <source>BLACKBGH</source>
+        <translation>BLACKBGH</translation>
+    </message>
+    <message>
+        <source>BLACKBGI</source>
+        <translation>BLACKBGI</translation>
+    </message>
+    <message>
+        <source>Dark city fourth street</source>
+        <translation>Dark city fourth street</translation>
     </message>
 </context>
 <context>
@@ -6870,6 +6866,10 @@ The km/h speeds are calculated while playing </translation>
         <source>New Game +</source>
         <translation>New Game +</translation>
     </message>
+    <message>
+        <source>Unable to open PSV of Type %2: 0x%1</source>
+        <translation>Unable to open PSV of Type %2: 0x%1</translation>
+    </message>
 </context>
 <context>
     <name>FF7SaveInfo</name>
@@ -6894,10 +6894,6 @@ The km/h speeds are calculated while playing </translation>
         <translation>Virtual Memory Card</translation>
     </message>
     <message>
-        <source>PSP/Vita Virtual Memory Card</source>
-        <translation>PSP/Vita Virtual Memory Card</translation>
-    </message>
-    <message>
         <source>Virtual Game Station Memory Card</source>
         <translation>Virtual Game Station Memory Card</translation>
     </message>
@@ -6912,6 +6908,18 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <source>All Files (*)</source>
         <translation>All Files (*)</translation>
+    </message>
+    <message>
+        <source>PSP and PsVita Virtual Memory Card</source>
+        <translation>PSP and PsVita Virtual Memory Card</translation>
+    </message>
+    <message>
+        <source>PSXGameEdit Memory Juggler</source>
+        <translation>PSXGameEdit Memory Juggler</translation>
+    </message>
+    <message>
+        <source>XP AR GS Caetla SmartLink Dantel</source>
+        <translation>XP AR GS Caetla SmartLink Dantel</translation>
     </message>
 </context>
 <context>
@@ -7297,10 +7305,6 @@ The km/h speeds are calculated while playing </translation>
         <translation>         INFO ON CURRENTLY SELECTED REPLAY MISSION</translation>
     </message>
     <message>
-        <source>&amp;Options</source>
-        <translation>&amp;Options</translation>
-    </message>
-    <message>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
@@ -7525,10 +7529,6 @@ The km/h speeds are calculated while playing </translation>
         <translation>Wild Chocobo</translation>
     </message>
     <message>
-        <source>PSV Save Notice</source>
-        <translation>PSV Save Notice</translation>
-    </message>
-    <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Diamond / Ultimate / Ruby Weapon</translation>
     </message>
@@ -7599,14 +7599,6 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <source>-None-</source>
         <translation>-None-</translation>
-    </message>
-    <message>
-        <source>PAL -&gt; NTSC Conversion</source>
-        <translation>PAL -&gt; NTSC Conversion</translation>
-    </message>
-    <message>
-        <source>NTSC -&gt; PAL Conversion</source>
-        <translation>NTSC -&gt; PAL Conversion</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
@@ -7755,18 +7747,6 @@ Select Unknown Var To View
 Table Entries are Editable</translation>
     </message>
     <message>
-        <source>Would you like to correct the play time?</source>
-        <translation>Would you like to correct the play time?</translation>
-    </message>
-    <message>
-        <source>In this region the game runs 60hz</source>
-        <translation>In this region the game runs 60hz</translation>
-    </message>
-    <message>
-        <source>In this region the game runs 50hz</source>
-        <translation>In this region the game runs 50hz</translation>
-    </message>
-    <message>
         <source>Talked to Biggs</source>
         <translation>Talked to Biggs</translation>
     </message>
@@ -7911,10 +7891,6 @@ Table Entries are Editable</translation>
         <translation>Money</translation>
     </message>
     <message>
-        <source>Advanced Mode</source>
-        <translation>Advanced Mode</translation>
-    </message>
-    <message>
         <source>Hex Editor</source>
         <translation>Hex Editor</translation>
     </message>
@@ -7985,38 +7961,6 @@ Table Entries are Editable</translation>
     <message>
         <source>New Game Plus Created - Using: %1</source>
         <translation>New Game Plus Created - Using: %1</translation>
-    </message>
-    <message>
-        <source>PSP/PsVita Save Notice</source>
-        <translation>PSP/PsVita Save Notice</translation>
-    </message>
-    <message>
-        <source>FF7 PC (*.ff7)</source>
-        <translation type="vanished">FF7 PC (*.ff7)</translation>
-    </message>
-    <message>
-        <source>Raw PSX Save(*FF7-S*)</source>
-        <translation type="vanished">Raw PSX Save(*FF7-S*)</translation>
-    </message>
-    <message>
-        <source>Virtual Game Station(*.vgs *.mem)</source>
-        <translation type="vanished">Virtual Game Station(*.vgs *.mem)</translation>
-    </message>
-    <message>
-        <source>PSV Export Attempted</source>
-        <translation type="vanished">PSV Export Attempted</translation>
-    </message>
-    <message>
-        <source>PSV Exports Are Not Allowed.</source>
-        <translation type="vanished">PSV Exports Are Not Allowed.</translation>
-    </message>
-    <message>
-        <source>VMP Export Attempted</source>
-        <translation type="vanished">VMP Export Attempted</translation>
-    </message>
-    <message>
-        <source>VMP Exports Are Not Allowed.</source>
-        <translation type="vanished">VMP Exports Are Not Allowed.</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
@@ -8119,10 +8063,6 @@ Table Entries are Editable</translation>
         <translation>Select Achievement File</translation>
     </message>
     <message>
-        <source>Dat File (*.dat);</source>
-        <translation>Dat File (*.dat);</translation>
-    </message>
-    <message>
         <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
         <translation>English</translation>
     </message>
@@ -8201,14 +8141,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>Error Loading File %1</translation>
     </message>
     <message>
-        <source>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
- ps3Key: %1
- ps3Seed: %2</source>
-        <translation>Black Chocobo Will Attempt to Sign your Save using the keys provided in the options Dialog.
- ps3Key: %1
- ps3Seed: %2</translation>
-    </message>
-    <message>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
         <translation>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</translation>
     </message>
@@ -8229,36 +8161,8 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>PsxName:</translation>
     </message>
     <message>
-        <source>TextLabel</source>
-        <translation type="vanished">TextLabel</translation>
-    </message>
-    <message>
         <source>No Description Text</source>
         <translation>No Description Text</translation>
-    </message>
-    <message>
-        <source>z_41</source>
-        <translation type="vanished">z_41</translation>
-    </message>
-    <message>
-        <source>z_42</source>
-        <translation type="vanished">z_42</translation>
-    </message>
-    <message>
-        <source>z_43</source>
-        <translation type="vanished">z_43</translation>
-    </message>
-    <message>
-        <source>z_44</source>
-        <translation type="vanished">z_44</translation>
-    </message>
-    <message>
-        <source>z_45</source>
-        <translation type="vanished">z_45</translation>
-    </message>
-    <message>
-        <source>z_46</source>
-        <translation type="vanished">z_46</translation>
     </message>
     <message>
         <source>He&amp;lp</source>
@@ -8267,10 +8171,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     <message>
         <source>&amp;View</source>
         <translation>&amp;View</translation>
-    </message>
-    <message>
-        <source>&amp;Language</source>
-        <translation>&amp;Language</translation>
     </message>
     <message>
         <source>&amp;Slot Region</source>
@@ -8285,20 +8185,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>&amp;About</translation>
     </message>
     <message>
-        <source>&amp;Show Selection Dialog</source>
-        <translation>&amp;Show Selection Dialog</translation>
-    </message>
-    <message>
         <source>&amp;Previous Slot</source>
         <translation>&amp;Previous Slot</translation>
     </message>
     <message>
         <source>&amp;Next Slot</source>
         <translation>&amp;Next Slot</translation>
-    </message>
-    <message>
-        <source>&amp;More Options...</source>
-        <translation>&amp;More Options...</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
@@ -8313,36 +8205,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>&amp;Spanish (PAL)</translation>
     </message>
     <message>
-        <source>New &amp;Game+ </source>
-        <translation>New &amp;Game+ </translation>
-    </message>
-    <message>
-        <source>&amp;Calculate Stats</source>
-        <translation>&amp;Calculate Stats</translation>
-    </message>
-    <message>
         <source>&amp;Reload</source>
         <translation>&amp;Reload</translation>
     </message>
     <message>
         <source>&amp;French (PAL)</source>
         <translation>&amp;French (PAL)</translation>
-    </message>
-    <message>
-        <source>&amp;Create Cloud Save Folder</source>
-        <translation>&amp;Create Cloud Save Folder</translation>
-    </message>
-    <message>
-        <source>Open Achievement &amp;File</source>
-        <translation>Open Achievement &amp;File</translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="vanished">Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm);;PSV SaveGame (*.psv);;PSP/PsVita SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</translation>
-    </message>
-    <message>
-        <source>Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</source>
-        <translation type="vanished">Virtual Memory Card(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin *.srm)</translation>
     </message>
     <message>
         <source>
@@ -8395,14 +8263,6 @@ trigger showing that tutorial</source>
 trigger showing that tutorial</translation>
     </message>
     <message>
-        <source>This File Does Not Have An Updated Signature
- Because of this your PSP/PsVita will reject this save as corrupted
- This is normal please see the User Guide for more information.</source>
-        <translation>This File Does Not Have An Updated Signature
- Because of this your PSP/PsVita will reject this save as corrupted
- This is normal please see the User Guide for more information.</translation>
-    </message>
-    <message>
         <source>&amp;Us English (NTSC-U)</source>
         <translation>&amp;Us English (NTSC-U)</translation>
     </message>
@@ -8453,10 +8313,6 @@ location.</translation>
         <translation>Avalanche Has Run To Hideout</translation>
     </message>
     <message>
-        <source>Ho&amp;ur</source>
-        <translation>Ho&amp;ur</translation>
-    </message>
-    <message>
         <source>Number of Steps</source>
         <translation>Number of Steps</translation>
     </message>
@@ -8465,24 +8321,8 @@ location.</translation>
         <translation>Snowboard Mini Game </translation>
     </message>
     <message>
-        <source>G-Bi&amp;ke High Score</source>
-        <translation>G-Bi&amp;ke High Score</translation>
-    </message>
-    <message>
         <source>Played piano durring flashback</source>
         <translation>Played piano durring flashback</translation>
-    </message>
-    <message>
-        <source>DEX Drive Memory Card(*.gme)</source>
-        <translation type="vanished">DEX Drive Memory Card(*.gme)</translation>
-    </message>
-    <message>
-        <source>PSV Save File(*.psv)</source>
-        <translation type="vanished">PSV Save File(*.psv)</translation>
-    </message>
-    <message>
-        <source>PSP Memory Card(*.vmp)</source>
-        <translation type="vanished">PSP Memory Card(*.vmp)</translation>
     </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
@@ -8498,12 +8338,112 @@ location.</translation>
   Next Data Chunk @ Slot:%1</translation>
     </message>
     <message>
-        <source>UnSupported Export Attempted</source>
-        <translation>UnSupported Export Attempted</translation>
+        <source>G-Bike High Score</source>
+        <translation>G-Bike High Score</translation>
     </message>
     <message>
-        <source>This format can not be Exported.</source>
-        <translation>This format can not be Exported.</translation>
+        <source>&amp;Settings</source>
+        <translation>&amp;Settings</translation>
+    </message>
+    <message>
+        <source>Ctrl+Q</source>
+        <translation>Ctrl+Q</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+S</source>
+        <translation>Ctrl+Shift+S</translation>
+    </message>
+    <message>
+        <source>&amp;Select Slot</source>
+        <translation>&amp;Select Slot</translation>
+    </message>
+    <message>
+        <source>F4</source>
+        <translation>F4</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+C</source>
+        <translation>Ctrl+Shift+C</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+V</source>
+        <translation>Ctrl+Shift+V</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+Del</source>
+        <translation>Ctrl+Shift+Del</translation>
+    </message>
+    <message>
+        <source>Alt+Left</source>
+        <translation>Alt+Left</translation>
+    </message>
+    <message>
+        <source>Alt+Right</source>
+        <translation>Alt+Right</translation>
+    </message>
+    <message>
+        <source>&amp;Configure</source>
+        <translation>&amp;Configure</translation>
+    </message>
+    <message>
+        <source>F2</source>
+        <translation>F2</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+N</source>
+        <translation>Ctrl+Shift+N</translation>
+    </message>
+    <message>
+        <source>New Game&amp;+ </source>
+        <translation>New Game&amp;+ </translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+=</source>
+        <translation>Ctrl+Shift+=</translation>
+    </message>
+    <message>
+        <source>Ctrl+E</source>
+        <translation>Ctrl+E</translation>
+    </message>
+    <message>
+        <source>Ctrl+Ins</source>
+        <translation>Ctrl+Ins</translation>
+    </message>
+    <message>
+        <source>Create Cloud Save &amp;Folder</source>
+        <translation>Create Cloud Save &amp;Folder</translation>
+    </message>
+    <message>
+        <source>F9</source>
+        <translation>F9</translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+Ins</source>
+        <translation>Ctrl+Shift+Ins</translation>
+    </message>
+    <message>
+        <source>&amp;Achievement Editor</source>
+        <translation>&amp;Achievement Editor</translation>
+    </message>
+    <message>
+        <source>F10</source>
+        <translation>F10</translation>
+    </message>
+    <message>
+        <source>Select A File to Save As</source>
+        <translation>Select A File to Save As</translation>
+    </message>
+    <message>
+        <source>Dat File (*.dat)</source>
+        <translation>Dat File (*.dat)</translation>
+    </message>
+    <message>
+        <source>Exported Slot:%2 from %1 -&gt; %3</source>
+        <translation>Exported Slot:%2 from %1 -&gt; %3</translation>
+    </message>
+    <message>
+        <source>Application Preferences</source>
+        <translation>Application Preferences</translation>
     </message>
 </context>
 <context>
@@ -8578,10 +8518,6 @@ location.</translation>
     <message>
         <source>Visible</source>
         <translation>Visible</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Locked</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -8690,6 +8626,10 @@ location.</translation>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancel</translation>
     </message>
+    <message>
+        <source>Places</source>
+        <translation>Places</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -8712,10 +8652,6 @@ location.</translation>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Select A Location To Save Character Stat Files</translation>
-    </message>
-    <message>
-        <source>Reset to Default</source>
-        <translation>Reset to Default</translation>
     </message>
     <message>
         <source>Options</source>
@@ -8742,14 +8678,6 @@ location.</translation>
         <translation>Override Builtin New Game Data</translation>
     </message>
     <message>
-        <source>Use Only Raw Psx Files</source>
-        <translation>Use Only Raw Psx Files</translation>
-    </message>
-    <message>
-        <source>Editor Options</source>
-        <translation>Editor Options</translation>
-    </message>
-    <message>
         <source>CharEditor - Advanced Mode</source>
         <translation>CharEditor - Advanced Mode</translation>
     </message>
@@ -8774,64 +8702,128 @@ location.</translation>
         <translation>Options - Always Show Controller Mapping </translation>
     </message>
     <message>
-        <source>Enable Experimental TestData </source>
-        <translation>Enable Experimental TestData </translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation>Close</translation>
-    </message>
-    <message>
-        <source>Path Options</source>
-        <translation>Path Options</translation>
-    </message>
-    <message>
         <source>Editable Combo for Materia and Items</source>
         <translation>Editable Combo for Materia and Items</translation>
     </message>
     <message>
-        <source>Signing Keys:</source>
-        <translation>Signing Keys:</translation>
+        <source>General</source>
+        <translation>General</translation>
     </message>
     <message>
-        <source>Input Key in HEX ex( 00010203AABF )</source>
-        <translation>Input Key in HEX ex( 00010203AABF )</translation>
+        <source>Application Scale</source>
+        <translation>Application Scale</translation>
     </message>
     <message>
-        <source>Input Seed in Hex ex( 00010203AABF )</source>
-        <translation>Input Seed in Hex ex( 00010203AABF )</translation>
+        <source>100%</source>
+        <translation>100%</translation>
     </message>
     <message>
-        <source>Scale Widgets by: </source>
-        <translation>Scale Widgets by: </translation>
+        <source>Normal Scale:</source>
+        <translation>Normal Scale:</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Keys&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Key&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Keys&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Key&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>Current Scale</source>
+        <translation>Current Scale</translation>
     </message>
     <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Seeds&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Seed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.psdevwiki.com/ps3/Seeds&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ps3Seed&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>Application Language</source>
+        <translation>Application Language</translation>
     </message>
     <message>
-        <source>Signing is disabled! Build with OpenSSL support to enable</source>
-        <translation>Signing is disabled! Build with OpenSSL support to enable</translation>
+        <source>Use Native File Dialogs</source>
+        <translation>Use Native File Dialogs</translation>
+    </message>
+    <message>
+        <source>New Game Default Region </source>
+        <translation>New Game Default Region </translation>
+    </message>
+    <message>
+        <source>NTSC-U</source>
+        <translation>NTSC-U</translation>
+    </message>
+    <message>
+        <source>PAL-E</source>
+        <translation>PAL-E</translation>
+    </message>
+    <message>
+        <source>PAL-FR</source>
+        <translation>PAL-FR</translation>
+    </message>
+    <message>
+        <source>PAL-DE</source>
+        <translation>PAL-DE</translation>
+    </message>
+    <message>
+        <source>PAL-ES</source>
+        <translation>PAL-ES</translation>
+    </message>
+    <message>
+        <source>NTSC-J</source>
+        <translation>NTSC-J</translation>
+    </message>
+    <message>
+        <source>NTSC-JI</source>
+        <translation>NTSC-JI</translation>
+    </message>
+    <message>
+        <source>Edit the Places show in sidebar on file dialogs</source>
+        <translation>Edit the Places show in sidebar on file dialogs</translation>
+    </message>
+    <message>
+        <source>Edit Places</source>
+        <translation>Edit Places</translation>
+    </message>
+    <message>
+        <source>Dark Theme</source>
+        <translation>Dark Theme</translation>
+    </message>
+    <message>
+        <source>Light Theme</source>
+        <translation>Light Theme</translation>
+    </message>
+    <message>
+        <source>Application Color Scheme</source>
+        <translation>Application Color Scheme</translation>
+    </message>
+    <message>
+        <source>File Options</source>
+        <translation>File Options</translation>
+    </message>
+    <message>
+        <source>Raw Psx Files Only!</source>
+        <translation>Raw Psx Files Only!</translation>
+    </message>
+    <message>
+        <source>Editing Options</source>
+        <translation>Editing Options</translation>
+    </message>
+    <message>
+        <source>Show Experimental TestData Tab</source>
+        <translation>Show Experimental TestData Tab</translation>
+    </message>
+    <message>
+        <source>CharEditor - Simulate Leveling Up / Down</source>
+        <translation>CharEditor - Simulate Leveling Up / Down</translation>
+    </message>
+    <message>
+        <source>Reset values to defaults</source>
+        <translation>Reset values to defaults</translation>
+    </message>
+    <message>
+        <source>Reset values to stored settings</source>
+        <translation>Reset values to stored settings</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation>Close and save changes</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation>Close and forget changes</translation>
+    </message>
+    <message>
+        <source>System Theme</source>
+        <translation>System Theme</translation>
     </message>
 </context>
 <context>
@@ -9073,6 +9065,63 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>QObject</name>
+    <message>
+        <source>Places</source>
+        <translation>Places</translation>
+    </message>
+    <message>
+        <source>Edit Places</source>
+        <translation>Edit Places</translation>
+    </message>
+    <message>
+        <source>Add a place</source>
+        <translation>Add a place</translation>
+    </message>
+    <message>
+        <source>Select a path to add to places</source>
+        <translation>Select a path to add to places</translation>
+    </message>
+    <message>
+        <source>Remove selected place</source>
+        <translation>Remove selected place</translation>
+    </message>
+    <message>
+        <source>Restore default places</source>
+        <translation>Restore default places</translation>
+    </message>
+    <message>
+        <source>Reset values to stored settings</source>
+        <translation>Reset values to stored settings</translation>
+    </message>
+    <message>
+        <source>Save Changes</source>
+        <translation>Save Changes</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Close</translation>
+    </message>
+    <message>
+        <source>Adjust the play time?</source>
+        <translation>Adjust the play time?</translation>
+    </message>
+    <message>
+        <source>Old region was %1hz
+New region is %2hz</source>
+        <translation>Old region was %1hz
+New region is %2hz</translation>
+    </message>
+    <message>
+        <source>PAL -&gt; NTSC Conversion</source>
+        <translation>PAL -&gt; NTSC Conversion</translation>
+    </message>
+    <message>
+        <source>NTSC -&gt; PAL Conversion</source>
+        <translation>NTSC -&gt; PAL Conversion</translation>
+    </message>
+</context>
+<context>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
@@ -9184,14 +9233,6 @@ p, li { white-space: pre-wrap; }
         <translation>  &amp;Cancel</translation>
     </message>
     <message>
-        <source>Save As</source>
-        <translation>Save As</translation>
-    </message>
-    <message>
-        <source>Dat Files (*.dat)</source>
-        <translation>Dat Files (*.dat)</translation>
-    </message>
-    <message>
         <source>Failed To Save File</source>
         <translation>Failed To Save File</translation>
     </message>
@@ -9204,34 +9245,6 @@ File:%1</translation>
 </context>
 <context>
     <name>errbox</name>
-    <message>
-        <source>&amp;Export As Raw PSX</source>
-        <translation>&amp;Export As Raw PSX</translation>
-    </message>
-    <message>
-        <source>Save Raw PSX File</source>
-        <translation>Save Raw PSX File</translation>
-    </message>
-    <message>
-        <source>All Files(*)</source>
-        <translation>All Files(*)</translation>
-    </message>
-    <message>
-        <source>Save Successfully</source>
-        <translation>Save Successfully</translation>
-    </message>
-    <message>
-        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation>File Saved Successfully, Going Back To The Selection Dialog</translation>
-    </message>
-    <message>
-        <source>Save Error</source>
-        <translation>Save Error</translation>
-    </message>
-    <message>
-        <source>Error On File Save, Going Back To The Selection Dialog</source>
-        <translation>Error On File Save, Going Back To The Selection Dialog</translation>
-    </message>
     <message>
         <source>Slot:%1
 </source>
@@ -9281,6 +9294,10 @@ File:%1</translation>
    Next Data Chunk @ Slot:%1</source>
         <translation>
    Next Data Chunk @ Slot:%1</translation>
+    </message>
+    <message>
+        <source>E&amp;xport Slot</source>
+        <translation>E&amp;xport Slot</translation>
     </message>
 </context>
 </TS>

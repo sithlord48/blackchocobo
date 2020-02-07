@@ -7288,7 +7288,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Configure</string>
    </property>
    <property name="toolTip">
-    <string>Applicaion Preferences</string>
+    <string>Application Preferences</string>
    </property>
    <property name="shortcut">
     <string>F2</string>

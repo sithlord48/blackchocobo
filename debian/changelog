@@ -1,3 +1,11 @@
+blackchocobo (1.10.0) trusty; urgency=low
+  *New: PSV Signing
+  *New: VMP Signing
+  *New: Switch save Support
+  *New: Common single save types Supported
+  *Many bug fixes.
+ -- Chris Rizzitello <sithlord48@gmail.com>  Fri, 7 Feb 2020 12:00:00 -0400
+
 blackchocobo (1.9.910) trusty; urgency=low
   *New: More HiDpi Adjustments
   *Fixed: track the hex Editor tab's curosr position on tab changes. 

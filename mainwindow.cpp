@@ -22,6 +22,7 @@
 #include "ff7tk/data/FF7Location.h"
 #include "bcdialog.h"
 #include "bcsettings.h"
+#include <QString>
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -165,7 +166,7 @@ void MainWindow::initDisplay()
 
 void MainWindow::setScale(double scale)
 {
-    scale = std::max(scale, 1.0);
+    scale = std::max(scale, 0.5);
     setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 * scale));
     ui->btn_cloud->setFixedSize(int(98 * scale), int(110 * scale));
     ui->btn_cloud->setIconSize(QSize(int(92 * scale), int(104 * scale)));
@@ -386,12 +387,17 @@ void MainWindow::init_connections()
 
 void MainWindow::loadBasicSettings()
 {
-    if (BCSettings::instance()->value(SETTINGS::SCALE).isNull())
-#ifndef Q_OS_MAC
-        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 96.0f), 1.0));
-#else
-        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(double(qApp->desktop()->logicalDpiX() / 72.0f), 1.0));
+    if (BCSettings::instance()->value(SETTINGS::SCALE).isNull()) {
+        double stdDPI = 96.0;
+#ifdef Q_OS_MAC
+        stdDPI = 72.0;
 #endif
+        double scale = QString::number(qApp->desktop()->logicalDpiX() / stdDPI, 'f', 2).toDouble();
+        double sy = int(scale * 100) % 25;
+        scale -= (sy / 100);
+        scale = ( sy < 12.49) ? scale : scale + 0.25;
+        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(scale, 0.5));
+    }
 
     if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull()) {
         setGeometry(x(), y(), minimumWidth(), minimumHeight());
