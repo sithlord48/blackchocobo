@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="open">open.png</file>
+        <file alias="prev">previous.png</file>
+        <file alias="next">next.png</file>
+        <file alias="config">config.png</file>
+        <file alias="bchoco">Black_Chocobo.png</file>
+        <file alias="slot_sel">slot_sel.png</file>
+        <file alias="def_save">default_save.png</file>
+        <file alias="new_plus">new_plus.png</file>
+        <file alias="export_char">export_char.png</file>
+        <file alias="import_char">import_char.png</file>
+        <file alias="save_as">save_as.png</file>
+        <file alias="save">save.png</file>
+        <file alias="world_map">world_map.png</file>
+        <file alias="slider_up">slider_up.png</file>
+        <file alias="fix_time">fix_time.png</file>
+        <file alias="refresh">refresh.png</file>
+        <file alias="cloudsave">cloudsave.png</file>
+        <file alias="achievements">achievements.png</file>
+        <file alias="psxmc">psxmc.png</file>
+        <file alias="import">import.png</file>
+        <file alias="list-add">list-add.png</file>
+        <file alias="list-remove">list-remove.png</file>
+    </qresource>
+</RCC>
