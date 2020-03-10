@@ -1628,31 +1628,16 @@ void MainWindow::progress_update()
     ui->cb_s7ts_6->setChecked((ff7->unknown(s, 26).at(8) & (1 << 5)));
     ui->cb_s7ts_7->setChecked((ff7->unknown(s, 26).at(8) & (1 << 6)));
     ui->cb_s7ts_8->setChecked((ff7->unknown(s, 26).at(8) & (1 << 7)));
-
-    //When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
-    //to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
-
-    if (static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0x00 &&
-      static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x00 &&
-      static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x00 &&
-      static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x00 &&
-      static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x00 &&
-      static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x00)
-            ui->combo_s7_slums->setCurrentIndex(1);
-
-    else if (
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->unknown(s, 26).at(1)) == 0xBF) &&
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x51) &&
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->unknown(s, 26).at(3)) == 0x05) &&
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->unknown(s, 26).at(4)) == 0x17) &&
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->unknown(s, 26).at(5)) == 0x5D) &&
-      (static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->unknown(s, 26).at(6)) == 0xEF))
+    
+    if (ff7->unknown(s, 26).mid(0, 6) == "\x00\x00\x00\x00\x00\x00")
+        ui->combo_s7_slums->setCurrentIndex(1);
+    else if (ff7->unknown(s, 26).mid(0, 6) == "\xFF\x03\x04\x0F\x1F\x6F" || ff7->unknown(s, 26).mid(0, 6) == "\xBF\x51\x05\x17\x5D\xEF")
         ui->combo_s7_slums->setCurrentIndex(2);
-
     else if (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x13)
         ui->combo_s7_slums->setCurrentIndex(3);
     else
         ui->combo_s7_slums->setCurrentIndex(0);
+    
     load = false;
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
@@ -3453,26 +3438,25 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem *item)
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
 {
     if (!load) {
-        QByteArray temp;
+        QByteArray temp(ff7->unknown(s, 26));
         switch (index) {
         default: break; //do nothing
         case 1: //initial slums setting
-            temp.setRawData("\x00\x00\x00\x00\x00\x00", 6);
-            ff7->setUnknown(s, 26, temp);
+            temp.replace(0, 6, "\x00\x00\x00\x00\x00\x00");
             break;
 
         case 2://after first scene. needs game global progress set to 105
-            temp.setRawData("\xBF\x03\x05\x17\x5D\xEF", 6);
-            ff7->setUnknown(s, 26, temp);
+            temp.replace(0, 6, "\xBF\x03\x05\x17\x5D\xEF");
             break;
 
         case 3://plate falling
-            temp.setRawData("\xBF\x13\x05\x17\x5D\xEF", 6);
-            ff7->setUnknown(s, 26, temp);
+            temp.replace(0, 6, "\xBF\x13\x05\x17\x5D\xEF");
             break;
         }
+        ff7->setUnknown(s, 26, temp);
     }
 }
+
 void MainWindow::char_materia_changed(materia mat)
 {
     if (!load) {} ff7->setCharMateria(s, curchar, mslotsel, mat);
