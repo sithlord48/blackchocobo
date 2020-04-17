@@ -1616,7 +1616,7 @@ void FF7Save::newGamePlus(int s, QString CharFileName, QString fileName)
             if (i == 6) { //export cait sith. cait sith's stats are only generated when he joins the party.
                 outFile.append(CharFileName);
                 outFile.append("-cait_sith");
-                if (fileFormat != FF7SaveInfo::FORMAT::PSX || fileFormat != FF7SaveInfo::FORMAT::PS3) {
+                if (fileFormat != FF7SaveInfo::FORMAT::PSX && fileFormat != FF7SaveInfo::FORMAT::PS3) {
                     outFile.append("-");
                     QString str;
                     str.setNum(s, 10) + 1;
@@ -1625,7 +1625,7 @@ void FF7Save::newGamePlus(int s, QString CharFileName, QString fileName)
             } else if (i == 7) { // export vincent. vincent's stats are only generated when he joins the party.
                 outFile.append(CharFileName);
                 outFile.append("-vincent");
-                if (fileFormat != FF7SaveInfo::FORMAT::PSX || fileFormat != FF7SaveInfo::FORMAT::PS3) {
+                if (fileFormat != FF7SaveInfo::FORMAT::PSX && fileFormat != FF7SaveInfo::FORMAT::PS3) {
                     outFile.append("-");
                     QString str;
                     str.setNum(s, 10) + 1;
