@@ -88,15 +88,10 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                         return true;
                     }
                 }
-            }//End Of HoverLeave Processing
-            else {
+            } else {
                 return true;
             }
-        } else if (ev->type() == QEvent::Resize) {
-            if (createdSelector) {
-                itemupdate();
-            }
-            return event(ev);
+        //End Of HoverLeave Processing
         } else {
             return event(ev);
         }
@@ -107,9 +102,8 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 
 void ItemList::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange) {
+    if (e->type() != QEvent::LanguageChange)
         QTableWidget::changeEvent(e);
-    }
     itemupdate();
 }
 ItemList::ItemList(qreal Scale, QWidget *parent) : QTableWidget(parent)
@@ -125,22 +119,19 @@ ItemList::ItemList(qreal Scale, QWidget *parent) : QTableWidget(parent)
     setEditTriggers(QAbstractItemView::NoEditTriggers);// thats a long 0
     setContextMenuPolicy(Qt::NoContextMenu);
     setSelectionMode(QAbstractItemView::NoSelection);
-    itemSelector = new ItemSelector();
-    createdSelector = true;
+    itemSelector = new ItemSelector;
     setColumnWidth(0, itemSelector->combo_type_width());
     setColumnWidth(1, itemSelector->combo_item_width());
     setColumnWidth(2, itemSelector->qty_width());
+    setFixedWidth(itemSelector->width() + verticalScrollBar()->sizeHint().width() + 7);
+    itemSelector->deleteLater();
+    itemSelector = nullptr;
     connect(this, &QTableWidget::currentCellChanged, this, &ItemList::listSelectionChanged);
     horizontalHeader()->close();
     verticalHeader()->close();
     verticalScrollBar()->setToolTip("");//negate custom tooltip
-    for (int i = 0; i < 320; i++) {
+    for (int i = 0; i < 320; i++)
         itemlist.append(FF7Item::EmptyItemData);   //initlize the data.
-    }
-    itemSelector->setFixedHeight(fontMetrics().height());
-    setFixedWidth(itemSelector->width() + verticalScrollBar()->sizeHint().width() + 7);
-    itemSelector->close();
-    createdSelector = false;
     itemupdate();// redraw Display After data init.
 }
 
@@ -149,10 +140,9 @@ void ItemList::setMaximumItemQty(int maxQty)
     itemQtyLimit = maxQty;
     //check that any items Qty is not greater then the new Qty. if so fix it.
     for (int i = 0; i < 320; i++) {
-        if ((FF7Item::instance()->itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i) != FF7Item::EmptyItemData)) {
-            //qty not above limit and item is not empty.
+        //qty not above limit and item is not empty.
+        if ((FF7Item::instance()->itemQty(itemlist.at(i)) > itemQtyLimit) && (itemlist.at(i) != FF7Item::EmptyItemData))
             itemlist.replace(i, FF7Item::instance()->itemEncode(FF7Item::instance()->itemId(itemlist.at(i)), quint8(itemQtyLimit)));
-        }
     }
     itemupdate();
 }
@@ -160,15 +150,18 @@ void ItemList::setMaximumItemQty(int maxQty)
 void ItemList::setItems(QList<quint16> items)
 {
     itemlist = items;
-    if (createdSelector) {
-        itemSelector->setVisible(false);
-        createdSelector = false;
+
+    if (itemSelector) {
+        itemSelector->deleteLater();
+        itemSelector = nullptr;
     }
+
     if (createdTooltip) {
         itemPreview->close();
         createdTooltip = false;
     }
     itemupdate();
+    setCurrentCell(-1, -1);
 }
 void ItemList::itemSelector_changed(quint16 item)
 {
@@ -192,39 +185,46 @@ void ItemList::itemSelector_changed(quint16 item)
 
 void ItemList::itemupdate()
 {
-
     clearContents();
-    for (int i = 0; i < 320; i++) { // set up items
+    for (int i = 0; i < 320; i++)
         updateItem(i);
-    }
 }
+
 void ItemList::listSelectionChanged(int row, int colum, int prevRow, int prevColum)
 {
     Q_UNUSED(prevColum)
-    if (createdSelector) {
-        itemSelector->close();
-        createdSelector = false;
+
+    if (itemSelector) {
+        itemSelector->deleteLater();
+        itemSelector = nullptr;
     }
+
     if (createdTooltip) {
         itemPreview->close();
         createdTooltip = false;
     }
-    if (colum < 0 || row < 0) {
+
+    if (colum < 0 || row < 0)
         return;   //Ingore if selecting -1 (clearContents)
-    }
+
     if (prevRow >= 0) {
+        removeCellWidget(prevRow, 0);
         updateItem(prevRow);   //update the previews Row so its filled again.
     }
-    itemSelector = new ItemSelector;
-    itemSelector->setEditableItemCombo(editableItemCombo);
-    createdSelector = true;
+
+    if (!itemSelector) {
+        itemSelector = new ItemSelector();
+        itemSelector->setEditableItemCombo(editableItemCombo);
+        itemSelector->setMinimumWidth(itemSelector->width());
+        connect(itemSelector, &ItemSelector::itemChanged, this, &ItemList::itemSelector_changed,Qt::UniqueConnection);
+    }
     itemSelector->setMaximumQty(itemQtyLimit);
     itemSelector->setObjectName(QString::number(row));
-    itemSelector->setMinimumWidth(itemSelector->width());
-    setCellWidget(row, 0, itemSelector);
     itemSelector->setCurrentItem(itemlist.at(row));
-    connect(itemSelector, &ItemSelector::itemChanged, this, &ItemList::itemSelector_changed);
+    setItem(row, 0, new QTableWidgetItem("", 0));
+    setCellWidget(row, 0, itemSelector);
 }
+
 void ItemList::updateItem(int row)
 {
     QTableWidgetItem *newItem;
@@ -254,6 +254,7 @@ void ItemList::updateItem(int row)
     }
     setRowHeight(row, fontMetrics().height() + 9);
 }
+
 void ItemList::setEditableItemCombo(bool editable)
 {
     editableItemCombo = editable;

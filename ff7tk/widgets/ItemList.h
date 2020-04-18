@@ -39,12 +39,12 @@ private slots:
 private:
     void itemupdate();
     void updateItem(int row);
-    int itemQtyLimit;
-    ItemSelector *itemSelector;
-    ItemPreview *itemPreview;
+    ItemSelector *itemSelector = nullptr;
+    ItemPreview *itemPreview = nullptr;
     QList<quint16> itemlist;
+    qreal scale;
+    int itemQtyLimit;
     bool createdSelector;
     bool createdTooltip;
     bool editableItemCombo;
-    qreal scale;
 };
