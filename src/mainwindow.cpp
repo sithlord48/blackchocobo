@@ -14,6 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
+#include <QString>
+#include <QScrollBar>
+#include <QMessageBox>
+#include <QDesktopWidget>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -22,7 +26,6 @@
 #include "ff7tk/data/FF7Location.h"
 #include "bcdialog.h"
 #include "bcsettings.h"
-#include <QString>
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

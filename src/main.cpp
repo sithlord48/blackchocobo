@@ -13,10 +13,11 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-#include "qglobal.h"
-
-#include <QtWidgets/QApplication>
+#include <QApplication>
 #include <QLocale>
+#ifndef Q_OS_LINUX
+    #include <QStyleFactory>
+#endif
 #include <QTranslator>
 #include <QTime>
 #include "bcsettings.h"

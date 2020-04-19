@@ -59,7 +59,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
 
     connect(btnExport, &QPushButton::clicked, this, &errbox::btnExportClicked);
 
-    QHBoxLayout *slotLayout = new QHBoxLayout;
+    auto slotLayout = new QHBoxLayout;
     slotLayout->setContentsMargins(0, 0, 3, 0);
     slotLayout->setSpacing(0);
     slotLayout->addWidget(lblIcon);
@@ -75,7 +75,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     btnLayout->setSpacing(3);
     btnLayout->addWidget(btnExport);
 
-    QVBoxLayout *finalLayout = new QVBoxLayout;
+    auto finalLayout = new QVBoxLayout;
     finalLayout->setContentsMargins(3, 3, 3, 3);
     finalLayout->setSpacing(3);
     finalLayout->addLayout(slotLayout);

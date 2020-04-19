@@ -14,13 +14,11 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-
-#include "qglobal.h"
-#include <QtWidgets/QDialog>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QVBoxLayout>
+#include <QDialog>
+#include <QLabel>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 #include "ff7tk/data/FF7Save.h"
 #include "ff7tk/data/SaveIcon.h"

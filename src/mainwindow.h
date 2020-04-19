@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2016 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -14,26 +14,16 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
-#include "qglobal.h"
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
-#include <QtWidgets>
-#else
-#include <QtGui/QMainWindow>
-#include <QtGui/QWidget>
-#include <QMessageBox>
-#endif
-
-#include <QDataStream>              // for data manip
+#pragma once
+#include <QDataStream>
+#include <QDomDocument>
+#include <QMainWindow>
 #include <QSettings>
-#include <QtXml/QDomDocument>       // for metadata.xml parse
-#include "options.h"                // contains the options dialog
-#include "about.h"                  // about dialog stuff.
-#include "errbox.h"                 // non ff7 error box
-#include "achievementdialog.h"      // Dialog for editing achievement files
 //ff7tk Items
+#include "options.h"
+#include "about.h"
+#include "errbox.h"
+#include "achievementdialog.h"
 #include "ff7tk/data/SaveIcon.h"
 #include "ff7tk/data/FF7Save.h"
 #include "ff7tk/data/FF7Char.h"
@@ -86,16 +76,16 @@ private:
     //ITEM buffer_item; // for use later
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
-    PhsListWidget *phsList;
-    MenuListWidget *menuList;
-    OptionsWidget *optionsWidget;
-    MateriaEditor *materia_editor;
-    QSpacerItem *mat_spacer;
-    CharEditor *char_editor;
-    ItemList *itemlist;
-    QHexEdit *hexEditor;
-    ChocoboManager *chocoboManager;
-    LocationViewer *locationViewer;
+    PhsListWidget *phsList = nullptr;
+    MenuListWidget *menuList = nullptr;
+    OptionsWidget *optionsWidget = nullptr;
+    MateriaEditor *materia_editor = nullptr;
+    QSpacerItem *mat_spacer = nullptr;
+    CharEditor *char_editor = nullptr;
+    ItemList *itemlist = nullptr;
+    QHexEdit *hexEditor = nullptr;
+    ChocoboManager *chocoboManager = nullptr;
+    LocationViewer *locationViewer = nullptr;
     QString prevFile;
     QMap<QString, QTranslator *> m_translations;
     QList<QUrl> m_sideBarUrls;
@@ -508,4 +498,3 @@ private slots://try to keep these in the same order as the .cpp file
     void on_linePsxDesc_textChanged(const QString &arg1);
     void on_cb_FlashbackPiano_toggled(bool checked);
 };
-#endif // MAINWINDOW_H
