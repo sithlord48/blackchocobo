@@ -15,6 +15,7 @@
 /****************************************************************************/
 #include "achievementdialog.h"
 
+#include <QDialogButtonBox>
 #include <QFileDialog>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -24,33 +25,29 @@
 
 achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
     QDialog(parent)
-    , achEditor(new AchievementEditor)
-    , btnSave(new QPushButton(QIcon::fromTheme("document-save", QIcon(":/icon/save")), tr("  &Save")))
-    , btnNo(new QPushButton(QIcon::fromTheme("window-close", QIcon(":/icon/quit")), tr("  &Cancel")))
+    , achievementEditor(new AchievementEditor(this))
+    , buttonBox(new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel, this))
     , fileName(FileName)
 {
     setWindowTitle(tr("Achievement Editor"));
     setMinimumWidth(fontMetrics().horizontalAdvance(QChar('W')) * 25);
     setMinimumHeight(fontMetrics().height() * 15);
-    achEditor->openFile(fileName);
-    achEditor->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    QHBoxLayout *btnLayout = new QHBoxLayout;
-    btnLayout->setContentsMargins(0, 0, 0, 0);
-    btnLayout->setSpacing(2);
-    btnLayout->addWidget(btnSave);
-    btnLayout->addWidget(btnNo);
+    achievementEditor->openFile(fileName);
+    achievementEditor->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     QVBoxLayout *layout = new QVBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
-    layout->addWidget(achEditor);
-    layout->addLayout(btnLayout);
+    layout->addWidget(achievementEditor);
+    layout->addWidget(buttonBox);
     setLayout(layout);
-    connect(btnSave, &QPushButton::clicked, this, &achievementDialog::accept);
-    connect(btnNo, &QPushButton::clicked, this, &achievementDialog::close);
-}
-void achievementDialog::accept(void)
-{
-    if (!achEditor->saveFile(fileName))
-        QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
-    close();
+    buttonBox->button(QDialogButtonBox::Save)->setToolTip(tr("Close and save changes"));
+    buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &achievementDialog::close);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, [this] {
+        if (!achievementEditor->saveFile(fileName))
+            QMessageBox::critical(this, tr("Failed To Save File"), QString(tr("Failed To Write File\nFile:%1")).arg(fileName));
+        close();
+    });
+
 }

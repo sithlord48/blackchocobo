@@ -17,17 +17,15 @@
 #include <QDialog>
 #include "ff7tk/widgets/AchievementEditor.h"
 
-class QPushButton;
+class QDialogButtonBox;
+
 class achievementDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit achievementDialog(const QString &FileName, QWidget *parent = nullptr);
-public slots:
-    void accept();
 private:
-    AchievementEditor *achEditor = nullptr;
-    QPushButton *btnSave = nullptr;
-    QPushButton *btnNo = nullptr;
+    AchievementEditor *achievementEditor = nullptr;
+    QDialogButtonBox *buttonBox = nullptr;
     QString fileName;
 };
