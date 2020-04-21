@@ -71,7 +71,7 @@ public:
     }
 
     /*!
-     * \brief Referance to a fieldItem
+     * \brief Reference to a fieldItem
      * \param index of item
      * \return info for one field item
      */
@@ -129,7 +129,7 @@ private:
         , {{quint16(0x0BD7)}, {quint8(3)}, {QStringLiteral("jetin1")}, QT_TR_NOOP("Flayer")}
         , {{quint16(0x0BD7)}, {quint8(4)}, {QStringLiteral("zz4")}, QT_TR_NOOP("Chaos")}
         , {{quint16(0x0BD7)}, {quint8(5)}, {QStringLiteral("ghotin_2")}, QT_TR_NOOP("Elixir")}
-        , {{quint16(0x0BD7), quint16(0x0BD7)}, {quint8(6), quint8(7)}, {QStringLiteral("zz3")}, QT_TR_NOOP("Enemy Skill")}// First Bit is Chocobo Has Droped Second is Pickup from field.
+        , {{quint16(0x0BD7), quint16(0x0BD7)}, {quint8(6), quint8(7)}, {QStringLiteral("zz3")}, QT_TR_NOOP("Enemy Skill")}// First Bit is Chocobo Has Dropped Second is Pickup from field.
 
         , {{quint16(0x0BDC)}, {quint8(0)}, {QStringLiteral("colne_4")}, QT_TR_NOOP("Ether")}
         , {{quint16(0x0BDC)}, {quint8(1)}, {QStringLiteral("colne_6")}, QT_TR_NOOP("Hyper")}
@@ -186,26 +186,26 @@ private:
 
         , {{quint16(0x0C2A)}, {quint8(3)}, {QStringLiteral("ujunon1"), QStringLiteral("prisila")}, QT_TR_NOOP("Shiva")}
 
-        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(0), quint8(1)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Cologne")}//Mutually Exclucive
-        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(1), quint8( 2)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Flower Cologne")}//Mutually Exclucive
-        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(2), quint8(3)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Sexy Cologne")}//Mutually Exclucive
+        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(0), quint8(1)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Cologne")}//Mutually Exclusive
+        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(1), quint8( 2)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Flower Cologne")}//Mutually Exclusive
+        , {{quint16(0x0C44), quint16(0x0BE5)}, {quint8(2), quint8(3)}, {QStringLiteral("mktpb")}, QT_TR_NOOP("KeyItem: Sexy Cologne")}//Mutually Exclusive
 
         , {{quint16(0x0C44), quint16(0x0BE6)}, {quint8(6), quint8(0)}, {QStringLiteral("mkt_s2")}, QT_TR_NOOP("KeyItem: Pharmacy Coupon")}
-        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(3)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Wig")}//Mutually Exclucive
-        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(4)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Dyed Wig")}//Mutually Exclucive
-        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(5)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Blonde Wig")}//Mutually Exclucive
+        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(3)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Wig")}//Mutually Exclusive
+        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(4)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Dyed Wig")}//Mutually Exclusive
+        , {{quint16(0x0C44), quint16(0x0BE4)}, {quint8(7), quint8(5)}, {QStringLiteral("mkt_mens")}, QT_TR_NOOP("KeyItem: Blonde Wig")}//Mutually Exclusive
 
-        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(5), quint8(0)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Cotton Dress")}//Mutually Exclucive
-        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(6), quint8(1)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Satin Dress")}//Mutually Exclucive
-        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(7), quint8(2)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Silk Dress")}//Mutually Exclucive
+        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(5), quint8(0)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Cotton Dress")}//Mutually Exclusive
+        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(6), quint8(1)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Satin Dress")}//Mutually Exclusive
+        , {{quint16(0x0C45), quint16(0x0C45), quint16(0x0BE4)}, {quint8(3), quint8(7), quint8(2)}, {QStringLiteral("mkt_s1")}, QT_TR_NOOP("KeyItem: Silk Dress")}//Mutually Exclusive
 
-        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(0), quint8(1)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Disinfectant")}//Mutually Exclucive
-        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(1), quint8(2)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Deodorant")}//Mutually Exclucive
-        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(2), quint8(3)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Digestive")}//Mutually Exclucive
+        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(0), quint8(1)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Disinfectant")}//Mutually Exclusive
+        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(1), quint8(2)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Deodorant")}//Mutually Exclusive
+        , {{quint16(0x0C46), quint16(0x0BE6)}, {quint8(2), quint8(3)}, {QStringLiteral("mkt_s3")}, QT_TR_NOOP("KeyItem: Digestive")}//Mutually Exclusive
 
-        , {{quint16(0x0C46), quint16(0x0BE4)}, {quint8(6), quint8(6)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Glass Tiara")} //Mutally Exclucive
-        , {{quint16(0x0C46), quint16(0x0BE4)}, {quint8(5), quint8(7)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Ruby Tiara")}//Mutually Exclucive
-        , {{quint16(0x0C46), quint16(0x0BE5)}, {quint8(4), quint8(0)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Diamond Tiara")}//Mutually Exclucive
+        , {{quint16(0x0C46), quint16(0x0BE4)}, {quint8(6), quint8(6)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Glass Tiara")} //Mutally Exclusive
+        , {{quint16(0x0C46), quint16(0x0BE4)}, {quint8(5), quint8(7)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Ruby Tiara")}//Mutually Exclusive
+        , {{quint16(0x0C46), quint16(0x0BE5)}, {quint8(4), quint8(0)}, {QStringLiteral("mkt_m")}, QT_TR_NOOP("KeyItem: Diamond Tiara")}//Mutually Exclusive
 
         , {{quint16(0x0C49), quint16(0x0C49), quint16(0x0C49)}, {quint8(5), quint8(6), quint8(7)}, {QStringLiteral("mkt_w")}, QT_TR_NOOP("Batteries")}
 

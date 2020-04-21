@@ -41,7 +41,7 @@ public:
     /*! \brief sets the text mode, if TRUE will return Japanese text */
     void setJapanese(bool japanese);
 
-    /*! \brief returns True if using japanese mode. */
+    /*! \brief returns True if using Japanese mode. */
     bool isJapanese();
 
     /*! \brief convert ff7text to pc string
@@ -71,7 +71,7 @@ private:
     inline static const auto jap_fc = QString::fromUtf8("由閉記憶選番街底忘都過艇路運搬船墓心港末宿西道艦家乗竜巻迷宮絶壁支社久件想秒予多落受組余系標起迫日勝形引現解除磁互口廃棄汚染液活令副隠主斉登温泉百段熱走急降奪響嵐移危戻遠吠軟骨言葉震叫噴舞狩粉失敗眼激盤逆鱗踏喰盾叩食凍退木吐線魅押潰曲翼教皇太陽界案挑援赤往殴意東北参知聞来仕別集信用思毎悪枯考然張好伍早各独配腐話帰永救感故売浮市加流約宇礼束母男年待宙立残俺少精士私険関倒休我許郷助要問係旧固荒稼良議導夢追説声任柱満未顔旅¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶"); /**< character table #4 for japanese */
     inline static const auto jap_fd = QString::fromUtf8("友伝夜探対調民読占頼若学識業歳争苦織困答準恐認客務居他再幸役縮情豊夫近窟責建求迎貸期工算湿難保帯届凝笑向可遊襲申次国素題普密望官泣創術演輝買途浴老幼利門格原管牧炭彼房驚禁注整衆語証深層査渡号科欲店括坑酬緊研権書暇兄派造広川賛駅絡在党岸服捜姉敷胸刑谷痛岩至勢畑姿統略抹展示修酸製歓接障災室索扉傷録優基讐勇司境璧医怖狙協犯資設雇根億脱富躍純写病依到練順園総念維検朽圧補公働因朝浪祝恋郎勉春功耳恵緑美辺昇悩泊低酒影競二矢瞬希志¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶"); /**< character table #5 for japanese */
     inline static const auto jap_fe = QString::fromUtf8("孫継団給抗違提断島栄油就僕存企比浸非応細承編排努締談趣埋営文夏個益損額区寒簡遣例肉博幻量昔臓負討悔膨飲妄越憎増枚皆愚療庫涙照冗壇坂訳抱薄義騒奴丈捕被概招劣較析繁殖耐論貴称千歴史募容噂壱胞鳴表雑職妹氏踊停罪甘健焼払侵頃愛便田舎孤晩清際領評課勤謝才偉誤価欠寄忙従五送周頑労植施販台度嫌諸習緒誘仮借輩席戒弟珍酔試騎霜鉱裕票券専祖惰偶怠罰熟牲燃犠快劇拠厄抵適程繰腹橋白処匹杯暑坊週秀看軽幕和平王姫庭観航横帳丘亭財律布規謀積刻陥類¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶"); /**< character table #6 for japanese */
-    bool in_ja = false; /**< if true toPC will give us japanese characters*/
+    bool in_ja = false; /**< if true toPC will give us Japanese characters*/
     };
     FF7TEXTPrivate *d;
 };

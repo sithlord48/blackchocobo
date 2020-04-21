@@ -850,7 +850,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
             itemlist->setMaximumItemQty(127);
         } else {
             if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Convertor
+                set_pal_time();   //Call RegionTime Converter
 
             ff7->setRegion(s, "PAL-E");
             itemlist->setMaximumItemQty(127);
@@ -877,7 +877,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
             itemlist->setMaximumItemQty(127);
         } else {
             if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Convertor
+                set_pal_time();   //Call RegionTime Converter
 
             ff7->setRegion(s, "PAL-DE");
             itemlist->setMaximumItemQty(127);
@@ -904,7 +904,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
             itemlist->setMaximumItemQty(127);
         } else {
             if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Convertor
+                set_pal_time();   //Call RegionTime Converter
 
             ff7->setRegion(s, "PAL-ES");
             itemlist->setMaximumItemQty(127);
@@ -931,7 +931,7 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
             itemlist->setMaximumItemQty(127);
         } else {
             if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Convertor
+                set_pal_time();   //Call RegionTime Converter
 
             ff7->setRegion(s, "PAL-FR");
             itemlist->setMaximumItemQty(127);
@@ -1963,7 +1963,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
 
 void MainWindow::on_btn_add_all_materia_clicked()
 {
-    //place one of each at lowest ossible point
+    //place one of each at lowest possible point
     for (int i = 117; i < 142; i++) {
         //Starting With Magic Materia
         if (i < 132)

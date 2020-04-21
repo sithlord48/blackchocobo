@@ -52,7 +52,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Verschiedene Code-Hilfe / Debug; Windows QA</translation>
     </message>
     <message>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
         <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
     </message>
     <message>
@@ -5297,20 +5297,20 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <translation type="unfinished">Fast zu Costa del Sol</translation>
     </message>
     <message>
-        <source>Junion -&gt; Costa Del Sol</source>
-        <translation type="unfinished">Junion -&gt; Costa Del Sol</translation>
+        <source>Junon -&gt; Costa Del Sol</source>
+        <translation type="unfinished">Junon -&gt; Costa Del Sol</translation>
     </message>
     <message>
-        <source>Costa del Sol -&gt; Junion</source>
-        <translation type="unfinished">Costa del Sol -&gt; Junion</translation>
+        <source>Costa del Sol -&gt; Junon</source>
+        <translation type="unfinished">Costa del Sol -&gt; Junon</translation>
     </message>
     <message>
-        <source>Junion Area (Highwind)</source>
-        <translation type="unfinished">Junion-Region (Highwind)</translation>
+        <source>Junon Area (Highwind)</source>
+        <translation type="unfinished">Junon-Region (Highwind)</translation>
     </message>
     <message>
-        <source>Junion Area (Underwater)</source>
-        <translation>Junion-Region (Unterwasser)</translation>
+        <source>Junon Area (Underwater)</source>
+        <translation>Junon-Region (Unterwasser)</translation>
     </message>
     <message>
         <source>Crater Area</source>

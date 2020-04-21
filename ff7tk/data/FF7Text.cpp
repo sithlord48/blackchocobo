@@ -115,7 +115,7 @@ QString FF7TEXT::toPC(QByteArray text)
     }
     return String;
 }
-//This Convertor is Modified From Hyne (thanks Myst6re)
+//This Converter is Modified From Hyne (thanks Myst6re)
 QByteArray FF7TEXT::toFF7(const QString &string)
 {
     QByteArray ff7str;
