@@ -230,7 +230,7 @@ public:
 
     /** \brief creates a new game + in a slot
      *
-     * When creating a new game+ two char files will be exported. one for cait sith and another for vincent. those characters have to be reset to correctly set a new game. You can reimport the char files when you aquire the character in your new game +
+     * When creating a new game+ two char files will be exported. one for cait sith and another for vincent. those characters have to be reset to correctly set a new game. You can reimport the char files when you acquire the character in your new game +
      * \param s slot number (0-14)
      * \param CharFileName base filename to use for saving char files vincent and
      * \param fileName Raw PSX file to use instead of defalut data
@@ -274,7 +274,7 @@ public:
     QByteArray fileHeader(void);/**< \brief file Header as QByteArray*/
 
     /** \brief set the file header
-     *  \param data: replace exsisting data with these bytes
+     *  \param data: replace existing data with these bytes
      *  \return True is Successful
     */
     bool setFileHeader(QByteArray data);
@@ -283,7 +283,7 @@ public:
 
     /** \brief set the slot header
      *  \param s slot number (0-14)
-     *  \param data: replace exsisting data with these bytes
+     *  \param data: replace existing data with these bytes
      *  \return True is Successful
     */
     bool setSlotHeader(int s, QByteArray data);
@@ -292,7 +292,7 @@ public:
 
     /** \brief set the slot footer
      *  \param s slot number (0-14)
-     *  \param data: replace exsisting data with these bytes
+     *  \param data: replace existing data with these bytes
      *  \return True is Successful
     */
     bool setSlotFooter(int s, QByteArray data);
@@ -303,7 +303,7 @@ public:
      *
      *  Most Useful when connected to a hexEditor, This function will set the slot(s) raw data as if writing to a psx card directly. even if more then one slot and correctly update the save index based on whats in the data.
      *  \param s slot number (0-14)
-     *  \param data: replace exsisting data with these bytes
+     *  \param data: replace existing data with these bytes
      *  \return True is Successful
     */
     bool setSlotPsxRawData(int s, QByteArray data);
@@ -312,7 +312,7 @@ public:
 
     /** \brief
      *  \param s slot number (0-14)
-     *  \param data: replace exsisting data with these bytes
+     *  \param data: replace existing data with these bytes
      *  \overload setSlotFF7Data(int,FF7SLOT)
      */
     bool setSlotFF7Data(int s, QByteArray data);
@@ -493,7 +493,7 @@ public:
     //options
     /** \brief get controller mapping for a slot
      *
-     *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+     *  The controller mapping while stored in the pc save is not used? and shouldn't be edited
      *  \param s slot number (0-14)
      *  \return Mapping as raw bytes
      */
@@ -501,7 +501,7 @@ public:
 
     /** \brief set the controller mapping for a slot
      *
-     *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+     *  The controller mapping while stored in the pc save is not used? and shouldn't be edited
      *  \param s slot number (0-14)
      *  \param map Mapping as raw bytes
      */
@@ -509,7 +509,7 @@ public:
 
     /** \brief get button bound to an action for a slot
      *
-     *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+     *  The controller mapping while stored in the pc save is not used? and shouldn't be edited
      *  \param s slot number (0-14)
      *  \param action game action ( FF7Save::CONTROLACTION )
      *  \return  FF7Save::PSXBUTTON that an action is mapped to
@@ -518,7 +518,7 @@ public:
 
     /** \brief bind a button to an action for a slot.
      *
-     *  The controller mapping while stored in the pc save is not used? and shouln't be edited
+     *  The controller mapping while stored in the pc save is not used? and shouldn't be edited
      *  \param s slot number (0-14)
      *  \param action valid game action ( FF7Save::CONTROLACTION )
      *  \param button a valid button ( FF7Save::PSXBUTTON )

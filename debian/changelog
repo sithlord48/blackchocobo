@@ -8,7 +8,7 @@ blackchocobo (1.10.0) trusty; urgency=low
 
 blackchocobo (1.9.910) trusty; urgency=low
   *New: More HiDpi Adjustments
-  *Fixed: track the hex Editor tab's curosr position on tab changes. 
+  *Fixed: track the hex Editor tab's cursor position on tab changes.
   *ff7tk: Fixed Loading Psv file crashes host.
   *ff7tk: Fixed Issue#12, https://github.com/sithlord48/ff7tk/issues/12
   *ff7tk: Fixed Issue#17, https://github.com/sithlord48/ff7tk/issues/17
@@ -20,7 +20,7 @@ blackchocobo (1.9.910) trusty; urgency=low
 blackchocobo (1.9.900) trusty; urgency=low
   *New: Items Tab now Contains command buttons for keyitems and flyers for 
   easier access.
-  *New: Advanced modes for different ff7tk widgets can be set indpendently in 
+  *New: Advanced modes for different ff7tk widgets can be set independently in
   options.
   *New: Apply Button for Replay Missions;Browse the options without changing 
   your data.
@@ -103,7 +103,7 @@ blackchocobo (1.9.6) natty; urgency=low
 
 blackchocobo (1.9.5) natty; urgency=low
   *New: German Translation
-  *New: String Convertor For Conversion to FF7 test
+  *New: String Converter For Conversion to FF7 test
   *New: Stat Calculation
   *New: Many Improvements to handling (and editing) of non FF7 slots
   *New: Prompt for unsaved changes.

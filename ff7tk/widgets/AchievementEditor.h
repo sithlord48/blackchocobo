@@ -23,7 +23,7 @@
  *
  *  This widget uses FF7Achievements to do everything for us we only need to tell it what file to open and what file to save.
  *  The list will contain icons for each achievement so be sure to include achievements.qrc in your projects resources
- *  The end user only ever needs to see a list the rest sholud be set to signals/slots in the host application
+ *  The end user only ever needs to see a list the rest should be set to signals/slots in the host application
  */
 class AchievementEditor : public QWidget
 {
@@ -45,7 +45,7 @@ public slots:
     bool saveFile(const QString &fileName);
 private slots:
     /*! \brief an item has been toggled
-     *  \param index QModeIndex from where the change occored
+     *  \param index QModeIndex from where the change occurred
      */
     void itemToggled(const QModelIndex &index);
 private:

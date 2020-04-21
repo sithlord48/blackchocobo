@@ -149,8 +149,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../about.ui" line="423"/>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>Psx Icon Class &amp; PC string convertor for japanese</translation>
+        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
+        <translation>Psx Icon Class &amp; PC string converter for Japanese</translation>
     </message>
     <message>
         <location filename="../about.ui" line="459"/>
@@ -5613,23 +5613,23 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="258"/>
-        <source>Junion -&gt; Costa Del Sol</source>
-        <translation>Junion -&gt; Costa Del Sol</translation>
+        <source>Junon -&gt; Costa Del Sol</source>
+        <translation>Junon -&gt; Costa Del Sol</translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="259"/>
-        <source>Costa del Sol -&gt; Junion</source>
-        <translation>Costa del Sol -&gt; Junion</translation>
+        <source>Costa del Sol -&gt; Junon</source>
+        <translation>Costa del Sol -&gt; Junon</translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="261"/>
-        <source>Junion Area (Highwind)</source>
-        <translation>Junion Area (Highwind)</translation>
+        <source>Junon Area (Highwind)</source>
+        <translation>Junon Area (Highwind)</translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="262"/>
-        <source>Junion Area (Underwater)</source>
-        <translation>Junion Area (Underwater)</translation>
+        <source>Junon Area (Underwater)</source>
+        <translation>Junon Area (Underwater)</translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="279"/>
@@ -6488,7 +6488,7 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="610"/>
         <source>Aljunon</source>
-        <translation>Junion (Right)</translation>
+        <translation>Junon (Right)</translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="611"/>

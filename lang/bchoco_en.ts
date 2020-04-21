@@ -52,8 +52,8 @@ p, li { white-space: pre-wrap; }
         <translation>Various code help/debug; Windows QA</translation>
     </message>
     <message>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>Psx Icon Class &amp; PC string convertor for japanese</translation>
+        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
+        <translation>Psx Icon Class &amp; PC string converter for Japanese</translation>
     </message>
     <message>
         <source>Bug Testers</source>
@@ -5289,7 +5289,7 @@ The km/h speeds are calculated while playing </translation>
         <translation>Last Worldmap Location</translation>
     </message>
     <message>
-        <source>Start of Juion Ship Sequence</source>
+        <source>Start of Junon Ship Sequence</source>
         <translation>Start of Juion Ship Sequence</translation>
     </message>
     <message>
@@ -5297,20 +5297,20 @@ The km/h speeds are calculated while playing </translation>
         <translation>Almost at Costa del Sol</translation>
     </message>
     <message>
-        <source>Junion -&gt; Costa Del Sol</source>
-        <translation>Junion -&gt; Costa Del Sol</translation>
+        <source>Junon -&gt; Costa Del Sol</source>
+        <translation>Junon -&gt; Costa Del Sol</translation>
     </message>
     <message>
-        <source>Costa del Sol -&gt; Junion</source>
-        <translation>Costa del Sol -&gt; Junion</translation>
+        <source>Costa del Sol -&gt; Junon</source>
+        <translation>Costa del Sol -&gt; Junon</translation>
     </message>
     <message>
-        <source>Junion Area (Highwind)</source>
-        <translation>Junion Area (Highwind)</translation>
+        <source>Junon Area (Highwind)</source>
+        <translation>Junon Area (Highwind)</translation>
     </message>
     <message>
-        <source>Junion Area (Underwater)</source>
-        <translation>Junion Area (Underwater)</translation>
+        <source>Junon Area (Underwater)</source>
+        <translation>Junon Area (Underwater)</translation>
     </message>
     <message>
         <source>Crater Area</source>

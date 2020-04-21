@@ -52,7 +52,7 @@ p, li { white-space: pre-wrap; }
         <translation>De l&apos;aide sur le code et du débogage varié; AQ Windows</translation>
     </message>
     <message>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
         <translation>Classe d&apos;icône PSX et convertisseur de japonais pour PC</translation>
     </message>
     <message>
@@ -5297,19 +5297,19 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
         <translation type="unfinished">Presque sur la Costa del Sol</translation>
     </message>
     <message>
-        <source>Junion -&gt; Costa Del Sol</source>
-        <translation type="unfinished">Junion -&gt; Costa Del Sol</translation>
+        <source>Junon -&gt; Costa Del Sol</source>
+        <translation type="unfinished">Junon -&gt; Costa Del Sol</translation>
     </message>
     <message>
-        <source>Costa del Sol -&gt; Junion</source>
-        <translation type="unfinished">Costa del Sol -&gt; Junion</translation>
+        <source>Costa del Sol -&gt; Junon</source>
+        <translation type="unfinished">Costa del Sol -&gt; Junon</translation>
     </message>
     <message>
-        <source>Junion Area (Highwind)</source>
+        <source>Junon Area (Highwind)</source>
         <translation type="unfinished">Région de Junon (Hauvent)</translation>
     </message>
     <message>
-        <source>Junion Area (Underwater)</source>
+        <source>Junon Area (Underwater)</source>
         <translation type="unfinished">Région de Junon (sous l&apos;eau)</translation>
     </message>
     <message>

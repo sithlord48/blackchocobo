@@ -48,7 +48,7 @@ p, li { white-space: pre-wrap; }
         <translation>各種コードヘルプ/デバッグ。 Windows QA</translation>
     </message>
     <message>
-        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
         <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
     <message>
@@ -5293,19 +5293,19 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">ほぼコスタデルソル</translation>
     </message>
     <message>
-        <source>Junion -&gt; Costa Del Sol</source>
+        <source>Junon -&gt; Costa Del Sol</source>
         <translation type="unfinished">ジュニア-&gt;コスタデルソル</translation>
     </message>
     <message>
-        <source>Costa del Sol -&gt; Junion</source>
+        <source>Costa del Sol -&gt; Junon</source>
         <translation type="unfinished">コスタデルソル-&gt;ユニオン</translation>
     </message>
     <message>
-        <source>Junion Area (Highwind)</source>
+        <source>Junon Area (Highwind)</source>
         <translation type="unfinished">ジュニアエリア（ハイウィンド）</translation>
     </message>
     <message>
-        <source>Junion Area (Underwater)</source>
+        <source>Junon Area (Underwater)</source>
         <translation type="unfinished">ジュニアエリア（水中）</translation>
     </message>
     <message>

@@ -420,7 +420,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label_37">
                  <property name="text">
-                  <string>Psx Icon Class &amp; PC string convertor for japanese</string>
+                  <string>Psx Icon Class &amp; PC string converter for Japanese</string>
                  </property>
                 </widget>
                </item>

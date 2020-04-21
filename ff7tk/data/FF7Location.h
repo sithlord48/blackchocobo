@@ -110,42 +110,42 @@ public:
      */
     Q_INVOKABLE const QString &locationID(const QString &fileName);
 
-    /*! \brief x coord of save or valid placment
+    /*! \brief x coord of save or valid placement
      *  \param index Number on the locations list
      *  \return x as QString
      *  \sa x(QString)
      */
     Q_INVOKABLE const QString &x(int index);
 
-    /*! \brief x coord of save or valid placment
+    /*! \brief x coord of save or valid placement
      *  \param fileName fileName of location
      *  \return x as QString
      *  \sa x(int)
      */
     Q_INVOKABLE const QString &x(const QString &fileName);
 
-    /*! \brief y coord of save or valid placment
+    /*! \brief y coord of save or valid placement
      *  \param index Number on the locations list
      *  \return y as QString
      *  \sa y(QString)
      */
     Q_INVOKABLE const QString &y(int index);
 
-    /*! \brief y coord of save or valid placment
+    /*! \brief y coord of save or valid placement
      *  \param fileName fileName of location
      *  \return y as QString
      *  \sa y(int)
      */
     Q_INVOKABLE const QString &y(const QString &fileName);
 
-    /*! \brief triangle of save or valid placment
+    /*! \brief triangle of save or valid placement
      *  \param index Number on the locations list
      *  \return triangle as QString
      *  \sa t(QString)
      */
     Q_INVOKABLE const QString &t(int index);
 
-    /*! \brief triangle of save or valid placment
+    /*! \brief triangle of save or valid placement
     *  \param fileName fileName of location
     *  \return t as QString
     *  \sa t(int)
@@ -255,11 +255,11 @@ private:
             , {QStringLiteral("WM34"), QT_TR_NOOP("Last Worldmap Location"), QStringLiteral("3"), QStringLiteral("35"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM35"), QT_TR_NOOP("Start of Juion Ship Sequence"), QStringLiteral("3"), QStringLiteral("36"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM36"), QT_TR_NOOP("Almost at Costa del Sol"), QStringLiteral("3"), QStringLiteral("37"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
-            , {QStringLiteral("WM37"), QT_TR_NOOP("Junion -> Costa Del Sol"), QStringLiteral("3"), QStringLiteral("38"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
-            , {QStringLiteral("WM38"), QT_TR_NOOP("Costa del Sol -> Junion"), QStringLiteral("3"), QStringLiteral("39"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("WM37"), QT_TR_NOOP("Junon -> Costa Del Sol"), QStringLiteral("3"), QStringLiteral("38"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("WM38"), QT_TR_NOOP("Costa del Sol -> Junon"), QStringLiteral("3"), QStringLiteral("39"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM39"), QT_TR_NOOP("Midgar Area"), QStringLiteral("3"), QStringLiteral("40"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
-            , {QStringLiteral("WM40"), QT_TR_NOOP("Junion Area (Highwind)"), QStringLiteral("3"), QStringLiteral("41"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
-            , {QStringLiteral("WM41"), QT_TR_NOOP("Junion Area (Underwater)"), QStringLiteral("3"), QStringLiteral("42"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("WM40"), QT_TR_NOOP("Junon Area (Highwind)"), QStringLiteral("3"), QStringLiteral("41"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
+            , {QStringLiteral("WM41"), QT_TR_NOOP("Junon Area (Underwater)"), QStringLiteral("3"), QStringLiteral("42"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM42"), QT_TR_NOOP("Nibel Area"), QStringLiteral("3"), QStringLiteral("43"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM43"), QT_TR_NOOP("Nibel Area"), QStringLiteral("3"), QStringLiteral("44"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
             , {QStringLiteral("WM44"), QT_TR_NOOP("Last Worldmap Location"), QStringLiteral("3"), QStringLiteral("45"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0"), QStringLiteral("0")}
