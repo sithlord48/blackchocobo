@@ -75,7 +75,6 @@ Options::Options(QWidget *parent) : QDialog(parent)
     });
 
     loadSettings();
-    setGeometry(x(), y(), width(), minimumHeight());
 }
 
 Options::~Options()
@@ -165,7 +164,8 @@ void Options::restoreDefaultSettings()
     ui->sliderScale->setValue(2);
     ui->cbAutoGrowth->setChecked(true);
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(QStringLiteral("en")));
-    ui->cbNativeDialogs->setChecked(true);
+    ui->cbNativeDialogs->setChecked(false);
+    ui->btnEditSideBarItems->setVisible(true);
 }
 
 void Options::on_btn_set_save_pc_clicked()

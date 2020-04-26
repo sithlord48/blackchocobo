@@ -80,16 +80,24 @@ void BCSettings::initSettings()
 void BCSettings::cleanSettings()
 {
     for(const QString &key : settings->allKeys()) {
-        if(!validSettingsNames.contains(key))
+        if (!validSettingsNames.contains(key))
+            settings->remove(key);
+        if (settings->value(key).toString().isEmpty() && !settings->value(key).isValid())
             settings->remove(key);
     }
 }
 
 void BCSettings::setValue(const QString &setting, const QVariant &value)
 {
-    settings->setValue(setting, value);
+    if (settings->value(setting) == value)
+        return;
+
+    if (value.toString().isEmpty() && !value.isValid())
+        settings->remove(setting);
+    else
+        settings->setValue(setting, value);
     settings->sync();
-    settingsChanged();
+    emit settingsChanged();
 }
 
 QVariant BCSettings::value(const QString &setting, const QVariant &defaultValue)
@@ -99,7 +107,6 @@ QVariant BCSettings::value(const QString &setting, const QVariant &defaultValue)
 
 void BCSettings::restoreDefaultSettings()
 {
-    settings->setValue(SETTINGS::LOADPATH, QString());
     settings->setValue(SETTINGS::LOADPATH, QString());
     settings->setValue(SETTINGS::DEFAULTSAVE, QString());
     settings->setValue(SETTINGS::STATFOLDER, QString());

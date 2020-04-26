@@ -88,7 +88,6 @@ private:
     LocationViewer *locationViewer = nullptr;
     QString prevFile;
     QMap<QString, QTranslator *> m_translations;
-    QList<QUrl> m_sideBarUrls;
 
     typedef QList<quint16> fieldItemOffsetList;
     typedef QList<quint8> fieldItemBitList;

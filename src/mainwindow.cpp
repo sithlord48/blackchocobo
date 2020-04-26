@@ -402,18 +402,15 @@ void MainWindow::loadBasicSettings()
         BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(scale, 0.5));
     }
 
-    if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull()) {
-        setGeometry(x(), y(), minimumWidth(), minimumHeight());
+    if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull())
         saveGeometry();
-    }
-    restoreGeometry(BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray());
+    else
+        restoreGeometry(BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
 
 void MainWindow::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
-    for(const QString &url : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
-        m_sideBarUrls.append(QUrl::fromLocalFile(url));
     char_editor->setEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     materia_editor->setEditableMateriaCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     itemlist->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
