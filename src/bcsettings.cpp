@@ -131,9 +131,7 @@ QPalette BCSettings::paletteForSetting()
 {
     int index = settings->value(SETTINGS::COLORSCHEME).toInt();
     QPalette newPalette;
-    if( index == 0)
-        newPalette = qApp->style()->standardPalette();
-    else {
+    if( index != 0) {
         newPalette.setColor(QPalette::Window, index == 1 ? darkWindow : lightWindow);
         newPalette.setColor(QPalette::Base, index == 1 ? darkButton : lightButton);
         newPalette.setColor(QPalette::Text, index == 1 ? darkText : lightText);
