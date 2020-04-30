@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2020  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -10,12 +10,30 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
+
+#include <QCheckBox>
+#include <QComboBox>
+#include <QEvent>
+#include <QGroupBox>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QLCDNumber>
+#include <QLineEdit>
+#include <QListWidget>
+#include <QProgressBar>
+#include <QPushButton>
+#include <QSpacerItem>
+#include <QSpinBox>
+#include <QToolBox>
+#include <QVBoxLayout>
+
 #include "../data/FF7Char.h"
 #include "../data/FF7Item.h"
+#include "MateriaEditor.h"
 
 CharEditor::CharEditor(qreal Scale, QWidget *parent) : QWidget(parent)
     , data(FF7CHAR())

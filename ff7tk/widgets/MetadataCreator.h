@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -10,15 +10,17 @@
 //                                                                          //
 //    Black Chocobo is distributed in the hope that it will be useful,      //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-/*~~~~~~~~~~~Includes~~~~~~~~*/
 #pragma once
+
 #include <QDialog>
-#include <QVBoxLayout>
-#include "../data/FF7Save.h"
+
 #include "../data/FF7SaveInfo.h"
+
+class FF7Save;
+class QVBoxLayout;
 
 class MetadataCreator : public QDialog
 {

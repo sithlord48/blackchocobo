@@ -15,9 +15,11 @@
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
 #include <QString>
+#include <QDesktopWidget>
+#include <QDragEnterEvent>
+#include <QDropEvent>
 #include <QScrollBar>
 #include <QMessageBox>
-#include <QDesktopWidget>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"

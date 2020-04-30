@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,18 +14,21 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QComboBox>
-#include <QEvent>
-#include <QGroupBox>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QListWidget>
-#include <QPushButton>
-#include <QSpinBox>
-#include <QWidget>
 
-/* SET FF7Materia PATH ACCORDINGLY*/
+#include <QWidget>
+#include <QEvent>
+
 #include "../data/FF7Materia.h"
+
+class QComboBox;
+class QFrame;
+class QGroupBox;
+class QHBoxLayout;
+class QLabel;
+class QListWidget;
+class QPushButton;
+class QSpacerItem;
+class QSpinBox;
 
 class MateriaEditor : public QWidget
 {

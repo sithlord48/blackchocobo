@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -10,15 +10,20 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
+
 #include <QDialog>
-#include <QFrame>
-#include <QScrollArea>
-#include "../data/FF7Save.h"
-#include "SlotPreview.h"
+
+class QFrame;
+class QScrollArea;
+class QVBoxLayout;
+class QWidget;
+
+class SlotPreview;
+class FF7Save;
 
 /** \class SlotSelect
  *  \brief Display a preview of the contents of a PSX memory card file or FF7 PC save.

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -8,14 +8,12 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//   FF7tk is distributed in the hope that it will be useful,               //
+//    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
-#ifndef TYPE_FF7CHAR_H
-#define TYPE_FF7CHAR_H
+#pragma once
 
 #include "Type_materia.h"
 
@@ -64,4 +62,3 @@ struct FF7CHAR {
     materia materias[16];   /**< [0x0040] Materia slots (0-7=weapon,8-15=armor)*/
     quint32 expNext;        /**< [0x0080] EXP to next level*/
 });
-#endif //< TYPE_FF7CHAR_H

@@ -5336,6 +5336,50 @@ Los km/h son calculados mientras se juega </translation>
         <source>Dark city fourth street</source>
         <translation type="unfinished">Ciudad oscura cuarta calle</translation>
     </message>
+    <message>
+        <source>Last Train from Midgar</source>
+        <translation>último tren procedente de Midgar</translation>
+    </message>
+    <message>
+        <source>Sector 7 Mechanized Tower</source>
+        <translation>Soportes de plataforma</translation>
+    </message>
+    <message>
+        <source>Conference Room</source>
+        <translation>Sala de conferencias</translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s New Home</source>
+        <translation>Nueva casa de Johnny</translation>
+    </message>
+    <message>
+        <source>Inside the Ferris Wheel</source>
+        <translation>Dentro de la noria</translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Waiting Room</source>
+        <translation>Sala de espera</translation>
+    </message>
+    <message>
+        <source>RedXIII&apos;s Room</source>
+        <translation type="obsolete">Sala Nanaki</translation>
+    </message>
+    <message>
+        <source>Cet Wall</source>
+        <translation>Muro Seto</translation>
+    </message>
+    <message>
+        <source>Great Cave</source>
+        <translation type="unfinished">Gran Cueva</translation>
+    </message>
+    <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation>Sala Nanaki</translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -9223,11 +9267,11 @@ Nueva región es %2hz</translation>
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation>  &amp;Guardar</translation>
+        <translation type="vanished">  &amp;Guardar</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation>  &amp;Cancelar</translation>
+        <translation type="vanished">  &amp;Cancelar</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -9237,6 +9281,14 @@ Nueva región es %2hz</translation>
         <source>Failed To Write File
 File:%1</source>
         <translation>No se pudo escribir el archivo: %1</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation type="unfinished">Cerrar y guardar cambios</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation type="unfinished">Cierra y olvida los cambios</translation>
     </message>
 </context>
 <context>

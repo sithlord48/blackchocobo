@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,17 +14,21 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QAction>
-#include <QCheckBox>
+
 #include <QEvent>
-#include <QGroupBox>
-#include <QLabel>
-#include <QLineEdit>
-#include <QListWidget>
-#include <QSpinBox>
-#include <QTableWidget>
-#include <QToolButton>
-// Include FF7tk Items.
+#include <QModelIndex>
+#include <QWidget>
+
+class QAction;
+class QCheckBox;
+class QGroupBox;
+class QLabel;
+class QLineEdit;
+class QListWidget;
+class QSpinBox;
+class QTableWidget;
+class QToolButton;
+
 #include "../data/FF7FieldItemList.h"
 
 /** \class LocationViewer

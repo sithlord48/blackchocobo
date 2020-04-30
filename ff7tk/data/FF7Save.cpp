@@ -8,40 +8,45 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//   FF7tk is distributed in the hope that it will be useful,               //
+//    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "FF7Save.h"
-#include <QObject>
+// This Class should contain NO Gui Parts
+#include <QColor>
+#include <QDateTime>
+#include <QMap>
+#include <QTextCodec>
 #include <QFile>
-#include <QDataStream>
-#include <QTextStream>
+#include <QFileInfo>
 #include <QMessageAuthenticationCode>
+#include <QTextStream>
+#include <QtXml/QDomDocument>
+#include <QVector>
+
 #include "FF7Text.h"
 #include "crypto/aes.h"
-// This Class should contain NO Gui Parts
-#include <QDebug>
 
 FF7Save::FF7Save()
 {
     fileHasChanged = false;
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 15; i++)
         slotChanged[i] = false;
-    }
     memcpy(&buffer_slot, defaultSave, size_t(FF7SaveInfo::instance()->slotSize()));
 }
+
 bool FF7Save::loadFile(const QString &fileName)
 {
     // Return true if File Loaded and false if file not loaded.
-    if (fileName.isEmpty()) {
+    if (fileName.isEmpty())
         return false;   // bail on empty string.
-    }
+
     QFile file(fileName);
-    if (!file.open(QIODevice::ReadOnly)) {
+    if (!file.open(QIODevice::ReadOnly))
         return false;
-    }
+
     auto file_size = file.size();
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     //decide the file type
@@ -54,10 +59,12 @@ bool FF7Save::loadFile(const QString &fileName)
     else if (((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PS3) - 0x84) % FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX) == 0) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3))
     {
         char psvType = file.peek(0x40).at(FF7SaveInfo::instance()->extraPSVOffsets(FF7SaveInfo::PSVINFO::SAVETYPE));
-        if (psvType == 0x14)
+        if (psvType == 0x14) {
             setFormat(FF7SaveInfo::FORMAT::PS3);
-        else
-            qInfo() << tr("Unable to open PSV of Type %2: 0x%1").arg(psvType, 2, 16, QChar('0')).arg(psvType == 0x14 ? QStringLiteral("PSX") : psvType == 0x2C ? QStringLiteral ("PS2") : QStringLiteral("Unknown"));
+        } else {
+            QTextStream(stdout) << tr("Unable to open PSV of Type %2: 0x%1").arg(psvType, 2, 16, QChar('0')).arg(psvType == 0x14 ? QStringLiteral("PSX") : psvType == 0x2C ? QStringLiteral ("PS2") : QStringLiteral("Unknown"));
+            return false;
+        }
     }
     else if ((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSP)) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PSP))
             setFormat(FF7SaveInfo::FORMAT::PSP);
@@ -85,23 +92,20 @@ bool FF7Save::loadFile(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (fileFormat == FF7SaveInfo::FORMAT::PC || fileFormat == FF7SaveInfo::FORMAT::SWITCH) {
         for (int i = 0; i < 15; i++) {
-            if (slot[i].checksum != 0x0000 && slot[i].checksum != 0x4D1D) {
+            if (slot[i].checksum != 0x0000 && slot[i].checksum != 0x4D1D)
                 SG_Region_String[i] = QString("BASCUS-94163FF7-S%1").arg(QString::number(i + 1), 2, QChar('0'));
-            } else {
+            else
                 SG_Region_String[i].clear();
-            }
         }
     } else if (fileFormat == FF7SaveInfo::FORMAT::PSX) {
         SG_Region_String[0] = QFileInfo(file).fileName();
-        for (int i = 1; i < 15; i++) {
+        for (int i = 1; i < 15; i++)
             clearSlot(i);
-        }
     } else if (fileFormat == FF7SaveInfo::FORMAT::PS3) {
         file.seek(0x64);
         SG_Region_String[0] = QString(file.read(20));
-        for (int i = 1; i < 15; i++) {
+        for (int i = 1; i < 15; i++)
             clearSlot(i);
-        }
     } else if (fileFormat == FF7SaveInfo::FORMAT::VMC || fileFormat == FF7SaveInfo::FORMAT::PSP || fileFormat == FF7SaveInfo::FORMAT::VGS || fileFormat == FF7SaveInfo::FORMAT::DEX) {
         QByteArray mc_header;
         int offset = FF7SaveInfo::instance()->fileHeaderSize(fileFormat) - 0x2000;
@@ -117,7 +121,6 @@ bool FF7Save::loadFile(const QString &fileName)
     } else if (fileFormat == FF7SaveInfo::FORMAT::PDA) {
         file.seek(0);
         SG_Region_String[0] = file.read(20);
-        qDebug() << SG_Region_String[0];
     } else {
         return false;
     }
@@ -765,7 +768,7 @@ void FF7Save::importSlot(int s, QString fileName, int fileSlot)
             inType = FF7SaveInfo::FORMAT::PS3;
             offset = FF7SaveInfo::instance()->slotHeaderSize(FF7SaveInfo::FORMAT::PS3) + FF7SaveInfo::instance()->fileHeaderSize(FF7SaveInfo::FORMAT::PS3);
         } else {
-            qInfo() << tr("Unable to open PSV of Type %2: 0x%1").arg(psvType, 2, 16, QChar('0')).arg(psvType == 0x14 ? QStringLiteral("PSX") : psvType == 0x2C ? QStringLiteral ("PS2") : QStringLiteral("Unknown"));
+            QTextStream(stdout) << tr("Unable to open PSV of Type %2: 0x%1").arg(psvType, 2, 16, QChar('0')).arg(psvType == 0x14 ? QStringLiteral("PSX") : psvType == 0x2C ? QStringLiteral ("PS2") : QStringLiteral("Unknown"));
             file.close();
             return;
         }
@@ -1910,6 +1913,7 @@ quint8 FF7Save::love(int s, bool battle, FF7Save::LOVER who)
         case FF7Save::LOVE_YUFFIE: return slot[s].love.yuffie;
         }
     }
+    return 0;
 }
 void FF7Save::setLove(int s, bool battle, FF7Save::LOVER who, quint8 love)
 {
@@ -1937,6 +1941,7 @@ bool  FF7Save::materiaCave(int s, FF7Save::MATERIACAVE cave)
     case FF7Save::CAVE_QUADMAGIC: return (slot[s].materiacaves & (1 << 2));
     case FF7Save::CAVE_KOTR: return (slot[s].materiacaves & (1 << 3));
     }
+    return false;
 }
 void FF7Save::setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool isEmpty)
 {

@@ -8,26 +8,25 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//   FF7tk is distributed in the hope that it will be useful,               //
+//    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #pragma once
-//Qt Includes
+
 #include <QObject>
-#include <QColor>
 #include <cstdlib>
-#include <QFileInfo>
-#include <QDateTime>
-#include <QVector>
-#include <QMap>
-#include <QtXml/QDomDocument>
-#include <QTextCodec>
-//FF7tk Includes
+
 #include "FF7SaveInfo.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
+
+class QColor;
+class QDateTime;
+class QFileInfo;
+class QDomDocument;
+class QTextCodec;
+
 /** \class FF7Save
  *  \todo Support for PS4 Saves.
  *  \todo Support for XBONE Saves
@@ -37,7 +36,7 @@
  *  the following are supported formats:
  *  | File   | Description
  *  |--------|-------------
- *  | *.ff7  |PC Format Save if with a metadata.xml file will attempt to sign it.
+ *  | *.ff7  |PC Format Save; If a metadata.xml file is in the save path it will be updated.
  *  |ff7slot*|Switch Format save, same as PC
  *  | *.mcr  |Common Emulator format (Virtual Memory Card)
  *  | *.mcd  |Common Emulator format (Virtual Memory Card)

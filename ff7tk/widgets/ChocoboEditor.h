@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2019  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2020  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -10,21 +10,23 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QCheckBox>
-#include <QComboBox>
-#include <QEvent>
-#include <QGridLayout>
-#include <QLabel>
-#include <QLineEdit>
-#include <QSpinBox>
+
 #include <QWidget>
-//Be sure to set paths correctly for below.
-//ALSO CHECK ChocoboEditor.cpp for icons includes.
+#include <QEvent>
+
 #include "../data/Type_FF7CHOCOBO.h"
+
+class QCheckBox;
+class QComboBox;
+class QFrame;
+class QGridLayout;
+class QLabel;
+class QLineEdit;
+class QSpinBox;
 
 class ChocoboEditor : public QWidget
 {

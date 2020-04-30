@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 - 2018  Chris Rizzitello <sithlord48@gmail.com>        //
+//    copyright 2012 - 2020  Chris Rizzitello <sithlord48@gmail.com>        //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -8,19 +8,20 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//   FF7tk is distributed in the hope that it will be useful,               //
+//    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
 
 #include <QObject>
-#include <QIcon>
-#include <QStringList>
 
+class QIcon;
+class QStringList;
 class QQmlEngine;
 class QJSEngine;
+
 /*! \class FF7Char
 *   \brief Data and Enums for Characters in Final Fantasy 7
 */
@@ -347,7 +348,7 @@ private:
             }
         };
 
-        inline static const QVector<QList<int>> _stat_base{
+        inline static const QList<QList<int>> _stat_base{
             {12, 9, 9, 21, 44, 50, 57, 73},
             {13, 12, 11, 11, 17, 43, 53, 80},
             {12, 10, 11, 21, 32, 42, 56, 73},
@@ -380,7 +381,7 @@ private:
             {5, 6, 4, 9, 14, 20, 24, 30}
         };
 
-        inline static const QVector<QList<int>> _stat_gradent{
+        inline static const QList<QList<int>> _stat_gradent{
             {130, 160, 160, 120, 70, 60, 50, 30},
             {120, 130, 133, 135, 120, 72, 55, 21},
             {130, 140, 140, 110, 90, 70, 48, 27},

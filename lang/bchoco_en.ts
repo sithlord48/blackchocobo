@@ -5290,7 +5290,7 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>Start of Junon Ship Sequence</source>
-        <translation>Start of Juion Ship Sequence</translation>
+        <translation type="vanished">Start of Juion Ship Sequence</translation>
     </message>
     <message>
         <source>Almost at Costa del Sol</source>
@@ -5335,6 +5335,50 @@ The km/h speeds are calculated while playing </translation>
     <message>
         <source>Dark city fourth street</source>
         <translation>Dark city fourth street</translation>
+    </message>
+    <message>
+        <source>Start of Juion Ship Sequence</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Last Train from Midgar</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Sector 7 Mechanized Tower</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Conference Room</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s New Home</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Inside the Ferris Wheel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Waiting Room</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Cet Wall</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Great Cave</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation>Nanaki&apos;s Room</translation>
     </message>
 </context>
 <context>
@@ -9226,11 +9270,11 @@ New region is %2hz</translation>
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation>  &amp;Save</translation>
+        <translation type="vanished">  &amp;Save</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation>  &amp;Cancel</translation>
+        <translation type="vanished">  &amp;Cancel</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -9241,6 +9285,14 @@ New region is %2hz</translation>
 File:%1</source>
         <translation>Failed To Write File
 File:%1</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation>Close and save changes</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation>Close and forget changes</translation>
     </message>
 </context>
 <context>

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -10,15 +10,20 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QLCDNumber>
-#include <QGroupBox>
-//import friends from ff7tk
+
+#include <QWidget>
+
 #include "../widgets/ChocoboEditor.h"
 #include "../widgets/ChocoboLabel.h"
+
+class QComboBox;
+class QGroupBox;
+class QLCDNumber;
+
 class ChocoboManager : public QWidget
 {
     Q_OBJECT

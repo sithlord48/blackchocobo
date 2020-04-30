@@ -14,15 +14,24 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "LocationViewer.h"
-#include "../data/FF7Location.h"
-#include <QtDebug>
+#include <QAction>
+#include <QCheckBox>
+#include <QGroupBox>
 #include <QHeaderView>
 #include <QHBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QListWidget>
 #include <QMenu>
 #include <QResizeEvent>
 #include <QScrollBar>
+#include <QSpinBox>
+#include <QTableWidget>
+#include <QToolButton>
 #include <QTranslator>
 #include <QVBoxLayout>
+
+#include "../data/FF7Location.h"
 
 LocationViewer::LocationViewer(qreal Scale, QWidget *parent)
     : QWidget(parent)
@@ -393,7 +402,6 @@ void LocationViewer::setLocation(int mapId, int locId)
         QString newStr = translate(oldStr);
         if (oldStr != newStr && autoUpdate) {
             emit(locationStringChanged(newStr));
-            qWarning() << QStringLiteral("LocationString Changed: %1").arg(newStr);
         }
         sbMapID->setValue(FF7Location::instance()->mapID(fileName).toInt());
         sbLocID->setValue(FF7Location::instance()->locationID(fileName).toInt());
@@ -409,7 +417,7 @@ void LocationViewer::setLocation(int mapId, int locId)
 
 void LocationViewer::lineLocationNameChanged(QString locName)
 {
-    emit(locationStringChanged(locName)); qWarning() << QStringLiteral("LocationString Changed: %1").arg(locName);
+    emit(locationStringChanged(locName));
 }
 
 void LocationViewer::setX(int x)
@@ -447,10 +455,8 @@ void LocationViewer::setLocationString(QString locString)
     init_disconnect();
     QString newStr = translate(locString);
     lineLocationName->setText(newStr);
-    if (locString != newStr && autoUpdate) {
+    if (locString != newStr && autoUpdate)
         emit(locationStringChanged(newStr));
-        qWarning() << QStringLiteral("LocationString Changed: %1").arg(newStr);
-    }
     init_connections();
 }
 
@@ -479,39 +485,35 @@ void LocationViewer::setTranslationBaseFile(QString basePathName)
 
 QString LocationViewer::translate(QString text)
 {
-    if (region.isNull()) {
-        qWarning() << "Translate: No Region"; return text;
+    if (region.isNull())
+        return text;
+
+    if (transBasePath.isNull())
+        return text;
+
+    QString lang = transBasePath;
+    QTranslator Translator;// will do the translating.
+    QString reg = region;// remove trailing  FF7-SXX
+    reg.chop(7);
+    if (reg == "BASCUS-94163" || reg == "BESCES-00867") {
+        lang.append("en.qm");
+    } else if (reg == "BESCES-00868") {
+        lang.append("fr.qm");
+    } else if (reg == "BESCES-00869") {
+        lang.append("de.qm");
+    } else if (reg == "BESCES-00900") {
+        lang.append("es.qm");
+    } else if (reg == "BISLPS-00700" || reg == "BISLPS-01057") {
+        lang.append("ja.qm");
+    } else {//unknown language.
+        return text;
     }
 
-    if (transBasePath.isNull()) {
-        qWarning() << "Translate: No Base Path"; return text;
-    } else {
-        QString lang = transBasePath;
-        QTranslator Translator;// will do the translating.
-        QString reg = region;// remove trailing  FF7-SXX
-        reg.chop(7);
-        if (reg == "BASCUS-94163" || reg == "BESCES-00867") {
-            lang.append("en.qm");
-        } else if (reg == "BESCES-00868") {
-            lang.append("fr.qm");
-        } else if (reg == "BESCES-00869") {
-            lang.append("de.qm");
-        } else if (reg == "BESCES-00900") {
-            lang.append("es.qm");
-        } else if (reg == "BISLPS-00700" || reg == "BISLPS-01057") {
-            lang.append("ja.qm");
-        } else {//unknown language.
-            qWarning() << QString("Unknown Region:%1").arg(reg);
-            return text;
-        }
-        Translator.load(lang);
-        QString newText = Translator.translate("FF7Location", text.toLatin1());
-        if (newText.isEmpty()) {
-            return text;
-        } else {
-            return newText;
-        }
-    }
+    Translator.load(lang);
+    QString newText = Translator.translate("FF7Location", text.toLatin1());
+    if (newText.isEmpty())
+        return text;
+    return newText;
 }
 
 void LocationViewer::filterLocations(QString filter)

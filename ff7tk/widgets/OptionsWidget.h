@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2013 - 2019 Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2013 - 2020 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk.                                           //
 //                                                                          //
@@ -10,18 +10,21 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QComboBox>
-#include <QCheckBox>
-#include <QGridLayout>
-#include <QGroupBox>
-#include <QResizeEvent>
+
 #include <QScrollArea>
-#include <QSlider>
-#include "DialogPreview.h"
+
+class QComboBox;
+class QCheckBox;
+class QGridLayout;
+class QGroupBox;
+class QLabel;
+class QResizeEvent;
+class QSlider;
+class DialogPreview;
 
 /** \class OptionsWidget
  *  \brief A Single widget to allow you to set all the options for the game

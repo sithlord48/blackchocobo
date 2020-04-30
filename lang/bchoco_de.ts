@@ -5336,6 +5336,46 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <source>Dark city fourth street</source>
         <translation>Dunkle Stadt, vierte Straße</translation>
     </message>
+    <message>
+        <source>Last Train from Midgar</source>
+        <translation>Last train from Midgar</translation>
+    </message>
+    <message>
+        <source>Sector 7 Mechanized Tower</source>
+        <translation>Plattenstützen</translation>
+    </message>
+    <message>
+        <source>Conference Room</source>
+        <translation>Konferenzraum</translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s New Home</source>
+        <translation>Johnnys neues Zuhause</translation>
+    </message>
+    <message>
+        <source>Inside the Ferris Wheel</source>
+        <translation>Im Ferris-Rad</translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation>Arena</translation>
+    </message>
+    <message>
+        <source>Waiting Room</source>
+        <translation>Warteraum</translation>
+    </message>
+    <message>
+        <source>Cet Wall</source>
+        <translation>Seto-Wall</translation>
+    </message>
+    <message>
+        <source>Great Cave</source>
+        <translation>Große Höhle</translation>
+    </message>
+    <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation type="unfinished">Nanakis Zimmer</translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -9231,11 +9271,11 @@ Neue Region ist %2hz</translation>
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation>  &amp;Speichern</translation>
+        <translation type="vanished">  &amp;Speichern</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation>  Abbre&amp;chen</translation>
+        <translation type="vanished">  Abbre&amp;chen</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -9246,6 +9286,14 @@ Neue Region ist %2hz</translation>
 File:%1</source>
         <translation>Datei konnte nicht schreiben
 Datei:%1</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation type="unfinished">Schließen und speichern Sie die Änderungen</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation type="unfinished">Schließen und Änderungen vergessen</translation>
     </message>
 </context>
 <context>

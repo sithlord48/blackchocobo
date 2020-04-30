@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2016  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -8,14 +8,12 @@
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//   FF7tk is distributed in the hope that it will be useful,               //
+//    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
-#ifndef TYPE_FF7CHOCOBO_H
-#define TYPE_FF7CHOCOBO_H
+#pragma once
 
 #ifdef _MSC_VER
 #   define PACK(structure)          \
@@ -50,5 +48,3 @@ struct FF7CHOCOBO {
     quint8 sex = 0;             /**< [0x000E] Sex (0=male,1=female)*/
     quint8 type = 0;            /**< [0x000F] Type (Yellow,Green,Blue,Black,Gold)*/
 });
-
-#endif // TYPE_FF7CHOCOBO_H

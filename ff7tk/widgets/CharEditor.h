@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2012 -2019  Chris Rizzitello <sithlord48@gmail.com>         //
+//    copyright 2012 -2020  Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of FF7tk                                            //
 //                                                                          //
@@ -14,17 +14,30 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #pragma once
-#include <QCheckBox>
-#include <QEvent>
-#include <QLCDNumber>
-#include <QLineEdit>
-#include <QProgressBar>
-#include <QToolBox>
 
-//set path to FF7Item FF7Materia and FF7Char
+#include <QWidget>
 #include "../data/FF7Materia.h"
 #include "../data/Type_FF7CHAR.h"
-#include "MateriaEditor.h"
+
+class QCheckBox;
+class QComboBox;
+class QLCDNumber;
+class QLineEdit;
+class QProgressBar;
+class QToolBox;
+class QSpinBox;
+class QLabel;
+class QHFrame;
+class QHBoxLayout;
+class QVBoxLayout;
+class QGroupBox;
+class QListWidget;
+class QFrame;
+class QSlider;
+class QPushButton;
+
+class FF7Item;
+class MateriaEditor;
 
 /** \class CharEditor
  *  \brief Widget to allow editing of a character using FF7Char for data.

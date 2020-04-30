@@ -5336,6 +5336,46 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
         <source>Dark city fourth street</source>
         <translation type="unfinished">Quatrième rue de la ville sombre</translation>
     </message>
+    <message>
+        <source>Last Train from Midgar</source>
+        <translation>Dernier train</translation>
+    </message>
+    <message>
+        <source>Sector 7 Mechanized Tower</source>
+        <translation>Supports de la plaque</translation>
+    </message>
+    <message>
+        <source>Conference Room</source>
+        <translation>Salle de conférence</translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s New Home</source>
+        <translation>Nouvelle maison de Johnny</translation>
+    </message>
+    <message>
+        <source>Inside the Ferris Wheel</source>
+        <translation>Intérieur de la Grande Roue</translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation>Arène</translation>
+    </message>
+    <message>
+        <source>Waiting Room</source>
+        <translation>Salle d&apos;attente</translation>
+    </message>
+    <message>
+        <source>Cet Wall</source>
+        <translation>Muraille de Seto</translation>
+    </message>
+    <message>
+        <source>Great Cave</source>
+        <translation>La Grande grotte</translation>
+    </message>
+    <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation>Chambre de Nanaki</translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -9226,11 +9266,11 @@ La nouvelle région est% 2hz</translation>
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation>  &amp;Enregistrer</translation>
+        <translation type="vanished">  &amp;Enregistrer</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation>  &amp;Annuler</translation>
+        <translation type="vanished">  &amp;Annuler</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -9241,6 +9281,14 @@ La nouvelle région est% 2hz</translation>
 File:%1</source>
         <translation>Impossible d&apos;écrire le fichier
 Fichier : %1</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation type="unfinished">Fermer et enregistrer les modifications</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation type="unfinished">Fermer et oublier les modifications</translation>
     </message>
 </context>
 <context>

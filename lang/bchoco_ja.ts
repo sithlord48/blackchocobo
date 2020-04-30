@@ -5332,6 +5332,46 @@ The km/h speeds are calculated while playing </source>
         <source>Dark city fourth street</source>
         <translation type="unfinished">ダークシティ4番街</translation>
     </message>
+    <message>
+        <source>Last Train from Midgar</source>
+        <translation>路線図</translation>
+    </message>
+    <message>
+        <source>Sector 7 Mechanized Tower</source>
+        <translation>プレート支柱</translation>
+    </message>
+    <message>
+        <source>Conference Room</source>
+        <translation>会議室</translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s New Home</source>
+        <translation>ジョニーの新居</translation>
+    </message>
+    <message>
+        <source>Inside the Ferris Wheel</source>
+        <translation>観らん車内部</translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation type="unfinished">闘技場</translation>
+    </message>
+    <message>
+        <source>Waiting Room</source>
+        <translation>ひかえ室</translation>
+    </message>
+    <message>
+        <source>Cet Wall</source>
+        <translation>セトの壁</translation>
+    </message>
+    <message>
+        <source>Great Cave</source>
+        <translation>大空洞</translation>
+    </message>
+    <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation>ナナキの部屋</translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -9219,11 +9259,11 @@ New region is %2hz</source>
     </message>
     <message>
         <source>  &amp;Save</source>
-        <translation type="unfinished">保存(&amp;S)</translation>
+        <translation type="obsolete">保存(&amp;S)</translation>
     </message>
     <message>
         <source>  &amp;Cancel</source>
-        <translation type="unfinished">キャンセル(&amp;C)</translation>
+        <translation type="obsolete">キャンセル(&amp;C)</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -9234,6 +9274,14 @@ New region is %2hz</source>
 File:%1</source>
         <translation type="unfinished">ファイルの保存に失敗しました
 %1</translation>
+    </message>
+    <message>
+        <source>Close and save changes</source>
+        <translation type="unfinished">変更を閉じて保存する</translation>
+    </message>
+    <message>
+        <source>Close and forget changes</source>
+        <translation type="unfinished">変更を閉じて忘れる</translation>
     </message>
 </context>
 <context>

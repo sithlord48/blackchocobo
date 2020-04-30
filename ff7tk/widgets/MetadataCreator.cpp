@@ -10,11 +10,11 @@
 //                                                                          //
 //    FF7tk is distributed in the hope that it will be useful,              //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-/*~~~~~~~~~~~Includes~~~~~~~~*/
 #include "MetadataCreator.h"
+
 #include <QDialogButtonBox>
 #include <QFileDialog>
 #include <QGroupBox>
@@ -25,7 +25,9 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QStyle>
-#include "../data/FF7SaveInfo.h"
+#include <QVBoxLayout>
+
+#include "../data/FF7Save.h"
 
 MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
     : QDialog(parent)
