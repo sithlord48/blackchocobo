@@ -15,12 +15,13 @@
 /****************************************************************************/
 #pragma once
 
-#include <QString>
 #include <QDir>
 
+class QString;
 class QWidget;
 class QSettings;
 class FF7Save;
+
 class BCDialog
 {
 public:

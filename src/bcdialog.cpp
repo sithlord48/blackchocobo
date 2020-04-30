@@ -14,18 +14,20 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "bcdialog.h"
-#include "bcsettings.h"
-#include "ff7tk/data/FF7Save.h"
+
 #include <QAction>
 #include <QDialogButtonBox>
 #include <QFileDialog>
 #include <QHBoxLayout>
 #include <QInputDialog>
 #include <QListWidget>
+#include <QMessageBox>
 #include <QPushButton>
 #include <QStandardPaths>
-#include <QDebug>
-#include <QMessageBox>
+#include <QTextCodec>
+
+#include "bcsettings.h"
+#include "ff7tk/data/FF7Save.h"
 
 QRect readGeometry()
 {
