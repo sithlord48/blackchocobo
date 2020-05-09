@@ -50,7 +50,6 @@ MainWindow::MainWindow(QWidget *parent)
     buffer_materia.id = FF7Materia::EmptyId;
     for (int i = 0; i < 3; i++)
         buffer_materia.ap[i] = 0xFF;   //empty buffer incase
-
     setAcceptDrops(true);
     ui->setupUi(this);
     loadBasicSettings();
@@ -172,7 +171,7 @@ void MainWindow::initDisplay()
 void MainWindow::setScale(double scale)
 {
     scale = std::max(scale, 0.5);
-    setStyleSheet(QString("QCheckBox::indicator{width: %1px; height: %1px; padding: -%2px;}\nQListWidget::indicator{width: %1px; height: %1px; padding: -%2px}").arg(fontMetrics().height()).arg(2 * scale));
+    setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
     ui->btn_cloud->setFixedSize(int(98 * scale), int(110 * scale));
     ui->btn_cloud->setIconSize(QSize(int(92 * scale), int(104 * scale)));
     ui->btn_barret->setIconSize(QSize(int(92 * scale), int(104 * scale)));
@@ -495,6 +494,7 @@ void MainWindow::closeEvent(QCloseEvent *e)
 void MainWindow::resizeEvent(QResizeEvent *)
 {
     BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    fileModified(ff7->isFileModified());
 }
 void MainWindow::moveEvent(QMoveEvent *)
 {
@@ -789,7 +789,7 @@ void MainWindow::on_actionOpen_Achievement_File_triggered()
 {
     QString temp = ff7->fileName();
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
-    temp.append(QString("%1achievement.dat").arg(QDir::separator()));
+    temp.append(QStringLiteral("%1achievement.dat").arg(QDir::separator()));
     QFile tmp(temp);
     if (!tmp.exists())
         temp = BCDialog::getOpenFileName(this, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
@@ -810,6 +810,13 @@ void MainWindow::changeLanguage(const QVariant &data)
     if(!m_translations.contains(data.toString()))
         populateLanguageMenu();
     QApplication::installTranslator(m_translations.value(data.toString()));
+}
+
+void MainWindow::setOpenFileText(const QString &openFile)
+{
+    int maxWidth = width() * .85;
+    ui->lbl_fileName->setMaximumWidth(maxWidth);
+    ui->lbl_fileName->setText(fontMetrics().elidedText(openFile, Qt::ElideMiddle, maxWidth));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
@@ -1095,9 +1102,10 @@ void MainWindow::setmenu(bool newgame)
 }
 void MainWindow::fileModified(bool changed)
 {
-    ui->lbl_fileName->setText(ff7->fileName());
     if (changed)
-        ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
+        setOpenFileText(ff7->fileName().append("*"));
+    else
+        setOpenFileText(ff7->fileName());
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
