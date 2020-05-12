@@ -562,7 +562,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
             int fileSlot = 0;
             if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
                 SlotSelect *SSelect = new SlotSelect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), tempSave, false);
-                SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + (SSelect->height() /2));
+                SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + ((sizeHint().height() - SSelect->sizeHint().height()) /2));
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     on_actionImport_Slot_From_File_triggered();
@@ -757,7 +757,7 @@ void MainWindow::on_actionShow_Options_triggered()
     connect(&odialog, &Options::requestChangeNativeDialog, this, [] (bool useNative){
         QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
     });
-    odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((height() - odialog.sizeHint().height()) / 2));
+    odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((sizeHint().height() - odialog.sizeHint().height()) / 2));
     if (odialog.exec()) {
         setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
         loadChildWidgetSettings();
@@ -774,7 +774,7 @@ void MainWindow::on_actionCreateNewMetadata_triggered()
 void MainWindow::on_actionShow_Selection_Dialog_triggered()
 {
     SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true);
-    slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + (slotselect.height() /2));
+    slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + ((sizeHint().height() - slotselect.sizeHint().height()) /2));
 
     int i = slotselect.exec();
     if(i == -1) {
