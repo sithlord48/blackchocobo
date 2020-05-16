@@ -70,6 +70,7 @@ private:
     bool load; // are we loading data? if so don't save it to the file.
     //bool showLocPreview;
     FF7Save *ff7 = nullptr; // our save file struct pointer.
+    SaveIcon *saveIcon = nullptr;
     int s; //track slot
     FF7Materia Materias;//FF7Materia Static Data.
     materia buffer_materia; // buffer for a materia

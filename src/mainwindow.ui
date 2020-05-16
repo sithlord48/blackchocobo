@@ -5661,6 +5661,9 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     <height>64</height>
                    </size>
                   </property>
+                  <property name="scaledContents">
++                   <bool>true</bool>
++                  </property>
                  </widget>
                 </item>
                 <item>
@@ -5684,6 +5687,9 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="placeholderText">
                  <string>No Description Text</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>

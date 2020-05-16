@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
     , _init(true)
     , load(true)
     , ff7(new FF7Save)
+    , saveIcon(new SaveIcon)
     , s(0)
     , curchar(0)
     , mslotsel(-1)
@@ -85,8 +86,6 @@ void MainWindow::populateLanguageMenu()
 
 void MainWindow::initDisplay()
 {
-    ui->linePsxDesc->setReadOnly(true);
-
     QHBoxLayout *phsLayout = new QHBoxLayout;
     phsLayout->addWidget(phsList);
     ui->Phs_Box->setLayout(phsLayout);
@@ -284,6 +283,8 @@ void MainWindow::init_connections()
 {
     connect(ui->tbl_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::setValue);
     connect(ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_unknown->verticalScrollBar(), &QScrollBar::setValue);
+
+    connect(saveIcon, &SaveIcon::nextIcon, ui->lblPsxIcon, &QLabel::setPixmap);
 
     connect(ff7, &FF7Save::fileChanged, this, &MainWindow::fileModified);
 
@@ -1358,10 +1359,8 @@ void MainWindow::updateStolenMateria()
 void MainWindow::update_hexEditor_PSXInfo(void)
 {
     load = true;
-    SaveIcon *save_icon = new SaveIcon(ff7->slotIcon(s));
-    ui->lblPsxIcon->setPixmap(save_icon->icon().scaled(ui->lblPsxIcon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    //connect(save_icon, SIGNAL(nextIcon(QPixmap)), ui->lblPsxIcon, SLOT(setPixmap(QPixmap)));
 
+    saveIcon->setAll(ff7->slotIcon(s));
     ui->lblRegionString->setText(ff7->region(s));
     QString SlotSizeText;
 
@@ -1975,9 +1974,9 @@ void MainWindow::on_btn_add_all_materia_clicked()
         //Starting With Magic Materia
         if (i < 132)
             ff7->setPartyMateria(s, i, quint8(i - 68), FF7Materia::MaxMateriaAp);
-        else if ((i >= 132) && (i < 136))
+        else if (i < 136)
             ff7->setPartyMateria(s, (i - 1), quint8(i - 68), FF7Materia::MaxMateriaAp);
-        else if ((i >= 136) && (i < 142))
+        else if (i < 142)
             ff7->setPartyMateria(s, (i - 3), quint8(i - 68), FF7Materia::MaxMateriaAp);
     }
     // Then Support
@@ -3943,7 +3942,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. for all formats except for pc and switch.
+        if (ff7->format() != FF7SaveInfo::FORMAT::PC && ff7->format() != FF7SaveInfo::FORMAT::SWITCH && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         load = false;
         break;
