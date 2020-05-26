@@ -33,7 +33,7 @@ class SlotPreview : public QLabel
 public:
     /** \enum MODE */
     enum MODE {MODE_EMPTY,/**< \brief Empty Slot*/ MODE_PSXGAME, /**< \brief PSX Game or linked block */ MODE_FF7SAVE /**< \brief FF7 Save in slot*/ };
-    SlotPreview(int index = 0, qreal Scale = 1, QWidget *parent = 0);
+    SlotPreview(int index = 0, qreal Scale = 1, QWidget *parent = nullptr);
     int index(void);
     void setParty(QPixmap p1, QPixmap p2, QPixmap p3);
     void setParty(QString p1_style, QString p2_style, QString p3_style);
@@ -46,47 +46,40 @@ public:
     void setPsxIcon(QList<QByteArray> icon_data);
     void setMode(int mode);
 
-private slots:
-    void setIndex(int index);
-    //raw pix map for labels
-    void set_Party1(QPixmap);
-    void set_Party2(QPixmap);
-    void set_Party3(QPixmap);
-    void set_Party1(QString style);
-    void set_Party2(QString style);
-    void set_Party3(QString style);
-    void removed(void);
-    void copy(void);
-    void paste(void);
-    void set_ff7_save(void);
-    void set_empty(void);
-    void set_psx_game(void);
-
-private:
-    void init_display(void);
-    QLabel *party1;
-    QLabel *party2;
-    QLabel *party3;
-    QLabel *name;
-    QLabel *lbl_Slot;
-    QLabel *lbl_time;
-    QLabel *lbl_level;
-    QLabel *location;
-    QLabel *lbl_gil;
-    QPushButton *btn_copy;
-    QPushButton *btn_paste;
-    QPushButton *btn_remove;
-    SaveIcon *icon;
-    QHBoxLayout   *btnLayout;
-    QVBoxLayout *Final;
-    QVBoxLayout *top_layout;
-    bool not_pc;
-    qreal scale;
-protected:
-    void mousePressEvent(QMouseEvent *ev);
 signals:
     void clicked(int); /**< \brief Signal: User Clicked on preview . \return index number */
     void btn_remove_clicked(int); /**< \brief Signal: User Clicked on remove . \return index number */
     void btn_copy_clicked(int); /**< \brief Signal: User Clicked on copy . \return index number */
     void btn_paste_clicked(int); /**< \brief Signal: User Clicked on paste . \return index number */
+
+protected:
+    void mousePressEvent(QMouseEvent *ev);
+
+private:
+    void init_display(void);
+    void set_ff7_save(void);
+    void set_empty(void);
+    void set_psx_game(void);
+    QLabel *party1 = nullptr;
+    QLabel *party2 = nullptr;
+    QLabel *party3 = nullptr;
+    QLabel *name = nullptr;
+    QLabel *lbl_Slot = nullptr;
+    QLabel *lbl_time = nullptr;
+    QLabel *lbl_level = nullptr;
+    QLabel *location = nullptr;
+    QLabel *lbl_gil = nullptr;
+    QPushButton *btn_copy = nullptr;
+    QPushButton *btn_paste = nullptr;
+    QPushButton *btn_remove = nullptr;
+    SaveIcon *icon = nullptr;
+    QHBoxLayout *btnLayout = nullptr;
+    QVBoxLayout *Final = nullptr;
+    QVBoxLayout *top_layout = nullptr;
+    qreal scale;
+    int m_index;
+    static inline QString _previewStyle = QStringLiteral(R"(SlotPreview{border: .5ex solid;}\nQPushButton{border: 1px solid})");
+    static inline QString _genericStyle = QStringLiteral(R"(font: 75 16pt "Verdana"; color: white)");
+    static inline QString _ff7SlotStyle = QStringLiteral(R"(background-color:rgba(0,0,0,0);font: 75 16pt "Verdana";color:white)");
+    static inline QString _emptyTextStyle = QStringLiteral(R"(font: 75 20pt "Verdana"; color:yellow;)");
 };

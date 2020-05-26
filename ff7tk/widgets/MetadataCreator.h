@@ -20,6 +20,7 @@
 #include "../data/FF7SaveInfo.h"
 
 class FF7Save;
+class QDialogButtonBox;
 class QVBoxLayout;
 
 class MetadataCreator : public QDialog
@@ -29,7 +30,7 @@ public:
     explicit MetadataCreator(QWidget *parent = nullptr, FF7Save *ff7save = nullptr);
 private slots:
     void initDisplay();
-    void on_buttonBox_accepted();
+    void accepted();
 
 private:
     QString getOpenFileName(QWidget  *parent = nullptr, const QString &title = QString(), const QString &path = QString(), const QString &nameFilters = QString(), const QString &initSelection = QString());
@@ -41,6 +42,5 @@ private:
     QStringList InFiles;
     QString OutPath;
     QString UserID;
-    QPushButton *btnOk = nullptr;
-    QPushButton *btnCancel = nullptr;
+    QDialogButtonBox *btnBox = nullptr;
 };

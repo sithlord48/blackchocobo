@@ -30,9 +30,12 @@ public:
     /** \enum Box
      *  \brief Acces to Allow and Visible boxes without knowing their index
      */
-    enum Box {PHSALLOWED = 1/**< 1*/, PHSVISIBLE = 2/**< 2*/};
+    enum Box {
+        PHSALLOWED = 1/**< 1*/,
+        PHSVISIBLE = 2/**< 2*/
+    };
 
-    explicit PhsListWidget(QWidget *parent = 0);
+    explicit PhsListWidget(QWidget *parent = nullptr);
 
 protected:
     void changeEvent(QEvent *e);
@@ -79,16 +82,16 @@ private slots:
     void cb_cid_visibleToggled(bool checked);
 
 private:
-    DoubleCheckBox *cb_cloud;
-    DoubleCheckBox *cb_barret;
-    DoubleCheckBox *cb_tifa;
-    DoubleCheckBox *cb_aerith;
-    DoubleCheckBox *cb_red;
-    DoubleCheckBox *cb_yuffie;
-    DoubleCheckBox *cb_cait;
-    DoubleCheckBox *cb_vincent;
-    DoubleCheckBox *cb_cid;
-    QLabel *lbl_phs;
+    DoubleCheckBox *cb_cloud =  nullptr;
+    DoubleCheckBox *cb_barret =  nullptr;
+    DoubleCheckBox *cb_tifa =  nullptr;
+    DoubleCheckBox *cb_aerith =  nullptr;
+    DoubleCheckBox *cb_red =  nullptr;
+    DoubleCheckBox *cb_yuffie =  nullptr;
+    DoubleCheckBox *cb_cait =  nullptr;
+    DoubleCheckBox *cb_vincent =  nullptr;
+    DoubleCheckBox *cb_cid =  nullptr;
+    QLabel *lbl_phs =  nullptr;
     void init_display();
     void connectAll();
     void disconnectAll();

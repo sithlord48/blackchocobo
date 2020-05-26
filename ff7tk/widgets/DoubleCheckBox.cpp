@@ -33,13 +33,10 @@ DoubleCheckBox::DoubleCheckBox(const QString &text, QWidget *parent) :
 }
 void DoubleCheckBox::init_display()
 {
-    QString style = QStringLiteral("QCheckBox::indicator{width: %1px; height: %1px;}").arg(fontMetrics().height());
     cb_one = new QCheckBox(this);
-    cb_one->setStyleSheet(style);
     connect(cb_one, &QCheckBox::toggled, this, &DoubleCheckBox::box1_toggled);
 
     cb_two = new QCheckBox(this);
-    cb_two->setStyleSheet(style);
     connect(cb_two, &QCheckBox::toggled, this, &DoubleCheckBox::box2_toggled);
     label = new QLabel(this);
 
@@ -47,11 +44,10 @@ void DoubleCheckBox::init_display()
     boxLayout->addWidget(cb_one);
     boxLayout->addWidget(cb_two);
     boxLayout->setContentsMargins(0, 0, 0, 0);
-    boxLayout->setSpacing(2);
 
     auto Final = new QHBoxLayout;
-    Final->addWidget(label);
-    Final->addLayout(boxLayout);
+    Final->addWidget(label, 2);
+    Final->addLayout(boxLayout, 1);
     Final->setContentsMargins(0, 0, 0, 0);
     this->setLayout(Final);
 }

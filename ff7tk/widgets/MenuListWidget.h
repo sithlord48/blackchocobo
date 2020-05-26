@@ -30,8 +30,12 @@ public:
     /** \enum Box
      *  \brief Acces to Visible and Locked boxes without knowing their index
      */
-    enum Box {MENUVISIBLE = 1, MENULOCKED = 2};
-    explicit MenuListWidget(QWidget *parent = 0);
+    enum BOX {
+        MENUVISIBLE = 1,
+        MENULOCKED = 2
+    };
+    Q_ENUM(BOX)
+    explicit MenuListWidget(QWidget *parent = nullptr);
 protected:
     void changeEvent(QEvent *e);
 signals:
@@ -76,17 +80,17 @@ private slots:
     void cb_save_one_toggled(bool checked);
     void cb_save_two_toggled(bool checked);
 private:
-    DoubleCheckBox *cb_item;
-    DoubleCheckBox *cb_magic;
-    DoubleCheckBox *cb_materia;
-    DoubleCheckBox *cb_equip;
-    DoubleCheckBox *cb_status;
-    DoubleCheckBox *cb_order;
-    DoubleCheckBox *cb_limit;
-    DoubleCheckBox *cb_config;
-    DoubleCheckBox *cb_phs;
-    DoubleCheckBox *cb_save;
-    QLabel *lbl_title;
+    DoubleCheckBox *cb_item = nullptr;
+    DoubleCheckBox *cb_magic = nullptr;
+    DoubleCheckBox *cb_materia = nullptr;
+    DoubleCheckBox *cb_equip = nullptr;
+    DoubleCheckBox *cb_status = nullptr;
+    DoubleCheckBox *cb_order = nullptr;
+    DoubleCheckBox *cb_limit = nullptr;
+    DoubleCheckBox *cb_config = nullptr;
+    DoubleCheckBox *cb_phs = nullptr;
+    DoubleCheckBox *cb_save = nullptr;
+    QLabel *lbl_title = nullptr;
     void init_display();
     void connectAll();
     void disconnectAll();

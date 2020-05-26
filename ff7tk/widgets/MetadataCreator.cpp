@@ -32,8 +32,7 @@
 MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
     : QDialog(parent)
     , ff7(ff7save)
-    , btnOk(new QPushButton(QIcon::fromTheme(QStringLiteral("dialog-ok"), style()->standardIcon(QStyle::SP_DialogOkButton)), tr("&Ok")))
-    , btnCancel(new QPushButton(QIcon::fromTheme(QStringLiteral("dialog-cancel"), style()->standardIcon(QStyle::SP_DialogCancelButton)), tr("&Cancel")))
+    , btnBox (new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel))
 {
     initDisplay();
     for (int i = 0; i < 15; i++)
@@ -46,13 +45,10 @@ MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
 void MetadataCreator::initDisplay(void)
 {
 
-    btnOk->setEnabled(false);
-    connect(btnOk, &QPushButton::clicked, this, &MetadataCreator::on_buttonBox_accepted);
-    connect(btnCancel, &QPushButton::clicked, this, &MetadataCreator::close);
-
-    auto btnBox = new QHBoxLayout;
-    btnBox->addWidget(btnOk);
-    btnBox->addWidget(btnCancel);
+    connect(btnBox, &QDialogButtonBox::accepted, this, &MetadataCreator::accepted);
+    connect(btnBox, &QDialogButtonBox::rejected, this, &MetadataCreator::close);
+    
+    btnBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
     auto lblOut = new QLabel(tr("Output Path:"));
     auto lineOutPath = new QLineEdit;
@@ -60,7 +56,7 @@ void MetadataCreator::initDisplay(void)
     connect(lineOutPath, &QLineEdit::textChanged, this, [this](const QString & string) {
         if (!load)
             OutPath = string;
-        btnOk->setEnabled(!string.isEmpty());
+        btnBox->button(QDialogButtonBox::Ok)->setEnabled(!string.isEmpty());
     });
 
     auto lblUserID = new QLabel(tr("Sign With User Id"));
@@ -102,12 +98,12 @@ void MetadataCreator::initDisplay(void)
     FinalLayout->addLayout(outpathLayout);
     FinalLayout->addLayout(userIDLayout);
     FinalLayout->addWidget(SaveGroup);
-    FinalLayout->addLayout(btnBox);
+    FinalLayout->addWidget(btnBox);
 
     setLayout(FinalLayout);
 }
 
-void MetadataCreator::on_buttonBox_accepted()
+void MetadataCreator::accepted()
 {
     for (int i = 0; i < 10; i++) {
         QString OutFile = QString("%1/save0%2.ff7").arg(OutPath, QString::number(i));

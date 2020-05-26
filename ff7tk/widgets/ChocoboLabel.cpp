@@ -261,5 +261,5 @@ void ChocoboLabel::setHoverColorStyle(QString backgroundColor)
 
     backgroundColor.prepend("QPushButton:enabled{background-color:rgba(0,0,0,0);border:0px solid;} QWidget[HoverStyled=\"true\"]:enabled:hover{background-color:");
     backgroundColor.append("}");
-    this->setStyleSheet(backgroundColor);
+    setStyleSheet(backgroundColor);
 }

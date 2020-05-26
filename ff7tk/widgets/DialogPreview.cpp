@@ -32,32 +32,28 @@ DialogPreview::DialogPreview(QWidget *parent) :
 
     connect(btn_ul, &QPushButton::clicked, this, [this] {
         QColor color = QColorDialog::getColor(upper_left, this);
-        if (color.isValid())
-        {
+        if (color.isValid()) {
             SetULeft(color);
         }
     });
 
     connect(btn_ur, &QPushButton::clicked, this, [this] {
         QColor color = QColorDialog::getColor(upper_right, this);
-        if (color.isValid())
-        {
+        if (color.isValid()) {
             SetLRight(color);
         }
     });
 
     connect(btn_ll, &QPushButton::clicked, this, [this] {
         QColor color = QColorDialog::getColor(lower_left, this);
-        if (color.isValid())
-        {
+        if (color.isValid()) {
             SetLLeft(color);
         }
     });
 
     connect(btn_lr, &QPushButton::clicked, this, [this] {
         QColor color = QColorDialog::getColor(lower_right, this);
-        if (color.isValid())
-        {
+        if (color.isValid()) {
             SetLRight(color);
         }
     });

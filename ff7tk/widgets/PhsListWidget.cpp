@@ -38,16 +38,14 @@ PhsListWidget::PhsListWidget(QWidget *parent) :
 
 void PhsListWidget::changeEvent(QEvent *e)
 {
-    if (e->type() != QEvent::LanguageChange) {
+    if (e->type() != QEvent::LanguageChange)
         QWidget::changeEvent(e);
-    }
-
     updateText();
 }
 
 void PhsListWidget::init_display()
 {
-    lbl_phs->setStyleSheet(QString("text-decoration: underline;"));
+    lbl_phs->setStyleSheet(QStringLiteral("text-decoration: underline;"));
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(lbl_phs);
     layout->setSpacing(3);
@@ -67,35 +65,43 @@ void PhsListWidget::updateText()
 {
     QString aString = tr("Allowed");
     QString vString = tr("Visible");
-
     lbl_phs->setText(tr("PHS Manager"));
+
     cb_cloud->setText(tr("Cloud"));
-    cb_cloud->setBoxToolTip(1, aString);
-    cb_cloud->setBoxToolTip(2, vString);
+    cb_cloud->setBoxToolTip(PHSALLOWED, aString);
+    cb_cloud->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_barret->setText(tr("Barret"));
-    cb_barret->setBoxToolTip(1, aString);
-    cb_barret->setBoxToolTip(2, vString);
+    cb_barret->setBoxToolTip(PHSALLOWED, aString);
+    cb_barret->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_tifa->setText(tr("Tifa"));
-    cb_tifa->setBoxToolTip(1, aString);
-    cb_tifa->setBoxToolTip(2, vString);
+    cb_tifa->setBoxToolTip(PHSALLOWED, aString);
+    cb_tifa->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_aerith->setText(tr("Aerith"));
-    cb_aerith->setBoxToolTip(1, aString);
-    cb_aerith->setBoxToolTip(2, vString);
+    cb_aerith->setBoxToolTip(PHSALLOWED, aString);
+    cb_aerith->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_red->setText(tr("Red XIII"));
-    cb_red->setBoxToolTip(1, aString);
-    cb_red->setBoxToolTip(2, vString);
+    cb_red->setBoxToolTip(PHSALLOWED, aString);
+    cb_red->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_yuffie->setText(tr("Yuffie"));
-    cb_yuffie->setBoxToolTip(1, aString);
-    cb_yuffie->setBoxToolTip(2, vString);
+    cb_yuffie->setBoxToolTip(PHSALLOWED, aString);
+    cb_yuffie->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_cait->setText(tr("Cait Sith"));
-    cb_cait->setBoxToolTip(1, aString);
-    cb_cait->setBoxToolTip(2, vString);
+    cb_cait->setBoxToolTip(PHSALLOWED, aString);
+    cb_cait->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_vincent->setText(tr("Vincent"));
-    cb_vincent->setBoxToolTip(1, aString);
-    cb_vincent->setBoxToolTip(2, vString);
+    cb_vincent->setBoxToolTip(PHSALLOWED, aString);
+    cb_vincent->setBoxToolTip(PHSVISIBLE, vString);
+
     cb_cid->setText(tr("Cid"));
-    cb_cid->setBoxToolTip(1, aString);
-    cb_cid->setBoxToolTip(2, vString);
+    cb_cid->setBoxToolTip(PHSALLOWED, aString);
+    cb_cid->setBoxToolTip(PHSVISIBLE, vString);
 }
 
 void PhsListWidget::setChecked(int row, int box, bool checked)

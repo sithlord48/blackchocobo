@@ -27,13 +27,13 @@
 #include "../data/FF7Save.h"
 
 
-SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool loadVisible, QWidget *parent): QDialog(parent)
+SlotSelect::SlotSelect(qreal scale, FF7Save *data, bool loadVisible, QWidget *parent) : QDialog(parent)
 {
-    scale = Scale;
+    _scale = scale;
     ff7 = data;
     list_preview = new QScrollArea();
     btnNew = new QPushButton(QIcon::fromTheme(QString("document-open"), QPixmap()), tr("Load Another File"));
-    connect(btnNew, SIGNAL(clicked()), this, SLOT(newFile()));
+    connect(btnNew, &QPushButton::clicked, this, &SlotSelect::newFile);
     setWindowFlags(((windowFlags() | Qt::CustomizeWindowHint) & ~Qt::WindowCloseButtonHint)); //remove close button
     setWindowTitle(tr("Select A Slot"));
     preview_layout = new QVBoxLayout;
@@ -43,7 +43,7 @@ SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool loadVisible, QWidget *pa
     preview_layout->setContentsMargins(0, 0, 0, 0);
     preview_layout->setSpacing(3);
     for (int i = 0; i < 15; i++) {
-        preview[i] = new SlotPreview(i, scale);
+        preview[i] = new SlotPreview(i, _scale);
         preview_layout->addWidget(preview[i]);
         setSlotPreview(i);
     }
@@ -56,12 +56,13 @@ SlotSelect::SlotSelect(qreal Scale, FF7Save *data, bool loadVisible, QWidget *pa
     dialog_layout->addWidget(btnNew);
     showLoad(loadVisible);
     setLayout(dialog_layout);
-    setFixedWidth(int(preview[1]->contentsRect().size().width() + contentsMargins().left() + contentsMargins().right() + list_preview->verticalScrollBar()->widthMM() + 14 * scale));
+    setFixedWidth(int(preview[1]->contentsRect().size().width() + contentsMargins().left() + contentsMargins().right() + list_preview->verticalScrollBar()->widthMM() + 14 * _scale));
     setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
 }
+
 void SlotSelect::button_clicked(int s)
 {
-    this->done(s);
+    done(s);
 }
 
 void SlotSelect::remove_slot(int s)
@@ -96,7 +97,7 @@ void SlotSelect::copy_slot(int s)
 void SlotSelect::paste_slot(int s)
 {
     if (ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_MIDLINK)
-            || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)) {
+     || ff7->psx_block_type(s) == char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_ENDLINK)) {
         return;
     }
 
@@ -118,7 +119,7 @@ void SlotSelect::paste_slot(int s)
 void SlotSelect::ReIntSlot(int s)
 {
     preview[s]->~SlotPreview();
-    preview[s] = new SlotPreview(s, scale);
+    preview[s] = new SlotPreview(s, _scale);
     preview_layout->insertWidget(s, preview[s]);
     setSlotPreview(s);
 }
@@ -170,28 +171,28 @@ void SlotSelect::setSlotPreview(int s)
             Slottext.append(tr("\n\t Game Uses %n Save Block(s)", nullptr, ff7->psx_block_size(s)));
         }
 
-        if (ff7->psx_block_next(s) != 0xFF) {
+        if (ff7->psx_block_next(s) != 0xFF)
             Slottext.append(tr("\n\t   Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s) + 1)));
-        }
+
         preview[s]->setLocation(Slottext);
     }
-    connect(preview[s], SIGNAL(clicked(int)), this, SLOT(button_clicked(int)));
-    connect(preview[s], SIGNAL(btn_remove_clicked(int)), this, SLOT(remove_slot(int)));
-    connect(preview[s], SIGNAL(btn_copy_clicked(int)), this, SLOT(copy_slot(int)));
-    connect(preview[s], SIGNAL(btn_paste_clicked(int)), this, SLOT(paste_slot(int)));
+
+    connect(preview[s], &SlotPreview::clicked, this, &SlotSelect::button_clicked);
+    connect(preview[s], &SlotPreview::btn_remove_clicked, this, &SlotSelect::remove_slot);
+    connect(preview[s], &SlotPreview::btn_copy_clicked, this, &SlotSelect::copy_slot);
+    connect(preview[s], &SlotPreview::btn_paste_clicked, this, &SlotSelect::paste_slot);
 }
 
 void SlotSelect::newFile(void)
 {
-    this->done(-1);
+    done(-1);
 }
 
 void SlotSelect::showLoad(bool show)
 {
     btnNew->setVisible(show);
-    if (show) {
-        this->setMinimumHeight(442);
-    } else {
-        this->setMinimumHeight(420);
-    }
+    if (show)
+        setMinimumHeight(442);
+    else
+        setMinimumHeight(420);
 }

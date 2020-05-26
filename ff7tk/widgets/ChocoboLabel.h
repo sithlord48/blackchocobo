@@ -32,7 +32,6 @@ public:
     /** \brief Create a new Chocobo label.
      *
      *  This Widget is designed to be part of a more complex chocobo manager (chocoboManager) it is useful on its own but will need to be
-     *  \param scale scale of pixmaps.
      * \param parent Parent of this widget
      * \param titleText Name for the box something like "Stable 1 "
      * \param occupied Is there a chocobo here? else set a blank label
