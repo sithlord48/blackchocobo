@@ -178,7 +178,8 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     });
 
     if(dialog.exec() == QFileDialog::Accepted) {
-        chosenType->replace(chosenType->mid(0), dialog.selectedNameFilter());
+        if (!nameFilters.contains(QStringLiteral(".char")))
+            chosenType->replace(chosenType->mid(0), dialog.selectedNameFilter());
         return dialog.selectedFiles().first();
     }
     return QString();
