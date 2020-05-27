@@ -140,7 +140,7 @@ win32: {
     QMAKE_CXXFLAGS += -mno-ms-bitfields
     }
     #Windows RC Info Below
-    VERSION = 1.10.1
+    VERSION = 1.10.2
     QMAKE_TARGET_COMPANY = Black Chocobo Devs
     QMAKE_TARGET_DESCRIPTION = Final Fantasy 7 Save Editor
     QMAKE_TARGET_COPYRIGHT = 2010 - 2020 Chris Rizzitello

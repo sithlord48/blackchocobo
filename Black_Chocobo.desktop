@@ -1,6 +1,5 @@
 [Desktop Entry]
-Categories=Application;Game;
-Encoding=UTF-8
+Categories=Game;
 Exec=/usr/bin/blackchocobo
 GenericName=FF7 Save Game Editor
 GenericName[en]=FF7 Save Game Editor
