@@ -1067,7 +1067,7 @@ void MainWindow::setmenu(bool newgame)
         ui->actionNew_Game->setEnabled(1);
     }
 
-    if ((ff7->format() != FF7SaveInfo::FORMAT::PSX && ff7->format() != FF7SaveInfo::FORMAT::PS3 && (!_init)) && (ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)) { //more then one slot, or unknown Type
+    if ( FF7SaveInfo::instance()->slotCount(ff7->format()) > 1) { //more then one slot, or unknown Type
         ui->actionNext_Slot->setEnabled(1);
         ui->actionPrevious_Slot->setEnabled(1);
         ui->actionShow_Selection_Dialog->setEnabled(1);
@@ -1213,7 +1213,7 @@ void MainWindow::CheckGame()
             || ((!ff7->isFF7(s)) && (ff7->format() != FF7SaveInfo::FORMAT::PC || ff7->format() != FF7SaveInfo::FORMAT::SWITCH) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(nullptr, ff7, s);
-        if ((ff7->format() == FF7SaveInfo::FORMAT::PSX) || (ff7->format() == FF7SaveInfo::FORMAT::PS3) || ff7->format() == FF7SaveInfo::FORMAT::PDA || ff7->format() == FF7SaveInfo::FORMAT::PGE)
+        if (FF7SaveInfo::instance()->slotCount(ff7->format()) == 1)
             error.setSingleSlot(true);
         error.move(x() + ((width() - error.width()) / 2), y() + (height() /2));
         switch (error.exec()) {
