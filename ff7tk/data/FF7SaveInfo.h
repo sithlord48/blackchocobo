@@ -151,7 +151,7 @@ public:
 
     /**
      * @brief Extra off set data for psv format
-     * @param PsvInfo offset
+     * @param info: FF7SaveInfo::PSVINFO that describes the info type to return.
      * @return offset for the type of info requested
      */
     Q_INVOKABLE int extraPSVOffsets(FF7SaveInfo::PSVINFO info) const;
@@ -223,6 +223,13 @@ public:
      * @return Constructed Filter string
      */
     Q_INVOKABLE QString knownTypesFilter() const;
+
+    /**
+     * @brief Check if a format is using the PC format internally
+     * @param format - Format to check 
+     * @return True if format is uses PC format internally
+     */
+    Q_INVOKABLE bool internalPC(FF7SaveInfo::FORMAT format) const;
 
 private:
     FF7SaveInfo *operator = (FF7SaveInfo &other) = delete;

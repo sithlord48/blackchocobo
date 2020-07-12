@@ -31,7 +31,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
 {
-    if (ff7data->format() == FF7SaveInfo::FORMAT::PC)
+    if (FF7SaveInfo::instance()->internalPC(ff7data->format()))
         close();
 
     QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());
@@ -148,15 +148,9 @@ void errbox::btnExportClicked()
 
 void errbox::setSingleSlot(bool single)
 {
-    if (single) {
-        btnNext->setEnabled(false);
-        btnPrev->setEnabled(false);
-        singleSlot = true;
-    } else {
-        btnNext->setEnabled(true);
-        btnPrev->setEnabled(true);
-        singleSlot = false;
-    }
+    btnNext->setEnabled(!single);
+    btnPrev->setEnabled(!single);
+    singleSlot = !single;
 }
 
 bool errbox::isSingleSlot()
