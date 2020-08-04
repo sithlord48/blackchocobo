@@ -8,13 +8,13 @@ init:
 
     Update-AppveyorBuild -Version ("{0}-{1}-{2}" -f $env:appveyor_repo_branch,$env:appveyor_build_number,$env:commit )
 environment:
-  VSVER: 14.0 
+  VSVER: 16.0 
   matrix:
-  - MSVC: 15
+  - MSVC: 19
     RUNTIME_LINKAGE: static
     ICU_VERSION: 57.1
     ICU_LINKAGE: static
-    QTDIR: C:\Qt\5.13\mingw73_32
+    QTDIR: C:\Qt\5.13.2\mingw73_32
     QT_VERSION: 5.13.2
     QT_LINKAGE: static
 install:
@@ -29,7 +29,7 @@ install:
 
     if %QTDIR:msvc=%==%QTDIR% g++ --version
 
-    if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
+    set make=mingw32-make.exe
 
     if %QTDIR:msvc=%==%QTDIR% %make% --version
 
@@ -54,7 +54,7 @@ build_script:
 
     move COPYING.TXT Black_Chocobo-%commit%-win32\
 
-    %make%
+    mingw32-make
 
     move release\Black_Chocobo.exe Black_Chocobo-%commit%-win32\
 

@@ -22,7 +22,7 @@ matrix:
 before_install: 
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y;
-    sudo add-apt-repository ppa:beineri/opt-qt-5.12.6-xenial -y;
+    sudo add-apt-repository ppa:beineri/opt-qt-5.15.0-xenial -y;
     sudo apt-get update -qq;
     fi
 
@@ -33,17 +33,18 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt512tools qt512base g++-8 zsync; 
+    sudo apt-get -y install build-essential qt5-default qt515tools qt515base g++-8 zsync; 
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
 #MAC OS
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-    brew install qt5;
+    brew upgrade qt5;
     chmod -R 755 /usr/local/opt/qt5/*;
     fi
 
 script:
+- export VERSION=continuous;
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
     qmake Black_Chocobo.pro;
@@ -54,8 +55,6 @@ script:
     wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage";
     chmod a+x linuxdeployqt*.AppImage;
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
-    export VERSION=continuous;
-    ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -bundle-non-qt-libs;
     ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage;
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
