@@ -87,6 +87,18 @@
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="lbl_ff7tk_version">
+        <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="smaller_text" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QLabel" name="lbl_qt_version">
          <property name="font">
           <font>

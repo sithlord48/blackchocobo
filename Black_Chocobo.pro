@@ -32,6 +32,7 @@ SOURCES += \
     qhexedit/chunks.cpp \
     qhexedit/qhexedit.cpp \
     qhexedit/commands.cpp \
+    ff7tk/about.h \
     ff7tk/data/crypto/aes.c \
     ff7tk/data/SaveIcon.cpp \
     ff7tk/data/FF7Text.cpp \

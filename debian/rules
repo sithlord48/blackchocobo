@@ -7,7 +7,7 @@
 #include /usr/share/dpkg/buildflags.mk
 
 %:
-	dh $@ --parallel --buildsystem=cmake
+	dh $@
 	
 override_dh_auto_install:
 	find . -name "COPYING.txt" -delete

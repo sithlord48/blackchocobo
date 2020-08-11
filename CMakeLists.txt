@@ -119,7 +119,7 @@ set ( blackchocobo_TRS
 
 qt5_add_translation(TRS ${blackchocobo_TRS})
 
-add_executable ( blackchocobo ${blackchocobo_SRCS} ${RESOURCES} ${TRS} )
+add_executable ( blackchocobo ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} )
 target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick )
 
 #install stuff

@@ -25,7 +25,7 @@
 #include <QTextStream>
 #include <QtXml/QDomDocument>
 #include <QVector>
-
+#include <QtEndian>
 #include "FF7Text.h"
 #include "crypto/aes.h"
 
@@ -1155,7 +1155,7 @@ void FF7Save::fix_psv_header(int s)
     QByteArray data = fileHeader();
     data.replace(0x64, 0x20, QByteArray(0x20, '\x00'));
     data.replace(0x64, SG_Region_String[s].size(), SG_Region_String[s].toLatin1());
-    QByteArray bSize('\x00', 3);
+    QByteArray bSize(3, '\x00');
     switch((_blocks * 0x2000)) {
         default: bSize.setRawData("\x00\x20\x00", 3); break;
         case 0x4000:bSize.setRawData("\x00\x40\x00", 3); break;
@@ -1686,7 +1686,7 @@ quint16 FF7Save::mainProgress(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].mprogress;
+        return qFromLittleEndian(slot[s].mprogress);
     }
 }
 void FF7Save::setMainProgress(int s, int mProgress)
@@ -1695,6 +1695,7 @@ void FF7Save::setMainProgress(int s, int mProgress)
         return;
     } else {
         mProgress = std::clamp(mProgress, 0, 0xFFFF);
+        mProgress = qToLittleEndian(mProgress);
         if (mProgress != slot[s].mprogress) {
             slot[s].mprogress = mProgress;
             setFileModified(true, s);
@@ -1793,23 +1794,23 @@ quint8 FF7Save::descParty(int s, int char_num)
 }
 quint16 FF7Save::descCurHP(int s)
 {
-    return slot[s].desc.curHP;
+    return qFromLittleEndian(slot[s].desc.curHP);
 }
 quint16 FF7Save::descMaxHP(int s)
 {
-    return slot[s].desc.maxHP;
+    return qFromLittleEndian(slot[s].desc.maxHP);
 }
 quint16 FF7Save::descCurMP(int s)
 {
-    return slot[s].desc.curMP;
+    return qFromLittleEndian(slot[s].desc.curMP);
 }
 quint16 FF7Save::descMaxMP(int s)
 {
-    return slot[s].desc.maxMP;
+    return qFromLittleEndian(slot[s].desc.maxMP);
 }
 quint32 FF7Save::descGil(int s)
 {
-    return slot[s].desc.gil;
+    return qFromLittleEndian(slot[s].desc.gil);
 }
 void FF7Save::setDescLevel(int s, int new_level)
 {
@@ -1824,48 +1825,48 @@ void FF7Save::setDescParty(int s, int char_num, quint8 new_id)
 }
 void FF7Save::setDescCurHP(int s, quint16 new_curHP)
 {
-    slot[s].desc.curHP = new_curHP;
+    slot[s].desc.curHP = qToLittleEndian(new_curHP);
     setFileModified(true, s);
 }
 void FF7Save::setDescMaxHP(int s, quint16 new_maxHP)
 {
-    slot[s].desc.maxHP = new_maxHP;
+    slot[s].desc.maxHP = qToLittleEndian(new_maxHP);
     setFileModified(true, s);
 }
 void FF7Save::setDescCurMP(int s, quint16 new_curMP)
 {
-    slot[s].desc.curMP = new_curMP;
+    slot[s].desc.curMP = qToLittleEndian(new_curMP);
     setFileModified(true, s);
 }
 void FF7Save::setDescMaxMP(int s, quint16 new_maxMP)
 {
-    slot[s].desc.maxMP = new_maxMP;
+    slot[s].desc.maxMP = qToLittleEndian(new_maxMP);
     setFileModified(true, s);
 }
 void FF7Save::setDescGil(int s, quint32 new_gil)
 {
-    slot[s].desc.gil = new_gil;
+    slot[s].desc.gil = qToLittleEndian(new_gil);
     setFileModified(true, s);
 }
 
 quint32 FF7Save::descTime(int s)
 {
-    return slot[s].desc.time;
+    return qFromLittleEndian(slot[s].desc.time);
 }
 void FF7Save::setDescTime(int s, quint32 new_time)
 {
-    slot[s].desc.time = new_time;
+    slot[s].desc.time = qToLittleEndian(new_time);
     setFileModified(true, s);
 }
 
 quint32 FF7Save::time(int s)
 {
-    return slot[s].time;
+    return qFromLittleEndian(slot[s].time);
 }
 
 void FF7Save::setTime(int s, quint32 new_time)
 {
-    slot[s].time = new_time;
+    slot[s].time = qToLittleEndian(new_time);
     setDescTime(s, new_time); //set Desc also.
     setFileModified(true, s);
 }
@@ -1983,14 +1984,15 @@ void FF7Save::setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool isEmpty)
 quint16 FF7Save::speedScore(int s, int rank)
 {
     switch (rank) {
-    case 1: return slot[s].coster_1;
-    case 2: return slot[s].coster_2;
-    case 3: return slot[s].coster_3;
+    case 1: return qFromLittleEndian(slot[s].coster_1);
+    case 2: return qFromLittleEndian(slot[s].coster_2);
+    case 3: return qFromLittleEndian(slot[s].coster_3);
     default:  return 0;
     }
 }
 void FF7Save::setSpeedScore(int s, int rank, quint16 score)
 {
+    score = qToLittleEndian(score);
     switch (rank) {
     case 1: slot[s].coster_1 = score; setFileModified(true, s); break;
     case 2: slot[s].coster_2 = score; setFileModified(true, s); break;
@@ -2020,6 +2022,7 @@ void FF7Save::setChocoName(int s, int choco_num, QString new_name)
 }
 void FF7Save::setPartyMateria(int s, int mat_num, quint8 id, qint32 ap)
 {
+    ap = qToLittleEndian(ap);
     //if invalid set to 0xFF
     if ((id < 91) && ((ap >= 0) && (ap <= 16777215))) {
         //Valid Id and Ap provided.
@@ -2046,10 +2049,11 @@ quint8 FF7Save::partyMateriaId(int s, int mat_num)
 qint32 FF7Save::partyMateriaAp(int s, int mat_num)
 {
     qint32 ap_temp = slot[s].materias[mat_num].ap[0] | (slot[s].materias[mat_num].ap[1] << 8) | slot[s].materias[mat_num].ap[2] << 16;
-    return ap_temp;
+    return qFromLittleEndian(ap_temp);
 }
 void FF7Save::setStolenMateria(int s, int mat_num, quint8 id, qint32 ap)
 {
+    ap = qToLittleEndian(ap);
     if ((id < 91) && ((ap >= 0) && (ap <= 16777215))) {
         //Valid Id and Ap provided.
         slot[s].stolen[mat_num].id = id;
@@ -2076,7 +2080,7 @@ quint8 FF7Save::stolenMateriaId(int s, int mat_num)
 qint32 FF7Save::stolenMateriaAp(int s, int mat_num)
 {
     qint32 ap_temp = slot[s].stolen[mat_num].ap[0] | (slot[s].stolen[mat_num].ap[1] << 8) | slot[s].stolen[mat_num].ap[2] << 16;
-    return ap_temp;
+    return qFromLittleEndian(ap_temp);
 }
 QColor FF7Save::dialogColorUL(int s)
 {
@@ -2221,38 +2225,38 @@ quint8 FF7Save::charFlag(int s, int char_num, int flag_num)
 }
 quint16 FF7Save::charLimits(int s, int char_num)
 {
-    return slot[s].chars[char_num].limits;
+    return qFromLittleEndian(slot[s].chars[char_num].limits);
 }
 quint16 FF7Save::charKills(int s, int char_num)
 {
-    return slot[s].chars[char_num].kills;
+    return qFromLittleEndian(slot[s].chars[char_num].kills);
 }
 
 quint16 FF7Save::charTimesLimitUsed(int s, int char_num, int level)
 {
     switch (level) {
-    case 1: return slot[s].chars[char_num].timesused1;
-    case 2: return slot[s].chars[char_num].timesused2;
-    case 3: return slot[s].chars[char_num].timesused3;
+    case 1: return qFromLittleEndian(slot[s].chars[char_num].timesused1);
+    case 2: return qFromLittleEndian(slot[s].chars[char_num].timesused2);
+    case 3: return qFromLittleEndian(slot[s].chars[char_num].timesused3);
     default: return 0;
     }
 }
 
 quint16 FF7Save::charCurrentHp(int s, int char_num)
 {
-    return slot[s].chars[char_num].curHP;
+    return qFromLittleEndian(slot[s].chars[char_num].curHP);
 }
 quint16 FF7Save::charBaseHp(int s, int char_num)
 {
-    return slot[s].chars[char_num].baseHP;
+    return qFromLittleEndian(slot[s].chars[char_num].baseHP);
 }
 quint16 FF7Save::charCurrentMp(int s, int char_num)
 {
-    return slot[s].chars[char_num].curMP;
+    return qFromLittleEndian(slot[s].chars[char_num].curMP);
 }
 quint16 FF7Save::charBaseMp(int s, int char_num)
 {
-    return slot[s].chars[char_num].baseMP;
+    return qFromLittleEndian(slot[s].chars[char_num].baseMP);
 }
 quint8 FF7Save::charUnknown(int s, int char_num, int unknown_num)
 {
@@ -2260,19 +2264,19 @@ quint8 FF7Save::charUnknown(int s, int char_num, int unknown_num)
 }
 quint16 FF7Save::charMaxHp(int s, int char_num)
 {
-    return slot[s].chars[char_num].maxHP;
+    return qFromLittleEndian(slot[s].chars[char_num].maxHP);
 }
 quint16 FF7Save::charMaxMp(int s, int char_num)
 {
-    return slot[s].chars[char_num].maxMP;
+    return qFromLittleEndian(slot[s].chars[char_num].maxMP);
 }
 quint32 FF7Save::charCurrentExp(int s, int char_num)
 {
-    return slot[s].chars[char_num].exp;
+    return qFromLittleEndian(slot[s].chars[char_num].exp);
 }
 quint32 FF7Save::charNextExp(int s, int char_num)
 {
-    return slot[s].chars[char_num].expNext;
+    return qFromLittleEndian(slot[s].chars[char_num].expNext);
 }
 
 void  FF7Save::setCharID(int s, int char_num, qint8 new_id)
@@ -2377,16 +2381,17 @@ void  FF7Save::setCharFlag(int s, int char_num, int flag_num, quint8 flag_value)
 }
 void  FF7Save::setCharLimits(int s, int char_num, quint16 new_limits)
 {
-    slot[s].chars[char_num].limits = new_limits;
+    slot[s].chars[char_num].limits = qToLittleEndian(new_limits);
     setFileModified(true, s);
 }
-void  FF7Save::setCharKills(int s, int char_num, quint16 new_level)
+void  FF7Save::setCharKills(int s, int char_num, quint16 newKills)
 {
-    slot[s].chars[char_num].kills = new_level;
+    slot[s].chars[char_num].kills = qToLittleEndian(newKills);
     setFileModified(true, s);
 }
 void  FF7Save::setCharTimeLimitUsed(int s, int char_num, int level, quint16 timesused)
 {
+    timesused = qToLittleEndian(timesused);
     switch (level) {
     case 1: slot[s].chars[char_num].timesused1 = timesused; setFileModified(true, s); break;
     case 2: slot[s].chars[char_num].timesused2 = timesused; setFileModified(true, s); break;
@@ -2395,22 +2400,22 @@ void  FF7Save::setCharTimeLimitUsed(int s, int char_num, int level, quint16 time
 }
 void  FF7Save::setCharCurrentHp(int s, int char_num, quint16 curHp)
 {
-    slot[s].chars[char_num].curHP = curHp;
+    slot[s].chars[char_num].curHP = qToLittleEndian(curHp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharBaseHp(int s, int char_num, quint16 baseHp)
 {
-    slot[s].chars[char_num].baseHP = baseHp;
+    slot[s].chars[char_num].baseHP = qToLittleEndian(baseHp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharCurrentMp(int s, int char_num, quint16 curMp)
 {
-    slot[s].chars[char_num].curMP = curMp;
+    slot[s].chars[char_num].curMP = qToLittleEndian(curMp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharBaseMp(int s, int char_num, quint16 baseMp)
 {
-    slot[s].chars[char_num].baseMP = baseMp;
+    slot[s].chars[char_num].baseMP = qToLittleEndian(baseMp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharUnknown(int s, int char_num, int unknown_num, quint8 value)
@@ -2420,27 +2425,28 @@ void  FF7Save::setCharUnknown(int s, int char_num, int unknown_num, quint8 value
 }
 void  FF7Save::setCharMaxHp(int s, int char_num, quint16 maxHp)
 {
-    slot[s].chars[char_num].maxHP = maxHp;
+    slot[s].chars[char_num].maxHP = qToLittleEndian(maxHp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharMaxMp(int s, int char_num, quint16 maxMp)
 {
-    slot[s].chars[char_num].maxMP = maxMp;
+    slot[s].chars[char_num].maxMP = qToLittleEndian(maxMp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharCurrentExp(int s, int char_num, quint32 exp)
 {
-    slot[s].chars[char_num].exp = exp;
+    slot[s].chars[char_num].exp = qToLittleEndian(exp);
     setFileModified(true, s);
 }
 void  FF7Save::setCharNextExp(int s, int char_num, quint32 next)
 {
-    slot[s].chars[char_num].expNext = next;
+    slot[s].chars[char_num].expNext = qToLittleEndian(next);
     setFileModified(true, s);
 }
 
 void FF7Save::setCharMateria(int s, int who, int mat_num, quint8 id, qint32 ap)
 {
+    ap = qToLittleEndian(ap);
     if ((id < 91) && ((ap >= 0) && (ap <= 16777215))) {
         //Valid Id and Ap provided.
         slot[s].chars[who].materias[mat_num].id = id;
@@ -2471,7 +2477,7 @@ quint8 FF7Save::charMateriaId(int s, int who, int mat_num)
 qint32 FF7Save::charMateriaAp(int s, int who, int mat_num)
 {
     qint32 ap_temp = slot[s].chars[who].materias[mat_num].ap[0] | (slot[s].chars[who].materias[mat_num].ap[1] << 8) | slot[s].chars[who].materias[mat_num].ap[2] << 16;
-    return ap_temp;
+    return qToLittleEndian(ap_temp);
 }
 FF7CHOCOBO FF7Save::chocobo(int s, int chocoSlot)
 {
@@ -2492,16 +2498,16 @@ FF7CHOCOBO FF7Save::chocobo(int s, int chocoSlot)
 
 quint16 FF7Save::chocoStamina(int s, int chocoSlot)
 {
-    return slot[s].chocostaminas[chocoSlot];
+    return qFromLittleEndian(slot[s].chocostaminas[chocoSlot]);
 }
 quint16 FF7Save::chocoSpeed(int s, int chocoSlot)
 {
     if (chocoSlot > -1 && chocoSlot < 4) {
-        return slot[s].chocobos[chocoSlot].speed;
+        return qFromLittleEndian(slot[s].chocobos[chocoSlot].speed);
     } else if (chocoSlot == 4) {
-        return slot[s].choco56[0].speed;
+        return qFromLittleEndian(slot[s].choco56[0].speed);
     } else if (chocoSlot == 5) {
-        return slot[s].choco56[1].speed;
+        return qFromLittleEndian(slot[s].choco56[1].speed);
     } else {
         return 0;
     }
@@ -2509,11 +2515,11 @@ quint16 FF7Save::chocoSpeed(int s, int chocoSlot)
 quint16 FF7Save::chocoMaxSpeed(int s, int chocoSlot)
 {
     if (chocoSlot > -1 && chocoSlot < 4) {
-        return slot[s].chocobos[chocoSlot].maxspeed;
+        return qFromLittleEndian(slot[s].chocobos[chocoSlot].maxspeed);
     } else if (chocoSlot == 4) {
-        return slot[s].choco56[0].maxspeed;
+        return qFromLittleEndian(slot[s].choco56[0].maxspeed);
     } else if (chocoSlot == 5) {
-        return slot[s].choco56[1].maxspeed;
+        return qFromLittleEndian(slot[s].choco56[1].maxspeed);
     } else {
         return 0;
     }
@@ -2521,11 +2527,11 @@ quint16 FF7Save::chocoMaxSpeed(int s, int chocoSlot)
 quint16 FF7Save::chocoSprintSpeed(int s, int chocoSlot)
 {
     if (chocoSlot > -1 && chocoSlot < 4) {
-        return slot[s].chocobos[chocoSlot].sprintspd;
+        return qFromLittleEndian(slot[s].chocobos[chocoSlot].sprintspd);
     } else if (chocoSlot == 4) {
-        return slot[s].choco56[0].sprintspd;
+        return qFromLittleEndian(slot[s].choco56[0].sprintspd);
     } else if (chocoSlot == 5) {
-        return slot[s].choco56[1].sprintspd;
+        return qFromLittleEndian(slot[s].choco56[1].sprintspd);
     } else {
         return 0;
     }
@@ -2533,11 +2539,11 @@ quint16 FF7Save::chocoSprintSpeed(int s, int chocoSlot)
 quint16 FF7Save::chocoMaxSprintSpeed(int s, int chocoSlot)
 {
     if (chocoSlot > -1 && chocoSlot < 4) {
-        return slot[s].chocobos[chocoSlot].maxsprintspd;
+        return qFromLittleEndian(slot[s].chocobos[chocoSlot].maxsprintspd);
     } else if (chocoSlot == 4) {
-        return slot[s].choco56[0].maxsprintspd;
+        return qFromLittleEndian(slot[s].choco56[0].maxsprintspd);
     } else if (chocoSlot == 5) {
-        return slot[s].choco56[1].maxsprintspd;
+        return qFromLittleEndian(slot[s].choco56[1].maxsprintspd);
     } else {
         return 0;
     }
@@ -2645,11 +2651,12 @@ bool FF7Save::chocoCantMate(int s, int chocoSlot)
 
 void FF7Save::setChocoStamina(int s, int chocoSlot, quint16 stamina)
 {
-    slot[s].chocostaminas[chocoSlot] = stamina;
+    slot[s].chocostaminas[chocoSlot] = qToLittleEndian(stamina);
     setFileModified(true, s);
 }
 void FF7Save::setChocoSpeed(int s, int chocoSlot, quint16 speed)
 {
+    speed = qToLittleEndian(speed);
     if (chocoSlot > -1 && chocoSlot < 4) {
         slot[s].chocobos[chocoSlot].speed = speed;
         setFileModified(true, s);
@@ -2663,6 +2670,7 @@ void FF7Save::setChocoSpeed(int s, int chocoSlot, quint16 speed)
 }
 void FF7Save::setChocoMaxSpeed(int s, int chocoSlot, quint16 maxspeed)
 {
+    maxspeed = qToLittleEndian(maxspeed);
     if (chocoSlot > -1 && chocoSlot < 4) {
         slot[s].chocobos[chocoSlot].maxspeed = maxspeed;
         setFileModified(true, s);
@@ -2676,6 +2684,7 @@ void FF7Save::setChocoMaxSpeed(int s, int chocoSlot, quint16 maxspeed)
 }
 void FF7Save::setChocoSprintSpeed(int s, int chocoSlot, quint16 sprintSpeed)
 {
+    sprintSpeed = qToLittleEndian(sprintSpeed);
     if (chocoSlot > -1 && chocoSlot < 4) {
         slot[s].chocobos[chocoSlot].sprintspd = sprintSpeed;
         setFileModified(true, s);
@@ -2689,6 +2698,7 @@ void FF7Save::setChocoSprintSpeed(int s, int chocoSlot, quint16 sprintSpeed)
 }
 void FF7Save::setChocoMaxSprintSpeed(int s, int chocoSlot, quint16 maxsprintSpeed)
 {
+    maxsprintSpeed = qToLittleEndian(maxsprintSpeed);
     if (chocoSlot > -1 && chocoSlot < 4) {
         slot[s].chocobos[chocoSlot].maxsprintspd = maxsprintSpeed;
         setFileModified(true, s);
@@ -2815,43 +2825,47 @@ void FF7Save::setChocoCantMate(int s, int chocoSlot, bool cantMate)
 }
 quint32 FF7Save::gil(int s)
 {
-    return slot[s].gil;
+    return qFromLittleEndian(slot[s].gil);
 }
 void FF7Save::setGil(int s, quint32 gil)
 {
     gil = std::max<quint32>(gil, 0);
+    gil = qToLittleEndian(gil);
     slot[s].gil = gil;
     setDescGil(s, gil); //Update Desc
     setFileModified(true, s);
 }
 quint16 FF7Save::gp(int s)
 {
-    return slot[s].gp;
+    return qFromLittleEndian(slot[s].gp);
 }
 void FF7Save::setGp(int s, int gp)
 {
     gp = std::clamp(gp, 0, 65535);
+    gp = qToLittleEndian(gp);
     slot[s].gp = gp;
     setFileModified(true, s);
 }
 quint16 FF7Save::battles(int s)
 {
-    return slot[s].battles;
+    return qFromLittleEndian(slot[s].battles);
 }
 void FF7Save::setBattles(int s, int battles)
 {
 
     battles = std::clamp(battles, 0, 65535);
+    battles = qToLittleEndian(battles);
     slot[s].battles = battles;
     setFileModified(true, s);
 }
 quint16 FF7Save::runs(int s)
 {
-    return slot[s].runs;
+    return qFromLittleEndian(slot[s].runs);
 }
 void FF7Save::setRuns(int s, int runs)
 {
     runs = std::clamp(runs, 0, 65535);
+    runs = qToLittleEndian(runs);
     slot[s].runs = runs;
     setFileModified(true, s);
 }
@@ -2875,13 +2889,13 @@ QString FF7Save::snowboardTime(int s, int course)
     quint32 time = 0;
     switch (course) {
     case 0:
-        time = slot[s].SnowBegFastTime;
+        time = qFromLittleEndian(slot[s].SnowBegFastTime);
         break;
     case 1:
-        time = slot[s].SnowExpFastTime;
+        time = qFromLittleEndian(slot[s].SnowExpFastTime);
         break;
     case 2:
-        time = slot[s].SnowCrazyFastTime;
+        time = qFromLittleEndian(slot[s].SnowCrazyFastTime);
         break;
     default: break;
     }
@@ -2928,19 +2942,20 @@ void FF7Save::setSnowboardScore(int s, int course, quint8 score)
 }
 quint16 FF7Save::bikeHighScore(int s)
 {
-    return slot[s].BikeHighScore;
+    return qFromLittleEndian(slot[s].BikeHighScore);
 }
 void FF7Save::setBikeHighScore(int s, quint16 score)
 {
-    slot[s].BikeHighScore = score;
+    slot[s].BikeHighScore = qToLittleEndian(score);
     setFileModified(true, s);
 }
 quint16 FF7Save::battlePoints(int s)
 {
-    return slot[s].battlepoints;
+    return qFromLittleEndian(slot[s].battlepoints);
 }
 void FF7Save::setBattlePoints(int s, quint16 bp)
 {
+    bp = qToLittleEndian(bp);
     if (s < 0 || s > 14) {
         return;
     } else if (slot[s].battlepoints == bp) {
@@ -4231,11 +4246,12 @@ void FF7Save::setBattleTargets(int s, bool shown)
 
 quint16 FF7Save::options(int s)
 {
-    return  slot[s].options;
+    return  qFromLittleEndian(slot[s].options);
 }
 void FF7Save::setOptions(int s, int opt)
 {
     if (opt != options(s)) {
+        opt = qToLittleEndian(opt);
         slot[s].options = opt;
         setFileModified(true, s);
     }
@@ -4306,6 +4322,7 @@ void FF7Save::setPhsVisible(int s, quint16 phs_visible)
         return;
     }
     if (phs_visible != slot[s].phsvisible) {
+        phs_visible = qToLittleEndian(phs_visible);
         slot[s].phsvisible = phs_visible;
         setFileModified(true, s);
     }
@@ -4315,7 +4332,7 @@ quint16 FF7Save::phsVisible(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].phsvisible;
+        return qFromLittleEndian(slot[s].phsvisible);
     }
 }
 
@@ -4335,7 +4352,7 @@ quint16 FF7Save::phsAllowed(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].phsallowed;
+        return qFromLittleEndian(slot[s].phsallowed);
     }
 }
 
@@ -4360,6 +4377,7 @@ void FF7Save::setPhsAllowed(int s, quint16 phs_visible)
         return;
     }
     if (phs_visible != slot[s].phsallowed) {
+        phs_visible = qToLittleEndian(phs_visible);
         slot[s].phsallowed = phs_visible;
         setFileModified(true, s);
     }
@@ -4396,6 +4414,7 @@ void FF7Save::setMenuVisible(int s, quint16 menu_visible)
         return;
     }
     if (menu_visible != slot[s].menu_visible) {
+        menu_visible = qToLittleEndian(menu_visible);
         slot[s].menu_visible = menu_visible;
         setFileModified(true, s);
     }
@@ -4405,7 +4424,7 @@ quint16 FF7Save::menuVisible(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].menu_visible;
+        return qFromLittleEndian(slot[s].menu_visible);
     }
 }
 
@@ -4441,6 +4460,7 @@ void FF7Save::setMenuLocked(int s, quint16 menu_locked)
         return;
     }
     if (menu_locked != slot[s].menu_locked) {
+        menu_locked = qToLittleEndian(menu_locked);
         slot[s].menu_locked = menu_locked;
         setFileModified(true, s);
     }
@@ -4450,7 +4470,7 @@ quint16 FF7Save::menuLocked(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].menu_locked;
+        return qFromLittleEndian(slot[s].menu_locked);
     }
 }
 quint16 FF7Save::locationId(int s)
@@ -4458,7 +4478,7 @@ quint16 FF7Save::locationId(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].locationid;
+        return qFromLittleEndian(slot[s].locationid);
     }
 }
 
@@ -4470,6 +4490,7 @@ void FF7Save::setLocationId(int s, quint16 locationID)
         return;
     } else {
         slot[s].locationid = locationID;
+        locationID = qToLittleEndian(locationID);
         setFileModified(true, s);
     }
 }
@@ -4478,7 +4499,7 @@ quint16 FF7Save::mapId(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].mapid;
+        return qFromLittleEndian(slot[s].mapid);
     }
 }
 
@@ -4489,6 +4510,7 @@ void FF7Save::setMapId(int s, quint16 mapID)
     } else if (mapID == mapId(s)) {
         return;
     } else {
+        mapID = qToLittleEndian(mapID);
         slot[s].mapid = mapID;
         setFileModified(true, s);
     }
@@ -4498,7 +4520,7 @@ qint16 FF7Save::locationX(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].coord.x;
+        return qFromLittleEndian(slot[s].coord.x);
     }
 }
 
@@ -4509,6 +4531,7 @@ void FF7Save::setLocationX(int s, qint16 x)
     } else if (x == locationX(s)) {
         return;
     } else {
+        x = qToLittleEndian(x);
         slot[s].coord.x = x;
         setFileModified(true, s);
     }
@@ -4518,7 +4541,7 @@ qint16 FF7Save::locationY(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].coord.y;
+        return qFromLittleEndian(slot[s].coord.y);
     }
 }
 
@@ -4529,6 +4552,7 @@ void FF7Save::setLocationY(int s, qint16 y)
     } else if (y == locationY(s)) {
         return;
     } else {
+        y = qToLittleEndian(y);
         slot[s].coord.y = y;
         setFileModified(true, s);
     }
@@ -4538,7 +4562,7 @@ quint16 FF7Save::locationT(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].coord.t;
+        return qFromLittleEndian(slot[s].coord.t);
     }
 }
 
@@ -4549,6 +4573,7 @@ void FF7Save::setLocationT(int s, quint16 t)
     } else if (t == locationT(s)) {
         return;
     } else {
+        t = qToLittleEndian(t);
         slot[s].coord.t = t;
         setFileModified(true, s);
     }
@@ -4558,7 +4583,7 @@ quint8 FF7Save::locationD(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].coord.d;
+        return qFromLittleEndian(slot[s].coord.d);
     }
 }
 
@@ -4569,6 +4594,7 @@ void FF7Save::setLocationD(int s, quint8 d)
     } else if (d == locationD(s)) {
         return;
     } else {
+        d = qToLittleEndian(d);
         slot[s].coord.d = d;
         setFileModified(true, s);
     }
@@ -4579,7 +4605,7 @@ quint16 FF7Save::condorFunds(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].condorfunds;
+        return qFromLittleEndian(slot[s].condorfunds);
     }
 }
 void FF7Save::setCondorFunds(int s, quint16 value)
@@ -4587,6 +4613,7 @@ void FF7Save::setCondorFunds(int s, quint16 value)
     if (value == condorFunds(s)) {
         return;
     } else {
+        value = qToLittleEndian(value);
         slot[s].condorfunds = value;
         setFileModified(true, s);
     }
@@ -4756,6 +4783,7 @@ void FF7Save::setCountdownTimer(int s, quint32 time)
     if (s < 0 || s > 14) {
         return;
     } else {
+        time = qToLittleEndian(time);
         slot[s].timer[0] = (time & 0xff);
         slot[s].timer[1] = ((time & 0xff00) >> 8);
         slot[s].timer[2] = ((time & 0xff0000) >> 16);
@@ -4784,7 +4812,7 @@ quint16 FF7Save::steps(int s)
     if (s < 0 || s > 14) {
         return 0;
     } else {
-        return slot[s].steps;
+        return qFromLittleEndian(slot[s].steps);
     }
 }
 void FF7Save::setSteps(int s, int steps)
@@ -4794,6 +4822,7 @@ void FF7Save::setSteps(int s, int steps)
     } else {
         steps = std::clamp(steps, 0, 0xFFFF);
         if (steps != slot[s].mprogress) {
+            steps = qToLittleEndian(steps);
             slot[s].steps = steps;
             setFileModified(true, s);
         }
@@ -4883,6 +4912,7 @@ void FF7Save::setUWeaponHp(int s, int hp)
         return;
     } else {
         if (quint32(hp) != uWeaponHp(s)) {
+            hp = qToLittleEndian(hp);
             int a = (hp & 0xff);
             int b = (hp & 0xff00) >> 8;
             int c = (hp & 0xff0000) >> 16;
