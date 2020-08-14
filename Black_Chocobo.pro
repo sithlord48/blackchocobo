@@ -170,10 +170,14 @@ unix:!macx:!symbian:!android {
 
     icon.files = icon/Black_Chocobo.png
     icon.path = /usr/share/pixmaps
+
+    appstream.files = Black_Chocobo.appdata.xml
+    appstream.path = /usr/share/metadata
+
     desktop.files =Black_Chocobo.desktop
     desktop.path = /usr/share/applications
 
-    INSTALLS += target langfiles icon desktop
+    INSTALLS += target langfiles icon desktop appstream
 }
 android:{
     TARGET = blackchocobo
