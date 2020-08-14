@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Game;
-Exec=/usr/bin/blackchocobo
+Exec=blackchocobo
 GenericName=FF7 Save Game Editor
 GenericName[en]=FF7 Save Game Editor
 GenericName[es]=Editor de partidas guardadas para FF7

@@ -146,21 +146,20 @@ win32: {
     QMAKE_TARGET_DESCRIPTION = Final Fantasy 7 Save Editor
     QMAKE_TARGET_COPYRIGHT = 2010 - 2020 Chris Rizzitello
     QMAKE_TARGET_PRODUCT = Black_Chocobo
-    RC_ICONS = icon/bchoco_icon_win.ico
+    RC_ICONS = deploy/bchoco_icon_win.ico
 }
 
 #set up for mac os
 macx:{
     TARGET = Black_Chocobo
-    ICON = icon/bchoco_icon_osx.icns     #set program icon
+    ICON = deploy/bchoco_icon_osx.icns     #set program icon
     QMAKE_CXXFLAGS += -stdlib=libc++
 }
 #system calls trigger with any OS
 system (lrelease Black_Chocobo.pro)#release the .qm files
 
 #set up for unix os
-unix:!macx:!symbian:!android {
-    #remember to ship debian/menu and debian/blackchocobo.sharedmimeinfo
+unix:!macx:!symbian{
 
     TARGET = blackchocobo
     target.path = /usr/bin
@@ -168,29 +167,24 @@ unix:!macx:!symbian:!android {
     langfiles.files= lang/*.qm
     langfiles.path= /usr/share/blackchocobo/lang
 
-    icon.files = icon/Black_Chocobo.png
-    icon.path = /usr/share/pixmaps
+    icon.files = deploy/Black_Chocobo.png
+    icon.path = /usr/share/pixmaps/
 
-    appstream.files = Black_Chocobo.appdata.xml
-    appstream.path = /usr/share/metadata
+    appstream.files = deploy/Black_Chocobo.appdata.xml
+    appstream.path = /usr/share/metadata/
 
-    desktop.files =Black_Chocobo.desktop
+    menu.files = deploy/blackchocobo
+    menu.path = /usr/share/menu
+
+    mimeinfo.files = deploy/blackchocobo.xml
+    mimeinfo.path = /usr/share/mime/packages
+
+    desktop.files = deploy/Black_Chocobo.desktop
     desktop.path = /usr/share/applications
 
-    INSTALLS += target langfiles icon desktop appstream
+    INSTALLS += target langfiles icon desktop appstream mimeinfo menu
 }
-android:{
-    TARGET = blackchocobo
-    target.path = /usr/bin
 
-    langfiles.files= lang/*.qm
-    langfiles.path= /usr/share/blackchocobo/lang
-
-    icon.files = icon/Black_Chocobo.png
-    icon.path = /usr/share/pixmaps
-
-    INSTALLS +=target langfiles icon
-}
 static:{ # everything below takes effect with CONFIG += static
     CONFIG += static
     CONFIG += staticlib # this is needed if you create a static library, not a static executable

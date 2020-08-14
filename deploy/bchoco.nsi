@@ -46,7 +46,7 @@ Section "Black Chocobo(Required)"
   SectionIn RO
   SetOutPath $INSTDIR
   ; Set output path to the installation directory.
-  File /r ..\Black_Chocobo-win32\*
+  File /r ..\Black_Chocobo-continuous-win32\*
   ; Put file there
   ;make menu entrys for main program else workpath is wrong?
   CreateDirectory "$SMPROGRAMS\Black_Chocobo"

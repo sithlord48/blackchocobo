@@ -46,29 +46,29 @@ build_script:
 
     qmake Black_Chocobo.pro
 
-    mkdir Black_Chocobo-win32
+    mkdir Black_Chocobo-continuous-win32
 
-    mkdir Black_Chocobo-win32\lang
+    mkdir Black_Chocobo-continuous-win32\lang
 
-    move lang\*.qm Black_Chocobo-win32\lang\
+    move lang\*.qm Black_Chocobo-continuous-win32\lang\
 
-    move COPYING.TXT Black_Chocobo-win32\
+    move COPYING.TXT Black_Chocobo-continuous-win32\
 
     mingw32-make
 
-    move release\Black_Chocobo.exe Black_Chocobo-win32\
+    move release\Black_Chocobo.exe Black_Chocobo-continuous-win32\
 
-    windeployqt --compiler-runtime Black_Chocobo-win32\Black_Chocobo.exe
+    windeployqt --compiler-runtime Black_Chocobo-continuous-win32\Black_Chocobo.exe
 
-    echo "" > Black_Chocobo-win32\settings.ini
+    echo "" > Black_Chocobo-continuous-win32\settings.ini
 
-    dir Black_Chocobo-win32
+    dir Black_Chocobo-continuous-win32
 
-    7z a -tzip Black_Chocobo-continuous-win32.zip Black_Chocobo-win32 -r
+    7z a -tzip Black_Chocobo-continuous-win32.zip Black_Chocobo-continuous-win32 -r
 
-    del /f Black_Chocobo-win32\settings.ini
+    del /f Black_Chocobo-continuous-win32\settings.ini
 
-    makensis.exe /X"SetCompressor /FINAL lzma" nsis\bchoco.nsi
+    makensis.exe /X"SetCompressor /FINAL lzma" deploy\bchoco.nsi
 
 artifacts:
 - path: Black_Chocobo-continuous-win32.zip
@@ -87,4 +87,4 @@ deploy:
   force_update: true
 branches:
   except:
-    - /continuous/
+    - /^continuous$/
