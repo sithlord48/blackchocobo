@@ -5,19 +5,6 @@ dist: xenial
 os:
  - linux
  - osx
-matrix:
- exclude:
-# Only do coverity or coverage build on Linux when the compiler is gcc
-  - os: linux
-    compiler: clang
-    env: COVERITY=1
-    env: COVERAGE=1
-# Don't build with clang on Linux
-  - os: linux
-    compiler: clang
-# Don't build with gcc on OSX
-  - os: osx
-    compiler: gcc
 
 before_install: 
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
@@ -76,24 +63,6 @@ after_success:
     mv Black_Chocobo*.dmg* Black_Chocobo-continuous*.dmg*;
     bash ./upload.sh Black_Chocobo*.dmg*;
     fi
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "B4xjY+hcZOob6hGLx8b5Ykxk+8sN9M+XwfnuhRReR1YRFvXZdcUUiL/VusDM0iapUGhkuvbO0AQEeLPaC69uBNdxQsBJFGFMzrHZGEtuBFl44SJB+lZGRTVemj3AZ4f5aQvTkKFbt7M+/sjkWa6ZP6EHdrAN2XCp4emrwKBApO4="
-
-addons:
-  apt:
-  
-  coverity_scan:
-    project:
-      name: "sithlord48/blackchocobo"
-      description: "Final Fantasy VII Save Editor"
-    notication_email: sithlord48@gmail.com
-    build_command_prepend: "qmake Black_Chocobo.pro"
-    build_command:   "make -j 4"
-    branch_pattern: coverity_scan
 
 branches:
   except:
