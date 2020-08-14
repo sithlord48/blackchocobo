@@ -35,24 +35,22 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
+
 signals:
     void requestLanguageChange(const QVariant &data);
     void requestChangeNativeDialog(bool UseNativeDialogs);
-private slots:
-    void on_btn_set_char_stat_folder_clicked();
-    void on_btn_set_default_save_clicked();
-    void on_btn_set_load_path_clicked();
-    void on_btn_set_save_emu_clicked();
-    void on_btn_set_save_pc_clicked();
-    void on_cb_override_def_save_toggled(bool checked);
-    void on_comboLanguage_currentIndexChanged(const QString &arg1);
-    void on_cbNativeDialogs_clicked(bool checked);
-    void on_btnEditSideBarItems_clicked();
-    void on_comboColorScheme_currentIndexChanged(int index);
-    
+
 private:
     Ui::Options *ui;
     void loadSettings();
     void saveSettings();
     void restoreDefaultSettings();
+    void initConnections();
+    void btn_set_char_stat_folder_clicked();
+    void btn_set_default_save_clicked();
+    void btn_set_load_path_clicked();
+    void btn_set_save_emu_clicked();
+    void btn_set_save_pc_clicked();
+    void cbNativeDialogs_clicked(bool checked);
+    void comboColorScheme_currentIndexChanged(int index);
 };

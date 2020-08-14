@@ -62,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadChildWidgetSettings();
     init_connections();
     on_actionNew_Game_triggered();
-    ui->btn_cloud->clicked();
+    emit ui->btn_cloud->clicked();
     ff7->setFileModified(false, 0);
 }
 
@@ -438,7 +438,8 @@ void MainWindow::changeEvent(QEvent *e)
 {
     if (e->type() == QEvent::PaletteChange) {
         QPalette palette = BCSettings::instance()->paletteForSetting();
-        for (QWidget * widget : findChildren<QWidget *>(QString(), Qt::FindChildrenRecursively))
+        QList<QWidget*> widgets = findChildren<QWidget *>(QString(), Qt::FindChildrenRecursively);
+        for (QWidget * widget : widgets)
              widget->setPalette(palette);
         hexEditor->setAddressAreaColor(palette.alternateBase().color());
     } else if (e->type() == QEvent::LanguageChange) {
@@ -525,7 +526,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
     QFile file(fileName);
 
     if (!file.open(QFile::ReadOnly)) {
-        QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName).arg(file.errorString()));
+        QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName, file.errorString()));
         return;
     }
 
@@ -589,11 +590,11 @@ void MainWindow::on_actionImport_char_triggered()
         return;
     QFile file(fileName);
     if (!file.open(QFile::ReadOnly)) {
-        QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.").arg(fileName).arg(file.errorString()));
+        QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.").arg(fileName, file.errorString()));
         return;
     }
     if (file.size() != 0x84) {
-        QMessageBox::warning(this, tr("Black Chocobo"), tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName).arg(file.errorString()));
+        QMessageBox::warning(this, tr("Black Chocobo"), tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName, file.errorString()));
         return;
     }
     QByteArray new_char;
@@ -636,6 +637,7 @@ bool MainWindow::on_actionSave_File_As_triggered()
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
     QString selectedType = typeMap.key(ff7->format(), QString());
+    const QStringList typeKeys = typeMap.keys();
 
     QString path;
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
@@ -645,7 +647,13 @@ bool MainWindow::on_actionSave_File_As_triggered()
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
         path = BCSettings::instance()->value(SETTINGS::EMUSAVEPATH).toString();
 
-    QString fileName = BCDialog::getSaveFileName(this, ff7->region(s), tr("Select A File to Save As"), path , typeMap.keys().join(";;"), &selectedType, QFile(ff7->fileName()).fileName());
+    QString fileName = BCDialog::getSaveFileName(this,
+                                                 ff7->region(s),
+                                                 tr("Select A File to Save As"),
+                                                 path,
+                                                 typeKeys.join(QStringLiteral(";;")),
+                                                 &selectedType,
+                                                 QFile(ff7->fileName()).fileName());
 
     if (fileName.isEmpty())
         return false;
@@ -841,7 +849,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     }
@@ -869,7 +877,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -896,7 +904,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -923,7 +931,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -950,7 +958,7 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -977,7 +985,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
             ui->action_Region_JPN_International->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1003,7 +1011,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
             ui->action_Region_JPN->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1239,8 +1247,14 @@ void MainWindow::CheckGame()
             typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
             typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
             QString selectedType = typeMap.key(FF7SaveInfo::FORMAT::PSX);
+            const QStringList typeKeys = typeMap.keys();
 
-            QString fileName = BCDialog::getSaveFileName(this, ff7->region(s), tr("Select A File to Save As"), QStringLiteral("%1/%2").arg(QDir::homePath(), ff7->region(s)), typeMap.keys().join(";;"), &selectedType);
+            QString fileName = BCDialog::getSaveFileName(this,
+                                                         ff7->region(s),
+                                                         tr("Select A File to Save As"),
+                                                         QStringLiteral("%1/%2").arg(QDir::homePath(),ff7->region(s)),
+                                                         typeKeys.join(QStringLiteral(";;")),
+                                                         &selectedType);
 
             if (fileName.isEmpty())
                 return;
@@ -1312,19 +1326,19 @@ void MainWindow::othersUpdate()
     updateStolenMateria();
 
     //SnowBoard Mini Game Data.
-    ui->sbSnowBegMin->setValue(ff7->snowboardTime(s, 0).mid(0, 2).toInt());
-    ui->sbSnowBegSec->setValue(ff7->snowboardTime(s, 0).mid(2, 2).toInt());
-    ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s, 0).mid(4, 3).toInt());
+    ui->sbSnowBegMin->setValue(ff7->snowboardTime(s, 0).midRef(0, 2).toInt());
+    ui->sbSnowBegSec->setValue(ff7->snowboardTime(s, 0).midRef(2, 2).toInt());
+    ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s, 0).midRef(4, 3).toInt());
     ui->sbSnowBegScore->setValue(ff7->snowboardScore(s, 0));
 
-    ui->sbSnowExpMin->setValue(ff7->snowboardTime(s, 1).mid(0, 2).toInt());
-    ui->sbSnowExpSec->setValue(ff7->snowboardTime(s, 1).mid(2, 2).toInt());
-    ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s, 1).mid(4, 3).toInt());
+    ui->sbSnowExpMin->setValue(ff7->snowboardTime(s, 1).midRef(0, 2).toInt());
+    ui->sbSnowExpSec->setValue(ff7->snowboardTime(s, 1).midRef(2, 2).toInt());
+    ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s, 1).midRef(4, 3).toInt());
     ui->sbSnowExpScore->setValue(ff7->snowboardScore(s, 1));
 
-    ui->sbSnowCrazyMin->setValue(ff7->snowboardTime(s, 2).mid(0, 2).toInt());
-    ui->sbSnowCrazySec->setValue(ff7->snowboardTime(s, 2).mid(2, 2).toInt());
-    ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s, 2).mid(4, 3).toInt());
+    ui->sbSnowCrazyMin->setValue(ff7->snowboardTime(s, 2).midRef(0, 2).toInt());
+    ui->sbSnowCrazySec->setValue(ff7->snowboardTime(s, 2).midRef(2, 2).toInt());
+    ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s, 2).midRef(4, 3).toInt());
     ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s, 2));
 
     ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
@@ -3941,7 +3955,7 @@ void MainWindow::on_testDataTabWidget_currentChanged(int index)
         ui->sb_saveZ->setValue(ff7->craterSavePointZ(s));
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-        ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+        ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
         if (!FF7SaveInfo::instance()->internalPC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         load = false;

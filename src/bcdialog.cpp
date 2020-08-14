@@ -73,7 +73,8 @@ QString BCDialog::getOpenFileName(QWidget  *parent, const QString &title, const 
     int dialogHeight = int (mainRect.height() * 0.80);
     int fmw = dialog.fontMetrics().height();
     QSize iconSize = QSize(fmw, fmw);
-    for(QAbstractButton * btn: dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively))
+    const QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
+    for(QAbstractButton * btn: buttons)
         btn->setIconSize(iconSize);
     dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
@@ -81,12 +82,13 @@ QString BCDialog::getOpenFileName(QWidget  *parent, const QString &title, const 
     if (!fileName.isEmpty())
         dialog.selectFile(fileName);
     QList<QUrl> sideBarUrls;
-    for(const QString &url : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
+    const QStringList SideBarUrls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    for(const QString &url : SideBarUrls)
         sideBarUrls.append(QUrl::fromLocalFile(url));
     dialog.setSidebarUrls(sideBarUrls);
 
     if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().first();
+        return dialog.selectedFiles().at(0);
     return QString();
 }
 
@@ -98,7 +100,8 @@ QString BCDialog::getExistingDirectory(QWidget *parent, const QString &title, co
     QFileDialog dialog(parent, title, path.isEmpty() ? QDir::homePath() : path, initSelection);
     int fmw = dialog.fontMetrics().height();
     QSize iconSize = QSize(fmw, fmw);
-    for(QAbstractButton * btn: dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively))
+    QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
+    for(QAbstractButton * btn: buttons)
         btn->setIconSize(iconSize);
     dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog.setFileMode(QFileDialog::Directory);
@@ -108,16 +111,17 @@ QString BCDialog::getExistingDirectory(QWidget *parent, const QString &title, co
         dialog.selectFile(fileName);
     dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
     QList<QUrl> sideBarUrls;
-    for(const QString &url : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
+    const QStringList URLS = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    for(const QString &url : URLS)
         sideBarUrls.append(QUrl::fromLocalFile(url));
     dialog.setSidebarUrls(sideBarUrls);
 
     if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().first();
+        return dialog.selectedFiles().at(0);
     return QString();
 }
 
-QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString * chosenType, const QString &initSelection)
+QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString* chosenType, const QString &initSelection)
 {
     QRect mainRect = readGeometry();
     int dialogWidth = int(mainRect.width() * 0.80);
@@ -131,7 +135,8 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     if (!fileName.isEmpty())
         dialog.selectFile(fileName);
     QList<QUrl> sideBarUrls;
-    for(const QString &url : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
+    const QStringList URLS = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    for(const QString &url : URLS)
         sideBarUrls.append(QUrl::fromLocalFile(url));
     dialog.setSidebarUrls(sideBarUrls);
 
@@ -180,7 +185,7 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     if(dialog.exec() == QFileDialog::Accepted) {
         if (!nameFilters.contains(QStringLiteral(".char")))
             chosenType->replace(chosenType->mid(0), dialog.selectedNameFilter());
-        return dialog.selectedFiles().first();
+        return dialog.selectedFiles().at(0);
     }
     return QString();
 }
@@ -225,7 +230,8 @@ void BCDialog::editSideBarPaths(QWidget *parent)
     mainLayout->addLayout(&btnLayout);
     mainLayout->addWidget(&btnBox);
     dialog.setLayout(mainLayout);
-    for (QAbstractButton *btn : dialog.findChildren<QAbstractButton *>(QString(),Qt::FindChildrenRecursively))
+    const QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton *>(QString(),Qt::FindChildrenRecursively);
+    for (QAbstractButton *btn : buttons)
         btn->setIconSize(iconSize);
 
     QObject::connect(&btnBox, &QDialogButtonBox::clicked, [&btnBox, &listWidget, &dialog](QAbstractButton *button){
@@ -247,8 +253,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
                 listWidget.addItem(BCSettings::instance()->value(SETTINGS::STATFOLDER).toString());
         } else if (button == btnBox.button(QDialogButtonBox::Reset)) {
             listWidget.clear();
-            for (const QString &string : BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList())
-                listWidget.addItem(string);
+            listWidget.addItems(BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList());
         }
     });
 

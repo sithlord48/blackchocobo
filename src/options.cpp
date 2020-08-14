@@ -18,6 +18,7 @@
 #include <QStyle>
 #include <QTranslator>
 #include <QUrl>
+
 #include "options.h"
 #include "bcdialog.h"
 #include "bcsettings.h"
@@ -27,15 +28,17 @@
 Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)
 {
-    connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
     ui->setupUi(this);
+    connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
+    initConnections();
     int fmh = fontMetrics().height();
     QSize iconSize(fmh, fmh);
     ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setToolTip(tr("Reset values to defaults"));
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
-    for (QAbstractButton *btn : ui->buttonBox->buttons())
+    const QList<QAbstractButton*> buttons = ui->buttonBox->buttons();
+    for (QAbstractButton *btn : buttons)
          btn->setIconSize(iconSize);
     ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
@@ -168,64 +171,68 @@ void Options::restoreDefaultSettings()
     ui->btnEditSideBarItems->setVisible(true);
 }
 
-void Options::on_btn_set_save_pc_clicked()
+void Options::initConnections()
+{
+    connect(ui->btn_set_char_stat_folder, &QPushButton::clicked, this, &Options::btn_set_char_stat_folder_clicked);
+    connect(ui->btn_set_default_save, &QPushButton::clicked, this, &Options::btn_set_default_save_clicked);
+    connect(ui->btn_set_load_path, &QPushButton::clicked, this, &Options::btn_set_load_path_clicked);
+    connect(ui->btn_set_save_emu, &QPushButton::clicked, this, &Options::btn_set_save_emu_clicked);
+    connect(ui->btn_set_save_pc, &QPushButton::clicked, this, &Options::btn_set_save_pc_clicked);
+    connect(ui->cbNativeDialogs, &QCheckBox::toggled, this, &Options::cbNativeDialogs_clicked);
+    connect(ui->comboColorScheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &Options::comboColorScheme_currentIndexChanged);
+    connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setVisible);
+
+    connect(ui->btnEditSideBarItems, &QPushButton::clicked, this, [this]{
+        BCDialog::editSideBarPaths(this);
+    });
+
+    connect(ui->comboLanguage, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]{
+        emit requestLanguageChange(ui->comboLanguage->currentData());
+    });
+}
+
+void Options::btn_set_save_pc_clicked()
 {
     QString temp = BCDialog::getExistingDirectory(this, tr("Select A Directory To Save FF7 PC Saves"), ui->line_save_pc->text(), ui->line_save_pc->text());
     if (!temp.isEmpty())
         ui->line_save_pc->setText(temp);
 }
 
-void Options::on_btn_set_save_emu_clicked()
+void Options::btn_set_save_emu_clicked()
 {
     QString temp = BCDialog::getExistingDirectory(this, tr("Select A Directory To Save mcd/mcr saves"), ui->line_save_emu->text(), ui->line_save_emu->text());
     if (!temp.isEmpty())
         ui->line_save_emu->setText(temp);
 }
 
-void Options::on_btn_set_load_path_clicked()
+void Options::btn_set_load_path_clicked()
 {
     QString temp = BCDialog::getExistingDirectory(this, tr("Select A Directory To Load FF7 PC Saves From"), ui->line_load_path->text(), ui->line_load_path->text());
     if (!temp.isEmpty())
         ui->line_load_path->setText(temp);
 }
 
-void Options::on_btn_set_default_save_clicked()
+void Options::btn_set_default_save_clicked()
 {
     QString temp = BCDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString()).fileName());
     if(!temp.isEmpty())
         ui->line_default_save->setText(temp);
 }
 
-void Options::on_btn_set_char_stat_folder_clicked()
+void Options::btn_set_char_stat_folder_clicked()
 {
     QString temp = BCDialog::getExistingDirectory(this, tr("Select A Location To Save Character Stat Files"), ui->line_char_stat_folder->text(), ui->line_char_stat_folder->text());
     if (!temp.isNull())
         ui->line_char_stat_folder->setText(temp);
 }
 
-void Options::on_cb_override_def_save_toggled(bool checked)
-{
-    ui->defaultSaveLayout->setVisible(checked);
-}
-
-void Options::on_comboLanguage_currentIndexChanged(const QString &arg1)
-{
-    Q_UNUSED(arg1)
-    emit requestLanguageChange(ui->comboLanguage->currentData());
-}
-
-void Options::on_cbNativeDialogs_clicked(bool checked)
+void Options::cbNativeDialogs_clicked(bool checked)
 {
     ui->btnEditSideBarItems->setVisible(!checked);
     emit requestChangeNativeDialog(checked);
 }
 
-void Options::on_btnEditSideBarItems_clicked()
-{
-    BCDialog::editSideBarPaths(this);
-}
-
-void Options::on_comboColorScheme_currentIndexChanged(int index)
+void Options::comboColorScheme_currentIndexChanged(int index)
 {
     BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, index);
     qApp->setPalette(BCSettings::instance()->paletteForSetting());

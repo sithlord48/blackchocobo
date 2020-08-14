@@ -73,7 +73,8 @@ void BCSettings::initSettings()
 
 void BCSettings::cleanSettings()
 {
-    for(const QString &key : settings->allKeys()) {
+    const QStringList keys = settings->allKeys();
+    for(const QString &key : keys) {
         if (!validSettingsNames.contains(key))
             settings->remove(key);
         if (settings->value(key).toString().isEmpty() && !settings->value(key).isValid())
