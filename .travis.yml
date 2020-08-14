@@ -48,10 +48,9 @@ script:
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
     qmake Black_Chocobo.pro;
-    make -j2;
+    make -j 4;
     make INSTALL_ROOT=appdir install; find appdir/;
-    mv appdir/usr/share/blackchocobo/lang appdir/usr/bin/lang;
-    rm -rf appdir/usr/share/blackchocobo appdir/usr/share/menu;
+    rm -rf appdir/usr/share/menu;
     wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage";
     chmod a+x linuxdeployqt*.AppImage;
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
@@ -61,7 +60,7 @@ script:
     export QTDIR="/usr/local/opt/qt5";
     export PATH="$QTDIR/bin:$PATH";
     qmake Black_Chocobo.pro;
-    make -j2;
+    make -j 4;
     mkdir -p Black_Chocobo.app/Contents/MacOS/lang;
     mv lang/*.qm Black_Chocobo.app/Contents/MacOS/lang/;
     macdeployqt Black_Chocobo.app/ -dmg;

@@ -45,17 +45,11 @@ void BCSettings::initSettings()
     else
         settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
 #endif //STATIC
-#ifdef Q_OS_UNIX
-#ifndef Q_OS_MAC
-    //check the lang path and if running from /usr/bin (and Unix) then usr copies in /usr/share/blackchocobo
-    if (QCoreApplication::applicationDirPath().startsWith("/usr/bin"))
-        settings->setValue(SETTINGS::LANGPATH, QStringLiteral("/usr/share/blackchocobo"));
-    else
+    if(QDir(QStringLiteral("%1/lang").arg(QCoreApplication::applicationDirPath())).exists())
         settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
-#endif
-#else
-    settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
-#endif
+    else
+        settings->setValue(SETTINGS::LANGPATH, QStringLiteral("../share/blackchocobo"));
+
     if (settings->value(SETTINGS::SIDEBARURLS).isNull()) {
         QStringList defaultBarUrls;
         defaultBarUrls.append(QDir::rootPath());
