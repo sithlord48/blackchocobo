@@ -37,15 +37,19 @@ int main(int argc, char *argv[])
     QVersionNumber version(1, 10, 3);
 
     if(argc >1) {
-        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h")
+        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h") {
             printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");
-        else if(QString(argv[1]) == "--version")
+            return 0;
+        }
+
+        if(QString(argv[1]) == "--version") {
             printf("Black Chocobo Version:%s \n",version.toString().toLocal8Bit().constData());
-        return 0;
+            return 0;
+        }
     }
-    //Start application init.
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
+    //Start application init.
 #ifndef Q_OS_LINUX
     a.setStyle(QStyleFactory::create("Fusion"));
 #endif
@@ -56,8 +60,8 @@ int main(int argc, char *argv[])
 
     QRandomGenerator(quint32(QTime::currentTime().msec()));
     MainWindow w;
-    if(argc ==2)
-        w.loadFileFull(QString(argv[1]), 0);// if command is run w/ a filename after it , load that file.
+    if(argc == 2)
+        w.loadFileFull(QString(argv[1]), 0);
     w.show();
     return a.exec();
 }
