@@ -53,8 +53,8 @@ Section "Black Chocobo(Required)"
   CreateShortCut "$SMPROGRAMS\Black_Chocobo\Black_Chocobo.lnk" "$INSTDIR\Black_Chocobo.exe" "" "$INSTDIR\Black_Chocobo.exe" 0  
   CreateShortCut "$SMPROGRAMS\Black_Chocobo\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0 
   ;set open with
-  ${registerExtension} "$INSTDIR\Black_Chocobo.exe" ".ff7" "FF7 Savegame"
-
+  ${registerExtension} "$INSTDIR\Black_Chocobo.exe" ".ff7" "FF7 PC Savegame"
+  ${registerExtension} "$INSTDIR\Black_Chocobo.exe" "ff7slot" "FF7 Switch Savegame"
   ; Write the installation path into the registry
   WriteRegStr HKLM SOFTWARE\Black_Chocobo "Install_Dir" "$INSTDIR"
   
