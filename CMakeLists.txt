@@ -143,6 +143,8 @@ if(UNIX AND NOT APPLE)
     install( FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo DESTINATION share/menu/)
 elseif(WIN32)
     install(FILES ${TRS} DESTINATION bin)
+    configure_file(${PROJECT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${PROJECT_BINARY_DIR}/blackchocobo.rc}
+    target_sources(blackchocobo PRIVATE ${PROJECT_BINARY_DIR}/blackchocobo.rc @ONLY)
 endif()
 
 #install stuff
