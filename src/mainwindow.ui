@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Black Chocobo</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="images.qrc">
-    <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
-  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_24">
     <property name="leftMargin">

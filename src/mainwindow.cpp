@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent)
     , chocoboManager(new ChocoboManager)
 {
 //Initilze Remaining Data
+    setWindowIcon(QIcon(":/icon/bchoco"));
     buffer_materia.id = FF7Materia::EmptyId;
     for (int i = 0; i < 3; i++)
         buffer_materia.ap[i] = 0xFF;   //empty buffer incase
