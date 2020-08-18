@@ -1,5 +1,5 @@
 version: '{branch}.{build}'
-image: Visual Studio 2017
+image: Visual Studio 2019
 configuration: release
 platform: x86
 init:
@@ -14,59 +14,38 @@ environment:
     RUNTIME_LINKAGE: static
     ICU_VERSION: 57.1
     ICU_LINKAGE: static
-    QTDIR: C:\Qt\5.13.2\mingw73_32
-    QT_VERSION: 5.13.2
+    QTDIR: C:\Qt\5.15\msvc2019
+    QT_VERSION: 5.15.0
     QT_LINKAGE: static
 install:
 - cmd: >-
     %QTDIR%\bin\qtenv2.bat
 
-    qmake -v
-
     set QTDIR
 
     if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
 
-    if %QTDIR:msvc=%==%QTDIR% g++ --version
-
-    set make=mingw32-make.exe
-
-    if %QTDIR:msvc=%==%QTDIR% %make% --version
-
-    if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VSVER%\VC\vcvarsall.bat" %ARCH%
-
-    if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
-
-    if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+    call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x86
 
     set QTBIN=%QTDIR%\bin
 build_script:
 - cmd: >-
+
     cd C:\projects\blackchocobo
 
-    qmake Black_Chocobo.pro
+    cmake -G Ninja -DCMAKE_INSTALL_PREFIX=C:\projects\blackchocobo\Black_Chocobo-continuous-win32\ --config=Release CMakeLists.txt
 
-    mkdir Black_Chocobo-continuous-win32
+    ninja install
 
-    mkdir Black_Chocobo-continuous-win32\lang
+    windeployqt --no-compiler-runtime Black_Chocobo-continuous-win32\bin\Black_Chocobo.exe
 
-    move lang\*.qm Black_Chocobo-continuous-win32\lang\
-
-    move COPYING.TXT Black_Chocobo-continuous-win32\
-
-    mingw32-make
-
-    move release\Black_Chocobo.exe Black_Chocobo-continuous-win32\
-
-    windeployqt --compiler-runtime Black_Chocobo-continuous-win32\Black_Chocobo.exe
-
-    echo "" > Black_Chocobo-continuous-win32\settings.ini
+    echo "" > Black_Chocobo-continuous-win32\bin\settings.ini
 
     dir Black_Chocobo-continuous-win32
 
     7z a -tzip Black_Chocobo-continuous-win32.zip Black_Chocobo-continuous-win32 -r
 
-    del /f Black_Chocobo-continuous-win32\settings.ini
+    del /f Black_Chocobo-continuous-win32\bin\settings.ini
 
     makensis.exe /X"SetCompressor /FINAL lzma" deploy\bchoco.nsi
 

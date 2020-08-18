@@ -34,8 +34,6 @@ Q_IMPORT_PLUGIN(qkrcodecs)
 
 int main(int argc, char *argv[])
 {
-    QVersionNumber version(1, 10, 3);
-
     if(argc >1) {
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h") {
             printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");
@@ -43,7 +41,7 @@ int main(int argc, char *argv[])
         }
 
         if(QString(argv[1]) == "--version") {
-            printf("Black Chocobo Version:%s \n",version.toString().toLocal8Bit().constData());
+            printf("Black Chocobo Version:%s \n", BC_VERSION);
             return 0;
         }
     }
@@ -56,7 +54,7 @@ int main(int argc, char *argv[])
     a.setPalette(BCSettings::instance()->paletteForSetting());
     a.setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     a.setApplicationName("Black Chocobo");
-    a.setApplicationVersion(version.toString());
+    a.setApplicationVersion(BC_VERSION);
 
     QRandomGenerator(quint32(QTime::currentTime().msec()));
     MainWindow w;

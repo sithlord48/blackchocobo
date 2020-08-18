@@ -20,13 +20,14 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt515tools qt515base g++-8 zsync; 
+    sudo apt-get -y install build-essential qt5-default qt515tools qt515base g++-8 zsync;
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
 #MAC OS
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
     brew upgrade qt5;
+    brew upgrade cmake;
     chmod -R 755 /usr/local/opt/qt5/*;
     fi
 
@@ -34,9 +35,9 @@ script:
 - export VERSION=continuous;
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
-    qmake Black_Chocobo.pro;
+    cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX=/usr;
     make -j 4;
-    make INSTALL_ROOT=appdir install; find appdir/;
+    make DESTDIR=appdir install; find appdir/;
     wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage";
     chmod a+x linuxdeployqt*.AppImage;
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
@@ -45,10 +46,8 @@ script:
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
     export QTDIR="/usr/local/opt/qt5";
     export PATH="$QTDIR/bin:$PATH";
-    qmake Black_Chocobo.pro;
+    cmake CMakeLists.txt;
     make -j 4;
-    mkdir -p Black_Chocobo.app/Contents/MacOS/lang;
-    mv lang/*.qm Black_Chocobo.app/Contents/MacOS/lang/;
     macdeployqt Black_Chocobo.app/ -dmg;
     fi
 

@@ -18,4 +18,8 @@ A Save Editor for Final Fantasy 7
  - Slot Management Copy/Paste and Import slots to Saves
  - And more
 
+## Build Requirements
+ - [Qt](https://www.qt.io) (5.12.0+)
+ - [CMake](https://cmake.org) (3.8+)
+
 Black Chocobo is built using parts of [ff7tk](https://github.com/sithlord48/ff7tk)
