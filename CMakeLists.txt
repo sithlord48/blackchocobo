@@ -135,15 +135,15 @@ if(UNIX AND NOT APPLE)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc @ONLY)
-    add_executable (Black_Chocobo ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
+    add_executable (Black_Chocobo WIN32 ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
     if(CMAKE_COMPILER_IS_GNUCC)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
     endif()
     target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick)
-    install(TARGETS Black_Chocobo RUNTIME DESTINATION bin)
-    install(FILES ${TRS} DESTINATION share/blackchocobo/lang/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/GPLV3.txt DESTINATION / RENAME COPYING.txt)
+    install(TARGETS Black_Chocobo RUNTIME DESTINATION .)
+    install(FILES ${TRS} DESTINATION lang)
+    install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
 elseif(APPLE)
     set(MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo")
     set(MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo")
@@ -160,72 +160,65 @@ elseif(APPLE)
     add_executable(Black_Chocobo MACOSX_BUNDLE ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${APPICON})
     target_compile_options(Black_Chocobo PRIVATE -stdlib=libc++)
     target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick)
-    install(TARGETS Black_Chocobo BUNDLE DESTINATION bin)
+    install(TARGETS Black_Chocobo BUNDLE DESTINATION .)
 endif()
 
-#install stuff
-INCLUDE (InstallRequiredSystemLibraries)
+##CPACK
+set(CPACK_SOURCE_IGNORE_FILES build/* .git/* .directory CMakeLists.txt.user *.yml)
+set(CPACK_STRIP_FILES blackchocobo)
+get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
+get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
 
-SET(CPACK_SOURCE_IGNORE_FILES build/*)
-
-SET(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/COPYING.txt")
-SET(CPACK_PACKAGE_NAME ${CMAKE_PROJECT_NAME})
-SET(CPACK_PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY ${CMAKE_PROJECT_DESCRIPTION})
-
-if (CMAKE_SYSTEM_NAME MATCHES "Linux")
-    EXECUTE_PROCESS( COMMAND uname -m COMMAND tr -d '\n' OUTPUT_VARIABLE ARCHITECTURE )
-    if(GIT_FOUND)
-        SET(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}_${GIT_VERSION}-${CMAKE_SYSTEM_NAME}_${ARCHITECTURE}")
-    else()
-        SET(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}-${CMAKE_SYSTEM_NAME}_${ARCHITECTURE}")
-    endif(GIT_FOUND)
-    
-endif()
-
-SET(CPACK_STRIP_FILES blackchocobo)
+set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/COPYING.txt")
+set(CPACK_PACKAGE_NAME "Black_Chocobo")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/sithlord48/blackchocobo")
+set(CPACK_PACKAGE_VERSION ${BC_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY ${CMAKE_PROJECT_DESCRIPTION})
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
     #install generic files needed for linux package
-    SET(CPACK_SOURCE_GENERATOR "TGZ;TZ")
-    SET(CPACK_GENERATOR "STGZ;TGZ")
-    #detect Distro Family DEB , RPM 
-    if(EXISTS "/etc/debian_release")
-        set(DistroType DEB)
-    elseif(EXISTS "/etc/fedora-release")
-        set(DistroType RPM)
-    endif()
-    message(STATUS "Distro Detected: ${DistroType} ")
-
-    if(DistroType MATCHES "DEB")
-      # Setup DEB package properties
-      MESSAGE(STATUS "DEB ADDED TO GENERATION LIST")
-      SET(CPACK_GENERATOR "${CPACK_GENERATOR};DEB")
-      EXECUTE_PROCESS(COMMAND dpkg --print-architecture OUTPUT_VARIABLE CPACK_DEBIAN_PACKAGE_ARCHITECTURE OUTPUT_STRIP_TRAILING_WHITESPACE)
-      MESSAGE (STATUS "Architecture: ${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
-      SET(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}-${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
-    endif()
-    if(EXISTS "/usr/bin/rpmbuild")
-        MESSAGE(STATUS "RPM ADDED TO GENERATION LIST")
-        SET(CPACK_GENERATOR "${CPACK_GENERATOR};RPM")
-    endif()
-      SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Chris Rizzitello <sithlord48@gmail.com>")
-    #Find out what architecture are we running on and set the package architecture 
-      #set the name to be debian package like.
-      SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}-src")
-      SET(CPACK_DEBIAN_PACKAGE_SECTION games)
-      SET(CPACK_DEBIAN_PACKAGE_PRIORITY extra)
-      SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libqtcore5,libqtgui5,libqt5-xml,libqt5widgets")
-
-      SET(CPACK_RPM_PACKAGE_SUMMARY CPACK_PACKAGE_DESCRIPTION_SUMMARY)
-      SET(CPACK_RPM_PACKAGE_NAME CPACK_PACKAGE_NAME)
-      SET(CPACK_RPM_PACKAGE_VERSION CPACK_PACKAGE_VERSION)
-      SET(CPACK_RPM_PACKAGE_RELEASE 1)
-      SET(CPACK_RPM_PACKAGE_LICENSE "GPLv3+")
-      SET(CPACK_RPM_PACKAGE_GROUP games)
-      SET(CPACK_RPM_PACKAGE_VENDOR)
-      SET(CPACK_RPM_PACKAGE_DESCRIPTION)
-      SET(CPACK_RPM_PACKAGE_REQUIRES "qt")
+    set(CPACK_GENERATOR "TXZ")
+    EXECUTE_PROCESS( COMMAND uname -m COMMAND tr -d '\n' OUTPUT_VARIABLE ARCHITECTURE)
+    set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-linux-${ARCHITECTURE}")
+elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(CPACK_PACKAGE_INSTALL_DIRECTORY "Black_Chocobo")
+    set(CPACK_NSIS_DISPLAY_NAME ${CMAKE_PACKAGE_NAME})
+    set(CPACK_NSIS_COMPRESSOR lzma)
+    set(CPACK_NSIS_MUI_ICON "${PROJECT_SOURCE_DIR}/deploy/bchoco_icon_win.ico")
+    set(CPACK_NSIS_INSTALLED_ICON_NAME Black_Chocobo.exe)
+    set(CPACK_NSIS_MENU_LINKS "Black_Chocobo.exe" "Black Chocobo")
+    set(CPACK_NSIS_EXTRA_PREINSTALL_COMMANDS "!include \\\"${PROJECT_SOURCE_DIR}\\\\deploy\\\\FileAssociation.nsh\\\"")
+    set(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "\\\${RegisterExtension} '$INSTDIR\\\\Black_Chocobo.exe' '.ff7' 'FF7 PC Save File'")
+    set(CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS 
+        "\\\${UnRegisterExtension} '.ff7' 'FF7 PC Save File'"
+        "RMDir /r '$INSTDIR'"
+    )
+    set(CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION .)
+    set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
+    include(InstallRequiredSystemLibraries)
+    find_program(WINDEPLOYQT windeployqt HINTS "${_qt_bin_dir}")
+    add_custom_command(
+        TARGET Black_Chocobo POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
+        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import --no-translations --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:Black_Chocobo>
+    )
+    install(
+        DIRECTORY ${CMAKE_BINARY_DIR}/qtDeploy/
+        DESTINATION .
+        FILES_MATCHING PATTERN "*.*"
+    )
+    set(CPACK_GENERATOR "ZIP;NSIS")
+elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    find_program(MACDEPLOYQT macdeployqt HINTS "${_qt_bin_dir}")
+    add_custom_command(
+        TARGET Black_Chocobo POST_BUILD
+        COMMAND ${MACDEPLOYQT} Black_Chocobo.app
+    )
+    set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-macos")
+    set(CPACK_DMG_BACKGROUND_IMAGE "${PROJECT_SOURCE_DIR}/deploy/dmg_background.png")
+    set(CPACK_DMG_DS_STORE "${PROJECT_SOURCE_DIR}/deploy/dmg_ds_store")
+    set(CPACK_DMG_VOLUME_NAME "Black_Chocobo")
+    set(CPACK_GENERATOR "DragNDrop")
 endif()
 
 INCLUDE (CPack)
