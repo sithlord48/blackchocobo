@@ -27,14 +27,13 @@ class MenuListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    /** \enum Box
+    /** \enum BOX
      *  \brief Acces to Visible and Locked boxes without knowing their index
      */
     enum BOX {
         MENUVISIBLE = 1,
         MENULOCKED = 2
     };
-    Q_ENUM(BOX)
     explicit MenuListWidget(QWidget *parent = nullptr);
 protected:
     void changeEvent(QEvent *e);

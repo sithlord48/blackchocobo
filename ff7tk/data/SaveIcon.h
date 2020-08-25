@@ -56,15 +56,9 @@ public:
 
     /*!
      * \brief Save the icon.
-     * \return Icon Data
+     * \return Icon Data as QByteArray
      */
     const QByteArray &save();
-
-    /** \brief incase you wish to write the icon to a file
-     * \return Icon As QByteArray
-     * \sa save()
-    */
-    [[deprecated]] QByteArray sauver();
 
     /** \brief pixmap of your icon
      * \param chocobo_world_icon is this an icon for chocoboworld?
@@ -73,11 +67,20 @@ public:
     QPixmap icon(bool chocobo_world_icon = false);
 signals:
     void nextIcon(QPixmap); /**< \brief Emit Signal: Time to update your QPixmap. connect to object your displaying on to tell it time for a new icon.*/
-private slots:
-    void nextFrame(); /**< \brief get get next icon if more then one frame */
 private:
-    QByteArray data; /**< \brief hold our icon data */
-    quint8 nbFrames;/**< \brief number of frames */
-    quint8 curFrame = 0; /**< \brief current Frame*/
-    static QTimer timer; /**< \brief frame change timer.*/
+
+    /** \brief Helper function for chocobo World Icons.
+     * \return chocobo World Icon as A QPixmap
+    */
+    QPixmap chocoWorldIcon();
+
+    /** \brief Helper function for psx SaveIcons
+     * \return psx SaveIcon as A QPixmap
+    */
+    void nextFrame(); /**< \brief get get next icon if more then one frame */
+    QPixmap psxIcon();
+    QByteArray m_data; /**< \brief hold our icon data */
+    quint8 m_nbFrames;/**< \brief number of frames */
+    quint8 m_curFrame = 0; /**< \brief current Frame*/
+    static QTimer m_timer; /**< \brief frame change timer.*/
 };

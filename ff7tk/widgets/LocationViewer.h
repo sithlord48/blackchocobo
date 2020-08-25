@@ -56,18 +56,18 @@ signals:
     void fieldItemChanged(int index, bool checked);
 
 public slots:
-    void setSelected(QString);
+    void setSelected(const QString &);
     void setLocationChangesSaved(bool saveChanges);
     bool locationChangesSaved(void);
-    void setRegion(QString region);
-    void setTranslationBaseFile(QString);
+    void setRegion(const QString &region);
+    void setTranslationBaseFile(const QString &);
     void setX(int x);
     void setY(int y);
     void setT(int t);
     void setD(int d);
     void setMapId(int mapId);
     void setLocationId(int locId);
-    void setLocationString(QString);
+    void setLocationString(const QString &);
     void setHorizontalHeaderStyle(QString styleSheet);
     void setFieldItemChecked(int row, bool checked);
     void init_fieldItems(void);
@@ -82,7 +82,7 @@ private slots:
     void sbYChanged(int y);
     void sbTChanged(int t);
     void sbDChanged(int d);
-    void lineLocationNameChanged(QString);
+    void lineLocationNameChanged(const QString &);
     void setLocation(int mapId, int locId);
     void filterLocations(QString filter);
     void actionNameSearchToggled(bool checked);

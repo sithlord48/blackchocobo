@@ -33,7 +33,7 @@ struct FieldItem {
 class FF7FieldItemList : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int size READ size)
+    Q_PROPERTY(int size READ size CONSTANT)
 public:
     /*! \brief data structure to hold field item  changes
     */

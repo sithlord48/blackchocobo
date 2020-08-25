@@ -124,7 +124,7 @@ void ChocoboManager::setStablesOwned(int value)
 void ChocoboManager::connectEditor()
 {
     connect(this, &ChocoboManager::setMode, chocoboEditor, &ChocoboEditor::setAdvancedMode);
-    connect(chocoboEditor, &ChocoboEditor::nameChanged, this, [this](QString name) {
+    connect(chocoboEditor, &ChocoboEditor::nameChanged, this, [this](const QString &name) {
         if (name != chocoboName[selectedStable]) {
             chocoboName[selectedStable] = name;
             labelUpdate(selectedStable);

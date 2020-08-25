@@ -30,7 +30,7 @@ public:
     explicit MetadataCreator(QWidget *parent = nullptr, FF7Save *ff7save = nullptr);
 private slots:
     void initDisplay();
-    void accepted();
+    void onAccepted();
 
 private:
     QString getOpenFileName(QWidget  *parent = nullptr, const QString &title = QString(), const QString &path = QString(), const QString &nameFilters = QString(), const QString &initSelection = QString());

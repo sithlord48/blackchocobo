@@ -32,7 +32,7 @@ protected:
 signals:
     void itemsChanged(QList<quint16> items);
 public slots:
-    void setItems(QList<quint16> items);
+    void setItems(const QList<quint16> &items);
     void setMaximumItemQty(int maxQty);
     void setEditableItemCombo(bool);
 private slots:

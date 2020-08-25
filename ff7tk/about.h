@@ -7,7 +7,7 @@
 */
 QString ff7tk_version() {
     QString version = QStringLiteral("0.80.16");
-    if(!QString("7db8071").isEmpty())
-        version.append(QStringLiteral("-7db8071"));
+    if(!QString("b8ffe91").isEmpty())
+        version.append(QStringLiteral("-b8ffe91"));
     return version;
 }

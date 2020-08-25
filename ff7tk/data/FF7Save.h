@@ -119,13 +119,14 @@ public:
 
     /** \brief attempt to save fileName as ff7save
      *  \param fileName file that will be saved
-     *  \param slot the slot to be saved in case of single slot export.
+     *  \param s the slot to be saved in case of single slot export.
      *  \return True if Successful
     */
     bool saveFile(const QString &fileName, int s = 0);
 
     /** \brief attempt to export a file as ff7save. A convenance function to call the proper export function
     *  \param fileName file that will be saved
+    *  \param newFormat The Format to export.
     *  \param s Slot to export if exporting to a multi slot save type
     *  \return True if Successful
     *  \sa exportPC(),exportPSX(),exportPS3(),exportVMC(),exportDEX(),exportVGS(),exportVMP(),exportPGE()
@@ -252,20 +253,22 @@ public:
      */
     void importCharacter(int s, int char_num, QByteArray new_char); //import new_char to slot[s].char[char_num]
 
-    typedef QVector< QString > SubContainer; /** <\typedef QVector<QString> SubContainer \brief used to hold more xml style string in metadata signing*/
+    /** \typedef QVector<QString> SubContainer
+     * \brief used to hold more xml style string in metadata signing
+     */
+    typedef QVector< QString > SubContainer;
 
     /** \brief parse the metadata for 2012 / 2013 release
      *  \param fileName name of the file to output
-     *  \param OutPath to metadata
      *  \param UserID squaresoft id number to when signing
      *  \return True is Successful
     */
-    bool fixMetaData(QString fileName = "", QString OutPath = "", QString UserID = "");
+    bool fixMetaData(QString fileName = "", QString UserID = "");
 
     /**
      * @brief generates a signature for PS3 or VMP based on input..
-     * @param format Format you will sign
-     * @param data to generate signature for
+     * @param data: to generate signature for
+     * @param keySeed: keySeed that will be used to sign the data
      * @return new Signature for the file
      */
     QByteArray generatePsSaveSignature(QByteArray data, QByteArray keySeed);
@@ -315,7 +318,7 @@ public:
      *  \overload setSlotFF7Data(int,FF7SLOT)
      */
     bool setSlotFF7Data(int s, QByteArray data);
-    bool setSlotFF7Data(int s, FF7SLOT data);
+    bool setSlotFF7Data(int s, const FF7SLOT &data);
 
     QList<QByteArray> slotIcon(int s); /**< \brief return slots save icon. each new frame will be appended to the list.*/
 
@@ -544,7 +547,7 @@ public:
 
     /** \brief setSound mode for a slot
      *  \param s slot number (0-14)
-     *  \param new soundMode FF7Save::SOUNDMODE
+     *  \param mode: new soundMode FF7Save::SOUNDMODE
      */
     void setSoundMode(int s, int mode);
 
@@ -711,7 +714,7 @@ public:
     quint32 charNextExp(int s, int char_num);
     quint8 charMateriaId(int s, int who, int mat_num);
     qint32 charMateriaAp(int s, int who, int mat_num);
-    void setCharacter(int s, int char_num, FF7CHAR new_char);
+    void setCharacter(int s, int char_num, const FF7CHAR &new_char);
     void setCharID(int s, int char_num, qint8 new_id);
     void setCharLevel(int s, int char_num, qint8 new_level);
     void setCharStr(int s, int char_num, quint8 str);
@@ -1064,7 +1067,7 @@ private:
     QString filename;//opened file;
     //private functions
     QString md5sum(QString fileName, QString UserID);
-    QString fileblock(QString fileName);
+    QString fileblock(const QString &fileName);
     QString filetimestamp(QString fileName);
     void checksumSlots();
     quint16 ff7Checksum(int s);
@@ -1078,8 +1081,8 @@ private:
     quint16 itemEncode(quint16 id, quint8 qty);
     void vmcRegionEval(int s);
     int _blocks = 1;
-    QVector< SubContainer > parseXML(QString fileName, QString metadataPath, QString UserID);
-    QVector< SubContainer > createMetadata(QString fileName, QString UserID);
+    QVector< SubContainer > parseXML(const QString &fileName, const QString &metadataPath, const QString &UserID);
+    QVector< SubContainer > createMetadata(const QString &fileName, const QString &UserID);
 
     inline static const quint8 defaultSave[0x10F4] = {
         0xCD, 0x2A, 0x00, 0x00, 0x01, 0x00, 0xFF, 0xFF, 0x25, 0x58, 0x0D, 0x33, 0x2F, 0x2C, 0x24, 0x29,

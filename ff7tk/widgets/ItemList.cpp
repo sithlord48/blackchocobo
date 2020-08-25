@@ -152,7 +152,7 @@ void ItemList::setMaximumItemQty(int maxQty)
     itemupdate();
 }
 
-void ItemList::setItems(QList<quint16> items)
+void ItemList::setItems(const QList<quint16> &items)
 {
     itemlist = items;
 

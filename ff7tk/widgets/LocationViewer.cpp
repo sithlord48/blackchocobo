@@ -332,7 +332,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
     }
 }
 
-void LocationViewer::setSelected(QString locFilename)
+void LocationViewer::setSelected(const QString &locFilename)
 {
     locationTable->setCurrentItem(locationTable->item(-1, -1));
     for (int i = 0; i < FF7Location::instance()->size(); i++) {
@@ -415,7 +415,7 @@ void LocationViewer::setLocation(int mapId, int locId)
     init_connections();
 }
 
-void LocationViewer::lineLocationNameChanged(QString locName)
+void LocationViewer::lineLocationNameChanged(const QString &locName)
 {
     emit(locationStringChanged(locName));
 }
@@ -450,7 +450,7 @@ void LocationViewer::setLocationId(int locId)
     sbLocID->setValue(locId);
 }
 
-void LocationViewer::setLocationString(QString locString)
+void LocationViewer::setLocationString(const QString &locString)
 {
     init_disconnect();
     QString newStr = translate(locString);
@@ -473,12 +473,12 @@ void LocationViewer::setHorizontalHeaderStyle(QString styleSheet)
     locationTable->horizontalHeader()->setStyleSheet(styleSheet);
 }
 
-void LocationViewer::setRegion(QString newRegion)
+void LocationViewer::setRegion(const QString &newRegion)
 {
     region = newRegion; setLocation(sbMapID->value(), sbLocID->value());
 }
 
-void LocationViewer::setTranslationBaseFile(QString basePathName)
+void LocationViewer::setTranslationBaseFile(const QString &basePathName)
 {
     transBasePath = basePathName;
 }

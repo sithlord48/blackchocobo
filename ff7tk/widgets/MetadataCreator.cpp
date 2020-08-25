@@ -45,7 +45,7 @@ MetadataCreator::MetadataCreator(QWidget *parent, FF7Save *ff7save)
 void MetadataCreator::initDisplay(void)
 {
 
-    connect(btnBox, &QDialogButtonBox::accepted, this, &MetadataCreator::accepted);
+    connect(btnBox, &QDialogButtonBox::accepted, this, &MetadataCreator::onAccepted);
     connect(btnBox, &QDialogButtonBox::rejected, this, &MetadataCreator::close);
     
     btnBox->button(QDialogButtonBox::Ok)->setEnabled(false);
@@ -103,7 +103,7 @@ void MetadataCreator::initDisplay(void)
     setLayout(FinalLayout);
 }
 
-void MetadataCreator::accepted()
+void MetadataCreator::onAccepted()
 {
     for (int i = 0; i < 10; i++) {
         QString OutFile = QString("%1/save0%2.ff7").arg(OutPath, QString::number(i));
@@ -115,7 +115,7 @@ void MetadataCreator::accepted()
                 //If we find the file put its path in InFiles
                 InFiles.replace(i, OutFile);
             } else {
-                ff7->fixMetaData(OutFile, OutPath, UserID);
+                ff7->fixMetaData(OutFile, UserID);
                 continue;
             }//empty and not found
         }
@@ -125,7 +125,7 @@ void MetadataCreator::accepted()
             ff7->exportPC(OutFile);
         else if (!ff7->saveFile(OutFile))
                 QMessageBox::critical(this, QString(tr("File Error")), QString(tr("Failure to write the File: %1")).arg(OutFile));
-        ff7->fixMetaData(OutFile, OutPath, UserID);
+        ff7->fixMetaData(OutFile, UserID);
     }
     QString achievement(QString("%1/achievement.dat").arg(OutPath));
     QFile file(achievement);
