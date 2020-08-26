@@ -14,20 +14,46 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
-#include <QString>
+#include <QAction>
+#include <QCheckBox>
 #include <QDesktopWidget>
+#include <QDoubleSpinBox>
 #include <QDragEnterEvent>
 #include <QDropEvent>
-#include <QScrollBar>
 #include <QMessageBox>
+#include <QScrollBar>
+#include <QSpinBox>
+#include <QString>
+#include <QToolBox>
+#include <QTabWidget>
+#include <QWidget>
 
+#include "about.h"
+#include "achievementdialog.h"
+#include "bcdialog.h"
+#include "bcsettings.h"
+#include "errbox.h"
 #include "mainwindow.h"
+#include "options.h"
 #include "ui_mainwindow.h"
 #include "ff7tk/data/FF7Char.h"
 #include "ff7tk/data/FF7Item.h"
 #include "ff7tk/data/FF7Location.h"
-#include "bcdialog.h"
-#include "bcsettings.h"
+#include "ff7tk/data/FF7Save.h"
+#include "ff7tk/data/FF7Materia.h"
+#include "ff7tk/data/SaveIcon.h"
+#include "ff7tk/widgets/OptionsWidget.h"
+#include "ff7tk/widgets/MateriaEditor.h"
+#include "ff7tk/widgets/SlotSelect.h"
+#include "ff7tk/widgets/ChocoboEditor.h"
+#include "ff7tk/widgets/CharEditor.h"
+#include "ff7tk/widgets/ItemList.h"
+#include "ff7tk/widgets/MetadataCreator.h"
+#include "ff7tk/widgets/PhsListWidget.h"
+#include "ff7tk/widgets/MenuListWidget.h"
+#include "ff7tk/widgets/ChocoboManager.h"
+#include "ff7tk/widgets/LocationViewer.h"
+#include "qhexedit/qhexedit.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -62,8 +88,8 @@ MainWindow::MainWindow(QWidget *parent)
     init_style();
     loadChildWidgetSettings();
     init_connections();
-    on_actionNew_Game_triggered();
-    emit ui->btn_cloud->clicked();
+    actionNewGame_triggered();
+    btnCloud_clicked();
     ff7->setFileModified(false, 0);
 }
 
@@ -142,70 +168,70 @@ void MainWindow::initDisplay()
 
     ui->statusBar->addWidget(ui->frame_status, 1);
     ui->frame_status->setFixedHeight(fontMetrics().height() + 2);
-    ui->tbl_materia->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
-    ui->tbl_unknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
-    ui->tbl_unknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
-    ui->tbl_unknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
-    ui->tbl_unknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
-    ui->tbl_unknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblMateria->setIconSize(QSize(fontMetrics().height(), fontMetrics().height()));
+    ui->tblUnknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
+    ui->tblUnknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblUnknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblUnknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
+    ui->tblUnknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
 
-    ui->tbl_compare_unknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
-    ui->tbl_compare_unknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
-    ui->tbl_compare_unknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
-    ui->tbl_compare_unknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
-    ui->tbl_compare_unknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblCompareUnknown->setColumnWidth(0, fontMetrics().horizontalAdvance(QStringLiteral("WW")));
+    ui->tblCompareUnknown->setColumnWidth(1, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblCompareUnknown->setColumnWidth(2, fontMetrics().horizontalAdvance(QStringLiteral("W")));
+    ui->tblCompareUnknown->setColumnWidth(3, fontMetrics().horizontalAdvance(QStringLiteral("WWWWWW")));
+    ui->tblCompareUnknown->setColumnWidth(4, fontMetrics().horizontalAdvance(QStringLiteral("W")));
 
     int width = 0;
     for(int i = 0; i < 5; i++)
-        width += ui->tbl_unknown->columnWidth(i);
+        width += ui->tblUnknown->columnWidth(i);
 
-    width +=ui->tbl_unknown->verticalScrollBar()->width();
+    width +=ui->tblUnknown->verticalScrollBar()->width();
     ui->table_unknown->setFixedWidth(width);
-    ui->tbl_unknown->setFixedWidth(width);
+    ui->tblUnknown->setFixedWidth(width);
 
-    width -=ui->tbl_unknown->verticalScrollBar()->width();
+    width -=ui->tblUnknown->verticalScrollBar()->width();
     ui->compare_table->setFixedWidth(width);
-    ui->tbl_compare_unknown->setFixedWidth(width);
+    ui->tblCompareUnknown->setFixedWidth(width);
 }
 
 void MainWindow::setScale(double scale)
 {
     scale = std::max(scale, 0.5);
     setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
-    ui->btn_cloud->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_cloud->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_barret->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_barret->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_tifa->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_tifa->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_aeris->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_aeris->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_red->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_red->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_yuffie->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_yuffie->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_cait->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_cait->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_vincent->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_vincent->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btn_cid->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btn_cid->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->combo_party1->setFixedHeight(int(32 * scale));
-    ui->combo_party1->setIconSize(QSize(int(32 * scale), int(32 * scale)));
-    ui->combo_party2->setFixedHeight(int(32 * scale));
-    ui->combo_party2->setIconSize(QSize(int(32 * scale), int(32 * scale)));
-    ui->combo_party3->setFixedHeight(int(32 * scale));
-    ui->combo_party3->setIconSize(QSize(int(32 * scale), int(32 * scale)));
+    ui->btnCloud->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnCloud->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnBarret->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnBarret->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnTifa->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnTifa->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnAeris->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnAeris->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnRed->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnRed->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnYuffie->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnYuffie->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnCait->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnCait->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnVincent->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnVincent->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->btnCid->setFixedSize(int(98 * scale), int(110 * scale));
+    ui->btnCid->setIconSize(QSize(int(92 * scale), int(104 * scale)));
+    ui->comboParty1->setFixedHeight(int(32 * scale));
+    ui->comboParty1->setIconSize(QSize(int(32 * scale), int(32 * scale)));
+    ui->comboParty2->setFixedHeight(int(32 * scale));
+    ui->comboParty2->setIconSize(QSize(int(32 * scale), int(32 * scale)));
+    ui->comboParty3->setFixedHeight(int(32 * scale));
+    ui->comboParty3->setIconSize(QSize(int(32 * scale), int(32 * scale)));
     ui->groupBox_11->setFixedWidth(int(375 * scale));
     ui->groupBox_18->setFixedWidth(int(273 * scale)); //materia table group.
     ui->scrollArea->setFixedWidth(int(310 * scale));
     ui->scrollAreaWidgetContents->adjustSize();
     ui->world_map_frame->setFixedSize(int(446 * scale), int(381 * scale));
-    ui->world_map_view->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->world_map_view->setGeometry(int(5 * scale), int(32 * scale), int(432 * scale), int(336 * scale));
-    ui->combo_map_controls->setFixedHeight(32);
-    ui->slide_world_x->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
-    ui->slide_world_y->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
+    ui->worldMapView->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->worldMapView->setGeometry(int(5 * scale), int(32 * scale), int(432 * scale), int(336 * scale));
+    ui->comboMapControls->setFixedHeight(32);
+    ui->slideWorldX->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
+    ui->slideWorldY->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
     ui->lbl_love_aeris->setFixedSize(int(50 * scale), int(68 * scale));
     ui->lbl_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_barret->setFixedSize(int(50 * scale), int(68 * scale));
@@ -214,13 +240,13 @@ void MainWindow::setScale(double scale)
     ui->lbl_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_love_yuffie->setFixedSize(int(50 * scale), int(68 * scale));
     ui->lbl_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_aeris->setFixedSize(ui->sb_b_love_aeris->width(), int(74 * scale));
+    ui->lbl_battle_love_aeris->setFixedSize(ui->sbBloveAeris->width(), int(74 * scale));
     ui->lbl_battle_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_barret->setFixedSize(ui->sb_b_love_barret->width(), int(74 * scale));
+    ui->lbl_battle_love_barret->setFixedSize(ui->sbBloveBarret->width(), int(74 * scale));
     ui->lbl_battle_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_tifa->setFixedSize(ui->sb_b_love_tifa->width(), int(74 * scale));
+    ui->lbl_battle_love_tifa->setFixedSize(ui->sbBloveTifa->width(), int(74 * scale));
     ui->lbl_battle_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_yuffie->setFixedSize(ui->sb_b_love_yuffie->width(), int(74 * scale));
+    ui->lbl_battle_love_yuffie->setFixedSize(ui->sbBloveYuffie->width(), int(74 * scale));
     ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     materia_editor->setStarsSize(int(48 * scale));
     guirefresh(0);
@@ -229,37 +255,37 @@ void MainWindow::setScale(double scale)
 void MainWindow::populateCombos()
 {
 //Party Combos
-    if (ui->combo_party1->count() != 0) {
+    if (ui->comboParty1->count() != 0) {
         for (int i = 0; i < 11; i++) {
-            ui->combo_party1->setItemText(i, FF7Char::instance()->defaultName(i));
-            ui->combo_party2->setItemText(i, FF7Char::instance()->defaultName(i));
-            ui->combo_party3->setItemText(i, FF7Char::instance()->defaultName(i));
+            ui->comboParty1->setItemText(i, FF7Char::instance()->defaultName(i));
+            ui->comboParty2->setItemText(i, FF7Char::instance()->defaultName(i));
+            ui->comboParty3->setItemText(i, FF7Char::instance()->defaultName(i));
         }
-        ui->combo_party1->setItemText(12, tr("-Empty-"));
-        ui->combo_party2->setItemText(12, tr("-Empty-"));
-        ui->combo_party3->setItemText(12, tr("-Empty-"));
+        ui->comboParty1->setItemText(12, tr("-Empty-"));
+        ui->comboParty2->setItemText(12, tr("-Empty-"));
+        ui->comboParty3->setItemText(12, tr("-Empty-"));
     } else {
         for (int i = 0; i < 11; i++) {
-            ui->combo_party1->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
-            ui->combo_party2->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
-            ui->combo_party3->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
+            ui->comboParty1->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
+            ui->comboParty2->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
+            ui->comboParty3->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
         }
-        ui->combo_party1->addItem(QString("0x0B"));
-        ui->combo_party2->addItem(QString("0x0B"));
-        ui->combo_party3->addItem(QString("0x0B"));
-        ui->combo_party1->addItem(tr("-Empty-"));
-        ui->combo_party2->addItem(tr("-Empty-"));
-        ui->combo_party3->addItem(tr("-Empty-"));
+        ui->comboParty1->addItem(QString("0x0B"));
+        ui->comboParty2->addItem(QString("0x0B"));
+        ui->comboParty3->addItem(QString("0x0B"));
+        ui->comboParty1->addItem(tr("-Empty-"));
+        ui->comboParty2->addItem(tr("-Empty-"));
+        ui->comboParty3->addItem(tr("-Empty-"));
     }
 //World party leader Combo.
-    if (ui->cb_world_party_leader->count() != 0) {
-        ui->cb_world_party_leader->setItemText(0, FF7Char::instance()->defaultName(FF7Char::Cloud));
-        ui->cb_world_party_leader->setItemText(1, FF7Char::instance()->defaultName(FF7Char::Tifa));
-        ui->cb_world_party_leader->setItemText(2, FF7Char::instance()->defaultName(FF7Char::Cid));
+    if (ui->comboWorldPartyLeader->count() != 0) {
+        ui->comboWorldPartyLeader->setItemText(0, FF7Char::instance()->defaultName(FF7Char::Cloud));
+        ui->comboWorldPartyLeader->setItemText(1, FF7Char::instance()->defaultName(FF7Char::Tifa));
+        ui->comboWorldPartyLeader->setItemText(2, FF7Char::instance()->defaultName(FF7Char::Cid));
     } else {
-        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Cloud), FF7Char::instance()->defaultName(FF7Char::Cloud));
-        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Tifa), FF7Char::instance()->defaultName(FF7Char::Tifa));
-        ui->cb_world_party_leader->addItem(FF7Char::instance()->icon(FF7Char::Cid), FF7Char::instance()->defaultName(FF7Char::Cid));
+        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Cloud), FF7Char::instance()->defaultName(FF7Char::Cloud));
+        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Tifa), FF7Char::instance()->defaultName(FF7Char::Tifa));
+        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Cid), FF7Char::instance()->defaultName(FF7Char::Cid));
     }
 }
 
@@ -276,14 +302,237 @@ void MainWindow::init_style()
     char_editor->setToolBoxStyle(tabStyle);
     ui->locationToolBox->setStyleSheet(tabStyle);
 
-    ui->slide_world_y->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
-    ui->slide_world_x->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
+    ui->slideWorldY->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
+    ui->slideWorldX->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
 }
 
 void MainWindow::init_connections()
 {
-    connect(ui->tbl_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::setValue);
-    connect(ui->tbl_compare_unknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tbl_unknown->verticalScrollBar(), &QScrollBar::setValue);
+    //Actions
+    connect(ui->actionQuit, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->actionOpenSaveFile, &QAction::triggered, this, &MainWindow::actionOpenSaveFile_triggered);
+    connect(ui->actionReload, &QAction::triggered, this, &MainWindow::actionReload_triggered);
+    connect(ui->actionImportChar, &QAction::triggered, this , &MainWindow::actionImportChar_triggered);
+    connect(ui->actionExportChar, &QAction::triggered, this , &MainWindow::actionExportChar_triggered);
+    connect(ui->actionSave, &QAction::triggered, this , &MainWindow::actionSave_triggered);
+    connect(ui->actionSaveFileAs, &QAction::triggered, this , &MainWindow::actionSaveFileAs_triggered);
+    connect(ui->actionNewGame, &QAction::triggered, this, &MainWindow::actionNewGame_triggered);
+    connect(ui->actionNewGamePlus, &QAction::triggered, this, &MainWindow::actionNewGamePlus_triggered);
+    connect(ui->actionShowSelectionDialog, &QAction::triggered, this, &MainWindow::actionShowSelectionDialog_triggered);
+    connect(ui->actionClearSlot, &QAction::triggered, this, &MainWindow::actionClearSlot_triggered);
+    connect(ui->actionPreviousSlot, &QAction::triggered, this, &MainWindow::actionPreviousSlot_triggered);
+    connect(ui->actionNextSlot, &QAction::triggered, this, &MainWindow::actionNextSlot_triggered);
+    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::actionAbout_triggered);
+    connect(ui->actionCopySlot, &QAction::triggered, this, &MainWindow::actionCopySlot_triggered);
+    connect(ui->actionPasteSlot, &QAction::triggered, this, &MainWindow::actionPasteSlot_triggered);
+    connect(ui->actionShowOptions, &QAction::triggered, this, &MainWindow::actionShowOptions_triggered);
+    connect(ui->actionOpenAchievementFile, &QAction::triggered, this, &MainWindow::actionOpenAchievementFile_triggered);
+    connect(ui->actionCreateNewMetadata, &QAction::triggered, this, &MainWindow::actionCreateNewMetadata_triggered);
+    connect(ui->actionImportSlotFromFile, &QAction::triggered, this, &MainWindow::actionImportSlotFromFile_triggered);
+    connect(ui->actionRegionUSA, &QAction::triggered, this, &MainWindow::actionRegionUSA_triggered);
+    connect(ui->actionRegionPALGeneric, &QAction::triggered, this, &MainWindow::actionRegionPALGeneric_triggered);
+    connect(ui->actionRegionPALFrench, &QAction::triggered, this, &MainWindow::actionRegionPALFrench_triggered);
+    connect(ui->actionRegionPALGerman, &QAction::triggered, this, &MainWindow::actionRegionPALGerman_triggered);
+    connect(ui->actionRegionPALSpanish, &QAction::triggered, this, &MainWindow::actionRegionPALSpanish_triggered);
+    connect(ui->actionRegionJPN, &QAction::triggered, this, &MainWindow::actionRegionJPN_triggered);
+    connect(ui->actionRegionJPNInternational, &QAction::triggered, this, &MainWindow::actionRegionJPNInternational_triggered);
+    //Buttons
+    connect(ui->btnCloud, &QPushButton::clicked, this, &MainWindow::btnCloud_clicked);
+    connect(ui->btnBarret, &QPushButton::clicked, this, &MainWindow::btnBarret_clicked);
+    connect(ui->btnTifa, &QPushButton::clicked, this, &MainWindow::btnTifa_clicked);
+    connect(ui->btnAeris, &QPushButton::clicked, this, &MainWindow::btnAeris_clicked);
+    connect(ui->btnRed, &QPushButton::clicked, this, &MainWindow::btnRed_clicked);
+    connect(ui->btnYuffie, &QPushButton::clicked, this, &MainWindow::btnYuffie_clicked);
+    connect(ui->btnCait, &QPushButton::clicked, this, &MainWindow::btnCait_clicked);
+    connect(ui->btnVincent, &QPushButton::clicked, this, &MainWindow::btnVincent_clicked);
+    connect(ui->btnCid, &QPushButton::clicked, this, &MainWindow::btnCid_clicked);
+    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &MainWindow::btnSearchFlyers_clicked);
+    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &MainWindow::btnSearchKeyItems_clicked);
+    connect(ui->btnReplay, &QPushButton::clicked, this, &MainWindow::btnReplay_clicked);
+    connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &MainWindow::btnRemoveAllMateria_clicked);
+    connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &MainWindow::btnRemoveAllStolen_clicked);
+    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &MainWindow::btnAddAllItems_clicked);
+    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &MainWindow::btnRemoveAllItems_clicked);
+    connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &MainWindow::btnAddAllMateria_clicked);
+    connect(ui->btnMaxChar, &QPushButton::clicked, this, &MainWindow::btnMaxChar_clicked);
+    //SpinBoxes
+    connect(ui->sbGil, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &MainWindow::sbGil_valueChanged);
+    connect(ui->sbGp, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbGp_valueChanged);
+    connect(ui->sbBattles, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBattles_valueChanged);
+    connect(ui->sbRuns, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbRuns_valueChanged);
+    connect(ui->sbCurdisc, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCurdisc_valueChanged);
+    connect(ui->sbLoveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveYuffie_valueChanged);
+    connect(ui->sbLoveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveTifa_valueChanged);
+    connect(ui->sbLoveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveAeris_valueChanged);
+    connect(ui->sbLoveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveBarret_valueChanged);
+    connect(ui->sbTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeSec_valueChanged);
+    connect(ui->sbTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeMin_valueChanged);
+    connect(ui->sbTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeHour_valueChanged);
+    connect(ui->sbTimerTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeSec_valueChanged);
+    connect(ui->sbTimerTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeMin_valueChanged);
+    connect(ui->sbTimerTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeHour_valueChanged);
+    connect(ui->sbBloveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveYuffie_valueChanged);
+    connect(ui->sbBloveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveTifa_valueChanged);
+    connect(ui->sbBloveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveAeris_valueChanged);
+    connect(ui->sbBloveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveBarret_valueChanged);
+    connect(ui->sbUweaponHp, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbUweaponHp_valueChanged);
+    connect(ui->sbCoster1, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster1_valueChanged);
+    connect(ui->sbCoster2, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster2_valueChanged);
+    connect(ui->sbCoster3, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster3_valueChanged);
+    connect(ui->sbTurkschurch, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTurkschurch_valueChanged);
+    connect(ui->sbMprogress, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbMprogress_valueChanged);
+    connect(ui->sbDonprog, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDonprog_valueChanged);
+    connect(ui->sbSteps, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSteps_valueChanged);
+    connect(ui->sbSnowBegScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegScore_valueChanged);
+    connect(ui->sbSnowExpScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpScore_valueChanged);
+    connect(ui->sbSnowCrazyScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyScore_valueChanged);
+    connect(ui->sbSnowBegMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegMin_valueChanged);
+    connect(ui->sbSnowBegSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegSec_valueChanged);
+    connect(ui->sbSnowBegMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegMsec_valueChanged);
+    connect(ui->sbSnowExpMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpMin_valueChanged);
+    connect(ui->sbSnowExpSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpSec_valueChanged);
+    connect(ui->sbSnowExpMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpMsec_valueChanged);
+    connect(ui->sbSnowCrazyMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyMin_valueChanged);
+    connect(ui->sbSnowCrazySec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazySec_valueChanged);
+    connect(ui->sbSnowCrazyMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyMsec_valueChanged);
+    connect(ui->sbBikeHighScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBikeHighScore_valueChanged);
+    connect(ui->sbBattlePoints, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBattlePoints_valueChanged);
+    connect(ui->sbCondorFunds, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorFunds_valueChanged);
+    connect(ui->sbCondorWins, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorWins_valueChanged);
+    connect(ui->sbCondorLosses, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorLosses_valueChanged);
+    connect(ui->sbSaveMapId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveMapId_valueChanged);
+    connect(ui->sbSaveX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveX_valueChanged);
+    connect(ui->sbSaveY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveY_valueChanged);
+    connect(ui->sbSaveZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveZ_valueChanged);
+    connect(ui->sbLeaderX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderX_valueChanged);
+    connect(ui->sbLeaderY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderY_valueChanged);
+    connect(ui->sbLeaderZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderZ_valueChanged);
+    connect(ui->sbLeaderId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderId_valueChanged);
+    connect(ui->sbLeaderAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderAngle_valueChanged);
+    connect(ui->sbTcX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcX_valueChanged);
+    connect(ui->sbTcY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcY_valueChanged);
+    connect(ui->sbTcZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcZ_valueChanged);
+    connect(ui->sbTcId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcId_valueChanged);
+    connect(ui->sbTcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcAngle_valueChanged);
+    connect(ui->sbBhX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhX_valueChanged);
+    connect(ui->sbBhY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhY_valueChanged);
+    connect(ui->sbBhZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhZ_valueChanged);
+    connect(ui->sbBhId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhId_valueChanged);
+    connect(ui->sbBhAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhAngle_valueChanged);
+    connect(ui->sbSubX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubX_valueChanged);
+    connect(ui->sbSubY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubY_valueChanged);
+    connect(ui->sbSubZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubZ_valueChanged);
+    connect(ui->sbSubId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubId_valueChanged);
+    connect(ui->sbSubAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubAngle_valueChanged);
+    connect(ui->sbWcX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcX_valueChanged);
+    connect(ui->sbWcY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcY_valueChanged);
+    connect(ui->sbWcZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcZ_valueChanged);
+    connect(ui->sbWcId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcId_valueChanged);
+    connect(ui->sbWcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcAngle_valueChanged);
+    connect(ui->sbDurwX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwX_valueChanged);
+    connect(ui->sbDurwY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwY_valueChanged);
+    connect(ui->sbDurwZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwZ_valueChanged);
+    connect(ui->sbDurwId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwId_valueChanged);
+    connect(ui->sbDurwAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwAngle_valueChanged);
+    //CheckBoxes
+    connect(ui->cbTutWorldSave, &QCheckBox::stateChanged, this, &MainWindow::cbTutWorldSave_stateChanged);
+    connect(ui->cbBombingInt, &QCheckBox::stateChanged, this, &MainWindow::cbBombingInt_stateChanged);
+    connect(ui->cbFlashbackPiano, &QCheckBox::toggled, this, &MainWindow::cbFlashbackPiano_toggled);
+    connect(ui->cbSubGameWon, &QCheckBox::toggled, this, &MainWindow::cbSubGameWon_toggled);
+    connect(ui->cbMysteryPanties, &QCheckBox::toggled, this, &MainWindow::cbMysteryPanties_toggled);
+    connect(ui->cbLetterToDaughter, &QCheckBox::toggled, this, &MainWindow::cbLetterToDaughter_toggled);
+    connect(ui->cbLetterToWife, &QCheckBox::toggled, this, &MainWindow::cbLetterToWife_toggled);
+    connect(ui->cbPandorasBox, &QCheckBox::toggled, this, &MainWindow::cbPandorasBox_toggled);
+    connect(ui->cbVisibleBuggy, &QCheckBox::toggled, this, &MainWindow::cbVisibleBuggy_toggled);
+    connect(ui->cbVisibleBronco, &QCheckBox::toggled, this, &MainWindow::cbVisibleBronco_toggled);
+    connect(ui->cbVisibleHighwind, &QCheckBox::toggled, this, &MainWindow::cbVisibleHighwind_toggled);
+    connect(ui->cbVisibleWildChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleWildChocobo_toggled);
+    connect(ui->cbVisibleYellowChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleYellowChocobo_toggled);
+    connect(ui->cbVisibleGreenChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleGreenChocobo_toggled);
+    connect(ui->cbVisibleBlueChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleBlueChocobo_toggled);
+    connect(ui->cbVisibleBlackChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleBlackChocobo_toggled);
+    connect(ui->cbVisibleGoldChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleGoldChocobo_toggled);
+    connect(ui->cbRubyDead, &QCheckBox::toggled, this, &MainWindow::cbRubyDead_toggled);
+    connect(ui->cbEmeraldDead, &QCheckBox::toggled, this, &MainWindow::cbEmeraldDead_toggled);
+    connect(ui->cbBm1_1, &QCheckBox::toggled, this, &MainWindow::cbBm1_1_toggled);
+    connect(ui->cbBm1_2, &QCheckBox::toggled, this, &MainWindow::cbBm1_2_toggled);
+    connect(ui->cbBm1_3, &QCheckBox::toggled, this, &MainWindow::cbBm1_3_toggled);
+    connect(ui->cbBm1_4, &QCheckBox::toggled, this, &MainWindow::cbBm1_4_toggled);
+    connect(ui->cbBm1_5, &QCheckBox::toggled, this, &MainWindow::cbBm1_5_toggled);
+    connect(ui->cbBm1_6, &QCheckBox::toggled, this, &MainWindow::cbBm1_6_toggled);
+    connect(ui->cbBm1_7, &QCheckBox::toggled, this, &MainWindow::cbBm1_7_toggled);
+    connect(ui->cbBm1_8, &QCheckBox::toggled, this, &MainWindow::cbBm1_8_toggled);
+    connect(ui->cbBm2_1, &QCheckBox::toggled, this, &MainWindow::cbBm2_1_toggled);
+    connect(ui->cbBm2_2, &QCheckBox::toggled, this, &MainWindow::cbBm2_2_toggled);
+    connect(ui->cbBm2_3, &QCheckBox::toggled, this, &MainWindow::cbBm2_3_toggled);
+    connect(ui->cbBm2_4, &QCheckBox::toggled, this, &MainWindow::cbBm2_4_toggled);
+    connect(ui->cbBm2_5, &QCheckBox::toggled, this, &MainWindow::cbBm2_5_toggled);
+    connect(ui->cbBm2_6, &QCheckBox::toggled, this, &MainWindow::cbBm2_6_toggled);
+    connect(ui->cbBm2_7, &QCheckBox::toggled, this, &MainWindow::cbBm2_7_toggled);
+    connect(ui->cbBm2_8, &QCheckBox::toggled, this, &MainWindow::cbBm2_8_toggled);
+    connect(ui->cbBm3_1, &QCheckBox::toggled, this, &MainWindow::cbBm3_1_toggled);
+    connect(ui->cbBm3_2, &QCheckBox::toggled, this, &MainWindow::cbBm3_2_toggled);
+    connect(ui->cbBm3_3, &QCheckBox::toggled, this, &MainWindow::cbBm3_3_toggled);
+    connect(ui->cbBm3_4, &QCheckBox::toggled, this, &MainWindow::cbBm3_4_toggled);
+    connect(ui->cbBm3_5, &QCheckBox::toggled, this, &MainWindow::cbBm3_5_toggled);
+    connect(ui->cbBm3_6, &QCheckBox::toggled, this, &MainWindow::cbBm3_6_toggled);
+    connect(ui->cbBm3_7, &QCheckBox::toggled, this, &MainWindow::cbBm3_7_toggled);
+    connect(ui->cbBm3_8, &QCheckBox::toggled, this, &MainWindow::cbBm3_8_toggled);
+    connect(ui->cbS7pl_1, &QCheckBox::toggled, this, &MainWindow::cbS7pl_1_toggled);
+    connect(ui->cbS7pl_2, &QCheckBox::toggled, this, &MainWindow::cbS7pl_2_toggled);
+    connect(ui->cbS7pl_3, &QCheckBox::toggled, this, &MainWindow::cbS7pl_3_toggled);
+    connect(ui->cbS7pl_4, &QCheckBox::toggled, this, &MainWindow::cbS7pl_4_toggled);
+    connect(ui->cbS7pl_5, &QCheckBox::toggled, this, &MainWindow::cbS7pl_5_toggled);
+    connect(ui->cbS7pl_6, &QCheckBox::toggled, this, &MainWindow::cbS7pl_6_toggled);
+    connect(ui->cbS7pl_7, &QCheckBox::toggled, this, &MainWindow::cbS7pl_7_toggled);
+    connect(ui->cbS7pl_8, &QCheckBox::toggled, this, &MainWindow::cbS7pl_8_toggled);
+    connect(ui->cbS7ts_1, &QCheckBox::toggled, this, &MainWindow::cbS7ts_1_toggled);
+    connect(ui->cbS7ts_2, &QCheckBox::toggled, this, &MainWindow::cbS7ts_2_toggled);
+    connect(ui->cbS7ts_3, &QCheckBox::toggled, this, &MainWindow::cbS7ts_3_toggled);
+    connect(ui->cbS7ts_4, &QCheckBox::toggled, this, &MainWindow::cbS7ts_4_toggled);
+    connect(ui->cbS7ts_5, &QCheckBox::toggled, this, &MainWindow::cbS7ts_5_toggled);
+    connect(ui->cbS7ts_6, &QCheckBox::toggled, this, &MainWindow::cbS7ts_6_toggled);
+    connect(ui->cbS7ts_7, &QCheckBox::toggled, this, &MainWindow::cbS7ts_7_toggled);
+    connect(ui->cbS7ts_8, &QCheckBox::toggled, this, &MainWindow::cbS7ts_8_toggled);
+    connect(ui->cbTutSub, &QCheckBox::toggled, this, &MainWindow::cbTutSub_toggled);
+    connect(ui->cbMidgartrain_8, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_8_toggled);
+    connect(ui->cbMidgartrain_7, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_7_toggled);
+    connect(ui->cbMidgartrain_6, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_6_toggled);
+    connect(ui->cbMidgartrain_5, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_5_toggled);
+    connect(ui->cbMidgartrain_4, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_4_toggled);
+    connect(ui->cbMidgartrain_3, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_3_toggled);
+    connect(ui->cbMidgartrain_2, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_2_toggled);
+    connect(ui->cbMidgartrain_1, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_1_toggled);
+    connect(ui->cbYuffieForest, &QCheckBox::toggled, this, &MainWindow::cbYuffieForest_toggled);
+    connect(ui->cbRegYuffie, &QCheckBox::toggled, this, &MainWindow::cbRegYuffie_toggled);
+    connect(ui->cbRegVinny, &QCheckBox::toggled, this, &MainWindow::cbRegVinny_toggled);
+    //QComboBoxes
+    connect(ui->comboHexEditor, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboHexEditor_currentIndexChanged);
+    connect(ui->comboParty1, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty1_currentIndexChanged);
+    connect(ui->comboParty2, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty2_currentIndexChanged);
+    connect(ui->comboParty3, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty3_currentIndexChanged);
+    connect(ui->comboRegionSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboRegionSlot_currentIndexChanged);
+    connect(ui->comboHighwindBuggy, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboHighwindBuggy_currentIndexChanged);
+    connect(ui->comboMapControls, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboMapControls_currentIndexChanged);
+    connect(ui->comboZVar, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboZVar_currentIndexChanged);
+    connect(ui->comboCompareSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboCompareSlot_currentIndexChanged);
+    connect(ui->comboS7Slums, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboS7Slums_currentIndexChanged);
+    connect(ui->comboReplay, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboReplay_currentIndexChanged);
+    //Misc
+    connect(ui->tblUnknown, &QTableWidget::itemChanged, this, &MainWindow::tblUnknown_itemChanged);
+    connect(ui->slideWorldX, &QSlider::valueChanged, this, &MainWindow::slideWorldX_valueChanged);
+    connect(ui->slideWorldY, &QSlider::valueChanged, this, &MainWindow::slideWorldY_valueChanged);
+    void on_worldMapView_customContextMenuRequested(QPoint pos);
+    connect(ui->linePsxDesc, &QLineEdit::textChanged, this, &MainWindow::linePsxDesc_textChanged);
+    connect(ui->tblMateria, &QTableWidget::currentCellChanged, this, &MainWindow::tblMateria_currentCellChanged);
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::tabWidget_currentChanged);
+    connect(ui->locationToolBox, &QToolBox::currentChanged, this, &MainWindow::locationToolBox_currentChanged);
+    connect(ui->testDataTabWidget, &QTabWidget::currentChanged, this, &MainWindow::testDataTabWidget_currentChanged);
+    //UI -> UI
+    connect(ui->tblUnknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tblCompareUnknown->verticalScrollBar(), &QScrollBar::setValue);
+    connect(ui->tblCompareUnknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tblUnknown->verticalScrollBar(), &QScrollBar::setValue);
+    connect(ui->comboWorldPartyLeader, qOverload<int>(&QComboBox::currentIndexChanged), ui->sbLeaderId, &QSpinBox::setValue);
+    connect(ui->sbLeaderId, qOverload<int>(&QSpinBox::valueChanged), ui->comboWorldPartyLeader, &QComboBox::setCurrentIndex);
 
     connect(saveIcon, &SaveIcon::nextIcon, ui->lblPsxIcon, &QLabel::setPixmap);
 
@@ -426,8 +675,8 @@ void MainWindow::loadChildWidgetSettings()
     if (FF7SaveInfo::instance()->internalPC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         setControllerMappingVisible(BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
     ui->bm_unknown->setVisible(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
-    ui->bh_id->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
-    ui->leader_id->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->sbBhId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->sbLeaderId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow()
@@ -477,7 +726,7 @@ bool MainWindow::saveChanges(void)
     result = QMessageBox::question(this, tr("Unsaved Changes"), tr("Save Changes to the File:\n%1").arg(ff7->fileName()), QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel);
     switch (result) {
     case QMessageBox::Yes:
-        on_action_Save_triggered();
+        actionSave_triggered();
         return true;
     case QMessageBox::No:
         return true;
@@ -504,7 +753,7 @@ void MainWindow::moveEvent(QMoveEvent *)
     BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionOpen_Save_File_triggered()
+void MainWindow::actionOpenSaveFile_triggered()
 {
     if (ff7->isFileModified()) {
         if (!saveChanges())
@@ -515,7 +764,7 @@ void MainWindow::on_actionOpen_Save_File_triggered()
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
-void MainWindow::on_actionReload_triggered()
+void MainWindow::actionReload_triggered()
 {
     if (!ff7->fileName().isEmpty())
         loadFileFull(ff7->fileName(), 1);
@@ -544,7 +793,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
         if (reload)
             guirefresh(0);
         else
-            on_actionShow_Selection_Dialog_triggered();
+            actionShowSelectionDialog_triggered();
     } else {
         s = 0;
         guirefresh(0);
@@ -554,7 +803,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
     hexCursorPos = 0;
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionImport_Slot_From_File_triggered()
+void MainWindow::actionImportSlotFromFile_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(),
@@ -568,7 +817,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
                 SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + ((sizeHint().height() - SSelect->sizeHint().height()) /2));
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
-                    on_actionImport_Slot_From_File_triggered();
+                    actionImportSlotFromFile_triggered();
                     return;
                 }
                 ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
@@ -584,7 +833,7 @@ void MainWindow::on_actionImport_Slot_From_File_triggered()
     ff7->setFileModified(true, 0);
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionImport_char_triggered()
+void MainWindow::actionImportChar_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
@@ -605,7 +854,7 @@ void MainWindow::on_actionImport_char_triggered()
     set_char_buttons();
 }
 
-void MainWindow::on_actionExport_char_triggered()
+void MainWindow::actionExportChar_triggered()
 {
     QString fileName = BCDialog::getSaveFileName(this, ff7->region(s),
                        tr("Save FF7 Character File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(),
@@ -617,14 +866,14 @@ void MainWindow::on_actionExport_char_triggered()
             ui->statusBar->showMessage(tr("Character Export Failed"), 2000);
     }
 }
-bool MainWindow::on_action_Save_triggered()
+bool MainWindow::actionSave_triggered()
 {
     if (_init || ff7->fileName().isEmpty())
-        return on_actionSave_File_As_triggered();
+        return actionSaveFileAs_triggered();
     return saveFileFull(ff7->fileName());
 }
 
-bool MainWindow::on_actionSave_File_As_triggered()
+bool MainWindow::actionSaveFileAs_triggered()
 {
     QMap<QString, FF7SaveInfo::FORMAT> typeMap;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
@@ -690,7 +939,7 @@ bool MainWindow::saveFileFull(const QString &fileName)
 }
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 
-void MainWindow::on_actionNew_Game_triggered()
+void MainWindow::actionNewGame_triggered()
 {
     QString save_name = BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
                 BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString() : QString();
@@ -706,7 +955,7 @@ void MainWindow::on_actionNew_Game_triggered()
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
-void MainWindow::on_actionNew_Game_Plus_triggered()
+void MainWindow::actionNewGamePlus_triggered()
 {
     QString save_name;
     if (BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
@@ -721,12 +970,12 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionClear_Slot_triggered()
+void MainWindow::actionClearSlot_triggered()
 {
     ff7->clearSlot(s);
     guirefresh(0);
 }
-void MainWindow::on_actionPrevious_Slot_triggered()
+void MainWindow::actionPreviousSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
@@ -736,7 +985,7 @@ void MainWindow::on_actionPrevious_Slot_triggered()
         guirefresh(0);
     }
 }
-void MainWindow::on_actionNext_Slot_triggered()
+void MainWindow::actionNextSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
@@ -746,21 +995,21 @@ void MainWindow::on_actionNext_Slot_triggered()
         guirefresh(0);
     }
 }
-void MainWindow::on_actionAbout_triggered()
+void MainWindow::actionAbout_triggered()
 {
     About adialog(this);
     adialog.exec();
 }
-void MainWindow::on_actionCopy_Slot_triggered()
+void MainWindow::actionCopySlot_triggered()
 {
     ff7->copySlot(s);
 }
-void MainWindow::on_actionPaste_Slot_triggered()
+void MainWindow::actionPasteSlot_triggered()
 {
     ff7->pasteSlot(s);
     guirefresh(0);
 }
-void MainWindow::on_actionShow_Options_triggered()
+void MainWindow::actionShowOptions_triggered()
 {
     Options odialog(this);
     connect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
@@ -775,27 +1024,27 @@ void MainWindow::on_actionShow_Options_triggered()
     disconnect(&odialog, nullptr, nullptr, nullptr);
 }
 
-void MainWindow::on_actionCreateNewMetadata_triggered()
+void MainWindow::actionCreateNewMetadata_triggered()
 {
     MetadataCreator mdata(this, ff7);
     mdata.exec();
 }
 
-void MainWindow::on_actionShow_Selection_Dialog_triggered()
+void MainWindow::actionShowSelectionDialog_triggered()
 {
     SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true);
     slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + ((sizeHint().height() - slotselect.sizeHint().height()) /2));
 
     int i = slotselect.exec();
     if(i == -1) {
-        on_actionOpen_Save_File_triggered();
+        actionOpenSaveFile_triggered();
     } else {
         s = i;
         guirefresh(0);
     }
 }
 
-void MainWindow::on_actionOpen_Achievement_File_triggered()
+void MainWindow::actionOpenAchievementFile_triggered()
 {
     QString temp = ff7->fileName();
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
@@ -829,7 +1078,7 @@ void MainWindow::setOpenFileText(const QString &openFile)
     ui->lbl_fileName->setText(fontMetrics().elidedText(openFile, Qt::ElideMiddle, maxWidth));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_USA_triggered(bool checked)
+void MainWindow::actionRegionUSA_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -842,22 +1091,22 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
 
             ff7->setRegion(s, "NTSC-U");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     }
     locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
+void MainWindow::actionRegionPALGeneric_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -870,21 +1119,21 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
 
             ff7->setRegion(s, "PAL-E");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
+void MainWindow::actionRegionPALGerman_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -897,21 +1146,21 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
 
             ff7->setRegion(s, "PAL-DE");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
+void MainWindow::actionRegionPALSpanish_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -924,21 +1173,21 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
 
             ff7->setRegion(s, "PAL-ES");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
+void MainWindow::actionRegionPALFrench_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -951,21 +1200,21 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
 
             ff7->setRegion(s, "PAL-FR");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_triggered(bool checked)
+void MainWindow::actionRegionJPN_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -978,21 +1227,21 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
                 set_ntsc_time();   //Convert Time?
             ff7->setRegion(s, "NTSC-J");
             itemlist->setMaximumItemQty(99);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
+void MainWindow::actionRegionJPNInternational_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1004,15 +1253,15 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
                 set_ntsc_time();   //Convert Time?
             ff7->setRegion(s, "NTSC-JI");
             itemlist->setMaximumItemQty(127);
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_French->setChecked(false);
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_JPN->setChecked(false);
+            ui->actionRegionUSA->setChecked(false);
+            ui->actionRegionPALGeneric->setChecked(false);
+            ui->actionRegionPALFrench->setChecked(false);
+            ui->actionRegionPALGerman->setChecked(false);
+            ui->actionRegionPALSpanish->setChecked(false);
+            ui->actionRegionJPN->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1024,22 +1273,22 @@ void MainWindow::setmenu(bool newgame)
 {
     load = true;
     /*~~Disable All Items that are dependent on File Type~~*/
-    ui->actionClear_Slot->setEnabled(0);
-    ui->action_Region_USA->setChecked(false);
-    ui->action_Region_PAL_Generic->setChecked(false);
-    ui->action_Region_PAL_German->setChecked(false);
-    ui->action_Region_PAL_French->setChecked(false);
-    ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_JPN->setChecked(false);
-    ui->action_Region_JPN_International->setChecked(false);
-    ui->actionNext_Slot->setEnabled(0);
-    ui->actionPrevious_Slot->setEnabled(0);
-    ui->actionShow_Selection_Dialog->setEnabled(0);
-    ui->actionNew_Game->setEnabled(0);
+    ui->actionClearSlot->setEnabled(0);
+    ui->actionRegionUSA->setChecked(false);
+    ui->actionRegionPALGeneric->setChecked(false);
+    ui->actionRegionPALGerman->setChecked(false);
+    ui->actionRegionPALFrench->setChecked(false);
+    ui->actionRegionPALSpanish->setChecked(false);
+    ui->actionRegionJPN->setChecked(false);
+    ui->actionRegionJPNInternational->setChecked(false);
+    ui->actionNextSlot->setEnabled(0);
+    ui->actionPreviousSlot->setEnabled(0);
+    ui->actionShowSelectionDialog->setEnabled(0);
+    ui->actionNewGame->setEnabled(0);
     ui->compare_table->setEnabled(0);
     ui->lbl_current_slot_txt->clear();
-    ui->actionImport_char->setEnabled(1);
-    ui->actionExport_char->setEnabled(1);
+    ui->actionImportChar->setEnabled(1);
+    ui->actionExportChar->setEnabled(1);
     /*~~End Clear Menu Items~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
     //For first file load.Don't Bother to disable these again.
@@ -1047,8 +1296,8 @@ void MainWindow::setmenu(bool newgame)
 
     //if not FF7 user is stuck in the hex editor tab.
     if (!ff7->isFF7(s) && !ff7->region(s).isEmpty()) {
-        if (ui->combo_hexEditor->currentIndex() != 0)
-            ui->combo_hexEditor->setCurrentIndex(0);
+        if (ui->comboHexEditor->currentIndex() != 0)
+            ui->comboHexEditor->setCurrentIndex(0);
         ui->tabWidget->setCurrentIndex(8);
         for (int i = 0; i < 8; i++)
             ui->tabWidget->setTabEnabled(i, false);
@@ -1060,53 +1309,53 @@ void MainWindow::setmenu(bool newgame)
     }
 
     if (!newgame && !ff7->fileName().isEmpty()) {
-        ui->actionSave_File_As->setEnabled(1);
+        ui->actionSaveFileAs->setEnabled(1);
         ui->actionReload->setEnabled(1);
     }
 
-    ui->actionImport_char->setEnabled(1);
-    ui->action_Save->setEnabled(1);
+    ui->actionImportChar->setEnabled(1);
+    ui->actionSave->setEnabled(1);
 
     //we haven't loaded a file yet.
     if (!_init) {
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionImport_Slot_From_File->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionNew_Game->setEnabled(1);
+        ui->actionNewGamePlus->setEnabled(1);
+        ui->actionImportSlotFromFile->setEnabled(1);
+        ui->actionCopySlot->setEnabled(1);
+        ui->actionPasteSlot->setEnabled(1);
+        ui->actionNewGame->setEnabled(1);
     }
 
     if ( FF7SaveInfo::instance()->slotCount(ff7->format()) > 1) { //more then one slot, or unknown Type
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionNew_Game->setEnabled(1);
+        ui->actionNextSlot->setEnabled(1);
+        ui->actionPreviousSlot->setEnabled(1);
+        ui->actionShowSelectionDialog->setEnabled(1);
+        ui->actionClearSlot->setEnabled(1);
+        ui->actionNewGame->setEnabled(1);
         ui->compare_table->setEnabled(1);
         ui->lbl_current_slot_txt->setText(tr("Current Slot:%1").arg(QString::number(s + 1), 2, QChar('0')));
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
     if (ff7->region(s).contains("94163"))
-        ui->action_Region_USA->setChecked(true);
+        ui->actionRegionUSA->setChecked(true);
     else if (ff7->region(s).contains("00867"))
-        ui->action_Region_PAL_Generic->setChecked(true);
+        ui->actionRegionPALGeneric->setChecked(true);
     else if (ff7->region(s).contains("00868"))
-        ui->action_Region_PAL_French->setChecked(true);
+        ui->actionRegionPALFrench->setChecked(true);
     else if (ff7->region(s).contains("00869"))
-        ui->action_Region_PAL_German->setChecked(true);
+        ui->actionRegionPALGerman->setChecked(true);
     else if (ff7->region(s).contains("00900"))
-        ui->action_Region_PAL_Spanish->setChecked(true);
+        ui->actionRegionPALSpanish->setChecked(true);
     else if (ff7->region(s).contains("00700"))
-        ui->action_Region_JPN->setChecked(true);
+        ui->actionRegionJPN->setChecked(true);
     else if (ff7->region(s).contains("01057"))
-        ui->action_Region_JPN_International->setChecked(true);
+        ui->actionRegionJPNInternational->setChecked(true);
     else if (!ff7->region(s).isEmpty()) {
         //not FF7 unset some menu options.
-        ui->actionNew_Game_Plus->setEnabled(0);
-        ui->actionCopy_Slot->setEnabled(0);
-        ui->actionExport_char->setEnabled(0);
-        ui->actionImport_char->setEnabled(0);
+        ui->actionNewGamePlus->setEnabled(0);
+        ui->actionCopySlot->setEnabled(0);
+        ui->actionExportChar->setEnabled(0);
+        ui->actionImportChar->setEnabled(0);
     }
     load = false;
 }
@@ -1123,9 +1372,9 @@ void MainWindow::set_ntsc_time(void)
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) * 1.2));
         load = true;
-        ui->sb_time_hour->setValue(ff7->time(s) / 3600);
-        ui->sb_time_min->setValue(ff7->time(s) / 60 % 60);
-        ui->sb_time_sec->setValue(int(ff7->time(s)) - ((ui->sb_time_hour->value() * 3600) + ui->sb_time_min->value() * 60));
+        ui->sbTimeHour->setValue(ff7->time(s) / 3600);
+        ui->sbTimeMin->setValue(ff7->time(s) / 60 % 60);
+        ui->sbTimeSec->setValue(int(ff7->time(s)) - ((ui->sbTimeHour->value() * 3600) + ui->sbTimeMin->value() * 60));
         load = false;
     }
 }
@@ -1134,63 +1383,63 @@ void MainWindow::set_pal_time(void)
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) / 1.2));
         load = true;
-        ui->sb_time_hour->setValue(ff7->time(s) / 3600);
-        ui->sb_time_min->setValue(ff7->time(s) / 60 % 60);
-        ui->sb_time_sec->setValue(int(ff7->time(s)) - ((ui->sb_time_hour->value() * 3600) + ui->sb_time_min->value() * 60));
+        ui->sbTimeHour->setValue(ff7->time(s) / 3600);
+        ui->sbTimeMin->setValue(ff7->time(s) / 60 % 60);
+        ui->sbTimeSec->setValue(int(ff7->time(s)) - ((ui->sbTimeHour->value() * 3600) + ui->sbTimeMin->value() * 60));
         load = false;
     }
 }
 void MainWindow::materiaupdate(void)
 {
     load = true;
-    int j = std::max(0, ui->tbl_materia->currentRow());
-    ui->tbl_materia->reset();
-    ui->tbl_materia->clearContents();
-    ui->tbl_materia->setColumnWidth(0, int(ui->tbl_materia->width()*.65));
-    ui->tbl_materia->setColumnWidth(1, int(ui->tbl_materia->width()*.25));
-    ui->tbl_materia->setRowCount(200);
+    int j = std::max(0, ui->tblMateria->currentRow());
+    ui->tblMateria->reset();
+    ui->tblMateria->clearContents();
+    ui->tblMateria->setColumnWidth(0, int(ui->tblMateria->width()*.65));
+    ui->tblMateria->setColumnWidth(1, int(ui->tblMateria->width()*.25));
+    ui->tblMateria->setRowCount(200);
 
     for (int mat = 0; mat < 200; mat++) { // partys materias
         QTableWidgetItem *newItem;
-        ui->tbl_materia->setRowHeight(mat, fontMetrics().height() + 9);
+        ui->tblMateria->setRowHeight(mat, fontMetrics().height() + 9);
         qint32 current_ap = ff7->partyMateriaAp(s, mat);
         quint8 current_id = ff7->partyMateriaId(s, mat);
         QString ap;
 
         if (current_id <= 0x5A) {
             newItem = new QTableWidgetItem(QIcon(QPixmap::fromImage(Materias.image(current_id).scaledToHeight(fontMetrics().height(), Qt::SmoothTransformation))), Materias.name(current_id), 0);
-            ui->tbl_materia->setItem(mat, 0, newItem);
+            ui->tblMateria->setItem(mat, 0, newItem);
         }
 
         if (current_id == FF7Materia::EnemySkill) {
             if (current_ap == FF7Materia::MaxMateriaAp) {
                 newItem = new QTableWidgetItem(tr("Master"));
-                ui->tbl_materia->setItem(mat, 1, newItem);
+                ui->tblMateria->setItem(mat, 1, newItem);
             } else {
                 newItem = new QTableWidgetItem(QString(), 0);
-                ui->tbl_materia->setItem(mat, 1, newItem);
+                ui->tblMateria->setItem(mat, 1, newItem);
             }
         }
 
         else if (current_id == FF7Materia::MasterCommand || current_id == FF7Materia::MasterMagic || current_id == FF7Materia::MasterSummon || current_id == FF7Materia::Underwater) {
             newItem = new QTableWidgetItem(QString(), 0);
-            ui->tbl_materia->setItem(mat, 1, newItem);
+            ui->tblMateria->setItem(mat, 1, newItem);
         } else if (current_id != FF7Materia::EmptyId) {
             if (current_ap == FF7Materia::MaxMateriaAp) {
                 newItem = new QTableWidgetItem(tr("Master"));
-                ui->tbl_materia->setItem(mat, 1, newItem);
+                ui->tblMateria->setItem(mat, 1, newItem);
             } else {
                 newItem = new QTableWidgetItem(ap.setNum(current_ap));
-                ui->tbl_materia->setItem(mat, 1, newItem);
+                ui->tblMateria->setItem(mat, 1, newItem);
             }
         } else {
             //We need to clear invalid to prevent data issues. to keep file changes correct we back up our change vars and replace later.
             bool fileTemp = ff7->isFileModified();
             ff7->setPartyMateria(s, mat, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp); //invalid insure its clear.
             newItem = new QTableWidgetItem(tr("===Empty Slot==="), 0);
-            ui->tbl_materia->setItem(mat, 0, newItem);
+            ui->tblMateria->setItem(mat, 0, newItem);
             newItem = new QTableWidgetItem(QString(), 0);
-            ui->tbl_materia->setItem(mat, 1, newItem);
+            ui->tblMateria->setItem(mat, 1, newItem);
             ff7->setFileModified(fileTemp, s);
         }
     }
@@ -1199,20 +1448,20 @@ void MainWindow::materiaupdate(void)
     else
         mat_spacer->changeSize(0, 0, QSizePolicy::Fixed, QSizePolicy::MinimumExpanding);
     materia_editor->setMateria(ff7->partyMateriaId(s, j), ff7->partyMateriaAp(s, j));
-    ui->tbl_materia->setCurrentCell(j, 1); //so that right side is set correctly.
+    ui->tblMateria->setCurrentCell(j, 1); //so that right side is set correctly.
     load = false;
 }
 void MainWindow::materia_ap_changed(qint32 ap)
 {
     if (!load) {
-        ff7->setPartyMateria(s, ui->tbl_materia->currentRow(), ff7->partyMateriaId(s, ui->tbl_materia->currentRow()), ap);
+        ff7->setPartyMateria(s, ui->tblMateria->currentRow(), ff7->partyMateriaId(s, ui->tblMateria->currentRow()), ap);
         materiaupdate();
     }
 }
 void MainWindow::materia_id_changed(qint8 id)
 {
     if (!load) {
-        ff7->setPartyMateria(s, ui->tbl_materia->currentRow(), quint8(id), ff7->partyMateriaAp(s, ui->tbl_materia->currentRow()));
+        ff7->setPartyMateria(s, ui->tblMateria->currentRow(), quint8(id), ff7->partyMateriaAp(s, ui->tblMateria->currentRow()));
         materiaupdate();
     }
 }
@@ -1275,8 +1524,8 @@ void MainWindow::othersUpdate()
 {
     load = true;
 
-    ui->cb_ruby_dead->setChecked(ff7->killedRubyWeapon(s));
-    ui->cb_emerald_dead->setChecked(ff7->killedEmeraldWeapon(s));
+    ui->cbRubyDead->setChecked(ff7->killedRubyWeapon(s));
+    ui->cbEmeraldDead->setChecked(ff7->killedEmeraldWeapon(s));
 
     ui->cbPandorasBox->setChecked(ff7->seenPandorasBox(s));
     ui->cbSubGameWon->setChecked(ff7->subMiniGameVictory(s));
@@ -1284,9 +1533,9 @@ void MainWindow::othersUpdate()
     ui->sbCondorLosses->setValue(ff7->condorLosses(s));
     ui->sbCondorFunds->setValue(ff7->condorFunds(s));
 
-    ui->sb_coster_1->setValue(ff7->speedScore(s, 1));
-    ui->sb_coster_2->setValue(ff7->speedScore(s, 2));
-    ui->sb_coster_3->setValue(ff7->speedScore(s, 3));
+    ui->sbCoster1->setValue(ff7->speedScore(s, 1));
+    ui->sbCoster2->setValue(ff7->speedScore(s, 2));
+    ui->sbCoster3->setValue(ff7->speedScore(s, 3));
 
     for (int i = 0; i < 9; i++) //Allowed in Phs
             phsList->setChecked(i, PhsListWidget::PHSALLOWED, !ff7->phsAllowed(s, i));
@@ -1300,30 +1549,30 @@ void MainWindow::othersUpdate()
     for (int i = 0; i < 10; i++) //menu_locked
             menuList->setChecked(i, MenuListWidget::MENULOCKED, ff7->menuLocked(s, i));
 
-    ui->sb_steps->setValue(ff7->steps(s));
+    ui->sbSteps->setValue(ff7->steps(s));
 
-    ui->sb_love_barret->setValue(ff7->love(s, false, FF7Save::LOVE_BARRET));
-    ui->sb_love_tifa->setValue(ff7->love(s, false, FF7Save::LOVE_TIFA));
-    ui->sb_love_aeris->setValue(ff7->love(s, false, FF7Save::LOVE_AERIS));
-    ui->sb_love_yuffie->setValue(ff7->love(s, false, FF7Save::LOVE_YUFFIE));
+    ui->sbLoveBarret->setValue(ff7->love(s, false, FF7Save::LOVE_BARRET));
+    ui->sbLoveTifa->setValue(ff7->love(s, false, FF7Save::LOVE_TIFA));
+    ui->sbLoveAeris->setValue(ff7->love(s, false, FF7Save::LOVE_AERIS));
+    ui->sbLoveYuffie->setValue(ff7->love(s, false, FF7Save::LOVE_YUFFIE));
 
-    ui->sb_time_hour->setValue(ff7->time(s) / 3600);
-    ui->sb_time_min->setValue(ff7->time(s) / 60 % 60);
-    ui->sb_time_sec->setValue(int(ff7->time(s)) - ((ui->sb_time_hour->value() * 3600) + ui->sb_time_min->value() * 60));
+    ui->sbTimeHour->setValue(ff7->time(s) / 3600);
+    ui->sbTimeMin->setValue(ff7->time(s) / 60 % 60);
+    ui->sbTimeSec->setValue(int(ff7->time(s)) - ((ui->sbTimeHour->value() * 3600) + ui->sbTimeMin->value() * 60));
 
-    ui->sb_timer_time_hour->setValue(ff7->countdownTimer(s) / 3600);
-    ui->sb_timer_time_min->setValue(ff7->countdownTimer(s) / 60 % 60);
-    ui->sb_timer_time_sec->setValue(int(ff7->countdownTimer(s)) - ((ui->sb_timer_time_hour->value() * 3600) + ui->sb_timer_time_min->value() * 60));
-    ui->cb_yuffieforest->setChecked(ff7->canFightNinjaInForest(s));
-    ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
-    ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
+    ui->sbTimerTimeHour->setValue(ff7->countdownTimer(s) / 3600);
+    ui->sbTimerTimeMin->setValue(ff7->countdownTimer(s) / 60 % 60);
+    ui->sbTimerTimeSec->setValue(int(ff7->countdownTimer(s)) - ((ui->sbTimerTimeHour->value() * 3600) + ui->sbTimerTimeMin->value() * 60));
+    ui->cbYuffieForest->setChecked(ff7->canFightNinjaInForest(s));
+    ui->cbRegYuffie->setChecked(ff7->yuffieUnlocked(s));
+    ui->cbRegVinny->setChecked(ff7->vincentUnlocked(s));
 
     /*~~~~~Stolen Materia~~~~~~~*/
-    ui->tbl_materia_2->reset();
-    ui->tbl_materia_2->clearContents();
-    ui->tbl_materia_2->setColumnWidth(0, int(ui->tbl_materia_2->width()*.65));
-    ui->tbl_materia_2->setColumnWidth(1, int(ui->tbl_materia_2->width()*.25));
-    ui->tbl_materia_2->setRowCount(48);
+    ui->tblMateriaStolen->reset();
+    ui->tblMateriaStolen->clearContents();
+    ui->tblMateriaStolen->setColumnWidth(0, int(ui->tblMateriaStolen->width()*.65));
+    ui->tblMateriaStolen->setColumnWidth(1, int(ui->tblMateriaStolen->width()*.25));
+    ui->tblMateriaStolen->setRowCount(48);
     updateStolenMateria();
 
     //SnowBoard Mini Game Data.
@@ -1342,9 +1591,9 @@ void MainWindow::othersUpdate()
     ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s, 2).midRef(4, 3).toInt());
     ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s, 2));
 
-    ui->sb_BikeHighScore->setValue(ff7->bikeHighScore(s));
-    ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
-    ui->cb_FlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
+    ui->sbBikeHighScore->setValue(ff7->bikeHighScore(s));
+    ui->sbBattlePoints->setValue(ff7->battlePoints(s));
+    ui->cbFlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
     load = false;
 }
 void MainWindow::updateStolenMateria()
@@ -1355,20 +1604,20 @@ void MainWindow::updateStolenMateria()
         QTableWidgetItem *newItem;
         if (current_id != FF7Materia::EmptyId) {
             newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)), Materias.name(current_id), 0);
-            ui->tbl_materia_2->setItem(mat, 0, newItem);
+            ui->tblMateriaStolen->setItem(mat, 0, newItem);
             qint32 current_ap = ff7->stolenMateriaAp(s, mat);
             if (current_ap == FF7Materia::MaxMateriaAp) {
                 newItem = new QTableWidgetItem(tr("Master"));
-                ui->tbl_materia_2->setItem(mat, 1, newItem);
+                ui->tblMateriaStolen->setItem(mat, 1, newItem);
             } else {
                 newItem = new QTableWidgetItem(ap.setNum(current_ap));
-                ui->tbl_materia_2->setItem(mat, 1, newItem);
+                ui->tblMateriaStolen->setItem(mat, 1, newItem);
             }
         } else {
             newItem = new QTableWidgetItem(tr("===Empty Slot==="), 0);
-            ui->tbl_materia_2->setItem(mat, 0, newItem);
+            ui->tblMateriaStolen->setItem(mat, 0, newItem);
         }
-        ui->tbl_materia_2->setRowHeight(mat, fontMetrics().height() + 9);
+        ui->tblMateriaStolen->setRowHeight(mat, fontMetrics().height() + 9);
     }
 }
 void MainWindow::update_hexEditor_PSXInfo(void)
@@ -1414,7 +1663,7 @@ void MainWindow::update_hexEditor_PSXInfo(void)
     ui->lblSlotSize->setText(SlotSizeText);
     load = false;
 }
-void MainWindow::on_tabWidget_currentChanged(int index)
+void MainWindow::tabWidget_currentChanged(int index)
 {
     //Update the shown tab.
     load = true;
@@ -1422,43 +1671,43 @@ void MainWindow::on_tabWidget_currentChanged(int index)
     switch (index) {
     case 0://Party Tab
         if (ff7->party(s, 0) >= 0x0C)
-            ui->combo_party1->setCurrentIndex(12);
+            ui->comboParty1->setCurrentIndex(12);
         else
-            ui->combo_party1->setCurrentIndex(ff7->party(s, 0));
+            ui->comboParty1->setCurrentIndex(ff7->party(s, 0));
 
         if (ff7->party(s, 1) >= 0x0C)
-            ui->combo_party2->setCurrentIndex(12);
+            ui->comboParty2->setCurrentIndex(12);
         else
-            ui->combo_party2->setCurrentIndex(ff7->party(s, 1));
+            ui->comboParty2->setCurrentIndex(ff7->party(s, 1));
 
         if (ff7->party(s, 2) >= 0x0C)
-            ui->combo_party3->setCurrentIndex(12);
+            ui->comboParty3->setCurrentIndex(12);
         else
-            ui->combo_party3->setCurrentIndex(ff7->party(s, 2));
+            ui->comboParty3->setCurrentIndex(ff7->party(s, 2));
 
         set_char_buttons();
         switch (curchar) {
-        case 0: ui->btn_cloud->click(); break;
-        case 1: ui->btn_barret->click(); break;
-        case 2: ui->btn_tifa->click(); break;
-        case 3: ui->btn_aeris->click(); break;
-        case 4: ui->btn_red->click(); break;
-        case 5: ui->btn_yuffie->click(); break;
-        case 6: ui->btn_cait->click(); break;
-        case 7: ui->btn_vincent->click(); break;
-        case 8: ui->btn_cid->click(); break;
+        case 0: btnCloud_clicked(); break;
+        case 1: btnBarret_clicked(); break;
+        case 2: btnTifa_clicked(); break;
+        case 3: btnAeris_clicked(); break;
+        case 4: btnRed_clicked(); break;
+        case 5: btnYuffie_clicked(); break;
+        case 6: btnCait_clicked(); break;
+        case 7: btnVincent_clicked(); break;
+        case 8: btnCid_clicked(); break;
         }
         break;
 
     case 1://Item Tab
         itemlist->setItems(ff7->items(s));
-        ui->sb_gil->setValue(ff7->gil(s));
-        ui->sb_gp->setValue(ff7->gp(s));
-        ui->sb_runs->setValue(ff7->runs(s));
-        ui->sb_battles->setValue(ff7->battles(s));
-        ui->cb_mysteryPanties->setChecked(ff7->keyItem(s, FF7Save::MYSTERYPANTIES));
-        ui->cb_letterToDaughter->setChecked(ff7->keyItem(s, FF7Save::LETTERTOADAUGHTER));
-        ui->cb_letterToWife->setChecked(ff7->keyItem(s, FF7Save::LETTERTOAWIFE));
+        ui->sbGil->setValue(ff7->gil(s));
+        ui->sbGp->setValue(ff7->gp(s));
+        ui->sbRuns->setValue(ff7->runs(s));
+        ui->sbBattles->setValue(ff7->battles(s));
+        ui->cbMysteryPanties->setChecked(ff7->keyItem(s, FF7Save::MYSTERYPANTIES));
+        ui->cbLetterToDaughter->setChecked(ff7->keyItem(s, FF7Save::LETTERTOADAUGHTER));
+        ui->cbLetterToWife->setChecked(ff7->keyItem(s, FF7Save::LETTERTOAWIFE));
         break;
 
     case 2://Materia
@@ -1470,7 +1719,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         break;
 
     case 4://Location Tab
-        on_locationToolBox_currentChanged(ui->locationToolBox->currentIndex());
+        locationToolBox_currentChanged(ui->locationToolBox->currentIndex());
         break;
 
     case 5://Game Progress Tab
@@ -1510,11 +1759,11 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         break;
 
     case 8://HexEditor Tab
-        hexTabUpdate(ui->combo_hexEditor->currentIndex());
+        hexTabUpdate(ui->comboHexEditor->currentIndex());
         break;
 
     case 9: //Test Data Tab
-        on_testDataTabWidget_currentChanged(ui->testDataTabWidget->currentIndex());
+        testDataTabWidget_currentChanged(ui->testDataTabWidget->currentIndex());
         break;
     }
     load = false;
@@ -1563,8 +1812,8 @@ void MainWindow::guirefresh(bool newgame)
     } else {
         //IS FF7 Slot
         if (FF7SaveInfo::instance()->internalPC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
-            if (ui->combo_hexEditor->currentIndex() != 1)
-                ui->combo_hexEditor->setCurrentIndex(1);
+            if (ui->comboHexEditor->currentIndex() != 1)
+                ui->comboHexEditor->setCurrentIndex(1);
         }
         //QByteArray text;
         if (ff7->region(s).isEmpty()
@@ -1575,143 +1824,143 @@ void MainWindow::guirefresh(bool newgame)
         }
         locationViewer->setRegion(ff7->region(s));
         setmenu(newgame);
-        on_tabWidget_currentChanged(ui->tabWidget->currentIndex());
+        tabWidget_currentChanged(ui->tabWidget->currentIndex());
         load = false;
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-    ui->btn_cloud->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 0)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_barret->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 1)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_tifa->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 2)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_aeris->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 3)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_red->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 4)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_yuffie->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 5)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_cait->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 6)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_vincent->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 7)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btn_cid->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 8)).scaled(ui->btn_cloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnCloud->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 0)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnBarret->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 1)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnTifa->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 2)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnAeris->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 3)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnRed->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 4)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnYuffie->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 5)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnCait->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 6)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnVincent->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 7)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnCid->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 8)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
 }
 void MainWindow::progress_update()
 {
     load = true;
-    ui->sb_curdisc->setValue(ff7->disc(s));
-    ui->sb_mprogress->setValue(ff7->mainProgress(s));
+    ui->sbCurdisc->setValue(ff7->disc(s));
+    ui->sbMprogress->setValue(ff7->mainProgress(s));
 
-    ui->sb_turkschurch->setValue(ff7->churchProgress(s));
-    ui->sb_donprog->setValue(ff7->donProgress(s));
-    ui->combo_s7_slums->setCurrentIndex(0);
+    ui->sbTurkschurch->setValue(ff7->churchProgress(s));
+    ui->sbDonprog->setValue(ff7->donProgress(s));
+    ui->comboS7Slums->setCurrentIndex(0);
 
-    ui->cb_bm1_1->setChecked(ff7->bmProgress1(s, 0));
-    ui->cb_bm1_2->setChecked(ff7->bmProgress1(s, 1));
-    ui->cb_bm1_3->setChecked(ff7->bmProgress1(s, 2));
-    ui->cb_bm1_4->setChecked(ff7->bmProgress1(s, 3));
-    ui->cb_bm1_5->setChecked(ff7->bmProgress1(s, 4));
-    ui->cb_bm1_6->setChecked(ff7->bmProgress1(s, 5));
-    ui->cb_bm1_7->setChecked(ff7->bmProgress1(s, 6));
-    ui->cb_bm1_8->setChecked(ff7->bmProgress1(s, 7));
-    ui->cb_bm2_1->setChecked(ff7->bmProgress2(s, 0));
-    ui->cb_bm2_2->setChecked(ff7->bmProgress2(s, 1));
-    ui->cb_bm2_3->setChecked(ff7->bmProgress2(s, 2));
-    ui->cb_bm2_4->setChecked(ff7->bmProgress2(s, 3));
-    ui->cb_bm2_5->setChecked(ff7->bmProgress2(s, 4));
-    ui->cb_bm2_6->setChecked(ff7->bmProgress2(s, 5));
-    ui->cb_bm2_7->setChecked(ff7->bmProgress2(s, 6));
-    ui->cb_bm2_8->setChecked(ff7->bmProgress2(s, 7));
-    ui->cb_bm3_1->setChecked(ff7->bmProgress3(s, 0));
-    ui->cb_bm3_2->setChecked(ff7->bmProgress3(s, 1));
-    ui->cb_bm3_3->setChecked(ff7->bmProgress3(s, 2));
-    ui->cb_bm3_4->setChecked(ff7->bmProgress3(s, 3));
-    ui->cb_bm3_5->setChecked(ff7->bmProgress3(s, 4));
-    ui->cb_bm3_6->setChecked(ff7->bmProgress3(s, 5));
-    ui->cb_bm3_7->setChecked(ff7->bmProgress3(s, 6));
-    ui->cb_bm3_8->setChecked(ff7->bmProgress3(s, 7));
-    ui->cb_midgartrain_1->setChecked(ff7->midgarTrainFlags(s, 0));
-    ui->cb_midgartrain_2->setChecked(ff7->midgarTrainFlags(s, 1));
-    ui->cb_midgartrain_3->setChecked(ff7->midgarTrainFlags(s, 2));
-    ui->cb_midgartrain_4->setChecked(ff7->midgarTrainFlags(s, 3));
-    ui->cb_midgartrain_5->setChecked(ff7->midgarTrainFlags(s, 4));
-    ui->cb_midgartrain_6->setChecked(ff7->midgarTrainFlags(s, 5));
-    ui->cb_midgartrain_7->setChecked(ff7->midgarTrainFlags(s, 6));
-    ui->cb_midgartrain_8->setChecked(ff7->midgarTrainFlags(s, 7));
-    ui->cb_bombing_int->setChecked(ff7->startBombingMission(s));
+    ui->cbBm1_1->setChecked(ff7->bmProgress1(s, 0));
+    ui->cbBm1_2->setChecked(ff7->bmProgress1(s, 1));
+    ui->cbBm1_3->setChecked(ff7->bmProgress1(s, 2));
+    ui->cbBm1_4->setChecked(ff7->bmProgress1(s, 3));
+    ui->cbBm1_5->setChecked(ff7->bmProgress1(s, 4));
+    ui->cbBm1_6->setChecked(ff7->bmProgress1(s, 5));
+    ui->cbBm1_7->setChecked(ff7->bmProgress1(s, 6));
+    ui->cbBm1_8->setChecked(ff7->bmProgress1(s, 7));
+    ui->cbBm2_1->setChecked(ff7->bmProgress2(s, 0));
+    ui->cbBm2_2->setChecked(ff7->bmProgress2(s, 1));
+    ui->cbBm2_3->setChecked(ff7->bmProgress2(s, 2));
+    ui->cbBm2_4->setChecked(ff7->bmProgress2(s, 3));
+    ui->cbBm2_5->setChecked(ff7->bmProgress2(s, 4));
+    ui->cbBm2_6->setChecked(ff7->bmProgress2(s, 5));
+    ui->cbBm2_7->setChecked(ff7->bmProgress2(s, 6));
+    ui->cbBm2_8->setChecked(ff7->bmProgress2(s, 7));
+    ui->cbBm3_1->setChecked(ff7->bmProgress3(s, 0));
+    ui->cbBm3_2->setChecked(ff7->bmProgress3(s, 1));
+    ui->cbBm3_3->setChecked(ff7->bmProgress3(s, 2));
+    ui->cbBm3_4->setChecked(ff7->bmProgress3(s, 3));
+    ui->cbBm3_5->setChecked(ff7->bmProgress3(s, 4));
+    ui->cbBm3_6->setChecked(ff7->bmProgress3(s, 5));
+    ui->cbBm3_7->setChecked(ff7->bmProgress3(s, 6));
+    ui->cbBm3_8->setChecked(ff7->bmProgress3(s, 7));
+    ui->cbMidgartrain_1->setChecked(ff7->midgarTrainFlags(s, 0));
+    ui->cbMidgartrain_2->setChecked(ff7->midgarTrainFlags(s, 1));
+    ui->cbMidgartrain_3->setChecked(ff7->midgarTrainFlags(s, 2));
+    ui->cbMidgartrain_4->setChecked(ff7->midgarTrainFlags(s, 3));
+    ui->cbMidgartrain_5->setChecked(ff7->midgarTrainFlags(s, 4));
+    ui->cbMidgartrain_6->setChecked(ff7->midgarTrainFlags(s, 5));
+    ui->cbMidgartrain_7->setChecked(ff7->midgarTrainFlags(s, 6));
+    ui->cbMidgartrain_8->setChecked(ff7->midgarTrainFlags(s, 7));
+    ui->cbBombingInt->setChecked(ff7->startBombingMission(s));
 
-    ui->cb_s7pl_1->setChecked((ff7->unknown(s, 26).at(0) & (1 << 0)));
-    ui->cb_s7pl_2->setChecked((ff7->unknown(s, 26).at(0) & (1 << 1)));
-    ui->cb_s7pl_3->setChecked((ff7->unknown(s, 26).at(0) & (1 << 2)));
-    ui->cb_s7pl_4->setChecked((ff7->unknown(s, 26).at(0) & (1 << 3)));
-    ui->cb_s7pl_5->setChecked((ff7->unknown(s, 26).at(0) & (1 << 4)));
-    ui->cb_s7pl_6->setChecked((ff7->unknown(s, 26).at(0) & (1 << 5)));
-    ui->cb_s7pl_7->setChecked((ff7->unknown(s, 26).at(0) & (1 << 6)));
-    ui->cb_s7pl_8->setChecked((ff7->unknown(s, 26).at(0) & (1 << 7)));
+    ui->cbS7pl_1->setChecked((ff7->unknown(s, 26).at(0) & (1 << 0)));
+    ui->cbS7pl_2->setChecked((ff7->unknown(s, 26).at(0) & (1 << 1)));
+    ui->cbS7pl_3->setChecked((ff7->unknown(s, 26).at(0) & (1 << 2)));
+    ui->cbS7pl_4->setChecked((ff7->unknown(s, 26).at(0) & (1 << 3)));
+    ui->cbS7pl_5->setChecked((ff7->unknown(s, 26).at(0) & (1 << 4)));
+    ui->cbS7pl_6->setChecked((ff7->unknown(s, 26).at(0) & (1 << 5)));
+    ui->cbS7pl_7->setChecked((ff7->unknown(s, 26).at(0) & (1 << 6)));
+    ui->cbS7pl_8->setChecked((ff7->unknown(s, 26).at(0) & (1 << 7)));
 
-    ui->cb_s7ts_1->setChecked((ff7->unknown(s, 26).at(8) & (1 << 0)));
-    ui->cb_s7ts_2->setChecked((ff7->unknown(s, 26).at(8) & (1 << 1)));
-    ui->cb_s7ts_3->setChecked((ff7->unknown(s, 26).at(8) & (1 << 2)));
-    ui->cb_s7ts_4->setChecked((ff7->unknown(s, 26).at(8) & (1 << 3)));
-    ui->cb_s7ts_5->setChecked((ff7->unknown(s, 26).at(8) & (1 << 4)));
-    ui->cb_s7ts_6->setChecked((ff7->unknown(s, 26).at(8) & (1 << 5)));
-    ui->cb_s7ts_7->setChecked((ff7->unknown(s, 26).at(8) & (1 << 6)));
-    ui->cb_s7ts_8->setChecked((ff7->unknown(s, 26).at(8) & (1 << 7)));
+    ui->cbS7ts_1->setChecked((ff7->unknown(s, 26).at(8) & (1 << 0)));
+    ui->cbS7ts_2->setChecked((ff7->unknown(s, 26).at(8) & (1 << 1)));
+    ui->cbS7ts_3->setChecked((ff7->unknown(s, 26).at(8) & (1 << 2)));
+    ui->cbS7ts_4->setChecked((ff7->unknown(s, 26).at(8) & (1 << 3)));
+    ui->cbS7ts_5->setChecked((ff7->unknown(s, 26).at(8) & (1 << 4)));
+    ui->cbS7ts_6->setChecked((ff7->unknown(s, 26).at(8) & (1 << 5)));
+    ui->cbS7ts_7->setChecked((ff7->unknown(s, 26).at(8) & (1 << 6)));
+    ui->cbS7ts_8->setChecked((ff7->unknown(s, 26).at(8) & (1 << 7)));
     
     if (ff7->unknown(s, 26).mid(0, 6) == "\x00\x00\x00\x00\x00\x00")
-        ui->combo_s7_slums->setCurrentIndex(1);
+        ui->comboS7Slums->setCurrentIndex(1);
     else if (ff7->unknown(s, 26).mid(0, 6) == "\xFF\x03\x04\x0F\x1F\x6F" || ff7->unknown(s, 26).mid(0, 6) == "\xBF\x51\x05\x17\x5D\xEF")
-        ui->combo_s7_slums->setCurrentIndex(2);
+        ui->comboS7Slums->setCurrentIndex(2);
     else if (static_cast<unsigned char>(ff7->unknown(s, 26).at(2)) == 0x13)
-        ui->combo_s7_slums->setCurrentIndex(3);
+        ui->comboS7Slums->setCurrentIndex(3);
     else
-        ui->combo_s7_slums->setCurrentIndex(0);
+        ui->comboS7Slums->setCurrentIndex(0);
     
     load = false;
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()
+void MainWindow::btnCloud_clicked()
 {
     curchar = 0;
     char_editor->setChar(ff7->character(s, 0), ff7->charName(s, 0));
 }
-void MainWindow::on_btn_barret_clicked()
+void MainWindow::btnBarret_clicked()
 {
     curchar = 1;
     char_editor->setChar(ff7->character(s, 1), ff7->charName(s, 1));
 }
-void MainWindow::on_btn_tifa_clicked()
+void MainWindow::btnTifa_clicked()
 {
     curchar = 2;
     char_editor->setChar(ff7->character(s, 2), ff7->charName(s, 2));
 }
-void MainWindow::on_btn_aeris_clicked()
+void MainWindow::btnAeris_clicked()
 {
     curchar = 3;
     char_editor->setChar(ff7->character(s, 3), ff7->charName(s, 3));
 }
-void MainWindow::on_btn_red_clicked()
+void MainWindow::btnRed_clicked()
 {
     curchar = 4;
     char_editor->setChar(ff7->character(s, 4), ff7->charName(s, 4));
 }
-void MainWindow::on_btn_yuffie_clicked()
+void MainWindow::btnYuffie_clicked()
 {
     curchar = 5;
     char_editor->setChar(ff7->character(s, 5), ff7->charName(s, 5));
 }
-void MainWindow::on_btn_cait_clicked()
+void MainWindow::btnCait_clicked()
 {
     curchar = 6;
     char_editor->setChar(ff7->character(s, 6), ff7->charName(s, 6));
 }
-void MainWindow::on_btn_vincent_clicked()
+void MainWindow::btnVincent_clicked()
 {
     curchar = 7;
     char_editor->setChar(ff7->character(s, 7), ff7->charName(s, 7));
 }
-void MainWindow::on_btn_cid_clicked()
+void MainWindow::btnCid_clicked()
 {
     curchar = 8;
     char_editor->setChar(ff7->character(s, 8), ff7->charName(s, 8));
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_combo_party1_currentIndexChanged(int index)
+void MainWindow::comboParty1_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 0x0C) { //empty char slot (index 12)
@@ -1762,7 +2011,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::on_combo_party2_currentIndexChanged(int index)
+void MainWindow::comboParty2_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 12)
@@ -1774,7 +2023,7 @@ void MainWindow::on_combo_party2_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::on_combo_party3_currentIndexChanged(int index)
+void MainWindow::comboParty3_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 12)
@@ -1890,82 +2139,82 @@ void MainWindow::cm_pensChanged(int pen, int index)
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_love_barret_valueChanged(int value)
+void MainWindow::sbLoveBarret_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
 }
-void MainWindow::on_sb_love_aeris_valueChanged(int value)
+void MainWindow::sbLoveAeris_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
 }
-void MainWindow::on_sb_love_tifa_valueChanged(int value)
+void MainWindow::sbLoveTifa_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
 }
-void MainWindow::on_sb_love_yuffie_valueChanged(int value)
+void MainWindow::sbLoveYuffie_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
 }
 
-void MainWindow::on_sb_time_hour_valueChanged(int value)
+void MainWindow::sbTimeHour_valueChanged(int value)
 {
     if (!load)
-        ff7->setTime(s, quint32((value * 3600) + (ui->sb_time_min->value() * 60) + (ui->sb_time_sec->value())));
+        ff7->setTime(s, quint32((value * 3600) + (ui->sbTimeMin->value() * 60) + (ui->sbTimeSec->value())));
 }
-void MainWindow::on_sb_time_min_valueChanged(int value)
+void MainWindow::sbTimeMin_valueChanged(int value)
 {
     if (!load)
-        ff7->setTime(s, quint32((ui->sb_time_hour->value() * 3600) + ((value * 60)) + (ui->sb_time_sec->value())));
+        ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimeSec->value())));
 }
-void MainWindow::on_sb_time_sec_valueChanged(int value)
+void MainWindow::sbTimeSec_valueChanged(int value)
 {
     if (!load)
-        ff7->setTime(s, quint32((ui->sb_time_hour->value() * 3600) + (ui->sb_time_min->value() * 60) + (value)));
+        ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + (ui->sbTimeMin->value() * 60) + (value)));
 }
 
-void MainWindow::on_sb_steps_valueChanged(int value)
+void MainWindow::sbSteps_valueChanged(int value)
 {
     if (!load)
         ff7->setSteps(s, value);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_sb_gil_valueChanged(double value)
+void MainWindow::sbGil_valueChanged(double value)
 {
     if (!load)
         ff7->setGil(s, quint32(value));
 }
-void MainWindow::on_sb_gp_valueChanged(int value)
+void MainWindow::sbGp_valueChanged(int value)
 {
     if (!load)
         ff7->setGp(s, value);
 }
-void MainWindow::on_sb_battles_valueChanged(int value)
+void MainWindow::sbBattles_valueChanged(int value)
 {
     if (!load)
         ff7->setBattles(s, value);
 }
-void MainWindow::on_sb_runs_valueChanged(int value)
+void MainWindow::sbRuns_valueChanged(int value)
 {
     if (!load)
         ff7->setRuns(s, value);
 }
 
-void MainWindow::on_cb_mysteryPanties_toggled(bool checked)
+void MainWindow::cbMysteryPanties_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
 }
-void MainWindow::on_cb_letterToDaughter_toggled(bool checked)
+void MainWindow::cbLetterToDaughter_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
 }
-void MainWindow::on_cb_letterToWife_toggled(bool checked)
+void MainWindow::cbLetterToWife_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
@@ -1973,7 +2222,7 @@ void MainWindow::on_cb_letterToWife_toggled(bool checked)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_tbl_materia_currentCellChanged(int row)
+void MainWindow::tblMateria_currentCellChanged(int row)
 {
     if (!load) {
         load = true;
@@ -1982,7 +2231,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
     }
 }
 
-void MainWindow::on_btn_add_all_materia_clicked()
+void MainWindow::btnAddAllMateria_clicked()
 {
     //place one of each at lowest possible point
     for (int i = 117; i < 142; i++) {
@@ -2160,148 +2409,148 @@ void MainWindow::setMagicOrder(int order)
 }
 
 /*--------GAME PROGRESS-------*/
-void MainWindow::on_sb_curdisc_valueChanged(int value)
+void MainWindow::sbCurdisc_valueChanged(int value)
 {
     if (!load)
         ff7->setDisc(s, value);
 }
-void MainWindow::on_sb_mprogress_valueChanged(int value)
+void MainWindow::sbMprogress_valueChanged(int value)
 {
     if (!load)
         ff7->setMainProgress(s, value);
 }
-void MainWindow::on_sb_turkschurch_valueChanged(int value)
+void MainWindow::sbTurkschurch_valueChanged(int value)
 {
     if (!load)
         ff7->setChurchProgress(s, value);
 }
-void MainWindow::on_sb_donprog_valueChanged(int value)
+void MainWindow::sbDonprog_valueChanged(int value)
 {
     if (!load)
         ff7->setDonProgress(s, value);
 }
-void MainWindow::on_cb_bm1_1_toggled(bool checked)
+void MainWindow::cbBm1_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 0, checked);
 }
-void MainWindow::on_cb_bm1_2_toggled(bool checked)
+void MainWindow::cbBm1_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 1, checked);
 }
-void MainWindow::on_cb_bm1_3_toggled(bool checked)
+void MainWindow::cbBm1_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 2, checked);
 }
-void MainWindow::on_cb_bm1_4_toggled(bool checked)
+void MainWindow::cbBm1_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 3, checked);
 }
-void MainWindow::on_cb_bm1_5_toggled(bool checked)
+void MainWindow::cbBm1_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 4, checked);
 }
-void MainWindow::on_cb_bm1_6_toggled(bool checked)
+void MainWindow::cbBm1_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 5, checked);
 }
-void MainWindow::on_cb_bm1_7_toggled(bool checked)
+void MainWindow::cbBm1_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 6, checked);
 }
-void MainWindow::on_cb_bm1_8_toggled(bool checked)
+void MainWindow::cbBm1_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 7, checked);
 }
-void MainWindow::on_cb_bm2_1_toggled(bool checked)
+void MainWindow::cbBm2_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 0, checked);
 }
-void MainWindow::on_cb_bm2_2_toggled(bool checked)
+void MainWindow::cbBm2_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 1, checked);
 }
-void MainWindow::on_cb_bm2_3_toggled(bool checked)
+void MainWindow::cbBm2_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 2, checked);
 }
-void MainWindow::on_cb_bm2_4_toggled(bool checked)
+void MainWindow::cbBm2_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 3, checked);
 }
-void MainWindow::on_cb_bm2_5_toggled(bool checked)
+void MainWindow::cbBm2_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 4, checked);
 }
-void MainWindow::on_cb_bm2_6_toggled(bool checked)
+void MainWindow::cbBm2_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 5, checked);
 }
-void MainWindow::on_cb_bm2_7_toggled(bool checked)
+void MainWindow::cbBm2_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 6, checked);
 }
-void MainWindow::on_cb_bm2_8_toggled(bool checked)
+void MainWindow::cbBm2_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 7, checked);
 }
-void MainWindow::on_cb_bm3_1_toggled(bool checked)
+void MainWindow::cbBm3_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 0, checked);
 }
-void MainWindow::on_cb_bm3_2_toggled(bool checked)
+void MainWindow::cbBm3_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 1, checked);
 }
-void MainWindow::on_cb_bm3_3_toggled(bool checked)
+void MainWindow::cbBm3_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 2, checked);
 }
-void MainWindow::on_cb_bm3_4_toggled(bool checked)
+void MainWindow::cbBm3_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 3, checked);
 }
-void MainWindow::on_cb_bm3_5_toggled(bool checked)
+void MainWindow::cbBm3_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 4, checked);
 }
-void MainWindow::on_cb_bm3_6_toggled(bool checked)
+void MainWindow::cbBm3_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 5, checked);
 }
-void MainWindow::on_cb_bm3_7_toggled(bool checked)
+void MainWindow::cbBm3_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 6, checked);
 }
-void MainWindow::on_cb_bm3_8_toggled(bool checked)
+void MainWindow::cbBm3_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 7, checked);
 }
 
-void MainWindow::on_cb_s7pl_1_toggled(bool checked)
+void MainWindow::cbS7pl_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2313,7 +2562,7 @@ void MainWindow::on_cb_s7pl_1_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_2_toggled(bool checked)
+void MainWindow::cbS7pl_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2325,7 +2574,7 @@ void MainWindow::on_cb_s7pl_2_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_3_toggled(bool checked)
+void MainWindow::cbS7pl_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2337,7 +2586,7 @@ void MainWindow::on_cb_s7pl_3_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_4_toggled(bool checked)
+void MainWindow::cbS7pl_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2349,7 +2598,7 @@ void MainWindow::on_cb_s7pl_4_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_5_toggled(bool checked)
+void MainWindow::cbS7pl_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2361,7 +2610,7 @@ void MainWindow::on_cb_s7pl_5_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_6_toggled(bool checked)
+void MainWindow::cbS7pl_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2373,7 +2622,7 @@ void MainWindow::on_cb_s7pl_6_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_7_toggled(bool checked)
+void MainWindow::cbS7pl_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2385,7 +2634,7 @@ void MainWindow::on_cb_s7pl_7_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::on_cb_s7pl_8_toggled(bool checked)
+void MainWindow::cbS7pl_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2398,7 +2647,7 @@ void MainWindow::on_cb_s7pl_8_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_1_toggled(bool checked)
+void MainWindow::cbS7ts_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2411,7 +2660,7 @@ void MainWindow::on_cb_s7ts_1_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_2_toggled(bool checked)
+void MainWindow::cbS7ts_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2424,7 +2673,7 @@ void MainWindow::on_cb_s7ts_2_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_3_toggled(bool checked)
+void MainWindow::cbS7ts_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2437,7 +2686,7 @@ void MainWindow::on_cb_s7ts_3_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_4_toggled(bool checked)
+void MainWindow::cbS7ts_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2450,7 +2699,7 @@ void MainWindow::on_cb_s7ts_4_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_5_toggled(bool checked)
+void MainWindow::cbS7ts_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2463,7 +2712,7 @@ void MainWindow::on_cb_s7ts_5_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_6_toggled(bool checked)
+void MainWindow::cbS7ts_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2476,7 +2725,7 @@ void MainWindow::on_cb_s7ts_6_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_7_toggled(bool checked)
+void MainWindow::cbS7ts_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2489,7 +2738,7 @@ void MainWindow::on_cb_s7ts_7_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_s7ts_8_toggled(bool checked)
+void MainWindow::cbS7ts_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2502,13 +2751,13 @@ void MainWindow::on_cb_s7ts_8_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_bombing_int_stateChanged(int checked)
+void MainWindow::cbBombingInt_stateChanged(int checked)
 {
     if (!load)
         ff7->setStartBombingMission(s, checked);
 }
 
-void MainWindow::on_cb_replay_currentIndexChanged(int index)
+void MainWindow::comboReplay_currentIndexChanged(int index)
 {
     if (index > 0)
         ui->btnReplay->setEnabled(true);
@@ -2530,18 +2779,18 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     else
         ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));
 }
-void MainWindow::on_btnReplay_clicked()
+void MainWindow::btnReplay_clicked()
 {
-    if (ui->cb_replay->currentIndex() == 1) { // bombing mission
-        ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(1);
+    if (ui->comboReplay->currentIndex() == 1) { // bombing mission
+        ui->sbCurdisc->setValue(1);
+        ui->sbMprogress->setValue(1);
         ff7->setBmProgress1(s, 0);
         ff7->setBmProgress2(s, 0);
         ff7->setBmProgress3(s, 0);
         ff7->setMidgarTrainFlags(s, 0);
-        ui->cb_bombing_int->setChecked(true);
-        ui->combo_s7_slums->setCurrentIndex(1);
-        ui->sb_turkschurch->setValue(0); // reset turks.
+        ui->cbBombingInt->setChecked(true);
+        ui->comboS7Slums->setCurrentIndex(1);
+        ui->sbTurkschurch->setValue(0); // reset turks.
         locationViewer->setMapId(1);
         locationViewer->setLocationId(116);
         if (!locationViewer->locationChangesSaved()) {
@@ -2550,14 +2799,14 @@ void MainWindow::on_btnReplay_clicked()
             locationViewer->setLocationChangesSaved(false);
         }
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
-    } else if (ui->cb_replay->currentIndex() == 2) { // The Church In The Slums
-        ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(130);
-        ui->sb_turkschurch->setValue(0);
+    } else if (ui->comboReplay->currentIndex() == 2) { // The Church In The Slums
+        ui->sbCurdisc->setValue(1);
+        ui->sbMprogress->setValue(130);
+        ui->sbTurkschurch->setValue(0);
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(false);
+        ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(183);
         if (!locationViewer->locationChangesSaved()) {
@@ -2565,17 +2814,17 @@ void MainWindow::on_btnReplay_clicked()
             locationViewer->setLocationChangesSaved(true);
             locationViewer->setLocationChangesSaved(false);
         }
-        ui->combo_party1->setCurrentIndex(0);
-        ui->combo_party2->setCurrentIndex(12);
-        ui->combo_party3->setCurrentIndex(12);
+        ui->comboParty1->setCurrentIndex(0);
+        ui->comboParty2->setCurrentIndex(12);
+        ui->comboParty3->setCurrentIndex(12);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
-    } else if (ui->cb_replay->currentIndex() == 3) { // Flash back
-        ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(341);
+    } else if (ui->comboReplay->currentIndex() == 3) { // Flash back
+        ui->sbCurdisc->setValue(1);
+        ui->sbMprogress->setValue(341);
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(false);
+        ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(332);
         if (!locationViewer->locationChangesSaved()) {
@@ -2603,13 +2852,13 @@ void MainWindow::on_btnReplay_clicked()
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
-    else if (ui->cb_replay->currentIndex() == 4) { // The Date Scene
-        ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(583);
+    else if (ui->comboReplay->currentIndex() == 4) { // The Date Scene
+        ui->sbCurdisc->setValue(1);
+        ui->sbMprogress->setValue(583);
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(false);
+        ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(496);
         if (!locationViewer->locationChangesSaved()) {
@@ -2620,13 +2869,13 @@ void MainWindow::on_btnReplay_clicked()
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
-    else if (ui->cb_replay->currentIndex() == 5) { //Aeris Death
-        ui->sb_curdisc->setValue(1);
-        ui->sb_mprogress->setValue(664);
+    else if (ui->comboReplay->currentIndex() == 5) { //Aeris Death
+        ui->sbCurdisc->setValue(1);
+        ui->sbMprogress->setValue(664);
         ff7->setBmProgress1(s, 120);
         ff7->setBmProgress2(s, 198);
         ff7->setBmProgress3(s, 3);
-        ui->cb_bombing_int->setChecked(false);
+        ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(646);
         if (!locationViewer->locationChangesSaved()) {
@@ -2638,147 +2887,147 @@ void MainWindow::on_btnReplay_clicked()
         phsList->setChecked(FF7Char::Aerith, PhsListWidget::PHSVISIBLE, false);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
-    ui->cb_replay->setCurrentIndex(0);
+    ui->comboReplay->setCurrentIndex(0);
     if (!load)
         progress_update();
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_btn_remove_all_items_clicked()
+void MainWindow::btnRemoveAllItems_clicked()
 {
     for (int i = 0; i < 320; i++)
         ff7->setItem(s, i, FF7Item::EmptyItemData);
     itemlist->setItems(ff7->items(s));
 }
 
-void MainWindow::on_btn_remove_all_materia_clicked()
+void MainWindow::btnRemoveAllMateria_clicked()
 {
     for (int i = 0; i < 200; i++)
         ff7->setPartyMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     materiaupdate();
 }
 
-void MainWindow::on_btn_remove_all_stolen_clicked()
+void MainWindow::btnRemoveAllStolen_clicked()
 {
     for (int i = 0; i < 48; i++)
         ff7->setStolenMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     guirefresh(0);
 }
 
-void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
+void MainWindow::sbBloveAeris_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
 }
-void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
+void MainWindow::sbBloveTifa_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
 }
-void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
+void MainWindow::sbBloveYuffie_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
 }
-void MainWindow::on_sb_b_love_barret_valueChanged(int value)
+void MainWindow::sbBloveBarret_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
 }
-void MainWindow::on_sb_coster_1_valueChanged(int value)
+void MainWindow::sbCoster1_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 1, quint16(value));
 }
-void MainWindow::on_sb_coster_2_valueChanged(int value)
+void MainWindow::sbCoster2_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 2, quint16(value));
 }
-void MainWindow::on_sb_coster_3_valueChanged(int value)
+void MainWindow::sbCoster3_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 3, quint16(value));
 }
-void MainWindow::on_sb_timer_time_hour_valueChanged(int value)
+void MainWindow::sbTimerTimeHour_valueChanged(int value)
 {
     if (!load)
-        ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sb_timer_time_min->value() * 60) + (ui->sb_timer_time_sec->value())));
+        ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sbTimerTimeMin->value() * 60) + (ui->sbTimerTimeSec->value())));
 }
-void MainWindow::on_sb_timer_time_min_valueChanged(int value)
+void MainWindow::sbTimerTimeMin_valueChanged(int value)
 {
     if (!load)
-        ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value() * 3600) + ((value * 60)) + (ui->sb_timer_time_sec->value())));
+        ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimerTimeSec->value())));
 }
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
+void MainWindow::sbTimerTimeSec_valueChanged(int value)
 {
     if (!load)
-        ff7->setCountdownTimer(s, quint32((ui->sb_timer_time_hour->value() * 3600) + (ui->sb_timer_time_min->value() * 60) + (value)));
+        ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + (ui->sbTimerTimeMin->value() * 60) + (value)));
 }
-void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
+void MainWindow::sbUweaponHp_valueChanged(int value)
 {
     if (!load)
         ff7->setUWeaponHp(s, value);
 }
-void MainWindow::on_cb_reg_vinny_toggled(bool checked)
+void MainWindow::cbRegVinny_toggled(bool checked)
 {
     if (!load)
         ff7->setVincentUnlocked(s, checked);
 }
-void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
+void MainWindow::cbRegYuffie_toggled(bool checked)
 {
     if (!load)
         ff7->setYuffieUnlocked(s, checked);
 }
-void MainWindow::on_cb_yuffieforest_toggled(bool checked)
+void MainWindow::cbYuffieForest_toggled(bool checked)
 {
     if (!load)
         ff7->setCanFightNinjaInForest(s, checked);
 }
 
-void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
+void MainWindow::cbMidgartrain_1_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 0, checked);
 }
-void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
+void MainWindow::cbMidgartrain_2_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 1, checked);
 }
-void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
+void MainWindow::cbMidgartrain_3_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 2, checked);
 }
-void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
+void MainWindow::cbMidgartrain_4_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 3, checked);
 }
-void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
+void MainWindow::cbMidgartrain_5_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 4, checked);
 }
-void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
+void MainWindow::cbMidgartrain_6_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 5, checked);
 }
-void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
+void MainWindow::cbMidgartrain_7_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 6, checked);
 
 }
-void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
+void MainWindow::cbMidgartrain_8_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 7, checked);
 }
 
-void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
+void MainWindow::cbTutWorldSave_stateChanged(int value)
 {
     if (!load) {
         if (value == 0)
@@ -2791,7 +3040,7 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     }
 }
 
-void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
+void MainWindow::comboRegionSlot_currentIndexChanged(int index)
 {
     if (!load) {
         if (ff7->isFF7(s)) {
@@ -2801,7 +3050,7 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::on_cb_tut_sub_toggled(bool checked)
+void MainWindow::cbTutSub_toggled(bool checked)
 {
     if (!load) {
         ff7->setTutSub(s, 2, checked);
@@ -2809,436 +3058,436 @@ void MainWindow::on_cb_tut_sub_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_ruby_dead_toggled(bool checked)
+void MainWindow::cbRubyDead_toggled(bool checked)
 {
     if (!load)
         ff7->setKilledRubyWeapon(s, checked);
 }
-void MainWindow::on_cb_emerald_dead_toggled(bool checked)
+void MainWindow::cbEmeraldDead_toggled(bool checked)
 {
     if (!load)
         ff7->setKilledEmeraldWeapon(s, checked);
 }
 
-void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
+void MainWindow::comboHighwindBuggy_currentIndexChanged(int index)
 {
     if (!load) {
         switch (index) {
-        case 0: ui->bh_id->setValue(0x00); ui->cb_visible_buggy->setChecked(false); ui->cb_visible_highwind->setChecked(false); break;
-        case 1: ui->bh_id->setValue(0x06); ui->cb_visible_buggy->setChecked(true); break; //buggy
-        case 2: ui->bh_id->setValue(0x03); ui->cb_visible_highwind->setChecked(true); break; //highwind
+        case 0: ui->sbBhId->setValue(0x00); ui->cbVisibleBuggy->setChecked(false); ui->cbVisibleHighwind->setChecked(false); break;
+        case 1: ui->sbBhId->setValue(0x06); ui->cbVisibleBuggy->setChecked(true); break; //buggy
+        case 2: ui->sbBhId->setValue(0x03); ui->cbVisibleHighwind->setChecked(true); break; //highwind
         default: break;
         }
     }
 }
-void MainWindow::on_cb_visible_buggy_toggled(bool checked)
+void MainWindow::cbVisibleBuggy_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_BUGGY, checked);
         if (checked) {
-            if (ui->cb_visible_highwind->isChecked())
-                ui->cb_visible_highwind->setChecked(false);
+            if (ui->cbVisibleHighwind->isChecked())
+                ui->cbVisibleHighwind->setChecked(false);
             load = true;
-            ui->combo_highwind_buggy->setCurrentIndex(1);
-            ui->bh_id->setValue(0x06);
+            ui->comboHighwindBuggy->setCurrentIndex(1);
+            ui->sbBhId->setValue(0x06);
             load = false;
         } else {
-            if (!ui->cb_visible_buggy->isChecked()) {
+            if (!ui->cbVisibleBuggy->isChecked()) {
                 load = true;
-                ui->combo_highwind_buggy->setCurrentIndex(0);
-                ui->bh_id->setValue(0x00);
+                ui->comboHighwindBuggy->setCurrentIndex(0);
+                ui->sbBhId->setValue(0x00);
                 load = false;
             }
         }
 
     }
 }
-void MainWindow::on_cb_visible_bronco_toggled(bool checked)
+void MainWindow::cbVisibleBronco_toggled(bool checked)
 {
     if (!load)
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
 }
-void MainWindow::on_cb_visible_highwind_toggled(bool checked)
+void MainWindow::cbVisibleHighwind_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_HIGHWIND, checked);
         if (checked) {
-            if (ui->cb_visible_buggy->isChecked()) {
-                ui->cb_visible_buggy->setChecked(false);
+            if (ui->cbVisibleBuggy->isChecked()) {
+                ui->cbVisibleBuggy->setChecked(false);
             }
             load = true;
-            ui->combo_highwind_buggy->setCurrentIndex(2);
-            ui->bh_id->setValue(0x03);
+            ui->comboHighwindBuggy->setCurrentIndex(2);
+            ui->sbBhId->setValue(0x03);
             load = false;
         } else {
-            if (!ui->cb_visible_highwind->isChecked()) {
+            if (!ui->cbVisibleHighwind->isChecked()) {
                 load = true;
-                ui->combo_highwind_buggy->setCurrentIndex(0);
-                ui->bh_id->setValue(0x00);
+                ui->comboHighwindBuggy->setCurrentIndex(0);
+                ui->sbBhId->setValue(0x00);
                 load = false;
             }
         }
     }
 }
-void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleWildChocobo_toggled(bool checked)
 {
     if (!load)
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_WILD, checked);
 
     if (!checked) {
-        ui->cb_visible_yellow_chocobo->setChecked(false);
-        ui->cb_visible_green_chocobo->setChecked(false);
-        ui->cb_visible_blue_chocobo->setChecked(false);
-        ui->cb_visible_black_chocobo->setChecked(false);
-        ui->cb_visible_gold_chocobo->setChecked(false);
+        ui->cbVisibleYellowChocobo->setChecked(false);
+        ui->cbVisibleGreenChocobo->setChecked(false);
+        ui->cbVisibleBlueChocobo->setChecked(false);
+        ui->cbVisibleBlackChocobo->setChecked(false);
+        ui->cbVisibleGoldChocobo->setChecked(false);
     }
-    ui->cb_visible_yellow_chocobo->setEnabled(checked);
-    ui->cb_visible_green_chocobo->setEnabled(checked);
-    ui->cb_visible_blue_chocobo->setEnabled(checked);
-    ui->cb_visible_black_chocobo->setEnabled(checked);
-    ui->cb_visible_gold_chocobo->setEnabled(checked);
+    ui->cbVisibleYellowChocobo->setEnabled(checked);
+    ui->cbVisibleGreenChocobo->setEnabled(checked);
+    ui->cbVisibleBlueChocobo->setEnabled(checked);
+    ui->cbVisibleBlackChocobo->setEnabled(checked);
+    ui->cbVisibleGoldChocobo->setEnabled(checked);
 
 }
-void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleYellowChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_YELLOW, checked);
         if (checked) {
-            ui->cb_visible_green_chocobo->setChecked(false);
-            ui->cb_visible_blue_chocobo->setChecked(false);
-            ui->cb_visible_black_chocobo->setChecked(false);
-            ui->cb_visible_gold_chocobo->setChecked(false);
+            ui->cbVisibleGreenChocobo->setChecked(false);
+            ui->cbVisibleBlueChocobo->setChecked(false);
+            ui->cbVisibleBlackChocobo->setChecked(false);
+            ui->cbVisibleGoldChocobo->setChecked(false);
         }
     }
 }
-void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleGreenChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GREEN, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(false);
-            ui->cb_visible_blue_chocobo->setChecked(false);
-            ui->cb_visible_black_chocobo->setChecked(false);
-            ui->cb_visible_gold_chocobo->setChecked(false);
+            ui->cbVisibleYellowChocobo->setChecked(false);
+            ui->cbVisibleBlueChocobo->setChecked(false);
+            ui->cbVisibleBlackChocobo->setChecked(false);
+            ui->cbVisibleGoldChocobo->setChecked(false);
         }
     }
 }
-void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleBlueChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLUE, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(false);
-            ui->cb_visible_green_chocobo->setChecked(false);
-            ui->cb_visible_black_chocobo->setChecked(false);
-            ui->cb_visible_gold_chocobo->setChecked(false);
+            ui->cbVisibleYellowChocobo->setChecked(false);
+            ui->cbVisibleGreenChocobo->setChecked(false);
+            ui->cbVisibleBlackChocobo->setChecked(false);
+            ui->cbVisibleGoldChocobo->setChecked(false);
         }
     }
 }
 
-void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleBlackChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLACK, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(false);
-            ui->cb_visible_green_chocobo->setChecked(false);
-            ui->cb_visible_blue_chocobo->setChecked(false);
-            ui->cb_visible_gold_chocobo->setChecked(false);
+            ui->cbVisibleYellowChocobo->setChecked(false);
+            ui->cbVisibleGreenChocobo->setChecked(false);
+            ui->cbVisibleBlueChocobo->setChecked(false);
+            ui->cbVisibleGoldChocobo->setChecked(false);
         }
     }
 }
 
-void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
+void MainWindow::cbVisibleGoldChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GOLD, checked);
         if (checked) {
-            ui->cb_visible_yellow_chocobo->setChecked(false);
-            ui->cb_visible_green_chocobo->setChecked(false);
-            ui->cb_visible_blue_chocobo->setChecked(false);
-            ui->cb_visible_black_chocobo->setChecked(false);
+            ui->cbVisibleYellowChocobo->setChecked(false);
+            ui->cbVisibleGreenChocobo->setChecked(false);
+            ui->cbVisibleBlueChocobo->setChecked(false);
+            ui->cbVisibleBlackChocobo->setChecked(false);
         }
     }
 }
 // Leader's world map stuff. 0
-void MainWindow::on_leader_id_valueChanged(int value)
+void MainWindow::sbLeaderId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderID(s, value);
 }
-void MainWindow::on_leader_angle_valueChanged(int value)
+void MainWindow::sbLeaderAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderAngle(s, value);
 }
-void MainWindow::on_leader_z_valueChanged(int value)
+void MainWindow::sbLeaderZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderZ(s, value);
 }
-void MainWindow::on_leader_x_valueChanged(int value)
+void MainWindow::sbLeaderX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsLeaderX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 0) {
+        if (ui->comboMapControls->currentIndex() == 0) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
 
-void MainWindow::on_leader_y_valueChanged(int value)
+void MainWindow::sbLeaderY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsLeaderY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 0) {
+        if (ui->comboMapControls->currentIndex() == 0) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
 
 //Tiny bronco / chocobo world 1
-void MainWindow::on_tc_id_valueChanged(int value)
+void MainWindow::sbTcId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcID(s, value);
 }
-void MainWindow::on_tc_angle_valueChanged(int value)
+void MainWindow::sbTcAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcAngle(s, value);
 }
-void MainWindow::on_tc_z_valueChanged(int value)
+void MainWindow::sbTcZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcZ(s, value);
 }
-void MainWindow::on_tc_x_valueChanged(int value)
+void MainWindow::sbTcX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsTcX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 1) {
+        if (ui->comboMapControls->currentIndex() == 1) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_tc_y_valueChanged(int value)
+void MainWindow::sbTcY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsTcY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 1) {
+        if (ui->comboMapControls->currentIndex() == 1) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
 
 //buggy / highwind world 2
-void MainWindow::on_bh_id_valueChanged(int value)
+void MainWindow::sbBhId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhID(s, value);
 }
-void MainWindow::on_bh_angle_valueChanged(int value)
+void MainWindow::sbBhAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhAngle(s, value);
 }
-void MainWindow::on_bh_z_valueChanged(int value)
+void MainWindow::sbBhZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhZ(s, value);
 }
-void MainWindow::on_bh_x_valueChanged(int value)
+void MainWindow::sbBhX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsBhX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 2) {
+        if (ui->comboMapControls->currentIndex() == 2) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_bh_y_valueChanged(int value)
+void MainWindow::sbBhY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsBhY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 2) {
+        if (ui->comboMapControls->currentIndex() == 2) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
 // sub world 3
-void MainWindow::on_sub_id_valueChanged(int value)
+void MainWindow::sbSubId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubID(s, value);
 }
-void MainWindow::on_sub_angle_valueChanged(int value)
+void MainWindow::sbSubAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubAngle(s, value);
 }
-void MainWindow::on_sub_z_valueChanged(int value)
+void MainWindow::sbSubZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubZ(s, value);
 }
-void MainWindow::on_sub_x_valueChanged(int value)
+void MainWindow::sbSubX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsSubX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 3) {
+        if (ui->comboMapControls->currentIndex() == 3) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_sub_y_valueChanged(int value)
+void MainWindow::sbSubY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsSubY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 3) {
+        if (ui->comboMapControls->currentIndex() == 3) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
 
 //Wild Chocobo 4
-void MainWindow::on_wc_id_valueChanged(int value)
+void MainWindow::sbWcId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoID(s, value);
 }
-void MainWindow::on_wc_angle_valueChanged(int value)
+void MainWindow::sbWcAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoAngle(s, value);
 }
-void MainWindow::on_wc_z_valueChanged(int value)
+void MainWindow::sbWcZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoZ(s, value);
 }
-void MainWindow::on_wc_x_valueChanged(int value)
+void MainWindow::sbWcX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsWchocoX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 4) {
+        if (ui->comboMapControls->currentIndex() == 4) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_wc_y_valueChanged(int value)
+void MainWindow::sbWcY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsWchocoY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 4) {
+        if (ui->comboMapControls->currentIndex() == 4) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
 
 //Ruby world stuff 5
-void MainWindow::on_durw_id_valueChanged(int value)
+void MainWindow::sbDurwId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwID(s, value);
 }
-void MainWindow::on_durw_angle_valueChanged(int value)
+void MainWindow::sbDurwAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwAngle(s, value);
 }
-void MainWindow::on_durw_z_valueChanged(int value)
+void MainWindow::sbDurwZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwZ(s, value);
 }
-void MainWindow::on_durw_x_valueChanged(int value)
+void MainWindow::sbDurwX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsDurwX(s, value);
-        if (ui->combo_map_controls->currentIndex() == 5) {
+        if (ui->comboMapControls->currentIndex() == 5) {
             load = true;
-            ui->slide_world_x->setValue(value);
+            ui->slideWorldX->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_durw_y_valueChanged(int value)
+void MainWindow::sbDurwY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsDurwY(s, value);
-        if (ui->combo_map_controls->currentIndex() == 5) {
+        if (ui->comboMapControls->currentIndex() == 5) {
             load = true;
-            ui->slide_world_y->setValue(value);
+            ui->slideWorldY->setValue(value);
             load = false;
         }
     }
 }
-void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
+void MainWindow::comboMapControls_currentIndexChanged(int index)
 {
     load = true;
     switch (index) {
-    case 0: ui->slide_world_x->setValue(ff7->worldCoordsLeaderX(s)); ui->slide_world_y->setValue(ff7->worldCoordsLeaderY(s));   break;
-    case 1: ui->slide_world_x->setValue(ff7->worldCoordsTcX(s));     ui->slide_world_y->setValue(ff7->worldCoordsTcY(s));       break;
-    case 2: ui->slide_world_x->setValue(ff7->worldCoordsBhX(s));     ui->slide_world_y->setValue(ff7->worldCoordsBhY(s));       break;
-    case 3: ui->slide_world_x->setValue(ff7->worldCoordsSubX(s));    ui->slide_world_y->setValue(ff7->worldCoordsSubY(s));      break;
-    case 4: ui->slide_world_x->setValue(ff7->worldCoordsWchocoX(s));  ui->slide_world_y->setValue(ff7->worldCoordsWchocoY(s));   break;
-    case 5: ui->slide_world_x->setValue(ff7->worldCoordsDurwX(s));   ui->slide_world_y->setValue(ff7->worldCoordsDurwY(s));     break;
+    case 0: ui->slideWorldX->setValue(ff7->worldCoordsLeaderX(s)); ui->slideWorldY->setValue(ff7->worldCoordsLeaderY(s));   break;
+    case 1: ui->slideWorldX->setValue(ff7->worldCoordsTcX(s));     ui->slideWorldY->setValue(ff7->worldCoordsTcY(s));       break;
+    case 2: ui->slideWorldX->setValue(ff7->worldCoordsBhX(s));     ui->slideWorldY->setValue(ff7->worldCoordsBhY(s));       break;
+    case 3: ui->slideWorldX->setValue(ff7->worldCoordsSubX(s));    ui->slideWorldY->setValue(ff7->worldCoordsSubY(s));      break;
+    case 4: ui->slideWorldX->setValue(ff7->worldCoordsWchocoX(s));  ui->slideWorldY->setValue(ff7->worldCoordsWchocoY(s));   break;
+    case 5: ui->slideWorldX->setValue(ff7->worldCoordsDurwX(s));   ui->slideWorldY->setValue(ff7->worldCoordsDurwY(s));     break;
     }
     load = false;
 }
 
-void MainWindow::on_slide_world_x_valueChanged(int value)
+void MainWindow::slideWorldX_valueChanged(int value)
 {
     if (!load) {
         fileModified(true);
-        switch (ui->combo_map_controls->currentIndex()) {
-        case 0: ui->leader_x->setValue(value);  break;
-        case 1: ui->tc_x->setValue(value);      break;
-        case 2: ui->bh_x->setValue(value);      break;
-        case 3: ui->sub_x->setValue(value);     break;
-        case 4: ui->wc_x->setValue(value);      break;
-        case 5: ui->durw_x->setValue(value);    break;
+        switch (ui->comboMapControls->currentIndex()) {
+        case 0: ui->sbLeaderX->setValue(value);  break;
+        case 1: ui->sbTcX->setValue(value);      break;
+        case 2: ui->sbBhX->setValue(value);      break;
+        case 3: ui->sbSubX->setValue(value);     break;
+        case 4: ui->sbWcX->setValue(value);      break;
+        case 5: ui->sbDurwX->setValue(value);    break;
         }
     }
 }
 
-void MainWindow::on_slide_world_y_valueChanged(int value)
+void MainWindow::slideWorldY_valueChanged(int value)
 {
     if (!load) {
         fileModified(true);
-        switch (ui->combo_map_controls->currentIndex()) {
-        case 0: ui->leader_y->setValue(value);  break;
-        case 1: ui->tc_y->setValue(value);      break;
-        case 2: ui->bh_y->setValue(value);      break;
-        case 3: ui->sub_y->setValue(value);     break;
-        case 4: ui->wc_y->setValue(value);      break;
-        case 5: ui->durw_y->setValue(value);    break;
+        switch (ui->comboMapControls->currentIndex()) {
+        case 0: ui->sbLeaderY->setValue(value);  break;
+        case 1: ui->sbTcY->setValue(value);      break;
+        case 2: ui->sbBhY->setValue(value);      break;
+        case 3: ui->sbSubY->setValue(value);     break;
+        case 4: ui->sbWcY->setValue(value);      break;
+        case 5: ui->sbDurwY->setValue(value);    break;
         }
     }
 }
 
-void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
+void MainWindow::worldMapView_customContextMenuRequested(QPoint pos)
 {
     //Need to create a Paint System Here To put Dots where Chars Are Placed.
     QMenu menu(this);
@@ -3252,37 +3501,37 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     /* Do Nothing. Don't know emerald weapon Coords
     menu.addAction(tr("Place Emerald Weapon?"));
     */
-    sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
+    sel = menu.exec(ui->worldMapView->mapToGlobal(pos));
     if (!sel)
         return;
 
     fileModified(true);
     if (sel->text() == tr("&Place Leader")) {
-        ui->leader_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->leader_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbLeaderX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbLeaderY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else if (sel->text() == tr("Place &Tiny Bronco/Chocobo")) {
-        ui->tc_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->tc_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbTcX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbTcY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else if (sel->text() == tr("Place &Buggy/Highwind")) {
-        ui->bh_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->bh_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbBhX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbBhY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else if (sel->text() == tr("Place &Sub")) {
-        ui->sub_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->sub_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbSubX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbSubY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else if (sel->text() == tr("Place &Wild Chocobo")) {
-        ui->wc_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->wc_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbWcX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbWcY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else if (sel->text() == tr("Place &Diamond/Ultimate/Ruby Weapon")) {
-        ui->durw_x->setValue(pos.x() * (295000 / ui->world_map_view->width()));
-        ui->durw_y->setValue(pos.y() * (230000 / ui->world_map_view->height()));
+        ui->sbDurwX->setValue(pos.x() * (295000 / ui->worldMapView->width()));
+        ui->sbDurwY->setValue(pos.y() * (230000 / ui->worldMapView->height()));
     } else {
         return;
     }
 }//End Of Map Context Menu
 
-void MainWindow::on_btn_item_add_each_item_clicked()
+void MainWindow::btnAddAllItems_clicked()
 {
-    ui->btn_remove_all_items->click();
+    ui->btnRemoveAllItems->click();
     for (int i = 0; i < 320; i++) {
         //Replaced by new item engine. (Vegeta_Ss4)
         if (FF7Item::instance()->name(i) != tr("DON'T USE")) {
@@ -3309,8 +3558,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     QByteArray temp, temp2;
     int s2;
 
-    ui->tbl_unknown->reset();
-    ui->tbl_compare_unknown->reset();
+    ui->tblUnknown->reset();
+    ui->tblCompareUnknown->reset();
 
     if (z <= ff7->unknown_zmax())
         temp = ff7->unknown(s, z);
@@ -3319,18 +3568,18 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 
     rows = temp.size();
 
-    ui->tbl_unknown->setRowCount(rows);
-    if (ui->combo_compare_slot->currentIndex() != 0)
-        ui->tbl_compare_unknown->setRowCount(rows);
+    ui->tblUnknown->setRowCount(rows);
+    if (ui->comboCompareSlot->currentIndex() != 0)
+        ui->tblCompareUnknown->setRowCount(rows);
 
     for (int i = 0; i < rows; i++) {
-        if (ui->combo_z_var->currentText() == "SLOT") {
+        if (ui->comboZVar->currentText() == "SLOT") {
             QString hex_str = QString("%1").arg(i, 4, 16, QChar('0')).toUpper(); //format ex: 000C
             newItem = new QTableWidgetItem(hex_str, 0);
-            ui->tbl_unknown->setItem(i, 0, newItem);
+            ui->tblUnknown->setItem(i, 0, newItem);
         } else {
             newItem = new QTableWidgetItem(QString::number(i), 0);
-            ui->tbl_unknown->setItem(i, 0, newItem);
+            ui->tblUnknown->setItem(i, 0, newItem);
         }
 
         quint8 value = quint8(temp.at(i));
@@ -3338,34 +3587,34 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         //Write Hex
         newItem = new QTableWidgetItem(QString("%1").arg(value, 2, 16, QChar('0')).toUpper(), 0);
         newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_unknown->setItem(i, 1, newItem);
+        ui->tblUnknown->setItem(i, 1, newItem);
         //Write Dec
         newItem = new QTableWidgetItem(QString("%1").arg(value, 3, 10, QChar('0')), 0);
         newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_unknown->setItem(i, 2, newItem);
+        ui->tblUnknown->setItem(i, 2, newItem);
         //Write Bin
         newItem = new QTableWidgetItem(QString("%1").arg(value, 8, 2, QChar('0')), 0);
         newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_unknown->setItem(i, 3, newItem);
+        ui->tblUnknown->setItem(i, 3, newItem);
         //Write Char
         newItem = new QTableWidgetItem(QString("%1").arg(QChar(value)), 0);
         newItem->setTextAlignment(Qt::AlignHCenter);
-        ui->tbl_unknown->setItem(i, 4, newItem);
+        ui->tblUnknown->setItem(i, 4, newItem);
         //Set Height
-        ui->tbl_unknown->setRowHeight(i, fontMetrics().height() + 6);
+        ui->tblUnknown->setRowHeight(i, fontMetrics().height() + 6);
 
-        if (ui->combo_compare_slot->currentIndex() != 0) {
+        if (ui->comboCompareSlot->currentIndex() != 0) {
             //do the same for the compare slot if one has been selected.
-            if (ui->combo_z_var->currentText() == "SLOT") {
+            if (ui->comboZVar->currentText() == "SLOT") {
                 newItem = new QTableWidgetItem(QString("%1").arg(i, 4, 16, QChar('0')).toUpper(), 0);
-                ui->tbl_compare_unknown->setItem(i, 0, newItem);
+                ui->tblCompareUnknown->setItem(i, 0, newItem);
             } else {
                 newItem = new QTableWidgetItem(QString::number(i), 0);
                 newItem->setTextAlignment(Qt::AlignHCenter);
-                ui->tbl_compare_unknown->setItem(i, 0, newItem);
+                ui->tblCompareUnknown->setItem(i, 0, newItem);
             }
 
-            s2 = ui->combo_compare_slot->currentIndex() - 1;
+            s2 = ui->comboCompareSlot->currentIndex() - 1;
             if (z <= ff7->unknown_zmax())
                 temp2 = ff7->unknown(s2, z);
             else if (z == ff7->unknown_zmax() + 1)
@@ -3375,70 +3624,70 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             //Write Hex
             newItem = new QTableWidgetItem(QString("%1").arg(value, 2, 16, QChar('0')).toUpper(), 0);
             newItem->setTextAlignment(Qt::AlignHCenter);
-            ui->tbl_compare_unknown->setItem(i, 1, newItem);
+            ui->tblCompareUnknown->setItem(i, 1, newItem);
             //Write Dec
             newItem = new QTableWidgetItem(QString("%1").arg(value, 3, 10, QChar('0')), 0);
             newItem->setTextAlignment(Qt::AlignHCenter);
-            ui->tbl_compare_unknown->setItem(i, 2, newItem);
+            ui->tblCompareUnknown->setItem(i, 2, newItem);
             //Write Bin
             newItem = new QTableWidgetItem(QString("%1").arg(value, 8, 2, QChar('0')), 0);
             newItem->setTextAlignment(Qt::AlignHCenter);
-            ui->tbl_compare_unknown->setItem(i, 3, newItem);
+            ui->tblCompareUnknown->setItem(i, 3, newItem);
             //Write Char
             newItem = new QTableWidgetItem(QChar(value), 0);
             newItem->setTextAlignment(Qt::AlignHCenter);
-            ui->tbl_compare_unknown->setItem(i, 4, newItem);
+            ui->tblCompareUnknown->setItem(i, 4, newItem);
 
-            ui->tbl_compare_unknown->setRowHeight(i, fontMetrics().height() +6);
-            if (ui->tbl_compare_unknown->item(i, 1)->text() != ui->tbl_unknown->item(i, 1)->text()) {
+            ui->tblCompareUnknown->setRowHeight(i, fontMetrics().height() +6);
+            if (ui->tblCompareUnknown->item(i, 1)->text() != ui->tblUnknown->item(i, 1)->text()) {
                 for (int c = 0; c < 5; c++) {
                     //color the diffs ;)
-                    ui->tbl_compare_unknown->item(i, c)->setBackground(Qt::yellow);
-                    ui->tbl_compare_unknown->item(i, c)->setForeground(Qt::red);
-                    ui->tbl_unknown->item(i, c)->setBackground(Qt::yellow);
-                    ui->tbl_unknown->item(i, c)->setForeground(Qt::red);
+                    ui->tblCompareUnknown->item(i, c)->setBackground(Qt::yellow);
+                    ui->tblCompareUnknown->item(i, c)->setForeground(Qt::red);
+                    ui->tblUnknown->item(i, c)->setBackground(Qt::yellow);
+                    ui->tblUnknown->item(i, c)->setForeground(Qt::red);
                 }
             }
         }
     }
     for (int i = 0; i < rows; i++) { //set up the item flags
-        ui->tbl_unknown->item(i, 0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
-        ui->tbl_unknown->item(i, 1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
-        ui->tbl_unknown->item(i, 2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
-        ui->tbl_unknown->item(i, 3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
-        ui->tbl_unknown->item(i, 4)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tblUnknown->item(i, 0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tblUnknown->item(i, 1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
+        ui->tblUnknown->item(i, 2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
+        ui->tblUnknown->item(i, 3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable);
+        ui->tblUnknown->item(i, 4)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
 
-        if (ui->combo_compare_slot->currentIndex() != 0) {
-            ui->tbl_compare_unknown->item(i, 0)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_compare_unknown->item(i, 1)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_compare_unknown->item(i, 2)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_compare_unknown->item(i, 3)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_compare_unknown->item(i, 4)->setFlags(Qt::ItemIsEnabled);
+        if (ui->comboCompareSlot->currentIndex() != 0) {
+            ui->tblCompareUnknown->item(i, 0)->setFlags(Qt::ItemIsEnabled);
+            ui->tblCompareUnknown->item(i, 1)->setFlags(Qt::ItemIsEnabled);
+            ui->tblCompareUnknown->item(i, 2)->setFlags(Qt::ItemIsEnabled);
+            ui->tblCompareUnknown->item(i, 3)->setFlags(Qt::ItemIsEnabled);
+            ui->tblCompareUnknown->item(i, 4)->setFlags(Qt::ItemIsEnabled);
         }
     }
     load = false;
 }
 
-void MainWindow::on_combo_z_var_currentIndexChanged(int z)
+void MainWindow::comboZVar_currentIndexChanged(int z)
 {
     unknown_refresh(z);
 }
 
-void MainWindow::on_combo_compare_slot_currentIndexChanged(int index)
+void MainWindow::comboCompareSlot_currentIndexChanged(int index)
 {
     if (index == 0) {
-        ui->tbl_compare_unknown->clearContents();
-        ui->tbl_compare_unknown->setRowCount(0);
+        ui->tblCompareUnknown->clearContents();
+        ui->tblCompareUnknown->setRowCount(0);
     } else
-        unknown_refresh(ui->combo_z_var->currentIndex());
+        unknown_refresh(ui->comboZVar->currentIndex());
 }
 
-void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem *item)
+void MainWindow::tblUnknown_itemChanged(QTableWidgetItem *item)
 {
     if (!load) {
         QByteArray temp;
 
-        int z = ui->combo_z_var->currentIndex();
+        int z = ui->comboZVar->currentIndex();
         if (z <= ff7->unknown_zmax())
             temp = ff7->unknown(s, z);
         else if (z == ff7->unknown_zmax() + 1)
@@ -3459,7 +3708,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem *item)
     }
 }
 
-void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
+void MainWindow::comboS7Slums_currentIndexChanged(int index)
 {
     if (!load) {
         QByteArray temp(ff7->unknown(s, 26));
@@ -3649,7 +3898,7 @@ void MainWindow::char_maxMp_changed(quint16 value)
         ff7->setDescMaxMP(s, value);
 }
 
-void MainWindow::on_btn_maxChar_clicked()
+void MainWindow::btnMaxChar_clicked()
 {
     if (ff7->charID(s, curchar) == FF7Char::YoungCloud || ff7->charID(s, curchar) == FF7Char::Sephiroth  ||  _init)
         return;   //no char selected, sephiroth and young cloud.
@@ -3660,15 +3909,15 @@ void MainWindow::on_btn_maxChar_clicked()
     case QMessageBox::No: char_editor->MaxStats(); break;
     }
     switch (curchar) {
-    case 0: on_btn_cloud_clicked(); break;
-    case 1: on_btn_barret_clicked(); break;
-    case 2: on_btn_tifa_clicked(); break;
-    case 3: on_btn_aeris_clicked(); break;
-    case 4: on_btn_red_clicked(); break;
-    case 5: on_btn_yuffie_clicked(); break;
-    case 6: on_btn_cait_clicked(); break;
-    case 7: on_btn_vincent_clicked(); break;
-    case 8: on_btn_cid_clicked(); break;
+    case 0: btnCloud_clicked(); break;
+    case 1: btnBarret_clicked(); break;
+    case 2: btnTifa_clicked(); break;
+    case 3: btnAeris_clicked(); break;
+    case 4: btnRed_clicked(); break;
+    case 5: btnYuffie_clicked(); break;
+    case 6: btnCait_clicked(); break;
+    case 7: btnVincent_clicked(); break;
+    case 8: btnCid_clicked(); break;
     }
 
 }
@@ -3676,23 +3925,23 @@ void MainWindow::Items_Changed(QList<quint16> items)
 {
     ff7->setItems(s, items);
 }
-void MainWindow::on_sbSnowBegScore_valueChanged(int value)
+void MainWindow::sbSnowBegScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 0, quint8(value));
 }
-void MainWindow::on_sbSnowExpScore_valueChanged(int value)
+void MainWindow::sbSnowExpScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 1, quint8(value));
 }
-void MainWindow::on_sbSnowCrazyScore_valueChanged(int value)
+void MainWindow::sbSnowCrazyScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 2, quint8(value));
 }
 
-void MainWindow::on_sbSnowBegMin_valueChanged(int value)
+void MainWindow::sbSnowBegMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -3701,7 +3950,7 @@ void MainWindow::on_sbSnowBegMin_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowBegSec_valueChanged(int value)
+void MainWindow::sbSnowBegSec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -3710,7 +3959,7 @@ void MainWindow::on_sbSnowBegSec_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowBegMsec_valueChanged(int value)
+void MainWindow::sbSnowBegMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -3719,7 +3968,7 @@ void MainWindow::on_sbSnowBegMsec_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowExpMin_valueChanged(int value)
+void MainWindow::sbSnowExpMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -3728,7 +3977,7 @@ void MainWindow::on_sbSnowExpMin_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowExpSec_valueChanged(int value)
+void MainWindow::sbSnowExpSec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -3737,7 +3986,7 @@ void MainWindow::on_sbSnowExpSec_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowExpMsec_valueChanged(int value)
+void MainWindow::sbSnowExpMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -3746,7 +3995,7 @@ void MainWindow::on_sbSnowExpMsec_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowCrazyMin_valueChanged(int value)
+void MainWindow::sbSnowCrazyMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -3755,7 +4004,7 @@ void MainWindow::on_sbSnowCrazyMin_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowCrazySec_valueChanged(int value)
+void MainWindow::sbSnowCrazySec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -3764,7 +4013,7 @@ void MainWindow::on_sbSnowCrazySec_valueChanged(int value)
     }
 }
 
-void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
+void MainWindow::sbSnowCrazyMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -3772,18 +4021,18 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
         ff7->setSnowboardTime(s, 2, time);
     }
 }
-void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1)
+void MainWindow::sbBikeHighScore_valueChanged(int arg1)
 {
     if (!load)
         ff7->setBikeHighScore(s, quint16(arg1));
 }
-void MainWindow::on_sb_BattlePoints_valueChanged(int arg1)
+void MainWindow::sbBattlePoints_valueChanged(int arg1)
 {
     if (!load)
         ff7->setBattlePoints(s, quint16(arg1));
 }
 
-void MainWindow::on_combo_hexEditor_currentIndexChanged(int index)
+void MainWindow::comboHexEditor_currentIndexChanged(int index)
 {
     hexTabUpdate(index);
 }
@@ -3793,7 +4042,7 @@ void MainWindow::hexEditorChanged(void)
     if (FF7SaveInfo::instance()->internalPC(ff7->format())) {
         ff7->setSlotFF7Data(s, hexEditor->data());
     } else {
-        switch (ui->combo_hexEditor->currentIndex()) {
+        switch (ui->comboHexEditor->currentIndex()) {
         case 0:
             ff7->setSlotPsxRawData(s, hexEditor->data());
             update_hexEditor_PSXInfo();
@@ -3827,7 +4076,7 @@ void MainWindow::menuList_box_visible_toggled(int row, bool checked)
         ff7->setMenuVisible(s, row, checked);
 }
 
-void MainWindow::on_locationToolBox_currentChanged(int index)
+void MainWindow::locationToolBox_currentChanged(int index)
 {
     //LocationTabs
     load = true;
@@ -3844,149 +4093,149 @@ void MainWindow::on_locationToolBox_currentChanged(int index)
         break;
 
     case 1:
-        ui->cb_visible_buggy->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_BUGGY));
-        ui->cb_visible_bronco->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_TBRONCO));
-        ui->cb_visible_highwind->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_HIGHWIND));
-        ui->cb_visible_wild_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_WILD));
-        ui->cb_visible_yellow_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_YELLOW));
-        ui->cb_visible_green_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_GREEN));
-        ui->cb_visible_blue_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_BLUE));
-        ui->cb_visible_black_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_BLACK));
-        ui->cb_visible_gold_chocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_GOLD));
+        ui->cbVisibleBuggy->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_BUGGY));
+        ui->cbVisibleBronco->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_TBRONCO));
+        ui->cbVisibleHighwind->setChecked(ff7->worldVehicle(s, FF7Save::WVEHCILE_HIGHWIND));
+        ui->cbVisibleWildChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_WILD));
+        ui->cbVisibleYellowChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_YELLOW));
+        ui->cbVisibleGreenChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_GREEN));
+        ui->cbVisibleBlueChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_BLUE));
+        ui->cbVisibleBlackChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_BLACK));
+        ui->cbVisibleGoldChocobo->setChecked(ff7->worldChocobo(s, FF7Save::WCHOCO_GOLD));
 
-        switch (ui->combo_map_controls->currentIndex()) {
-        case 0: ui->slide_world_x->setValue(ff7->worldCoordsLeaderX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsLeaderY(s));
+        switch (ui->comboMapControls->currentIndex()) {
+        case 0: ui->slideWorldX->setValue(ff7->worldCoordsLeaderX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsLeaderY(s));
             break;
-        case 1: ui->slide_world_x->setValue(ff7->worldCoordsTcX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsTcY(s));
+        case 1: ui->slideWorldX->setValue(ff7->worldCoordsTcX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsTcY(s));
             break;
-        case 2:  ui->slide_world_x->setValue(ff7->worldCoordsBhX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsBhY(s));
+        case 2:  ui->slideWorldX->setValue(ff7->worldCoordsBhX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsBhY(s));
             break;
-        case 3: ui->slide_world_x->setValue(ff7->worldCoordsSubX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsSubY(s));
+        case 3: ui->slideWorldX->setValue(ff7->worldCoordsSubX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsSubY(s));
             break;
-        case 4: ui->slide_world_x->setValue(ff7->worldCoordsWchocoX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsWchocoY(s));
+        case 4: ui->slideWorldX->setValue(ff7->worldCoordsWchocoX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsWchocoY(s));
             break;
-        case 5: ui->slide_world_x->setValue(ff7->worldCoordsDurwX(s));
-            ui->slide_world_y->setValue(ff7->worldCoordsDurwY(s));
+        case 5: ui->slideWorldX->setValue(ff7->worldCoordsDurwX(s));
+            ui->slideWorldY->setValue(ff7->worldCoordsDurwY(s));
             break;
         }
         //WORLD TAB
-        ui->leader_x->setValue(ff7->worldCoordsLeaderX(s));
-        ui->leader_id->setValue(ff7->worldCoordsLeaderID(s));
-        ui->leader_angle->setValue(ff7->worldCoordsLeaderAngle(s));
-        ui->leader_y->setValue(ff7->worldCoordsLeaderY(s));
-        ui->leader_z->setValue(ff7->worldCoordsLeaderZ(s));
+        ui->sbLeaderId->setValue(ff7->worldCoordsLeaderID(s));
+        ui->sbLeaderX->setValue(ff7->worldCoordsLeaderX(s));
+        ui->sbLeaderAngle->setValue(ff7->worldCoordsLeaderAngle(s));
+        ui->sbLeaderY->setValue(ff7->worldCoordsLeaderY(s));
+        ui->sbLeaderZ->setValue(ff7->worldCoordsLeaderZ(s));
 
-        ui->durw_x->setValue(ff7->worldCoordsDurwX(s));
-        ui->durw_id->setValue(ff7->worldCoordsDurwID(s));
-        ui->durw_angle->setValue(ff7->worldCoordsDurwAngle(s));
-        ui->durw_y->setValue(ff7->worldCoordsDurwY(s));
-        ui->durw_z->setValue(ff7->worldCoordsDurwZ(s));
+        ui->sbDurwX->setValue(ff7->worldCoordsDurwX(s));
+        ui->sbDurwId->setValue(ff7->worldCoordsDurwID(s));
+        ui->sbDurwAngle->setValue(ff7->worldCoordsDurwAngle(s));
+        ui->sbDurwY->setValue(ff7->worldCoordsDurwY(s));
+        ui->sbDurwZ->setValue(ff7->worldCoordsDurwZ(s));
 
-        ui->wc_x->setValue(ff7->worldCoordsWchocoX(s));
-        ui->wc_id->setValue(ff7->worldCoordsWchocoID(s));
-        ui->wc_angle->setValue(ff7->worldCoordsWchocoAngle(s));
-        ui->wc_y->setValue(ff7->worldCoordsWchocoY(s));
-        ui->wc_z->setValue(ff7->worldCoordsWchocoZ(s));
+        ui->sbWcX->setValue(ff7->worldCoordsWchocoX(s));
+        ui->sbWcId->setValue(ff7->worldCoordsWchocoID(s));
+        ui->sbWcAngle->setValue(ff7->worldCoordsWchocoAngle(s));
+        ui->sbWcY->setValue(ff7->worldCoordsWchocoY(s));
+        ui->sbWcZ->setValue(ff7->worldCoordsWchocoZ(s));
 
-        ui->tc_x->setValue(ff7->worldCoordsTcX(s));
-        ui->tc_id->setValue(ff7->worldCoordsTcID(s));
-        ui->tc_angle->setValue(ff7->worldCoordsTcAngle(s));
-        ui->tc_y->setValue(ff7->worldCoordsTcY(s));
-        ui->tc_z->setValue(ff7->worldCoordsTcZ(s));
+        ui->sbTcX->setValue(ff7->worldCoordsTcX(s));
+        ui->sbTcId->setValue(ff7->worldCoordsTcID(s));
+        ui->sbTcAngle->setValue(ff7->worldCoordsTcAngle(s));
+        ui->sbTcY->setValue(ff7->worldCoordsTcY(s));
+        ui->sbTcZ->setValue(ff7->worldCoordsTcZ(s));
 
-        ui->bh_x->setValue(ff7->worldCoordsBhX(s));
-        ui->bh_id->setValue(ff7->worldCoordsBhID(s));
+        ui->sbBhX->setValue(ff7->worldCoordsBhX(s));
+        ui->sbBhId->setValue(ff7->worldCoordsBhID(s));
 
-        switch (ui->bh_id->value()) {
-        case 0: ui->combo_highwind_buggy->setCurrentIndex(0); break; //empty
-        case 6: ui->combo_highwind_buggy->setCurrentIndex(1); break; //buggy
-        case 3: ui->combo_highwind_buggy->setCurrentIndex(2); break; //highwind
+        switch (ui->sbBhId->value()) {
+        case 0: ui->comboHighwindBuggy->setCurrentIndex(0); break; //empty
+        case 6: ui->comboHighwindBuggy->setCurrentIndex(1); break; //buggy
+        case 3: ui->comboHighwindBuggy->setCurrentIndex(2); break; //highwind
         default: QMessageBox::information(this, tr("Black Chocobo"), tr("Unknown Id in Buggy/Highwind Location")); break;
         }
 
-        ui->bh_angle->setValue(ff7->worldCoordsBhAngle(s));
-        ui->bh_y->setValue(ff7->worldCoordsBhY(s));
-        ui->bh_z->setValue(ff7->worldCoordsBhZ(s));
+        ui->sbBhAngle->setValue(ff7->worldCoordsBhAngle(s));
+        ui->sbBhY->setValue(ff7->worldCoordsBhY(s));
+        ui->sbBhZ->setValue(ff7->worldCoordsBhZ(s));
 
-        ui->sub_x->setValue(ff7->worldCoordsSubX(s));
-        ui->sub_id->setValue(ff7->worldCoordsSubID(s));
-        ui->sub_angle->setValue(ff7->worldCoordsSubAngle(s));
-        ui->sub_y->setValue(ff7->worldCoordsSubY(s));
-        ui->sub_z->setValue(ff7->worldCoordsSubZ(s));
+        ui->sbSubX->setValue(ff7->worldCoordsSubX(s));
+        ui->sbSubId->setValue(ff7->worldCoordsSubID(s));
+        ui->sbSubAngle->setValue(ff7->worldCoordsSubAngle(s));
+        ui->sbSubY->setValue(ff7->worldCoordsSubY(s));
+        ui->sbSubZ->setValue(ff7->worldCoordsSubZ(s));
         break;
     }
     load = false;
 }
 
-void MainWindow::on_testDataTabWidget_currentChanged(int index)
+void MainWindow::testDataTabWidget_currentChanged(int index)
 {
 
     switch (index) {
     case 0:
         load = true;
-        ui->sb_b_love_aeris->setValue(ff7->love(s, true, FF7Save::LOVE_AERIS));
-        ui->sb_b_love_tifa->setValue(ff7->love(s, true, FF7Save::LOVE_TIFA));
-        ui->sb_b_love_yuffie->setValue(ff7->love(s, true, FF7Save::LOVE_YUFFIE));
-        ui->sb_b_love_barret->setValue(ff7->love(s, true, FF7Save::LOVE_BARRET));
-        ui->sb_u_weapon_hp->setValue(int(ff7->uWeaponHp(s)));
-        ui->cb_tut_sub->setChecked(ff7->tutSub(s, 2));
+        ui->sbBloveAeris->setValue(ff7->love(s, true, FF7Save::LOVE_AERIS));
+        ui->sbBloveTifa->setValue(ff7->love(s, true, FF7Save::LOVE_TIFA));
+        ui->sbBloveYuffie->setValue(ff7->love(s, true, FF7Save::LOVE_YUFFIE));
+        ui->sbBloveBarret->setValue(ff7->love(s, true, FF7Save::LOVE_BARRET));
+        ui->sbUweaponHp->setValue(int(ff7->uWeaponHp(s)));
+        ui->cbTutSub->setChecked(ff7->tutSub(s, 2));
 
         ui->lcdTutSub->display(ff7->tutSub(s));
 
         if (ff7->tutSave(s) == 0x3A)
-            ui->cb_tut_worldsave->setCheckState(Qt::Checked);
+            ui->cbTutWorldSave->setCheckState(Qt::Checked);
         else if (ff7->tutSave(s) == 0x32)
-            ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);
+            ui->cbTutWorldSave->setCheckState(Qt::PartiallyChecked);
         else
-            ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);
+            ui->cbTutWorldSave->setCheckState(Qt::Unchecked);
 
         ui->lcdNumber_7->display(ff7->tutSave(s));
 
-        ui->cb_reg_yuffie->setChecked(ff7->yuffieUnlocked(s));
-        ui->cb_reg_vinny->setChecked(ff7->vincentUnlocked(s));
+        ui->cbRegYuffie->setChecked(ff7->yuffieUnlocked(s));
+        ui->cbRegVinny->setChecked(ff7->vincentUnlocked(s));
 
-        ui->sb_saveMapId->setValue(ff7->craterSavePointMapID(s));
-        ui->sb_saveX->setValue(ff7->craterSavePointX(s));
-        ui->sb_saveY->setValue(ff7->craterSavePointY(s));
-        ui->sb_saveZ->setValue(ff7->craterSavePointZ(s));
+        ui->sbSaveMapId->setValue(ff7->craterSavePointMapID(s));
+        ui->sbSaveX->setValue(ff7->craterSavePointX(s));
+        ui->sbSaveY->setValue(ff7->craterSavePointY(s));
+        ui->sbSaveZ->setValue(ff7->craterSavePointZ(s));
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-        ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+        ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
         if (!FF7SaveInfo::instance()->internalPC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         load = false;
         break;
 
-    case 1: unknown_refresh(ui->combo_z_var->currentIndex()); break;
+    case 1: unknown_refresh(ui->comboZVar->currentIndex()); break;
     }
 }
 
-void MainWindow::on_sbCondorFunds_valueChanged(int arg1)
+void MainWindow::sbCondorFunds_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorFunds(s, quint16(arg1));
 }
-void MainWindow::on_sbCondorWins_valueChanged(int arg1)
+void MainWindow::sbCondorWins_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorWins(s, quint8(arg1));
 }
-void MainWindow::on_sbCondorLosses_valueChanged(int arg1)
+void MainWindow::sbCondorLosses_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorLosses(s, quint8(arg1));
 }
-void MainWindow::on_cbPandorasBox_toggled(bool checked)
+void MainWindow::cbPandorasBox_toggled(bool checked)
 {
     if (!load)
         ff7->setSeenPandorasBox(s, checked);
 }
-void MainWindow::on_cbSubGameWon_toggled(bool checked)
+void MainWindow::cbSubGameWon_toggled(bool checked)
 {
     if (!load)
         ff7->setSubMiniGameVictory(s, checked);
@@ -4048,53 +4297,55 @@ void MainWindow::fieldItemStateChanged(int boxID, bool checked)
     }
 }
 
-void MainWindow::on_sb_saveMapId_valueChanged(int arg1)
+void MainWindow::sbSaveMapId_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointMapID(s, arg1);
 }
-void MainWindow::on_sb_saveX_valueChanged(int arg1)
+void MainWindow::sbSaveX_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointX(s, arg1);
 }
-void MainWindow::on_sb_saveY_valueChanged(int arg1)
+void MainWindow::sbSaveY_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointY(s, arg1);
 }
-void MainWindow::on_sb_saveZ_valueChanged(int arg1)
+void MainWindow::sbSaveZ_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointZ(s, arg1);
 }
 
-void MainWindow::on_btnSearchFlyers_clicked()
+void MainWindow::btnSearchFlyers_clicked()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);
     locationViewer->setFilterString(tr("Turtle Paradise"), LocationViewer::ITEM);
 }
 
-void MainWindow::on_btnSearchKeyItems_clicked()
+void MainWindow::btnSearchKeyItems_clicked()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);
     locationViewer->setFilterString(tr("KeyItem"), LocationViewer::ITEM);
 }
 
-void MainWindow::on_linePsxDesc_textChanged(const QString &arg1)
+void MainWindow::linePsxDesc_textChanged(const QString &arg1)
 {
     if (!load) {
         ff7->setPsxDesc(arg1, s);
         update_hexEditor_PSXInfo();
     }
 }
-void MainWindow::on_cb_FlashbackPiano_toggled(bool checked)
+
+void MainWindow::cbFlashbackPiano_toggled(bool checked)
 {
     if (!load)
         ff7->setPlayedPianoOnFlashback(s, checked);
 }
+
 void MainWindow::setButtonMapping(int controlAction, int newButton)
 {
     if (!load)

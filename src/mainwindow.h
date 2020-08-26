@@ -13,34 +13,27 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #pragma once
-#include <QDataStream>
-#include <QDomDocument>
 #include <QMainWindow>
-#include <QSettings>
-//ff7tk Items
-#include "options.h"
-#include "about.h"
-#include "errbox.h"
-#include "achievementdialog.h"
-#include "ff7tk/data/SaveIcon.h"
-#include "ff7tk/data/FF7Save.h"
-#include "ff7tk/data/FF7Char.h"
+#include <QMap>
+
+#include "ff7tk/data/Type_materia.h"
 #include "ff7tk/data/FF7Materia.h"
-#include "ff7tk/widgets/OptionsWidget.h"
-#include "ff7tk/widgets/MateriaEditor.h"
-#include "ff7tk/widgets/SlotSelect.h"
-#include "ff7tk/widgets/ChocoboEditor.h"
-#include "ff7tk/widgets/CharEditor.h"
-#include "ff7tk/widgets/ItemList.h"
-#include "ff7tk/widgets/MetadataCreator.h"
-#include "ff7tk/widgets/PhsListWidget.h"
-#include "ff7tk/widgets/MenuListWidget.h"
-#include "ff7tk/widgets/ChocoboManager.h"
-#include "ff7tk/widgets/LocationViewer.h"
-//QHexedit
-#include "qhexedit/qhexedit.h"
+
+class FF7Save;
+class SaveIcon;
+class PhsListWidget;
+class MenuListWidget;
+class OptionsWidget;
+class MateriaEditor;
+class QSpacerItem;
+class CharEditor;
+class ItemList;
+class QHexEdit;
+class ChocoboManager;
+class LocationViewer;
+class QTableWidgetItem;
+class QTranslator;
 
 namespace Ui
 {
@@ -113,41 +106,44 @@ private slots://try to keep these in the same order as the .cpp file
      * @return true to accept and false to ignore.
      */
     bool saveChanges(void);
-    void setControllerMappingVisible(bool);
-    void on_actionOpen_Save_File_triggered();
-    void on_actionReload_triggered();
-    void Items_Changed(QList<quint16>);
-    void on_actionImport_char_triggered();
-    void on_actionExport_char_triggered();
-    bool on_action_Save_triggered();
-    bool on_actionSave_File_As_triggered();
     /**
      * @brief save thefile.
      * @param fileName: path of the file to save.
      * @return true if successful.
      */
     bool saveFileFull(const QString &fileName);
-    void on_actionNew_Game_triggered();
-    void on_actionNew_Game_Plus_triggered();
+    void setControllerMappingVisible(bool);
+    void Items_Changed(QList<quint16>);
     /*Simple Menu Actions */
-    void on_actionShow_Selection_Dialog_triggered();
-    void on_actionClear_Slot_triggered();
-    void on_actionPrevious_Slot_triggered();
-    void on_actionNext_Slot_triggered();
-    void on_actionAbout_triggered();
-    void on_actionCopy_Slot_triggered();
-    void on_actionPaste_Slot_triggered();
-    void on_actionShow_Options_triggered();
+    void actionOpenSaveFile_triggered();
+    void actionReload_triggered();
+    void actionImportChar_triggered();
+    void actionExportChar_triggered();
+    bool actionSave_triggered();
+    bool actionSaveFileAs_triggered();
+    void actionNewGame_triggered();
+    void actionNewGamePlus_triggered();
+    void actionShowSelectionDialog_triggered();
+    void actionClearSlot_triggered();
+    void actionPreviousSlot_triggered();
+    void actionNextSlot_triggered();
+    void actionAbout_triggered();
+    void actionCopySlot_triggered();
+    void actionPasteSlot_triggered();
+    void actionShowOptions_triggered();
+    void actionOpenAchievementFile_triggered();
+    void actionCreateNewMetadata_triggered();
+    void actionImportSlotFromFile_triggered();
     /*Language and Region Data*/
+    void actionRegionUSA_triggered(bool checked);
+    void actionRegionPALGeneric_triggered(bool checked);
+    void actionRegionPALFrench_triggered(bool checked);
+    void actionRegionPALGerman_triggered(bool checked);
+    void actionRegionPALSpanish_triggered(bool checked);
+    void actionRegionJPN_triggered(bool checked);
+    void actionRegionJPNInternational_triggered(bool checked);
     void changeLanguage(const QVariant &data);
     void setOpenFileText(const QString &text);
-    void on_action_Region_USA_triggered(bool checked);
-    void on_action_Region_PAL_Generic_triggered(bool checked);
-    void on_action_Region_PAL_French_triggered(bool checked);
-    void on_action_Region_PAL_German_triggered(bool checked);
-    void on_action_Region_PAL_Spanish_triggered(bool checked);
-    void on_action_Region_JPN_triggered(bool checked);
-    void on_action_Region_JPN_International_triggered(bool checked);
 
     /*GuiFunctions*/
     void setmenu(bool newgame);
@@ -159,37 +155,37 @@ private slots://try to keep these in the same order as the .cpp file
     void set_pal_time(void);
     void CheckGame(void);
     void othersUpdate();
-    void on_tabWidget_currentChanged(int index);
-    void on_locationToolBox_currentChanged(int index);
-    void on_testDataTabWidget_currentChanged(int index);
+    void tabWidget_currentChanged(int index);
+    void locationToolBox_currentChanged(int index);
+    void testDataTabWidget_currentChanged(int index);
     void fileModified(bool changed);
     void updateStolenMateria();
 
     /*HexEditor Tab */
     void hexTabUpdate(int viewMode);
-    void on_combo_hexEditor_currentIndexChanged(int index);
+    void comboHexEditor_currentIndexChanged(int index);
     void hexEditorChanged(void);
     void update_hexEditor_PSXInfo(void);
     //QString avatar_style(int);
 
     /*CharButtons*/
-    void on_btn_cloud_clicked();
-    void on_btn_barret_clicked();
-    void on_btn_tifa_clicked();
-    void on_btn_aeris_clicked();
-    void on_btn_red_clicked();
-    void on_btn_yuffie_clicked();
-    void on_btn_cait_clicked();
-    void on_btn_vincent_clicked();
-    void on_btn_cid_clicked();
+    void btnCloud_clicked();
+    void btnBarret_clicked();
+    void btnTifa_clicked();
+    void btnAeris_clicked();
+    void btnRed_clicked();
+    void btnYuffie_clicked();
+    void btnCait_clicked();
+    void btnVincent_clicked();
+    void btnCid_clicked();
     /*PARTY TAB*/
-    void on_sb_gil_valueChanged(double);
-    void on_sb_gp_valueChanged(int);
-    void on_sb_battles_valueChanged(int);
-    void on_sb_runs_valueChanged(int);
-    void on_combo_party1_currentIndexChanged(int index);
-    void on_combo_party2_currentIndexChanged(int index);
-    void on_combo_party3_currentIndexChanged(int index);
+    void sbGil_valueChanged(double);
+    void sbGp_valueChanged(int);
+    void sbBattles_valueChanged(int);
+    void sbRuns_valueChanged(int);
+    void comboParty1_currentIndexChanged(int index);
+    void comboParty2_currentIndexChanged(int index);
+    void comboParty3_currentIndexChanged(int index);
     /*Chocobo Tab*/
     /* ChocoboManager*/
     void cm_stablesOwnedChanged(qint8);
@@ -216,14 +212,14 @@ private slots://try to keep these in the same order as the .cpp file
     //The Chocobo pens.
 
     /* Others Tab */
-    void on_sb_curdisc_valueChanged(int);
-    void on_sb_love_yuffie_valueChanged(int);
-    void on_sb_love_tifa_valueChanged(int);
-    void on_sb_love_aeris_valueChanged(int);
-    void on_sb_love_barret_valueChanged(int);
-    void on_sb_time_sec_valueChanged(int);
-    void on_sb_time_min_valueChanged(int);
-    void on_sb_time_hour_valueChanged(int);
+    void sbCurdisc_valueChanged(int);
+    void sbLoveYuffie_valueChanged(int);
+    void sbLoveTifa_valueChanged(int);
+    void sbLoveAeris_valueChanged(int);
+    void sbLoveBarret_valueChanged(int);
+    void sbTimeSec_valueChanged(int);
+    void sbTimeMin_valueChanged(int);
+    void sbTimeHour_valueChanged(int);
 
 //NOT IN ORDER FROM HERE DOWN
     void char_id_changed(qint8);
@@ -265,88 +261,88 @@ private slots://try to keep these in the same order as the .cpp file
     void char_materia_changed(materia);
     void char_expNext_changed(quint32);
 
-    void on_sb_timer_time_sec_valueChanged(int);
-    void on_cb_tut_worldsave_stateChanged(int);
-    void on_cb_bombing_int_stateChanged(int);
-    void on_cb_tut_sub_toggled(bool checked);
-    void on_sb_timer_time_min_valueChanged(int);
-    void on_sb_timer_time_hour_valueChanged(int);
+    void sbTimerTimeHour_valueChanged(int);
+    void sbTimerTimeMin_valueChanged(int);
+    void sbTimerTimeSec_valueChanged(int);
+    void cbTutWorldSave_stateChanged(int);
+    void cbBombingInt_stateChanged(int);
+    void cbTutSub_toggled(bool checked);
 
-    void on_cb_midgartrain_8_toggled(bool);
-    void on_cb_midgartrain_7_toggled(bool);
-    void on_cb_midgartrain_6_toggled(bool);
-    void on_cb_midgartrain_5_toggled(bool);
-    void on_cb_midgartrain_4_toggled(bool);
-    void on_cb_midgartrain_3_toggled(bool);
-    void on_cb_midgartrain_2_toggled(bool);
-    void on_cb_midgartrain_1_toggled(bool);
+    void cbMidgartrain_8_toggled(bool);
+    void cbMidgartrain_7_toggled(bool);
+    void cbMidgartrain_6_toggled(bool);
+    void cbMidgartrain_5_toggled(bool);
+    void cbMidgartrain_4_toggled(bool);
+    void cbMidgartrain_3_toggled(bool);
+    void cbMidgartrain_2_toggled(bool);
+    void cbMidgartrain_1_toggled(bool);
 
-    void on_cb_yuffieforest_toggled(bool);
-    void on_cb_reg_yuffie_toggled(bool);
-    void on_cb_reg_vinny_toggled(bool);
+    void cbYuffieForest_toggled(bool);
+    void cbRegYuffie_toggled(bool);
+    void cbRegVinny_toggled(bool);
 
-    void on_sb_u_weapon_hp_valueChanged(int);
-    void on_sb_coster_1_valueChanged(int);
-    void on_sb_coster_2_valueChanged(int);
-    void on_sb_coster_3_valueChanged(int);
-    void on_sb_b_love_barret_valueChanged(int);
-    void on_sb_b_love_yuffie_valueChanged(int);
-    void on_sb_b_love_tifa_valueChanged(int);
-    void on_sb_b_love_aeris_valueChanged(int);
+    void sbUweaponHp_valueChanged(int);
+    void sbCoster1_valueChanged(int);
+    void sbCoster2_valueChanged(int);
+    void sbCoster3_valueChanged(int);
+    void sbBloveBarret_valueChanged(int);
+    void sbBloveYuffie_valueChanged(int);
+    void sbBloveTifa_valueChanged(int);
+    void sbBloveAeris_valueChanged(int);
 
-    void on_sb_turkschurch_valueChanged(int);
+    void sbTurkschurch_valueChanged(int);
 
-    void on_btn_remove_all_materia_clicked();
-    void on_btn_remove_all_stolen_clicked();
+    void btnRemoveAllMateria_clicked();
+    void btnRemoveAllStolen_clicked();
 
     //progress functions
 
-    void on_cb_replay_currentIndexChanged(int index);
-    void on_sb_mprogress_valueChanged(int value);
-    void on_cb_bm1_1_toggled(bool checked);
-    void on_cb_bm1_2_toggled(bool checked);
-    void on_cb_bm1_3_toggled(bool checked);
-    void on_cb_bm1_4_toggled(bool checked);
-    void on_cb_bm1_5_toggled(bool checked);
-    void on_cb_bm1_6_toggled(bool checked);
-    void on_cb_bm1_7_toggled(bool checked);
-    void on_cb_bm1_8_toggled(bool checked);
+    void comboReplay_currentIndexChanged(int index);
+    void sbMprogress_valueChanged(int value);
+    void cbBm1_1_toggled(bool checked);
+    void cbBm1_2_toggled(bool checked);
+    void cbBm1_3_toggled(bool checked);
+    void cbBm1_4_toggled(bool checked);
+    void cbBm1_5_toggled(bool checked);
+    void cbBm1_6_toggled(bool checked);
+    void cbBm1_7_toggled(bool checked);
+    void cbBm1_8_toggled(bool checked);
 
-    void on_cb_bm2_1_toggled(bool checked);
-    void on_cb_bm2_2_toggled(bool checked);
-    void on_cb_bm2_3_toggled(bool checked);
-    void on_cb_bm2_4_toggled(bool checked);
-    void on_cb_bm2_5_toggled(bool checked);
-    void on_cb_bm2_6_toggled(bool checked);
-    void on_cb_bm2_7_toggled(bool checked);
-    void on_cb_bm2_8_toggled(bool checked);
+    void cbBm2_1_toggled(bool checked);
+    void cbBm2_2_toggled(bool checked);
+    void cbBm2_3_toggled(bool checked);
+    void cbBm2_4_toggled(bool checked);
+    void cbBm2_5_toggled(bool checked);
+    void cbBm2_6_toggled(bool checked);
+    void cbBm2_7_toggled(bool checked);
+    void cbBm2_8_toggled(bool checked);
 
-    void on_cb_bm3_1_toggled(bool checked);
-    void on_cb_bm3_2_toggled(bool checked);
-    void on_cb_bm3_3_toggled(bool checked);
-    void on_cb_bm3_4_toggled(bool checked);
-    void on_cb_bm3_5_toggled(bool checked);
-    void on_cb_bm3_6_toggled(bool checked);
-    void on_cb_bm3_7_toggled(bool checked);
-    void on_cb_bm3_8_toggled(bool checked);
+    void cbBm3_1_toggled(bool checked);
+    void cbBm3_2_toggled(bool checked);
+    void cbBm3_3_toggled(bool checked);
+    void cbBm3_4_toggled(bool checked);
+    void cbBm3_5_toggled(bool checked);
+    void cbBm3_6_toggled(bool checked);
+    void cbBm3_7_toggled(bool checked);
+    void cbBm3_8_toggled(bool checked);
 
-    void on_cb_s7pl_1_toggled(bool checked);
-    void on_cb_s7pl_2_toggled(bool checked);
-    void on_cb_s7pl_3_toggled(bool checked);
-    void on_cb_s7pl_4_toggled(bool checked);
-    void on_cb_s7pl_5_toggled(bool checked);
-    void on_cb_s7pl_6_toggled(bool checked);
-    void on_cb_s7pl_7_toggled(bool checked);
-    void on_cb_s7pl_8_toggled(bool checked);
+    void cbS7pl_1_toggled(bool checked);
+    void cbS7pl_2_toggled(bool checked);
+    void cbS7pl_3_toggled(bool checked);
+    void cbS7pl_4_toggled(bool checked);
+    void cbS7pl_5_toggled(bool checked);
+    void cbS7pl_6_toggled(bool checked);
+    void cbS7pl_7_toggled(bool checked);
+    void cbS7pl_8_toggled(bool checked);
 
-    void on_cb_s7ts_1_toggled(bool checked);
-    void on_cb_s7ts_2_toggled(bool checked);
-    void on_cb_s7ts_3_toggled(bool checked);
-    void on_cb_s7ts_4_toggled(bool checked);
-    void on_cb_s7ts_5_toggled(bool checked);
-    void on_cb_s7ts_6_toggled(bool checked);
-    void on_cb_s7ts_7_toggled(bool checked);
-    void on_cb_s7ts_8_toggled(bool checked);
+    void cbS7ts_1_toggled(bool checked);
+    void cbS7ts_2_toggled(bool checked);
+    void cbS7ts_3_toggled(bool checked);
+    void cbS7ts_4_toggled(bool checked);
+    void cbS7ts_5_toggled(bool checked);
+    void cbS7ts_6_toggled(bool checked);
+    void cbS7ts_7_toggled(bool checked);
+    void cbS7ts_8_toggled(bool checked);
 
     // game options tab
 
@@ -381,121 +377,118 @@ private slots://try to keep these in the same order as the .cpp file
     void location_textChanged(QString);
 
     //items tab
-    void on_btn_item_add_each_item_clicked();
-    void on_btn_remove_all_items_clicked();
+    void btnAddAllItems_clicked();
+    void btnRemoveAllItems_clicked();
 
     // Materia Tab
-    void on_tbl_materia_currentCellChanged(int row);
+    void tblMateria_currentCellChanged(int row);
     void materia_ap_changed(qint32 ap);
     void materia_id_changed(qint8 id);
 
-    void on_cb_Region_Slot_currentIndexChanged(int index);
-    void on_cb_ruby_dead_toggled(bool checked);
-    void on_cb_emerald_dead_toggled(bool checked);
-    void on_combo_highwind_buggy_currentIndexChanged(int index);
+    void cbRubyDead_toggled(bool checked);
+    void cbEmeraldDead_toggled(bool checked);
+    void comboRegionSlot_currentIndexChanged(int index);
+    void comboHighwindBuggy_currentIndexChanged(int index);
 
 //Map Stuff
-    void on_leader_x_valueChanged(int);
-    void on_leader_y_valueChanged(int);
-    void on_leader_z_valueChanged(int);
-    void on_leader_id_valueChanged(int);
-    void on_leader_angle_valueChanged(int);
+    void sbLeaderX_valueChanged(int);
+    void sbLeaderY_valueChanged(int);
+    void sbLeaderZ_valueChanged(int);
+    void sbLeaderId_valueChanged(int);
+    void sbLeaderAngle_valueChanged(int);
 
-    void on_tc_x_valueChanged(int);
-    void on_tc_y_valueChanged(int);
-    void on_tc_z_valueChanged(int);
-    void on_tc_id_valueChanged(int);
-    void on_tc_angle_valueChanged(int);
+    void sbTcX_valueChanged(int);
+    void sbTcY_valueChanged(int);
+    void sbTcZ_valueChanged(int);
+    void sbTcId_valueChanged(int);
+    void sbTcAngle_valueChanged(int);
 
-    void on_bh_x_valueChanged(int);
-    void on_bh_y_valueChanged(int);
-    void on_bh_z_valueChanged(int);
-    void on_bh_id_valueChanged(int);
-    void on_bh_angle_valueChanged(int);
+    void sbBhX_valueChanged(int);
+    void sbBhY_valueChanged(int);
+    void sbBhZ_valueChanged(int);
+    void sbBhId_valueChanged(int);
+    void sbBhAngle_valueChanged(int);
 
-    void on_sub_x_valueChanged(int);
-    void on_sub_id_valueChanged(int);
-    void on_sub_angle_valueChanged(int);
-    void on_sub_y_valueChanged(int);
-    void on_sub_z_valueChanged(int);
+    void sbSubX_valueChanged(int);
+    void sbSubY_valueChanged(int);
+    void sbSubZ_valueChanged(int);
+    void sbSubId_valueChanged(int);
+    void sbSubAngle_valueChanged(int);
 
-    void on_durw_x_valueChanged(int);
-    void on_durw_y_valueChanged(int);
-    void on_durw_z_valueChanged(int);
-    void on_durw_id_valueChanged(int);
-    void on_durw_angle_valueChanged(int);
+    void sbDurwX_valueChanged(int);
+    void sbDurwY_valueChanged(int);
+    void sbDurwZ_valueChanged(int);
+    void sbDurwId_valueChanged(int);
+    void sbDurwAngle_valueChanged(int);
 
-    void on_wc_x_valueChanged(int);
-    void on_wc_y_valueChanged(int);
-    void on_wc_z_valueChanged(int);
-    void on_wc_id_valueChanged(int);
-    void on_wc_angle_valueChanged(int);
+    void sbWcX_valueChanged(int);
+    void sbWcY_valueChanged(int);
+    void sbWcZ_valueChanged(int);
+    void sbWcId_valueChanged(int);
+    void sbWcAngle_valueChanged(int);
 
-    void on_combo_map_controls_currentIndexChanged(int index);
-    void on_slide_world_x_valueChanged(int value);
-    void on_slide_world_y_valueChanged(int value);
-    void on_world_map_view_customContextMenuRequested(QPoint pos);
+    void comboMapControls_currentIndexChanged(int index);
+    void slideWorldX_valueChanged(int value);
+    void slideWorldY_valueChanged(int value);
+    void worldMapView_customContextMenuRequested(QPoint pos);
 
-    void on_sb_donprog_valueChanged(int);
-    void on_combo_z_var_currentIndexChanged(int);
-    void on_tbl_unknown_itemChanged(QTableWidgetItem *item);
+    void sbDonprog_valueChanged(int);
+    void comboZVar_currentIndexChanged(int);
+    void tblUnknown_itemChanged(QTableWidgetItem *item);
 
-    void on_btn_add_all_materia_clicked();
-    void on_combo_compare_slot_currentIndexChanged(int index);
-    void on_sb_steps_valueChanged(int);
-    void on_combo_s7_slums_currentIndexChanged(int index);
-    void on_cb_visible_buggy_toggled(bool checked);
-    void on_cb_visible_bronco_toggled(bool checked);
-    void on_cb_visible_highwind_toggled(bool checked);
-    void on_cb_visible_wild_chocobo_toggled(bool checked);
-    void on_cb_visible_yellow_chocobo_toggled(bool checked);
-    void on_cb_visible_green_chocobo_toggled(bool checked);
-    void on_cb_visible_blue_chocobo_toggled(bool checked);
-    void on_cb_visible_black_chocobo_toggled(bool checked);
-    void on_cb_visible_gold_chocobo_toggled(bool checked);
+    void btnAddAllMateria_clicked();
+    void comboCompareSlot_currentIndexChanged(int index);
+    void sbSteps_valueChanged(int);
+    void comboS7Slums_currentIndexChanged(int index);
+    void cbVisibleBuggy_toggled(bool checked);
+    void cbVisibleBronco_toggled(bool checked);
+    void cbVisibleHighwind_toggled(bool checked);
+    void cbVisibleWildChocobo_toggled(bool checked);
+    void cbVisibleYellowChocobo_toggled(bool checked);
+    void cbVisibleGreenChocobo_toggled(bool checked);
+    void cbVisibleBlueChocobo_toggled(bool checked);
+    void cbVisibleBlackChocobo_toggled(bool checked);
+    void cbVisibleGoldChocobo_toggled(bool checked);
     void set_char_buttons();
-    void on_btn_maxChar_clicked();
-    void on_sbSnowBegScore_valueChanged(int value);
-    void on_sbSnowExpScore_valueChanged(int value);
-    void on_sbSnowCrazyScore_valueChanged(int value);
-    void on_sbSnowBegMin_valueChanged(int value);
-    void on_sbSnowBegSec_valueChanged(int value);
-    void on_sbSnowBegMsec_valueChanged(int value);
-    void on_sbSnowExpMin_valueChanged(int value);
-    void on_sbSnowExpSec_valueChanged(int value);
-    void on_sbSnowExpMsec_valueChanged(int value);
-    void on_sbSnowCrazyMin_valueChanged(int value);
-    void on_sbSnowCrazySec_valueChanged(int value);
-    void on_sbSnowCrazyMsec_valueChanged(int value);
-    void on_sb_BikeHighScore_valueChanged(int arg1);
-    void on_sb_BattlePoints_valueChanged(int arg1);
-    void on_actionCreateNewMetadata_triggered();
+    void btnMaxChar_clicked();
+    void sbSnowBegScore_valueChanged(int value);
+    void sbSnowExpScore_valueChanged(int value);
+    void sbSnowCrazyScore_valueChanged(int value);
+    void sbSnowBegMin_valueChanged(int value);
+    void sbSnowBegSec_valueChanged(int value);
+    void sbSnowBegMsec_valueChanged(int value);
+    void sbSnowExpMin_valueChanged(int value);
+    void sbSnowExpSec_valueChanged(int value);
+    void sbSnowExpMsec_valueChanged(int value);
+    void sbSnowCrazyMin_valueChanged(int value);
+    void sbSnowCrazySec_valueChanged(int value);
+    void sbSnowCrazyMsec_valueChanged(int value);
+    void sbBikeHighScore_valueChanged(int arg1);
+    void sbBattlePoints_valueChanged(int arg1);
 
     void phsList_box_allowed_toggled(int row, bool checked);
     void phsList_box_visible_toggled(int row, bool checked);
     void menuList_box_locked_toggled(int row, bool checked);
     void menuList_box_visible_toggled(int row, bool checked);
-    void on_sbCondorFunds_valueChanged(int arg1);
-    void on_sbCondorWins_valueChanged(int arg1);
-    void on_sbCondorLosses_valueChanged(int arg1);
-    void on_cbPandorasBox_toggled(bool checked);
-    void on_actionImport_Slot_From_File_triggered();
+    void sbCondorFunds_valueChanged(int arg1);
+    void sbCondorWins_valueChanged(int arg1);
+    void sbCondorLosses_valueChanged(int arg1);
+    void cbPandorasBox_toggled(bool checked);
     //new feildItem Stuff
     void connectFieldItem(quint8, QList<quint16>, QList<quint8>);
     void checkFieldItem(int);
     void fieldItemStateChanged(int ID, bool checked);
-    void on_sb_saveMapId_valueChanged(int arg1);
-    void on_sb_saveX_valueChanged(int arg1);
-    void on_sb_saveY_valueChanged(int arg1);
-    void on_sb_saveZ_valueChanged(int arg1);
-    void on_actionOpen_Achievement_File_triggered();
-    void on_cbSubGameWon_toggled(bool checked);
-    void on_cb_mysteryPanties_toggled(bool checked);
-    void on_cb_letterToDaughter_toggled(bool checked);
-    void on_cb_letterToWife_toggled(bool checked);
-    void on_btnSearchFlyers_clicked();
-    void on_btnSearchKeyItems_clicked();
-    void on_btnReplay_clicked();
-    void on_linePsxDesc_textChanged(const QString &arg1);
-    void on_cb_FlashbackPiano_toggled(bool checked);
+    void sbSaveMapId_valueChanged(int arg1);
+    void sbSaveX_valueChanged(int arg1);
+    void sbSaveY_valueChanged(int arg1);
+    void sbSaveZ_valueChanged(int arg1);
+    void cbSubGameWon_toggled(bool checked);
+    void cbMysteryPanties_toggled(bool checked);
+    void cbLetterToDaughter_toggled(bool checked);
+    void cbLetterToWife_toggled(bool checked);
+    void btnSearchFlyers_clicked();
+    void btnSearchKeyItems_clicked();
+    void btnReplay_clicked();
+    void linePsxDesc_textChanged(const QString &arg1);
+    void cbFlashbackPiano_toggled(bool checked);
 };

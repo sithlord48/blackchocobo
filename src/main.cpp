@@ -20,6 +20,8 @@
 #endif
 #include <QTranslator>
 #include <QTime>
+#include <QRandomGenerator>
+
 #include "bcsettings.h"
 #include "mainwindow.h"
 

@@ -122,7 +122,7 @@
                   <number>3</number>
                  </property>
                  <item>
-                  <widget class="QComboBox" name="combo_party1">
+                  <widget class="QComboBox" name="comboParty1">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -141,7 +141,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_party2">
+                  <widget class="QComboBox" name="comboParty2">
                    <property name="enabled">
                     <bool>true</bool>
                    </property>
@@ -163,7 +163,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_party3">
+                  <widget class="QComboBox" name="comboParty3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -215,7 +215,7 @@
                <number>0</number>
               </property>
               <item row="2" column="0">
-               <widget class="QPushButton" name="btn_cait">
+               <widget class="QPushButton" name="btnCait">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -225,7 +225,7 @@
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QPushButton" name="btn_red">
+               <widget class="QPushButton" name="btnRed">
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
@@ -238,7 +238,7 @@
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QPushButton" name="btn_barret">
+               <widget class="QPushButton" name="btnBarret">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -248,7 +248,7 @@
                </widget>
               </item>
               <item row="2" column="2">
-               <widget class="QPushButton" name="btn_cid">
+               <widget class="QPushButton" name="btnCid">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -258,7 +258,7 @@
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QPushButton" name="btn_cloud">
+               <widget class="QPushButton" name="btnCloud">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -268,7 +268,7 @@
                </widget>
               </item>
               <item row="1" column="2">
-               <widget class="QPushButton" name="btn_yuffie">
+               <widget class="QPushButton" name="btnYuffie">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -278,7 +278,7 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QPushButton" name="btn_aeris">
+               <widget class="QPushButton" name="btnAeris">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -288,7 +288,7 @@
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QPushButton" name="btn_tifa">
+               <widget class="QPushButton" name="btnTifa">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -298,7 +298,7 @@
                </widget>
               </item>
               <item row="2" column="1">
-               <widget class="QPushButton" name="btn_vincent">
+               <widget class="QPushButton" name="btnVincent">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -311,7 +311,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_maxChar">
+            <widget class="QPushButton" name="btnMaxChar">
              <property name="text">
               <string>Selected Character Max Stats/Weapons/Materia</string>
              </property>
@@ -529,7 +529,7 @@
                <number>3</number>
               </property>
               <item>
-               <widget class="QPushButton" name="btn_item_add_each_item">
+               <widget class="QPushButton" name="btnAddAllItems">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -542,7 +542,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="btn_remove_all_items">
+               <widget class="QPushButton" name="btnRemoveAllItems">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -633,7 +633,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QDoubleSpinBox" name="sb_gil">
+                    <widget class="QDoubleSpinBox" name="sbGil">
                      <property name="layoutDirection">
                       <enum>Qt::LeftToRight</enum>
                      </property>
@@ -678,7 +678,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_gp">
+                    <widget class="QSpinBox" name="sbGp">
                      <property name="enabled">
                       <bool>true</bool>
                      </property>
@@ -747,7 +747,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_battles">
+                    <widget class="QSpinBox" name="sbBattles">
                      <property name="enabled">
                       <bool>true</bool>
                      </property>
@@ -786,7 +786,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_runs">
+                    <widget class="QSpinBox" name="sbRuns">
                      <property name="wrapping">
                       <bool>true</bool>
                      </property>
@@ -851,21 +851,21 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QCheckBox" name="cb_mysteryPanties">
+                  <widget class="QCheckBox" name="cbMysteryPanties">
                    <property name="text">
                     <string>Mystery panties</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QCheckBox" name="cb_letterToDaughter">
+                  <widget class="QCheckBox" name="cbLetterToDaughter">
                    <property name="text">
                     <string>Letter to a Daughter</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QCheckBox" name="cb_letterToWife">
+                  <widget class="QCheckBox" name="cbLetterToWife">
                    <property name="text">
                     <string>Letter to a Wife</string>
                    </property>
@@ -952,7 +952,7 @@
             <number>2</number>
            </property>
            <item>
-            <widget class="QTableWidget" name="tbl_materia">
+            <widget class="QTableWidget" name="tblMateria">
              <property name="minimumSize">
               <size>
                <width>242</width>
@@ -1039,14 +1039,14 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_add_all_materia">
+            <widget class="QPushButton" name="btnAddAllMateria">
              <property name="text">
               <string>Add Each Materia to Stock (end of list)</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_remove_all_materia">
+            <widget class="QPushButton" name="btnRemoveAllMateria">
              <property name="text">
               <string>Remove ALL Materia </string>
              </property>
@@ -1254,7 +1254,7 @@
                          <number>0</number>
                         </property>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_buggy">
+                         <widget class="QCheckBox" name="cbVisibleBuggy">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1267,7 +1267,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_bronco">
+                         <widget class="QCheckBox" name="cbVisibleBronco">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1280,7 +1280,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_highwind">
+                         <widget class="QCheckBox" name="cbVisibleHighwind">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1293,7 +1293,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_wild_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleWildChocobo">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1327,7 +1327,7 @@
                          <number>0</number>
                         </property>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_yellow_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleYellowChocobo">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
@@ -1343,7 +1343,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_green_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleGreenChocobo">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
@@ -1359,7 +1359,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_blue_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleBlueChocobo">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
@@ -1375,7 +1375,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_black_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleBlackChocobo">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
@@ -1391,7 +1391,7 @@
                          </widget>
                         </item>
                         <item>
-                         <widget class="QCheckBox" name="cb_visible_gold_chocobo">
+                         <widget class="QCheckBox" name="cbVisibleGoldChocobo">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
@@ -1438,7 +1438,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_52">
                      <item>
-                      <widget class="QSpinBox" name="leader_x">
+                      <widget class="QSpinBox" name="sbLeaderX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1460,7 +1460,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="leader_y">
+                      <widget class="QSpinBox" name="sbLeaderY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1482,7 +1482,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="leader_z">
+                      <widget class="QSpinBox" name="sbLeaderZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1528,7 +1528,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="leader_angle">
+                      <widget class="QSpinBox" name="sbLeaderAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1569,7 +1569,7 @@
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="cb_world_party_leader">
+                      <widget class="QComboBox" name="comboWorldPartyLeader">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1579,7 +1579,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="leader_id">
+                      <widget class="QSpinBox" name="sbLeaderId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1623,7 +1623,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_53">
                      <item>
-                      <widget class="QSpinBox" name="tc_x">
+                      <widget class="QSpinBox" name="sbTcX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1645,7 +1645,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="tc_y">
+                      <widget class="QSpinBox" name="sbTcY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1667,7 +1667,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="tc_z">
+                      <widget class="QSpinBox" name="sbTcZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1719,7 +1719,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="tc_angle">
+                      <widget class="QSpinBox" name="sbTcAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1767,7 +1767,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="tc_id">
+                      <widget class="QSpinBox" name="sbTcId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1824,7 +1824,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_60">
                      <item>
-                      <widget class="QSpinBox" name="bh_x">
+                      <widget class="QSpinBox" name="sbBhX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1846,7 +1846,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="bh_y">
+                      <widget class="QSpinBox" name="sbBhY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1868,7 +1868,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="bh_z">
+                      <widget class="QSpinBox" name="sbBhZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1923,7 +1923,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="bh_angle">
+                      <widget class="QSpinBox" name="sbBhAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1961,7 +1961,7 @@
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="combo_highwind_buggy">
+                      <widget class="QComboBox" name="comboHighwindBuggy">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1998,7 +1998,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="bh_id">
+                      <widget class="QSpinBox" name="sbBhId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2042,7 +2042,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_62">
                      <item>
-                      <widget class="QSpinBox" name="sub_x">
+                      <widget class="QSpinBox" name="sbSubX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2064,7 +2064,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sub_y">
+                      <widget class="QSpinBox" name="sbSubY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2086,7 +2086,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sub_z">
+                      <widget class="QSpinBox" name="sbSubZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2138,7 +2138,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sub_angle">
+                      <widget class="QSpinBox" name="sbSubAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2186,7 +2186,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sub_id">
+                      <widget class="QSpinBox" name="sbSubId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2243,7 +2243,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_73">
                      <item>
-                      <widget class="QSpinBox" name="wc_x">
+                      <widget class="QSpinBox" name="sbWcX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2265,7 +2265,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="wc_y">
+                      <widget class="QSpinBox" name="sbWcY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2287,7 +2287,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="wc_z">
+                      <widget class="QSpinBox" name="sbWcZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2339,7 +2339,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="wc_angle">
+                      <widget class="QSpinBox" name="sbWcAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2387,7 +2387,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="wc_id">
+                      <widget class="QSpinBox" name="sbWcId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2444,7 +2444,7 @@
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_75">
                      <item>
-                      <widget class="QSpinBox" name="durw_x">
+                      <widget class="QSpinBox" name="sbDurwX">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2466,7 +2466,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="durw_y">
+                      <widget class="QSpinBox" name="sbDurwY">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2488,7 +2488,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="durw_z">
+                      <widget class="QSpinBox" name="sbDurwZ">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2540,7 +2540,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="durw_angle">
+                      <widget class="QSpinBox" name="sbDurwAngle">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2588,7 +2588,7 @@
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="durw_id">
+                      <widget class="QSpinBox" name="sbDurwId">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2660,7 +2660,7 @@
                      <height>381</height>
                     </size>
                    </property>
-                   <widget class="QLabel" name="world_map_view">
+                   <widget class="QLabel" name="worldMapView">
                     <property name="geometry">
                      <rect>
                       <x>5</x>
@@ -2679,7 +2679,7 @@
                      <set>Qt::NoTextInteraction</set>
                     </property>
                    </widget>
-                   <widget class="QSlider" name="slide_world_x">
+                   <widget class="QSlider" name="slideWorldX">
                     <property name="geometry">
                      <rect>
                       <x>-1</x>
@@ -2722,7 +2722,7 @@
                      <bool>true</bool>
                     </property>
                    </widget>
-                   <widget class="QSlider" name="slide_world_y">
+                   <widget class="QSlider" name="slideWorldY">
                     <property name="geometry">
                      <rect>
                       <x>437</x>
@@ -2795,7 +2795,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_map_controls">
+                  <widget class="QComboBox" name="comboMapControls">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -2896,7 +2896,7 @@ location.</string>
               </widget>
              </item>
              <item>
-              <widget class="QSpinBox" name="sb_mprogress">
+              <widget class="QSpinBox" name="sbMprogress">
                <property name="wrapping">
                 <bool>true</bool>
                </property>
@@ -2922,7 +2922,7 @@ location.</string>
               </spacer>
              </item>
              <item>
-              <widget class="QSpinBox" name="sb_curdisc">
+              <widget class="QSpinBox" name="sbCurdisc">
                <property name="minimumSize">
                 <size>
                  <width>100</width>
@@ -3023,7 +3023,7 @@ location.</string>
                      <number>3</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="cb_bombing_int">
+                     <widget class="QCheckBox" name="cbBombingInt">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -3036,56 +3036,56 @@ location.</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_2">
+                     <widget class="QCheckBox" name="cbBm2_2">
                       <property name="text">
                        <string>Elevator Door Open</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_1">
+                     <widget class="QCheckBox" name="cbBm1_1">
                       <property name="text">
                        <string>Elevator On 2nd Floor</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_4">
+                     <widget class="QCheckBox" name="cbBm1_4">
                       <property name="text">
                        <string>1st Door Open</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_5">
+                     <widget class="QCheckBox" name="cbBm1_5">
                       <property name="text">
                        <string>2nd Door Opened</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_3">
+                     <widget class="QCheckBox" name="cbBm2_3">
                       <property name="text">
                        <string>Post Pan NMKIN_5</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_7">
+                     <widget class="QCheckBox" name="cbBm1_7">
                       <property name="text">
                        <string>The Bomb Was Set</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_6">
+                     <widget class="QCheckBox" name="cbBm1_6">
                       <property name="text">
                        <string>Jessie Has Been Unstuck</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_8">
+                     <widget class="QCheckBox" name="cbBm1_8">
                       <property name="text">
                        <string>Trigger Game Over (countdown reached 0)</string>
                       </property>
@@ -3107,14 +3107,14 @@ location.</string>
                      <number>3</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_1">
+                     <widget class="QCheckBox" name="cbBm3_1">
                       <property name="text">
                        <string>Post Pan MD8_2</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_2">
+                     <widget class="QCheckBox" name="cbBm3_2">
                       <property name="text">
                        <string>Post Electrical Effect MD8_3</string>
                       </property>
@@ -3136,28 +3136,28 @@ location.</string>
                      <number>3</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_1">
+                     <widget class="QCheckBox" name="cbMidgartrain_1">
                       <property name="text">
                        <string>Talked to Biggs</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_2">
+                     <widget class="QCheckBox" name="cbMidgartrain_2">
                       <property name="text">
                        <string>Talked to Wedge Twice</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_3">
+                     <widget class="QCheckBox" name="cbMidgartrain_3">
                       <property name="text">
                        <string>Talked to Jessie Before Looking At Map</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_4">
+                     <widget class="QCheckBox" name="cbMidgartrain_4">
                       <property name="text">
                        <string> Played Video on Train?</string>
                       </property>
@@ -3179,28 +3179,28 @@ location.</string>
                      <number>3</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_1">
+                     <widget class="QCheckBox" name="cbS7ts_1">
                       <property name="text">
                        <string>Avalanche had meeting after Bombing Mission</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_2">
+                     <widget class="QCheckBox" name="cbS7ts_2">
                       <property name="text">
                        <string>Talked To Trainman 3 times</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_3">
+                     <widget class="QCheckBox" name="cbS7ts_3">
                       <property name="text">
                        <string>Pair At Station agree</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_4">
+                     <widget class="QCheckBox" name="cbS7ts_4">
                       <property name="text">
                        <string>Set To Reactor 5 Mode</string>
                       </property>
@@ -3222,35 +3222,35 @@ location.</string>
                      <number>3</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_1">
+                     <widget class="QCheckBox" name="cbS7pl_1">
                       <property name="text">
                        <string>Avalanche Has Run To Hideout</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_2">
+                     <widget class="QCheckBox" name="cbS7pl_2">
                       <property name="text">
                        <string>Can Show Pillar Pan Video</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_3">
+                     <widget class="QCheckBox" name="cbS7pl_3">
                       <property name="text">
                        <string>Barret called us</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_4">
+                     <widget class="QCheckBox" name="cbS7pl_4">
                       <property name="text">
                        <string>Post Pillar Pan Video</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_5">
+                     <widget class="QCheckBox" name="cbS7pl_5">
                       <property name="text">
                        <string>Talked To soldier two times</string>
                       </property>
@@ -3266,7 +3266,7 @@ location.</string>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_117">
                     <item>
-                     <widget class="QComboBox" name="combo_s7_slums">
+                     <widget class="QComboBox" name="comboS7Slums">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -3320,7 +3320,7 @@ location.</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="sb_turkschurch"/>
+                       <widget class="QSpinBox" name="sbTurkschurch"/>
                       </item>
                      </layout>
                     </item>
@@ -3334,7 +3334,7 @@ location.</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="sb_donprog">
+                       <widget class="QSpinBox" name="sbDonprog">
                         <property name="maximum">
                          <number>255</number>
                         </property>
@@ -3343,175 +3343,175 @@ location.</string>
                      </layout>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_2">
+                     <widget class="QCheckBox" name="cbBm1_2">
                       <property name="text">
                        <string notr="true">bm1_2</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm1_3">
+                     <widget class="QCheckBox" name="cbBm1_3">
                       <property name="text">
                        <string notr="true">bm1_3</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_1">
+                     <widget class="QCheckBox" name="cbBm2_1">
                       <property name="text">
                        <string notr="true">bm2_1</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_4">
+                     <widget class="QCheckBox" name="cbBm2_4">
                       <property name="text">
                        <string notr="true">bm2_4</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_5">
+                     <widget class="QCheckBox" name="cbBm2_5">
                       <property name="text">
                        <string notr="true">bm2_5</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_6">
+                     <widget class="QCheckBox" name="cbBm2_6">
                       <property name="text">
                        <string notr="true">bm2_6</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_7">
+                     <widget class="QCheckBox" name="cbBm2_7">
                       <property name="text">
                        <string notr="true">bm2_7</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm2_8">
+                     <widget class="QCheckBox" name="cbBm2_8">
                       <property name="text">
                        <string notr="true">bm2_8</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_3">
+                     <widget class="QCheckBox" name="cbBm3_3">
                       <property name="text">
                        <string notr="true">bm3_3</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_4">
+                     <widget class="QCheckBox" name="cbBm3_4">
                       <property name="text">
                        <string notr="true">bm3_4</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_5">
+                     <widget class="QCheckBox" name="cbBm3_5">
                       <property name="text">
                        <string notr="true">bm3_5</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_6">
+                     <widget class="QCheckBox" name="cbBm3_6">
                       <property name="text">
                        <string notr="true">bm3_6</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_7">
+                     <widget class="QCheckBox" name="cbBm3_7">
                       <property name="text">
                        <string notr="true">bm3_7</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_bm3_8">
+                     <widget class="QCheckBox" name="cbBm3_8">
                       <property name="text">
                        <string notr="true">bm3_8</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_5">
+                     <widget class="QCheckBox" name="cbMidgartrain_5">
                       <property name="text">
                        <string notr="true">mt_5</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_6">
+                     <widget class="QCheckBox" name="cbMidgartrain_6">
                       <property name="text">
                        <string notr="true">mt_6</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_7">
+                     <widget class="QCheckBox" name="cbMidgartrain_7">
                       <property name="text">
                        <string notr="true">mt_7</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_midgartrain_8">
+                     <widget class="QCheckBox" name="cbMidgartrain_8">
                       <property name="text">
                        <string notr="true">mt_8</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_5">
+                     <widget class="QCheckBox" name="cbS7ts_5">
                       <property name="text">
                        <string notr="true">s7ts_5</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_6">
+                     <widget class="QCheckBox" name="cbS7ts_6">
                       <property name="text">
                        <string notr="true">s7ts_6</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_7">
+                     <widget class="QCheckBox" name="cbS7ts_7">
                       <property name="text">
                        <string notr="true">s7ts_7</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7ts_8">
+                     <widget class="QCheckBox" name="cbS7ts_8">
                       <property name="text">
                        <string notr="true">s7ts_8</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_6">
+                     <widget class="QCheckBox" name="cbS7pl_6">
                       <property name="text">
                        <string notr="true">s7pl_6</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_7">
+                     <widget class="QCheckBox" name="cbS7pl_7">
                       <property name="text">
                        <string notr="true">s7pl_7</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QCheckBox" name="cb_s7pl_8">
+                     <widget class="QCheckBox" name="cbS7pl_8">
                       <property name="text">
                        <string notr="true">s7pl_8</string>
                       </property>
@@ -3573,7 +3573,7 @@ location.</string>
               <number>3</number>
              </property>
              <item>
-              <widget class="QComboBox" name="cb_replay">
+              <widget class="QComboBox" name="comboReplay">
                <item>
                 <property name="text">
                  <string/>
@@ -3712,12 +3712,12 @@ location.</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_time_hour</cstring>
+                  <cstring>sbTimeHour</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_time_hour">
+                <widget class="QSpinBox" name="sbTimeHour">
                  <property name="wrapping">
                   <bool>true</bool>
                  </property>
@@ -3748,12 +3748,12 @@ location.</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_time_min</cstring>
+                  <cstring>sbTimeMin</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_time_min">
+                <widget class="QSpinBox" name="sbTimeMin">
                  <property name="wrapping">
                   <bool>true</bool>
                  </property>
@@ -3781,12 +3781,12 @@ location.</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_time_sec</cstring>
+                  <cstring>sbTimeSec</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_time_sec">
+                <widget class="QSpinBox" name="sbTimeSec">
                  <property name="wrapping">
                   <bool>true</bool>
                  </property>
@@ -3835,12 +3835,12 @@ location.</string>
                   <enum>QFrame::NoFrame</enum>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_love_aeris</cstring>
+                  <cstring>sbLoveAeris</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_love_aeris">
+                <widget class="QSpinBox" name="sbLoveAeris">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -3883,12 +3883,12 @@ location.</string>
                <item>
                 <widget class="QLabel" name="lbl_love_tifa">
                  <property name="buddy">
-                  <cstring>sb_love_tifa</cstring>
+                  <cstring>sbLoveTifa</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_love_tifa">
+                <widget class="QSpinBox" name="sbLoveTifa">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -3928,12 +3928,12 @@ location.</string>
                <item>
                 <widget class="QLabel" name="lbl_love_yuffie">
                  <property name="buddy">
-                  <cstring>sb_love_yuffie</cstring>
+                  <cstring>sbLoveYuffie</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_love_yuffie">
+                <widget class="QSpinBox" name="sbLoveYuffie">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -3976,12 +3976,12 @@ location.</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_love_barret</cstring>
+                  <cstring>sbLoveBarret</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_love_barret">
+                <widget class="QSpinBox" name="sbLoveBarret">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -4039,14 +4039,14 @@ location.</string>
            </spacer>
           </item>
           <item>
-           <widget class="QCheckBox" name="cb_ruby_dead">
+           <widget class="QCheckBox" name="cbRubyDead">
             <property name="text">
              <string>Beat Ruby Weapon</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="cb_emerald_dead">
+           <widget class="QCheckBox" name="cbEmeraldDead">
             <property name="text">
              <string>Beat Emerald Weapon</string>
             </property>
@@ -4060,7 +4060,7 @@ location.</string>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="cb_yuffieforest">
+           <widget class="QCheckBox" name="cbYuffieForest">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -4073,14 +4073,14 @@ location.</string>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="cb_reg_vinny">
+           <widget class="QCheckBox" name="cbRegVinny">
             <property name="text">
              <string>Unlocked Vincent</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="cb_reg_yuffie">
+           <widget class="QCheckBox" name="cbRegYuffie">
             <property name="text">
              <string>Unlocked Yuffie </string>
             </property>
@@ -4143,7 +4143,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </widget>
              </item>
              <item>
-              <widget class="QSpinBox" name="sb_BattlePoints">
+              <widget class="QSpinBox" name="sbBattlePoints">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -4211,7 +4211,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </widget>
              </item>
              <item>
-              <widget class="QSpinBox" name="sb_steps">
+              <widget class="QSpinBox" name="sbSteps">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                  <horstretch>0</horstretch>
@@ -4264,12 +4264,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_time_hour</cstring>
+                  <cstring>sbTimeHour</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_timer_time_hour">
+                <widget class="QSpinBox" name="sbTimerTimeHour">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -4303,12 +4303,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   <set>Qt::AlignCenter</set>
                  </property>
                  <property name="buddy">
-                  <cstring>sb_time_min</cstring>
+                  <cstring>sbTimeMin</cstring>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_timer_time_min">
+                <widget class="QSpinBox" name="sbTimerTimeMin">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -4350,7 +4350,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="sb_timer_time_sec">
+                <widget class="QSpinBox" name="sbTimerTimeSec">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -4507,7 +4507,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               <number>3</number>
              </property>
              <item>
-              <widget class="QTableWidget" name="tbl_materia_2">
+              <widget class="QTableWidget" name="tblMateriaStolen">
                <property name="minimumSize">
                 <size>
                  <width>230</width>
@@ -4560,7 +4560,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="btn_remove_all_stolen">
+              <widget class="QPushButton" name="btnRemoveAllStolen">
                <property name="text">
                 <string>Clear All Stolen Materia</string>
                </property>
@@ -5169,7 +5169,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="sb_coster_1">
+                 <widget class="QSpinBox" name="sbCoster1">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -5246,7 +5246,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="sb_coster_2">
+                 <widget class="QSpinBox" name="sbCoster2">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -5323,7 +5323,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="sb_coster_3">
+                 <widget class="QSpinBox" name="sbCoster3">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -5541,12 +5541,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    <string>G-Bike High Score</string>
                   </property>
                   <property name="buddy">
-                   <cstring>sb_BikeHighScore</cstring>
+                   <cstring>sbBikeHighScore</cstring>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="sb_BikeHighScore">
+                 <widget class="QSpinBox" name="sbBikeHighScore">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -5708,7 +5708,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QComboBox" name="combo_hexEditor">
+                    <widget class="QComboBox" name="comboHexEditor">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5876,7 +5876,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_b_love_aeris">
+                    <widget class="QSpinBox" name="sbBloveAeris">
                      <property name="wrapping">
                       <bool>true</bool>
                      </property>
@@ -5893,7 +5893,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     <widget class="QLabel" name="lbl_battle_love_tifa"/>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_b_love_tifa">
+                    <widget class="QSpinBox" name="sbBloveTifa">
                      <property name="wrapping">
                       <bool>true</bool>
                      </property>
@@ -5910,7 +5910,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     <widget class="QLabel" name="lbl_battle_love_yuffie"/>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_b_love_yuffie">
+                    <widget class="QSpinBox" name="sbBloveYuffie">
                      <property name="wrapping">
                       <bool>true</bool>
                      </property>
@@ -5931,7 +5931,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QSpinBox" name="sb_b_love_barret">
+                    <widget class="QSpinBox" name="sbBloveBarret">
                      <property name="wrapping">
                       <bool>true</bool>
                      </property>
@@ -5971,7 +5971,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QSpinBox" name="sb_u_weapon_hp">
+                 <widget class="QSpinBox" name="sbUweaponHp">
                   <property name="wrapping">
                    <bool>true</bool>
                   </property>
@@ -6001,7 +6001,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </layout>
             </item>
             <item>
-             <widget class="QCheckBox" name="cb_FlashbackPiano">
+             <widget class="QCheckBox" name="cbFlashbackPiano">
               <property name="text">
                <string>Played piano durring flashback</string>
               </property>
@@ -6055,7 +6055,7 @@ trigger showing that tutorial</string>
                       <number>3</number>
                      </property>
                      <item>
-                      <widget class="QCheckBox" name="cb_tut_sub">
+                      <widget class="QCheckBox" name="cbTutSub">
                        <property name="text">
                         <string>Controling the Sub</string>
                        </property>
@@ -6088,7 +6088,7 @@ trigger showing that tutorial</string>
                       <number>3</number>
                      </property>
                      <item>
-                      <widget class="QCheckBox" name="cb_tut_worldsave">
+                      <widget class="QCheckBox" name="cbTutWorldSave">
                        <property name="text">
                         <string>Saving on the World Map</string>
                        </property>
@@ -6145,7 +6145,7 @@ trigger showing that tutorial</string>
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QSpinBox" name="sb_saveMapId">
+                  <widget class="QSpinBox" name="sbSaveMapId">
                    <property name="prefix">
                     <string>Map Id: </string>
                    </property>
@@ -6158,7 +6158,7 @@ trigger showing that tutorial</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QSpinBox" name="sb_saveX">
+                  <widget class="QSpinBox" name="sbSaveX">
                    <property name="prefix">
                     <string>X: </string>
                    </property>
@@ -6171,7 +6171,7 @@ trigger showing that tutorial</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QSpinBox" name="sb_saveY">
+                  <widget class="QSpinBox" name="sbSaveY">
                    <property name="prefix">
                     <string>Y: </string>
                    </property>
@@ -6184,7 +6184,7 @@ trigger showing that tutorial</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QSpinBox" name="sb_saveZ">
+                  <widget class="QSpinBox" name="sbSaveZ">
                    <property name="prefix">
                     <string>Z:</string>
                    </property>
@@ -6265,7 +6265,7 @@ trigger showing that tutorial</string>
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="cb_Region_Slot">
+                <widget class="QComboBox" name="comboRegionSlot">
                  <property name="enabled">
                   <bool>true</bool>
                  </property>
@@ -6444,7 +6444,7 @@ rgb(255, 255, 255)</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_z_var">
+                  <widget class="QComboBox" name="comboZVar">
                    <item>
                     <property name="text">
                      <string>-None-</string>
@@ -6690,7 +6690,7 @@ rgb(255, 255, 255)</string>
                 </layout>
                </item>
                <item>
-                <widget class="QTableWidget" name="tbl_unknown">
+                <widget class="QTableWidget" name="tblUnknown">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                    <horstretch>0</horstretch>
@@ -6838,7 +6838,7 @@ Var And Scrolling Synced To Left Table</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_compare_slot">
+                  <widget class="QComboBox" name="comboCompareSlot">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -6936,7 +6936,7 @@ Var And Scrolling Synced To Left Table</string>
                 </layout>
                </item>
                <item>
-                <widget class="QTableWidget" name="tbl_compare_unknown">
+                <widget class="QTableWidget" name="tblCompareUnknown">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                    <horstretch>0</horstretch>
@@ -7033,18 +7033,18 @@ Var And Scrolling Synced To Left Table</string>
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="actionOpen_Save_File"/>
-    <addaction name="action_Save"/>
-    <addaction name="actionSave_File_As"/>
+    <addaction name="actionOpenSaveFile"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveFileAs"/>
     <addaction name="separator"/>
-    <addaction name="actionImport_Slot_From_File"/>
+    <addaction name="actionImportSlotFromFile"/>
     <addaction name="separator"/>
-    <addaction name="actionImport_char"/>
-    <addaction name="actionExport_char"/>
+    <addaction name="actionImportChar"/>
+    <addaction name="actionExportChar"/>
     <addaction name="separator"/>
     <addaction name="actionCreateNewMetadata"/>
     <addaction name="separator"/>
-    <addaction name="action_Quit"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuSlot">
     <property name="title">
@@ -7052,12 +7052,12 @@ Var And Scrolling Synced To Left Table</string>
     </property>
     <addaction name="actionReload"/>
     <addaction name="separator"/>
-    <addaction name="actionNext_Slot"/>
-    <addaction name="actionPrevious_Slot"/>
+    <addaction name="actionNextSlot"/>
+    <addaction name="actionPreviousSlot"/>
     <addaction name="separator"/>
-    <addaction name="actionShow_Selection_Dialog"/>
+    <addaction name="actionShowSelectionDialog"/>
     <addaction name="separator"/>
-    <addaction name="actionOpen_Achievement_File"/>
+    <addaction name="actionOpenAchievementFile"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
@@ -7066,7 +7066,7 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
-    <addaction name="actionShow_Options"/>
+    <addaction name="actionShowOptions"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -7076,23 +7076,23 @@ Var And Scrolling Synced To Left Table</string>
      <property name="title">
       <string>&amp;Slot Region</string>
      </property>
-     <addaction name="action_Region_USA"/>
+     <addaction name="actionRegionUSA"/>
      <addaction name="separator"/>
-     <addaction name="action_Region_PAL_Generic"/>
-     <addaction name="action_Region_PAL_French"/>
-     <addaction name="action_Region_PAL_German"/>
-     <addaction name="action_Region_PAL_Spanish"/>
+     <addaction name="actionRegionPALGeneric"/>
+     <addaction name="actionRegionPALFrench"/>
+     <addaction name="actionRegionPALGerman"/>
+     <addaction name="actionRegionPALSpanish"/>
      <addaction name="separator"/>
-     <addaction name="action_Region_JPN"/>
-     <addaction name="action_Region_JPN_International"/>
+     <addaction name="actionRegionJPN"/>
+     <addaction name="actionRegionJPNInternational"/>
     </widget>
-    <addaction name="actionNew_Game"/>
-    <addaction name="actionNew_Game_Plus"/>
+    <addaction name="actionNewGame"/>
+    <addaction name="actionNewGamePlus"/>
     <addaction name="separator"/>
-    <addaction name="actionCopy_Slot"/>
-    <addaction name="actionPaste_Slot"/>
+    <addaction name="actionCopySlot"/>
+    <addaction name="actionPasteSlot"/>
     <addaction name="separator"/>
-    <addaction name="actionClear_Slot"/>
+    <addaction name="actionClearSlot"/>
     <addaction name="separator"/>
     <addaction name="menuRegion"/>
    </widget>
@@ -7110,7 +7110,7 @@ Var And Scrolling Synced To Left Table</string>
     </sizepolicy>
    </property>
   </widget>
-  <action name="action_Quit">
+  <action name="actionQuit">
    <property name="icon">
     <iconset theme="application-exit" resource="ff7tk/icons/common.qrc">
      <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
@@ -7125,7 +7125,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>QAction::QuitRole</enum>
    </property>
   </action>
-  <action name="actionOpen_Save_File">
+  <action name="actionOpenSaveFile">
    <property name="icon">
     <iconset theme="document-open" resource="images.qrc">
      <normaloff>:/icon/open</normaloff>:/icon/open</iconset>
@@ -7140,7 +7140,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionSave_File_As">
+  <action name="actionSaveFileAs">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7176,7 +7176,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>QAction::AboutRole</enum>
    </property>
   </action>
-  <action name="actionShow_Selection_Dialog">
+  <action name="actionShowSelectionDialog">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7191,7 +7191,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>F4</string>
    </property>
   </action>
-  <action name="actionCopy_Slot">
+  <action name="actionCopySlot">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7209,7 +7209,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionPaste_Slot">
+  <action name="actionPasteSlot">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7227,7 +7227,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionClear_Slot">
+  <action name="actionClearSlot">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7245,7 +7245,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionPrevious_Slot">
+  <action name="actionPreviousSlot">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7263,7 +7263,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionNext_Slot">
+  <action name="actionNextSlot">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7281,7 +7281,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionShow_Options">
+  <action name="actionShowOptions">
    <property name="icon">
     <iconset theme="preferences-system" resource="images.qrc">
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
@@ -7299,7 +7299,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>QAction::PreferencesRole</enum>
    </property>
   </action>
-  <action name="action_Region_USA">
+  <action name="actionRegionUSA">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7310,7 +7310,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BASCUS-94163</string>
    </property>
   </action>
-  <action name="action_Region_PAL_Generic">
+  <action name="actionRegionPALGeneric">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7321,7 +7321,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BESCES-00867</string>
    </property>
   </action>
-  <action name="action_Region_PAL_German">
+  <action name="actionRegionPALGerman">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7332,7 +7332,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BESCES-00869</string>
    </property>
   </action>
-  <action name="action_Region_PAL_Spanish">
+  <action name="actionRegionPALSpanish">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7346,7 +7346,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BESCES-00900</string>
    </property>
   </action>
-  <action name="action_Region_JPN">
+  <action name="actionRegionJPN">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7360,7 +7360,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BISLPS-00700</string>
    </property>
   </action>
-  <action name="action_Region_JPN_International">
+  <action name="actionRegionJPNInternational">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7374,7 +7374,7 @@ Var And Scrolling Synced To Left Table</string>
     <string notr="true">BISLPS-01057</string>
    </property>
   </action>
-  <action name="actionNew_Game">
+  <action name="actionNewGame">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
@@ -7389,7 +7389,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionNew_Game_Plus">
+  <action name="actionNewGamePlus">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7407,7 +7407,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="actionExport_char">
+  <action name="actionExportChar">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/export_char</normaloff>:/icon/export_char</iconset>
@@ -7419,7 +7419,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Ctrl+E</string>
    </property>
   </action>
-  <action name="actionImport_char">
+  <action name="actionImportChar">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/import_char</normaloff>:/icon/import_char</iconset>
@@ -7431,7 +7431,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Ctrl+Ins</string>
    </property>
   </action>
-  <action name="action_Save">
+  <action name="actionSave">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7467,7 +7467,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="action_Region_PAL_French">
+  <action name="actionRegionPALFrench">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -7490,7 +7490,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>F9</string>
    </property>
   </action>
-  <action name="actionImport_Slot_From_File">
+  <action name="actionImportSlotFromFile">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -7505,7 +7505,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Ctrl+Shift+Ins</string>
    </property>
   </action>
-  <action name="actionOpen_Achievement_File">
+  <action name="actionOpenAchievementFile">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/achievements</normaloff>:/icon/achievements</iconset>
@@ -7521,97 +7521,44 @@ Var And Scrolling Synced To Left Table</string>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
   <tabstop>combo_party2</tabstop>
-  <tabstop>sb_gp</tabstop>
-  <tabstop>sb_battles</tabstop>
-  <tabstop>sb_runs</tabstop>
-  <tabstop>btn_cloud</tabstop>
-  <tabstop>btn_barret</tabstop>
-  <tabstop>btn_tifa</tabstop>
-  <tabstop>btn_aeris</tabstop>
-  <tabstop>btn_red</tabstop>
-  <tabstop>btn_yuffie</tabstop>
-  <tabstop>btn_cait</tabstop>
-  <tabstop>btn_vincent</tabstop>
-  <tabstop>btn_cid</tabstop>
-  <tabstop>cb_Region_Slot</tabstop>
-  <tabstop>tbl_materia</tabstop>
-  <tabstop>cb_replay</tabstop>
-  <tabstop>tbl_materia_2</tabstop>
-  <tabstop>sb_love_aeris</tabstop>
-  <tabstop>sb_love_tifa</tabstop>
-  <tabstop>sb_love_yuffie</tabstop>
-  <tabstop>sb_love_barret</tabstop>
-  <tabstop>sb_coster_1</tabstop>
-  <tabstop>sb_coster_2</tabstop>
-  <tabstop>sb_coster_3</tabstop>
-  <tabstop>sb_time_hour</tabstop>
-  <tabstop>sb_time_min</tabstop>
-  <tabstop>sb_time_sec</tabstop>
-  <tabstop>sb_b_love_aeris</tabstop>
-  <tabstop>sb_b_love_tifa</tabstop>
-  <tabstop>sb_b_love_yuffie</tabstop>
-  <tabstop>sb_b_love_barret</tabstop>
-  <tabstop>cb_tut_sub</tabstop>
-  <tabstop>cb_tut_worldsave</tabstop>
-  <tabstop>sb_timer_time_hour</tabstop>
-  <tabstop>sb_timer_time_min</tabstop>
-  <tabstop>sb_timer_time_sec</tabstop>
+  <tabstop>sbGp</tabstop>
+  <tabstop>sbBattles</tabstop>
+  <tabstop>sbRuns</tabstop>
+  <tabstop>btnCloud</tabstop>
+  <tabstop>btnBarret</tabstop>
+  <tabstop>btnTifa</tabstop>
+  <tabstop>btnAeris</tabstop>
+  <tabstop>btnRed</tabstop>
+  <tabstop>btnYuffie</tabstop>
+  <tabstop>btnCait</tabstop>
+  <tabstop>btnVincent</tabstop>
+  <tabstop>btnCid</tabstop>
+  <tabstop>cbRegionSlot</tabstop>
+  <tabstop>tblMateria</tabstop>
+  <tabstop>cbReplay</tabstop>
+  <tabstop>tblMateriaStolen</tabstop>
+  <tabstop>sbLoveAeris</tabstop>
+  <tabstop>sbLoveTifa</tabstop>
+  <tabstop>sbLoveYuffie</tabstop>
+  <tabstop>sbLoveBarret</tabstop>
+  <tabstop>sbCoster1</tabstop>
+  <tabstop>sbCoster2</tabstop>
+  <tabstop>sbCoster3</tabstop>
+  <tabstop>sbTimeHour</tabstop>
+  <tabstop>sbTimeMin</tabstop>
+  <tabstop>sbTtimeSec</tabstop>
+  <tabstop>sbBloveAeris</tabstop>
+  <tabstop>sbBloveTifa</tabstop>
+  <tabstop>sbBloveYuffie</tabstop>
+  <tabstop>sbBloveBarret</tabstop>
+  <tabstop>cbTutSub</tabstop>
+  <tabstop>cbTutWorldSave</tabstop>
+  <tabstop>sbTimerTimeHour</tabstop>
+  <tabstop>sbTimerTimeMin</tabstop>
+  <tabstop>sbTimerTimeSec</tabstop>
  </tabstops>
  <resources>
   <include location="images.qrc"/>
   <include location="ff7tk/icons/common.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>action_Quit</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>364</x>
-     <y>264</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>leader_id</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>cb_world_party_leader</receiver>
-   <slot>setCurrentIndex(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>261</x>
-     <y>243</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>194</x>
-     <y>243</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>cb_world_party_leader</sender>
-   <signal>currentIndexChanged(int)</signal>
-   <receiver>leader_id</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>194</x>
-     <y>243</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>261</x>
-     <y>243</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <slot>setlevel()</slot>
- </slots>
 </ui>
