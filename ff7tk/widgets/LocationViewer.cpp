@@ -327,7 +327,7 @@ void LocationViewer::itemChanged(int currentRow, int currentColumn, int prevRow,
         int locID = FF7Location::instance()->locationID(locationTable->item(currentRow, 0)->text()).toInt();
         setLocation(mapID, locID);
         if (autoUpdate) {
-            emit(locationChanged(FF7Location::instance()->fileName(mapID, locID)));
+            emit locationChanged(FF7Location::instance()->fileName(mapID, locID));
         }
     }
 }
@@ -351,9 +351,9 @@ void LocationViewer::sbMapIdChanged(int mapId)
     setLocation(mapId, sbLocID->value());
     QString fileName = FF7Location::instance()->fileName(mapId, sbLocID->value());
     if (fileName.isEmpty()) {
-        emit(mapIdChanged(mapId));
+        emit mapIdChanged(mapId);
     } else {
-        emit(locationChanged(fileName));
+        emit locationChanged(fileName);
     }
 }
 
@@ -362,30 +362,30 @@ void LocationViewer::sbLocIdChanged(int locId)
     setLocation(sbMapID->value(), locId);
     QString fileName = FF7Location::instance()->fileName(sbMapID->value(), locId);
     if (fileName.isEmpty()) {
-        emit(locIdChanged(locId));
+        emit locIdChanged(locId);
     } else {
-        emit(locationChanged(fileName));
+        emit locationChanged(fileName);
     }
 }
 
 void LocationViewer::sbXChanged(int x)
 {
-    emit(xChanged(x));
+    emit xChanged(x);
 }
 
 void LocationViewer::sbYChanged(int y)
 {
-    emit(yChanged(y));
+    emit yChanged(y);
 }
 
 void LocationViewer::sbTChanged(int t)
 {
-    emit(tChanged(t));
+    emit tChanged(t);
 }
 
 void LocationViewer::sbDChanged(int d)
 {
-    emit(dChanged(d));
+    emit dChanged(d);
 }
 
 void LocationViewer::setLocation(int mapId, int locId)
@@ -401,7 +401,7 @@ void LocationViewer::setLocation(int mapId, int locId)
         QString oldStr = FF7Location::instance()->rawLocationString(fileName);
         QString newStr = translate(oldStr);
         if (oldStr != newStr && autoUpdate) {
-            emit(locationStringChanged(newStr));
+            emit locationStringChanged(newStr);
         }
         sbMapID->setValue(FF7Location::instance()->mapID(fileName).toInt());
         sbLocID->setValue(FF7Location::instance()->locationID(fileName).toInt());
@@ -417,7 +417,7 @@ void LocationViewer::setLocation(int mapId, int locId)
 
 void LocationViewer::lineLocationNameChanged(const QString &locName)
 {
-    emit(locationStringChanged(locName));
+    emit locationStringChanged(locName);
 }
 
 void LocationViewer::setX(int x)
@@ -456,7 +456,7 @@ void LocationViewer::setLocationString(const QString &locString)
     QString newStr = translate(locString);
     lineLocationName->setText(newStr);
     if (locString != newStr && autoUpdate)
-        emit(locationStringChanged(newStr));
+        emit locationStringChanged(newStr);
     init_connections();
 }
 

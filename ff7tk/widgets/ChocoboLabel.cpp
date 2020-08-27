@@ -25,7 +25,7 @@
 bool ChocoboLabel::event(QEvent *ev)
 {
     if (ev->type() == QEvent::MouseButtonPress && isEnabled) {
-        emit(clicked());
+        emit clicked();
         return true;
     } else if (ev->type() == QEvent::LanguageChange) {
         btnCopy->setToolTip(QString(tr("Copy")));

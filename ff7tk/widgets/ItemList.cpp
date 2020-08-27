@@ -185,7 +185,7 @@ void ItemList::itemSelector_changed(quint16 item)
         newItem = new QTableWidgetItem("", 0);
         setItem(sender()->objectName().toInt(), 2, newItem);
     }
-    emit(itemsChanged(itemlist));
+    emit itemsChanged(itemlist);
 }
 
 void ItemList::itemupdate()

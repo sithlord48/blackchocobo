@@ -169,11 +169,10 @@ QVBoxLayout *MetadataCreator::makeLineLayout()
 
         connect(button, &QPushButton::clicked, this, [this, i, lineSave] {
             load = true;
-            QString path = QFileInfo(lineSave->text()).path().isEmpty() ? QDir::homePath() : QFileInfo(lineSave->text()).path();
-            QString temp = QFile(lineSave->text()).fileName();
-            temp = getOpenFileName(parentWidget(), tr("Select A File To Use As Save0%1").arg(QString::number(i)), QDir::homePath(), FF7SaveInfo::instance()->knownTypesFilter(), temp);
-            if (ff7->loadFile(temp)) {
-                InFiles.replace(i, temp);
+            QString file = QFile(lineSave->text()).fileName();
+            file = getOpenFileName(parentWidget(), tr("Select A File To Use As Save0%1").arg(QString::number(i)), QDir::homePath(), FF7SaveInfo::instance()->knownTypesFilter(), file);
+            if (ff7->loadFile(file)) {
+                InFiles.replace(i, file);
                 lineSave->setText(InFiles.at(i));
             }
             load = false;
@@ -195,7 +194,8 @@ QString MetadataCreator::getOpenFileName(QWidget  *parent, const QString &title,
     int dialogHeight = int (parent->geometry().height() * 0.80);
     int fmw = dialog.fontMetrics().height();
     QSize iconSize = QSize(fmw, fmw);
-    for(QAbstractButton * btn: dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively))
+    const QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
+    for(QAbstractButton * btn: buttons)
         btn->setIconSize(iconSize);
     dialog.setGeometry(parent->geometry().x() + ((parent->geometry().width() - dialogWidth) / 2), parent->geometry().y() + ((parent->geometry().height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog.setLabelText(QFileDialog::LookIn, tr("Places"));
@@ -204,7 +204,7 @@ QString MetadataCreator::getOpenFileName(QWidget  *parent, const QString &title,
         dialog.selectFile(fileName);
 
     if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().first();
+        return dialog.selectedFiles().at(0);
     return QString();
 }
 
@@ -216,7 +216,8 @@ QString MetadataCreator::getExistingDirectory(QWidget *parent, const QString &ti
     QFileDialog dialog(parent, title, path.isEmpty() ? QDir::homePath() : path, initSelection);
     int fmw = dialog.fontMetrics().height();
     QSize iconSize = QSize(fmw, fmw);
-    for(QAbstractButton * btn: dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively))
+    const QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
+    for(QAbstractButton * btn: buttons)
         btn->setIconSize(iconSize);
     dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog.setFileMode(QFileDialog::Directory);
@@ -227,6 +228,6 @@ QString MetadataCreator::getExistingDirectory(QWidget *parent, const QString &ti
     dialog.setLabelText(QFileDialog::LookIn, tr("Places"));
 
     if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().first();
+        return dialog.selectedFiles().at(0);
     return QString();
 }

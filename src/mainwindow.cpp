@@ -1003,6 +1003,7 @@ void MainWindow::actionAbout_triggered()
 void MainWindow::actionCopySlot_triggered()
 {
     ff7->copySlot(s);
+    ui->actionPasteSlot->setEnabled(true);
 }
 void MainWindow::actionPasteSlot_triggered()
 {
@@ -1321,13 +1322,13 @@ void MainWindow::setmenu(bool newgame)
         ui->actionNewGamePlus->setEnabled(1);
         ui->actionImportSlotFromFile->setEnabled(1);
         ui->actionCopySlot->setEnabled(1);
-        ui->actionPasteSlot->setEnabled(1);
+        ui->actionPasteSlot->setEnabled(ff7->isBufferSlotPopulated());
         ui->actionNewGame->setEnabled(1);
     }
 
     if ( FF7SaveInfo::instance()->slotCount(ff7->format()) > 1) { //more then one slot, or unknown Type
-        ui->actionNextSlot->setEnabled(1);
-        ui->actionPreviousSlot->setEnabled(1);
+        ui->actionNextSlot->setEnabled(s != 14);
+        ui->actionPreviousSlot->setEnabled(s != 0);
         ui->actionShowSelectionDialog->setEnabled(1);
         ui->actionClearSlot->setEnabled(1);
         ui->actionNewGame->setEnabled(1);

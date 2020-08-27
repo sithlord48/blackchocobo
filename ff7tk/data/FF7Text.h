@@ -25,7 +25,7 @@ class QJSEngine;
 class FF7TEXT: public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool japanese READ isJapanese WRITE setJapanese)
+    Q_PROPERTY(bool japanese READ isJapanese WRITE setJapanese NOTIFY languageChanged)
 public:
     /**
      * @brief Get the FF7TEXT Instance.
@@ -55,7 +55,10 @@ public:
      *  \return decoded ff7text
      */
     Q_INVOKABLE QByteArray toFF7(const QString &string);
-
+signals:
+    /*! \brief emited when switching language used for decode.
+     */
+    void languageChanged();
 private:
     FF7TEXT *operator = (FF7TEXT &other) = delete;
     FF7TEXT(const FF7TEXT &other) = delete;

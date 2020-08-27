@@ -129,83 +129,83 @@ void MenuListWidget::setChecked(int row, int box, bool checked)
 }
 void MenuListWidget::cb_item_one_toggled(bool checked)
 {
-    emit(visibleToggled(0, checked));
+    emit visibleToggled(0, checked);
 }
 void MenuListWidget::cb_item_two_toggled(bool checked)
 {
-    emit(lockedToggled(0, checked));
+    emit lockedToggled(0, checked);
 }
 void MenuListWidget::cb_magic_one_toggled(bool checked)
 {
-    emit(visibleToggled(1, checked));
+    emit visibleToggled(1, checked);
 }
 void MenuListWidget::cb_magic_two_toggled(bool checked)
 {
-    emit(lockedToggled(1, checked));
+    emit lockedToggled(1, checked);
 }
 void MenuListWidget::cb_materia_one_toggled(bool checked)
 {
-    emit(visibleToggled(2, checked));
+    emit visibleToggled(2, checked);
 }
 void MenuListWidget::cb_materia_two_toggled(bool checked)
 {
-    emit(lockedToggled(2, checked));
+    emit lockedToggled(2, checked);
 }
 void MenuListWidget::cb_equip_one_toggled(bool checked)
 {
-    emit(visibleToggled(3, checked));
+    emit visibleToggled(3, checked);
 }
 void MenuListWidget::cb_equip_two_toggled(bool checked)
 {
-    emit(lockedToggled(3, checked));
+    emit lockedToggled(3, checked);
 }
 void MenuListWidget::cb_status_one_toggled(bool checked)
 {
-    emit(visibleToggled(4, checked));
+    emit visibleToggled(4, checked);
 }
 void MenuListWidget::cb_status_two_toggled(bool checked)
 {
-    emit(lockedToggled(4, checked));
+    emit lockedToggled(4, checked);
 }
 void MenuListWidget::cb_order_one_toggled(bool checked)
 {
-    emit(visibleToggled(5, checked));
+    emit visibleToggled(5, checked);
 }
 void MenuListWidget::cb_order_two_toggled(bool checked)
 {
-    emit(lockedToggled(5, checked));
+    emit lockedToggled(5, checked);
 }
 void MenuListWidget::cb_limit_one_toggled(bool checked)
 {
-    emit(visibleToggled(6, checked));
+    emit visibleToggled(6, checked);
 }
 void MenuListWidget::cb_limit_two_toggled(bool checked)
 {
-    emit(lockedToggled(6, checked));
+    emit lockedToggled(6, checked);
 }
 void MenuListWidget::cb_config_one_toggled(bool checked)
 {
-    emit(visibleToggled(7, checked));
+    emit visibleToggled(7, checked);
 }
 void MenuListWidget::cb_config_two_toggled(bool checked)
 {
-    emit(lockedToggled(7, checked));
+    emit lockedToggled(7, checked);
 }
 void MenuListWidget::cb_phs_one_toggled(bool checked)
 {
-    emit(visibleToggled(8, checked));
+    emit visibleToggled(8, checked);
 }
 void MenuListWidget::cb_phs_two_toggled(bool checked)
 {
-    emit(lockedToggled(8, checked));
+    emit lockedToggled(8, checked);
 }
 void MenuListWidget::cb_save_one_toggled(bool checked)
 {
-    emit(visibleToggled(9, checked));
+    emit visibleToggled(9, checked);
 }
 void MenuListWidget::cb_save_two_toggled(bool checked)
 {
-    emit(lockedToggled(9, checked));
+    emit lockedToggled(9, checked);
 }
 
 void MenuListWidget::connectAll()

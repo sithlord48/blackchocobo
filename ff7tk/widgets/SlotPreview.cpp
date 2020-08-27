@@ -52,7 +52,8 @@ void SlotPreview::init_display(void)
     btn_paste->setToolTip(tr("Paste Into Slot"));
     connect(btn_paste, &QPushButton::clicked, this, [this] { emit btn_paste_clicked(m_index); });
 
-    for (auto btn : findChildren<QPushButton *>()) {
+    const QList<QPushButton*> buttons = findChildren<QPushButton *>();
+    for (auto btn : buttons) {
         btn->setMaximumSize(int(22 * scale), int(22 * scale));
         btn->setCursor(Qt::BitmapCursor);
         btn->setHidden(true);
@@ -183,7 +184,8 @@ void SlotPreview::set_ff7_save(void)
     top_layout->setSpacing(3);
     Final->addLayout(top_layout);
 
-    for (auto lbl : findChildren<QLabel *>())
+    const QList<QLabel*> labels = findChildren<QLabel *>();
+    for (auto lbl : labels)
         lbl->setStyleSheet(_ff7SlotStyle);
 }
 

@@ -25,14 +25,14 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int PC_FILE_HEADER_SIZE = 0x09;
     inline static const QString PC_FILE_DESCRIPTION = tr("PC Save File");
     inline static const QStringList PC_VALID_EXTENSIONS { QStringLiteral("*.ff7") };
-    inline static const QRegExp PC_VALID_NAME_REGEX = QRegExp(QStringLiteral("save0[0-9].ff7"));
+    inline static const QRegularExpression PC_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("save0[0-9].ff7"));
     inline static const QByteArray PC_FILE_ID = QByteArray::fromRawData("\x71\x73\x27\x06", 4);
     /*~~~~~~~~~~~~~~~~~~ Switch Save File ~~~~~~~~~~~~~*/
     static const int SWITCH_FILE_SIZE = PC_FILE_SIZE;
     static const int SWITCH_FILE_HEADER_SIZE = PC_FILE_HEADER_SIZE;
     inline static const QString SWITCH_FILE_DESCRIPTION = tr("Switch Save File");
     inline static const QStringList SWITCH_VALID_EXTENSIONS {QStringLiteral("ff7slot*")};
-    inline static const QRegExp SWITCH_VALID_NAME_REGEX = QRegExp(QStringLiteral("ff7slot[0-9]"));
+    inline static const QRegularExpression SWITCH_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("ff7slot[0-9]"));
     inline static const QByteArray SWITCH_FILE_ID = PC_FILE_ID;
     /*~~~~~~~~~~~~~~~~~~ Psx save file ~~~~~~~~~~~~~~~~*/
     static const int PSX_FILE_SIZE = 0x2000;
@@ -43,7 +43,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
         QStringLiteral("BESCES-00867FF7-S*"), QStringLiteral("BESCES-00868FF7-S*"),
         QStringLiteral("BESCES-00869FF7-S*"), QStringLiteral("BESCES-00900FF7-S*"),
         QStringLiteral("BISLPS-00700FF7-S*"), QStringLiteral("BISLPS-01057FF7-S*")};
-    inline static const QRegExp PSX_VALID_NAME_REGEX = QRegExp(QStringLiteral("(BASCUS|BESCES|BISLPS)-\\d{5}FF7-S([1][0-5]|0[1-9])"));
+    inline static const QRegularExpression PSX_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("(BASCUS|BESCES|BISLPS)-\\d{5}FF7-S([1][0-5]|0[1-9])"));
     inline static const QByteArray PSX_FILE_ID = QByteArray::fromRawData("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60", 16);
     //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
     inline static const QByteArrayList PSX_SLOT_HEADER = {
@@ -68,7 +68,7 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int PS3_FILE_HEADER_SIZE = 0x0084;
     inline static const QString PS3_FILE_DESCRIPTION = tr("PSV Save File");
     inline static const QStringList PS3_VALID_EXTENSIONS { QStringLiteral("*.PSV")};
-    inline static const QRegExp PS3_VALID_NAME_REGEX = QRegExp(QStringLiteral("(BASCUS|BESCES|BISLPS)-\\d{5}4646372D533(13[0-5]|03[1-9]).PSV"));
+    inline static const QRegularExpression PS3_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("(BASCUS|BESCES|BISLPS)-\\d{5}4646372D533(13[0-5]|03[1-9]).PSV"));
     inline static const QByteArray PS3_FILE_ID = QByteArray::fromRawData("\x00\x56\x53\x50", 4);
     static const int PS3_SEED_OFFSET = 0x0008;
     static const int PS3_SIGNATURE_OFFSET = 0x001C;
@@ -88,14 +88,14 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
         QStringLiteral("*.mcr"), QStringLiteral("*.mcd"), QStringLiteral("*.mci"),
         QStringLiteral("*.mc"), QStringLiteral("*.ddf"), QStringLiteral("*.ps"),
         QStringLiteral("*.psm"), QStringLiteral("*.VM1"), QStringLiteral("*.bin"), QStringLiteral("*.srm")};
-    inline static const QRegExp VMC_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.(mc[r|d|i]?|ddf|ps[m]?]|bin|srm|VM1)"), Qt::CaseInsensitive);
+    inline static const QRegularExpression VMC_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.(mc[r|d|i]?|ddf|ps[m]?]|bin|srm|VM1)"), QRegularExpression::CaseInsensitiveOption);
     inline static const QByteArray VMC_FILE_ID = "\x4D\x43";
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PSP_FILE_SIZE = 0x20080;
     static const int PSP_FILE_HEADER_SIZE = 0x2080;
     inline static const QString PSP_FILE_DESCRIPTION = tr("PSP and PsVita Virtual Memory Card");
     inline static const QStringList PSP_VALID_EXTENSIONS { QStringLiteral("*.VMP")};
-    inline static const QRegExp PSP_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.VMP"));
+    inline static const QRegularExpression PSP_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.VMP"));
     inline static const QByteArray PSP_FILE_ID = QByteArray::fromRawData("\x00\x50\x4D\x56\x80", 5);
     static const int PSP_SEED_OFFSET = 0x000C;
     static const int PSP_SIGNATURE_OFFSET = 0x0020;
@@ -105,27 +105,27 @@ struct FF7SaveInfo::FF7SaveInfoPrivate {
     static const int VGS_FILE_HEADER_SIZE = 0x2040;
     inline static const QString VGS_FILE_DESCRIPTION = tr("Virtual Game Station Memory Card");
     inline static const QStringList VGS_VALID_EXTENSIONS { QStringLiteral("*.vgs"), QStringLiteral("*.mem")};
-    inline static const QRegExp VGS_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.(vgs|mem)"), Qt::CaseInsensitive);
+    inline static const QRegularExpression VGS_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.(vgs|mem)"), QRegularExpression::CaseInsensitiveOption);
     inline static const QByteArray VGS_FILE_ID = "\x56\x67\x73\x4D";
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DEX SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
     static const int DEX_FILE_SIZE = 0x20F40;
     static const int DEX_FILE_HEADER_SIZE = 0x2F40;
     inline static const QString DEX_FILE_DESCRIPTION = tr("DEX Drive Virtual Memory Card");
     inline static const QStringList DEX_VALID_EXTENSIONS {QStringLiteral("*.gme")};
-    inline static const QRegExp DEX_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.gme"), Qt::CaseInsensitive);
+    inline static const QRegularExpression DEX_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.gme"), QRegularExpression::CaseInsensitiveOption);
     inline static const QByteArray DEX_FILE_ID = QByteArray::fromRawData("\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x4D", 22);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PGE SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PGE_FILE_SIZE = 0x2080;
     static const int PGE_FILE_HEADER_SIZE = 0x0080;
     inline static const QString PGE_FILE_DESCRIPTION = tr("PSXGameEdit Memory Juggler");
     inline static const QStringList PGE_VALID_EXTENSIONS { QStringLiteral("*.mcs"), QStringLiteral("*.ps1")};
-    inline static const QRegExp PGE_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.(mcs|ps1)"), Qt::CaseInsensitive);
+    inline static const QRegularExpression PGE_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.(mcs|ps1)"), QRegularExpression::CaseInsensitiveOption);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PDA SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
     static const int PDA_FILE_SIZE = 0x2036;
     static const int PDA_FILE_HEADER_SIZE = 0x0036;
     inline static const QString PDA_FILE_DESCRIPTION = tr("XP AR GS Caetla SmartLink Dantel");
     inline static const QStringList PDA_VALID_EXTENSIONS { QStringLiteral("*.mcb"), QStringLiteral("*.mcx"),QStringLiteral("*.psx"), QStringLiteral("*.pda")};
-    inline static const QRegExp PDA_VALID_NAME_REGEX = QRegExp(QStringLiteral("\\S+.(psx|mcb|mcx|pda)"), Qt::CaseInsensitive);
+    inline static const QRegularExpression PDA_VALID_NAME_REGEX = QRegularExpression(QStringLiteral("\\S+.(psx|mcb|mcx|pda)"), QRegularExpression::CaseInsensitiveOption);
 };
 
 FF7SaveInfo *FF7SaveInfo::instance()
@@ -353,7 +353,7 @@ int FF7SaveInfo::slotSize() const
     return d->_slotSize;
 }
 
-QRegExp FF7SaveInfo::validNameRegExp(FF7SaveInfo::FORMAT format) const
+QRegularExpression FF7SaveInfo::validNames(FF7SaveInfo::FORMAT format) const
 {
     switch (format) {
     case FORMAT::PC: return d->PC_VALID_NAME_REGEX;
@@ -366,7 +366,7 @@ QRegExp FF7SaveInfo::validNameRegExp(FF7SaveInfo::FORMAT format) const
     case FORMAT::SWITCH: return d->SWITCH_VALID_NAME_REGEX;
     case FORMAT::PGE: return d->PGE_VALID_NAME_REGEX;
     case FORMAT::PDA: return d->PDA_VALID_NAME_REGEX;
-    default: return QRegExp(QStringLiteral(""));
+    default: return QRegularExpression();
     }
 }
 
@@ -413,31 +413,32 @@ QString FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT format) const
 
 QString FF7SaveInfo::knownTypesFilter() const
 {
+    QString space = QStringLiteral(" ");
     QString allTypes = QStringLiteral("%1 %2 %3 %4 %5 %6 %7 %8 %9 %10")
-        .arg(d->PC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->PSX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->PSP_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->PS3_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->DEX_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->VGS_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->VMC_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->SWITCH_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->PGE_VALID_EXTENSIONS.join(QStringLiteral(" ")))
-        .arg(d->PDA_VALID_EXTENSIONS.join(QStringLiteral(" ")));
+        .arg(d->PC_VALID_EXTENSIONS.join(space)
+        , d->PSX_VALID_EXTENSIONS.join(space)
+        , d->PSP_VALID_EXTENSIONS.join(space)
+        , d->PS3_VALID_EXTENSIONS.join(space)
+        , d->DEX_VALID_EXTENSIONS.join(space)
+        , d->VGS_VALID_EXTENSIONS.join(space)
+        , d->VMC_VALID_EXTENSIONS.join(space)
+        , d->SWITCH_VALID_EXTENSIONS.join(space)
+        , d->PGE_VALID_EXTENSIONS.join(space)
+        , d->PDA_VALID_EXTENSIONS.join(space));
 
     return QStringLiteral("%1;;%2;;%3;;%4;;%5;;%6;;%7;;%8;;%9;;%10;;%11;;%12")
-        .arg(tr("Known FF7 Save Types (%1)").arg(allTypes))
-        .arg(typeFilter(FORMAT::PC))
-        .arg(typeFilter(FORMAT::SWITCH))
-        .arg(typeFilter(FORMAT::VMC))
-        .arg(typeFilter(FORMAT::PSX))
-        .arg(typeFilter(FORMAT::PS3))
-        .arg(typeFilter(FORMAT::PSP))
-        .arg(typeFilter(FORMAT::DEX))
-        .arg(typeFilter(FORMAT::VGS))
-        .arg(typeFilter(FORMAT::PGE))
-        .arg(typeFilter(FORMAT::PDA))
-        .arg(typeFilter(FORMAT::UNKNOWN));
+        .arg(tr("Known FF7 Save Types (%1)").arg(allTypes)
+        , typeFilter(FORMAT::PC)
+        , typeFilter(FORMAT::SWITCH)
+        , typeFilter(FORMAT::VMC)
+        , typeFilter(FORMAT::PSX)
+        , typeFilter(FORMAT::PS3)
+        , typeFilter(FORMAT::PSP)
+        , typeFilter(FORMAT::DEX)
+        , typeFilter(FORMAT::VGS)
+        , typeFilter(FORMAT::PGE)
+        , typeFilter(FORMAT::PDA)
+        , typeFilter(FORMAT::UNKNOWN));
 }
 
 bool FF7SaveInfo::internalPC(FF7SaveInfo::FORMAT format) const

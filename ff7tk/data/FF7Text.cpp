@@ -45,7 +45,10 @@ QObject *FF7TEXT::qmlSingletonRegister(QQmlEngine *engine, QJSEngine *scriptEngi
 
 void FF7TEXT::setJapanese(bool japanese)
 {
+    if(japanese == d->in_ja)
+        return;
     d->in_ja = japanese;
+    emit languageChanged();
 }
 
 bool FF7TEXT::isJapanese()

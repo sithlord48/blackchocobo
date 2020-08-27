@@ -148,74 +148,74 @@ void ChocoboManager::connectEditor()
     connect(chocoboEditor, &ChocoboEditor::sprintChanged, this, [this](quint16 sprint) {
         if (sprint != chocoboData[selectedStable].sprintspd) {
             chocoboData[selectedStable].sprintspd = sprint;
-            emit(sprintChanged(selectedStable, sprint));
+            emit sprintChanged(selectedStable, sprint);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::mSprintChanged, this, [this](quint16 Msprint) {
         if (Msprint != chocoboData[selectedStable].maxsprintspd) {
             chocoboData[selectedStable].maxsprintspd = Msprint;
-            emit(mSprintChanged(selectedStable, Msprint));
+            emit mSprintChanged(selectedStable, Msprint);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::speedChanged, this, [this](quint16 speed) {
         if (speed != chocoboData[selectedStable].speed) {
             chocoboData[selectedStable].speed = speed;
-            emit(speedChanged(selectedStable, speed));
+            emit speedChanged(selectedStable, speed);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::mSpeedChanged, this, [this](quint16 Mspeed) {
         if (Mspeed != chocoboData[selectedStable].maxspeed) {
             chocoboData[selectedStable].maxspeed = Mspeed;
-            emit(mSpeedChanged(selectedStable, Mspeed));
+            emit mSpeedChanged(selectedStable, Mspeed);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::staminaChanged, this, [this](quint16 stamina) {
         if (stamina != chocoboStamina[selectedStable]) {
             chocoboStamina[selectedStable] = stamina;
-            emit(staminaChanged(selectedStable, stamina));
+            emit staminaChanged(selectedStable, stamina);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::accelChanged, this, [this](quint8 accel) {
         if (accel != chocoboData[selectedStable].accel) {
             chocoboData[selectedStable].accel = accel;
-            emit(accelChanged(selectedStable, accel));
+            emit accelChanged(selectedStable, accel);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::coopChanged, this, [this](quint8 coop) {
         if (coop != chocoboData[selectedStable].coop) {
             chocoboData[selectedStable].coop = coop;
-            emit(coopChanged(selectedStable, coop));
+            emit coopChanged(selectedStable, coop);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::intelligenceChanged, this, [this](quint8 intelligence) {
         if (intelligence != chocoboData[selectedStable].intelligence) {
             chocoboData[selectedStable].intelligence = intelligence;
-            emit(intelligenceChanged(selectedStable, intelligence));
+            emit intelligenceChanged(selectedStable, intelligence);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::personalityChanged, this, [this](quint8 personality) {
         if (personality != chocoboData[selectedStable].personality) {
             chocoboData[selectedStable].personality = personality;
-            emit(personalityChanged(selectedStable, personality));
+            emit personalityChanged(selectedStable, personality);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::pCountChanged, this, [this](quint8 pCount) {
         if (pCount != chocoboData[selectedStable].pcount) {
             chocoboData[selectedStable].pcount = pCount;
-            emit(pCountChanged(selectedStable, pCount));
+            emit pCountChanged(selectedStable, pCount);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::winsChanged, this, [this](quint8 wins) {
         if (wins != chocoboData[selectedStable].raceswon) {
             chocoboData[selectedStable].raceswon = wins;
             labelUpdate(selectedStable);
-            emit(winsChanged(selectedStable, wins));
+            emit winsChanged(selectedStable, wins);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::cantMateChanged, this, [this](bool cantmate) {
         if (cantmate != cantMate[selectedStable]) {
             cantMate[selectedStable] = cantmate;
-            emit(cantMateChanged(selectedStable, cantmate));
+            emit cantMateChanged(selectedStable, cantmate);
         }
     });
     connect(chocoboEditor, &ChocoboEditor::ratingChanged, this, [this](quint8 rating) {
@@ -364,22 +364,22 @@ void ChocoboManager::setOccupied(int occupied, int mask)
 }
 void ChocoboManager::ChocoboChanged(int s)
 {
-    emit(nameChanged(s, chocoboName[s]));
-    emit(staminaChanged(s, chocoboStamina[s]));
-    emit(cantMateChanged(s, cantMate[s]));
-    emit(sexChanged(s, chocoboData[s].sex));
-    emit(typeChanged(s, chocoboData[s].type));
-    emit(sprintChanged(s, chocoboData[s].sprintspd));
-    emit(mSprintChanged(s, chocoboData[s].maxsprintspd));
-    emit(speedChanged(s, chocoboData[s].speed));
-    emit(mSpeedChanged(s, chocoboData[s].maxspeed));
-    emit(accelChanged(s, chocoboData[s].accel));
-    emit(coopChanged(s, chocoboData[s].coop));
-    emit(intelligenceChanged(s, chocoboData[s].intelligence));
-    emit(personalityChanged(s, chocoboData[s].personality));
-    emit(pCountChanged(s, chocoboData[s].pcount));
-    emit(winsChanged(s, chocoboData[s].raceswon));
-    emit(ratingChanged(s, chocoboRatings[s]));
+    emit nameChanged(s, chocoboName[s]);
+    emit staminaChanged(s, chocoboStamina[s]);
+    emit cantMateChanged(s, cantMate[s]);
+    emit sexChanged(s, chocoboData[s].sex);
+    emit typeChanged(s, chocoboData[s].type);
+    emit sprintChanged(s, chocoboData[s].sprintspd);
+    emit mSprintChanged(s, chocoboData[s].maxsprintspd);
+    emit speedChanged(s, chocoboData[s].speed);
+    emit mSpeedChanged(s, chocoboData[s].maxspeed);
+    emit accelChanged(s, chocoboData[s].accel);
+    emit coopChanged(s, chocoboData[s].coop);
+    emit intelligenceChanged(s, chocoboData[s].intelligence);
+    emit personalityChanged(s, chocoboData[s].personality);
+    emit pCountChanged(s, chocoboData[s].pcount);
+    emit winsChanged(s, chocoboData[s].raceswon);
+    emit ratingChanged(s, chocoboRatings[s]);
 }
 bool ChocoboManager::isEmpty(FF7CHOCOBO choco)
 {
@@ -530,7 +530,7 @@ QGridLayout *ChocoboManager::createChocoboPenGrid()
         comboChocoPen[i]->setObjectName(QString::number(i));
         gridLayout->addWidget(comboChocoPen[i], i / 2, i % 2, 1, 1);
         connect(comboChocoPen[i], QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
-            emit(penChanged(sender()->objectName().toInt(), index));
+            emit penChanged(sender()->objectName().toInt(), index);
         });
     }
     updateCombos();

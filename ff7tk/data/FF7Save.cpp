@@ -34,7 +34,7 @@ FF7Save::FF7Save()
     fileHasChanged = false;
     for (int i = 0; i < 15; i++)
         slotChanged[i] = false;
-    memcpy(&buffer_slot, defaultSave, size_t(FF7SaveInfo::instance()->slotSize()));
+    buffer_slot.checksum = 0x4D1D;
 }
 
 bool FF7Save::loadFile(const QString &fileName)
@@ -56,7 +56,7 @@ bool FF7Save::loadFile(const QString &fileName)
         setFormat(FF7SaveInfo::FORMAT::SWITCH);
     else if ((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::VMC)) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::VMC).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::VMC))
         setFormat(FF7SaveInfo::FORMAT::VMC);
-    else if (((file_size == FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PS3) - 0x84) % FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX) == 0) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3))
+    else if (((FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PS3) - 0x84) % FF7SaveInfo::instance()->fileSize(FF7SaveInfo::FORMAT::PSX) == 0) && (file.peek(FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3).length())) == FF7SaveInfo::instance()->fileIdentifier(FF7SaveInfo::FORMAT::PS3))
     {
         char psvType = file.peek(0x40).at(FF7SaveInfo::instance()->extraPSVOffsets(FF7SaveInfo::PSVINFO::SAVETYPE));
         if (psvType == 0x14) {
@@ -1296,11 +1296,13 @@ void FF7Save::setRegion(int s, const QString &new_region)
     }
     setFileModified(true, s);
 }
+
 void FF7Save::copySlot(int s)
 {
     buffer_slot = slot[s];
     buffer_region = SG_Region_String[s];
 }
+
 void FF7Save::pasteSlot(int s)
 {
     slot[s] = buffer_slot;
@@ -6144,6 +6146,11 @@ void FF7Save::setPlayedPianoOnFlashback(int s, bool played)
 FF7SaveInfo::FORMAT FF7Save::format()
 {
     return fileFormat;
+}
+
+bool FF7Save::isBufferSlotPopulated()
+{
+    return buffer_slot.checksum != 0x4D1D;
 }
 
 void FF7Save::setFormat(FF7SaveInfo::FORMAT newFormat)

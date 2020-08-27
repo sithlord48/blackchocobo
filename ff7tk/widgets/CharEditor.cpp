@@ -1518,7 +1518,7 @@ void CharEditor::setTimesused1(int timesused)
         data.timesused1 = quint16Max;
     else
         data.timesused1 = quint16(timesused);
-    emit(timesused1_changed(data.timesused1));
+    emit timesused1_changed(data.timesused1);
 }
 
 void CharEditor::setTimesused2(int timesused)
@@ -1531,7 +1531,7 @@ void CharEditor::setTimesused2(int timesused)
         data.timesused2 = quint16Max;
     else
         data.timesused2 = quint16(timesused);
-    emit(timesused2_changed(data.timesused2));
+    emit timesused2_changed(data.timesused2);
 }
 
 void CharEditor::setTimesused3(int timesused)
@@ -1544,7 +1544,7 @@ void CharEditor::setTimesused3(int timesused)
         data.timesused3 = quint16Max;
     else
         data.timesused3 = quint16(timesused);
-    emit(timesused3_changed(data.timesused3));
+    emit timesused3_changed(data.timesused3);
 }
 
 void CharEditor::setBaseHp(int baseHp)
@@ -2130,7 +2130,7 @@ void CharEditor::matId_changed(qint8 id)
         data.materias[mslotsel].id = FF7Materia::EmptyId;
 
     if (!load)
-        emit(Materias_changed(data.materias[mslotsel]));
+        emit Materias_changed(data.materias[mslotsel]);
     update_materia_slots();
 }
 void CharEditor::matAp_changed(qint32 ap)
@@ -2148,7 +2148,7 @@ void CharEditor::matAp_changed(qint32 ap)
         data.materias[mslotsel].ap[2] = quint8Max;
     }
     if (!load) {
-        emit(Materias_changed(data.materias[mslotsel]));
+        emit Materias_changed(data.materias[mslotsel]);
     }
     update_materia_slots();
 }
@@ -2162,7 +2162,7 @@ void CharEditor::materiaSlotClicked(int slotClicked)
         mslotsel = slotClicked;
         materia_edit->setMateria(char_materia(mslotsel).id, Materias.ap2num(char_materia(mslotsel).ap));
         setSlotFrame();
-        emit(mslotChanged(mslotsel));
+        emit mslotChanged(mslotsel);
     } else {
         materia_edit->setMateria(char_materia(mslotsel).id, Materias.ap2num(char_materia(mslotsel).ap));
     }
@@ -2254,8 +2254,8 @@ void CharEditor::MaxEquip()
         data.materias[mslotsel].ap[1] = quint8Max;
         data.materias[mslotsel].ap[2] = quint8Max;
 
-        emit(mslotChanged(mslotsel));
-        emit(Materias_changed(data.materias[mslotsel]));
+        emit mslotChanged(mslotsel);
+        emit Materias_changed(data.materias[mslotsel]);
     }
     update_materia_slots();
     setSlotFrame();

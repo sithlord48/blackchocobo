@@ -162,7 +162,7 @@ void ItemSelector::comboItem_changed(int index)
             sb_qty->setEnabled(true);
             
         }
-        emit(itemChanged(current_item));
+        emit itemChanged(current_item);
 	}
 }
 
@@ -214,7 +214,7 @@ void ItemSelector::sb_qty_changed(int qty)
 {
     if (qty != FF7Item::instance()->itemQty(current_item)) {
         current_item = FF7Item::instance()->itemEncode(FF7Item::instance()->itemId(current_item), quint8(qty));
-        emit(itemChanged(current_item));
+        emit itemChanged(current_item);
     }
 }
 

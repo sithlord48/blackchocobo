@@ -1049,6 +1049,7 @@ public:
      */
     FF7SaveInfo::FORMAT format();
 
+    bool isBufferSlotPopulated();/**< \brief True when the bufferslot is populated */
 signals:
     void fileChanged(bool);/**< \brief emits when internal data changes */
 private:

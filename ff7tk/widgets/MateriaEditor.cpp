@@ -96,7 +96,7 @@ void MateriaEditor::setAP(qint32 ap)
         frm_ap_stars->setHidden(true);
         if (_current_ap != ap) {
             _current_ap = ap;
-            emit(apChanged(_current_ap));
+            emit apChanged(_current_ap);
         }
         if (_id == FF7Materia::EnemySkill) {
             //Eskill Materia Specialness.
@@ -575,7 +575,7 @@ QWidget *MateriaEditor::makeSkillWidget()
             _current_ap |= (1 << i);
         else
             _current_ap &= ~(1 << i);
-        emit(apChanged(_current_ap));
+        emit apChanged(_current_ap);
     });
 
     btn_eskill_clear = new QPushButton(tr("Clear"));

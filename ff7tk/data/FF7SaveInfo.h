@@ -16,6 +16,7 @@
 #pragma once
 
 #include <QObject>
+#include <QRegularExpression>
 
 class QJSEngine;
 class QQmlEngine;
@@ -198,11 +199,11 @@ public:
     Q_INVOKABLE int slotSize() const;
 
     /**
-     * @brief Get a constructed RegExp to check for valid save name
+     * @brief Get a constructed RegularExpression to check for valid save name
      * @param format: the format you wish to check .
-     * @return Constructed RegEx
+     * @return Constructed RegularExpression
      */
-    Q_INVOKABLE QRegExp validNameRegExp(FF7SaveInfo::FORMAT format) const;
+    Q_INVOKABLE QRegularExpression validNames(FF7SaveInfo::FORMAT format) const;
 
     /**
      * @brief Valid Extensions for the File type
