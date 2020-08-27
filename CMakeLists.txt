@@ -164,7 +164,6 @@ elseif(APPLE)
 endif()
 
 ##CPACK
-set(CPACK_SOURCE_IGNORE_FILES build/* .git/* .directory CMakeLists.txt.user *.yml)
 set(CPACK_STRIP_FILES blackchocobo)
 get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
 get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
@@ -221,4 +220,7 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
     set(CPACK_GENERATOR "DragNDrop")
 endif()
 
+set(CPACK_SOURCE_IGNORE_FILES build/* .git/* .directory CMakeLists.txt.user *.yml)
+set(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_FILE_NAME}-src")
+set(CPACK_SOURCE_GENERATOR "ZIP;TGZ")
 INCLUDE (CPack)

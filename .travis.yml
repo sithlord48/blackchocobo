@@ -1,12 +1,11 @@
 language: cpp
-sudo: required
 dist: xenial
 
 os:
  - linux
  - osx
 
-before_install: 
+before_install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y;
     sudo add-apt-repository ppa:beineri/opt-qt-5.15.0-xenial -y;
@@ -36,10 +35,9 @@ script:
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
     cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX=/usr;
-    make -j 4;
+    make -j 2;
     make DESTDIR=appdir install; find appdir/;
     cpack;
-    mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz;
     wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage";
     chmod a+x linuxdeployqt*.AppImage;
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
@@ -49,7 +47,7 @@ script:
     export QTDIR="/usr/local/opt/qt5";
     export PATH="$QTDIR/bin:$PATH";
     cmake CMakeLists.txt;
-    make -j 4;
+    make -j 2;
     cpack;
     fi
 
@@ -57,8 +55,8 @@ after_success:
 - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
     find ./appdir -executable -type f -exec ldd {} \; | grep " => /usr" | cut -d " " -f 2-3 | sort | uniq ;
-    bash ./upload.sh Black_Chocobo*.AppImage*;
-    bash ./upload.sh Black_Chocobo-*.tar.xz;
+    mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz;
+    bash ./upload.sh Black_Chocobo-continuous*;
     fi
 - if [ "$TRAVIS_OS_NAME" = "osx" ]; then
     mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg;
