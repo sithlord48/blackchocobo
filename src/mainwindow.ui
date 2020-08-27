@@ -7520,7 +7520,7 @@ Var And Scrolling Synced To Left Table</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>combo_party2</tabstop>
+  <tabstop>comboParty2</tabstop>
   <tabstop>sbGp</tabstop>
   <tabstop>sbBattles</tabstop>
   <tabstop>sbRuns</tabstop>
@@ -7533,9 +7533,9 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>btnCait</tabstop>
   <tabstop>btnVincent</tabstop>
   <tabstop>btnCid</tabstop>
-  <tabstop>cbRegionSlot</tabstop>
+  <tabstop>comboRegionSlot</tabstop>
   <tabstop>tblMateria</tabstop>
-  <tabstop>cbReplay</tabstop>
+  <tabstop>comboReplay</tabstop>
   <tabstop>tblMateriaStolen</tabstop>
   <tabstop>sbLoveAeris</tabstop>
   <tabstop>sbLoveTifa</tabstop>
@@ -7546,7 +7546,7 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sbCoster3</tabstop>
   <tabstop>sbTimeHour</tabstop>
   <tabstop>sbTimeMin</tabstop>
-  <tabstop>sbTtimeSec</tabstop>
+  <tabstop>sbTimeSec</tabstop>
   <tabstop>sbBloveAeris</tabstop>
   <tabstop>sbBloveTifa</tabstop>
   <tabstop>sbBloveYuffie</tabstop>
