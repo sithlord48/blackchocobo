@@ -263,7 +263,7 @@ QByteArray FF7SaveInfo::fileHeader(FF7SaveInfo::FORMAT format) const
 
 QByteArray FF7SaveInfo::slotHeader(FF7SaveInfo::FORMAT format, int slot) const
 {
-    std::clamp(slot, 0, 14);
+    slot = std::clamp(slot, 0, 14);
     switch (format) {
     case FORMAT::PDA:
     case FORMAT::PGE:
@@ -415,30 +415,30 @@ QString FF7SaveInfo::knownTypesFilter() const
 {
     QString space = QStringLiteral(" ");
     QString allTypes = QStringLiteral("%1 %2 %3 %4 %5 %6 %7 %8 %9 %10")
-        .arg(d->PC_VALID_EXTENSIONS.join(space)
-        , d->PSX_VALID_EXTENSIONS.join(space)
-        , d->PSP_VALID_EXTENSIONS.join(space)
-        , d->PS3_VALID_EXTENSIONS.join(space)
-        , d->DEX_VALID_EXTENSIONS.join(space)
-        , d->VGS_VALID_EXTENSIONS.join(space)
-        , d->VMC_VALID_EXTENSIONS.join(space)
-        , d->SWITCH_VALID_EXTENSIONS.join(space)
-        , d->PGE_VALID_EXTENSIONS.join(space)
-        , d->PDA_VALID_EXTENSIONS.join(space));
+        .arg(d->PC_VALID_EXTENSIONS.join(space))
+        .arg(d->PSX_VALID_EXTENSIONS.join(space))
+        .arg(d->PSP_VALID_EXTENSIONS.join(space))
+        .arg(d->PS3_VALID_EXTENSIONS.join(space))
+        .arg(d->DEX_VALID_EXTENSIONS.join(space))
+        .arg(d->VGS_VALID_EXTENSIONS.join(space))
+        .arg(d->VMC_VALID_EXTENSIONS.join(space))
+        .arg(d->SWITCH_VALID_EXTENSIONS.join(space))
+        .arg(d->PGE_VALID_EXTENSIONS.join(space))
+        .arg(d->PDA_VALID_EXTENSIONS.join(space));
 
     return QStringLiteral("%1;;%2;;%3;;%4;;%5;;%6;;%7;;%8;;%9;;%10;;%11;;%12")
-        .arg(tr("Known FF7 Save Types (%1)").arg(allTypes)
-        , typeFilter(FORMAT::PC)
-        , typeFilter(FORMAT::SWITCH)
-        , typeFilter(FORMAT::VMC)
-        , typeFilter(FORMAT::PSX)
-        , typeFilter(FORMAT::PS3)
-        , typeFilter(FORMAT::PSP)
-        , typeFilter(FORMAT::DEX)
-        , typeFilter(FORMAT::VGS)
-        , typeFilter(FORMAT::PGE)
-        , typeFilter(FORMAT::PDA)
-        , typeFilter(FORMAT::UNKNOWN));
+        .arg(tr("Known FF7 Save Types (%1)").arg(allTypes))
+        .arg(typeFilter(FORMAT::PC))
+        .arg(typeFilter(FORMAT::SWITCH))
+        .arg(typeFilter(FORMAT::VMC))
+        .arg(typeFilter(FORMAT::PSX))
+        .arg(typeFilter(FORMAT::PS3))
+        .arg(typeFilter(FORMAT::PSP))
+        .arg(typeFilter(FORMAT::DEX))
+        .arg(typeFilter(FORMAT::VGS))
+        .arg(typeFilter(FORMAT::PGE))
+        .arg(typeFilter(FORMAT::PDA))
+        .arg(typeFilter(FORMAT::UNKNOWN));
 }
 
 bool FF7SaveInfo::internalPC(FF7SaveInfo::FORMAT format) const

@@ -1159,7 +1159,7 @@ void CharEditor::setMaxMp(int maxMp)
 {
     if (data.maxMP == maxMp)
         return;
-    std::clamp(maxMp, 0, qint16Max);
+    maxMp = std::clamp(maxMp, 0, qint16Max);
     data.maxMP = quint16(maxMp);
     emit maxMp_changed(data.maxMP);
 }
