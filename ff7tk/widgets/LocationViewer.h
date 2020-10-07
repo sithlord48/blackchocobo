@@ -25,6 +25,7 @@ class QGroupBox;
 class QLabel;
 class QLineEdit;
 class QListWidget;
+class QPushButton;
 class QSpinBox;
 class QTableWidget;
 class QToolButton;
@@ -57,8 +58,6 @@ signals:
 
 public slots:
     void setSelected(const QString &);
-    void setLocationChangesSaved(bool saveChanges);
-    bool locationChangesSaved(void);
     void setRegion(const QString &region);
     void setTranslationBaseFile(const QString &);
     void setX(int x);
@@ -90,7 +89,7 @@ private slots:
     void actionRegExpSearchToggled(bool checked);
     void actionCaseSensitiveToggled(bool checked);
     void fieldItemListItemChanged(QModelIndex index);
-    void chkAutoUpdateChanged(bool checked);
+    void btnUpdateSaveLocationClicked();
 protected:
     void resizeEvent(QResizeEvent *ev);
     void changeEvent(QEvent *e);
@@ -99,13 +98,14 @@ private:
     void init_connections(void);
     void init_disconnect(void);
     void updateText();
+    void updateItemText(int locID = -1, bool currentLoc = false);
     QString translate(QString text);
     void searchItem(QRegExp exp);
     void searchName(QRegExp exp);
     qreal scale;
     QString region;
     QString transBasePath;
-    bool autoUpdate;
+    int currentStartingLocation = -1;
     bool regExpSearch;
     bool caseSensitive;
     bool _advancedMode;
@@ -129,7 +129,7 @@ private:
     QSpinBox *sbD;
     QListWidget *fieldItemList;
     QGroupBox *groupFieldItems;
-    QCheckBox *chkAutoUpdate;
+    QPushButton *btnUpdateSaveLocation;
 
     inline static const QString _tooltip = QStringLiteral("<html><head/><body><p><img src=\":/locations/%1_%2\" width=\"%3\" height\"%4\" /></p></body></html>");
 };

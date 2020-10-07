@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation>Usando Qt: %1</translation>
+        <translation type="vanished">Usando Qt: %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -218,6 +218,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation>Formato finalizado Soporte de exportación PS3 (psv)</translation>
+    </message>
+    <message>
+        <source>ff7tk: %1</source>
+        <translation type="unfinished">ff7tk: %1</translation>
+    </message>
+    <message>
+        <source>Qt: %1</source>
+        <translation type="unfinished">Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -5357,10 +5365,6 @@ Los km/h son calculados mientras se juega </translation>
         <translation>Dentro de la noria</translation>
     </message>
     <message>
-        <source>Arena</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Waiting Room</source>
         <translation>Sala de espera</translation>
     </message>
@@ -5379,6 +5383,10 @@ Los km/h son calculados mientras se juega </translation>
     <message>
         <source>Nanaki&apos;s Room</source>
         <translation>Sala Nanaki</translation>
+    </message>
+    <message>
+        <source>Arena</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7239,7 +7247,11 @@ Los km/h son calculados mientras se juega </translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation>Guardar &amp;los cambios de Ubicación</translation>
+        <translation type="vanished">Guardar &amp;los cambios de Ubicación</translation>
+    </message>
+    <message>
+        <source>Set as current location</source>
+        <translation type="unfinished">Establecer como ubicación actual</translation>
     </message>
 </context>
 <context>
@@ -8598,7 +8610,11 @@ location.</source>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished">Permitido</translation>
+        <translation type="obsolete">Permitido</translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8661,11 +8677,11 @@ location.</source>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Cancelar</translation>
+        <translation type="obsolete">&amp;Cancelar</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">Aprobad&amp;o</translation>
+        <translation type="obsolete">Aprobad&amp;o</translation>
     </message>
     <message>
         <source>Places</source>

@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation>Using Qt: %1</translation>
+        <translation type="vanished">Using Qt: %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -218,6 +218,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation>Finalized format Support PS3 export (psv)</translation>
+    </message>
+    <message>
+        <source>ff7tk: %1</source>
+        <translation>ff7tk: %1</translation>
+    </message>
+    <message>
+        <source>Qt: %1</source>
+        <translation>Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -4797,10 +4805,6 @@ The km/h speeds are calculated while playing </translation>
         <translation>Dolphin Offing</translation>
     </message>
     <message>
-        <source>Priscilla&apos;s House</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Cargo Ship</source>
         <translation>Cargo Ship</translation>
     </message>
@@ -5337,48 +5341,52 @@ The km/h speeds are calculated while playing </translation>
         <translation>Dark city fourth street</translation>
     </message>
     <message>
+        <source>Nanaki&apos;s Room</source>
+        <translation>Nanaki&apos;s Room</translation>
+    </message>
+    <message>
         <source>Start of Juion Ship Sequence</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Last Train from Midgar</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Sector 7 Mechanized Tower</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Conference Room</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Priscilla&apos;s House</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Johnny&apos;s New Home</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Inside the Ferris Wheel</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Arena</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Waiting Room</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cet Wall</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Great Cave</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Nanaki&apos;s Room</source>
-        <translation>Nanaki&apos;s Room</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7239,7 +7247,11 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation>Save &amp;Location Changes</translation>
+        <translation type="vanished">Save &amp;Location Changes</translation>
+    </message>
+    <message>
+        <source>Set as current location</source>
+        <translation>Set as current location</translation>
     </message>
 </context>
 <context>
@@ -8601,7 +8613,11 @@ location.</translation>
     </message>
     <message>
         <source>Allowed</source>
-        <translation>Allowed</translation>
+        <translation type="vanished">Allowed</translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation>Locked</translation>
     </message>
 </context>
 <context>
@@ -8664,11 +8680,11 @@ location.</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation>&amp;Ok</translation>
+        <translation type="vanished">&amp;Ok</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancel</translation>
+        <translation type="vanished">&amp;Cancel</translation>
     </message>
     <message>
         <source>Places</source>

@@ -8,7 +8,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(REQUIRED_QT_VERSION "5.12.0")
 
-project( blackchocobo VERSION 1.10.3 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.10.4 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 set(BC_VERSION ${CMAKE_PROJECT_VERSION})
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
@@ -34,15 +34,6 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Quick
 )
 find_package(Qt5LinguistTools)
-
-set ( blackchocobo_HDRS
-    ff7tk/data/Type_FF7CHOCOBO.h
-    ff7tk/data/FF7FieldItemList.h
-    ff7tk/data/Type_materia.h
-    ff7tk/data/Type_FF7CHAR.h
-    ff7tk/data/FF7Save_Types.h
-    ff7tk/data/FF7Save_Const.h
-    )
 
 set ( blackchocobo_SRCS
     src/main.cpp
@@ -105,13 +96,6 @@ set ( RESOURCES
     ff7tk/icons/psxButtons.qrc
     )
 
-#set( translatables
-#    ${blackchocobo_HDRS}
-#    ${blackchocobo_SRCS}
-#    ${blackchocobo_UIS}
-#    )
-#qt5_create_translation(TRS ${translatables} ${blackchocobo_TRS})
-
 set ( blackchocobo_TRS
     lang/bchoco_en.ts
     lang/bchoco_es.ts
@@ -120,7 +104,8 @@ set ( blackchocobo_TRS
     lang/bchoco_ja.ts
     lang/bchoco_re.ts
     )
-qt5_add_translation(TRS ${blackchocobo_TRS})
+
+qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS})
 
 if(UNIX AND NOT APPLE)
     add_executable (blackchocobo ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS})

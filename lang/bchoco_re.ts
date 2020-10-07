@@ -14,17 +14,17 @@
         <translation>Black Chocobo </translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="131"/>
+        <location filename="../src/about.ui" line="143"/>
         <source>&amp;About</source>
         <translation>&amp;About</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="137"/>
+        <location filename="../src/about.ui" line="149"/>
         <source>The Final Fantasy VII Save Game Editor</source>
         <translation>The Final Fantasy VII Save Game Editor</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="191"/>
+        <location filename="../src/about.ui" line="203"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -37,12 +37,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="213"/>
+        <location filename="../src/about.ui" line="225"/>
         <source>Newest Features</source>
         <translation>Newest Features</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="157"/>
+        <location filename="../src/about.ui" line="169"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -55,7 +55,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="174"/>
+        <location filename="../src/about.ui" line="186"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -68,205 +68,214 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="236"/>
+        <location filename="../src/about.ui" line="248"/>
         <source>Simple light and dark color theme option</source>
         <translation>Simple light and dark color theme option</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="241"/>
+        <location filename="../src/about.ui" line="253"/>
         <source>Filename suggestion for Exports</source>
         <translation>Filename suggestion for Exports</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="246"/>
+        <location filename="../src/about.ui" line="258"/>
         <source>Improved Settings Dialog</source>
         <translation>Improved Settings Dialog</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="251"/>
+        <location filename="../src/about.ui" line="263"/>
         <source>Dynamic Language Switching</source>
         <translation>Dynamic Language Switching</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="256"/>
+        <location filename="../src/about.ui" line="268"/>
         <source>Default to Non Native File Dialog</source>
         <translation>Default to Non Native File Dialog</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="261"/>
+        <location filename="../src/about.ui" line="273"/>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation>Finalized format Support PS3 export (psv)</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="266"/>
+        <location filename="../src/about.ui" line="278"/>
         <source>Finalized format Support PSP exports (vmp) </source>
         <translation>Finalized format Support PSP exports (vmp) </translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="271"/>
+        <location filename="../src/about.ui" line="283"/>
         <source>New format Support Switch (ff7slot00 - ff7slot09)</source>
         <translation>New format Support Switch (ff7slot00 - ff7slot09)</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="276"/>
+        <location filename="../src/about.ui" line="288"/>
         <source>New format Support PGE (ps1, mcs)</source>
         <translation>New format Support PGE (ps1, mcs)</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="281"/>
+        <location filename="../src/about.ui" line="293"/>
         <source>New format Support PDA (psx, mcx, mcb, pda)</source>
         <translation>New format Support PDA (psx, mcx, mcb, pda)</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="286"/>
+        <location filename="../src/about.ui" line="298"/>
         <source>Location Viewer: Added more locations</source>
         <translation>Location Viewer: Added more locations</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="295"/>
+        <location filename="../src/about.ui" line="307"/>
         <source>C&amp;redits</source>
         <translation>C&amp;redits</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="301"/>
+        <location filename="../src/about.ui" line="313"/>
         <source>Giving Credit Where Credit is Due</source>
         <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="342"/>
+        <location filename="../src/about.ui" line="354"/>
         <source>Programmers</source>
         <translation>Programmers</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="361"/>
+        <location filename="../src/about.ui" line="373"/>
         <source>Almost All code and GUI design; </source>
         <translation>Almost All code and GUI design; </translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="392"/>
+        <location filename="../src/about.ui" line="404"/>
         <source>Various code help/debug; Windows QA</source>
         <translation>Various code help/debug; Windows QA</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="423"/>
+        <location filename="../src/about.ui" line="435"/>
         <source>Psx Icon Class &amp; PC string converter for Japanese</source>
         <translation>Psx Icon Class &amp; PC string converter for Japanese</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="459"/>
+        <location filename="../src/about.ui" line="471"/>
         <source>Bug Testers</source>
         <translation>Bug Testers</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="481"/>
+        <location filename="../src/about.ui" line="493"/>
         <source>Main Bug Tester, for win/gnome + ingame</source>
         <translation>Main Bug Tester, for win/gnome + ingame</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="512"/>
+        <location filename="../src/about.ui" line="524"/>
         <source>Early Win32 Tester</source>
         <translation>Early Win32 Tester</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="543"/>
-        <location filename="../src/about.ui" line="574"/>
+        <location filename="../src/about.ui" line="555"/>
+        <location filename="../src/about.ui" line="586"/>
         <source>Mac Os Tester</source>
         <translation>Mac Os Tester</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="605"/>
+        <location filename="../src/about.ui" line="617"/>
         <source>Windows Tester</source>
         <translation>Windows Tester</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="641"/>
+        <location filename="../src/about.ui" line="653"/>
         <source>Translators</source>
         <translation>Translators</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="656"/>
+        <location filename="../src/about.ui" line="668"/>
         <source>Spanish Translation:</source>
         <translation>Spanish Translation:</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="687"/>
+        <location filename="../src/about.ui" line="699"/>
         <source>French Translation:</source>
         <translation>French Translation:</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="718"/>
+        <location filename="../src/about.ui" line="730"/>
         <source>Japanese Translation:</source>
         <translation>Japanese Translation:</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="749"/>
+        <location filename="../src/about.ui" line="761"/>
         <source>German Translation:</source>
         <translation>German Translation:</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="795"/>
+        <location filename="../src/about.ui" line="807"/>
         <source>Icons Used In this Program</source>
         <translation>Icons Used In this Program</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="824"/>
+        <location filename="../src/about.ui" line="836"/>
         <source>Buff Icons (and one or two more) by </source>
         <translation>Buff Icons (and one or two more) by </translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="881"/>
+        <location filename="../src/about.ui" line="893"/>
         <source>&amp;Thanks</source>
         <translation>&amp;Thanks</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="1043"/>
+        <location filename="../src/about.ui" line="1055"/>
         <source>&amp;Close</source>
         <translation>&amp;Close</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="896"/>
+        <location filename="../src/about.ui" line="908"/>
         <source>A Big Thank You  To:</source>
         <translation>A Big Thank You  To:</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="927"/>
+        <location filename="../src/about.ui" line="939"/>
         <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
         <translation>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="946"/>
+        <location filename="../src/about.ui" line="958"/>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
         <translation>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="965"/>
+        <location filename="../src/about.ui" line="977"/>
         <source>Thank you for the old checksum program</source>
         <translation>Thank you for the old checksum program</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="984"/>
+        <location filename="../src/about.ui" line="996"/>
         <source>Thank you for helping me see the light of stupid errors.</source>
         <translation>Thank you for helping me see the light of stupid errors.</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="1003"/>
+        <location filename="../src/about.ui" line="1015"/>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
         <translation>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</translation>
     </message>
     <message>
-        <location filename="../src/about.ui" line="1022"/>
+        <location filename="../src/about.ui" line="1034"/>
         <source>Cause she&apos;s just awesome!</source>
         <translation>Cause she&apos;s just awesome!</translation>
     </message>
     <message>
-        <location filename="../src/about.cpp" line="29"/>
+        <location filename="../src/about.cpp" line="30"/>
         <source>Version: %1</source>
         <translation>Version: %1</translation>
     </message>
     <message>
-        <location filename="../src/about.cpp" line="30"/>
+        <location filename="../src/about.cpp" line="31"/>
+        <source>ff7tk: %1</source>
+        <translation>ff7tk: %1</translation>
+    </message>
+    <message>
+        <location filename="../src/about.cpp" line="32"/>
+        <source>Qt: %1</source>
+        <translation>Qt: %1</translation>
+    </message>
+    <message>
         <source>Using Qt: %1</source>
-        <translation>Using Qt: %1</translation>
+        <translation type="vanished">Using Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -5838,7 +5847,6 @@ The km/h speeds are calculated while playing </translation>
         <location filename="../ff7tk/data/FF7Location.h" line="381"/>
         <location filename="../ff7tk/data/FF7Location.h" line="382"/>
         <location filename="../ff7tk/data/FF7Location.h" line="387"/>
-        <location filename="../ff7tk/data/FF7Location.h" line="388"/>
         <source>Sector 7 Slums</source>
         <translation>District 7, Slums</translation>
     </message>
@@ -5864,12 +5872,13 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <location filename="../ff7tk/data/FF7Location.h" line="389"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="390"/>
         <location filename="../ff7tk/data/FF7Location.h" line="392"/>
         <source>Plate Support</source>
         <translation>Plate Support</translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Location.h" line="390"/>
+        <location filename="../ff7tk/data/FF7Location.h" line="388"/>
         <source>Sector 7 Mechanized Tower</source>
         <translation type="unfinished">Sector 7 Mechanized Tower</translation>
     </message>
@@ -9351,12 +9360,12 @@ The km/h speeds are calculated while playing </translation>
     <name>FF7Save</name>
     <message>
         <location filename="../ff7tk/data/FF7Save.cpp" line="65"/>
-        <location filename="../ff7tk/data/FF7Save.cpp" line="771"/>
+        <location filename="../ff7tk/data/FF7Save.cpp" line="768"/>
         <source>Unable to open PSV of Type %2: 0x%1</source>
         <translation>Unable to open PSV of Type %2: 0x%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7Save.cpp" line="1671"/>
+        <location filename="../ff7tk/data/FF7Save.cpp" line="1669"/>
         <source>New Game +</source>
         <translation></translation>
     </message>
@@ -9419,7 +9428,7 @@ The km/h speeds are calculated while playing </translation>
         <translation>All Files (*)</translation>
     </message>
     <message>
-        <location filename="../ff7tk/data/FF7SaveInfo.cpp" line="429"/>
+        <location filename="../ff7tk/data/FF7SaveInfo.cpp" line="430"/>
         <source>Known FF7 Save Types (%1)</source>
         <translation>Known FF7 Save Types (%1)</translation>
     </message>
@@ -9695,78 +9704,82 @@ The km/h speeds are calculated while playing </translation>
 <context>
     <name>LocationViewer</name>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="105"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="95"/>
         <source>Filename</source>
         <translation>Filename</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="105"/>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="128"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="95"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="118"/>
         <source>Location Name</source>
         <translation>Location Name</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="105"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="95"/>
         <source>LocID</source>
         <translation>LocID</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="118"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="108"/>
         <source>Filter Mode: Name / Location String</source>
         <translation>Filter Mode: Name / Location String</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="119"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="109"/>
         <source>Filter Mode: Items Found at Location</source>
         <translation>Filter Mode: Items Found at Location</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="120"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="110"/>
         <source>Process Regular Expressions</source>
         <translation>Process Regular Expressions</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="121"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="111"/>
         <source>Case Sensitive</source>
         <translation>Case Sensitive</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="122"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="112"/>
         <source>MapID: </source>
         <translation>MapID: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="123"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="113"/>
         <source>LocID: </source>
         <translation>LocID: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="124"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="114"/>
         <source>X: </source>
         <translation>X: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="125"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="115"/>
         <source>Y: </source>
         <translation>Y: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="126"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="116"/>
         <source>T: </source>
         <translation>T: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="127"/>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="117"/>
         <source>D: </source>
         <translation>D: </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="129"/>
-        <source>Save &amp;Location Changes</source>
-        <translation>Save &amp;Location Changes</translation>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="119"/>
+        <source>Set as current location</source>
+        <translation>Set as current location</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="130"/>
+        <source>Save &amp;Location Changes</source>
+        <translation type="vanished">Save &amp;Location Changes</translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/widgets/LocationViewer.cpp" line="120"/>
         <source>Field Items</source>
         <translation>Field Items</translation>
     </message>
@@ -9775,777 +9788,777 @@ The km/h speeds are calculated while playing </translation>
     <name>MainWindow</name>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
-        <location filename="../src/mainwindow.cpp" line="527"/>
-        <location filename="../src/mainwindow.cpp" line="591"/>
-        <location filename="../src/mainwindow.cpp" line="595"/>
-        <location filename="../src/mainwindow.cpp" line="3635"/>
-        <location filename="../src/mainwindow.cpp" line="3887"/>
+        <location filename="../src/mainwindow.cpp" line="779"/>
+        <location filename="../src/mainwindow.cpp" line="843"/>
+        <location filename="../src/mainwindow.cpp" line="847"/>
+        <location filename="../src/mainwindow.cpp" line="3882"/>
+        <location filename="../src/mainwindow.cpp" line="4134"/>
         <source>Black Chocobo</source>
         <translation>Black Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="44"/>
+        <location filename="../src/mainwindow.ui" line="40"/>
         <source>Party</source>
         <translation>Party</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="110"/>
+        <location filename="../src/mainwindow.ui" line="106"/>
         <source>In Party</source>
         <translation>In Party</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="603"/>
+        <location filename="../src/mainwindow.ui" line="599"/>
         <source>Money</source>
         <translation>Money</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="635"/>
+        <location filename="../src/mainwindow.ui" line="631"/>
         <source>Gil</source>
         <translation>Gil</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="680"/>
+        <location filename="../src/mainwindow.ui" line="676"/>
         <source>GP</source>
         <translation>GP</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="720"/>
-        <location filename="../src/mainwindow.ui" line="749"/>
+        <location filename="../src/mainwindow.ui" line="716"/>
+        <location filename="../src/mainwindow.ui" line="745"/>
         <source>Battles</source>
         <translation>Battles</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="203"/>
+        <location filename="../src/mainwindow.ui" line="199"/>
         <source>Click On A Char To edit ===========&gt;</source>
         <translation>Click On A Char To edit ===========&gt;</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="320"/>
+        <location filename="../src/mainwindow.ui" line="316"/>
         <source>Selected Character Max Stats/Weapons/Materia</source>
         <translation>Selected Character Max Stats/Weapons/Materia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="472"/>
+        <location filename="../src/mainwindow.ui" line="468"/>
         <source>Items</source>
         <translation>Items</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="496"/>
+        <location filename="../src/mainwindow.ui" line="492"/>
         <source>Inventory</source>
         <translation>Inventory</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="544"/>
+        <location filename="../src/mainwindow.ui" line="540"/>
         <source>Add Max Of All Items</source>
         <translation>Add Max Of All Items</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="557"/>
+        <location filename="../src/mainwindow.ui" line="553"/>
         <source>Clear All Items</source>
         <translation>Clear All Items</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="788"/>
+        <location filename="../src/mainwindow.ui" line="784"/>
         <source>Escapes</source>
         <translation>Escapes</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="819"/>
+        <location filename="../src/mainwindow.ui" line="815"/>
         <source>Turtle Paradise Flyers Collected</source>
         <translation>Turtle Paradise Flyers Collected</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="825"/>
+        <location filename="../src/mainwindow.ui" line="821"/>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
         <translation>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="835"/>
+        <location filename="../src/mainwindow.ui" line="831"/>
         <source>Key Items</source>
         <translation>Key Items</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="860"/>
+        <location filename="../src/mainwindow.ui" line="856"/>
         <source>Mystery panties</source>
         <translation>Mystery Panties</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="867"/>
+        <location filename="../src/mainwindow.ui" line="863"/>
         <source>Letter to a Daughter</source>
         <translation>Letter to My Daughter</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="874"/>
+        <location filename="../src/mainwindow.ui" line="870"/>
         <source>Letter to a Wife</source>
         <translation>Letter to My Wife</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="907"/>
-        <location filename="../src/mainwindow.ui" line="1001"/>
-        <location filename="../src/mainwindow.ui" line="4556"/>
+        <location filename="../src/mainwindow.ui" line="903"/>
+        <location filename="../src/mainwindow.ui" line="997"/>
+        <location filename="../src/mainwindow.ui" line="4552"/>
         <source>Materia</source>
         <translation>Materia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="937"/>
+        <location filename="../src/mainwindow.ui" line="933"/>
         <source>Party&apos;s Materia Stock</source>
         <translation>Party&apos;s Materia Stock</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1006"/>
-        <location filename="../src/mainwindow.ui" line="4561"/>
+        <location filename="../src/mainwindow.ui" line="1002"/>
+        <location filename="../src/mainwindow.ui" line="4557"/>
         <source>AP</source>
         <translation>AP</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1041"/>
+        <location filename="../src/mainwindow.ui" line="1037"/>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>Selected Materia Skills and Stat Info</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1048"/>
+        <location filename="../src/mainwindow.ui" line="1044"/>
         <source>Add Each Materia to Stock (end of list)</source>
         <translation>Add Each Materia to Stock (end of list)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1055"/>
+        <location filename="../src/mainwindow.ui" line="1051"/>
         <source>Remove ALL Materia </source>
         <translation>Remove ALL Materia </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1066"/>
+        <location filename="../src/mainwindow.ui" line="1062"/>
         <source>Location</source>
         <translation>Location</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1147"/>
+        <location filename="../src/mainwindow.ui" line="1143"/>
         <source>Worldmap Location</source>
         <translation>Worldmap Location</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1213"/>
+        <location filename="../src/mainwindow.ui" line="1209"/>
         <source>Visible On World Map</source>
         <translation>Visible On World Map</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1269"/>
-        <location filename="../src/mainwindow.ui" line="1994"/>
+        <location filename="../src/mainwindow.ui" line="1265"/>
+        <location filename="../src/mainwindow.ui" line="1990"/>
         <source>Buggy</source>
         <translation>Buggy</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1282"/>
+        <location filename="../src/mainwindow.ui" line="1278"/>
         <source>Tiny bronco</source>
         <translation>Tiny bronco</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1295"/>
-        <location filename="../src/mainwindow.ui" line="1999"/>
+        <location filename="../src/mainwindow.ui" line="1291"/>
+        <location filename="../src/mainwindow.ui" line="1995"/>
         <source>Highwind</source>
         <translation>Highwind</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1304"/>
         <source>Wild chocobo</source>
         <translation>Wild chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1345"/>
+        <location filename="../src/mainwindow.ui" line="1341"/>
         <source>Yellow chocobo</source>
         <translation>Yellow chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1361"/>
+        <location filename="../src/mainwindow.ui" line="1357"/>
         <source>Green chocobo</source>
         <translation>Green chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1377"/>
+        <location filename="../src/mainwindow.ui" line="1373"/>
         <source>Blue chocobo</source>
         <translation>Blue chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1393"/>
+        <location filename="../src/mainwindow.ui" line="1389"/>
         <source>Black chocobo</source>
         <translation>Black chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1409"/>
+        <location filename="../src/mainwindow.ui" line="1405"/>
         <source>Gold chocobo</source>
         <translation>Gold chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1424"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Party leader</source>
         <translation>Party leader</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1481"/>
-        <location filename="../src/mainwindow.ui" line="1666"/>
-        <location filename="../src/mainwindow.ui" line="1867"/>
-        <location filename="../src/mainwindow.ui" line="2085"/>
-        <location filename="../src/mainwindow.ui" line="2286"/>
-        <location filename="../src/mainwindow.ui" line="2487"/>
-        <location filename="../src/mainwindow.ui" line="6174"/>
+        <location filename="../src/mainwindow.ui" line="1477"/>
+        <location filename="../src/mainwindow.ui" line="1662"/>
+        <location filename="../src/mainwindow.ui" line="1863"/>
+        <location filename="../src/mainwindow.ui" line="2081"/>
+        <location filename="../src/mainwindow.ui" line="2282"/>
+        <location filename="../src/mainwindow.ui" line="2483"/>
+        <location filename="../src/mainwindow.ui" line="6176"/>
         <source>Y: </source>
         <translation>Y: </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1530"/>
-        <location filename="../src/mainwindow.ui" line="1721"/>
-        <location filename="../src/mainwindow.ui" line="1925"/>
-        <location filename="../src/mainwindow.ui" line="2140"/>
-        <location filename="../src/mainwindow.ui" line="2341"/>
-        <location filename="../src/mainwindow.ui" line="2542"/>
+        <location filename="../src/mainwindow.ui" line="1526"/>
+        <location filename="../src/mainwindow.ui" line="1717"/>
+        <location filename="../src/mainwindow.ui" line="1921"/>
+        <location filename="../src/mainwindow.ui" line="2136"/>
+        <location filename="../src/mainwindow.ui" line="2337"/>
+        <location filename="../src/mainwindow.ui" line="2538"/>
         <source>angle</source>
         <translation>angle</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1609"/>
+        <location filename="../src/mainwindow.ui" line="1605"/>
         <source>Tiny Bronco / Chocobo</source>
         <translation>Tiny Bronco / Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1769"/>
-        <location filename="../src/mainwindow.ui" line="2188"/>
-        <location filename="../src/mainwindow.ui" line="2389"/>
-        <location filename="../src/mainwindow.ui" line="2590"/>
+        <location filename="../src/mainwindow.ui" line="1765"/>
+        <location filename="../src/mainwindow.ui" line="2184"/>
+        <location filename="../src/mainwindow.ui" line="2385"/>
+        <location filename="../src/mainwindow.ui" line="2586"/>
         <source>id</source>
         <translation>id</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1810"/>
+        <location filename="../src/mainwindow.ui" line="1806"/>
         <source>Buggy / Highwind</source>
         <translation>Buggy / Highwind</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1989"/>
+        <location filename="../src/mainwindow.ui" line="1985"/>
         <source>None</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2028"/>
-        <location filename="../src/mainwindow.ui" line="2826"/>
+        <location filename="../src/mainwindow.ui" line="2024"/>
+        <location filename="../src/mainwindow.ui" line="2822"/>
         <source>Sub</source>
         <translation>Sub</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2229"/>
-        <location filename="../src/mainwindow.ui" line="2831"/>
+        <location filename="../src/mainwindow.ui" line="2225"/>
+        <location filename="../src/mainwindow.ui" line="2827"/>
         <source>Wild Chocobo</source>
         <translation>Wild Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2430"/>
+        <location filename="../src/mainwindow.ui" line="2426"/>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>Diamond / Ultimate / Ruby  Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2797"/>
+        <location filename="../src/mainwindow.ui" line="2793"/>
         <source>sliders show </source>
         <translation>sliders show </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2811"/>
+        <location filename="../src/mainwindow.ui" line="2807"/>
         <source>Party Leader</source>
         <translation>Party Leader</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2816"/>
+        <location filename="../src/mainwindow.ui" line="2812"/>
         <source>TinyBronco/Chocobo</source>
         <translation>TinyBronco/Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2821"/>
+        <location filename="../src/mainwindow.ui" line="2817"/>
         <source>Buggy/Highwind</source>
         <translation>Buggy/Highwind</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2836"/>
+        <location filename="../src/mainwindow.ui" line="2832"/>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2869"/>
+        <location filename="../src/mainwindow.ui" line="2865"/>
         <source>Game Progress</source>
         <translation>Game Progress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2880"/>
+        <location filename="../src/mainwindow.ui" line="2876"/>
         <source>Global Progress</source>
         <translation>Global Progress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2898"/>
+        <location filename="../src/mainwindow.ui" line="2894"/>
         <source>Main Progression</source>
         <translation>Main Progression</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2943"/>
+        <location filename="../src/mainwindow.ui" line="2939"/>
         <source>Disc  #</source>
         <translation>Disc  #</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2975"/>
+        <location filename="../src/mainwindow.ui" line="2971"/>
         <source>Event Progress</source>
         <translation>Event Progress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3020"/>
+        <location filename="../src/mainwindow.ui" line="3016"/>
         <source>Bombing Mission Progress</source>
         <translation>Bombing Mission Progress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3038"/>
+        <location filename="../src/mainwindow.ui" line="3034"/>
         <source>Bombing Mission Start Flag</source>
         <translation>Bombing Mission Start Flag</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3045"/>
+        <location filename="../src/mainwindow.ui" line="3041"/>
         <source>Elevator Door Open</source>
         <translation>Elevator Door Open</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3052"/>
+        <location filename="../src/mainwindow.ui" line="3048"/>
         <source>Elevator On 2nd Floor</source>
         <translation>Elevator On 2nd Floor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3059"/>
+        <location filename="../src/mainwindow.ui" line="3055"/>
         <source>1st Door Open</source>
         <translation>1st Door Open</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3066"/>
+        <location filename="../src/mainwindow.ui" line="3062"/>
         <source>2nd Door Opened</source>
         <translation>2nd Door Opened</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3073"/>
+        <location filename="../src/mainwindow.ui" line="3069"/>
         <source>Post Pan NMKIN_5</source>
         <translation>Post Pan NMKIN_5</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3080"/>
+        <location filename="../src/mainwindow.ui" line="3076"/>
         <source>The Bomb Was Set</source>
         <translation>The Bomb Was Set</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3104"/>
+        <location filename="../src/mainwindow.ui" line="3100"/>
         <source>Escape From Reactor </source>
         <translation>Escape From Reactor </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3116"/>
+        <location filename="../src/mainwindow.ui" line="3112"/>
         <source>Post Pan MD8_2</source>
         <translation>Post Pan MD8_2</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3123"/>
+        <location filename="../src/mainwindow.ui" line="3119"/>
         <source>Post Electrical Effect MD8_3</source>
         <translation>Post Electrical Effect MD8_3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3133"/>
+        <location filename="../src/mainwindow.ui" line="3129"/>
         <source>Midgar Train Flags</source>
         <translation>Midgar Train Flags</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3145"/>
+        <location filename="../src/mainwindow.ui" line="3141"/>
         <source>Talked to Biggs</source>
         <translation>Talked to Biggs</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3152"/>
+        <location filename="../src/mainwindow.ui" line="3148"/>
         <source>Talked to Wedge Twice</source>
         <translation>Talked to Wedge Twice</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3166"/>
+        <location filename="../src/mainwindow.ui" line="3162"/>
         <source> Played Video on Train?</source>
         <translation> Played Video on Train?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3176"/>
+        <location filename="../src/mainwindow.ui" line="3172"/>
         <source>Sector 7 Trainstation</source>
         <translation>District 7 Trainstation</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3195"/>
+        <location filename="../src/mainwindow.ui" line="3191"/>
         <source>Talked To Trainman 3 times</source>
         <translation>Talked To Trainman 3 times</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3202"/>
+        <location filename="../src/mainwindow.ui" line="3198"/>
         <source>Pair At Station agree</source>
         <translation>Pair At Station agree</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3209"/>
+        <location filename="../src/mainwindow.ui" line="3205"/>
         <source>Set To Reactor 5 Mode</source>
         <translation>Set To Reactor 5 Mode</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3219"/>
+        <location filename="../src/mainwindow.ui" line="3215"/>
         <source>Sector 7 Pillar</source>
         <translation>District 7 Pillar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3238"/>
+        <location filename="../src/mainwindow.ui" line="3234"/>
         <source>Can Show Pillar Pan Video</source>
         <translation>Can Show Pillar Pan Video</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3245"/>
+        <location filename="../src/mainwindow.ui" line="3241"/>
         <source>Barret called us</source>
         <translation>Barrett called us</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3252"/>
+        <location filename="../src/mainwindow.ui" line="3248"/>
         <source>Post Pillar Pan Video</source>
         <translation>Post Pillar Pan Video</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3259"/>
+        <location filename="../src/mainwindow.ui" line="3255"/>
         <source>Talked To soldier two times</source>
         <translation>Talked To soldier two times</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3269"/>
+        <location filename="../src/mainwindow.ui" line="3265"/>
         <source>Sector 7 - Slums Progress</source>
         <translation>District 7 - Slums Progress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3287"/>
+        <location filename="../src/mainwindow.ui" line="3283"/>
         <source>Initial Settings</source>
         <translation>Initial Settings</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3292"/>
+        <location filename="../src/mainwindow.ui" line="3288"/>
         <source>Destroy the Sector 5 Reactor </source>
         <translation>Destroy the District 5 Reactor </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3297"/>
+        <location filename="../src/mainwindow.ui" line="3293"/>
         <source>The Plate is Falling</source>
         <translation>The Plate is Falling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3308"/>
+        <location filename="../src/mainwindow.ui" line="3304"/>
         <source>Unknowns / Unused</source>
         <translation>Unknowns / Unused</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3336"/>
+        <location filename="../src/mainwindow.ui" line="3332"/>
         <source>DonProgress</source>
         <translation>DonProgress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3560"/>
+        <location filename="../src/mainwindow.ui" line="3556"/>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
         <translation>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3632"/>
+        <location filename="../src/mainwindow.ui" line="3628"/>
         <source>Apply Selected Replay </source>
         <translation>Apply Selected Replay </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7062"/>
+        <location filename="../src/mainwindow.ui" line="7064"/>
         <source>&amp;Settings</source>
         <translation>&amp;Settings</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7240"/>
+        <location filename="../src/mainwindow.ui" line="7242"/>
         <source>Ctrl+Shift+Del</source>
         <translation>Ctrl+Shift+Del</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7276"/>
+        <location filename="../src/mainwindow.ui" line="7278"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7288"/>
+        <location filename="../src/mainwindow.ui" line="7290"/>
         <source>&amp;Configure</source>
         <translation>&amp;Configure</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7291"/>
+        <location filename="../src/mainwindow.ui" line="7293"/>
         <source>Application Preferences</source>
         <translation>Application Preferences</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7294"/>
+        <location filename="../src/mainwindow.ui" line="7296"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7503"/>
+        <location filename="../src/mainwindow.ui" line="7505"/>
         <source>Ctrl+Shift+Ins</source>
         <translation>Ctrl+Shift+Ins</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7512"/>
+        <location filename="../src/mainwindow.ui" line="7514"/>
         <source>&amp;Achievement Editor</source>
         <translation>&amp;Achievement Editor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7515"/>
+        <location filename="../src/mainwindow.ui" line="7517"/>
         <source>F10</source>
         <translation>F10</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4082"/>
+        <location filename="../src/mainwindow.ui" line="4078"/>
         <source>Unlocked Vincent</source>
         <translation>Unlocked Vincent</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4089"/>
+        <location filename="../src/mainwindow.ui" line="4085"/>
         <source>Unlocked Yuffie </source>
         <translation>Unlocked Yuffie </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4213"/>
+        <location filename="../src/mainwindow.ui" line="4209"/>
         <source>Number of Steps</source>
         <translation>Number of Steps</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4616"/>
+        <location filename="../src/mainwindow.ui" line="4612"/>
         <source>Snowboard Mini Game </source>
         <translation>Snowboard Mini Game </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5580"/>
+        <location filename="../src/mainwindow.ui" line="5576"/>
         <source>Have Won the Submarine Game</source>
         <translation>Have Won the Submarine Game</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7025"/>
+        <location filename="../src/mainwindow.ui" line="7027"/>
         <source>He&amp;lp</source>
         <translation>He&amp;lp</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7049"/>
+        <location filename="../src/mainwindow.ui" line="7051"/>
         <source>&amp;View</source>
         <translation>&amp;View</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7075"/>
+        <location filename="../src/mainwindow.ui" line="7077"/>
         <source>&amp;Slot Region</source>
         <translation>&amp;Slot Region</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7150"/>
+        <location filename="../src/mainwindow.ui" line="7152"/>
         <source>Sa&amp;ve As</source>
         <translation>Sa&amp;ve As</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7165"/>
+        <location filename="../src/mainwindow.ui" line="7167"/>
         <source>&amp;About</source>
         <translation>&amp;About</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7255"/>
+        <location filename="../src/mainwindow.ui" line="7257"/>
         <source>&amp;Previous Slot</source>
         <translation>&amp;Previous Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7258"/>
+        <location filename="../src/mainwindow.ui" line="7260"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7273"/>
+        <location filename="../src/mainwindow.ui" line="7275"/>
         <source>&amp;Next Slot</source>
         <translation>&amp;Next Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7316"/>
+        <location filename="../src/mainwindow.ui" line="7318"/>
         <source>Uk &amp;English (PAL)</source>
         <translation>Uk &amp;English (PAL)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7327"/>
+        <location filename="../src/mainwindow.ui" line="7329"/>
         <source>&amp;German (PAL)</source>
         <translation>&amp;German (PAL)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7338"/>
+        <location filename="../src/mainwindow.ui" line="7340"/>
         <source>&amp;Spanish (PAL)</source>
         <translation>&amp;Spanish (PAL)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7352"/>
+        <location filename="../src/mainwindow.ui" line="7354"/>
         <source>&amp;Japanese (NTSC-J)</source>
         <translation>&amp;Japanese (NTSC-J)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7355"/>
+        <location filename="../src/mainwindow.ui" line="7357"/>
         <source>Japanese (NTSC-J)</source>
         <translation>Japanese (NTSC-J)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7366"/>
+        <location filename="../src/mainwindow.ui" line="7368"/>
         <source>&amp;International (NTSC-J)</source>
         <translation>&amp;International (NTSC-J)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7369"/>
+        <location filename="../src/mainwindow.ui" line="7371"/>
         <source>International (NTSC-J)</source>
         <translation>International (NTSC-J)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7459"/>
+        <location filename="../src/mainwindow.ui" line="7461"/>
         <source>&amp;Reload</source>
         <translation>&amp;Reload</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7473"/>
+        <location filename="../src/mainwindow.ui" line="7475"/>
         <source>&amp;French (PAL)</source>
         <translation>&amp;French (PAL)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3570"/>
+        <location filename="../src/mainwindow.ui" line="3566"/>
         <source>Replay Mission</source>
         <translation>Replay Mission</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3588"/>
+        <location filename="../src/mainwindow.ui" line="3584"/>
         <source>Bombing Mission</source>
         <translation>Bombing Mission</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3593"/>
+        <location filename="../src/mainwindow.ui" line="3589"/>
         <source>The Church In The Slums</source>
         <translation>The Church In The Slums</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3598"/>
+        <location filename="../src/mainwindow.ui" line="3594"/>
         <source>Cloud&apos;s Flashback</source>
         <translation>Cloud&apos;s Flashback</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3603"/>
+        <location filename="../src/mainwindow.ui" line="3599"/>
         <source>The Date Scene</source>
         <translation>The Date Scene</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3608"/>
+        <location filename="../src/mainwindow.ui" line="3604"/>
         <source>Aeris Death</source>
         <translation>Aerith&apos;s Death</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3661"/>
+        <location filename="../src/mainwindow.ui" line="3657"/>
         <source>Other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3687"/>
+        <location filename="../src/mainwindow.ui" line="3683"/>
         <source>Time Played</source>
         <translation>Time Played</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3713"/>
-        <location filename="../src/mainwindow.ui" line="4265"/>
+        <location filename="../src/mainwindow.ui" line="3709"/>
+        <location filename="../src/mainwindow.ui" line="4261"/>
         <source>Hour</source>
         <translation>Hour</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3749"/>
-        <location filename="../src/mainwindow.ui" line="4304"/>
+        <location filename="../src/mainwindow.ui" line="3745"/>
+        <location filename="../src/mainwindow.ui" line="4300"/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3782"/>
-        <location filename="../src/mainwindow.ui" line="4349"/>
+        <location filename="../src/mainwindow.ui" line="3778"/>
+        <location filename="../src/mainwindow.ui" line="4345"/>
         <source>Sec</source>
         <translation>Sec</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3813"/>
+        <location filename="../src/mainwindow.ui" line="3809"/>
         <source>Love Points</source>
         <translation>Love Points</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4048"/>
+        <location filename="../src/mainwindow.ui" line="4044"/>
         <source>Beat Ruby Weapon</source>
         <translation>Beat Ruby Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4055"/>
+        <location filename="../src/mainwindow.ui" line="4051"/>
         <source>Beat Emerald Weapon</source>
         <translation>Beat Emerald Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4075"/>
+        <location filename="../src/mainwindow.ui" line="4071"/>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>Can Fight Mysterious Ninja in Forests</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4062"/>
+        <location filename="../src/mainwindow.ui" line="4058"/>
         <source>Have Seen Pandora&apos;s Box</source>
         <translation>Have Seen Enigma</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="841"/>
+        <location filename="../src/mainwindow.ui" line="837"/>
         <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
         <translation>Search For &quot;KeyItem&quot; using item search mode on the location tab</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="851"/>
+        <location filename="../src/mainwindow.ui" line="847"/>
         <source>Unused KeyItems</source>
         <translation>Unused KeyItems</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1103"/>
+        <location filename="../src/mainwindow.ui" line="1099"/>
         <source>Field Location</source>
         <translation>Field Location</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4242"/>
+        <location filename="../src/mainwindow.ui" line="4238"/>
         <source>Countdown Timer</source>
         <translation>Countdown Timer</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5360"/>
+        <location filename="../src/mainwindow.ui" line="5356"/>
         <source>Fort Condor</source>
         <translation>Fort Condor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5386"/>
+        <location filename="../src/mainwindow.ui" line="5382"/>
         <source>Funds </source>
         <translation>Funds </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5422"/>
+        <location filename="../src/mainwindow.ui" line="5418"/>
         <source>Record </source>
         <translation>Record </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5469"/>
+        <location filename="../src/mainwindow.ui" line="5465"/>
         <source>/</source>
         <translation>/</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4473"/>
+        <location filename="../src/mainwindow.ui" line="4469"/>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
         <translation>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4495"/>
+        <location filename="../src/mainwindow.ui" line="4491"/>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia Stolen By Yuffie</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4569"/>
+        <location filename="../src/mainwindow.ui" line="4565"/>
         <source>Clear All Stolen Materia</source>
         <translation>Clear All Stolen Materia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4139"/>
-        <location filename="../src/mainwindow.ui" line="4158"/>
+        <location filename="../src/mainwindow.ui" line="4135"/>
+        <location filename="../src/mainwindow.ui" line="4154"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
@@ -10556,341 +10569,341 @@ Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3087"/>
+        <location filename="../src/mainwindow.ui" line="3083"/>
         <source>Jessie Has Been Unstuck</source>
         <translation>Jessie Has Been Unstuck</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3094"/>
+        <location filename="../src/mainwindow.ui" line="3090"/>
         <source>Trigger Game Over (countdown reached 0)</source>
         <translation>Trigger Game Over (countdown reached 0)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3159"/>
+        <location filename="../src/mainwindow.ui" line="3155"/>
         <source>Talked to Jessie Before Looking At Map</source>
         <translation>Talked to Jessie Before Looking At Map</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3188"/>
+        <location filename="../src/mainwindow.ui" line="3184"/>
         <source>Avalanche had meeting after Bombing Mission</source>
         <translation>Avalanche had meeting after Bombing Mission</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3231"/>
+        <location filename="../src/mainwindow.ui" line="3227"/>
         <source>Avalanche Has Run To Hideout</source>
         <translation>Avalanche Has Run To Hideout</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5545"/>
+        <location filename="../src/mainwindow.ui" line="5541"/>
         <source>G-Bike High Score</source>
         <translation>G-Bike High Score</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6130"/>
+        <location filename="../src/mainwindow.ui" line="6132"/>
         <source>Save Point Location In North Crater</source>
         <translation>Save Point Location In North Crater</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6221"/>
+        <location filename="../src/mainwindow.ui" line="6223"/>
         <source>Region String</source>
         <translation>Region String</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6285"/>
+        <location filename="../src/mainwindow.ui" line="6287"/>
         <source>S01</source>
         <translation>S01</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6290"/>
+        <location filename="../src/mainwindow.ui" line="6292"/>
         <source>S02</source>
         <translation>S02</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6295"/>
+        <location filename="../src/mainwindow.ui" line="6297"/>
         <source>S03</source>
         <translation>S03</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6300"/>
+        <location filename="../src/mainwindow.ui" line="6302"/>
         <source>S04</source>
         <translation>S04</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6305"/>
+        <location filename="../src/mainwindow.ui" line="6307"/>
         <source>S05</source>
         <translation>S05</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6310"/>
+        <location filename="../src/mainwindow.ui" line="6312"/>
         <source>S06</source>
         <translation>S06</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6315"/>
+        <location filename="../src/mainwindow.ui" line="6317"/>
         <source>S07</source>
         <translation>S07</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6320"/>
+        <location filename="../src/mainwindow.ui" line="6322"/>
         <source>S08</source>
         <translation>S08</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6325"/>
+        <location filename="../src/mainwindow.ui" line="6327"/>
         <source>S09</source>
         <translation>S09</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6330"/>
+        <location filename="../src/mainwindow.ui" line="6332"/>
         <source>S10</source>
         <translation>S10</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6335"/>
+        <location filename="../src/mainwindow.ui" line="6337"/>
         <source>S11</source>
         <translation>S11</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6340"/>
+        <location filename="../src/mainwindow.ui" line="6342"/>
         <source>S12</source>
         <translation>S12</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6345"/>
+        <location filename="../src/mainwindow.ui" line="6347"/>
         <source>S13</source>
         <translation>S13</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6350"/>
+        <location filename="../src/mainwindow.ui" line="6352"/>
         <source>S14</source>
         <translation>S14</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6355"/>
+        <location filename="../src/mainwindow.ui" line="6357"/>
         <source>S15</source>
         <translation>S15</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4637"/>
+        <location filename="../src/mainwindow.ui" line="4633"/>
         <source>Beginner Course</source>
         <translation>Beginner Course</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4663"/>
-        <location filename="../src/mainwindow.ui" line="4815"/>
-        <location filename="../src/mainwindow.ui" line="4967"/>
+        <location filename="../src/mainwindow.ui" line="4659"/>
+        <location filename="../src/mainwindow.ui" line="4811"/>
+        <location filename="../src/mainwindow.ui" line="4963"/>
         <source>Time:</source>
         <translation>Time:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4695"/>
-        <location filename="../src/mainwindow.ui" line="4847"/>
-        <location filename="../src/mainwindow.ui" line="4999"/>
+        <location filename="../src/mainwindow.ui" line="4691"/>
+        <location filename="../src/mainwindow.ui" line="4843"/>
+        <location filename="../src/mainwindow.ui" line="4995"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4727"/>
-        <location filename="../src/mainwindow.ui" line="4879"/>
-        <location filename="../src/mainwindow.ui" line="5031"/>
+        <location filename="../src/mainwindow.ui" line="4723"/>
+        <location filename="../src/mainwindow.ui" line="4875"/>
+        <location filename="../src/mainwindow.ui" line="5027"/>
         <source>.</source>
         <translation>.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4754"/>
-        <location filename="../src/mainwindow.ui" line="4906"/>
-        <location filename="../src/mainwindow.ui" line="5061"/>
+        <location filename="../src/mainwindow.ui" line="4750"/>
+        <location filename="../src/mainwindow.ui" line="4902"/>
+        <location filename="../src/mainwindow.ui" line="5057"/>
         <source>Score:</source>
         <translation>Score:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4777"/>
-        <location filename="../src/mainwindow.ui" line="4929"/>
-        <location filename="../src/mainwindow.ui" line="5084"/>
+        <location filename="../src/mainwindow.ui" line="4773"/>
+        <location filename="../src/mainwindow.ui" line="4925"/>
+        <location filename="../src/mainwindow.ui" line="5080"/>
         <source>Points</source>
         <translation>Points</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4789"/>
+        <location filename="../src/mainwindow.ui" line="4785"/>
         <source>Expert Course</source>
         <translation>Expert Course</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4941"/>
+        <location filename="../src/mainwindow.ui" line="4937"/>
         <source>Crazy Course</source>
         <translation>Crazy Course</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5108"/>
+        <location filename="../src/mainwindow.ui" line="5104"/>
         <source>Coaster Shooter High Scores</source>
         <translation>Coaster Shooter High Scores</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5171"/>
+        <location filename="../src/mainwindow.ui" line="5167"/>
         <source>1st</source>
         <translation>1st</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5248"/>
+        <location filename="../src/mainwindow.ui" line="5244"/>
         <source>2nd</source>
         <translation>2nd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5325"/>
+        <location filename="../src/mainwindow.ui" line="5321"/>
         <source>3rd</source>
         <translation>3rd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="4145"/>
+        <location filename="../src/mainwindow.ui" line="4141"/>
         <source>Battle Points</source>
         <translation>Battle Points</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2848"/>
+        <location filename="../src/mainwindow.ui" line="2844"/>
         <source>Right click on map to easily set an item&apos;s
 location.</source>
         <translation>Right click on map to easily set an item&apos;s
 location.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="3322"/>
+        <location filename="../src/mainwindow.ui" line="3318"/>
         <source>ChurchProgress</source>
         <translation>ChurchProgress</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5593"/>
+        <location filename="../src/mainwindow.ui" line="5589"/>
         <source>Hex Editor</source>
         <translation>Hex Editor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5614"/>
+        <location filename="../src/mainwindow.ui" line="5610"/>
         <source>Playstation Save Info</source>
         <translation>Playstation Save Info</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5638"/>
+        <location filename="../src/mainwindow.ui" line="5634"/>
         <source>PsxName:</source>
         <translation>PsxName:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5686"/>
+        <location filename="../src/mainwindow.ui" line="5685"/>
         <source>No Description Text</source>
         <translation>No Description Text</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5704"/>
+        <location filename="../src/mainwindow.ui" line="5706"/>
         <source>Show:</source>
         <translation>Show:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5733"/>
+        <location filename="../src/mainwindow.ui" line="5735"/>
         <source>PSX Save Data</source>
         <translation>PSX Save Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5807"/>
+        <location filename="../src/mainwindow.ui" line="5809"/>
         <source>Test Data</source>
         <translation>Test Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5844"/>
+        <location filename="../src/mainwindow.ui" line="5846"/>
         <source>Misc</source>
         <translation>Misc</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5852"/>
+        <location filename="../src/mainwindow.ui" line="5854"/>
         <source>Battle Love Points</source>
         <translation>Battle Love Points</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="5964"/>
+        <location filename="../src/mainwindow.ui" line="5966"/>
         <source>Ultimate Weapons Hp</source>
         <translation>Ultimate Weapons Hp</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6004"/>
+        <location filename="../src/mainwindow.ui" line="6006"/>
         <source>Played piano durring flashback</source>
         <translation>Played piano durring flashback</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6011"/>
+        <location filename="../src/mainwindow.ui" line="6013"/>
         <source>When Box is Partally Checked (&quot;-&quot;) it will
 trigger showing that tutorial</source>
         <translation>When Box is Partally Checked (&quot;-&quot;) it will
 trigger showing that tutorial</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6032"/>
+        <location filename="../src/mainwindow.ui" line="6034"/>
         <source>Tutorials Seen</source>
         <translation>Tutorials Seen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6058"/>
+        <location filename="../src/mainwindow.ui" line="6060"/>
         <source>Controling the Sub</source>
         <translation>Controling the Sub</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6091"/>
+        <location filename="../src/mainwindow.ui" line="6093"/>
         <source>Saving on the World Map</source>
         <translation>Saving on the World Map</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6148"/>
+        <location filename="../src/mainwindow.ui" line="6150"/>
         <source>Map Id: </source>
         <translation>Map Id: </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6161"/>
+        <location filename="../src/mainwindow.ui" line="6163"/>
         <source>X: </source>
         <translation>X: </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6187"/>
+        <location filename="../src/mainwindow.ui" line="6189"/>
         <source>Z:</source>
         <translation>Z:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6396"/>
+        <location filename="../src/mainwindow.ui" line="6398"/>
         <source>Unknown Vars</source>
         <translation>Unknown Vars</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6440"/>
+        <location filename="../src/mainwindow.ui" line="6442"/>
         <source>Unknown Var:</source>
         <translation>Unknown Var:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6448"/>
-        <location filename="../src/mainwindow.ui" line="6854"/>
+        <location filename="../src/mainwindow.ui" line="6450"/>
+        <location filename="../src/mainwindow.ui" line="6856"/>
         <source>-None-</source>
         <translation>-None-</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6718"/>
-        <location filename="../src/mainwindow.ui" line="6976"/>
+        <location filename="../src/mainwindow.ui" line="6720"/>
+        <location filename="../src/mainwindow.ui" line="6978"/>
         <source>#</source>
         <translation>#</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6723"/>
-        <location filename="../src/mainwindow.ui" line="6981"/>
+        <location filename="../src/mainwindow.ui" line="6725"/>
+        <location filename="../src/mainwindow.ui" line="6983"/>
         <source>Hex</source>
         <translation>Hex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6728"/>
-        <location filename="../src/mainwindow.ui" line="6986"/>
+        <location filename="../src/mainwindow.ui" line="6730"/>
+        <location filename="../src/mainwindow.ui" line="6988"/>
         <source>Dec</source>
         <translation>Dec</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6733"/>
-        <location filename="../src/mainwindow.ui" line="6991"/>
+        <location filename="../src/mainwindow.ui" line="6735"/>
+        <location filename="../src/mainwindow.ui" line="6993"/>
         <source>Bin</source>
         <translation>Bin</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6757"/>
+        <location filename="../src/mainwindow.ui" line="6759"/>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
@@ -10899,7 +10912,7 @@ Select Unknown Var To View
 Table Entries are Editable</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6772"/>
+        <location filename="../src/mainwindow.ui" line="6774"/>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
@@ -10910,440 +10923,440 @@ Table is Read Only
 Var And Scrolling Synced To Left Table</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="6834"/>
+        <location filename="../src/mainwindow.ui" line="6836"/>
         <source>Compare To Slot</source>
         <translation>Compare To Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7032"/>
+        <location filename="../src/mainwindow.ui" line="7034"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7071"/>
+        <location filename="../src/mainwindow.ui" line="7073"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7117"/>
+        <location filename="../src/mainwindow.ui" line="7119"/>
         <source>&amp;Quit</source>
         <translation>&amp;Quit</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7120"/>
+        <location filename="../src/mainwindow.ui" line="7122"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7132"/>
+        <location filename="../src/mainwindow.ui" line="7134"/>
         <source>&amp;Open</source>
         <translation>&amp;Open</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7135"/>
+        <location filename="../src/mainwindow.ui" line="7137"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7153"/>
+        <location filename="../src/mainwindow.ui" line="7155"/>
         <source>Ctrl+Shift+S</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7186"/>
+        <location filename="../src/mainwindow.ui" line="7188"/>
         <source>&amp;Select Slot</source>
         <translation>&amp;Select Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7189"/>
+        <location filename="../src/mainwindow.ui" line="7191"/>
         <source>F4</source>
         <translation>F4</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7201"/>
+        <location filename="../src/mainwindow.ui" line="7203"/>
         <source>&amp;Copy Current Slot</source>
         <translation>&amp;Copy Current Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7204"/>
+        <location filename="../src/mainwindow.ui" line="7206"/>
         <source>Ctrl+Shift+C</source>
         <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7219"/>
+        <location filename="../src/mainwindow.ui" line="7221"/>
         <source>&amp;Paste Slot</source>
         <translation>&amp;Paste Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7222"/>
+        <location filename="../src/mainwindow.ui" line="7224"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7237"/>
+        <location filename="../src/mainwindow.ui" line="7239"/>
         <source>Clea&amp;r Slot</source>
         <translation>Clea&amp;r Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7305"/>
+        <location filename="../src/mainwindow.ui" line="7307"/>
         <source>&amp;Us English (NTSC-U)</source>
         <translation>&amp;Us English (NTSC-U)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7341"/>
+        <location filename="../src/mainwindow.ui" line="7343"/>
         <source>Spanish (PAL)</source>
         <translation>Spanish (PAL)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7381"/>
+        <location filename="../src/mainwindow.ui" line="7383"/>
         <source>&amp;New Game</source>
         <translation>&amp;New Game</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7384"/>
+        <location filename="../src/mainwindow.ui" line="7386"/>
         <source>Ctrl+Shift+N</source>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7399"/>
+        <location filename="../src/mainwindow.ui" line="7401"/>
         <source>New Game&amp;+ </source>
         <translation>New Game&amp;+ </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7402"/>
+        <location filename="../src/mainwindow.ui" line="7404"/>
         <source>Ctrl+Shift+=</source>
         <translation>Ctrl+Shift+=</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7414"/>
+        <location filename="../src/mainwindow.ui" line="7416"/>
         <source>E&amp;xport Current Character</source>
         <translation>E&amp;xport Current Character</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7417"/>
+        <location filename="../src/mainwindow.ui" line="7419"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7426"/>
+        <location filename="../src/mainwindow.ui" line="7428"/>
         <source>I&amp;mport Current Character</source>
         <translation>I&amp;mport Current Character</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7429"/>
+        <location filename="../src/mainwindow.ui" line="7431"/>
         <source>Ctrl+Ins</source>
         <translation>Ctrl+Ins</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7441"/>
+        <location filename="../src/mainwindow.ui" line="7443"/>
         <source>&amp;Save</source>
         <translation>&amp;Save</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7485"/>
+        <location filename="../src/mainwindow.ui" line="7487"/>
         <source>Create Cloud Save &amp;Folder</source>
         <translation>Create Cloud Save &amp;Folder</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7488"/>
+        <location filename="../src/mainwindow.ui" line="7490"/>
         <source>F9</source>
         <translation>F9</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="7500"/>
+        <location filename="../src/mainwindow.ui" line="7502"/>
         <source>&amp;Import To Current Slot</source>
         <translation>&amp;Import To Current Slot</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="239"/>
-        <location filename="../src/mainwindow.cpp" line="240"/>
-        <location filename="../src/mainwindow.cpp" line="241"/>
-        <location filename="../src/mainwindow.cpp" line="251"/>
-        <location filename="../src/mainwindow.cpp" line="252"/>
-        <location filename="../src/mainwindow.cpp" line="253"/>
+        <location filename="../src/mainwindow.cpp" line="264"/>
+        <location filename="../src/mainwindow.cpp" line="265"/>
+        <location filename="../src/mainwindow.cpp" line="266"/>
+        <location filename="../src/mainwindow.cpp" line="276"/>
+        <location filename="../src/mainwindow.cpp" line="277"/>
+        <location filename="../src/mainwindow.cpp" line="278"/>
         <source>-Empty-</source>
         <translation>-Empty-</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="100"/>
-        <location filename="../src/mainwindow.cpp" line="446"/>
+        <location filename="../src/mainwindow.cpp" line="125"/>
+        <location filename="../src/mainwindow.cpp" line="697"/>
         <source>Chocobo</source>
         <translation>Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="101"/>
-        <location filename="../src/mainwindow.cpp" line="447"/>
+        <location filename="../src/mainwindow.cpp" line="126"/>
+        <location filename="../src/mainwindow.cpp" line="698"/>
         <source>Game Options</source>
         <translation>Game Options</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="48"/>
+        <location filename="../src/options.cpp" line="51"/>
         <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
         <translation>ReTranslation</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="475"/>
+        <location filename="../src/mainwindow.cpp" line="726"/>
         <source>Unsaved Changes</source>
         <translation>Unsaved Changes</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="475"/>
+        <location filename="../src/mainwindow.cpp" line="726"/>
         <source>Save Changes to the File:
 %1</source>
         <translation>Save Changes to the File:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="511"/>
-        <location filename="../src/mainwindow.cpp" line="557"/>
+        <location filename="../src/mainwindow.cpp" line="763"/>
+        <location filename="../src/mainwindow.cpp" line="809"/>
         <source>Open Final Fantasy 7 Save</source>
         <translation>Open Final Fantasy 7 Save</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="527"/>
-        <location filename="../src/mainwindow.cpp" line="591"/>
+        <location filename="../src/mainwindow.cpp" line="779"/>
+        <location filename="../src/mainwindow.cpp" line="843"/>
         <source>Cannot read file %1:
 %2.</source>
         <translation>Cannot read file %1:
 %2.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="536"/>
+        <location filename="../src/mainwindow.cpp" line="788"/>
         <source>Load Failed</source>
         <translation>Load Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="536"/>
+        <location filename="../src/mainwindow.cpp" line="788"/>
         <source>Failed to Load File</source>
         <translation>Failed to Load File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="571"/>
+        <location filename="../src/mainwindow.cpp" line="823"/>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
         <translation>Imported Slot:%2 from %1 -&gt; Slot:%3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="586"/>
+        <location filename="../src/mainwindow.cpp" line="838"/>
         <source>Select FF7 Character Stat File</source>
         <translation>Select FF7 Character Stat File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="586"/>
-        <location filename="../src/mainwindow.cpp" line="609"/>
+        <location filename="../src/mainwindow.cpp" line="838"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>FF7 Character Stat File(*.char)</source>
         <translation>FF7 Character Stat File(*.char)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="595"/>
+        <location filename="../src/mainwindow.cpp" line="847"/>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
         <translation>%1:
 %2 is Not a FF7 Character Stat File.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="608"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Save FF7 Character File</source>
         <translation>Save FF7 Character File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="612"/>
+        <location filename="../src/mainwindow.cpp" line="864"/>
         <source>Character Export Successful</source>
         <translation>Character Export Successful</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="614"/>
+        <location filename="../src/mainwindow.cpp" line="866"/>
         <source>Character Export Failed</source>
         <translation>Character Export Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="573"/>
+        <location filename="../src/mainwindow.cpp" line="825"/>
         <source>Imported %1 -&gt; Slot:%2</source>
         <translation>Imported %1 -&gt; Slot:%2</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="578"/>
+        <location filename="../src/mainwindow.cpp" line="830"/>
         <source>Error Loading File %1</source>
         <translation>Error Loading File %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="657"/>
+        <location filename="../src/mainwindow.cpp" line="916"/>
         <source>Export Successful</source>
         <translation>Export Successful</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="662"/>
-        <location filename="../src/mainwindow.cpp" line="1243"/>
+        <location filename="../src/mainwindow.cpp" line="921"/>
+        <location filename="../src/mainwindow.cpp" line="1517"/>
         <source>Export Failed</source>
         <translation>Export Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="678"/>
+        <location filename="../src/mainwindow.cpp" line="937"/>
         <source>Save Error</source>
         <translation>Save Error</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="678"/>
+        <location filename="../src/mainwindow.cpp" line="937"/>
         <source>Failed to save file
 %1</source>
         <translation>Failed to save file
 %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="693"/>
-        <location filename="../src/mainwindow.cpp" line="707"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
+        <location filename="../src/mainwindow.cpp" line="966"/>
         <source>Builtin Data</source>
         <translation>Builtin Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="692"/>
+        <location filename="../src/mainwindow.cpp" line="951"/>
         <source>New Game Created - Using: %1</source>
         <translation>New Game Created - Using: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="706"/>
+        <location filename="../src/mainwindow.cpp" line="965"/>
         <source>New Game Plus Created - Using: %1</source>
         <translation>New Game Plus Created - Using: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="795"/>
+        <location filename="../src/mainwindow.cpp" line="1055"/>
         <source>Select Achievement File</source>
         <translation>Select Achievement File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1069"/>
+        <location filename="../src/mainwindow.cpp" line="1336"/>
         <source>Current Slot:%1</source>
         <translation>Current Slot:%1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="647"/>
-        <location filename="../src/mainwindow.cpp" line="1234"/>
+        <location filename="../src/mainwindow.cpp" line="902"/>
+        <location filename="../src/mainwindow.cpp" line="1505"/>
         <source>Select A File to Save As</source>
         <translation>Select A File to Save As</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="795"/>
+        <location filename="../src/mainwindow.cpp" line="1055"/>
         <source>Dat File (*.dat)</source>
         <translation>Dat File (*.dat)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1149"/>
-        <location filename="../src/mainwindow.cpp" line="1162"/>
-        <location filename="../src/mainwindow.cpp" line="1337"/>
+        <location filename="../src/mainwindow.cpp" line="1417"/>
+        <location filename="../src/mainwindow.cpp" line="1430"/>
+        <location filename="../src/mainwindow.cpp" line="1611"/>
         <source>Master</source>
         <translation>Master</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1172"/>
-        <location filename="../src/mainwindow.cpp" line="1344"/>
+        <location filename="../src/mainwindow.cpp" line="1440"/>
+        <location filename="../src/mainwindow.cpp" line="1618"/>
         <source>===Empty Slot===</source>
         <translation>===Empty Slot===</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1241"/>
+        <location filename="../src/mainwindow.cpp" line="1515"/>
         <source>Exported Slot:%2 from %1 -&gt; %3</source>
         <translation>Exported Slot:%2 from %1 -&gt; %3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1368"/>
+        <location filename="../src/mainwindow.cpp" line="1640"/>
         <source>
  Mid-Linked Block </source>
         <translation>
  Mid-Linked Block </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1372"/>
+        <location filename="../src/mainwindow.cpp" line="1644"/>
         <source>
  End Of Linked Data</source>
         <translation>
  End Of Linked Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1377"/>
+        <location filename="../src/mainwindow.cpp" line="1649"/>
         <source>(Deleted)</source>
         <translation>(Deleted)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2003"/>
+        <location filename="../src/mainwindow.cpp" line="2275"/>
         <source>All Materia Added!</source>
         <translation>All Materia Added!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2017"/>
+        <location filename="../src/mainwindow.cpp" line="2289"/>
         <source>Set Save Location: %1</source>
         <translation>Set Save Location: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2499"/>
+        <location filename="../src/mainwindow.cpp" line="2771"/>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>Replay the bombing mission from right after you get off the train.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2503"/>
+        <location filename="../src/mainwindow.cpp" line="2775"/>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
         <translation>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2530"/>
-        <location filename="../src/mainwindow.cpp" line="2549"/>
-        <location filename="../src/mainwindow.cpp" line="2581"/>
-        <location filename="../src/mainwindow.cpp" line="2598"/>
-        <location filename="../src/mainwindow.cpp" line="2617"/>
+        <location filename="../src/mainwindow.cpp" line="2797"/>
+        <location filename="../src/mainwindow.cpp" line="2811"/>
+        <location filename="../src/mainwindow.cpp" line="2838"/>
+        <location filename="../src/mainwindow.cpp" line="2850"/>
+        <location filename="../src/mainwindow.cpp" line="2864"/>
         <source>Progression Reset Complete</source>
         <translation>Progression Reset Complete</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3224"/>
-        <location filename="../src/mainwindow.cpp" line="3238"/>
+        <location filename="../src/mainwindow.cpp" line="3471"/>
+        <location filename="../src/mainwindow.cpp" line="3485"/>
         <source>&amp;Place Leader</source>
         <translation>&amp;Place Leader</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3225"/>
-        <location filename="../src/mainwindow.cpp" line="3241"/>
+        <location filename="../src/mainwindow.cpp" line="3472"/>
+        <location filename="../src/mainwindow.cpp" line="3488"/>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
         <translation>Place &amp;Tiny Bronco/Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3226"/>
-        <location filename="../src/mainwindow.cpp" line="3244"/>
+        <location filename="../src/mainwindow.cpp" line="3473"/>
+        <location filename="../src/mainwindow.cpp" line="3491"/>
         <source>Place &amp;Buggy/Highwind</source>
         <translation>Place &amp;Buggy/Highwind</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3227"/>
-        <location filename="../src/mainwindow.cpp" line="3247"/>
+        <location filename="../src/mainwindow.cpp" line="3474"/>
+        <location filename="../src/mainwindow.cpp" line="3494"/>
         <source>Place &amp;Sub</source>
         <translation>Place &amp;Sub</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3228"/>
-        <location filename="../src/mainwindow.cpp" line="3250"/>
+        <location filename="../src/mainwindow.cpp" line="3475"/>
+        <location filename="../src/mainwindow.cpp" line="3497"/>
         <source>Place &amp;Wild Chocobo</source>
         <translation>Place &amp;Wild Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3229"/>
-        <location filename="../src/mainwindow.cpp" line="3253"/>
+        <location filename="../src/mainwindow.cpp" line="3476"/>
+        <location filename="../src/mainwindow.cpp" line="3500"/>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
         <translation>Place &amp;Diamond/Ultimate/Ruby Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4054"/>
+        <location filename="../src/mainwindow.cpp" line="4301"/>
         <source>Turtle Paradise</source>
         <translation>Turtle Paradise</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4061"/>
+        <location filename="../src/mainwindow.cpp" line="4308"/>
         <source>KeyItem</source>
         <translation>KeyItem</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2501"/>
+        <location filename="../src/mainwindow.cpp" line="2773"/>
         <source>Meeting Aeris</source>
         <translation>Meeting Aerith</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/mainwindow.cpp" line="1383"/>
+        <location filename="../src/mainwindow.cpp" line="1655"/>
         <source>Game Uses %n Save Block(s)</source>
         <translation>
             <numerusform>Game Uses %n Save Block</numerusform>
@@ -11351,44 +11364,44 @@ Var And Scrolling Synced To Left Table</translation>
         </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1389"/>
+        <location filename="../src/mainwindow.cpp" line="1661"/>
         <source>
   Next Data Chunk @ Slot:%1</source>
         <translation>
   Next Data Chunk @ Slot:%1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2505"/>
+        <location filename="../src/mainwindow.cpp" line="2777"/>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2507"/>
+        <location filename="../src/mainwindow.cpp" line="2779"/>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>Replay the death of Aerith.This option Will remove Aerith from your PHS</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2509"/>
+        <location filename="../src/mainwindow.cpp" line="2781"/>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
         <translation>         INFO ON CURRENTLY SELECTED REPLAY MISSION</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3266"/>
+        <location filename="../src/mainwindow.cpp" line="3513"/>
         <source>DON&apos;T USE</source>
         <translation>DON&apos;T USE</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3278"/>
+        <location filename="../src/mainwindow.cpp" line="3525"/>
         <source>All Items Added</source>
         <translation>All Items Added</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3635"/>
+        <location filename="../src/mainwindow.cpp" line="3882"/>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
         <translation>Do You Want To Also Replace %1&apos;s Equipment and Materia?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3887"/>
+        <location filename="../src/mainwindow.cpp" line="4134"/>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation>Unknown Id in Buggy/Highwind Location</translation>
     </message>
@@ -11484,67 +11497,71 @@ Var And Scrolling Synced To Left Table</translation>
 <context>
     <name>MenuListWidget</name>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="73"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="71"/>
         <source>Menu Manager</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="74"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="72"/>
         <source>Item</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="71"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="68"/>
         <source>Visible</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="70"/>
         <source>Allowed</source>
-        <translation>Allowed</translation>
+        <translation type="vanished">Allowed</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="78"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="69"/>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="76"/>
         <source>Magic</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="82"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="80"/>
         <source>Materia</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="86"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="84"/>
         <source>Equip</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="90"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="88"/>
         <source>Status</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="94"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="92"/>
         <source>Order</source>
         <translation>Form</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="98"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="96"/>
         <source>Limit</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="102"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="100"/>
         <source>Config</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="106"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="104"/>
         <source>P.H.S</source>
         <translation>PHS</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="110"/>
+        <location filename="../ff7tk/widgets/MenuListWidget.cpp" line="108"/>
         <source>Save</source>
         <translation></translation>
     </message>
@@ -11552,88 +11569,86 @@ Var And Scrolling Synced To Left Table</translation>
 <context>
     <name>MetadataCreator</name>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="43"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="42"/>
         <source>Create Cloud Save Folder</source>
         <translation>Create Cloud Save Folder</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="35"/>
         <source>&amp;Ok</source>
-        <translation>&amp;Ok</translation>
+        <translation type="vanished">&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="36"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancel</translation>
+        <translation type="vanished">&amp;Cancel</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="57"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="53"/>
         <source>Output Path:</source>
         <translation>Output Path:</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="59"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="55"/>
         <source>Folder To Write Files Into</source>
         <translation>Folder To Write Files Into</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="66"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="62"/>
         <source>Sign With User Id</source>
         <translation>Sign With User Id</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="68"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="64"/>
         <source>Your SE Id number</source>
         <translation>Your SE Id number</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="156"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="152"/>
         <source>Save0%1</source>
         <translation>Save0%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="178"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="173"/>
         <source>Select A File To Use As Save0%1</source>
         <translation>Select A File To Use As Save0%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="205"/>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="231"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="201"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="228"/>
         <source>Places</source>
         <translation>Places</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="161"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="157"/>
         <source>Add Files For each Save you want in your cloud data.</source>
         <translation>Add Files For each Save you want in your cloud data.</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="163"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="159"/>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
         <translation>You Can Use Any Format That Black Chocobo Can Open</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="165"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="161"/>
         <source>Unused files will be Looked for in the Save Path</source>
         <translation>Unused files will be Looked for in the Save Path</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="167"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="163"/>
         <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
         <translation>Pressing Ok Will Overwrite Any Metadata in the save path</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="81"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="77"/>
         <source>Select A Directory To Save Into</source>
         <translation>Select A Directory To Save Into</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="131"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="127"/>
         <source>File Error</source>
         <translation>File Error</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="131"/>
+        <location filename="../ff7tk/widgets/MetadataCreator.cpp" line="127"/>
         <source>Failure to write the File: %1</source>
         <translation>Failure to write the File: %1</translation>
     </message>
@@ -11836,47 +11851,47 @@ Var And Scrolling Synced To Left Table</translation>
         <translation>Options - Always Show Controller Mapping </translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="34"/>
+        <location filename="../src/options.cpp" line="36"/>
         <source>Reset values to defaults</source>
         <translation>Reset values to defaults</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="35"/>
+        <location filename="../src/options.cpp" line="37"/>
         <source>Reset values to stored settings</source>
         <translation>Reset values to stored settings</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="36"/>
+        <location filename="../src/options.cpp" line="38"/>
         <source>Close and save changes</source>
         <translation>Close and save changes</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="37"/>
+        <location filename="../src/options.cpp" line="39"/>
         <source>Close and forget changes</source>
         <translation>Close and forget changes</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="173"/>
+        <location filename="../src/options.cpp" line="196"/>
         <source>Select A Directory To Save FF7 PC Saves</source>
         <translation>Select A Directory To Save FF7 PC Saves</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="180"/>
+        <location filename="../src/options.cpp" line="203"/>
         <source>Select A Directory To Save mcd/mcr saves</source>
         <translation>Select A Directory To Save mcd/mcr saves</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="187"/>
+        <location filename="../src/options.cpp" line="210"/>
         <source>Select A Directory To Load FF7 PC Saves From</source>
         <translation>Select A Directory To Load FF7 PC Saves From</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="194"/>
+        <location filename="../src/options.cpp" line="217"/>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>Select A Default Save Game (Must Be Raw PSX)</translation>
     </message>
     <message>
-        <location filename="../src/options.cpp" line="201"/>
+        <location filename="../src/options.cpp" line="224"/>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Select A Location To Save Character Stat Files</translation>
     </message>
@@ -12136,27 +12151,27 @@ Var And Scrolling Synced To Left Table</translation>
 <context>
     <name>PhsListWidget</name>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="71"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="68"/>
         <source>PHS Manager</source>
         <translation>PHS Manager</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="72"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="70"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="68"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="66"/>
         <source>Allowed</source>
         <translation>Allowed</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="69"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="67"/>
         <source>Visible</source>
         <translation>Visible</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="75"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="74"/>
         <source>Barret</source>
         <translation>Barrett</translation>
     </message>
@@ -12166,32 +12181,32 @@ Var And Scrolling Synced To Left Table</translation>
         <translation>Tifa</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="81"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="82"/>
         <source>Aerith</source>
         <translation>Aerith</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="84"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="86"/>
         <source>Red XIII</source>
         <translation>Red XIII</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="87"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="90"/>
         <source>Yuffie</source>
         <translation>Yuffie</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="90"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="94"/>
         <source>Cait Sith</source>
         <translation>Cait Sith</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="93"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="98"/>
         <source>Vincent</source>
         <translation>Vincent</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="96"/>
+        <location filename="../ff7tk/widgets/PhsListWidget.cpp" line="102"/>
         <source>Cid</source>
         <translation>Cid</translation>
     </message>
@@ -12199,71 +12214,71 @@ Var And Scrolling Synced To Left Table</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/bcdialog.cpp" line="79"/>
-        <location filename="../src/bcdialog.cpp" line="109"/>
-        <location filename="../src/bcdialog.cpp" line="129"/>
+        <location filename="../src/bcdialog.cpp" line="80"/>
+        <location filename="../src/bcdialog.cpp" line="112"/>
+        <location filename="../src/bcdialog.cpp" line="133"/>
         <source>Places</source>
         <translation>Places</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="190"/>
+        <location filename="../src/bcdialog.cpp" line="196"/>
         <source>Edit Places</source>
         <translation>Edit Places</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="201"/>
+        <location filename="../src/bcdialog.cpp" line="207"/>
         <source>Add a place</source>
         <translation>Add a place</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="203"/>
+        <location filename="../src/bcdialog.cpp" line="209"/>
         <source>Select a path to add to places</source>
         <translation>Select a path to add to places</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="208"/>
+        <location filename="../src/bcdialog.cpp" line="214"/>
         <source>Remove selected place</source>
         <translation>Remove selected place</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="218"/>
+        <location filename="../src/bcdialog.cpp" line="224"/>
         <source>Restore default places</source>
         <translation>Restore default places</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="219"/>
+        <location filename="../src/bcdialog.cpp" line="225"/>
         <source>Reset values to stored settings</source>
         <translation>Reset values to stored settings</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="220"/>
+        <location filename="../src/bcdialog.cpp" line="226"/>
         <source>Save Changes</source>
         <translation>Save Changes</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="221"/>
+        <location filename="../src/bcdialog.cpp" line="227"/>
         <source>Close</source>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="267"/>
+        <location filename="../src/bcdialog.cpp" line="273"/>
         <source>Adjust the play time?</source>
         <translation>Adjust the play time?</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="268"/>
+        <location filename="../src/bcdialog.cpp" line="274"/>
         <source>Old region was %1hz
 New region is %2hz</source>
         <translation>Old region was %1hz
 New region is %2hz</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="269"/>
+        <location filename="../src/bcdialog.cpp" line="275"/>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation>PAL -&gt; NTSC Conversion</translation>
     </message>
     <message>
-        <location filename="../src/bcdialog.cpp" line="269"/>
+        <location filename="../src/bcdialog.cpp" line="275"/>
         <source>NTSC -&gt; PAL Conversion</source>
         <translation>NTSC -&gt; PAL Conversion</translation>
     </message>
@@ -12271,42 +12286,42 @@ New region is %2hz</translation>
 <context>
     <name>SlotPreview</name>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="40"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="41"/>
         <source>Slot: %1</source>
         <translation>Slot: %1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="45"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="44"/>
         <source>Clear Slot</source>
         <translation>Clear Slot</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="51"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="48"/>
         <source>Copy Slot</source>
         <translation>Copy Slot</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="57"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="52"/>
         <source>Paste Into Slot</source>
         <translation>Paste Into Slot</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="90"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="83"/>
         <source>-Empty Slot-</source>
         <translation>-Empty Slot-</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="258"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="218"/>
         <source>Level:%1</source>
         <translation>Level:%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="266"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="228"/>
         <source>Gil:%1</source>
         <translation>Gil:%1</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="270"/>
+        <location filename="../ff7tk/widgets/SlotPreview.cpp" line="233"/>
         <source>Time:%1:%2</source>
         <translation>Time:%1:%2</translation>
     </message>
@@ -12324,32 +12339,32 @@ New region is %2hz</translation>
         <translation>Select A Slot</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="157"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="160"/>
         <source>       Mid-Linked Block</source>
         <translation>       Mid-Linked Block</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="158"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="161"/>
         <source>    Mid-Linked Block (Deleted)</source>
         <translation>    Mid-Linked Block (Deleted)</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="159"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="162"/>
         <source>      End Of Linked Blocks</source>
         <translation>      End Of Linked Blocks</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="160"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="163"/>
         <source>      End Of Linked Blocks (Deleted)</source>
         <translation>      End Of Linked Blocks (Deleted)</translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="161"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="164"/>
         <source>ERROR</source>
         <translation>ERROR</translation>
     </message>
     <message numerus="yes">
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="170"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="173"/>
         <source>
 	 Game Uses %n Save Block(s)</source>
         <translation>
@@ -12360,7 +12375,7 @@ New region is %2hz</translation>
         </translation>
     </message>
     <message>
-        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="174"/>
+        <location filename="../ff7tk/widgets/SlotSelect.cpp" line="177"/>
         <source>
 	   Next Data Chunk @ Slot:%1</source>
         <translation>
@@ -12370,17 +12385,17 @@ New region is %2hz</translation>
 <context>
     <name>UndoStack</name>
     <message>
-        <location filename="../qhexedit/commands.cpp" line="112"/>
+        <location filename="../qhexedit/commands.cpp" line="114"/>
         <source>Inserting %1 bytes</source>
         <translation>Inserting %1 bytes</translation>
     </message>
     <message>
-        <location filename="../qhexedit/commands.cpp" line="134"/>
+        <location filename="../qhexedit/commands.cpp" line="136"/>
         <source>Delete %1 chars</source>
         <translation>Delete %1 chars</translation>
     </message>
     <message>
-        <location filename="../qhexedit/commands.cpp" line="159"/>
+        <location filename="../qhexedit/commands.cpp" line="161"/>
         <source>Overwrite %1 chars</source>
         <translation>Overwrite %1 chars</translation>
     </message>

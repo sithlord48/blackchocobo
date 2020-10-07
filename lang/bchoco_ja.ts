@@ -133,7 +133,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation type="unfinished">QTを使用します：%1</translation>
+        <translation type="obsolete">QTを使用します：%1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -214,6 +214,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation type="unfinished">ファイナライズされた形式のサポートPS3エクスポート（psv）</translation>
+    </message>
+    <message>
+        <source>ff7tk: %1</source>
+        <translation type="unfinished">ff7tk: %1</translation>
+    </message>
+    <message>
+        <source>Qt: %1</source>
+        <translation type="unfinished">Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -4681,10 +4689,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">見張り小屋</translation>
     </message>
     <message>
-        <source>top of the mountian</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Upper Junon</source>
         <translation type="unfinished">アルジュノン</translation>
     </message>
@@ -5313,22 +5317,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">クレーターエリア</translation>
     </message>
     <message>
-        <source>DEBUG MODE</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>DEBUG</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>BLACKBGH</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>BLACKBGI</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Dark city fourth street</source>
         <translation type="unfinished">ダークシティ4番街</translation>
     </message>
@@ -5371,6 +5359,26 @@ The km/h speeds are calculated while playing </source>
     <message>
         <source>Nanaki&apos;s Room</source>
         <translation>ナナキの部屋</translation>
+    </message>
+    <message>
+        <source>DEBUG MODE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEBUG</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BLACKBGH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BLACKBGI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>top of the mountian</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6360,10 +6368,6 @@ The km/h speeds are calculated while playing </source>
         <translation type="unfinished">フルケア (99MP)</translation>
     </message>
     <message>
-        <source>Shield</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Shield (180mp)</source>
         <translation type="unfinished">シールド (180MP)</translation>
     </message>
@@ -6895,6 +6899,10 @@ The km/h speeds are calculated while playing </source>
         <source>Pandora&apos;s Box</source>
         <translation type="unfinished">なんとか？？？</translation>
     </message>
+    <message>
+        <source>Shield</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FF7Save</name>
@@ -7231,7 +7239,11 @@ The km/h speeds are calculated while playing </source>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation type="unfinished">保存場所の変更 (&amp;L)</translation>
+        <translation type="obsolete">保存場所の変更 (&amp;L)</translation>
+    </message>
+    <message>
+        <source>Set as current location</source>
+        <translation type="unfinished">現在地として設定</translation>
     </message>
 </context>
 <context>
@@ -8591,7 +8603,11 @@ location.</source>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished">許可されました</translation>
+        <translation type="obsolete">許可されました</translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8654,11 +8670,11 @@ location.</source>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">はい</translation>
+        <translation type="obsolete">はい</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;キャンセル</translation>
+        <translation type="obsolete">&amp;キャンセル</translation>
     </message>
     <message>
         <source>Places</source>

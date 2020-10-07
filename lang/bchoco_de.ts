@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation type="unfinished">Mit Qt: %1</translation>
+        <translation type="obsolete">Mit Qt: %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -218,6 +218,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation type="unfinished">Finalisiertes Format Unterstützt PS3-Export (PSV)</translation>
+    </message>
+    <message>
+        <source>ff7tk: %1</source>
+        <translation type="unfinished">ff7tk: %1</translation>
+    </message>
+    <message>
+        <source>Qt: %1</source>
+        <translation type="unfinished">Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -2918,10 +2926,6 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <translation>Kessel</translation>
     </message>
     <message>
-        <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Sylkis Greens</source>
         <translation>Sylkisgemüse</translation>
     </message>
@@ -3070,64 +3074,32 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <translation>Omnischlag</translation>
     </message>
     <message>
-        <source>Learn Limit Skill [Omnislash]</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Catastrophe</source>
         <translation>Katastrophe</translation>
-    </message>
-    <message>
-        <source>Learn Limit Skill [Catastrophe]</source>
-        <translation></translation>
     </message>
     <message>
         <source>Final Heaven</source>
         <translation>Himmelsfaust</translation>
     </message>
     <message>
-        <source>Learn Limit Skill [Final Heaven]</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Great Gospel</source>
         <translation>Engels Chor</translation>
-    </message>
-    <message>
-        <source>Learn Limit Skill [Great Gospel]</source>
-        <translation></translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
         <translation>Kosmo-Glut</translation>
     </message>
     <message>
-        <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>All Creation</source>
         <translation>Zorn der Götter</translation>
-    </message>
-    <message>
-        <source>Learn Limit Skill [All Creation]</source>
-        <translation></translation>
     </message>
     <message>
         <source>Chaos</source>
         <translation>Chaos</translation>
     </message>
     <message>
-        <source>Learn Limit Skill [Chaos]</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Highwind</source>
         <translation>Highwind</translation>
-    </message>
-    <message>
-        <source>Learn Limit Skill [Highwind]</source>
-        <translation></translation>
     </message>
     <message>
         <source>1/35 soldier</source>
@@ -4173,6 +4145,42 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <source>Increases Manipulation rate</source>
         <translation>Verstärkt Manipul</translation>
     </message>
+    <message>
+        <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Omnislash]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Catastrophe]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Final Heaven]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Great Gospel]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Cosmo Memory]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [All Creation]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Chaos]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Highwind]</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FF7Location</name>
@@ -4205,24 +4213,8 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <translation>Cosmo-Region</translation>
     </message>
     <message>
-        <source>Nibel Area</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Rocket Launch Pad Area</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Wutai Area</source>
         <translation>Wutai-Region</translation>
-    </message>
-    <message>
-        <source>Icicle Area</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Woodlands Area</source>
-        <translation></translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -5376,6 +5368,22 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <source>Nanaki&apos;s Room</source>
         <translation type="unfinished">Nanakis Zimmer</translation>
     </message>
+    <message>
+        <source>Woodlands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rocket Launch Pad Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Icicle Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -5674,10 +5682,6 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     <message>
         <source>Counter Attack 100%</source>
         <translation>Konter Attacke 100%</translation>
-    </message>
-    <message>
-        <source>Slash-All</source>
-        <translation></translation>
     </message>
     <message>
         <source>Flash</source>
@@ -6004,10 +6008,6 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <translation>Premium-Befehl</translation>
     </message>
     <message>
-        <source>Fire</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Fire (4mp)</source>
         <translation>Feuer (4MP)</translation>
     </message>
@@ -6066,10 +6066,6 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     <message>
         <source>[Earth]</source>
         <translation>[Erde]</translation>
-    </message>
-    <message>
-        <source>Lightning</source>
-        <translation></translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
@@ -6250,10 +6246,6 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     <message>
         <source>[Gravity]</source>
         <translation>[Schwerkraft]</translation>
-    </message>
-    <message>
-        <source>Barrier</source>
-        <translation></translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
@@ -6899,6 +6891,22 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
         <source>Pandora&apos;s Box</source>
         <translation>Pandora</translation>
     </message>
+    <message>
+        <source>Slash-All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire</source>
+        <translation type="unfinished">Feuer</translation>
+    </message>
+    <message>
+        <source>Lightning</source>
+        <translation type="unfinished">Blitz</translation>
+    </message>
+    <message>
+        <source>Barrier</source>
+        <translation type="unfinished">Barriere</translation>
+    </message>
 </context>
 <context>
     <name>FF7Save</name>
@@ -7235,7 +7243,11 @@ Die km / h beschleunigt berechnet werden während des Spielens </translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation>Save S&amp;tandort Änderungen</translation>
+        <translation type="vanished">Save S&amp;tandort Änderungen</translation>
+    </message>
+    <message>
+        <source>Set as current location</source>
+        <translation type="unfinished">Als aktuellen Standort festlegen</translation>
     </message>
 </context>
 <context>
@@ -8602,7 +8614,11 @@ Lage.</translation>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished">Dürfen</translation>
+        <translation type="obsolete">Dürfen</translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8665,11 +8681,11 @@ Lage.</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Ok</translation>
+        <translation type="obsolete">&amp;Ok</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">Abbre&amp;chen</translation>
+        <translation type="obsolete">Abbre&amp;chen</translation>
     </message>
     <message>
         <source>Places</source>

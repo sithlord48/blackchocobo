@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt: %1</source>
-        <translation>Version de Qt : %1</translation>
+        <translation type="vanished">Version de Qt : %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -218,6 +218,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Finalized format Support PS3 export (psv)</source>
         <translation type="unfinished">Format final Prise en charge de l&apos;exportation PS3 (psv)</translation>
+    </message>
+    <message>
+        <source>ff7tk: %1</source>
+        <translation type="unfinished">ff7tk: %1</translation>
+    </message>
+    <message>
+        <source>Qt: %1</source>
+        <translation type="unfinished">Qt: %1</translation>
     </message>
 </context>
 <context>
@@ -4809,10 +4817,6 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
         <translation>Port de Costa del Sol</translation>
     </message>
     <message>
-        <source>Costa del Sol</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Costa del Sol Inn</source>
         <translation>Auberge de Costa del Sol</translation>
     </message>
@@ -5376,6 +5380,10 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
         <source>Nanaki&apos;s Room</source>
         <translation>Chambre de Nanaki</translation>
     </message>
+    <message>
+        <source>Costa del Sol</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FF7Materia</name>
@@ -5866,10 +5874,6 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     <message>
         <source>Elemental 200%</source>
         <translation>Dégâts élémentaires -200%</translation>
-    </message>
-    <message>
-        <source>Added Effect</source>
-        <translation></translation>
     </message>
     <message>
         <source>Sneak Attack</source>
@@ -6899,6 +6903,10 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
         <source>Pandora&apos;s Box</source>
         <translation>Boîte-Pandore</translation>
     </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FF7Save</name>
@@ -7235,7 +7243,11 @@ Les vitesses en km/h sont calculés pendant le jeu </translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
-        <translation>Sauvegarder les changements de &amp;lieu</translation>
+        <translation type="vanished">Sauvegarder les changements de &amp;lieu</translation>
+    </message>
+    <message>
+        <source>Set as current location</source>
+        <translation type="unfinished">Définir comme emplacement actuel</translation>
     </message>
 </context>
 <context>
@@ -8597,7 +8609,11 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>Allowed</source>
-        <translation type="unfinished">Autorisé</translation>
+        <translation type="obsolete">Autorisé</translation>
+    </message>
+    <message>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8660,11 +8676,11 @@ d&apos;un objet facilement.</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Annuler</translation>
+        <translation type="obsolete">&amp;Annuler</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Ok</translation>
+        <translation type="obsolete">&amp;Ok</translation>
     </message>
     <message>
         <source>Places</source>

@@ -2794,11 +2794,6 @@ void MainWindow::btnReplay_clicked()
         ui->sbTurkschurch->setValue(0); // reset turks.
         locationViewer->setMapId(1);
         locationViewer->setLocationId(116);
-        if (!locationViewer->locationChangesSaved()) {
-            //toggle saving of locations if they are not being saved by the widget
-            locationViewer->setLocationChangesSaved(true);
-            locationViewer->setLocationChangesSaved(false);
-        }
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     } else if (ui->comboReplay->currentIndex() == 2) { // The Church In The Slums
         ui->sbCurdisc->setValue(1);
@@ -2810,11 +2805,6 @@ void MainWindow::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(183);
-        if (!locationViewer->locationChangesSaved()) {
-            //toggle saving of locations if they are not being saved by the widget
-            locationViewer->setLocationChangesSaved(true);
-            locationViewer->setLocationChangesSaved(false);
-        }
         ui->comboParty1->setCurrentIndex(0);
         ui->comboParty2->setCurrentIndex(12);
         ui->comboParty3->setCurrentIndex(12);
@@ -2828,11 +2818,6 @@ void MainWindow::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(332);
-        if (!locationViewer->locationChangesSaved()) {
-            //toggle saving of locations if they are not being saved by the widget
-            locationViewer->setLocationChangesSaved(true);
-            locationViewer->setLocationChangesSaved(false);
-        }
         // set up young cloud, Copy Cloud Change ID to young Cloud
         ff7->setCharacter(s, FF7Char::CaitSith, ff7->character(s, FF7Char::Cloud));
         ff7->setCharID(s, FF7Char::CaitSith, FF7Char::YoungCloud);
@@ -2862,11 +2847,6 @@ void MainWindow::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(496);
-        if (!locationViewer->locationChangesSaved()) {
-            //toggle saving of locations if they are not being saved by the widget
-            locationViewer->setLocationChangesSaved(true);
-            locationViewer->setLocationChangesSaved(false);
-        }
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
@@ -2879,11 +2859,6 @@ void MainWindow::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(646);
-        if (!locationViewer->locationChangesSaved()) {
-            //toggle saving of locations if they are not being saved by the widget
-            locationViewer->setLocationChangesSaved(true);
-            locationViewer->setLocationChangesSaved(false);
-        }
         phsList->setChecked(FF7Char::Aerith, PhsListWidget::PHSALLOWED, false);
         phsList->setChecked(FF7Char::Aerith, PhsListWidget::PHSVISIBLE, false);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
