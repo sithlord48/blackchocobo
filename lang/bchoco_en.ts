@@ -232,5065 +232,5065 @@ p, li { white-space: pre-wrap; }
     <name>CharEditor</name>
     <message>
         <source>Level</source>
-        <translation>Level</translation>
+        <translation type="vanished">Level</translation>
     </message>
     <message>
         <source>Kills</source>
-        <translation>Kills</translation>
+        <translation type="vanished">Kills</translation>
     </message>
     <message>
         <source>HP</source>
-        <translation>HP</translation>
+        <translation type="vanished">HP</translation>
     </message>
     <message>
         <source>MP</source>
-        <translation>MP</translation>
+        <translation type="vanished">MP</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation>Fury</translation>
+        <translation type="vanished">Fury</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation>Sadness</translation>
+        <translation type="vanished">Sadness</translation>
     </message>
     <message>
         <source>Front Row</source>
-        <translation>Front Row</translation>
+        <translation type="vanished">Front Row</translation>
     </message>
     <message>
         <source>Base HP</source>
-        <translation>Base HP</translation>
+        <translation type="vanished">Base HP</translation>
     </message>
     <message>
         <source>Base MP</source>
-        <translation>Base MP</translation>
+        <translation type="vanished">Base MP</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation>Next</translation>
+        <translation type="vanished">Next</translation>
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation>Limit Bar</translation>
+        <translation type="vanished">Limit Bar</translation>
     </message>
     <message>
         <source>Str</source>
-        <translation>Str</translation>
+        <translation type="vanished">Str</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation>Vit</translation>
+        <translation type="vanished">Vit</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation>Mag</translation>
+        <translation type="vanished">Mag</translation>
     </message>
     <message>
         <source>Spi</source>
-        <translation>Spi</translation>
+        <translation type="vanished">Spi</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation>Dex</translation>
+        <translation type="vanished">Dex</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation>Lck</translation>
+        <translation type="vanished">Lck</translation>
     </message>
     <message>
         <source>Limit Uses</source>
-        <translation>Limit Uses</translation>
+        <translation type="vanished">Limit Uses</translation>
     </message>
     <message>
         <source>1-1</source>
-        <translation>1-1</translation>
+        <translation type="vanished">1-1</translation>
     </message>
     <message>
         <source>2-1</source>
-        <translation>2-1</translation>
+        <translation type="vanished">2-1</translation>
     </message>
     <message>
         <source>3-1</source>
-        <translation>3-1</translation>
+        <translation type="vanished">3-1</translation>
     </message>
     <message>
         <source>Limit Level</source>
-        <translation>Limit Level</translation>
+        <translation type="vanished">Limit Level</translation>
     </message>
     <message>
         <source>-NONE-</source>
-        <translation>-NONE-</translation>
+        <translation type="vanished">-NONE-</translation>
     </message>
     <message>
         <source>Elemental Effects</source>
-        <translation>Elemental Effects</translation>
+        <translation type="vanished">Elemental Effects</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation>Status Effects</translation>
+        <translation type="vanished">Status Effects</translation>
     </message>
     <message>
         <source>Weapon</source>
-        <translation>Weapon</translation>
+        <translation type="vanished">Weapon</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translation>Armor</translation>
+        <translation type="vanished">Armor</translation>
     </message>
     <message>
         <source>Accessory</source>
-        <translation>Accessory</translation>
+        <translation type="vanished">Accessory</translation>
     </message>
     <message>
         <source>Status Info</source>
-        <translation>Status Info</translation>
+        <translation type="vanished">Status Info</translation>
     </message>
     <message>
         <source>Equipment</source>
-        <translation>Equipment</translation>
+        <translation type="vanished">Equipment</translation>
     </message>
     <message>
         <source>AP:x%1</source>
-        <translation>AP:x%1</translation>
+        <translation type="vanished">AP:x%1</translation>
     </message>
     <message>
         <source> Str:+%1</source>
-        <translation> Str:+%1</translation>
+        <translation type="vanished"> Str:+%1</translation>
     </message>
     <message>
         <source> Vit:+%1</source>
-        <translation> Vit:+%1</translation>
+        <translation type="vanished"> Vit:+%1</translation>
     </message>
     <message>
         <source> Dex:+%1</source>
-        <translation> Dex:+%1</translation>
+        <translation type="vanished"> Dex:+%1</translation>
     </message>
     <message>
         <source> Spi:+%1</source>
-        <translation> Spi:+%1</translation>
+        <translation type="vanished"> Spi:+%1</translation>
     </message>
     <message>
         <source> Mag:+%1</source>
-        <translation> Mag:+%1</translation>
+        <translation type="vanished"> Mag:+%1</translation>
     </message>
     <message>
         <source> Lck:+%1</source>
-        <translation> Lck:+%1</translation>
+        <translation type="vanished"> Lck:+%1</translation>
     </message>
     <message>
         <source> Hp:+%1%</source>
-        <translation> Hp:+%1%</translation>
+        <translation type="vanished"> Hp:+%1%</translation>
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation> Mp:+%1%</translation>
+        <translation type="vanished"> Mp:+%1%</translation>
     </message>
     <message>
         <source>Restoration</source>
-        <translation>Restoration</translation>
+        <translation type="vanished">Restoration</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>Fire</translation>
+        <translation type="vanished">Fire</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation>Cold</translation>
+        <translation type="vanished">Cold</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Lightning</translation>
+        <translation type="vanished">Lightning</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>Earth</translation>
+        <translation type="vanished">Earth</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation>Wind</translation>
+        <translation type="vanished">Wind</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation>Water</translation>
+        <translation type="vanished">Water</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>Gravity</translation>
+        <translation type="vanished">Gravity</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation>Holy</translation>
+        <translation type="vanished">Holy</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Poison</translation>
+        <translation type="vanished">Poison</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation>Cut</translation>
+        <translation type="vanished">Cut</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation>Shoot</translation>
+        <translation type="vanished">Shoot</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation>Punch</translation>
+        <translation type="vanished">Punch</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation>Hit</translation>
+        <translation type="vanished">Hit</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation>Absorb:</translation>
+        <translation type="vanished">Absorb:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation>Nullify:</translation>
+        <translation type="vanished">Nullify:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation>Halve:</translation>
+        <translation type="vanished">Halve:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation>Attack:</translation>
+        <translation type="vanished">Attack:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation>Death</translation>
+        <translation type="vanished">Death</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation>Slow-Numb</translation>
+        <translation type="vanished">Slow-Numb</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation>D.Sentence</translation>
+        <translation type="vanished">D.Sentence</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation>Paralysis</translation>
+        <translation type="vanished">Paralysis</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation>Petrify</translation>
+        <translation type="vanished">Petrify</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation>Silence</translation>
+        <translation type="vanished">Silence</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation>Sleep</translation>
+        <translation type="vanished">Sleep</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation>Confusion</translation>
+        <translation type="vanished">Confusion</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation>Berserk</translation>
+        <translation type="vanished">Berserk</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation>Frog</translation>
+        <translation type="vanished">Frog</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation>Mini</translation>
+        <translation type="vanished">Mini</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation>Darkness</translation>
+        <translation type="vanished">Darkness</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation>Haste</translation>
+        <translation type="vanished">Haste</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Slow</translation>
+        <translation type="vanished">Slow</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="vanished">Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>Barrier</translation>
+        <translation type="vanished">Barrier</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation>M.Barrier</translation>
+        <translation type="vanished">M.Barrier</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation>Reflect</translation>
+        <translation type="vanished">Reflect</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Shield</translation>
+        <translation type="vanished">Shield</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation>Regen</translation>
+        <translation type="vanished">Regen</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation>Protect:</translation>
+        <translation type="vanished">Protect:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation>Remove:</translation>
+        <translation type="vanished">Remove:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation>Inflict:</translation>
+        <translation type="vanished">Inflict:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation>OnBattle:</translation>
+        <translation type="vanished">OnBattle:</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation>-Empty-</translation>
+        <translation type="vanished">-Empty-</translation>
     </message>
     <message>
         <source>0x34</source>
-        <translation>0x34</translation>
+        <translation type="vanished">0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation>0x35</translation>
+        <translation type="vanished">0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation>0x36</translation>
+        <translation type="vanished">0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation>0x37</translation>
+        <translation type="vanished">0x37</translation>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation>Young Cloud</translation>
+        <translation type="vanished">Young Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation>Sephiroth</translation>
+        <translation type="vanished">Sephiroth</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation type="vanished">Name</translation>
     </message>
     <message>
         <source>Exp: </source>
-        <translation>Exp: </translation>
+        <translation type="vanished">Exp: </translation>
     </message>
     <message>
         <source>Next: %1</source>
-        <translation>Next: %1</translation>
+        <translation type="vanished">Next: %1</translation>
     </message>
     <message>
         <source>Resist</source>
-        <translation>Resist</translation>
+        <translation type="vanished">Resist</translation>
     </message>
     <message>
         <source>Current HP</source>
-        <translation>Current HP</translation>
+        <translation type="vanished">Current HP</translation>
     </message>
     <message>
         <source>Current MP</source>
-        <translation>Current MP</translation>
+        <translation type="vanished">Current MP</translation>
     </message>
     <message>
         <source>Maximum HP</source>
-        <translation>Maximum HP</translation>
+        <translation type="vanished">Maximum HP</translation>
     </message>
     <message>
         <source>Materia and Equipment Bonus</source>
-        <translation>Materia and Equipment Bonus</translation>
+        <translation type="vanished">Materia and Equipment Bonus</translation>
     </message>
     <message>
         <source>Maximum MP</source>
-        <translation>Maximum MP</translation>
+        <translation type="vanished">Maximum MP</translation>
     </message>
     <message>
         <source>Base Strength</source>
-        <translation>Base Strength</translation>
+        <translation type="vanished">Base Strength</translation>
     </message>
     <message>
         <source>Power Sources Used</source>
-        <translation>Power Sources Used</translation>
+        <translation type="vanished">Power Sources Used</translation>
     </message>
     <message>
         <source>Strength Stat Total</source>
-        <translation>Strength Stat Total</translation>
+        <translation type="vanished">Strength Stat Total</translation>
     </message>
     <message>
         <source>Base Vitality</source>
-        <translation>Base Vitality</translation>
+        <translation type="vanished">Base Vitality</translation>
     </message>
     <message>
         <source>Guard Sources Used</source>
-        <translation>Guard Sources Used</translation>
+        <translation type="vanished">Guard Sources Used</translation>
     </message>
     <message>
         <source>Vitality Stat Total</source>
-        <translation>Vitality Stat Total</translation>
+        <translation type="vanished">Vitality Stat Total</translation>
     </message>
     <message>
         <source>Base Magic</source>
-        <translation>Base Magic</translation>
+        <translation type="vanished">Base Magic</translation>
     </message>
     <message>
         <source>Magic Sources Used</source>
-        <translation>Magic Sources Used</translation>
+        <translation type="vanished">Magic Sources Used</translation>
     </message>
     <message>
         <source>Magic Stat Total</source>
-        <translation>Magic Stat Total</translation>
+        <translation type="vanished">Magic Stat Total</translation>
     </message>
     <message>
         <source>Base Spirit</source>
-        <translation>Base Spirit</translation>
+        <translation type="vanished">Base Spirit</translation>
     </message>
     <message>
         <source>Mind Sources Used</source>
-        <translation>Mind Sources Used</translation>
+        <translation type="vanished">Mind Sources Used</translation>
     </message>
     <message>
         <source>Spirit Stat Total</source>
-        <translation>Spirit Stat Total</translation>
+        <translation type="vanished">Spirit Stat Total</translation>
     </message>
     <message>
         <source>Base Dexterity</source>
-        <translation>Base Dexterity</translation>
+        <translation type="vanished">Base Dexterity</translation>
     </message>
     <message>
         <source>Speed Sources Used</source>
-        <translation>Speed Sources Used</translation>
+        <translation type="vanished">Speed Sources Used</translation>
     </message>
     <message>
         <source>Dexterity Stat Total</source>
-        <translation>Dexterity Stat Total</translation>
+        <translation type="vanished">Dexterity Stat Total</translation>
     </message>
     <message>
         <source>Base Luck</source>
-        <translation>Base Luck</translation>
+        <translation type="vanished">Base Luck</translation>
     </message>
     <message>
         <source>Luck Sources Used</source>
-        <translation>Luck Sources Used</translation>
+        <translation type="vanished">Luck Sources Used</translation>
     </message>
     <message>
         <source>Luck Stat Total</source>
-        <translation>Luck Stat Total</translation>
+        <translation type="vanished">Luck Stat Total</translation>
     </message>
 </context>
 <context>
     <name>ChocoboEditor</name>
     <message>
         <source>Unable To Mate</source>
-        <translation>Unable To Mate</translation>
+        <translation type="vanished">Unable To Mate</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation>Stamina</translation>
+        <translation type="vanished">Stamina</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation type="vanished">Name</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>Run Speed</translation>
+        <translation type="vanished">Run Speed</translation>
     </message>
     <message>
         <source>Sprint Speed</source>
-        <translation>Sprint Speed</translation>
+        <translation type="vanished">Sprint Speed</translation>
     </message>
     <message>
         <source>pCount</source>
-        <translation>pCount</translation>
+        <translation type="vanished">pCount</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation>Personality</translation>
+        <translation type="vanished">Personality</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation>Yellow</translation>
+        <translation type="vanished">Yellow</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation>Green</translation>
+        <translation type="vanished">Green</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation>Blue</translation>
+        <translation type="vanished">Blue</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation>Black</translation>
+        <translation type="vanished">Black</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation>Gold</translation>
+        <translation type="vanished">Gold</translation>
     </message>
     <message>
         <source>Male %1</source>
-        <translation>Male %1</translation>
+        <translation type="vanished">Male %1</translation>
     </message>
     <message>
         <source>Female %1</source>
-        <translation>Female %1</translation>
+        <translation type="vanished">Female %1</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </source>
-        <translation>Speed Values Are The Raw Values
+        <translation type="vanished">Speed Values Are The Raw Values
 The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>Rank: C</source>
-        <translation>Rank: C</translation>
+        <translation type="vanished">Rank: C</translation>
     </message>
     <message>
         <source>Rank: B</source>
-        <translation>Rank: B</translation>
+        <translation type="vanished">Rank: B</translation>
     </message>
     <message>
         <source>Rank: A</source>
-        <translation>Rank: A</translation>
+        <translation type="vanished">Rank: A</translation>
     </message>
     <message>
         <source>Rank: S</source>
-        <translation>Rank: S</translation>
+        <translation type="vanished">Rank: S</translation>
     </message>
     <message>
         <source>Acceleration</source>
-        <translation>Acceleration</translation>
+        <translation type="vanished">Acceleration</translation>
     </message>
     <message>
         <source>Races Won</source>
-        <translation>Races Won</translation>
+        <translation type="vanished">Races Won</translation>
     </message>
     <message>
         <source>Cooperation</source>
-        <translation>Cooperation</translation>
+        <translation type="vanished">Cooperation</translation>
     </message>
     <message>
         <source>Intelligence</source>
-        <translation>Intelligence</translation>
+        <translation type="vanished">Intelligence</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Empty</translation>
+        <translation type="vanished">Empty</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>Wonderful</translation>
+        <translation type="vanished">Wonderful</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>Great</translation>
+        <translation type="vanished">Great</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>Good</translation>
+        <translation type="vanished">Good</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>Fair</translation>
+        <translation type="vanished">Fair</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation>Average</translation>
+        <translation type="vanished">Average</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>Poor</translation>
+        <translation type="vanished">Poor</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>Bad</translation>
+        <translation type="vanished">Bad</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>Terrible</translation>
+        <translation type="vanished">Terrible</translation>
     </message>
     <message>
         <source>Choco Billy&apos;s Rating: </source>
-        <translation>Choco Billy&apos;s Rating: </translation>
+        <translation type="vanished">Choco Billy&apos;s Rating: </translation>
     </message>
 </context>
 <context>
     <name>ChocoboLabel</name>
     <message>
         <source>Copy</source>
-        <translation>Copy</translation>
+        <translation type="vanished">Copy</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation type="vanished">Paste</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Remove</translation>
+        <translation type="vanished">Remove</translation>
     </message>
     <message>
         <source>Rank:C</source>
-        <translation>Rank:C</translation>
+        <translation type="vanished">Rank:C</translation>
     </message>
     <message>
         <source>Rank:B</source>
-        <translation>Rank:B</translation>
+        <translation type="vanished">Rank:B</translation>
     </message>
     <message>
         <source>Rank:A</source>
-        <translation>Rank:A</translation>
+        <translation type="vanished">Rank:A</translation>
     </message>
     <message>
         <source>Rank:S</source>
-        <translation>Rank:S</translation>
+        <translation type="vanished">Rank:S</translation>
     </message>
 </context>
 <context>
     <name>ChocoboManager</name>
     <message>
         <source>Stables Owned</source>
-        <translation>Stables Owned</translation>
+        <translation type="vanished">Stables Owned</translation>
     </message>
     <message>
         <source>Stables Occupied</source>
-        <translation>Stables Occupied</translation>
+        <translation type="vanished">Stables Occupied</translation>
     </message>
     <message>
         <source>Stable:%1</source>
-        <translation>Stable:%1</translation>
+        <translation type="vanished">Stable:%1</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>Fenced Chocobos</translation>
+        <translation type="vanished">Fenced Chocobos</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Empty</translation>
+        <translation type="vanished">Empty</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>Wonderful</translation>
+        <translation type="vanished">Wonderful</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>Great</translation>
+        <translation type="vanished">Great</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>Good</translation>
+        <translation type="vanished">Good</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>Fair</translation>
+        <translation type="vanished">Fair</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation>Average</translation>
+        <translation type="vanished">Average</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>Poor</translation>
+        <translation type="vanished">Poor</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>Bad</translation>
+        <translation type="vanished">Bad</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>Terrible</translation>
+        <translation type="vanished">Terrible</translation>
     </message>
 </context>
 <context>
     <name>FF7Achievements</name>
     <message>
         <source>Dice</source>
-        <translation>Dice</translation>
+        <translation type="vanished">Dice</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation>Sled Fang</translation>
+        <translation type="vanished">Sled Fang</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation>Greased Lightning</translation>
+        <translation type="vanished">Greased Lightning</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation>Beat Rush</translation>
+        <translation type="vanished">Beat Rush</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation>Boost Jump</translation>
+        <translation type="vanished">Boost Jump</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation>Healing Wind</translation>
+        <translation type="vanished">Healing Wind</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation>Galian Beast</translation>
+        <translation type="vanished">Galian Beast</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation>Big Shot</translation>
+        <translation type="vanished">Big Shot</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation>Braver</translation>
+        <translation type="vanished">Braver</translation>
     </message>
     <message>
         <source>First Battle</source>
-        <translation>First Battle</translation>
+        <translation type="vanished">First Battle</translation>
     </message>
     <message>
         <source>Gold Chocobo</source>
-        <translation>Gold Chocobo</translation>
+        <translation type="vanished">Gold Chocobo</translation>
     </message>
     <message>
         <source>Battle Square</source>
-        <translation>Battle Square</translation>
+        <translation type="vanished">Battle Square</translation>
     </message>
     <message>
         <source>Materia Overlord</source>
-        <translation>Materia Overlord</translation>
+        <translation type="vanished">Materia Overlord</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation type="vanished">Yuffie</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="vanished">Vincent</translation>
     </message>
     <message>
         <source>Emerald Weapon</source>
-        <translation>Emerald Weapon</translation>
+        <translation type="vanished">Emerald Weapon</translation>
     </message>
     <message>
         <source>Ruby Weapon</source>
-        <translation>Ruby Weapon</translation>
+        <translation type="vanished">Ruby Weapon</translation>
     </message>
     <message>
         <source>Diamond Weapon</source>
-        <translation>Diamond Weapon</translation>
+        <translation type="vanished">Diamond Weapon</translation>
     </message>
     <message>
         <source>Ultimate Weapon</source>
-        <translation>Ultimate Weapon</translation>
+        <translation type="vanished">Ultimate Weapon</translation>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation>Bahamut Zero</translation>
+        <translation type="vanished">Bahamut Zero</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation>Slots</translation>
+        <translation type="vanished">Slots</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>Cosmo Memory</translation>
+        <translation type="vanished">Cosmo Memory</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>All Creation</translation>
+        <translation type="vanished">All Creation</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Final Heaven</translation>
+        <translation type="vanished">Final Heaven</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Highwind</translation>
+        <translation type="vanished">Highwind</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Great Gospel</translation>
+        <translation type="vanished">Great Gospel</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Chaos</translation>
+        <translation type="vanished">Chaos</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catastrophe</translation>
+        <translation type="vanished">Catastrophe</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnislash</translation>
+        <translation type="vanished">Omnislash</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation>Knights of the Round</translation>
+        <translation type="vanished">Knights of the Round</translation>
     </message>
     <message>
         <source>Top Level</source>
-        <translation>Top Level</translation>
+        <translation type="vanished">Top Level</translation>
     </message>
     <message>
         <source>Master of Gil</source>
-        <translation>Master of Gil</translation>
+        <translation type="vanished">Master of Gil</translation>
     </message>
     <message>
         <source>Master Materia</source>
-        <translation>Master Materia</translation>
+        <translation type="vanished">Master Materia</translation>
     </message>
     <message>
         <source>End of Game</source>
-        <translation>End of Game</translation>
+        <translation type="vanished">End of Game</translation>
     </message>
     <message>
         <source>End of Part II</source>
-        <translation>End of Part II</translation>
+        <translation type="vanished">End of Part II</translation>
     </message>
     <message>
         <source>End of Part I</source>
-        <translation>End of Part I</translation>
+        <translation type="vanished">End of Part I</translation>
     </message>
 </context>
 <context>
     <name>FF7Char</name>
     <message>
         <source>Cloud</source>
-        <translation>Cloud</translation>
+        <translation type="vanished">Cloud</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation>Braver</translation>
+        <translation type="vanished">Braver</translation>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation>Cross-Slash</translation>
+        <translation type="vanished">Cross-Slash</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation>Blade Beam</translation>
+        <translation type="vanished">Blade Beam</translation>
     </message>
     <message>
         <source>Climhazzard</source>
-        <translation>Climhazzard</translation>
+        <translation type="vanished">Climhazzard</translation>
     </message>
     <message>
         <source>Meteorain</source>
-        <translation>Meteorain</translation>
+        <translation type="vanished">Meteorain</translation>
     </message>
     <message>
         <source>Finishing Touch</source>
-        <translation>Finishing Touch</translation>
+        <translation type="vanished">Finishing Touch</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnislash</translation>
+        <translation type="vanished">Omnislash</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>Barret</translation>
+        <translation type="vanished">Barret</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation>Big Shot</translation>
+        <translation type="vanished">Big Shot</translation>
     </message>
     <message>
         <source>Mindblow</source>
-        <translation>Mindblow</translation>
+        <translation type="vanished">Mindblow</translation>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation>Grenade Bomb</translation>
+        <translation type="vanished">Grenade Bomb</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation>Hammerblow</translation>
+        <translation type="vanished">Hammerblow</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation>Satellite Beam</translation>
+        <translation type="vanished">Satellite Beam</translation>
     </message>
     <message>
         <source>Angermax</source>
-        <translation>Angermax</translation>
+        <translation type="vanished">Angermax</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catastrophe</translation>
+        <translation type="vanished">Catastrophe</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>Tifa</translation>
+        <translation type="vanished">Tifa</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation>Beat Rush</translation>
+        <translation type="vanished">Beat Rush</translation>
     </message>
     <message>
         <source>Somersault</source>
-        <translation>Somersault</translation>
+        <translation type="vanished">Somersault</translation>
     </message>
     <message>
         <source>Waterkick</source>
-        <translation>Waterkick</translation>
+        <translation type="vanished">Waterkick</translation>
     </message>
     <message>
         <source>Meteodrive</source>
-        <translation>Meteodrive</translation>
+        <translation type="vanished">Meteodrive</translation>
     </message>
     <message>
         <source>Dolphin Blow</source>
-        <translation>Dolphin Blow</translation>
+        <translation type="vanished">Dolphin Blow</translation>
     </message>
     <message>
         <source>Meteor Strike</source>
-        <translation>Meteor Strike</translation>
+        <translation type="vanished">Meteor Strike</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Final Heaven</translation>
+        <translation type="vanished">Final Heaven</translation>
     </message>
     <message>
         <source>Aerith</source>
-        <translation>Aerith</translation>
+        <translation type="vanished">Aerith</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation>Healing Wind</translation>
+        <translation type="vanished">Healing Wind</translation>
     </message>
     <message>
         <source>Seal Evil</source>
-        <translation>Seal Evil</translation>
+        <translation type="vanished">Seal Evil</translation>
     </message>
     <message>
         <source>Breath of the Earth</source>
-        <translation>Breath of the Earth</translation>
+        <translation type="vanished">Breath of the Earth</translation>
     </message>
     <message>
         <source>Fury Brand</source>
-        <translation>Fury Brand</translation>
+        <translation type="vanished">Fury Brand</translation>
     </message>
     <message>
         <source>Planet Protector</source>
-        <translation>Planet Protector</translation>
+        <translation type="vanished">Planet Protector</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation>Pulse of Life</translation>
+        <translation type="vanished">Pulse of Life</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Great Gospel</translation>
+        <translation type="vanished">Great Gospel</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>Red XIII</translation>
+        <translation type="vanished">Red XIII</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation>Sled Fang</translation>
+        <translation type="vanished">Sled Fang</translation>
     </message>
     <message>
         <source>Lunatic High</source>
-        <translation>Lunatic High</translation>
+        <translation type="vanished">Lunatic High</translation>
     </message>
     <message>
         <source>Blood Fang</source>
-        <translation>Blood Fang</translation>
+        <translation type="vanished">Blood Fang</translation>
     </message>
     <message>
         <source>Stardust Ray</source>
-        <translation>Stardust Ray</translation>
+        <translation type="vanished">Stardust Ray</translation>
     </message>
     <message>
         <source>Howling Moon</source>
-        <translation>Howling Moon</translation>
+        <translation type="vanished">Howling Moon</translation>
     </message>
     <message>
         <source>Earth Rave</source>
-        <translation>Earth Rave</translation>
+        <translation type="vanished">Earth Rave</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>Cosmo Memory</translation>
+        <translation type="vanished">Cosmo Memory</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation type="vanished">Yuffie</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation>Greased Lightning</translation>
+        <translation type="vanished">Greased Lightning</translation>
     </message>
     <message>
         <source>Clear Tranquil</source>
-        <translation>Clear Tranquil</translation>
+        <translation type="vanished">Clear Tranquil</translation>
     </message>
     <message>
         <source>Landscaper</source>
-        <translation>Landscaper</translation>
+        <translation type="vanished">Landscaper</translation>
     </message>
     <message>
         <source>Bloodfest</source>
-        <translation>Bloodfest</translation>
+        <translation type="vanished">Bloodfest</translation>
     </message>
     <message>
         <source>Gauntlet</source>
-        <translation>Gauntlet</translation>
+        <translation type="vanished">Gauntlet</translation>
     </message>
     <message>
         <source>Doom of the Living</source>
-        <translation>Doom of the Living</translation>
+        <translation type="vanished">Doom of the Living</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>All Creation</translation>
+        <translation type="vanished">All Creation</translation>
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>Cait Sith</translation>
+        <translation type="vanished">Cait Sith</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation>Dice</translation>
+        <translation type="vanished">Dice</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation>Slots</translation>
+        <translation type="vanished">Slots</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="vanished">Vincent</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation>Galian Beast</translation>
+        <translation type="vanished">Galian Beast</translation>
     </message>
     <message>
         <source>Death Gigas</source>
-        <translation>Death Gigas</translation>
+        <translation type="vanished">Death Gigas</translation>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation>Hellmasker</translation>
+        <translation type="vanished">Hellmasker</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Chaos</translation>
+        <translation type="vanished">Chaos</translation>
     </message>
     <message>
         <source>Cid</source>
-        <translation>Cid</translation>
+        <translation type="vanished">Cid</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation>Boost Jump</translation>
+        <translation type="vanished">Boost Jump</translation>
     </message>
     <message>
         <source>Dynamite</source>
-        <translation>Dynamite</translation>
+        <translation type="vanished">Dynamite</translation>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation>Hyper Jump</translation>
+        <translation type="vanished">Hyper Jump</translation>
     </message>
     <message>
         <source>Dragon</source>
-        <translation>Dragon</translation>
+        <translation type="vanished">Dragon</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation>Dragon Dive</translation>
+        <translation type="vanished">Dragon Dive</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation>Big Brawl</translation>
+        <translation type="vanished">Big Brawl</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Highwind</translation>
+        <translation type="vanished">Highwind</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>Y.Cloud</translation>
+        <translation type="vanished">Y.Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation>Sephiroth</translation>
+        <translation type="vanished">Sephiroth</translation>
     </message>
 </context>
 <context>
     <name>FF7FieldItemList</name>
     <message>
         <source>Hi-Potion</source>
-        <translation>Hi-Potion</translation>
+        <translation type="vanished">Hi-Potion</translation>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation>Echo Screen</translation>
+        <translation type="vanished">Echo Screen</translation>
     </message>
     <message>
         <source>Potion</source>
-        <translation>Potion</translation>
+        <translation type="vanished">Potion</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation>Ether</translation>
+        <translation type="vanished">Ether</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation>Elixir</translation>
+        <translation type="vanished">Elixir</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>Safety Bit</translation>
+        <translation type="vanished">Safety Bit</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>Mind Source</translation>
+        <translation type="vanished">Mind Source</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>Sneak Glove</translation>
+        <translation type="vanished">Sneak Glove</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>Premium Heart</translation>
+        <translation type="vanished">Premium Heart</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation>Phoenix Down</translation>
+        <translation type="vanished">Phoenix Down</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Cover</translation>
+        <translation type="vanished">Cover</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation>Choco/Mog</translation>
+        <translation type="vanished">Choco/Mog</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>Sense</translation>
+        <translation type="vanished">Sense</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation>Ramuh</translation>
+        <translation type="vanished">Ramuh</translation>
     </message>
     <message>
         <source>KeyItem: Mythril</source>
-        <translation>KeyItem: Mythril</translation>
+        <translation type="vanished">KeyItem: Mythril</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Mime</translation>
+        <translation type="vanished">Mime</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>HP &lt;-&gt; MP</translation>
+        <translation type="vanished">HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>Quadra Magic</translation>
+        <translation type="vanished">Quadra Magic</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation>Knights of the Round</translation>
+        <translation type="vanished">Knights of the Round</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>X-Potion</translation>
+        <translation type="vanished">X-Potion</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>Turbo Ether</translation>
+        <translation type="vanished">Turbo Ether</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation>Vaccine</translation>
+        <translation type="vanished">Vaccine</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation>Magic Counter</translation>
+        <translation type="vanished">Magic Counter</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>Speed Source</translation>
+        <translation type="vanished">Speed Source</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>Mega All</translation>
+        <translation type="vanished">Mega All</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>Luck Source</translation>
+        <translation type="vanished">Luck Source</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation>Remedy</translation>
+        <translation type="vanished">Remedy</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>Bolt Ring</translation>
+        <translation type="vanished">Bolt Ring</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>Gold Armlet</translation>
+        <translation type="vanished">Gold Armlet</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Great Gospel</translation>
+        <translation type="vanished">Great Gospel</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>Umbrella</translation>
+        <translation type="vanished">Umbrella</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation>Flayer</translation>
+        <translation type="vanished">Flayer</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Chaos</translation>
+        <translation type="vanished">Chaos</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Enemy Skill</translation>
+        <translation type="vanished">Enemy Skill</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation>Hyper</translation>
+        <translation type="vanished">Hyper</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>Magic Source</translation>
+        <translation type="vanished">Magic Source</translation>
     </message>
     <message>
         <source>KeyItem: Midgar parts</source>
-        <translation>KeyItem: Midgar parts</translation>
+        <translation type="vanished">KeyItem: Midgar parts</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 66</source>
-        <translation>KeyItem: Keycard 66</translation>
+        <translation type="vanished">KeyItem: Keycard 66</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>All</translation>
+        <translation type="vanished">All</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>Wind Slash</translation>
+        <translation type="vanished">Wind Slash</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>Fairy Ring</translation>
+        <translation type="vanished">Fairy Ring</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Added Effect</translation>
+        <translation type="vanished">Added Effect</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>Black M-phone</translation>
+        <translation type="vanished">Black M-phone</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>HP Absorb</translation>
+        <translation type="vanished">HP Absorb</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>Magic Shuriken</translation>
+        <translation type="vanished">Magic Shuriken</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>Hairpin</translation>
+        <translation type="vanished">Hairpin</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 62</source>
-        <translation>KeyItem: Keycard 62</translation>
+        <translation type="vanished">KeyItem: Keycard 62</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>Swift Bolt</translation>
+        <translation type="vanished">Swift Bolt</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>Pile Banger</translation>
+        <translation type="vanished">Pile Banger</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>Master Fist</translation>
+        <translation type="vanished">Master Fist</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>Behemoth Horn</translation>
+        <translation type="vanished">Behemoth Horn</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation>Full Cure</translation>
+        <translation type="vanished">Full Cure</translation>
     </message>
     <message>
         <source>KeyItem: Member&apos;s Card</source>
-        <translation>KeyItem: Member&apos;s Card</translation>
+        <translation type="vanished">KeyItem: Member&apos;s Card</translation>
     </message>
     <message>
         <source>KeyItem: Key to Ancients</source>
-        <translation>KeyItem: Key to Ancients</translation>
+        <translation type="vanished">KeyItem: Key to Ancients</translation>
     </message>
     <message>
         <source>KeyItem: Keystone</source>
-        <translation>KeyItem: Keystone</translation>
+        <translation type="vanished">KeyItem: Keystone</translation>
     </message>
     <message>
         <source>KeyItem: Black Materia</source>
-        <translation>KeyItem: Black Materia</translation>
+        <translation type="vanished">KeyItem: Black Materia</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation>Ultima</translation>
+        <translation type="vanished">Ultima</translation>
     </message>
     <message>
         <source>KeyItem: Snowboard</source>
-        <translation>KeyItem: Snowboard</translation>
+        <translation type="vanished">KeyItem: Snowboard</translation>
     </message>
     <message>
         <source>KeyItem: Glacier Map</source>
-        <translation>KeyItem: Glacier Map</translation>
+        <translation type="vanished">KeyItem: Glacier Map</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation>Shiva</translation>
+        <translation type="vanished">Shiva</translation>
     </message>
     <message>
         <source>KeyItem: Cologne</source>
-        <translation>KeyItem: Cologne</translation>
+        <translation type="vanished">KeyItem: Cologne</translation>
     </message>
     <message>
         <source>KeyItem: Flower Cologne</source>
-        <translation>KeyItem: Flower Cologne</translation>
+        <translation type="vanished">KeyItem: Flower Cologne</translation>
     </message>
     <message>
         <source>KeyItem: Sexy Cologne</source>
-        <translation>KeyItem: Sexy Cologne</translation>
+        <translation type="vanished">KeyItem: Sexy Cologne</translation>
     </message>
     <message>
         <source>KeyItem: Pharmacy Coupon</source>
-        <translation>KeyItem: Pharmacy Coupon</translation>
+        <translation type="vanished">KeyItem: Pharmacy Coupon</translation>
     </message>
     <message>
         <source>KeyItem: Wig</source>
-        <translation>KeyItem: Wig</translation>
+        <translation type="vanished">KeyItem: Wig</translation>
     </message>
     <message>
         <source>KeyItem: Dyed Wig</source>
-        <translation>KeyItem: Dyed Wig</translation>
+        <translation type="vanished">KeyItem: Dyed Wig</translation>
     </message>
     <message>
         <source>KeyItem: Blonde Wig</source>
-        <translation>KeyItem: Blonde Wig</translation>
+        <translation type="vanished">KeyItem: Blonde Wig</translation>
     </message>
     <message>
         <source>KeyItem: Cotton Dress</source>
-        <translation>KeyItem: Cotton Dress</translation>
+        <translation type="vanished">KeyItem: Cotton Dress</translation>
     </message>
     <message>
         <source>KeyItem: Satin Dress</source>
-        <translation>KeyItem: Satin Dress</translation>
+        <translation type="vanished">KeyItem: Satin Dress</translation>
     </message>
     <message>
         <source>KeyItem: Silk Dress</source>
-        <translation>KeyItem: Silk Dress</translation>
+        <translation type="vanished">KeyItem: Silk Dress</translation>
     </message>
     <message>
         <source>KeyItem: Disinfectant</source>
-        <translation>KeyItem: Disinfectant</translation>
+        <translation type="vanished">KeyItem: Disinfectant</translation>
     </message>
     <message>
         <source>KeyItem: Deodorant</source>
-        <translation>KeyItem: Deodorant</translation>
+        <translation type="vanished">KeyItem: Deodorant</translation>
     </message>
     <message>
         <source>KeyItem: Digestive</source>
-        <translation>KeyItem: Digestive</translation>
+        <translation type="vanished">KeyItem: Digestive</translation>
     </message>
     <message>
         <source>KeyItem: Glass Tiara</source>
-        <translation>KeyItem: Glass Tiara</translation>
+        <translation type="vanished">KeyItem: Glass Tiara</translation>
     </message>
     <message>
         <source>KeyItem: Ruby Tiara</source>
-        <translation>KeyItem: Ruby Tiara</translation>
+        <translation type="vanished">KeyItem: Ruby Tiara</translation>
     </message>
     <message>
         <source>KeyItem: Diamond Tiara</source>
-        <translation>KeyItem: Diamond Tiara</translation>
+        <translation type="vanished">KeyItem: Diamond Tiara</translation>
     </message>
     <message>
         <source>Batteries</source>
-        <translation>Batteries</translation>
+        <translation type="vanished">Batteries</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>Phoenix</translation>
+        <translation type="vanished">Phoenix</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation>Magic Comb</translation>
+        <translation type="vanished">Magic Comb</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>Peace Ring</translation>
+        <translation type="vanished">Peace Ring</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>Megalixir</translation>
+        <translation type="vanished">Megalixir</translation>
     </message>
     <message>
         <source>Super Ball</source>
-        <translation>Super Ball</translation>
+        <translation type="vanished">Super Ball</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation>Alexander</translation>
+        <translation type="vanished">Alexander</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Added Cut</translation>
+        <translation type="vanished">Added Cut</translation>
     </message>
     <message>
         <source>Can Advance</source>
-        <translation>Can Advance</translation>
+        <translation type="vanished">Can Advance</translation>
     </message>
     <message>
         <source>KeyItem: KeyCard 68</source>
-        <translation>KeyItem: KeyCard 68</translation>
+        <translation type="vanished">KeyItem: KeyCard 68</translation>
     </message>
     <message>
         <source>KeyItem: Lunar Harp</source>
-        <translation>KeyItem: Lunar Harp</translation>
+        <translation type="vanished">KeyItem: Lunar Harp</translation>
     </message>
     <message>
         <source>KeyItem: Key To Basement</source>
-        <translation>KeyItem: Key To Basement</translation>
+        <translation type="vanished">KeyItem: Key To Basement</translation>
     </message>
     <message>
         <source>Mind Plus</source>
-        <translation>Mind Plus</translation>
+        <translation type="vanished">Mind Plus</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>Platinum Fist</translation>
+        <translation type="vanished">Platinum Fist</translation>
     </message>
     <message>
         <source>KeyItem: Gold Ticket</source>
-        <translation>KeyItem: Gold Ticket</translation>
+        <translation type="vanished">KeyItem: Gold Ticket</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>Gil Plus</translation>
+        <translation type="vanished">Gil Plus</translation>
     </message>
     <message>
         <source>Exp Plus</source>
-        <translation>Exp Plus</translation>
+        <translation type="vanished">Exp Plus</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation>Sprint Shoes</translation>
+        <translation type="vanished">Sprint Shoes</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnislash</translation>
+        <translation type="vanished">Omnislash</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>W-Summon</translation>
+        <translation type="vanished">W-Summon</translation>
     </message>
     <message>
         <source>Found hidden draw</source>
-        <translation>Found hidden draw</translation>
+        <translation type="vanished">Found hidden draw</translation>
     </message>
     <message>
         <source>Stole boys 5 gil</source>
-        <translation>Stole boys 5 gil</translation>
+        <translation type="vanished">Stole boys 5 gil</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 60</source>
-        <translation>KeyItem: Keycard 60</translation>
+        <translation type="vanished">KeyItem: Keycard 60</translation>
     </message>
     <message>
         <source>Initialized the Machine</source>
-        <translation>Initialized the Machine</translation>
+        <translation type="vanished">Initialized the Machine</translation>
     </message>
     <message>
         <source>KeyItem: A Coupon</source>
-        <translation>KeyItem: A Coupon</translation>
+        <translation type="vanished">KeyItem: A Coupon</translation>
     </message>
     <message>
         <source>KeyItem: B Coupon</source>
-        <translation>KeyItem: B Coupon</translation>
+        <translation type="vanished">KeyItem: B Coupon</translation>
     </message>
     <message>
         <source>KeyItem: C Coupon</source>
-        <translation>KeyItem: C Coupon</translation>
+        <translation type="vanished">KeyItem: C Coupon</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>Star Pendant</translation>
+        <translation type="vanished">Star Pendant</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>Four Slots</translation>
+        <translation type="vanished">Four Slots</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>Grow Lance</translation>
+        <translation type="vanished">Grow Lance</translation>
     </message>
     <message>
         <source>KeyItem: Keycard 65</source>
-        <translation>KeyItem: Keycard 65</translation>
+        <translation type="vanished">KeyItem: Keycard 65</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>Elemental</translation>
+        <translation type="vanished">Elemental</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>MP Absorb</translation>
+        <translation type="vanished">MP Absorb</translation>
     </message>
     <message>
         <source>Bahamut Zero</source>
-        <translation>Bahamut Zero</translation>
+        <translation type="vanished">Bahamut Zero</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #1</source>
-        <translation>Turtle Paradise Flyer #1</translation>
+        <translation type="vanished">Turtle Paradise Flyer #1</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #2</source>
-        <translation>Turtle Paradise Flyer #2</translation>
+        <translation type="vanished">Turtle Paradise Flyer #2</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #3</source>
-        <translation>Turtle Paradise Flyer #3</translation>
+        <translation type="vanished">Turtle Paradise Flyer #3</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #4</source>
-        <translation>Turtle Paradise Flyer #4</translation>
+        <translation type="vanished">Turtle Paradise Flyer #4</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #5</source>
-        <translation>Turtle Paradise Flyer #5</translation>
+        <translation type="vanished">Turtle Paradise Flyer #5</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #6</source>
-        <translation>Turtle Paradise Flyer #6</translation>
+        <translation type="vanished">Turtle Paradise Flyer #6</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyer #7</source>
-        <translation>Turtle Paradise Flyer #7</translation>
+        <translation type="vanished">Turtle Paradise Flyer #7</translation>
     </message>
     <message>
         <source>Rewarded for viewing all Turtle Paradise Flyers</source>
-        <translation>Rewarded for viewing all Turtle Paradise Flyers</translation>
+        <translation type="vanished">Rewarded for viewing all Turtle Paradise Flyers</translation>
     </message>
     <message>
         <source>KeyItem: Bikini briefs</source>
-        <translation>KeyItem: Bikini briefs</translation>
+        <translation type="vanished">KeyItem: Bikini briefs</translation>
     </message>
     <message>
         <source>KeyItem: Lingerie</source>
-        <translation>KeyItem: Lingerie</translation>
+        <translation type="vanished">KeyItem: Lingerie</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>Work Glove</translation>
+        <translation type="vanished">Work Glove</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation>Nail Bat</translation>
+        <translation type="vanished">Nail Bat</translation>
     </message>
     <message>
         <source>Rewards From Ester</source>
-        <translation>Rewards From Ester</translation>
+        <translation type="vanished">Rewards From Ester</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation>Ink</translation>
+        <translation type="vanished">Ink</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>T/S Bomb</translation>
+        <translation type="vanished">T/S Bomb</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>Dragon Fang</translation>
+        <translation type="vanished">Dragon Fang</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation>Dragon Scales</translation>
+        <translation type="vanished">Dragon Scales</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation>Cauldron</translation>
+        <translation type="vanished">Cauldron</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Chocobo Lure</translation>
+        <translation type="vanished">Chocobo Lure</translation>
     </message>
     <message>
         <source>Final Heaven (+other stuff?)</source>
-        <translation>Final Heaven (+other stuff?)</translation>
+        <translation type="vanished">Final Heaven (+other stuff?)</translation>
     </message>
     <message>
         <source>Elemental(+other stuff?)</source>
-        <translation>Elemental(+other stuff?)</translation>
+        <translation type="vanished">Elemental(+other stuff?)</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>Enhance Sword</translation>
+        <translation type="vanished">Enhance Sword</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>Fire Armlet</translation>
+        <translation type="vanished">Fire Armlet</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation>Javelin</translation>
+        <translation type="vanished">Javelin</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>Ribbon</translation>
+        <translation type="vanished">Ribbon</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catastrophe</translation>
+        <translation type="vanished">Catastrophe</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>Hero Drink</translation>
+        <translation type="vanished">Hero Drink</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>Neo Bahamut</translation>
+        <translation type="vanished">Neo Bahamut</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>Poison Ring</translation>
+        <translation type="vanished">Poison Ring</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation>MP Turbo</translation>
+        <translation type="vanished">MP Turbo</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Poison</translation>
+        <translation type="vanished">Poison</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>Bolt Armlet</translation>
+        <translation type="vanished">Bolt Armlet</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation>HypnoCrown</translation>
+        <translation type="vanished">HypnoCrown</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation>Kujata</translation>
+        <translation type="vanished">Kujata</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation>Destruct</translation>
+        <translation type="vanished">Destruct</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation>Odin</translation>
+        <translation type="vanished">Odin</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation>Counter</translation>
+        <translation type="vanished">Counter</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>Magic Plus</translation>
+        <translation type="vanished">Magic Plus</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>Steal</translation>
+        <translation type="vanished">Steal</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>Twin Viper</translation>
+        <translation type="vanished">Twin Viper</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>Silver M-phone</translation>
+        <translation type="vanished">Silver M-phone</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>Enemy Launcher</translation>
+        <translation type="vanished">Enemy Launcher</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation>Buntline</translation>
+        <translation type="vanished">Buntline</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation>Aurora Armlet</translation>
+        <translation type="vanished">Aurora Armlet</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>Viper Halberd</translation>
+        <translation type="vanished">Viper Halberd</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>Rune Blade</translation>
+        <translation type="vanished">Rune Blade</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>Plus Barrette</translation>
+        <translation type="vanished">Plus Barrette</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>Powersoul</translation>
+        <translation type="vanished">Powersoul</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>Sniper CR</translation>
+        <translation type="vanished">Sniper CR</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Power Source</translation>
+        <translation type="vanished">Power Source</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>Water Ring</translation>
+        <translation type="vanished">Water Ring</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>Typhon</translation>
+        <translation type="vanished">Typhon</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>Supershot ST</translation>
+        <translation type="vanished">Supershot ST</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>Slash-All</translation>
+        <translation type="vanished">Slash-All</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>Minerva Band</translation>
+        <translation type="vanished">Minerva Band</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation>Apocalypse</translation>
+        <translation type="vanished">Apocalypse</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>Spring Gun Clip</translation>
+        <translation type="vanished">Spring Gun Clip</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation>Mop</translation>
+        <translation type="vanished">Mop</translation>
     </message>
     <message>
         <source>KeyItem: Key To Sector 5</source>
-        <translation>KeyItem: Key To Sector 5</translation>
+        <translation type="vanished">KeyItem: Key To Sector 5</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation>Tent</translation>
+        <translation type="vanished">Tent</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Long Range</translation>
+        <translation type="vanished">Long Range</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation>Titan</translation>
+        <translation type="vanished">Titan</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation>Comet</translation>
+        <translation type="vanished">Comet</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>Deathblow</translation>
+        <translation type="vanished">Deathblow</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>Hades</translation>
+        <translation type="vanished">Hades</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>Outsider</translation>
+        <translation type="vanished">Outsider</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>Escort Guard</translation>
+        <translation type="vanished">Escort Guard</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation>Conformer</translation>
+        <translation type="vanished">Conformer</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>Spirit Lance</translation>
+        <translation type="vanished">Spirit Lance</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>Heaven&apos;s Cloud</translation>
+        <translation type="vanished">Heaven&apos;s Cloud</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>Guard Source</translation>
+        <translation type="vanished">Guard Source</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation>Mystile</translation>
+        <translation type="vanished">Mystile</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>Tetra Elemental</translation>
+        <translation type="vanished">Tetra Elemental</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>White M-phone</translation>
+        <translation type="vanished">White M-phone</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>Drill Arm</translation>
+        <translation type="vanished">Drill Arm</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation>Yoshiyuki</translation>
+        <translation type="vanished">Yoshiyuki</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>Venus Gospel</translation>
+        <translation type="vanished">Venus Gospel</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>Save Crystal</translation>
+        <translation type="vanished">Save Crystal</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation>Peacemaker</translation>
+        <translation type="vanished">Peacemaker</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>Fourth Bracelet</translation>
+        <translation type="vanished">Fourth Bracelet</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>Double Cut</translation>
+        <translation type="vanished">Double Cut</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Highwind</translation>
+        <translation type="vanished">Highwind</translation>
     </message>
     <message>
         <source>Show Underwater</source>
-        <translation>Show Underwater</translation>
+        <translation type="vanished">Show Underwater</translation>
     </message>
     <message>
         <source>Show Master Command</source>
-        <translation>Show Master Command</translation>
+        <translation type="vanished">Show Master Command</translation>
     </message>
     <message>
         <source>Show Master Magic</source>
-        <translation>Show Master Magic</translation>
+        <translation type="vanished">Show Master Magic</translation>
     </message>
     <message>
         <source>Show Master Summon</source>
-        <translation>Show Master Summon</translation>
+        <translation type="vanished">Show Master Summon</translation>
     </message>
     <message>
         <source>Show Gold Chocobo</source>
-        <translation>Show Gold Chocobo</translation>
+        <translation type="vanished">Show Gold Chocobo</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Morph</translation>
+        <translation type="vanished">Morph</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>Luck Plus</translation>
+        <translation type="vanished">Luck Plus</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>Princess Guard</translation>
+        <translation type="vanished">Princess Guard</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation>Trumpet Shell</translation>
+        <translation type="vanished">Trumpet Shell</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation>Bahamut</translation>
+        <translation type="vanished">Bahamut</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation>Trident</translation>
+        <translation type="vanished">Trident</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>Rocket Punch</translation>
+        <translation type="vanished">Rocket Punch</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>Silver Rifle</translation>
+        <translation type="vanished">Silver Rifle</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation>Motor Drive</translation>
+        <translation type="vanished">Motor Drive</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>Fire Ring</translation>
+        <translation type="vanished">Fire Ring</translation>
     </message>
     <message>
         <source>Purchased The House</source>
-        <translation>Purchased The House</translation>
+        <translation type="vanished">Purchased The House</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>W Machine Gun</translation>
+        <translation type="vanished">W Machine Gun</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation>Transform</translation>
+        <translation type="vanished">Transform</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>1/35 soldier</translation>
+        <translation type="vanished">1/35 soldier</translation>
     </message>
     <message>
         <source>KeyItem: Leviathan Scales</source>
-        <translation>KeyItem: Leviathan Scales</translation>
+        <translation type="vanished">KeyItem: Leviathan Scales</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>Steal-As-Well</translation>
+        <translation type="vanished">Steal-As-Well</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>Dragoon Lance</translation>
+        <translation type="vanished">Dragoon Lance</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>W-Item</translation>
+        <translation type="vanished">W-Item</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>Max Ray</translation>
+        <translation type="vanished">Max Ray</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>Aegis Armlet</translation>
+        <translation type="vanished">Aegis Armlet</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation>Scimitar</translation>
+        <translation type="vanished">Scimitar</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>Battle Trumpet</translation>
+        <translation type="vanished">Battle Trumpet</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>Leviathan</translation>
+        <translation type="vanished">Leviathan</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation>Oritsuru</translation>
+        <translation type="vanished">Oritsuru</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>Starlight Phone</translation>
+        <translation type="vanished">Starlight Phone</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>Missing Score</translation>
+        <translation type="vanished">Missing Score</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Shield</translation>
+        <translation type="vanished">Shield</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>W-Magic</translation>
+        <translation type="vanished">W-Magic</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>Imperial Guard</translation>
+        <translation type="vanished">Imperial Guard</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation>Contain</translation>
+        <translation type="vanished">Contain</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia: Fort Condor</source>
-        <translation>KeyItem: Huge Materia: Fort Condor</translation>
+        <translation type="vanished">KeyItem: Huge Materia: Fort Condor</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia: UnderWater</source>
-        <translation>KeyItem: Huge Materia: UnderWater</translation>
+        <translation type="vanished">KeyItem: Huge Materia: UnderWater</translation>
     </message>
     <message>
         <source>KeyItem: PHS</source>
-        <translation>KeyItem: PHS</translation>
+        <translation type="vanished">KeyItem: PHS</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia: Corel</source>
-        <translation>KeyItem: Huge Materia: Corel</translation>
+        <translation type="vanished">KeyItem: Huge Materia: Corel</translation>
     </message>
     <message>
         <source>KeyItem: Huge Materia: Rocket</source>
-        <translation>KeyItem: Huge Materia: Rocket</translation>
+        <translation type="vanished">KeyItem: Huge Materia: Rocket</translation>
     </message>
 </context>
 <context>
     <name>FF7Item</name>
     <message>
         <source>Restoration</source>
-        <translation>Restoration</translation>
+        <translation type="vanished">Restoration</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>Fire</translation>
+        <translation type="vanished">Fire</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation>Cold</translation>
+        <translation type="vanished">Cold</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Lightning</translation>
+        <translation type="vanished">Lightning</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>Earth</translation>
+        <translation type="vanished">Earth</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation>Wind</translation>
+        <translation type="vanished">Wind</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation>Water</translation>
+        <translation type="vanished">Water</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>Gravity</translation>
+        <translation type="vanished">Gravity</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation>Holy</translation>
+        <translation type="vanished">Holy</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Poison</translation>
+        <translation type="vanished">Poison</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation>Cut</translation>
+        <translation type="vanished">Cut</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation>Shoot</translation>
+        <translation type="vanished">Shoot</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation>Punch</translation>
+        <translation type="vanished">Punch</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation>Hit</translation>
+        <translation type="vanished">Hit</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation>Absorb:</translation>
+        <translation type="vanished">Absorb:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation>Nullify:</translation>
+        <translation type="vanished">Nullify:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation>Halve:</translation>
+        <translation type="vanished">Halve:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation>Attack:</translation>
+        <translation type="vanished">Attack:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation>Death</translation>
+        <translation type="vanished">Death</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation>Slow-Numb</translation>
+        <translation type="vanished">Slow-Numb</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation>D.Sentence</translation>
+        <translation type="vanished">D.Sentence</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation>Paralysis</translation>
+        <translation type="vanished">Paralysis</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation>Petrify</translation>
+        <translation type="vanished">Petrify</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation>Silence</translation>
+        <translation type="vanished">Silence</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation>Sleep</translation>
+        <translation type="vanished">Sleep</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation>Confusion</translation>
+        <translation type="vanished">Confusion</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation>Berserk</translation>
+        <translation type="vanished">Berserk</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation>Frog</translation>
+        <translation type="vanished">Frog</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation>Mini</translation>
+        <translation type="vanished">Mini</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation>Fury</translation>
+        <translation type="vanished">Fury</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation>Sadness</translation>
+        <translation type="vanished">Sadness</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation>Darkness</translation>
+        <translation type="vanished">Darkness</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation>Haste</translation>
+        <translation type="vanished">Haste</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Slow</translation>
+        <translation type="vanished">Slow</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="vanished">Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>Barrier</translation>
+        <translation type="vanished">Barrier</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation>M.Barrier</translation>
+        <translation type="vanished">M.Barrier</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation>Reflect</translation>
+        <translation type="vanished">Reflect</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Shield</translation>
+        <translation type="vanished">Shield</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation>Regen</translation>
+        <translation type="vanished">Regen</translation>
     </message>
     <message>
         <source>Resist</source>
-        <translation>Resist</translation>
+        <translation type="vanished">Resist</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation>Protect:</translation>
+        <translation type="vanished">Protect:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation>Remove:</translation>
+        <translation type="vanished">Remove:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation>Inflict:</translation>
+        <translation type="vanished">Inflict:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation>OnBattle:</translation>
+        <translation type="vanished">OnBattle:</translation>
     </message>
     <message>
         <source>Potion</source>
-        <translation>Potion</translation>
+        <translation type="vanished">Potion</translation>
     </message>
     <message>
         <source>Restores 100 HP</source>
-        <translation>Restores 100 HP</translation>
+        <translation type="vanished">Restores 100 HP</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation>Hi-Potion</translation>
+        <translation type="vanished">Hi-Potion</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation>Restores 500 HP</translation>
+        <translation type="vanished">Restores 500 HP</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>X-Potion</translation>
+        <translation type="vanished">X-Potion</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation>Restores all lost HP</translation>
+        <translation type="vanished">Restores all lost HP</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation>Ether</translation>
+        <translation type="vanished">Ether</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation>Restores 100 MP</translation>
+        <translation type="vanished">Restores 100 MP</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>Turbo Ether</translation>
+        <translation type="vanished">Turbo Ether</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation>Restores all lost MP</translation>
+        <translation type="vanished">Restores all lost MP</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation>Elixir</translation>
+        <translation type="vanished">Elixir</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation>Fully Restores HP/MP</translation>
+        <translation type="vanished">Fully Restores HP/MP</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>Megalixir</translation>
+        <translation type="vanished">Megalixir</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation>Fully Restores all Members HP/MP</translation>
+        <translation type="vanished">Fully Restores all Members HP/MP</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation>Phoenix Down</translation>
+        <translation type="vanished">Phoenix Down</translation>
     </message>
     <message>
         <source>Restores life</source>
-        <translation>Restores life</translation>
+        <translation type="vanished">Restores life</translation>
     </message>
     <message>
         <source>Antidote</source>
-        <translation>Antidote</translation>
+        <translation type="vanished">Antidote</translation>
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation>Cures [Poison]</translation>
+        <translation type="vanished">Cures [Poison]</translation>
     </message>
     <message>
         <source>Soft</source>
-        <translation>Soft</translation>
+        <translation type="vanished">Soft</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation>Cures [Petrify]</translation>
+        <translation type="vanished">Cures [Petrify]</translation>
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation>Maiden&apos;s Kiss</translation>
+        <translation type="vanished">Maiden&apos;s Kiss</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation>Cures [Frog]</translation>
+        <translation type="vanished">Cures [Frog]</translation>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation>Cornucopia</translation>
+        <translation type="vanished">Cornucopia</translation>
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation>Cures [Mini]</translation>
+        <translation type="vanished">Cures [Mini]</translation>
     </message>
     <message>
         <source>Echo Screen</source>
-        <translation>Echo Screen</translation>
+        <translation type="vanished">Echo Screen</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation>Cures [Silence]</translation>
+        <translation type="vanished">Cures [Silence]</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation>Hyper</translation>
+        <translation type="vanished">Hyper</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation>Cures [Sadness]</translation>
+        <translation type="vanished">Cures [Sadness]</translation>
     </message>
     <message>
         <source>Tranquilizer</source>
-        <translation>Tranquilizer</translation>
+        <translation type="vanished">Tranquilizer</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation>Cures [Fury]</translation>
+        <translation type="vanished">Cures [Fury]</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation>Remedy</translation>
+        <translation type="vanished">Remedy</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation>Cures abnormal status</translation>
+        <translation type="vanished">Cures abnormal status</translation>
     </message>
     <message>
         <source>Smoke Bomb</source>
-        <translation>Smoke Bomb</translation>
+        <translation type="vanished">Smoke Bomb</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation>Can escape from opponents during battle</translation>
+        <translation type="vanished">Can escape from opponents during battle</translation>
     </message>
     <message>
         <source>Speed Drink</source>
-        <translation>Speed Drink</translation>
+        <translation type="vanished">Speed Drink</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation>Casts [Haste] on one ally</translation>
+        <translation type="vanished">Casts [Haste] on one ally</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>Hero Drink</translation>
+        <translation type="vanished">Hero Drink</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation>Raises ability once during battle</translation>
+        <translation type="vanished">Raises ability once during battle</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation>Vaccine</translation>
+        <translation type="vanished">Vaccine</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation>Protects against transformations</translation>
+        <translation type="vanished">Protects against transformations</translation>
     </message>
     <message>
         <source>Grenade</source>
-        <translation>Grenade</translation>
+        <translation type="vanished">Grenade</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation>Explosive damage against one opponent</translation>
+        <translation type="vanished">Explosive damage against one opponent</translation>
     </message>
     <message>
         <source>Shrapnel</source>
-        <translation>Shrapnel</translation>
+        <translation type="vanished">Shrapnel</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation>Explosive damage against all opponents</translation>
+        <translation type="vanished">Explosive damage against all opponents</translation>
     </message>
     <message>
         <source>Right arm</source>
-        <translation>Right arm</translation>
+        <translation type="vanished">Right arm</translation>
     </message>
     <message>
         <source>Hourglass</source>
-        <translation>Hourglass</translation>
+        <translation type="vanished">Hourglass</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation>Stops all opponents</translation>
+        <translation type="vanished">Stops all opponents</translation>
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>Kiss of Death</translation>
+        <translation type="vanished">Kiss of Death</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation>Uses [Death] on all opponents</translation>
+        <translation type="vanished">Uses [Death] on all opponents</translation>
     </message>
     <message>
         <source>Spider Web</source>
-        <translation>Spider Web</translation>
+        <translation type="vanished">Spider Web</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation>Slows all opponents</translation>
+        <translation type="vanished">Slows all opponents</translation>
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation>Dream Powder</translation>
+        <translation type="vanished">Dream Powder</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation>Uses [Sleepel] on all opponents</translation>
+        <translation type="vanished">Uses [Sleepel] on all opponents</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation>Mute Mask</translation>
+        <translation type="vanished">Mute Mask</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation>Uses [Silence] on all opponents</translation>
+        <translation type="vanished">Uses [Silence] on all opponents</translation>
     </message>
     <message>
         <source>War Gong</source>
-        <translation>War Gong</translation>
+        <translation type="vanished">War Gong</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation>Uses [Berserk] on all opponents</translation>
+        <translation type="vanished">Uses [Berserk] on all opponents</translation>
     </message>
     <message>
         <source>Loco weed</source>
-        <translation>Loco weed</translation>
+        <translation type="vanished">Loco weed</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation>Uses [Confu] on all opponents</translation>
+        <translation type="vanished">Uses [Confu] on all opponents</translation>
     </message>
     <message>
         <source>Fire Fang</source>
-        <translation>Fire Fang</translation>
+        <translation type="vanished">Fire Fang</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation>Uses [Fire2] on all opponents</translation>
+        <translation type="vanished">Uses [Fire2] on all opponents</translation>
     </message>
     <message>
         <source>Fire Veil</source>
-        <translation>Fire Veil</translation>
+        <translation type="vanished">Fire Veil</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation>Uses [Fire3] on all opponents</translation>
+        <translation type="vanished">Uses [Fire3] on all opponents</translation>
     </message>
     <message>
         <source>Antarctic Wind</source>
-        <translation>Antarctic Wind</translation>
+        <translation type="vanished">Antarctic Wind</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
-        <translation>Uses [Ice2] on all opponents</translation>
+        <translation type="vanished">Uses [Ice2] on all opponents</translation>
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation>Ice Crystal</translation>
+        <translation type="vanished">Ice Crystal</translation>
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation>Uses [Ice3] on all opponents</translation>
+        <translation type="vanished">Uses [Ice3] on all opponents</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
-        <translation>Bolt Plume</translation>
+        <translation type="vanished">Bolt Plume</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation>Uses [Bolt2] on all opponents</translation>
+        <translation type="vanished">Uses [Bolt2] on all opponents</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>Swift Bolt</translation>
+        <translation type="vanished">Swift Bolt</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation>Uses [Bolt3] on all opponents</translation>
+        <translation type="vanished">Uses [Bolt3] on all opponents</translation>
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation>Earth Drum</translation>
+        <translation type="vanished">Earth Drum</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation>Uses [Quake2] on all opponents</translation>
+        <translation type="vanished">Uses [Quake2] on all opponents</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
-        <translation>Earth Mallet</translation>
+        <translation type="vanished">Earth Mallet</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation>Uses [Quake3] on all opponents</translation>
+        <translation type="vanished">Uses [Quake3] on all opponents</translation>
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation>Deadly Waste</translation>
+        <translation type="vanished">Deadly Waste</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation>Uses [Bio2] on all opponents</translation>
+        <translation type="vanished">Uses [Bio2] on all opponents</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation>M-Tentacles</translation>
+        <translation type="vanished">M-Tentacles</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation>Uses [Bio3] on all opponents</translation>
+        <translation type="vanished">Uses [Bio3] on all opponents</translation>
     </message>
     <message>
         <source>Stardust</source>
-        <translation>Stardust</translation>
+        <translation type="vanished">Stardust</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation>Uses [Comet2] on all opponents</translation>
+        <translation type="vanished">Uses [Comet2] on all opponents</translation>
     </message>
     <message>
         <source>Vampire Fang</source>
-        <translation>Vampire Fang</translation>
+        <translation type="vanished">Vampire Fang</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation>Drains HP out of one opponent</translation>
+        <translation type="vanished">Drains HP out of one opponent</translation>
     </message>
     <message>
         <source>Ghost Hand</source>
-        <translation>Ghost Hand</translation>
+        <translation type="vanished">Ghost Hand</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation>Drains MP out of one opponent</translation>
+        <translation type="vanished">Drains MP out of one opponent</translation>
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation>Vagyrisk Claw</translation>
+        <translation type="vanished">Vagyrisk Claw</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation>Petrifies one opponent</translation>
+        <translation type="vanished">Petrifies one opponent</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation>Light Curtain</translation>
+        <translation type="vanished">Light Curtain</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation>Creates [Barrier] around all allies</translation>
+        <translation type="vanished">Creates [Barrier] around all allies</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation>Lunar Curtain</translation>
+        <translation type="vanished">Lunar Curtain</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation>Creates [MBarrier] around all allies</translation>
+        <translation type="vanished">Creates [MBarrier] around all allies</translation>
     </message>
     <message>
         <source>Mirror</source>
-        <translation>Mirror</translation>
+        <translation type="vanished">Mirror</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation>Uses [Reflect] on all allies</translation>
+        <translation type="vanished">Uses [Reflect] on all allies</translation>
     </message>
     <message>
         <source>Holy Torch</source>
-        <translation>Holy Torch</translation>
+        <translation type="vanished">Holy Torch</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation>Uses [DeSpell] on all allies</translation>
+        <translation type="vanished">Uses [DeSpell] on all allies</translation>
     </message>
     <message>
         <source>Bird Wing</source>
-        <translation>Bird Wing</translation>
+        <translation type="vanished">Bird Wing</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation>Uses whirlwind on all opponents</translation>
+        <translation type="vanished">Uses whirlwind on all opponents</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation>Dragon Scales</translation>
+        <translation type="vanished">Dragon Scales</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation>Water damage on all opponents</translation>
+        <translation type="vanished">Water damage on all opponents</translation>
     </message>
     <message>
         <source>Impaler</source>
-        <translation>Impaler</translation>
+        <translation type="vanished">Impaler</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation>Changes one opponent to a frog</translation>
+        <translation type="vanished">Changes one opponent to a frog</translation>
     </message>
     <message>
         <source>Shrivel</source>
-        <translation>Shrivel</translation>
+        <translation type="vanished">Shrivel</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation>Uses [Mini] on one opponent</translation>
+        <translation type="vanished">Uses [Mini] on one opponent</translation>
     </message>
     <message>
         <source>Eye drop</source>
-        <translation>Eye drop</translation>
+        <translation type="vanished">Eye drop</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation>Cures [Darkness]</translation>
+        <translation type="vanished">Cures [Darkness]</translation>
     </message>
     <message>
         <source>Molotov</source>
-        <translation>Molotov</translation>
+        <translation type="vanished">Molotov</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation>Fire damage on one opponent</translation>
+        <translation type="vanished">Fire damage on one opponent</translation>
     </message>
     <message>
         <source>S-mine</source>
-        <translation>S-mine</translation>
+        <translation type="vanished">S-mine</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation>Explosive damage on one opponent</translation>
+        <translation type="vanished">Explosive damage on one opponent</translation>
     </message>
     <message>
         <source>8-inch Cannon</source>
-        <translation>8-inch Cannon</translation>
+        <translation type="vanished">8-inch Cannon</translation>
     </message>
     <message>
         <source>Graviball</source>
-        <translation>Graviball</translation>
+        <translation type="vanished">Graviball</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation>Uses [Demi] against one opponent</translation>
+        <translation type="vanished">Uses [Demi] against one opponent</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>T/S Bomb</translation>
+        <translation type="vanished">T/S Bomb</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation>Uses [Demi2] against one opponent</translation>
+        <translation type="vanished">Uses [Demi2] against one opponent</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation>Ink</translation>
+        <translation type="vanished">Ink</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation>Uses [Darkness] against one opponent</translation>
+        <translation type="vanished">Uses [Darkness] against one opponent</translation>
     </message>
     <message>
         <source>Dazers</source>
-        <translation>Dazers</translation>
+        <translation type="vanished">Dazers</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation>Paralyzes one opponent</translation>
+        <translation type="vanished">Paralyzes one opponent</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>Dragon Fang</translation>
+        <translation type="vanished">Dragon Fang</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation>Lightning damage against all opponents</translation>
+        <translation type="vanished">Lightning damage against all opponents</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation>Cauldron</translation>
+        <translation type="vanished">Cauldron</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</translation>
+        <translation type="vanished">Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</translation>
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation>Sylkis Greens</translation>
+        <translation type="vanished">Sylkis Greens</translation>
     </message>
     <message>
         <source>When you want a chocobo...</source>
-        <translation>When you want a chocobo...</translation>
+        <translation type="vanished">When you want a chocobo...</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation>Reagan Greens</translation>
+        <translation type="vanished">Reagan Greens</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation>Mimett Greens</translation>
+        <translation type="vanished">Mimett Greens</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation>Curiel Greens</translation>
+        <translation type="vanished">Curiel Greens</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation>Pahsana Greens</translation>
+        <translation type="vanished">Pahsana Greens</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation>Tantal Greens</translation>
+        <translation type="vanished">Tantal Greens</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>Krakka Greens</translation>
+        <translation type="vanished">Krakka Greens</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation>Gysahl Greens</translation>
+        <translation type="vanished">Gysahl Greens</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation>Tent</translation>
+        <translation type="vanished">Tent</translation>
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation>Restores ally&apos;s max HP/MP. Use at Save Point.</translation>
+        <translation type="vanished">Restores ally&apos;s max HP/MP. Use at Save Point.</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Power Source</translation>
+        <translation type="vanished">Power Source</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation>Raises [Strength]</translation>
+        <translation type="vanished">Raises [Strength]</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>Guard Source</translation>
+        <translation type="vanished">Guard Source</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation>Raises [Vitality]</translation>
+        <translation type="vanished">Raises [Vitality]</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>Magic Source</translation>
+        <translation type="vanished">Magic Source</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation>Raises [Magic Power]</translation>
+        <translation type="vanished">Raises [Magic Power]</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>Mind Source</translation>
+        <translation type="vanished">Mind Source</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation>Raises [Spirit]</translation>
+        <translation type="vanished">Raises [Spirit]</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>Speed Source</translation>
+        <translation type="vanished">Speed Source</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation>Raises [Dexterity]</translation>
+        <translation type="vanished">Raises [Dexterity]</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>Luck Source</translation>
+        <translation type="vanished">Luck Source</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation>Raises [Luck]</translation>
+        <translation type="vanished">Raises [Luck]</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
-        <translation>Zeio Nut</translation>
+        <translation type="vanished">Zeio Nut</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation>When you want to breed Chocobos...</translation>
+        <translation type="vanished">When you want to breed Chocobos...</translation>
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation>Carob Nut</translation>
+        <translation type="vanished">Carob Nut</translation>
     </message>
     <message>
         <source>Porov Nut</source>
-        <translation>Porov Nut</translation>
+        <translation type="vanished">Porov Nut</translation>
     </message>
     <message>
         <source>Pram Nut</source>
-        <translation>Pram Nut</translation>
+        <translation type="vanished">Pram Nut</translation>
     </message>
     <message>
         <source>Lasan Nut</source>
-        <translation>Lasan Nut</translation>
+        <translation type="vanished">Lasan Nut</translation>
     </message>
     <message>
         <source>Saraha Nut</source>
-        <translation>Saraha Nut</translation>
+        <translation type="vanished">Saraha Nut</translation>
     </message>
     <message>
         <source>Luchile Nut</source>
-        <translation>Luchile Nut</translation>
+        <translation type="vanished">Luchile Nut</translation>
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation>Pepio Nut</translation>
+        <translation type="vanished">Pepio Nut</translation>
     </message>
     <message>
         <source>Battery</source>
-        <translation>Battery</translation>
+        <translation type="vanished">Battery</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation>Looks like it can start some sort of machine</translation>
+        <translation type="vanished">Looks like it can start some sort of machine</translation>
     </message>
     <message>
         <source>Tissue</source>
-        <translation>Tissue</translation>
+        <translation type="vanished">Tissue</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation>This one&apos;s a little tough...</translation>
+        <translation type="vanished">This one&apos;s a little tough...</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnislash</translation>
+        <translation type="vanished">Omnislash</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation>Learn Limit Skill [Omnislash]</translation>
+        <translation type="vanished">Learn Limit Skill [Omnislash]</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catastrophe</translation>
+        <translation type="vanished">Catastrophe</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation>Learn Limit Skill [Catastrophe]</translation>
+        <translation type="vanished">Learn Limit Skill [Catastrophe]</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Final Heaven</translation>
+        <translation type="vanished">Final Heaven</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation>Learn Limit Skill [Final Heaven]</translation>
+        <translation type="vanished">Learn Limit Skill [Final Heaven]</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Great Gospel</translation>
+        <translation type="vanished">Great Gospel</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation>Learn Limit Skill [Great Gospel]</translation>
+        <translation type="vanished">Learn Limit Skill [Great Gospel]</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>Cosmo Memory</translation>
+        <translation type="vanished">Cosmo Memory</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation>Learn Limit Skill [Cosmo Memory]</translation>
+        <translation type="vanished">Learn Limit Skill [Cosmo Memory]</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>All Creation</translation>
+        <translation type="vanished">All Creation</translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation>Learn Limit Skill [All Creation]</translation>
+        <translation type="vanished">Learn Limit Skill [All Creation]</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Chaos</translation>
+        <translation type="vanished">Chaos</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation>Learn Limit Skill [Chaos]</translation>
+        <translation type="vanished">Learn Limit Skill [Chaos]</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Highwind</translation>
+        <translation type="vanished">Highwind</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation>Learn Limit Skill [Highwind]</translation>
+        <translation type="vanished">Learn Limit Skill [Highwind]</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>1/35 soldier</translation>
+        <translation type="vanished">1/35 soldier</translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</translation>
+        <translation type="vanished">Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</translation>
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation>Super Sweeper</translation>
+        <translation type="vanished">Super Sweeper</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation>A new machine to protect the reactor!</translation>
+        <translation type="vanished">A new machine to protect the reactor!</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation>Masamune Blade</translation>
+        <translation type="vanished">Masamune Blade</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation>A prefect copy of Sephiroth&apos;s sword!</translation>
+        <translation type="vanished">A prefect copy of Sephiroth&apos;s sword!</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>Save Crystal</translation>
+        <translation type="vanished">Save Crystal</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation>Use This to create a SAVE Point in the &apos;North Cave&apos;</translation>
+        <translation type="vanished">Use This to create a SAVE Point in the &apos;North Cave&apos;</translation>
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation>Combat Diary</translation>
+        <translation type="vanished">Combat Diary</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation>A record of Master Dio&apos;s fiercest battles</translation>
+        <translation type="vanished">A record of Master Dio&apos;s fiercest battles</translation>
     </message>
     <message>
         <source>Autograph</source>
-        <translation>Autograph</translation>
+        <translation type="vanished">Autograph</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
-        <translation>Dio&apos;s autograph</translation>
+        <translation type="vanished">Dio&apos;s autograph</translation>
     </message>
     <message>
         <source>Gambler</source>
-        <translation>Gambler</translation>
+        <translation type="vanished">Gambler</translation>
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation>Second part of Dio&apos;s diary: The Gold Saucer years</translation>
+        <translation type="vanished">Second part of Dio&apos;s diary: The Gold Saucer years</translation>
     </message>
     <message>
         <source>Desert Rose</source>
-        <translation>Desert Rose</translation>
+        <translation type="vanished">Desert Rose</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation>Blooms once every 1000 years</translation>
+        <translation type="vanished">Blooms once every 1000 years</translation>
     </message>
     <message>
         <source>Earth Harp</source>
-        <translation>Earth Harp</translation>
+        <translation type="vanished">Earth Harp</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation>Calms the hearts of all who hear it</translation>
+        <translation type="vanished">Calms the hearts of all who hear it</translation>
     </message>
     <message>
         <source>Guide Book</source>
-        <translation>Guide Book</translation>
+        <translation type="vanished">Guide Book</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation>Map of another world. It Slumbers with sunken ships</translation>
+        <translation type="vanished">Map of another world. It Slumbers with sunken ships</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>DON&apos;T USE</translation>
+        <translation type="vanished">DON&apos;T USE</translation>
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation>Buster Sword</translation>
+        <translation type="vanished">Buster Sword</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation>Initial equiping</translation>
+        <translation type="vanished">Initial equiping</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
-        <translation>Mythril Saber</translation>
+        <translation type="vanished">Mythril Saber</translation>
     </message>
     <message>
         <source>Hardedge</source>
-        <translation>Hardedge</translation>
+        <translation type="vanished">Hardedge</translation>
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation>Butterfly Edge</translation>
+        <translation type="vanished">Butterfly Edge</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>Enhance Sword</translation>
+        <translation type="vanished">Enhance Sword</translation>
     </message>
     <message>
         <source>Organics</source>
-        <translation>Organics</translation>
+        <translation type="vanished">Organics</translation>
     </message>
     <message>
         <source>Crystal Sword</source>
-        <translation>Crystal Sword</translation>
+        <translation type="vanished">Crystal Sword</translation>
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation>Force Stealer</translation>
+        <translation type="vanished">Force Stealer</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>Rune Blade</translation>
+        <translation type="vanished">Rune Blade</translation>
     </message>
     <message>
         <source>Murasame</source>
-        <translation>Murasame</translation>
+        <translation type="vanished">Murasame</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation>Nail Bat</translation>
+        <translation type="vanished">Nail Bat</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation>Yoshiyuki</translation>
+        <translation type="vanished">Yoshiyuki</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation>Sword is used when an ally is down</translation>
+        <translation type="vanished">Sword is used when an ally is down</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation>Apocalypse</translation>
+        <translation type="vanished">Apocalypse</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>Heaven&apos;s Cloud</translation>
+        <translation type="vanished">Heaven&apos;s Cloud</translation>
     </message>
     <message>
         <source>Ragnarok</source>
-        <translation>Ragnarok</translation>
+        <translation type="vanished">Ragnarok</translation>
     </message>
     <message>
         <source>Ultima Weapon</source>
-        <translation>Ultima Weapon</translation>
+        <translation type="vanished">Ultima Weapon</translation>
     </message>
     <message>
         <source>Leather Glove</source>
-        <translation>Leather Glove</translation>
+        <translation type="vanished">Leather Glove</translation>
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation>Metal Knuckle</translation>
+        <translation type="vanished">Metal Knuckle</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation>Mythril Claw</translation>
+        <translation type="vanished">Mythril Claw</translation>
     </message>
     <message>
         <source>Grand Glove</source>
-        <translation>Grand Glove</translation>
+        <translation type="vanished">Grand Glove</translation>
     </message>
     <message>
         <source>Tiger Fang</source>
-        <translation>Tiger Fang</translation>
+        <translation type="vanished">Tiger Fang</translation>
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation>Diamond Knuckle</translation>
+        <translation type="vanished">Diamond Knuckle</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation>Dragon Claw</translation>
+        <translation type="vanished">Dragon Claw</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
-        <translation>Crystal Glove</translation>
+        <translation type="vanished">Crystal Glove</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation>Motor Drive</translation>
+        <translation type="vanished">Motor Drive</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>Platinum Fist</translation>
+        <translation type="vanished">Platinum Fist</translation>
     </message>
     <message>
         <source>Kaiser Knuckle</source>
-        <translation>Kaiser Knuckle</translation>
+        <translation type="vanished">Kaiser Knuckle</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>Work Glove</translation>
+        <translation type="vanished">Work Glove</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>Powersoul</translation>
+        <translation type="vanished">Powersoul</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation>Power up when [Near death]</translation>
+        <translation type="vanished">Power up when [Near death]</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>Master Fist</translation>
+        <translation type="vanished">Master Fist</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation>Power up when condition changes</translation>
+        <translation type="vanished">Power up when condition changes</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation>God&apos;s Hand</translation>
+        <translation type="vanished">God&apos;s Hand</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>Premium Heart</translation>
+        <translation type="vanished">Premium Heart</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
-        <translation>Gatling Gun</translation>
+        <translation type="vanished">Gatling Gun</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation>Initial equip. Long Range Weapon</translation>
+        <translation type="vanished">Initial equip. Long Range Weapon</translation>
     </message>
     <message>
         <source>Assault Gun</source>
-        <translation>Assault Gun</translation>
+        <translation type="vanished">Assault Gun</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation>Long Range Weapon</translation>
+        <translation type="vanished">Long Range Weapon</translation>
     </message>
     <message>
         <source>Cannon Ball</source>
-        <translation>Cannon Ball</translation>
+        <translation type="vanished">Cannon Ball</translation>
     </message>
     <message>
         <source>Atomic Scissors</source>
-        <translation>Atomic Scissors</translation>
+        <translation type="vanished">Atomic Scissors</translation>
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation>Heavy Vulcan</translation>
+        <translation type="vanished">Heavy Vulcan</translation>
     </message>
     <message>
         <source>Chainsaw</source>
-        <translation>Chainsaw</translation>
+        <translation type="vanished">Chainsaw</translation>
     </message>
     <message>
         <source>Microlaser</source>
-        <translation>Microlaser</translation>
+        <translation type="vanished">Microlaser</translation>
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation>A M Cannon</translation>
+        <translation type="vanished">A M Cannon</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>W Machine Gun</translation>
+        <translation type="vanished">W Machine Gun</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>Drill Arm</translation>
+        <translation type="vanished">Drill Arm</translation>
     </message>
     <message>
         <source>Solid Bazooka</source>
-        <translation>Solid Bazooka</translation>
+        <translation type="vanished">Solid Bazooka</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>Rocket Punch</translation>
+        <translation type="vanished">Rocket Punch</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>Enemy Launcher</translation>
+        <translation type="vanished">Enemy Launcher</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>Pile Banger</translation>
+        <translation type="vanished">Pile Banger</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>Max Ray</translation>
+        <translation type="vanished">Max Ray</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>Missing Score</translation>
+        <translation type="vanished">Missing Score</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
-        <translation>Mythril Clip</translation>
+        <translation type="vanished">Mythril Clip</translation>
     </message>
     <message>
         <source>Diamond Pin</source>
-        <translation>Diamond Pin</translation>
+        <translation type="vanished">Diamond Pin</translation>
     </message>
     <message>
         <source>Silver Barrette</source>
-        <translation>Silver Barrette</translation>
+        <translation type="vanished">Silver Barrette</translation>
     </message>
     <message>
         <source>Gold Barrette</source>
-        <translation>Gold Barrette</translation>
+        <translation type="vanished">Gold Barrette</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
-        <translation>Adaman Clip</translation>
+        <translation type="vanished">Adaman Clip</translation>
     </message>
     <message>
         <source>Crystal Comb</source>
-        <translation>Crystal Comb</translation>
+        <translation type="vanished">Crystal Comb</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation>Magic Comb</translation>
+        <translation type="vanished">Magic Comb</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>Plus Barrette</translation>
+        <translation type="vanished">Plus Barrette</translation>
     </message>
     <message>
         <source>Centclip</source>
-        <translation>Centclip</translation>
+        <translation type="vanished">Centclip</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>Hairpin</translation>
+        <translation type="vanished">Hairpin</translation>
     </message>
     <message>
         <source>Seraph Comb</source>
-        <translation>Seraph Comb</translation>
+        <translation type="vanished">Seraph Comb</translation>
     </message>
     <message>
         <source>Memento of father</source>
-        <translation>Memento of father</translation>
+        <translation type="vanished">Memento of father</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>Behemoth Horn</translation>
+        <translation type="vanished">Behemoth Horn</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>Spring Gun Clip</translation>
+        <translation type="vanished">Spring Gun Clip</translation>
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation>Limited Moon</translation>
+        <translation type="vanished">Limited Moon</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation>Guard Stick</translation>
+        <translation type="vanished">Guard Stick</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
-        <translation>Mythril Rod</translation>
+        <translation type="vanished">Mythril Rod</translation>
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>Full Metal Staff</translation>
+        <translation type="vanished">Full Metal Staff</translation>
     </message>
     <message>
         <source>Striking Staff</source>
-        <translation>Striking Staff</translation>
+        <translation type="vanished">Striking Staff</translation>
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation>Prism Staff</translation>
+        <translation type="vanished">Prism Staff</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation>Aurora Rod</translation>
+        <translation type="vanished">Aurora Rod</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
-        <translation>Wizard Staff</translation>
+        <translation type="vanished">Wizard Staff</translation>
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation>Wizer Staff</translation>
+        <translation type="vanished">Wizer Staff</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation>Fairy Tale</translation>
+        <translation type="vanished">Fairy Tale</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>Umbrella</translation>
+        <translation type="vanished">Umbrella</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>Princess Guard</translation>
+        <translation type="vanished">Princess Guard</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation>Raises Power when you need to protect others nearby</translation>
+        <translation type="vanished">Raises Power when you need to protect others nearby</translation>
     </message>
     <message>
         <source>Spear</source>
-        <translation>Spear</translation>
+        <translation type="vanished">Spear</translation>
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation>Slash Lance</translation>
+        <translation type="vanished">Slash Lance</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation>Trident</translation>
+        <translation type="vanished">Trident</translation>
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation>Mast Ax</translation>
+        <translation type="vanished">Mast Ax</translation>
     </message>
     <message>
         <source>Partisan</source>
-        <translation>Partisan</translation>
+        <translation type="vanished">Partisan</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>Viper Halberd</translation>
+        <translation type="vanished">Viper Halberd</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation>Javelin</translation>
+        <translation type="vanished">Javelin</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>Grow Lance</translation>
+        <translation type="vanished">Grow Lance</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation>Mop</translation>
+        <translation type="vanished">Mop</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>Dragoon Lance</translation>
+        <translation type="vanished">Dragoon Lance</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation>Scimitar</translation>
+        <translation type="vanished">Scimitar</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation>Flayer</translation>
+        <translation type="vanished">Flayer</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>Spirit Lance</translation>
+        <translation type="vanished">Spirit Lance</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>Venus Gospel</translation>
+        <translation type="vanished">Venus Gospel</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
-        <translation>4-point Shuriken</translation>
+        <translation type="vanished">4-point Shuriken</translation>
     </message>
     <message>
         <source>Boomerang</source>
-        <translation>Boomerang</translation>
+        <translation type="vanished">Boomerang</translation>
     </message>
     <message>
         <source>Pinwheel</source>
-        <translation>Pinwheel</translation>
+        <translation type="vanished">Pinwheel</translation>
     </message>
     <message>
         <source>Razor Ring</source>
-        <translation>Razor Ring</translation>
+        <translation type="vanished">Razor Ring</translation>
     </message>
     <message>
         <source>Hawkeye</source>
-        <translation>Hawkeye</translation>
+        <translation type="vanished">Hawkeye</translation>
     </message>
     <message>
         <source>Crystal Cross</source>
-        <translation>Crystal Cross</translation>
+        <translation type="vanished">Crystal Cross</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>Wind Slash</translation>
+        <translation type="vanished">Wind Slash</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>Twin Viper</translation>
+        <translation type="vanished">Twin Viper</translation>
     </message>
     <message>
         <source>Spiral Shuriken</source>
-        <translation>Spiral Shuriken</translation>
+        <translation type="vanished">Spiral Shuriken</translation>
     </message>
     <message>
         <source>Superball</source>
-        <translation>Superball</translation>
+        <translation type="vanished">Superball</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>Magic Shuriken</translation>
+        <translation type="vanished">Magic Shuriken</translation>
     </message>
     <message>
         <source>Rising Sun</source>
-        <translation>Rising Sun</translation>
+        <translation type="vanished">Rising Sun</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation>Oritsuru</translation>
+        <translation type="vanished">Oritsuru</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation>Conformer</translation>
+        <translation type="vanished">Conformer</translation>
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation>Yellow M-phone</translation>
+        <translation type="vanished">Yellow M-phone</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation>Green M-phone</translation>
+        <translation type="vanished">Green M-phone</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation>Blue M-phone</translation>
+        <translation type="vanished">Blue M-phone</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation>Red M-phone</translation>
+        <translation type="vanished">Red M-phone</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation>Crystal M-phone</translation>
+        <translation type="vanished">Crystal M-phone</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>White M-phone</translation>
+        <translation type="vanished">White M-phone</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>Black M-phone</translation>
+        <translation type="vanished">Black M-phone</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>Silver M-phone</translation>
+        <translation type="vanished">Silver M-phone</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation>Trumpet Shell</translation>
+        <translation type="vanished">Trumpet Shell</translation>
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation>Gold M-phone</translation>
+        <translation type="vanished">Gold M-phone</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>Battle Trumpet</translation>
+        <translation type="vanished">Battle Trumpet</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>Starlight Phone</translation>
+        <translation type="vanished">Starlight Phone</translation>
     </message>
     <message>
         <source>HP Shout</source>
-        <translation>HP Shout</translation>
+        <translation type="vanished">HP Shout</translation>
     </message>
     <message>
         <source>Quicksilver</source>
-        <translation>Quicksilver</translation>
+        <translation type="vanished">Quicksilver</translation>
     </message>
     <message>
         <source>Shotgun</source>
-        <translation>Shotgun</translation>
+        <translation type="vanished">Shotgun</translation>
     </message>
     <message>
         <source>Shortbarrel</source>
-        <translation>Shortbarrel</translation>
+        <translation type="vanished">Shortbarrel</translation>
     </message>
     <message>
         <source>Lariat</source>
-        <translation>Lariat</translation>
+        <translation type="vanished">Lariat</translation>
     </message>
     <message>
         <source>Winchester</source>
-        <translation>Winchester</translation>
+        <translation type="vanished">Winchester</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation>Peacemaker</translation>
+        <translation type="vanished">Peacemaker</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation>Buntline</translation>
+        <translation type="vanished">Buntline</translation>
     </message>
     <message>
         <source>Long Barrel R</source>
-        <translation>Long Barrel R</translation>
+        <translation type="vanished">Long Barrel R</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>Silver Rifle</translation>
+        <translation type="vanished">Silver Rifle</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>Sniper CR</translation>
+        <translation type="vanished">Sniper CR</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>Supershot ST</translation>
+        <translation type="vanished">Supershot ST</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>Outsider</translation>
+        <translation type="vanished">Outsider</translation>
     </message>
     <message>
         <source>Death Penalty</source>
-        <translation>Death Penalty</translation>
+        <translation type="vanished">Death Penalty</translation>
     </message>
     <message>
         <source>Masamune</source>
-        <translation>Masamune</translation>
+        <translation type="vanished">Masamune</translation>
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation>Bronze Bangle</translation>
+        <translation type="vanished">Bronze Bangle</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
-        <translation>Iron Bangle</translation>
+        <translation type="vanished">Iron Bangle</translation>
     </message>
     <message>
         <source>Titan Bangle</source>
-        <translation>Titan Bangle</translation>
+        <translation type="vanished">Titan Bangle</translation>
     </message>
     <message>
         <source>Mythril Armlet</source>
-        <translation>Mythril Armlet</translation>
+        <translation type="vanished">Mythril Armlet</translation>
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation>Carbon Bangle</translation>
+        <translation type="vanished">Carbon Bangle</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation>Silver Armlet</translation>
+        <translation type="vanished">Silver Armlet</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>Gold Armlet</translation>
+        <translation type="vanished">Gold Armlet</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation>Diamond Bangle</translation>
+        <translation type="vanished">Diamond Bangle</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>Crystal Bangle</translation>
+        <translation type="vanished">Crystal Bangle</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation>Platinum Bangle</translation>
+        <translation type="vanished">Platinum Bangle</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation>Rune Armlet</translation>
+        <translation type="vanished">Rune Armlet</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation>Edincoat</translation>
+        <translation type="vanished">Edincoat</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
-        <translation>Wizard Bracelet</translation>
+        <translation type="vanished">Wizard Bracelet</translation>
     </message>
     <message>
         <source>Adaman Bangle</source>
-        <translation>Adaman Bangle</translation>
+        <translation type="vanished">Adaman Bangle</translation>
     </message>
     <message>
         <source>Gigas Armlet</source>
-        <translation>Gigas Armlet</translation>
+        <translation type="vanished">Gigas Armlet</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>Imperial Guard</translation>
+        <translation type="vanished">Imperial Guard</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>Aegis Armlet</translation>
+        <translation type="vanished">Aegis Armlet</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>Fourth Bracelet</translation>
+        <translation type="vanished">Fourth Bracelet</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation>Warrior Bangle</translation>
+        <translation type="vanished">Warrior Bangle</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
-        <translation>Shinra Beta</translation>
+        <translation type="vanished">Shinra Beta</translation>
     </message>
     <message>
         <source>Shinra Alpha</source>
-        <translation>Shinra Alpha</translation>
+        <translation type="vanished">Shinra Alpha</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>Four Slots</translation>
+        <translation type="vanished">Four Slots</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>Fire Armlet</translation>
+        <translation type="vanished">Fire Armlet</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation>Drains [Fire] attacks</translation>
+        <translation type="vanished">Drains [Fire] attacks</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation>Aurora Armlet</translation>
+        <translation type="vanished">Aurora Armlet</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation>Drains [Cold] attacks</translation>
+        <translation type="vanished">Drains [Cold] attacks</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>Bolt Armlet</translation>
+        <translation type="vanished">Bolt Armlet</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation>Drains [Lightning] attacks</translation>
+        <translation type="vanished">Drains [Lightning] attacks</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation>Dragon Armlet</translation>
+        <translation type="vanished">Dragon Armlet</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation>Drains 1/2 [Fire/Cold/Lightning] attack</translation>
+        <translation type="vanished">Drains 1/2 [Fire/Cold/Lightning] attack</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>Minerva Band</translation>
+        <translation type="vanished">Minerva Band</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</translation>
+        <translation type="vanished">Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>Escort Guard</translation>
+        <translation type="vanished">Escort Guard</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</translation>
+        <translation type="vanished">Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation>Mystile</translation>
+        <translation type="vanished">Mystile</translation>
     </message>
     <message>
         <source>Ziedrich</source>
-        <translation>Ziedrich</translation>
+        <translation type="vanished">Ziedrich</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation>Decreases all elemental attacks by 1/2</translation>
+        <translation type="vanished">Decreases all elemental attacks by 1/2</translation>
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation>Precious Watch</translation>
+        <translation type="vanished">Precious Watch</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation>A gorgeous watch</translation>
+        <translation type="vanished">A gorgeous watch</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
-        <translation>Chocobracelet</translation>
+        <translation type="vanished">Chocobracelet</translation>
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation>Power Wrist</translation>
+        <translation type="vanished">Power Wrist</translation>
     </message>
     <message>
         <source>Strength +10</source>
-        <translation>Strength +10</translation>
+        <translation type="vanished">Strength +10</translation>
     </message>
     <message>
         <source>Protect Vest</source>
-        <translation>Protect Vest</translation>
+        <translation type="vanished">Protect Vest</translation>
     </message>
     <message>
         <source>Vitality +10</source>
-        <translation>Vitality +10</translation>
+        <translation type="vanished">Vitality +10</translation>
     </message>
     <message>
         <source>Earring</source>
-        <translation>Earring</translation>
+        <translation type="vanished">Earring</translation>
     </message>
     <message>
         <source>Magic +10</source>
-        <translation>Magic +10</translation>
+        <translation type="vanished">Magic +10</translation>
     </message>
     <message>
         <source>Talisman</source>
-        <translation>Talisman</translation>
+        <translation type="vanished">Talisman</translation>
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation>Spirit +10</translation>
+        <translation type="vanished">Spirit +10</translation>
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation>Choco Feather</translation>
+        <translation type="vanished">Choco Feather</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
-        <translation>Dexterity +10</translation>
+        <translation type="vanished">Dexterity +10</translation>
     </message>
     <message>
         <source>Amulet</source>
-        <translation>Amulet</translation>
+        <translation type="vanished">Amulet</translation>
     </message>
     <message>
         <source>Luck +10</source>
-        <translation>Luck +10</translation>
+        <translation type="vanished">Luck +10</translation>
     </message>
     <message>
         <source>Champion Belt</source>
-        <translation>Champion Belt</translation>
+        <translation type="vanished">Champion Belt</translation>
     </message>
     <message>
         <source>Power &amp; Vitality +30</source>
-        <translation>Power &amp; Vitality +30</translation>
+        <translation type="vanished">Power &amp; Vitality +30</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>Poison Ring</translation>
+        <translation type="vanished">Poison Ring</translation>
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation>Drains [Poison] attacks, protects against [Poison]</translation>
+        <translation type="vanished">Drains [Poison] attacks, protects against [Poison]</translation>
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation>Tough Ring</translation>
+        <translation type="vanished">Tough Ring</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation>Vitality &amp; Spirit +50</translation>
+        <translation type="vanished">Vitality &amp; Spirit +50</translation>
     </message>
     <message>
         <source>Circlet</source>
-        <translation>Circlet</translation>
+        <translation type="vanished">Circlet</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation>Magic &amp; Spirit +30</translation>
+        <translation type="vanished">Magic &amp; Spirit +30</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>Star Pendant</translation>
+        <translation type="vanished">Star Pendant</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation>Protects against [Poison]</translation>
+        <translation type="vanished">Protects against [Poison]</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
-        <translation>Silver Glasses</translation>
+        <translation type="vanished">Silver Glasses</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation>Protects against [Darkness]</translation>
+        <translation type="vanished">Protects against [Darkness]</translation>
     </message>
     <message>
         <source>Headband</source>
-        <translation>Headband</translation>
+        <translation type="vanished">Headband</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation>Protects against [Sleep]</translation>
+        <translation type="vanished">Protects against [Sleep]</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>Fairy Ring</translation>
+        <translation type="vanished">Fairy Ring</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation>Protects against [Poison/Darkness]</translation>
+        <translation type="vanished">Protects against [Poison/Darkness]</translation>
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation>Jem Ring</translation>
+        <translation type="vanished">Jem Ring</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation>Protects against [Paralyze/Petrify/Slow-numb]</translation>
+        <translation type="vanished">Protects against [Paralyze/Petrify/Slow-numb]</translation>
     </message>
     <message>
         <source>White Cape</source>
-        <translation>White Cape</translation>
+        <translation type="vanished">White Cape</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation>Protects against [Frog/Small]</translation>
+        <translation type="vanished">Protects against [Frog/Small]</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation>Sprint Shoes</translation>
+        <translation type="vanished">Sprint Shoes</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation>Automatically put you in [Haste]</translation>
+        <translation type="vanished">Automatically put you in [Haste]</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>Peace Ring</translation>
+        <translation type="vanished">Peace Ring</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation>Protects against [Berserk/Fury/Sadness]</translation>
+        <translation type="vanished">Protects against [Berserk/Fury/Sadness]</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>Ribbon</translation>
+        <translation type="vanished">Ribbon</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation>Protects against all abnormal status</translation>
+        <translation type="vanished">Protects against all abnormal status</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>Fire Ring</translation>
+        <translation type="vanished">Fire Ring</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation>Nullifies [Fire] attacks</translation>
+        <translation type="vanished">Nullifies [Fire] attacks</translation>
     </message>
     <message>
         <source>Ice Ring</source>
-        <translation>Ice Ring</translation>
+        <translation type="vanished">Ice Ring</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation>Nullifies [Cold] attacks</translation>
+        <translation type="vanished">Nullifies [Cold] attacks</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>Bolt Ring</translation>
+        <translation type="vanished">Bolt Ring</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation>Nullifies [Lightning] attacks</translation>
+        <translation type="vanished">Nullifies [Lightning] attacks</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>Tetra Elemental</translation>
+        <translation type="vanished">Tetra Elemental</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation>Drains [Fire/Cold/Lightning/Earth] attacks</translation>
+        <translation type="vanished">Drains [Fire/Cold/Lightning/Earth] attacks</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>Safety Bit</translation>
+        <translation type="vanished">Safety Bit</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation>Protects against [Sudden Death/Petrify/Slow-numb]</translation>
+        <translation type="vanished">Protects against [Sudden Death/Petrify/Slow-numb]</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation>Fury Ring</translation>
+        <translation type="vanished">Fury Ring</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation>Automatically puts you in [Berserk]</translation>
+        <translation type="vanished">Automatically puts you in [Berserk]</translation>
     </message>
     <message>
         <source>Curse Ring</source>
-        <translation>Curse Ring</translation>
+        <translation type="vanished">Curse Ring</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation>It increases each status but...</translation>
+        <translation type="vanished">It increases each status but...</translation>
     </message>
     <message>
         <source>Protect Ring</source>
-        <translation>Protect Ring</translation>
+        <translation type="vanished">Protect Ring</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation>Automatically sets up [Barrier/MBarrier]</translation>
+        <translation type="vanished">Automatically sets up [Barrier/MBarrier]</translation>
     </message>
     <message>
         <source>Cat&apos;s Bell</source>
-        <translation>Cat&apos;s Bell</translation>
+        <translation type="vanished">Cat&apos;s Bell</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation>Restores HP as you walk</translation>
+        <translation type="vanished">Restores HP as you walk</translation>
     </message>
     <message>
         <source>Reflect Ring</source>
-        <translation>Reflect Ring</translation>
+        <translation type="vanished">Reflect Ring</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation>Automatically sets up [Reflect]</translation>
+        <translation type="vanished">Automatically sets up [Reflect]</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>Water Ring</translation>
+        <translation type="vanished">Water Ring</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation>Drains Water attacks</translation>
+        <translation type="vanished">Drains Water attacks</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>Sneak Glove</translation>
+        <translation type="vanished">Sneak Glove</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation>Increases Stealing rate</translation>
+        <translation type="vanished">Increases Stealing rate</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation>HypnoCrown</translation>
+        <translation type="vanished">HypnoCrown</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation>Increases Manipulation rate</translation>
+        <translation type="vanished">Increases Manipulation rate</translation>
     </message>
 </context>
 <context>
     <name>FF7Location</name>
     <message>
         <source>Midgar Area</source>
-        <translation>Midgar Area</translation>
+        <translation type="vanished">Midgar Area</translation>
     </message>
     <message>
         <source>Grasslands Area</source>
-        <translation>Grasslands Area</translation>
+        <translation type="vanished">Grasslands Area</translation>
     </message>
     <message>
         <source>Junon Area</source>
-        <translation>Junon Area</translation>
+        <translation type="vanished">Junon Area</translation>
     </message>
     <message>
         <source>Corel Area</source>
-        <translation>Corel Area</translation>
+        <translation type="vanished">Corel Area</translation>
     </message>
     <message>
         <source>Gold Saucer Area</source>
-        <translation>Gold Saucer Area</translation>
+        <translation type="vanished">Gold Saucer Area</translation>
     </message>
     <message>
         <source>Gongaga Area</source>
-        <translation>Gongaga Area</translation>
+        <translation type="vanished">Gongaga Area</translation>
     </message>
     <message>
         <source>Cosmo Area</source>
-        <translation>Cosmo Area</translation>
+        <translation type="vanished">Cosmo Area</translation>
     </message>
     <message>
         <source>Nibel Area</source>
-        <translation>Nibel Area</translation>
+        <translation type="vanished">Nibel Area</translation>
     </message>
     <message>
         <source>Rocket Launch Pad Area</source>
-        <translation>Rocket Launch Pad Area</translation>
+        <translation type="vanished">Rocket Launch Pad Area</translation>
     </message>
     <message>
         <source>Wutai Area</source>
-        <translation>Wutai Area</translation>
+        <translation type="vanished">Wutai Area</translation>
     </message>
     <message>
         <source>Icicle Area</source>
-        <translation>Icicle Area</translation>
+        <translation type="vanished">Icicle Area</translation>
     </message>
     <message>
         <source>Woodlands Area</source>
-        <translation>Woodlands Area</translation>
+        <translation type="vanished">Woodlands Area</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation>Debug Room [ja]</translation>
+        <translation type="vanished">Debug Room [ja]</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Highwind</translation>
+        <translation type="vanished">Highwind</translation>
     </message>
     <message>
         <source>deck</source>
-        <translation>deck</translation>
+        <translation type="vanished">deck</translation>
     </message>
     <message>
         <source>Bridge</source>
-        <translation>Bridge</translation>
+        <translation type="vanished">Bridge</translation>
     </message>
     <message>
         <source>Inside airship</source>
-        <translation>Inside airship</translation>
+        <translation type="vanished">Inside airship</translation>
     </message>
     <message>
         <source>Old man&apos;s house</source>
-        <translation>Old man&apos;s house</translation>
+        <translation type="vanished">Old man&apos;s house</translation>
     </message>
     <message>
         <source>Weapon seller</source>
-        <translation>Weapon seller</translation>
+        <translation type="vanished">Weapon seller</translation>
     </message>
     <message>
         <source>Chocobo Sage&apos;s house</source>
-        <translation>Chocobo Sage&apos;s house</translation>
+        <translation type="vanished">Chocobo Sage&apos;s house</translation>
     </message>
     <message>
         <source>???</source>
-        <translation>???</translation>
+        <translation type="vanished">???</translation>
     </message>
     <message>
         <source>Materia Cave</source>
-        <translation>Materia Cave</translation>
+        <translation type="vanished">Materia Cave</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation>Hallway</translation>
+        <translation type="vanished">Hallway</translation>
     </message>
     <message>
         <source>Research Room</source>
-        <translation>Research Room</translation>
+        <translation type="vanished">Research Room</translation>
     </message>
     <message>
         <source>Cargo Room</source>
-        <translation>Cargo Room</translation>
+        <translation type="vanished">Cargo Room</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translation>Debug Room [en]</translation>
+        <translation type="vanished">Debug Room [en]</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>Mt. Nibel</translation>
+        <translation type="vanished">Mt. Nibel</translation>
     </message>
     <message>
         <source>Platform</source>
-        <translation>Platform</translation>
+        <translation type="vanished">Platform</translation>
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation>Sector 1 Station</translation>
+        <translation type="vanished">Sector 1 Station</translation>
     </message>
     <message>
         <source>Sector 1</source>
-        <translation>Sector 1</translation>
+        <translation type="vanished">Sector 1</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation>No.1 Reactor</translation>
+        <translation type="vanished">No.1 Reactor</translation>
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation>No.5 Reactor</translation>
+        <translation type="vanished">No.5 Reactor</translation>
     </message>
     <message>
         <source>Sector 8</source>
-        <translation>Sector 8</translation>
+        <translation type="vanished">Sector 8</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
-        <translation>Last Train From Midgar</translation>
+        <translation type="vanished">Last Train From Midgar</translation>
     </message>
     <message>
         <source>Inside Train</source>
-        <translation>Inside Train</translation>
+        <translation type="vanished">Inside Train</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation>Train Graveyard</translation>
+        <translation type="vanished">Train Graveyard</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation>Sector 7 Station</translation>
+        <translation type="vanished">Sector 7 Station</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
-        <translation>Sector 7 Weapon Shop</translation>
+        <translation type="vanished">Sector 7 Weapon Shop</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>Beginner&apos;s Hall</translation>
+        <translation type="vanished">Beginner&apos;s Hall</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>Sector 7 Slums</translation>
+        <translation type="vanished">Sector 7 Slums</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation>Sector 7 Item Store</translation>
+        <translation type="vanished">Sector 7 Item Store</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation>Johnny&apos;s Home</translation>
+        <translation type="vanished">Johnny&apos;s Home</translation>
     </message>
     <message>
         <source>7th Heaven</source>
-        <translation>7th Heaven</translation>
+        <translation type="vanished">7th Heaven</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
-        <translation>AVALANCHE Hideout</translation>
+        <translation type="vanished">AVALANCHE Hideout</translation>
     </message>
     <message>
         <source>Plate Support</source>
-        <translation>Plate Support</translation>
+        <translation type="vanished">Plate Support</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
-        <translation>Winding Tunnel</translation>
+        <translation type="vanished">Winding Tunnel</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
-        <translation>4th Street Plate Int.</translation>
+        <translation type="vanished">4th Street Plate Int.</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation>Lower Sector 4 Plate</translation>
+        <translation type="vanished">Lower Sector 4 Plate</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
-        <translation>Slum Outskirts</translation>
+        <translation type="vanished">Slum Outskirts</translation>
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation>Sector 5 Slum</translation>
+        <translation type="vanished">Sector 5 Slum</translation>
     </message>
     <message>
         <source>House 1f.</source>
-        <translation>House 1f.</translation>
+        <translation type="vanished">House 1f.</translation>
     </message>
     <message>
         <source>House 2f.</source>
-        <translation>House 2f.</translation>
+        <translation type="vanished">House 2f.</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
-        <translation>Earthen Pipe</translation>
+        <translation type="vanished">Earthen Pipe</translation>
     </message>
     <message>
         <source>Weapon Store</source>
-        <translation>Weapon Store</translation>
+        <translation type="vanished">Weapon Store</translation>
     </message>
     <message>
         <source>Item Store</source>
-        <translation>Item Store</translation>
+        <translation type="vanished">Item Store</translation>
     </message>
     <message>
         <source>Materia store</source>
-        <translation>Materia store</translation>
+        <translation type="vanished">Materia store</translation>
     </message>
     <message>
         <source>Church</source>
-        <translation>Church</translation>
+        <translation type="vanished">Church</translation>
     </message>
     <message>
         <source>church in the slums</source>
-        <translation>church in the slums</translation>
+        <translation type="vanished">church in the slums</translation>
     </message>
     <message>
         <source>Inside the Church</source>
-        <translation>Inside the Church</translation>
+        <translation type="vanished">Inside the Church</translation>
     </message>
     <message>
         <source>Church Roof</source>
-        <translation>Church Roof</translation>
+        <translation type="vanished">Church Roof</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>Aerith&apos;s House</translation>
+        <translation type="vanished">Aerith&apos;s House</translation>
     </message>
     <message>
         <source>Sector 6</source>
-        <translation>Sector 6</translation>
+        <translation type="vanished">Sector 6</translation>
     </message>
     <message>
         <source>Sector 6 park</source>
-        <translation>Sector 6 park</translation>
+        <translation type="vanished">Sector 6 park</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation>Wall Market</translation>
+        <translation type="vanished">Wall Market</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
-        <translation>Men&apos;s Hall</translation>
+        <translation type="vanished">Men&apos;s Hall</translation>
     </message>
     <message>
         <source>Inn</source>
-        <translation>Inn</translation>
+        <translation type="vanished">Inn</translation>
     </message>
     <message>
         <source>Materia Store</source>
-        <translation>Materia Store</translation>
+        <translation type="vanished">Materia Store</translation>
     </message>
     <message>
         <source>Boutique</source>
-        <translation>Boutique</translation>
+        <translation type="vanished">Boutique</translation>
     </message>
     <message>
         <source>Diner</source>
-        <translation>Diner</translation>
+        <translation type="vanished">Diner</translation>
     </message>
     <message>
         <source>Pharmacy</source>
-        <translation>Pharmacy</translation>
+        <translation type="vanished">Pharmacy</translation>
     </message>
     <message>
         <source>Bar</source>
-        <translation>Bar</translation>
+        <translation type="vanished">Bar</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
-        <translation>Corneo Hall</translation>
+        <translation type="vanished">Corneo Hall</translation>
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
-        <translation>Corneo Hall,1f.</translation>
+        <translation type="vanished">Corneo Hall,1f.</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
-        <translation>Corneo Hall,2f.</translation>
+        <translation type="vanished">Corneo Hall,2f.</translation>
     </message>
     <message>
         <source>Torture Room</source>
-        <translation>Torture Room</translation>
+        <translation type="vanished">Torture Room</translation>
     </message>
     <message>
         <source>Sewer</source>
-        <translation>Sewer</translation>
+        <translation type="vanished">Sewer</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation>Honey Bee Inn</translation>
+        <translation type="vanished">Honey Bee Inn</translation>
     </message>
     <message>
         <source>Plate Section</source>
-        <translation>Plate Section</translation>
+        <translation type="vanished">Plate Section</translation>
     </message>
     <message>
         <source>Sector 0</source>
-        <translation>Sector 0</translation>
+        <translation type="vanished">Sector 0</translation>
     </message>
     <message>
         <source>Outside Plates</source>
-        <translation>Outside Plates</translation>
+        <translation type="vanished">Outside Plates</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>Shinra Bldg.</translation>
+        <translation type="vanished">Shinra Bldg.</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation>Shinra Bldg. Stairs</translation>
+        <translation type="vanished">Shinra Bldg. Stairs</translation>
     </message>
     <message>
         <source>Elevator</source>
-        <translation>Elevator</translation>
+        <translation type="vanished">Elevator</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation>Outside Elevator</translation>
+        <translation type="vanished">Outside Elevator</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
-        <translation>Shinra Bldg. 1f. lobby</translation>
+        <translation type="vanished">Shinra Bldg. 1f. lobby</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
-        <translation>Shinra Bldg. 2f. Lobby</translation>
+        <translation type="vanished">Shinra Bldg. 2f. Lobby</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Shop</source>
-        <translation>Shinra Bldg. 2f. Shop</translation>
+        <translation type="vanished">Shinra Bldg. 2f. Shop</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
-        <translation>Shinra Bldg. 3f. Lobby</translation>
+        <translation type="vanished">Shinra Bldg. 3f. Lobby</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
-        <translation>Shinra Bldg. 59f.</translation>
+        <translation type="vanished">Shinra Bldg. 59f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
-        <translation>Shinra Bldg. 60f.</translation>
+        <translation type="vanished">Shinra Bldg. 60f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
-        <translation>Shinra Bldg. 61f.</translation>
+        <translation type="vanished">Shinra Bldg. 61f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
-        <translation>Shinra Bldg. 62f.</translation>
+        <translation type="vanished">Shinra Bldg. 62f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
-        <translation>Shinra Bldg. 63f.</translation>
+        <translation type="vanished">Shinra Bldg. 63f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
-        <translation>Shinra Bldg. 64f.</translation>
+        <translation type="vanished">Shinra Bldg. 64f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
-        <translation>Shinra Bldg. 65f.</translation>
+        <translation type="vanished">Shinra Bldg. 65f.</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation>Shinra Bldg.66f.</translation>
+        <translation type="vanished">Shinra Bldg.66f.</translation>
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation>Shinra Bldg.67f.</translation>
+        <translation type="vanished">Shinra Bldg.67f.</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation>Shinra Bldg.68f.</translation>
+        <translation type="vanished">Shinra Bldg.68f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation>Shinra Bldg. 69f.</translation>
+        <translation type="vanished">Shinra Bldg. 69f.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation>Shinra Bldg. 70f.</translation>
+        <translation type="vanished">Shinra Bldg. 70f.</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
-        <translation>Nibelheim Item Store</translation>
+        <translation type="vanished">Nibelheim Item Store</translation>
     </message>
     <message>
         <source>Nibelheim House</source>
-        <translation>Nibelheim House</translation>
+        <translation type="vanished">Nibelheim House</translation>
     </message>
     <message>
         <source>Nibelheim Inn</source>
-        <translation>Nibelheim Inn</translation>
+        <translation type="vanished">Nibelheim Inn</translation>
     </message>
     <message>
         <source>Cloud&apos;s House</source>
-        <translation>Cloud&apos;s House</translation>
+        <translation type="vanished">Cloud&apos;s House</translation>
     </message>
     <message>
         <source>Nibelheim</source>
-        <translation>Nibelheim</translation>
+        <translation type="vanished">Nibelheim</translation>
     </message>
     <message>
         <source>Tifa&apos;s House</source>
-        <translation>Tifa&apos;s House</translation>
+        <translation type="vanished">Tifa&apos;s House</translation>
     </message>
     <message>
         <source>Mansion, 1f.</source>
-        <translation>Mansion, 1f.</translation>
+        <translation type="vanished">Mansion, 1f.</translation>
     </message>
     <message>
         <source>Mansion, 2f.</source>
-        <translation>Mansion, 2f.</translation>
+        <translation type="vanished">Mansion, 2f.</translation>
     </message>
     <message>
         <source>Mansion, Hidden Steps</source>
-        <translation>Mansion, Hidden Steps</translation>
+        <translation type="vanished">Mansion, Hidden Steps</translation>
     </message>
     <message>
         <source>Mansion, Basement</source>
-        <translation>Mansion, Basement</translation>
+        <translation type="vanished">Mansion, Basement</translation>
     </message>
     <message>
         <source>Nibel Reactor</source>
-        <translation>Nibel Reactor</translation>
+        <translation type="vanished">Nibel Reactor</translation>
     </message>
     <message>
         <source>Mt. Nibel Cave</source>
-        <translation>Mt. Nibel Cave</translation>
+        <translation type="vanished">Mt. Nibel Cave</translation>
     </message>
     <message>
         <source>Nibel Reactor(Int.)</source>
-        <translation>Nibel Reactor(Int.)</translation>
+        <translation type="vanished">Nibel Reactor(Int.)</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
-        <translation>Inn: 1f</translation>
+        <translation type="vanished">Inn: 1f</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
-        <translation>Inn: 2f</translation>
+        <translation type="vanished">Inn: 2f</translation>
     </message>
     <message>
         <source>House: 1f</source>
-        <translation>House: 1f</translation>
+        <translation type="vanished">House: 1f</translation>
     </message>
     <message>
         <source>House: 2f</source>
-        <translation>House: 2f</translation>
+        <translation type="vanished">House: 2f</translation>
     </message>
     <message>
         <source>Kalm</source>
-        <translation>Kalm</translation>
+        <translation type="vanished">Kalm</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
-        <translation>Rear Tower (Pagoda)</translation>
+        <translation type="vanished">Rear Tower (Pagoda)</translation>
     </message>
     <message>
         <source>Chocobo farm</source>
-        <translation>Chocobo farm</translation>
+        <translation type="vanished">Chocobo farm</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>Chocobo Ranch</translation>
+        <translation type="vanished">Chocobo Ranch</translation>
     </message>
     <message>
         <source>Marshes</source>
-        <translation>Marshes</translation>
+        <translation type="vanished">Marshes</translation>
     </message>
     <message>
         <source>Mythril Mine</source>
-        <translation>Mythril Mine</translation>
+        <translation type="vanished">Mythril Mine</translation>
     </message>
     <message>
         <source>Base of Fort Condor</source>
-        <translation>Base of Fort Condor</translation>
+        <translation type="vanished">Base of Fort Condor</translation>
     </message>
     <message>
         <source>Entrance to Fort Condor</source>
-        <translation>Entrance to Fort Condor</translation>
+        <translation type="vanished">Entrance to Fort Condor</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation>Fort Condor</translation>
+        <translation type="vanished">Fort Condor</translation>
     </message>
     <message>
         <source>Watch Room</source>
-        <translation>Watch Room</translation>
+        <translation type="vanished">Watch Room</translation>
     </message>
     <message>
         <source>top of the mountian</source>
-        <translation>top of the mountian</translation>
+        <translation type="vanished">top of the mountian</translation>
     </message>
     <message>
         <source>Upper Junon</source>
-        <translation>Upper Junon</translation>
+        <translation type="vanished">Upper Junon</translation>
     </message>
     <message>
         <source>Barracks</source>
-        <translation>Barracks</translation>
+        <translation type="vanished">Barracks</translation>
     </message>
     <message>
         <source>Lower Junon</source>
-        <translation>Lower Junon</translation>
+        <translation type="vanished">Lower Junon</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation>Junon Inn</translation>
+        <translation type="vanished">Junon Inn</translation>
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
-        <translation>Shinra Member&apos;s Bar</translation>
+        <translation type="vanished">Shinra Member&apos;s Bar</translation>
     </message>
     <message>
         <source>Respectable Inn</source>
-        <translation>Respectable Inn</translation>
+        <translation type="vanished">Respectable Inn</translation>
     </message>
     <message>
         <source>Junon Dock</source>
-        <translation>Junon Dock</translation>
+        <translation type="vanished">Junon Dock</translation>
     </message>
     <message>
         <source>Airport</source>
-        <translation>Airport</translation>
+        <translation type="vanished">Airport</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation>Junon Airport Path</translation>
+        <translation type="vanished">Junon Airport Path</translation>
     </message>
     <message>
         <source>Locker Room</source>
-        <translation>Locker Room</translation>
+        <translation type="vanished">Locker Room</translation>
     </message>
     <message>
         <source>Path 2</source>
-        <translation>Path 2</translation>
+        <translation type="vanished">Path 2</translation>
     </message>
     <message>
         <source>Junon Path</source>
-        <translation>Junon Path</translation>
+        <translation type="vanished">Junon Path</translation>
     </message>
     <message>
         <source>Junon Branch, 1f.</source>
-        <translation>Junon Branch, 1f.</translation>
+        <translation type="vanished">Junon Branch, 1f.</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>Junon Office F2</translation>
+        <translation type="vanished">Junon Office F2</translation>
     </message>
     <message>
         <source>Office</source>
-        <translation>Office</translation>
+        <translation type="vanished">Office</translation>
     </message>
     <message>
         <source>Dr.&apos;s Office</source>
-        <translation>Dr.&apos;s Office</translation>
+        <translation type="vanished">Dr.&apos;s Office</translation>
     </message>
     <message>
         <source>Press Room</source>
-        <translation>Press Room</translation>
+        <translation type="vanished">Press Room</translation>
     </message>
     <message>
         <source>Gas Room</source>
-        <translation>Gas Room</translation>
+        <translation type="vanished">Gas Room</translation>
     </message>
     <message>
         <source>Submarine Dock</source>
-        <translation>Submarine Dock</translation>
+        <translation type="vanished">Submarine Dock</translation>
     </message>
     <message>
         <source>Submarine Bridge</source>
-        <translation>Submarine Bridge</translation>
+        <translation type="vanished">Submarine Bridge</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation>Inside Submarine</translation>
+        <translation type="vanished">Inside Submarine</translation>
     </message>
     <message>
         <source>Aljunon</source>
-        <translation>Aljunon</translation>
+        <translation type="vanished">Aljunon</translation>
     </message>
     <message>
         <source>Canon</source>
-        <translation>Canon</translation>
+        <translation type="vanished">Canon</translation>
     </message>
     <message>
         <source>Junon branch,(ext.)</source>
-        <translation>Junon branch,(ext.)</translation>
+        <translation type="vanished">Junon branch,(ext.)</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation>Underwater Reactor</translation>
+        <translation type="vanished">Underwater Reactor</translation>
     </message>
     <message>
         <source>Under Junon</source>
-        <translation>Under Junon</translation>
+        <translation type="vanished">Under Junon</translation>
     </message>
     <message>
         <source>Dolphin Offing</source>
-        <translation>Dolphin Offing</translation>
+        <translation type="vanished">Dolphin Offing</translation>
     </message>
     <message>
         <source>Cargo Ship</source>
-        <translation>Cargo Ship</translation>
+        <translation type="vanished">Cargo Ship</translation>
     </message>
     <message>
         <source>Costa del Sol Harbor</source>
-        <translation>Costa del Sol Harbor</translation>
+        <translation type="vanished">Costa del Sol Harbor</translation>
     </message>
     <message>
         <source>Costa del Sol</source>
-        <translation>Costa del Sol</translation>
+        <translation type="vanished">Costa del Sol</translation>
     </message>
     <message>
         <source>Costa del Sol Inn</source>
-        <translation>Costa del Sol Inn</translation>
+        <translation type="vanished">Costa del Sol Inn</translation>
     </message>
     <message>
         <source>House for Sale</source>
-        <translation>House for Sale</translation>
+        <translation type="vanished">House for Sale</translation>
     </message>
     <message>
         <source>Cellar</source>
-        <translation>Cellar</translation>
+        <translation type="vanished">Cellar</translation>
     </message>
     <message>
         <source>North Corel</source>
-        <translation>North Corel</translation>
+        <translation type="vanished">North Corel</translation>
     </message>
     <message>
         <source>North Corel Inn</source>
-        <translation>North Corel Inn</translation>
+        <translation type="vanished">North Corel Inn</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>Ropeway Station</translation>
+        <translation type="vanished">Ropeway Station</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation>Mt. Corel</translation>
+        <translation type="vanished">Mt. Corel</translation>
     </message>
     <message>
         <source>Corel Reactor</source>
-        <translation>Corel Reactor</translation>
+        <translation type="vanished">Corel Reactor</translation>
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation>Corel Prison</translation>
+        <translation type="vanished">Corel Prison</translation>
     </message>
     <message>
         <source>Basement</source>
-        <translation>Basement</translation>
+        <translation type="vanished">Basement</translation>
     </message>
     <message>
         <source>Prison Pub</source>
-        <translation>Prison Pub</translation>
+        <translation type="vanished">Prison Pub</translation>
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
-        <translation>Mayor&apos;s Old House</translation>
+        <translation type="vanished">Mayor&apos;s Old House</translation>
     </message>
     <message>
         <source>Container</source>
-        <translation>Container</translation>
+        <translation type="vanished">Container</translation>
     </message>
     <message>
         <source>Corel Desert</source>
-        <translation>Corel Desert</translation>
+        <translation type="vanished">Corel Desert</translation>
     </message>
     <message>
         <source>Event square</source>
-        <translation>Event square</translation>
+        <translation type="vanished">Event square</translation>
     </message>
     <message>
         <source>Speed square</source>
-        <translation>Speed square</translation>
+        <translation type="vanished">Speed square</translation>
     </message>
     <message>
         <source>Round Square</source>
-        <translation>Round Square</translation>
+        <translation type="vanished">Round Square</translation>
     </message>
     <message>
         <source>Ghost Hotel</source>
-        <translation>Ghost Hotel</translation>
+        <translation type="vanished">Ghost Hotel</translation>
     </message>
     <message>
         <source>Hotel Lobby</source>
-        <translation>Hotel Lobby</translation>
+        <translation type="vanished">Hotel Lobby</translation>
     </message>
     <message>
         <source>Hotel</source>
-        <translation>Hotel</translation>
+        <translation type="vanished">Hotel</translation>
     </message>
     <message>
         <source>Hotel Shop</source>
-        <translation>Hotel Shop</translation>
+        <translation type="vanished">Hotel Shop</translation>
     </message>
     <message>
         <source>Terminal Floor</source>
-        <translation>Terminal Floor</translation>
+        <translation type="vanished">Terminal Floor</translation>
     </message>
     <message>
         <source>Battle Square</source>
-        <translation>Battle Square</translation>
+        <translation type="vanished">Battle Square</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
-        <translation>Arena Lobby</translation>
+        <translation type="vanished">Arena Lobby</translation>
     </message>
     <message>
         <source>Dio&apos;s Museum</source>
-        <translation>Dio&apos;s Museum</translation>
+        <translation type="vanished">Dio&apos;s Museum</translation>
     </message>
     <message>
         <source>Wonder Square</source>
-        <translation>Wonder Square</translation>
+        <translation type="vanished">Wonder Square</translation>
     </message>
     <message>
         <source>Building 1f.</source>
-        <translation>Building 1f.</translation>
+        <translation type="vanished">Building 1f.</translation>
     </message>
     <message>
         <source>Building 2f.</source>
-        <translation>Building 2f.</translation>
+        <translation type="vanished">Building 2f.</translation>
     </message>
     <message>
         <source>Chocobo Square</source>
-        <translation>Chocobo Square</translation>
+        <translation type="vanished">Chocobo Square</translation>
     </message>
     <message>
         <source>Ticket Office</source>
-        <translation>Ticket Office</translation>
+        <translation type="vanished">Ticket Office</translation>
     </message>
     <message>
         <source>Jungle</source>
-        <translation>Jungle</translation>
+        <translation type="vanished">Jungle</translation>
     </message>
     <message>
         <source>Meltdown Reactor</source>
-        <translation>Meltdown Reactor</translation>
+        <translation type="vanished">Meltdown Reactor</translation>
     </message>
     <message>
         <source>Gongaga Village</source>
-        <translation>Gongaga Village</translation>
+        <translation type="vanished">Gongaga Village</translation>
     </message>
     <message>
         <source>Weapons Store</source>
-        <translation>Weapons Store</translation>
+        <translation type="vanished">Weapons Store</translation>
     </message>
     <message>
         <source>Zack&apos;s Home</source>
-        <translation>Zack&apos;s Home</translation>
+        <translation type="vanished">Zack&apos;s Home</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
-        <translation>Mayor&apos;s Home</translation>
+        <translation type="vanished">Mayor&apos;s Home</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation>Cosmo Canyon</translation>
+        <translation type="vanished">Cosmo Canyon</translation>
     </message>
     <message>
         <source>Cosmo Candle</source>
-        <translation>Cosmo Candle</translation>
+        <translation type="vanished">Cosmo Candle</translation>
     </message>
     <message>
         <source>Elder&apos;s Room</source>
-        <translation>Elder&apos;s Room</translation>
+        <translation type="vanished">Elder&apos;s Room</translation>
     </message>
     <message>
         <source>Gate of Naught</source>
-        <translation>Gate of Naught</translation>
+        <translation type="vanished">Gate of Naught</translation>
     </message>
     <message>
         <source>Pub &quot;Starlet&quot; </source>
-        <translation>Pub &quot;Starlet&quot; </translation>
+        <translation type="vanished">Pub &quot;Starlet&quot; </translation>
     </message>
     <message>
         <source>Sealed Cave</source>
-        <translation>Sealed Cave</translation>
+        <translation type="vanished">Sealed Cave</translation>
     </message>
     <message>
         <source>Materia Shop</source>
-        <translation>Materia Shop</translation>
+        <translation type="vanished">Materia Shop</translation>
     </message>
     <message>
         <source>Shildra Inn</source>
-        <translation>Shildra Inn</translation>
+        <translation type="vanished">Shildra Inn</translation>
     </message>
     <message>
         <source>Observatory</source>
-        <translation>Observatory</translation>
+        <translation type="vanished">Observatory</translation>
     </message>
     <message>
         <source>Bugen Research Center</source>
-        <translation>Bugen Research Center</translation>
+        <translation type="vanished">Bugen Research Center</translation>
     </message>
     <message>
         <source>Cave of the Gi</source>
-        <translation>Cave of the Gi</translation>
+        <translation type="vanished">Cave of the Gi</translation>
     </message>
     <message>
         <source>House</source>
-        <translation>House</translation>
+        <translation type="vanished">House</translation>
     </message>
     <message>
         <source>Shanghai Inn</source>
-        <translation>Shanghai Inn</translation>
+        <translation type="vanished">Shanghai Inn</translation>
     </message>
     <message>
         <source>Rocket Town</source>
-        <translation>Rocket Town</translation>
+        <translation type="vanished">Rocket Town</translation>
     </message>
     <message>
         <source>Rocket Launching Pad</source>
-        <translation>Rocket Launching Pad</translation>
+        <translation type="vanished">Rocket Launching Pad</translation>
     </message>
     <message>
         <source>Duct</source>
-        <translation>Duct</translation>
+        <translation type="vanished">Duct</translation>
     </message>
     <message>
         <source>Ship Hallway</source>
-        <translation>Ship Hallway</translation>
+        <translation type="vanished">Ship Hallway</translation>
     </message>
     <message>
         <source>Materia Room</source>
-        <translation>Materia Room</translation>
+        <translation type="vanished">Materia Room</translation>
     </message>
     <message>
         <source>Cockpit</source>
-        <translation>Cockpit</translation>
+        <translation type="vanished">Cockpit</translation>
     </message>
     <message>
         <source>Engine Room</source>
-        <translation>Engine Room</translation>
+        <translation type="vanished">Engine Room</translation>
     </message>
     <message>
         <source>Escape Pod</source>
-        <translation>Escape Pod</translation>
+        <translation type="vanished">Escape Pod</translation>
     </message>
     <message>
         <source>Wilderness</source>
-        <translation>Wilderness</translation>
+        <translation type="vanished">Wilderness</translation>
     </message>
     <message>
         <source>Plains</source>
-        <translation>Plains</translation>
+        <translation type="vanished">Plains</translation>
     </message>
     <message>
         <source>Wutai</source>
-        <translation>Wutai</translation>
+        <translation type="vanished">Wutai</translation>
     </message>
     <message>
         <source>Wutai, Cat&apos;s House</source>
-        <translation>Wutai, Cat&apos;s House</translation>
+        <translation type="vanished">Wutai, Cat&apos;s House</translation>
     </message>
     <message>
         <source>Wutai, Old Man&apos;s House</source>
-        <translation>Wutai, Old Man&apos;s House</translation>
+        <translation type="vanished">Wutai, Old Man&apos;s House</translation>
     </message>
     <message>
         <source>Bar [Turtle Paradise]</source>
-        <translation>Bar [Turtle Paradise]</translation>
+        <translation type="vanished">Bar [Turtle Paradise]</translation>
     </message>
     <message>
         <source>Yuffie&apos;s House</source>
-        <translation>Yuffie&apos;s House</translation>
+        <translation type="vanished">Yuffie&apos;s House</translation>
     </message>
     <message>
         <source>Hidden Passage</source>
-        <translation>Hidden Passage</translation>
+        <translation type="vanished">Hidden Passage</translation>
     </message>
     <message>
         <source>Wutai, Godo&apos;s Pagoda</source>
-        <translation>Wutai, Godo&apos;s Pagoda</translation>
+        <translation type="vanished">Wutai, Godo&apos;s Pagoda</translation>
     </message>
     <message>
         <source>Wutai, Pagoda</source>
-        <translation>Wutai, Pagoda</translation>
+        <translation type="vanished">Wutai, Pagoda</translation>
     </message>
     <message>
         <source>Wutai, Main Mtn.</source>
-        <translation>Wutai, Main Mtn.</translation>
+        <translation type="vanished">Wutai, Main Mtn.</translation>
     </message>
     <message>
         <source>Hidden Room</source>
-        <translation>Hidden Room</translation>
+        <translation type="vanished">Hidden Room</translation>
     </message>
     <message>
         <source>Wutai, Da-chao Statue</source>
-        <translation>Wutai, Da-chao Statue</translation>
+        <translation type="vanished">Wutai, Da-chao Statue</translation>
     </message>
     <message>
         <source>Temple of the Ancients</source>
-        <translation>Temple of the Ancients</translation>
+        <translation type="vanished">Temple of the Ancients</translation>
     </message>
     <message>
         <source>Bone Village</source>
-        <translation>Bone Village</translation>
+        <translation type="vanished">Bone Village</translation>
     </message>
     <message>
         <source>Sleeping Forest</source>
-        <translation>Sleeping Forest</translation>
+        <translation type="vanished">Sleeping Forest</translation>
     </message>
     <message>
         <source>Ancient Forest</source>
-        <translation>Ancient Forest</translation>
+        <translation type="vanished">Ancient Forest</translation>
     </message>
     <message>
         <source>Corel Valley</source>
-        <translation>Corel Valley</translation>
+        <translation type="vanished">Corel Valley</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>Forgotten City</translation>
+        <translation type="vanished">Forgotten City</translation>
     </message>
     <message>
         <source>Corel Valley Cave</source>
-        <translation>Corel Valley Cave</translation>
+        <translation type="vanished">Corel Valley Cave</translation>
     </message>
     <message>
         <source>Forgotten Capital</source>
-        <translation>Forgotten Capital</translation>
+        <translation type="vanished">Forgotten Capital</translation>
     </message>
     <message>
         <source>Water Altar</source>
-        <translation>Water Altar</translation>
+        <translation type="vanished">Water Altar</translation>
     </message>
     <message>
         <source>Icicle Inn</source>
-        <translation>Icicle Inn</translation>
+        <translation type="vanished">Icicle Inn</translation>
     </message>
     <message>
         <source>Icicle Inn Bar</source>
-        <translation>Icicle Inn Bar</translation>
+        <translation type="vanished">Icicle Inn Bar</translation>
     </message>
     <message>
         <source>Gast&apos;s House</source>
-        <translation>Gast&apos;s House</translation>
+        <translation type="vanished">Gast&apos;s House</translation>
     </message>
     <message>
         <source>Great Glacier</source>
-        <translation>Great Glacier</translation>
+        <translation type="vanished">Great Glacier</translation>
     </message>
     <message>
         <source>Frostbite Cave</source>
-        <translation>Frostbite Cave</translation>
+        <translation type="vanished">Frostbite Cave</translation>
     </message>
     <message>
         <source>Cave</source>
-        <translation>Cave</translation>
+        <translation type="vanished">Cave</translation>
     </message>
     <message>
         <source>Great Glacier Map</source>
-        <translation>Great Glacier Map</translation>
+        <translation type="vanished">Great Glacier Map</translation>
     </message>
     <message>
         <source>Base of Gaea&apos;s Cliff</source>
-        <translation>Base of Gaea&apos;s Cliff</translation>
+        <translation type="vanished">Base of Gaea&apos;s Cliff</translation>
     </message>
     <message>
         <source>Gaea&apos;s Cliff</source>
-        <translation>Gaea&apos;s Cliff</translation>
+        <translation type="vanished">Gaea&apos;s Cliff</translation>
     </message>
     <message>
         <source>Inside of Gaea&apos;s Cliff</source>
-        <translation>Inside of Gaea&apos;s Cliff</translation>
+        <translation type="vanished">Inside of Gaea&apos;s Cliff</translation>
     </message>
     <message>
         <source>Crater</source>
-        <translation>Crater</translation>
+        <translation type="vanished">Crater</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation>Whirlwind Maze</translation>
+        <translation type="vanished">Whirlwind Maze</translation>
     </message>
     <message>
         <source>Mideel</source>
-        <translation>Mideel</translation>
+        <translation type="vanished">Mideel</translation>
     </message>
     <message>
         <source>Mideel,Weapon Store</source>
-        <translation>Mideel,Weapon Store</translation>
+        <translation type="vanished">Mideel,Weapon Store</translation>
     </message>
     <message>
         <source>Mideel,Item Store</source>
-        <translation>Mideel,Item Store</translation>
+        <translation type="vanished">Mideel,Item Store</translation>
     </message>
     <message>
         <source>Mideel,Materia Store</source>
-        <translation>Mideel,Materia Store</translation>
+        <translation type="vanished">Mideel,Materia Store</translation>
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation>Mideel,Clinic</translation>
+        <translation type="vanished">Mideel,Clinic</translation>
     </message>
     <message>
         <source>Mideel,House1</source>
-        <translation>Mideel,House1</translation>
+        <translation type="vanished">Mideel,House1</translation>
     </message>
     <message>
         <source>Mideel,House2</source>
-        <translation>Mideel,House2</translation>
+        <translation type="vanished">Mideel,House2</translation>
     </message>
     <message>
         <source>Coal Train</source>
-        <translation>Coal Train</translation>
+        <translation type="vanished">Coal Train</translation>
     </message>
     <message>
         <source>8th Street</source>
-        <translation>8th Street</translation>
+        <translation type="vanished">8th Street</translation>
     </message>
     <message>
         <source>Midgar, Sector 8</source>
-        <translation>Midgar, Sector 8</translation>
+        <translation type="vanished">Midgar, Sector 8</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Sector 8, Underground</translation>
+        <translation type="vanished">Sector 8, Underground</translation>
     </message>
     <message>
         <source>Mako Cannon</source>
-        <translation>Mako Cannon</translation>
+        <translation type="vanished">Mako Cannon</translation>
     </message>
     <message>
         <source>Highwind, on deck</source>
-        <translation>Highwind, on deck</translation>
+        <translation type="vanished">Highwind, on deck</translation>
     </message>
     <message>
         <source>Northern Cave Crater</source>
-        <translation>Northern Cave Crater</translation>
+        <translation type="vanished">Northern Cave Crater</translation>
     </message>
     <message>
         <source>Northern Cave</source>
-        <translation>Northern Cave</translation>
+        <translation type="vanished">Northern Cave</translation>
     </message>
     <message>
         <source>Inside Northern Cave</source>
-        <translation>Inside Northern Cave</translation>
+        <translation type="vanished">Inside Northern Cave</translation>
     </message>
     <message>
         <source>Bottom of Northern Cave</source>
-        <translation>Bottom of Northern Cave</translation>
+        <translation type="vanished">Bottom of Northern Cave</translation>
     </message>
     <message>
         <source>Inside the Planet</source>
-        <translation>Inside the Planet</translation>
+        <translation type="vanished">Inside the Planet</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>????</translation>
+        <translation type="vanished">????</translation>
     </message>
     <message>
         <source>Test Fight</source>
-        <translation>Test Fight</translation>
+        <translation type="vanished">Test Fight</translation>
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
-        <translation>Cloud&apos;s Past</translation>
+        <translation type="vanished">Cloud&apos;s Past</translation>
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
-        <translation>Cloud&apos;s Villa</translation>
+        <translation type="vanished">Cloud&apos;s Villa</translation>
     </message>
     <message>
         <source>Mideel Area</source>
-        <translation>Mideel Area</translation>
+        <translation type="vanished">Mideel Area</translation>
     </message>
     <message>
         <source>North Corel Area</source>
-        <translation>North Corel Area</translation>
+        <translation type="vanished">North Corel Area</translation>
     </message>
     <message>
         <source>Round Island</source>
-        <translation>Round Island</translation>
+        <translation type="vanished">Round Island</translation>
     </message>
     <message>
         <source>Last Underwater Location</source>
-        <translation>Last Underwater Location</translation>
+        <translation type="vanished">Last Underwater Location</translation>
     </message>
     <message>
         <source>Underwater (Gelnika)</source>
-        <translation>Underwater (Gelnika)</translation>
+        <translation type="vanished">Underwater (Gelnika)</translation>
     </message>
     <message>
         <source>Last Worldmap Location</source>
-        <translation>Last Worldmap Location</translation>
+        <translation type="vanished">Last Worldmap Location</translation>
     </message>
     <message>
         <source>Start of Junon Ship Sequence</source>
@@ -5298,1952 +5298,1908 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>Almost at Costa del Sol</source>
-        <translation>Almost at Costa del Sol</translation>
+        <translation type="vanished">Almost at Costa del Sol</translation>
     </message>
     <message>
         <source>Junon -&gt; Costa Del Sol</source>
-        <translation>Junon -&gt; Costa Del Sol</translation>
+        <translation type="vanished">Junon -&gt; Costa Del Sol</translation>
     </message>
     <message>
         <source>Costa del Sol -&gt; Junon</source>
-        <translation>Costa del Sol -&gt; Junon</translation>
+        <translation type="vanished">Costa del Sol -&gt; Junon</translation>
     </message>
     <message>
         <source>Junon Area (Highwind)</source>
-        <translation>Junon Area (Highwind)</translation>
+        <translation type="vanished">Junon Area (Highwind)</translation>
     </message>
     <message>
         <source>Junon Area (Underwater)</source>
-        <translation>Junon Area (Underwater)</translation>
+        <translation type="vanished">Junon Area (Underwater)</translation>
     </message>
     <message>
         <source>Crater Area</source>
-        <translation>Crater Area</translation>
+        <translation type="vanished">Crater Area</translation>
     </message>
     <message>
         <source>DEBUG MODE</source>
-        <translation>DEBUG MODE</translation>
+        <translation type="vanished">DEBUG MODE</translation>
     </message>
     <message>
         <source>DEBUG</source>
-        <translation>DEBUG</translation>
+        <translation type="vanished">DEBUG</translation>
     </message>
     <message>
         <source>BLACKBGH</source>
-        <translation>BLACKBGH</translation>
+        <translation type="vanished">BLACKBGH</translation>
     </message>
     <message>
         <source>BLACKBGI</source>
-        <translation>BLACKBGI</translation>
+        <translation type="vanished">BLACKBGI</translation>
     </message>
     <message>
         <source>Dark city fourth street</source>
-        <translation>Dark city fourth street</translation>
+        <translation type="vanished">Dark city fourth street</translation>
     </message>
     <message>
         <source>Nanaki&apos;s Room</source>
-        <translation>Nanaki&apos;s Room</translation>
-    </message>
-    <message>
-        <source>Start of Juion Ship Sequence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Last Train from Midgar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 7 Mechanized Tower</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Conference Room</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Priscilla&apos;s House</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Johnny&apos;s New Home</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inside the Ferris Wheel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Arena</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Waiting Room</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cet Wall</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Great Cave</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Nanaki&apos;s Room</translation>
     </message>
 </context>
 <context>
     <name>FF7Materia</name>
     <message>
         <source>EMPTY</source>
-        <translation>EMPTY</translation>
+        <translation type="vanished">EMPTY</translation>
     </message>
     <message>
         <source>MP Plus</source>
-        <translation>MP Plus</translation>
+        <translation type="vanished">MP Plus</translation>
     </message>
     <message>
         <source>MP Plus +10%</source>
-        <translation>MP Plus +10%</translation>
+        <translation type="vanished">MP Plus +10%</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation>MP Plus +20%</translation>
+        <translation type="vanished">MP Plus +20%</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation>MP Plus +30%</translation>
+        <translation type="vanished">MP Plus +30%</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation>MP Plus +40%</translation>
+        <translation type="vanished">MP Plus +40%</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation>MP Plus +50%</translation>
+        <translation type="vanished">MP Plus +50%</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation>MaxMp:+% depending on level</translation>
+        <translation type="vanished">MaxMp:+% depending on level</translation>
     </message>
     <message>
         <source>HP Plus</source>
-        <translation>HP Plus</translation>
+        <translation type="vanished">HP Plus</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation>HP Plus +10%</translation>
+        <translation type="vanished">HP Plus +10%</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation>HP Plus +20%</translation>
+        <translation type="vanished">HP Plus +20%</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation>HP Plus +30%</translation>
+        <translation type="vanished">HP Plus +30%</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation>HP Plus +40%</translation>
+        <translation type="vanished">HP Plus +40%</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation>HP Plus +50%</translation>
+        <translation type="vanished">HP Plus +50%</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation>MaxHp:+% depending on level</translation>
+        <translation type="vanished">MaxHp:+% depending on level</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation>Speed Plus</translation>
+        <translation type="vanished">Speed Plus</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation>Speed Plus +10%</translation>
+        <translation type="vanished">Speed Plus +10%</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation>Speed Plus +20%</translation>
+        <translation type="vanished">Speed Plus +20%</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation>Speed Plus +30%</translation>
+        <translation type="vanished">Speed Plus +30%</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation>Speed Plus +40%</translation>
+        <translation type="vanished">Speed Plus +40%</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation>Speed Plus +50%</translation>
+        <translation type="vanished">Speed Plus +50%</translation>
     </message>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation>Dex:+% depending on level</translation>
+        <translation type="vanished">Dex:+% depending on level</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>Magic Plus</translation>
+        <translation type="vanished">Magic Plus</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation>Magic Plus +10%</translation>
+        <translation type="vanished">Magic Plus +10%</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation>Magic Plus +20%</translation>
+        <translation type="vanished">Magic Plus +20%</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation>Magic Plus +30%</translation>
+        <translation type="vanished">Magic Plus +30%</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation>Magic Plus +40%</translation>
+        <translation type="vanished">Magic Plus +40%</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation>Magic Plus +50%</translation>
+        <translation type="vanished">Magic Plus +50%</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation>Mag:+% depending on level</translation>
+        <translation type="vanished">Mag:+% depending on level</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>Luck Plus</translation>
+        <translation type="vanished">Luck Plus</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation>Luck Plus +10%</translation>
+        <translation type="vanished">Luck Plus +10%</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation>Luck Plus +20%</translation>
+        <translation type="vanished">Luck Plus +20%</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation>Luck Plus +30%</translation>
+        <translation type="vanished">Luck Plus +30%</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation>Luck Plus +40%</translation>
+        <translation type="vanished">Luck Plus +40%</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation>Luck Plus +50%</translation>
+        <translation type="vanished">Luck Plus +50%</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation>Lck:+% depending on level</translation>
+        <translation type="vanished">Lck:+% depending on level</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation>EXP Plus</translation>
+        <translation type="vanished">EXP Plus</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation>Exp Plus +50%</translation>
+        <translation type="vanished">Exp Plus +50%</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation>Exp Plus +100%</translation>
+        <translation type="vanished">Exp Plus +100%</translation>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation>Lck:+1</translation>
+        <translation type="vanished">Lck:+1</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>Gil Plus</translation>
+        <translation type="vanished">Gil Plus</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation>Gil Plus +50%</translation>
+        <translation type="vanished">Gil Plus +50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation>Gil Plus +100%</translation>
+        <translation type="vanished">Gil Plus +100%</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation>Enemy Away</translation>
+        <translation type="vanished">Enemy Away</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation>Encounter Rate -50%</translation>
+        <translation type="vanished">Encounter Rate -50%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation>Encounter Rate -75%</translation>
+        <translation type="vanished">Encounter Rate -75%</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation>Enemy Lure</translation>
+        <translation type="vanished">Enemy Lure</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation>Encounter Rate +50%</translation>
+        <translation type="vanished">Encounter Rate +50%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation>Encounter Rate +100%</translation>
+        <translation type="vanished">Encounter Rate +100%</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation>Lck:-1</translation>
+        <translation type="vanished">Lck:-1</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Chocobo Lure</translation>
+        <translation type="vanished">Chocobo Lure</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation>Chocobo Lure +50%</translation>
+        <translation type="vanished">Chocobo Lure +50%</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation>Chocobo Lure +100%</translation>
+        <translation type="vanished">Chocobo Lure +100%</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation>Chocobo Lure +200%</translation>
+        <translation type="vanished">Chocobo Lure +200%</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation>Pre-emptive</translation>
+        <translation type="vanished">Pre-emptive</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation>Pre-emptive +6%</translation>
+        <translation type="vanished">Pre-emptive +6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation>Pre-emptive +12%</translation>
+        <translation type="vanished">Pre-emptive +12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation>Pre-emptive +24%</translation>
+        <translation type="vanished">Pre-emptive +24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation>Pre-emptive +36%</translation>
+        <translation type="vanished">Pre-emptive +36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation>Pre-emptive +48%</translation>
+        <translation type="vanished">Pre-emptive +48%</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation>Dex:+2</translation>
+        <translation type="vanished">Dex:+2</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Long Range</translation>
+        <translation type="vanished">Long Range</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>Mega All</translation>
+        <translation type="vanished">Mega All</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation>Mega-all x1</translation>
+        <translation type="vanished">Mega-all x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation>Mega-all x2</translation>
+        <translation type="vanished">Mega-all x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation>Mega-all x3</translation>
+        <translation type="vanished">Mega-all x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation>Mega-all x4</translation>
+        <translation type="vanished">Mega-all x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation>Mega-all x5</translation>
+        <translation type="vanished">Mega-all x5</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation>Counter Attack</translation>
+        <translation type="vanished">Counter Attack</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation>Counter Attack 20%</translation>
+        <translation type="vanished">Counter Attack 20%</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation>Counter Attack 40%</translation>
+        <translation type="vanished">Counter Attack 40%</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation>Counter Attack 60%</translation>
+        <translation type="vanished">Counter Attack 60%</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation>Counter Attack 80%</translation>
+        <translation type="vanished">Counter Attack 80%</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation>Counter Attack 100%</translation>
+        <translation type="vanished">Counter Attack 100%</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>Slash-All</translation>
+        <translation type="vanished">Slash-All</translation>
     </message>
     <message>
         <source>Flash</source>
-        <translation>Flash</translation>
+        <translation type="vanished">Flash</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>Double Cut</translation>
+        <translation type="vanished">Double Cut</translation>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation>2x-Cut</translation>
+        <translation type="vanished">2x-Cut</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation>4x-Cut</translation>
+        <translation type="vanished">4x-Cut</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Cover</translation>
+        <translation type="vanished">Cover</translation>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation>Cover +20%</translation>
+        <translation type="vanished">Cover +20%</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation>Cover +40%</translation>
+        <translation type="vanished">Cover +40%</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation>Cover +60%</translation>
+        <translation type="vanished">Cover +60%</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation>Cover +80%</translation>
+        <translation type="vanished">Cover +80%</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation>Cover +100%</translation>
+        <translation type="vanished">Cover +100%</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation>Vit:+1</translation>
+        <translation type="vanished">Vit:+1</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>Underwater</translation>
+        <translation type="vanished">Underwater</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>HP &lt;-&gt; MP</translation>
+        <translation type="vanished">HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>W-Magic</translation>
+        <translation type="vanished">W-Magic</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>W-Summon</translation>
+        <translation type="vanished">W-Summon</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>W-Item</translation>
+        <translation type="vanished">W-Item</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>DON&apos;T USE</translation>
+        <translation type="vanished">DON&apos;T USE</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>All</translation>
+        <translation type="vanished">All</translation>
     </message>
     <message>
         <source>All x1</source>
-        <translation>All x1</translation>
+        <translation type="vanished">All x1</translation>
     </message>
     <message>
         <source>All x2</source>
-        <translation>All x2</translation>
+        <translation type="vanished">All x2</translation>
     </message>
     <message>
         <source>All x3</source>
-        <translation>All x3</translation>
+        <translation type="vanished">All x3</translation>
     </message>
     <message>
         <source>All x4</source>
-        <translation>All x4</translation>
+        <translation type="vanished">All x4</translation>
     </message>
     <message>
         <source>All x5</source>
-        <translation>All x5</translation>
+        <translation type="vanished">All x5</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation>Counter</translation>
+        <translation type="vanished">Counter</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation>Counter Rate 20%</translation>
+        <translation type="vanished">Counter Rate 20%</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation>Counter Rate 40%</translation>
+        <translation type="vanished">Counter Rate 40%</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation>Counter Rate 60%</translation>
+        <translation type="vanished">Counter Rate 60%</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation>Counter Rate 80%</translation>
+        <translation type="vanished">Counter Rate 80%</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation>Counter Rate 100%</translation>
+        <translation type="vanished">Counter Rate 100%</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation>Magic Counter</translation>
+        <translation type="vanished">Magic Counter</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation>Magic Counter Rate 30%</translation>
+        <translation type="vanished">Magic Counter Rate 30%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation>Magic Counter Rate 40%</translation>
+        <translation type="vanished">Magic Counter Rate 40%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation>Magic Counter Rate 60%</translation>
+        <translation type="vanished">Magic Counter Rate 60%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation>Magic Counter Rate 80%</translation>
+        <translation type="vanished">Magic Counter Rate 80%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation>Magic Counter Rate 100%</translation>
+        <translation type="vanished">Magic Counter Rate 100%</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation>MP Turbo</translation>
+        <translation type="vanished">MP Turbo</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation>MP Turbo 10%</translation>
+        <translation type="vanished">MP Turbo 10%</translation>
     </message>
     <message>
         <source>MP Turbo 20%</source>
-        <translation>MP Turbo 20%</translation>
+        <translation type="vanished">MP Turbo 20%</translation>
     </message>
     <message>
         <source>MP Turbo 30%</source>
-        <translation>MP Turbo 30%</translation>
+        <translation type="vanished">MP Turbo 30%</translation>
     </message>
     <message>
         <source>MP Turbo 40%</source>
-        <translation>MP Turbo 40%</translation>
+        <translation type="vanished">MP Turbo 40%</translation>
     </message>
     <message>
         <source>MP Turbo 50%</source>
-        <translation>MP Turbo 50%</translation>
+        <translation type="vanished">MP Turbo 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>MP Absorb</translation>
+        <translation type="vanished">MP Absorb</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>HP Absorb</translation>
+        <translation type="vanished">HP Absorb</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>Elemental</translation>
+        <translation type="vanished">Elemental</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation>Elemental 50%</translation>
+        <translation type="vanished">Elemental 50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation>Elemental 100%</translation>
+        <translation type="vanished">Elemental 100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation>Elemental 200%</translation>
+        <translation type="vanished">Elemental 200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Added Effect</translation>
+        <translation type="vanished">Added Effect</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation>Sneak Attack</translation>
+        <translation type="vanished">Sneak Attack</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
-        <translation>Sneak Attack 20%</translation>
+        <translation type="vanished">Sneak Attack 20%</translation>
     </message>
     <message>
         <source>Sneak Attack 35%</source>
-        <translation>Sneak Attack 35%</translation>
+        <translation type="vanished">Sneak Attack 35%</translation>
     </message>
     <message>
         <source>Sneak Attack 50%</source>
-        <translation>Sneak Attack 50%</translation>
+        <translation type="vanished">Sneak Attack 50%</translation>
     </message>
     <message>
         <source>Sneak Attack 65%</source>
-        <translation>Sneak Attack 65%</translation>
+        <translation type="vanished">Sneak Attack 65%</translation>
     </message>
     <message>
         <source>Sneak Attack 80%</source>
-        <translation>Sneak Attack 80%</translation>
+        <translation type="vanished">Sneak Attack 80%</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation>Final Attack</translation>
+        <translation type="vanished">Final Attack</translation>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation>Final Attack x1</translation>
+        <translation type="vanished">Final Attack x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation>Final Attack x2</translation>
+        <translation type="vanished">Final Attack x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation>Final Attack x3</translation>
+        <translation type="vanished">Final Attack x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation>Final Attack x4</translation>
+        <translation type="vanished">Final Attack x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation>Final Attack x5</translation>
+        <translation type="vanished">Final Attack x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Added Cut</translation>
+        <translation type="vanished">Added Cut</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>Steal-As-Well</translation>
+        <translation type="vanished">Steal-As-Well</translation>
     </message>
     <message>
         <source>Steal as well</source>
-        <translation>Steal as well</translation>
+        <translation type="vanished">Steal as well</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>Quadra Magic</translation>
+        <translation type="vanished">Quadra Magic</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
-        <translation>Quadra Magic x1</translation>
+        <translation type="vanished">Quadra Magic x1</translation>
     </message>
     <message>
         <source>Quadra Magic x2</source>
-        <translation>Quadra Magic x2</translation>
+        <translation type="vanished">Quadra Magic x2</translation>
     </message>
     <message>
         <source>Quadra Magic x3</source>
-        <translation>Quadra Magic x3</translation>
+        <translation type="vanished">Quadra Magic x3</translation>
     </message>
     <message>
         <source>Quadra Magic x4</source>
-        <translation>Quadra Magic x4</translation>
+        <translation type="vanished">Quadra Magic x4</translation>
     </message>
     <message>
         <source>Quadra Magic x5</source>
-        <translation>Quadra Magic x5</translation>
+        <translation type="vanished">Quadra Magic x5</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>Steal</translation>
+        <translation type="vanished">Steal</translation>
     </message>
     <message>
         <source>Mug</source>
-        <translation>Mug</translation>
+        <translation type="vanished">Mug</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>Sense</translation>
+        <translation type="vanished">Sense</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation>Throw</translation>
+        <translation type="vanished">Throw</translation>
     </message>
     <message>
         <source>Coin</source>
-        <translation>Coin</translation>
+        <translation type="vanished">Coin</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Morph</translation>
+        <translation type="vanished">Morph</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>Deathblow</translation>
+        <translation type="vanished">Deathblow</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation>DeathBlow</translation>
+        <translation type="vanished">DeathBlow</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>Manipulate</translation>
+        <translation type="vanished">Manipulate</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Mime</translation>
+        <translation type="vanished">Mime</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Enemy Skill</translation>
+        <translation type="vanished">Enemy Skill</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>Master Command</translation>
+        <translation type="vanished">Master Command</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>Fire</translation>
+        <translation type="vanished">Fire</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
-        <translation>Fire (4mp)</translation>
+        <translation type="vanished">Fire (4mp)</translation>
     </message>
     <message>
         <source>Fire2 (22mp)</source>
-        <translation>Fire2 (22mp)</translation>
+        <translation type="vanished">Fire2 (22mp)</translation>
     </message>
     <message>
         <source>Fire3 (52mp)</source>
-        <translation>Fire3 (52mp)</translation>
+        <translation type="vanished">Fire3 (52mp)</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</translation>
+        <translation type="vanished">MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</translation>
     </message>
     <message>
         <source>[Fire]</source>
-        <translation>[Fire]</translation>
+        <translation type="vanished">[Fire]</translation>
     </message>
     <message>
         <source>Ice</source>
-        <translation>Ice</translation>
+        <translation type="vanished">Ice</translation>
     </message>
     <message>
         <source>Ice (4mp)</source>
-        <translation>Ice (4mp)</translation>
+        <translation type="vanished">Ice (4mp)</translation>
     </message>
     <message>
         <source>Ice2 (22mp)</source>
-        <translation>Ice2 (22mp)</translation>
+        <translation type="vanished">Ice2 (22mp)</translation>
     </message>
     <message>
         <source>Ice3 (52mp)</source>
-        <translation>Ice3 (52mp)</translation>
+        <translation type="vanished">Ice3 (52mp)</translation>
     </message>
     <message>
         <source>[Ice]</source>
-        <translation>[Ice]</translation>
+        <translation type="vanished">[Ice]</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>Earth</translation>
+        <translation type="vanished">Earth</translation>
     </message>
     <message>
         <source>Quake (6mp)</source>
-        <translation>Quake (6mp)</translation>
+        <translation type="vanished">Quake (6mp)</translation>
     </message>
     <message>
         <source>Quake2 (28mp)</source>
-        <translation>Quake2 (28mp)</translation>
+        <translation type="vanished">Quake2 (28mp)</translation>
     </message>
     <message>
         <source>Quake3 (68mp)</source>
-        <translation>Quake3 (68mp)</translation>
+        <translation type="vanished">Quake3 (68mp)</translation>
     </message>
     <message>
         <source>[Earth]</source>
-        <translation>[Earth]</translation>
+        <translation type="vanished">[Earth]</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Lightning</translation>
+        <translation type="vanished">Lightning</translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
-        <translation>Bolt (4mp)</translation>
+        <translation type="vanished">Bolt (4mp)</translation>
     </message>
     <message>
         <source>Bolt2 (22mp)</source>
-        <translation>Bolt2 (22mp)</translation>
+        <translation type="vanished">Bolt2 (22mp)</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation>Bolt3 (52mp)</translation>
+        <translation type="vanished">Bolt3 (52mp)</translation>
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation>[Lightning]</translation>
+        <translation type="vanished">[Lightning]</translation>
     </message>
     <message>
         <source>Restore</source>
-        <translation>Restore</translation>
+        <translation type="vanished">Restore</translation>
     </message>
     <message>
         <source>Cure (5mp)</source>
-        <translation>Cure (5mp)</translation>
+        <translation type="vanished">Cure (5mp)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation>Cure2 (24mp)</translation>
+        <translation type="vanished">Cure2 (24mp)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
-        <translation>Regen (30mp)</translation>
+        <translation type="vanished">Regen (30mp)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
-        <translation>Cure3 (64mp)</translation>
+        <translation type="vanished">Cure3 (64mp)</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation>Heal</translation>
+        <translation type="vanished">Heal</translation>
     </message>
     <message>
         <source>Poisona (3mp)</source>
-        <translation>Poisona (3mp)</translation>
+        <translation type="vanished">Poisona (3mp)</translation>
     </message>
     <message>
         <source>Esuna (15mp)</source>
-        <translation>Esuna (15mp)</translation>
+        <translation type="vanished">Esuna (15mp)</translation>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation>Resist (120mp)</translation>
+        <translation type="vanished">Resist (120mp)</translation>
     </message>
     <message>
         <source>Revive</source>
-        <translation>Revive</translation>
+        <translation type="vanished">Revive</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
-        <translation>Life (34mp)</translation>
+        <translation type="vanished">Life (34mp)</translation>
     </message>
     <message>
         <source>Life2 (100mp)</source>
-        <translation>Life2 (100mp)</translation>
+        <translation type="vanished">Life2 (100mp)</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</translation>
+        <translation type="vanished">MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</translation>
     </message>
     <message>
         <source>Seal</source>
-        <translation>Seal</translation>
+        <translation type="vanished">Seal</translation>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation>Sleepel (8mp)</translation>
+        <translation type="vanished">Sleepel (8mp)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
-        <translation>Silence (24mp)</translation>
+        <translation type="vanished">Silence (24mp)</translation>
     </message>
     <message>
         <source>[Sleep]</source>
-        <translation>[Sleep]</translation>
+        <translation type="vanished">[Sleep]</translation>
     </message>
     <message>
         <source>[Silence]</source>
-        <translation>[Silence]</translation>
+        <translation type="vanished">[Silence]</translation>
     </message>
     <message>
         <source>Mystify</source>
-        <translation>Mystify</translation>
+        <translation type="vanished">Mystify</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
-        <translation>Confu (18mp)</translation>
+        <translation type="vanished">Confu (18mp)</translation>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation>Berserk (28mp)</translation>
+        <translation type="vanished">Berserk (28mp)</translation>
     </message>
     <message>
         <source>[Confusion]</source>
-        <translation>[Confusion]</translation>
+        <translation type="vanished">[Confusion]</translation>
     </message>
     <message>
         <source>[Berserk]</source>
-        <translation>[Berserk]</translation>
+        <translation type="vanished">[Berserk]</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation>Transform</translation>
+        <translation type="vanished">Transform</translation>
     </message>
     <message>
         <source>Mini (10mp)</source>
-        <translation>Mini (10mp)</translation>
+        <translation type="vanished">Mini (10mp)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation>Toad (14mp)</translation>
+        <translation type="vanished">Toad (14mp)</translation>
     </message>
     <message>
         <source>[Mini]</source>
-        <translation>[Mini]</translation>
+        <translation type="vanished">[Mini]</translation>
     </message>
     <message>
         <source>[Frog]</source>
-        <translation>[Frog]</translation>
+        <translation type="vanished">[Frog]</translation>
     </message>
     <message>
         <source>Exit</source>
-        <translation>Exit</translation>
+        <translation type="vanished">Exit</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation>Exit (16mp)</translation>
+        <translation type="vanished">Exit (16mp)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
-        <translation>Remove (99mp)</translation>
+        <translation type="vanished">Remove (99mp)</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Poison</translation>
+        <translation type="vanished">Poison</translation>
     </message>
     <message>
         <source>Bio (8mp)</source>
-        <translation>Bio (8mp)</translation>
+        <translation type="vanished">Bio (8mp)</translation>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation>Bio2 (36mp)</translation>
+        <translation type="vanished">Bio2 (36mp)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
-        <translation>Bio3 (80mp)</translation>
+        <translation type="vanished">Bio3 (80mp)</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation>[Poison]</translation>
+        <translation type="vanished">[Poison]</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>Gravity</translation>
+        <translation type="vanished">Gravity</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation>Demi (14mp)</translation>
+        <translation type="vanished">Demi (14mp)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
-        <translation>Demi2 (33mp)</translation>
+        <translation type="vanished">Demi2 (33mp)</translation>
     </message>
     <message>
         <source>Demi3 (48mp)</source>
-        <translation>Demi3 (48mp)</translation>
+        <translation type="vanished">Demi3 (48mp)</translation>
     </message>
     <message>
         <source>[Gravity]</source>
-        <translation>[Gravity]</translation>
+        <translation type="vanished">[Gravity]</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>Barrier</translation>
+        <translation type="vanished">Barrier</translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation>Barrier (16mp)</translation>
+        <translation type="vanished">Barrier (16mp)</translation>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
-        <translation>M-Barrier (24mp)</translation>
+        <translation type="vanished">M-Barrier (24mp)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
-        <translation>Reflect (30mp)</translation>
+        <translation type="vanished">Reflect (30mp)</translation>
     </message>
     <message>
         <source>Wall (58mp)</source>
-        <translation>Wall (58mp)</translation>
+        <translation type="vanished">Wall (58mp)</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation>Comet</translation>
+        <translation type="vanished">Comet</translation>
     </message>
     <message>
         <source>Comet (70mp)</source>
-        <translation>Comet (70mp)</translation>
+        <translation type="vanished">Comet (70mp)</translation>
     </message>
     <message>
         <source>Comet2 (110mp)</source>
-        <translation>Comet2 (110mp)</translation>
+        <translation type="vanished">Comet2 (110mp)</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Time</translation>
+        <translation type="vanished">Time</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
-        <translation>Haste (18mp)</translation>
+        <translation type="vanished">Haste (18mp)</translation>
     </message>
     <message>
         <source>Slow (20mp)</source>
-        <translation>Slow (20mp)</translation>
+        <translation type="vanished">Slow (20mp)</translation>
     </message>
     <message>
         <source>Stop (34mp)</source>
-        <translation>Stop (34mp)</translation>
+        <translation type="vanished">Stop (34mp)</translation>
     </message>
     <message>
         <source>[Slow]</source>
-        <translation>[Slow]</translation>
+        <translation type="vanished">[Slow]</translation>
     </message>
     <message>
         <source>[Stop]</source>
-        <translation>[Stop]</translation>
+        <translation type="vanished">[Stop]</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation>Destruct</translation>
+        <translation type="vanished">Destruct</translation>
     </message>
     <message>
         <source>DeBarrier (12mp)</source>
-        <translation>DeBarrier (12mp)</translation>
+        <translation type="vanished">DeBarrier (12mp)</translation>
     </message>
     <message>
         <source>DeSpell (20mp)</source>
-        <translation>DeSpell (20mp)</translation>
+        <translation type="vanished">DeSpell (20mp)</translation>
     </message>
     <message>
         <source>Death (30mp)</source>
-        <translation>Death (30mp)</translation>
+        <translation type="vanished">Death (30mp)</translation>
     </message>
     <message>
         <source>[Death]</source>
-        <translation>[Death]</translation>
+        <translation type="vanished">[Death]</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation>Contain</translation>
+        <translation type="vanished">Contain</translation>
     </message>
     <message>
         <source>Freeze (82mp)</source>
-        <translation>Freeze (82mp)</translation>
+        <translation type="vanished">Freeze (82mp)</translation>
     </message>
     <message>
         <source>Break (86mp)</source>
-        <translation>Break (86mp)</translation>
+        <translation type="vanished">Break (86mp)</translation>
     </message>
     <message>
         <source>Tornado (90mp)</source>
-        <translation>Tornado (90mp)</translation>
+        <translation type="vanished">Tornado (90mp)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
-        <translation>Flare (100mp)</translation>
+        <translation type="vanished">Flare (100mp)</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</translation>
+        <translation type="vanished">MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</translation>
     </message>
     <message>
         <source>[Petrify]</source>
-        <translation>[Petrify]</translation>
+        <translation type="vanished">[Petrify]</translation>
     </message>
     <message>
         <source>Full Cure</source>
-        <translation>Full Cure</translation>
+        <translation type="vanished">Full Cure</translation>
     </message>
     <message>
         <source>Full Cure (99mp)</source>
-        <translation>Full Cure (99mp)</translation>
+        <translation type="vanished">Full Cure (99mp)</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Shield</translation>
+        <translation type="vanished">Shield</translation>
     </message>
     <message>
         <source>Shield (180mp)</source>
-        <translation>Shield (180mp)</translation>
+        <translation type="vanished">Shield (180mp)</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation>Ultima</translation>
+        <translation type="vanished">Ultima</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation>Ultima (130mp)</translation>
+        <translation type="vanished">Ultima (130mp)</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>Master Magic</translation>
+        <translation type="vanished">Master Magic</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation>Choco/Mog</translation>
+        <translation type="vanished">Choco/Mog</translation>
     </message>
     <message>
         <source>Choco/Mog x1 (14mp)</source>
-        <translation>Choco/Mog x1 (14mp)</translation>
+        <translation type="vanished">Choco/Mog x1 (14mp)</translation>
     </message>
     <message>
         <source>Choco/Mog x2 (14mp)</source>
-        <translation>Choco/Mog x2 (14mp)</translation>
+        <translation type="vanished">Choco/Mog x2 (14mp)</translation>
     </message>
     <message>
         <source>Choco/Mog x3 (14mp)</source>
-        <translation>Choco/Mog x3 (14mp)</translation>
+        <translation type="vanished">Choco/Mog x3 (14mp)</translation>
     </message>
     <message>
         <source>Choco/Mog x4 (14mp)</source>
-        <translation>Choco/Mog x4 (14mp)</translation>
+        <translation type="vanished">Choco/Mog x4 (14mp)</translation>
     </message>
     <message>
         <source>Choco/Mog x5 (14mp)</source>
-        <translation>Choco/Mog x5 (14mp)</translation>
+        <translation type="vanished">Choco/Mog x5 (14mp)</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation>MaxHp:-2% MaxMp:+2% Mag:+1</translation>
+        <translation type="vanished">MaxHp:-2% MaxMp:+2% Mag:+1</translation>
     </message>
     <message>
         <source>[Wind]</source>
-        <translation>[Wind]</translation>
+        <translation type="vanished">[Wind]</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation>Shiva</translation>
+        <translation type="vanished">Shiva</translation>
     </message>
     <message>
         <source>Shiva x1 (32mp)</source>
-        <translation>Shiva x1 (32mp)</translation>
+        <translation type="vanished">Shiva x1 (32mp)</translation>
     </message>
     <message>
         <source>Shiva x2 (32mp)</source>
-        <translation>Shiva x2 (32mp)</translation>
+        <translation type="vanished">Shiva x2 (32mp)</translation>
     </message>
     <message>
         <source>Shiva x3 (32mp)</source>
-        <translation>Shiva x3 (32mp)</translation>
+        <translation type="vanished">Shiva x3 (32mp)</translation>
     </message>
     <message>
         <source>Shiva x4 (32mp)</source>
-        <translation>Shiva x4 (32mp)</translation>
+        <translation type="vanished">Shiva x4 (32mp)</translation>
     </message>
     <message>
         <source>Shiva x5 (32mp)</source>
-        <translation>Shiva x5 (32mp)</translation>
+        <translation type="vanished">Shiva x5 (32mp)</translation>
     </message>
     <message>
         <source>Ifrit</source>
-        <translation>Ifrit</translation>
+        <translation type="vanished">Ifrit</translation>
     </message>
     <message>
         <source>Ifrit x1 (34mp)</source>
-        <translation>Ifrit x1 (34mp)</translation>
+        <translation type="vanished">Ifrit x1 (34mp)</translation>
     </message>
     <message>
         <source>Ifrit x2 (34mp)</source>
-        <translation>Ifrit x2 (34mp)</translation>
+        <translation type="vanished">Ifrit x2 (34mp)</translation>
     </message>
     <message>
         <source>Ifrit x3 (34mp)</source>
-        <translation>Ifrit x3 (34mp)</translation>
+        <translation type="vanished">Ifrit x3 (34mp)</translation>
     </message>
     <message>
         <source>Ifrit x4 (34mp)</source>
-        <translation>Ifrit x4 (34mp)</translation>
+        <translation type="vanished">Ifrit x4 (34mp)</translation>
     </message>
     <message>
         <source>Ifrit x5 (34mp)</source>
-        <translation>Ifrit x5 (34mp)</translation>
+        <translation type="vanished">Ifrit x5 (34mp)</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation>Ramuh</translation>
+        <translation type="vanished">Ramuh</translation>
     </message>
     <message>
         <source>Ramuh x1 (40mp)</source>
-        <translation>Ramuh x1 (40mp)</translation>
+        <translation type="vanished">Ramuh x1 (40mp)</translation>
     </message>
     <message>
         <source>Ramuh x2 (40mp)</source>
-        <translation>Ramuh x2 (40mp)</translation>
+        <translation type="vanished">Ramuh x2 (40mp)</translation>
     </message>
     <message>
         <source>Ramuh x3 (40mp)</source>
-        <translation>Ramuh x3 (40mp)</translation>
+        <translation type="vanished">Ramuh x3 (40mp)</translation>
     </message>
     <message>
         <source>Ramuh x4 (40mp)</source>
-        <translation>Ramuh x4 (40mp)</translation>
+        <translation type="vanished">Ramuh x4 (40mp)</translation>
     </message>
     <message>
         <source>Ramuh x5 (40mp)</source>
-        <translation>Ramuh x5 (40mp)</translation>
+        <translation type="vanished">Ramuh x5 (40mp)</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation>Titan</translation>
+        <translation type="vanished">Titan</translation>
     </message>
     <message>
         <source>Titan x1 (46mp)</source>
-        <translation>Titan x1 (46mp)</translation>
+        <translation type="vanished">Titan x1 (46mp)</translation>
     </message>
     <message>
         <source>Titan x2 (46mp)</source>
-        <translation>Titan x2 (46mp)</translation>
+        <translation type="vanished">Titan x2 (46mp)</translation>
     </message>
     <message>
         <source>Titan x3 (46mp)</source>
-        <translation>Titan x3 (46mp)</translation>
+        <translation type="vanished">Titan x3 (46mp)</translation>
     </message>
     <message>
         <source>Titan x4 (46mp)</source>
-        <translation>Titan x4 (46mp)</translation>
+        <translation type="vanished">Titan x4 (46mp)</translation>
     </message>
     <message>
         <source>Titan x5 (46mp)</source>
-        <translation>Titan x5 (46mp)</translation>
+        <translation type="vanished">Titan x5 (46mp)</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation>Odin</translation>
+        <translation type="vanished">Odin</translation>
     </message>
     <message>
         <source>Odin x1 (80mp)</source>
-        <translation>Odin x1 (80mp)</translation>
+        <translation type="vanished">Odin x1 (80mp)</translation>
     </message>
     <message>
         <source>Odin x2 (80mp)</source>
-        <translation>Odin x2 (80mp)</translation>
+        <translation type="vanished">Odin x2 (80mp)</translation>
     </message>
     <message>
         <source>Odin x3 (80mp)</source>
-        <translation>Odin x3 (80mp)</translation>
+        <translation type="vanished">Odin x3 (80mp)</translation>
     </message>
     <message>
         <source>Odin x4 (80mp)</source>
-        <translation>Odin x4 (80mp)</translation>
+        <translation type="vanished">Odin x4 (80mp)</translation>
     </message>
     <message>
         <source>Odin x5 (80mp)</source>
-        <translation>Odin x5 (80mp)</translation>
+        <translation type="vanished">Odin x5 (80mp)</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</translation>
+        <translation type="vanished">MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>Leviathan</translation>
+        <translation type="vanished">Leviathan</translation>
     </message>
     <message>
         <source>Leviathan x1 (78mp)</source>
-        <translation>Leviathan x1 (78mp)</translation>
+        <translation type="vanished">Leviathan x1 (78mp)</translation>
     </message>
     <message>
         <source>Leviathan x2 (78mp)</source>
-        <translation>Leviathan x2 (78mp)</translation>
+        <translation type="vanished">Leviathan x2 (78mp)</translation>
     </message>
     <message>
         <source>Leviathan x3 (78mp)</source>
-        <translation>Leviathan x3 (78mp)</translation>
+        <translation type="vanished">Leviathan x3 (78mp)</translation>
     </message>
     <message>
         <source>Leviathan x4 (78mp)</source>
-        <translation>Leviathan x4 (78mp)</translation>
+        <translation type="vanished">Leviathan x4 (78mp)</translation>
     </message>
     <message>
         <source>Leviathan x5 (78mp)</source>
-        <translation>Leviathan x5 (78mp)</translation>
+        <translation type="vanished">Leviathan x5 (78mp)</translation>
     </message>
     <message>
         <source>[Water]</source>
-        <translation>[Water]</translation>
+        <translation type="vanished">[Water]</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation>Bahamut</translation>
+        <translation type="vanished">Bahamut</translation>
     </message>
     <message>
         <source>Bahamut x1 (100mp)</source>
-        <translation>Bahamut x1 (100mp)</translation>
+        <translation type="vanished">Bahamut x1 (100mp)</translation>
     </message>
     <message>
         <source>Bahamut x2 (100mp)</source>
-        <translation>Bahamut x2 (100mp)</translation>
+        <translation type="vanished">Bahamut x2 (100mp)</translation>
     </message>
     <message>
         <source>Bahamut x3 (100mp)</source>
-        <translation>Bahamut x3 (100mp)</translation>
+        <translation type="vanished">Bahamut x3 (100mp)</translation>
     </message>
     <message>
         <source>Bahamut x4 (100mp)</source>
-        <translation>Bahamut x4 (100mp)</translation>
+        <translation type="vanished">Bahamut x4 (100mp)</translation>
     </message>
     <message>
         <source>Bahamut x5 (100mp)</source>
-        <translation>Bahamut x5 (100mp)</translation>
+        <translation type="vanished">Bahamut x5 (100mp)</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation>Kujata</translation>
+        <translation type="vanished">Kujata</translation>
     </message>
     <message>
         <source>Kujata x1 (110mp)</source>
-        <translation>Kujata x1 (110mp)</translation>
+        <translation type="vanished">Kujata x1 (110mp)</translation>
     </message>
     <message>
         <source>Kujata x2 (110mp)</source>
-        <translation>Kujata x2 (110mp)</translation>
+        <translation type="vanished">Kujata x2 (110mp)</translation>
     </message>
     <message>
         <source>Kujata x3 (110mp)</source>
-        <translation>Kujata x3 (110mp)</translation>
+        <translation type="vanished">Kujata x3 (110mp)</translation>
     </message>
     <message>
         <source>Kujata x4 (110mp)</source>
-        <translation>Kujata x4 (110mp)</translation>
+        <translation type="vanished">Kujata x4 (110mp)</translation>
     </message>
     <message>
         <source>Kujata x5 (110mp)</source>
-        <translation>Kujata x5 (110mp)</translation>
+        <translation type="vanished">Kujata x5 (110mp)</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation>Alexander</translation>
+        <translation type="vanished">Alexander</translation>
     </message>
     <message>
         <source>Alexander x1 (120mp)</source>
-        <translation>Alexander x1 (120mp)</translation>
+        <translation type="vanished">Alexander x1 (120mp)</translation>
     </message>
     <message>
         <source>Alexander x2 (120mp)</source>
-        <translation>Alexander x2 (120mp)</translation>
+        <translation type="vanished">Alexander x2 (120mp)</translation>
     </message>
     <message>
         <source>Alexander x3 (120mp)</source>
-        <translation>Alexander x3 (120mp)</translation>
+        <translation type="vanished">Alexander x3 (120mp)</translation>
     </message>
     <message>
         <source>Alexander x4 (120mp)</source>
-        <translation>Alexander x4 (120mp)</translation>
+        <translation type="vanished">Alexander x4 (120mp)</translation>
     </message>
     <message>
         <source>Alexander x5 (120mp)</source>
-        <translation>Alexander x5 (120mp)</translation>
+        <translation type="vanished">Alexander x5 (120mp)</translation>
     </message>
     <message>
         <source>[Holy]</source>
-        <translation>[Holy]</translation>
+        <translation type="vanished">[Holy]</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>Phoenix</translation>
+        <translation type="vanished">Phoenix</translation>
     </message>
     <message>
         <source>Phoenix x1 (180mp)</source>
-        <translation>Phoenix x1 (180mp)</translation>
+        <translation type="vanished">Phoenix x1 (180mp)</translation>
     </message>
     <message>
         <source>Phoenix x2 (180mp)</source>
-        <translation>Phoenix x2 (180mp)</translation>
+        <translation type="vanished">Phoenix x2 (180mp)</translation>
     </message>
     <message>
         <source>Phoenix x3 (180mp)</source>
-        <translation>Phoenix x3 (180mp)</translation>
+        <translation type="vanished">Phoenix x3 (180mp)</translation>
     </message>
     <message>
         <source>Phoenix x4 (180mp)</source>
-        <translation>Phoenix x4 (180mp)</translation>
+        <translation type="vanished">Phoenix x4 (180mp)</translation>
     </message>
     <message>
         <source>Phoenix x5 (180mp)</source>
-        <translation>Phoenix x5 (180mp)</translation>
+        <translation type="vanished">Phoenix x5 (180mp)</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</translation>
+        <translation type="vanished">MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>Neo Bahamut</translation>
+        <translation type="vanished">Neo Bahamut</translation>
     </message>
     <message>
         <source>Neo Bahamut x1 (140mp)</source>
-        <translation>Neo Bahamut x1 (140mp)</translation>
+        <translation type="vanished">Neo Bahamut x1 (140mp)</translation>
     </message>
     <message>
         <source>Neo Bahamut x2 (140mp)</source>
-        <translation>Neo Bahamut x2 (140mp)</translation>
+        <translation type="vanished">Neo Bahamut x2 (140mp)</translation>
     </message>
     <message>
         <source>Neo Bahamut x3 (140mp)</source>
-        <translation>Neo Bahamut x3 (140mp)</translation>
+        <translation type="vanished">Neo Bahamut x3 (140mp)</translation>
     </message>
     <message>
         <source>Neo Bahamut x4 (140mp)</source>
-        <translation>Neo Bahamut x4 (140mp)</translation>
+        <translation type="vanished">Neo Bahamut x4 (140mp)</translation>
     </message>
     <message>
         <source>Neo Bahamut x5 (140mp)</source>
-        <translation>Neo Bahamut x5 (140mp)</translation>
+        <translation type="vanished">Neo Bahamut x5 (140mp)</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>Hades</translation>
+        <translation type="vanished">Hades</translation>
     </message>
     <message>
         <source>Hades x1 (150mp)</source>
-        <translation>Hades x1 (150mp)</translation>
+        <translation type="vanished">Hades x1 (150mp)</translation>
     </message>
     <message>
         <source>Hades x2 (150mp)</source>
-        <translation>Hades x2 (150mp)</translation>
+        <translation type="vanished">Hades x2 (150mp)</translation>
     </message>
     <message>
         <source>Hades x3 (150mp)</source>
-        <translation>Hades x3 (150mp)</translation>
+        <translation type="vanished">Hades x3 (150mp)</translation>
     </message>
     <message>
         <source>Hades x4 (150mp)</source>
-        <translation>Hades x4 (150mp)</translation>
+        <translation type="vanished">Hades x4 (150mp)</translation>
     </message>
     <message>
         <source>Hades x5 (150mp)</source>
-        <translation>Hades x5 (150mp)</translation>
+        <translation type="vanished">Hades x5 (150mp)</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</translation>
+        <translation type="vanished">MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>Typhon</translation>
+        <translation type="vanished">Typhon</translation>
     </message>
     <message>
         <source>Typhon x1 (160mp)</source>
-        <translation>Typhon x1 (160mp)</translation>
+        <translation type="vanished">Typhon x1 (160mp)</translation>
     </message>
     <message>
         <source>Typhon x2 (160mp)</source>
-        <translation>Typhon x2 (160mp)</translation>
+        <translation type="vanished">Typhon x2 (160mp)</translation>
     </message>
     <message>
         <source>Typhon x3 (160mp)</source>
-        <translation>Typhon x3 (160mp)</translation>
+        <translation type="vanished">Typhon x3 (160mp)</translation>
     </message>
     <message>
         <source>Typhon x4 (160mp)</source>
-        <translation>Typhon x4 (160mp)</translation>
+        <translation type="vanished">Typhon x4 (160mp)</translation>
     </message>
     <message>
         <source>Typhon x5 (160mp)</source>
-        <translation>Typhon x5 (160mp)</translation>
+        <translation type="vanished">Typhon x5 (160mp)</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation>Bahamut ZERO</translation>
+        <translation type="vanished">Bahamut ZERO</translation>
     </message>
     <message>
         <source>Bahamut ZERO x1 (180mp)</source>
-        <translation>Bahamut ZERO x1 (180mp)</translation>
+        <translation type="vanished">Bahamut ZERO x1 (180mp)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x2 (180mp)</source>
-        <translation>Bahamut ZERO x2 (180mp)</translation>
+        <translation type="vanished">Bahamut ZERO x2 (180mp)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x3 (180mp)</source>
-        <translation>Bahamut ZERO x3 (180mp)</translation>
+        <translation type="vanished">Bahamut ZERO x3 (180mp)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x4 (180mp)</source>
-        <translation>Bahamut ZERO x4 (180mp)</translation>
+        <translation type="vanished">Bahamut ZERO x4 (180mp)</translation>
     </message>
     <message>
         <source>Bahamut ZERO x5 (180mp)</source>
-        <translation>Bahamut ZERO x5 (180mp)</translation>
+        <translation type="vanished">Bahamut ZERO x5 (180mp)</translation>
     </message>
     <message>
         <source>Knights of the Round</source>
-        <translation>Knights of the Round</translation>
+        <translation type="vanished">Knights of the Round</translation>
     </message>
     <message>
         <source>KOTR x1 (250mp)</source>
-        <translation>KOTR x1 (250mp)</translation>
+        <translation type="vanished">KOTR x1 (250mp)</translation>
     </message>
     <message>
         <source>KOTR x2 (250mp)</source>
-        <translation>KOTR x2 (250mp)</translation>
+        <translation type="vanished">KOTR x2 (250mp)</translation>
     </message>
     <message>
         <source>KOTR x3 (250mp)</source>
-        <translation>KOTR x3 (250mp)</translation>
+        <translation type="vanished">KOTR x3 (250mp)</translation>
     </message>
     <message>
         <source>KOTR x4 (250mp)</source>
-        <translation>KOTR x4 (250mp)</translation>
+        <translation type="vanished">KOTR x4 (250mp)</translation>
     </message>
     <message>
         <source>KOTR x5 (250mp)</source>
-        <translation>KOTR x5 (250mp)</translation>
+        <translation type="vanished">KOTR x5 (250mp)</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</translation>
+        <translation type="vanished">MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>Master Summon</translation>
+        <translation type="vanished">Master Summon</translation>
     </message>
     <message>
         <source>Frog Song</source>
-        <translation>Frog Song</translation>
+        <translation type="vanished">Frog Song</translation>
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>L4 Suicide</translation>
+        <translation type="vanished">L4 Suicide</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
-        <translation>Magic Hammer</translation>
+        <translation type="vanished">Magic Hammer</translation>
     </message>
     <message>
         <source>White Wind</source>
-        <translation>White Wind</translation>
+        <translation type="vanished">White Wind</translation>
     </message>
     <message>
         <source>Big Guard</source>
-        <translation>Big Guard</translation>
+        <translation type="vanished">Big Guard</translation>
     </message>
     <message>
         <source>Angel Whisper</source>
-        <translation>Angel Whisper</translation>
+        <translation type="vanished">Angel Whisper</translation>
     </message>
     <message>
         <source>Dragon Force</source>
-        <translation>Dragon Force</translation>
+        <translation type="vanished">Dragon Force</translation>
     </message>
     <message>
         <source>Death Force</source>
-        <translation>Death Force</translation>
+        <translation type="vanished">Death Force</translation>
     </message>
     <message>
         <source>Flame Thrower</source>
-        <translation>Flame Thrower</translation>
+        <translation type="vanished">Flame Thrower</translation>
     </message>
     <message>
         <source>Laser</source>
-        <translation>Laser</translation>
+        <translation type="vanished">Laser</translation>
     </message>
     <message>
         <source>Matra Magic</source>
-        <translation>Matra Magic</translation>
+        <translation type="vanished">Matra Magic</translation>
     </message>
     <message>
         <source>Bad Breath</source>
-        <translation>Bad Breath</translation>
+        <translation type="vanished">Bad Breath</translation>
     </message>
     <message>
         <source>Beta</source>
-        <translation>Beta</translation>
+        <translation type="vanished">Beta</translation>
     </message>
     <message>
         <source>Aqualung</source>
-        <translation>Aqualung</translation>
+        <translation type="vanished">Aqualung</translation>
     </message>
     <message>
         <source>Trine</source>
-        <translation>Trine</translation>
+        <translation type="vanished">Trine</translation>
     </message>
     <message>
         <source>Magic Breath</source>
-        <translation>Magic Breath</translation>
+        <translation type="vanished">Magic Breath</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>????</translation>
+        <translation type="vanished">????</translation>
     </message>
     <message>
         <source>Goblin Punch</source>
-        <translation>Goblin Punch</translation>
+        <translation type="vanished">Goblin Punch</translation>
     </message>
     <message>
         <source>Chocobuckle</source>
-        <translation>Chocobuckle</translation>
+        <translation type="vanished">Chocobuckle</translation>
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>L5 Death</translation>
+        <translation type="vanished">L5 Death</translation>
     </message>
     <message>
         <source>Death Sentence</source>
-        <translation>Death Sentence</translation>
+        <translation type="vanished">Death Sentence</translation>
     </message>
     <message>
         <source>Roulette</source>
-        <translation>Roulette</translation>
+        <translation type="vanished">Roulette</translation>
     </message>
     <message>
         <source>Shadow Flare</source>
-        <translation>Shadow Flare</translation>
+        <translation type="vanished">Shadow Flare</translation>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>Pandora&apos;s Box</translation>
+        <translation type="vanished">Pandora&apos;s Box</translation>
     </message>
 </context>
 <context>
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
-        <translation>New Game +</translation>
+        <translation type="vanished">New Game +</translation>
     </message>
     <message>
         <source>Unable to open PSV of Type %2: 0x%1</source>
-        <translation>Unable to open PSV of Type %2: 0x%1</translation>
+        <translation type="vanished">Unable to open PSV of Type %2: 0x%1</translation>
     </message>
 </context>
 <context>
     <name>FF7SaveInfo</name>
     <message>
         <source>PC Save File</source>
-        <translation>PC Save File</translation>
+        <translation type="vanished">PC Save File</translation>
     </message>
     <message>
         <source>Switch Save File</source>
-        <translation>Switch Save File</translation>
+        <translation type="vanished">Switch Save File</translation>
     </message>
     <message>
         <source>PSX Save File</source>
-        <translation>PSX Save File</translation>
+        <translation type="vanished">PSX Save File</translation>
     </message>
     <message>
         <source>PSV Save File</source>
-        <translation>PSV Save File</translation>
+        <translation type="vanished">PSV Save File</translation>
     </message>
     <message>
         <source>Virtual Memory Card</source>
-        <translation>Virtual Memory Card</translation>
+        <translation type="vanished">Virtual Memory Card</translation>
     </message>
     <message>
         <source>Virtual Game Station Memory Card</source>
-        <translation>Virtual Game Station Memory Card</translation>
+        <translation type="vanished">Virtual Game Station Memory Card</translation>
     </message>
     <message>
         <source>DEX Drive Virtual Memory Card</source>
-        <translation>DEX Drive Virtual Memory Card</translation>
+        <translation type="vanished">DEX Drive Virtual Memory Card</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (%1)</source>
-        <translation>Known FF7 Save Types (%1)</translation>
+        <translation type="vanished">Known FF7 Save Types (%1)</translation>
     </message>
     <message>
         <source>All Files (*)</source>
-        <translation>All Files (*)</translation>
+        <translation type="vanished">All Files (*)</translation>
     </message>
     <message>
         <source>PSP and PsVita Virtual Memory Card</source>
-        <translation>PSP and PsVita Virtual Memory Card</translation>
+        <translation type="vanished">PSP and PsVita Virtual Memory Card</translation>
     </message>
     <message>
         <source>PSXGameEdit Memory Juggler</source>
-        <translation>PSXGameEdit Memory Juggler</translation>
+        <translation type="vanished">PSXGameEdit Memory Juggler</translation>
     </message>
     <message>
         <source>XP AR GS Caetla SmartLink Dantel</source>
-        <translation>XP AR GS Caetla SmartLink Dantel</translation>
+        <translation type="vanished">XP AR GS Caetla SmartLink Dantel</translation>
     </message>
 </context>
 <context>
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>-------EMPTY--------</translation>
+        <translation type="vanished">-------EMPTY--------</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation>-------BAD ID-------</translation>
+        <translation type="vanished">-------BAD ID-------</translation>
     </message>
 </context>
 <context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
-        <translation>Elemental Effects</translation>
+        <translation type="vanished">Elemental Effects</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation>Status Effects</translation>
+        <translation type="vanished">Status Effects</translation>
     </message>
     <message>
         <source>APx%1</source>
-        <translation>APx%1</translation>
+        <translation type="vanished">APx%1</translation>
     </message>
     <message>
         <source>Restoration</source>
-        <translation>Restoration</translation>
+        <translation type="vanished">Restoration</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>Fire</translation>
+        <translation type="vanished">Fire</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation>Cold</translation>
+        <translation type="vanished">Cold</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Lightning</translation>
+        <translation type="vanished">Lightning</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>Earth</translation>
+        <translation type="vanished">Earth</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation>Wind</translation>
+        <translation type="vanished">Wind</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation>Water</translation>
+        <translation type="vanished">Water</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>Gravity</translation>
+        <translation type="vanished">Gravity</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation>Holy</translation>
+        <translation type="vanished">Holy</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Poison</translation>
+        <translation type="vanished">Poison</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation>Cut</translation>
+        <translation type="vanished">Cut</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation>Shoot</translation>
+        <translation type="vanished">Shoot</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation>Punch</translation>
+        <translation type="vanished">Punch</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation>Hit</translation>
+        <translation type="vanished">Hit</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation>Absorb:</translation>
+        <translation type="vanished">Absorb:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation>Nullify:</translation>
+        <translation type="vanished">Nullify:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation>Halve:</translation>
+        <translation type="vanished">Halve:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation>Attack:</translation>
+        <translation type="vanished">Attack:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation>Death</translation>
+        <translation type="vanished">Death</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation>Slow-Numb</translation>
+        <translation type="vanished">Slow-Numb</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation>Paralysis</translation>
+        <translation type="vanished">Paralysis</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation>Petrify</translation>
+        <translation type="vanished">Petrify</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation>Silence</translation>
+        <translation type="vanished">Silence</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation>Sleep</translation>
+        <translation type="vanished">Sleep</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation>Berserk</translation>
+        <translation type="vanished">Berserk</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation>Frog</translation>
+        <translation type="vanished">Frog</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation>Mini</translation>
+        <translation type="vanished">Mini</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation>Fury</translation>
+        <translation type="vanished">Fury</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation>Sadness</translation>
+        <translation type="vanished">Sadness</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation>Darkness</translation>
+        <translation type="vanished">Darkness</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation>Haste</translation>
+        <translation type="vanished">Haste</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Slow</translation>
+        <translation type="vanished">Slow</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation>Stop</translation>
+        <translation type="vanished">Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>Barrier</translation>
+        <translation type="vanished">Barrier</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation>M.Barrier</translation>
+        <translation type="vanished">M.Barrier</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation>Reflect</translation>
+        <translation type="vanished">Reflect</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Shield</translation>
+        <translation type="vanished">Shield</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation>Regen</translation>
+        <translation type="vanished">Regen</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation>Protect:</translation>
+        <translation type="vanished">Protect:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation>Remove:</translation>
+        <translation type="vanished">Remove:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation>Inflict:</translation>
+        <translation type="vanished">Inflict:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation>OnBattle:</translation>
+        <translation type="vanished">OnBattle:</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation>Confusion</translation>
+        <translation type="vanished">Confusion</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation>D.Sentence</translation>
+        <translation type="vanished">D.Sentence</translation>
     </message>
     <message>
         <source>Resist</source>
-        <translation>Resist</translation>
+        <translation type="vanished">Resist</translation>
     </message>
 </context>
 <context>
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation>Empty Item</translation>
+        <translation type="vanished">Empty Item</translation>
     </message>
 </context>
 <context>
     <name>LocationViewer</name>
     <message>
         <source>Location Name</source>
-        <translation>Location Name</translation>
+        <translation type="vanished">Location Name</translation>
     </message>
     <message>
         <source>MapID: </source>
-        <translation>MapID: </translation>
+        <translation type="vanished">MapID: </translation>
     </message>
     <message>
         <source>X: </source>
-        <translation>X: </translation>
+        <translation type="vanished">X: </translation>
     </message>
     <message>
         <source>Y: </source>
-        <translation>Y: </translation>
+        <translation type="vanished">Y: </translation>
     </message>
     <message>
         <source>T: </source>
-        <translation>T: </translation>
+        <translation type="vanished">T: </translation>
     </message>
     <message>
         <source>D: </source>
-        <translation>D: </translation>
+        <translation type="vanished">D: </translation>
     </message>
     <message>
         <source>LocID: </source>
-        <translation>LocID: </translation>
+        <translation type="vanished">LocID: </translation>
     </message>
     <message>
         <source>LocID</source>
-        <translation>LocID</translation>
+        <translation type="vanished">LocID</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation>Filename</translation>
+        <translation type="vanished">Filename</translation>
     </message>
     <message>
         <source>Process Regular Expressions</source>
-        <translation>Process Regular Expressions</translation>
+        <translation type="vanished">Process Regular Expressions</translation>
     </message>
     <message>
         <source>Case Sensitive</source>
-        <translation>Case Sensitive</translation>
+        <translation type="vanished">Case Sensitive</translation>
     </message>
     <message>
         <source>Field Items</source>
-        <translation>Field Items</translation>
+        <translation type="vanished">Field Items</translation>
     </message>
     <message>
         <source>Filter Mode: Name / Location String</source>
-        <translation>Filter Mode: Name / Location String</translation>
+        <translation type="vanished">Filter Mode: Name / Location String</translation>
     </message>
     <message>
         <source>Filter Mode: Items Found at Location</source>
-        <translation>Filter Mode: Items Found at Location</translation>
+        <translation type="vanished">Filter Mode: Items Found at Location</translation>
     </message>
     <message>
         <source>Save &amp;Location Changes</source>
@@ -7251,7 +7207,7 @@ The km/h speeds are calculated while playing </translation>
     </message>
     <message>
         <source>Set as current location</source>
-        <translation>Set as current location</translation>
+        <translation type="vanished">Set as current location</translation>
     </message>
 </context>
 <context>
@@ -8506,110 +8462,110 @@ location.</translation>
     <name>MateriaEditor</name>
     <message>
         <source>Delete</source>
-        <translation>Delete</translation>
+        <translation type="vanished">Delete</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation>Copy</translation>
+        <translation type="vanished">Copy</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation>Paste</translation>
+        <translation type="vanished">Paste</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation>Clear</translation>
+        <translation type="vanished">Clear</translation>
     </message>
     <message>
         <source>Skills</source>
-        <translation>Skills</translation>
+        <translation type="vanished">Skills</translation>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation>Stat Changes</translation>
+        <translation type="vanished">Stat Changes</translation>
     </message>
     <message>
         <source>All Materia</source>
-        <translation>All Materia</translation>
+        <translation type="vanished">All Materia</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation>Magic</translation>
+        <translation type="vanished">Magic</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation>Summon</translation>
+        <translation type="vanished">Summon</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation>Independent</translation>
+        <translation type="vanished">Independent</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation>Support</translation>
+        <translation type="vanished">Support</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation>Command</translation>
+        <translation type="vanished">Command</translation>
     </message>
     <message>
         <source>Master</source>
-        <translation>Master</translation>
+        <translation type="vanished">Master</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Added Effect</translation>
+        <translation type="vanished">Added Effect</translation>
     </message>
 </context>
 <context>
     <name>MenuListWidget</name>
     <message>
         <source>Menu Manager</source>
-        <translation>Menu Manager</translation>
+        <translation type="vanished">Menu Manager</translation>
     </message>
     <message>
         <source>Item</source>
-        <translation>Item</translation>
+        <translation type="vanished">Item</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation>Visible</translation>
+        <translation type="vanished">Visible</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation>Magic</translation>
+        <translation type="vanished">Magic</translation>
     </message>
     <message>
         <source>Materia</source>
-        <translation>Materia</translation>
+        <translation type="vanished">Materia</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation>Equip</translation>
+        <translation type="vanished">Equip</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Status</translation>
+        <translation type="vanished">Status</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Order</translation>
+        <translation type="vanished">Order</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation>Limit</translation>
+        <translation type="vanished">Limit</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation>Config</translation>
+        <translation type="vanished">Config</translation>
     </message>
     <message>
         <source>P.H.S</source>
-        <translation>P.H.S</translation>
+        <translation type="vanished">P.H.S</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Save</translation>
+        <translation type="vanished">Save</translation>
     </message>
     <message>
         <source>Allowed</source>
@@ -8617,66 +8573,66 @@ location.</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation>Locked</translation>
+        <translation type="vanished">Locked</translation>
     </message>
 </context>
 <context>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
-        <translation>Output Path:</translation>
+        <translation type="vanished">Output Path:</translation>
     </message>
     <message>
         <source>Folder To Write Files Into</source>
-        <translation>Folder To Write Files Into</translation>
+        <translation type="vanished">Folder To Write Files Into</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
-        <translation>Sign With User Id</translation>
+        <translation type="vanished">Sign With User Id</translation>
     </message>
     <message>
         <source>Your SE Id number</source>
-        <translation>Your SE Id number</translation>
+        <translation type="vanished">Your SE Id number</translation>
     </message>
     <message>
         <source>Add Files For each Save you want in your cloud data.</source>
-        <translation>Add Files For each Save you want in your cloud data.</translation>
+        <translation type="vanished">Add Files For each Save you want in your cloud data.</translation>
     </message>
     <message>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
-        <translation>You Can Use Any Format That Black Chocobo Can Open</translation>
+        <translation type="vanished">You Can Use Any Format That Black Chocobo Can Open</translation>
     </message>
     <message>
         <source>Unused files will be Looked for in the Save Path</source>
-        <translation>Unused files will be Looked for in the Save Path</translation>
+        <translation type="vanished">Unused files will be Looked for in the Save Path</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
-        <translation>Select A Directory To Save Into</translation>
+        <translation type="vanished">Select A Directory To Save Into</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation>Create Cloud Save Folder</translation>
+        <translation type="vanished">Create Cloud Save Folder</translation>
     </message>
     <message>
         <source>File Error</source>
-        <translation>File Error</translation>
+        <translation type="vanished">File Error</translation>
     </message>
     <message>
         <source>Failure to write the File: %1</source>
-        <translation>Failure to write the File: %1</translation>
+        <translation type="vanished">Failure to write the File: %1</translation>
     </message>
     <message>
         <source>Pressing Ok Will Overwrite Any Metadata in the save path</source>
-        <translation>Pressing Ok Will Overwrite Any Metadata in the save path</translation>
+        <translation type="vanished">Pressing Ok Will Overwrite Any Metadata in the save path</translation>
     </message>
     <message>
         <source>Save0%1</source>
-        <translation>Save0%1</translation>
+        <translation type="vanished">Save0%1</translation>
     </message>
     <message>
         <source>Select A File To Use As Save0%1</source>
-        <translation>Select A File To Use As Save0%1</translation>
+        <translation type="vanished">Select A File To Use As Save0%1</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
@@ -8688,7 +8644,7 @@ location.</translation>
     </message>
     <message>
         <source>Places</source>
-        <translation>Places</translation>
+        <translation type="vanished">Places</translation>
     </message>
 </context>
 <context>
@@ -8890,238 +8846,238 @@ location.</translation>
     <name>OptionsWidget</name>
     <message>
         <source>In-Game Dialog Preview</source>
-        <translation>In-Game Dialog Preview</translation>
+        <translation type="vanished">In-Game Dialog Preview</translation>
     </message>
     <message>
         <source>ATB Style</source>
-        <translation>ATB Style</translation>
+        <translation type="vanished">ATB Style</translation>
     </message>
     <message>
         <source>Active</source>
-        <translation>Active</translation>
+        <translation type="vanished">Active</translation>
     </message>
     <message>
         <source>Recommended</source>
-        <translation>Recommended</translation>
+        <translation type="vanished">Recommended</translation>
     </message>
     <message>
         <source>Wait</source>
-        <translation>Wait</translation>
+        <translation type="vanished">Wait</translation>
     </message>
     <message>
         <source>Sound Mode</source>
-        <translation>Sound Mode</translation>
+        <translation type="vanished">Sound Mode</translation>
     </message>
     <message>
         <source>Mono</source>
-        <translation>Mono</translation>
+        <translation type="vanished">Mono</translation>
     </message>
     <message>
         <source>Stereo</source>
-        <translation>Stereo</translation>
+        <translation type="vanished">Stereo</translation>
     </message>
     <message>
         <source>Magic Order</source>
-        <translation>Magic Order</translation>
+        <translation type="vanished">Magic Order</translation>
     </message>
     <message>
         <source>Restore,Attack,Indirect</source>
-        <translation>Restore,Attack,Indirect</translation>
+        <translation type="vanished">Restore,Attack,Indirect</translation>
     </message>
     <message>
         <source>Restore,Indirect,Attack</source>
-        <translation>Restore,Indirect,Attack</translation>
+        <translation type="vanished">Restore,Indirect,Attack</translation>
     </message>
     <message>
         <source>Attack,Indirect,Restore</source>
-        <translation>Attack,Indirect,Restore</translation>
+        <translation type="vanished">Attack,Indirect,Restore</translation>
     </message>
     <message>
         <source>Attack,Restore,Indirect</source>
-        <translation>Attack,Restore,Indirect</translation>
+        <translation type="vanished">Attack,Restore,Indirect</translation>
     </message>
     <message>
         <source>Indirect,Restore,Attack</source>
-        <translation>Indirect,Restore,Attack</translation>
+        <translation type="vanished">Indirect,Restore,Attack</translation>
     </message>
     <message>
         <source>Indirect,Attack,Restore</source>
-        <translation>Indirect,Attack,Restore</translation>
+        <translation type="vanished">Indirect,Attack,Restore</translation>
     </message>
     <message>
         <source>Cursor Type</source>
-        <translation>Cursor Type</translation>
+        <translation type="vanished">Cursor Type</translation>
     </message>
     <message>
         <source>Initial</source>
-        <translation>Initial</translation>
+        <translation type="vanished">Initial</translation>
     </message>
     <message>
         <source>Memory</source>
-        <translation>Memory</translation>
+        <translation type="vanished">Memory</translation>
     </message>
     <message>
         <source>Camera</source>
-        <translation>Camera</translation>
+        <translation type="vanished">Camera</translation>
     </message>
     <message>
         <source>Normal</source>
-        <translation>Normal</translation>
+        <translation type="vanished">Normal</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation>Custom</translation>
+        <translation type="vanished">Custom</translation>
     </message>
     <message>
         <source>Show Battle Targets Labels</source>
-        <translation>Show Battle Targets Labels</translation>
+        <translation type="vanished">Show Battle Targets Labels</translation>
     </message>
     <message>
         <source>Show Battle Help</source>
-        <translation>Show Battle Help</translation>
+        <translation type="vanished">Show Battle Help</translation>
     </message>
     <message>
         <source>Show Field Help</source>
-        <translation>Show Field Help</translation>
+        <translation type="vanished">Show Field Help</translation>
     </message>
     <message>
         <source>Battle Speed:</source>
-        <translation>Battle Speed:</translation>
+        <translation type="vanished">Battle Speed:</translation>
     </message>
     <message>
         <source>Fast</source>
-        <translation>Fast</translation>
+        <translation type="vanished">Fast</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Slow</translation>
+        <translation type="vanished">Slow</translation>
     </message>
     <message>
         <source>Battle Message Speed:</source>
-        <translation>Battle Message Speed:</translation>
+        <translation type="vanished">Battle Message Speed:</translation>
     </message>
     <message>
         <source>Custom Controller Mapping (PSX Only)</source>
-        <translation>Custom Controller Mapping (PSX Only)</translation>
+        <translation type="vanished">Custom Controller Mapping (PSX Only)</translation>
     </message>
     <message>
         <source>Controller Settings</source>
-        <translation>Controller Settings</translation>
+        <translation type="vanished">Controller Settings</translation>
     </message>
     <message>
         <source>Field Message Speed:</source>
-        <translation>Field Message Speed:</translation>
+        <translation type="vanished">Field Message Speed:</translation>
     </message>
     <message>
         <source>9</source>
-        <translation>9</translation>
+        <translation type="vanished">9</translation>
     </message>
     <message>
         <source>10</source>
-        <translation>10</translation>
+        <translation type="vanished">10</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation>Up</translation>
+        <translation type="vanished">Up</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>Right</translation>
+        <translation type="vanished">Right</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation>Down</translation>
+        <translation type="vanished">Down</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>Left</translation>
+        <translation type="vanished">Left</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation>Menu</translation>
+        <translation type="vanished">Menu</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation>Ok</translation>
+        <translation type="vanished">Ok</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation type="vanished">Cancel</translation>
     </message>
     <message>
         <source>Switch</source>
-        <translation>Switch</translation>
+        <translation type="vanished">Switch</translation>
     </message>
     <message>
         <source>Target</source>
-        <translation>Target</translation>
+        <translation type="vanished">Target</translation>
     </message>
     <message>
         <source>PgUp</source>
-        <translation>PgUp</translation>
+        <translation type="vanished">PgUp</translation>
     </message>
     <message>
         <source>PgDn</source>
-        <translation>PgDn</translation>
+        <translation type="vanished">PgDn</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation type="vanished">Help</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation>Pause</translation>
+        <translation type="vanished">Pause</translation>
     </message>
 </context>
 <context>
     <name>PhsListWidget</name>
     <message>
         <source>Cloud</source>
-        <translation>Cloud</translation>
+        <translation type="vanished">Cloud</translation>
     </message>
     <message>
         <source>Allowed</source>
-        <translation>Allowed</translation>
+        <translation type="vanished">Allowed</translation>
     </message>
     <message>
         <source>Visible</source>
-        <translation>Visible</translation>
+        <translation type="vanished">Visible</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>Barret</translation>
+        <translation type="vanished">Barret</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>Tifa</translation>
+        <translation type="vanished">Tifa</translation>
     </message>
     <message>
         <source>Aerith</source>
-        <translation>Aerith</translation>
+        <translation type="vanished">Aerith</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>Red XIII</translation>
+        <translation type="vanished">Red XIII</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation type="vanished">Yuffie</translation>
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>Cait Sith</translation>
+        <translation type="vanished">Cait Sith</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation type="vanished">Vincent</translation>
     </message>
     <message>
         <source>Cid</source>
-        <translation>Cid</translation>
+        <translation type="vanished">Cid</translation>
     </message>
     <message>
         <source>PHS Manager</source>
-        <translation>PHS Manager</translation>
+        <translation type="vanished">PHS Manager</translation>
     </message>
 </context>
 <context>
@@ -9185,71 +9141,71 @@ New region is %2hz</translation>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
-        <translation>Level:%1</translation>
+        <translation type="vanished">Level:%1</translation>
     </message>
     <message>
         <source>Gil:%1</source>
-        <translation>Gil:%1</translation>
+        <translation type="vanished">Gil:%1</translation>
     </message>
     <message>
         <source>Time:%1:%2</source>
-        <translation>Time:%1:%2</translation>
+        <translation type="vanished">Time:%1:%2</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>Clear Slot</translation>
+        <translation type="vanished">Clear Slot</translation>
     </message>
     <message>
         <source>Copy Slot</source>
-        <translation>Copy Slot</translation>
+        <translation type="vanished">Copy Slot</translation>
     </message>
     <message>
         <source>Paste Into Slot</source>
-        <translation>Paste Into Slot</translation>
+        <translation type="vanished">Paste Into Slot</translation>
     </message>
     <message>
         <source>Slot: %1</source>
-        <translation>Slot: %1</translation>
+        <translation type="vanished">Slot: %1</translation>
     </message>
     <message>
         <source>-Empty Slot-</source>
-        <translation>-Empty Slot-</translation>
+        <translation type="vanished">-Empty Slot-</translation>
     </message>
 </context>
 <context>
     <name>SlotSelect</name>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation>      End Of Linked Blocks</translation>
+        <translation type="vanished">      End Of Linked Blocks</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation>ERROR</translation>
+        <translation type="vanished">ERROR</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation>      End Of Linked Blocks (Deleted)</translation>
+        <translation type="vanished">      End Of Linked Blocks (Deleted)</translation>
     </message>
     <message>
         <source>Select A Slot</source>
-        <translation>Select A Slot</translation>
+        <translation type="vanished">Select A Slot</translation>
     </message>
     <message>
         <source>Load Another File</source>
-        <translation>Load Another File</translation>
+        <translation type="vanished">Load Another File</translation>
     </message>
     <message>
         <source>       Mid-Linked Block</source>
-        <translation>       Mid-Linked Block</translation>
+        <translation type="vanished">       Mid-Linked Block</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted)</source>
-        <translation>    Mid-Linked Block (Deleted)</translation>
+        <translation type="vanished">    Mid-Linked Block (Deleted)</translation>
     </message>
     <message numerus="yes">
         <source>
 	 Game Uses %n Save Block(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>
 	 Game Uses %n Save Block</numerusform>
             <numerusform>
@@ -9259,7 +9215,7 @@ New region is %2hz</translation>
     <message>
         <source>
 	   Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="vanished">
 	   Next Data Chunk @ Slot:%1</translation>
     </message>
 </context>

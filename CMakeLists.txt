@@ -8,6 +8,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(REQUIRED_QT_VERSION "5.12.0")
 
+cmake_policy(SET CMP0010 NEW)
+
 project( blackchocobo VERSION 1.10.4 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 set(BC_VERSION ${CMAKE_PROJECT_VERSION})
@@ -33,6 +35,10 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Xml
     Quick
 )
+
+find_package(ff7tk REQUIRED)
+find_package(ff7tkWidgets REQUIRED)
+
 find_package(Qt5LinguistTools)
 
 set ( blackchocobo_SRCS
@@ -47,35 +53,6 @@ set ( blackchocobo_SRCS
     qhexedit/chunks.cpp
     qhexedit/commands.cpp
     qhexedit/qhexedit.cpp
-    ff7tk/data/crypto/aes.c
-    ff7tk/data/SaveIcon.cpp
-    ff7tk/data/FF7Text.cpp
-    ff7tk/data/FF7Save.cpp
-    ff7tk/data/FF7SaveInfo.cpp
-    ff7tk/data/FF7Materia.cpp
-    ff7tk/data/FF7Location.cpp
-    ff7tk/data/FF7Item.cpp
-    ff7tk/data/FF7Char.cpp
-    ff7tk/data/FF7FieldItemList.cpp
-    ff7tk/widgets/SlotSelect.cpp
-    ff7tk/widgets/SlotPreview.cpp
-    ff7tk/widgets/MateriaEditor.cpp
-    ff7tk/widgets/ItemPreview.cpp
-    ff7tk/widgets/DialogPreview.cpp
-    ff7tk/widgets/ChocoboEditor.cpp
-    ff7tk/widgets/CharEditor.cpp
-    ff7tk/widgets/ItemSelector.cpp
-    ff7tk/widgets/ItemList.cpp
-    ff7tk/widgets/MetadataCreator.cpp
-    ff7tk/widgets/DoubleCheckBox.cpp
-    ff7tk/widgets/MenuListWidget.cpp
-    ff7tk/widgets/OptionsWidget.cpp
-    ff7tk/widgets/ChocoboManager.cpp
-    ff7tk/widgets/ChocoboLabel.cpp
-    ff7tk/widgets/LocationViewer.cpp
-    ff7tk/widgets/AchievementEditor.cpp
-    ff7tk/widgets/PhsListWidget.cpp
-    ff7tk/data/FF7Achievements.cpp
     )
 
 set ( blackchocobo_UIS
@@ -86,14 +63,6 @@ set ( blackchocobo_UIS
 
 set ( RESOURCES
     icon/images.qrc
-    ff7tk/icons/achievements.qrc
-    ff7tk/icons/characters.qrc
-    ff7tk/icons/chocobo.qrc
-    ff7tk/icons/common.qrc
-    ff7tk/icons/items.qrc
-    ff7tk/icons/locations.qrc
-    ff7tk/icons/materia.qrc
-    ff7tk/icons/psxButtons.qrc
     )
 
 set ( blackchocobo_TRS
@@ -108,8 +77,8 @@ set ( blackchocobo_TRS
 qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS})
 
 if(UNIX AND NOT APPLE)
-    add_executable (blackchocobo ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS})
-    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick)
+    add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES} ${TRS})
+    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS blackchocobo RUNTIME DESTINATION bin)
     install(FILES ${TRS} DESTINATION share/blackchocobo/lang)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.png DESTINATION share/pixmaps/)
@@ -119,17 +88,41 @@ if(UNIX AND NOT APPLE)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo DESTINATION share/menu/)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
+
+    set (FF7TK_DEPENDS
+            ${ff7tk_DIR}/../../../bin/ff7tk.dll
+            ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
+        )
+
+    set (FF7TK_TRS
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_en.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_es.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_fr.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_de.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_ja.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
+    )
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc @ONLY)
     add_executable (Black_Chocobo WIN32 ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
     if(CMAKE_COMPILER_IS_GNUCC)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
     endif()
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo RUNTIME DESTINATION .)
     install(FILES ${TRS} DESTINATION lang)
+    install(FILES ${FF7TK_TRS} DESTINATION lang)
+    install(FILES ${FF7TK_DEPENDS} DESTINATION .)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
 elseif(APPLE)
+    set (FF7TK_TRS
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_en.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_es.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_fr.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_de.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_ja.qm
+        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
+    )
     set(MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo")
     set(MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo")
     set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo")
@@ -142,9 +135,10 @@ elseif(APPLE)
     set(APPICON ${CMAKE_CURRENT_SOURCE_DIR}/deploy/bchoco_icon_osx.icns)
     set_source_files_properties(${APPICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
     set_source_files_properties(${TRS} PROPERTIES MACOSX_PACKAGE_LOCATION "MacOS/lang")
-    add_executable(Black_Chocobo MACOSX_BUNDLE ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${APPICON})
+    set_source_files_properties(${FF7TK_TRS} PROPERTIES MACOSX_PACKAGE_LOCATION "MacOS/lang")
+    add_executable(Black_Chocobo MACOSX_BUNDLE ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${FF7TK_TRS} ${APPICON})
     target_compile_options(Black_Chocobo PRIVATE -stdlib=libc++)
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo BUNDLE DESTINATION .)
 endif()
 

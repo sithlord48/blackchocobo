@@ -15,7 +15,7 @@
 /****************************************************************************/
 #pragma once
 #include <QDialog>
-#include "ff7tk/widgets/AchievementEditor.h"
+#include <AchievementEditor.h>
 
 class QDialogButtonBox;
 

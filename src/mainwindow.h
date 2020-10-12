@@ -17,8 +17,8 @@
 #include <QMainWindow>
 #include <QMap>
 
-#include "ff7tk/data/Type_materia.h"
-#include "ff7tk/data/FF7Materia.h"
+#include <Type_materia.h>
+#include <FF7Materia.h>
 
 class FF7Save;
 class SaveIcon;
@@ -82,7 +82,7 @@ private:
     LocationViewer *locationViewer = nullptr;
     QString prevFile;
     QMap<QString, QTranslator *> m_translations;
-
+    QMap<QString, QTranslator *> m_ff7tk_translations;
     typedef QList<quint16> fieldItemOffsetList;
     typedef QList<quint8> fieldItemBitList;
 

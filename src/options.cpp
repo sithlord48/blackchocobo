@@ -19,11 +19,12 @@
 #include <QTranslator>
 #include <QUrl>
 
+#include <FF7SaveInfo.h>
+
 #include "options.h"
 #include "bcdialog.h"
 #include "bcsettings.h"
 #include "ui_options.h"
-#include "ff7tk/data/FF7SaveInfo.h"
 
 Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)

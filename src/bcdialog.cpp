@@ -26,8 +26,9 @@
 #include <QStandardPaths>
 #include <QTextCodec>
 
+#include <FF7Save.h>
+
 #include "bcsettings.h"
-#include "ff7tk/data/FF7Save.h"
 
 QRect readGeometry()
 {

@@ -28,7 +28,7 @@ About::About(QWidget *parent) :
     ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco").scaled(ui->lbl_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lbl_name->setText(QCoreApplication::applicationName());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
-    ui->lbl_ff7tk_version->setText(QString(tr("ff7tk: %1")).arg(ff7tk_version()));
+    ui->lbl_ff7tk_version->setText(QString(tr("ff7tk: %1")).arg(ff7tk_version().append(ff7tk_revision())));
     ui->lbl_qt_version->setText(QString(tr("Qt: %1")).arg(qVersion()));
 }
 

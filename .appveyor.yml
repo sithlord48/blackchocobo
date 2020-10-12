@@ -38,11 +38,19 @@ install:
 
     call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %ARCH%
 
+    git clone https://github.com/sithlord48/ff7tk.git
+
+    cd ff7tk
+
+    cmake -G Ninja -S. -DCMAKE_INSTALL_PREFIX=C:\ff7tk -DFORMATS=OFF -DUTILS=OFF -DCMAKE_BUILD_TYPE=Release
+
+    ninja install
+
 build_script:
 - cmd: >-
     cd C:\projects\blackchocobo
 
-    cmake -G Ninja -DCMAKE_INSTALL_PREFIX=C:\projects\blackchocobo\Black_Chocobo-continuous\ --config=Release CMakeLists.txt
+    cmake -G Ninja -Dff7tk_DIR=C:\ff7tk\lib\cmake\ff7tk -Dff7tkWidgets_DIR=C:\ff7tk\lib\cmake\ff7tk -DCMAKE_INSTALL_PREFIX=C:\projects\blackchocobo\Black_Chocobo-continuous\ --config=Release CMakeLists.txt
 
     ninja install
 

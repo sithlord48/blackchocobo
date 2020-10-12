@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "errbox.h"
-#include "ff7tk/data/FF7SaveInfo.h"
+#include <FF7SaveInfo.h>
 #include <QMessageBox>
 #include <QKeyEvent>
 

@@ -20,7 +20,7 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt515tools qt515base g++-8 zsync;
+    sudo apt-get -y install build-essential qt5-default qt515tools qt515base qt515declarative g++-8 qt515quickcontrols2 zsync;
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
@@ -32,10 +32,23 @@ install:
     fi
 
 script:
-- export VERSION=continuous;
+- git clone https://github.com/sithlord48/ff7tk.git
+- cd ff7tk
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
     source /opt/qt*/bin/qt*-env.sh;
-    cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX=/usr;
+    cmake -S. -DCMAKE_INSTALL_PREFIX=/usr -DFORMATS=OFF -DUTILS=OFF;
+    sudo make install;
+    fi
+- if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
+    export QTDIR="/usr/local/opt/qt5";
+    export PATH="$QTDIR/bin:$PATH";
+    cmake -S. -DFORMATS=OFF -DUTILS=OFF;
+    make install;
+    fi
+- export VERSION=continuous
+- cd ..
+- if [ "$TRAVIS_OS_NAME" = "linux" ]; then
+    cmake CMakeLists.txt -Dff7tk_DIR=/usr/lib/x86_64-linux-gnu/cmake/ff7tk -Dff7tkWidgets_DIR=/usr/lib/x86_64-linux-gnu/cmake/ff7tk -DCMAKE_INSTALL_PREFIX=/usr;
     make -j 2;
     make DESTDIR=appdir install; find appdir/;
     cpack;
@@ -43,13 +56,12 @@ script:
     chmod a+x linuxdeployqt*.AppImage;
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
     mv ./appdir/usr/share/blackchocobo/lang ./appdir/usr/bin;
+    cp /usr/share/ff7tk/lang/*.qm ./appdir/usr/bin/lang/;
     rmdir ./appdir/usr/share/blackchocobo;
     ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage;
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-    export QTDIR="/usr/local/opt/qt5";
-    export PATH="$QTDIR/bin:$PATH";
-    cmake CMakeLists.txt;
+    cmake -S. -Dff7tk_DIR=/usr/local/lib/cmake/ff7tk/ -Dff7tkWidgets_DIR=/usr/local/lib/cmake/ff7tk/;
     make -j 2;
     cpack;
     fi

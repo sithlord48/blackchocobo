@@ -36,23 +36,25 @@
 #include "mainwindow.h"
 #include "options.h"
 #include "ui_mainwindow.h"
-#include "ff7tk/data/FF7Char.h"
-#include "ff7tk/data/FF7Item.h"
-#include "ff7tk/data/FF7Location.h"
-#include "ff7tk/data/FF7Save.h"
-#include "ff7tk/data/FF7Materia.h"
-#include "ff7tk/data/SaveIcon.h"
-#include "ff7tk/widgets/OptionsWidget.h"
-#include "ff7tk/widgets/MateriaEditor.h"
-#include "ff7tk/widgets/SlotSelect.h"
-#include "ff7tk/widgets/ChocoboEditor.h"
-#include "ff7tk/widgets/CharEditor.h"
-#include "ff7tk/widgets/ItemList.h"
-#include "ff7tk/widgets/MetadataCreator.h"
-#include "ff7tk/widgets/PhsListWidget.h"
-#include "ff7tk/widgets/MenuListWidget.h"
-#include "ff7tk/widgets/ChocoboManager.h"
-#include "ff7tk/widgets/LocationViewer.h"
+
+#include <FF7Char.h>
+#include <FF7Item.h>
+#include <FF7Location.h>
+#include <FF7Save.h>
+#include <FF7Materia.h>
+#include <SaveIcon.h>
+#include <OptionsWidget.h>
+#include <MateriaEditor.h>
+#include <SlotSelect.h>
+#include <ChocoboEditor.h>
+#include <CharEditor.h>
+#include <ItemList.h>
+#include <MetadataCreator.h>
+#include <PhsListWidget.h>
+#include <MenuListWidget.h>
+#include <ChocoboManager.h>
+#include <LocationViewer.h>
+
 #include "qhexedit/qhexedit.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
@@ -98,6 +100,7 @@ void MainWindow::populateLanguageMenu()
     m_translations.clear();
     QDir dir(QStringLiteral("%1/lang").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
+
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
@@ -108,6 +111,29 @@ void MainWindow::populateLanguageMenu()
             BCSettings::instance()->setValue(SETTINGS::LANG, lang);
             QApplication::installTranslator(translator);
         }
+    }
+
+    m_ff7tk_translations.clear();
+    QString dirPath;
+
+    if(QDir("../share/ff7tk/lang").exists())
+        dirPath = "../share/ff7tk/lang";
+    else if(QDir("/usr/share/ff7tk/lang").exists())
+        dirPath = "/usr/share/ff7tk/lang";
+    else
+        dirPath = dir.absolutePath();
+
+    qDebug() << dirPath;
+    QDir ff7tkDir(dirPath);
+    QStringList ff7tkList = ff7tkDir.entryList(QStringList("ff7tk_*.qm"), QDir::Files, QDir::Name);
+    for (const QString &translation : ff7tkList) {
+        QTranslator *translator = new QTranslator;
+        translator->load(translation, ff7tkDir.absolutePath());
+        QString lang = translation.mid(6, 2);
+        m_ff7tk_translations.insert(lang, translator);
+        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        if (currentLang)
+            QApplication::installTranslator(translator);
     }
 }
 
@@ -1071,6 +1097,7 @@ void MainWindow::changeLanguage(const QVariant &data)
     if(!m_translations.contains(data.toString()))
         populateLanguageMenu();
     QApplication::installTranslator(m_translations.value(data.toString()));
+    QApplication::installTranslator(m_ff7tk_translations.value(data.toString()));
 }
 
 void MainWindow::setOpenFileText(const QString &openFile)
