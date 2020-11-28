@@ -522,7 +522,8 @@ void MainWindow::init_connections()
     connect(ui->tblUnknown, &QTableWidget::itemChanged, this, &MainWindow::tblUnknown_itemChanged);
     connect(ui->slideWorldX, &QSlider::valueChanged, this, &MainWindow::slideWorldX_valueChanged);
     connect(ui->slideWorldY, &QSlider::valueChanged, this, &MainWindow::slideWorldY_valueChanged);
-    void on_worldMapView_customContextMenuRequested(QPoint pos);
+    connect(ui->worldMapView, &QWidget::customContextMenuRequested, this, &MainWindow::worldMapView_customContextMenuRequested);
+    
     connect(ui->linePsxDesc, &QLineEdit::textChanged, this, &MainWindow::linePsxDesc_textChanged);
     connect(ui->tblMateria, &QTableWidget::currentCellChanged, this, &MainWindow::tblMateria_currentCellChanged);
     connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::tabWidget_currentChanged);

@@ -9788,11 +9788,11 @@ The km/h speeds are calculated while playing </translation>
     <name>MainWindow</name>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
-        <location filename="../src/mainwindow.cpp" line="779"/>
-        <location filename="../src/mainwindow.cpp" line="843"/>
-        <location filename="../src/mainwindow.cpp" line="847"/>
-        <location filename="../src/mainwindow.cpp" line="3882"/>
-        <location filename="../src/mainwindow.cpp" line="4134"/>
+        <location filename="../src/mainwindow.cpp" line="780"/>
+        <location filename="../src/mainwindow.cpp" line="844"/>
+        <location filename="../src/mainwindow.cpp" line="848"/>
+        <location filename="../src/mainwindow.cpp" line="3883"/>
+        <location filename="../src/mainwindow.cpp" line="4135"/>
         <source>Black Chocobo</source>
         <translation>Black Chocobo</translation>
     </message>
@@ -11079,13 +11079,13 @@ Var And Scrolling Synced To Left Table</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="125"/>
-        <location filename="../src/mainwindow.cpp" line="697"/>
+        <location filename="../src/mainwindow.cpp" line="698"/>
         <source>Chocobo</source>
         <translation>Chocobo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="126"/>
-        <location filename="../src/mainwindow.cpp" line="698"/>
+        <location filename="../src/mainwindow.cpp" line="699"/>
         <source>Game Options</source>
         <translation>Game Options</translation>
     </message>
@@ -11095,268 +11095,268 @@ Var And Scrolling Synced To Left Table</translation>
         <translation>ReTranslation</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="726"/>
+        <location filename="../src/mainwindow.cpp" line="727"/>
         <source>Unsaved Changes</source>
         <translation>Unsaved Changes</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="726"/>
+        <location filename="../src/mainwindow.cpp" line="727"/>
         <source>Save Changes to the File:
 %1</source>
         <translation>Save Changes to the File:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="763"/>
-        <location filename="../src/mainwindow.cpp" line="809"/>
+        <location filename="../src/mainwindow.cpp" line="764"/>
+        <location filename="../src/mainwindow.cpp" line="810"/>
         <source>Open Final Fantasy 7 Save</source>
         <translation>Open Final Fantasy 7 Save</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="779"/>
-        <location filename="../src/mainwindow.cpp" line="843"/>
+        <location filename="../src/mainwindow.cpp" line="780"/>
+        <location filename="../src/mainwindow.cpp" line="844"/>
         <source>Cannot read file %1:
 %2.</source>
         <translation>Cannot read file %1:
 %2.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="788"/>
+        <location filename="../src/mainwindow.cpp" line="789"/>
         <source>Load Failed</source>
         <translation>Load Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="788"/>
+        <location filename="../src/mainwindow.cpp" line="789"/>
         <source>Failed to Load File</source>
         <translation>Failed to Load File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="823"/>
+        <location filename="../src/mainwindow.cpp" line="824"/>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
         <translation>Imported Slot:%2 from %1 -&gt; Slot:%3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="838"/>
+        <location filename="../src/mainwindow.cpp" line="839"/>
         <source>Select FF7 Character Stat File</source>
         <translation>Select FF7 Character Stat File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="838"/>
-        <location filename="../src/mainwindow.cpp" line="861"/>
+        <location filename="../src/mainwindow.cpp" line="839"/>
+        <location filename="../src/mainwindow.cpp" line="862"/>
         <source>FF7 Character Stat File(*.char)</source>
         <translation>FF7 Character Stat File(*.char)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="847"/>
+        <location filename="../src/mainwindow.cpp" line="848"/>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
         <translation>%1:
 %2 is Not a FF7 Character Stat File.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="860"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>Save FF7 Character File</source>
         <translation>Save FF7 Character File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="864"/>
+        <location filename="../src/mainwindow.cpp" line="865"/>
         <source>Character Export Successful</source>
         <translation>Character Export Successful</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="866"/>
+        <location filename="../src/mainwindow.cpp" line="867"/>
         <source>Character Export Failed</source>
         <translation>Character Export Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="825"/>
+        <location filename="../src/mainwindow.cpp" line="826"/>
         <source>Imported %1 -&gt; Slot:%2</source>
         <translation>Imported %1 -&gt; Slot:%2</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="830"/>
+        <location filename="../src/mainwindow.cpp" line="831"/>
         <source>Error Loading File %1</source>
         <translation>Error Loading File %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="916"/>
+        <location filename="../src/mainwindow.cpp" line="917"/>
         <source>Export Successful</source>
         <translation>Export Successful</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="921"/>
-        <location filename="../src/mainwindow.cpp" line="1517"/>
+        <location filename="../src/mainwindow.cpp" line="922"/>
+        <location filename="../src/mainwindow.cpp" line="1518"/>
         <source>Export Failed</source>
         <translation>Export Failed</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="937"/>
+        <location filename="../src/mainwindow.cpp" line="938"/>
         <source>Save Error</source>
         <translation>Save Error</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="937"/>
+        <location filename="../src/mainwindow.cpp" line="938"/>
         <source>Failed to save file
 %1</source>
         <translation>Failed to save file
 %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="952"/>
-        <location filename="../src/mainwindow.cpp" line="966"/>
+        <location filename="../src/mainwindow.cpp" line="953"/>
+        <location filename="../src/mainwindow.cpp" line="967"/>
         <source>Builtin Data</source>
         <translation>Builtin Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="951"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>New Game Created - Using: %1</source>
         <translation>New Game Created - Using: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="965"/>
+        <location filename="../src/mainwindow.cpp" line="966"/>
         <source>New Game Plus Created - Using: %1</source>
         <translation>New Game Plus Created - Using: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1055"/>
+        <location filename="../src/mainwindow.cpp" line="1056"/>
         <source>Select Achievement File</source>
         <translation>Select Achievement File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1336"/>
+        <location filename="../src/mainwindow.cpp" line="1337"/>
         <source>Current Slot:%1</source>
         <translation>Current Slot:%1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="902"/>
-        <location filename="../src/mainwindow.cpp" line="1505"/>
+        <location filename="../src/mainwindow.cpp" line="903"/>
+        <location filename="../src/mainwindow.cpp" line="1506"/>
         <source>Select A File to Save As</source>
         <translation>Select A File to Save As</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1055"/>
+        <location filename="../src/mainwindow.cpp" line="1056"/>
         <source>Dat File (*.dat)</source>
         <translation>Dat File (*.dat)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1417"/>
-        <location filename="../src/mainwindow.cpp" line="1430"/>
-        <location filename="../src/mainwindow.cpp" line="1611"/>
+        <location filename="../src/mainwindow.cpp" line="1418"/>
+        <location filename="../src/mainwindow.cpp" line="1431"/>
+        <location filename="../src/mainwindow.cpp" line="1612"/>
         <source>Master</source>
         <translation>Master</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1440"/>
-        <location filename="../src/mainwindow.cpp" line="1618"/>
+        <location filename="../src/mainwindow.cpp" line="1441"/>
+        <location filename="../src/mainwindow.cpp" line="1619"/>
         <source>===Empty Slot===</source>
         <translation>===Empty Slot===</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1515"/>
+        <location filename="../src/mainwindow.cpp" line="1516"/>
         <source>Exported Slot:%2 from %1 -&gt; %3</source>
         <translation>Exported Slot:%2 from %1 -&gt; %3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1640"/>
+        <location filename="../src/mainwindow.cpp" line="1641"/>
         <source>
  Mid-Linked Block </source>
         <translation>
  Mid-Linked Block </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1644"/>
+        <location filename="../src/mainwindow.cpp" line="1645"/>
         <source>
  End Of Linked Data</source>
         <translation>
  End Of Linked Data</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1649"/>
+        <location filename="../src/mainwindow.cpp" line="1650"/>
         <source>(Deleted)</source>
         <translation>(Deleted)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2275"/>
+        <location filename="../src/mainwindow.cpp" line="2276"/>
         <source>All Materia Added!</source>
         <translation>All Materia Added!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2289"/>
+        <location filename="../src/mainwindow.cpp" line="2290"/>
         <source>Set Save Location: %1</source>
         <translation>Set Save Location: %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2771"/>
+        <location filename="../src/mainwindow.cpp" line="2772"/>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>Replay the bombing mission from right after you get off the train.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2775"/>
+        <location filename="../src/mainwindow.cpp" line="2776"/>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
         <translation>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2797"/>
-        <location filename="../src/mainwindow.cpp" line="2811"/>
-        <location filename="../src/mainwindow.cpp" line="2838"/>
-        <location filename="../src/mainwindow.cpp" line="2850"/>
-        <location filename="../src/mainwindow.cpp" line="2864"/>
+        <location filename="../src/mainwindow.cpp" line="2798"/>
+        <location filename="../src/mainwindow.cpp" line="2812"/>
+        <location filename="../src/mainwindow.cpp" line="2839"/>
+        <location filename="../src/mainwindow.cpp" line="2851"/>
+        <location filename="../src/mainwindow.cpp" line="2865"/>
         <source>Progression Reset Complete</source>
         <translation>Progression Reset Complete</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3471"/>
-        <location filename="../src/mainwindow.cpp" line="3485"/>
+        <location filename="../src/mainwindow.cpp" line="3472"/>
+        <location filename="../src/mainwindow.cpp" line="3486"/>
         <source>&amp;Place Leader</source>
         <translation>&amp;Place Leader</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3472"/>
-        <location filename="../src/mainwindow.cpp" line="3488"/>
+        <location filename="../src/mainwindow.cpp" line="3473"/>
+        <location filename="../src/mainwindow.cpp" line="3489"/>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
         <translation>Place &amp;Tiny Bronco/Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3473"/>
-        <location filename="../src/mainwindow.cpp" line="3491"/>
+        <location filename="../src/mainwindow.cpp" line="3474"/>
+        <location filename="../src/mainwindow.cpp" line="3492"/>
         <source>Place &amp;Buggy/Highwind</source>
         <translation>Place &amp;Buggy/Highwind</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3474"/>
-        <location filename="../src/mainwindow.cpp" line="3494"/>
+        <location filename="../src/mainwindow.cpp" line="3475"/>
+        <location filename="../src/mainwindow.cpp" line="3495"/>
         <source>Place &amp;Sub</source>
         <translation>Place &amp;Sub</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3475"/>
-        <location filename="../src/mainwindow.cpp" line="3497"/>
+        <location filename="../src/mainwindow.cpp" line="3476"/>
+        <location filename="../src/mainwindow.cpp" line="3498"/>
         <source>Place &amp;Wild Chocobo</source>
         <translation>Place &amp;Wild Chocobo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3476"/>
-        <location filename="../src/mainwindow.cpp" line="3500"/>
+        <location filename="../src/mainwindow.cpp" line="3477"/>
+        <location filename="../src/mainwindow.cpp" line="3501"/>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
         <translation>Place &amp;Diamond/Ultimate/Ruby Weapon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4301"/>
+        <location filename="../src/mainwindow.cpp" line="4302"/>
         <source>Turtle Paradise</source>
         <translation>Turtle Paradise</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4308"/>
+        <location filename="../src/mainwindow.cpp" line="4309"/>
         <source>KeyItem</source>
         <translation>KeyItem</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2773"/>
+        <location filename="../src/mainwindow.cpp" line="2774"/>
         <source>Meeting Aeris</source>
         <translation>Meeting Aerith</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/mainwindow.cpp" line="1655"/>
+        <location filename="../src/mainwindow.cpp" line="1656"/>
         <source>Game Uses %n Save Block(s)</source>
         <translation>
             <numerusform>Game Uses %n Save Block</numerusform>
@@ -11364,44 +11364,44 @@ Var And Scrolling Synced To Left Table</translation>
         </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1661"/>
+        <location filename="../src/mainwindow.cpp" line="1662"/>
         <source>
   Next Data Chunk @ Slot:%1</source>
         <translation>
   Next Data Chunk @ Slot:%1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2777"/>
+        <location filename="../src/mainwindow.cpp" line="2778"/>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2779"/>
+        <location filename="../src/mainwindow.cpp" line="2780"/>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>Replay the death of Aerith.This option Will remove Aerith from your PHS</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2781"/>
+        <location filename="../src/mainwindow.cpp" line="2782"/>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
         <translation>         INFO ON CURRENTLY SELECTED REPLAY MISSION</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3513"/>
+        <location filename="../src/mainwindow.cpp" line="3514"/>
         <source>DON&apos;T USE</source>
         <translation>DON&apos;T USE</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3525"/>
+        <location filename="../src/mainwindow.cpp" line="3526"/>
         <source>All Items Added</source>
         <translation>All Items Added</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3882"/>
+        <location filename="../src/mainwindow.cpp" line="3883"/>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
         <translation>Do You Want To Also Replace %1&apos;s Equipment and Materia?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4134"/>
+        <location filename="../src/mainwindow.cpp" line="4135"/>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation>Unknown Id in Buggy/Highwind Location</translation>
     </message>
