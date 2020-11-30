@@ -98,12 +98,11 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::populateLanguageMenu()
 {
     m_translations.clear();
-    QString dirPath;
-    if(QDir("../share/blackchocobo/lang").exists())
-        dirPath = "../share/blackchocobo/lang";
-    else
-        dirPath = QCoreApplication::applicationDirPath().append("/lang");
-    QDir dir(dirPath);
+
+    QDir dir (QCoreApplication::applicationDirPath());
+    dir.cd(QStringLiteral("../share/blackchocobo/lang"));
+    if(!dir.exists())
+        dir.setPath(QCoreApplication::applicationDirPath().append("/lang"));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
 
     for (const QString &translation : langList) {
@@ -119,16 +118,12 @@ void MainWindow::populateLanguageMenu()
     }
 
     m_ff7tk_translations.clear();
-    if(QDir("../share/ff7tk/lang").exists())
-        dirPath = "../share/ff7tk/lang";
-    else if(QDir("/usr/share/ff7tk/lang").exists())
-        dirPath = "/usr/share/ff7tk/lang";
-    else
-    dirPath = dir.absolutePath();
-
-    qDebug() << dirPath;
-    QDir ff7tkDir(dirPath);
+    QDir ff7tkDir (QCoreApplication::applicationDirPath());
+    ff7tkDir.cd(QStringLiteral("../share/ff7tk/lang"));
+    if(!ff7tkDir.exists())
+        ff7tkDir.setPath(QCoreApplication::applicationDirPath().append("/lang"));
     QStringList ff7tkList = ff7tkDir.entryList(QStringList("ff7tk_*.qm"), QDir::Files, QDir::Name);
+
     for (const QString &translation : ff7tkList) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, ff7tkDir.absolutePath());

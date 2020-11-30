@@ -44,12 +44,10 @@ Options::Options(QWidget *parent) : QDialog(parent)
     ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    QString dirPath;
-    if(QDir("../share/blackchocobo/lang").exists())
-        dirPath = "../share/blackchocobo/lang";
-    else
-        dirPath = QCoreApplication::applicationDirPath().append("/lang");
-    QDir dir(dirPath);
+    QDir dir(QCoreApplication::applicationDirPath());
+    dir.cd(QStringLiteral("../share/blackchocobo/lang"));
+    if(!dir.exists())
+        dir.setPath(QCoreApplication::applicationDirPath().append("/lang"));
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
 
     for (const QString &translation : langList) {

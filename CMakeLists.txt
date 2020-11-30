@@ -10,7 +10,7 @@ set(REQUIRED_QT_VERSION "5.12.0")
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.10.4 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.10.5 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 set(BC_VERSION ${CMAKE_PROJECT_VERSION})
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
@@ -55,12 +55,6 @@ set ( blackchocobo_SRCS
     qhexedit/qhexedit.cpp
     )
 
-set ( blackchocobo_UIS
-    src/mainwindow.ui
-    src/about.ui
-    src/options.ui
-    )
-
 set ( RESOURCES
     icon/images.qrc
     )
@@ -84,8 +78,7 @@ if(UNIX AND NOT APPLE)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.png DESTINATION share/pixmaps/)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.desktop DESTINATION share/applications/)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo.xml DESTINATION share/mime/packages/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.appdata.xml DESTINATION share/metadata/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo DESTINATION share/menu/)
+    install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.appdata.xml DESTINATION share/metainfo/)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
 
@@ -103,7 +96,7 @@ elseif(WIN32)
         ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
     )
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc @ONLY)
-    add_executable (Black_Chocobo WIN32 ff7tk/about.h ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
+    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
     if(CMAKE_COMPILER_IS_GNUCC)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
