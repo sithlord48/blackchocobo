@@ -45,11 +45,6 @@ void BCSettings::initSettings()
     else
         settings = new QSettings(QSettings::NativeFormat, QSettings::UserScope, QStringLiteral("blackchocobo"), QStringLiteral("settings"), nullptr);
 #endif //STATIC
-    if(QDir(QStringLiteral("%1/lang").arg(QCoreApplication::applicationDirPath())).exists())
-        settings->setValue(SETTINGS::LANGPATH, QCoreApplication::applicationDirPath());
-    else
-        settings->setValue(SETTINGS::LANGPATH, QStringLiteral("../share/blackchocobo"));
-
     if (settings->value(SETTINGS::SIDEBARURLS).isNull()) {
         QStringList defaultBarUrls;
         defaultBarUrls.append(QDir::rootPath());

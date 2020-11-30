@@ -43,8 +43,15 @@ Options::Options(QWidget *parent) : QDialog(parent)
          btn->setIconSize(iconSize);
     ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    QDir dir(QStringLiteral("%1/lang").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
+
+    QString dirPath;
+    if(QDir("../share/blackchocobo/lang").exists())
+        dirPath = "../share/blackchocobo/lang";
+    else
+        dirPath = QCoreApplication::applicationDirPath().append("/lang");
+    QDir dir(dirPath);
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
+
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
         translator->load(translation, dir.absolutePath());

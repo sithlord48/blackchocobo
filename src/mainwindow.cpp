@@ -98,7 +98,12 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::populateLanguageMenu()
 {
     m_translations.clear();
-    QDir dir(QStringLiteral("%1/lang").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
+    QString dirPath;
+    if(QDir("../share/blackchocobo/lang").exists())
+        dirPath = "../share/blackchocobo/lang";
+    else
+        dirPath = QCoreApplication::applicationDirPath().append("/lang");
+    QDir dir(dirPath);
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
 
     for (const QString &translation : langList) {
@@ -114,14 +119,12 @@ void MainWindow::populateLanguageMenu()
     }
 
     m_ff7tk_translations.clear();
-    QString dirPath;
-
     if(QDir("../share/ff7tk/lang").exists())
         dirPath = "../share/ff7tk/lang";
     else if(QDir("/usr/share/ff7tk/lang").exists())
         dirPath = "/usr/share/ff7tk/lang";
     else
-        dirPath = dir.absolutePath();
+    dirPath = dir.absolutePath();
 
     qDebug() << dirPath;
     QDir ff7tkDir(dirPath);
@@ -185,8 +188,8 @@ void MainWindow::initDisplay()
     ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
     locationViewer = new LocationViewer(scale);
-    locationViewer->setTranslationBaseFile(QStringLiteral("%1/lang/bchoco_").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
     locationViewer->setRegion("BASCUS-94163FF7-S00");
+
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0, 0, 0, 0);
     locLayout->addWidget(locationViewer);
