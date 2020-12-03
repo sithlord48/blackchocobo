@@ -50,7 +50,7 @@ build_script:
 - cmd: >-
     cd C:\projects\blackchocobo
 
-    cmake -G Ninja -Dff7tk_DIR=C:\ff7tk\lib\cmake\ff7tk -Dff7tkWidgets_DIR=C:\ff7tk\lib\cmake\ff7tk -DCMAKE_INSTALL_PREFIX=C:\projects\blackchocobo\Black_Chocobo-continuous\ --config=Release CMakeLists.txt
+    cmake -G Ninja -Dff7tk_DIR=C:\ff7tk\lib\cmake\ff7tk -DCMAKE_INSTALL_PREFIX=C:\projects\blackchocobo\Black_Chocobo-continuous\ --config=Release CMakeLists.txt
 
     ninja install
 

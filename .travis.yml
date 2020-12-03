@@ -48,7 +48,7 @@ script:
 - export VERSION=continuous
 - cd ..
 - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-    cmake CMakeLists.txt -Dff7tk_DIR=/usr/lib/x86_64-linux-gnu/cmake/ff7tk -Dff7tkWidgets_DIR=/usr/lib/x86_64-linux-gnu/cmake/ff7tk -DCMAKE_INSTALL_PREFIX=/usr;
+    cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX=/usr;
     make -j 2;
     make DESTDIR=appdir install; find appdir/;
     cpack;
@@ -60,7 +60,7 @@ script:
     ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage;
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-    cmake -S. -Dff7tk_DIR=/usr/local/lib/cmake/ff7tk/ -Dff7tkWidgets_DIR=/usr/local/lib/cmake/ff7tk/;
+    cmake -S. -Dff7tk_DIR=/usr/local/lib/cmake/ff7tk;
     make -j 2;
     cpack;
     fi

@@ -36,8 +36,10 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Quick
 )
 
-find_package(ff7tk REQUIRED)
-find_package(ff7tkWidgets REQUIRED)
+find_package(ff7tk REQUIRED NO_MODULE COMPONENTS
+    ff7tk
+    ff7tkWidgets
+)
 
 find_package(Qt5LinguistTools)
 
