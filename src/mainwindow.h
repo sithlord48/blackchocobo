@@ -81,8 +81,7 @@ private:
     ChocoboManager *chocoboManager = nullptr;
     LocationViewer *locationViewer = nullptr;
     QString prevFile;
-    QMap<QString, QTranslator *> m_translations;
-    QMap<QString, QTranslator *> m_ff7tk_translations;
+    QMap<QString, QList<QTranslator *>> m_translations;
     typedef QList<quint16> fieldItemOffsetList;
     typedef QList<quint8> fieldItemBitList;
 

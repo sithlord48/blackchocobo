@@ -170,10 +170,11 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
     include(InstallRequiredSystemLibraries)
     find_program(WINDEPLOYQT windeployqt HINTS "${_qt_bin_dir}")
+
     add_custom_command(
         TARGET Black_Chocobo POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
-        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import --no-translations --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:Black_Chocobo>
+        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:Black_Chocobo>
     )
     install(
         DIRECTORY ${CMAKE_BINARY_DIR}/qtDeploy/

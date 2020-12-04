@@ -28,6 +28,7 @@ namespace SETTINGS {
     inline const static QString EDITABLECOMBOS = QStringLiteral("editableCombos");
     inline const static QString PROGRESSADVANCED = QStringLiteral("gameProgressAdvanced");
     inline const static QString LANG = QStringLiteral("lang");
+    inline const static QString LANGPATH = QStringLiteral("langPath");
     inline const static QString LOADPATH = QStringLiteral("load_path");
     inline const static QString LOCVIEWADVANCED = QStringLiteral("locationViewerAdvanced");
     inline const static QString ALWAYSSHOWCONTROLLERMAP = QStringLiteral("optionsShowMapping");
@@ -72,6 +73,7 @@ private:
         SETTINGS::EDITABLECOMBOS,
         SETTINGS::PROGRESSADVANCED,
         SETTINGS::LANG,
+        SETTINGS::LANGPATH,
         SETTINGS::LOADPATH,
         SETTINGS::LOCVIEWADVANCED,
         SETTINGS::ALWAYSSHOWCONTROLLERMAP,

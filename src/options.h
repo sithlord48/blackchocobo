@@ -46,6 +46,7 @@ private:
     void saveSettings();
     void restoreDefaultSettings();
     void initConnections();
+    void updateText();
     void btn_set_char_stat_folder_clicked();
     void btn_set_default_save_clicked();
     void btn_set_load_path_clicked();

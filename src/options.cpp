@@ -34,22 +34,15 @@ Options::Options(QWidget *parent) : QDialog(parent)
     initConnections();
     int fmh = fontMetrics().height();
     QSize iconSize(fmh, fmh);
-    ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setToolTip(tr("Reset values to defaults"));
-    ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
-    ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
-    ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+    updateText();
     const QList<QAbstractButton*> buttons = ui->buttonBox->buttons();
     for (QAbstractButton *btn : buttons)
          btn->setIconSize(iconSize);
     ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    QDir dir(QCoreApplication::applicationDirPath());
-    dir.cd(QStringLiteral("../share/blackchocobo/lang"));
-    if(!dir.exists())
-        dir.setPath(QCoreApplication::applicationDirPath().append("/lang"));
+    QDir dir (BCSettings::instance()->value(SETTINGS::LANGPATH).toString());
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
-
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
@@ -97,6 +90,7 @@ void Options::changeEvent(QEvent *e)
     switch (e->type()) {
     case QEvent::LanguageChange:
         ui->retranslateUi(this);
+        updateText();
         break;
     default:
         break;
@@ -195,6 +189,18 @@ void Options::initConnections()
     connect(ui->comboLanguage, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]{
         emit requestLanguageChange(ui->comboLanguage->currentData());
     });
+}
+
+void Options::updateText()
+{
+    ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setToolTip(tr("Reset values to defaults"));
+    ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
+    ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
+    ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+    ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setText(tr("Defaults"));
+    ui->buttonBox->button(QDialogButtonBox::Reset)->setText(tr("Reset"));
+    ui->buttonBox->button(QDialogButtonBox::Apply)->setText(tr("Apply"));
+    ui->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
 }
 
 void Options::btn_set_save_pc_clicked()

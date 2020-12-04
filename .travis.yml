@@ -20,7 +20,7 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt515tools qt515base qt515declarative g++-8 qt515quickcontrols2 zsync;
+    sudo apt-get -y install build-essential qt5-default qt515tools qt515base qt515declarative g++-8 qt515quickcontrols2 zsync qt515translations;
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
