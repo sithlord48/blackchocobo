@@ -58,16 +58,13 @@ set ( blackchocobo_SRCS
 
 set (RESOURCES icon/images.qrc)
 
+add_subdirectory(deploy)
 add_subdirectory(lang)
 
 if(UNIX AND NOT APPLE)
     add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES})
     target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS blackchocobo RUNTIME DESTINATION bin)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.png DESTINATION share/pixmaps/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.desktop DESTINATION share/applications/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo.xml DESTINATION share/mime/packages/)
-    install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.appdata.xml DESTINATION share/metainfo/)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
 
@@ -76,8 +73,8 @@ elseif(WIN32)
             ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
         )
 
-    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc @ONLY)
-    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
+    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${CMAKE_BINARY_DIR}/deploy/blackchocobo.rc)
+
     if(CMAKE_COMPILER_IS_GNUCC)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
