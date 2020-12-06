@@ -55,7 +55,7 @@
 #include <ChocoboManager.h>
 #include <LocationViewer.h>
 
-#include "qhexedit/qhexedit.h"
+#include <qhexedit/qhexedit.h>
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

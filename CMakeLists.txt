@@ -50,9 +50,6 @@ set ( blackchocobo_SRCS
     src/achievementdialog.cpp
     src/bcdialog.cpp
     src/bcsettings.cpp
-    qhexedit/chunks.cpp
-    qhexedit/commands.cpp
-    qhexedit/qhexedit.cpp
     )
 
 
@@ -60,10 +57,11 @@ set (RESOURCES icon/images.qrc)
 
 add_subdirectory(deploy)
 add_subdirectory(lang)
+add_subdirectory(qhexedit)
 
 if(UNIX AND NOT APPLE)
     add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES})
-    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS blackchocobo RUNTIME DESTINATION bin)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
@@ -79,7 +77,7 @@ elseif(WIN32)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
     endif()
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo RUNTIME DESTINATION .)
     install(FILES ${FF7TK_DEPENDS} DESTINATION .)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
@@ -97,7 +95,7 @@ elseif(APPLE)
     set_source_files_properties(${APPICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
     add_executable(Black_Chocobo MACOSX_BUNDLE ${blackchocobo_SRCS} ${RESOURCES} ${APPICON})
     target_compile_options(Black_Chocobo PRIVATE -stdlib=libc++)
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo BUNDLE DESTINATION .)
 endif()
 
