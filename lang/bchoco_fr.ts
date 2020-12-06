@@ -1667,20 +1667,12 @@ d&apos;un objet facilement.</translation>
         <translation>Thème du système</translation>
     </message>
     <message>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Apply</source>
-        <translation type="unfinished">Appliquer</translation>
+        <translation type="obsolete">Appliquer</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation type="obsolete">Annuler</translation>
     </message>
 </context>
 <context>

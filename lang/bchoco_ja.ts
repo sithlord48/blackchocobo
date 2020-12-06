@@ -1661,20 +1661,12 @@ location.</source>
         <translation type="unfinished">システムテーマ</translation>
     </message>
     <message>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Apply</source>
-        <translation type="unfinished">適用</translation>
+        <translation type="obsolete">適用</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">キャンセル</translation>
+        <translation type="obsolete">キャンセル</translation>
     </message>
 </context>
 <context>

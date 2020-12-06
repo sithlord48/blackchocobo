@@ -197,10 +197,7 @@ void Options::updateText()
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
-    ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setText(tr("Defaults"));
-    ui->buttonBox->button(QDialogButtonBox::Reset)->setText(tr("Reset"));
-    ui->buttonBox->button(QDialogButtonBox::Apply)->setText(tr("Apply"));
-    ui->buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
+    ui->labelScale->setText(QStringLiteral("%1%").arg(int(BCSettings::instance()->value(SETTINGS::SCALE, 1.00).toDouble() *100), 3, 10, QChar('0')));
 }
 
 void Options::btn_set_save_pc_clicked()

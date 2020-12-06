@@ -94,7 +94,7 @@ private:
     void init_connections();
     void loadBasicSettings();
     void loadChildWidgetSettings();
-    void populateLanguageMenu();
+    void detectTranslations();
 public slots:
     void loadFileFull(const QString &fileName, int reload); //(Vegeta_Ss4) v0.8.3
 

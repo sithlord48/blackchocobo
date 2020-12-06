@@ -1648,19 +1648,19 @@ Var And Scrolling Synced To Left Table</translation>
     </message>
     <message>
         <source>Defaults</source>
-        <translation>Defaults</translation>
+        <translation type="vanished">Defaults</translation>
     </message>
     <message>
         <source>Reset</source>
-        <translation>Reset</translation>
+        <translation type="vanished">Reset</translation>
     </message>
     <message>
         <source>Apply</source>
-        <translation>Apply</translation>
+        <translation type="vanished">Apply</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation type="vanished">Cancel</translation>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>

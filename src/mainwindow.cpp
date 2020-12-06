@@ -83,7 +83,7 @@ MainWindow::MainWindow(QWidget *parent)
     setAcceptDrops(true);
     ui->setupUi(this);
     loadBasicSettings();
-    populateLanguageMenu();
+    detectTranslations();
     initDisplay();
     setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
     populateCombos();
@@ -95,7 +95,7 @@ MainWindow::MainWindow(QWidget *parent)
     ff7->setFileModified(false, 0);
 }
 
-void MainWindow::populateLanguageMenu()
+void MainWindow::detectTranslations()
 {
     m_translations.clear();
 
@@ -144,24 +144,27 @@ void MainWindow::populateLanguageMenu()
         if (currentLang)
             QApplication::installTranslator(translator);
     }
-    qDebug() << "ff7tk_lang_path" << dir.absolutePath() << "ff7tk_translations" << ff7tk_translations;
 
     QMap<QString, QTranslator *> qt_translations;
     nameFilter = QStringList{QStringLiteral("qt_*.qm")};
-    dir.setPath(QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
     if (langList.isEmpty()) {
-        dir.setPath(QStringLiteral("%1/../share/qt/translations").arg(QCoreApplication::applicationDirPath()));
+        dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("lang")));
         langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-        if(langList.isEmpty()) {
-            dir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/qt/translations")));
+        if (langList.isEmpty()) {
+            dir.setPath(QStringLiteral("%1/../share/qt/translations").arg(QCoreApplication::applicationDirPath()));
             langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
             if(langList.isEmpty()) {
-                dir.setPath(QStringLiteral("/usr/local/share/qt/translations"));
+                dir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/qt/translations")));
                 langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
                 if(langList.isEmpty()) {
-                    dir.setPath(QStringLiteral("/usr/share/qt/translations"));
+                    dir.setPath(QStringLiteral("/usr/local/share/qt/translations"));
                     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
+                    if(langList.isEmpty()) {
+                        dir.setPath(QStringLiteral("/usr/share/qt/translations"));
+                        langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
+                    }
                 }
             }
         }
@@ -175,37 +178,16 @@ void MainWindow::populateLanguageMenu()
         if (currentLang)
             QApplication::installTranslator(translator);
     }
-    qDebug() << "qt_lang_path" << dir.absolutePath() << "qt_translations" << qt_translations;
-
-    QMap<QString, QTranslator *> qtbase_translations;
-    nameFilter = QStringList{QStringLiteral("qtbase_*.qm")};
-    QStringList qtbaseList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-    for (const QString &translation : qtbaseList) {
-        QTranslator *translator = new QTranslator;
-        translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(7, 2);
-        qtbase_translations.insert(lang, translator);
-
-        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
-        if (currentLang)
-            QApplication::installTranslator(translator);
-    }
-    qDebug() << "qtbase_translations" << qtbase_translations;
-
     QStringList keys = app_translations.keys();
     QList<QTranslator *> tempList;
     for (const QString &lang : keys) {
         tempList.clear();
         tempList.append(app_translations.value(lang));
         tempList.append(ff7tk_translations.value(lang));
-        if(lang == QStringLiteral("re")) {
-            tempList.append(qt_translations.value(QStringLiteral("en")));
-            tempList.append(qtbase_translations.value(QStringLiteral("en")));
-        } else {
+        if(lang != QStringLiteral("re"))
             tempList.append(qt_translations.value(lang));
-            tempList.append(qtbase_translations.value(lang));
-        }
-        qDebug() << "Inserting Language:" << lang << tempList;
+        else
+            tempList.append(qt_translations.value(QStringLiteral("en")));
         m_translations.insert(lang, tempList);
     }
 }
@@ -1166,9 +1148,13 @@ void MainWindow::actionOpenAchievementFile_triggered()
 
 void MainWindow::changeLanguage(const QVariant &data)
 {
-    BCSettings::instance()->setValue(SETTINGS::LANG, data);
     if(!m_translations.contains(data.toString()))
-        populateLanguageMenu();
+        detectTranslations();
+
+    for(auto translation : m_translations.value(BCSettings::instance()->value(SETTINGS::LANG).toString()))
+        QApplication::removeTranslator(translation);
+
+    BCSettings::instance()->setValue(SETTINGS::LANG, data);
     for(auto translation : m_translations.value(data.toString()))
         QApplication::installTranslator(translation);
 }

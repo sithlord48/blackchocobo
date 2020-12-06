@@ -1672,20 +1672,12 @@ Lage.</translation>
         <translation type="unfinished">Systemthema</translation>
     </message>
     <message>
-        <source>Defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Apply</source>
-        <translation type="unfinished">Zuweisen</translation>
+        <translation type="obsolete">Zuweisen</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Abbrechen</translation>
+        <translation type="obsolete">Abbrechen</translation>
     </message>
 </context>
 <context>

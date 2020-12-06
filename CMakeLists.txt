@@ -41,8 +41,6 @@ find_package(ff7tk REQUIRED NO_MODULE COMPONENTS
     ff7tkWidgets
 )
 
-find_package(Qt5LinguistTools)
-
 set ( blackchocobo_SRCS
     src/main.cpp
     src/mainwindow.cpp
@@ -57,26 +55,15 @@ set ( blackchocobo_SRCS
     qhexedit/qhexedit.cpp
     )
 
-set ( RESOURCES
-    icon/images.qrc
-    )
 
-set ( blackchocobo_TRS
-    lang/bchoco_en.ts
-    lang/bchoco_es.ts
-    lang/bchoco_fr.ts
-    lang/bchoco_de.ts
-    lang/bchoco_ja.ts
-    lang/bchoco_re.ts
-    )
+set (RESOURCES icon/images.qrc)
 
-qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS})
+add_subdirectory(lang)
 
 if(UNIX AND NOT APPLE)
-    add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES} ${TRS})
-    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES})
+    target_link_libraries ( blackchocobo  Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS blackchocobo RUNTIME DESTINATION bin)
-    install(FILES ${TRS} DESTINATION share/blackchocobo/lang)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.png DESTINATION share/pixmaps/)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/Black_Chocobo.desktop DESTINATION share/applications/)
     install(FILES ${PROJECT_SOURCE_DIR}/deploy/blackchocobo.xml DESTINATION share/mime/packages/)
@@ -89,35 +76,17 @@ elseif(WIN32)
             ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
         )
 
-    set (FF7TK_TRS
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_en.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_es.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_fr.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_de.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_ja.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
-    )
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.rc.in ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc @ONLY)
-    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
+    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${CMAKE_CURRENT_BINARY_DIR}/blackchocobo.rc)
     if(CMAKE_COMPILER_IS_GNUCC)
         #Prevent ms padding on spacked structures on gcc compiler
         target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
     endif()
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo RUNTIME DESTINATION .)
-    install(FILES ${TRS} DESTINATION lang)
-    install(FILES ${FF7TK_TRS} DESTINATION lang)
     install(FILES ${FF7TK_DEPENDS} DESTINATION .)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
 elseif(APPLE)
-    set (FF7TK_TRS
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_en.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_es.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_fr.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_de.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_ja.qm
-        ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
-    )
     set(MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo")
     set(MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo")
     set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo")
@@ -129,11 +98,9 @@ elseif(APPLE)
     set(MACOSX_BUNDLE_SHORT_VERSION_STRING ${BC_VERSION})
     set(APPICON ${CMAKE_CURRENT_SOURCE_DIR}/deploy/bchoco_icon_osx.icns)
     set_source_files_properties(${APPICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
-    set_source_files_properties(${TRS} PROPERTIES MACOSX_PACKAGE_LOCATION "MacOS/lang")
-    set_source_files_properties(${FF7TK_TRS} PROPERTIES MACOSX_PACKAGE_LOCATION "MacOS/lang")
-    add_executable(Black_Chocobo MACOSX_BUNDLE ${blackchocobo_SRCS} ${RESOURCES} ${TRS} ${FF7TK_TRS} ${APPICON})
+    add_executable(Black_Chocobo MACOSX_BUNDLE ${blackchocobo_SRCS} ${RESOURCES} ${APPICON})
     target_compile_options(Black_Chocobo PRIVATE -stdlib=libc++)
-    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Xml Qt5::Widgets Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
+    target_link_libraries (Black_Chocobo Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml Qt5::Quick ff7tk::ff7tk ff7tk::ff7tkWidgets)
     install(TARGETS Black_Chocobo BUNDLE DESTINATION .)
 endif()
 
