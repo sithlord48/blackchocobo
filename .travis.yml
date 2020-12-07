@@ -57,7 +57,7 @@ script:
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
     mkdir -p ./appdir/usr/share/ff7tk/lang;
     cp /usr/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang;
-    ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage;
+    ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage -extra-plugins=iconengines,platformthemes/libqgtk3.so,platformthemes/libqxdgdesktopportal.so;
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
     cmake -S. -Dff7tk_DIR=/usr/local/lib/cmake/ff7tk;
