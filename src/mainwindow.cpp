@@ -135,14 +135,15 @@ void MainWindow::detectTranslations()
             }
         }
     }
-    for (const QString &translation : langList) {
+    for (const QString &translation : qAsConst(langList)) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(6, 2);
         ff7tk_translations.insert(lang, translator);
         bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
-        if (currentLang)
+        if (currentLang) {
             QApplication::installTranslator(translator);
+        }
     }
 
     QMap<QString, QTranslator *> qt_translations;
@@ -169,7 +170,7 @@ void MainWindow::detectTranslations()
             }
         }
     }
-    for (const QString &translation : langList) {
+    for (const QString &translation : qAsConst(langList)) {
         QTranslator *translator = new QTranslator;
         translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(3, 2);
@@ -178,7 +179,7 @@ void MainWindow::detectTranslations()
         if (currentLang)
             QApplication::installTranslator(translator);
     }
-    QStringList keys = app_translations.keys();
+    const QStringList keys = app_translations.keys();
     QList<QTranslator *> tempList;
     for (const QString &lang : keys) {
         tempList.clear();
