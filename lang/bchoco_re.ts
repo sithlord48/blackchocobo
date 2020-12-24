@@ -1682,6 +1682,10 @@ Var And Scrolling Synced To Left Table</translation>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Select A Location To Save Character Stat Files</translation>
     </message>
+    <message>
+        <source>Application Style</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>

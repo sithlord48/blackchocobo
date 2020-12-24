@@ -20,7 +20,7 @@ before_install:
 
 install:
 - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-    sudo apt-get -y install build-essential qt5-default qt515tools qt515base qt515declarative g++-8 qt515quickcontrols2 zsync qt515translations;
+    sudo apt-get -y install build-essential qt5-default qt515tools qt515base qt515declarative g++-8 qt515quickcontrols2 zsync qt515translations kde-style-breeze kde-style-oxygen-qt5 kde-style-qtcurve-qt5;
     sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90;
     fi
 
@@ -57,6 +57,10 @@ script:
     unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
     mkdir -p ./appdir/usr/share/ff7tk/lang;
     cp /usr/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang;
+    mkdir -p ./appdir/usr/plugins/styles;
+    cp /usr/lib/x86_64-linux-gnu/qt5/plugins/styles/breeze.so ./appdir/usr/plugins/styles/;
+    cp /usr/lib/x86_64-linux-gnu/qt5/plugins/styles/oxygen.so ./appdir/usr/plugins/styles/;
+    cp /usr/lib/x86_64-linux-gnu/qt5/plugins/styles/qtcurve.so ./appdir/usr/plugins/styles/;
     ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage -extra-plugins=iconengines,platformthemes/libqgtk3.so,platformthemes/libqxdgdesktopportal.so;
     fi
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then

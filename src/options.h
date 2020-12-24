@@ -54,4 +54,5 @@ private:
     void btn_set_save_pc_clicked();
     void cbNativeDialogs_clicked(bool checked);
     void comboColorScheme_currentIndexChanged(int index);
+    void comboAppStyle_currentTextChanged(const QString &text);
 };

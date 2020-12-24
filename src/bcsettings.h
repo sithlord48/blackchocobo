@@ -42,6 +42,7 @@ namespace SETTINGS {
     inline const static QString USENATIVEDIALOGS = QStringLiteral("useNativeDialogs");
     inline const static QString SIDEBARURLS = QStringLiteral("sidebarUrls");
     inline const static QString COLORSCHEME = QStringLiteral("colorScheme");
+    inline const static QString APPSTYLE = QStringLiteral("appStyle");
 }
 
 class BCSettings : public QObject
@@ -87,6 +88,7 @@ private:
         SETTINGS::USENATIVEDIALOGS,
         SETTINGS::SIDEBARURLS,
         SETTINGS::COLORSCHEME,
+        SETTINGS::APPSTYLE,
     };
     //Theme Colors
     inline static const QColor lightWindow = QColor(252, 252, 252);

@@ -1682,6 +1682,10 @@ location.</translation>
         <source>Cancel</source>
         <translation type="vanished">Cancel</translation>
     </message>
+    <message>
+        <source>Application Style</source>
+        <translation>Application Style</translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>

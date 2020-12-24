@@ -132,6 +132,7 @@ void BCSettings::restoreDefaultSettings()
     settings->setValue(SETTINGS::AUTOGROWTH, true);
     settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
     settings->setValue(SETTINGS::COLORSCHEME, 0);
+    settings->setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
 }
 QPalette BCSettings::paletteForSetting()
 {

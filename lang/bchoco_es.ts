@@ -1671,6 +1671,10 @@ location.</source>
         <source>Cancel</source>
         <translation type="obsolete">Cancelar</translation>
     </message>
+    <message>
+        <source>Application Style</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>

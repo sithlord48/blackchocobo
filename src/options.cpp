@@ -16,6 +16,7 @@
 
 #include <QStandardPaths>
 #include <QStyle>
+#include <QStyleFactory>
 #include <QTranslator>
 #include <QUrl>
 
@@ -52,6 +53,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en"))));
     ui->comboLanguage->setVisible(ui->comboLanguage->count());
     ui->lblLanguage->setVisible(ui->comboLanguage->count());
+    ui->comboAppStyle->addItems(QStyleFactory::keys());
 
     connect(ui->sliderScale, &QSlider::valueChanged, this, [this](int value){
         value = int(((value * 0.25) + 0.5) * 100);
@@ -120,6 +122,7 @@ void Options::loadSettings()
     ui->cbNativeDialogs->setChecked(BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
     ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
+    ui->comboAppStyle->setCurrentText(BCSettings::instance()->value(SETTINGS::APPSTYLE).toString());
 }
 
 void Options::saveSettings()
@@ -144,6 +147,7 @@ void Options::saveSettings()
     BCSettings::instance()->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
     BCSettings::instance()->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
     BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
+    BCSettings::instance()->setValue(SETTINGS::APPSTYLE, ui->comboAppStyle->currentText());
 }
 
 void Options::restoreDefaultSettings()
@@ -169,6 +173,7 @@ void Options::restoreDefaultSettings()
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(QStringLiteral("en")));
     ui->cbNativeDialogs->setChecked(false);
     ui->btnEditSideBarItems->setVisible(true);
+    ui->comboAppStyle->setCurrentText(QStringLiteral("Fusion"));
 }
 
 void Options::initConnections()
@@ -180,6 +185,7 @@ void Options::initConnections()
     connect(ui->btn_set_save_pc, &QPushButton::clicked, this, &Options::btn_set_save_pc_clicked);
     connect(ui->cbNativeDialogs, &QCheckBox::toggled, this, &Options::cbNativeDialogs_clicked);
     connect(ui->comboColorScheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &Options::comboColorScheme_currentIndexChanged);
+    connect(ui->comboAppStyle, &QComboBox::textActivated, this, &Options::comboAppStyle_currentTextChanged);
     connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setVisible);
 
     connect(ui->btnEditSideBarItems, &QPushButton::clicked, this, [this]{
@@ -245,4 +251,10 @@ void Options::comboColorScheme_currentIndexChanged(int index)
 {
     BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, index);
     qApp->setPalette(BCSettings::instance()->paletteForSetting());
+}
+
+void Options::comboAppStyle_currentTextChanged(const QString &text)
+{
+    BCSettings::instance()->setValue(SETTINGS::APPSTYLE, text);
+    qApp->setStyle(QStyleFactory::create(text));
 }

@@ -15,9 +15,8 @@
 /****************************************************************************/
 #include <QApplication>
 #include <QLocale>
-#ifndef Q_OS_LINUX
-    #include <QStyleFactory>
-#endif
+#include <QStyle>
+#include <QStyleFactory>
 #include <QTranslator>
 #include <QTime>
 #include <QRandomGenerator>
@@ -50,9 +49,7 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     //Start application init.
-#ifndef Q_OS_LINUX
-    a.setStyle(QStyleFactory::create("Fusion"));
-#endif
+    a.setStyle(QStyleFactory::create(BCSettings::instance()->value(SETTINGS::APPSTYLE, QVariant(QString(a.style()->objectName()))).toString()));
     a.setPalette(BCSettings::instance()->paletteForSetting());
     a.setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     a.setApplicationName("Black Chocobo");
