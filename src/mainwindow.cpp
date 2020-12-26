@@ -234,7 +234,7 @@ void MainWindow::initDisplay()
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
-    itemlist = new ItemList(scale);
+    itemlist = new ItemList(this);
     ui->group_items->layout()->removeWidget(ui->group_item_options);
     ui->group_items->layout()->addWidget(itemlist);
     ui->group_items->layout()->addWidget(ui->group_item_options);
