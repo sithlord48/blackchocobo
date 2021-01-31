@@ -68,125 +68,77 @@ QRect readGeometry()
 
 QString BCDialog::getOpenFileName(QWidget  *parent, const QString &title, const QString &path , const QString &nameFilters, const QString &initSelection)
 {
-    const QRect mainRect = readGeometry();
-    QFileDialog dialog(parent, title, path.isEmpty() ? QDir::homePath() : path, nameFilters);
-    int dialogWidth = int(mainRect.width() * 0.80);
-    int dialogHeight = int (mainRect.height() * 0.80);
-    int fmw = dialog.fontMetrics().height();
-    QSize iconSize = QSize(fmw, fmw);
-    const QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
-    for(QAbstractButton * btn: buttons)
-        btn->setIconSize(iconSize);
-    dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
-    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
-    QString fileName = initSelection;
-    if (!fileName.isEmpty())
-        dialog.selectFile(fileName);
-    QList<QUrl> sideBarUrls;
-    const QStringList SideBarUrls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
-    for(const QString &url : SideBarUrls)
-        sideBarUrls.append(QUrl::fromLocalFile(url));
-    dialog.setSidebarUrls(sideBarUrls);
+    auto dialog = getFileDialog(parent, title, path, nameFilters, initSelection);
 
-    if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().at(0);
+    if(dialog->exec() == QFileDialog::Accepted)
+        return dialog->selectedFiles().at(0);
     return QString();
 }
 
 QString BCDialog::getExistingDirectory(QWidget *parent, const QString &title, const QString &path, const QString &initSelection)
 {
-    QRect mainRect = readGeometry();
-    int dialogWidth = int(mainRect.width() * 0.80);
-    int dialogHeight = int (mainRect.height() * 0.80);
-    QFileDialog dialog(parent, title, path.isEmpty() ? QDir::homePath() : path, initSelection);
-    int fmw = dialog.fontMetrics().height();
-    QSize iconSize = QSize(fmw, fmw);
-    QList<QAbstractButton*> buttons = dialog.findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
-    for(QAbstractButton * btn: buttons)
-        btn->setIconSize(iconSize);
-    dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
-    dialog.setFileMode(QFileDialog::Directory);
-    dialog.setFilter(QDir::Dirs);
-    QString fileName = initSelection;
-    if (!fileName.isEmpty())
-        dialog.selectFile(fileName);
-    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
-    QList<QUrl> sideBarUrls;
-    const QStringList URLS = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
-    for(const QString &url : URLS)
-        sideBarUrls.append(QUrl::fromLocalFile(url));
-    dialog.setSidebarUrls(sideBarUrls);
+    auto dialog = getFileDialog(parent, title, path, QString(), initSelection);
+    dialog->setFileMode(QFileDialog::Directory);
+    dialog->setFilter(QDir::Dirs);
 
-    if(dialog.exec() == QFileDialog::Accepted)
-        return dialog.selectedFiles().at(0);
+    if(dialog->exec() == QFileDialog::Accepted)
+        return dialog->selectedFiles().at(0);
     return QString();
 }
 
 QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString* chosenType, const QString &initSelection)
 {
-    QRect mainRect = readGeometry();
-    int dialogWidth = int(mainRect.width() * 0.80);
-    int dialogHeight = int (mainRect.height() * 0.80);
-    QFileDialog dialog(parent, title, path.isEmpty() ? QDir::homePath() : path, nameFilters);
-    dialog.setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
-    dialog.setFileMode(QFileDialog::AnyFile);
-    dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
-    QString fileName = initSelection;
-    if (!fileName.isEmpty())
-        dialog.selectFile(fileName);
-    QList<QUrl> sideBarUrls;
-    const QStringList URLS = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
-    for(const QString &url : URLS)
-        sideBarUrls.append(QUrl::fromLocalFile(url));
-    dialog.setSidebarUrls(sideBarUrls);
+    auto dialog = getFileDialog(parent, title, path, nameFilters, initSelection);
+    dialog->setFileMode(QFileDialog::AnyFile);
+    dialog->setAcceptMode(QFileDialog::AcceptSave);
 
     if(chosenType)
-        dialog.selectNameFilter(chosenType->mid(0));
-    if(nameFilters.contains(QStringLiteral(".char")))
-        dialog.setDefaultSuffix(QStringLiteral(".char"));
+        dialog->selectNameFilter(chosenType->mid(0));
 
-    QObject::connect(&dialog, &QFileDialog::filterSelected, [&dialog, region](const QString &filter){
+    if(nameFilters.contains(QStringLiteral(".char")))
+        dialog->setDefaultSuffix(QStringLiteral(".char"));
+
+    QObject::connect(dialog, &QFileDialog::filterSelected, [dialog, region](const QString &filter) {
         QString name;
         if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" "))) {
-            dialog.setDefaultSuffix(QString());
+            dialog->setDefaultSuffix(QString());
             name = region;
         } else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".mcs"));
+            dialog->setDefaultSuffix(QStringLiteral(".mcs"));
             name = region;
         } else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PDA).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".mcb"));
+            dialog->setDefaultSuffix(QStringLiteral(".mcb"));
             name = region;
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".PSV"));
+            dialog->setDefaultSuffix(QStringLiteral(".PSV"));
             name = region.mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(region.mid(12)).toHex().toUpper());
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PC).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".ff7"));
+            dialog->setDefaultSuffix(QStringLiteral(".ff7"));
             name = QStringLiteral("save00");
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::SWITCH).join(" "))) {
-            dialog.setDefaultSuffix(QString());
+            dialog->setDefaultSuffix(QString());
             name = QStringLiteral("ff7slot00");
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSP).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".VMP"));
+            dialog->setDefaultSuffix(QStringLiteral(".VMP"));
             name = QStringLiteral("SCEVMC0");
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VMC).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".mcr"));
+            dialog->setDefaultSuffix(QStringLiteral(".mcr"));
             name = QStringLiteral("vmcCard");
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::DEX).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".gme"));
+            dialog->setDefaultSuffix(QStringLiteral(".gme"));
             name = QStringLiteral("dexCard");
         } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VGS).join(" "))) {
-            dialog.setDefaultSuffix(QStringLiteral(".vgs"));
+            dialog->setDefaultSuffix(QStringLiteral(".vgs"));
             name = QStringLiteral("vgsCard");
         }
-        QString ext = dialog.defaultSuffix().isEmpty() ? QString() : QStringLiteral(".%1").arg(dialog.defaultSuffix());
-        dialog.selectFile(QStringLiteral("%1%2").arg(name, ext));
+        QString ext = dialog->defaultSuffix().isEmpty() ? QString() : QStringLiteral(".%1").arg(dialog->defaultSuffix());
+        dialog->selectFile(QStringLiteral("%1%2").arg(name, ext));
     });
 
-    if(dialog.exec() == QFileDialog::Accepted) {
+    if(dialog->exec() == QFileDialog::Accepted) {
         if (!nameFilters.contains(QStringLiteral(".char")))
-            chosenType->replace(chosenType->mid(0), dialog.selectedNameFilter());
-        return dialog.selectedFiles().at(0);
+            chosenType->replace(chosenType->mid(0), dialog->selectedNameFilter());
+        return dialog->selectedFiles().at(0);
     }
     return QString();
 }
@@ -277,4 +229,31 @@ int BCDialog::fixTimeDialog(QWidget *parent, bool slotPAL)
     dialog.addButton(QMessageBox::Yes);
     dialog.addButton(QMessageBox::No);
     return dialog.exec();
+}
+
+QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, const QString &path, const QString &nameFilters, const QString &initSelection)
+{
+    auto dialog = new QFileDialog(parent, title, path.isEmpty() ? QDir::homePath() : path, nameFilters);
+    const QRect mainRect = readGeometry();
+    int dialogWidth = int(mainRect.width() * 0.80);
+    int dialogHeight = int (mainRect.height() * 0.80);
+
+    QSize iconSize = QSize(dialog->fontMetrics().height(), dialog->fontMetrics().height());
+    const QList<QAbstractButton*> buttons = dialog->findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
+    for(QAbstractButton * btn: buttons)
+        btn->setIconSize(iconSize);
+
+    dialog->setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
+    dialog->setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
+
+    QList<QUrl> sideBarUrls;
+    const QStringList SideBarUrls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    for(const QString &url : SideBarUrls)
+        sideBarUrls.append(QUrl::fromLocalFile(url));
+    dialog->setSidebarUrls(sideBarUrls);
+
+    if (!initSelection.isEmpty())
+        dialog->selectFile(initSelection);
+
+    return dialog;
 }

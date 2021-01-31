@@ -21,7 +21,7 @@ class QString;
 class QWidget;
 class QSettings;
 class FF7Save;
-
+class QFileDialog;
 class BCDialog
 {
 public:
@@ -30,4 +30,6 @@ public:
     static QString getSaveFileName(QWidget  *parent = nullptr, const QString &region = QString(), const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), QString *chosenType = nullptr, const QString &initSelection = QString());
     static void editSideBarPaths(QWidget *parent= nullptr);
     static int fixTimeDialog(QWidget* parent, bool slotPAL = false);
+private:
+    static QFileDialog* getFileDialog(QWidget *parent = nullptr, const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), const QString &initSelection = QString());
 };
