@@ -115,6 +115,9 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
         btnPrev->setEnabled(false);
     if (s == 15)
         btnNext->setEnabled(false);
+
+    if(parent)
+        move(parent->x() + ((parent->sizeHint().width() - sizeHint().width()) / 2), parent->y() + ((parent->height() - height()) / 2));
 }
 
 void errbox::keyPressEvent(QKeyEvent *e)

@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2020 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2021 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -141,9 +141,8 @@ void MainWindow::detectTranslations()
         QString lang = translation.mid(6, 2);
         ff7tk_translations.insert(lang, translator);
         bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
-        if (currentLang) {
+        if (currentLang)
             QApplication::installTranslator(translator);
-        }
     }
 
     QMap<QString, QTranslator *> qt_translations;
@@ -786,10 +785,12 @@ void MainWindow::changeEvent(QEvent *e)
             update_hexEditor_PSXInfo();
     }
 }
+
 void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 {
     e->accept();
 }
+
 void MainWindow::dropEvent(QDropEvent *e)
 {
     if (ff7->isFileModified()) {
@@ -847,11 +848,13 @@ void MainWindow::actionOpenSaveFile_triggered()
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
+
 void MainWindow::actionReload_triggered()
 {
     if (!ff7->fileName().isEmpty())
         loadFileFull(ff7->fileName(), 1);
 }
+
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName, int reload)
 {
@@ -864,27 +867,39 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
     }
 
     prevFile = ff7->fileName();
-    if (ff7->loadFile(fileName)) {
-        _init = false; //we have now loaded a file
-        fileModified(false);
-    } else {
+    hexEditor->setCursorPosition(0);
+    hexCursorPos = 0;
+
+    if (!ff7->loadFile(fileName)) {
         QMessageBox::information(this, tr("Load Failed"), tr("Failed to Load File"));
         return;
     }
 
-    if (ff7->numberOfSlots() > 1) {
-        if (reload)
-            guirefresh(0);
-        else
-            actionShowSelectionDialog_triggered();
-    } else {
+    _init = false;
+    fileModified(false);
+
+    if (ff7->numberOfSlots() == 1 ) {
         s = 0;
         guirefresh(0);
+        return;
     }
 
-    hexEditor->setCursorPosition(0);
-    hexCursorPos = 0;
+    if (reload) {
+        guirefresh(0);
+        return;
+    }
+
+    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true, this);
+    int i = slotselect.exec();
+    if(i == -1) {
+        actionOpenSaveFile_triggered();
+        return;
+    }
+
+    s = i;
+    guirefresh(0);
 }
+
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::actionImportSlotFromFile_triggered()
 {
@@ -896,8 +911,7 @@ void MainWindow::actionImportSlotFromFile_triggered()
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
             if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
-                SlotSelect *SSelect = new SlotSelect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), tempSave, false);
-                SSelect->move(x() + ((width() - SSelect->width()) / 2), y() + ((sizeHint().height() - SSelect->sizeHint().height()) /2));
+                SlotSelect *SSelect = new SlotSelect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), tempSave, false, this);
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     actionImportSlotFromFile_triggered();
@@ -1068,6 +1082,7 @@ void MainWindow::actionPreviousSlot_triggered()
         guirefresh(0);
     }
 }
+
 void MainWindow::actionNextSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
@@ -1078,16 +1093,19 @@ void MainWindow::actionNextSlot_triggered()
         guirefresh(0);
     }
 }
+
 void MainWindow::actionAbout_triggered()
 {
     About adialog(this);
     adialog.exec();
 }
+
 void MainWindow::actionCopySlot_triggered()
 {
     ff7->copySlot(s);
     ui->actionPasteSlot->setEnabled(true);
 }
+
 void MainWindow::actionPasteSlot_triggered()
 {
     ff7->pasteSlot(s);
@@ -1100,7 +1118,6 @@ void MainWindow::actionShowOptions_triggered()
     connect(&odialog, &Options::requestChangeNativeDialog, this, [] (bool useNative){
         QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
     });
-    odialog.move(x() + ((width() - odialog.width()) / 2), y() + ((sizeHint().height() - odialog.sizeHint().height()) / 2));
     if (odialog.exec()) {
         setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
         loadChildWidgetSettings();
@@ -1116,23 +1133,16 @@ void MainWindow::actionCreateNewMetadata_triggered()
 
 void MainWindow::actionShowSelectionDialog_triggered()
 {
-    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true);
-    slotselect.move(x() + ((width() - slotselect.width()) / 2), y() + ((sizeHint().height() - slotselect.sizeHint().height()) /2));
-
-    int i = slotselect.exec();
-    if(i == -1) {
-        actionOpenSaveFile_triggered();
-    } else {
-        s = i;
-        guirefresh(0);
-    }
+    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, false, this);
+    s = slotselect.exec();
+    guirefresh(0);
 }
 
 void MainWindow::actionOpenAchievementFile_triggered()
 {
     QString temp = ff7->fileName();
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
-    temp.append(QStringLiteral("%1achievement.dat").arg(QDir::separator()));
+    temp.append(QStringLiteral("/achievement.dat"));
     QFile tmp(temp);
     if (!tmp.exists())
         temp = BCDialog::getOpenFileName(this, tr("Select Achievement File"), QDir::homePath(), tr("Dat File (*.dat)"));
@@ -1140,8 +1150,7 @@ void MainWindow::actionOpenAchievementFile_triggered()
     if (temp.isEmpty())
         return;
 
-    achievementDialog achDialog(temp);
-    achDialog.move(x() + (width() - achDialog.width()) / 2, y() + (height() - achDialog.height())/2);
+    achievementDialog achDialog(temp, this);
     achDialog.exec();
 }
 
@@ -1559,10 +1568,9 @@ void MainWindow::CheckGame()
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
             || ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->internalPC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
-        errbox error(nullptr, ff7, s);
+        errbox error(this, ff7, s);
         if (FF7SaveInfo::instance()->slotCount(ff7->format()) == 1)
             error.setSingleSlot(true);
-        error.move(x() + ((width() - error.width()) / 2), y() + (height() /2));
         switch (error.exec()) {
         case 0://View Anyway..
             setmenu(0);

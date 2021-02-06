@@ -50,4 +50,6 @@ achievementDialog::achievementDialog(const QString &FileName, QWidget *parent) :
         close();
     });
 
+    if(parent)
+        move(parent->x() + (parent->width() - width()) / 2, parent->y() + (parent->height() - height())/2);
 }

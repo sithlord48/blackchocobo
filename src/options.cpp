@@ -79,6 +79,9 @@ Options::Options(QWidget *parent) : QDialog(parent)
     });
 
     loadSettings();
+
+    if(parent)
+        move(parent->x() + ((parent->width() - width()) / 2), parent->y() + ((parent->sizeHint().height() - sizeHint().height()) / 2));
 }
 
 Options::~Options()
