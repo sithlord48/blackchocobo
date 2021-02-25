@@ -136,7 +136,7 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     });
 
     if(dialog->exec() == QFileDialog::Accepted) {
-        if (!nameFilters.contains(QStringLiteral(".char")))
+        if (!nameFilters.contains(QStringLiteral(".char")) && chosenType)
             chosenType->replace(chosenType->mid(0), dialog->selectedNameFilter());
         return dialog->selectedFiles().at(0);
     }
