@@ -65,10 +65,13 @@ QHexEdit::~QHexEdit()
 
 void QHexEdit::setAddressArea(bool addressArea)
 {
+    if(_addressArea == addressArea)
+        return;
     _addressArea = addressArea;
     adjust();
     setCursorPosition(_cursorPosition);
     viewport()->update();
+    emit addressAreaChanged(_addressArea);
 }
 
 bool QHexEdit::addressArea()
@@ -78,8 +81,11 @@ bool QHexEdit::addressArea()
 
 void QHexEdit::setAddressAreaColor(const QColor &color)
 {
+    if(_addressAreaColor == color)
+        return;
     _addressAreaColor = color;
     viewport()->update();
+    emit addressAreaColorChanged(_addressAreaColor);
 }
 
 QColor QHexEdit::addressAreaColor()
@@ -89,10 +95,13 @@ QColor QHexEdit::addressAreaColor()
 
 void QHexEdit::setAddressOffset(qint64 addressOffset)
 {
+    if(_addressOffset == addressOffset)
+        return;
     _addressOffset = addressOffset;
     adjust();
     setCursorPosition(_cursorPosition);
     viewport()->update();
+    emit addressOffsetChanged(_addressOffset);
 }
 
 qint64 QHexEdit::addressOffset()
@@ -102,10 +111,13 @@ qint64 QHexEdit::addressOffset()
 
 void QHexEdit::setAddressWidth(int addressWidth)
 {
+    if(_addressWidth == addressWidth)
+        return;
     _addressWidth = addressWidth;
     adjust();
     setCursorPosition(_cursorPosition);
     viewport()->update();
+    emit addressWidthChanged(_addressWidth);
 }
 
 int QHexEdit::addressWidth()
@@ -125,12 +137,15 @@ int QHexEdit::addressWidth()
 
 void QHexEdit::setAsciiArea(bool asciiArea)
 {
+    if(_editAreaIsAscii == asciiArea)
+        return;
     if (!asciiArea)
         _editAreaIsAscii = false;
     _asciiArea = asciiArea;
     adjust();
     setCursorPosition(_cursorPosition);
     viewport()->update();
+    emit asciiAreaChanged(_asciiArea);
 }
 
 bool QHexEdit::asciiArea()
@@ -140,12 +155,15 @@ bool QHexEdit::asciiArea()
 
 void QHexEdit::setBytesPerLine(int count)
 {
+    if (_bytesPerLine == count)
+        return;
     _bytesPerLine = count;
     _hexCharsInLine = count * 3 - 1;
 
     adjust();
     setCursorPosition(_cursorPosition);
     viewport()->update();
+    emit bytesPerLineChanged(_bytesPerLine);
 }
 
 int QHexEdit::bytesPerLine()
@@ -155,6 +173,8 @@ int QHexEdit::bytesPerLine()
 
 void QHexEdit::setCursorPosition(qint64 position)
 {
+    if(_cursorPosition == position)
+        return;
     // 1. delete old cursor
     _blink = false;
     viewport()->update(_cursorRect);
@@ -188,6 +208,7 @@ void QHexEdit::setCursorPosition(qint64 position)
     _blink = true;
     viewport()->update(_cursorRect);
     emit currentAddressChanged(_bPosCurrent);
+    emit cursorPositionChanged(_cursorPosition);
 }
 
 qint64 QHexEdit::cursorPosition(QPoint pos)
@@ -234,8 +255,11 @@ QByteArray QHexEdit::data()
 
 void QHexEdit::setHighlighting(bool highlighting)
 {
+    if(_highlighting == highlighting)
+        return;
     _highlighting = highlighting;
     viewport()->update();
+    emit highlightingChanged(_highlighting);
 }
 
 bool QHexEdit::highlighting()
@@ -245,9 +269,12 @@ bool QHexEdit::highlighting()
 
 void QHexEdit::setHighlightingColor(const QColor &color)
 {
+    if(_brushHighlighted.color() == color)
+        return;
     _brushHighlighted = QBrush(color);
     _penHighlighted = QPen(viewport()->palette().color(QPalette::WindowText));
     viewport()->update();
+    emit highlightingColorChanged(_brushHighlighted.color());
 }
 
 QColor QHexEdit::highlightingColor()
@@ -257,6 +284,8 @@ QColor QHexEdit::highlightingColor()
 
 void QHexEdit::setOverwriteMode(bool overwriteMode)
 {
+    if(_overwriteMode == overwriteMode)
+        return;
     _overwriteMode = overwriteMode;
     emit overwriteModeChanged(overwriteMode);
 }
@@ -268,9 +297,12 @@ bool QHexEdit::overwriteMode()
 
 void QHexEdit::setSelectionColor(const QColor &color)
 {
+    if(_brushSelection.color() == color)
+        return;
     _brushSelection = QBrush(color);
     _penSelection = QPen(Qt::white);
     viewport()->update();
+    emit selectionColorChanged(_brushSelection.color());
 }
 
 QColor QHexEdit::selectionColor()
@@ -285,16 +317,19 @@ bool QHexEdit::isReadOnly()
 
 void QHexEdit::setReadOnly(bool readOnly)
 {
+    if(_readOnly == readOnly)
+        return;
     _readOnly = readOnly;
+    emit readOnlyChanged(_readOnly);
 }
 
 void QHexEdit::setHexCaps(const bool isCaps)
 {
-    if (_hexCaps != isCaps)
-    {
-        _hexCaps = isCaps;
-        viewport()->update();
-    }
+    if (_hexCaps == isCaps)
+        return;
+    _hexCaps = isCaps;
+    viewport()->update();
+    emit hexCapsChanged(_hexCaps);
 }
 
 bool QHexEdit::hexCaps()
@@ -304,8 +339,11 @@ bool QHexEdit::hexCaps()
 
 void QHexEdit::setDynamicBytesPerLine(const bool isDynamic)
 {
+    if(_dynamicBytesPerLine == isDynamic)
+        return;
     _dynamicBytesPerLine = isDynamic;
-    resizeEvent(NULL);
+    resizeEvent(nullptr);
+    emit dynamicBytesPerLineChanged(_dynamicBytesPerLine);
 }
 
 bool QHexEdit::dynamicBytesPerLine()
@@ -444,6 +482,7 @@ void QHexEdit::setFont(const QFont &font)
     _pxCursorWidth = _pxCharHeight / 7;
     _pxSelectionSub = _pxCharHeight / 5;
     viewport()->update();
+    emit fontChanged(theFont);
 }
 
 QString QHexEdit::toReadableString()
@@ -719,9 +758,9 @@ void QHexEdit::keyPressEvent(QKeyEvent *event)
             /* Hex and ascii input */
             int key;
             if (_editAreaIsAscii)
-                key = (uchar)event->text()[0].toLatin1();
+                key = (uchar)event->text().at(0).toLatin1();
             else
-                key = int(event->text()[0].toLower().toLatin1());
+                key = int(event->text().at(0).toLower().toLatin1());
 
             if ((((key >= '0' && key <= '9') || (key >= 'a' && key <= 'f')) && _editAreaIsAscii == false)
                 || (key >= ' ' && _editAreaIsAscii))
