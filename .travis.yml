@@ -26,7 +26,7 @@ install:
 
 #MAC OS
 - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-    brew upgrade qt5;
+    brew install qt@5;
     brew upgrade cmake;
     chmod -R 755 /usr/local/opt/qt5/*;
     fi
