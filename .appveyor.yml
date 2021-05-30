@@ -71,7 +71,7 @@ deploy:
   tag: continuous
   description: continuous
   auth_token:
-    secure: yG66EEKasiTmuCDPStbz0nVsvcETsQlnpDD2ScfNWUwT81kKfALCVFRTPMrp6R6E
+    secure: 1B1lpcCmJ4GDn0uv7vDK9tIkHacvCVGAo+tH4nepXsCeh8FEfD8YJmLw4T91ECmw
   artifact: blackchocobo-zip,blackchocobo-installer
   force_update: true
   on:
