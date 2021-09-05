@@ -26,6 +26,7 @@ jobs:
            , ff7tkPrefix: /usr
            , make_install_ff7tk: "sudo ninja install"
            , install_ninja: "sudo apt-get install -qq ninja-build"
+           , bcInstallPrefix: /usr
            , build_blackchocobo: "DESTDIR=appdir ninja install; find appdir/"
            , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz"
           }
@@ -36,6 +37,7 @@ jobs:
             , ff7tkPrefix: /usr/local
             , make_install_ff7tk: "sudo ninja install"
             , install_ninja: "brew install ninja"
+            , bcInstallPrefix: /usr
             , build_blackchocobo: "ninja"
             , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg"
           }
@@ -46,8 +48,9 @@ jobs:
             , ff7tkPrefix: "C:/ff7tk"
             , make_install_ff7tk: "ninja install"
             , install_ninja: "choco install ninja"
+            , bcInstallPrefix: Black_Chocobo-continuous
             , build_blackchocobo: "ninja install"
-            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
+            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
           }
         - {
             name: "Windows-x86"
@@ -56,8 +59,9 @@ jobs:
             , ff7tkPrefix: "C:/ff7tk"
             , make_install_ff7tk: "ninja install"
             , install_ninja: "choco install ninja"
+            , bcInstallPrefix: Black_Chocobo-continuous
             , build_blackchocobo: "ninja install"
-            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip && mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
+            , rename_package: "ls -R && mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
           }
     steps:
     - uses: actions/checkout@v2
@@ -69,6 +73,7 @@ jobs:
         arch: ${{matrix.config.WIN_ARCH}}
 
     - name: Install Ninja
+      shell: bash
       run: ${{matrix.config.install_ninja}}
 
     - name: Install Qt
@@ -89,7 +94,7 @@ jobs:
     - name: Build Black_Chocobo
       id: main_build
       run: |
-        cmake -S. -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk
+        cmake -S. -G Ninja -DCMAKE_INSTALL_PREFIX=${{matrix.config.bcInstallPrefix}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk
         ${{matrix.config.build_blackchocobo}}
 
     - name: CPack
@@ -115,7 +120,7 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        path: ${{ github.workspace }}/${{env.packageGlob}}
+        path: ${{github.workspace}}/${{env.packageGlob}}
 
   release_assets:
     name: Release
@@ -127,8 +132,7 @@ jobs:
       uses: actions/download-artifact@v2
 
     - name: Move Files
-      run: |
-        mv artifact/* ${{github.workspace}}
+      run: mv artifact/* ${{github.workspace}}
 
     - name: Deploy Package
       uses: "marvinpinto/action-automatic-releases@latest"
