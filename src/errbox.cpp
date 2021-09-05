@@ -31,7 +31,7 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     , lblRegionString(new QLabel)
     , lblIcon(new QLabel)
 {
-    if (FF7SaveInfo::instance()->internalPC(ff7data->format()))
+    if (FF7SaveInfo::instance()->isTypePC(ff7data->format()))
         close();
 
     QSize iconSize = QSize(fontMetrics().height(), fontMetrics().height());

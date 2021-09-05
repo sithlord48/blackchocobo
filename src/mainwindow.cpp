@@ -754,7 +754,7 @@ void MainWindow::loadChildWidgetSettings()
     chocoboManager->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHOCOADVANCED, false).toBool());
     locationViewer->setAdvancedMode(BCSettings::instance()->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
     ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST, false).toBool());
-    if (FF7SaveInfo::instance()->internalPC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
+    if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         setControllerMappingVisible(BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
     ui->bm_unknown->setVisible(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
     ui->sbBhId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
@@ -1566,7 +1566,7 @@ void MainWindow::materia_id_changed(qint8 id)
 void MainWindow::CheckGame()
 {
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
-            || ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->internalPC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
+            || ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->isTypePC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(this, ff7, s);
         if (FF7SaveInfo::instance()->slotCount(ff7->format()) == 1)
@@ -1844,7 +1844,7 @@ void MainWindow::tabWidget_currentChanged(int index)
         for (int i = 0; i < 16; i++) {
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
-        if ((!FF7SaveInfo::instance()->internalPC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
+        if ((!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
                 || BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
@@ -1870,7 +1870,7 @@ void MainWindow::hexTabUpdate(int viewMode)
     ui->psxExtras->setVisible(false);
     ui->boxHexData->setVisible(false);
     disconnect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
-    if (FF7SaveInfo::instance()->internalPC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         hexEditor->setData(ff7->slotFF7Data(s));
     } else {
         ui->psxExtras->setVisible(true);
@@ -1903,12 +1903,12 @@ void MainWindow::guirefresh(bool newgame)
     load = true;
     /*~~~~Check for SG type and ff7~~~~*/
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-            ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->internalPC(ff7->format())
+            ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->isTypePC(ff7->format())
              && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)) && (ff7->psx_block_type(s) != '\x00'))) {
         CheckGame();//Not FF7! Handled By CheckGame()
     } else {
         //IS FF7 Slot
-        if (FF7SaveInfo::instance()->internalPC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+        if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
             if (ui->comboHexEditor->currentIndex() != 1)
                 ui->comboHexEditor->setCurrentIndex(1);
         }
@@ -4111,7 +4111,7 @@ void MainWindow::comboHexEditor_currentIndexChanged(int index)
 
 void MainWindow::hexEditorChanged(void)
 {
-    if (FF7SaveInfo::instance()->internalPC(ff7->format())) {
+    if (FF7SaveInfo::instance()->isTypePC(ff7->format())) {
         ff7->setSlotFF7Data(s, hexEditor->data());
     } else {
         switch (ui->comboHexEditor->currentIndex()) {
@@ -4278,7 +4278,7 @@ void MainWindow::testDataTabWidget_currentChanged(int index)
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
         ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-        if (!FF7SaveInfo::instance()->internalPC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
+        if (!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         load = false;
         break;
