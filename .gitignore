@@ -25,6 +25,9 @@ Makefile*
 *.qm
 object_script.*
 
+#CMake
+CMakeLists.txt.user
+
 # QtCreator
 
 *.autosave

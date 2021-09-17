@@ -8,6 +8,7 @@ set ( blackchocobo_TRS
     bchoco_de.ts
     bchoco_ja.ts
     bchoco_re.ts
+    bchoco_pl.ts
     )
 
 set (FF7TK_TRS
@@ -17,6 +18,7 @@ set (FF7TK_TRS
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_de.qm
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_ja.qm
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_re.qm
+    ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_pl.qm
 )
 
 qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS})
@@ -37,4 +39,6 @@ elseif(APPLE)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_es.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_es.qm)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_fr.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_fr.qm)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_ja.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_ja.qm)
+    install(FILES ${MAC_QT_LANG_PATH}/qtbase_re.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_re.qm)
+    install(FILES ${MAC_QT_LANG_PATH}/qtbase_pl.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_pl.qm)
 endif()
