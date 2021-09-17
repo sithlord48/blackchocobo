@@ -1,0 +1,144 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  QT_VERSION: 5.15.2
+  BUILD_TYPE: Release
+  packageGlob: Black_Chocobo-continuous-*.*
+
+jobs:
+  main_build:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {
+           name: "Linux-amd64"
+           , os: ubuntu-18.04
+           , QT_INST_DIR: /opt
+           , ff7tkPrefix: /usr
+           , make_install_ff7tk: "sudo ninja install"
+           , install_ninja: "sudo apt-get install -qq ninja-build"
+           , bcInstallPrefix: /usr
+           , build_blackchocobo: "DESTDIR=appdir ninja install; find appdir/"
+           , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz"
+          }
+        - {
+            name: "MacOS-amd64"
+            , os: macos-latest
+            , QT_INST_DIR: /Users/runner
+            , ff7tkPrefix: /usr/local
+            , make_install_ff7tk: "sudo ninja install"
+            , install_ninja: "brew install ninja"
+            , bcInstallPrefix: /usr
+            , build_blackchocobo: "ninja"
+            , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg"
+          }
+        - {
+            name: "Windows-x64", WIN_ARCH: "x64"
+            , os: windows-latest
+            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
+            , ff7tkPrefix: "C:/ff7tk"
+            , make_install_ff7tk: "ninja install"
+            , install_ninja: "choco install ninja"
+            , bcInstallPrefix: Black_Chocobo-continuous
+            , build_blackchocobo: "ninja install"
+            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
+          }
+        - {
+            name: "Windows-x86"
+            , os: windows-latest, WIN_ARCH: "amd64_x86"
+            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
+            , ff7tkPrefix: "C:/ff7tk"
+            , make_install_ff7tk: "ninja install"
+            , install_ninja: "choco install ninja"
+            , bcInstallPrefix: Black_Chocobo-continuous
+            , build_blackchocobo: "ninja install"
+            , rename_package: "ls -R && mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
+          }
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Env Script (Windows)
+      uses: ilammy/msvc-dev-cmd@v1
+      if: runner.os == 'Windows'
+      with:
+        arch: ${{matrix.config.WIN_ARCH}}
+
+    - name: Install Ninja
+      shell: bash
+      run: ${{matrix.config.install_ninja}}
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2.14.0
+      with:
+       dir: ${{matrix.config.QT_INST_DIR}}
+       arch: ${{matrix.config.QT_ARCH}}
+       version: ${{env.QT_VERSION}}
+
+    - name: Build ff7tk
+      run: |
+        git clone https://github.com/sithlord48/ff7tk.git ${{github.workspace}}/ff7tk-git
+        cd ${{github.workspace}}/ff7tk-git
+        cmake -G Ninja -S. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{matrix.config.ff7tkPrefix}} -DFORMATS=OFF -DUTILS=OFF
+        ${{matrix.config.make_install_ff7tk}}
+        cd ${{github.workspace}}
+
+    - name: Build Black_Chocobo
+      id: main_build
+      run: |
+        cmake -S. -G Ninja -DCMAKE_INSTALL_PREFIX=${{matrix.config.bcInstallPrefix}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk
+        ${{matrix.config.build_blackchocobo}}
+
+    - name: CPack
+      run: cpack
+
+    - name: Build AppImage (Linux)
+      if: runner.os == 'Linux'
+      run: |
+        wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
+        export VERSION=continuous
+        chmod a+x linuxdeployqt*.AppImage
+        unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH
+        mkdir -p ./appdir/usr/share/ff7tk/lang
+        cp /usr/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang
+        mkdir -p ./appdir/usr/plugins/styles
+        ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage -extra-plugins=iconengines,platformthemes/libqxdgdesktopportal.so
+        find ./appdir -executable -type f -exec ldd {} \; | grep " => /usr" | cut -d " " -f 2-3 | sort | uniq
+
+    - name: Prepare Upload
+      shell: bash
+      run: ${{matrix.config.rename_package}}
+
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        path: ${{github.workspace}}/${{env.packageGlob}}
+
+  release_assets:
+    name: Release
+    needs: main_Build
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download Files
+      uses: actions/download-artifact@v2
+
+    - name: Move Files
+      run: mv artifact/* ${{github.workspace}}
+
+    - name: Deploy Package
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+       repo_token: "${{ secrets.DEPLOYTOKEN }}"
+       automatic_release_tag: "continuous"
+       prerelease: false
+       title: "Continuous Build"
+       files: ${{env.packageGlob}}
