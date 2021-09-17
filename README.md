@@ -1,7 +1,7 @@
 # Black Chocobo
 A Save Editor for Final Fantasy 7
 
-[![CI Status](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml/badge.svg)](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/993fc5029fd6486eb304d945a500b58f)](https://www.codacy.com/manual/sithlord48/blackchocobo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sithlord48/blackchocobo&amp;utm_campaign=Badge_Grade)
+[![CI/CD](https://github.com/QtQuickGames/blackchocobo/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/QtQuickGames/blackchocobo/actions/workflows/build.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/993fc5029fd6486eb304d945a500b58f)](https://www.codacy.com/manual/sithlord48/blackchocobo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sithlord48/blackchocobo&amp;utm_campaign=Badge_Grade)
 
 [![SourceForge](https://img.shields.io/sourceforge/dm/blackchocobo?label=Download%20Stable%20Release)](https://sourceforge.net/projects/blackchocobo/files/latest/download) [![GitHub All Releases](https://img.shields.io/github/downloads/sithlord48/blackchocobo/total?label=Download%20Continuous%20Release)](https://github.com/sithlord48/blackchocobo/releases/tag/continuous) [![SourceForge](https://img.shields.io/sourceforge/dt/blackchocobo/Samples?label=Download%20Save%20Samples)](https://sourceforge.net/projects/blackchocobo/files/Samples/samples.tar.gz/download)
 
