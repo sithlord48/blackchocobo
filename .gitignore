@@ -35,3 +35,7 @@ object_script.*
  
 #userstuff
 .directory
+
+#CMake
+CMakeLists.txt.user
+
