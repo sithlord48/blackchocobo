@@ -1,12 +1,16 @@
-cmake_minimum_required( VERSION 3.8 )
-set(CMAKE_BUILD_TYPE Release)
+cmake_minimum_required( VERSION 3.21 )
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(REQUIRED_QT_VERSION "5.12.0")
+set(REQUIRED_QT_VERSION "5.15.0")
 
 cmake_policy(SET CMP0010 NEW)
 
@@ -41,67 +45,83 @@ find_package(ff7tk REQUIRED NO_MODULE COMPONENTS
     ff7tkWidgets
 )
 
-set ( blackchocobo_SRCS
-    src/main.cpp
-    src/mainwindow.cpp
-    src/about.cpp
-    src/options.cpp
-    src/errbox.cpp
-    src/achievementdialog.cpp
-    src/bcdialog.cpp
-    src/bcsettings.cpp
-    )
-
-
-set (RESOURCES icon/images.qrc)
-
 add_subdirectory(deploy)
 add_subdirectory(lang)
 add_subdirectory(qhexedit)
 
-if(UNIX AND NOT APPLE)
-    add_executable (blackchocobo ${blackchocobo_SRCS} ${RESOURCES})
-    target_link_libraries (blackchocobo  Qt::Core Qt::Gui Qt::Widgets Qt::Xml Qt::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
-    install(TARGETS blackchocobo RUNTIME DESTINATION bin)
-    install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
-elseif(WIN32)
-
-    set (FF7TK_DEPENDS
+if(WIN32)
+    set(PLATFORM_EX_SRC ${CMAKE_BINARY_DIR}/deploy/blackchocobo.rc)
+    set(BIN_NAME "Black_Chocobo")
+    if(CMAKE_COMPILER_IS_GNUCC)
+        set (FF7TK_DEPENDS
+            ${ff7tk_DIR}/../../../bin/libff7tk.dll
+            ${ff7tk_DIR}/../../../bin/libff7tkWidgets.dll
+        )
+    else()
+        set (FF7TK_DEPENDS
             ${ff7tk_DIR}/../../../bin/ff7tk.dll
             ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
         )
-
-    add_executable (Black_Chocobo WIN32 ${blackchocobo_SRCS} ${RESOURCES} ${CMAKE_BINARY_DIR}/deploy/blackchocobo.rc)
-
-    if(CMAKE_COMPILER_IS_GNUCC)
-        #Prevent ms padding on spacked structures on gcc compiler
-        target_compile_options(Black_Chocobo PRIVATE -mno-ms-bitfields)
     endif()
-    target_link_libraries (Black_Chocobo Qt::Core Qt::Gui Qt::Widgets Qt::Xml Qt::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
-    install(TARGETS Black_Chocobo RUNTIME DESTINATION .)
+elseif(APPLE)
+    set(PLATFORM_EX_SRC ${CMAKE_CURRENT_SOURCE_DIR}/deploy/bchoco_icon_osx.icns)
+    set_source_files_properties(${PLATFORM_EX_SRC} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
+    set(BIN_NAME "Black_Chocobo")
+else()
+    set(BIN_NAME "blackchocobo")
+endif()
+
+add_executable(${BIN_NAME} WIN32 MACOSX_BUNDLE
+      src/main.cpp
+      src/mainwindow.cpp
+      src/about.cpp
+      src/options.cpp
+      src/errbox.cpp
+      src/achievementdialog.cpp
+      src/bcdialog.cpp
+      src/bcsettings.cpp
+      icon/images.qrc
+      ${PLATFORM_EX_SRC}
+    )
+
+target_link_libraries (${BIN_NAME} PUBLIC
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets
+        Qt::Xml
+        Qt::Quick
+        QHEXEDIT
+        ff7tk::ff7tk
+        ff7tk::ff7tkWidgets
+    )
+
+if(APPLE)
+    set_target_properties(${BIN_NAME} PROPERTIES
+      MACOSX_RPATH ON
+      INSTALL_RPATH_USE_LINK_PATH TRUE
+      MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo"
+      MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo"
+      MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo"
+      MACOSX_BUNDLE_ICON_FILE bchoco_icon_osx.icns
+      MACOSX_BUNDLE_INFO_STRING "${CMAKE_PROJECT_DESCRIPTION}"
+      MACOSX_BUNDLE_COPYRIGHT "2010-2020 Chris Rizzitello"
+      MACOSX_BUNDLE_BUNDLE_VERSION ${BC_VERSION}
+      MACOSX_BUNDLE_LONG_VERSION_STRING ${BC_VERSION}
+      MACOSX_BUNDLE_SHORT_VERSION_STRING ${BC_VERSION}
+    )
+    target_compile_options(${BIN_NAME} PRIVATE -stdlib=libc++)
+    install(TARGETS ${BIN_NAME} BUNDLE DESTINATION .)
+elseif(UNIX AND NOT APPLE)
+    install(TARGETS ${BIN_NAME} RUNTIME DESTINATION bin)
+    install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION licenses/blackchocobo/ RENAME LICENSE)
+elseif(WIN32)
+    install(TARGETS ${BIN_NAME} RUNTIME DESTINATION .)
     install(FILES ${FF7TK_DEPENDS} DESTINATION .)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
-elseif(APPLE)
-    set(CMAKE_MACOSX_RPATH ON)
-    set(MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo")
-    set(MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo")
-    set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo")
-    set(MACOSX_BUNDLE_ICON_FILE bchoco_icon_osx.icns)
-    set(MACOSX_BUNDLE_INFO_STRING "${CMAKE_PROJECT_DESCRIPTION}")
-    set(MACOSX_BUNDLE_COPYRIGHT "2010-2020 Chris Rizzitello")
-    set(MACOSX_BUNDLE_BUNDLE_VERSION ${BC_VERSION})
-    set(MACOSX_BUNDLE_LONG_VERSION_STRING ${BC_VERSION})
-    set(MACOSX_BUNDLE_SHORT_VERSION_STRING ${BC_VERSION})
-    set(APPICON ${CMAKE_CURRENT_SOURCE_DIR}/deploy/bchoco_icon_osx.icns)
-    set_source_files_properties(${APPICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
-    add_executable(Black_Chocobo MACOSX_BUNDLE ${blackchocobo_SRCS} ${RESOURCES} ${APPICON})
-    target_compile_options(Black_Chocobo PRIVATE -stdlib=libc++)
-    target_link_libraries (Black_Chocobo Qt::Core Qt::Gui Qt::Widgets Qt::Xml Qt::Quick QHEXEDIT ff7tk::ff7tk ff7tk::ff7tkWidgets)
-    install(TARGETS Black_Chocobo BUNDLE DESTINATION .)
 endif()
 
 ##CPACK
-set(CPACK_STRIP_FILES blackchocobo)
+set(CPACK_STRIP_FILES ${BIN_NAME})
 get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
 get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
 
@@ -135,9 +155,9 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     find_program(WINDEPLOYQT windeployqt HINTS "${_qt_bin_dir}")
 
     add_custom_command(
-        TARGET Black_Chocobo POST_BUILD
+        TARGET ${BIN_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
-        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:Black_Chocobo>
+        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
     )
     install(
         DIRECTORY ${CMAKE_BINARY_DIR}/qtDeploy/
@@ -148,13 +168,13 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
 elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
     find_program(MACDEPLOYQT macdeployqt HINTS "${_qt_bin_dir}")
     add_custom_command(
-        TARGET Black_Chocobo POST_BUILD
-        COMMAND ${MACDEPLOYQT} Black_Chocobo.app
+        TARGET ${BIN_NAME} POST_BUILD
+        COMMAND ${MACDEPLOYQT} ${BIN_NAME}.app
     )
     set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-macos")
     set(CPACK_DMG_BACKGROUND_IMAGE "${PROJECT_SOURCE_DIR}/deploy/dmg_background.png")
     set(CPACK_DMG_DS_STORE "${PROJECT_SOURCE_DIR}/deploy/dmg_ds_store")
-    set(CPACK_DMG_VOLUME_NAME "Black_Chocobo")
+    set(CPACK_DMG_VOLUME_NAME "${BIN_NAME}")
     set(CPACK_GENERATOR "DragNDrop")
 endif()
 
