@@ -97,8 +97,8 @@ target_link_libraries (${BIN_NAME} PUBLIC
 
 if(APPLE)
     set_target_properties(${BIN_NAME} PROPERTIES
-      MACOSX_RPATH ON
-      INSTALL_RPATH_USE_LINK_PATH TRUE
+      INSTALL_NAME_DIR "@executable_path/../Frameworks @loader_path/../Frameworks"
+      BUILD_WITH_INSTALL_NAME_DIR TRUE
       MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo"
       MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo"
       MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo"
