@@ -21,7 +21,7 @@ set (FF7TK_TRS
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_pl.qm
 )
 
-qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS})
+qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none)
 add_custom_target(app_translations ALL DEPENDS ${TRS})
 
 if(UNIX AND NOT APPLE)
