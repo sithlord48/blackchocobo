@@ -64,7 +64,7 @@ private:
     void initSettings();
     void cleanSettings();
     QSettings *settings = nullptr;
-    inline static const QStringList validSettingsNames = {
+    const QStringList validSettingsNames = {
         SETTINGS::MAINGEOMETRY,
         SETTINGS::AUTOGROWTH,
         SETTINGS::CHARADVANCED,
