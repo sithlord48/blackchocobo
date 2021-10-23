@@ -33,12 +33,32 @@ IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
 ENDIF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
 add_definitions(-DBC_VERSION="${BC_VERSION}")
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+
+if(NOT QT_DEFAULT_MAJOR_VERSION)
+    set(QT_DEFAULT_MAJOR_VERSION 5 CACHE STRING "" FORCE)
+endif()
+
+if (${QT_DEFAULT_MAJOR_VERSION} MATCHES "5")
+    set(REQUIRED_QT_VERSION 5.15.2)
+elseif (${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
+    set(REQUIRED_QT_VERSION 6.2.0)
+endif()
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
+endif()
+
+
+find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Widgets
     Gui
     Xml
     Quick
 )
+
+if(${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
+    find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
+endif()
 
 find_package(ff7tk REQUIRED NO_MODULE COMPONENTS
     ff7tk
@@ -95,6 +115,10 @@ target_link_libraries (${BIN_NAME} PUBLIC
         ff7tk::ff7tkWidgets
     )
 
+if(${QT_DEFAULT_MAJOR_VERSION} EQUAL "6")
+    target_link_libraries(${BIN_NAME} PUBLIC Qt6::Core5Compat)
+endif()
+
 if(APPLE)
     set_target_properties(${BIN_NAME} PROPERTIES
       INSTALL_NAME_DIR "@executable_path/../Frameworks @loader_path/../Frameworks"
@@ -122,7 +146,7 @@ endif()
 
 ##CPACK
 set(CPACK_STRIP_FILES ${BIN_NAME})
-get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
+get_target_property(_qmake_executable Qt${QT_DEFAULT_MAJOR_VERSION}::qmake IMPORTED_LOCATION)
 get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
 
 set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/COPYING.txt")
@@ -154,11 +178,20 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     include(InstallRequiredSystemLibraries)
     find_program(WINDEPLOYQT windeployqt HINTS "${_qt_bin_dir}")
 
-    add_custom_command(
-        TARGET ${BIN_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
-        COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
-    )
+    if(${QT_DEFAULT_MAJOR_VERSION} EQUAL "6")
+        add_custom_command(
+            TARGET ${BIN_NAME} POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
+            COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
+        )
+    else()
+        add_custom_command(
+            TARGET ${BIN_NAME} POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
+            COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
+        )
+    endif()
+
     install(
         DIRECTORY ${CMAKE_BINARY_DIR}/qtDeploy/
         DESTINATION .

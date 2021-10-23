@@ -16,12 +16,12 @@
 /*~~~~~~~~~~~Includes~~~~~~~~*/
 #include <QAction>
 #include <QCheckBox>
-#include <QDesktopWidget>
 #include <QDoubleSpinBox>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QMessageBox>
 #include <QScrollBar>
+#include <QScreen>
 #include <QSpinBox>
 #include <QString>
 #include <QToolBox>
@@ -729,7 +729,8 @@ void MainWindow::loadBasicSettings()
 #ifdef Q_OS_MAC
         stdDPI = 72.0;
 #endif
-        double scale = QString::number(qApp->desktop()->logicalDpiX() / stdDPI, 'f', 2).toDouble();
+        QScreen *screen = QGuiApplication::screens().at(0);
+        double scale = QString::number(screen->logicalDotsPerInch() / stdDPI, 'f', 2).toDouble();
         double sy = int(scale * 100) % 25;
         scale -= (sy / 100);
         scale = ( sy < 12.49) ? scale : scale + 0.25;
@@ -1197,7 +1198,7 @@ void MainWindow::actionRegionUSA_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     }
@@ -1225,7 +1226,7 @@ void MainWindow::actionRegionPALGeneric_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1252,7 +1253,7 @@ void MainWindow::actionRegionPALGerman_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1279,7 +1280,7 @@ void MainWindow::actionRegionPALSpanish_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1306,7 +1307,7 @@ void MainWindow::actionRegionPALFrench_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1333,7 +1334,7 @@ void MainWindow::actionRegionJPN_triggered(bool checked)
             ui->actionRegionJPNInternational->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1359,7 +1360,7 @@ void MainWindow::actionRegionJPNInternational_triggered(bool checked)
             ui->actionRegionJPN->setChecked(false);
             load = true;
             ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
             load = false;
         }
     } locationViewer->setRegion(ff7->region(s));
@@ -1673,19 +1674,19 @@ void MainWindow::othersUpdate()
     updateStolenMateria();
 
     //SnowBoard Mini Game Data.
-    ui->sbSnowBegMin->setValue(ff7->snowboardTime(s, 0).midRef(0, 2).toInt());
-    ui->sbSnowBegSec->setValue(ff7->snowboardTime(s, 0).midRef(2, 2).toInt());
-    ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s, 0).midRef(4, 3).toInt());
+    ui->sbSnowBegMin->setValue(ff7->snowboardTime(s, 0).mid(0, 2).toInt());
+    ui->sbSnowBegSec->setValue(ff7->snowboardTime(s, 0).mid(2, 2).toInt());
+    ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s, 0).mid(4, 3).toInt());
     ui->sbSnowBegScore->setValue(ff7->snowboardScore(s, 0));
 
-    ui->sbSnowExpMin->setValue(ff7->snowboardTime(s, 1).midRef(0, 2).toInt());
-    ui->sbSnowExpSec->setValue(ff7->snowboardTime(s, 1).midRef(2, 2).toInt());
-    ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s, 1).midRef(4, 3).toInt());
+    ui->sbSnowExpMin->setValue(ff7->snowboardTime(s, 1).mid(0, 2).toInt());
+    ui->sbSnowExpSec->setValue(ff7->snowboardTime(s, 1).mid(2, 2).toInt());
+    ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s, 1).mid(4, 3).toInt());
     ui->sbSnowExpScore->setValue(ff7->snowboardScore(s, 1));
 
-    ui->sbSnowCrazyMin->setValue(ff7->snowboardTime(s, 2).midRef(0, 2).toInt());
-    ui->sbSnowCrazySec->setValue(ff7->snowboardTime(s, 2).midRef(2, 2).toInt());
-    ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s, 2).midRef(4, 3).toInt());
+    ui->sbSnowCrazyMin->setValue(ff7->snowboardTime(s, 2).mid(0, 2).toInt());
+    ui->sbSnowCrazySec->setValue(ff7->snowboardTime(s, 2).mid(2, 2).toInt());
+    ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s, 2).mid(4, 3).toInt());
     ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s, 2));
 
     ui->sbBikeHighScore->setValue(ff7->bikeHighScore(s));
@@ -4277,7 +4278,7 @@ void MainWindow::testDataTabWidget_currentChanged(int index)
         ui->sbSaveZ->setValue(ff7->craterSavePointZ(s));
 
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-        ui->comboRegionSlot->setCurrentIndex(ff7->region(s).midRef(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+        ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
         if (!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
             ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
         load = false;
