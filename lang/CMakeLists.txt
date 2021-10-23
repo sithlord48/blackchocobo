@@ -1,5 +1,5 @@
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM 1)
-find_package(Qt5LinguistTools)
+find_package(Qt${QT_DEFAULT_MAJOR_VERSION}LinguistTools)
 
 set ( blackchocobo_TRS
     bchoco_en.ts
@@ -21,7 +21,7 @@ set (FF7TK_TRS
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_pl.qm
 )
 
-qt5_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none)
+qt_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none)
 add_custom_target(app_translations ALL DEPENDS ${TRS})
 
 if(UNIX AND NOT APPLE)
@@ -31,7 +31,7 @@ elseif(WIN32)
     install(FILES ${FF7TK_TRS} DESTINATION lang)
 elseif(APPLE)
     set(MAC_LANG_PATH Black_Chocobo.app/Contents/MacOS/lang)
-    set(MAC_QT_LANG_PATH ${Qt5_DIR}/../../../translations)
+    set(MAC_QT_LANG_PATH ${Qt${QT_DEFAULT_MAJOR_VERSION}_DIR}/../../../translations)
     install(FILES ${TRS} DESTINATION ${MAC_LANG_PATH})
     install(FILES ${FF7TK_TRS} DESTINATION ${MAC_LANG_PATH})
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_en.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_en.qm)

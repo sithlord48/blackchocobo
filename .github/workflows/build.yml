@@ -7,7 +7,6 @@ on:
     branches: [ master ]
 
 env:
-  QT_VERSION: 5.15.2
   BUILD_TYPE: Release
   packageGlob: Black_Chocobo-continuous-*.*
 
@@ -20,46 +19,82 @@ jobs:
       matrix:
         config:
         - {
-           name: "Linux-amd64"
+           name: "Linux-Qt5-amd64"
            , os: ubuntu-18.04
-           , QT_INST_DIR: /opt
+           , QT_VERSION: 5.15.2, QT_INST_DIR: /opt, QTDIR: /opt/Qt/5.15.2/gcc_64
            , ff7tkPrefix: /opt/ff7tk
+           , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=5"
            , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
            , bcInstallPrefix: /usr
            , installBC: "make DESTDIR=appdir install"
-           , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-linux-x86_64.tar.xz"
+           , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-Qt5-linux-x86_64.tar.xz && mv Black_Chocobo-*.AppImage Black_Chocobo-continuous-Qt5-x86_64.AppImage"
           }
         - {
-            name: "MacOS-amd64"
+           name: "Linux-Qt6-amd64"
+           , os: ubuntu-latest
+           , QT_VERSION: 6.2.0, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.0/gcc_64, QT_MODULES: qt5compat
+           , ff7tkPrefix: /opt/ff7tk
+           , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
+           , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+           , bcInstallPrefix: /usr
+           , installBC: "make DESTDIR=appdir install"
+           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.0/gcc_64/libexec"
+           , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-Qt6-linux-x86_64.tar.xz && mv Black_Chocobo-*.AppImage Black_Chocobo-continuous-Qt6-x86_64.AppImage"
+          }
+        - {
+            name: "MacOS-Qt5-amd64"
             , os: macos-latest
-            , QT_INST_DIR: /Users/runner
+            , QT_VERSION: 5.15.2, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/5.15.2/clang_64
             , ff7tkPrefix: /opt/ff7tk
+            , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=5"
             , installBC: "make install"
             , bcInstallPrefix: .
             , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
-            , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-macos.dmg"
+            , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-Qt5-macos.dmg"
           }
         - {
-            name: "Windows-x64", WIN_ARCH: "x64"
+            name: "MacOS-Qt6-amd64"
+            , os: macos-latest
+            , QT_VERSION: 6.2.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.0/clang_64, QT_MODULES: qt5compat
+            , ff7tkPrefix: /opt/ff7tk
+            , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
+            , installBC: "make install"
+            , bcInstallPrefix: .
+            , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+            , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-Qt6-macos.dmg"
+          }
+        - {
+            name: "Windows-Qt5-x64", WIN_ARCH: "x64"
             , os: windows-latest
-            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
+            , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
             , ff7tkPrefix: "C:/ff7tk"
             , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
             , bcInstallPrefix: Black_Chocobo-continuous
-            , extraCMakeOptions: -G Ninja
+            , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
             , installBC:  ninja install
-            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win64-installer.exe"
+            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt5-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt5-win64-installer.exe"
           }
         - {
-            name: "Windows-x86"
-            , os: windows-latest, WIN_ARCH: "amd64_x86"
-            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
+            name: "Windows-Qt6-x64", WIN_ARCH: "x64"
+            , os: windows-latest
+            , QT_VERSION: 6.2.0, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.0/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
             , ff7tkPrefix: "C:/ff7tk"
             , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
-            , extraCMakeOptions: -G Ninja
             , bcInstallPrefix: Black_Chocobo-continuous
-            , installBC: ninja install
-            , rename_package: "ls -R && mv Black_Chocobo-*.zip Black_Chocobo-continuous-win32.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-win32-installer.exe"
+            , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=6"
+            , installBC:  ninja install
+            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt6-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt6-win64-installer.exe"
+          }
+        - {
+            name: "Windows-Qt5-x86"
+            , os: windows-latest, WIN_ARCH: "amd64_x86"
+            , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
+            , ff7tkPrefix: "C:/ff7tk"
+            , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
+            , bcInstallPrefix: Black_Chocobo-continuous
+            , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
+            , installBC:  ninja install
+            , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt5-win32.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt5-win32-installer.exe"
           }
     steps:
     - uses: actions/checkout@v2
@@ -69,7 +104,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ${{matrix.config.QT_INST_DIR}}/Qt
-        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-qt-${{ env.QT_VERSION }}
+        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-qt-${{ matrix.config.QT_VERSION }}
 
     - name: Env Script (Windows)
       uses: ilammy/msvc-dev-cmd@v1
@@ -78,11 +113,14 @@ jobs:
         arch: ${{matrix.config.WIN_ARCH}}
 
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2.14.0
+      uses: jurplel/install-qt-action@v2
       with:
+       aqtversion: ==2.0.0
+       py7zrversion: ==0.16.2
        dir: ${{matrix.config.QT_INST_DIR}}
        arch: ${{ matrix.config.QT_ARCH }}
-       version: ${{ env.QT_VERSION }}
+       version: ${{ matrix.config.QT_VERSION }}
+       modules: ${{ matrix.config.QT_MODULES }}
        cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
     - name: Clone ff7tk repo
@@ -97,21 +135,25 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ${{ matrix.config.ff7tkPrefix }}
-        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-ff7tk-${{ hashFiles('ff7tk-HEAD') }}
+        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{matrix.config.QT_VERSION}}-ff7tk-${{ hashFiles('ff7tk-HEAD') }}
 
     - name: Build ff7tk
       if: steps.cache-ff7tk.outputs.cache-hit != 'true'
       run: |
-        cmake -S ff7tk-git -B ff7tk-git/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{matrix.config.ff7tkPrefix}} -DFORMATS=OFF -DUTILS=OFF ${{matrix.config.extraCMakeOptions}}
+        cmake -S ff7tk-git -B ff7tk-git/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{matrix.config.ff7tkPrefix}} -DFORMATS=OFF -DUTILS=OFF -DBUILD_TESTING=OFF ${{matrix.config.extraCMakeConfig}}
         cmake --build ff7tk-git/build --config ${{env.BUILD_TYPE}} -j8
         ${{matrix.config.make_install_ff7tk}}
 
     - name: Build Black_Chocobo
       id: main_build
       run: |
-        cmake -S. -DCMAKE_INSTALL_PREFIX=${{matrix.config.bcInstallPrefix}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeOptions}}
+        cmake -S. -DCMAKE_INSTALL_PREFIX=${{matrix.config.bcInstallPrefix}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
         cmake --build . --config ${{env.BUILD_TYPE}} -j8
         ${{matrix.config.installBC}}
+
+    - name: Remove Chocolatey's CPack
+      if: runner.os == 'Windows'
+      run: Remove-Item -Path C:\ProgramData\Chocolatey\bin\cpack.exe -Force
 
     - name: CPack
       run: cpack
@@ -119,16 +161,18 @@ jobs:
     - name: Build AppImage (Linux)
       if: runner.os == 'Linux'
       run: |
-        wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
+        wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
+        wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
+        chmod a+x linuxdeploy*.AppImage
         export VERSION=continuous
-        chmod a+x linuxdeployqt*.AppImage
-        unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ff7tk/lib
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${{ matrix.config.ff7tkPrefix }}/lib
         mkdir -p ./appdir/usr/share/ff7tk/lang
         cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang
-        mkdir -p ./appdir/usr/plugins/styles
-        ./linuxdeployqt*.AppImage ./appdir/usr/share/applications/*.desktop -appimage -extra-plugins=iconengines,platformthemes/libqxdgdesktopportal.so
-        find ./appdir -executable -type f -exec ldd {} \; | grep " => /usr" | cut -d " " -f 2-3 | sort | uniq
+        ${{matrix.config.linuxDeployQtPath}}
+        ./linuxdeploy-x86_64.AppImage --appdir=appdir --plugin=qt --output appimage \
+          -e blackchocobo \
+          -d deploy/org.sithlord48.blackchocobo.desktop \
+          -i deploy/blackchocobo.png
 
     - name: Prepare Upload
       shell: bash
