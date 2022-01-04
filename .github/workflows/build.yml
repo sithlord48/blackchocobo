@@ -24,7 +24,8 @@ jobs:
            , QT_VERSION: 5.15.2, QT_INST_DIR: /opt, QTDIR: /opt/Qt/5.15.2/gcc_64
            , ff7tkPrefix: /opt/ff7tk
            , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=5"
-           , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+           , ff7tkPackage: ff7tk-continuous-Qt5-Linux_X86_64.tar.gz
+           , install_ff7tk: "sudo tar -xf ff7tk-continuous-Qt5-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , bcInstallPrefix: /usr
            , installBC: "make DESTDIR=appdir install"
            , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-Qt5-linux-x86_64.tar.xz && mv Black_Chocobo-*.AppImage Black_Chocobo-continuous-Qt5-x86_64.AppImage"
@@ -35,7 +36,8 @@ jobs:
            , QT_VERSION: 6.2.0, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.0/gcc_64, QT_MODULES: qt5compat
            , ff7tkPrefix: /opt/ff7tk
            , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
-           , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+           , ff7tkPackage: ff7tk-continuous-Qt6-Linux_X86_64.tar.gz
+           , install_ff7tk: "sudo tar -xf ff7tk-continuous-Qt6-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , bcInstallPrefix: /usr
            , installBC: "make DESTDIR=appdir install"
            , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.0/gcc_64/libexec"
@@ -45,22 +47,24 @@ jobs:
             name: "MacOS-Qt5-amd64"
             , os: macos-latest
             , QT_VERSION: 5.15.2, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/5.15.2/clang_64
-            , ff7tkPrefix: /opt/ff7tk
+            , ff7tkPrefix: /Users/runner/ff7tk
             , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=5"
             , installBC: "make install"
             , bcInstallPrefix: .
-            , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+            , ff7tkPackage: ff7tk-continuous-Qt5-macos_X86_64.zip
+            , install_ff7tk: "sudo unzip ff7tk-continuous-Qt5-macos_x86_64.zip -d /Users/runner/ff7tk"
             , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-Qt5-macos.dmg"
           }
         - {
             name: "MacOS-Qt6-amd64"
             , os: macos-latest
             , QT_VERSION: 6.2.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.0/clang_64, QT_MODULES: qt5compat
-            , ff7tkPrefix: /opt/ff7tk
+            , ff7tkPrefix: /Users/runner/ff7tk
             , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
             , installBC: "make install"
             , bcInstallPrefix: .
-            , make_install_ff7tk: "sudo cmake --install ff7tk-git/build --strip"
+            , ff7tkPackage: ff7tk-continuous-Qt6-macos_X86_64.zip
+            , install_ff7tk: "sudo unzip ff7tk-continuous-Qt6-macos_x86_64.zip -d /Users/runner/ff7tk"
             , rename_package: "mv Black_Chocobo-*.dmg Black_Chocobo-continuous-Qt6-macos.dmg"
           }
         - {
@@ -68,10 +72,10 @@ jobs:
             , os: windows-latest
             , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
             , ff7tkPrefix: "C:/ff7tk"
-            , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
+            , ff7tkPackage: ff7tk-continuous-Qt5-win64.7z
+            , install_ff7tk: "7z x ff7tk-continuous-Qt5-win64.7z -oC:/ff7tk"
             , bcInstallPrefix: Black_Chocobo-continuous
             , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
-            , installBC:  ninja install
             , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt5-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt5-win64-installer.exe"
           }
         - {
@@ -79,10 +83,10 @@ jobs:
             , os: windows-latest
             , QT_VERSION: 6.2.0, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.0/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
             , ff7tkPrefix: "C:/ff7tk"
-            , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
+            , ff7tkPackage: ff7tk-continuous-Qt6-win64.7z
+            , install_ff7tk: "7z x ff7tk-continuous-Qt6-win64.7z -oC:/ff7tk"
             , bcInstallPrefix: Black_Chocobo-continuous
             , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=6"
-            , installBC:  ninja install
             , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt6-win64.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt6-win64-installer.exe"
           }
         - {
@@ -90,10 +94,10 @@ jobs:
             , os: windows-latest, WIN_ARCH: "amd64_x86"
             , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
             , ff7tkPrefix: "C:/ff7tk"
-            , make_install_ff7tk: "cmake --install ff7tk-git/build --strip"
+            , ff7tkPackage: ff7tk-continuous-Qt5-win32.7z
+            , install_ff7tk: "7z x ff7tk-continuous-Qt5-win32.7z -oC:/ff7tk"
             , bcInstallPrefix: Black_Chocobo-continuous
             , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
-            , installBC:  ninja install
             , rename_package: "mv Black_Chocobo-*.zip Black_Chocobo-continuous-Qt5-win32.zip & mv Black_Chocobo-*.exe Black_Chocobo-continuous-Qt5-win32-installer.exe"
           }
     steps:
@@ -123,40 +127,26 @@ jobs:
        modules: ${{ matrix.config.QT_MODULES }}
        cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
-    - name: Clone ff7tk repo
-      run: git clone --depth 1 --single-branch --branch master https://github.com/sithlord48/ff7tk.git ${{github.workspace}}/ff7tk-git
-
-    - name: Get ff7tk HEAD
-      run: git rev-parse HEAD > ${{ github.workspace }}/ff7tk-HEAD
-      working-directory: ${{github.workspace}}/ff7tk-git
+    - name: Get ff7tk redist
+      run: curl -LJO https://github.com/sithlord48/ff7tk/releases/download/continuous/${{matrix.config.ff7tkPackage}}
 
     - name: Cache ff7tk
       id: cache-ff7tk
       uses: actions/cache@v2
       with:
         path: ${{ matrix.config.ff7tkPrefix }}
-        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{matrix.config.QT_VERSION}}-ff7tk-${{ hashFiles('ff7tk-HEAD') }}
+        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{matrix.config.QT_VERSION}}-ff7tk-${{ hashFiles( 'ff7tk*') }}
 
-    - name: Build ff7tk
-      if: steps.cache-ff7tk.outputs.cache-hit != 'true'
-      run: |
-        cmake -S ff7tk-git -B ff7tk-git/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_INSTALL_PREFIX=${{matrix.config.ff7tkPrefix}} -DFORMATS=OFF -DUTILS=OFF -DBUILD_TESTING=OFF ${{matrix.config.extraCMakeConfig}}
-        cmake --build ff7tk-git/build --config ${{env.BUILD_TYPE}} -j8
-        ${{matrix.config.make_install_ff7tk}}
+    - name: Install ff7tk
+      if: (steps.cache-ff7tk.outputs.cache-hit != 'true')
+      run: ${{matrix.config.install_ff7tk}}
 
     - name: Build Black_Chocobo
       id: main_build
       run: |
         cmake -S. -DCMAKE_INSTALL_PREFIX=${{matrix.config.bcInstallPrefix}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
-        cmake --build . --config ${{env.BUILD_TYPE}} -j8
+        cmake --build . --config ${{env.BUILD_TYPE}} --target package
         ${{matrix.config.installBC}}
-
-    - name: Remove Chocolatey's CPack
-      if: runner.os == 'Windows'
-      run: Remove-Item -Path C:\ProgramData\Chocolatey\bin\cpack.exe -Force
-
-    - name: CPack
-      run: cpack
 
     - name: Build AppImage (Linux)
       if: runner.os == 'Linux'
