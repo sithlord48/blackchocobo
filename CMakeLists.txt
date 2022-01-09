@@ -33,7 +33,6 @@ IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
 ENDIF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
 add_definitions(-DBC_VERSION="${BC_VERSION}")
 
-
 if(NOT QT_DEFAULT_MAJOR_VERSION)
     set(QT_DEFAULT_MAJOR_VERSION 5 CACHE STRING "" FORCE)
 endif()
@@ -84,7 +83,7 @@ if(WIN32)
         )
     endif()
 elseif(APPLE)
-    set(PLATFORM_EX_SRC ${CMAKE_CURRENT_SOURCE_DIR}/deploy/bchoco_icon_osx.icns)
+    set(PLATFORM_EX_SRC ${CMAKE_CURRENT_SOURCE_DIR}/deploy/blackchocobo.icns)
     set_source_files_properties(${PLATFORM_EX_SRC} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
     set(BIN_NAME "Black_Chocobo")
 else()
@@ -110,6 +109,7 @@ target_link_libraries (${BIN_NAME} PUBLIC
         Qt::Widgets
         Qt::Xml
         Qt::Quick
+        Qt::Svg
         QHEXEDIT
         ff7tk::ff7tk
         ff7tk::ff7tkWidgets
@@ -126,7 +126,7 @@ if(APPLE)
       MACOSX_BUNDLE_BUNDLE_NAME "Black Chocobo"
       MACOSX_BUNDLE_DISPLAY_NAME "Black_Chocobo"
       MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo"
-      MACOSX_BUNDLE_ICON_FILE bchoco_icon_osx.icns
+      MACOSX_BUNDLE_ICON_FILE blackchocobo.icns
       MACOSX_BUNDLE_INFO_STRING "${CMAKE_PROJECT_DESCRIPTION}"
       MACOSX_BUNDLE_COPYRIGHT "2010-2020 Chris Rizzitello"
       MACOSX_BUNDLE_BUNDLE_VERSION ${BC_VERSION}
@@ -164,7 +164,7 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(CPACK_PACKAGE_INSTALL_DIRECTORY "Black_Chocobo")
     set(CPACK_NSIS_DISPLAY_NAME ${CMAKE_PACKAGE_NAME})
     set(CPACK_NSIS_COMPRESSOR lzma)
-    set(CPACK_NSIS_MUI_ICON "${PROJECT_SOURCE_DIR}/deploy/bchoco_icon_win.ico")
+    set(CPACK_NSIS_MUI_ICON "${PROJECT_SOURCE_DIR}/deploy/blackchocobo.ico")
     set(CPACK_NSIS_INSTALLED_ICON_NAME Black_Chocobo.exe)
     set(CPACK_NSIS_MENU_LINKS "Black_Chocobo.exe" "Black Chocobo")
     set(CPACK_NSIS_EXTRA_PREINSTALL_COMMANDS "!include \\\"${PROJECT_SOURCE_DIR}\\\\deploy\\\\FileAssociation.nsh\\\"")
