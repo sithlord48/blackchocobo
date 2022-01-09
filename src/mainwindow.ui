@@ -6872,8 +6872,8 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="actionQuit">
    <property name="icon">
-    <iconset theme="application-exit" resource="ff7tk/icons/common.qrc">
-     <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
+    <iconset theme="application-exit" resource="images.qrc">
+     <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>

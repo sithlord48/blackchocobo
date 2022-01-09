@@ -222,7 +222,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
 int BCDialog::fixTimeDialog(QWidget *parent, bool slotPAL)
 {
     QMessageBox dialog(parent);
-    dialog.setIconPixmap(QPixmap(":/icon/fix_time"));
+    dialog.setIcon(QMessageBox::Question);
     dialog.setText(QObject::tr("Adjust the play time?"));
     dialog.setInformativeText(QObject::tr("Old region was %1hz\nNew region is %2hz").arg(slotPAL ? 50 : 60).arg(!slotPAL ? 50 : 60));
     dialog.setWindowTitle( slotPAL ? QObject::tr("PAL -> NTSC Conversion") : QObject::tr("NTSC -> PAL Conversion"));

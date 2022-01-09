@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient1438" cx="24.538" cy=".40011" r="17.171" gradientTransform="matrix(0,-2.0467,1.5576,0,2.767,66.933)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient1444" cx="24.837" cy="36.421" r="15.645" gradientTransform="matrix(1 0 0 .53672 0 16.873)" gradientUnits="userSpaceOnUse">
+   <stop offset="0"/>
+   <stop stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient11514" cx="23.515" cy="22" r="17.485" gradientTransform="matrix(1 0 0 .97227 0 .61015)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#729fcf" offset="0"/>
+   <stop stop-color="#5187d6" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g transform="translate(-.00073637 .00035251)">
+  <g fill-rule="evenodd">
+   <ellipse transform="matrix(1.2145 0 0 .59546 -6.1638 16.313)" cx="24.837" cy="36.421" rx="15.645" ry="8.3969" color="#000000" fill="url(#radialGradient1444)" opacity=".29946"/>
+   <path d="m14.492 38.5h17.978v-12.953h8.0305l-17.125-20.048-16.846 19.99 7.9685 0.06629z" color="#000000" fill="url(#radialGradient11514)" stroke="#4080c0" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+   <path d="m7.5855 25.033h7.4103l0.0666 6.5618c5.6556-11 15.993-8.8444 16.594-15.628l-8.2898-9.5447z" color="#000000" fill="url(#radialGradient1438)" opacity=".50802"/>
+  </g>
+  <path d="m15.603 37.5h15.9v-12.993h6.809l-14.95-17.437-14.707 17.48 6.8204-0.0221z" color="#000000" fill="none" opacity=".48128" stroke="#fffff7" stroke-miterlimit="10"/>
+ </g>
+</svg>

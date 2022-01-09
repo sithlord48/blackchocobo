@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SVGRoot" width="128px" height="128px" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient4114" cx="97.677" cy="130.07" r="39.399" gradientTransform="matrix(.8126 .00044959 0 .30458 -15.372 75.339)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#e59d00" offset="0"/>
+   <stop stop-color="#f9d326" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient8621" x1="28" x2="46.147" y1="36" y2="36.077" gradientTransform="matrix(1 0 0 1.3572 1.8534 -1.9641)" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+   <stop stop-color="#1e14af" offset="0"/>
+   <stop stop-color="#5f84cf" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient12472" cx="64" cy="94.481" r="31.649" gradientTransform="matrix(1 0 0 1.0591 0 -5.5807)" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+   <stop stop-color="#e59d26" offset="0"/>
+  </radialGradient>
+  <radialGradient id="radialGradient4114-7" cx="98.882" cy="72.991" r="39.399" gradientTransform="matrix(-.43149 .076145 -.065711 -.37156 113.46 116.59)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#e5f000" offset="0"/>
+   <stop stop-color="#f9d310" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient15685" x1="39.434" x2="90.991" y1="93.866" y2="93.866" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f9c010" offset="0"/>
+   <stop stop-color="#f9c010" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <path d="m22.853 0.7503c28.017 4.7713 56.509 6.0542 86 0-3.8464 17.784 2.1952 37.219-8.8534 49.849-17.203 8.2383-28.196 22.162-32.857 41.88-9.3629-16.197-17.985-32.944-37.143-41.88-8.3568-17.986-3.7233-34.95-7.1466-49.849z" fill="url(#linearGradient8621)" stroke="#000" stroke-width="1.165px"/>
+  <ellipse cx="64" cy="94.481" rx="30.242" ry="32.112" fill="url(#radialGradient4114)" stroke="url(#radialGradient12472)" stroke-linecap="square" stroke-linejoin="round" stroke-width="2.8137"/>
+  <path d="m82.021 93.866a17 17.481 0 0 1-16.789 17.48 17 17.481 0 0 1-17.205-17.047 17 17.481 0 0 1 16.363-17.902 17 17.481 0 0 1 17.611 16.603" fill="url(#radialGradient4114-7)" stroke="url(#linearGradient15685)" stroke-linecap="square" stroke-linejoin="round" stroke-opacity=".61279" stroke-width="17.174"/>
+ </g>
+</svg>
