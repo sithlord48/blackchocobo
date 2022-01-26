@@ -158,14 +158,14 @@ void BCDialog::editSideBarPaths(QWidget *parent)
         listWidget.addItem(string);
     QPushButton btnAdd(QIcon::fromTheme(QStringLiteral("list-add"), QIcon(QStringLiteral(":/icon/list-add"))), QString(), nullptr);
     btnAdd.setToolTip(QObject::tr("Add a place"));
-    QObject::connect(&btnAdd, &QPushButton::clicked, [parent, &listWidget]{
+    QObject::connect(&btnAdd, &QPushButton::clicked, &dialog, [parent, &listWidget]{
         QString fileName = getExistingDirectory(parent, QObject::tr("Select a path to add to places"));
         if (!fileName.isEmpty())
             listWidget.addItem(fileName);
     });
     QPushButton btnRemove(QIcon::fromTheme(QStringLiteral("list-remove"), QIcon(QStringLiteral(":/icon/list-remove"))), QString(), nullptr);
     btnRemove.setToolTip(QObject::tr("Remove selected place"));
-    QObject::connect(&btnRemove, &QPushButton::clicked, [&listWidget] {
+    QObject::connect(&btnRemove, &QPushButton::clicked, &dialog, [&listWidget] {
         if (!listWidget.selectedItems().isEmpty())
             delete listWidget.takeItem(listWidget.row(listWidget.selectedItems().first()));
     });
@@ -187,7 +187,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
     for (QAbstractButton *btn : buttons)
         btn->setIconSize(iconSize);
 
-    QObject::connect(&btnBox, &QDialogButtonBox::clicked, [&btnBox, &listWidget, &dialog](QAbstractButton *button){
+    QObject::connect(&btnBox, &QDialogButtonBox::clicked, &dialog, [&btnBox, &listWidget, &dialog](const QAbstractButton *button){
         if (button == btnBox.button(QDialogButtonBox::Save))
             dialog.accept();
         else if (button == btnBox.button(QDialogButtonBox::Cancel))

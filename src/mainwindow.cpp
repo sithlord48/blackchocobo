@@ -239,6 +239,9 @@ void MainWindow::initDisplay()
     ui->group_items->layout()->addWidget(ui->group_item_options);
     ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
+    ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next"),QIcon(":/icon/next")));
+    ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next"),QIcon(":/icon/next")));
+
     locationViewer = new LocationViewer(scale);
     locationViewer->setRegion("BASCUS-94163FF7-S00");
 
@@ -279,62 +282,87 @@ void MainWindow::initDisplay()
         _zvars.append(QStringLiteral("z_%1").arg(i));
     _zvars.append(tr("Slot"));
     ui->comboZVar->addItems(_zvars);
+
+    ui->worldMapView->setScaledContents(true);
+    ui->worldMapView->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
+    ui->lbl_slot_icon->setScaledContents(true);
+
+    ui->lbl_love_aeris->setScaledContents(true);
+    ui->lbl_love_barret->setScaledContents(true);
+    ui->lbl_love_tifa->setScaledContents(true);
+    ui->lbl_love_yuffie->setScaledContents(true);
+    ui->lbl_battle_love_aeris->setScaledContents(true);
+    ui->lbl_battle_love_barret->setScaledContents(true);
+    ui->lbl_battle_love_tifa->setScaledContents(true);
+    ui->lbl_battle_love_yuffie->setScaledContents(true);
+    ui->lbl_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith));
+    ui->lbl_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret));
+    ui->lbl_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa));
+    ui->lbl_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
+    ui->lbl_battle_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith));
+    ui->lbl_battle_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret));
+    ui->lbl_battle_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa));
+    ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
 }
 
 void MainWindow::setScale(double scale)
 {
     scale = std::max(scale, 0.5);
     setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
-    ui->btnCloud->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnCloud->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnBarret->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnBarret->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnTifa->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnTifa->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnAeris->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnAeris->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnRed->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnRed->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnYuffie->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnYuffie->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnCait->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnCait->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnVincent->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnVincent->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->btnCid->setFixedSize(int(98 * scale), int(110 * scale));
-    ui->btnCid->setIconSize(QSize(int(92 * scale), int(104 * scale)));
-    ui->comboParty1->setFixedHeight(int(32 * scale));
-    ui->comboParty1->setIconSize(QSize(int(32 * scale), int(32 * scale)));
-    ui->comboParty2->setFixedHeight(int(32 * scale));
-    ui->comboParty2->setIconSize(QSize(int(32 * scale), int(32 * scale)));
-    ui->comboParty3->setFixedHeight(int(32 * scale));
-    ui->comboParty3->setIconSize(QSize(int(32 * scale), int(32 * scale)));
+    const QSize partyButtonSize(int(98 * scale), int(110 * scale));
+    ui->btnCloud->setFixedSize(partyButtonSize);
+    ui->btnBarret->setFixedSize(partyButtonSize);
+    ui->btnTifa->setFixedSize(partyButtonSize);
+    ui->btnAeris->setFixedSize(partyButtonSize);
+    ui->btnRed->setFixedSize(partyButtonSize);
+    ui->btnYuffie->setFixedSize(partyButtonSize);
+    ui->btnCait->setFixedSize(partyButtonSize);
+    ui->btnVincent->setFixedSize(partyButtonSize);
+    ui->btnCid->setFixedSize(partyButtonSize);
+
+    const QSize partyIconSize(int(92 * scale), int(104 * scale));
+    ui->btnCloud->setIconSize(partyIconSize);
+    ui->btnBarret->setIconSize(partyIconSize);
+    ui->btnTifa->setIconSize(partyIconSize);
+    ui->btnAeris->setIconSize(partyIconSize);
+    ui->btnRed->setIconSize(partyIconSize);
+    ui->btnYuffie->setIconSize(partyIconSize);
+    ui->btnCait->setIconSize(partyIconSize);
+    ui->btnVincent->setIconSize(partyIconSize);
+    ui->btnCid->setIconSize(partyIconSize);
+
+    const QSize comboPartyIconSize(int(32 * scale), int(32 * scale));
+    ui->comboParty1->setFixedHeight(comboPartyIconSize.height());
+    ui->comboParty2->setFixedHeight(comboPartyIconSize.height());
+    ui->comboParty3->setFixedHeight(comboPartyIconSize.height());
+    ui->comboParty1->setIconSize(comboPartyIconSize);
+    ui->comboParty2->setIconSize(comboPartyIconSize);
+    ui->comboParty3->setIconSize(comboPartyIconSize);
+
     ui->groupBox_11->setFixedWidth(int(375 * scale));
     ui->groupBox_18->setFixedWidth(int(273 * scale)); //materia table group.
     ui->scrollArea->setFixedWidth(int(310 * scale));
     ui->scrollAreaWidgetContents->adjustSize();
     ui->world_map_frame->setFixedSize(int(446 * scale), int(381 * scale));
-    ui->worldMapView->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
     ui->worldMapView->setGeometry(int(5 * scale), int(32 * scale), int(432 * scale), int(336 * scale));
-    ui->comboMapControls->setFixedHeight(32);
+
+    ui->comboMapControls->setFixedHeight(comboPartyIconSize.height());
+
     ui->slideWorldX->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
     ui->slideWorldY->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
-    ui->lbl_love_aeris->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_love_barret->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret).scaled(ui->lbl_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_love_tifa->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_love_yuffie->setFixedSize(int(50 * scale), int(68 * scale));
-    ui->lbl_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_aeris->setFixedSize(ui->sbBloveAeris->width(), int(74 * scale));
-    ui->lbl_battle_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith).scaled(ui->lbl_battle_love_aeris->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_barret->setFixedSize(ui->sbBloveBarret->width(), int(74 * scale));
-    ui->lbl_battle_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret).scaled(ui->lbl_battle_love_barret->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_tifa->setFixedSize(ui->sbBloveTifa->width(), int(74 * scale));
-    ui->lbl_battle_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa).scaled(ui->lbl_battle_love_tifa->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lbl_battle_love_yuffie->setFixedSize(ui->sbBloveYuffie->width(), int(74 * scale));
-    ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie).scaled(ui->lbl_battle_love_yuffie->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
+    const QSize lovePointSize(int(50 * scale), int(68 * scale));
+    ui->lbl_love_aeris->setFixedSize(lovePointSize);
+    ui->lbl_love_barret->setFixedSize(lovePointSize);
+    ui->lbl_love_tifa->setFixedSize(lovePointSize);
+    ui->lbl_love_yuffie->setFixedSize(lovePointSize);
+    ui->lbl_battle_love_aeris->setFixedSize(lovePointSize);
+    ui->lbl_battle_love_barret->setFixedSize(lovePointSize);
+    ui->lbl_battle_love_tifa->setFixedSize(lovePointSize);
+    ui->lbl_battle_love_yuffie->setFixedSize(lovePointSize);
+
     materia_editor->setStarsSize(int(48 * scale));
     guirefresh(0);
 }
@@ -1518,7 +1546,7 @@ void MainWindow::materiaupdate(void)
         QString ap;
 
         if (current_id <= 0x5A) {
-            newItem = new QTableWidgetItem(QIcon(QPixmap::fromImage(Materias.image(current_id).scaledToHeight(fontMetrics().height(), Qt::SmoothTransformation))), Materias.name(current_id), 0);
+            newItem = new QTableWidgetItem(Materias.icon(current_id), Materias.name(current_id), 0);
             ui->tblMateria->setItem(mat, 0, newItem);
         }
 
@@ -1713,7 +1741,7 @@ void MainWindow::updateStolenMateria()
         quint8 current_id = ff7->stolenMateriaId(s, mat);
         QTableWidgetItem *newItem;
         if (current_id != FF7Materia::EmptyId) {
-            newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.image(current_id)), Materias.name(current_id), 0);
+            newItem = new QTableWidgetItem(Materias.icon(current_id), Materias.name(current_id), 0);
             ui->tblMateriaStolen->setItem(mat, 0, newItem);
             qint32 current_ap = ff7->stolenMateriaAp(s, mat);
             if (current_ap == FF7Materia::MaxMateriaAp) {
@@ -1940,15 +1968,15 @@ void MainWindow::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()
 {
-    ui->btnCloud->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 0)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnBarret->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 1)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnTifa->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 2)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnAeris->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 3)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnRed->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 4)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnYuffie->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 5)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnCait->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 6)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnVincent->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 7)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
-    ui->btnCid->setIcon(QIcon(FF7Char::instance()->pixmap(ff7->charID(s, 8)).scaled(ui->btnCloud->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation)));
+    ui->btnCloud->setIcon(FF7Char::instance()->icon(ff7->charID(s, 0)));
+    ui->btnBarret->setIcon(FF7Char::instance()->icon(ff7->charID(s, 1)));
+    ui->btnTifa->setIcon(FF7Char::instance()->icon(ff7->charID(s, 2)));
+    ui->btnAeris->setIcon(FF7Char::instance()->icon(ff7->charID(s, 3)));
+    ui->btnRed->setIcon(FF7Char::instance()->icon(ff7->charID(s, 4)));
+    ui->btnYuffie->setIcon(FF7Char::instance()->icon(ff7->charID(s, 5)));
+    ui->btnCait->setIcon(FF7Char::instance()->icon(ff7->charID(s, 6)));
+    ui->btnVincent->setIcon(FF7Char::instance()->icon(ff7->charID(s, 7)));
+    ui->btnCid->setIcon(FF7Char::instance()->icon(ff7->charID(s, 8)));
 }
 void MainWindow::progress_update()
 {
@@ -4291,7 +4319,7 @@ void MainWindow::testDataTabWidget_currentChanged(int index)
         ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
         ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
         if (!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
-            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon().scaled(ui->lbl_slot_icon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon());
         load = false;
         break;
 

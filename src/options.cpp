@@ -46,7 +46,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
-        translator->load(translation, dir.absolutePath());
+        std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
     }
@@ -62,7 +62,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
         ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(value, value, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     });
 
-    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton * button){
+    connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](const QAbstractButton * button){
         if (button == ui->buttonBox->button(QDialogButtonBox::Apply)) {
             disconnect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
             saveSettings();
@@ -80,8 +80,9 @@ Options::Options(QWidget *parent) : QDialog(parent)
 
     loadSettings();
 
-    if(parent)
-        move(parent->x() + ((parent->width() - width()) / 2), parent->y() + ((parent->sizeHint().height() - sizeHint().height()) / 2));
+    if(parent) {
+        move(parent->x() + ((parent->width() -  sizeHint().width()) / 2), parent->y() + ((parent->sizeHint().height() - sizeHint().height()) / 2));
+    }
 }
 
 Options::~Options()

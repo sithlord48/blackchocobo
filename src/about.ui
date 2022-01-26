@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>761</width>
-    <height>649</height>
+    <width>0</width>
+    <height>0</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,11 @@
    <item>
     <layout class="QHBoxLayout" name="_2">
      <item>
-      <widget class="QLabel" name="lbl_icon"/>
+      <widget class="QLabel" name="lbl_icon">
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="spacer_4">
@@ -156,7 +160,7 @@
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string notr="true">(C) 2010 - 2020 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2022 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
