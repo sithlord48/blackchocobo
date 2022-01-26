@@ -1483,6 +1483,10 @@ d&apos;un objet facilement.</translation>
         <source>Application Preferences</source>
         <translation type="unfinished">Préférences d&apos;application</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Slot</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

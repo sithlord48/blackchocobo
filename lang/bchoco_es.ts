@@ -1480,6 +1480,10 @@ location.</source>
         <source>Application Preferences</source>
         <translation type="unfinished">Preferencias de aplicación</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Ranura</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

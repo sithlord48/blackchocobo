@@ -1479,6 +1479,10 @@ Var And Scrolling Synced To Left Table</translation>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation>Unknown Id in Buggy/Highwind Location</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Slot</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

@@ -1488,6 +1488,10 @@ Lage.</translation>
         <source>Application Preferences</source>
         <translation type="unfinished">Anwendungseinstellungen</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Steckplatz</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

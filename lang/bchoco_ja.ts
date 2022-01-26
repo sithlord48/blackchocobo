@@ -1477,6 +1477,10 @@ location.</source>
         <source>Application Preferences</source>
         <translation type="unfinished">アプリケーション設定</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">スロット</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

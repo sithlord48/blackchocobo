@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2021 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2022 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -273,6 +273,12 @@ void MainWindow::initDisplay()
     width -=ui->tblUnknown->verticalScrollBar()->width();
     ui->compare_table->setFixedWidth(width);
     ui->tblCompareUnknown->setFixedWidth(width);
+
+    QStringList _zvars {tr("-None-")};
+    for (int i=1; i<= ff7->unknown_zmax(); i++ )
+        _zvars.append(QStringLiteral("z_%1").arg(i));
+    _zvars.append(tr("Slot"));
+    ui->comboZVar->addItems(_zvars);
 }
 
 void MainWindow::setScale(double scale)
@@ -385,6 +391,12 @@ void MainWindow::init_style()
 
     ui->slideWorldY->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
     ui->slideWorldX->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
+    auto cboxes = findChildren<QComboBox*>(QString(), Qt::FindChildrenRecursively);
+    for (auto box : cboxes) {
+        box->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        box->setStyleSheet(QStringLiteral("QComboBox { combobox-popup: 0;}"));
+    }
+
 }
 
 void MainWindow::init_connections()
@@ -3633,7 +3645,6 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 
     ui->tblUnknown->reset();
     ui->tblCompareUnknown->reset();
-
     if (z <= ff7->unknown_zmax())
         temp = ff7->unknown(s, z);
     else if (z == ff7->unknown_zmax() + 1)

@@ -1469,6 +1469,10 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
         <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
         <translation>TŁUMACZ NA NAZWĘ JĘZYKA</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Slot</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>

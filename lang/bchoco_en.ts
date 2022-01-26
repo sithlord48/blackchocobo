@@ -1483,6 +1483,10 @@ location.</translation>
         <source>Application Preferences</source>
         <translation>Application Preferences</translation>
     </message>
+    <message>
+        <source>Slot</source>
+        <translation>Slot</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
