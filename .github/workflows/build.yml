@@ -32,20 +32,20 @@ jobs:
           }
         - {
            name: "Linux-Qt6-amd64"
-           , os: ubuntu-latest
-           , QT_VERSION: 6.2.0, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.0/gcc_64, QT_MODULES: qt5compat
+           , os: ubuntu-20.04
+           , QT_VERSION: 6.2.3, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.3/gcc_64, QT_MODULES: qt5compat
            , ff7tkPrefix: /opt/ff7tk
            , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
            , ff7tkPackage: ff7tk-continuous-Qt6-Linux_X86_64.tar.gz
            , install_ff7tk: "sudo tar -xf ff7tk-continuous-Qt6-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , bcInstallPrefix: /usr
            , installBC: "make DESTDIR=appdir install"
-           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.0/gcc_64/libexec"
+           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.3/gcc_64/libexec"
            , rename_package: "mv Black_Chocobo-*.tar.xz Black_Chocobo-continuous-Qt6-linux-x86_64.tar.xz && mv Black_Chocobo-*.AppImage Black_Chocobo-continuous-Qt6-x86_64.AppImage"
           }
         - {
             name: "MacOS-Qt5-amd64"
-            , os: macos-latest
+            , os: macos-10.15
             , QT_VERSION: 5.15.2, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/5.15.2/clang_64
             , ff7tkPrefix: /Users/runner/ff7tk
             , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=5"
@@ -57,8 +57,8 @@ jobs:
           }
         - {
             name: "MacOS-Qt6-amd64"
-            , os: macos-latest
-            , QT_VERSION: 6.2.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.0/clang_64, QT_MODULES: qt5compat
+            , os: macos-10.15
+            , QT_VERSION: 6.2.3, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.3/clang_64, QT_MODULES: qt5compat
             , ff7tkPrefix: /Users/runner/ff7tk
             , extraCMakeConfig: "-DQT_DEFAULT_MAJOR_VERSION=6"
             , installBC: "make install"
@@ -69,7 +69,7 @@ jobs:
           }
         - {
             name: "Windows-Qt5-x64", WIN_ARCH: "x64"
-            , os: windows-latest
+            , os: windows-2019
             , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-Qt5-win64.7z
@@ -80,8 +80,8 @@ jobs:
           }
         - {
             name: "Windows-Qt6-x64", WIN_ARCH: "x64"
-            , os: windows-latest
-            , QT_VERSION: 6.2.0, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.0/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
+            , os: windows-2019
+            , QT_VERSION: 6.2.3, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.3/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-Qt6-win64.7z
             , install_ff7tk: "7z x ff7tk-continuous-Qt6-win64.7z -oC:/ff7tk"
@@ -91,7 +91,7 @@ jobs:
           }
         - {
             name: "Windows-Qt5-x86"
-            , os: windows-latest, WIN_ARCH: "amd64_x86"
+            , os: windows-2019, WIN_ARCH: "amd64_x86"
             , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-Qt5-win32.7z
