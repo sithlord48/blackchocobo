@@ -23,7 +23,7 @@
    <string>Options</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="preferences-system" resource="images.qrc">
+   <iconset theme="preferences-system">
     <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
   </property>
   <property name="sizeGripEnabled">
@@ -330,12 +330,6 @@
               </item>
               <item>
                <widget class="QLabel" name="lblPixNormal">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
                 <property name="minimumSize">
                  <size>
                   <width>64</width>
@@ -346,7 +340,7 @@
                  <string/>
                 </property>
                 <property name="scaledContents">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -359,12 +353,6 @@
              <layout class="QHBoxLayout" name="horizontalLayout_16">
               <item>
                <widget class="QLabel" name="lblPixScaled">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
                 <property name="minimumSize">
                  <size>
                   <width>192</width>
@@ -378,7 +366,7 @@
                  <string/>
                 </property>
                 <property name="scaledContents">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -1038,8 +1026,5 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="images.qrc"/>
- </resources>
  <connections/>
 </ui>

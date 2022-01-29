@@ -76,7 +76,19 @@ MainWindow::MainWindow(QWidget *parent)
     , chocoboManager(new ChocoboManager)
 {
 //Initilze Remaining Data
-    setWindowIcon(QIcon(":/icon/bchoco"));
+    QIcon::setFallbackSearchPaths(QIcon::fallbackSearchPaths() << ":/icons/common");
+    QIcon::setFallbackSearchPaths(QIcon::fallbackSearchPaths() << QStringLiteral(":/icons/%1").arg(checkIconTheme()));
+    if (!QIcon::hasThemeIcon(QStringLiteral("games-highscores"))) {
+        QIcon::setThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
+    } else{
+        QIcon::setFallbackThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
+    }
+
+    QTextStream(stdout) << "Theme Paths: " << QIcon::themeSearchPaths().join(" ")<< "\n";
+    QTextStream(stdout) << "Theme: " << QIcon::themeName()<< "\n";
+    QTextStream(stdout) << "FallBack Paths: " << QIcon::fallbackSearchPaths().join(" ")<< "\n";
+    QTextStream(stdout) << "Fallback Theme: " << QIcon::fallbackThemeName()<< "\n";
+    setWindowIcon(QIcon(":/icons/common/blackchocobo"));
     buffer_materia.id = FF7Materia::EmptyId;
     for (int i = 0; i < 3; i++)
         buffer_materia.ap[i] = 0xFF;   //empty buffer incase
@@ -93,6 +105,11 @@ MainWindow::MainWindow(QWidget *parent)
     actionNewGame_triggered();
     btnCloud_clicked();
     ff7->setFileModified(false, 0);
+}
+
+QString MainWindow::checkIconTheme()
+{
+    return palette().text().color().value() >= QColor(Qt::lightGray).value() ? QString("dark") : QString("light");
 }
 
 void MainWindow::detectTranslations()
@@ -239,8 +256,8 @@ void MainWindow::initDisplay()
     ui->group_items->layout()->addWidget(ui->group_item_options);
     ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
-    ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next"),QIcon(":/icon/next")));
-    ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next"),QIcon(":/icon/next")));
+    ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
+    ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
 
     locationViewer = new LocationViewer(scale);
     locationViewer->setRegion("BASCUS-94163FF7-S00");
@@ -284,7 +301,7 @@ void MainWindow::initDisplay()
     ui->comboZVar->addItems(_zvars);
 
     ui->worldMapView->setScaledContents(true);
-    ui->worldMapView->setPixmap(QPixmap(":/icon/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->worldMapView->setPixmap(QPixmap(":/icons/common/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
     ui->lbl_slot_icon->setScaledContents(true);
 
@@ -417,8 +434,8 @@ void MainWindow::init_style()
     char_editor->setToolBoxStyle(tabStyle);
     ui->locationToolBox->setStyleSheet(tabStyle);
 
-    ui->slideWorldY->setStyleSheet(QString("::handle{image: url(:/icon/prev);}"));
-    ui->slideWorldX->setStyleSheet(QString("::handle{image: url(:/icon/slider_up);}"));
+    ui->slideWorldY->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-left);}"));
+    ui->slideWorldX->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-up);}"));
     auto cboxes = findChildren<QComboBox*>(QString(), Qt::FindChildrenRecursively);
     for (auto box : cboxes) {
         box->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
@@ -815,6 +832,18 @@ void MainWindow::changeEvent(QEvent *e)
         for (QWidget * widget : widgets)
              widget->setPalette(palette);
         hexEditor->setAddressAreaColor(palette.alternateBase().color());
+        QStringList _temp = QIcon::fallbackSearchPaths();
+        _temp.removeAll(":icons/light");
+        _temp.removeAll(":icons/dark");
+        QIcon::setFallbackSearchPaths(_temp << QStringLiteral(":icons/%1").arg(checkIconTheme()));
+#if defined(QT_OS_WIN32) || defined(QT_OS_MAC)
+        QIcon::setThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
+#else
+        if(QIcon::themeName().startsWith(QStringLiteral("bc")))
+            QIcon::setThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
+        else
+            QIcon::setFallbackThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
+#endif
     } else if (e->type() == QEvent::LanguageChange) {
         ui->retranslateUi(this);
         ui->tabWidget->setTabText(3, tr("Chocobo"));
