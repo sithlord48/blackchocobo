@@ -157,12 +157,15 @@ jobs:
         export VERSION=continuous
         export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${{ matrix.config.ff7tkPrefix }}/lib
         mkdir -p ./appdir/usr/share/ff7tk/lang
+        mkdir -p ./appdir/usr/plugins/iconengines
+        cp /opt/Qt/${{ matrix.config.QT_VERSION }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
         cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang
         ${{matrix.config.linuxDeployQtPath}}
-        ./linuxdeploy-x86_64.AppImage --appdir=appdir --plugin=qt --output appimage \
+        ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
           -e blackchocobo \
           -d deploy/org.sithlord48.blackchocobo.desktop \
-          -i deploy/blackchocobo.png
+          -i deploy/blackchocobo.png \
+          --plugin=qt
 
     - name: Prepare Upload
       shell: bash

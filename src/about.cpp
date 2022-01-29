@@ -25,9 +25,9 @@ About::About(QWidget *parent) :
 {
     ui->setupUi(this);
     setFixedSize(parent->width() * 0.5F, parent->height() * 0.8F);
-    ui->pushButton->setIcon(QIcon::fromTheme("window-close", style()->standardIcon(QStyle::SP_DialogCloseButton)));
+    ui->pushButton->setIcon(QIcon::fromTheme("window-close"));
     ui->lbl_icon->setFixedSize(fontMetrics().height() * 6, fontMetrics().height() * 6);
-    ui->lbl_icon->setPixmap(QPixmap(":/icon/bchoco"));
+    ui->lbl_icon->setPixmap(QPixmap(":/icons/common/blackchocobo"));
     ui->lbl_name->setText(QCoreApplication::applicationName());
     ui->lbl_bc_version->setText(QString(tr("Version: %1")).arg(QCoreApplication::applicationVersion()));
     ui->lbl_ff7tk_version->setText(QString(tr("ff7tk: %1")).arg(ff7tk_version().append(ff7tk_revision())));

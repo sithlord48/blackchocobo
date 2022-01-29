@@ -156,14 +156,14 @@ void BCDialog::editSideBarPaths(QWidget *parent)
     QStringList urls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
     for (const QString &string : qAsConst(urls))
         listWidget.addItem(string);
-    QPushButton btnAdd(QIcon::fromTheme(QStringLiteral("list-add"), QIcon(QStringLiteral(":/icon/list-add"))), QString(), nullptr);
+    QPushButton btnAdd(QIcon::fromTheme(QStringLiteral("list-add")), QString(), nullptr);
     btnAdd.setToolTip(QObject::tr("Add a place"));
     QObject::connect(&btnAdd, &QPushButton::clicked, &dialog, [parent, &listWidget]{
         QString fileName = getExistingDirectory(parent, QObject::tr("Select a path to add to places"));
         if (!fileName.isEmpty())
             listWidget.addItem(fileName);
     });
-    QPushButton btnRemove(QIcon::fromTheme(QStringLiteral("list-remove"), QIcon(QStringLiteral(":/icon/list-remove"))), QString(), nullptr);
+    QPushButton btnRemove(QIcon::fromTheme(QStringLiteral("list-remove")), QString(), nullptr);
     btnRemove.setToolTip(QObject::tr("Remove selected place"));
     QObject::connect(&btnRemove, &QPushButton::clicked, &dialog, [&listWidget] {
         if (!listWidget.selectedItems().isEmpty())
@@ -222,7 +222,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
 int BCDialog::fixTimeDialog(QWidget *parent, bool slotPAL)
 {
     QMessageBox dialog(parent);
-    dialog.setIconPixmap(QPixmap(":/icon/fix_time"));
+    dialog.setIconPixmap(QPixmap(":/icons/common/dialog-question"));
     dialog.setText(QObject::tr("Adjust the play time?"));
     dialog.setInformativeText(QObject::tr("Old region was %1hz\nNew region is %2hz").arg(slotPAL ? 50 : 60).arg(!slotPAL ? 50 : 60));
     dialog.setWindowTitle( slotPAL ? QObject::tr("PAL -> NTSC Conversion") : QObject::tr("NTSC -> PAL Conversion"));

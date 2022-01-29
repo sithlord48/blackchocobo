@@ -59,12 +59,13 @@ if(${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
     find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
 endif()
 
-find_package(ff7tk REQUIRED NO_MODULE COMPONENTS
+find_package(ff7tk 0.80.22 REQUIRED NO_MODULE COMPONENTS
     ff7tk
     ff7tkWidgets
 )
 
 add_subdirectory(deploy)
+add_subdirectory(icons)
 add_subdirectory(lang)
 add_subdirectory(qhexedit)
 
@@ -99,7 +100,6 @@ add_executable(${BIN_NAME} WIN32 MACOSX_BUNDLE
       src/achievementdialog.cpp
       src/bcdialog.cpp
       src/bcsettings.cpp
-      icon/images.qrc
       ${PLATFORM_EX_SRC}
     )
 
@@ -109,8 +109,8 @@ target_link_libraries (${BIN_NAME} PUBLIC
         Qt::Widgets
         Qt::Xml
         Qt::Quick
-        Qt::Svg
         QHEXEDIT
+        libICONS
         ff7tk::ff7tk
         ff7tk::ff7tkWidgets
     )

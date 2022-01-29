@@ -1092,8 +1092,7 @@
             </rect>
            </property>
            <attribute name="icon">
-            <iconset resource="images.qrc">
-             <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
+            <iconset theme="psxmc"></iconset>
            </attribute>
            <attribute name="label">
             <string>Field Location</string>
@@ -1136,8 +1135,7 @@
             </rect>
            </property>
            <attribute name="icon">
-            <iconset resource="images.qrc">
-             <normaloff>:/icon/world_map</normaloff>:/icon/world_map</iconset>
+            <iconset theme="world_map"></iconset>
            </attribute>
            <attribute name="label">
             <string>Worldmap Location</string>
@@ -5658,8 +5656,8 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </size>
                   </property>
                   <property name="scaledContents">
-+                   <bool>true</bool>
-+                  </property>
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -6833,6 +6831,9 @@ Var And Scrolling Synced To Left Table</string>
      <string>&amp;Edit</string>
     </property>
     <widget class="QMenu" name="menuRegion">
+     <property name="icon">
+      <iconset theme="globe"></iconset>
+     </property>
      <property name="title">
       <string>&amp;Slot Region</string>
      </property>
@@ -6872,8 +6873,7 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="actionQuit">
    <property name="icon">
-    <iconset theme="application-exit" resource="ff7tk/icons/common.qrc">
-     <normaloff>:/common/applications-quit</normaloff>:/common/applications-quit</iconset>
+    <iconset theme="application-exit"></iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
@@ -6887,8 +6887,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenSaveFile">
    <property name="icon">
-    <iconset theme="document-open" resource="images.qrc">
-     <normaloff>:/icon/open</normaloff>:/icon/open</iconset>
+    <iconset theme="document-open"></iconset>
    </property>
    <property name="text">
     <string>&amp;Open</string>
@@ -6905,8 +6904,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save-as" resource="images.qrc">
-     <normaloff>:/icon/save_as</normaloff>:/icon/save_as</iconset>
+    <iconset theme="document-save-as"></iconset>
    </property>
    <property name="text">
     <string>Sa&amp;ve As</string>
@@ -6920,8 +6918,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset theme="help-about" resource="images.qrc">
-     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
+    <iconset theme="help-about"></iconset>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -6941,8 +6938,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/slot_sel</normaloff>:/icon/slot_sel</iconset>
+    <iconset theme="view-list-details"></iconset>
    </property>
    <property name="text">
     <string>&amp;Select Slot</string>
@@ -6956,8 +6952,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-copy" resource="ff7tk/icons/common.qrc">
-     <normaloff>:/common/edit-copy</normaloff>:/common/edit-copy</iconset>
+    <iconset theme="edit-copy"></iconset>
    </property>
    <property name="text">
     <string>&amp;Copy Current Slot</string>
@@ -6974,8 +6969,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-paste" resource="ff7tk/icons/common.qrc">
-     <normaloff>:/common/edit-paste</normaloff>:/common/edit-paste</iconset>
+    <iconset theme="edit-paste"></iconset>
    </property>
    <property name="text">
     <string>&amp;Paste Slot</string>
@@ -6992,8 +6986,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-clear" resource="ff7tk/icons/common.qrc">
-     <normaloff>:/common/edit-clear</normaloff>:/common/edit-clear</iconset>
+    <iconset theme="edit-clear"></iconset>
    </property>
    <property name="text">
     <string>Clea&amp;r Slot</string>
@@ -7010,8 +7003,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-previous" resource="images.qrc">
-     <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
+       <iconset theme="go-previous"></iconset>
    </property>
    <property name="text">
     <string>&amp;Previous Slot</string>
@@ -7028,8 +7020,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-next" resource="images.qrc">
-     <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
+    <iconset theme="go-next"></iconset>
    </property>
    <property name="text">
     <string>&amp;Next Slot</string>
@@ -7043,8 +7034,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionShowOptions">
    <property name="icon">
-    <iconset theme="preferences-system" resource="images.qrc">
-     <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
+       <iconset theme="configure"></iconset>
    </property>
    <property name="text">
     <string>&amp;Configure</string>
@@ -7136,8 +7126,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionNewGame">
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
+    <iconset theme="document-new"></iconset>
    </property>
    <property name="text">
     <string>&amp;New Game</string>
@@ -7154,8 +7143,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/new_plus</normaloff>:/icon/new_plus</iconset>
+       <iconset theme="document-new-from-template"></iconset>
    </property>
    <property name="text">
     <string>New Game&amp;+ </string>
@@ -7169,8 +7157,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionExportChar">
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/export_char</normaloff>:/icon/export_char</iconset>
+    <iconset theme="character-export"></iconset>
    </property>
    <property name="text">
     <string>E&amp;xport Current Character</string>
@@ -7181,8 +7168,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionImportChar">
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/import_char</normaloff>:/icon/import_char</iconset>
+    <iconset theme="character-import"></iconset>
    </property>
    <property name="text">
     <string>I&amp;mport Current Character</string>
@@ -7196,8 +7182,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save" resource="images.qrc">
-     <normaloff>:/icon/save</normaloff>:/icon/save</iconset>
+    <iconset theme="document-save"></iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -7214,8 +7199,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="view-refresh" resource="images.qrc">
-     <normaloff>:/icon/refresh</normaloff>:/icon/refresh</iconset>
+    <iconset theme="view-refresh"></iconset>
    </property>
    <property name="text">
     <string>&amp;Reload</string>
@@ -7240,8 +7224,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionCreateNewMetadata">
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
+    <iconset theme="folder-sync"></iconset>
    </property>
    <property name="text">
     <string>Create Cloud Save &amp;Folder</string>
@@ -7255,8 +7238,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-import" resource="images.qrc">
-     <normaloff>:/icon/import</normaloff>:/icon/import</iconset>
+       <iconset theme="document-import"></iconset>
    </property>
    <property name="text">
     <string>&amp;Import To Current Slot</string>
@@ -7267,8 +7249,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenAchievementFile">
    <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/achievements</normaloff>:/icon/achievements</iconset>
+    <iconset theme="games-highscores"></iconset>
    </property>
    <property name="text">
     <string>&amp;Achievement Editor</string>
@@ -7318,7 +7299,7 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sbTimerTimeSec</tabstop>
  </tabstops>
  <resources>
-  <include location="images.qrc"/>
+  <include location="icons.qrc"/>
   <include location="ff7tk/icons/common.qrc"/>
  </resources>
 </ui>

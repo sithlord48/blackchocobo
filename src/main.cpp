@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
             return 0;
         }
     }
-    Q_INIT_RESOURCE(images);
+    Q_INIT_RESOURCE(icons);
+
     QApplication a(argc, argv);
     //Start application init.
     a.setStyle(QStyleFactory::create(BCSettings::instance()->value(SETTINGS::APPSTYLE, QVariant(QString(a.style()->objectName()))).toString()));

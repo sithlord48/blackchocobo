@@ -31,6 +31,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)
 {
     ui->setupUi(this);
+    ui->lblPixNormal->setFixedSize(64,64);
     connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
     initConnections();
     int fmh = fontMetrics().height();
@@ -39,8 +40,8 @@ Options::Options(QWidget *parent) : QDialog(parent)
     const QList<QAbstractButton*> buttons = ui->buttonBox->buttons();
     for (QAbstractButton *btn : buttons)
          btn->setIconSize(iconSize);
-    ui->lblPixNormal->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(64, 64, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->lblPixNormal->setPixmap(QPixmap(":/icons/common/blackchocobo"));
+    ui->lblPixScaled->setPixmap(QPixmap(":/icons/common/blackchocobo"));
 
     QDir dir (BCSettings::instance()->value(SETTINGS::LANGPATH).toString());
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
@@ -59,7 +60,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
         value = int(((value * 0.25) + 0.5) * 100);
         ui->labelScale->setText(QStringLiteral("%1%").arg(value, 3, 10, QChar('0')));
         value = int(64 * (value / 100.0));
-        ui->lblPixScaled->setPixmap(QPixmap(":/icon/bchoco").scaled(value, value, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        ui->lblPixScaled->setFixedSize(QSize(value, value));
     });
 
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](const QAbstractButton * button){
@@ -127,6 +128,9 @@ void Options::loadSettings()
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
     ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
     ui->comboAppStyle->setCurrentText(BCSettings::instance()->value(SETTINGS::APPSTYLE).toString());
+    int pixScale = int(64 * (int(((ui->sliderScale->value() * 0.25) + 0.5) * 100) / 100.0));
+    ui->lblPixScaled->setFixedSize(QSize(pixScale, pixScale));
+    adjustSize();
 }
 
 void Options::saveSettings()
