@@ -105,7 +105,7 @@ void Options::changeEvent(QEvent *e)
 }
 void Options::loadSettings()
 {
-    ui->defaultSaveLayout->setVisible(false);
+    ui->defaultSaveLayout->setEnabled(false);
     ui->line_default_save->setText(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE, QString()).toString());
     ui->line_char_stat_folder->setText(BCSettings::instance()->value(SETTINGS::STATFOLDER, QString()).toString());
     ui->line_save_pc->setText(BCSettings::instance()->value(SETTINGS::PCSAVEPATH, QString()).toString());
@@ -160,7 +160,7 @@ void Options::saveSettings()
 
 void Options::restoreDefaultSettings()
 {
-    ui->defaultSaveLayout->setVisible(false);
+    ui->defaultSaveLayout->setEnabled(false);
     ui->line_default_save->setText(QString());
     ui->line_char_stat_folder->setText(QDir::homePath());
     ui->line_save_pc->setText(QDir::homePath());
@@ -194,7 +194,7 @@ void Options::initConnections()
     connect(ui->cbNativeDialogs, &QCheckBox::toggled, this, &Options::cbNativeDialogs_clicked);
     connect(ui->comboColorScheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &Options::comboColorScheme_currentIndexChanged);
     connect(ui->comboAppStyle, &QComboBox::textActivated, this, &Options::comboAppStyle_currentTextChanged);
-    connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setVisible);
+    connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setEnabled);
 
     connect(ui->btnEditSideBarItems, &QPushButton::clicked, this, [this]{
         BCDialog::editSideBarPaths(this);
