@@ -49,10 +49,11 @@ endif()
 
 
 find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
-    Widgets
     Gui
-    Xml
+    Svg
     Quick
+    Widgets
+    Xml
 )
 
 if(${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
