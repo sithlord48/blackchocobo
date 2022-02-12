@@ -31,7 +31,6 @@ Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)
 {
     ui->setupUi(this);
-    ui->lblPixNormal->setFixedSize(64,64);
     connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
     initConnections();
     int fmh = fontMetrics().height();
@@ -40,8 +39,6 @@ Options::Options(QWidget *parent) : QDialog(parent)
     const QList<QAbstractButton*> buttons = ui->buttonBox->buttons();
     for (QAbstractButton *btn : buttons)
          btn->setIconSize(iconSize);
-    ui->lblPixNormal->setPixmap(QPixmap(":/icons/common/blackchocobo"));
-    ui->lblPixScaled->setPixmap(QPixmap(":/icons/common/blackchocobo"));
 
     QDir dir (BCSettings::instance()->value(SETTINGS::LANGPATH).toString());
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
@@ -55,13 +52,6 @@ Options::Options(QWidget *parent) : QDialog(parent)
     ui->comboLanguage->setVisible(ui->comboLanguage->count());
     ui->lblLanguage->setVisible(ui->comboLanguage->count());
     ui->comboAppStyle->addItems(QStyleFactory::keys());
-
-    connect(ui->sliderScale, &QSlider::valueChanged, this, [this](int value){
-        value = int(((value * 0.25) + 0.5) * 100);
-        ui->labelScale->setText(QStringLiteral("%1%").arg(value, 3, 10, QChar('0')));
-        value = int(64 * (value / 100.0));
-        ui->lblPixScaled->setFixedSize(QSize(value, value));
-    });
 
     connect(ui->buttonBox, &QDialogButtonBox::clicked, this, [this](const QAbstractButton * button){
         if (button == ui->buttonBox->button(QDialogButtonBox::Apply)) {
@@ -105,7 +95,7 @@ void Options::changeEvent(QEvent *e)
 }
 void Options::loadSettings()
 {
-    ui->defaultSaveLayout->setEnabled(false);
+    ui->defaultSaveLayout->setVisible(false);
     ui->line_default_save->setText(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE, QString()).toString());
     ui->line_char_stat_folder->setText(BCSettings::instance()->value(SETTINGS::STATFOLDER, QString()).toString());
     ui->line_save_pc->setText(BCSettings::instance()->value(SETTINGS::PCSAVEPATH, QString()).toString());
@@ -121,15 +111,12 @@ void Options::loadSettings()
     ui->cbWorldMapAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
     ui->comboRegion->setCurrentText(BCSettings::instance()->value (SETTINGS::REGION, QStringLiteral("NTSC-U")).toString());
     ui->cb_override_def_save->setChecked(BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE, false).toBool());
-    ui->sliderScale->setValue(int((BCSettings::instance()->value(SETTINGS::SCALE, 1.00).toDouble() - 0.50) / 0.25));
     ui->cbAutoGrowth->setChecked(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG)));
     ui->cbNativeDialogs->setChecked(BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
     ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
     ui->comboAppStyle->setCurrentText(BCSettings::instance()->value(SETTINGS::APPSTYLE).toString());
-    int pixScale = int(64 * (int(((ui->sliderScale->value() * 0.25) + 0.5) * 100) / 100.0));
-    ui->lblPixScaled->setFixedSize(QSize(pixScale, pixScale));
     adjustSize();
 }
 
@@ -150,7 +137,6 @@ void Options::saveSettings()
     BCSettings::instance()->setValue(SETTINGS::WORLDMAPADVANCED, ui->cbWorldMapAdvanced->isChecked());
     BCSettings::instance()->setValue(SETTINGS::EDITABLECOMBOS, ui->cbEditableCombos->isChecked());
     BCSettings::instance()->setValue(SETTINGS::REGION, ui->comboRegion->currentText());
-    BCSettings::instance()->setValue(SETTINGS::SCALE, ((ui->sliderScale->value() * 0.25) + 0.5));
     BCSettings::instance()->setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
     BCSettings::instance()->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
     BCSettings::instance()->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
@@ -160,7 +146,7 @@ void Options::saveSettings()
 
 void Options::restoreDefaultSettings()
 {
-    ui->defaultSaveLayout->setEnabled(false);
+    ui->defaultSaveLayout->setVisible(false);
     ui->line_default_save->setText(QString());
     ui->line_char_stat_folder->setText(QDir::homePath());
     ui->line_save_pc->setText(QDir::homePath());
@@ -176,7 +162,6 @@ void Options::restoreDefaultSettings()
     ui->cbWorldMapAdvanced->setChecked(false);
     ui->comboRegion->setCurrentText(QStringLiteral("NTSC-U"));
     ui->cb_override_def_save->setChecked(false);
-    ui->sliderScale->setValue(2);
     ui->cbAutoGrowth->setChecked(true);
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(QStringLiteral("en")));
     ui->cbNativeDialogs->setChecked(false);
@@ -194,7 +179,7 @@ void Options::initConnections()
     connect(ui->cbNativeDialogs, &QCheckBox::toggled, this, &Options::cbNativeDialogs_clicked);
     connect(ui->comboColorScheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &Options::comboColorScheme_currentIndexChanged);
     connect(ui->comboAppStyle, &QComboBox::textActivated, this, &Options::comboAppStyle_currentTextChanged);
-    connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setEnabled);
+    connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setVisible);
 
     connect(ui->btnEditSideBarItems, &QPushButton::clicked, this, [this]{
         BCDialog::editSideBarPaths(this);
@@ -211,7 +196,6 @@ void Options::updateText()
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
-    ui->labelScale->setText(QStringLiteral("%1%").arg(int(BCSettings::instance()->value(SETTINGS::SCALE, 1.00).toDouble() *100), 3, 10, QChar('0')));
 }
 
 void Options::btn_set_save_pc_clicked()

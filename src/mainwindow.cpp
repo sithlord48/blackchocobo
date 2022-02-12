@@ -92,7 +92,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadBasicSettings();
     detectTranslations();
     initDisplay();
-    setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
+    setItemSizes();
     populateCombos();
     init_style();
     loadChildWidgetSettings();
@@ -237,7 +237,6 @@ void MainWindow::initDisplay()
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 
-    double scale = BCSettings::instance()->value(SETTINGS::SCALE).toDouble();
     char_editor = new CharEditor(this);
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
     char_editor_layout->setContentsMargins(0, 0, 0, 0);
@@ -318,11 +317,10 @@ void MainWindow::initDisplay()
     ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
 }
 
-void MainWindow::setScale(double scale)
+void MainWindow::setItemSizes()
 {
-    scale = std::max(scale, 0.5);
     setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
-    const QSize partyButtonSize(int(98 * scale), int(110 * scale));
+    const QSize partyButtonSize(98, 110);
     ui->btnCloud->setFixedSize(partyButtonSize);
     ui->btnBarret->setFixedSize(partyButtonSize);
     ui->btnTifa->setFixedSize(partyButtonSize);
@@ -333,7 +331,7 @@ void MainWindow::setScale(double scale)
     ui->btnVincent->setFixedSize(partyButtonSize);
     ui->btnCid->setFixedSize(partyButtonSize);
 
-    const QSize partyIconSize(int(92 * scale), int(104 * scale));
+    const QSize partyIconSize(92, 104);
     ui->btnCloud->setIconSize(partyIconSize);
     ui->btnBarret->setIconSize(partyIconSize);
     ui->btnTifa->setIconSize(partyIconSize);
@@ -344,7 +342,7 @@ void MainWindow::setScale(double scale)
     ui->btnVincent->setIconSize(partyIconSize);
     ui->btnCid->setIconSize(partyIconSize);
 
-    const QSize comboPartyIconSize(int(32 * scale), int(32 * scale));
+    const QSize comboPartyIconSize(32, 32);
     ui->comboParty1->setFixedHeight(comboPartyIconSize.height());
     ui->comboParty2->setFixedHeight(comboPartyIconSize.height());
     ui->comboParty3->setFixedHeight(comboPartyIconSize.height());
@@ -352,20 +350,20 @@ void MainWindow::setScale(double scale)
     ui->comboParty2->setIconSize(comboPartyIconSize);
     ui->comboParty3->setIconSize(comboPartyIconSize);
 
-    ui->groupBox_11->setFixedWidth(int(375 * scale));
-    ui->groupBox_18->setFixedWidth(int(273 * scale)); //materia table group.
-    ui->scrollArea->setFixedWidth(int(310 * scale));
+    ui->groupBox_11->setFixedWidth(375);
+    ui->groupBox_18->setFixedWidth(273); //materia table group.
+    ui->scrollArea->setFixedWidth(310);
     ui->scrollAreaWidgetContents->adjustSize();
-    ui->world_map_frame->setFixedSize(int(446 * scale), int(381 * scale));
+    ui->world_map_frame->setFixedSize(446, 381);
 
-    ui->worldMapView->setGeometry(int(5 * scale), int(32 * scale), int(432 * scale), int(336 * scale));
+    ui->worldMapView->setGeometry(5 , 32, 432, 336);
 
     ui->comboMapControls->setFixedHeight(comboPartyIconSize.height());
 
-    ui->slideWorldX->setGeometry(-1, int(369 * scale), int(443 * scale), int(10 * scale));
-    ui->slideWorldY->setGeometry(int(437 * scale), int(26 * scale), int(10 * scale), int(347 * scale));
+    ui->slideWorldX->setGeometry(-1, 369, 443, 10);
+    ui->slideWorldY->setGeometry(437, 26, 10, 347);
 
-    const QSize lovePointSize(int(50 * scale), int(68 * scale));
+    const QSize lovePointSize(50, 68);
     ui->lbl_love_aeris->setFixedSize(lovePointSize);
     ui->lbl_love_barret->setFixedSize(lovePointSize);
     ui->lbl_love_tifa->setFixedSize(lovePointSize);
@@ -375,7 +373,7 @@ void MainWindow::setScale(double scale)
     ui->lbl_battle_love_tifa->setFixedSize(lovePointSize);
     ui->lbl_battle_love_yuffie->setFixedSize(lovePointSize);
 
-    materia_editor->setStarsSize(int(48 * scale));
+    materia_editor->setStarsSize(48);
     guirefresh(0);
 }
 
@@ -776,19 +774,6 @@ void MainWindow::init_connections()
 
 void MainWindow::loadBasicSettings()
 {
-    if (BCSettings::instance()->value(SETTINGS::SCALE).isNull()) {
-        double stdDPI = 96.0;
-#ifdef Q_OS_MAC
-        stdDPI = 72.0;
-#endif
-        QScreen *screen = QGuiApplication::screens().at(0);
-        double scale = QString::number(screen->logicalDotsPerInch() / stdDPI, 'f', 2).toDouble();
-        double sy = int(scale * 100) % 25;
-        scale -= (sy / 100);
-        scale = ( sy < 12.49) ? scale : scale + 0.25;
-        BCSettings::instance()->setValue(SETTINGS::SCALE, std::max(scale, 0.5));
-    }
-
     if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull())
         saveGeometry();
     else
@@ -1183,7 +1168,6 @@ void MainWindow::actionShowOptions_triggered()
         QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
     });
     if (odialog.exec()) {
-        setScale(BCSettings::instance()->value(SETTINGS::SCALE).toDouble());
         loadChildWidgetSettings();
     }
     disconnect(&odialog, nullptr, nullptr, nullptr);
