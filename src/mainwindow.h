@@ -88,7 +88,7 @@ private:
     QList<fieldItemBitList> *fieldItemBit;
     void populateCombos();
     void initDisplay();
-    void setScale(double newScale);
+    void setItemSizes();
     void init_style();
     void init_connections();
     void loadBasicSettings();

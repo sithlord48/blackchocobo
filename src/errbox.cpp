@@ -44,7 +44,8 @@ errbox::errbox(QWidget *parent, FF7Save *ff7data, int slot)
     lblRegionString->setAlignment(Qt::AlignTop);
     lblIcon->setMinimumSize(64, 64);
     lblIcon->setMaximumSize(128, 128);
-    lblIcon->setPixmap(save_icon->icon().scaled(lblIcon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    lblIcon->setScaledContents(true);
+    lblIcon->setPixmap(save_icon->icon());
 
     btnPrev->setShortcut(QKeySequence::Back);
     btnPrev->setIconSize(iconSize);
@@ -163,5 +164,5 @@ bool errbox::isSingleSlot()
 
 void errbox::setIcon(QPixmap pix)
 {
-    lblIcon->setPixmap(pix.scaled(lblIcon->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    lblIcon->setPixmap(pix);
 }

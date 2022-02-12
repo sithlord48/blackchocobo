@@ -36,7 +36,6 @@ namespace SETTINGS {
     inline const static QString REGION = QStringLiteral("region");
     inline const static QString EMUSAVEPATH = QStringLiteral("save_emu_path");
     inline const static QString PCSAVEPATH = QStringLiteral("save_pc_path");
-    inline const static QString SCALE = QStringLiteral("scale");
     inline const static QString ENABLETEST = QStringLiteral("show_test");
     inline const static QString WORLDMAPADVANCED = QStringLiteral("worldMapAdvanced");
     inline const static QString USENATIVEDIALOGS = QStringLiteral("useNativeDialogs");
@@ -82,7 +81,6 @@ private:
         SETTINGS::REGION,
         SETTINGS::EMUSAVEPATH,
         SETTINGS::PCSAVEPATH,
-        SETTINGS::SCALE,
         SETTINGS::ENABLETEST,
         SETTINGS::WORLDMAPADVANCED,
         SETTINGS::USENATIVEDIALOGS,

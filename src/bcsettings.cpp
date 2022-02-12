@@ -128,7 +128,6 @@ void BCSettings::restoreDefaultSettings()
     settings->setValue(SETTINGS::WORLDMAPADVANCED, false);
     settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
     settings->setValue(SETTINGS::CUSTOMDEFAULTSAVE, false);
-    settings->setValue(SETTINGS::SCALE, 1.00);
     settings->setValue(SETTINGS::AUTOGROWTH, true);
     settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
     settings->setValue(SETTINGS::COLORSCHEME, 0);
