@@ -18,85 +18,40 @@ jobs:
       matrix:
         config:
         - {
-           name: "Linux-Qt5-amd64"
-           , os: ubuntu-18.04
-           , QT_VERSION: 5.15.2, QT_INST_DIR: /opt, QTDIR: /opt/Qt/5.15.2/gcc_64
-           , ff7tkPrefix: /opt/ff7tk
-           , ff7tkPackage: ff7tk-continuous-Qt5-Linux_X86_64.tar.gz
-           , install_ff7tk: "sudo tar -xf ff7tk-continuous-Qt5-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
-           , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr -DQT_DEFAULT_MAJOR_VERSION=5"
-           , installBC: "make DESTDIR=appdir install"
-           , bcVersion: "$GITHUB_REF_NAME-Qt5"
-          }
-        - {
-           name: "Linux-Qt6-amd64"
+           name: "Linux-amd64"
            , os: ubuntu-20.04
            , QT_VERSION: 6.2.4, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.4/gcc_64, QT_MODULES: qt5compat
            , ff7tkPrefix: /opt/ff7tk
-           , ff7tkPackage: ff7tk-continuous-Qt6-Linux_X86_64.tar.gz
-           , install_ff7tk: "sudo tar -xf ff7tk-continuous-Qt6-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
+           , ff7tkPackage: ff7tk-continuous-Linux_X86_64.tar.gz
+           , install_ff7tk: "sudo tar -xf ff7tk-continuous-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr -DQT_DEFAULT_MAJOR_VERSION=6"
            , installBC: "make DESTDIR=appdir install"
            , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.4/gcc_64/libexec"
-           , bcVersion: "$GITHUB_REF_NAME-Qt6"
           }
         - {
-            name: "MacOS-Qt5-amd64"
-            , os: macos-10.15
-            , QT_VERSION: 5.15.2, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/5.15.2/clang_64
-            , ff7tkPrefix: /Users/runner/ff7tk
-            , installBC: "make install"
-            , ff7tkPackage: ff7tk-continuous-Qt5-macos_X86_64.zip
-            , install_ff7tk: "sudo unzip ff7tk-continuous-Qt5-macos_x86_64.zip -d /Users/runner/ff7tk"
-            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=5"
-            , bcVersion: "$GITHUB_REF_NAME-Qt5"
-          }
-        - {
-            name: "MacOS-Qt6-amd64"
+            name: "MacOS-amd64"
             , os: macos-10.15
             , QT_VERSION: 6.2.4, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.4/clang_64, QT_MODULES: qt5compat
             , ff7tkPrefix: /Users/runner/ff7tk
             , installBC: "make install"
-            , ff7tkPackage: ff7tk-continuous-Qt6-macos_X86_64.zip
-            , install_ff7tk: "sudo unzip ff7tk-continuous-Qt6-macos_x86_64.zip -d /Users/runner/ff7tk"
+            , ff7tkPackage: ff7tk-continuous-macos_X86_64.zip
+            , install_ff7tk: "sudo unzip ff7tk-continuous-macos_x86_64.zip -d /Users/runner/ff7tk"
             , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=6"
-            , bcVersion: "$GITHUB_REF_NAME-Qt6"
           }
         - {
-            name: "Windows-Qt5-x64", WIN_ARCH: "x64"
-            , os: windows-2019
-            , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019_64", QT_ARCH: win64_msvc2019_64
-            , ff7tkPrefix: "C:/ff7tk"
-            , ff7tkPackage: ff7tk-continuous-Qt5-win64.7z
-            , install_ff7tk: "7z x ff7tk-continuous-Qt5-win64.7z -oC:/ff7tk"
-            , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
-            , bcVersion: "$GITHUB_REF_NAME-Qt5"
-          }
-        - {
-            name: "Windows-Qt6-x64", WIN_ARCH: "x64"
+            name: "Windows-x64", WIN_ARCH: "x64"
             , os: windows-2019
             , QT_VERSION: 6.2.4, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.4/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
             , ff7tkPrefix: "C:/ff7tk"
-            , ff7tkPackage: ff7tk-continuous-Qt6-win64.7z
-            , install_ff7tk: "7z x ff7tk-continuous-Qt6-win64.7z -oC:/ff7tk"
+            , ff7tkPackage: ff7tk-continuous-win64.7z
+            , install_ff7tk: "7z x ff7tk-continuous-win64.7z -oC:/ff7tk"
             , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=6"
-            , bcVersion: "$GITHUB_REF_NAME-Qt6"
-          }
-        - {
-            name: "Windows-Qt5-x86"
-            , os: windows-2019, WIN_ARCH: "amd64_x86"
-            , QT_VERSION: 5.15.2, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/5.15.2/msvc2019", QT_ARCH: win32_msvc2019
-            , ff7tkPrefix: "C:/ff7tk"
-            , ff7tkPackage: ff7tk-continuous-Qt5-win32.7z
-            , install_ff7tk: "7z x ff7tk-continuous-Qt5-win32.7z -oC:/ff7tk"
-            , bcInstallPrefix: Black_Chocobo-continuous
-            , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=5"
-            , bcVersion: "$GITHUB_REF_NAME-Qt5"
           }
     steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
+    - run: git fetch --tags --force
 
     - name: Cache Qt
       id: cache-qt
@@ -140,7 +95,7 @@ jobs:
       id: main_build
       shell: bash
       run: |
-        cmake -S. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION=${{matrix.config.bcVersion}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
+        cmake -S. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION=${{github.ref}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
         cmake --build . --config ${{env.BUILD_TYPE}} --target package
         ${{matrix.config.installBC}}
 
@@ -150,7 +105,7 @@ jobs:
         wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
         chmod a+x linuxdeploy*.AppImage
-        export VERSION=${{matrix.config.bcVersion}}
+        export VERSION=${{github.ref}}
         export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${{ matrix.config.ff7tkPrefix }}/lib
         mkdir -p ./appdir/usr/share/ff7tk/lang
         mkdir -p ./appdir/usr/plugins/iconengines
