@@ -238,7 +238,7 @@ void MainWindow::initDisplay()
     ui->group_hexedit->setLayout(hexLayout);
 
     double scale = BCSettings::instance()->value(SETTINGS::SCALE).toDouble();
-    char_editor = new CharEditor(scale);
+    char_editor = new CharEditor(this);
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
     char_editor_layout->setContentsMargins(0, 0, 0, 0);
     char_editor_layout->setSpacing(0);
@@ -254,7 +254,7 @@ void MainWindow::initDisplay()
     ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
     ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
 
-    locationViewer = new LocationViewer(scale);
+    locationViewer = new LocationViewer(this);
     locationViewer->setRegion("BASCUS-94163FF7-S00");
 
     QVBoxLayout *locLayout = new QVBoxLayout;
@@ -953,7 +953,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
         return;
     }
 
-    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, true, this);
+    SlotSelect slotselect(ff7, true, this);
     int i = slotselect.exec();
     if(i == -1) {
         actionOpenSaveFile_triggered();
@@ -975,7 +975,7 @@ void MainWindow::actionImportSlotFromFile_triggered()
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
             if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
-                SlotSelect *SSelect = new SlotSelect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), tempSave, false, this);
+                SlotSelect *SSelect = new SlotSelect(tempSave, false, this);
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
                     actionImportSlotFromFile_triggered();
@@ -1197,7 +1197,7 @@ void MainWindow::actionCreateNewMetadata_triggered()
 
 void MainWindow::actionShowSelectionDialog_triggered()
 {
-    SlotSelect slotselect(BCSettings::instance()->value(SETTINGS::SCALE).toDouble(), ff7, false, this);
+    SlotSelect slotselect(ff7, false, this);
     s = slotselect.exec();
     guirefresh(0);
 }

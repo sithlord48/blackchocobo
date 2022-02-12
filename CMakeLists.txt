@@ -47,22 +47,16 @@ endif()
 MESSAGE(STATUS "PROJECT VERSION ${BC_VERSION}")
 add_definitions(-DBC_VERSION="${BC_VERSION}")
 
-if(NOT QT_DEFAULT_MAJOR_VERSION)
-    set(QT_DEFAULT_MAJOR_VERSION 5 CACHE STRING "" FORCE)
-endif()
-
-if (${QT_DEFAULT_MAJOR_VERSION} MATCHES "5")
-    set(REQUIRED_QT_VERSION 5.15.2)
-elseif (${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
-    set(REQUIRED_QT_VERSION 6.2.0)
-endif()
+set(QT_DEFAULT_MAJOR_VERSION 6 CACHE STRING "" FORCE)
+set(REQUIRED_QT_VERSION 6.2.0)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
 endif()
 
 
-find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+    Core5Compat
     Gui
     Svg
     Quick
@@ -70,11 +64,7 @@ find_package(Qt${QT_DEFAULT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED NO_MO
     Xml
 )
 
-if(${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
-    find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
-endif()
-
-find_package(ff7tk 0.81.00 REQUIRED NO_MODULE COMPONENTS
+find_package(ff7tk 0.82 REQUIRED NO_MODULE COMPONENTS
     ff7tk
     ff7tkWidgets
 )
@@ -122,6 +112,7 @@ add_executable(${BIN_NAME} WIN32 MACOSX_BUNDLE
     )
 
 target_link_libraries (${BIN_NAME} PUBLIC
+        Qt::Core5Compat
         Qt::Core
         Qt::Gui
         Qt::Widgets
@@ -132,10 +123,6 @@ target_link_libraries (${BIN_NAME} PUBLIC
         ff7tk::ff7tk
         ff7tk::ff7tkWidgets
     )
-
-if(${QT_DEFAULT_MAJOR_VERSION} EQUAL "6")
-    target_link_libraries(${BIN_NAME} PUBLIC Qt6::Core5Compat)
-endif()
 
 if(APPLE)
     set_target_properties(${BIN_NAME} PROPERTIES
@@ -155,11 +142,11 @@ if(APPLE)
     install(TARGETS ${BIN_NAME} BUNDLE DESTINATION .)
 elseif(UNIX AND NOT APPLE)
     install(TARGETS ${BIN_NAME} RUNTIME DESTINATION bin)
-    install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION share/licenses/blackchocobo/ RENAME LICENSE)
+    install(FILES ${CMAKE_SOURCE_DIR}/COPYING.txt DESTINATION share/licenses/blackchocobo/ RENAME LICENSE)
 elseif(WIN32)
     install(TARGETS ${BIN_NAME} RUNTIME DESTINATION .)
     install(FILES ${FF7TK_DEPENDS} DESTINATION .)
-    install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION .)
+    install(FILES ${CMAKE_SOURCE_DIR}/COPYING.txt DESTINATION .)
 endif()
 
 ##CPACK
@@ -197,21 +184,11 @@ elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
     include(InstallRequiredSystemLibraries)
     find_program(WINDEPLOYQT windeployqt HINTS "${_qt_bin_dir}")
-
-    if(${QT_DEFAULT_MAJOR_VERSION} EQUAL "6")
-        add_custom_command(
+    add_custom_command(
             TARGET ${BIN_NAME} POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
             COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
-        )
-    else()
-        add_custom_command(
-            TARGET ${BIN_NAME} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/qtDeploy
-            COMMAND ${WINDEPLOYQT} --no-compiler-runtime --no-system-d3d-compiler --no-angle --no-webkit2 --no-quick-import -xml -qml -network --dir ${CMAKE_BINARY_DIR}/qtDeploy $<TARGET_FILE:${BIN_NAME}>
-        )
-    endif()
-
+    )
     install(
         DIRECTORY ${CMAKE_BINARY_DIR}/qtDeploy/
         DESTINATION .
