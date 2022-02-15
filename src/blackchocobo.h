@@ -21,12 +21,12 @@
 
 class FF7Save;
 class SaveIcon;
+class PartyTab;
 class PhsListWidget;
 class MenuListWidget;
 class OptionsWidget;
 class MateriaEditor;
 class QSpacerItem;
-class CharEditor;
 class ItemList;
 class QHexEdit;
 class ChocoboManager;
@@ -74,7 +74,7 @@ private:
     OptionsWidget *optionsWidget = nullptr;
     MateriaEditor *materia_editor = nullptr;
     QSpacerItem *mat_spacer = nullptr;
-    CharEditor *char_editor = nullptr;
+    PartyTab *partyTab = nullptr;
     ItemList *itemlist = nullptr;
     QHexEdit *hexEditor = nullptr;
     ChocoboManager *chocoboManager = nullptr;
@@ -167,23 +167,13 @@ private slots://try to keep these in the same order as the .cpp file
     //QString avatar_style(int);
 
     /*CharButtons*/
-    void btnCloud_clicked();
-    void btnBarret_clicked();
-    void btnTifa_clicked();
-    void btnAeris_clicked();
-    void btnRed_clicked();
-    void btnYuffie_clicked();
-    void btnCait_clicked();
-    void btnVincent_clicked();
-    void btnCid_clicked();
+    void charButtonClicked(int charSlot = 0);
+    void partyMembersChanged(int partySlot, int id = 0xFF);
     /*PARTY TAB*/
     void sbGil_valueChanged(double);
     void sbGp_valueChanged(int);
     void sbBattles_valueChanged(int);
     void sbRuns_valueChanged(int);
-    void comboParty1_currentIndexChanged(int index);
-    void comboParty2_currentIndexChanged(int index);
-    void comboParty3_currentIndexChanged(int index);
     /*Chocobo Tab*/
     /* ChocoboManager*/
     void cm_stablesOwnedChanged(qint8);
@@ -448,7 +438,6 @@ private slots://try to keep these in the same order as the .cpp file
     void cbVisibleBlackChocobo_toggled(bool checked);
     void cbVisibleGoldChocobo_toggled(bool checked);
     void set_char_buttons();
-    void btnMaxChar_clicked();
     void sbSnowBegScore_valueChanged(int value);
     void sbSnowExpScore_valueChanged(int value);
     void sbSnowCrazyScore_valueChanged(int value);

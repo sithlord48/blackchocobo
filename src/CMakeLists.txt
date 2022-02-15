@@ -13,6 +13,7 @@ find_package(ff7tk 0.82.00 REQUIRED NO_MODULE COMPONENTS
 )
 
 add_subdirectory(dialogs)
+add_subdirectory(widgets)
 
 if(WIN32)
     set(PLATFORM_EX_SRC ${CMAKE_BINARY_DIR}/deploy/blackchocobo.rc)
@@ -45,6 +46,7 @@ target_link_libraries (${BIN_NAME} PUBLIC
         Qt::Quick
         BCDIALOGS
         BCICONS
+        BCWIDGETS
         QHEXEDIT
         ff7tk::ff7tk
         ff7tk::ff7tkWidgets

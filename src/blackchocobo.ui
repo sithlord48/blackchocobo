@@ -32,437 +32,6 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_party">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-       <attribute name="title">
-        <string>Party</string>
-       </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_18">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-        <item>
-         <widget class="QFrame" name="frmParty">
-          <layout class="QVBoxLayout" name="verticalLayout_23">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <widget class="QFrame" name="frmPartyMoney">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_84">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QGroupBox" name="party_group_box">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="title">
-                 <string>In Party</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <property name="spacing">
-                  <number>3</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>3</number>
-                 </property>
-                 <item>
-                  <widget class="QComboBox" name="comboParty1">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maxVisibleItems">
-                    <number>13</number>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="comboParty2">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maxVisibleItems">
-                    <number>13</number>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="comboParty3">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maxVisibleItems">
-                    <number>13</number>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="groupBox_5">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Click On A Char To edit ===========&gt;</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <item row="2" column="0">
-               <widget class="QPushButton" name="btnCait">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="btnRed">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="btnBarret">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QPushButton" name="btnCid">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QPushButton" name="btnCloud">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="btnYuffie">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="btnAeris">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QPushButton" name="btnTifa">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="btnVincent">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btnMaxChar">
-             <property name="text">
-              <string>Selected Character Max Stats/Weapons/Materia</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QFrame" name="group_char_editor_box">
-          <widget class="QFrame" name="frame_status">
-           <property name="geometry">
-            <rect>
-             <x>-340</x>
-             <y>25</y>
-             <width>766</width>
-             <height>18</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>18</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>18</height>
-            </size>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_112">
-            <property name="spacing">
-             <number>0</number>
-            </property>
-            <property name="leftMargin">
-             <number>0</number>
-            </property>
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="rightMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
-            <item>
-             <spacer name="horizontalSpacer_95">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>14</width>
-                <height>18</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="lbl_fileName">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="lineWidth">
-               <number>0</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_76">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>25</width>
-                <height>0</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="lbl_current_slot_txt">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_115">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>14</width>
-                <height>18</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QWidget" name="tab_items">
        <attribute name="title">
         <string>Items</string>
@@ -1088,11 +657,12 @@
              <x>0</x>
              <y>0</y>
              <width>1130</width>
-             <height>814</height>
+             <height>796</height>
             </rect>
            </property>
            <attribute name="icon">
-            <iconset theme="psxmc"></iconset>
+            <iconset theme="psxmc">
+             <normaloff>.</normaloff>.</iconset>
            </attribute>
            <attribute name="label">
             <string>Field Location</string>
@@ -1130,12 +700,13 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>707</width>
-             <height>520</height>
+             <width>649</width>
+             <height>521</height>
             </rect>
            </property>
            <attribute name="icon">
-            <iconset theme="world_map"></iconset>
+            <iconset theme="world_map">
+             <normaloff>.</normaloff>.</iconset>
            </attribute>
            <attribute name="label">
             <string>Worldmap Location</string>
@@ -1181,8 +752,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>420</width>
-                 <height>1109</height>
+                 <width>407</width>
+                 <height>994</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
@@ -2991,8 +2562,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>561</width>
-                  <height>2721</height>
+                  <width>495</width>
+                  <height>2764</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -5677,13 +5248,10 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  <number>60</number>
                 </property>
                 <property name="readOnly">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="placeholderText">
                  <string>No Description Text</string>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -6442,8 +6010,7 @@ rgb(255, 255, 255)</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="comboZVar">
-                  </widget>
+                  <widget class="QComboBox" name="comboZVar"/>
                  </item>
                 </layout>
                </item>
@@ -6769,6 +6336,137 @@ Var And Scrolling Synced To Left Table</string>
       </widget>
      </widget>
     </item>
+    <item>
+     <widget class="QFrame" name="frame_status">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>18</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>18</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_112">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_95">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>14</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_fileName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_76">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_current_slot_txt">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_115">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>14</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -6831,11 +6529,12 @@ Var And Scrolling Synced To Left Table</string>
      <string>&amp;Edit</string>
     </property>
     <widget class="QMenu" name="menuRegion">
-     <property name="icon">
-      <iconset theme="globe"></iconset>
-     </property>
      <property name="title">
       <string>&amp;Slot Region</string>
+     </property>
+     <property name="icon">
+      <iconset theme="globe">
+       <normaloff>.</normaloff>.</iconset>
      </property>
      <addaction name="actionRegionUSA"/>
      <addaction name="separator"/>
@@ -6873,7 +6572,8 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="actionQuit">
    <property name="icon">
-    <iconset theme="application-exit"></iconset>
+    <iconset theme="application-exit">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
@@ -6887,7 +6587,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenSaveFile">
    <property name="icon">
-    <iconset theme="document-open"></iconset>
+    <iconset theme="document-open">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Open</string>
@@ -6904,7 +6605,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save-as"></iconset>
+    <iconset theme="document-save-as">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Sa&amp;ve As</string>
@@ -6918,7 +6620,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset theme="help-about"></iconset>
+    <iconset theme="help-about">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -6938,7 +6641,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="view-list-details"></iconset>
+    <iconset theme="view-list-details">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Select Slot</string>
@@ -6952,7 +6656,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-copy"></iconset>
+    <iconset theme="edit-copy">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Copy Current Slot</string>
@@ -6969,7 +6674,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-paste"></iconset>
+    <iconset theme="edit-paste">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Paste Slot</string>
@@ -6986,7 +6692,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-clear"></iconset>
+    <iconset theme="edit-clear">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Clea&amp;r Slot</string>
@@ -7003,7 +6710,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-       <iconset theme="go-previous"></iconset>
+    <iconset theme="go-previous">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Previous Slot</string>
@@ -7020,7 +6728,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-next"></iconset>
+    <iconset theme="go-next">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Next Slot</string>
@@ -7034,7 +6743,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionShowOptions">
    <property name="icon">
-       <iconset theme="configure"></iconset>
+    <iconset theme="configure">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Configure</string>
@@ -7126,7 +6836,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionNewGame">
    <property name="icon">
-    <iconset theme="document-new"></iconset>
+    <iconset theme="document-new">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;New Game</string>
@@ -7143,7 +6854,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-       <iconset theme="document-new-from-template"></iconset>
+    <iconset theme="document-new-from-template">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>New Game&amp;+ </string>
@@ -7157,7 +6869,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionExportChar">
    <property name="icon">
-    <iconset theme="character-export"></iconset>
+    <iconset theme="character-export">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>E&amp;xport Current Character</string>
@@ -7168,7 +6881,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionImportChar">
    <property name="icon">
-    <iconset theme="character-import"></iconset>
+    <iconset theme="character-import">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>I&amp;mport Current Character</string>
@@ -7182,7 +6896,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save"></iconset>
+    <iconset theme="document-save">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -7199,7 +6914,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="view-refresh"></iconset>
+    <iconset theme="view-refresh">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Reload</string>
@@ -7224,7 +6940,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionCreateNewMetadata">
    <property name="icon">
-    <iconset theme="folder-sync"></iconset>
+    <iconset theme="folder-sync">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Create Cloud Save &amp;Folder</string>
@@ -7238,7 +6955,8 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-       <iconset theme="document-import"></iconset>
+    <iconset theme="document-import">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Import To Current Slot</string>
@@ -7249,7 +6967,8 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenAchievementFile">
    <property name="icon">
-    <iconset theme="games-highscores"></iconset>
+    <iconset theme="games-highscores">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Achievement Editor</string>
@@ -7261,19 +6980,9 @@ Var And Scrolling Synced To Left Table</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>comboParty2</tabstop>
   <tabstop>sbGp</tabstop>
   <tabstop>sbBattles</tabstop>
   <tabstop>sbRuns</tabstop>
-  <tabstop>btnCloud</tabstop>
-  <tabstop>btnBarret</tabstop>
-  <tabstop>btnTifa</tabstop>
-  <tabstop>btnAeris</tabstop>
-  <tabstop>btnRed</tabstop>
-  <tabstop>btnYuffie</tabstop>
-  <tabstop>btnCait</tabstop>
-  <tabstop>btnVincent</tabstop>
-  <tabstop>btnCid</tabstop>
   <tabstop>comboRegionSlot</tabstop>
   <tabstop>tblMateria</tabstop>
   <tabstop>comboReplay</tabstop>
@@ -7298,8 +7007,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sbTimerTimeMin</tabstop>
   <tabstop>sbTimerTimeSec</tabstop>
  </tabstops>
- <resources>
-  <include location="icons.qrc"/>
-  <include location="ff7tk/icons/common.qrc"/>
- </resources>
+ <resources/>
+ <connections/>
 </ui>

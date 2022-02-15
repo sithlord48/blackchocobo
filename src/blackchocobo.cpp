@@ -57,6 +57,7 @@
 #include <ChocoboManager.h>
 #include <LocationViewer.h>
 
+#include "widgets/partytab.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 BlackChocobo::BlackChocobo(QWidget *parent)
     : QMainWindow(parent)
@@ -73,6 +74,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     , menuList(new MenuListWidget)
     , optionsWidget(new OptionsWidget)
     , materia_editor(new MateriaEditor(this))
+    , partyTab(new PartyTab)
     , hexEditor(new QHexEdit)
     , chocoboManager(new ChocoboManager)
 {
@@ -99,7 +101,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     loadChildWidgetSettings();
     init_connections();
     actionNewGame_triggered();
-    btnCloud_clicked();
+    partyTab->pressCharacterButton(FF7Char::Cloud);
     ff7->setFileModified(false, 0);
 }
 
@@ -216,8 +218,10 @@ void BlackChocobo::initDisplay()
     ui->Menu_Box->setLayout(menuLayout);
 
     chocoboManager->setContentsMargins(0, 20, 0, 0);
+    ui->tabWidget->insertTab(0, partyTab, tr("Party"));
     ui->tabWidget->insertTab(3, chocoboManager, tr("Chocobo"));
     ui->tabWidget->insertTab(7, optionsWidget, tr("Game Options"));
+    ui->tabWidget->setCurrentIndex(0);
 
     optionsWidget->setControllerMappingVisible(false);
     QVBoxLayout *materia_editor_layout = new QVBoxLayout();
@@ -238,12 +242,6 @@ void BlackChocobo::initDisplay()
     hexLayout->addWidget(hexEditor);
     ui->group_hexedit->setLayout(hexLayout);
 
-    char_editor = new CharEditor(this);
-    QHBoxLayout *char_editor_layout = new QHBoxLayout;
-    char_editor_layout->setContentsMargins(0, 0, 0, 0);
-    char_editor_layout->setSpacing(0);
-    char_editor_layout->addWidget(char_editor);
-    ui->group_char_editor_box->setLayout(char_editor_layout);
 
     itemlist = new ItemList(this);
     ui->group_items->layout()->removeWidget(ui->group_item_options);
@@ -321,35 +319,7 @@ void BlackChocobo::initDisplay()
 void BlackChocobo::setItemSizes()
 {
     setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
-    const QSize partyButtonSize(98, 110);
-    ui->btnCloud->setFixedSize(partyButtonSize);
-    ui->btnBarret->setFixedSize(partyButtonSize);
-    ui->btnTifa->setFixedSize(partyButtonSize);
-    ui->btnAeris->setFixedSize(partyButtonSize);
-    ui->btnRed->setFixedSize(partyButtonSize);
-    ui->btnYuffie->setFixedSize(partyButtonSize);
-    ui->btnCait->setFixedSize(partyButtonSize);
-    ui->btnVincent->setFixedSize(partyButtonSize);
-    ui->btnCid->setFixedSize(partyButtonSize);
 
-    const QSize partyIconSize(92, 104);
-    ui->btnCloud->setIconSize(partyIconSize);
-    ui->btnBarret->setIconSize(partyIconSize);
-    ui->btnTifa->setIconSize(partyIconSize);
-    ui->btnAeris->setIconSize(partyIconSize);
-    ui->btnRed->setIconSize(partyIconSize);
-    ui->btnYuffie->setIconSize(partyIconSize);
-    ui->btnCait->setIconSize(partyIconSize);
-    ui->btnVincent->setIconSize(partyIconSize);
-    ui->btnCid->setIconSize(partyIconSize);
-
-    const QSize comboPartyIconSize(32, 32);
-    ui->comboParty1->setFixedHeight(comboPartyIconSize.height());
-    ui->comboParty2->setFixedHeight(comboPartyIconSize.height());
-    ui->comboParty3->setFixedHeight(comboPartyIconSize.height());
-    ui->comboParty1->setIconSize(comboPartyIconSize);
-    ui->comboParty2->setIconSize(comboPartyIconSize);
-    ui->comboParty3->setIconSize(comboPartyIconSize);
 
     ui->groupBox_11->setFixedWidth(375);
     ui->groupBox_18->setFixedWidth(273); //materia table group.
@@ -359,7 +329,7 @@ void BlackChocobo::setItemSizes()
 
     ui->worldMapView->setGeometry(5 , 32, 432, 336);
 
-    ui->comboMapControls->setFixedHeight(comboPartyIconSize.height());
+    ui->comboMapControls->setFixedHeight(32);
 
     ui->slideWorldX->setGeometry(-1, 369, 443, 10);
     ui->slideWorldY->setGeometry(437, 26, 10, 347);
@@ -380,29 +350,7 @@ void BlackChocobo::setItemSizes()
 
 void BlackChocobo::populateCombos()
 {
-//Party Combos
-    if (ui->comboParty1->count() != 0) {
-        for (int i = 0; i < 11; i++) {
-            ui->comboParty1->setItemText(i, FF7Char::instance()->defaultName(i));
-            ui->comboParty2->setItemText(i, FF7Char::instance()->defaultName(i));
-            ui->comboParty3->setItemText(i, FF7Char::instance()->defaultName(i));
-        }
-        ui->comboParty1->setItemText(12, tr("-Empty-"));
-        ui->comboParty2->setItemText(12, tr("-Empty-"));
-        ui->comboParty3->setItemText(12, tr("-Empty-"));
-    } else {
-        for (int i = 0; i < 11; i++) {
-            ui->comboParty1->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
-            ui->comboParty2->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
-            ui->comboParty3->addItem(FF7Char::instance()->icon(i), FF7Char::instance()->defaultName(i));
-        }
-        ui->comboParty1->addItem(QString("0x0B"));
-        ui->comboParty2->addItem(QString("0x0B"));
-        ui->comboParty3->addItem(QString("0x0B"));
-        ui->comboParty1->addItem(tr("-Empty-"));
-        ui->comboParty2->addItem(tr("-Empty-"));
-        ui->comboParty3->addItem(tr("-Empty-"));
-    }
+
 //World party leader Combo.
     if (ui->comboWorldPartyLeader->count() != 0) {
         ui->comboWorldPartyLeader->setItemText(0, FF7Char::instance()->defaultName(FF7Char::Cloud));
@@ -422,10 +370,10 @@ void BlackChocobo::init_style()
     sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
     sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
     sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
-    char_editor->setSliderStyle(sliderStyleSheet);
+    partyTab->setCharEditorSliderStyle(sliderStyleSheet);
 
     QString tabStyle = QString("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()), QString::number(this->palette().highlight().color().green()), QString::number(this->palette().highlight().color().blue()));
-    char_editor->setToolBoxStyle(tabStyle);
+    partyTab->setCharEditorToolBoxStyle(tabStyle);
     ui->locationToolBox->setStyleSheet(tabStyle);
 
     ui->slideWorldY->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-left);}"));
@@ -469,24 +417,6 @@ void BlackChocobo::init_connections()
     connect(ui->actionRegionJPN, &QAction::triggered, this, &BlackChocobo::actionRegionJPN_triggered);
     connect(ui->actionRegionJPNInternational, &QAction::triggered, this, &BlackChocobo::actionRegionJPNInternational_triggered);
     //Buttons
-    connect(ui->btnCloud, &QPushButton::clicked, this, &BlackChocobo::btnCloud_clicked);
-    connect(ui->btnBarret, &QPushButton::clicked, this, &BlackChocobo::btnBarret_clicked);
-    connect(ui->btnTifa, &QPushButton::clicked, this, &BlackChocobo::btnTifa_clicked);
-    connect(ui->btnAeris, &QPushButton::clicked, this, &BlackChocobo::btnAeris_clicked);
-    connect(ui->btnRed, &QPushButton::clicked, this, &BlackChocobo::btnRed_clicked);
-    connect(ui->btnYuffie, &QPushButton::clicked, this, &BlackChocobo::btnYuffie_clicked);
-    connect(ui->btnCait, &QPushButton::clicked, this, &BlackChocobo::btnCait_clicked);
-    connect(ui->btnVincent, &QPushButton::clicked, this, &BlackChocobo::btnVincent_clicked);
-    connect(ui->btnCid, &QPushButton::clicked, this, &BlackChocobo::btnCid_clicked);
-    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &BlackChocobo::btnSearchFlyers_clicked);
-    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &BlackChocobo::btnSearchKeyItems_clicked);
-    connect(ui->btnReplay, &QPushButton::clicked, this, &BlackChocobo::btnReplay_clicked);
-    connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllMateria_clicked);
-    connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllStolen_clicked);
-    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &BlackChocobo::btnAddAllItems_clicked);
-    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllItems_clicked);
-    connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnAddAllMateria_clicked);
-    connect(ui->btnMaxChar, &QPushButton::clicked, this, &BlackChocobo::btnMaxChar_clicked);
     connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &BlackChocobo::btnSearchFlyers_clicked);
     connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &BlackChocobo::btnSearchKeyItems_clicked);
     connect(ui->btnReplay, &QPushButton::clicked, this, &BlackChocobo::btnReplay_clicked);
@@ -648,9 +578,6 @@ void BlackChocobo::init_connections()
     connect(ui->cbRegVinny, &QCheckBox::toggled, this, &BlackChocobo::cbRegVinny_toggled);
     //QComboBoxes
     connect(ui->comboHexEditor, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHexEditor_currentIndexChanged);
-    connect(ui->comboParty1, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty1_currentIndexChanged);
-    connect(ui->comboParty2, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty2_currentIndexChanged);
-    connect(ui->comboParty3, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty3_currentIndexChanged);
     connect(ui->comboRegionSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboRegionSlot_currentIndexChanged);
     connect(ui->comboHighwindBuggy, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHighwindBuggy_currentIndexChanged);
     connect(ui->comboMapControls, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboMapControls_currentIndexChanged);
@@ -690,44 +617,46 @@ void BlackChocobo::init_connections()
     connect(menuList, &MenuListWidget::lockedToggled, this, &BlackChocobo::menuList_box_locked_toggled);
     connect(menuList, &MenuListWidget::visibleToggled, this, &BlackChocobo::menuList_box_visible_toggled);
 
-    connect(char_editor, &CharEditor::id_changed, this, &BlackChocobo::char_id_changed);
-    connect(char_editor, &CharEditor::level_changed, this, &BlackChocobo::char_level_changed);
-    connect(char_editor, &CharEditor::str_changed, this, &BlackChocobo::char_str_changed);
-    connect(char_editor, &CharEditor::vit_changed, this, &BlackChocobo::char_vit_changed);
-    connect(char_editor, &CharEditor::mag_changed, this, &BlackChocobo::char_mag_changed);
-    connect(char_editor, &CharEditor::spi_changed, this, &BlackChocobo::char_spi_changed);
-    connect(char_editor, &CharEditor::dex_changed, this, &BlackChocobo::char_dex_changed);
-    connect(char_editor, &CharEditor::lck_changed, this, &BlackChocobo::char_lck_changed);
-    connect(char_editor, &CharEditor::strBonus_changed, this, &BlackChocobo::char_strBonus_changed);
-    connect(char_editor, &CharEditor::vitBonus_changed, this, &BlackChocobo::char_vitBonus_changed);
-    connect(char_editor, &CharEditor::magBonus_changed, this, &BlackChocobo::char_magBonus_changed);
-    connect(char_editor, &CharEditor::spiBonus_changed, this, &BlackChocobo::char_spiBonus_changed);
-    connect(char_editor, &CharEditor::dexBonus_changed, this, &BlackChocobo::char_dexBonus_changed);
-    connect(char_editor, &CharEditor::lckBonus_changed, this, &BlackChocobo::char_lckBonus_changed);
-    connect(char_editor, &CharEditor::limitLevel_changed, this, &BlackChocobo::char_limitLevel_changed);
-    connect(char_editor, &CharEditor::limitBar_changed, this, &BlackChocobo::char_limitBar_changed);
-    connect(char_editor, &CharEditor::name_changed, this, &BlackChocobo::char_name_changed);
-    connect(char_editor, &CharEditor::weapon_changed, this, &BlackChocobo::char_weapon_changed);
-    connect(char_editor, &CharEditor::armor_changed, this, &BlackChocobo::char_armor_changed);
-    connect(char_editor, &CharEditor::accessory_changed, this, &BlackChocobo::char_accessory_changed);
-    connect(char_editor, &CharEditor::curHp_changed, this, &BlackChocobo::char_curHp_changed);
-    connect(char_editor, &CharEditor::maxHp_changed, this, &BlackChocobo::char_maxHp_changed);
-    connect(char_editor, &CharEditor::curMp_changed, this, &BlackChocobo::char_curMp_changed);
-    connect(char_editor, &CharEditor::maxMp_changed, this, &BlackChocobo::char_maxMp_changed);
-    connect(char_editor, &CharEditor::kills_changed, this, &BlackChocobo::char_kills_changed);
-    connect(char_editor, &CharEditor::row_changed, this, &BlackChocobo::char_row_changed);
-    connect(char_editor, &CharEditor::levelProgress_changed, this, &BlackChocobo::char_levelProgress_changed);
-    connect(char_editor, &CharEditor::sadnessfury_changed, this, &BlackChocobo::char_sadnessfury_changed);
-    connect(char_editor, &CharEditor::limits_changed, this, &BlackChocobo::char_limits_changed);
-    connect(char_editor, &CharEditor::timesused1_changed, this, &BlackChocobo::char_timesused1_changed);
-    connect(char_editor, &CharEditor::timesused2_changed, this, &BlackChocobo::char_timeused2_changed);
-    connect(char_editor, &CharEditor::timesused3_changed, this, &BlackChocobo::char_timeused3_changed);
-    connect(char_editor, &CharEditor::baseHp_changed, this, &BlackChocobo::char_baseHp_changed);
-    connect(char_editor, &CharEditor::baseMp_changed, this, &BlackChocobo::char_baseMp_changed);
-    connect(char_editor, &CharEditor::exp_changed, this, &BlackChocobo::char_exp_changed);
-    connect(char_editor, &CharEditor::mslotChanged, this, &BlackChocobo::char_mslot_changed);
-    connect(char_editor, &CharEditor::Materias_changed, this, &BlackChocobo::char_materia_changed);
-    connect(char_editor, &CharEditor::expNext_changed, this, &BlackChocobo::char_expNext_changed);
+    connect(partyTab, &PartyTab::partyChanged, this, &BlackChocobo::partyMembersChanged);
+    connect(partyTab, &PartyTab::loadCharacterInSlot, this, &BlackChocobo::charButtonClicked);
+    connect(partyTab, &PartyTab::characterIdChanged, this, &BlackChocobo::char_id_changed);
+    connect(partyTab, &PartyTab::characterLevelChanged, this, &BlackChocobo::char_level_changed);
+    connect(partyTab, &PartyTab::characterStrChanged, this, &BlackChocobo::char_str_changed);
+    connect(partyTab, &PartyTab::characterVitChanged, this, &BlackChocobo::char_vit_changed);
+    connect(partyTab, &PartyTab::characterMagChanged, this, &BlackChocobo::char_mag_changed);
+    connect(partyTab, &PartyTab::characterSpiChanged, this, &BlackChocobo::char_spi_changed);
+    connect(partyTab, &PartyTab::characterDexChanged, this, &BlackChocobo::char_dex_changed);
+    connect(partyTab, &PartyTab::characterLckChanged, this, &BlackChocobo::char_lck_changed);
+    connect(partyTab, &PartyTab::characterStrBonusChanged, this, &BlackChocobo::char_strBonus_changed);
+    connect(partyTab, &PartyTab::characterVitBonusChanged, this, &BlackChocobo::char_vitBonus_changed);
+    connect(partyTab, &PartyTab::characterMagBonusChanged, this, &BlackChocobo::char_magBonus_changed);
+    connect(partyTab, &PartyTab::characterSpiBonusChanged, this, &BlackChocobo::char_spiBonus_changed);
+    connect(partyTab, &PartyTab::characterDexBonusChanged, this, &BlackChocobo::char_dexBonus_changed);
+    connect(partyTab, &PartyTab::characterLckBonusChanged, this, &BlackChocobo::char_lckBonus_changed);
+    connect(partyTab, &PartyTab::characterLimitLevelChanged, this, &BlackChocobo::char_limitLevel_changed);
+    connect(partyTab, &PartyTab::characterLimitBarChanged, this, &BlackChocobo::char_limitBar_changed);
+    connect(partyTab, &PartyTab::characterNameChanged, this, &BlackChocobo::char_name_changed);
+    connect(partyTab, &PartyTab::characterWeaponChanged, this, &BlackChocobo::char_weapon_changed);
+    connect(partyTab, &PartyTab::characterArmorChanged, this, &BlackChocobo::char_armor_changed);
+    connect(partyTab, &PartyTab::characterAccessoryChanged, this, &BlackChocobo::char_accessory_changed);
+    connect(partyTab, &PartyTab::characterCurHpChanged, this, &BlackChocobo::char_curHp_changed);
+    connect(partyTab, &PartyTab::characterMaxHpChanged, this, &BlackChocobo::char_maxHp_changed);
+    connect(partyTab, &PartyTab::characterCurMpChanged, this, &BlackChocobo::char_curMp_changed);
+    connect(partyTab, &PartyTab::characterMaxMpChanged, this, &BlackChocobo::char_maxMp_changed);
+    connect(partyTab, &PartyTab::characterKillsChanged, this, &BlackChocobo::char_kills_changed);
+    connect(partyTab, &PartyTab::characterRowChanged, this, &BlackChocobo::char_row_changed);
+    connect(partyTab, &PartyTab::characterLevelProgressChanged, this, &BlackChocobo::char_levelProgress_changed);
+    connect(partyTab, &PartyTab::characterSadnessfuryChanged, this, &BlackChocobo::char_sadnessfury_changed);
+    connect(partyTab, &PartyTab::characterLimitsChanged, this, &BlackChocobo::char_limits_changed);
+    connect(partyTab, &PartyTab::characterTimesused1Changed, this, &BlackChocobo::char_timesused1_changed);
+    connect(partyTab, &PartyTab::characterTimesused2Changed, this, &BlackChocobo::char_timeused2_changed);
+    connect(partyTab, &PartyTab::characterTimesused3Changed, this, &BlackChocobo::char_timeused3_changed);
+    connect(partyTab, &PartyTab::characterBaseHpChanged, this, &BlackChocobo::char_baseHp_changed);
+    connect(partyTab, &PartyTab::characterBaseMpChanged, this, &BlackChocobo::char_baseMp_changed);
+    connect(partyTab, &PartyTab::characterExpChanged, this, &BlackChocobo::char_exp_changed);
+    connect(partyTab, &PartyTab::characterMslotChanged, this, &BlackChocobo::char_mslot_changed);
+    connect(partyTab, &PartyTab::characterMateriaChanged, this, &BlackChocobo::char_materia_changed);
+    connect(partyTab, &PartyTab::characterExpNextChanged, this, &BlackChocobo::char_expNext_changed);
 
     connect(chocoboManager, &ChocoboManager::ownedChanged, this, &BlackChocobo::cm_stablesOwnedChanged);
     connect(chocoboManager, &ChocoboManager::stableMaskChanged, this, &BlackChocobo::cm_stableMaskChanged);
@@ -792,12 +721,12 @@ void BlackChocobo::loadBasicSettings()
 void BlackChocobo::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
-    char_editor->setEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     materia_editor->setEditableMateriaCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     itemlist->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    char_editor->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
-    char_editor->setAutoLevel(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
-    char_editor->setAutoStatCalc(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
+    partyTab->setCharEditorEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    partyTab->setCharEditorAdvancedMode(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
+    partyTab->setCharEditorAutoLevel(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
+    partyTab->setCharEditorAutoStatCalc(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
     chocoboManager->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHOCOADVANCED, false).toBool());
     locationViewer->setAdvancedMode(BCSettings::instance()->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
     ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST, false).toBool());
@@ -835,6 +764,7 @@ void BlackChocobo::changeEvent(QEvent *e)
 #endif
     } else if (e->type() == QEvent::LanguageChange) {
         ui->retranslateUi(this);
+        ui->tabWidget->setTabText(0, tr("Party"));
         ui->tabWidget->setTabText(3, tr("Chocobo"));
         ui->tabWidget->setTabText(7, tr("Game Options"));
         populateCombos();
@@ -1005,8 +935,8 @@ void BlackChocobo::actionImportChar_triggered()
     QByteArray new_char;
     new_char = file.readAll();
     ff7->importCharacter(s, curchar, new_char);
-    char_editor->setChar(ff7->character(s, curchar), ff7->charName(s, curchar));
-    set_char_buttons();
+    partyTab->setCharacter(ff7->character(s, curchar), ff7->charName(s, curchar));
+    partyTab->setButtonImageToId(curchar, ff7->character(s, curchar).id);
 }
 
 void BlackChocobo::actionExportChar_triggered()
@@ -1824,33 +1754,9 @@ void BlackChocobo::tabWidget_currentChanged(int index)
     hexCursorPos = hexEditor->cursorPosition();
     switch (index) {
     case 0://Party Tab
-        if (ff7->party(s, 0) >= 0x0C)
-            ui->comboParty1->setCurrentIndex(12);
-        else
-            ui->comboParty1->setCurrentIndex(ff7->party(s, 0));
-
-        if (ff7->party(s, 1) >= 0x0C)
-            ui->comboParty2->setCurrentIndex(12);
-        else
-            ui->comboParty2->setCurrentIndex(ff7->party(s, 1));
-
-        if (ff7->party(s, 2) >= 0x0C)
-            ui->comboParty3->setCurrentIndex(12);
-        else
-            ui->comboParty3->setCurrentIndex(ff7->party(s, 2));
-
+        partyTab->setPartyMembers(ff7->party(s, 0), ff7->party(s, 1), ff7->party(s, 2));
         set_char_buttons();
-        switch (curchar) {
-        case 0: btnCloud_clicked(); break;
-        case 1: btnBarret_clicked(); break;
-        case 2: btnTifa_clicked(); break;
-        case 3: btnAeris_clicked(); break;
-        case 4: btnRed_clicked(); break;
-        case 5: btnYuffie_clicked(); break;
-        case 6: btnCait_clicked(); break;
-        case 7: btnVincent_clicked(); break;
-        case 8: btnCid_clicked(); break;
-        }
+        partyTab->pressCharacterButton(curchar);
         break;
 
     case 1://Item Tab
@@ -1984,15 +1890,10 @@ void BlackChocobo::guirefresh(bool newgame)
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::set_char_buttons()
 {
-    ui->btnCloud->setIcon(FF7Char::instance()->icon(ff7->charID(s, 0)));
-    ui->btnBarret->setIcon(FF7Char::instance()->icon(ff7->charID(s, 1)));
-    ui->btnTifa->setIcon(FF7Char::instance()->icon(ff7->charID(s, 2)));
-    ui->btnAeris->setIcon(FF7Char::instance()->icon(ff7->charID(s, 3)));
-    ui->btnRed->setIcon(FF7Char::instance()->icon(ff7->charID(s, 4)));
-    ui->btnYuffie->setIcon(FF7Char::instance()->icon(ff7->charID(s, 5)));
-    ui->btnCait->setIcon(FF7Char::instance()->icon(ff7->charID(s, 6)));
-    ui->btnVincent->setIcon(FF7Char::instance()->icon(ff7->charID(s, 7)));
-    ui->btnCid->setIcon(FF7Char::instance()->icon(ff7->charID(s, 8)));
+    QList<int> ids;
+         for (int i =0; i < 9; i++)
+             ids.append(ff7->charID(s,i));
+         partyTab->setButtonImagesToIds(ids);
 }
 void BlackChocobo::progress_update()
 {
@@ -2067,127 +1968,28 @@ void BlackChocobo::progress_update()
     
     load = false;
 }
-/*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void BlackChocobo::btnCloud_clicked()
-{
-    curchar = 0;
-    char_editor->setChar(ff7->character(s, 0), ff7->charName(s, 0));
-}
-void BlackChocobo::btnBarret_clicked()
-{
-    curchar = 1;
-    char_editor->setChar(ff7->character(s, 1), ff7->charName(s, 1));
-}
-void BlackChocobo::btnTifa_clicked()
-{
-    curchar = 2;
-    char_editor->setChar(ff7->character(s, 2), ff7->charName(s, 2));
-}
-void BlackChocobo::btnAeris_clicked()
-{
-    curchar = 3;
-    char_editor->setChar(ff7->character(s, 3), ff7->charName(s, 3));
-}
-void BlackChocobo::btnRed_clicked()
-{
-    curchar = 4;
-    char_editor->setChar(ff7->character(s, 4), ff7->charName(s, 4));
-}
-void BlackChocobo::btnYuffie_clicked()
-{
-    curchar = 5;
-    char_editor->setChar(ff7->character(s, 5), ff7->charName(s, 5));
-}
-void BlackChocobo::btnCait_clicked()
-{
-    curchar = 6;
-    char_editor->setChar(ff7->character(s, 6), ff7->charName(s, 6));
-}
-void BlackChocobo::btnVincent_clicked()
-{
-    curchar = 7;
-    char_editor->setChar(ff7->character(s, 7), ff7->charName(s, 7));
-}
-void BlackChocobo::btnCid_clicked()
-{
-    curchar = 8;
-    char_editor->setChar(ff7->character(s, 8), ff7->charName(s, 8));
-}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void BlackChocobo::comboParty1_currentIndexChanged(int index)
+void BlackChocobo::charButtonClicked(int charSlot)
 {
-    if (!load) {
-        if (index == 0x0C) { //empty char slot (index 12)
-            ff7->setParty(s, 0, 0xFF);
-            //wipe all desc data if noone is there
-            ff7->setDescParty(s, 0, ff7->party(s, 0));
-            ff7->setDescCurHP(s, 0);
-            ff7->setDescMaxHP(s, 0);
-            ff7->setDescCurMP(s, 0);
-            ff7->setDescMaxMP(s, 0);
-            ff7->setDescLevel(s, 0);
-            ff7->setDescName(s, QString(QByteArray(16, char(0xFF))));
-        } else {
-            ff7->setParty(s, 0, index);
-            ff7->setDescParty(s, 0, ff7->party(s, 0));
-            // IF ID >8 no char slot so for 9, 10, 11 Use slot 6,7,8 char data.
-            if (ff7->party(s, 0) == FF7Char::YoungCloud) {
-                ff7->setDescCurHP(s, ff7->charCurrentHp(s, 6));
-                ff7->setDescMaxHP(s, ff7->charMaxHp(s, 6));
-                ff7->setDescCurMP(s, ff7->charCurrentMp(s, 6));
-                ff7->setDescMaxMP(s, ff7->charMaxMp(s, 6));
-                ff7->setDescLevel(s, ff7->charLevel(s, 6));
-                ff7->setDescName(s, ff7->charName(s, 6));
-            } else if (ff7->party(s, 0) == FF7Char::Sephiroth) {
-                ff7->setDescCurHP(s, ff7->charCurrentHp(s, 7));
-                ff7->setDescMaxHP(s, ff7->charMaxHp(s, 7));
-                ff7->setDescCurMP(s, ff7->charCurrentMp(s, 7));
-                ff7->setDescMaxMP(s, ff7->charMaxMp(s, 7));
-                ff7->setDescLevel(s, ff7->charLevel(s, 7));
-                ff7->setDescName(s, ff7->charName(s, 7));
-            } else if (ff7->party(s, 0) == 11) {
-                //chocobo? that never really works.
-                ff7->setDescCurHP(s, ff7->charCurrentHp(s, 8));
-                ff7->setDescMaxHP(s, ff7->charMaxHp(s, 8));
-                ff7->setDescCurMP(s, ff7->charCurrentMp(s, 8));
-                ff7->setDescMaxMP(s, ff7->charMaxMp(s, 8));
-                ff7->setDescLevel(s, ff7->charLevel(s, 8));
-                ff7->setDescName(s, ff7->charName(s, 8));
-            } else {
-                ff7->setDescCurHP(s, ff7->charCurrentHp(s, ff7->party(s, 0)));
-                ff7->setDescMaxHP(s, ff7->charMaxHp(s, ff7->party(s, 0)));
-                ff7->setDescCurMP(s, ff7->charCurrentMp(s, ff7->party(s, 0)));
-                ff7->setDescMaxMP(s, ff7->charMaxMp(s, ff7->party(s, 0)));
-                ff7->setDescLevel(s, ff7->charLevel(s, ff7->party(s, 0)));
-                ff7->setDescName(s, ff7->charName(s, ff7->party(s, 0)));
-            }
-        }
-    }
+    curchar = charSlot;
+    partyTab->setCharacter(ff7->character(s, curchar), ff7->charName(s, curchar));
 }
 
-void BlackChocobo::comboParty2_currentIndexChanged(int index)
+void BlackChocobo::partyMembersChanged(int partySlot, int id)
 {
-    if (!load) {
-        if (index == 12)
-            ff7->setParty(s, 1, FF7Char::Empty);
-        else
-            ff7->setParty(s, 1, index);
-        //either way set the desc
-        ff7->setDescParty(s, 1, ff7->party(s, 1));
-    }
+    if (load)
+        return;
+
+    if (partySlot > 2 || partySlot < 0)
+        return;
+
+    if(id == ff7->party(s, partySlot) || id < 0)
+        return;
+
+    ff7->setParty(s, partySlot, id);
 }
 
-void BlackChocobo::comboParty3_currentIndexChanged(int index)
-{
-    if (!load) {
-        if (index == 12)
-            ff7->setParty(s, 2, FF7Char::Empty);
-        else
-            ff7->setParty(s, 2, index);
-        //either way set the desc
-        ff7->setDescParty(s, 2, ff7->party(s, 2));
-    }
-}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::cm_stablesOwnedChanged(qint8 owned)
 {
@@ -2958,9 +2760,7 @@ void BlackChocobo::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(183);
-        ui->comboParty1->setCurrentIndex(0);
-        ui->comboParty2->setCurrentIndex(12);
-        ui->comboParty3->setCurrentIndex(12);
+        partyTab->setPartyMembers(0, 0xFF, 0xFF);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     } else if (ui->comboReplay->currentIndex() == 3) { // Flash back
         ui->sbCurdisc->setValue(1);
@@ -2985,9 +2785,9 @@ void BlackChocobo::btnReplay_clicked()
 
         set_char_buttons();
         if (curchar == FF7Char::CaitSith)
-            char_editor->setChar(ff7->character(s, 6), ff7->charName(s, 6));
+            partyTab->setCharacter(ff7->character(s, 6), ff7->charName(s, 6));
         else if (curchar == FF7Char::Vincent)
-            char_editor->setChar(ff7->character(s, 7), ff7->charName(s, 7));
+            partyTab->setCharacter(ff7->character(s, 7), ff7->charName(s, 7));
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
@@ -3893,7 +3693,7 @@ void BlackChocobo::char_curMp_changed(quint16 mp)
 void BlackChocobo::char_id_changed(qint8 id)
 {
     ff7->setCharID(s, curchar, id);
-    set_char_buttons();
+    partyTab->setButtonImageToId(curchar, id);
 }
 void BlackChocobo::char_level_changed(qint8 level)
 {
@@ -4024,30 +3824,6 @@ void BlackChocobo::char_maxMp_changed(quint16 value)
     ff7->setCharMaxMp(s, curchar, value);
     if (curchar == ff7->party(s, 0))
         ff7->setDescMaxMP(s, value);
-}
-
-void BlackChocobo::btnMaxChar_clicked()
-{
-    if (ff7->charID(s, curchar) == FF7Char::YoungCloud || ff7->charID(s, curchar) == FF7Char::Sephiroth  ||  _init)
-        return;   //no char selected, sephiroth and young cloud.
-
-    int result = QMessageBox::question(this, tr("Black Chocobo"), tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(ff7->charName(s, curchar)), QMessageBox::Yes, QMessageBox::No);
-    switch (result) {
-    case QMessageBox::Yes: char_editor->MaxEquip(); char_editor->MaxStats(); break;
-    case QMessageBox::No: char_editor->MaxStats(); break;
-    }
-    switch (curchar) {
-    case 0: btnCloud_clicked(); break;
-    case 1: btnBarret_clicked(); break;
-    case 2: btnTifa_clicked(); break;
-    case 3: btnAeris_clicked(); break;
-    case 4: btnRed_clicked(); break;
-    case 5: btnYuffie_clicked(); break;
-    case 6: btnCait_clicked(); break;
-    case 7: btnVincent_clicked(); break;
-    case 8: btnCid_clicked(); break;
-    }
-
 }
 
 void BlackChocobo::Items_Changed(QList<quint16> items)
