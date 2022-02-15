@@ -24,7 +24,7 @@
 
 #include "options.h"
 #include "bcdialog.h"
-#include "bcsettings.h"
+#include "../bcsettings.h"
 #include "ui_options.h"
 
 Options::Options(QWidget *parent) : QDialog(parent)

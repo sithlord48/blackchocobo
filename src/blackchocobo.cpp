@@ -28,15 +28,17 @@
 #include <QTabWidget>
 #include <QWidget>
 
-#include "about.h"
-#include "achievementdialog.h"
-#include "bcdialog.h"
+//Project Includes
+#include <about.h>
+#include <bcdialog.h>
+#include <errbox.h>
+#include <options.h>
+#include <qhexedit.h>
 #include "bcsettings.h"
-#include "errbox.h"
-#include "mainwindow.h"
-#include "options.h"
-#include "ui_mainwindow.h"
+#include "blackchocobo.h"
+#include "ui_blackchocobo.h"
 
+//ff7tk includes
 #include <FF7Char.h>
 #include <FF7Item.h>
 #include <FF7Location.h>
@@ -55,11 +57,10 @@
 #include <ChocoboManager.h>
 #include <LocationViewer.h>
 
-#include <qhexedit/qhexedit.h>
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-MainWindow::MainWindow(QWidget *parent)
+BlackChocobo::BlackChocobo(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::BlackChocobo)
     , hexCursorPos(0)
     , _init(true)
     , load(true)
@@ -102,12 +103,12 @@ MainWindow::MainWindow(QWidget *parent)
     ff7->setFileModified(false, 0);
 }
 
-QString MainWindow::checkIconTheme()
+QString BlackChocobo::checkIconTheme()
 {
     return palette().text().color().value() >= QColor(Qt::lightGray).value() ? QString("dark") : QString("light");
 }
 
-void MainWindow::detectTranslations()
+void BlackChocobo::detectTranslations()
 {
     m_translations.clear();
 
@@ -204,7 +205,7 @@ void MainWindow::detectTranslations()
     }
 }
 
-void MainWindow::initDisplay()
+void BlackChocobo::initDisplay()
 {
     QHBoxLayout *phsLayout = new QHBoxLayout;
     phsLayout->addWidget(phsList);
@@ -317,7 +318,7 @@ void MainWindow::initDisplay()
     ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
 }
 
-void MainWindow::setItemSizes()
+void BlackChocobo::setItemSizes()
 {
     setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
     const QSize partyButtonSize(98, 110);
@@ -377,7 +378,7 @@ void MainWindow::setItemSizes()
     guirefresh(0);
 }
 
-void MainWindow::populateCombos()
+void BlackChocobo::populateCombos()
 {
 //Party Combos
     if (ui->comboParty1->count() != 0) {
@@ -414,7 +415,7 @@ void MainWindow::populateCombos()
     }
 }
 
-void MainWindow::init_style()
+void BlackChocobo::init_style()
 {
     QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
     sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
@@ -437,229 +438,237 @@ void MainWindow::init_style()
 
 }
 
-void MainWindow::init_connections()
+void BlackChocobo::init_connections()
 {
     //Actions
-    connect(ui->actionQuit, &QAction::triggered, this, &MainWindow::close);
-    connect(ui->actionOpenSaveFile, &QAction::triggered, this, &MainWindow::actionOpenSaveFile_triggered);
-    connect(ui->actionReload, &QAction::triggered, this, &MainWindow::actionReload_triggered);
-    connect(ui->actionImportChar, &QAction::triggered, this , &MainWindow::actionImportChar_triggered);
-    connect(ui->actionExportChar, &QAction::triggered, this , &MainWindow::actionExportChar_triggered);
-    connect(ui->actionSave, &QAction::triggered, this , &MainWindow::actionSave_triggered);
-    connect(ui->actionSaveFileAs, &QAction::triggered, this , &MainWindow::actionSaveFileAs_triggered);
-    connect(ui->actionNewGame, &QAction::triggered, this, &MainWindow::actionNewGame_triggered);
-    connect(ui->actionNewGamePlus, &QAction::triggered, this, &MainWindow::actionNewGamePlus_triggered);
-    connect(ui->actionShowSelectionDialog, &QAction::triggered, this, &MainWindow::actionShowSelectionDialog_triggered);
-    connect(ui->actionClearSlot, &QAction::triggered, this, &MainWindow::actionClearSlot_triggered);
-    connect(ui->actionPreviousSlot, &QAction::triggered, this, &MainWindow::actionPreviousSlot_triggered);
-    connect(ui->actionNextSlot, &QAction::triggered, this, &MainWindow::actionNextSlot_triggered);
-    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::actionAbout_triggered);
-    connect(ui->actionCopySlot, &QAction::triggered, this, &MainWindow::actionCopySlot_triggered);
-    connect(ui->actionPasteSlot, &QAction::triggered, this, &MainWindow::actionPasteSlot_triggered);
-    connect(ui->actionShowOptions, &QAction::triggered, this, &MainWindow::actionShowOptions_triggered);
-    connect(ui->actionOpenAchievementFile, &QAction::triggered, this, &MainWindow::actionOpenAchievementFile_triggered);
-    connect(ui->actionCreateNewMetadata, &QAction::triggered, this, &MainWindow::actionCreateNewMetadata_triggered);
-    connect(ui->actionImportSlotFromFile, &QAction::triggered, this, &MainWindow::actionImportSlotFromFile_triggered);
-    connect(ui->actionRegionUSA, &QAction::triggered, this, &MainWindow::actionRegionUSA_triggered);
-    connect(ui->actionRegionPALGeneric, &QAction::triggered, this, &MainWindow::actionRegionPALGeneric_triggered);
-    connect(ui->actionRegionPALFrench, &QAction::triggered, this, &MainWindow::actionRegionPALFrench_triggered);
-    connect(ui->actionRegionPALGerman, &QAction::triggered, this, &MainWindow::actionRegionPALGerman_triggered);
-    connect(ui->actionRegionPALSpanish, &QAction::triggered, this, &MainWindow::actionRegionPALSpanish_triggered);
-    connect(ui->actionRegionJPN, &QAction::triggered, this, &MainWindow::actionRegionJPN_triggered);
-    connect(ui->actionRegionJPNInternational, &QAction::triggered, this, &MainWindow::actionRegionJPNInternational_triggered);
+    connect(ui->actionQuit, &QAction::triggered, this, &BlackChocobo::close);
+    connect(ui->actionOpenSaveFile, &QAction::triggered, this, &BlackChocobo::actionOpenSaveFile_triggered);
+    connect(ui->actionReload, &QAction::triggered, this, &BlackChocobo::actionReload_triggered);
+    connect(ui->actionImportChar, &QAction::triggered, this , &BlackChocobo::actionImportChar_triggered);
+    connect(ui->actionExportChar, &QAction::triggered, this , &BlackChocobo::actionExportChar_triggered);
+    connect(ui->actionSave, &QAction::triggered, this , &BlackChocobo::actionSave_triggered);
+    connect(ui->actionSaveFileAs, &QAction::triggered, this , &BlackChocobo::actionSaveFileAs_triggered);
+    connect(ui->actionNewGame, &QAction::triggered, this, &BlackChocobo::actionNewGame_triggered);
+    connect(ui->actionNewGamePlus, &QAction::triggered, this, &BlackChocobo::actionNewGamePlus_triggered);
+    connect(ui->actionShowSelectionDialog, &QAction::triggered, this, &BlackChocobo::actionShowSelectionDialog_triggered);
+    connect(ui->actionClearSlot, &QAction::triggered, this, &BlackChocobo::actionClearSlot_triggered);
+    connect(ui->actionPreviousSlot, &QAction::triggered, this, &BlackChocobo::actionPreviousSlot_triggered);
+    connect(ui->actionNextSlot, &QAction::triggered, this, &BlackChocobo::actionNextSlot_triggered);
+    connect(ui->actionAbout, &QAction::triggered, this, &BlackChocobo::actionAbout_triggered);
+    connect(ui->actionCopySlot, &QAction::triggered, this, &BlackChocobo::actionCopySlot_triggered);
+    connect(ui->actionPasteSlot, &QAction::triggered, this, &BlackChocobo::actionPasteSlot_triggered);
+    connect(ui->actionShowOptions, &QAction::triggered, this, &BlackChocobo::actionShowOptions_triggered);
+    connect(ui->actionOpenAchievementFile, &QAction::triggered, this, &BlackChocobo::actionOpenAchievementFile_triggered);
+    connect(ui->actionCreateNewMetadata, &QAction::triggered, this, &BlackChocobo::actionCreateNewMetadata_triggered);
+    connect(ui->actionImportSlotFromFile, &QAction::triggered, this, &BlackChocobo::actionImportSlotFromFile_triggered);
+    connect(ui->actionRegionUSA, &QAction::triggered, this, &BlackChocobo::actionRegionUSA_triggered);
+    connect(ui->actionRegionPALGeneric, &QAction::triggered, this, &BlackChocobo::actionRegionPALGeneric_triggered);
+    connect(ui->actionRegionPALFrench, &QAction::triggered, this, &BlackChocobo::actionRegionPALFrench_triggered);
+    connect(ui->actionRegionPALGerman, &QAction::triggered, this, &BlackChocobo::actionRegionPALGerman_triggered);
+    connect(ui->actionRegionPALSpanish, &QAction::triggered, this, &BlackChocobo::actionRegionPALSpanish_triggered);
+    connect(ui->actionRegionJPN, &QAction::triggered, this, &BlackChocobo::actionRegionJPN_triggered);
+    connect(ui->actionRegionJPNInternational, &QAction::triggered, this, &BlackChocobo::actionRegionJPNInternational_triggered);
     //Buttons
-    connect(ui->btnCloud, &QPushButton::clicked, this, &MainWindow::btnCloud_clicked);
-    connect(ui->btnBarret, &QPushButton::clicked, this, &MainWindow::btnBarret_clicked);
-    connect(ui->btnTifa, &QPushButton::clicked, this, &MainWindow::btnTifa_clicked);
-    connect(ui->btnAeris, &QPushButton::clicked, this, &MainWindow::btnAeris_clicked);
-    connect(ui->btnRed, &QPushButton::clicked, this, &MainWindow::btnRed_clicked);
-    connect(ui->btnYuffie, &QPushButton::clicked, this, &MainWindow::btnYuffie_clicked);
-    connect(ui->btnCait, &QPushButton::clicked, this, &MainWindow::btnCait_clicked);
-    connect(ui->btnVincent, &QPushButton::clicked, this, &MainWindow::btnVincent_clicked);
-    connect(ui->btnCid, &QPushButton::clicked, this, &MainWindow::btnCid_clicked);
-    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &MainWindow::btnSearchFlyers_clicked);
-    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &MainWindow::btnSearchKeyItems_clicked);
-    connect(ui->btnReplay, &QPushButton::clicked, this, &MainWindow::btnReplay_clicked);
-    connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &MainWindow::btnRemoveAllMateria_clicked);
-    connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &MainWindow::btnRemoveAllStolen_clicked);
-    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &MainWindow::btnAddAllItems_clicked);
-    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &MainWindow::btnRemoveAllItems_clicked);
-    connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &MainWindow::btnAddAllMateria_clicked);
-    connect(ui->btnMaxChar, &QPushButton::clicked, this, &MainWindow::btnMaxChar_clicked);
+    connect(ui->btnCloud, &QPushButton::clicked, this, &BlackChocobo::btnCloud_clicked);
+    connect(ui->btnBarret, &QPushButton::clicked, this, &BlackChocobo::btnBarret_clicked);
+    connect(ui->btnTifa, &QPushButton::clicked, this, &BlackChocobo::btnTifa_clicked);
+    connect(ui->btnAeris, &QPushButton::clicked, this, &BlackChocobo::btnAeris_clicked);
+    connect(ui->btnRed, &QPushButton::clicked, this, &BlackChocobo::btnRed_clicked);
+    connect(ui->btnYuffie, &QPushButton::clicked, this, &BlackChocobo::btnYuffie_clicked);
+    connect(ui->btnCait, &QPushButton::clicked, this, &BlackChocobo::btnCait_clicked);
+    connect(ui->btnVincent, &QPushButton::clicked, this, &BlackChocobo::btnVincent_clicked);
+    connect(ui->btnCid, &QPushButton::clicked, this, &BlackChocobo::btnCid_clicked);
+    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &BlackChocobo::btnSearchFlyers_clicked);
+    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &BlackChocobo::btnSearchKeyItems_clicked);
+    connect(ui->btnReplay, &QPushButton::clicked, this, &BlackChocobo::btnReplay_clicked);
+    connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllMateria_clicked);
+    connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllStolen_clicked);
+    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &BlackChocobo::btnAddAllItems_clicked);
+    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllItems_clicked);
+    connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnAddAllMateria_clicked);
+    connect(ui->btnMaxChar, &QPushButton::clicked, this, &BlackChocobo::btnMaxChar_clicked);
+    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &BlackChocobo::btnSearchFlyers_clicked);
+    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &BlackChocobo::btnSearchKeyItems_clicked);
+    connect(ui->btnReplay, &QPushButton::clicked, this, &BlackChocobo::btnReplay_clicked);
+    connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllMateria_clicked);
+    connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllStolen_clicked);
+    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &BlackChocobo::btnAddAllItems_clicked);
+    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllItems_clicked);
+    connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnAddAllMateria_clicked);
     //SpinBoxes
-    connect(ui->sbGil, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &MainWindow::sbGil_valueChanged);
-    connect(ui->sbGp, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbGp_valueChanged);
-    connect(ui->sbBattles, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBattles_valueChanged);
-    connect(ui->sbRuns, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbRuns_valueChanged);
-    connect(ui->sbCurdisc, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCurdisc_valueChanged);
-    connect(ui->sbLoveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveYuffie_valueChanged);
-    connect(ui->sbLoveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveTifa_valueChanged);
-    connect(ui->sbLoveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveAeris_valueChanged);
-    connect(ui->sbLoveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLoveBarret_valueChanged);
-    connect(ui->sbTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeSec_valueChanged);
-    connect(ui->sbTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeMin_valueChanged);
-    connect(ui->sbTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimeHour_valueChanged);
-    connect(ui->sbTimerTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeSec_valueChanged);
-    connect(ui->sbTimerTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeMin_valueChanged);
-    connect(ui->sbTimerTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTimerTimeHour_valueChanged);
-    connect(ui->sbBloveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveYuffie_valueChanged);
-    connect(ui->sbBloveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveTifa_valueChanged);
-    connect(ui->sbBloveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveAeris_valueChanged);
-    connect(ui->sbBloveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBloveBarret_valueChanged);
-    connect(ui->sbUweaponHp, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbUweaponHp_valueChanged);
-    connect(ui->sbCoster1, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster1_valueChanged);
-    connect(ui->sbCoster2, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster2_valueChanged);
-    connect(ui->sbCoster3, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCoster3_valueChanged);
-    connect(ui->sbTurkschurch, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTurkschurch_valueChanged);
-    connect(ui->sbMprogress, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbMprogress_valueChanged);
-    connect(ui->sbDonprog, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDonprog_valueChanged);
-    connect(ui->sbSteps, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSteps_valueChanged);
-    connect(ui->sbSnowBegScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegScore_valueChanged);
-    connect(ui->sbSnowExpScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpScore_valueChanged);
-    connect(ui->sbSnowCrazyScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyScore_valueChanged);
-    connect(ui->sbSnowBegMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegMin_valueChanged);
-    connect(ui->sbSnowBegSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegSec_valueChanged);
-    connect(ui->sbSnowBegMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowBegMsec_valueChanged);
-    connect(ui->sbSnowExpMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpMin_valueChanged);
-    connect(ui->sbSnowExpSec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpSec_valueChanged);
-    connect(ui->sbSnowExpMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowExpMsec_valueChanged);
-    connect(ui->sbSnowCrazyMin, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyMin_valueChanged);
-    connect(ui->sbSnowCrazySec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazySec_valueChanged);
-    connect(ui->sbSnowCrazyMsec, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSnowCrazyMsec_valueChanged);
-    connect(ui->sbBikeHighScore, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBikeHighScore_valueChanged);
-    connect(ui->sbBattlePoints, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBattlePoints_valueChanged);
-    connect(ui->sbCondorFunds, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorFunds_valueChanged);
-    connect(ui->sbCondorWins, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorWins_valueChanged);
-    connect(ui->sbCondorLosses, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbCondorLosses_valueChanged);
-    connect(ui->sbSaveMapId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveMapId_valueChanged);
-    connect(ui->sbSaveX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveX_valueChanged);
-    connect(ui->sbSaveY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveY_valueChanged);
-    connect(ui->sbSaveZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSaveZ_valueChanged);
-    connect(ui->sbLeaderX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderX_valueChanged);
-    connect(ui->sbLeaderY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderY_valueChanged);
-    connect(ui->sbLeaderZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderZ_valueChanged);
-    connect(ui->sbLeaderId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderId_valueChanged);
-    connect(ui->sbLeaderAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbLeaderAngle_valueChanged);
-    connect(ui->sbTcX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcX_valueChanged);
-    connect(ui->sbTcY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcY_valueChanged);
-    connect(ui->sbTcZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcZ_valueChanged);
-    connect(ui->sbTcId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcId_valueChanged);
-    connect(ui->sbTcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbTcAngle_valueChanged);
-    connect(ui->sbBhX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhX_valueChanged);
-    connect(ui->sbBhY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhY_valueChanged);
-    connect(ui->sbBhZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhZ_valueChanged);
-    connect(ui->sbBhId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhId_valueChanged);
-    connect(ui->sbBhAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbBhAngle_valueChanged);
-    connect(ui->sbSubX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubX_valueChanged);
-    connect(ui->sbSubY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubY_valueChanged);
-    connect(ui->sbSubZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubZ_valueChanged);
-    connect(ui->sbSubId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubId_valueChanged);
-    connect(ui->sbSubAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbSubAngle_valueChanged);
-    connect(ui->sbWcX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcX_valueChanged);
-    connect(ui->sbWcY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcY_valueChanged);
-    connect(ui->sbWcZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcZ_valueChanged);
-    connect(ui->sbWcId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcId_valueChanged);
-    connect(ui->sbWcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbWcAngle_valueChanged);
-    connect(ui->sbDurwX, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwX_valueChanged);
-    connect(ui->sbDurwY, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwY_valueChanged);
-    connect(ui->sbDurwZ, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwZ_valueChanged);
-    connect(ui->sbDurwId, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwId_valueChanged);
-    connect(ui->sbDurwAngle, qOverload<int>(&QSpinBox::valueChanged), this, &MainWindow::sbDurwAngle_valueChanged);
+    connect(ui->sbGil, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &BlackChocobo::sbGil_valueChanged);
+    connect(ui->sbGp, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbGp_valueChanged);
+    connect(ui->sbBattles, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBattles_valueChanged);
+    connect(ui->sbRuns, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbRuns_valueChanged);
+    connect(ui->sbCurdisc, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCurdisc_valueChanged);
+    connect(ui->sbLoveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveYuffie_valueChanged);
+    connect(ui->sbLoveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveTifa_valueChanged);
+    connect(ui->sbLoveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveAeris_valueChanged);
+    connect(ui->sbLoveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveBarret_valueChanged);
+    connect(ui->sbTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimeSec_valueChanged);
+    connect(ui->sbTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimeMin_valueChanged);
+    connect(ui->sbTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimeHour_valueChanged);
+    connect(ui->sbTimerTimeSec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimerTimeSec_valueChanged);
+    connect(ui->sbTimerTimeMin, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimerTimeMin_valueChanged);
+    connect(ui->sbTimerTimeHour, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTimerTimeHour_valueChanged);
+    connect(ui->sbBloveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBloveYuffie_valueChanged);
+    connect(ui->sbBloveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBloveTifa_valueChanged);
+    connect(ui->sbBloveAeris, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBloveAeris_valueChanged);
+    connect(ui->sbBloveBarret, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBloveBarret_valueChanged);
+    connect(ui->sbUweaponHp, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbUweaponHp_valueChanged);
+    connect(ui->sbCoster1, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCoster1_valueChanged);
+    connect(ui->sbCoster2, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCoster2_valueChanged);
+    connect(ui->sbCoster3, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCoster3_valueChanged);
+    connect(ui->sbTurkschurch, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTurkschurch_valueChanged);
+    connect(ui->sbMprogress, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbMprogress_valueChanged);
+    connect(ui->sbDonprog, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDonprog_valueChanged);
+    connect(ui->sbSteps, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSteps_valueChanged);
+    connect(ui->sbSnowBegScore, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowBegScore_valueChanged);
+    connect(ui->sbSnowExpScore, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowExpScore_valueChanged);
+    connect(ui->sbSnowCrazyScore, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowCrazyScore_valueChanged);
+    connect(ui->sbSnowBegMin, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowBegMin_valueChanged);
+    connect(ui->sbSnowBegSec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowBegSec_valueChanged);
+    connect(ui->sbSnowBegMsec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowBegMsec_valueChanged);
+    connect(ui->sbSnowExpMin, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowExpMin_valueChanged);
+    connect(ui->sbSnowExpSec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowExpSec_valueChanged);
+    connect(ui->sbSnowExpMsec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowExpMsec_valueChanged);
+    connect(ui->sbSnowCrazyMin, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowCrazyMin_valueChanged);
+    connect(ui->sbSnowCrazySec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowCrazySec_valueChanged);
+    connect(ui->sbSnowCrazyMsec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowCrazyMsec_valueChanged);
+    connect(ui->sbBikeHighScore, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBikeHighScore_valueChanged);
+    connect(ui->sbBattlePoints, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBattlePoints_valueChanged);
+    connect(ui->sbCondorFunds, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorFunds_valueChanged);
+    connect(ui->sbCondorWins, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorWins_valueChanged);
+    connect(ui->sbCondorLosses, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorLosses_valueChanged);
+    connect(ui->sbSaveMapId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSaveMapId_valueChanged);
+    connect(ui->sbSaveX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSaveX_valueChanged);
+    connect(ui->sbSaveY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSaveY_valueChanged);
+    connect(ui->sbSaveZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSaveZ_valueChanged);
+    connect(ui->sbLeaderX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLeaderX_valueChanged);
+    connect(ui->sbLeaderY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLeaderY_valueChanged);
+    connect(ui->sbLeaderZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLeaderZ_valueChanged);
+    connect(ui->sbLeaderId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLeaderId_valueChanged);
+    connect(ui->sbLeaderAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLeaderAngle_valueChanged);
+    connect(ui->sbTcX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTcX_valueChanged);
+    connect(ui->sbTcY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTcY_valueChanged);
+    connect(ui->sbTcZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTcZ_valueChanged);
+    connect(ui->sbTcId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTcId_valueChanged);
+    connect(ui->sbTcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbTcAngle_valueChanged);
+    connect(ui->sbBhX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBhX_valueChanged);
+    connect(ui->sbBhY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBhY_valueChanged);
+    connect(ui->sbBhZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBhZ_valueChanged);
+    connect(ui->sbBhId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBhId_valueChanged);
+    connect(ui->sbBhAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBhAngle_valueChanged);
+    connect(ui->sbSubX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSubX_valueChanged);
+    connect(ui->sbSubY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSubY_valueChanged);
+    connect(ui->sbSubZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSubZ_valueChanged);
+    connect(ui->sbSubId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSubId_valueChanged);
+    connect(ui->sbSubAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSubAngle_valueChanged);
+    connect(ui->sbWcX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbWcX_valueChanged);
+    connect(ui->sbWcY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbWcY_valueChanged);
+    connect(ui->sbWcZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbWcZ_valueChanged);
+    connect(ui->sbWcId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbWcId_valueChanged);
+    connect(ui->sbWcAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbWcAngle_valueChanged);
+    connect(ui->sbDurwX, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDurwX_valueChanged);
+    connect(ui->sbDurwY, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDurwY_valueChanged);
+    connect(ui->sbDurwZ, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDurwZ_valueChanged);
+    connect(ui->sbDurwId, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDurwId_valueChanged);
+    connect(ui->sbDurwAngle, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbDurwAngle_valueChanged);
     //CheckBoxes
-    connect(ui->cbTutWorldSave, &QCheckBox::stateChanged, this, &MainWindow::cbTutWorldSave_stateChanged);
-    connect(ui->cbBombingInt, &QCheckBox::stateChanged, this, &MainWindow::cbBombingInt_stateChanged);
-    connect(ui->cbFlashbackPiano, &QCheckBox::toggled, this, &MainWindow::cbFlashbackPiano_toggled);
-    connect(ui->cbSubGameWon, &QCheckBox::toggled, this, &MainWindow::cbSubGameWon_toggled);
-    connect(ui->cbMysteryPanties, &QCheckBox::toggled, this, &MainWindow::cbMysteryPanties_toggled);
-    connect(ui->cbLetterToDaughter, &QCheckBox::toggled, this, &MainWindow::cbLetterToDaughter_toggled);
-    connect(ui->cbLetterToWife, &QCheckBox::toggled, this, &MainWindow::cbLetterToWife_toggled);
-    connect(ui->cbPandorasBox, &QCheckBox::toggled, this, &MainWindow::cbPandorasBox_toggled);
-    connect(ui->cbVisibleBuggy, &QCheckBox::toggled, this, &MainWindow::cbVisibleBuggy_toggled);
-    connect(ui->cbVisibleBronco, &QCheckBox::toggled, this, &MainWindow::cbVisibleBronco_toggled);
-    connect(ui->cbVisibleHighwind, &QCheckBox::toggled, this, &MainWindow::cbVisibleHighwind_toggled);
-    connect(ui->cbVisibleWildChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleWildChocobo_toggled);
-    connect(ui->cbVisibleYellowChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleYellowChocobo_toggled);
-    connect(ui->cbVisibleGreenChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleGreenChocobo_toggled);
-    connect(ui->cbVisibleBlueChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleBlueChocobo_toggled);
-    connect(ui->cbVisibleBlackChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleBlackChocobo_toggled);
-    connect(ui->cbVisibleGoldChocobo, &QCheckBox::toggled, this, &MainWindow::cbVisibleGoldChocobo_toggled);
-    connect(ui->cbRubyDead, &QCheckBox::toggled, this, &MainWindow::cbRubyDead_toggled);
-    connect(ui->cbEmeraldDead, &QCheckBox::toggled, this, &MainWindow::cbEmeraldDead_toggled);
-    connect(ui->cbBm1_1, &QCheckBox::toggled, this, &MainWindow::cbBm1_1_toggled);
-    connect(ui->cbBm1_2, &QCheckBox::toggled, this, &MainWindow::cbBm1_2_toggled);
-    connect(ui->cbBm1_3, &QCheckBox::toggled, this, &MainWindow::cbBm1_3_toggled);
-    connect(ui->cbBm1_4, &QCheckBox::toggled, this, &MainWindow::cbBm1_4_toggled);
-    connect(ui->cbBm1_5, &QCheckBox::toggled, this, &MainWindow::cbBm1_5_toggled);
-    connect(ui->cbBm1_6, &QCheckBox::toggled, this, &MainWindow::cbBm1_6_toggled);
-    connect(ui->cbBm1_7, &QCheckBox::toggled, this, &MainWindow::cbBm1_7_toggled);
-    connect(ui->cbBm1_8, &QCheckBox::toggled, this, &MainWindow::cbBm1_8_toggled);
-    connect(ui->cbBm2_1, &QCheckBox::toggled, this, &MainWindow::cbBm2_1_toggled);
-    connect(ui->cbBm2_2, &QCheckBox::toggled, this, &MainWindow::cbBm2_2_toggled);
-    connect(ui->cbBm2_3, &QCheckBox::toggled, this, &MainWindow::cbBm2_3_toggled);
-    connect(ui->cbBm2_4, &QCheckBox::toggled, this, &MainWindow::cbBm2_4_toggled);
-    connect(ui->cbBm2_5, &QCheckBox::toggled, this, &MainWindow::cbBm2_5_toggled);
-    connect(ui->cbBm2_6, &QCheckBox::toggled, this, &MainWindow::cbBm2_6_toggled);
-    connect(ui->cbBm2_7, &QCheckBox::toggled, this, &MainWindow::cbBm2_7_toggled);
-    connect(ui->cbBm2_8, &QCheckBox::toggled, this, &MainWindow::cbBm2_8_toggled);
-    connect(ui->cbBm3_1, &QCheckBox::toggled, this, &MainWindow::cbBm3_1_toggled);
-    connect(ui->cbBm3_2, &QCheckBox::toggled, this, &MainWindow::cbBm3_2_toggled);
-    connect(ui->cbBm3_3, &QCheckBox::toggled, this, &MainWindow::cbBm3_3_toggled);
-    connect(ui->cbBm3_4, &QCheckBox::toggled, this, &MainWindow::cbBm3_4_toggled);
-    connect(ui->cbBm3_5, &QCheckBox::toggled, this, &MainWindow::cbBm3_5_toggled);
-    connect(ui->cbBm3_6, &QCheckBox::toggled, this, &MainWindow::cbBm3_6_toggled);
-    connect(ui->cbBm3_7, &QCheckBox::toggled, this, &MainWindow::cbBm3_7_toggled);
-    connect(ui->cbBm3_8, &QCheckBox::toggled, this, &MainWindow::cbBm3_8_toggled);
-    connect(ui->cbS7pl_1, &QCheckBox::toggled, this, &MainWindow::cbS7pl_1_toggled);
-    connect(ui->cbS7pl_2, &QCheckBox::toggled, this, &MainWindow::cbS7pl_2_toggled);
-    connect(ui->cbS7pl_3, &QCheckBox::toggled, this, &MainWindow::cbS7pl_3_toggled);
-    connect(ui->cbS7pl_4, &QCheckBox::toggled, this, &MainWindow::cbS7pl_4_toggled);
-    connect(ui->cbS7pl_5, &QCheckBox::toggled, this, &MainWindow::cbS7pl_5_toggled);
-    connect(ui->cbS7pl_6, &QCheckBox::toggled, this, &MainWindow::cbS7pl_6_toggled);
-    connect(ui->cbS7pl_7, &QCheckBox::toggled, this, &MainWindow::cbS7pl_7_toggled);
-    connect(ui->cbS7pl_8, &QCheckBox::toggled, this, &MainWindow::cbS7pl_8_toggled);
-    connect(ui->cbS7ts_1, &QCheckBox::toggled, this, &MainWindow::cbS7ts_1_toggled);
-    connect(ui->cbS7ts_2, &QCheckBox::toggled, this, &MainWindow::cbS7ts_2_toggled);
-    connect(ui->cbS7ts_3, &QCheckBox::toggled, this, &MainWindow::cbS7ts_3_toggled);
-    connect(ui->cbS7ts_4, &QCheckBox::toggled, this, &MainWindow::cbS7ts_4_toggled);
-    connect(ui->cbS7ts_5, &QCheckBox::toggled, this, &MainWindow::cbS7ts_5_toggled);
-    connect(ui->cbS7ts_6, &QCheckBox::toggled, this, &MainWindow::cbS7ts_6_toggled);
-    connect(ui->cbS7ts_7, &QCheckBox::toggled, this, &MainWindow::cbS7ts_7_toggled);
-    connect(ui->cbS7ts_8, &QCheckBox::toggled, this, &MainWindow::cbS7ts_8_toggled);
-    connect(ui->cbTutSub, &QCheckBox::toggled, this, &MainWindow::cbTutSub_toggled);
-    connect(ui->cbMidgartrain_8, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_8_toggled);
-    connect(ui->cbMidgartrain_7, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_7_toggled);
-    connect(ui->cbMidgartrain_6, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_6_toggled);
-    connect(ui->cbMidgartrain_5, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_5_toggled);
-    connect(ui->cbMidgartrain_4, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_4_toggled);
-    connect(ui->cbMidgartrain_3, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_3_toggled);
-    connect(ui->cbMidgartrain_2, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_2_toggled);
-    connect(ui->cbMidgartrain_1, &QCheckBox::toggled, this, &MainWindow::cbMidgartrain_1_toggled);
-    connect(ui->cbYuffieForest, &QCheckBox::toggled, this, &MainWindow::cbYuffieForest_toggled);
-    connect(ui->cbRegYuffie, &QCheckBox::toggled, this, &MainWindow::cbRegYuffie_toggled);
-    connect(ui->cbRegVinny, &QCheckBox::toggled, this, &MainWindow::cbRegVinny_toggled);
+    connect(ui->cbTutWorldSave, &QCheckBox::stateChanged, this, &BlackChocobo::cbTutWorldSave_stateChanged);
+    connect(ui->cbBombingInt, &QCheckBox::stateChanged, this, &BlackChocobo::cbBombingInt_stateChanged);
+    connect(ui->cbFlashbackPiano, &QCheckBox::toggled, this, &BlackChocobo::cbFlashbackPiano_toggled);
+    connect(ui->cbSubGameWon, &QCheckBox::toggled, this, &BlackChocobo::cbSubGameWon_toggled);
+    connect(ui->cbMysteryPanties, &QCheckBox::toggled, this, &BlackChocobo::cbMysteryPanties_toggled);
+    connect(ui->cbLetterToDaughter, &QCheckBox::toggled, this, &BlackChocobo::cbLetterToDaughter_toggled);
+    connect(ui->cbLetterToWife, &QCheckBox::toggled, this, &BlackChocobo::cbLetterToWife_toggled);
+    connect(ui->cbPandorasBox, &QCheckBox::toggled, this, &BlackChocobo::cbPandorasBox_toggled);
+    connect(ui->cbVisibleBuggy, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBuggy_toggled);
+    connect(ui->cbVisibleBronco, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBronco_toggled);
+    connect(ui->cbVisibleHighwind, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleHighwind_toggled);
+    connect(ui->cbVisibleWildChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleWildChocobo_toggled);
+    connect(ui->cbVisibleYellowChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleYellowChocobo_toggled);
+    connect(ui->cbVisibleGreenChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleGreenChocobo_toggled);
+    connect(ui->cbVisibleBlueChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBlueChocobo_toggled);
+    connect(ui->cbVisibleBlackChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBlackChocobo_toggled);
+    connect(ui->cbVisibleGoldChocobo, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleGoldChocobo_toggled);
+    connect(ui->cbRubyDead, &QCheckBox::toggled, this, &BlackChocobo::cbRubyDead_toggled);
+    connect(ui->cbEmeraldDead, &QCheckBox::toggled, this, &BlackChocobo::cbEmeraldDead_toggled);
+    connect(ui->cbBm1_1, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_1_toggled);
+    connect(ui->cbBm1_2, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_2_toggled);
+    connect(ui->cbBm1_3, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_3_toggled);
+    connect(ui->cbBm1_4, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_4_toggled);
+    connect(ui->cbBm1_5, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_5_toggled);
+    connect(ui->cbBm1_6, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_6_toggled);
+    connect(ui->cbBm1_7, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_7_toggled);
+    connect(ui->cbBm1_8, &QCheckBox::toggled, this, &BlackChocobo::cbBm1_8_toggled);
+    connect(ui->cbBm2_1, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_1_toggled);
+    connect(ui->cbBm2_2, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_2_toggled);
+    connect(ui->cbBm2_3, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_3_toggled);
+    connect(ui->cbBm2_4, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_4_toggled);
+    connect(ui->cbBm2_5, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_5_toggled);
+    connect(ui->cbBm2_6, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_6_toggled);
+    connect(ui->cbBm2_7, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_7_toggled);
+    connect(ui->cbBm2_8, &QCheckBox::toggled, this, &BlackChocobo::cbBm2_8_toggled);
+    connect(ui->cbBm3_1, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_1_toggled);
+    connect(ui->cbBm3_2, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_2_toggled);
+    connect(ui->cbBm3_3, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_3_toggled);
+    connect(ui->cbBm3_4, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_4_toggled);
+    connect(ui->cbBm3_5, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_5_toggled);
+    connect(ui->cbBm3_6, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_6_toggled);
+    connect(ui->cbBm3_7, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_7_toggled);
+    connect(ui->cbBm3_8, &QCheckBox::toggled, this, &BlackChocobo::cbBm3_8_toggled);
+    connect(ui->cbS7pl_1, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_1_toggled);
+    connect(ui->cbS7pl_2, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_2_toggled);
+    connect(ui->cbS7pl_3, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_3_toggled);
+    connect(ui->cbS7pl_4, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_4_toggled);
+    connect(ui->cbS7pl_5, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_5_toggled);
+    connect(ui->cbS7pl_6, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_6_toggled);
+    connect(ui->cbS7pl_7, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_7_toggled);
+    connect(ui->cbS7pl_8, &QCheckBox::toggled, this, &BlackChocobo::cbS7pl_8_toggled);
+    connect(ui->cbS7ts_1, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_1_toggled);
+    connect(ui->cbS7ts_2, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_2_toggled);
+    connect(ui->cbS7ts_3, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_3_toggled);
+    connect(ui->cbS7ts_4, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_4_toggled);
+    connect(ui->cbS7ts_5, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_5_toggled);
+    connect(ui->cbS7ts_6, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_6_toggled);
+    connect(ui->cbS7ts_7, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_7_toggled);
+    connect(ui->cbS7ts_8, &QCheckBox::toggled, this, &BlackChocobo::cbS7ts_8_toggled);
+    connect(ui->cbTutSub, &QCheckBox::toggled, this, &BlackChocobo::cbTutSub_toggled);
+    connect(ui->cbMidgartrain_8, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_8_toggled);
+    connect(ui->cbMidgartrain_7, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_7_toggled);
+    connect(ui->cbMidgartrain_6, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_6_toggled);
+    connect(ui->cbMidgartrain_5, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_5_toggled);
+    connect(ui->cbMidgartrain_4, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_4_toggled);
+    connect(ui->cbMidgartrain_3, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_3_toggled);
+    connect(ui->cbMidgartrain_2, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_2_toggled);
+    connect(ui->cbMidgartrain_1, &QCheckBox::toggled, this, &BlackChocobo::cbMidgartrain_1_toggled);
+    connect(ui->cbYuffieForest, &QCheckBox::toggled, this, &BlackChocobo::cbYuffieForest_toggled);
+    connect(ui->cbRegYuffie, &QCheckBox::toggled, this, &BlackChocobo::cbRegYuffie_toggled);
+    connect(ui->cbRegVinny, &QCheckBox::toggled, this, &BlackChocobo::cbRegVinny_toggled);
     //QComboBoxes
-    connect(ui->comboHexEditor, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboHexEditor_currentIndexChanged);
-    connect(ui->comboParty1, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty1_currentIndexChanged);
-    connect(ui->comboParty2, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty2_currentIndexChanged);
-    connect(ui->comboParty3, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboParty3_currentIndexChanged);
-    connect(ui->comboRegionSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboRegionSlot_currentIndexChanged);
-    connect(ui->comboHighwindBuggy, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboHighwindBuggy_currentIndexChanged);
-    connect(ui->comboMapControls, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboMapControls_currentIndexChanged);
-    connect(ui->comboZVar, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboZVar_currentIndexChanged);
-    connect(ui->comboCompareSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboCompareSlot_currentIndexChanged);
-    connect(ui->comboS7Slums, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboS7Slums_currentIndexChanged);
-    connect(ui->comboReplay, qOverload<int>(&QComboBox::currentIndexChanged), this, &MainWindow::comboReplay_currentIndexChanged);
+    connect(ui->comboHexEditor, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHexEditor_currentIndexChanged);
+    connect(ui->comboParty1, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty1_currentIndexChanged);
+    connect(ui->comboParty2, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty2_currentIndexChanged);
+    connect(ui->comboParty3, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboParty3_currentIndexChanged);
+    connect(ui->comboRegionSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboRegionSlot_currentIndexChanged);
+    connect(ui->comboHighwindBuggy, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHighwindBuggy_currentIndexChanged);
+    connect(ui->comboMapControls, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboMapControls_currentIndexChanged);
+    connect(ui->comboZVar, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboZVar_currentIndexChanged);
+    connect(ui->comboCompareSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboCompareSlot_currentIndexChanged);
+    connect(ui->comboS7Slums, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboS7Slums_currentIndexChanged);
+    connect(ui->comboReplay, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboReplay_currentIndexChanged);
     //Misc
-    connect(ui->tblUnknown, &QTableWidget::itemChanged, this, &MainWindow::tblUnknown_itemChanged);
-    connect(ui->slideWorldX, &QSlider::valueChanged, this, &MainWindow::slideWorldX_valueChanged);
-    connect(ui->slideWorldY, &QSlider::valueChanged, this, &MainWindow::slideWorldY_valueChanged);
-    connect(ui->worldMapView, &QWidget::customContextMenuRequested, this, &MainWindow::worldMapView_customContextMenuRequested);
+    connect(ui->tblUnknown, &QTableWidget::itemChanged, this, &BlackChocobo::tblUnknown_itemChanged);
+    connect(ui->slideWorldX, &QSlider::valueChanged, this, &BlackChocobo::slideWorldX_valueChanged);
+    connect(ui->slideWorldY, &QSlider::valueChanged, this, &BlackChocobo::slideWorldY_valueChanged);
+    connect(ui->worldMapView, &QWidget::customContextMenuRequested, this, &BlackChocobo::worldMapView_customContextMenuRequested);
     
-    connect(ui->linePsxDesc, &QLineEdit::textChanged, this, &MainWindow::linePsxDesc_textChanged);
-    connect(ui->tblMateria, &QTableWidget::currentCellChanged, this, &MainWindow::tblMateria_currentCellChanged);
-    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::tabWidget_currentChanged);
-    connect(ui->locationToolBox, &QToolBox::currentChanged, this, &MainWindow::locationToolBox_currentChanged);
-    connect(ui->testDataTabWidget, &QTabWidget::currentChanged, this, &MainWindow::testDataTabWidget_currentChanged);
+    connect(ui->linePsxDesc, &QLineEdit::textChanged, this, &BlackChocobo::linePsxDesc_textChanged);
+    connect(ui->tblMateria, &QTableWidget::currentCellChanged, this, &BlackChocobo::tblMateria_currentCellChanged);
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &BlackChocobo::tabWidget_currentChanged);
+    connect(ui->locationToolBox, &QToolBox::currentChanged, this, &BlackChocobo::locationToolBox_currentChanged);
+    connect(ui->testDataTabWidget, &QTabWidget::currentChanged, this, &BlackChocobo::testDataTabWidget_currentChanged);
     //UI -> UI
     connect(ui->tblUnknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tblCompareUnknown->verticalScrollBar(), &QScrollBar::setValue);
     connect(ui->tblCompareUnknown->verticalScrollBar(), &QScrollBar::valueChanged, ui->tblUnknown->verticalScrollBar(), &QScrollBar::setValue);
@@ -668,111 +677,111 @@ void MainWindow::init_connections()
 
     connect(saveIcon, &SaveIcon::nextIcon, ui->lblPsxIcon, &QLabel::setPixmap);
 
-    connect(ff7, &FF7Save::fileChanged, this, &MainWindow::fileModified);
+    connect(ff7, &FF7Save::fileChanged, this, &BlackChocobo::fileModified);
 
-    connect(itemlist, &ItemList::itemsChanged, this, &MainWindow::Items_Changed);
+    connect(itemlist, &ItemList::itemsChanged, this, &BlackChocobo::Items_Changed);
 
-    connect(materia_editor, &MateriaEditor::apChanged, this, &MainWindow::materia_ap_changed);
-    connect(materia_editor, &MateriaEditor::idChanged, this, &MainWindow::materia_id_changed);
+    connect(materia_editor, &MateriaEditor::apChanged, this, &BlackChocobo::materia_ap_changed);
+    connect(materia_editor, &MateriaEditor::idChanged, this, &BlackChocobo::materia_id_changed);
 
-    connect(phsList, &PhsListWidget::allowedToggled, this, &MainWindow::phsList_box_allowed_toggled);
-    connect(phsList, &PhsListWidget::visibleToggled, this, &MainWindow::phsList_box_visible_toggled);
+    connect(phsList, &PhsListWidget::allowedToggled, this, &BlackChocobo::phsList_box_allowed_toggled);
+    connect(phsList, &PhsListWidget::visibleToggled, this, &BlackChocobo::phsList_box_visible_toggled);
 
-    connect(menuList, &MenuListWidget::lockedToggled, this, &MainWindow::menuList_box_locked_toggled);
-    connect(menuList, &MenuListWidget::visibleToggled, this, &MainWindow::menuList_box_visible_toggled);
+    connect(menuList, &MenuListWidget::lockedToggled, this, &BlackChocobo::menuList_box_locked_toggled);
+    connect(menuList, &MenuListWidget::visibleToggled, this, &BlackChocobo::menuList_box_visible_toggled);
 
-    connect(char_editor, &CharEditor::id_changed, this, &MainWindow::char_id_changed);
-    connect(char_editor, &CharEditor::level_changed, this, &MainWindow::char_level_changed);
-    connect(char_editor, &CharEditor::str_changed, this, &MainWindow::char_str_changed);
-    connect(char_editor, &CharEditor::vit_changed, this, &MainWindow::char_vit_changed);
-    connect(char_editor, &CharEditor::mag_changed, this, &MainWindow::char_mag_changed);
-    connect(char_editor, &CharEditor::spi_changed, this, &MainWindow::char_spi_changed);
-    connect(char_editor, &CharEditor::dex_changed, this, &MainWindow::char_dex_changed);
-    connect(char_editor, &CharEditor::lck_changed, this, &MainWindow::char_lck_changed);
-    connect(char_editor, &CharEditor::strBonus_changed, this, &MainWindow::char_strBonus_changed);
-    connect(char_editor, &CharEditor::vitBonus_changed, this, &MainWindow::char_vitBonus_changed);
-    connect(char_editor, &CharEditor::magBonus_changed, this, &MainWindow::char_magBonus_changed);
-    connect(char_editor, &CharEditor::spiBonus_changed, this, &MainWindow::char_spiBonus_changed);
-    connect(char_editor, &CharEditor::dexBonus_changed, this, &MainWindow::char_dexBonus_changed);
-    connect(char_editor, &CharEditor::lckBonus_changed, this, &MainWindow::char_lckBonus_changed);
-    connect(char_editor, &CharEditor::limitLevel_changed, this, &MainWindow::char_limitLevel_changed);
-    connect(char_editor, &CharEditor::limitBar_changed, this, &MainWindow::char_limitBar_changed);
-    connect(char_editor, &CharEditor::name_changed, this, &MainWindow::char_name_changed);
-    connect(char_editor, &CharEditor::weapon_changed, this, &MainWindow::char_weapon_changed);
-    connect(char_editor, &CharEditor::armor_changed, this, &MainWindow::char_armor_changed);
-    connect(char_editor, &CharEditor::accessory_changed, this, &MainWindow::char_accessory_changed);
-    connect(char_editor, &CharEditor::curHp_changed, this, &MainWindow::char_curHp_changed);
-    connect(char_editor, &CharEditor::maxHp_changed, this, &MainWindow::char_maxHp_changed);
-    connect(char_editor, &CharEditor::curMp_changed, this, &MainWindow::char_curMp_changed);
-    connect(char_editor, &CharEditor::maxMp_changed, this, &MainWindow::char_maxMp_changed);
-    connect(char_editor, &CharEditor::kills_changed, this, &MainWindow::char_kills_changed);
-    connect(char_editor, &CharEditor::row_changed, this, &MainWindow::char_row_changed);
-    connect(char_editor, &CharEditor::levelProgress_changed, this, &MainWindow::char_levelProgress_changed);
-    connect(char_editor, &CharEditor::sadnessfury_changed, this, &MainWindow::char_sadnessfury_changed);
-    connect(char_editor, &CharEditor::limits_changed, this, &MainWindow::char_limits_changed);
-    connect(char_editor, &CharEditor::timesused1_changed, this, &MainWindow::char_timesused1_changed);
-    connect(char_editor, &CharEditor::timesused2_changed, this, &MainWindow::char_timeused2_changed);
-    connect(char_editor, &CharEditor::timesused3_changed, this, &MainWindow::char_timeused3_changed);
-    connect(char_editor, &CharEditor::baseHp_changed, this, &MainWindow::char_baseHp_changed);
-    connect(char_editor, &CharEditor::baseMp_changed, this, &MainWindow::char_baseMp_changed);
-    connect(char_editor, &CharEditor::exp_changed, this, &MainWindow::char_exp_changed);
-    connect(char_editor, &CharEditor::mslotChanged, this, &MainWindow::char_mslot_changed);
-    connect(char_editor, &CharEditor::Materias_changed, this, &MainWindow::char_materia_changed);
-    connect(char_editor, &CharEditor::expNext_changed, this, &MainWindow::char_expNext_changed);
+    connect(char_editor, &CharEditor::id_changed, this, &BlackChocobo::char_id_changed);
+    connect(char_editor, &CharEditor::level_changed, this, &BlackChocobo::char_level_changed);
+    connect(char_editor, &CharEditor::str_changed, this, &BlackChocobo::char_str_changed);
+    connect(char_editor, &CharEditor::vit_changed, this, &BlackChocobo::char_vit_changed);
+    connect(char_editor, &CharEditor::mag_changed, this, &BlackChocobo::char_mag_changed);
+    connect(char_editor, &CharEditor::spi_changed, this, &BlackChocobo::char_spi_changed);
+    connect(char_editor, &CharEditor::dex_changed, this, &BlackChocobo::char_dex_changed);
+    connect(char_editor, &CharEditor::lck_changed, this, &BlackChocobo::char_lck_changed);
+    connect(char_editor, &CharEditor::strBonus_changed, this, &BlackChocobo::char_strBonus_changed);
+    connect(char_editor, &CharEditor::vitBonus_changed, this, &BlackChocobo::char_vitBonus_changed);
+    connect(char_editor, &CharEditor::magBonus_changed, this, &BlackChocobo::char_magBonus_changed);
+    connect(char_editor, &CharEditor::spiBonus_changed, this, &BlackChocobo::char_spiBonus_changed);
+    connect(char_editor, &CharEditor::dexBonus_changed, this, &BlackChocobo::char_dexBonus_changed);
+    connect(char_editor, &CharEditor::lckBonus_changed, this, &BlackChocobo::char_lckBonus_changed);
+    connect(char_editor, &CharEditor::limitLevel_changed, this, &BlackChocobo::char_limitLevel_changed);
+    connect(char_editor, &CharEditor::limitBar_changed, this, &BlackChocobo::char_limitBar_changed);
+    connect(char_editor, &CharEditor::name_changed, this, &BlackChocobo::char_name_changed);
+    connect(char_editor, &CharEditor::weapon_changed, this, &BlackChocobo::char_weapon_changed);
+    connect(char_editor, &CharEditor::armor_changed, this, &BlackChocobo::char_armor_changed);
+    connect(char_editor, &CharEditor::accessory_changed, this, &BlackChocobo::char_accessory_changed);
+    connect(char_editor, &CharEditor::curHp_changed, this, &BlackChocobo::char_curHp_changed);
+    connect(char_editor, &CharEditor::maxHp_changed, this, &BlackChocobo::char_maxHp_changed);
+    connect(char_editor, &CharEditor::curMp_changed, this, &BlackChocobo::char_curMp_changed);
+    connect(char_editor, &CharEditor::maxMp_changed, this, &BlackChocobo::char_maxMp_changed);
+    connect(char_editor, &CharEditor::kills_changed, this, &BlackChocobo::char_kills_changed);
+    connect(char_editor, &CharEditor::row_changed, this, &BlackChocobo::char_row_changed);
+    connect(char_editor, &CharEditor::levelProgress_changed, this, &BlackChocobo::char_levelProgress_changed);
+    connect(char_editor, &CharEditor::sadnessfury_changed, this, &BlackChocobo::char_sadnessfury_changed);
+    connect(char_editor, &CharEditor::limits_changed, this, &BlackChocobo::char_limits_changed);
+    connect(char_editor, &CharEditor::timesused1_changed, this, &BlackChocobo::char_timesused1_changed);
+    connect(char_editor, &CharEditor::timesused2_changed, this, &BlackChocobo::char_timeused2_changed);
+    connect(char_editor, &CharEditor::timesused3_changed, this, &BlackChocobo::char_timeused3_changed);
+    connect(char_editor, &CharEditor::baseHp_changed, this, &BlackChocobo::char_baseHp_changed);
+    connect(char_editor, &CharEditor::baseMp_changed, this, &BlackChocobo::char_baseMp_changed);
+    connect(char_editor, &CharEditor::exp_changed, this, &BlackChocobo::char_exp_changed);
+    connect(char_editor, &CharEditor::mslotChanged, this, &BlackChocobo::char_mslot_changed);
+    connect(char_editor, &CharEditor::Materias_changed, this, &BlackChocobo::char_materia_changed);
+    connect(char_editor, &CharEditor::expNext_changed, this, &BlackChocobo::char_expNext_changed);
 
-    connect(chocoboManager, &ChocoboManager::ownedChanged, this, &MainWindow::cm_stablesOwnedChanged);
-    connect(chocoboManager, &ChocoboManager::stableMaskChanged, this, &MainWindow::cm_stableMaskChanged);
-    connect(chocoboManager, &ChocoboManager::occupiedChanged, this, &MainWindow::cm_stablesOccupiedChanged);
-    connect(chocoboManager, &ChocoboManager::nameChanged, this, &MainWindow::cm_nameChanged);
-    connect(chocoboManager, &ChocoboManager::cantMateChanged, this, &MainWindow::cm_mated_toggled);
-    connect(chocoboManager, &ChocoboManager::speedChanged, this, &MainWindow::cm_speedChanged);
-    connect(chocoboManager, &ChocoboManager::mSpeedChanged, this, &MainWindow::cm_maxspeedChanged);
-    connect(chocoboManager, &ChocoboManager::sprintChanged, this, &MainWindow::cm_sprintChanged);
-    connect(chocoboManager, &ChocoboManager::mSprintChanged, this, &MainWindow::cm_maxsprintChanged);
-    connect(chocoboManager, &ChocoboManager::staminaChanged, this, &MainWindow::cm_staminaChanged);
-    connect(chocoboManager, &ChocoboManager::sexChanged, this, &MainWindow::cm_sexChanged);
-    connect(chocoboManager, &ChocoboManager::typeChanged, this, &MainWindow::cm_typeChanged);
-    connect(chocoboManager, &ChocoboManager::accelChanged, this, &MainWindow::cm_accelChanged);
-    connect(chocoboManager, &ChocoboManager::coopChanged, this, &MainWindow::cm_coopChanged);
-    connect(chocoboManager, &ChocoboManager::intelligenceChanged, this, &MainWindow::cm_intelChanged);
-    connect(chocoboManager, &ChocoboManager::personalityChanged, this, &MainWindow::cm_personalityChanged);
-    connect(chocoboManager, &ChocoboManager::pCountChanged, this, &MainWindow::cm_pcountChanged);
-    connect(chocoboManager, &ChocoboManager::winsChanged, this, &MainWindow::cm_raceswonChanged);
-    connect(chocoboManager, &ChocoboManager::penChanged, this, &MainWindow::cm_pensChanged);
-    connect(chocoboManager, &ChocoboManager::ratingChanged, this, &MainWindow::cm_ratingChanged);
+    connect(chocoboManager, &ChocoboManager::ownedChanged, this, &BlackChocobo::cm_stablesOwnedChanged);
+    connect(chocoboManager, &ChocoboManager::stableMaskChanged, this, &BlackChocobo::cm_stableMaskChanged);
+    connect(chocoboManager, &ChocoboManager::occupiedChanged, this, &BlackChocobo::cm_stablesOccupiedChanged);
+    connect(chocoboManager, &ChocoboManager::nameChanged, this, &BlackChocobo::cm_nameChanged);
+    connect(chocoboManager, &ChocoboManager::cantMateChanged, this, &BlackChocobo::cm_mated_toggled);
+    connect(chocoboManager, &ChocoboManager::speedChanged, this, &BlackChocobo::cm_speedChanged);
+    connect(chocoboManager, &ChocoboManager::mSpeedChanged, this, &BlackChocobo::cm_maxspeedChanged);
+    connect(chocoboManager, &ChocoboManager::sprintChanged, this, &BlackChocobo::cm_sprintChanged);
+    connect(chocoboManager, &ChocoboManager::mSprintChanged, this, &BlackChocobo::cm_maxsprintChanged);
+    connect(chocoboManager, &ChocoboManager::staminaChanged, this, &BlackChocobo::cm_staminaChanged);
+    connect(chocoboManager, &ChocoboManager::sexChanged, this, &BlackChocobo::cm_sexChanged);
+    connect(chocoboManager, &ChocoboManager::typeChanged, this, &BlackChocobo::cm_typeChanged);
+    connect(chocoboManager, &ChocoboManager::accelChanged, this, &BlackChocobo::cm_accelChanged);
+    connect(chocoboManager, &ChocoboManager::coopChanged, this, &BlackChocobo::cm_coopChanged);
+    connect(chocoboManager, &ChocoboManager::intelligenceChanged, this, &BlackChocobo::cm_intelChanged);
+    connect(chocoboManager, &ChocoboManager::personalityChanged, this, &BlackChocobo::cm_personalityChanged);
+    connect(chocoboManager, &ChocoboManager::pCountChanged, this, &BlackChocobo::cm_pcountChanged);
+    connect(chocoboManager, &ChocoboManager::winsChanged, this, &BlackChocobo::cm_raceswonChanged);
+    connect(chocoboManager, &ChocoboManager::penChanged, this, &BlackChocobo::cm_pensChanged);
+    connect(chocoboManager, &ChocoboManager::ratingChanged, this, &BlackChocobo::cm_ratingChanged);
 
-    connect(locationViewer, &LocationViewer::locationStringChanged, this, &MainWindow::location_textChanged);
-    connect(locationViewer, &LocationViewer::locIdChanged, this, &MainWindow::loc_id_valueChanged);
-    connect(locationViewer, &LocationViewer::mapIdChanged, this, &MainWindow::map_id_valueChanged);
-    connect(locationViewer, &LocationViewer::xChanged, this, &MainWindow::coord_x_valueChanged);
-    connect(locationViewer, &LocationViewer::yChanged, this, &MainWindow::coord_y_valueChanged);
-    connect(locationViewer, &LocationViewer::tChanged, this, &MainWindow::coord_t_valueChanged);
-    connect(locationViewer, &LocationViewer::dChanged, this, &MainWindow::coord_d_valueChanged);
-    connect(locationViewer, &LocationViewer::locationChanged, this, &MainWindow::locationSelectionChanged);
-    connect(locationViewer, &LocationViewer::fieldItemConnectRequest, this, &MainWindow::connectFieldItem);
-    connect(locationViewer, &LocationViewer::fieldItemCheck, this, &MainWindow::checkFieldItem);
-    connect(locationViewer, &LocationViewer::fieldItemChanged, this, &MainWindow::fieldItemStateChanged);
+    connect(locationViewer, &LocationViewer::locationStringChanged, this, &BlackChocobo::location_textChanged);
+    connect(locationViewer, &LocationViewer::locIdChanged, this, &BlackChocobo::loc_id_valueChanged);
+    connect(locationViewer, &LocationViewer::mapIdChanged, this, &BlackChocobo::map_id_valueChanged);
+    connect(locationViewer, &LocationViewer::xChanged, this, &BlackChocobo::coord_x_valueChanged);
+    connect(locationViewer, &LocationViewer::yChanged, this, &BlackChocobo::coord_y_valueChanged);
+    connect(locationViewer, &LocationViewer::tChanged, this, &BlackChocobo::coord_t_valueChanged);
+    connect(locationViewer, &LocationViewer::dChanged, this, &BlackChocobo::coord_d_valueChanged);
+    connect(locationViewer, &LocationViewer::locationChanged, this, &BlackChocobo::locationSelectionChanged);
+    connect(locationViewer, &LocationViewer::fieldItemConnectRequest, this, &BlackChocobo::connectFieldItem);
+    connect(locationViewer, &LocationViewer::fieldItemCheck, this, &BlackChocobo::checkFieldItem);
+    connect(locationViewer, &LocationViewer::fieldItemChanged, this, &BlackChocobo::fieldItemStateChanged);
 
-    connect(optionsWidget, &OptionsWidget::dialogColorLLChanged, this, &MainWindow::setDialogColorLL);
-    connect(optionsWidget, &OptionsWidget::dialogColorLRChanged, this, &MainWindow::setDialogColorLR);
-    connect(optionsWidget, &OptionsWidget::dialogColorULChanged, this, &MainWindow::setDialogColorUL);
-    connect(optionsWidget, &OptionsWidget::dialogColorURChanged, this, &MainWindow::setDialogColorUR);
-    connect(optionsWidget, &OptionsWidget::magicOrderChanged, this, &MainWindow::setMagicOrder);
-    connect(optionsWidget, &OptionsWidget::cameraChanged, this, &MainWindow::setCameraMode);
-    connect(optionsWidget, &OptionsWidget::atbChanged, this, &MainWindow::setAtbMode);
-    connect(optionsWidget, &OptionsWidget::cursorChanged, this, &MainWindow::setCursorMode);
-    connect(optionsWidget, &OptionsWidget::controllerModeChanged, this, &MainWindow::setControlMode);
-    connect(optionsWidget, &OptionsWidget::soundChanged, this, &MainWindow::setSoundMode);
-    connect(optionsWidget, &OptionsWidget::fieldMessageSpeedChanged, this, &MainWindow::setFieldMessageSpeed);
-    connect(optionsWidget, &OptionsWidget::battleMessageSpeedChanged, this, &MainWindow::setBattleMessageSpeed);
-    connect(optionsWidget, &OptionsWidget::battleSpeedChanged, this, &MainWindow::setBattleSpeed);
-    connect(optionsWidget, &OptionsWidget::fieldHelpChanged, this, &MainWindow::setFieldHelp);
-    connect(optionsWidget, &OptionsWidget::battleTargetsChanged, this, &MainWindow::setBattleTargets);
-    connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &MainWindow::setBattleHelp);
-    connect(optionsWidget, &OptionsWidget::inputChanged, this, &MainWindow::setButtonMapping);
+    connect(optionsWidget, &OptionsWidget::dialogColorLLChanged, this, &BlackChocobo::setDialogColorLL);
+    connect(optionsWidget, &OptionsWidget::dialogColorLRChanged, this, &BlackChocobo::setDialogColorLR);
+    connect(optionsWidget, &OptionsWidget::dialogColorULChanged, this, &BlackChocobo::setDialogColorUL);
+    connect(optionsWidget, &OptionsWidget::dialogColorURChanged, this, &BlackChocobo::setDialogColorUR);
+    connect(optionsWidget, &OptionsWidget::magicOrderChanged, this, &BlackChocobo::setMagicOrder);
+    connect(optionsWidget, &OptionsWidget::cameraChanged, this, &BlackChocobo::setCameraMode);
+    connect(optionsWidget, &OptionsWidget::atbChanged, this, &BlackChocobo::setAtbMode);
+    connect(optionsWidget, &OptionsWidget::cursorChanged, this, &BlackChocobo::setCursorMode);
+    connect(optionsWidget, &OptionsWidget::controllerModeChanged, this, &BlackChocobo::setControlMode);
+    connect(optionsWidget, &OptionsWidget::soundChanged, this, &BlackChocobo::setSoundMode);
+    connect(optionsWidget, &OptionsWidget::fieldMessageSpeedChanged, this, &BlackChocobo::setFieldMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleMessageSpeedChanged, this, &BlackChocobo::setBattleMessageSpeed);
+    connect(optionsWidget, &OptionsWidget::battleSpeedChanged, this, &BlackChocobo::setBattleSpeed);
+    connect(optionsWidget, &OptionsWidget::fieldHelpChanged, this, &BlackChocobo::setFieldHelp);
+    connect(optionsWidget, &OptionsWidget::battleTargetsChanged, this, &BlackChocobo::setBattleTargets);
+    connect(optionsWidget, &OptionsWidget::battleHelpChanged, this, &BlackChocobo::setBattleHelp);
+    connect(optionsWidget, &OptionsWidget::inputChanged, this, &BlackChocobo::setButtonMapping);
 }
 
-void MainWindow::loadBasicSettings()
+void BlackChocobo::loadBasicSettings()
 {
     if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull())
         saveGeometry();
@@ -780,7 +789,7 @@ void MainWindow::loadBasicSettings()
         restoreGeometry(BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
 
-void MainWindow::loadChildWidgetSettings()
+void BlackChocobo::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
     char_editor->setEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
@@ -799,12 +808,12 @@ void MainWindow::loadChildWidgetSettings()
     ui->sbLeaderId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
-MainWindow::~MainWindow()
+BlackChocobo::~BlackChocobo()
 {
     delete ui;
 }
 
-void MainWindow::changeEvent(QEvent *e)
+void BlackChocobo::changeEvent(QEvent *e)
 {
     if (e->type() == QEvent::PaletteChange) {
         QPalette palette = BCSettings::instance()->paletteForSetting();
@@ -836,12 +845,12 @@ void MainWindow::changeEvent(QEvent *e)
     }
 }
 
-void MainWindow::dragEnterEvent(QDragEnterEvent *e)
+void BlackChocobo::dragEnterEvent(QDragEnterEvent *e)
 {
     e->accept();
 }
 
-void MainWindow::dropEvent(QDropEvent *e)
+void BlackChocobo::dropEvent(QDropEvent *e)
 {
     if (ff7->isFileModified()) {
         if (!saveChanges())
@@ -853,7 +862,7 @@ void MainWindow::dropEvent(QDropEvent *e)
         loadFileFull(mimeData->urls().at(0).toLocalFile(), 0);
 }
 
-bool MainWindow::saveChanges(void)
+bool BlackChocobo::saveChanges(void)
 {
     auto result = QMessageBox::question(this, tr("Unsaved Changes"), tr("Save Changes to the File:\n%1").arg(ff7->fileName())
                                    , QMessageBox::StandardButton::Yes | QMessageBox::StandardButton::No | QMessageBox::StandardButton::Cancel);
@@ -866,7 +875,7 @@ bool MainWindow::saveChanges(void)
     default: return false;
     }
 }
-void MainWindow::closeEvent(QCloseEvent *e)
+void BlackChocobo::closeEvent(QCloseEvent *e)
 {
     if (ff7->isFileModified()) {
         if(!saveChanges())
@@ -876,17 +885,17 @@ void MainWindow::closeEvent(QCloseEvent *e)
     }
     BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
-void MainWindow::resizeEvent(QResizeEvent *)
+void BlackChocobo::resizeEvent(QResizeEvent *)
 {
     BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
     fileModified(ff7->isFileModified());
 }
-void MainWindow::moveEvent(QMoveEvent *)
+void BlackChocobo::moveEvent(QMoveEvent *)
 {
     BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::actionOpenSaveFile_triggered()
+void BlackChocobo::actionOpenSaveFile_triggered()
 {
     if (ff7->isFileModified()) {
         if (!saveChanges())
@@ -898,14 +907,14 @@ void MainWindow::actionOpenSaveFile_triggered()
         loadFileFull(fileName, 0);
 }
 
-void MainWindow::actionReload_triggered()
+void BlackChocobo::actionReload_triggered()
 {
     if (!ff7->fileName().isEmpty())
         loadFileFull(ff7->fileName(), 1);
 }
 
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
-void MainWindow::loadFileFull(const QString &fileName, int reload)
+void BlackChocobo::loadFileFull(const QString &fileName, int reload)
 {
     //if called from reload then int reload ==1 (don't call slot select)
     QFile file(fileName);
@@ -950,7 +959,7 @@ void MainWindow::loadFileFull(const QString &fileName, int reload)
 }
 
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
-void MainWindow::actionImportSlotFromFile_triggered()
+void BlackChocobo::actionImportSlotFromFile_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(),
@@ -979,7 +988,7 @@ void MainWindow::actionImportSlotFromFile_triggered()
     ff7->setFileModified(true, 0);
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
-void MainWindow::actionImportChar_triggered()
+void BlackChocobo::actionImportChar_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
@@ -1000,7 +1009,7 @@ void MainWindow::actionImportChar_triggered()
     set_char_buttons();
 }
 
-void MainWindow::actionExportChar_triggered()
+void BlackChocobo::actionExportChar_triggered()
 {
     QString fileName = BCDialog::getSaveFileName(this, ff7->region(s),
                        tr("Save FF7 Character File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(),
@@ -1012,14 +1021,14 @@ void MainWindow::actionExportChar_triggered()
             ui->statusBar->showMessage(tr("Character Export Failed"), 2000);
     }
 }
-bool MainWindow::actionSave_triggered()
+bool BlackChocobo::actionSave_triggered()
 {
     if (_init || ff7->fileName().isEmpty())
         return actionSaveFileAs_triggered();
     return saveFileFull(ff7->fileName());
 }
 
-bool MainWindow::actionSaveFileAs_triggered()
+bool BlackChocobo::actionSaveFileAs_triggered()
 {
     QMap<QString, FF7SaveInfo::FORMAT> typeMap;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
@@ -1068,7 +1077,7 @@ bool MainWindow::actionSaveFileAs_triggered()
     return false;
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
-bool MainWindow::saveFileFull(const QString &fileName)
+bool BlackChocobo::saveFileFull(const QString &fileName)
 {
     if (ff7->saveFile(fileName, s)) {
         //if no save was loaded and new game was clicked be sure to act like a game was loaded.
@@ -1085,7 +1094,7 @@ bool MainWindow::saveFileFull(const QString &fileName)
 }
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 
-void MainWindow::actionNewGame_triggered()
+void BlackChocobo::actionNewGame_triggered()
 {
     QString save_name = BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
                 BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString() : QString();
@@ -1101,7 +1110,7 @@ void MainWindow::actionNewGame_triggered()
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
-void MainWindow::actionNewGamePlus_triggered()
+void BlackChocobo::actionNewGamePlus_triggered()
 {
     QString save_name;
     if (BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
@@ -1116,12 +1125,12 @@ void MainWindow::actionNewGamePlus_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::actionClearSlot_triggered()
+void BlackChocobo::actionClearSlot_triggered()
 {
     ff7->clearSlot(s);
     guirefresh(0);
 }
-void MainWindow::actionPreviousSlot_triggered()
+void BlackChocobo::actionPreviousSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
@@ -1132,7 +1141,7 @@ void MainWindow::actionPreviousSlot_triggered()
     }
 }
 
-void MainWindow::actionNextSlot_triggered()
+void BlackChocobo::actionNextSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         return;
@@ -1143,27 +1152,27 @@ void MainWindow::actionNextSlot_triggered()
     }
 }
 
-void MainWindow::actionAbout_triggered()
+void BlackChocobo::actionAbout_triggered()
 {
     About adialog(this);
     adialog.exec();
 }
 
-void MainWindow::actionCopySlot_triggered()
+void BlackChocobo::actionCopySlot_triggered()
 {
     ff7->copySlot(s);
     ui->actionPasteSlot->setEnabled(true);
 }
 
-void MainWindow::actionPasteSlot_triggered()
+void BlackChocobo::actionPasteSlot_triggered()
 {
     ff7->pasteSlot(s);
     guirefresh(0);
 }
-void MainWindow::actionShowOptions_triggered()
+void BlackChocobo::actionShowOptions_triggered()
 {
     Options odialog(this);
-    connect(&odialog, &Options::requestLanguageChange, this, &MainWindow::changeLanguage);
+    connect(&odialog, &Options::requestLanguageChange, this, &BlackChocobo::changeLanguage);
     connect(&odialog, &Options::requestChangeNativeDialog, this, [] (bool useNative){
         QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !useNative);
     });
@@ -1173,20 +1182,20 @@ void MainWindow::actionShowOptions_triggered()
     disconnect(&odialog, nullptr, nullptr, nullptr);
 }
 
-void MainWindow::actionCreateNewMetadata_triggered()
+void BlackChocobo::actionCreateNewMetadata_triggered()
 {
     MetadataCreator mdata(this, ff7);
     mdata.exec();
 }
 
-void MainWindow::actionShowSelectionDialog_triggered()
+void BlackChocobo::actionShowSelectionDialog_triggered()
 {
     SlotSelect slotselect(ff7, false, this);
     s = slotselect.exec();
     guirefresh(0);
 }
 
-void MainWindow::actionOpenAchievementFile_triggered()
+void BlackChocobo::actionOpenAchievementFile_triggered()
 {
     QString temp = ff7->fileName();
     temp.chop(temp.length() - (temp.lastIndexOf("/")));
@@ -1198,13 +1207,12 @@ void MainWindow::actionOpenAchievementFile_triggered()
     if (temp.isEmpty())
         return;
 
-    achievementDialog achDialog(temp, this);
-    achDialog.exec();
+    BCDialog::achievementDialog(this, temp);
 }
 
 /*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
 
-void MainWindow::changeLanguage(const QVariant &data)
+void BlackChocobo::changeLanguage(const QVariant &data)
 {
     if(!m_translations.contains(data.toString()))
         detectTranslations();
@@ -1217,14 +1225,14 @@ void MainWindow::changeLanguage(const QVariant &data)
         QApplication::installTranslator(translation);
 }
 
-void MainWindow::setOpenFileText(const QString &openFile)
+void BlackChocobo::setOpenFileText(const QString &openFile)
 {
     int maxWidth = width() * .85;
     ui->lbl_fileName->setMaximumWidth(maxWidth);
     ui->lbl_fileName->setText(fontMetrics().elidedText(openFile, Qt::ElideMiddle, maxWidth));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionUSA_triggered(bool checked)
+void BlackChocobo::actionRegionUSA_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1252,7 +1260,7 @@ void MainWindow::actionRegionUSA_triggered(bool checked)
     locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionPALGeneric_triggered(bool checked)
+void BlackChocobo::actionRegionPALGeneric_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1279,7 +1287,7 @@ void MainWindow::actionRegionPALGeneric_triggered(bool checked)
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionPALGerman_triggered(bool checked)
+void BlackChocobo::actionRegionPALGerman_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1306,7 +1314,7 @@ void MainWindow::actionRegionPALGerman_triggered(bool checked)
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionPALSpanish_triggered(bool checked)
+void BlackChocobo::actionRegionPALSpanish_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1333,7 +1341,7 @@ void MainWindow::actionRegionPALSpanish_triggered(bool checked)
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionPALFrench_triggered(bool checked)
+void BlackChocobo::actionRegionPALFrench_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1360,7 +1368,7 @@ void MainWindow::actionRegionPALFrench_triggered(bool checked)
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionJPN_triggered(bool checked)
+void BlackChocobo::actionRegionJPN_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1387,7 +1395,7 @@ void MainWindow::actionRegionJPN_triggered(bool checked)
     } locationViewer->setRegion(ff7->region(s));
 }
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::actionRegionJPNInternational_triggered(bool checked)
+void BlackChocobo::actionRegionJPNInternational_triggered(bool checked)
 {
     if (!load) {
         if (!checked) {
@@ -1415,7 +1423,7 @@ void MainWindow::actionRegionJPNInternational_triggered(bool checked)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
-void MainWindow::setmenu(bool newgame)
+void BlackChocobo::setmenu(bool newgame)
 {
     load = true;
     /*~~Disable All Items that are dependent on File Type~~*/
@@ -1505,7 +1513,7 @@ void MainWindow::setmenu(bool newgame)
     }
     load = false;
 }
-void MainWindow::fileModified(bool changed)
+void BlackChocobo::fileModified(bool changed)
 {
     if (changed)
         setOpenFileText(ff7->fileName().append("*"));
@@ -1513,7 +1521,7 @@ void MainWindow::fileModified(bool changed)
         setOpenFileText(ff7->fileName());
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
-void MainWindow::set_ntsc_time(void)
+void BlackChocobo::set_ntsc_time(void)
 {
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) * 1.2));
@@ -1524,7 +1532,7 @@ void MainWindow::set_ntsc_time(void)
         load = false;
     }
 }
-void MainWindow::set_pal_time(void)
+void BlackChocobo::set_pal_time(void)
 {
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
         ff7->setTime(s, quint32(ff7->time(s) / 1.2));
@@ -1535,7 +1543,7 @@ void MainWindow::set_pal_time(void)
         load = false;
     }
 }
-void MainWindow::materiaupdate(void)
+void BlackChocobo::materiaupdate(void)
 {
     load = true;
     int j = std::max(0, ui->tblMateria->currentRow());
@@ -1597,21 +1605,21 @@ void MainWindow::materiaupdate(void)
     ui->tblMateria->setCurrentCell(j, 1); //so that right side is set correctly.
     load = false;
 }
-void MainWindow::materia_ap_changed(qint32 ap)
+void BlackChocobo::materia_ap_changed(qint32 ap)
 {
     if (!load) {
         ff7->setPartyMateria(s, ui->tblMateria->currentRow(), ff7->partyMateriaId(s, ui->tblMateria->currentRow()), ap);
         materiaupdate();
     }
 }
-void MainWindow::materia_id_changed(qint8 id)
+void BlackChocobo::materia_id_changed(qint8 id)
 {
     if (!load) {
         ff7->setPartyMateria(s, ui->tblMateria->currentRow(), quint8(id), ff7->partyMateriaAp(s, ui->tblMateria->currentRow()));
         materiaupdate();
     }
 }
-void MainWindow::CheckGame()
+void BlackChocobo::CheckGame()
 {
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
             || ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->isTypePC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
@@ -1665,7 +1673,7 @@ void MainWindow::CheckGame()
         guirefresh(0);
     }
 }
-void MainWindow::othersUpdate()
+void BlackChocobo::othersUpdate()
 {
     load = true;
 
@@ -1741,7 +1749,7 @@ void MainWindow::othersUpdate()
     ui->cbFlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
     load = false;
 }
-void MainWindow::updateStolenMateria()
+void BlackChocobo::updateStolenMateria()
 {
     for (int mat = 0; mat < 48; mat++) { //materias stolen by yuffie
         QString ap;
@@ -1765,7 +1773,7 @@ void MainWindow::updateStolenMateria()
         ui->tblMateriaStolen->setRowHeight(mat, fontMetrics().height() + 9);
     }
 }
-void MainWindow::update_hexEditor_PSXInfo(void)
+void BlackChocobo::update_hexEditor_PSXInfo(void)
 {
     load = true;
 
@@ -1808,7 +1816,8 @@ void MainWindow::update_hexEditor_PSXInfo(void)
     ui->lblSlotSize->setText(SlotSizeText);
     load = false;
 }
-void MainWindow::tabWidget_currentChanged(int index)
+
+void BlackChocobo::tabWidget_currentChanged(int index)
 {
     //Update the shown tab.
     load = true;
@@ -1913,11 +1922,11 @@ void MainWindow::tabWidget_currentChanged(int index)
     }
     load = false;
 }
-void MainWindow::hexTabUpdate(int viewMode)
+void BlackChocobo::hexTabUpdate(int viewMode)
 {
     ui->psxExtras->setVisible(false);
     ui->boxHexData->setVisible(false);
-    disconnect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
+    disconnect(hexEditor, &QHexEdit::dataChanged, this, &BlackChocobo::hexEditorChanged);
     if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         hexEditor->setData(ff7->slotFF7Data(s));
     } else {
@@ -1938,15 +1947,15 @@ void MainWindow::hexTabUpdate(int viewMode)
         }
     }
     hexEditor->setCursorPosition(hexCursorPos);
-    connect(hexEditor, &QHexEdit::dataChanged, this, &MainWindow::hexEditorChanged);
+    connect(hexEditor, &QHexEdit::dataChanged, this, &BlackChocobo::hexEditorChanged);
 }
 
-void MainWindow::setControllerMappingVisible(bool Visible)
+void BlackChocobo::setControllerMappingVisible(bool Visible)
 {
     optionsWidget->setControllerMappingVisible(Visible);
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::guirefresh(bool newgame)
+void BlackChocobo::guirefresh(bool newgame)
 {
     load = true;
     /*~~~~Check for SG type and ff7~~~~*/
@@ -1973,7 +1982,7 @@ void MainWindow::guirefresh(bool newgame)
         load = false;
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
-void MainWindow::set_char_buttons()
+void BlackChocobo::set_char_buttons()
 {
     ui->btnCloud->setIcon(FF7Char::instance()->icon(ff7->charID(s, 0)));
     ui->btnBarret->setIcon(FF7Char::instance()->icon(ff7->charID(s, 1)));
@@ -1985,7 +1994,7 @@ void MainWindow::set_char_buttons()
     ui->btnVincent->setIcon(FF7Char::instance()->icon(ff7->charID(s, 7)));
     ui->btnCid->setIcon(FF7Char::instance()->icon(ff7->charID(s, 8)));
 }
-void MainWindow::progress_update()
+void BlackChocobo::progress_update()
 {
     load = true;
     ui->sbCurdisc->setValue(ff7->disc(s));
@@ -2059,53 +2068,53 @@ void MainWindow::progress_update()
     load = false;
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::btnCloud_clicked()
+void BlackChocobo::btnCloud_clicked()
 {
     curchar = 0;
     char_editor->setChar(ff7->character(s, 0), ff7->charName(s, 0));
 }
-void MainWindow::btnBarret_clicked()
+void BlackChocobo::btnBarret_clicked()
 {
     curchar = 1;
     char_editor->setChar(ff7->character(s, 1), ff7->charName(s, 1));
 }
-void MainWindow::btnTifa_clicked()
+void BlackChocobo::btnTifa_clicked()
 {
     curchar = 2;
     char_editor->setChar(ff7->character(s, 2), ff7->charName(s, 2));
 }
-void MainWindow::btnAeris_clicked()
+void BlackChocobo::btnAeris_clicked()
 {
     curchar = 3;
     char_editor->setChar(ff7->character(s, 3), ff7->charName(s, 3));
 }
-void MainWindow::btnRed_clicked()
+void BlackChocobo::btnRed_clicked()
 {
     curchar = 4;
     char_editor->setChar(ff7->character(s, 4), ff7->charName(s, 4));
 }
-void MainWindow::btnYuffie_clicked()
+void BlackChocobo::btnYuffie_clicked()
 {
     curchar = 5;
     char_editor->setChar(ff7->character(s, 5), ff7->charName(s, 5));
 }
-void MainWindow::btnCait_clicked()
+void BlackChocobo::btnCait_clicked()
 {
     curchar = 6;
     char_editor->setChar(ff7->character(s, 6), ff7->charName(s, 6));
 }
-void MainWindow::btnVincent_clicked()
+void BlackChocobo::btnVincent_clicked()
 {
     curchar = 7;
     char_editor->setChar(ff7->character(s, 7), ff7->charName(s, 7));
 }
-void MainWindow::btnCid_clicked()
+void BlackChocobo::btnCid_clicked()
 {
     curchar = 8;
     char_editor->setChar(ff7->character(s, 8), ff7->charName(s, 8));
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::comboParty1_currentIndexChanged(int index)
+void BlackChocobo::comboParty1_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 0x0C) { //empty char slot (index 12)
@@ -2156,7 +2165,7 @@ void MainWindow::comboParty1_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::comboParty2_currentIndexChanged(int index)
+void BlackChocobo::comboParty2_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 12)
@@ -2168,7 +2177,7 @@ void MainWindow::comboParty2_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::comboParty3_currentIndexChanged(int index)
+void BlackChocobo::comboParty3_currentIndexChanged(int index)
 {
     if (!load) {
         if (index == 12)
@@ -2180,186 +2189,186 @@ void MainWindow::comboParty3_currentIndexChanged(int index)
     }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::cm_stablesOwnedChanged(qint8 owned)
+void BlackChocobo::cm_stablesOwnedChanged(qint8 owned)
 {
     if (!load)
         ff7->setStablesOwned(s, owned);
 }
-void MainWindow::cm_stableMaskChanged(qint8 mask)
+void BlackChocobo::cm_stableMaskChanged(qint8 mask)
 {
     if (!load)
         ff7->setStableMask(s, mask);
 }
-void MainWindow::cm_stablesOccupiedChanged(qint8 occupied)
+void BlackChocobo::cm_stablesOccupiedChanged(qint8 occupied)
 {
     if (!load)
         ff7->setStablesOccupied(s, occupied);
 }
 //set data for stables inside
-void MainWindow::cm_nameChanged(int stable, QString text)
+void BlackChocobo::cm_nameChanged(int stable, QString text)
 {
     if (!load)
         ff7->setChocoName(s, stable, text);
 }
-void MainWindow::cm_staminaChanged(int stable, quint16 value)
+void BlackChocobo::cm_staminaChanged(int stable, quint16 value)
 {
     if (!load)
         ff7->setChocoStamina(s, stable, value);
 }
-void MainWindow::cm_speedChanged(int stable, quint16 value)
+void BlackChocobo::cm_speedChanged(int stable, quint16 value)
 {
     if (!load)
         ff7->setChocoSpeed(s, stable, value);
 }
-void MainWindow::cm_maxspeedChanged(int stable, quint16 value)
+void BlackChocobo::cm_maxspeedChanged(int stable, quint16 value)
 {
     if (!load)
         ff7->setChocoMaxSpeed(s, stable, value);
 }
-void MainWindow::cm_sprintChanged(int stable, quint16 value)
+void BlackChocobo::cm_sprintChanged(int stable, quint16 value)
 {
     if (!load)
         ff7->setChocoSprintSpeed(s, stable, value);
 }
-void MainWindow::cm_maxsprintChanged(int stable, quint16 value)
+void BlackChocobo::cm_maxsprintChanged(int stable, quint16 value)
 {
     if (!load)
         ff7->setChocoMaxSprintSpeed(s, stable, value);
 }
-void MainWindow::cm_sexChanged(int stable, quint8 index)
+void BlackChocobo::cm_sexChanged(int stable, quint8 index)
 {
     if (!load)
         ff7->setChocoSex(s, stable, index);
 }
-void MainWindow::cm_typeChanged(int stable, quint8 index)
+void BlackChocobo::cm_typeChanged(int stable, quint8 index)
 {
     if (!load)
         ff7->setChocoType(s, stable, index);
 }
-void MainWindow::cm_coopChanged(int stable, quint8 value)
+void BlackChocobo::cm_coopChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoCoop(s, stable, value);
 }
-void MainWindow::cm_accelChanged(int stable, quint8 value)
+void BlackChocobo::cm_accelChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoAccel(s, stable, value);
 }
-void MainWindow::cm_intelChanged(int stable, quint8 value)
+void BlackChocobo::cm_intelChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoIntelligence(s, stable, value);
 }
-void MainWindow::cm_raceswonChanged(int stable, quint8 value)
+void BlackChocobo::cm_raceswonChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoRaceswon(s, stable, value);
 }
-void MainWindow::cm_pcountChanged(int stable, quint8 value)
+void BlackChocobo::cm_pcountChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoPCount(s, stable, value);
 }
-void MainWindow::cm_personalityChanged(int stable, quint8 value)
+void BlackChocobo::cm_personalityChanged(int stable, quint8 value)
 {
     if (!load)
         ff7->setChocoPersonality(s, stable, value);
 }
-void MainWindow::cm_mated_toggled(int stable, bool checked)
+void BlackChocobo::cm_mated_toggled(int stable, bool checked)
 {
     if (!load)
         ff7->setChocoCantMate(s, stable, checked);
 }
-void MainWindow::cm_ratingChanged(int stable, quint8 rating)
+void BlackChocobo::cm_ratingChanged(int stable, quint8 rating)
 {
     if (!load)
         ff7->setChocoboRating(s, stable, rating);
 }
 //set data for pens outside
-void MainWindow::cm_pensChanged(int pen, int index)
+void BlackChocobo::cm_pensChanged(int pen, int index)
 {
     if (!load)
         ff7->setChocoboPen(s, pen, index);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::sbLoveBarret_valueChanged(int value)
+void BlackChocobo::sbLoveBarret_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
 }
-void MainWindow::sbLoveAeris_valueChanged(int value)
+void BlackChocobo::sbLoveAeris_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
 }
-void MainWindow::sbLoveTifa_valueChanged(int value)
+void BlackChocobo::sbLoveTifa_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
 }
-void MainWindow::sbLoveYuffie_valueChanged(int value)
+void BlackChocobo::sbLoveYuffie_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
 }
 
-void MainWindow::sbTimeHour_valueChanged(int value)
+void BlackChocobo::sbTimeHour_valueChanged(int value)
 {
     if (!load)
         ff7->setTime(s, quint32((value * 3600) + (ui->sbTimeMin->value() * 60) + (ui->sbTimeSec->value())));
 }
-void MainWindow::sbTimeMin_valueChanged(int value)
+void BlackChocobo::sbTimeMin_valueChanged(int value)
 {
     if (!load)
         ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimeSec->value())));
 }
-void MainWindow::sbTimeSec_valueChanged(int value)
+void BlackChocobo::sbTimeSec_valueChanged(int value)
 {
     if (!load)
         ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + (ui->sbTimeMin->value() * 60) + (value)));
 }
 
-void MainWindow::sbSteps_valueChanged(int value)
+void BlackChocobo::sbSteps_valueChanged(int value)
 {
     if (!load)
         ff7->setSteps(s, value);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::sbGil_valueChanged(double value)
+void BlackChocobo::sbGil_valueChanged(double value)
 {
     if (!load)
         ff7->setGil(s, quint32(value));
 }
-void MainWindow::sbGp_valueChanged(int value)
+void BlackChocobo::sbGp_valueChanged(int value)
 {
     if (!load)
         ff7->setGp(s, value);
 }
-void MainWindow::sbBattles_valueChanged(int value)
+void BlackChocobo::sbBattles_valueChanged(int value)
 {
     if (!load)
         ff7->setBattles(s, value);
 }
-void MainWindow::sbRuns_valueChanged(int value)
+void BlackChocobo::sbRuns_valueChanged(int value)
 {
     if (!load)
         ff7->setRuns(s, value);
 }
 
-void MainWindow::cbMysteryPanties_toggled(bool checked)
+void BlackChocobo::cbMysteryPanties_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
 }
-void MainWindow::cbLetterToDaughter_toggled(bool checked)
+void BlackChocobo::cbLetterToDaughter_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
 }
-void MainWindow::cbLetterToWife_toggled(bool checked)
+void BlackChocobo::cbLetterToWife_toggled(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
@@ -2367,7 +2376,7 @@ void MainWindow::cbLetterToWife_toggled(bool checked)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::tblMateria_currentCellChanged(int row)
+void BlackChocobo::tblMateria_currentCellChanged(int row)
 {
     if (!load) {
         load = true;
@@ -2376,7 +2385,7 @@ void MainWindow::tblMateria_currentCellChanged(int row)
     }
 }
 
-void MainWindow::btnAddAllMateria_clicked()
+void BlackChocobo::btnAddAllMateria_clicked()
 {
     //place one of each at lowest possible point
     for (int i = 117; i < 142; i++) {
@@ -2420,7 +2429,7 @@ void MainWindow::btnAddAllMateria_clicked()
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::locationSelectionChanged(QString fieldName)
+void BlackChocobo::locationSelectionChanged(QString fieldName)
 {
     if (!load) {
         ff7->setMapId(s, FF7Location::instance()->mapID(fieldName).toUShort());
@@ -2433,269 +2442,269 @@ void MainWindow::locationSelectionChanged(QString fieldName)
         statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName), 750);
     }
 }
-void MainWindow::map_id_valueChanged(int value)
+void BlackChocobo::map_id_valueChanged(int value)
 {
     if (!load)
         ff7->setMapId(s, quint16(value));
 }
-void MainWindow::loc_id_valueChanged(int value)
+void BlackChocobo::loc_id_valueChanged(int value)
 {
     if (!load)
         ff7->setLocationId(s, quint16(value));
 }
-void MainWindow::coord_x_valueChanged(int value)
+void BlackChocobo::coord_x_valueChanged(int value)
 {
     if (!load)
         ff7->setLocationX(s, qint16(value));
 }
-void MainWindow::coord_y_valueChanged(int value)
+void BlackChocobo::coord_y_valueChanged(int value)
 {
     if (!load)
         ff7->setLocationY(s, qint16(value));
 }
-void MainWindow::coord_t_valueChanged(int value)
+void BlackChocobo::coord_t_valueChanged(int value)
 {
     if (!load)
         ff7->setLocationT(s, quint16(value));
 }
-void MainWindow::coord_d_valueChanged(int value)
+void BlackChocobo::coord_d_valueChanged(int value)
 {
     if (!load)
         ff7->setLocationD(s, quint8(value));
 }
-void MainWindow::location_textChanged(QString text)
+void BlackChocobo::location_textChanged(QString text)
 {
     if (!load)
         ff7->setLocation(s, text);
 }
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
-void MainWindow::setDialogColorUL(QColor color)
+void BlackChocobo::setDialogColorUL(QColor color)
 {
     if (!load)
         ff7->setDialogColorUL(s, color);
 }
-void MainWindow::setDialogColorUR(QColor color)
+void BlackChocobo::setDialogColorUR(QColor color)
 {
     if (!load)
         ff7->setDialogColorUR(s, color);
 }
-void MainWindow::setDialogColorLL(QColor color)
+void BlackChocobo::setDialogColorLL(QColor color)
 {
     if (!load)
         ff7->setDialogColorLL(s, color);
 }
-void MainWindow::setDialogColorLR(QColor color)
+void BlackChocobo::setDialogColorLR(QColor color)
 {
     if (!load)
         ff7->setDialogColorLR(s, color);
 }
 
-void MainWindow::setBattleSpeed(int value)
+void BlackChocobo::setBattleSpeed(int value)
 {
     if (!load)
         ff7->setBattleSpeed(s, value);
 }
-void MainWindow::setBattleMessageSpeed(int value)
+void BlackChocobo::setBattleMessageSpeed(int value)
 {
     if (!load)
         ff7->setBattleMessageSpeed(s, value);
 }
-void MainWindow::setFieldMessageSpeed(int value)
+void BlackChocobo::setFieldMessageSpeed(int value)
 {
     if (!load)
         ff7->setMessageSpeed(s, value);
 }
-void MainWindow::setBattleHelp(bool checked)
+void BlackChocobo::setBattleHelp(bool checked)
 {
     if (!load)
         ff7->setBattleHelp(s, checked);
 }
-void MainWindow::setFieldHelp(bool checked)
+void BlackChocobo::setFieldHelp(bool checked)
 {
     if (!load)
         ff7->setFieldHelp(s, checked);
 }
-void MainWindow::setBattleTargets(bool checked)
+void BlackChocobo::setBattleTargets(bool checked)
 {
     if (!load)
         ff7->setBattleTargets(s, checked);
 }
 
-void MainWindow::setControlMode(int mode)
+void BlackChocobo::setControlMode(int mode)
 {
     if (!load)
         ff7->setControlMode(s, mode);
 }
-void MainWindow::setSoundMode(int mode)
+void BlackChocobo::setSoundMode(int mode)
 {
     if (!load)
         ff7->setSoundMode(s, mode);
 }
-void MainWindow::setCursorMode(int mode)
+void BlackChocobo::setCursorMode(int mode)
 {
     if (!load)
         ff7->setCursorMode(s, mode);
 }
-void MainWindow::setAtbMode(int mode)
+void BlackChocobo::setAtbMode(int mode)
 {
     if (!load)
         ff7->setAtbMode(s, mode);
 }
-void MainWindow::setCameraMode(int mode)
+void BlackChocobo::setCameraMode(int mode)
 {
     if (!load)
         ff7->setCameraMode(s, mode);
 }
-void MainWindow::setMagicOrder(int order)
+void BlackChocobo::setMagicOrder(int order)
 {
     if (!load)
         ff7->setMagicOrder(s, order);
 }
 
 /*--------GAME PROGRESS-------*/
-void MainWindow::sbCurdisc_valueChanged(int value)
+void BlackChocobo::sbCurdisc_valueChanged(int value)
 {
     if (!load)
         ff7->setDisc(s, value);
 }
-void MainWindow::sbMprogress_valueChanged(int value)
+void BlackChocobo::sbMprogress_valueChanged(int value)
 {
     if (!load)
         ff7->setMainProgress(s, value);
 }
-void MainWindow::sbTurkschurch_valueChanged(int value)
+void BlackChocobo::sbTurkschurch_valueChanged(int value)
 {
     if (!load)
         ff7->setChurchProgress(s, value);
 }
-void MainWindow::sbDonprog_valueChanged(int value)
+void BlackChocobo::sbDonprog_valueChanged(int value)
 {
     if (!load)
         ff7->setDonProgress(s, value);
 }
-void MainWindow::cbBm1_1_toggled(bool checked)
+void BlackChocobo::cbBm1_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 0, checked);
 }
-void MainWindow::cbBm1_2_toggled(bool checked)
+void BlackChocobo::cbBm1_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 1, checked);
 }
-void MainWindow::cbBm1_3_toggled(bool checked)
+void BlackChocobo::cbBm1_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 2, checked);
 }
-void MainWindow::cbBm1_4_toggled(bool checked)
+void BlackChocobo::cbBm1_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 3, checked);
 }
-void MainWindow::cbBm1_5_toggled(bool checked)
+void BlackChocobo::cbBm1_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 4, checked);
 }
-void MainWindow::cbBm1_6_toggled(bool checked)
+void BlackChocobo::cbBm1_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 5, checked);
 }
-void MainWindow::cbBm1_7_toggled(bool checked)
+void BlackChocobo::cbBm1_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 6, checked);
 }
-void MainWindow::cbBm1_8_toggled(bool checked)
+void BlackChocobo::cbBm1_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress1(s, 7, checked);
 }
-void MainWindow::cbBm2_1_toggled(bool checked)
+void BlackChocobo::cbBm2_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 0, checked);
 }
-void MainWindow::cbBm2_2_toggled(bool checked)
+void BlackChocobo::cbBm2_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 1, checked);
 }
-void MainWindow::cbBm2_3_toggled(bool checked)
+void BlackChocobo::cbBm2_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 2, checked);
 }
-void MainWindow::cbBm2_4_toggled(bool checked)
+void BlackChocobo::cbBm2_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 3, checked);
 }
-void MainWindow::cbBm2_5_toggled(bool checked)
+void BlackChocobo::cbBm2_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 4, checked);
 }
-void MainWindow::cbBm2_6_toggled(bool checked)
+void BlackChocobo::cbBm2_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 5, checked);
 }
-void MainWindow::cbBm2_7_toggled(bool checked)
+void BlackChocobo::cbBm2_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 6, checked);
 }
-void MainWindow::cbBm2_8_toggled(bool checked)
+void BlackChocobo::cbBm2_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress2(s, 7, checked);
 }
-void MainWindow::cbBm3_1_toggled(bool checked)
+void BlackChocobo::cbBm3_1_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 0, checked);
 }
-void MainWindow::cbBm3_2_toggled(bool checked)
+void BlackChocobo::cbBm3_2_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 1, checked);
 }
-void MainWindow::cbBm3_3_toggled(bool checked)
+void BlackChocobo::cbBm3_3_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 2, checked);
 }
-void MainWindow::cbBm3_4_toggled(bool checked)
+void BlackChocobo::cbBm3_4_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 3, checked);
 }
-void MainWindow::cbBm3_5_toggled(bool checked)
+void BlackChocobo::cbBm3_5_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 4, checked);
 }
-void MainWindow::cbBm3_6_toggled(bool checked)
+void BlackChocobo::cbBm3_6_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 5, checked);
 }
-void MainWindow::cbBm3_7_toggled(bool checked)
+void BlackChocobo::cbBm3_7_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 6, checked);
 }
-void MainWindow::cbBm3_8_toggled(bool checked)
+void BlackChocobo::cbBm3_8_toggled(bool checked)
 {
     if (!load)
         ff7->setBmProgress3(s, 7, checked);
 }
 
-void MainWindow::cbS7pl_1_toggled(bool checked)
+void BlackChocobo::cbS7pl_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2707,7 +2716,7 @@ void MainWindow::cbS7pl_1_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_2_toggled(bool checked)
+void BlackChocobo::cbS7pl_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2719,7 +2728,7 @@ void MainWindow::cbS7pl_2_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_3_toggled(bool checked)
+void BlackChocobo::cbS7pl_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2731,7 +2740,7 @@ void MainWindow::cbS7pl_3_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_4_toggled(bool checked)
+void BlackChocobo::cbS7pl_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2743,7 +2752,7 @@ void MainWindow::cbS7pl_4_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_5_toggled(bool checked)
+void BlackChocobo::cbS7pl_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2755,7 +2764,7 @@ void MainWindow::cbS7pl_5_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_6_toggled(bool checked)
+void BlackChocobo::cbS7pl_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2767,7 +2776,7 @@ void MainWindow::cbS7pl_6_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_7_toggled(bool checked)
+void BlackChocobo::cbS7pl_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2779,7 +2788,7 @@ void MainWindow::cbS7pl_7_toggled(bool checked)
         ff7->setUnknown(s, 26, temp);
     }
 }
-void MainWindow::cbS7pl_8_toggled(bool checked)
+void BlackChocobo::cbS7pl_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(0);
@@ -2792,7 +2801,7 @@ void MainWindow::cbS7pl_8_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_1_toggled(bool checked)
+void BlackChocobo::cbS7ts_1_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2805,7 +2814,7 @@ void MainWindow::cbS7ts_1_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_2_toggled(bool checked)
+void BlackChocobo::cbS7ts_2_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2818,7 +2827,7 @@ void MainWindow::cbS7ts_2_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_3_toggled(bool checked)
+void BlackChocobo::cbS7ts_3_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2831,7 +2840,7 @@ void MainWindow::cbS7ts_3_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_4_toggled(bool checked)
+void BlackChocobo::cbS7ts_4_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2844,7 +2853,7 @@ void MainWindow::cbS7ts_4_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_5_toggled(bool checked)
+void BlackChocobo::cbS7ts_5_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2857,7 +2866,7 @@ void MainWindow::cbS7ts_5_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_6_toggled(bool checked)
+void BlackChocobo::cbS7ts_6_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2870,7 +2879,7 @@ void MainWindow::cbS7ts_6_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_7_toggled(bool checked)
+void BlackChocobo::cbS7ts_7_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2883,7 +2892,7 @@ void MainWindow::cbS7ts_7_toggled(bool checked)
     }
 }
 
-void MainWindow::cbS7ts_8_toggled(bool checked)
+void BlackChocobo::cbS7ts_8_toggled(bool checked)
 {
     if (!load) {
         QByteArray temp = ff7->unknown(s, 26); char t = temp.at(8);
@@ -2896,13 +2905,13 @@ void MainWindow::cbS7ts_8_toggled(bool checked)
     }
 }
 
-void MainWindow::cbBombingInt_stateChanged(int checked)
+void BlackChocobo::cbBombingInt_stateChanged(int checked)
 {
     if (!load)
         ff7->setStartBombingMission(s, checked);
 }
 
-void MainWindow::comboReplay_currentIndexChanged(int index)
+void BlackChocobo::comboReplay_currentIndexChanged(int index)
 {
     if (index > 0)
         ui->btnReplay->setEnabled(true);
@@ -2924,7 +2933,7 @@ void MainWindow::comboReplay_currentIndexChanged(int index)
     else
         ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));
 }
-void MainWindow::btnReplay_clicked()
+void BlackChocobo::btnReplay_clicked()
 {
     if (ui->comboReplay->currentIndex() == 1) { // bombing mission
         ui->sbCurdisc->setValue(1);
@@ -3013,141 +3022,141 @@ void MainWindow::btnReplay_clicked()
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::btnRemoveAllItems_clicked()
+void BlackChocobo::btnRemoveAllItems_clicked()
 {
     for (int i = 0; i < 320; i++)
         ff7->setItem(s, i, FF7Item::EmptyItemData);
     itemlist->setItems(ff7->items(s));
 }
 
-void MainWindow::btnRemoveAllMateria_clicked()
+void BlackChocobo::btnRemoveAllMateria_clicked()
 {
     for (int i = 0; i < 200; i++)
         ff7->setPartyMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     materiaupdate();
 }
 
-void MainWindow::btnRemoveAllStolen_clicked()
+void BlackChocobo::btnRemoveAllStolen_clicked()
 {
     for (int i = 0; i < 48; i++)
         ff7->setStolenMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     guirefresh(0);
 }
 
-void MainWindow::sbBloveAeris_valueChanged(int value)
+void BlackChocobo::sbBloveAeris_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
 }
-void MainWindow::sbBloveTifa_valueChanged(int value)
+void BlackChocobo::sbBloveTifa_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
 }
-void MainWindow::sbBloveYuffie_valueChanged(int value)
+void BlackChocobo::sbBloveYuffie_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
 }
-void MainWindow::sbBloveBarret_valueChanged(int value)
+void BlackChocobo::sbBloveBarret_valueChanged(int value)
 {
     if (!load)
         ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
 }
-void MainWindow::sbCoster1_valueChanged(int value)
+void BlackChocobo::sbCoster1_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 1, quint16(value));
 }
-void MainWindow::sbCoster2_valueChanged(int value)
+void BlackChocobo::sbCoster2_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 2, quint16(value));
 }
-void MainWindow::sbCoster3_valueChanged(int value)
+void BlackChocobo::sbCoster3_valueChanged(int value)
 {
     if (!load)
         ff7->setSpeedScore(s, 3, quint16(value));
 }
-void MainWindow::sbTimerTimeHour_valueChanged(int value)
+void BlackChocobo::sbTimerTimeHour_valueChanged(int value)
 {
     if (!load)
         ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sbTimerTimeMin->value() * 60) + (ui->sbTimerTimeSec->value())));
 }
-void MainWindow::sbTimerTimeMin_valueChanged(int value)
+void BlackChocobo::sbTimerTimeMin_valueChanged(int value)
 {
     if (!load)
         ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimerTimeSec->value())));
 }
-void MainWindow::sbTimerTimeSec_valueChanged(int value)
+void BlackChocobo::sbTimerTimeSec_valueChanged(int value)
 {
     if (!load)
         ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + (ui->sbTimerTimeMin->value() * 60) + (value)));
 }
-void MainWindow::sbUweaponHp_valueChanged(int value)
+void BlackChocobo::sbUweaponHp_valueChanged(int value)
 {
     if (!load)
         ff7->setUWeaponHp(s, value);
 }
-void MainWindow::cbRegVinny_toggled(bool checked)
+void BlackChocobo::cbRegVinny_toggled(bool checked)
 {
     if (!load)
         ff7->setVincentUnlocked(s, checked);
 }
-void MainWindow::cbRegYuffie_toggled(bool checked)
+void BlackChocobo::cbRegYuffie_toggled(bool checked)
 {
     if (!load)
         ff7->setYuffieUnlocked(s, checked);
 }
-void MainWindow::cbYuffieForest_toggled(bool checked)
+void BlackChocobo::cbYuffieForest_toggled(bool checked)
 {
     if (!load)
         ff7->setCanFightNinjaInForest(s, checked);
 }
 
-void MainWindow::cbMidgartrain_1_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_1_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 0, checked);
 }
-void MainWindow::cbMidgartrain_2_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_2_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 1, checked);
 }
-void MainWindow::cbMidgartrain_3_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_3_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 2, checked);
 }
-void MainWindow::cbMidgartrain_4_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_4_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 3, checked);
 }
-void MainWindow::cbMidgartrain_5_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_5_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 4, checked);
 }
-void MainWindow::cbMidgartrain_6_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_6_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 5, checked);
 }
-void MainWindow::cbMidgartrain_7_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_7_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 6, checked);
 
 }
-void MainWindow::cbMidgartrain_8_toggled(bool checked)
+void BlackChocobo::cbMidgartrain_8_toggled(bool checked)
 {
     if (!load)
         ff7->setMidgarTrainFlags(s, 7, checked);
 }
 
-void MainWindow::cbTutWorldSave_stateChanged(int value)
+void BlackChocobo::cbTutWorldSave_stateChanged(int value)
 {
     if (!load) {
         if (value == 0)
@@ -3160,7 +3169,7 @@ void MainWindow::cbTutWorldSave_stateChanged(int value)
     }
 }
 
-void MainWindow::comboRegionSlot_currentIndexChanged(int index)
+void BlackChocobo::comboRegionSlot_currentIndexChanged(int index)
 {
     if (!load) {
         if (ff7->isFF7(s)) {
@@ -3170,7 +3179,7 @@ void MainWindow::comboRegionSlot_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::cbTutSub_toggled(bool checked)
+void BlackChocobo::cbTutSub_toggled(bool checked)
 {
     if (!load) {
         ff7->setTutSub(s, 2, checked);
@@ -3178,18 +3187,18 @@ void MainWindow::cbTutSub_toggled(bool checked)
     }
 }
 
-void MainWindow::cbRubyDead_toggled(bool checked)
+void BlackChocobo::cbRubyDead_toggled(bool checked)
 {
     if (!load)
         ff7->setKilledRubyWeapon(s, checked);
 }
-void MainWindow::cbEmeraldDead_toggled(bool checked)
+void BlackChocobo::cbEmeraldDead_toggled(bool checked)
 {
     if (!load)
         ff7->setKilledEmeraldWeapon(s, checked);
 }
 
-void MainWindow::comboHighwindBuggy_currentIndexChanged(int index)
+void BlackChocobo::comboHighwindBuggy_currentIndexChanged(int index)
 {
     if (!load) {
         switch (index) {
@@ -3200,7 +3209,7 @@ void MainWindow::comboHighwindBuggy_currentIndexChanged(int index)
         }
     }
 }
-void MainWindow::cbVisibleBuggy_toggled(bool checked)
+void BlackChocobo::cbVisibleBuggy_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_BUGGY, checked);
@@ -3222,12 +3231,12 @@ void MainWindow::cbVisibleBuggy_toggled(bool checked)
 
     }
 }
-void MainWindow::cbVisibleBronco_toggled(bool checked)
+void BlackChocobo::cbVisibleBronco_toggled(bool checked)
 {
     if (!load)
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
 }
-void MainWindow::cbVisibleHighwind_toggled(bool checked)
+void BlackChocobo::cbVisibleHighwind_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldVehicle(s, FF7Save::WVEHCILE_HIGHWIND, checked);
@@ -3249,7 +3258,7 @@ void MainWindow::cbVisibleHighwind_toggled(bool checked)
         }
     }
 }
-void MainWindow::cbVisibleWildChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleWildChocobo_toggled(bool checked)
 {
     if (!load)
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_WILD, checked);
@@ -3268,7 +3277,7 @@ void MainWindow::cbVisibleWildChocobo_toggled(bool checked)
     ui->cbVisibleGoldChocobo->setEnabled(checked);
 
 }
-void MainWindow::cbVisibleYellowChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleYellowChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_YELLOW, checked);
@@ -3280,7 +3289,7 @@ void MainWindow::cbVisibleYellowChocobo_toggled(bool checked)
         }
     }
 }
-void MainWindow::cbVisibleGreenChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleGreenChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GREEN, checked);
@@ -3292,7 +3301,7 @@ void MainWindow::cbVisibleGreenChocobo_toggled(bool checked)
         }
     }
 }
-void MainWindow::cbVisibleBlueChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleBlueChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLUE, checked);
@@ -3305,7 +3314,7 @@ void MainWindow::cbVisibleBlueChocobo_toggled(bool checked)
     }
 }
 
-void MainWindow::cbVisibleBlackChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleBlackChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_BLACK, checked);
@@ -3318,7 +3327,7 @@ void MainWindow::cbVisibleBlackChocobo_toggled(bool checked)
     }
 }
 
-void MainWindow::cbVisibleGoldChocobo_toggled(bool checked)
+void BlackChocobo::cbVisibleGoldChocobo_toggled(bool checked)
 {
     if (!load) {
         ff7->setWorldChocobo(s, FF7Save::WCHOCO_GOLD, checked);
@@ -3331,22 +3340,22 @@ void MainWindow::cbVisibleGoldChocobo_toggled(bool checked)
     }
 }
 // Leader's world map stuff. 0
-void MainWindow::sbLeaderId_valueChanged(int value)
+void BlackChocobo::sbLeaderId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderID(s, value);
 }
-void MainWindow::sbLeaderAngle_valueChanged(int value)
+void BlackChocobo::sbLeaderAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderAngle(s, value);
 }
-void MainWindow::sbLeaderZ_valueChanged(int value)
+void BlackChocobo::sbLeaderZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsLeaderZ(s, value);
 }
-void MainWindow::sbLeaderX_valueChanged(int value)
+void BlackChocobo::sbLeaderX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsLeaderX(s, value);
@@ -3358,7 +3367,7 @@ void MainWindow::sbLeaderX_valueChanged(int value)
     }
 }
 
-void MainWindow::sbLeaderY_valueChanged(int value)
+void BlackChocobo::sbLeaderY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsLeaderY(s, value);
@@ -3371,22 +3380,22 @@ void MainWindow::sbLeaderY_valueChanged(int value)
 }
 
 //Tiny bronco / chocobo world 1
-void MainWindow::sbTcId_valueChanged(int value)
+void BlackChocobo::sbTcId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcID(s, value);
 }
-void MainWindow::sbTcAngle_valueChanged(int value)
+void BlackChocobo::sbTcAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcAngle(s, value);
 }
-void MainWindow::sbTcZ_valueChanged(int value)
+void BlackChocobo::sbTcZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsTcZ(s, value);
 }
-void MainWindow::sbTcX_valueChanged(int value)
+void BlackChocobo::sbTcX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsTcX(s, value);
@@ -3397,7 +3406,7 @@ void MainWindow::sbTcX_valueChanged(int value)
         }
     }
 }
-void MainWindow::sbTcY_valueChanged(int value)
+void BlackChocobo::sbTcY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsTcY(s, value);
@@ -3410,22 +3419,22 @@ void MainWindow::sbTcY_valueChanged(int value)
 }
 
 //buggy / highwind world 2
-void MainWindow::sbBhId_valueChanged(int value)
+void BlackChocobo::sbBhId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhID(s, value);
 }
-void MainWindow::sbBhAngle_valueChanged(int value)
+void BlackChocobo::sbBhAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhAngle(s, value);
 }
-void MainWindow::sbBhZ_valueChanged(int value)
+void BlackChocobo::sbBhZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsBhZ(s, value);
 }
-void MainWindow::sbBhX_valueChanged(int value)
+void BlackChocobo::sbBhX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsBhX(s, value);
@@ -3436,7 +3445,7 @@ void MainWindow::sbBhX_valueChanged(int value)
         }
     }
 }
-void MainWindow::sbBhY_valueChanged(int value)
+void BlackChocobo::sbBhY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsBhY(s, value);
@@ -3448,22 +3457,22 @@ void MainWindow::sbBhY_valueChanged(int value)
     }
 }
 // sub world 3
-void MainWindow::sbSubId_valueChanged(int value)
+void BlackChocobo::sbSubId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubID(s, value);
 }
-void MainWindow::sbSubAngle_valueChanged(int value)
+void BlackChocobo::sbSubAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubAngle(s, value);
 }
-void MainWindow::sbSubZ_valueChanged(int value)
+void BlackChocobo::sbSubZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsSubZ(s, value);
 }
-void MainWindow::sbSubX_valueChanged(int value)
+void BlackChocobo::sbSubX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsSubX(s, value);
@@ -3474,7 +3483,7 @@ void MainWindow::sbSubX_valueChanged(int value)
         }
     }
 }
-void MainWindow::sbSubY_valueChanged(int value)
+void BlackChocobo::sbSubY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsSubY(s, value);
@@ -3487,22 +3496,22 @@ void MainWindow::sbSubY_valueChanged(int value)
 }
 
 //Wild Chocobo 4
-void MainWindow::sbWcId_valueChanged(int value)
+void BlackChocobo::sbWcId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoID(s, value);
 }
-void MainWindow::sbWcAngle_valueChanged(int value)
+void BlackChocobo::sbWcAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoAngle(s, value);
 }
-void MainWindow::sbWcZ_valueChanged(int value)
+void BlackChocobo::sbWcZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsWchocoZ(s, value);
 }
-void MainWindow::sbWcX_valueChanged(int value)
+void BlackChocobo::sbWcX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsWchocoX(s, value);
@@ -3513,7 +3522,7 @@ void MainWindow::sbWcX_valueChanged(int value)
         }
     }
 }
-void MainWindow::sbWcY_valueChanged(int value)
+void BlackChocobo::sbWcY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsWchocoY(s, value);
@@ -3526,22 +3535,22 @@ void MainWindow::sbWcY_valueChanged(int value)
 }
 
 //Ruby world stuff 5
-void MainWindow::sbDurwId_valueChanged(int value)
+void BlackChocobo::sbDurwId_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwID(s, value);
 }
-void MainWindow::sbDurwAngle_valueChanged(int value)
+void BlackChocobo::sbDurwAngle_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwAngle(s, value);
 }
-void MainWindow::sbDurwZ_valueChanged(int value)
+void BlackChocobo::sbDurwZ_valueChanged(int value)
 {
     if (!load)
         ff7->setWorldCoordsDurwZ(s, value);
 }
-void MainWindow::sbDurwX_valueChanged(int value)
+void BlackChocobo::sbDurwX_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsDurwX(s, value);
@@ -3552,7 +3561,7 @@ void MainWindow::sbDurwX_valueChanged(int value)
         }
     }
 }
-void MainWindow::sbDurwY_valueChanged(int value)
+void BlackChocobo::sbDurwY_valueChanged(int value)
 {
     if (!load) {
         ff7->setWorldCoordsDurwY(s, value);
@@ -3563,7 +3572,7 @@ void MainWindow::sbDurwY_valueChanged(int value)
         }
     }
 }
-void MainWindow::comboMapControls_currentIndexChanged(int index)
+void BlackChocobo::comboMapControls_currentIndexChanged(int index)
 {
     load = true;
     switch (index) {
@@ -3577,7 +3586,7 @@ void MainWindow::comboMapControls_currentIndexChanged(int index)
     load = false;
 }
 
-void MainWindow::slideWorldX_valueChanged(int value)
+void BlackChocobo::slideWorldX_valueChanged(int value)
 {
     if (!load) {
         fileModified(true);
@@ -3592,7 +3601,7 @@ void MainWindow::slideWorldX_valueChanged(int value)
     }
 }
 
-void MainWindow::slideWorldY_valueChanged(int value)
+void BlackChocobo::slideWorldY_valueChanged(int value)
 {
     if (!load) {
         fileModified(true);
@@ -3607,7 +3616,7 @@ void MainWindow::slideWorldY_valueChanged(int value)
     }
 }
 
-void MainWindow::worldMapView_customContextMenuRequested(QPoint pos)
+void BlackChocobo::worldMapView_customContextMenuRequested(QPoint pos)
 {
     //Need to create a Paint System Here To put Dots where Chars Are Placed.
     QMenu menu(this);
@@ -3649,7 +3658,7 @@ void MainWindow::worldMapView_customContextMenuRequested(QPoint pos)
     }
 }//End Of Map Context Menu
 
-void MainWindow::btnAddAllItems_clicked()
+void BlackChocobo::btnAddAllItems_clicked()
 {
     ui->btnRemoveAllItems->click();
     for (int i = 0; i < 320; i++) {
@@ -3669,7 +3678,7 @@ void MainWindow::btnAddAllItems_clicked()
     statusBar()->showMessage(tr("All Items Added"), 750);
 }
 
-void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
+void BlackChocobo::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {
     load = true;
 
@@ -3787,12 +3796,12 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     load = false;
 }
 
-void MainWindow::comboZVar_currentIndexChanged(int z)
+void BlackChocobo::comboZVar_currentIndexChanged(int z)
 {
     unknown_refresh(z);
 }
 
-void MainWindow::comboCompareSlot_currentIndexChanged(int index)
+void BlackChocobo::comboCompareSlot_currentIndexChanged(int index)
 {
     if (index == 0) {
         ui->tblCompareUnknown->clearContents();
@@ -3801,7 +3810,7 @@ void MainWindow::comboCompareSlot_currentIndexChanged(int index)
         unknown_refresh(ui->comboZVar->currentIndex());
 }
 
-void MainWindow::tblUnknown_itemChanged(QTableWidgetItem *item)
+void BlackChocobo::tblUnknown_itemChanged(QTableWidgetItem *item)
 {
     if (!load) {
         QByteArray temp;
@@ -3827,7 +3836,7 @@ void MainWindow::tblUnknown_itemChanged(QTableWidgetItem *item)
     }
 }
 
-void MainWindow::comboS7Slums_currentIndexChanged(int index)
+void BlackChocobo::comboS7Slums_currentIndexChanged(int index)
 {
     if (!load) {
         QByteArray temp(ff7->unknown(s, 26));
@@ -3849,175 +3858,175 @@ void MainWindow::comboS7Slums_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::char_materia_changed(materia mat)
+void BlackChocobo::char_materia_changed(materia mat)
 {
     if (!load) {} ff7->setCharMateria(s, curchar, mslotsel, mat);
 }
-void MainWindow::char_accessory_changed(quint8 accessory)
+void BlackChocobo::char_accessory_changed(quint8 accessory)
 {
     ff7->setCharAccessory(s, curchar, accessory);
 }
-void MainWindow::char_armor_changed(quint8 armor)
+void BlackChocobo::char_armor_changed(quint8 armor)
 {
     ff7->setCharArmor(s, curchar, armor);
 }
-void MainWindow::char_baseHp_changed(quint16 hp)
+void BlackChocobo::char_baseHp_changed(quint16 hp)
 {
     ff7->setCharBaseHp(s, curchar, hp);
 }
-void MainWindow::char_baseMp_changed(quint16 mp)
+void BlackChocobo::char_baseMp_changed(quint16 mp)
 {
     ff7->setCharBaseMp(s, curchar, mp);
 }
-void MainWindow::char_curHp_changed(quint16 hp)
+void BlackChocobo::char_curHp_changed(quint16 hp)
 {
     ff7->setCharCurrentHp(s, curchar, hp);
     if (curchar == ff7->party(s, 0))
         ff7->setDescCurHP(s, hp);
 }
-void MainWindow::char_curMp_changed(quint16 mp)
+void BlackChocobo::char_curMp_changed(quint16 mp)
 {
     ff7->setCharCurrentMp(s, curchar, mp);
     if (curchar == ff7->party(s, 0))
         ff7->setDescCurMP(s, mp);
 }
-void MainWindow::char_id_changed(qint8 id)
+void BlackChocobo::char_id_changed(qint8 id)
 {
     ff7->setCharID(s, curchar, id);
     set_char_buttons();
 }
-void MainWindow::char_level_changed(qint8 level)
+void BlackChocobo::char_level_changed(qint8 level)
 {
     ff7->setCharLevel(s, curchar, level);
     if (curchar == ff7->party(s, 0))
         ff7->setDescLevel(s, level);
 }
-void MainWindow::char_str_changed(quint8 str)
+void BlackChocobo::char_str_changed(quint8 str)
 {
     ff7->setCharStr(s, curchar, str);
 }
-void MainWindow::char_vit_changed(quint8 vit)
+void BlackChocobo::char_vit_changed(quint8 vit)
 {
     ff7->setCharVit(s, curchar, vit);
 }
-void MainWindow::char_mag_changed(quint8 mag)
+void BlackChocobo::char_mag_changed(quint8 mag)
 {
     ff7->setCharMag(s, curchar, mag);
 }
-void MainWindow::char_spi_changed(quint8 spi)
+void BlackChocobo::char_spi_changed(quint8 spi)
 {
     ff7->setCharSpi(s, curchar, spi);
 }
-void MainWindow::char_dex_changed(quint8 dex)
+void BlackChocobo::char_dex_changed(quint8 dex)
 {
     ff7->setCharDex(s, curchar, dex);
 }
-void MainWindow::char_lck_changed(quint8 lck)
+void BlackChocobo::char_lck_changed(quint8 lck)
 {
     ff7->setCharLck(s, curchar, lck);
 }
-void MainWindow::char_strBonus_changed(quint8 value)
+void BlackChocobo::char_strBonus_changed(quint8 value)
 {
     ff7->setCharStrBonus(s, curchar, value);
 }
-void MainWindow::char_vitBonus_changed(quint8 value)
+void BlackChocobo::char_vitBonus_changed(quint8 value)
 {
     ff7->setCharVitBonus(s, curchar, value);
 }
-void MainWindow::char_magBonus_changed(quint8 value)
+void BlackChocobo::char_magBonus_changed(quint8 value)
 {
     ff7->setCharMagBonus(s, curchar, value);
 }
-void MainWindow::char_spiBonus_changed(quint8 value)
+void BlackChocobo::char_spiBonus_changed(quint8 value)
 {
     ff7->setCharSpiBonus(s, curchar, value);
 }
-void MainWindow::char_dexBonus_changed(quint8 value)
+void BlackChocobo::char_dexBonus_changed(quint8 value)
 {
     ff7->setCharDexBonus(s, curchar, value);
 }
-void MainWindow::char_lckBonus_changed(quint8 value)
+void BlackChocobo::char_lckBonus_changed(quint8 value)
 {
     ff7->setCharLckBonus(s, curchar, value);
 }
-void MainWindow::char_limitLevel_changed(qint8 value)
+void BlackChocobo::char_limitLevel_changed(qint8 value)
 {
     ff7->setCharLimitLevel(s, curchar, value);
 }
-void MainWindow::char_limitBar_changed(quint8 value)
+void BlackChocobo::char_limitBar_changed(quint8 value)
 {
     ff7->setCharLimitBar(s, curchar, value);
 }
-void MainWindow::char_weapon_changed(quint8 value)
+void BlackChocobo::char_weapon_changed(quint8 value)
 {
     ff7->setCharWeapon(s, curchar, value);
 }
-void MainWindow::char_kills_changed(quint16 value)
+void BlackChocobo::char_kills_changed(quint16 value)
 {
     ff7->setCharKills(s, curchar, value);
 }
-void MainWindow::char_row_changed(quint8 value)
+void BlackChocobo::char_row_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 1, value);
 }
-void MainWindow::char_levelProgress_changed(quint8 value)
+void BlackChocobo::char_levelProgress_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 2, value);
 }
-void MainWindow::char_sadnessfury_changed(quint8 value)
+void BlackChocobo::char_sadnessfury_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 0, value);
 }
-void MainWindow::char_limits_changed(quint16 value)
+void BlackChocobo::char_limits_changed(quint16 value)
 {
     ff7->setCharLimits(s, curchar, value);
 }
-void MainWindow::char_timesused1_changed(quint16 value)
+void BlackChocobo::char_timesused1_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 1, value);
 }
-void MainWindow::char_timeused2_changed(quint16 value)
+void BlackChocobo::char_timeused2_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 2, value);
 }
-void MainWindow::char_timeused3_changed(quint16 value)
+void BlackChocobo::char_timeused3_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 3, value);
 }
-void MainWindow::char_exp_changed(quint32 value)
+void BlackChocobo::char_exp_changed(quint32 value)
 {
     ff7->setCharCurrentExp(s, curchar, value);
 }
-void MainWindow::char_expNext_changed(quint32 value)
+void BlackChocobo::char_expNext_changed(quint32 value)
 {
     ff7->setCharNextExp(s, curchar, value);
 }
-void MainWindow::char_mslot_changed(int slot)
+void BlackChocobo::char_mslot_changed(int slot)
 {
     mslotsel = slot;
 }
 
-void MainWindow::char_name_changed(QString name)
+void BlackChocobo::char_name_changed(QString name)
 {
     ff7->setCharName(s, curchar, name);
     if (curchar == ff7->party(s, 0))
         ff7->setDescName(s, name);
 }
 
-void MainWindow::char_maxHp_changed(quint16 value)
+void BlackChocobo::char_maxHp_changed(quint16 value)
 {
     ff7->setCharMaxHp(s, curchar, value);
     if (curchar == ff7->party(s, 0))
         ff7->setDescMaxHP(s, value);
 }
-void MainWindow::char_maxMp_changed(quint16 value)
+void BlackChocobo::char_maxMp_changed(quint16 value)
 {
     ff7->setCharMaxMp(s, curchar, value);
     if (curchar == ff7->party(s, 0))
         ff7->setDescMaxMP(s, value);
 }
 
-void MainWindow::btnMaxChar_clicked()
+void BlackChocobo::btnMaxChar_clicked()
 {
     if (ff7->charID(s, curchar) == FF7Char::YoungCloud || ff7->charID(s, curchar) == FF7Char::Sephiroth  ||  _init)
         return;   //no char selected, sephiroth and young cloud.
@@ -4040,27 +4049,28 @@ void MainWindow::btnMaxChar_clicked()
     }
 
 }
-void MainWindow::Items_Changed(QList<quint16> items)
+
+void BlackChocobo::Items_Changed(QList<quint16> items)
 {
     ff7->setItems(s, items);
 }
-void MainWindow::sbSnowBegScore_valueChanged(int value)
+void BlackChocobo::sbSnowBegScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 0, quint8(value));
 }
-void MainWindow::sbSnowExpScore_valueChanged(int value)
+void BlackChocobo::sbSnowExpScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 1, quint8(value));
 }
-void MainWindow::sbSnowCrazyScore_valueChanged(int value)
+void BlackChocobo::sbSnowCrazyScore_valueChanged(int value)
 {
     if (!load)
         ff7->setSnowboardScore(s, 2, quint8(value));
 }
 
-void MainWindow::sbSnowBegMin_valueChanged(int value)
+void BlackChocobo::sbSnowBegMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -4069,7 +4079,7 @@ void MainWindow::sbSnowBegMin_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowBegSec_valueChanged(int value)
+void BlackChocobo::sbSnowBegSec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -4078,7 +4088,7 @@ void MainWindow::sbSnowBegSec_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowBegMsec_valueChanged(int value)
+void BlackChocobo::sbSnowBegMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 0);
@@ -4087,7 +4097,7 @@ void MainWindow::sbSnowBegMsec_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowExpMin_valueChanged(int value)
+void BlackChocobo::sbSnowExpMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -4096,7 +4106,7 @@ void MainWindow::sbSnowExpMin_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowExpSec_valueChanged(int value)
+void BlackChocobo::sbSnowExpSec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -4105,7 +4115,7 @@ void MainWindow::sbSnowExpSec_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowExpMsec_valueChanged(int value)
+void BlackChocobo::sbSnowExpMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 1);
@@ -4114,7 +4124,7 @@ void MainWindow::sbSnowExpMsec_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowCrazyMin_valueChanged(int value)
+void BlackChocobo::sbSnowCrazyMin_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -4123,7 +4133,7 @@ void MainWindow::sbSnowCrazyMin_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowCrazySec_valueChanged(int value)
+void BlackChocobo::sbSnowCrazySec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -4132,7 +4142,7 @@ void MainWindow::sbSnowCrazySec_valueChanged(int value)
     }
 }
 
-void MainWindow::sbSnowCrazyMsec_valueChanged(int value)
+void BlackChocobo::sbSnowCrazyMsec_valueChanged(int value)
 {
     if (!load) {
         QString time = ff7->snowboardTime(s, 2);
@@ -4140,23 +4150,23 @@ void MainWindow::sbSnowCrazyMsec_valueChanged(int value)
         ff7->setSnowboardTime(s, 2, time);
     }
 }
-void MainWindow::sbBikeHighScore_valueChanged(int arg1)
+void BlackChocobo::sbBikeHighScore_valueChanged(int arg1)
 {
     if (!load)
         ff7->setBikeHighScore(s, quint16(arg1));
 }
-void MainWindow::sbBattlePoints_valueChanged(int arg1)
+void BlackChocobo::sbBattlePoints_valueChanged(int arg1)
 {
     if (!load)
         ff7->setBattlePoints(s, quint16(arg1));
 }
 
-void MainWindow::comboHexEditor_currentIndexChanged(int index)
+void BlackChocobo::comboHexEditor_currentIndexChanged(int index)
 {
     hexTabUpdate(index);
 }
 
-void MainWindow::hexEditorChanged(void)
+void BlackChocobo::hexEditorChanged(void)
 {
     if (FF7SaveInfo::instance()->isTypePC(ff7->format())) {
         ff7->setSlotFF7Data(s, hexEditor->data());
@@ -4174,28 +4184,28 @@ void MainWindow::hexEditorChanged(void)
     fileModified(true);
 }
 
-void MainWindow::phsList_box_allowed_toggled(int row, bool checked)
+void BlackChocobo::phsList_box_allowed_toggled(int row, bool checked)
 {
     if (!load)
         ff7->setPhsAllowed(s, row, !checked);
 }
-void MainWindow::phsList_box_visible_toggled(int row, bool checked)
+void BlackChocobo::phsList_box_visible_toggled(int row, bool checked)
 {
     if (!load)
         ff7->setPhsVisible(s, row, checked);
 }
-void MainWindow::menuList_box_locked_toggled(int row, bool checked)
+void BlackChocobo::menuList_box_locked_toggled(int row, bool checked)
 {
     if (!load)
         ff7->setMenuLocked(s, row, checked);
 }
-void MainWindow::menuList_box_visible_toggled(int row, bool checked)
+void BlackChocobo::menuList_box_visible_toggled(int row, bool checked)
 {
     if (!load)
         ff7->setMenuVisible(s, row, checked);
 }
 
-void MainWindow::locationToolBox_currentChanged(int index)
+void BlackChocobo::locationToolBox_currentChanged(int index)
 {
     //LocationTabs
     load = true;
@@ -4291,7 +4301,7 @@ void MainWindow::locationToolBox_currentChanged(int index)
     load = false;
 }
 
-void MainWindow::testDataTabWidget_currentChanged(int index)
+void BlackChocobo::testDataTabWidget_currentChanged(int index)
 {
 
     switch (index) {
@@ -4334,33 +4344,33 @@ void MainWindow::testDataTabWidget_currentChanged(int index)
     }
 }
 
-void MainWindow::sbCondorFunds_valueChanged(int arg1)
+void BlackChocobo::sbCondorFunds_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorFunds(s, quint16(arg1));
 }
-void MainWindow::sbCondorWins_valueChanged(int arg1)
+void BlackChocobo::sbCondorWins_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorWins(s, quint8(arg1));
 }
-void MainWindow::sbCondorLosses_valueChanged(int arg1)
+void BlackChocobo::sbCondorLosses_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCondorLosses(s, quint8(arg1));
 }
-void MainWindow::cbPandorasBox_toggled(bool checked)
+void BlackChocobo::cbPandorasBox_toggled(bool checked)
 {
     if (!load)
         ff7->setSeenPandorasBox(s, checked);
 }
-void MainWindow::cbSubGameWon_toggled(bool checked)
+void BlackChocobo::cbSubGameWon_toggled(bool checked)
 {
     if (!load)
         ff7->setSubMiniGameVictory(s, checked);
 }
 
-void MainWindow::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<quint8> Bit)
+void BlackChocobo::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<quint8> Bit)
 {
     if (boxID == 0) {
         //if box is 0 then new list.
@@ -4370,7 +4380,7 @@ void MainWindow::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<quin
     fieldItemOffset->append(Offset);
     fieldItemBit->append(Bit);
 }
-void MainWindow::checkFieldItem(int boxID)
+void BlackChocobo::checkFieldItem(int boxID)
 {
     //Will always be called in numerical Order
     fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
@@ -4396,7 +4406,7 @@ void MainWindow::checkFieldItem(int boxID)
         locationViewer->setFieldItemChecked(boxID, checked);
     }
 }
-void MainWindow::fieldItemStateChanged(int boxID, bool checked)
+void BlackChocobo::fieldItemStateChanged(int boxID, bool checked)
 {
     fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
     fieldItemBitList bitList = fieldItemBit->at(boxID);
@@ -4416,42 +4426,42 @@ void MainWindow::fieldItemStateChanged(int boxID, bool checked)
     }
 }
 
-void MainWindow::sbSaveMapId_valueChanged(int arg1)
+void BlackChocobo::sbSaveMapId_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointMapID(s, arg1);
 }
-void MainWindow::sbSaveX_valueChanged(int arg1)
+void BlackChocobo::sbSaveX_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointX(s, arg1);
 }
-void MainWindow::sbSaveY_valueChanged(int arg1)
+void BlackChocobo::sbSaveY_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointY(s, arg1);
 }
-void MainWindow::sbSaveZ_valueChanged(int arg1)
+void BlackChocobo::sbSaveZ_valueChanged(int arg1)
 {
     if (!load)
         ff7->setCraterSavePointZ(s, arg1);
 }
 
-void MainWindow::btnSearchFlyers_clicked()
+void BlackChocobo::btnSearchFlyers_clicked()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);
     locationViewer->setFilterString(tr("Turtle Paradise"), LocationViewer::ITEM);
 }
 
-void MainWindow::btnSearchKeyItems_clicked()
+void BlackChocobo::btnSearchKeyItems_clicked()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);
     locationViewer->setFilterString(tr("KeyItem"), LocationViewer::ITEM);
 }
 
-void MainWindow::linePsxDesc_textChanged(const QString &arg1)
+void BlackChocobo::linePsxDesc_textChanged(const QString &arg1)
 {
     if (!load) {
         ff7->setPsxDesc(arg1, s);
@@ -4459,13 +4469,13 @@ void MainWindow::linePsxDesc_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::cbFlashbackPiano_toggled(bool checked)
+void BlackChocobo::cbFlashbackPiano_toggled(bool checked)
 {
     if (!load)
         ff7->setPlayedPianoOnFlashback(s, checked);
 }
 
-void MainWindow::setButtonMapping(int controlAction, int newButton)
+void BlackChocobo::setButtonMapping(int controlAction, int newButton)
 {
     if (!load)
         ff7->setControllerMapping(s, controlAction, newButton);

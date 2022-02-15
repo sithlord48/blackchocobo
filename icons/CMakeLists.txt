@@ -1,3 +1,7 @@
 #BUILD OUR ICON QRC FILE.
-add_library(libICONS STATIC icons.qrc)
-target_link_libraries(libICONS PUBLIC Qt::Svg)
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+    Core
+    Svg
+)
+add_library(BCICONS STATIC icons.qrc)
+target_link_libraries(BCICONS PUBLIC Qt::Svg)

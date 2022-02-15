@@ -26,9 +26,10 @@
 #include <QStandardPaths>
 #include <QTextCodec>
 
+#include <AchievementEditor.h>
 #include <FF7Save.h>
 
-#include "bcsettings.h"
+#include "../bcsettings.h"
 
 QRect readGeometry()
 {
@@ -229,6 +230,39 @@ int BCDialog::fixTimeDialog(QWidget *parent, bool slotPAL)
     dialog.addButton(QMessageBox::Yes);
     dialog.addButton(QMessageBox::No);
     return dialog.exec();
+}
+
+void BCDialog::achievementDialog(QWidget *parent, const QString &fileName)
+{
+    QDialog dialog;
+    dialog.setWindowTitle(QObject::tr("Achievement Editor"));
+    dialog.setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+
+    const QRect mainRect = readGeometry();
+    dialog.setFixedHeight(int (mainRect.height() * 0.90));
+    auto achievementEditor = new AchievementEditor(&dialog);
+    achievementEditor->openFile(fileName);
+    achievementEditor->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::StandardButton::Save | QDialogButtonBox::StandardButton::Cancel);
+    auto layout = new QVBoxLayout;
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(0);
+    layout->addWidget(achievementEditor);
+    layout->addWidget(buttonBox);
+    dialog.setLayout(layout);
+    buttonBox->button(QDialogButtonBox::StandardButton::Save)->setToolTip(QObject::tr("Close and save changes"));
+    buttonBox->button(QDialogButtonBox::StandardButton::Cancel)->setToolTip(QObject::tr("Close and forget changes"));
+
+    QObject::connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::close);
+    QObject::connect(buttonBox, &QDialogButtonBox::accepted, &dialog, [achievementEditor, fileName, &dialog] {
+        if (!achievementEditor->saveFile(fileName))
+            QMessageBox::critical(&dialog, QObject::tr("Failed To Save File"), QString(QObject::tr("Failed To Write File\nFile:%1")).arg(fileName));
+        dialog.close();
+    });
+
+    if(parent)
+        dialog.move(mainRect.x() + (mainRect.width() - dialog.sizeHint().width()) / 2, mainRect.y() + (mainRect.height() - dialog.height())/2);
+    dialog.exec();
 }
 
 QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, const QString &path, const QString &nameFilters, const QString &initSelection)

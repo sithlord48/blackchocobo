@@ -1,5 +1,9 @@
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM 1)
-find_package(Qt${QT_DEFAULT_MAJOR_VERSION}LinguistTools)
+
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
+    Core
+    LinguistTools
+)
 
 set ( blackchocobo_TRS
     bchoco_en.ts
@@ -9,7 +13,7 @@ set ( blackchocobo_TRS
     bchoco_ja.ts
     bchoco_re.ts
     bchoco_pl.ts
-    )
+)
 
 set (FF7TK_TRS
     ${ff7tk_DIR}/../../../share/ff7tk/lang/ff7tk_en.qm

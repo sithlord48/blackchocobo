@@ -22,16 +22,7 @@
 #include <QRandomGenerator>
 
 #include "bcsettings.h"
-#include "mainwindow.h"
-
-#if defined(STATIC) && (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
-#include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
-//FOR STATIC BUILD.(WILL FAIL HERE IF NOT STATICLY BUILT QT!)
-Q_IMPORT_PLUGIN(qcncodecs)
-Q_IMPORT_PLUGIN(qjpcodecs)  //(Japanese Text Support)
-Q_IMPORT_PLUGIN(qtwcodecs)
-Q_IMPORT_PLUGIN(qkrcodecs)
-#endif
+#include "blackchocobo.h"
 
 int main(int argc, char *argv[])
 {
@@ -57,7 +48,7 @@ int main(int argc, char *argv[])
     a.setApplicationVersion(BC_VERSION);
 
     QRandomGenerator(quint32(QTime::currentTime().msec()));
-    MainWindow w;
+    BlackChocobo w;
     if(argc == 2)
         w.loadFileFull(QString(argv[1]), 0);
     w.show();

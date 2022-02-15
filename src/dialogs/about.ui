@@ -9,20 +9,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>0</width>
-    <height>0</height>
+    <width>654</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>About Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="help-about"></iconset>
+   <iconset theme="help-about">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="_2">
      <item>
@@ -58,7 +59,6 @@
          <property name="font">
           <font>
            <pointsize>16</pointsize>
-           <weight>75</weight>
            <italic>true</italic>
            <bold>true</bold>
           </font>
@@ -117,6 +117,9 @@
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -240,6 +243,9 @@ p, li { white-space: pre-wrap; }
          <property name="showDropIndicator" stdset="0">
           <bool>false</bool>
          </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::NoSelection</enum>
          </property>
@@ -248,57 +254,12 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>Simple light and dark color theme option</string>
+           <string>Removal of Scale Selection</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Filename suggestion for Exports</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Improved Settings Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Dynamic Language Switching</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Default to Non Native File Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Finalized format Support PS3 export (psv)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Finalized format Support PSP exports (vmp) </string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New format Support Switch (ff7slot00 - ff7slot09)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New format Support PGE (ps1, mcs)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>New format Support PDA (psx, mcx, mcb, pda)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Location Viewer: Added more locations</string>
+           <string>Hi-Res Icons</string>
           </property>
          </item>
         </widget>
@@ -310,8 +271,26 @@ p, li { white-space: pre-wrap; }
        <string>C&amp;redits</string>
       </attribute>
       <layout class="QVBoxLayout" name="_7">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
        <item>
         <widget class="QLabel" name="label_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="text">
           <string>Giving Credit Where Credit is Due</string>
          </property>
@@ -322,6 +301,21 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QScrollArea" name="scrollArea">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
+         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -332,17 +326,23 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-313</y>
-            <width>839</width>
-            <height>752</height>
+            <y>0</y>
+            <width>601</width>
+            <height>812</height>
            </rect>
           </property>
-          <layout class="QVBoxLayout" name="_8">
-           <property name="leftMargin">
-            <number>3</number>
-           </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="rightMargin">
-            <number>3</number>
+            <number>15</number>
+           </property>
+           <property name="bottomMargin">
+            <number>15</number>
            </property>
            <item>
             <layout class="QVBoxLayout" name="_20">
@@ -457,184 +457,179 @@ p, li { white-space: pre-wrap; }
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="_14">
+            <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <family>ubuntu</family>
+               <pointsize>9</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+               <underline>true</underline>
+              </font>
+             </property>
+             <property name="text">
+              <string>Bug Testers</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="Heading" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_19">
              <item>
-              <widget class="QLabel" name="label_6">
-               <property name="font">
-                <font>
-                 <family>ubuntu</family>
-                 <pointsize>9</pointsize>
-                 <weight>50</weight>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                 <underline>true</underline>
-                </font>
-               </property>
+              <widget class="QLabel" name="label_9">
                <property name="text">
-                <string>Bug Testers</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="Heading" stdset="0">
-                <bool>true</bool>
+                <string notr="true">Eslava:</string>
                </property>
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_19">
-               <item>
-                <widget class="QLabel" name="label_9">
-                 <property name="text">
-                  <string notr="true">Eslava:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_10">
-                 <property name="text">
-                  <string>Main Bug Tester, for win/gnome + ingame</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="spacer_13">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Main Bug Tester, for win/gnome + ingame</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_17">
-               <item>
-                <widget class="QLabel" name="label_7">
-                 <property name="text">
-                  <string notr="true">Jari:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_8">
-                 <property name="text">
-                  <string>Early Win32 Tester</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="spacer_11">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <spacer name="spacer_13">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_17">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string notr="true">Jari:</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_16">
-               <item>
-                <widget class="QLabel" name="label_11">
-                 <property name="text">
-                  <string notr="true">Timu:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_12">
-                 <property name="text">
-                  <string>Mac Os Tester</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="spacer_10">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Early Win32 Tester</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_15">
-               <item>
-                <widget class="QLabel" name="label_14">
-                 <property name="text">
-                  <string notr="true">Chocobo Girl:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_13">
-                 <property name="text">
-                  <string>Mac Os Tester</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="spacer_9">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <spacer name="spacer_11">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_16">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string notr="true">Timu:</string>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_18">
-               <item>
-                <widget class="QLabel" name="label_15">
-                 <property name="text">
-                  <string notr="true">Covarr:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_16">
-                 <property name="text">
-                  <string>Windows Tester</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="spacer_12">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Mac Os Tester</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_15">
+             <item>
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string notr="true">Chocobo Girl:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>Mac Os Tester</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_18">
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string notr="true">Covarr:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="text">
+                <string>Windows Tester</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacer_12">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
@@ -646,7 +641,6 @@ p, li { white-space: pre-wrap; }
                 <font>
                  <family>ubuntu</family>
                  <pointsize>9</pointsize>
-                 <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                  <underline>true</underline>
@@ -757,18 +751,49 @@ p, li { white-space: pre-wrap; }
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="_13">
+              <layout class="QHBoxLayout" name="_38">
                <item>
-                <widget class="QLabel" name="label_40">
+                <widget class="QLabel" name="label_50">
                  <property name="text">
                   <string>German Translation:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_41">
+                <widget class="QLabel" name="label_51">
                  <property name="text">
                   <string notr="true">D33enz</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="spacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="_13">
+               <item>
+                <widget class="QLabel" name="label_40">
+                 <property name="text">
+                  <string>Polish Translation:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_41">
+                 <property name="text">
+                  <string notr="true">Grzegorz Pisarczyk</string>
                  </property>
                 </widget>
                </item>
@@ -800,7 +825,6 @@ p, li { white-space: pre-wrap; }
                 <font>
                  <family>ubuntu</family>
                  <pointsize>9</pointsize>
-                 <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                  <underline>true</underline>
@@ -910,13 +934,24 @@ p, li { white-space: pre-wrap; }
        <string>&amp;Thanks</string>
       </attribute>
       <layout class="QVBoxLayout" name="_26">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
        <item>
         <widget class="QLabel" name="label_29">
          <property name="font">
           <font>
            <family>ubuntu</family>
            <pointsize>9</pointsize>
-           <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
           </font>
@@ -934,13 +969,16 @@ p, li { white-space: pre-wrap; }
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
          <widget class="QWidget" name="scrollAreaWidgetContents_2">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>839</width>
-            <height>725</height>
+            <width>583</width>
+            <height>896</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">
@@ -1072,12 +1110,14 @@ p, li { white-space: pre-wrap; }
       <string>&amp;Close</string>
      </property>
      <property name="icon">
-      <iconset theme="window-close"/>
+      <iconset theme="window-close">
+       <normaloff>.</normaloff>.</iconset>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <resources/>
  <connections>
   <connection>
    <sender>pushButton</sender>

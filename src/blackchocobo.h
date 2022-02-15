@@ -36,16 +36,16 @@ class QTranslator;
 
 namespace Ui
 {
-class MainWindow;
+class BlackChocobo;
 }
 
-class MainWindow : public QMainWindow
+class BlackChocobo : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit BlackChocobo(QWidget *parent = nullptr);
     QString checkIconTheme();
-    ~MainWindow();
+    ~BlackChocobo();
 
 protected:
     void dragEnterEvent(QDragEnterEvent *e);
@@ -55,7 +55,7 @@ protected:
     void resizeEvent(QResizeEvent *);
     void moveEvent(QMoveEvent *);
 private:
-    Ui::MainWindow *ui;
+    Ui::BlackChocobo *ui;
 //  qreal scale;
     qint64 hexCursorPos;
     bool skip_slot_mask;

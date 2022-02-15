@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2020 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2022 Chris Rizzitello <sithlord48@gmail.com>                //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -30,6 +30,7 @@ public:
     static QString getSaveFileName(QWidget  *parent = nullptr, const QString &region = QString(), const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), QString *chosenType = nullptr, const QString &initSelection = QString());
     static void editSideBarPaths(QWidget *parent= nullptr);
     static int fixTimeDialog(QWidget* parent, bool slotPAL = false);
+    static void achievementDialog(QWidget *parent = nullptr, const QString &fileName = QString());
 private:
     static QFileDialog* getFileDialog(QWidget *parent = nullptr, const QString &title = QString(), const QString &path = QDir::homePath(), const QString &nameFilters = QString(), const QString &initSelection = QString());
 };
