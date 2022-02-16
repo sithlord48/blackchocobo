@@ -117,7 +117,7 @@ void MainWindow::detectTranslations()
     QStringList langList = dir.entryList(nameFilter,QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
-        translator->load(translation, dir.absolutePath());
+        std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         app_translations.insert(lang, translator);
         bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
@@ -149,7 +149,7 @@ void MainWindow::detectTranslations()
     }
     for (const QString &translation : qAsConst(langList)) {
         QTranslator *translator = new QTranslator;
-        translator->load(translation, dir.absolutePath());
+        std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(6, 2);
         ff7tk_translations.insert(lang, translator);
         bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
@@ -183,7 +183,7 @@ void MainWindow::detectTranslations()
     }
     for (const QString &translation : qAsConst(langList)) {
         QTranslator *translator = new QTranslator;
-        translator->load(translation, dir.absolutePath());
+        std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(3, 2);
         qt_translations.insert(lang, translator);
         bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
@@ -870,14 +870,13 @@ void MainWindow::dropEvent(QDropEvent *e)
 
 bool MainWindow::saveChanges(void)
 {
-    //return 0 to ingore the event/ return 1 to process event.
-    int result;
-    result = QMessageBox::question(this, tr("Unsaved Changes"), tr("Save Changes to the File:\n%1").arg(ff7->fileName()), QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel);
+    auto result = QMessageBox::question(this, tr("Unsaved Changes"), tr("Save Changes to the File:\n%1").arg(ff7->fileName())
+                                   , QMessageBox::StandardButton::Yes | QMessageBox::StandardButton::No | QMessageBox::StandardButton::Cancel);
     switch (result) {
-    case QMessageBox::Yes:
+    case QMessageBox::StandardButton::Yes:
         actionSave_triggered();
         return true;
-    case QMessageBox::No:
+    case QMessageBox::StandardButton::No:
         return true;
     default: return false;
     }
