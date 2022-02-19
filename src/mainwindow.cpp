@@ -1569,7 +1569,7 @@ void MainWindow::materiaupdate(void)
         QString ap;
 
         if (current_id <= 0x5A) {
-            newItem = new QTableWidgetItem(Materias.icon(current_id), Materias.name(current_id), 0);
+            newItem = new QTableWidgetItem(FF7Materia::icon(current_id), FF7Materia::name(current_id), 0);
             ui->tblMateria->setItem(mat, 0, newItem);
         }
 
@@ -1764,7 +1764,7 @@ void MainWindow::updateStolenMateria()
         quint8 current_id = ff7->stolenMateriaId(s, mat);
         QTableWidgetItem *newItem;
         if (current_id != FF7Materia::EmptyId) {
-            newItem = new QTableWidgetItem(Materias.icon(current_id), Materias.name(current_id), 0);
+            newItem = new QTableWidgetItem(FF7Materia::icon(current_id), FF7Materia::name(current_id), 0);
             ui->tblMateriaStolen->setItem(mat, 0, newItem);
             qint32 current_ap = ff7->stolenMateriaAp(s, mat);
             if (current_ap == FF7Materia::MaxMateriaAp) {

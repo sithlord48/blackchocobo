@@ -14,7 +14,7 @@ set(REQUIRED_QT_VERSION "5.15.0")
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.10.5 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.11.0 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 set(BC_VERSION ${CMAKE_PROJECT_VERSION})
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
@@ -60,7 +60,7 @@ if(${QT_DEFAULT_MAJOR_VERSION} MATCHES "6")
     find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
 endif()
 
-find_package(ff7tk 0.80.22 REQUIRED NO_MODULE COMPONENTS
+find_package(ff7tk 0.81.00 REQUIRED NO_MODULE COMPONENTS
     ff7tk
     ff7tkWidgets
 )

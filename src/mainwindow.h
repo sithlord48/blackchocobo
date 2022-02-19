@@ -18,7 +18,6 @@
 #include <QMap>
 
 #include <Type_materia.h>
-#include <FF7Materia.h>
 
 class FF7Save;
 class SaveIcon;
@@ -66,7 +65,6 @@ private:
     FF7Save *ff7 = nullptr; // our save file struct pointer.
     SaveIcon *saveIcon = nullptr;
     int s; //track slot
-    FF7Materia Materias;//FF7Materia Static Data.
     materia buffer_materia; // buffer for a materia
     //ITEM buffer_item; // for use later
     int curchar; //keeps track of current character displayed
