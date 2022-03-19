@@ -32,7 +32,7 @@ BEGIN
             VALUE "FileDescription",  "@PROJECT_DESCRIPTION@"
             VALUE "FileVersion",      VER_FILEVERSION_STR
             VALUE "InternalName",     "blackchocobo"
-            VALUE "LegalCopyright",   "(C) 2010-2021 Chris Rizzitello"
+            VALUE "LegalCopyright",   "(C) 2010-2022 Chris Rizzitello"
             VALUE "OriginalFilename", "blackchocobo.exe"
             VALUE "ProductName",      "Black Chocobo"
             VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
