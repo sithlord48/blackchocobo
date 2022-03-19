@@ -1,16 +1,11 @@
 cmake_minimum_required( VERSION 3.21 )
 
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
-endif()
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(REQUIRED_QT_VERSION "5.15.0")
 
 cmake_policy(SET CMP0010 NEW)
 
@@ -114,8 +109,11 @@ endif()
 add_executable(${BIN_NAME} WIN32 MACOSX_BUNDLE
       src/main.cpp
       src/mainwindow.cpp
+      src/mainwindow.ui
       src/about.cpp
+      src/about.ui
       src/options.cpp
+      src/options.ui
       src/errbox.cpp
       src/achievementdialog.cpp
       src/bcdialog.cpp
@@ -148,7 +146,7 @@ if(APPLE)
       MACOSX_BUNDLE_GUI_IDENTIFIER "org.sithlord48.blackchocobo"
       MACOSX_BUNDLE_ICON_FILE blackchocobo.icns
       MACOSX_BUNDLE_INFO_STRING "${CMAKE_PROJECT_DESCRIPTION}"
-      MACOSX_BUNDLE_COPYRIGHT "2010-2020 Chris Rizzitello"
+      MACOSX_BUNDLE_COPYRIGHT "2010-2022 Chris Rizzitello"
       MACOSX_BUNDLE_BUNDLE_VERSION ${BC_VERSION}
       MACOSX_BUNDLE_LONG_VERSION_STRING ${BC_VERSION}
       MACOSX_BUNDLE_SHORT_VERSION_STRING ${BC_VERSION}
