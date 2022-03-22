@@ -56,14 +56,6 @@ p, li { white-space: pre-wrap; }
         <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
-        <source>Programmers</source>
-        <translation>Programmers</translation>
-    </message>
-    <message>
-        <source>Almost All code and GUI design; </source>
-        <translation>Almost All code and GUI design; </translation>
-    </message>
-    <message>
         <source>Various code help/debug; Windows QA</source>
         <translation>Various code help/debug; Windows QA</translation>
     </message>
@@ -114,10 +106,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Icons Used In this Program</source>
         <translation>Icons Used In this Program</translation>
-    </message>
-    <message>
-        <source>Buff Icons (and one or two more) by </source>
-        <translation>Buff Icons (and one or two more) by </translation>
     </message>
     <message>
         <source>&amp;Thanks</source>
@@ -173,19 +161,31 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Removal of Scale Selection</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Hi-Res Icons</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polish Translation:</translation>
+    </message>
+    <message>
+        <source>Contributions By </source>
+        <translation>Contributions By </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Contributions By </source>
@@ -1699,24 +1699,24 @@ New region is %2hz</translation>
     </message>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished">Achievement Editor</translation>
+        <translation>Achievement Editor</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">Close and save changes</translation>
+        <translation>Close and save changes</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished">Close and forget changes</translation>
+        <translation>Close and forget changes</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished">Failed To Save File</translation>
+        <translation>Failed To Save File</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished">Failed To Write File
+        <translation>Failed To Write File
 File:%1</translation>
     </message>
 </context>

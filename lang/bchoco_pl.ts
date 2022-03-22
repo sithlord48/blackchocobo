@@ -68,14 +68,6 @@ p, li { white-space: pre-wrap; }
         <translation>Udzielanie zaszczytów tam, gdzie zaszczyty są należne</translation>
     </message>
     <message>
-        <source>Programmers</source>
-        <translation>Programiści</translation>
-    </message>
-    <message>
-        <source>Almost All code and GUI design; </source>
-        <translation>Prawie cały kod i projekt GUI;</translation>
-    </message>
-    <message>
         <source>Various code help/debug; Windows QA</source>
         <translation>Różna pomoc/debugowanie kodu; Kontrola jakości systemu Windows</translation>
     </message>
@@ -126,10 +118,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Icons Used In this Program</source>
         <translation>Ikony używane w tym programie</translation>
-    </message>
-    <message>
-        <source>Buff Icons (and one or two more) by </source>
-        <translation>Ikony premii (i jedna lub dwie więcej) przez </translation>
     </message>
     <message>
         <source>&amp;Thanks</source>
@@ -189,7 +177,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Polish Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polski Tłumaczenie:</translation>
+    </message>
+    <message>
+        <source>Contributions By </source>
+        <translation>Składki przez </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Wyświetl wszystkich współtwórców&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Contributions By </source>
@@ -1013,7 +1009,7 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O Progr&amp;amie</translation>
     </message>
     <message>
         <source>&amp;Select Slot</source>
@@ -1701,24 +1697,24 @@ Nowy region to %2hz</translation>
     </message>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished">Edytor osiągnięć</translation>
+        <translation>Edytor osiągnięć</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">Zamknij i zapisz zmiany</translation>
+        <translation>Zamknij i zapisz zmiany</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Zamknij i nie zapisuj</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished">Nie udało się zapisać pliku</translation>
+        <translation>Nie udało się zapisać pliku</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished">Nie udało się zapisać pliku
+        <translation>Nie udało się zapisać pliku
 Plik: %1</translation>
     </message>
 </context>

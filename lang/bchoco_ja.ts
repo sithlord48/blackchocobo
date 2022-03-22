@@ -36,14 +36,6 @@ p, li { white-space: pre-wrap; }
         <translation>しかるべきクレジット</translation>
     </message>
     <message>
-        <source>Programmers</source>
-        <translation>プログラマー</translation>
-    </message>
-    <message>
-        <source>Almost All code and GUI design; </source>
-        <translation type="unfinished">ほぼすべてのコードとGUIデザイン。</translation>
-    </message>
-    <message>
         <source>Various code help/debug; Windows QA</source>
         <translation>各種コードヘルプ/デバッグ。 Windows QA</translation>
     </message>
@@ -94,10 +86,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Icons Used In this Program</source>
         <translation>プログラムの使用アイコン</translation>
-    </message>
-    <message>
-        <source>Buff Icons (and one or two more) by </source>
-        <translation>バフ アイコン (その他・諸々) の作成: </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
@@ -185,7 +173,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Polish Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポーランド語翻訳:</translation>
+    </message>
+    <message>
+        <source>Contributions By </source>
+        <translation type="unfinished">投稿者 </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;すべての寄稿者を表示&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Contributions By </source>
@@ -1111,7 +1107,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バージョン情報(&amp;A)</translation>
     </message>
     <message>
         <source>&amp;Select Slot</source>
@@ -1697,24 +1693,24 @@ New region is %2hz</source>
     </message>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished">達成エディタ</translation>
+        <translation>達成エディタ</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">変更を閉じて保存する</translation>
+        <translation>変更を閉じて保存する</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished">変更を閉じて忘れる</translation>
+        <translation>変更を閉じて忘れる</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished">ファイルの保存に失敗しました</translation>
+        <translation>ファイルの保存に失敗しました</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished">ファイルの保存に失敗しました
+        <translation>ファイルの保存に失敗しました
 %1</translation>
     </message>
 </context>
