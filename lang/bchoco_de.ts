@@ -40,14 +40,6 @@ p, li { white-space: pre-wrap; }
         <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
-        <source>Programmers</source>
-        <translation>Programmierer</translation>
-    </message>
-    <message>
-        <source>Almost All code and GUI design; </source>
-        <translation type="unfinished">Fast alle Code- und GUI-Design</translation>
-    </message>
-    <message>
         <source>Various code help/debug; Windows QA</source>
         <translation type="unfinished">Verschiedene Code-Hilfe / Debug; Windows QA</translation>
     </message>
@@ -98,10 +90,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Icons Used In this Program</source>
         <translation>Symbole benutzt in diesem Programm</translation>
-    </message>
-    <message>
-        <source>Buff Icons (and one or two more) by </source>
-        <translation>Buff Icons (eins mehr oder auch zwei) von </translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
@@ -189,7 +177,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Polish Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polieren Übersetzung:</translation>
+    </message>
+    <message>
+        <source>Contributions By </source>
+        <translation type="unfinished">Beiträge von </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alle Mitwirkenden anzeigen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Contributions By </source>
@@ -1706,24 +1702,24 @@ Neue Region ist %2hz</translation>
     </message>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished">Achievement-Editor</translation>
+        <translation>Achievement-Editor</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">Schließen und speichern Sie die Änderungen</translation>
+        <translation>Schließen und speichern Sie die Änderungen</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished">Schließen und Änderungen vergessen</translation>
+        <translation>Schließen und Änderungen vergessen</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished">Fehlgeschlagen Datei speichern</translation>
+        <translation>Fehlgeschlagen Datei speichern</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished">Datei konnte nicht schreiben
+        <translation>Datei konnte nicht schreiben
 Datei:%1</translation>
     </message>
 </context>
