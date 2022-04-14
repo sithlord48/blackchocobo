@@ -105,7 +105,7 @@ jobs:
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
         chmod a+x linuxdeploy*.AppImage
         export VERSION=continuous
-        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${{ matrix.config.ff7tkPrefix }}/lib
+        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib/x86_64-linux-gnu"
         mkdir -p ./appdir/usr/share/ff7tk/lang
         mkdir -p ./appdir/usr/plugins/iconengines
         cp /opt/Qt/${{ matrix.config.QT_VERSION }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
