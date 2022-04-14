@@ -20,18 +20,18 @@ jobs:
         - {
            name: "Linux-amd64"
            , os: ubuntu-20.04
-           , QT_VERSION: 6.2.4, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.2.4/gcc_64, QT_MODULES: qt5compat
+           , QT_VERSION: 6.3.0, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.3.0/gcc_64, QT_MODULES: qt5compat
            , ff7tkPrefix: /opt/ff7tk
            , ff7tkPackage: ff7tk-continuous-Linux_X86_64.tar.gz
            , install_ff7tk: "sudo tar -xf ff7tk-continuous-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr -DQT_DEFAULT_MAJOR_VERSION=6"
            , installBC: "make DESTDIR=appdir install"
-           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.2.4/gcc_64/libexec"
+           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.3.0/gcc_64/libexec"
           }
         - {
             name: "MacOS-amd64"
             , os: macos-10.15
-            , QT_VERSION: 6.2.4, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.2.4/clang_64, QT_MODULES: qt5compat
+            , QT_VERSION: 6.3.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.3.0/clang_64, QT_MODULES: qt5compat
             , ff7tkPrefix: /Users/runner/ff7tk
             , installBC: "make install"
             , ff7tkPackage: ff7tk-continuous-macos_X86_64.zip
@@ -41,7 +41,7 @@ jobs:
         - {
             name: "Windows-x64", WIN_ARCH: "x64"
             , os: windows-2019
-            , QT_VERSION: 6.2.4, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.2.4/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
+            , QT_VERSION: 6.3.0, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.3.0/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-win64.7z
             , install_ff7tk: "7z x ff7tk-continuous-win64.7z -oC:/ff7tk"
