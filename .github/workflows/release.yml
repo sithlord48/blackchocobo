@@ -33,10 +33,9 @@ jobs:
             , os: macos-10.15
             , QT_VERSION: 6.3.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.3.0/clang_64, QT_MODULES: qt5compat
             , ff7tkPrefix: /Users/runner/ff7tk
-            , installBC: "make install"
             , ff7tkPackage: ff7tk-continuous-macos_X86_64.zip
             , install_ff7tk: "sudo unzip ff7tk-continuous-macos_x86_64.zip -d /Users/runner/ff7tk"
-            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=6"
+            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\""
           }
         - {
             name: "Windows-x64", WIN_ARCH: "x64"
