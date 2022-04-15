@@ -30,14 +30,13 @@ jobs:
            , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.3.0/gcc_64/libexec"
           }
         - {
-            name: "MacOS-amd64"
+            name: "MacOS"
             , os: macos-10.15
             , QT_VERSION: 6.3.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.3.0/clang_64, QT_MODULES: qt5compat
             , ff7tkPrefix: /Users/runner/ff7tk
-            , installBC: "make install"
             , ff7tkPackage: ff7tk-continuous-macos_X86_64.zip
             , install_ff7tk: "sudo unzip ff7tk-continuous-macos_x86_64.zip -d /Users/runner/ff7tk"
-            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=6"
+            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=. -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\""
           }
         - {
             name: "Windows-x64", WIN_ARCH: "x64"
@@ -105,7 +104,7 @@ jobs:
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
         chmod a+x linuxdeploy*.AppImage
         export VERSION=continuous
-        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib/x86_64-linux-gnu"
+        export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib
         mkdir -p ./appdir/usr/share/ff7tk/lang
         mkdir -p ./appdir/usr/plugins/iconengines
         cp /opt/Qt/${{ matrix.config.QT_VERSION }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
