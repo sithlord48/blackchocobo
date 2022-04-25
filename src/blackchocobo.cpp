@@ -296,8 +296,6 @@ void BlackChocobo::initDisplay()
     ui->worldMapView->setScaledContents(true);
     ui->worldMapView->setPixmap(QPixmap(":/icons/common/world_map").scaled(ui->world_map_frame->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    ui->lbl_slot_icon->setScaledContents(true);
-
     ui->lbl_love_aeris->setScaledContents(true);
     ui->lbl_love_barret->setScaledContents(true);
     ui->lbl_love_tifa->setScaledContents(true);
@@ -578,7 +576,7 @@ void BlackChocobo::init_connections()
     connect(ui->cbRegVinny, &QCheckBox::toggled, this, &BlackChocobo::cbRegVinny_toggled);
     //QComboBoxes
     connect(ui->comboHexEditor, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHexEditor_currentIndexChanged);
-    connect(ui->comboRegionSlot, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboRegionSlot_currentIndexChanged);
+    connect(ui->comboSlotNumber, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboSlotNumber_currentIndexChanged);
     connect(ui->comboHighwindBuggy, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboHighwindBuggy_currentIndexChanged);
     connect(ui->comboMapControls, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboMapControls_currentIndexChanged);
     connect(ui->comboZVar, qOverload<int>(&QComboBox::currentIndexChanged), this, &BlackChocobo::comboZVar_currentIndexChanged);
@@ -592,6 +590,7 @@ void BlackChocobo::init_connections()
     connect(ui->worldMapView, &QWidget::customContextMenuRequested, this, &BlackChocobo::worldMapView_customContextMenuRequested);
     
     connect(ui->linePsxDesc, &QLineEdit::textChanged, this, &BlackChocobo::linePsxDesc_textChanged);
+    connect(ui->comboSlotRegion, &QComboBox::currentIndexChanged, this, &BlackChocobo::comboSlotRegionChanged);
     connect(ui->tblMateria, &QTableWidget::currentCellChanged, this, &BlackChocobo::tblMateria_currentCellChanged);
     connect(ui->tabWidget, &QTabWidget::currentChanged, this, &BlackChocobo::tabWidget_currentChanged);
     connect(ui->locationToolBox, &QToolBox::currentChanged, this, &BlackChocobo::locationToolBox_currentChanged);
@@ -1162,193 +1161,130 @@ void BlackChocobo::setOpenFileText(const QString &openFile)
     ui->lbl_fileName->setText(fontMetrics().elidedText(openFile, Qt::ElideMiddle, maxWidth));
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-void BlackChocobo::actionRegionUSA_triggered(bool checked)
+void BlackChocobo::setRegion(QString region)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
+    if(!load) {
+        bool NTSC = ff7->isNTSC(s);
+        QString oldRegion = ff7->region(s);
+        if (NTSC) {
+            if (region.contains(QStringLiteral("PAL")))
+                set_pal_time();
         } else {
-            if (ff7->isPAL(s))
-                set_ntsc_time();   //Convert Time?
-
-            ff7->setRegion(s, "NTSC-U");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
+            if (region.contains(QStringLiteral("NTSC")))
+                set_ntsc_time();
         }
+
+        ff7->setRegion(s, region);
+
+        if(region == QStringLiteral("NTSC-J")) {
+            itemlist->setMaximumItemQty(99);
+        } else {
+            itemlist->setMaximumItemQty(127);
+        }
+
+        if(oldRegion.contains(QStringLiteral("01057")))
+            ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＦＦ７Ｉ"), QStringLiteral("ＦＦ７")));
+        else if(ff7->region(s).contains(QStringLiteral("01057"))) {
+            ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＦＦ７"), QStringLiteral("ＦＦ７Ｉ")));
+        }
+
+        if(ff7->isJPN(s))
+            ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＳＡＶＥ"), QStringLiteral("セーブ")));
+        else if(!ff7->isJPN(s))
+            ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("セーブ"), QStringLiteral("ＳＡＶＥ")));
     }
     locationViewer->setRegion(ff7->region(s));
+
+}
+void BlackChocobo::actionRegionUSA_triggered(bool checked)
+{
+    if(!load && checked) {
+        setRegion(QStringLiteral("NTSC-U"));
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionPALGeneric_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Converter
-
-            ff7->setRegion(s, "PAL-E");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(checked) {
+        setRegion(QStringLiteral("PAL-E"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionPALGerman_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Converter
-
-            ff7->setRegion(s, "PAL-DE");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(!load && checked) {
+        setRegion(QStringLiteral("PAL-DE"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionPALSpanish_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Converter
-
-            ff7->setRegion(s, "PAL-ES");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(!load && checked) {
+        setRegion(QStringLiteral("PAL-ES"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionPALFrench_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            if (ff7->isNTSC(s))
-                set_pal_time();   //Call RegionTime Converter
-
-            ff7->setRegion(s, "PAL-FR");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(!load && checked) {
+        setRegion(QStringLiteral("PAL-FR"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionJPN_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            //First Check If Coming From PAL
-            if (ff7->isPAL(s))
-                set_ntsc_time();   //Convert Time?
-            ff7->setRegion(s, "NTSC-J");
-            itemlist->setMaximumItemQty(99);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionJPNInternational->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(!load && checked) {
+        setRegion(QStringLiteral("NTSC-J"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionJPNInternational->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionJPNInternational_triggered(bool checked)
 {
-    if (!load) {
-        if (!checked) {
-            ff7->setRegion(s, QString());
-            ui->lbl_sg_region->clear();
-            itemlist->setMaximumItemQty(127);
-        } else {
-            if (ff7->isPAL(s))
-                set_ntsc_time();   //Convert Time?
-            ff7->setRegion(s, "NTSC-JI");
-            itemlist->setMaximumItemQty(127);
-            ui->actionRegionUSA->setChecked(false);
-            ui->actionRegionPALGeneric->setChecked(false);
-            ui->actionRegionPALFrench->setChecked(false);
-            ui->actionRegionPALGerman->setChecked(false);
-            ui->actionRegionPALSpanish->setChecked(false);
-            ui->actionRegionJPN->setChecked(false);
-            load = true;
-            ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-            ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-            load = false;
-        }
-    } locationViewer->setRegion(ff7->region(s));
+    if(!load && checked) {
+        setRegion(QStringLiteral("NTSC-JI"));
+        ui->actionRegionUSA->setChecked(false);
+        ui->actionRegionPALGeneric->setChecked(false);
+        ui->actionRegionPALFrench->setChecked(false);
+        ui->actionRegionPALGerman->setChecked(false);
+        ui->actionRegionPALSpanish->setChecked(false);
+        ui->actionRegionJPN->setChecked(false);
+    }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1708,6 +1644,24 @@ void BlackChocobo::update_hexEditor_PSXInfo(void)
     load = true;
 
     saveIcon->setAll(ff7->slotIcon(s));
+    ui->comboSlotNumber->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+    if(ff7->region(s).contains(QStringLiteral("BASCUS-94163")))
+        ui->comboSlotRegion->setCurrentIndex(0);
+    else if(ff7->region(s).contains(QStringLiteral("BESCES-00867")))
+        ui->comboSlotRegion->setCurrentIndex(1);
+    else if(ff7->region(s).contains(QStringLiteral("BESCES-00868")))
+        ui->comboSlotRegion->setCurrentIndex(2);
+    else if(ff7->region(s).contains(QStringLiteral("BESCES-00869")))
+        ui->comboSlotRegion->setCurrentIndex(3);
+    else if(ff7->region(s).contains(QStringLiteral("BESCES-00900")))
+        ui->comboSlotRegion->setCurrentIndex(4);
+    else if(ff7->region(s).contains(QStringLiteral("BISLPS-00700")))
+        ui->comboSlotRegion->setCurrentIndex(5);
+    else if(ff7->region(s).contains(QStringLiteral("BISLPS-01057")))
+        ui->comboSlotRegion->setCurrentIndex(6);
+    else
+        ui->comboSlotRegion->setCurrentIndex(-1);
+
     ui->lblRegionString->setText(ff7->region(s));
     QString SlotSizeText;
 
@@ -1831,7 +1785,9 @@ void BlackChocobo::tabWidget_currentChanged(int index)
 void BlackChocobo::hexTabUpdate(int viewMode)
 {
     ui->psxExtras->setVisible(false);
-    ui->boxHexData->setVisible(false);
+    ui->hexShowsGroup->setVisible(false);
+    ui->lblSlotSize->setVisible(false);
+    ui->psxff7Extras->setVisible(false);
     disconnect(hexEditor, &QHexEdit::dataChanged, this, &BlackChocobo::hexEditorChanged);
     if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         hexEditor->setData(ff7->slotFF7Data(s));
@@ -1839,7 +1795,8 @@ void BlackChocobo::hexTabUpdate(int viewMode)
         ui->psxExtras->setVisible(true);
         update_hexEditor_PSXInfo();
         if (ff7->isFF7(s)) {
-            ui->boxHexData->setVisible(true);
+            ui->hexShowsGroup->setVisible(true);
+            ui->psxff7Extras->setVisible(true);
             switch (viewMode) {
             case 0:
                 hexEditor->setData(ff7->slotPsxRawData(s));
@@ -1849,6 +1806,7 @@ void BlackChocobo::hexTabUpdate(int viewMode)
                 break;
             }
         } else {
+            ui->lblSlotSize->setVisible(true);
             hexEditor->setData(ff7->slotPsxRawData(s));
         }
     }
@@ -2969,7 +2927,7 @@ void BlackChocobo::cbTutWorldSave_stateChanged(int value)
     }
 }
 
-void BlackChocobo::comboRegionSlot_currentIndexChanged(int index)
+void BlackChocobo::comboSlotNumber_currentIndexChanged(int index)
 {
     if (!load) {
         if (ff7->isFF7(s)) {
@@ -3942,6 +3900,24 @@ void BlackChocobo::comboHexEditor_currentIndexChanged(int index)
     hexTabUpdate(index);
 }
 
+void BlackChocobo::comboSlotRegionChanged(int index)
+{
+    auto region = ff7->region(s);
+    if(!load) {
+        switch(index) {
+            case 0: ui->actionRegionUSA->trigger(); break;
+            case 1: ui->actionRegionPALGeneric->trigger(); break;
+            case 2: ui->actionRegionPALFrench->trigger(); break;
+            case 3: ui->actionRegionPALGerman->trigger(); break;
+            case 4: ui->actionRegionPALSpanish->trigger(); break;
+            case 5: ui->actionRegionJPN->trigger(); break;
+            case 6: ui->actionRegionJPNInternational->trigger(); break;
+        }
+    }
+    if (region != ff7->region(s))
+        hexTabUpdate(ui->comboHexEditor->currentIndex());
+}
+
 void BlackChocobo::hexEditorChanged(void)
 {
     if (FF7SaveInfo::instance()->isTypePC(ff7->format())) {
@@ -4109,10 +4085,6 @@ void BlackChocobo::testDataTabWidget_currentChanged(int index)
         ui->sbSaveY->setValue(ff7->craterSavePointY(s));
         ui->sbSaveZ->setValue(ff7->craterSavePointZ(s));
 
-        ui->lbl_sg_region->setText(ff7->region(s).mid(0, ff7->region(s).lastIndexOf("-") + 1));
-        ui->comboRegionSlot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
-        if (!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN) //we Display an icon. or all formats except for pc and switch.
-            ui->lbl_slot_icon->setPixmap(SaveIcon(ff7->slotIcon(s)).icon());
         load = false;
         break;
 

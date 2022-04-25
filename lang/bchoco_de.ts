@@ -187,14 +187,6 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alle Mitwirkenden anzeigen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-    <message>
-        <source>Contributions By </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>BlackChocobo</name>
@@ -978,70 +970,6 @@ Trigger, Tutorial zeigt</translation>
         <translation type="unfinished">Save Point Lage im Nordkrater</translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation type="unfinished">Region String</translation>
-    </message>
-    <message>
-        <source>S01</source>
-        <translation type="unfinished">S01</translation>
-    </message>
-    <message>
-        <source>S02</source>
-        <translation type="unfinished">S02</translation>
-    </message>
-    <message>
-        <source>S03</source>
-        <translation type="unfinished">S03</translation>
-    </message>
-    <message>
-        <source>S04</source>
-        <translation type="unfinished">S04</translation>
-    </message>
-    <message>
-        <source>S05</source>
-        <translation type="unfinished">S05</translation>
-    </message>
-    <message>
-        <source>S06</source>
-        <translation type="unfinished">S06</translation>
-    </message>
-    <message>
-        <source>S07</source>
-        <translation type="unfinished">S07</translation>
-    </message>
-    <message>
-        <source>S08</source>
-        <translation type="unfinished">S08</translation>
-    </message>
-    <message>
-        <source>S09</source>
-        <translation type="unfinished">S09</translation>
-    </message>
-    <message>
-        <source>S10</source>
-        <translation type="unfinished">S10</translation>
-    </message>
-    <message>
-        <source>S11</source>
-        <translation type="unfinished">S11</translation>
-    </message>
-    <message>
-        <source>S12</source>
-        <translation type="unfinished">S12</translation>
-    </message>
-    <message>
-        <source>S13</source>
-        <translation type="unfinished">S13</translation>
-    </message>
-    <message>
-        <source>S14</source>
-        <translation type="unfinished">S14</translation>
-    </message>
-    <message>
-        <source>S15</source>
-        <translation type="unfinished">S15</translation>
-    </message>
-    <message>
         <source>Unknown Vars</source>
         <translation type="unfinished">unbekannt vars</translation>
     </message>
@@ -1425,6 +1353,30 @@ Trigger, Tutorial zeigt</translation>
     <message>
         <source>G-Bike High Score</source>
         <translation type="unfinished">G-Bike High Score</translation>
+    </message>
+    <message>
+        <source>Game Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>US English (NTSC-U)</source>
+        <translation type="unfinished">Us Englisch (NTSC-U)</translation>
+    </message>
+    <message>
+        <source>UK English (PAL)</source>
+        <translation type="unfinished">UK Englisch (PAL)</translation>
+    </message>
+    <message>
+        <source>French (PAL)</source>
+        <translation type="unfinished">Französisch (PAL)</translation>
+    </message>
+    <message>
+        <source>German (PAL)</source>
+        <translation type="unfinished">Deutsch (PAL)</translation>
+    </message>
+    <message>
+        <source>Save Slot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
