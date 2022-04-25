@@ -187,14 +187,6 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Ver todos los colaboradores&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-    <message>
-        <source>Contributions By </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>BlackChocobo</name>
@@ -361,10 +353,6 @@ p, li { white-space: pre-wrap; }
         <translation>PG de Arma Última</translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation>String de Región</translation>
-    </message>
-    <message>
         <source>Countdown Timer</source>
         <translation>Cronómetro de cuenta atrás</translation>
     </message>
@@ -401,66 +389,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Highwind</source>
         <translation>Gran Viento</translation>
-    </message>
-    <message>
-        <source>S01</source>
-        <translation>S01</translation>
-    </message>
-    <message>
-        <source>S02</source>
-        <translation>S02</translation>
-    </message>
-    <message>
-        <source>S03</source>
-        <translation>S03</translation>
-    </message>
-    <message>
-        <source>S04</source>
-        <translation>S04</translation>
-    </message>
-    <message>
-        <source>S05</source>
-        <translation>S05</translation>
-    </message>
-    <message>
-        <source>S06</source>
-        <translation>S06</translation>
-    </message>
-    <message>
-        <source>S07</source>
-        <translation>S07</translation>
-    </message>
-    <message>
-        <source>S08</source>
-        <translation>S08</translation>
-    </message>
-    <message>
-        <source>S09</source>
-        <translation>S09</translation>
-    </message>
-    <message>
-        <source>S10</source>
-        <translation>S10</translation>
-    </message>
-    <message>
-        <source>S11</source>
-        <translation>S11</translation>
-    </message>
-    <message>
-        <source>S12</source>
-        <translation>S12</translation>
-    </message>
-    <message>
-        <source>S13</source>
-        <translation>S13</translation>
-    </message>
-    <message>
-        <source>S14</source>
-        <translation>S14</translation>
-    </message>
-    <message>
-        <source>S15</source>
-        <translation>S15</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1419,6 +1347,30 @@ trigger showing that tutorial</source>
     <message>
         <source>KeyItem</source>
         <translation type="unfinished">Element Clave</translation>
+    </message>
+    <message>
+        <source>Game Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>US English (NTSC-U)</source>
+        <translation type="unfinished">US Ingles (NTSC-U)</translation>
+    </message>
+    <message>
+        <source>UK English (PAL)</source>
+        <translation type="unfinished">UK Ingles (PAL)</translation>
+    </message>
+    <message>
+        <source>French (PAL)</source>
+        <translation type="unfinished">Francés (PAL)</translation>
+    </message>
+    <message>
+        <source>German (PAL)</source>
+        <translation type="unfinished">Aleman (PAL)</translation>
+    </message>
+    <message>
+        <source>Save Slot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

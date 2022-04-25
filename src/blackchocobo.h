@@ -47,6 +47,7 @@ public:
     QString checkIconTheme();
     ~BlackChocobo();
 
+    void setRegion(QString region);
 protected:
     void dragEnterEvent(QDragEnterEvent *e);
     void dropEvent(QDropEvent *e);
@@ -162,6 +163,7 @@ private slots://try to keep these in the same order as the .cpp file
     /*HexEditor Tab */
     void hexTabUpdate(int viewMode);
     void comboHexEditor_currentIndexChanged(int index);
+    void comboSlotRegionChanged(int index);
     void hexEditorChanged(void);
     void update_hexEditor_PSXInfo(void);
     //QString avatar_style(int);
@@ -375,7 +377,7 @@ private slots://try to keep these in the same order as the .cpp file
 
     void cbRubyDead_toggled(bool checked);
     void cbEmeraldDead_toggled(bool checked);
-    void comboRegionSlot_currentIndexChanged(int index);
+    void comboSlotNumber_currentIndexChanged(int index);
     void comboHighwindBuggy_currentIndexChanged(int index);
 
 //Map Stuff

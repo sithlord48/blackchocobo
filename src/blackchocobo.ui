@@ -700,7 +700,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>649</width>
+             <width>653</width>
              <height>521</height>
             </rect>
            </property>
@@ -752,7 +752,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>407</width>
+                 <width>408</width>
                  <height>994</height>
                 </rect>
                </property>
@@ -5232,6 +5232,268 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </widget>
                 </item>
                 <item>
+                 <widget class="QWidget" name="psxff7Extras" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                   <item>
+                    <widget class="QWidget" name="hozlayoout4" native="true">
+                     <layout class="QHBoxLayout" name="horizontalLayout">
+                      <property name="spacing">
+                       <number>6</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_9">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>Game Region</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="comboSlotRegion">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">font: 9pt &quot;Ubuntu&quot;; color:
+rgb(255, 255, 255)</string>
+                        </property>
+                        <property name="currentIndex">
+                         <number>0</number>
+                        </property>
+                        <property name="maxVisibleItems">
+                         <number>15</number>
+                        </property>
+                        <property name="frame">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>US English (NTSC-U)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>UK English (PAL)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>French (PAL)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>German (PAL)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Spanish (PAL)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Japanese (NTSC-J)</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>International (NTSC-J)</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="alkwrtj" native="true">
+                     <layout class="QHBoxLayout" name="horizontalLayout_17">
+                      <property name="spacing">
+                       <number>6</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_28">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>Save Slot</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="comboSlotNumber">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">font: 9pt &quot;Ubuntu&quot;; color:
+rgb(255, 255, 255)</string>
+                        </property>
+                        <property name="currentIndex">
+                         <number>0</number>
+                        </property>
+                        <property name="maxVisibleItems">
+                         <number>15</number>
+                        </property>
+                        <property name="frame">
+                         <bool>false</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string notr="true">01</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">02</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">03</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">04</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">05</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">06</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">07</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">08</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">09</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">10</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">11</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">12</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">13</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">14</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string notr="true">15</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_2">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
                  <widget class="QLabel" name="lblSlotSize"/>
                 </item>
                </layout>
@@ -5255,65 +5517,67 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QWidget" name="boxHexData" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_15">
-                 <item>
-                  <layout class="QHBoxLayout" name="Hgroup">
-                   <item>
-                    <widget class="QLabel" name="label_232">
-                     <property name="maximumSize">
-                      <size>
-                       <width>75</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>Show:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QComboBox" name="comboHexEditor">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="frame">
-                      <bool>true</bool>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>PSX Save Data</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true">FF7 Save Data</string>
-                      </property>
-                     </item>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </widget>
-              </item>
              </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="hexShowsGroup" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QHBoxLayout" name="Hgroup">
+           <item>
+            <widget class="QLabel" name="label_232">
+             <property name="maximumSize">
+              <size>
+               <width>75</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Show:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboHexEditor">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>PSX Save Data</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">FF7 Save Data</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
@@ -5782,180 +6046,6 @@ trigger showing that tutorial</string>
                </size>
               </property>
              </spacer>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="Group_Region">
-              <property name="title">
-               <string>Region String</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="checked">
-               <bool>false</bool>
-              </property>
-              <layout class="QHBoxLayout" name="horizontalLayout">
-               <property name="spacing">
-                <number>3</number>
-               </property>
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>3</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
-               <item>
-                <spacer name="horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="lbl_sg_region">
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QComboBox" name="comboRegionSlot">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">font: 9pt &quot;Ubuntu&quot;; color:
-rgb(255, 255, 255)</string>
-                 </property>
-                 <property name="currentIndex">
-                  <number>-1</number>
-                 </property>
-                 <property name="maxVisibleItems">
-                  <number>15</number>
-                 </property>
-                 <property name="frame">
-                  <bool>false</bool>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>S01</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S02</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S03</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S04</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S05</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S06</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S07</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S08</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S09</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S10</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S11</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S12</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S13</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S14</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>S15</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="lbl_slot_icon">
-                 <property name="minimumSize">
-                  <size>
-                   <width>64</width>
-                   <height>64</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>64</width>
-                   <height>64</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
             </item>
            </layout>
           </widget>
@@ -6983,7 +7073,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sbGp</tabstop>
   <tabstop>sbBattles</tabstop>
   <tabstop>sbRuns</tabstop>
-  <tabstop>comboRegionSlot</tabstop>
   <tabstop>tblMateria</tabstop>
   <tabstop>comboReplay</tabstop>
   <tabstop>tblMateriaStolen</tabstop>
