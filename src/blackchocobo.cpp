@@ -749,10 +749,7 @@ void BlackChocobo::changeEvent(QEvent *e)
         for (QWidget * widget : widgets)
              widget->setPalette(palette);
         hexEditor->setAddressAreaColor(palette.alternateBase().color());
-        QStringList _temp = QIcon::fallbackSearchPaths();
-        _temp.removeAll(":icons/light");
-        _temp.removeAll(":icons/dark");
-        QIcon::setFallbackSearchPaths(_temp << QStringLiteral(":icons/%1").arg(checkIconTheme()));
+        QIcon::setThemeSearchPaths(QIcon::themeSearchPaths() << QStringLiteral(":/icons"));
 #if defined(QT_OS_WIN32) || defined(QT_OS_MAC)
         QIcon::setThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
 #else
