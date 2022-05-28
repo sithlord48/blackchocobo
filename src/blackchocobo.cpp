@@ -41,6 +41,7 @@
 //ff7tk includes
 #include <FF7Char.h>
 #include <FF7Item.h>
+#include <FF7ItemModel.h>
 #include <FF7Location.h>
 #include <FF7Save.h>
 #include <FF7Materia.h>
@@ -50,7 +51,7 @@
 #include <SlotSelect.h>
 #include <ChocoboEditor.h>
 #include <CharEditor.h>
-#include <ItemList.h>
+#include <ItemListView.h>
 #include <MetadataCreator.h>
 #include <PhsListWidget.h>
 #include <MenuListWidget.h>
@@ -77,6 +78,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     , partyTab(new PartyTab)
     , hexEditor(new QHexEdit)
     , chocoboManager(new ChocoboManager)
+    , ff7ItemModel(new FF7ItemModel(this))
 {
 //Initilze Remaining Data
     QIcon::setFallbackSearchPaths(QIcon::fallbackSearchPaths() << ":/icons/common");
@@ -243,11 +245,12 @@ void BlackChocobo::initDisplay()
     ui->group_hexedit->setLayout(hexLayout);
 
 
-    itemlist = new ItemList(this);
+    itemListView = new ItemListView(this);
+    itemListView->setModel(ff7ItemModel);
     ui->group_items->layout()->removeWidget(ui->group_item_options);
-    ui->group_items->layout()->addWidget(itemlist);
+    ui->group_items->layout()->addWidget(itemListView);
     ui->group_items->layout()->addWidget(ui->group_item_options);
-    ui->group_items->setFixedWidth(itemlist->width() + itemlist->contentsMargins().left() + itemlist->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
+    ui->group_items->setFixedWidth(itemListView->width() + itemListView->contentsMargins().left() + itemListView->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
 
     ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
     ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
@@ -605,7 +608,7 @@ void BlackChocobo::init_connections()
 
     connect(ff7, &FF7Save::fileChanged, this, &BlackChocobo::fileModified);
 
-    connect(itemlist, &ItemList::itemsChanged, this, &BlackChocobo::Items_Changed);
+    connect(ff7ItemModel, &FF7ItemModel::itemsChanged, this, &BlackChocobo::Items_Changed);
 
     connect(materia_editor, &MateriaEditor::apChanged, this, &BlackChocobo::materia_ap_changed);
     connect(materia_editor, &MateriaEditor::idChanged, this, &BlackChocobo::materia_id_changed);
@@ -721,7 +724,7 @@ void BlackChocobo::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
     materia_editor->setEditableMateriaCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    itemlist->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemListView->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     partyTab->setCharEditorEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
     partyTab->setCharEditorAdvancedMode(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
     partyTab->setCharEditorAutoLevel(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
@@ -1174,9 +1177,9 @@ void BlackChocobo::setRegion(QString region)
         ff7->setRegion(s, region);
 
         if(region == QStringLiteral("NTSC-J")) {
-            itemlist->setMaximumItemQty(99);
+            itemListView->setMaximumItemQty(99);
         } else {
-            itemlist->setMaximumItemQty(127);
+            itemListView->setMaximumItemQty(127);
         }
 
         if(oldRegion.contains(QStringLiteral("01057")))
@@ -1711,7 +1714,7 @@ void BlackChocobo::tabWidget_currentChanged(int index)
         break;
 
     case 1://Item Tab
-        itemlist->setItems(ff7->items(s));
+        ff7ItemModel->setItems(ff7->items(s));
         ui->sbGil->setValue(ff7->gil(s));
         ui->sbGp->setValue(ff7->gp(s));
         ui->sbRuns->setValue(ff7->runs(s));
@@ -2781,7 +2784,7 @@ void BlackChocobo::btnRemoveAllItems_clicked()
 {
     for (int i = 0; i < 320; i++)
         ff7->setItem(s, i, FF7Item::EmptyItemData);
-    itemlist->setItems(ff7->items(s));
+    ff7ItemModel->setItems(ff7->items(s));
 }
 
 void BlackChocobo::btnRemoveAllMateria_clicked()
@@ -3429,7 +3432,7 @@ void BlackChocobo::btnAddAllItems_clicked()
         if (i > 296)
             ff7->setItem(s, i, 0x1FF, 0x7F);   //replace the shifted ones w/ empty slots
     }
-    itemlist->setItems(ff7->items(s));
+    ff7ItemModel->setItems(ff7->items(s));
     statusBar()->showMessage(tr("All Items Added"), 750);
 }
 

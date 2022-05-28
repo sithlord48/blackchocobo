@@ -20,6 +20,7 @@
 #include <Type_materia.h>
 
 class FF7Save;
+class FF7ItemModel;
 class SaveIcon;
 class PartyTab;
 class PhsListWidget;
@@ -27,7 +28,7 @@ class MenuListWidget;
 class OptionsWidget;
 class MateriaEditor;
 class QSpacerItem;
-class ItemList;
+class ItemListView;
 class QHexEdit;
 class ChocoboManager;
 class LocationViewer;
@@ -76,7 +77,7 @@ private:
     MateriaEditor *materia_editor = nullptr;
     QSpacerItem *mat_spacer = nullptr;
     PartyTab *partyTab = nullptr;
-    ItemList *itemlist = nullptr;
+    ItemListView *itemListView = nullptr;
     QHexEdit *hexEditor = nullptr;
     ChocoboManager *chocoboManager = nullptr;
     LocationViewer *locationViewer = nullptr;
@@ -85,6 +86,7 @@ private:
     typedef QList<quint16> fieldItemOffsetList;
     typedef QList<quint8> fieldItemBitList;
 
+    FF7ItemModel *ff7ItemModel = nullptr;
     QList<fieldItemOffsetList> *fieldItemOffset;
     QList<fieldItemBitList> *fieldItemBit;
     void populateCombos();
