@@ -93,7 +93,13 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     dialog->setFileMode(QFileDialog::AnyFile);
     dialog->setAcceptMode(QFileDialog::AcceptSave);
 
-    if(chosenType)
+    if(initSelection.isEmpty()) {
+        dialog->setNameFilter(FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PC));
+        dialog->setDefaultSuffix(QStringLiteral(".ff7"));
+        dialog->selectFile(QStringLiteral("save00.%1").arg(dialog->defaultSuffix()));
+    }
+
+    if(!chosenType->isEmpty())
         dialog->selectNameFilter(chosenType->mid(0));
 
     if(nameFilters.contains(QStringLiteral(".char")))
@@ -132,8 +138,9 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
             dialog->setDefaultSuffix(QStringLiteral(".vgs"));
             name = QStringLiteral("vgsCard");
         }
-        QString ext = dialog->defaultSuffix().isEmpty() ? QString() : QStringLiteral(".%1").arg(dialog->defaultSuffix());
-        dialog->selectFile(QStringLiteral("%1%2").arg(name, ext));
+
+        name.append(QStringLiteral(".%1").arg(dialog->defaultSuffix()));
+        dialog->selectFile(name);
     });
 
     if(dialog->exec() == QFileDialog::Accepted) {
