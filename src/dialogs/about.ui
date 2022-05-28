@@ -262,6 +262,11 @@ p, li { white-space: pre-wrap; }
            <string>Hi-Res Icons</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Default to PC type, when saving unknown type</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -326,8 +331,8 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-491</y>
-            <width>596</width>
+            <y>0</y>
+            <width>583</width>
             <height>814</height>
            </rect>
           </property>
@@ -957,7 +962,7 @@ p, li { white-space: pre-wrap; }
             <x>0</x>
             <y>0</y>
             <width>583</width>
-            <height>896</height>
+            <height>812</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="_27">
