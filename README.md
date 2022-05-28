@@ -9,7 +9,7 @@ A Save Editor for Final Fantasy 7
  - Supports All Kinds Of FF7 Saves ,PC, Psx ,Emulator Formats PS3, PSP/PsVita , Switch
  - Support for 2012 steam saves metadata.xml
  - Automatic Signing of PS3 and PSP / PsVita files
- - Translated into 5 languages
+ - Translated into 6 languages
  - Create New Game + from your old saves
  - Import/Export Character stat files
  - Convert FF7 Save Game Formats And Regions
@@ -19,6 +19,6 @@ A Save Editor for Final Fantasy 7
  - And more
 
 ## Build Requirements
- - [Qt](https://www.qt.io) (5.12.0+)
- - [CMake](https://cmake.org) (3.8+)
+ - [Qt](https://www.qt.io) (6.2.0+)
+ - [CMake](https://cmake.org) (3.21+)
  - [ff7tk](https://github.com/sithlord48/ff7tk)
