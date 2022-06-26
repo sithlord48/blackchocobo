@@ -202,7 +202,6 @@ void BCDialog::editSideBarPaths(QWidget *parent)
             dialog.reject();
         else if (button == btnBox.button(QDialogButtonBox::RestoreDefaults)) {
             listWidget.clear();
-            listWidget.addItem(QDir::rootPath());
             listWidget.addItem(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
             if(!BCSettings::instance()->value(SETTINGS::LOADPATH).toString().isEmpty())
                 listWidget.addItem(BCSettings::instance()->value(SETTINGS::LOADPATH).toString());
@@ -288,6 +287,9 @@ QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, cons
     dialog->setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
 
     QList<QUrl> sideBarUrls;
+    const QFileInfoList drives = QDir::drives();
+    for (const QFileInfo &drive : drives)
+        sideBarUrls.append(QUrl::fromLocalFile(drive.path()));
     const QStringList SideBarUrls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
     for(const QString &url : SideBarUrls)
         sideBarUrls.append(QUrl::fromLocalFile(url));
