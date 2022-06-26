@@ -47,7 +47,6 @@ void BCSettings::initSettings()
 #endif //STATIC
     if (settings->value(SETTINGS::SIDEBARURLS).isNull()) {
         QStringList defaultBarUrls;
-        defaultBarUrls.append(QDir::rootPath());
         defaultBarUrls.append(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
         if (!settings->value(SETTINGS::LOADPATH).toString().isEmpty())
             defaultBarUrls.append(settings->value(SETTINGS::LOADPATH).toString());
