@@ -5,6 +5,8 @@
         <file>common/map-slide-left.svg</file>
         <file>common/world_map.png</file>
         <file>common/psxmc.png</file>
+        <file>bc-light/actions/24/list-add.svg</file>
+        <file>bc-light/actions/24/list-remove.svg</file>
         <file>bc-light/actions/24/edit-clear.svg</file>
         <file>bc-light/actions/24/edit-copy.svg</file>
         <file>bc-light/actions/24/edit-cut.svg</file>
@@ -37,6 +39,8 @@
         <file>bc-light/status/64/dialog-question.svg</file>
         <file>bc-light/status/64/dialog-warning.svg</file>
         <file>bc-light/index.theme</file>
+        <file>bc-dark/actions/24/list-add.svg</file>
+        <file>bc-dark/actions/24/list-remove.svg</file>
         <file>bc-dark/actions/24/edit-clear.svg</file>
         <file>bc-dark/actions/24/edit-copy.svg</file>
         <file>bc-dark/actions/24/edit-cut.svg</file>
