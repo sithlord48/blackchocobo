@@ -1569,6 +1569,10 @@ le tutoriel sera affiché directement</translation>
         <source>Application Style</source>
         <translation type="unfinished">Style d&apos;application</translation>
     </message>
+    <message>
+        <source>Item Editor - Always cap quanity at 99</source>
+        <translation type="unfinished">Éditeur d&apos;articles - Limitez toujours la quantité à 99</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

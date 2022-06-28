@@ -1563,6 +1563,10 @@ trigger showing that tutorial</source>
         <source>Application Style</source>
         <translation type="unfinished">アプリケーションスタイル</translation>
     </message>
+    <message>
+        <source>Item Editor - Always cap quanity at 99</source>
+        <translation type="unfinished">アイテムエディタ-常に数量を99に制限します</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

@@ -1567,6 +1567,10 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
         <source>Select A Location To Save Character Stat Files</source>
         <translation>Wybierz lokalizację, aby zapisać pliki statystyk postaci</translation>
     </message>
+    <message>
+        <source>Item Editor - Always cap quanity at 99</source>
+        <translation type="unfinished">Edytor przedmiotów - Zawsze ograniczaj ilość do 99</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>
