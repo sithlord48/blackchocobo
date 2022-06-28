@@ -1569,6 +1569,10 @@ trigger showing that tutorial</translation>
         <source>Application Style</source>
         <translation>Application Style</translation>
     </message>
+    <message>
+        <source>Item Editor - Always cap quanity at 99</source>
+        <translation>Item Editor - Always cap quanity at 99</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

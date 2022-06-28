@@ -1572,6 +1572,10 @@ Trigger, Tutorial zeigt</translation>
         <source>Application Style</source>
         <translation type="unfinished">Anwendungsstil</translation>
     </message>
+    <message>
+        <source>Item Editor - Always cap quanity at 99</source>
+        <translation type="unfinished">Artikeleditor - Beschränken Sie die Menge immer auf 99</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

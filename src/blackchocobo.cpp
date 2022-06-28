@@ -737,6 +737,10 @@ void BlackChocobo::loadChildWidgetSettings()
     ui->bm_unknown->setVisible(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
     ui->sbBhId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
     ui->sbLeaderId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    if(BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool())
+        itemListView->setMaximumItemQty(99);
+    else
+        itemListView->setMaximumItemQty(127);
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 BlackChocobo::~BlackChocobo()
@@ -1176,7 +1180,7 @@ void BlackChocobo::setRegion(QString region)
 
         ff7->setRegion(s, region);
 
-        if(region == QStringLiteral("NTSC-J")) {
+        if(region == QStringLiteral("NTSC-J") || BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool()) {
             itemListView->setMaximumItemQty(99);
         } else {
             itemListView->setMaximumItemQty(127);
@@ -3419,15 +3423,15 @@ void BlackChocobo::worldMapView_customContextMenuRequested(QPoint pos)
 void BlackChocobo::btnAddAllItems_clicked()
 {
     ui->btnRemoveAllItems->click();
+    int itemMax = (BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
     for (int i = 0; i < 320; i++) {
-        //Replaced by new item engine. (Vegeta_Ss4)
         if (FF7Item::instance()->name(i) != tr("DON'T USE")) {
             if (i < 106)
-                ff7->setItem(s, i, quint16(i), 127);
+                ff7->setItem(s, i, quint16(i), itemMax);
             else // after the block of empty items shift up 23 spots.
-                ff7->setItem(s, (i - 23), quint16(i), 127);
+                ff7->setItem(s, (i - 23), quint16(i), itemMax);
         } else {
-            ff7->setItem(s, i, 0x1FF, 0x7F);   //exclude the test items
+            ff7->setItem(s, i, 0x1FF, itemMax);   //exclude the test items
         }
         if (i > 296)
             ff7->setItem(s, i, 0x1FF, 0x7F);   //replace the shifted ones w/ empty slots

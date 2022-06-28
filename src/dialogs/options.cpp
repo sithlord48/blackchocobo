@@ -117,6 +117,7 @@ void Options::loadSettings()
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
     ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
     ui->comboAppStyle->setCurrentText(BCSettings::instance()->value(SETTINGS::APPSTYLE).toString());
+    ui->cbCapItemQty->setChecked(BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool());
     adjustSize();
 }
 
@@ -142,6 +143,7 @@ void Options::saveSettings()
     BCSettings::instance()->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
     BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
     BCSettings::instance()->setValue(SETTINGS::APPSTYLE, ui->comboAppStyle->currentText());
+    BCSettings::instance()->setValue(SETTINGS::ITEMCAP99, ui->cbCapItemQty->isChecked());
 }
 
 void Options::restoreDefaultSettings()
@@ -167,6 +169,7 @@ void Options::restoreDefaultSettings()
     ui->cbNativeDialogs->setChecked(false);
     ui->btnEditSideBarItems->setVisible(true);
     ui->comboAppStyle->setCurrentText(QStringLiteral("Fusion"));
+    ui->cbCapItemQty->setChecked(false);
 }
 
 void Options::initConnections()

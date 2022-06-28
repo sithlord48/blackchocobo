@@ -42,6 +42,7 @@ namespace SETTINGS {
     inline const static QString SIDEBARURLS = QStringLiteral("sidebarUrls");
     inline const static QString COLORSCHEME = QStringLiteral("colorScheme");
     inline const static QString APPSTYLE = QStringLiteral("appStyle");
+    inline const static QString ITEMCAP99 = QStringLiteral("alwaysCapItemsAt99");
 }
 
 class BCSettings : public QObject
@@ -87,6 +88,7 @@ private:
         SETTINGS::SIDEBARURLS,
         SETTINGS::COLORSCHEME,
         SETTINGS::APPSTYLE,
+        SETTINGS::ITEMCAP99
     };
     //Theme Colors
     inline static const QColor lightWindow = QColor(252, 252, 252);
