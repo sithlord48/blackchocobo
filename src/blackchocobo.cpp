@@ -107,7 +107,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
 
 QString BlackChocobo::checkIconTheme()
 {
-    return palette().text().color().value() >= QColor(Qt::lightGray).value() ? QString("dark") : QString("light");
+    return palette().text().color().value() >= QColor(Qt::lightGray).value() ? QStringLiteral("dark") : QStringLiteral("light");
 }
 
 void BlackChocobo::detectTranslations()
@@ -254,7 +254,7 @@ void BlackChocobo::initDisplay()
     ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
 
     locationViewer = new LocationViewer(this);
-    locationViewer->setRegion("BASCUS-94163FF7-S00");
+    locationViewer->setRegion(QStringLiteral("BASCUS-94163FF7-S00"));
 
     QVBoxLayout *locLayout = new QVBoxLayout;
     locLayout->setContentsMargins(0, 0, 0, 0);
@@ -364,14 +364,14 @@ void BlackChocobo::populateCombos()
 
 void BlackChocobo::init_style()
 {
-    QString sliderStyleSheet("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
-    sliderStyleSheet.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
-    sliderStyleSheet.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
-    sliderStyleSheet.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
-    sliderStyleSheet.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
+    QString sliderStyleSheet(QStringLiteral("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}"));
+    sliderStyleSheet.append(QStringLiteral("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    sliderStyleSheet.append(QStringLiteral("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
+    sliderStyleSheet.append(QStringLiteral("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    sliderStyleSheet.append(QStringLiteral("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
     partyTab->setCharEditorSliderStyle(sliderStyleSheet);
 
-    QString tabStyle = QString("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()), QString::number(this->palette().highlight().color().green()), QString::number(this->palette().highlight().color().blue()));
+    QString tabStyle = QStringLiteral("::tab:hover{background-color:rgba(%1, %2, %3, 128);}").arg(QString::number(this->palette().highlight().color().red()), QString::number(this->palette().highlight().color().green()), QString::number(this->palette().highlight().color().blue()));
     partyTab->setCharEditorToolBoxStyle(tabStyle);
     ui->locationToolBox->setStyleSheet(tabStyle);
 
@@ -906,14 +906,14 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
                     actionImportSlotFromFile_triggered();
                     return;
                 }
-                ui->statusBar->showMessage(QString(tr("Imported Slot:%2 from %1 -> Slot:%3")).arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
+                ui->statusBar->showMessage(tr("Imported Slot:%2 from %1 -> Slot:%3").arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
             } else {
-                ui->statusBar->showMessage(QString(tr("Imported %1 -> Slot:%2")).arg(fileName, QString::number(s + 1)), 2000);
+                ui->statusBar->showMessage(tr("Imported %1 -> Slot:%2").arg(fileName, QString::number(s + 1)), 2000);
             }
             ff7->importSlot(s, fileName, fileSlot);
             guirefresh(0);
         } else {
-            ui->statusBar->showMessage(QString(tr("Error Loading File %1")).arg(fileName), 2000);
+            ui->statusBar->showMessage(tr("Error Loading File %1").arg(fileName), 2000);
         }
     }
     ff7->setFileModified(true, 0);
@@ -1129,7 +1129,7 @@ void BlackChocobo::actionShowSelectionDialog_triggered()
 void BlackChocobo::actionOpenAchievementFile_triggered()
 {
     QString temp = ff7->fileName();
-    temp.chop(temp.length() - (temp.lastIndexOf("/")));
+    temp.chop(temp.length() - (temp.lastIndexOf(QStringLiteral("/"))));
     temp.append(QStringLiteral("/achievement.dat"));
     QFile tmp(temp);
     if (!tmp.exists())
@@ -1358,19 +1358,19 @@ void BlackChocobo::setmenu(bool newgame)
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
-    if (ff7->region(s).contains("94163"))
+    if (ff7->region(s).contains(QStringLiteral("94163")))
         ui->actionRegionUSA->setChecked(true);
-    else if (ff7->region(s).contains("00867"))
+    else if (ff7->region(s).contains(QStringLiteral("00867")))
         ui->actionRegionPALGeneric->setChecked(true);
-    else if (ff7->region(s).contains("00868"))
+    else if (ff7->region(s).contains(QStringLiteral("00868")))
         ui->actionRegionPALFrench->setChecked(true);
-    else if (ff7->region(s).contains("00869"))
+    else if (ff7->region(s).contains(QStringLiteral("00869")))
         ui->actionRegionPALGerman->setChecked(true);
-    else if (ff7->region(s).contains("00900"))
+    else if (ff7->region(s).contains(QStringLiteral("00900")))
         ui->actionRegionPALSpanish->setChecked(true);
-    else if (ff7->region(s).contains("00700"))
+    else if (ff7->region(s).contains(QStringLiteral("00700")))
         ui->actionRegionJPN->setChecked(true);
-    else if (ff7->region(s).contains("01057"))
+    else if (ff7->region(s).contains(QStringLiteral("01057")))
         ui->actionRegionJPNInternational->setChecked(true);
     else if (!ff7->region(s).isEmpty()) {
         //not FF7 unset some menu options.
@@ -1384,7 +1384,7 @@ void BlackChocobo::setmenu(bool newgame)
 void BlackChocobo::fileModified(bool changed)
 {
     if (changed)
-        setOpenFileText(ff7->fileName().append("*"));
+        setOpenFileText(ff7->fileName().append(QStringLiteral("*")));
     else
         setOpenFileText(ff7->fileName());
 }
@@ -1620,23 +1620,24 @@ void BlackChocobo::othersUpdate()
 void BlackChocobo::updateStolenMateria()
 {
     for (int mat = 0; mat < 48; mat++) { //materias stolen by yuffie
-        QString ap;
         quint8 current_id = ff7->stolenMateriaId(s, mat);
         QTableWidgetItem *newItem;
-        if (current_id != FF7Materia::EmptyId) {
+        if (current_id == FF7Materia::EmptyId) {
+            newItem = new QTableWidgetItem(tr("===Empty Slot==="), 0);
+            ui->tblMateriaStolen->setItem(mat, 0, newItem);
+        } else {
             newItem = new QTableWidgetItem(FF7Materia::icon(current_id), FF7Materia::name(current_id), 0);
             ui->tblMateriaStolen->setItem(mat, 0, newItem);
             qint32 current_ap = ff7->stolenMateriaAp(s, mat);
-            if (current_ap == FF7Materia::MaxMateriaAp) {
+            if ( current_ap >= FF7Materia::apForLevel(current_id, FF7Materia::levels(current_id) - 1))
                 newItem = new QTableWidgetItem(tr("Master"));
-                ui->tblMateriaStolen->setItem(mat, 1, newItem);
-            } else {
-                newItem = new QTableWidgetItem(ap.setNum(current_ap));
-                ui->tblMateriaStolen->setItem(mat, 1, newItem);
+            else {
+                if (current_id == FF7Materia::EnemySkill)
+                    newItem = new QTableWidgetItem(QStringLiteral("---"));
+                else
+                   newItem = new QTableWidgetItem(QString::number(current_ap));
             }
-        } else {
-            newItem = new QTableWidgetItem(tr("===Empty Slot==="), 0);
-            ui->tblMateriaStolen->setItem(mat, 0, newItem);
+            ui->tblMateriaStolen->setItem(mat, 1, newItem);
         }
         ui->tblMateriaStolen->setRowHeight(mat, fontMetrics().height() + 9);
     }
@@ -1646,7 +1647,7 @@ void BlackChocobo::update_hexEditor_PSXInfo(void)
     load = true;
 
     saveIcon->setAll(ff7->slotIcon(s));
-    ui->comboSlotNumber->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S") + 1, 2).toInt() - 1);
+    ui->comboSlotNumber->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf(QStringLiteral("S")) + 1, 2).toInt() - 1);
     if(ff7->region(s).contains(QStringLiteral("BASCUS-94163")))
         ui->comboSlotRegion->setCurrentIndex(0);
     else if(ff7->region(s).contains(QStringLiteral("BESCES-00867")))
