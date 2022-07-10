@@ -116,16 +116,16 @@ void BlackChocobo::detectTranslations()
 
     QStringList nameFilter ={QStringLiteral("bchoco_*.qm")};
     QMap<QString, QTranslator *> app_translations;
-    QDir dir (QStringLiteral("%1").arg(BCSettings::instance()->value(SETTINGS::LANGPATH).toString()));
+    QDir dir (QStringLiteral("%1").arg(BCSettings::value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(nameFilter,QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(7, 2);
         app_translations.insert(lang, translator);
-        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang) {
-            BCSettings::instance()->setValue(SETTINGS::LANG, lang);
+            BCSettings::setValue(SETTINGS::LANG, lang);
             QApplication::installTranslator(translator);
         }
     }
@@ -155,7 +155,7 @@ void BlackChocobo::detectTranslations()
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(6, 2);
         ff7tk_translations.insert(lang, translator);
-        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang)
             QApplication::installTranslator(translator);
     }
@@ -189,7 +189,7 @@ void BlackChocobo::detectTranslations()
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(3, 2);
         qt_translations.insert(lang, translator);
-        bool currentLang = (BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
+        bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang)
             QApplication::installTranslator(translator);
     }
@@ -712,30 +712,30 @@ void BlackChocobo::init_connections()
 
 void BlackChocobo::loadBasicSettings()
 {
-    if (BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).isNull())
+    if (BCSettings::value(SETTINGS::MAINGEOMETRY).isNull())
         saveGeometry();
     else
-        restoreGeometry(BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray());
+        restoreGeometry(BCSettings::value(SETTINGS::MAINGEOMETRY).toByteArray());
 }
 
 void BlackChocobo::loadChildWidgetSettings()
 {
-    QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS, false).toBool());
-    materia_editor->setEditableMateriaCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    itemListView->setEditableItemCombo(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    partyTab->setCharEditorEditableComboBoxes(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    partyTab->setCharEditorAdvancedMode(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
-    partyTab->setCharEditorAutoLevel(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
-    partyTab->setCharEditorAutoStatCalc(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
-    chocoboManager->setAdvancedMode(BCSettings::instance()->value(SETTINGS::CHOCOADVANCED, false).toBool());
-    locationViewer->setAdvancedMode(BCSettings::instance()->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
-    ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST, false).toBool());
+    QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::value(SETTINGS::USENATIVEDIALOGS, false).toBool());
+    materia_editor->setEditableMateriaCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemListView->setEditableItemCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    partyTab->setCharEditorEditableComboBoxes(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    partyTab->setCharEditorAdvancedMode(BCSettings::value(SETTINGS::CHARADVANCED, false).toBool());
+    partyTab->setCharEditorAutoLevel(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
+    partyTab->setCharEditorAutoStatCalc(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
+    chocoboManager->setAdvancedMode(BCSettings::value(SETTINGS::CHOCOADVANCED, false).toBool());
+    locationViewer->setAdvancedMode(BCSettings::value(SETTINGS::LOCVIEWADVANCED, false).toBool());
+    ui->tabWidget->setTabEnabled(9, BCSettings::value(SETTINGS::ENABLETEST, false).toBool());
     if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
-        setControllerMappingVisible(BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
-    ui->bm_unknown->setVisible(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
-    ui->sbBhId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
-    ui->sbLeaderId->setVisible(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
-    if(BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool())
+        setControllerMappingVisible(BCSettings::value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
+    ui->bm_unknown->setVisible(BCSettings::value(SETTINGS::PROGRESSADVANCED, false).toBool());
+    ui->sbBhId->setVisible(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->sbLeaderId->setVisible(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    if(BCSettings::value(SETTINGS::ITEMCAP99).toBool())
         itemListView->setMaximumItemQty(99);
     else
         itemListView->setMaximumItemQty(127);
@@ -749,7 +749,7 @@ BlackChocobo::~BlackChocobo()
 void BlackChocobo::changeEvent(QEvent *e)
 {
     if (e->type() == QEvent::PaletteChange) {
-        QPalette palette = BCSettings::instance()->paletteForSetting();
+        QPalette palette = BCSettings::paletteForSetting();
         QList<QWidget*> widgets = findChildren<QWidget *>(QString(), Qt::FindChildrenRecursively);
         for (QWidget * widget : widgets)
              widget->setPalette(palette);
@@ -814,16 +814,16 @@ void BlackChocobo::closeEvent(QCloseEvent *e)
         else
             e->accept();
     }
-    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 void BlackChocobo::resizeEvent(QResizeEvent *)
 {
-    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
     fileModified(ff7->isFileModified());
 }
 void BlackChocobo::moveEvent(QMoveEvent *)
 {
-    BCSettings::instance()->setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
+    BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionOpenSaveFile_triggered()
@@ -833,7 +833,7 @@ void BlackChocobo::actionOpenSaveFile_triggered()
             return;//cancel load.
     }
 
-    QString fileName = BCDialog::getOpenFileName(this, tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
+    QString fileName = BCDialog::getOpenFileName(this, tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
@@ -893,7 +893,7 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
 void BlackChocobo::actionImportSlotFromFile_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this,
-                       tr("Open Final Fantasy 7 Save"), BCSettings::instance()->value(SETTINGS::LOADPATH).toString(),
+                       tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::instance()->knownTypesFilter());
     if (!fileName.isEmpty()) {
         FF7Save *tempSave = new FF7Save();
@@ -921,7 +921,7 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionImportChar_triggered()
 {
-    QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
+    QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty())
         return;
     QFile file(fileName);
@@ -943,7 +943,7 @@ void BlackChocobo::actionImportChar_triggered()
 void BlackChocobo::actionExportChar_triggered()
 {
     QString fileName = BCDialog::getSaveFileName(this, ff7->region(s),
-                       tr("Save FF7 Character File"), BCSettings::instance()->value(SETTINGS::STATFOLDER).toString(),
+                       tr("Save FF7 Character File"), BCSettings::value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty()) {
         if (ff7->exportCharacter(s, curchar, fileName))
@@ -977,11 +977,11 @@ bool BlackChocobo::actionSaveFileAs_triggered()
 
     QString path;
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
-            path = BCSettings::instance()->value(SETTINGS::PCSAVEPATH).toString();
+            path = BCSettings::value(SETTINGS::PCSAVEPATH).toString();
     else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
              || (ff7->format() == FF7SaveInfo::FORMAT::VGS)
              || (ff7->format() == FF7SaveInfo::FORMAT::DEX))
-        path = BCSettings::instance()->value(SETTINGS::EMUSAVEPATH).toString();
+        path = BCSettings::value(SETTINGS::EMUSAVEPATH).toString();
 
     QString fileName = BCDialog::getSaveFileName(this,
                                                  ff7->region(s),
@@ -1027,11 +1027,11 @@ bool BlackChocobo::saveFileFull(const QString &fileName)
 
 void BlackChocobo::actionNewGame_triggered()
 {
-    QString save_name = BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
-                BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString() : QString();
+    QString save_name = BCSettings::value(SETTINGS::CUSTOMDEFAULTSAVE).toBool() ?
+                BCSettings::value(SETTINGS::DEFAULTSAVE).toString() : QString();
 
     QString region = ff7->region(s).isEmpty() ?
-                BCSettings::instance()->value(SETTINGS::REGION).toString() : ff7->region(s);
+                BCSettings::value(SETTINGS::REGION).toString() : ff7->region(s);
 
     ff7->newGame(s, region, save_name);//call the new game function
     ui->statusBar->showMessage(tr("New Game Created - Using: %1")
@@ -1044,8 +1044,8 @@ void BlackChocobo::actionNewGame_triggered()
 void BlackChocobo::actionNewGamePlus_triggered()
 {
     QString save_name;
-    if (BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
-        save_name = BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString();
+    if (BCSettings::value(SETTINGS::CUSTOMDEFAULTSAVE).toBool())
+        save_name = BCSettings::value(SETTINGS::DEFAULTSAVE).toString();
 
     ff7->newGamePlus(s, ff7->fileName(), save_name);
     ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
@@ -1148,10 +1148,10 @@ void BlackChocobo::changeLanguage(const QVariant &data)
     if(!m_translations.contains(data.toString()))
         detectTranslations();
 
-    for(auto translation : m_translations.value(BCSettings::instance()->value(SETTINGS::LANG).toString()))
+    for(auto translation : m_translations.value(BCSettings::value(SETTINGS::LANG).toString()))
         QApplication::removeTranslator(translation);
 
-    BCSettings::instance()->setValue(SETTINGS::LANG, data);
+    BCSettings::setValue(SETTINGS::LANG, data);
     for(auto translation : m_translations.value(data.toString()))
         QApplication::installTranslator(translation);
 }
@@ -1178,7 +1178,7 @@ void BlackChocobo::setRegion(QString region)
 
         ff7->setRegion(s, region);
 
-        if(region == QStringLiteral("NTSC-J") || BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool()) {
+        if(region == QStringLiteral("NTSC-J") || BCSettings::value(SETTINGS::ITEMCAP99).toBool()) {
             itemListView->setMaximumItemQty(99);
         } else {
             itemListView->setMaximumItemQty(127);
@@ -1327,7 +1327,7 @@ void BlackChocobo::setmenu(bool newgame)
     } else {
         for (int i = 0; i < 9; i++)
             ui->tabWidget->setTabEnabled(i, true);
-        ui->tabWidget->setTabEnabled(9, BCSettings::instance()->value(SETTINGS::ENABLETEST).toBool());
+        ui->tabWidget->setTabEnabled(9, BCSettings::value(SETTINGS::ENABLETEST).toBool());
     }
 
     if (!newgame && !ff7->fileName().isEmpty()) {
@@ -1765,7 +1765,7 @@ void BlackChocobo::tabWidget_currentChanged(int index)
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
         if ((!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
-                || BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
+                || BCSettings::value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
                 optionsWidget->setFixedWidth(optionsWidget->width() - 1);
@@ -3422,7 +3422,7 @@ void BlackChocobo::worldMapView_customContextMenuRequested(QPoint pos)
 void BlackChocobo::btnAddAllItems_clicked()
 {
     ui->btnRemoveAllItems->click();
-    int itemMax = (BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
+    int itemMax = (BCSettings::value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
     for (int i = 0; i < 320; i++) {
         if (!FF7Item::instance()->name(i).isEmpty()) {
             if (i < 106)

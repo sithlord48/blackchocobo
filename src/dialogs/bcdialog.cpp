@@ -33,7 +33,7 @@
 
 QRect readGeometry()
 {
-    QByteArray geometry = BCSettings::instance()->value(SETTINGS::MAINGEOMETRY).toByteArray();
+    QByteArray geometry = BCSettings::value(SETTINGS::MAINGEOMETRY).toByteArray();
     if (geometry.size() < 4)
         return QRect();
     QDataStream stream(geometry);
@@ -161,7 +161,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
     QListWidget listWidget;
     listWidget.setSelectionMode(QListWidget::SingleSelection);
     listWidget.setDragDropMode(QAbstractItemView::InternalMove);
-    QStringList urls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    QStringList urls = BCSettings::value(SETTINGS::SIDEBARURLS).toStringList();
     for (const QString &string : qAsConst(urls))
         listWidget.addItem(string);
     QPushButton btnAdd(QIcon::fromTheme(QStringLiteral("list-add")), QString(), nullptr);
@@ -203,17 +203,17 @@ void BCDialog::editSideBarPaths(QWidget *parent)
         else if (button == btnBox.button(QDialogButtonBox::RestoreDefaults)) {
             listWidget.clear();
             listWidget.addItem(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
-            if(!BCSettings::instance()->value(SETTINGS::LOADPATH).toString().isEmpty())
-                listWidget.addItem(BCSettings::instance()->value(SETTINGS::LOADPATH).toString());
-            if(!BCSettings::instance()->value(SETTINGS::PCSAVEPATH).toString().isEmpty())
-                listWidget.addItem(BCSettings::instance()->value(SETTINGS::PCSAVEPATH).toString());
-            if(!BCSettings::instance()->value(SETTINGS::EMUSAVEPATH).toString().isEmpty())
-                listWidget.addItem(BCSettings::instance()->value(SETTINGS::EMUSAVEPATH).toString());
-            if(!BCSettings::instance()->value(SETTINGS::STATFOLDER).toString().isEmpty())
-                listWidget.addItem(BCSettings::instance()->value(SETTINGS::STATFOLDER).toString());
+            if(!BCSettings::value(SETTINGS::LOADPATH).toString().isEmpty())
+                listWidget.addItem(BCSettings::value(SETTINGS::LOADPATH).toString());
+            if(!BCSettings::value(SETTINGS::PCSAVEPATH).toString().isEmpty())
+                listWidget.addItem(BCSettings::value(SETTINGS::PCSAVEPATH).toString());
+            if(!BCSettings::value(SETTINGS::EMUSAVEPATH).toString().isEmpty())
+                listWidget.addItem(BCSettings::value(SETTINGS::EMUSAVEPATH).toString());
+            if(!BCSettings::value(SETTINGS::STATFOLDER).toString().isEmpty())
+                listWidget.addItem(BCSettings::value(SETTINGS::STATFOLDER).toString());
         } else if (button == btnBox.button(QDialogButtonBox::Reset)) {
             listWidget.clear();
-            listWidget.addItems(BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList());
+            listWidget.addItems(BCSettings::value(SETTINGS::SIDEBARURLS).toStringList());
         }
     });
 
@@ -221,7 +221,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
         urls.clear();
         for ( int i =0; i < listWidget.count(); i++)
             urls.append(listWidget.item(i)->text());
-        BCSettings::instance()->setValue(SETTINGS::SIDEBARURLS, urls);
+        BCSettings::setValue(SETTINGS::SIDEBARURLS, urls);
     }
 }
 
@@ -290,7 +290,7 @@ QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, cons
     const QFileInfoList drives = QDir::drives();
     for (const QFileInfo &drive : drives)
         sideBarUrls.append(QUrl::fromLocalFile(drive.path()));
-    const QStringList SideBarUrls = BCSettings::instance()->value(SETTINGS::SIDEBARURLS).toStringList();
+    const QStringList SideBarUrls = BCSettings::value(SETTINGS::SIDEBARURLS).toStringList();
     for(const QString &url : SideBarUrls)
         sideBarUrls.append(QUrl::fromLocalFile(url));
     dialog->setSidebarUrls(sideBarUrls);

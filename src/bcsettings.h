@@ -50,10 +50,10 @@ class BCSettings : public QObject
     Q_OBJECT
 public:
     static BCSettings *instance();
-    void setValue(const QString &setting = QString(), const QVariant &value = QVariant());
-    QVariant value(const QString &setting = QString(), const QVariant &defaultValue = QVariant());
-    void restoreDefaultSettings();
-    QPalette paletteForSetting();
+    static void setValue(const QString &setting = QString(), const QVariant &value = QVariant());
+    static QVariant value(const QString &setting = QString(), const QVariant &defaultValue = QVariant());
+    static void restoreDefaultSettings();
+    static QPalette paletteForSetting();
 signals:
     void settingsChanged();
 private:
