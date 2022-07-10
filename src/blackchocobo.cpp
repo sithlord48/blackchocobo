@@ -89,9 +89,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
         QIcon::setFallbackThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
     }
     setWindowIcon(QIcon(":/icons/common/blackchocobo"));
-    buffer_materia.id = FF7Materia::EmptyId;
-    for (int i = 0; i < 3; i++)
-        buffer_materia.ap[i] = 0xFF;   //empty buffer incase
+    buffer_materia = FF7Materia::encodeMateria(FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     setAcceptDrops(true);
     ui->setupUi(this);
     loadBasicSettings();
@@ -3425,7 +3423,7 @@ void BlackChocobo::btnAddAllItems_clicked()
     ui->btnRemoveAllItems->click();
     int itemMax = (BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
     for (int i = 0; i < 320; i++) {
-        if (FF7Item::instance()->name(i) != tr("DON'T USE")) {
+        if (!FF7Item::instance()->name(i).isEmpty()) {
             if (i < 106)
                 ff7->setItem(s, i, quint16(i), itemMax);
             else // after the block of empty items shift up 23 spots.
