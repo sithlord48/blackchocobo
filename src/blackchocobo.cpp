@@ -3620,7 +3620,7 @@ void BlackChocobo::comboS7Slums_currentIndexChanged(int index)
 
 void BlackChocobo::char_materia_changed(materia mat)
 {
-    if (!load) {} ff7->setCharMateria(s, curchar, mslotsel, mat);
+    ff7->setCharMateria(s, curchar, mslotsel, mat);
 }
 void BlackChocobo::char_accessory_changed(quint8 accessory)
 {
