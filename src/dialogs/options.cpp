@@ -40,7 +40,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
     for (QAbstractButton *btn : buttons)
          btn->setIconSize(iconSize);
 
-    QDir dir (BCSettings::instance()->value(SETTINGS::LANGPATH).toString());
+    QDir dir (BCSettings::value(SETTINGS::LANGPATH).toString());
     QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
@@ -48,7 +48,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
         QString lang = translation.mid(7, 2);
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
     }
-    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG, QStringLiteral("en"))));
+    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::value(SETTINGS::LANG, QStringLiteral("en"))));
     ui->comboLanguage->setVisible(ui->comboLanguage->count());
     ui->lblLanguage->setVisible(ui->comboLanguage->count());
     ui->comboAppStyle->addItems(QStyleFactory::keys());
@@ -96,54 +96,54 @@ void Options::changeEvent(QEvent *e)
 void Options::loadSettings()
 {
     ui->defaultSaveLayout->setVisible(false);
-    ui->line_default_save->setText(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE, QString()).toString());
-    ui->line_char_stat_folder->setText(BCSettings::instance()->value(SETTINGS::STATFOLDER, QString()).toString());
-    ui->line_save_pc->setText(BCSettings::instance()->value(SETTINGS::PCSAVEPATH, QString()).toString());
-    ui->line_save_emu->setText(BCSettings::instance()->value(SETTINGS::EMUSAVEPATH, QString()).toString());
-    ui->line_load_path->setText(BCSettings::instance()->value(SETTINGS::LOADPATH, QString()).toString());
-    ui->cbEditableCombos->setChecked(BCSettings::instance()->value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    ui->cbCharEditorAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::CHARADVANCED, false).toBool());
-    ui->cbChocoboEditorAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::CHOCOADVANCED, false).toBool());
-    ui->cbLocationViewerAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::LOCVIEWADVANCED, false).toBool());
-    ui->cbTestDataEnabled->setChecked(BCSettings::instance()->value(SETTINGS::ENABLETEST, false).toBool());
-    ui->cbGameProgressAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::PROGRESSADVANCED, false).toBool());
-    ui->cbOptionsShowMapping->setChecked(BCSettings::instance()->value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
-    ui->cbWorldMapAdvanced->setChecked(BCSettings::instance()->value(SETTINGS::WORLDMAPADVANCED, false).toBool());
-    ui->comboRegion->setCurrentText(BCSettings::instance()->value (SETTINGS::REGION, QStringLiteral("NTSC-U")).toString());
-    ui->cb_override_def_save->setChecked(BCSettings::instance()->value(SETTINGS::CUSTOMDEFAULTSAVE, false).toBool());
-    ui->cbAutoGrowth->setChecked(BCSettings::instance()->value(SETTINGS::AUTOGROWTH, true).toBool());
-    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::instance()->value(SETTINGS::LANG)));
-    ui->cbNativeDialogs->setChecked(BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
+    ui->line_default_save->setText(BCSettings::value(SETTINGS::DEFAULTSAVE, QString()).toString());
+    ui->line_char_stat_folder->setText(BCSettings::value(SETTINGS::STATFOLDER, QString()).toString());
+    ui->line_save_pc->setText(BCSettings::value(SETTINGS::PCSAVEPATH, QString()).toString());
+    ui->line_save_emu->setText(BCSettings::value(SETTINGS::EMUSAVEPATH, QString()).toString());
+    ui->line_load_path->setText(BCSettings::value(SETTINGS::LOADPATH, QString()).toString());
+    ui->cbEditableCombos->setChecked(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    ui->cbCharEditorAdvanced->setChecked(BCSettings::value(SETTINGS::CHARADVANCED, false).toBool());
+    ui->cbChocoboEditorAdvanced->setChecked(BCSettings::value(SETTINGS::CHOCOADVANCED, false).toBool());
+    ui->cbLocationViewerAdvanced->setChecked(BCSettings::value(SETTINGS::LOCVIEWADVANCED, false).toBool());
+    ui->cbTestDataEnabled->setChecked(BCSettings::value(SETTINGS::ENABLETEST, false).toBool());
+    ui->cbGameProgressAdvanced->setChecked(BCSettings::value(SETTINGS::PROGRESSADVANCED, false).toBool());
+    ui->cbOptionsShowMapping->setChecked(BCSettings::value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
+    ui->cbWorldMapAdvanced->setChecked(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
+    ui->comboRegion->setCurrentText(BCSettings::value (SETTINGS::REGION, QStringLiteral("NTSC-U")).toString());
+    ui->cb_override_def_save->setChecked(BCSettings::value(SETTINGS::CUSTOMDEFAULTSAVE, false).toBool());
+    ui->cbAutoGrowth->setChecked(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
+    ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::value(SETTINGS::LANG)));
+    ui->cbNativeDialogs->setChecked(BCSettings::value(SETTINGS::USENATIVEDIALOGS).toBool());
     ui->btnEditSideBarItems->setVisible(!ui->cbNativeDialogs->isChecked());
-    ui->comboColorScheme->setCurrentIndex(BCSettings::instance()->value(SETTINGS::COLORSCHEME).toInt());
-    ui->comboAppStyle->setCurrentText(BCSettings::instance()->value(SETTINGS::APPSTYLE).toString());
-    ui->cbCapItemQty->setChecked(BCSettings::instance()->value(SETTINGS::ITEMCAP99).toBool());
+    ui->comboColorScheme->setCurrentIndex(BCSettings::value(SETTINGS::COLORSCHEME).toInt());
+    ui->comboAppStyle->setCurrentText(BCSettings::value(SETTINGS::APPSTYLE).toString());
+    ui->cbCapItemQty->setChecked(BCSettings::value(SETTINGS::ITEMCAP99).toBool());
     adjustSize();
 }
 
 void Options::saveSettings()
 {
-    BCSettings::instance()->setValue(SETTINGS::PCSAVEPATH, ui->line_save_pc->text());
-    BCSettings::instance()->setValue(SETTINGS::EMUSAVEPATH, ui->line_save_emu->text());
-    BCSettings::instance()->setValue(SETTINGS::LOADPATH, ui->line_load_path->text());
-    BCSettings::instance()->setValue(SETTINGS::DEFAULTSAVE, ui->line_default_save->text());
-    BCSettings::instance()->setValue(SETTINGS::STATFOLDER, ui->line_char_stat_folder->text());
-    BCSettings::instance()->setValue(SETTINGS::CUSTOMDEFAULTSAVE, ui->cb_override_def_save->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::CHARADVANCED, ui->cbCharEditorAdvanced->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::CHOCOADVANCED, ui->cbChocoboEditorAdvanced->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::PROGRESSADVANCED, ui->cbGameProgressAdvanced->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::ALWAYSSHOWCONTROLLERMAP, ui->cbOptionsShowMapping->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::ENABLETEST, ui->cbTestDataEnabled->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::LOCVIEWADVANCED, ui->cbLocationViewerAdvanced->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::WORLDMAPADVANCED, ui->cbWorldMapAdvanced->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::EDITABLECOMBOS, ui->cbEditableCombos->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::REGION, ui->comboRegion->currentText());
-    BCSettings::instance()->setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
-    BCSettings::instance()->setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
-    BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
-    BCSettings::instance()->setValue(SETTINGS::APPSTYLE, ui->comboAppStyle->currentText());
-    BCSettings::instance()->setValue(SETTINGS::ITEMCAP99, ui->cbCapItemQty->isChecked());
+    BCSettings::setValue(SETTINGS::PCSAVEPATH, ui->line_save_pc->text());
+    BCSettings::setValue(SETTINGS::EMUSAVEPATH, ui->line_save_emu->text());
+    BCSettings::setValue(SETTINGS::LOADPATH, ui->line_load_path->text());
+    BCSettings::setValue(SETTINGS::DEFAULTSAVE, ui->line_default_save->text());
+    BCSettings::setValue(SETTINGS::STATFOLDER, ui->line_char_stat_folder->text());
+    BCSettings::setValue(SETTINGS::CUSTOMDEFAULTSAVE, ui->cb_override_def_save->isChecked());
+    BCSettings::setValue(SETTINGS::CHARADVANCED, ui->cbCharEditorAdvanced->isChecked());
+    BCSettings::setValue(SETTINGS::CHOCOADVANCED, ui->cbChocoboEditorAdvanced->isChecked());
+    BCSettings::setValue(SETTINGS::PROGRESSADVANCED, ui->cbGameProgressAdvanced->isChecked());
+    BCSettings::setValue(SETTINGS::ALWAYSSHOWCONTROLLERMAP, ui->cbOptionsShowMapping->isChecked());
+    BCSettings::setValue(SETTINGS::ENABLETEST, ui->cbTestDataEnabled->isChecked());
+    BCSettings::setValue(SETTINGS::LOCVIEWADVANCED, ui->cbLocationViewerAdvanced->isChecked());
+    BCSettings::setValue(SETTINGS::WORLDMAPADVANCED, ui->cbWorldMapAdvanced->isChecked());
+    BCSettings::setValue(SETTINGS::EDITABLECOMBOS, ui->cbEditableCombos->isChecked());
+    BCSettings::setValue(SETTINGS::REGION, ui->comboRegion->currentText());
+    BCSettings::setValue(SETTINGS::AUTOGROWTH, ui->cbAutoGrowth->isChecked());
+    BCSettings::setValue(SETTINGS::LANG, ui->comboLanguage->currentData());
+    BCSettings::setValue(SETTINGS::USENATIVEDIALOGS, ui->cbNativeDialogs->isChecked());
+    BCSettings::setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
+    BCSettings::setValue(SETTINGS::APPSTYLE, ui->comboAppStyle->currentText());
+    BCSettings::setValue(SETTINGS::ITEMCAP99, ui->cbCapItemQty->isChecked());
 }
 
 void Options::restoreDefaultSettings()
@@ -224,7 +224,7 @@ void Options::btn_set_load_path_clicked()
 
 void Options::btn_set_default_save_clicked()
 {
-    QString temp = BCDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(BCSettings::instance()->value(SETTINGS::DEFAULTSAVE).toString()).fileName());
+    QString temp = BCDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).fileName());
     if(!temp.isEmpty())
         ui->line_default_save->setText(temp);
 }
@@ -244,12 +244,12 @@ void Options::cbNativeDialogs_clicked(bool checked)
 
 void Options::comboColorScheme_currentIndexChanged(int index)
 {
-    BCSettings::instance()->setValue(SETTINGS::COLORSCHEME, index);
-    qApp->setPalette(BCSettings::instance()->paletteForSetting());
+    BCSettings::setValue(SETTINGS::COLORSCHEME, index);
+    qApp->setPalette(BCSettings::paletteForSetting());
 }
 
 void Options::comboAppStyle_currentTextChanged(const QString &text)
 {
-    BCSettings::instance()->setValue(SETTINGS::APPSTYLE, text);
+    BCSettings::setValue(SETTINGS::APPSTYLE, text);
     qApp->setStyle(QStyleFactory::create(text));
 }

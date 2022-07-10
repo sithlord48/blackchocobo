@@ -94,48 +94,48 @@ void BCSettings::cleanSettings()
 
 void BCSettings::setValue(const QString &setting, const QVariant &value)
 {
-    if (settings->value(setting) == value)
+    if (instance()->settings->value(setting) == value)
         return;
 
     if (value.toString().isEmpty() && !value.isValid())
-        settings->remove(setting);
+        instance()->settings->remove(setting);
     else
-        settings->setValue(setting, value);
-    settings->sync();
-    emit settingsChanged();
+        instance()->settings->setValue(setting, value);
+    instance()->settings->sync();
+    emit instance()->settingsChanged();
 }
 
 QVariant BCSettings::value(const QString &setting, const QVariant &defaultValue)
 {
-    return settings->value(setting, defaultValue);
+    return instance()->settings->value(setting, defaultValue);
 }
 
 void BCSettings::restoreDefaultSettings()
 {
-    settings->setValue(SETTINGS::LOADPATH, QString());
-    settings->setValue(SETTINGS::DEFAULTSAVE, QString());
-    settings->setValue(SETTINGS::STATFOLDER, QString());
-    settings->setValue(SETTINGS::PCSAVEPATH, QString());
-    settings->setValue(SETTINGS::EMUSAVEPATH, QString());
-    settings->setValue(SETTINGS::EDITABLECOMBOS, true);
-    settings->setValue(SETTINGS::CHARADVANCED, false);
-    settings->setValue(SETTINGS::CHOCOADVANCED, false);
-    settings->setValue(SETTINGS::LOCVIEWADVANCED, false);
-    settings->setValue(SETTINGS::ENABLETEST, false);
-    settings->setValue(SETTINGS::PROGRESSADVANCED, false);
-    settings->setValue(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false);
-    settings->setValue(SETTINGS::WORLDMAPADVANCED, false);
-    settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
-    settings->setValue(SETTINGS::CUSTOMDEFAULTSAVE, false);
-    settings->setValue(SETTINGS::AUTOGROWTH, true);
-    settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
-    settings->setValue(SETTINGS::COLORSCHEME, 0);
-    settings->setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
-    settings->setValue(SETTINGS::ITEMCAP99, false);
+    instance()->settings->setValue(SETTINGS::LOADPATH, QString());
+    instance()->settings->setValue(SETTINGS::DEFAULTSAVE, QString());
+    instance()->settings->setValue(SETTINGS::STATFOLDER, QString());
+    instance()->settings->setValue(SETTINGS::PCSAVEPATH, QString());
+    instance()->settings->setValue(SETTINGS::EMUSAVEPATH, QString());
+    instance()->settings->setValue(SETTINGS::EDITABLECOMBOS, true);
+    instance()->settings->setValue(SETTINGS::CHARADVANCED, false);
+    instance()->settings->setValue(SETTINGS::CHOCOADVANCED, false);
+    instance()->settings->setValue(SETTINGS::LOCVIEWADVANCED, false);
+    instance()->settings->setValue(SETTINGS::ENABLETEST, false);
+    instance()->settings->setValue(SETTINGS::PROGRESSADVANCED, false);
+    instance()->settings->setValue(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false);
+    instance()->settings->setValue(SETTINGS::WORLDMAPADVANCED, false);
+    instance()->settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
+    instance()->settings->setValue(SETTINGS::CUSTOMDEFAULTSAVE, false);
+    instance()->settings->setValue(SETTINGS::AUTOGROWTH, true);
+    instance()->settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
+    instance()->settings->setValue(SETTINGS::COLORSCHEME, 0);
+    instance()->settings->setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
+    instance()->settings->setValue(SETTINGS::ITEMCAP99, false);
 }
 QPalette BCSettings::paletteForSetting()
 {
-    int index = settings->value(SETTINGS::COLORSCHEME).toInt();
+    int index = instance()->settings->value(SETTINGS::COLORSCHEME).toInt();
     QPalette newPalette;
     if( index != 0) {
         newPalette.setColor(QPalette::Window, index == 1 ? darkWindow : lightWindow);

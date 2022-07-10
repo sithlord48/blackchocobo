@@ -41,9 +41,9 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     //Start application init.
-    a.setStyle(QStyleFactory::create(BCSettings::instance()->value(SETTINGS::APPSTYLE, QVariant(QString(a.style()->objectName()))).toString()));
-    a.setPalette(BCSettings::instance()->paletteForSetting());
-    a.setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::instance()->value(SETTINGS::USENATIVEDIALOGS).toBool());
+    a.setStyle(QStyleFactory::create(BCSettings::value(SETTINGS::APPSTYLE, QVariant(QString(a.style()->objectName()))).toString()));
+    a.setPalette(BCSettings::paletteForSetting());
+    a.setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::value(SETTINGS::USENATIVEDIALOGS).toBool());
     a.setApplicationName("Black Chocobo");
     a.setApplicationVersion(BC_VERSION);
 
