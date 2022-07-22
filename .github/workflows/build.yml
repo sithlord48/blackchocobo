@@ -1,19 +1,43 @@
-name: CI/CD
+name: CI
 
 on:
   push:
     branches: [ master ]
+    tags:
+      'v*'
   pull_request:
     branches: [ master ]
-
 env:
-  BUILD_TYPE: Release
-  packageGlob: Black_Chocobo-continuous-*.*
+    QtVersion: 6.3.1
+    QtKey: "6.3.1"
+    PackageGLOB: "Black_Chocobo-*.*"
+    BuildType: Release
 
 jobs:
+  precheck:
+    name: Job Info
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.checkbuild.outputs.version }}
+      isRelease: ${{ steps.checkbuild.outputs.isRelease }}
+    steps:
+      - name: Run Info
+        id: checkbuild
+        run: |
+          RELEASE="false"
+          if [[ "$GITHUB_REF" == *"tags/v" || "$GITHUB_REF" == *"refs/heads/release" ]]; then
+              RELEASE="true"
+              VER="$GITHUB_REF_NAME"
+          else
+              VER="continuous"
+          fi
+          echo "::set-output name=version::$VER"
+          echo "::set-output name=isRelease::$RELEASE"
+
   main_build:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
+    needs: precheck
     strategy:
       fail-fast: false
       matrix:
@@ -21,18 +45,17 @@ jobs:
         - {
            name: "Linux-amd64"
            , os: ubuntu-20.04
-           , QT_VERSION: 6.3.0, QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.3.0/gcc_64, QT_MODULES: qt5compat
+           , QT_INST_DIR: /opt, QTDIR: /opt/Qt/6.3.1/gcc_64
            , ff7tkPrefix: /opt/ff7tk
            , ff7tkPackage: ff7tk-continuous-Linux_X86_64.tar.gz
            , install_ff7tk: "sudo tar -xf ff7tk-continuous-Linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr -DQT_DEFAULT_MAJOR_VERSION=6"
-           , installBC: "make DESTDIR=appdir install"
-           , linuxDeployQtPath: "export PATH=$PATH:/opt/Qt/6.3.0/gcc_64/libexec"
+           , installBC: ""
           }
         - {
             name: "MacOS"
-            , os: macos-10.15
-            , QT_VERSION: 6.3.0, QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.3.0/clang_64, QT_MODULES: qt5compat
+            , os: macos-11
+            , QT_INST_DIR: /Users/runner, QTDIR: /Users/runner/Qt/6.3.1/clang_64
             , ff7tkPrefix: /Users/runner/ff7tk
             , ff7tkPackage: ff7tk-continuous-macos_X86_64.zip
             , install_ff7tk: "sudo unzip ff7tk-continuous-macos_x86_64.zip -d /Users/runner/ff7tk"
@@ -41,13 +64,18 @@ jobs:
         - {
             name: "Windows-x64", WIN_ARCH: "x64"
             , os: windows-2019
-            , QT_VERSION: 6.3.0, QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.3.0/msvc2019_64", QT_ARCH: win64_msvc2019_64, QT_MODULES: qt5compat
+            , QT_INST_DIR: "C:/", QTDIR: "C:/Qt/6.3.1/msvc2019_64"
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-win64.7z
             , install_ff7tk: "7z x ff7tk-continuous-win64.7z -oC:/ff7tk"
             , extraCMakeConfig: "-G Ninja -DQT_DEFAULT_MAJOR_VERSION=6"
           }
     steps:
+    - name: Setup env
+      shell: bash
+      run: |
+        echo "BCVersion=${{ needs.precheck.outputs.version }}" >> $GITHUB_ENV
+
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
@@ -57,7 +85,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ${{matrix.config.QT_INST_DIR}}/Qt
-        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-qt-${{ matrix.config.QT_VERSION }}
+        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-qt-${{ env.QtVersion }}
 
     - name: Env Script (Windows)
       uses: ilammy/msvc-dev-cmd@v1
@@ -66,14 +94,13 @@ jobs:
         arch: ${{matrix.config.WIN_ARCH}}
 
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v2.14.0
       with:
        aqtversion: ==2.0.0
        py7zrversion: ==0.16.2
        dir: ${{matrix.config.QT_INST_DIR}}
-       arch: ${{ matrix.config.QT_ARCH }}
-       version: ${{ matrix.config.QT_VERSION }}
-       modules: ${{ matrix.config.QT_MODULES }}
+       version: ${{ env.QtVersion }}
+       modules: qt5compat
        cached: ${{ steps.cache-qt.outputs.cache-hit }}
 
     - name: Get ff7tk redist
@@ -84,7 +111,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ${{ matrix.config.ff7tkPrefix }}
-        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{matrix.config.QT_VERSION}}-ff7tk-${{ hashFiles( 'ff7tk*') }}
+        key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{env.QtVersion}}-ff7tk-${{ hashFiles( 'ff7tk*') }}
 
     - name: Install ff7tk
       if: (steps.cache-ff7tk.outputs.cache-hit != 'true')
@@ -93,23 +120,23 @@ jobs:
     - name: Build Black_Chocobo
       id: main_build
       run: |
-        cmake -S. -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCPACK_PACKAGE_VERSION=continuous -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
-        cmake --build . --config ${{env.BUILD_TYPE}} --target package
-        ${{matrix.config.installBC}}
+        cmake -S. -DCMAKE_BUILD_TYPE=${{env.BuildType}} -DCPACK_PACKAGE_VERSION=${{env.BCVersion}} -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
+        cmake --build . --config ${{env.BuildType}} --target package
 
     - name: Build AppImage (Linux)
       if: runner.os == 'Linux'
       run: |
+        make DESTDIR=appdir install
         wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
         chmod a+x linuxdeploy*.AppImage
-        export VERSION=continuous
+        export VERSION=${{env.BCVersion}}
         export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib
+        export PATH=$PATH:/opt/Qt/${{env.QtVersion}}/gcc_64/libexec
         mkdir -p ./appdir/usr/share/ff7tk/lang
         mkdir -p ./appdir/usr/plugins/iconengines
-        cp /opt/Qt/${{ matrix.config.QT_VERSION }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
+        cp /opt/Qt/${{ env.QtVersion }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
         cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang
-        ${{matrix.config.linuxDeployQtPath}}
         ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
           -e src/blackchocobo \
           -d deploy/org.sithlord48.blackchocobo.desktop \
@@ -117,9 +144,9 @@ jobs:
           --plugin=qt
 
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-        path: ${{github.workspace}}/${{env.packageGlob}}
+        path: ${{github.workspace}}/${{env.PackageGLOB}}
 
   release_assets:
     name: Release
@@ -128,16 +155,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Files
-      uses: actions/download-artifact@v2
-
-    - name: Move Files
-      run: mv artifact/* ${{github.workspace}}
-
-    - name: Deploy Package
+      uses: actions/download-artifact@v3
+    - name: Deploy Continuous
+      if: github.ref == 'refs/heads/master'
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
        repo_token: "${{ secrets.DEPLOYTOKEN }}"
        automatic_release_tag: "continuous"
        prerelease: false
        title: "Continuous Build"
-       files: ${{env.packageGlob}}
+       files: artifact/${{env.PackageGLOB}}
+    - name: Deploy Release
+      if: needs.precheck.outputs.isRelease == 'true'
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+       repo_token: "${{ secrets.DEPLOYTOKEN }}"
+       prerelease: false
+       files: artifact/${{env.PackageGLOB}}
