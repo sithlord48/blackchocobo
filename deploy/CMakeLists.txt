@@ -12,6 +12,12 @@ find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Core
 )
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/preBuildCPack.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/preBuildCPack.cmake @ONLY)
+set(CPACK_PRE_BUILD_SCRIPTS ${CMAKE_CURRENT_BINARY_DIR}/preBuildCPack.cmake)
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/cpackOptions.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/cpackOptions.cmake @ONLY)
+set(CPACK_PROJECT_CONFIG_FILE ${CMAKE_CURRENT_BINARY_DIR}/cpackOptions.cmake)
+
 set(CPACK_STRIP_FILES TRUE)
 #Qt Info to get deploy app
 

@@ -1,0 +1,15 @@
+#This File is generated to CONFIGURE time
+#This file is run at CPACK Time
+
+#Make sure the IFW Name ends with -installer.
+if(CPACK_GENERATOR MATCHES IFW|WIX|NSIS)
+    set(CPACK_PACKAGE_FILE_NAME ${CPACK_PACKAGE_FILE_NAME}-installer)
+endif()
+
+if(CPACK_GENERATOR MATCHES DEB|WIX)
+    set(CPACK_PACKAGE_VERSION @CMAKE_PROJECT_VERSION@)
+endif()
+
+if(CPACK_GENERATOR MATCHES 7Z|ZIP)
+    set(CPACK_PACKAGE_FILE_NAME ${CPACK_PACKAGE_FILE_NAME}-portable)
+endif()
