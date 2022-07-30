@@ -20,11 +20,13 @@ if(WIN32)
     if(CMAKE_COMPILER_IS_GNUCC)
         set (FF7TK_DEPENDS
             ${ff7tk_DIR}/../../../bin/libff7tk.dll
+            ${ff7tk_DIR}/../../../bin/libff7tkQtWidgets.dll
             ${ff7tk_DIR}/../../../bin/libff7tkWidgets.dll
         )
     else()
         set (FF7TK_DEPENDS
             ${ff7tk_DIR}/../../../bin/ff7tk.dll
+            ${ff7tk_DIR}/../../../bin/ff7tkQtWidgets.dll
             ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
         )
     endif()
