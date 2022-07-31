@@ -102,6 +102,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     init_connections();
     actionNewGame_triggered();
     partyTab->pressCharacterButton(FF7Char::Cloud);
+    ff7->setFormat(FF7SaveInfo::FORMAT::UNKNOWN);
     ff7->setFileModified(false, 0);
 }
 
@@ -972,10 +973,11 @@ bool BlackChocobo::actionSaveFileAs_triggered()
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
     typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
-    QString selectedType = typeMap.key(ff7->format(), QString());
     const QStringList typeKeys = typeMap.keys();
-
+    QString selectedType = ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN ? FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC) : typeMap.key(ff7->format(), QString());
+    QString selectedFile = ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN ? QStringLiteral("save00.ff7") : QFile(ff7->fileName()).fileName();
     QString path;
+
     if (ff7->format() == FF7SaveInfo::FORMAT::PC)
             path = BCSettings::value(SETTINGS::PCSAVEPATH).toString();
     else if ((ff7->format() == FF7SaveInfo::FORMAT::VMC)
@@ -989,7 +991,7 @@ bool BlackChocobo::actionSaveFileAs_triggered()
                                                  path,
                                                  typeKeys.join(QStringLiteral(";;")),
                                                  &selectedType,
-                                                 QFile(ff7->fileName()).fileName());
+                                                 selectedFile);
 
     if (fileName.isEmpty())
         return false;
