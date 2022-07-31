@@ -383,10 +383,6 @@ p, li { white-space: pre-wrap; }
         <translation>Fichier de stat personnage FF7 (*.char)</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation>NE PAS UTILISER</translation>
-    </message>
-    <message>
         <source>===Empty Slot===</source>
         <translation>==Emplacement vide==</translation>
     </message>

@@ -1339,10 +1339,6 @@ Trigger, Tutorial zeigt</translation>
         <translation type="unfinished">Platziere &amp;Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation type="unfinished">NICHT BENUTZEN</translation>
-    </message>
-    <message>
         <source>Turtle Paradise</source>
         <translation type="unfinished">Schildkrötenparadies</translation>
     </message>

@@ -379,10 +379,6 @@ p, li { white-space: pre-wrap; }
         <translation>FF7 Character Stat File(*.char)</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation>DON&apos;T USE</translation>
-    </message>
-    <message>
         <source>===Empty Slot===</source>
         <translation>===Empty Slot===</translation>
     </message>

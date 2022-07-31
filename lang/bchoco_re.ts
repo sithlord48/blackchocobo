@@ -1336,10 +1336,6 @@ Var And Scrolling Synced To Left Table</translation>
         <translation>Place &amp;Diamond/Ultimate/Ruby Weapon</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation>DON&apos;T USE</translation>
-    </message>
-    <message>
         <source>All Items Added</source>
         <translation>All Items Added</translation>
     </message>

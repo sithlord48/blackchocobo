@@ -383,10 +383,6 @@ p, li { white-space: pre-wrap; }
         <translation>Archivo de stats de personaje de FF7(*.char)</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation>NO USAR</translation>
-    </message>
-    <message>
         <source>===Empty Slot===</source>
         <translation>===Ranura vacía===</translation>
     </message>

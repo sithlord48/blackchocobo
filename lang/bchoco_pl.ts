@@ -1330,10 +1330,6 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
         <translation type="unfinished">Umieść &amp;Diamentową/Ostateczną/Rubinową broń</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation type="unfinished">NIE UŻYWAJ</translation>
-    </message>
-    <message>
         <source>All Items Added</source>
         <translation>Wszystkie dodane przedmioty</translation>
     </message>

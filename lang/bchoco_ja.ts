@@ -1330,10 +1330,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished">ダイヤ/アルテマ/ルビー ウェポンを配置 (&amp;D)</translation>
     </message>
     <message>
-        <source>DON&apos;T USE</source>
-        <translation type="unfinished">使用不可</translation>
-    </message>
-    <message>
         <source>Turtle Paradise</source>
         <translation type="unfinished">タートル・パラダイス</translation>
     </message>
