@@ -267,6 +267,16 @@ p, li { white-space: pre-wrap; }
            <string>Default to PC type, when saving unknown type</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Allow for an item cap 99 always</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Prepend drive to file dialog sidebars</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
