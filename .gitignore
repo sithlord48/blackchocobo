@@ -28,7 +28,6 @@ object_script.*
 # QtCreator
 
 *.autosave
-
 #QtCtreator Qml
 *.qmlproject.user
 *.qmlproject.user.* 
@@ -36,6 +35,9 @@ object_script.*
 #userstuff
 .directory
 
+#kate
+*.kate-swp
+
 #CMake
 CMakeLists.txt.user
-
+build/*
