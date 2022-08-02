@@ -10,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.12.0 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.12.1 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
   FIND_PACKAGE(Git)
@@ -71,7 +71,8 @@ find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Xml
 )
 
-find_package(ff7tk 0.82 REQUIRED NO_MODULE COMPONENTS
+set(REQUIRED_FF7TK_VERSION 0.82.1)
+find_package(ff7tk ${REQUIRED_FF7TK_VERSION} REQUIRED NO_MODULE COMPONENTS
     ff7tk
     ff7tkWidgets
 )

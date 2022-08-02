@@ -129,7 +129,8 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
                 dialog->setDefaultSuffix(QStringLiteral(".vgs"));
                 name = QStringLiteral("vgsCard");
             }
-            name.append(QStringLiteral("%1").arg(dialog->defaultSuffix()));
+            if(!dialog->defaultSuffix().isEmpty())
+                name.append(QStringLiteral(".%1").arg(dialog->defaultSuffix()));
             dialog->selectFile(name);
         });
     }

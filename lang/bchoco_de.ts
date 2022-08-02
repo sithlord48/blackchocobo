@@ -191,6 +191,14 @@ p, li { white-space: pre-wrap; }
         <source>Default to PC type, when saving unknown type</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Allow for an item cap 99 always</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prepend drive to file dialog sidebars</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlackChocobo</name>

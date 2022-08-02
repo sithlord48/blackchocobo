@@ -29,7 +29,6 @@ jobs:
               VER="continuous"
           fi
           echo "::set-output name=version::$VER"
-
   main_build:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
@@ -114,6 +113,10 @@ jobs:
       if: (steps.cache-ff7tk.outputs.cache-hit != 'true')
       run: ${{matrix.config.install_ff7tk}}
 
+    - name: Set FF7tk Path
+      if: runner.os == 'Linux'
+      run: echo /opt/ff7tk/lib | sudo tee /etc/ld.so.conf.d/ff7tk.conf
+
     - name: Build Black_Chocobo
       id: main_build
       run: |
@@ -143,7 +146,9 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-        path: ${{github.workspace}}/${{env.PackageGLOB}}
+        path: |
+          ${{github.workspace}}/${{env.PackageGLOB}}
+          ${{github.workspace}}/black*.deb
 
   release_assets:
     name: Release
