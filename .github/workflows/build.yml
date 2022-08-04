@@ -56,10 +56,9 @@ jobs:
         rm libff7tk*.deb
     - name: Build
       run: |
-        ${{env.cmakeConfigure}} -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}
+        ${{env.cmakeConfigure}} -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}~${{matrix.config.name}}
         cmake --build build
         cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
-        rename 's/_${{matrix.config.debArch}}/_${{matrix.config.debArch}}~${{matrix.config.name}}/g' *.deb
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
@@ -226,10 +225,9 @@ jobs:
             rm libff7tk*.deb
           run: |
             git config --global --add safe.directory /home/runner/work/blackchocobo/blackchocobo
-            ${{env.cmakeConfigure}} -DCPACK_PACKAGE_VERSION="${{ needs.precheck.outputs.version }}" -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}
+            ${{env.cmakeConfigure}} -DCPACK_PACKAGE_VERSION="${{ needs.precheck.outputs.version }}" -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}~${{matrix.config.name}}
             cmake --build build --config ${{env.BuildType}} --target package
             cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
-            rename 's/_${{matrix.config.debArch}}/_${{matrix.config.debArch}}~${{matrix.config.name}}/g' *.deb
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
