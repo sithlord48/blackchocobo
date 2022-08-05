@@ -189,15 +189,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation>Default to PC type, when saving unknown type</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation>Allow for an item cap 99 always</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepend drive to file dialog sidebars</translation>
     </message>
 </context>
 <context>
@@ -815,16 +815,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>Ultimate Weapons Hp</translation>
     </message>
     <message>
-        <source>Played piano durring flashback</source>
-        <translation>Played piano durring flashback</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</translation>
-    </message>
-    <message>
         <source>Tutorials Seen</source>
         <translation>Tutorials Seen</translation>
     </message>
@@ -1383,6 +1373,16 @@ Var And Scrolling Synced To Left Table</translation>
         <source>Save Slot</source>
         <translation>Save Slot</translation>
     </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation>Played piano during flashback</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -1574,8 +1574,8 @@ Var And Scrolling Synced To Left Table</translation>
         <translation>Application Style</translation>
     </message>
     <message>
-        <source>Item Editor - Always cap quanity at 99</source>
-        <translation>Item Editor - Always cap quanity at 99</translation>
+        <source>Item Editor - Always Cap Quantity to 99</source>
+        <translation>Item Editor - Always Cap Quantity to 99</translation>
     </message>
 </context>
 <context>

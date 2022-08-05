@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>769</width>
-    <height>599</height>
+    <height>611</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -672,7 +672,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Item Editor - Always cap quanity at 99</string>
+            <string>Item Editor - Always Cap Quantity to 99</string>
            </property>
           </widget>
          </item>
