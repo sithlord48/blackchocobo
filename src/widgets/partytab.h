@@ -90,10 +90,12 @@ protected:
 private:
     void updateText();
     void boostCharacter();
+    void setCurrentButton(int currentButton);
     QGroupBox * m_groupParty;
     QGroupBox * m_groupCharacters;
     QList<QComboBox *> m_comboParty;
     QList<QPushButton*> m_btnChars;
     QPushButton * m_btnBoostCharacter = nullptr;
     CharEditor * m_charEditor = nullptr;
+    QString m_charStyle = QStringLiteral("QWidget{background-color: rgb(%1,%2,%3);}");
 };
