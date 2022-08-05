@@ -713,10 +713,12 @@ void BlackChocobo::init_connections()
 
 void BlackChocobo::loadBasicSettings()
 {
-    if (BCSettings::value(SETTINGS::MAINGEOMETRY).isNull())
-        saveGeometry();
-    else
+    if (!BCSettings::value(SETTINGS::MAINGEOMETRY).isNull())
         restoreGeometry(BCSettings::value(SETTINGS::MAINGEOMETRY).toByteArray());
+    else {
+        adjustSize();
+        saveGeometry();
+    }
 }
 
 void BlackChocobo::loadChildWidgetSettings()
