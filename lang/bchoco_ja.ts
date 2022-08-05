@@ -5,7 +5,7 @@
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Black Chocobo について</translation>
+        <translation>黒チョコボ について</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
@@ -165,11 +165,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スケール選択の削除</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高解像度アイコン</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
@@ -185,22 +185,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">不明なタイプを保存する場合、デフォルトはPCタイプです</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">常にアイテムキャップ99を許可する</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドライブをファイルダイアログのサイドバーに追加する</translation>
     </message>
 </context>
 <context>
     <name>BlackChocobo</name>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Black Chocobo</translation>
+        <translation>黒チョコボ</translation>
     </message>
     <message>
         <source>AP</source>
@@ -948,16 +948,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">アルテマウェポン HP</translation>
     </message>
     <message>
-        <source>Played piano durring flashback</source>
-        <translation type="unfinished">フラッシュバック中にピアノを弾いた</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation type="unfinished">ボックスが部分的にチェックされている場合（「 - 」）は意志
-そのチュートリアルを示すトリガ</translation>
-    </message>
-    <message>
         <source>Tutorials Seen</source>
         <translation type="unfinished">チュートリアルの表示</translation>
     </message>
@@ -1377,6 +1367,16 @@ trigger showing that tutorial</source>
         <source>Save Slot</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation type="unfinished">フラッシュバック中にピアノを弾いた</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">ボックスが部分的にチェックされている場合（「 - 」）は意志
+そのチュートリアルを示すトリガ</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -1568,7 +1568,7 @@ trigger showing that tutorial</source>
         <translation type="unfinished">アプリケーションスタイル</translation>
     </message>
     <message>
-        <source>Item Editor - Always cap quanity at 99</source>
+        <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">アイテムエディタ-常に数量を99に制限します</translation>
     </message>
 </context>
@@ -1592,7 +1592,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation>黒チョコボ</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>

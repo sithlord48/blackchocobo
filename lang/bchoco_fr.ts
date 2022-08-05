@@ -5,11 +5,11 @@
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>À propos de Black Chocobo</translation>
+        <translation type="unfinished">À propos de Chocobo Noir</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo </translation>
+        <translation type="unfinished">Chocobo Noir </translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -101,7 +101,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , chasse aux bugs, aide pour trouver des données dans la savemap, test des thèmes, etc. Tu m&apos;as beaucoup aidé.</translation>
+        <translation type="unfinished">Merci pour toute l&apos;aide avec Chocobo Noir. Traduction , chasse aux bugs, aide pour trouver des données dans la savemap, test des thèmes, etc. Tu m&apos;as beaucoup aidé.</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
@@ -149,7 +149,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>ff7tk: %1</source>
-        <translation type="unfinished">ff7tk: %1</translation>
+        <translation>ff7tk: %1</translation>
     </message>
     <message>
         <source>Qt: %1</source>
@@ -169,11 +169,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suppression de la sélection d&apos;échelle</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Icônes haute résolution</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
@@ -189,15 +189,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Type de PC par défaut, lors de l&apos;enregistrement d&apos;un type inconnu</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Autoriser un plafond d&apos;articles 99 toujours</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajouter le lecteur aux barres latérales de la boîte de dialogue de fichier</translation>
     </message>
 </context>
 <context>
@@ -1053,16 +1053,6 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
         <translation type="unfinished">Pas de texte de description</translation>
     </message>
     <message>
-        <source>Played piano durring flashback</source>
-        <translation type="unfinished">Joué du piano pendant le flashback</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation type="unfinished">Quand la case est partiellement cochée (&quot;-&quot;)
-le tutoriel sera affiché directement</translation>
-    </message>
-    <message>
         <source>Save Point Location In North Crater</source>
         <translation type="unfinished">Lieu du point de sauvegarde au Cratère Nord</translation>
     </message>
@@ -1361,7 +1351,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Région du jeu</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1381,7 +1371,17 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Emplacement de sauvegarde</translation>
+    </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation type="unfinished">Joué du piano pendant le flashback</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">Quand la case est partiellement cochée (&quot;-&quot;)
+le tutoriel sera affiché directement</translation>
     </message>
 </context>
 <context>
@@ -1575,7 +1575,11 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Item Editor - Always cap quanity at 99</source>
-        <translation type="unfinished">Éditeur d&apos;articles - Limitez toujours la quantité à 99</translation>
+        <translation type="obsolete">Éditeur d&apos;articles - Limitez toujours la quantité à 99</translation>
+    </message>
+    <message>
+        <source>Item Editor - Always Cap Quantity to 99</source>
+        <translation type="unfinished">Éditeur d&apos;articles - Toujours limiter la quantité à 99</translation>
     </message>
 </context>
 <context>
@@ -1598,7 +1602,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="unfinished">Chocobo Noir</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>

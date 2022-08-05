@@ -5,11 +5,11 @@
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Acerca de Black Chocobo</translation>
+        <translation>Acerca de Chocobo Negro</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo </translation>
+        <translation>Chocobo Negro </translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -149,11 +149,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>ff7tk: %1</source>
-        <translation type="unfinished">ff7tk: %1</translation>
+        <translation>ff7tk: %1</translation>
     </message>
     <message>
         <source>Qt: %1</source>
-        <translation type="unfinished">Qt: %1</translation>
+        <translation>Qt: %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -169,11 +169,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eliminación de la selección de escala</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Iconos de alta resolución</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
@@ -189,22 +189,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Predeterminado al tipo de PC, al guardar un tipo desconocido</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Permitir un límite de artículo 99 siempre</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anteponer la unidad a las barras laterales del cuadro de diálogo del archivo</translation>
     </message>
 </context>
 <context>
     <name>BlackChocobo</name>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="unfinished">Chocobo Negro</translation>
     </message>
     <message>
         <source>AP</source>
@@ -979,11 +979,11 @@ location.</source>
     </message>
     <message>
         <source>Avalanche had meeting after Bombing Mission</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avalanche tuvo una reunión después de la misión de bombardeo</translation>
     </message>
     <message>
         <source>Avalanche Has Run To Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">La avalancha ha corrido hacia el escondite</translation>
     </message>
     <message>
         <source>ChurchProgress</source>
@@ -1028,11 +1028,11 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
     </message>
     <message>
         <source>Snowboard Mini Game </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minijuego de snowboard </translation>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Puntuación más alta de G-Bike</translation>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
@@ -1044,20 +1044,11 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
     </message>
     <message>
         <source>PsxName:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PsxNombre:</translation>
     </message>
     <message>
         <source>No Description Text</source>
         <translation type="unfinished">Sin Descripción</translation>
-    </message>
-    <message>
-        <source>Played piano durring flashback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
@@ -1358,7 +1349,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Región del juego</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1378,7 +1369,17 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Guardar ranura</translation>
+    </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation type="unfinished">Tocó el piano durante el flashback</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">Cuando la casilla está parcialmente marcada (&quot;-&quot;), se activará
+ mostrando ese tutorial</translation>
     </message>
 </context>
 <context>
@@ -1572,7 +1573,11 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Item Editor - Always cap quanity at 99</source>
-        <translation type="unfinished">Editor de elementos: siempre limite la cantidad a 99</translation>
+        <translation type="obsolete">Editor de elementos: siempre limite la cantidad a 99</translation>
+    </message>
+    <message>
+        <source>Item Editor - Always Cap Quantity to 99</source>
+        <translation type="unfinished">Editor de artículos - Siempre limita la cantidad a 99</translation>
     </message>
 </context>
 <context>

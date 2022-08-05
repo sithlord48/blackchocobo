@@ -5,11 +5,11 @@
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Über Black Chocobo</translation>
+        <translation type="unfinished">Über Schwarzer Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo</translation>
+        <translation type="unfinished">Schwarzer Chocobo </translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -169,11 +169,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Entfernung der Skalenauswahl</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hochauflösende Symbole</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
@@ -189,22 +189,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardmäßig PC-Typ, wenn unbekannter Typ gespeichert wird</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Planen Sie immer eine Artikelobergrenze von 99 ein</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Laufwerk den Seitenleisten des Dateidialogs voranstellen</translation>
     </message>
 </context>
 <context>
     <name>BlackChocobo</name>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Black Chocobo</translation>
+        <translation type="unfinished">Schwarzer Chocobo</translation>
     </message>
     <message>
         <source>AP</source>
@@ -956,16 +956,6 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation type="unfinished">Ultima Weapons HP</translation>
     </message>
     <message>
-        <source>Played piano durring flashback</source>
-        <translation type="unfinished">Spielte Klavier während des Flashbacks</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
-Trigger, Tutorial zeigt</translation>
-    </message>
-    <message>
         <source>Tutorials Seen</source>
         <translation type="unfinished">Tutorials Angesehen</translation>
     </message>
@@ -1364,7 +1354,7 @@ Trigger, Tutorial zeigt</translation>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spielregion</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1384,7 +1374,17 @@ Trigger, Tutorial zeigt</translation>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slot speichern</translation>
+    </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation type="unfinished">Spielte Klavier während des Flashbacks</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
+Trigger, Tutorial zeigt</translation>
     </message>
 </context>
 <context>
@@ -1577,7 +1577,7 @@ Trigger, Tutorial zeigt</translation>
         <translation type="unfinished">Anwendungsstil</translation>
     </message>
     <message>
-        <source>Item Editor - Always cap quanity at 99</source>
+        <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Artikeleditor - Beschränken Sie die Menge immer auf 99</translation>
     </message>
 </context>

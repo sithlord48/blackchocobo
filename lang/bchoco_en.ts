@@ -189,15 +189,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation>Default to PC type, when saving unknown type</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished"></translation>
+        <translation>Allow for an item cap 99 always</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepend drive to file dialog sidebars</translation>
     </message>
 </context>
 <context>
@@ -926,377 +926,367 @@ Table Entries are Editable</translation>
     </message>
     <message>
         <source>Items</source>
-        <translation type="unfinished">Items</translation>
+        <translation>Items</translation>
     </message>
     <message>
         <source>Escapes</source>
-        <translation type="unfinished">Escapes</translation>
+        <translation>Escapes</translation>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</translation>
+        <translation>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</translation>
     </message>
     <message>
         <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Search For &quot;KeyItem&quot; using item search mode on the location tab</translation>
+        <translation>Search For &quot;KeyItem&quot; using item search mode on the location tab</translation>
     </message>
     <message>
         <source>Unused KeyItems</source>
-        <translation type="unfinished">Unused KeyItems</translation>
+        <translation>Unused KeyItems</translation>
     </message>
     <message>
         <source>Location</source>
-        <translation type="unfinished">Location</translation>
+        <translation>Location</translation>
     </message>
     <message>
         <source>Field Location</source>
-        <translation type="unfinished">Field Location</translation>
+        <translation>Field Location</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished">Right click on map to easily set an item&apos;s
+        <translation>Right click on map to easily set an item&apos;s
 location.</translation>
     </message>
     <message>
         <source>Game Progress</source>
-        <translation type="unfinished">Game Progress</translation>
+        <translation>Game Progress</translation>
     </message>
     <message>
         <source>Disc  #</source>
-        <translation type="unfinished">Disc  #</translation>
+        <translation>Disc  #</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished">Jessie Has Been Unstuck</translation>
+        <translation>Jessie Has Been Unstuck</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown reached 0)</source>
-        <translation type="unfinished">Trigger Game Over (countdown reached 0)</translation>
+        <translation>Trigger Game Over (countdown reached 0)</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished">Talked to Jessie Before Looking At Map</translation>
+        <translation>Talked to Jessie Before Looking At Map</translation>
     </message>
     <message>
         <source>Avalanche had meeting after Bombing Mission</source>
-        <translation type="unfinished">Avalanche had meeting after Bombing Mission</translation>
+        <translation>Avalanche had meeting after Bombing Mission</translation>
     </message>
     <message>
         <source>Avalanche Has Run To Hideout</source>
-        <translation type="unfinished">Avalanche Has Run To Hideout</translation>
+        <translation>Avalanche Has Run To Hideout</translation>
     </message>
     <message>
         <source>ChurchProgress</source>
-        <translation type="unfinished">ChurchProgress</translation>
+        <translation>ChurchProgress</translation>
     </message>
     <message>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
-        <translation type="unfinished">Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</translation>
+        <translation>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</translation>
     </message>
     <message>
         <source>Apply Selected Replay </source>
-        <translation type="unfinished">Apply Selected Replay </translation>
+        <translation>Apply Selected Replay </translation>
     </message>
     <message>
         <source>Other</source>
-        <translation type="unfinished">Other</translation>
+        <translation>Other</translation>
     </message>
     <message>
         <source>Unlocked Vincent</source>
-        <translation type="unfinished">Unlocked Vincent</translation>
+        <translation>Unlocked Vincent</translation>
     </message>
     <message>
         <source>Unlocked Yuffie </source>
-        <translation type="unfinished">Unlocked Yuffie </translation>
+        <translation>Unlocked Yuffie </translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Number of Steps</source>
-        <translation type="unfinished">Number of Steps</translation>
+        <translation>Number of Steps</translation>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
-        <translation type="unfinished">Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</translation>
+        <translation>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</translation>
     </message>
     <message>
         <source>Snowboard Mini Game </source>
-        <translation type="unfinished">Snowboard Mini Game </translation>
+        <translation>Snowboard Mini Game </translation>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation type="unfinished">G-Bike High Score</translation>
+        <translation>G-Bike High Score</translation>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
-        <translation type="unfinished">Have Won the Submarine Game</translation>
+        <translation>Have Won the Submarine Game</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
-        <translation type="unfinished">Playstation Save Info</translation>
+        <translation>Playstation Save Info</translation>
     </message>
     <message>
         <source>PsxName:</source>
-        <translation type="unfinished">PsxName:</translation>
+        <translation>PsxName:</translation>
     </message>
     <message>
         <source>No Description Text</source>
-        <translation type="unfinished">No Description Text</translation>
-    </message>
-    <message>
-        <source>Played piano durring flashback</source>
-        <translation type="unfinished">Played piano durring flashback</translation>
-    </message>
-    <message>
-        <source>When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</source>
-        <translation type="unfinished">When Box is Partally Checked (&quot;-&quot;) it will
-trigger showing that tutorial</translation>
+        <translation>No Description Text</translation>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
-        <translation type="unfinished">Save Point Location In North Crater</translation>
+        <translation>Save Point Location In North Crater</translation>
     </message>
     <message>
         <source>Map Id: </source>
-        <translation type="unfinished">Map Id: </translation>
+        <translation>Map Id: </translation>
     </message>
     <message>
         <source>X: </source>
-        <translation type="unfinished">X: </translation>
+        <translation>X: </translation>
     </message>
     <message>
         <source>Z:</source>
-        <translation type="unfinished">Z:</translation>
+        <translation>Z:</translation>
     </message>
     <message>
         <source>He&amp;lp</source>
-        <translation type="unfinished">He&amp;lp</translation>
+        <translation>He&amp;lp</translation>
     </message>
     <message>
         <source>&amp;View</source>
-        <translation type="unfinished">&amp;View</translation>
+        <translation>&amp;View</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation type="unfinished">&amp;Settings</translation>
+        <translation>&amp;Settings</translation>
     </message>
     <message>
         <source>&amp;Slot Region</source>
-        <translation type="unfinished">&amp;Slot Region</translation>
+        <translation>&amp;Slot Region</translation>
     </message>
     <message>
         <source>Ctrl+Q</source>
-        <translation type="unfinished">Ctrl+Q</translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <source>Sa&amp;ve As</source>
-        <translation type="unfinished">Sa&amp;ve As</translation>
+        <translation>Sa&amp;ve As</translation>
     </message>
     <message>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished">Ctrl+Shift+S</translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;About</translation>
+        <translation>&amp;About</translation>
     </message>
     <message>
         <source>&amp;Select Slot</source>
-        <translation type="unfinished">&amp;Select Slot</translation>
+        <translation>&amp;Select Slot</translation>
     </message>
     <message>
         <source>F4</source>
-        <translation type="unfinished">F4</translation>
+        <translation>F4</translation>
     </message>
     <message>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished">Ctrl+Shift+C</translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished">Ctrl+Shift+V</translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <source>Ctrl+Shift+Del</source>
-        <translation type="unfinished">Ctrl+Shift+Del</translation>
+        <translation>Ctrl+Shift+Del</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation type="unfinished">&amp;Previous Slot</translation>
+        <translation>&amp;Previous Slot</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation type="unfinished">Alt+Left</translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <source>&amp;Next Slot</source>
-        <translation type="unfinished">&amp;Next Slot</translation>
+        <translation>&amp;Next Slot</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation type="unfinished">Alt+Right</translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <source>&amp;Configure</source>
-        <translation type="unfinished">&amp;Configure</translation>
+        <translation>&amp;Configure</translation>
     </message>
     <message>
         <source>Application Preferences</source>
-        <translation type="unfinished">Application Preferences</translation>
+        <translation>Application Preferences</translation>
     </message>
     <message>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <source>&amp;Us English (NTSC-U)</source>
-        <translation type="unfinished">&amp;Us English (NTSC-U)</translation>
+        <translation>&amp;Us English (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
-        <translation type="unfinished">Uk &amp;English (PAL)</translation>
+        <translation>Uk &amp;English (PAL)</translation>
     </message>
     <message>
         <source>&amp;German (PAL)</source>
-        <translation type="unfinished">&amp;German (PAL)</translation>
+        <translation>&amp;German (PAL)</translation>
     </message>
     <message>
         <source>&amp;Spanish (PAL)</source>
-        <translation type="unfinished">&amp;Spanish (PAL)</translation>
+        <translation>&amp;Spanish (PAL)</translation>
     </message>
     <message>
         <source>Spanish (PAL)</source>
-        <translation type="unfinished">Spanish (PAL)</translation>
+        <translation>Spanish (PAL)</translation>
     </message>
     <message>
         <source>&amp;Japanese (NTSC-J)</source>
-        <translation type="unfinished">&amp;Japanese (NTSC-J)</translation>
+        <translation>&amp;Japanese (NTSC-J)</translation>
     </message>
     <message>
         <source>Japanese (NTSC-J)</source>
-        <translation type="unfinished">Japanese (NTSC-J)</translation>
+        <translation>Japanese (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;International (NTSC-J)</source>
-        <translation type="unfinished">&amp;International (NTSC-J)</translation>
+        <translation>&amp;International (NTSC-J)</translation>
     </message>
     <message>
         <source>International (NTSC-J)</source>
-        <translation type="unfinished">International (NTSC-J)</translation>
+        <translation>International (NTSC-J)</translation>
     </message>
     <message>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished">Ctrl+Shift+N</translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <source>New Game&amp;+ </source>
-        <translation type="unfinished">New Game&amp;+ </translation>
+        <translation>New Game&amp;+ </translation>
     </message>
     <message>
         <source>Ctrl+Shift+=</source>
-        <translation type="unfinished">Ctrl+Shift+=</translation>
+        <translation>Ctrl+Shift+=</translation>
     </message>
     <message>
         <source>Ctrl+E</source>
-        <translation type="unfinished">Ctrl+E</translation>
+        <translation>Ctrl+E</translation>
     </message>
     <message>
         <source>Ctrl+Ins</source>
-        <translation type="unfinished">Ctrl+Ins</translation>
+        <translation>Ctrl+Ins</translation>
     </message>
     <message>
         <source>&amp;Reload</source>
-        <translation type="unfinished">&amp;Reload</translation>
+        <translation>&amp;Reload</translation>
     </message>
     <message>
         <source>&amp;French (PAL)</source>
-        <translation type="unfinished">&amp;French (PAL)</translation>
+        <translation>&amp;French (PAL)</translation>
     </message>
     <message>
         <source>Create Cloud Save &amp;Folder</source>
-        <translation type="unfinished">Create Cloud Save &amp;Folder</translation>
+        <translation>Create Cloud Save &amp;Folder</translation>
     </message>
     <message>
         <source>F9</source>
-        <translation type="unfinished">F9</translation>
+        <translation>F9</translation>
     </message>
     <message>
         <source>Ctrl+Shift+Ins</source>
-        <translation type="unfinished">Ctrl+Shift+Ins</translation>
+        <translation>Ctrl+Shift+Ins</translation>
     </message>
     <message>
         <source>&amp;Achievement Editor</source>
-        <translation type="unfinished">&amp;Achievement Editor</translation>
+        <translation>&amp;Achievement Editor</translation>
     </message>
     <message>
         <source>F10</source>
-        <translation type="unfinished">F10</translation>
+        <translation>F10</translation>
     </message>
     <message>
         <source>Chocobo</source>
-        <translation type="unfinished">Chocobo</translation>
+        <translation>Chocobo</translation>
     </message>
     <message>
         <source>Slot</source>
-        <translation type="unfinished">Slot</translation>
+        <translation>Slot</translation>
     </message>
     <message>
         <source>Imported %1 -&gt; Slot:%2</source>
-        <translation type="unfinished">Imported %1 -&gt; Slot:%2</translation>
+        <translation>Imported %1 -&gt; Slot:%2</translation>
     </message>
     <message>
         <source>Error Loading File %1</source>
-        <translation type="unfinished">Error Loading File %1</translation>
+        <translation>Error Loading File %1</translation>
     </message>
     <message>
         <source>Select A File to Save As</source>
-        <translation type="unfinished">Select A File to Save As</translation>
+        <translation>Select A File to Save As</translation>
     </message>
     <message>
         <source>Select Achievement File</source>
-        <translation type="unfinished">Select Achievement File</translation>
+        <translation>Select Achievement File</translation>
     </message>
     <message>
         <source>Dat File (*.dat)</source>
-        <translation type="unfinished">Dat File (*.dat)</translation>
+        <translation>Dat File (*.dat)</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
-        <translation type="unfinished">Current Slot:%1</translation>
+        <translation>Current Slot:%1</translation>
     </message>
     <message>
         <source>Exported Slot:%2 from %1 -&gt; %3</source>
-        <translation type="unfinished">Exported Slot:%2 from %1 -&gt; %3</translation>
+        <translation>Exported Slot:%2 from %1 -&gt; %3</translation>
     </message>
     <message>
         <source>
  Mid-Linked Block </source>
-        <translation type="unfinished">
+        <translation>
  Mid-Linked Block </translation>
     </message>
     <message>
         <source>
  End Of Linked Data</source>
-        <translation type="unfinished">
+        <translation>
  End Of Linked Data</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished">(Deleted)</translation>
+        <translation>(Deleted)</translation>
     </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Game Uses %n Save Block</numerusform>
             <numerusform>Game Uses %n Save Blocks</numerusform>
         </translation>
@@ -1304,60 +1294,60 @@ trigger showing that tutorial</translation>
     <message>
         <source>
   Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">
+        <translation>
   Next Data Chunk @ Slot:%1</translation>
     </message>
     <message>
         <source>All Materia Added!</source>
-        <translation type="unfinished">All Materia Added!</translation>
+        <translation>All Materia Added!</translation>
     </message>
     <message>
         <source>Set Save Location: %1</source>
-        <translation type="unfinished">Set Save Location: %1</translation>
+        <translation>Set Save Location: %1</translation>
     </message>
     <message>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
-        <translation type="unfinished">This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</translation>
+        <translation>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</translation>
     </message>
     <message>
         <source>Progression Reset Complete</source>
-        <translation type="unfinished">Progression Reset Complete</translation>
+        <translation>Progression Reset Complete</translation>
     </message>
     <message>
         <source>&amp;Place Leader</source>
-        <translation type="unfinished">&amp;Place Leader</translation>
+        <translation>&amp;Place Leader</translation>
     </message>
     <message>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
-        <translation type="unfinished">Place &amp;Tiny Bronco/Chocobo</translation>
+        <translation>Place &amp;Tiny Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Buggy/Highwind</source>
-        <translation type="unfinished">Place &amp;Buggy/Highwind</translation>
+        <translation>Place &amp;Buggy/Highwind</translation>
     </message>
     <message>
         <source>Place &amp;Sub</source>
-        <translation type="unfinished">Place &amp;Sub</translation>
+        <translation>Place &amp;Sub</translation>
     </message>
     <message>
         <source>Place &amp;Wild Chocobo</source>
-        <translation type="unfinished">Place &amp;Wild Chocobo</translation>
+        <translation>Place &amp;Wild Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="unfinished">Place &amp;Diamond/Ultimate/Ruby Weapon</translation>
+        <translation>Place &amp;Diamond/Ultimate/Ruby Weapon</translation>
     </message>
     <message>
         <source>All Items Added</source>
-        <translation type="unfinished">All Items Added</translation>
+        <translation>All Items Added</translation>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">Turtle Paradise</translation>
+        <translation>Turtle Paradise</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished">KeyItem</translation>
+        <translation>KeyItem</translation>
     </message>
     <message>
         <source>Game Region</source>
@@ -1365,23 +1355,33 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
-        <translation type="unfinished">US English (NTSC-U)</translation>
+        <translation>US English (NTSC-U)</translation>
     </message>
     <message>
         <source>UK English (PAL)</source>
-        <translation type="unfinished">UK English (PAL)</translation>
+        <translation>UK English (PAL)</translation>
     </message>
     <message>
         <source>French (PAL)</source>
-        <translation type="unfinished">French (PAL)</translation>
+        <translation>French (PAL)</translation>
     </message>
     <message>
         <source>German (PAL)</source>
-        <translation type="unfinished">German (PAL)</translation>
+        <translation>German (PAL)</translation>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished">Save Slot</translation>
+        <translation>Save Slot</translation>
+    </message>
+    <message>
+        <source>Played piano during flashback</source>
+        <translation>Played piano during flashback</translation>
+    </message>
+    <message>
+        <source>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</source>
+        <translation>When Box is Partially Checked (&quot;-&quot;) it will
+trigger showing that tutorial</translation>
     </message>
 </context>
 <context>
@@ -1574,8 +1574,8 @@ trigger showing that tutorial</translation>
         <translation>Application Style</translation>
     </message>
     <message>
-        <source>Item Editor - Always cap quanity at 99</source>
-        <translation>Item Editor - Always cap quanity at 99</translation>
+        <source>Item Editor - Always Cap Quantity to 99</source>
+        <translation>Item Editor - Always Cap Quantity to 99</translation>
     </message>
 </context>
 <context>

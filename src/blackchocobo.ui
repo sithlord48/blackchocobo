@@ -5833,14 +5833,14 @@ rgb(255, 255, 255)</string>
             <item>
              <widget class="QCheckBox" name="cbFlashbackPiano">
               <property name="text">
-               <string>Played piano durring flashback</string>
+               <string>Played piano during flashback</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="label_187">
               <property name="text">
-               <string>When Box is Partally Checked (&quot;-&quot;) it will
+               <string>When Box is Partially Checked (&quot;-&quot;) it will
 trigger showing that tutorial</string>
               </property>
               <property name="wordWrap">
