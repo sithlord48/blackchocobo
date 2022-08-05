@@ -40,11 +40,12 @@ PartyTab::PartyTab(QWidget *parent)
     for(int i=0; i<9;i++) {
         auto button = new QPushButton(this);
         button->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        button->setMinimumSize(116,132);
+        button->setMinimumSize(118,132);
         button->setIconSize(QSize(112, 128));
         button->setIcon(FF7Char::pixmap(i));
         connect(button, &QPushButton::clicked, this, [this, i](){
             Q_EMIT loadCharacterInSlot(i);
+            setCurrentButton(i);
         });
         m_btnChars.append(button);
     }
@@ -65,6 +66,7 @@ PartyTab::PartyTab(QWidget *parent)
     leftLayout->addWidget(m_groupParty);
     leftLayout->addWidget(m_groupCharacters);
     leftLayout->addWidget(m_btnBoostCharacter);
+    leftLayout->addSpacerItem(new QSpacerItem(0,0, QSizePolicy::Fixed, QSizePolicy::Expanding));
 
     auto mainLayout = new QHBoxLayout;
     mainLayout->addLayout(leftLayout, 1);
@@ -225,5 +227,17 @@ void PartyTab::boostCharacter()
     switch (result) {
     case QMessageBox::StandardButton::Yes : m_charEditor->MaxEquip(); m_charEditor->MaxStats(); break;
     case QMessageBox::StandardButton::No: m_charEditor->MaxStats(); break;
+    }
+}
+
+void PartyTab::setCurrentButton(int currentButton)
+{
+    QColor color;
+    for(int i=0; i< 9; i++) {
+        if(currentButton == i)
+            color = palette().highlight().color();
+        else
+            color = palette().button().color();
+        m_btnChars.at(i)->setStyleSheet(m_charStyle.arg(QString::number(color.red()), QString::number(color.green()), QString::number(color.blue())));
     }
 }
