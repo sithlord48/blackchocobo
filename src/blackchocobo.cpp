@@ -1721,7 +1721,7 @@ void BlackChocobo::tabWidget_currentChanged(int index)
         break;
 
     case 1://Item Tab
-        ff7ItemModel->setItems(ff7->items(s));
+        ff7ItemModel->resetItems(ff7->items(s));
         ui->sbGil->setValue(ff7->gil(s));
         ui->sbGp->setValue(ff7->gp(s));
         ui->sbRuns->setValue(ff7->runs(s));
