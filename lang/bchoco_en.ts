@@ -1577,6 +1577,12 @@ trigger showing that tutorial</translation>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation>Item Editor - Always Cap Quantity to 99</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>
