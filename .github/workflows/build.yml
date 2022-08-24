@@ -221,7 +221,7 @@ jobs:
             apt-get update -y > /dev/null
             apt-get install -qqq ${{env.debianRequirments}} > /dev/null
             curl -s https://api.github.com/repos/sithlord48/ff7tk/releases/latest | awk -F\" '/browser_download_url.*_${{matrix.config.debArch}}*[.deb]/{print $(NF-1)}' | wget -i -
-            apt -y -qqq install ./libff7tk*.deb
+            apt -y install ./libff7tk*.deb
             rm libff7tk*.deb
           run: |
             git config --global --add safe.directory /home/runner/work/blackchocobo/blackchocobo
