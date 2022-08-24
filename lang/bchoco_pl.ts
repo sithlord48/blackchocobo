@@ -1575,6 +1575,12 @@ trigger showing that tutorial</source>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation>Edytor przedmiotów - Zawsze ograniczaj ilość do 99</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation type="unfinished">Zmień styl widżetu
+  Zalecane jest Fusion Inne motywy mogą nie być zgodne z paletą kolorów lub zawierać problemy graficzne.</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

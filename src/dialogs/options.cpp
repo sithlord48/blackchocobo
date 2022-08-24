@@ -31,8 +31,6 @@ Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)
 {
     ui->setupUi(this);
-    connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
-    initConnections();
     int fmh = fontMetrics().height();
     QSize iconSize(fmh, fmh);
     updateText();
@@ -70,6 +68,8 @@ Options::Options(QWidget *parent) : QDialog(parent)
     });
 
     loadSettings();
+    connect(BCSettings::instance(), &BCSettings::settingsChanged, this, &Options::loadSettings);
+    initConnections();
 
     if(parent) {
         move(parent->x() + ((parent->width() -  sizeHint().width()) / 2), parent->y() + ((parent->sizeHint().height() - sizeHint().height()) / 2));
@@ -199,6 +199,7 @@ void Options::updateText()
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));
     ui->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(tr("Close and forget changes"));
+    ui->comboAppStyle->setToolTip(tr("Fusion is the recommended theme \n Other themes may contain graphical issues."));
 }
 
 void Options::btn_set_save_pc_clicked()

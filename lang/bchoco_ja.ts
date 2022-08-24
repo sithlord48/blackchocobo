@@ -1571,6 +1571,12 @@ trigger showing that tutorial</source>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">アイテムエディタ-常に数量を99に制限します</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation type="unfinished">ウィジェットのスタイルを変更
+  Fusion をお勧めします。他のテーマは、カラー パレットに従わないか、グラフィックの問題を含んでいる可能性があります。</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

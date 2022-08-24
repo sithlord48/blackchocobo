@@ -128,7 +128,7 @@ void BCSettings::restoreDefaultSettings()
     instance()->settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
     instance()->settings->setValue(SETTINGS::CUSTOMDEFAULTSAVE, false);
     instance()->settings->setValue(SETTINGS::AUTOGROWTH, true);
-    instance()->settings->setValue(SETTINGS::USENATIVEDIALOGS, false);
+    instance()->settings->setValue(SETTINGS::USENATIVEDIALOGS, true);
     instance()->settings->setValue(SETTINGS::COLORSCHEME, 0);
     instance()->settings->setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
     instance()->settings->setValue(SETTINGS::ITEMCAP99, false);

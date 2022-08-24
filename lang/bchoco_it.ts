@@ -1577,6 +1577,12 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Editor articolo - Limita sempre la quantità a 99</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation type="unfinished">Cambia stile widget
+  Si consiglia Fusion Altri temi potrebbero non rispettare la tavolozza dei colori o contenere problemi grafici.</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

@@ -1579,6 +1579,12 @@ trigger showing that tutorial</source>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Editor de artículos - Siempre limita la cantidad a 99</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation type="unfinished">Cambiar el estilo del widget
+  Se recomienda Fusion. Es posible que otros temas no obedezcan a la paleta de colores o contengan problemas gráficos.</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>

@@ -1581,6 +1581,12 @@ le tutoriel sera affiché directement</translation>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Éditeur d&apos;articles - Toujours limiter la quantité à 99</translation>
     </message>
+    <message>
+        <source>Change Widget Style
+ Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
+        <translation type="unfinished">Changer le style des widgets
+  La fusion est recommandée D&apos;autres thèmes peuvent ne pas respecter la palette de couleurs ou contenir des problèmes graphiques.</translation>
+    </message>
 </context>
 <context>
     <name>PartyTab</name>
