@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QWidget>
-#include <Type_materia.h>
+#include <Type_materia>
 
 class QComboBox;
 class QGroupBox;

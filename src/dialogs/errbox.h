@@ -20,8 +20,8 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
-#include <FF7Save.h>
-#include <SaveIcon.h>
+#include <FF7Save>
+#include <SaveIcon>
 
 class errbox : public QDialog
 {

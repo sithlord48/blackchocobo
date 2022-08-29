@@ -17,7 +17,7 @@
 #include "about.h"
 #include "ui_about.h"
 
-#include <ff7tkAbout.h>
+#include <ff7tkAbout>
 
 About::About(QWidget *parent) :
     QDialog(parent),

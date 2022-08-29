@@ -17,7 +17,7 @@
 #include <QMainWindow>
 #include <QMap>
 
-#include <Type_materia.h>
+#include <Type_materia>
 
 class FF7Save;
 class FF7ItemModel;
