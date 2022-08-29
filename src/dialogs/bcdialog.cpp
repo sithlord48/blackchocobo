@@ -26,8 +26,8 @@
 #include <QStandardPaths>
 #include <QTextCodec>
 
-#include <AchievementEditor.h>
-#include <FF7Save.h>
+#include <AchievementEditor>
+#include <FF7Save>
 
 #include "../bcsettings.h"
 

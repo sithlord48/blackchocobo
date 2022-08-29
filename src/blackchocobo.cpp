@@ -39,24 +39,24 @@
 #include "ui_blackchocobo.h"
 
 //ff7tk includes
-#include <FF7Char.h>
-#include <FF7Item.h>
-#include <FF7ItemModel.h>
-#include <FF7Location.h>
-#include <FF7Save.h>
-#include <FF7Materia.h>
-#include <SaveIcon.h>
-#include <OptionsWidget.h>
-#include <MateriaEditor.h>
-#include <SlotSelect.h>
-#include <ChocoboEditor.h>
-#include <CharEditor.h>
-#include <ItemListView.h>
-#include <MetadataCreator.h>
-#include <PhsListWidget.h>
-#include <MenuListWidget.h>
-#include <ChocoboManager.h>
-#include <LocationViewer.h>
+#include <FF7Char>
+#include <FF7Item>
+#include <FF7ItemModel>
+#include <FF7Location>
+#include <FF7Save>
+#include <FF7Materia>
+#include <SaveIcon>
+#include <OptionsWidget>
+#include <MateriaEditor>
+#include <SlotSelect>
+#include <ChocoboEditor>
+#include <CharEditor>
+#include <ItemListView>
+#include <MetadataCreator>
+#include <PhsListWidget>
+#include <MenuListWidget>
+#include <ChocoboManager>
+#include <LocationViewer>
 
 #include "widgets/partytab.h"
 /*~~~~~~~~GUI Set Up~~~~~~~*/

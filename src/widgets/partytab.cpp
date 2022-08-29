@@ -1,7 +1,7 @@
 #include "partytab.h"
 
-#include <FF7Char.h>
-#include <CharEditor.h>
+#include <FF7Char>
+#include <CharEditor>
 
 #include <QComboBox>
 #include <QGroupBox>

@@ -20,7 +20,7 @@
 #include <QTranslator>
 #include <QUrl>
 
-#include <FF7SaveInfo.h>
+#include <FF7SaveInfo>
 
 #include "options.h"
 #include "bcdialog.h"
