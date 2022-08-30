@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="pl_PL">
 <context>
     <name>About</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation type="unfinished">Informazioni su Chocobo Nero</translation>
+        <translation type="unfinished">O Czarny Chocobo</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation type="unfinished">Chocobo Nero </translation>
+        <translation>Black Chocobo </translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">S&amp;u</translation>
+        <translation>O Progr&amp;amie</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="unfinished">L&apos;editor di giochi di salvataggio di Final Fantasy VII</translation>
+        <translation>Edytor Zapisów Gry Final Fantasy VII</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -25,11 +25,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Licenza: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Licencja: GNU GPL Wersja 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -37,11 +37,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Pagina del progetto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Strona Projektu&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -49,115 +49,115 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Sostieni questo progetto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Wspomóż Projekt&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="unfinished">Funzionalità più recenti</translation>
+        <translation>Najnowsze Funkcje</translation>
     </message>
     <message>
         <source>C&amp;redits</source>
-        <translation type="unfinished">C&amp;rediti</translation>
+        <translation>O Nas</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="unfinished">Dare credito dove il credito è dovuto</translation>
+        <translation>Udzielanie zaszczytów tam, gdzie zaszczyty są należne</translation>
     </message>
     <message>
         <source>Various code help/debug; Windows QA</source>
-        <translation type="unfinished">Vari codici di aiuto/debug; Controllo qualità di Windows</translation>
+        <translation>Różna pomoc/debugowanie kodu; Kontrola jakości systemu Windows</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation type="unfinished">Psx Icon Class e convertitore di stringhe per PC per il giapponese</translation>
+        <translation>Konwerter Psx Icon Class i PC string dla języka japońskiego</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="unfinished">Bug tester</translation>
+        <translation>Testerzy Błędów</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished">Main Bug Tester, per win/gnome e ingame</translation>
+        <translation>Główny Tester Błędów, dla windows/gnoma + w grze</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished">I primi tester di Win32</translation>
+        <translation>Wczesny Tester Win32</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="unfinished">Tester Mac OS</translation>
+        <translation>Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="unfinished">Tester di Windows</translation>
+        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished">Traduttori</translation>
+        <translation>Tłumacze</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="unfinished">Traduzione in spagnolo:</translation>
+        <translation>Hiszpańskie Tłumaczenie:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="unfinished">Traduzione in francese:</translation>
+        <translation>Francuskie Tłumaczenie:</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished">Traduzione giapponese:</translation>
+        <translation>Japońskie Tłumaczenie:</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished">Traduzione tedesca:</translation>
+        <translation>Niemieckie Tłumaczenie:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="unfinished">Icone utilizzate in questo programma</translation>
+        <translation>Ikony używane w tym programie</translation>
     </message>
     <message>
         <source>&amp;Thanks</source>
-        <translation type="unfinished">&amp;Grazie</translation>
+        <translation>Podziękowania</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished">Un grande ringraziamento a:</translation>
+        <translation>Wielkie Podziękowania Dla:</translation>
     </message>
     <message>
         <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished">Grazie per aver fornito la fonte a Jenova. Questo programma utilizza versioni modificate della struttura del file di salvataggio di Jenova e delle liste Item/Materia. L&apos;accesso al suo codice sorgente ha consentito di risparmiare molto tempo durante le prime fasi di sviluppo.</translation>
+        <translation>Dziękuję za udostępnienie źródła Jenovie. Ten program używa zmodyfikowanych wersji struktury pliku zapisu Jenova i list elementów/materiałów. Dostęp do jego kodu źródłowego zaoszczędził dużo czasu na wczesnych etapach rozwoju.</translation>
     </message>
     <message>
         <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation type="unfinished">Grazie per tutto il tuo aiuto con Chocobo Nero. Traduzione, test dei bug, aiuto nella ricerca di dati nella mappa di salvataggio, test dei temi, ecc. Hai fatto molto per aiutare.</translation>
+        <translation type="unfinished">Dziękuję za wszelką pomoc z Czarny Chocobo. Tłumaczenie, testowanie błędów, pomoc w znajdowaniu danych w savemapie, testowanie motywów itp. Zrobiłeś wiele, aby pomóc.</translation>
     </message>
     <message>
         <source>Thank you for the old checksum program</source>
-        <translation type="unfinished">Grazie per il vecchio programma di checksum</translation>
+        <translation>Dziękuję za stary program sum kontrolnych</translation>
     </message>
     <message>
         <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation type="unfinished">Grazie per avermi aiutato a vedere la luce di stupidi errori.</translation>
+        <translation>Dziękuję za pomoc w dostrzeżeniu światła głupich błędów.</translation>
     </message>
     <message>
         <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation type="unfinished">Grazie per aver fornito una migliore comprensione delle funzioni di Qt quando i file della guida non sono riusciti.</translation>
+        <translation>Dziękujemy za lepsze zrozumienie funkcji Qt, gdy pliki pomocy zawiodły.</translation>
     </message>
     <message>
         <source>Cause she&apos;s just awesome!</source>
-        <translation type="unfinished">Perché è semplicemente fantastica!</translation>
+        <translation>Bo jest po prostu niesamowita!</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Chiudi</translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <source>Version: %1</source>
-        <translation>Versione: %1</translation>
+        <translation>Wersja: %1</translation>
     </message>
     <message>
         <source>ff7tk: %1</source>
@@ -169,62 +169,66 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Removal of Scale Selection</source>
-        <translation type="unfinished">Rimozione della selezione della scala</translation>
+        <translation type="unfinished">Usunięcie zaznaczenia skali</translation>
     </message>
     <message>
         <source>Hi-Res Icons</source>
-        <translation type="unfinished">Icone ad alta risoluzione</translation>
-    </message>
-    <message>
-        <source>Contributions By </source>
-        <translation type="unfinished">Contributi di </translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Visualizza tutti i contributori&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">Ikony wysokiej rozdzielczości</translation>
     </message>
     <message>
         <source>Polish Translation:</source>
-        <translation type="unfinished">Traduzione in polacco:</translation>
+        <translation>Polski Tłumaczenie:</translation>
+    </message>
+    <message>
+        <source>Contributions By </source>
+        <translation>Składki przez </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Wyświetl wszystkich współtwórców&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished">L&apos;impostazione predefinita è Tipo di PC, quando si salva un tipo sconosciuto</translation>
+        <translation type="unfinished">Domyślny typ PC, podczas zapisywania nieznanego typu</translation>
     </message>
     <message>
         <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished">Consenti sempre un limite di articolo 99</translation>
+        <translation type="unfinished">Zawsze zezwalaj na ograniczenie pozycji 99</translation>
     </message>
     <message>
         <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished">Anteponi l&apos;unità alle barre laterali della finestra di dialogo dei file</translation>
+        <translation type="unfinished">Dołącz paski boczne okna dialogowego dysku do pliku</translation>
     </message>
 </context>
 <context>
     <name>BlackChocobo</name>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Chocobo Nero</translation>
+        <translation>Czarny Chocobo</translation>
+    </message>
+    <message>
+        <source>Party</source>
+        <translation>Impreza</translation>
     </message>
     <message>
         <source>Items</source>
-        <translation type="unfinished">Elementi</translation>
+        <translation type="unfinished">Przedmioty</translation>
     </message>
     <message>
         <source>Inventory</source>
-        <translation type="unfinished">Inventario</translation>
+        <translation type="unfinished">Inwentarz</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
-        <translation type="unfinished">Aggiungi massimo di tutti gli articoli</translation>
+        <translation type="unfinished">Dodaj maksimum wszystkich przedmiotów</translation>
     </message>
     <message>
         <source>Clear All Items</source>
-        <translation type="unfinished">Cancella tutti gli elementi</translation>
+        <translation type="unfinished">Wyczyść wszystkie przedmioty</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished">I soldi</translation>
+        <translation type="unfinished">Pieniądze</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -236,51 +240,51 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Battles</source>
-        <translation type="unfinished">Battaglie</translation>
+        <translation type="unfinished">Bitwy</translation>
     </message>
     <message>
         <source>Escapes</source>
-        <translation type="unfinished">Fughe</translation>
+        <translation type="unfinished">Ucieczki</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">Volantini del la tartaruga felice raccolti</translation>
+        <translation type="unfinished">Zebrano ulotki o Żółwim Raju</translation>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Cerca &quot;La tartaruga felice&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
+        <translation type="unfinished">Wyszukaj „Żółwi Raj” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
     </message>
     <message>
         <source>Key Items</source>
-        <translation type="unfinished">Rarità</translation>
+        <translation type="unfinished">Kluczowe przedmioty</translation>
     </message>
     <message>
         <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Cerca &quot;Rarità&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
+        <translation type="unfinished">Wyszukaj „Kluczowy Przedmiot” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
     </message>
     <message>
         <source>Unused KeyItems</source>
-        <translation type="unfinished">Rarità non utilizzato</translation>
+        <translation type="unfinished">Niewykorzystane kluczowe przedmioty</translation>
     </message>
     <message>
         <source>Mystery panties</source>
-        <translation type="unfinished">Mutandine misteriose</translation>
+        <translation type="unfinished">Tajemnicze majtki</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
-        <translation type="unfinished">Lettera a una figlia</translation>
+        <translation type="unfinished">List do Córki</translation>
     </message>
     <message>
         <source>Letter to a Wife</source>
-        <translation type="unfinished">Lettera a una moglie</translation>
+        <translation type="unfinished">List do Żony</translation>
     </message>
     <message>
         <source>Materia</source>
-        <translation>Materia</translation>
+        <translation type="unfinished">Materia</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
-        <translation type="unfinished">Materia Stock per feste</translation>
+        <translation type="unfinished">Zapas materiałów na imprezę</translation>
     </message>
     <message>
         <source>AP</source>
@@ -288,71 +292,71 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation type="unfinished">Abilità della materia e informazioni statistiche selezionate</translation>
+        <translation type="unfinished">Wybrane umiejętności Materia i informacje o statystykach</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
-        <translation type="unfinished">Aggiungi ogni materia allo stock (fine elenco)</translation>
+        <translation type="unfinished">Dodaj każdy materiał do magazynu (koniec listy)</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation type="unfinished">Rimuovi TUTTA la materia </translation>
+        <translation type="unfinished">Usuń całą Materię</translation>
     </message>
     <message>
         <source>Location</source>
-        <translation type="unfinished">Posizione</translation>
+        <translation type="unfinished">Lokacja</translation>
     </message>
     <message>
         <source>Field Location</source>
-        <translation type="unfinished">Posizione del campo</translation>
+        <translation type="unfinished">Lokalizacja pola</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
-        <translation type="unfinished">Posizione sulla mappa del mondo</translation>
+        <translation type="unfinished">Lokalizacja na mapie świata</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
-        <translation type="unfinished">Visibile sulla mappa del mondo</translation>
+        <translation type="unfinished">Widoczne na Mapie Świata</translation>
     </message>
     <message>
         <source>Buggy</source>
-        <translation type="unfinished">Buggy</translation>
+        <translation type="unfinished">Powozik</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation type="unfinished">Piccolo bronco</translation>
+        <translation type="unfinished">Małe bronco</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Vento forte</translation>
+        <translation type="unfinished">Silny wiatr</translation>
     </message>
     <message>
         <source>Wild chocobo</source>
-        <translation type="unfinished">Chocobo selvatico</translation>
+        <translation type="unfinished">Dzikie chocobo</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>
-        <translation type="unfinished">Cioccolato giallo</translation>
+        <translation type="unfinished">Żółte chocobo</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation type="unfinished">Cioccolato verde</translation>
+        <translation type="unfinished">Zielone chocobo</translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation type="unfinished">Chocobo blu</translation>
+        <translation type="unfinished">Niebieskie chocobo</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation type="unfinished">Chocobo nero</translation>
+        <translation type="unfinished">Black chocobo</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished">Cioccolato d&apos;oro</translation>
+        <translation type="unfinished">Złote chocobo</translation>
     </message>
     <message>
         <source>Party leader</source>
-        <translation type="unfinished">Capo del partito</translation>
+        <translation type="unfinished">Lider Imprezy</translation>
     </message>
     <message>
         <source>Y: </source>
@@ -360,11 +364,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>angle</source>
-        <translation type="unfinished">angolo</translation>
+        <translation type="unfinished">kąt</translation>
     </message>
     <message>
         <source>Tiny Bronco / Chocobo</source>
-        <translation type="unfinished">Piccolo Bronco / Chocobo</translation>
+        <translation type="unfinished">Małe bronco / Chocobo</translation>
     </message>
     <message>
         <source>id</source>
@@ -372,338 +376,337 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Buggy / Highwind</source>
-        <translation type="unfinished">Buggy / Vento forte</translation>
+        <translation type="unfinished">Powozik / Silny wiatr</translation>
     </message>
     <message>
         <source>None</source>
-        <translation type="unfinished">Nessuno</translation>
+        <translation type="unfinished">Żadne</translation>
     </message>
     <message>
         <source>Sub</source>
-        <translation type="unfinished">Sub</translation>
+        <translation type="unfinished">Pod</translation>
     </message>
     <message>
         <source>Wild Chocobo</source>
-        <translation type="unfinished">Chocobo selvaggio</translation>
+        <translation type="unfinished">Dzikie Chocobo</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation type="unfinished">Arma Diamante/Ultimate/Rubino</translation>
+        <translation type="unfinished">Diamentowa / Ostateczna / Rubinowa Broń</translation>
     </message>
     <message>
         <source>sliders show </source>
-        <translation type="unfinished">mostrano i cursori</translation>
+        <translation type="unfinished">pokaz slajdów</translation>
     </message>
     <message>
         <source>Party Leader</source>
-        <translation type="unfinished">Capo del partito</translation>
+        <translation type="unfinished">Lider Imprezy</translation>
     </message>
     <message>
         <source>TinyBronco/Chocobo</source>
-        <translation type="unfinished">Tiny Bronco/Chocobo</translation>
+        <translation type="unfinished">Małe bronco / Chocobo</translation>
     </message>
     <message>
         <source>Buggy/Highwind</source>
-        <translation type="unfinished">Buggy/vento forte</translation>
+        <translation type="unfinished">Powozik / Silny wiatr</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
-        <translation type="unfinished">Arma Diamante/Ultimate/Rubino</translation>
+        <translation type="unfinished">Diamentowa / Ostateczna / Rubinowa Broń</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s
 location.</source>
-        <translation type="unfinished">Fare clic con il tasto destro sulla mappa per impostare facilmente un elemento Posizione.</translation>
+        <translation type="unfinished">Kliknij prawym przyciskiem myszy na mapie, aby łatwo ustawić lokalizację przedmiotu.</translation>
     </message>
     <message>
         <source>Game Progress</source>
-        <translation type="unfinished">Progresso del gioco</translation>
+        <translation type="unfinished">Postęp Gry</translation>
     </message>
     <message>
         <source>Global Progress</source>
-        <translation type="unfinished">Progresso globale</translation>
+        <translation type="unfinished">Ogólny Postęp</translation>
     </message>
     <message>
         <source>Main Progression</source>
-        <translation type="unfinished">Progresso principale</translation>
+        <translation type="unfinished">Główna progresja</translation>
     </message>
     <message>
         <source>Disc  #</source>
-        <translation type="unfinished">Disco #</translation>
+        <translation type="unfinished">Dysk #</translation>
     </message>
     <message>
         <source>Event Progress</source>
-        <translation type="unfinished">Avanzamento dell&apos;evento</translation>
+        <translation type="unfinished">Postęp wydarzenia</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
-        <translation type="unfinished">Progresso della missione di bombardamento</translation>
+        <translation type="unfinished">Postęp misji bombardowania</translation>
     </message>
     <message>
         <source>Bombing Mission Start Flag</source>
-        <translation type="unfinished">Bandiera di inizio missione di bombardamento</translation>
+        <translation type="unfinished">Flaga rozpoczęcia misji bombardowania</translation>
     </message>
     <message>
         <source>Elevator Door Open</source>
-        <translation type="unfinished">Porta dell&apos;ascensore aperta</translation>
+        <translation type="unfinished">Drzwi windy otwarte</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation type="unfinished">Ascensore Al 2° Piano</translation>
+        <translation type="unfinished">Winda na drugim piętrze</translation>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation type="unfinished">1a porta aperta</translation>
+        <translation type="unfinished">Pierwsze drzwi otwarte</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation type="unfinished">2a porta aperta</translation>
+        <translation type="unfinished">Drugie drzwi otwarte</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translation type="unfinished">Post panoramica NMKIN_5</translation>
+        <translation type="unfinished">Post Pan NMKIN_5</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished">La bomba è stata impostata</translation>
+        <translation type="unfinished">Bomba została ustawiona</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished">Jessie è stata sbloccata</translation>
+        <translation type="unfinished">Jessie została odblokowana</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown reached 0)</source>
-        <translation type="unfinished">Attiva Game Over (conto alla rovescia raggiunto 0)</translation>
+        <translation type="unfinished">Uruchom grę (odliczanie osiągnęło 0)</translation>
     </message>
     <message>
         <source>Escape From Reactor </source>
-        <translation type="unfinished">Fuga dal reattore </translation>
+        <translation type="unfinished">Ucieczka z reaktora</translation>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation type="unfinished">Post panoramica MD8_2</translation>
+        <translation type="unfinished">Post Pan MD8_2</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translation type="unfinished">Effetto post elettrico MD8_3</translation>
+        <translation type="unfinished">Efekt poelektryczny MD8_3</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translation type="unfinished">Bandiere del treno di Midgar</translation>
+        <translation type="unfinished">Flagi pociągu Midgar</translation>
     </message>
     <message>
         <source>Talked to Biggs</source>
-        <translation type="unfinished">Ho parlato con Biggs</translation>
+        <translation type="unfinished">Rozmawiałem z Biggsem</translation>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translation type="unfinished">Ho parlato con Wedge due volte</translation>
+        <translation type="unfinished">Rozmawiałem z Wedge dwukrotnie</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished">Ho parlato con Jessie prima di guardare la mappa</translation>
+        <translation type="unfinished">Rozmawiałem z Jessie przed spojrzeniem na mapę</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translation type="unfinished"> Video riprodotto sul treno?</translation>
+        <translation type="unfinished">Odtworzyłeś film w pociągu?</translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
-        <translation type="unfinished">Settore 7 Stazione Ferroviaria</translation>
+        <translation type="unfinished">Sektor 7 Dworzec</translation>
     </message>
     <message>
         <source>Avalanche had meeting after Bombing Mission</source>
-        <translation type="unfinished">Avalanche si è incontrato dopo la missione di bombardamento</translation>
+        <translation type="unfinished">Lawina miała spotkanie po zbombardowaniu</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
-        <translation type="unfinished">Ho parlato con Trainman 3 volte</translation>
+        <translation type="unfinished">Rozmawiałem z Konduktorem 3 razy</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation type="unfinished">Coppia alla stazione d&apos;accordo</translation>
+        <translation type="unfinished">Uzgodnić parę na stacji</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished">Impostare sulla modalità Reattore 5</translation>
+        <translation type="unfinished">Ustaw na tryb Reaktora 5</translation>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translation type="unfinished">Pilastro del settore 7</translation>
+        <translation type="unfinished">Sektor 7 Filar</translation>
     </message>
     <message>
         <source>Avalanche Has Run To Hideout</source>
-        <translation type="unfinished">La valanga è corsa al nascondiglio</translation>
+        <translation type="unfinished">Lawina pobiegła do kryjówki</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translation type="unfinished">Può mostrare il video della panoramica del pilastro</translation>
+        <translation type="unfinished">Może wyświetlać wideo z panoramą słupka</translation>
     </message>
     <message>
         <source>Barret called us</source>
-        <translation type="unfinished">Barret ci ha chiamato</translation>
+        <translation type="unfinished">Barret zadzwonił do nas</translation>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
-        <translation type="unfinished">Video della panoramica del pilastro</translation>
+        <translation type="unfinished">Post filar Pan wideo</translation>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation type="unfinished">Ho parlato con il soldato due volte</translation>
+        <translation type="unfinished">Rozmawiałem z żołnierzem dwa razy</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
-        <translation type="unfinished">Settore 7 - Progresso degli slum</translation>
+        <translation type="unfinished">Sektor 7 - Postęp w slumsach</translation>
     </message>
     <message>
         <source>Initial Settings</source>
-        <translation type="unfinished">Impostazioni iniziali</translation>
+        <translation type="unfinished">Ustawienia początkowe</translation>
     </message>
     <message>
         <source>Destroy the Sector 5 Reactor </source>
-        <translation type="unfinished">Distruggi il reattore del settore 5</translation>
+        <translation type="unfinished">Zniszcz reaktor sektora 5</translation>
     </message>
     <message>
         <source>The Plate is Falling</source>
-        <translation type="unfinished">Il piatto sta cadendo</translation>
+        <translation type="unfinished">Talerz spada</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
-        <translation type="unfinished">Sconosciuti / Inutilizzati</translation>
+        <translation type="unfinished">Nieznane / Nieużywane</translation>
     </message>
     <message>
         <source>ChurchProgress</source>
-        <translation type="unfinished">Progresso della Chiesa</translation>
+        <translation type="unfinished">Postęp Kościoła</translation>
     </message>
     <message>
         <source>DonProgress</source>
-        <translation type="unfinished">Don Progresso</translation>
+        <translation type="unfinished">Don Postęp</translation>
     </message>
     <message>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
-        <translation type="unfinished">Imposta Replay Mission di seguito per riportare il gioco su quella missione. Questo imposterà automaticamente la posizione di salvataggio e il numero del disco, nonché le variabili di progressione della missione. NON SOVRASCRIVERE IL RISPARMIO CORRENTE quando si utilizza questa funzione; Non posso promettere che sarai in grado di giocare da qualsiasi replay fino alla fine del gioco, o che qualsiasi replay funzionerà nel tuo salvataggio. Questa funzione è ancora in fase di sviluppo.</translation>
+        <translation type="unfinished">Ustaw misję powtórki poniżej, aby przywrócić grę do tej misji. Spowoduje to automatyczne ustawienie lokalizacji zapisu i numeru dysku, a także zmienne postępu zadania. NIE NADPISYWAJ BIEŻĄCEGO ZAPISU podczas korzystania z tej funkcji; Nie mogę obiecać, że będziesz mógł grać od dowolnej powtórki do końca gry, ani że dana powtórka będzie działać w twoim zapisie. Ta funkcja jest wciąż w fazie rozwoju.</translation>
     </message>
     <message>
         <source>Replay Mission</source>
-        <translation type="unfinished">Ripeti la missione</translation>
+        <translation type="unfinished">Powtórz misję</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
-        <translation type="unfinished">Missione di bombardamento</translation>
+        <translation type="unfinished">Misja bombardowania</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation type="unfinished">La Chiesa nei bassifondi</translation>
+        <translation type="unfinished">Kościół w slumsach</translation>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
-        <translation type="unfinished">Il flashback di Cloud</translation>
+        <translation type="unfinished">Wspomnienie Cloud</translation>
     </message>
     <message>
         <source>The Date Scene</source>
-        <translation type="unfinished">La scena della data</translation>
+        <translation type="unfinished">Scena randki</translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished">Aeris Morte</translation>
+        <translation type="unfinished">Śmierć Aeris</translation>
     </message>
     <message>
         <source>Apply Selected Replay </source>
-        <translation type="unfinished">Applica la riproduzione selezionata</translation>
+        <translation type="unfinished">Zastosuj wybraną powtórkę</translation>
     </message>
     <message>
         <source>Other</source>
-        <translation type="unfinished">Altro</translation>
+        <translation type="unfinished">Inne</translation>
     </message>
     <message>
         <source>Time Played</source>
-        <translation type="unfinished">Tempo giocato</translation>
+        <translation type="unfinished">Czas gry</translation>
     </message>
     <message>
         <source>Hour</source>
-        <translation type="unfinished">Ora</translation>
+        <translation type="unfinished">Godzina</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation type="unfinished">Min</translation>
+        <translation type="unfinished">Minuta</translation>
     </message>
     <message>
         <source>Sec</source>
-        <translation type="unfinished">Sec</translation>
+        <translation type="unfinished">Sekunda</translation>
     </message>
     <message>
         <source>Love Points</source>
-        <translation type="unfinished">Punti d&apos;amore</translation>
+        <translation type="unfinished">Punkty miłości</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
-        <translation type="unfinished">Sconfiggi l&apos;Arma Rubino</translation>
+        <translation type="unfinished">Pokonaj Rubinową Broń</translation>
     </message>
     <message>
         <source>Beat Emerald Weapon</source>
-        <translation type="unfinished">Sconfiggi l&apos;arma di smeraldo</translation>
+        <translation type="unfinished">Pokonaj Szmaragdową Broń</translation>
     </message>
     <message>
         <source>Have Seen Pandora&apos;s Box</source>
-        <translation type="unfinished">Ho visto il vaso di Pandora</translation>
+        <translation type="unfinished">Widziałem Puszkę Pandory</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
-        <translation type="unfinished">Può combattere il ninja misterioso nelle foreste</translation>
+        <translation type="unfinished">Może walczyć z tajemniczym ninja w lasach</translation>
     </message>
     <message>
         <source>Unlocked Vincent</source>
-        <translation type="unfinished">Sbloccato Vincent</translation>
+        <translation type="unfinished">Odblokowany Vincent</translation>
     </message>
     <message>
         <source>Unlocked Yuffie </source>
-        <translation type="unfinished">Yuffie sbloccato</translation>
+        <translation type="unfinished">Odblokowany Yuffie</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
 When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena
 Lobby&amp;quot; so you can spend
 them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reimposta
-Quando passi attraverso la porta di Battle Square, imposta la posizione su &amp;quot;Arena
-Lobby&amp;quot; così puoi spendere
-loro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resetowanie
+Kiedy przejdziesz przez lokację zestawu drzwi na Placu Bitwy Do &amp;quot;Lobby Areny&amp;quot;,
+aby móc je wydać&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Battle Points</source>
-        <translation type="unfinished">Punti Battaglia</translation>
+        <translation type="unfinished">Punkty bitewne</translation>
     </message>
     <message>
         <source>Number of Steps</source>
-        <translation type="unfinished">Numero di passi</translation>
+        <translation type="unfinished">Liczba kroków</translation>
     </message>
     <message>
         <source>Countdown Timer</source>
-        <translation type="unfinished">Conto alla rovescia</translation>
+        <translation type="unfinished">Odliczanie czasu</translation>
     </message>
     <message>
         <source>Cait Sith and Vincent should not be enabled if they are disabled in the Party tab.</source>
-        <translation type="unfinished">Cait Sith e Vincent non dovrebbero essere abilitati se sono disabilitati nella scheda Party.</translation>
+        <translation type="unfinished">Cait Sith i Vincent nie powinni być włączani, jeśli są wyłączeni w zakładce Impreza.</translation>
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
-        <translation type="unfinished">Materia rubata da Yuffie</translation>
+        <translation type="unfinished">Materia skradziona przez Yuffie</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation type="unfinished">Cancella tutte le materie rubate</translation>
+        <translation type="unfinished">Wyczyść całą skradzioną Materię</translation>
     </message>
     <message>
         <source>Snowboard Mini Game </source>
-        <translation type="unfinished">Mini gioco di snowboard</translation>
+        <translation type="unfinished">Minigra snowboardowa</translation>
     </message>
     <message>
         <source>Beginner Course</source>
-        <translation type="unfinished">Corso per principianti</translation>
+        <translation type="unfinished">Kurs dla początkujących</translation>
     </message>
     <message>
         <source>Time:</source>
-        <translation type="unfinished">Volta:</translation>
+        <translation type="unfinished">Czas:</translation>
     </message>
     <message>
         <source>:</source>
@@ -715,47 +718,47 @@ loro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Score:</source>
-        <translation type="unfinished">Punto:</translation>
+        <translation type="unfinished">Wynik:</translation>
     </message>
     <message>
         <source>Points</source>
-        <translation type="unfinished">Punti</translation>
+        <translation type="unfinished">Punktów</translation>
     </message>
     <message>
         <source>Expert Course</source>
-        <translation type="unfinished">Corso per esperti</translation>
+        <translation type="unfinished">Kurs ekspercki</translation>
     </message>
     <message>
         <source>Crazy Course</source>
-        <translation type="unfinished">Corso pazzo</translation>
+        <translation type="unfinished">Szalony kurs</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation type="unfinished">Punteggi più alti del tiratore di montagne russe</translation>
+        <translation type="unfinished">Najlepsze wyniki strzelanki górskiej</translation>
     </message>
     <message>
         <source>1st</source>
-        <translation type="unfinished">1°</translation>
+        <translation type="unfinished">Pierwszy</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation type="unfinished">2°</translation>
+        <translation type="unfinished">Drugi</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation type="unfinished">3°</translation>
+        <translation type="unfinished">Trzeci</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Forte Condor</translation>
+        <translation type="unfinished">Fort Kondor</translation>
     </message>
     <message>
         <source>Funds </source>
-        <translation type="unfinished">Fondi </translation>
+        <translation type="unfinished">Fundusze</translation>
     </message>
     <message>
         <source>Record </source>
-        <translation type="unfinished">Disco </translation>
+        <translation type="unfinished">Rekord</translation>
     </message>
     <message>
         <source>/</source>
@@ -763,71 +766,71 @@ loro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation type="unfinished">Punteggio più alto della G-Bike</translation>
+        <translation type="unfinished">Najwyższy wynik G-Bike</translation>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
-        <translation type="unfinished">Hai vinto il gioco del sottomarino</translation>
+        <translation type="unfinished">Wygrałem grę w łodzi podwodnej</translation>
     </message>
     <message>
         <source>Hex Editor</source>
-        <translation type="unfinished">Editor esadecimale</translation>
+        <translation type="unfinished">Edytor szesnastkowy</translation>
     </message>
     <message>
         <source>Playstation Save Info</source>
-        <translation type="unfinished">PlayStation Salva informazioni</translation>
+        <translation type="unfinished">Informacje o zapisie na Playstation</translation>
     </message>
     <message>
         <source>PsxName:</source>
-        <translation type="unfinished">Nome Psx:</translation>
+        <translation type="unfinished">PsxNazwa:</translation>
     </message>
     <message>
         <source>No Description Text</source>
-        <translation type="unfinished">Nessun testo di descrizione</translation>
+        <translation type="unfinished">Brak opisu</translation>
     </message>
     <message>
         <source>Show:</source>
-        <translation type="unfinished">Mostrare:</translation>
+        <translation type="unfinished">Pokaż:</translation>
     </message>
     <message>
         <source>PSX Save Data</source>
-        <translation type="unfinished">PSX Salva dati</translation>
+        <translation type="unfinished">Zapisz dane PSX</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation type="unfinished">Dati di test</translation>
+        <translation type="unfinished">Dane testowe</translation>
     </message>
     <message>
         <source>Misc</source>
-        <translation type="unfinished">Varie</translation>
+        <translation type="unfinished">Różne</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
-        <translation type="unfinished">Punti d&apos;amore di battaglia</translation>
+        <translation type="unfinished">Bitwa Punkty Miłości</translation>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation type="unfinished">HP arma definitiva</translation>
+        <translation type="unfinished">Ostateczne bronie PŻ</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation type="unfinished">Tutorial visti</translation>
+        <translation type="unfinished">Widziane samouczki</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
-        <translation type="unfinished">Controllo del sottomarino</translation>
+        <translation type="unfinished">Kontrolowanie łodzi podwodnej</translation>
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation type="unfinished">Salvataggio sulla mappa del mondo</translation>
+        <translation type="unfinished">Zapisywanie na mapie świata</translation>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
-        <translation type="unfinished">Salva la posizione del punto nel cratere nord</translation>
+        <translation type="unfinished">Zapisz położenie punktu w kraterze północnym</translation>
     </message>
     <message>
         <source>Map Id: </source>
-        <translation type="unfinished">ID mappa: </translation>
+        <translation type="unfinished">Identyfikator mapy: </translation>
     </message>
     <message>
         <source>X: </source>
@@ -835,85 +838,85 @@ loro&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Z:</source>
-        <translation type="unfinished">Z:</translation>
+        <translation type="unfinished">Z: </translation>
     </message>
     <message>
         <source>Unknown Vars</source>
-        <translation type="unfinished">Variabili sconosciute</translation>
+        <translation type="unfinished">Nieznane zmienne</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation type="unfinished">Variabili sconosciute:</translation>
+        <translation type="unfinished">Nieznana zmienna:</translation>
     </message>
     <message>
         <source>#</source>
-        <translation>#</translation>
+        <translation type="unfinished">#</translation>
     </message>
     <message>
         <source>Hex</source>
-        <translation type="unfinished">Hex</translation>
+        <translation type="unfinished">Szesnatkowy</translation>
     </message>
     <message>
         <source>Dec</source>
-        <translation type="unfinished">Dec</translation>
+        <translation type="unfinished">Dziesiętny</translation>
     </message>
     <message>
         <source>Bin</source>
-        <translation type="unfinished">Bin</translation>
+        <translation type="unfinished">Binarny</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
-        <translation type="unfinished">&lt;------Tabella sinistra------
-Selezionare Var sconosciuto da visualizzare
-Le voci della tabella sono modificabili</translation>
+        <translation type="unfinished">&lt;------Lewa Tabela------
+Wybierz nieznaną wartość zmiennej do wyświetlenia
+Wpisy w tabeli można edytować</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table</source>
-        <translation type="unfinished">------Tavola destra------&gt;
-Seleziona uno slot da confrontare
-La tabella è di sola lettura
-Var e scorrimento sincronizzati alla tabella di sinistra</translation>
+        <translation type="unfinished">------Prawa Tabela------&gt;
+Wybierz slot do porównania
+Tabela jest tylko do odczytu
+Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
-        <translation type="unfinished">Confronta con slot</translation>
+        <translation type="unfinished">Porównaj do slotu</translation>
     </message>
     <message>
         <source>-None-</source>
-        <translation type="unfinished">-Nessuno-</translation>
+        <translation type="unfinished">-Brak-</translation>
     </message>
     <message>
         <source>He&amp;lp</source>
-        <translation type="unfinished">Gu&amp;ida</translation>
+        <translation type="unfinished">Pomoc</translation>
     </message>
     <message>
         <source>&amp;File</source>
-        <translation type="unfinished">&amp;File</translation>
+        <translation type="unfinished">&amp;Plik</translation>
     </message>
     <message>
         <source>&amp;View</source>
-        <translation type="unfinished">&amp;Visualizza</translation>
+        <translation type="unfinished">&amp;Widok</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation type="unfinished">Impo&amp;stazioni</translation>
+        <translation type="unfinished">&amp;Ustawienia</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation type="unfinished">Mo&amp;difica</translation>
+        <translation type="unfinished">&amp;Edycja</translation>
     </message>
     <message>
         <source>&amp;Slot Region</source>
-        <translation type="unfinished">&amp;Slot regione</translation>
+        <translation type="unfinished">&amp;Region slotu</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation type="unfinished">&amp;Uscire</translation>
+        <translation type="unfinished">&amp;Zamknij</translation>
     </message>
     <message>
         <source>Ctrl+Q</source>
@@ -921,7 +924,7 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;Open</source>
-        <translation type="unfinished">A&amp;pri</translation>
+        <translation type="unfinished">&amp;Otwórz</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -929,7 +932,7 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>Sa&amp;ve As</source>
-        <translation type="unfinished">Sal&amp;va con nome</translation>
+        <translation type="unfinished">Zapi&amp;sz jako</translation>
     </message>
     <message>
         <source>Ctrl+Shift+S</source>
@@ -937,11 +940,11 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">Inform&amp;azioni</translation>
+        <translation type="unfinished">O Progr&amp;amie</translation>
     </message>
     <message>
         <source>&amp;Select Slot</source>
-        <translation type="unfinished">&amp;Seleziona Slot</translation>
+        <translation type="unfinished">Wybierz slot</translation>
     </message>
     <message>
         <source>F4</source>
@@ -949,7 +952,7 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;Copy Current Slot</source>
-        <translation type="unfinished">&amp;Copia Slot corrente</translation>
+        <translation type="unfinished">&amp;Kopiuj wybrany slot</translation>
     </message>
     <message>
         <source>Ctrl+Shift+C</source>
@@ -957,43 +960,43 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;Paste Slot</source>
-        <translation type="unfinished">&amp;Incolla slot</translation>
+        <translation type="unfinished">Wklej Slot</translation>
     </message>
     <message>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Shift+V</translation>
     </message>
     <message>
         <source>Clea&amp;r Slot</source>
-        <translation type="unfinished">Slot di Clear</translation>
+        <translation type="unfinished">Wyczyść Slot</translation>
     </message>
     <message>
         <source>Ctrl+Shift+Del</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Shift+Del</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation type="unfinished">&amp;Slot precedente</translation>
+        <translation type="unfinished">&amp;Poprzedni Slot</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Alt+Lewo</translation>
     </message>
     <message>
         <source>&amp;Next Slot</source>
-        <translation type="unfinished">&amp;Slot successivo</translation>
+        <translation type="unfinished">&amp;Następny Slot</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Alt+Prawo</translation>
     </message>
     <message>
         <source>&amp;Configure</source>
-        <translation type="unfinished">&amp;Configura</translation>
+        <translation type="unfinished">Konfiguracja</translation>
     </message>
     <message>
         <source>Application Preferences</source>
-        <translation type="unfinished">Preferenze dell&apos;applicazione</translation>
+        <translation type="unfinished">Preferencje aplikacji</translation>
     </message>
     <message>
         <source>F2</source>
@@ -1001,87 +1004,87 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;Us English (NTSC-U)</source>
-        <translation type="unfinished">Inglese &amp;Us (NTSC-U)</translation>
+        <translation type="unfinished">&amp;Us angielski (NTSC-U)</translation>
     </message>
     <message>
         <source>Uk &amp;English (PAL)</source>
-        <translation type="unfinished">&amp;Inglese britannico (NTSC-U)</translation>
+        <translation type="unfinished">Wielka &amp;Brytania Angielski (PAL)</translation>
     </message>
     <message>
         <source>&amp;German (PAL)</source>
-        <translation type="unfinished">&amp;Tedesco (PAL)</translation>
+        <translation type="unfinished">&amp;Niemiecki (PAL)</translation>
     </message>
     <message>
         <source>&amp;Spanish (PAL)</source>
-        <translation type="unfinished">&amp;Spagnolo (PAL)</translation>
+        <translation type="unfinished">&amp;Hiszpański (PAL)</translation>
     </message>
     <message>
         <source>Spanish (PAL)</source>
-        <translation type="unfinished">Spagnolo (PAL)</translation>
+        <translation type="unfinished">Hiszpański (PAL)</translation>
     </message>
     <message>
         <source>&amp;Japanese (NTSC-J)</source>
-        <translation type="unfinished">&amp;Giapponese (NTSC-J)</translation>
+        <translation type="unfinished">&amp;Japoński (NTSC-J)</translation>
     </message>
     <message>
         <source>Japanese (NTSC-J)</source>
-        <translation type="unfinished">Giapponese (NTSC-J)</translation>
+        <translation type="unfinished">Japoński (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;International (NTSC-J)</source>
-        <translation type="unfinished">&amp;Internazionale (NTSC-J)</translation>
+        <translation type="unfinished">&amp;Międzynarodowy (NTSC-J)</translation>
     </message>
     <message>
         <source>International (NTSC-J)</source>
-        <translation type="unfinished">Internazionale (NTSC-J)</translation>
+        <translation type="unfinished">Międzynarodowy (NTSC-J)</translation>
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation type="unfinished">&amp;Nuovo gioco</translation>
+        <translation type="unfinished">&amp;Nowa Gra</translation>
     </message>
     <message>
         <source>Ctrl+Shift+N</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
         <source>New Game&amp;+ </source>
-        <translation type="unfinished">Nuovo gioco&amp;+</translation>
+        <translation type="unfinished">Nowa Gra&amp;+ </translation>
     </message>
     <message>
         <source>Ctrl+Shift+=</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
     <message>
         <source>E&amp;xport Current Character</source>
-        <translation type="unfinished">E&amp;esporta carattere corrente</translation>
+        <translation type="unfinished">&amp;Eksportuj bieżący znak</translation>
     </message>
     <message>
         <source>Ctrl+E</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+E</translation>
     </message>
     <message>
         <source>I&amp;mport Current Character</source>
-        <translation type="unfinished">I&amp;importa il carattere corrente</translation>
+        <translation type="unfinished">&amp;Importuj bieżący znak</translation>
     </message>
     <message>
         <source>Ctrl+Ins</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Ins</translation>
     </message>
     <message>
         <source>&amp;Save</source>
-        <translation type="unfinished">&amp;Salva</translation>
+        <translation type="unfinished">&amp;Zapisz</translation>
     </message>
     <message>
         <source>&amp;Reload</source>
-        <translation type="unfinished">&amp;Ricaricare</translation>
+        <translation type="unfinished">&amp;Przeładuj</translation>
     </message>
     <message>
         <source>&amp;French (PAL)</source>
-        <translation type="unfinished">&amp;Francese (PAL)</translation>
+        <translation type="unfinished">&amp;Francuski (PAL)</translation>
     </message>
     <message>
         <source>Create Cloud Save &amp;Folder</source>
-        <translation type="unfinished">Crea cartella di salvata&amp;ggio nel cloud</translation>
+        <translation type="unfinished">Utwórz &amp;folder zapisu w chmurze</translation>
     </message>
     <message>
         <source>F9</source>
@@ -1089,23 +1092,19 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation type="unfinished">&amp;Import To Current Slot</translation>
+        <translation type="unfinished">&amp;Importuj do bieżącego slotu</translation>
     </message>
     <message>
         <source>Ctrl+Shift+Ins</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Ctrl+Shift+Ins</translation>
     </message>
     <message>
         <source>&amp;Achievement Editor</source>
-        <translation type="unfinished">Editore di &amp;Risultati</translation>
+        <translation type="unfinished">&amp;Edytor osiągnięć</translation>
     </message>
     <message>
         <source>F10</source>
         <translation type="unfinished">F10</translation>
-    </message>
-    <message>
-        <source>Party</source>
-        <translation type="unfinished">Gruppo</translation>
     </message>
     <message>
         <source>Chocobo</source>
@@ -1113,653 +1112,655 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
     </message>
     <message>
         <source>Game Options</source>
-        <translation type="unfinished">Opzioni di gioco</translation>
-    </message>
-    <message>
-        <source>Slot</source>
-        <translation type="unfinished">&amp;Spazio</translation>
+        <translation type="unfinished">Opcje gry</translation>
     </message>
     <message>
         <source>Unsaved Changes</source>
-        <translation type="unfinished">Modifiche non salvate</translation>
+        <translation type="unfinished">Niezapisane zmiany</translation>
     </message>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation type="unfinished">Salva le modifiche al file:
+        <translation type="unfinished">Zapisz zmiany w pliku:
 %1</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
-        <translation type="unfinished">Apri Final Fantasy 7 Salva</translation>
+        <translation type="unfinished">Otwórz zapis Final Fantasy 7</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2.</source>
-        <translation type="unfinished">Impossibile leggere il file %1:
+        <translation type="unfinished">Nie można odczytać pliku %1:
 %2.</translation>
     </message>
     <message>
         <source>Load Failed</source>
-        <translation type="unfinished">Caricamento non riuscito</translation>
+        <translation type="unfinished">Ładowanie nie powiodło się</translation>
     </message>
     <message>
         <source>Failed to Load File</source>
-        <translation type="unfinished">Impossibile caricare il file</translation>
+        <translation type="unfinished">Nie udało się załadować pliku</translation>
     </message>
     <message>
         <source>Imported Slot:%2 from %1 -&gt; Slot:%3</source>
-        <translation type="unfinished">Slot importato:%2 da %1 -&gt; Slot:%3</translation>
+        <translation type="unfinished">Importowany slot:%2 z %1 -&gt; Slot:%3</translation>
     </message>
     <message>
         <source>Imported %1 -&gt; Slot:%2</source>
-        <translation type="unfinished">Importato %1 -&gt; Slot:%2</translation>
+        <translation type="unfinished">Importowane %1 -&gt; Slot:%2</translation>
     </message>
     <message>
         <source>Error Loading File %1</source>
-        <translation type="unfinished">Errore durante il caricamento del file %1</translation>
+        <translation type="unfinished">Błąd podczas ładowania pliku %1</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
-        <translation type="unfinished">Seleziona File di statistiche del carattere FF7</translation>
+        <translation type="unfinished">Wybierz plik statystyk postaci FF7</translation>
     </message>
     <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation type="unfinished">File delle statistiche dei caratteri FF7(*.char)</translation>
+        <translation type="unfinished">Plik statystyki postaci FF7 (*.char)</translation>
     </message>
     <message>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
         <translation type="unfinished">%1:
-%2 non è un file di statistiche del carattere FF7.</translation>
+%2 nie jest plikiem statystyki znaków FF7.</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
-        <translation type="unfinished">Salva file di caratteri FF7</translation>
+        <translation type="unfinished">Save FF7 Character File</translation>
     </message>
     <message>
         <source>Character Export Successful</source>
-        <translation type="unfinished">Esportazione caratteri riuscita</translation>
+        <translation type="unfinished">Pomyślny eksport postaci</translation>
     </message>
     <message>
         <source>Character Export Failed</source>
-        <translation type="unfinished">Esportazione caratteri non riuscita</translation>
+        <translation type="unfinished">Eksport postaci nie powiódł się</translation>
     </message>
     <message>
         <source>Select A File to Save As</source>
-        <translation type="unfinished">Seleziona un file da salvare con nome</translation>
+        <translation type="unfinished">Wybierz plik do zapisania jako</translation>
     </message>
     <message>
         <source>Export Successful</source>
-        <translation type="unfinished">Esportazione riuscita</translation>
+        <translation type="unfinished">Eksport udany</translation>
     </message>
     <message>
         <source>Export Failed</source>
-        <translation type="unfinished">Esportazione non riuscita</translation>
+        <translation type="unfinished">Eksport nie udany</translation>
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished">Salva errore</translation>
+        <translation type="unfinished">Błąd zapisu</translation>
     </message>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished">Impossibile salvare il file
-%1</translation>
+        <translation type="unfinished">Nie udało się zapisać pliku
+% 1</translation>
     </message>
     <message>
         <source>New Game Created - Using: %1</source>
-        <translation type="unfinished">Nuova partita creata - Utilizzo: %1</translation>
+        <translation type="unfinished">Utworzono nową grę — przy użyciu: %1</translation>
     </message>
     <message>
         <source>Builtin Data</source>
-        <translation type="unfinished">Dati incorporati</translation>
+        <translation type="unfinished">Wbudowane dane</translation>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation type="unfinished">Nuovo gioco Plus creato - Utilizzo: %1</translation>
+        <translation type="unfinished">Utworzono nową grę Plus — przy użyciu: %1</translation>
     </message>
     <message>
         <source>Select Achievement File</source>
-        <translation type="unfinished">Seleziona File dei risultati</translation>
+        <translation type="unfinished">Wybierz plik osiągnięć</translation>
     </message>
     <message>
         <source>Dat File (*.dat)</source>
-        <translation type="unfinished">File Dat (*.dat)</translation>
+        <translation type="unfinished">Plik dat (*.dat)</translation>
     </message>
     <message>
         <source>Current Slot:%1</source>
-        <translation type="unfinished">Slot corrente:%1</translation>
+        <translation type="unfinished">Bieżący slot:%1</translation>
     </message>
     <message>
         <source>Master</source>
-        <translation type="unfinished">Maestro</translation>
+        <translation type="unfinished">Mistrz</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
-        <translation type="unfinished">===Slot vuoto===</translation>
+        <translation type="unfinished">===Pusty slot===</translation>
     </message>
     <message>
         <source>Exported Slot:%2 from %1 -&gt; %3</source>
-        <translation type="unfinished">Slot esportato:%2 da %1 -&gt; %3</translation>
+        <translation type="unfinished">Wyeksportowany slot:%2 z %1 -&gt; %3</translation>
     </message>
     <message>
         <source>
  Mid-Linked Block </source>
         <translation type="unfinished">
- Blocco a collegamento intermedio </translation>
+ Blok połączony w środku </translation>
     </message>
     <message>
         <source>
  End Of Linked Data</source>
         <translation type="unfinished">
- Fine dei dati collegati</translation>
+ Koniec połączonych danych</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished">(eliminato)</translation>
+        <translation type="unfinished">(Usunięto)</translation>
     </message>
     <message numerus="yes">
         <source>Game Uses %n Save Block(s)</source>
         <translation type="unfinished">
-            <numerusform>Il gioco utilizza %n blocco di salvataggio</numerusform>
-            <numerusform>Il gioco utilizza %n blocchi di salvataggio</numerusform>
+            <numerusform>Gra używa %n bloków zapisu</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>
   Next Data Chunk @ Slot:%1</source>
         <translation type="unfinished">
-  Blocco dati successivo allo slot:%1</translation>
+  Następna porcja danych w slocie:%1</translation>
     </message>
     <message>
         <source>All Materia Added!</source>
-        <translation type="unfinished">Tutta la materia aggiunta!</translation>
+        <translation type="unfinished">Dodano Całą Materię!</translation>
     </message>
     <message>
         <source>Set Save Location: %1</source>
-        <translation type="unfinished">Imposta posizione di salvataggio: %1</translation>
+        <translation type="unfinished">Ustaw lokalizację zapisu: %1</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation type="unfinished">Ripeti la missione di bombardamento subito dopo essere sceso dal treno.</translation>
+        <translation type="unfinished">Powtórz misję bombardowania zaraz po wyjściu z pociągu.</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation type="unfinished">Incontro con Aeris</translation>
+        <translation type="unfinished">Spotkanie z Aeris</translation>
     </message>
     <message>
         <source>This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). Sephiroth&apos;s stats will come directly from the Default Save. Be Sure to back up your CaitSith and Vincent if you want to use them again</source>
-        <translation type="unfinished">Questo copierà Cloud come lo è per Young Cloud (slot di Caitsith). Le statistiche di Sephiroth arriveranno direttamente dal salvataggio predefinito. Assicurati di eseguire il backup di CaitSith e Vincent se desideri riutilizzarli</translation>
+        <translation type="unfinished">To skopiuje Cloud tak samo jak młodą chmurę (slot Caitsith). Statystyki Sephirotha będą pochodzić bezpośrednio z domyślnego zapisu. Pamiętaj, aby wykonać kopię zapasową CaitSith i Vincenta, jeśli chcesz ich ponownie użyć</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To The Ropeway Station Talk to man by the Tram to start event. If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished">Riproduci la scena della data, la tua posizione sarà impostata sulla stazione della funivia Parla con l&apos;uomo sul tram per iniziare l&apos;evento. Se stai cercando una data speciale, assicurati di impostare anche i tuoi punti d&apos;amore.</translation>
+        <translation type="unfinished">Odtwórz ponownie scenę randkową, Twoja lokalizacja zostanie ustawiona na stacji kolejki linowej Porozmawiaj z człowiekiem przy tramwaju, aby rozpocząć wydarzenie. Jeśli szukasz wyjątkowej randki, ustaw też swoje punkty miłosne.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation type="unfinished">Ripeti la morte di Aeris. Questa opzione rimuoverà Aeris dal tuo PHS</translation>
+        <translation type="unfinished">Odtwórz ponownie śmierć Aeris. Ta opcja usunie Aeris z twojego PHS</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
-        <translation type="unfinished">         INFORMAZIONI SULLA MISSIONE DI REPLAY ATTUALMENTE SELEZIONATA</translation>
+        <translation type="unfinished">         INFORMACJE O AKTUALNIE WYBRANEJ MISJI POWTÓRNEJ</translation>
     </message>
     <message>
         <source>Progression Reset Complete</source>
-        <translation type="unfinished">Ripristino avanzamento completato</translation>
+        <translation type="unfinished">Zakończono resetowanie postępu</translation>
     </message>
     <message>
         <source>&amp;Place Leader</source>
-        <translation type="unfinished">&amp;Posto Leader</translation>
+        <translation type="unfinished">&amp;Umieść lidera</translation>
     </message>
     <message>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
-        <translation type="unfinished">Posiziona &amp;Tiny Bronco / Chocobo</translation>
+        <translation type="unfinished">Umieść &amp;Małe Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Buggy/Highwind</source>
-        <translation type="unfinished">Posiziona &amp;Buggy/Highwind</translation>
+        <translation type="unfinished">Umieść &amp;Powozik/Silny Wiatr</translation>
     </message>
     <message>
         <source>Place &amp;Sub</source>
-        <translation type="unfinished">Posiziona &amp;Sub</translation>
+        <translation type="unfinished">Umieść &amp;Łódź podwodną</translation>
     </message>
     <message>
         <source>Place &amp;Wild Chocobo</source>
-        <translation type="unfinished">Posiziona il &amp;Chocobo selvatico</translation>
+        <translation type="unfinished">Umieść &amp;Dzikie Chocobo</translation>
     </message>
     <message>
         <source>Place &amp;Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="unfinished">Posiziona &amp;Diamond/Ultimate/Ruby Weapon</translation>
+        <translation type="unfinished">Umieść &amp;Diamentową/Ostateczną/Rubinową broń</translation>
     </message>
     <message>
         <source>All Items Added</source>
-        <translation type="unfinished">Tutti gli articoli aggiunti</translation>
+        <translation>Wszystkie dodane przedmioty</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
-        <translation type="unfinished">ID sconosciuto in posizione Buggy/vento forte</translation>
+        <translation type="unfinished">Nieznany identyfikator w lokalizacji Powozik/Silny Wiatr</translation>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">La tartaruga felice</translation>
+        <translation type="unfinished">Żółwi Raj</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished">Rarità</translation>
+        <translation type="unfinished">Kluczowy Przedmiot</translation>
+    </message>
+    <message>
+        <source>Slot</source>
+        <translation type="unfinished">Slot</translation>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished">Regione di gioco</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
-        <translation type="unfinished">Inglese americano (NTSC-U)</translation>
+        <translation type="unfinished">Us angielski (NTSC-U)</translation>
     </message>
     <message>
         <source>UK English (PAL)</source>
-        <translation type="unfinished">Inglese britannico (PAL)</translation>
+        <translation type="unfinished">Wielka Brytania Angielski (PAL)</translation>
     </message>
     <message>
         <source>French (PAL)</source>
-        <translation type="unfinished">Francese (PAL)</translation>
+        <translation type="unfinished">Francuski (PAL)</translation>
     </message>
     <message>
         <source>German (PAL)</source>
-        <translation type="unfinished">Tedesco (PAL)</translation>
+        <translation type="unfinished">Niemiecki (PAL)</translation>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished">Salva slot</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Played piano during flashback</source>
-        <translation type="unfinished">Suonato il piano durante il flashback</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>When Box is Partially Checked (&quot;-&quot;) it will
 trigger showing that tutorial</source>
-        <translation type="unfinished">When Box is Partially Checked (&quot;-&quot;) it will
-trigger showing that tutorial</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>Italiano</translation>
+        <translation>TŁUMACZ NA NAZWĘ JĘZYKA</translation>
     </message>
 </context>
 <context>
     <name>Options</name>
     <message>
         <source>Options</source>
-        <translation type="unfinished">Opzioni</translation>
+        <translation>Opcje</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished">Generale</translation>
-    </message>
-    <message>
-        <source>Application Language</source>
-        <translation type="unfinished">Linguaggio applicativo</translation>
-    </message>
-    <message>
-        <source>System Theme</source>
-        <translation type="unfinished">Tema di sistema</translation>
-    </message>
-    <message>
-        <source>Dark Theme</source>
-        <translation type="unfinished">Tema scuro</translation>
-    </message>
-    <message>
-        <source>Light Theme</source>
-        <translation type="unfinished">Tema leggero</translation>
-    </message>
-    <message>
-        <source>New Game Default Region </source>
-        <translation type="unfinished">Nuova regione predefinita del gioco </translation>
-    </message>
-    <message>
-        <source>Use Native File Dialogs</source>
-        <translation type="unfinished">Usa le finestre di dialogo dei file nativi</translation>
-    </message>
-    <message>
-        <source>Edit the Places show in sidebar on file dialogs</source>
-        <translation type="unfinished">Modifica i Luoghi visualizzati nella barra laterale nelle finestre di dialogo dei file</translation>
-    </message>
-    <message>
-        <source>Edit Places</source>
-        <translation type="unfinished">Modifica luoghi</translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <source>Application Style</source>
-        <translation type="unfinished">Stile di applicazione</translation>
+        <translation>Styl Aplikacji</translation>
+    </message>
+    <message>
+        <source>System Theme</source>
+        <translation>Styl Systemu</translation>
+    </message>
+    <message>
+        <source>Dark Theme</source>
+        <translation>Ciemny Styl</translation>
+    </message>
+    <message>
+        <source>Light Theme</source>
+        <translation>Jasny Styl</translation>
+    </message>
+    <message>
+        <source>Application Language</source>
+        <translation>Język Aplikacji</translation>
     </message>
     <message>
         <source>NTSC-U</source>
-        <translation type="unfinished">NTSC-U</translation>
+        <translation>NTSC-U</translation>
     </message>
     <message>
         <source>PAL-E</source>
-        <translation type="unfinished">PAL-E</translation>
+        <translation>PAL-E</translation>
     </message>
     <message>
         <source>PAL-FR</source>
-        <translation type="unfinished">PAL-FR</translation>
+        <translation>PAL-FR</translation>
     </message>
     <message>
         <source>PAL-DE</source>
-        <translation type="unfinished">PAL-DE</translation>
+        <translation>PAL-DE</translation>
     </message>
     <message>
         <source>PAL-ES</source>
-        <translation type="unfinished">PAL-ES</translation>
+        <translation>PAL-ES</translation>
     </message>
     <message>
         <source>NTSC-J</source>
-        <translation type="unfinished">NTSC-J</translation>
+        <translation>NTSC-J</translation>
     </message>
     <message>
         <source>NTSC-JI</source>
-        <translation type="unfinished">NTSC-JI</translation>
+        <translation>NTSC-JI</translation>
     </message>
     <message>
         <source>Application Color Scheme</source>
-        <translation type="unfinished">Combinazione di colori dell&apos;applicazione</translation>
+        <translation>Schemat kolorów aplikacji</translation>
+    </message>
+    <message>
+        <source>New Game Default Region </source>
+        <translation>Domyślny region nowej gry</translation>
+    </message>
+    <message>
+        <source>Edit the Places show in sidebar on file dialogs</source>
+        <translation>Edytuj miejsca wyświetlane na pasku bocznym w oknach dialogowych plików</translation>
+    </message>
+    <message>
+        <source>Edit Places</source>
+        <translation>Edytuj miejsca</translation>
+    </message>
+    <message>
+        <source>Use Native File Dialogs</source>
+        <translation>Użyj natywnych okien dialogowych plików</translation>
     </message>
     <message>
         <source>File Options</source>
-        <translation type="unfinished">Opzioni file</translation>
+        <translation>Opcje Plików</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
-        <translation type="unfinished">Percorso predefinito per il caricamento di tutti i salvataggi</translation>
+        <translation>Domyślna ścieżka do wczytywania wszystkich zapisów</translation>
     </message>
     <message>
         <source>Path For Emulator Memory Cards  </source>
-        <translation type="unfinished">Percorso per le schede di memoria dell&apos;emulatore</translation>
+        <translation>Ścieżka do kart pamięci emulatora  </translation>
     </message>
     <message>
         <source>Path For PC (.ff7) Saves</source>
-        <translation type="unfinished">Percorso per PC (.ff7) Salva</translation>
+        <translation>Ścieżka Zapisu dla PC (.ff7)</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished">Percorso per i file delle statistiche dei personaggi</translation>
+        <translation>Ścieżka do plików statystyk postaci</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation type="unfinished">Sostituisci i nuovi dati di gioco incorporati</translation>
+        <translation>Nadpisz wbudowane nowe dane gry</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
-        <translation type="unfinished">Solo file Psx non elaborati!</translation>
+        <translation>Tylko surowe pliki PSX!</translation>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation type="unfinished">Opzioni di modifica</translation>
+        <translation>Opcje edycji</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
-        <translation type="unfinished">Mostra scheda Dati test sperimentali</translation>
+        <translation>Pokaż kartę eksperymentalnych danych testowych</translation>
     </message>
     <message>
         <source>Editable Combo for Materia and Items</source>
-        <translation type="unfinished">Combo modificabile per Materia e oggetti</translation>
+        <translation>Edytowalne kombinacje materiałów i przedmiotów</translation>
     </message>
     <message>
         <source>CharEditor - Simulate Leveling Up / Down</source>
-        <translation type="unfinished">Editor di caratteri: Simula il livellamento</translation>
+        <translation>CharEditor - Symuluj zdobywanie poziomów w górę / w dół</translation>
     </message>
     <message>
         <source>CharEditor - Advanced Mode</source>
-        <translation type="unfinished">Editor di caratteri: Modalità avanzata</translation>
+        <translation>Edytor znaków — tryb zaawansowany</translation>
     </message>
     <message>
         <source>Chocobo Manager - Show Pcount / Personality</source>
-        <translation type="unfinished">Chocobo Manager: Spettacolo Pcount / Personality</translation>
+        <translation>Chocobo Manager - Pokaż Pcount / Osobowość</translation>
     </message>
     <message>
         <source>Field Location - Show Map/X/Y/T/D</source>
-        <translation type="unfinished">Posizioni campo: mostra le coordinate</translation>
+        <translation>Lokalizacja pola — Pokaż mapę/X/Y/T/D</translation>
     </message>
     <message>
         <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
-        <translation type="unfinished">Visualizzatore mappe del mondo: mostra int SpinBoxes per ID leader e ID buggy</translation>
+        <translation>Przeglądarka map świata - Pokaż int SpinBoxa dla identyfikatora lidera i identyfikatora buggy</translation>
     </message>
     <message>
         <source>Game Progress - Show Untested</source>
-        <translation type="unfinished">Progresso del gioco: mostra non testato</translation>
+        <translation>Postęp gry — pokaż nieprzetestowane</translation>
     </message>
     <message>
         <source>Options - Always Show Controller Mapping </source>
-        <translation type="unfinished">Opzioni: mostra sempre la mappatura del controller</translation>
+        <translation>Opcje - Zawsze pokazuj mapowanie kontrolera </translation>
     </message>
     <message>
         <source>Reset values to defaults</source>
-        <translation type="unfinished">Ripristina i valori ai valori predefiniti</translation>
+        <translation>Zresetuj wartości do wartości domyślnych</translation>
     </message>
     <message>
         <source>Reset values to stored settings</source>
-        <translation type="unfinished">Ripristina i valori alle impostazioni memorizzate </translation>
+        <translation>Zresetuj wartości do zapisanych ustawień</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">Chiudi e salva le modifiche</translation>
+        <translation>Zamknij i zapisz zmiany</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished">Chiudi e dimentica le modifiche</translation>
+        <translation>Zamknij i zapomnij o zmianach</translation>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
-        <translation type="unfinished">Seleziona una directory per salvare i salvataggi su PC FF7</translation>
+        <translation>Wybierz katalog, aby zapisać zapisy PC FF7</translation>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation type="unfinished">Seleziona una directory per salvare i salvataggi mcd/mcr</translation>
+        <translation>Wybierz katalog, aby zapisać zapisy mcd/mcr</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation type="unfinished">Seleziona una directory da cui caricare i salvataggi del PC FF7</translation>
+        <translation>Wybierz katalog, z którego chcesz załadować Zapisy FF7 PC</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation type="unfinished">Seleziona un salvataggio di gioco predefinito (deve essere Raw PSX)</translation>
+        <translation>Wybierz domyślny zapis gry (musi to być surowy PSX)</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation type="unfinished">46 / 5,000
-Seleziona una posizione per salvare i file delle statistiche del personaggio</translation>
+        <translation>Wybierz lokalizację, aby zapisać pliki statystyk postaci</translation>
     </message>
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
-        <translation type="unfinished">Editor articolo - Limita sempre la quantità a 99</translation>
+        <translation>Edytor przedmiotów - Zawsze ograniczaj ilość do 99</translation>
     </message>
     <message>
         <source>Change Widget Style
  Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="unfinished">Cambia stile widget
-  Si consiglia Fusion Altri temi potrebbero non rispettare la tavolozza dei colori o contenere problemi grafici.</translation>
+        <translation type="obsolete">Zmień styl widżetu
+  Zalecane jest Fusion Inne motywy mogą nie być zgodne z paletą kolorów lub zawierać problemy graficzne.</translation>
+    </message>
+    <message>
+        <source>Fusion is the recommended theme 
+ Other themes may contain graphical issues.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PartyTab</name>
     <message>
         <source>Party Members</source>
-        <translation type="unfinished">Membri del partito</translation>
+        <translation>Członkowie partii</translation>
     </message>
     <message>
         <source>Click on a Char To Edit  ===&gt;</source>
-        <translation type="unfinished">Fare clic su un carattere da modificare ==&gt;</translation>
+        <translation>Kliknij na znak, aby edytować ===&gt;</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vuoto-</translation>
+        <translation>-Pusty-</translation>
     </message>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
-        <translation type="unfinished">Statistiche/armi/materia massime del personaggio selezionato</translation>
+        <translation>Wybrane maksymalne statystyki/bronie/materiały postaci</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Chocobo Nero</translation>
+        <translation>Czarny Chocobo</translation>
     </message>
     <message>
         <source>Do You Want To Also Replace %1&apos;s Equipment and Materia?</source>
-        <translation type="unfinished">Vuoi sostituire anche l&apos;attrezzatura e la materia di %1?</translation>
+        <translation>Czy chcesz również wymienić Sprzęt %1 i Materię?</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Edit Places</source>
-        <translation type="unfinished">Modifica luoghi</translation>
+        <translation>Edytuj miejsca</translation>
     </message>
     <message>
         <source>Add a place</source>
-        <translation type="unfinished">Aggiungi un luogo</translation>
+        <translation>Dodaj miejsce</translation>
     </message>
     <message>
         <source>Select a path to add to places</source>
-        <translation type="unfinished">Seleziona un percorso da aggiungere ai luoghi</translation>
+        <translation>Wybierz ścieżkę do dodania do miejsc</translation>
     </message>
     <message>
         <source>Remove selected place</source>
-        <translation type="unfinished">Rimuovi luogo selezionato</translation>
+        <translation>Usuń wybrane miejsce</translation>
     </message>
     <message>
         <source>Restore default places</source>
-        <translation type="unfinished">Ripristina luoghi predefiniti</translation>
+        <translation>Przywróć domyślne miejsca</translation>
     </message>
     <message>
         <source>Reset values to stored settings</source>
-        <translation type="unfinished">Ripristina i valori alle impostazioni memorizzate</translation>
+        <translation>Zresetuj wartości do zapisanych ustawień</translation>
     </message>
     <message>
         <source>Save Changes</source>
-        <translation type="unfinished">Salvare le modifiche</translation>
+        <translation>Zapisz zmiany</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished">Chiudi</translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <source>Adjust the play time?</source>
-        <translation type="unfinished">Regolare il tempo di riproduzione?</translation>
+        <translation>Dostosować czas odtwarzania?</translation>
     </message>
     <message>
         <source>Old region was %1hz
 New region is %2hz</source>
-        <translation type="unfinished">La vecchia regione era %1 hz
-La nuova regione è %2 hz</translation>
+        <translation>Stary region to %1hz
+Nowy region to %2hz</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
-        <translation type="unfinished">PAL -&gt; NTSC Conversione</translation>
+        <translation>Konwersja PAL -&gt; NTSC</translation>
     </message>
     <message>
         <source>NTSC -&gt; PAL Conversion</source>
-        <translation type="unfinished">NTSC -&gt; PAL Conversione</translation>
+        <translation>Konwersja NTSC -&gt; PAL</translation>
     </message>
     <message>
         <source>Places</source>
-        <translation type="unfinished">Luogui</translation>
+        <translation>Miejsca</translation>
     </message>
     <message>
         <source>Achievement Editor</source>
-        <translation type="unfinished">Editore di risultati</translation>
+        <translation>Edytor osiągnięć</translation>
     </message>
     <message>
         <source>Close and save changes</source>
-        <translation type="unfinished">Chiudi e salva le modifiche</translation>
+        <translation>Zamknij i zapisz zmiany</translation>
     </message>
     <message>
         <source>Close and forget changes</source>
-        <translation type="unfinished">Chiudi e dimentica le modifiche</translation>
+        <translation>Zamknij i nie zapisuj</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
-        <translation type="unfinished">non è riuscito a salvare il file</translation>
+        <translation>Nie udało się zapisać pliku</translation>
     </message>
     <message>
         <source>Failed To Write File
 File:%1</source>
-        <translation type="unfinished">Impossibile scrivere il file
-File: %1</translation>
+        <translation>Nie udało się zapisać pliku
+Plik: %1</translation>
     </message>
 </context>
 <context>
     <name>UndoStack</name>
     <message>
         <source>Inserting %1 bytes</source>
-        <translation type="unfinished">Inserisci %1 bytes</translation>
+        <translation>Wstawianie %1 bajtów</translation>
     </message>
     <message>
         <source>Delete %1 chars</source>
-        <translation type="unfinished">Elimina %1 caratteres</translation>
+        <translation>Usuń %1 znaków</translation>
     </message>
     <message>
         <source>Overwrite %1 chars</source>
-        <translation type="unfinished">Sovrascrivi %1 caratteres</translation>
+        <translation>Nadpisz %1 znaków</translation>
     </message>
 </context>
 <context>
     <name>errbox</name>
     <message>
         <source>View Anyway</source>
-        <translation type="unfinished">Visualizza comunque</translation>
+        <translation>Pokaż Zawsze</translation>
     </message>
     <message>
         <source>E&amp;xport Slot</source>
-        <translation type="unfinished">E&amp;sporta salva</translation>
+        <translation>E&amp;xport Slot</translation>
     </message>
     <message>
         <source>Non Final Fantasy VII Slot</source>
-        <translation type="unfinished">Slot non Final Fantasy VII</translation>
+        <translation>Slot Nie z Final Fantasy VII</translation>
     </message>
     <message>
         <source>Slot:%1
 </source>
-        <translation type="unfinished">Slot: %1
+        <translation>Slot: %1
 </translation>
     </message>
     <message>
         <source>       Mid-Linked Block</source>
-        <translation type="unfinished">blocco di collegamento intermedio</translation>
+        <translation>       Środkowy-Połączony Blok</translation>
     </message>
     <message>
         <source>    Mid-Linked Block (Deleted)</source>
-        <translation type="unfinished">blocco di collegamento centrale (eliminato)</translation>
+        <translation>       Środkowy-Połączony Blok (Usunięty)</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation type="unfinished"> Fine dei blocchi collegati</translation>
+        <translation>       Koniec Połączonych Bloków</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks (Deleted)</source>
-        <translation type="unfinished"> Fine dei blocchi collegati (eliminati)</translation>
+        <translation>       Koniec Połączonych Bloków (Usunięte)</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation type="unfinished">ERRORE</translation>
+        <translation>BŁĄD</translation>
     </message>
     <message numerus="yes">
         <source>
  Game Uses %n Save Block(s)</source>
-        <translation type="unfinished">
-            <numerusform>
- Il gioco utilizza %n blocco di salvataggio</numerusform>
-            <numerusform>
- Il gioco utilizza %n blocchi di salvataggio</numerusform>
+        <translation>
+            <numerusform> Gra Używa %n Zapisanych Bloków</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>
    Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">
-   Prossimo blocco di dati nello slot:%1</translation>
+        <translation>   Następna Porcja Danych @ Slot:%1</translation>
     </message>
 </context>
 </TS>

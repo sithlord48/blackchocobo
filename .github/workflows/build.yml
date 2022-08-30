@@ -168,10 +168,10 @@ jobs:
         export VERSION="${{env.BCVersion}}"
         export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib
         export PATH=$PATH:/opt/Qt/${{env.QtVersion}}/gcc_64/libexec
-        mkdir -p ./appdir/usr/share/ff7tk/lang
+        mkdir -p ./appdir/usr/share/ff7tk/translations
         mkdir -p ./appdir/usr/plugins/iconengines
         cp /opt/Qt/${{ env.QtVersion }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
-        cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/lang/*.qm ./appdir/usr/share/ff7tk/lang
+        cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/translations/*.qm ./appdir/usr/share/ff7tk/translations
         ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
           -e src/blackchocobo \
           -d deploy/org.sithlord48.blackchocobo.desktop \
