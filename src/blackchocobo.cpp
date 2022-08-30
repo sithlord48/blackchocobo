@@ -39,6 +39,7 @@
 #include "ui_blackchocobo.h"
 
 //ff7tk includes
+#include <ff7tkInfo>
 #include <FF7Char>
 #include <FF7Item>
 #include <FF7ItemModel>
@@ -115,6 +116,7 @@ void BlackChocobo::detectTranslations()
 {
     m_translations.clear();
 
+    QMap<QString, QTranslator *> ff7tk_translations = ff7tkInfo::translations();
     QStringList nameFilter ={QStringLiteral("blackchocobo_*.qm")};
     QMap<QString, QTranslator *> app_translations;
     QDir dir (QStringLiteral("%1").arg(BCSettings::value(SETTINGS::LANGPATH).toString()));
@@ -128,37 +130,8 @@ void BlackChocobo::detectTranslations()
         if (currentLang) {
             BCSettings::setValue(SETTINGS::LANG, lang);
             QApplication::installTranslator(translator);
+            QApplication::installTranslator(ff7tk_translations.value(lang));
         }
-    }
-
-    QMap<QString, QTranslator *> ff7tk_translations;
-    nameFilter = QStringList{QStringLiteral("ff7tk_*.qm")};
-    dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
-    langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-    if (langList.isEmpty()) {
-        dir.setPath(QStringLiteral("%1/../share/ff7tk/translations").arg(QCoreApplication::applicationDirPath()));
-        langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-        if(langList.isEmpty()) {
-            dir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/ff7tk/translations")));
-            langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-            if(langList.isEmpty()) {
-                dir.setPath(QStringLiteral("/usr/local/share/ff7tk/translations"));
-                langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-                if(langList.isEmpty()) {
-                    dir.setPath(QStringLiteral("/usr/share/ff7tk/translations"));
-                    langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
-                }
-            }
-        }
-    }
-    for (const QString &translation : qAsConst(langList)) {
-        QTranslator *translator = new QTranslator;
-        std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(6, 2);
-        ff7tk_translations.insert(lang, translator);
-        bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
-        if (currentLang)
-            QApplication::installTranslator(translator);
     }
 
     QMap<QString, QTranslator *> qt_translations;
