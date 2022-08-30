@@ -93,6 +93,6 @@ get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
 
 add_subdirectory(deploy)
 add_subdirectory(icons)
-add_subdirectory(lang)
+add_subdirectory(translations)
 add_subdirectory(qhexedit)
 add_subdirectory(src)

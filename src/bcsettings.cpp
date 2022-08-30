@@ -64,16 +64,19 @@ void BCSettings::initSettings()
     if (settings->value(SETTINGS::REGION).isNull())
         settings->setValue(SETTINGS::REGION, QStringLiteral("NTSC-U"));
 
-    QDir translationDir(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("lang")));
-    QStringList nameFilter{QStringLiteral("bchoco_*.qm")};
+    QDir translationDir(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
+    QStringList nameFilter{QStringLiteral("blackchocobo_*.qm")};
     if (translationDir.entryList(nameFilter, QDir::Files, QDir::Name).isEmpty()) {
-        translationDir.setPath(QStringLiteral("%1/../share/blackchocobo/lang").arg(QCoreApplication::applicationDirPath()));
+        translationDir.setPath(QStringLiteral("%1/../translations").arg(QCoreApplication::applicationDirPath()));
         if (translationDir.entryList(nameFilter, QDir::Files, QDir::Name).isEmpty()) {
-            translationDir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/blackchocobo/lang")));
+            translationDir.setPath(QStringLiteral("%1/../share/blackchocobo/translations").arg(QCoreApplication::applicationDirPath()));
             if (translationDir.entryList(nameFilter, QDir::Files, QDir::Name).isEmpty()) {
-                translationDir.setPath(QStringLiteral("/usr/local/share/blackchocobo/lang"));
+                translationDir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/blackchocobo/translations")));
                 if (translationDir.entryList(nameFilter, QDir::Files, QDir::Name).isEmpty()) {
-                    translationDir.setPath(QStringLiteral("/usr/share/blackchocobo/lang"));
+                    translationDir.setPath(QStringLiteral("/usr/local/share/blackchocobo/translations"));
+                    if (translationDir.entryList(nameFilter, QDir::Files, QDir::Name).isEmpty()) {
+                        translationDir.setPath(QStringLiteral("/usr/share/blackchocobo/translations"));
+                    }
                 }
             }
         }

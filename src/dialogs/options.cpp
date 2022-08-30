@@ -39,11 +39,11 @@ Options::Options(QWidget *parent) : QDialog(parent)
          btn->setIconSize(iconSize);
 
     QDir dir (BCSettings::value(SETTINGS::LANGPATH).toString());
-    QStringList langList = dir.entryList(QStringList("bchoco_*.qm"), QDir::Files, QDir::Name);
+    QStringList langList = dir.entryList(QStringList("blackchocobo_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(7, 2);
+        QString lang = translation.mid(13, 2);
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
     }
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::value(SETTINGS::LANG, QStringLiteral("en"))));

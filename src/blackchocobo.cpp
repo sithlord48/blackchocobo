@@ -115,14 +115,14 @@ void BlackChocobo::detectTranslations()
 {
     m_translations.clear();
 
-    QStringList nameFilter ={QStringLiteral("bchoco_*.qm")};
+    QStringList nameFilter ={QStringLiteral("blackchocobo_*.qm")};
     QMap<QString, QTranslator *> app_translations;
     QDir dir (QStringLiteral("%1").arg(BCSettings::value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(nameFilter,QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(7, 2);
+        QString lang = translation.mid(13, 2);
         app_translations.insert(lang, translator);
         bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang) {
@@ -133,19 +133,19 @@ void BlackChocobo::detectTranslations()
 
     QMap<QString, QTranslator *> ff7tk_translations;
     nameFilter = QStringList{QStringLiteral("ff7tk_*.qm")};
-    dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("lang")));
+    dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
     if (langList.isEmpty()) {
-        dir.setPath(QStringLiteral("%1/../share/ff7tk/lang").arg(QCoreApplication::applicationDirPath()));
+        dir.setPath(QStringLiteral("%1/../share/ff7tk/translations").arg(QCoreApplication::applicationDirPath()));
         langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
         if(langList.isEmpty()) {
-            dir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/ff7tk/lang")));
+            dir.setPath(QStringLiteral("%1/%2").arg(QDir::homePath(), QStringLiteral(".local/share/ff7tk/translations")));
             langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
             if(langList.isEmpty()) {
-                dir.setPath(QStringLiteral("/usr/local/share/ff7tk/lang"));
+                dir.setPath(QStringLiteral("/usr/local/share/ff7tk/translations"));
                 langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
                 if(langList.isEmpty()) {
-                    dir.setPath(QStringLiteral("/usr/share/ff7tk/lang"));
+                    dir.setPath(QStringLiteral("/usr/share/ff7tk/translations"));
                     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
                 }
             }
@@ -166,7 +166,7 @@ void BlackChocobo::detectTranslations()
     dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
     if (langList.isEmpty()) {
-        dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("lang")));
+        dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
         langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
         if (langList.isEmpty()) {
             dir.setPath(QStringLiteral("%1/../share/qt/translations").arg(QCoreApplication::applicationDirPath()));
