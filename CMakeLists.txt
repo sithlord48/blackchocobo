@@ -10,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.12.1 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.13.0.0 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
   FIND_PACKAGE(Git)
@@ -50,6 +50,7 @@ add_definitions(-DBC_VERSION="${BC_VERSION}")
 
 set(QT_DEFAULT_MAJOR_VERSION 6 CACHE STRING "" FORCE)
 set(REQUIRED_QT_VERSION 6.2.0)
+set(REQUIRED_FF7TK_VERSION 0.83.0)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
@@ -62,22 +63,7 @@ else()
     set(BIN_NAME "blackchocobo")
 endif()
 
-find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
-    Core5Compat
-    Gui
-    Svg
-    Quick
-    Widgets
-    Xml
-)
-
-set(REQUIRED_FF7TK_VERSION 0.82.1)
-find_package(ff7tk ${REQUIRED_FF7TK_VERSION} REQUIRED NO_MODULE COMPONENTS
-    ff7tk
-    ff7tkQtWidgets
-    ff7tkWidgets
-)
-
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core)
 get_target_property(qmake_executable Qt6::qmake IMPORTED_LOCATION)
 get_filename_component(_qt_bin_dir "${qmake_executable}" DIRECTORY)
 if(WIN32 OR APPLE)

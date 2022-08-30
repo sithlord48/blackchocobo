@@ -12,6 +12,7 @@ target_link_libraries(BCDIALOGS
       Qt::Gui
       Qt::Widgets
       ff7tk::ff7tk
+      ff7tk::ff7tkData
       ff7tk::ff7tkWidgets
 )
 

@@ -7,8 +7,10 @@ find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Xml
 )
 
-find_package(ff7tk 0.82.00 REQUIRED NO_MODULE COMPONENTS
+find_package(ff7tk ${REQUIRED_FF7TK_VERSION} REQUIRED NO_MODULE COMPONENTS
     ff7tk
+    ff7tkData
+    ff7tkQtWidgets
     ff7tkWidgets
 )
 
@@ -20,12 +22,14 @@ if(WIN32)
     if(CMAKE_COMPILER_IS_GNUCC)
         set (FF7TK_DEPENDS
             ${ff7tk_DIR}/../../../bin/libff7tk.dll
+            ${ff7tk_DIR}/../../../bin/libff7tkData.dll
             ${ff7tk_DIR}/../../../bin/libff7tkQtWidgets.dll
             ${ff7tk_DIR}/../../../bin/libff7tkWidgets.dll
         )
     else()
         set (FF7TK_DEPENDS
             ${ff7tk_DIR}/../../../bin/ff7tk.dll
+            ${ff7tk_DIR}/../../../bin/ff7tkData.dll
             ${ff7tk_DIR}/../../../bin/ff7tkQtWidgets.dll
             ${ff7tk_DIR}/../../../bin/ff7tkWidgets.dll
         )
