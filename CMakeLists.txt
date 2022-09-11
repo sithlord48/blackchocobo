@@ -74,8 +74,6 @@ if(WIN32 OR APPLE)
     endif()
     find_program(PLATFORMDEPLOYQT ${deployqtapp} HINTS "${_qt_bin_dir}")
 endif()
-get_target_property(_qmake_executable Qt${QT_DEFAULT_MAJOR_VERSION}::qmake IMPORTED_LOCATION)
-get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
 
 add_subdirectory(deploy)
 add_subdirectory(icons)
