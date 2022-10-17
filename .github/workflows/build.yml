@@ -30,7 +30,7 @@ jobs:
           else
               VER="continuous"
           fi
-          echo "::set-output name=version::$VER"
+          echo "version=$VER" >> $GITHUB_OUTPUT
   deb_builder:
     name: debianBuilder-${{matrix.config.name}}
     runs-on: ${{matrix.config.os}}
