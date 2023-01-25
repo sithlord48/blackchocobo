@@ -168,6 +168,10 @@ void PartyTab::setCharEditorAutoStatCalc(bool enabled)
 void PartyTab::setCharacter(const FF7CHAR &charData, const QString &processedName)
 {
     m_charEditor->setChar(charData, processedName);
+    if(charData.id == FF7Char::Sephiroth || charData.id == FF7Char::YoungCloud)
+        m_btnBoostCharacter->setVisible(false);
+    else
+        m_btnBoostCharacter->setVisible(true);
 }
 
 void PartyTab::setButtonImageToId(int buttonNumber, int id)
@@ -220,8 +224,13 @@ void PartyTab::updateText()
 
 void PartyTab::boostCharacter()
 {
-    if (m_charEditor->id() == FF7Char::YoungCloud || m_charEditor->id() || m_charEditor->name().isNull())
+    if (m_charEditor->id() == FF7Char::YoungCloud || m_charEditor->id() == FF7Char::Sephiroth || m_charEditor->name().isNull())
         return;   //no char selected, sephiroth and young cloud.
+
+    if (m_charEditor->id() == FF7Char::Chocobo) {
+        m_charEditor->MaxStats();
+        return;
+    }
 
     int result = QMessageBox::question(this, tr("Black Chocobo"), tr("Do You Want To Also Replace %1's Equipment and Materia?").arg(m_charEditor->name()), QMessageBox::StandardButton::Yes | QMessageBox::StandardButton::No);
     switch (result) {
