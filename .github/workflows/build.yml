@@ -130,7 +130,7 @@ jobs:
 
     - name: Cache ff7tk
       id: cache-ff7tk
-      uses: actions/cache@v2
+      uses: actions/cache@v3.0.11
       with:
         path: ${{ matrix.config.ff7tkPrefix }}
         key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{env.QtVersion}}-ff7tk-${{ hashFiles( 'ff7tk*') }}
