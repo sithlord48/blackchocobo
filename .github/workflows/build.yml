@@ -236,21 +236,21 @@ jobs:
       uses: actions/download-artifact@v3
     - name: Deploy Continuous
       if: github.ref == 'refs/heads/master'
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: softprops/action-gh-release@v1
       with:
-       repo_token: "${{ secrets.DEPLOYTOKEN }}"
-       automatic_release_tag: "continuous"
+       token: "${{ secrets.DEPLOYTOKEN }}"
+       tag_name: "continuous"
        prerelease: false
-       title: "Continuous Build"
+       name: "Continuous Build"
        files: |
          artifact/*
          container-artifact/*
          debian-artifacts/*
     - name: Deploy Release
       if: contains(github.ref, 'tags/v')
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: softprops/action-gh-release@v1
       with:
-       repo_token: "${{ secrets.DEPLOYTOKEN }}"
+       token: "${{ secrets.DEPLOYTOKEN }}"
        prerelease: false
        files: |
          artifact/*
