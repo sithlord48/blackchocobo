@@ -152,6 +152,8 @@ jobs:
     - name: Build AppImage (Linux)
       if: runner.os == 'Linux'
       run: |
+        sudo apt-get update -y > /dev/null
+        sudo apt-get install -qqq libxkbcommon-x11-0 > /dev/null
         make DESTDIR=appdir install
         wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
