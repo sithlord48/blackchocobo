@@ -150,6 +150,11 @@ void PartyTab::setCharEditorEditableComboBoxes(bool editable)
     m_charEditor->setEditableComboBoxes(editable);
 }
 
+void PartyTab::setCharEditorShowPlaceholderMateria(bool shown)
+{
+    m_charEditor->setShowPlaceholderMateria(shown);
+}
+
 void PartyTab::setCharEditorAdvancedMode(bool adv)
 {
     m_charEditor->setAdvancedMode(adv);

@@ -1580,7 +1580,12 @@ trigger showing that tutorial</source>
     <message>
         <source>Fusion is the recommended theme 
  Other themes may contain graphical issues.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fusionはおすすめのテーマです
+  他のテーマには、グラフィックの問題が含まれる場合があります。</translation>
+    </message>
+    <message>
+        <source>Show Placeholders In Materia and Item Selection</source>
+        <translation type="unfinished">マテリアとアイテム選択でプレースホルダーを表示</translation>
     </message>
 </context>
 <context>

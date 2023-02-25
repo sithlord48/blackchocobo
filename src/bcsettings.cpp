@@ -135,6 +135,7 @@ void BCSettings::restoreDefaultSettings()
     instance()->settings->setValue(SETTINGS::COLORSCHEME, 0);
     instance()->settings->setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
     instance()->settings->setValue(SETTINGS::ITEMCAP99, false);
+    instance()->settings->setValue(SETTINGS::SHOWPLACEHOLDERS, false);
 }
 QPalette BCSettings::paletteForSetting()
 {

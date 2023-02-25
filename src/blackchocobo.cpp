@@ -698,11 +698,14 @@ void BlackChocobo::loadChildWidgetSettings()
 {
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::value(SETTINGS::USENATIVEDIALOGS, false).toBool());
     materia_editor->setEditableMateriaCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    materia_editor->setShowPlaceHolderMateria(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
     itemListView->setEditableItemCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemListView->setShowPlaceholderItems(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
     partyTab->setCharEditorEditableComboBoxes(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
     partyTab->setCharEditorAdvancedMode(BCSettings::value(SETTINGS::CHARADVANCED, false).toBool());
     partyTab->setCharEditorAutoLevel(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
     partyTab->setCharEditorAutoStatCalc(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
+    partyTab->setCharEditorShowPlaceholderMateria(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
     chocoboManager->setAdvancedMode(BCSettings::value(SETTINGS::CHOCOADVANCED, false).toBool());
     locationViewer->setAdvancedMode(BCSettings::value(SETTINGS::LOCVIEWADVANCED, false).toBool());
     ui->tabWidget->setTabEnabled(9, BCSettings::value(SETTINGS::ENABLETEST, false).toBool());

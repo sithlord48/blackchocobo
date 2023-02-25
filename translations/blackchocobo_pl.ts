@@ -1584,6 +1584,11 @@ trigger showing that tutorial</source>
     <message>
         <source>Fusion is the recommended theme 
  Other themes may contain graphical issues.</source>
+        <translation type="unfinished">Polecanym motywem jest Fusion
+  Inne motywy mogą zawierać problemy graficzne.</translation>
+    </message>
+    <message>
+        <source>Show Placeholders In Materia and Item Selection</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
