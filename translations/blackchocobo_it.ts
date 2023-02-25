@@ -1586,7 +1586,12 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
     <message>
         <source>Fusion is the recommended theme 
  Other themes may contain graphical issues.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fusion è il tema consigliato
+  Altri temi possono contenere problemi grafici.</translation>
+    </message>
+    <message>
+        <source>Show Placeholders In Materia and Item Selection</source>
+        <translation type="unfinished">Mostra segnaposto nella selezione materia e oggetto</translation>
     </message>
 </context>
 <context>

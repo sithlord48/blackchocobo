@@ -118,6 +118,7 @@ void Options::loadSettings()
     ui->comboColorScheme->setCurrentIndex(BCSettings::value(SETTINGS::COLORSCHEME).toInt());
     ui->comboAppStyle->setCurrentText(BCSettings::value(SETTINGS::APPSTYLE).toString());
     ui->cbCapItemQty->setChecked(BCSettings::value(SETTINGS::ITEMCAP99).toBool());
+    ui->cbShowPlaceholders->setChecked(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS).toBool());
     adjustSize();
 }
 
@@ -144,6 +145,7 @@ void Options::saveSettings()
     BCSettings::setValue(SETTINGS::COLORSCHEME, ui->comboColorScheme->currentIndex());
     BCSettings::setValue(SETTINGS::APPSTYLE, ui->comboAppStyle->currentText());
     BCSettings::setValue(SETTINGS::ITEMCAP99, ui->cbCapItemQty->isChecked());
+    BCSettings::setValue(SETTINGS::SHOWPLACEHOLDERS, ui->cbShowPlaceholders->isChecked());
 }
 
 void Options::restoreDefaultSettings()
@@ -170,6 +172,7 @@ void Options::restoreDefaultSettings()
     ui->btnEditSideBarItems->setVisible(true);
     ui->comboAppStyle->setCurrentText(QStringLiteral("Fusion"));
     ui->cbCapItemQty->setChecked(false);
+    ui->cbShowPlaceholders->setChecked(false);
 }
 
 void Options::initConnections()

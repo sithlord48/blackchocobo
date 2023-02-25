@@ -1590,7 +1590,12 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Fusion is the recommended theme 
  Other themes may contain graphical issues.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fusion est le thème recommandé
+  D&apos;autres thèmes peuvent contenir des problèmes graphiques.</translation>
+    </message>
+    <message>
+        <source>Show Placeholders In Materia and Item Selection</source>
+        <translation type="unfinished">Afficher les espaces réservés dans la sélection de materia et d&apos;éléments</translation>
     </message>
 </context>
 <context>

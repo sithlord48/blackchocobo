@@ -28,6 +28,7 @@ public:
     void setCharEditorSliderStyle(const QString &sliderStyleSheet);
     void setCharEditorToolBoxStyle(const QString &tabStyle);
     void setCharEditorEditableComboBoxes(bool editable);
+    void setCharEditorShowPlaceholderMateria(bool shown);
     void setCharEditorAdvancedMode(bool adv);
     void setCharEditorAutoLevel(bool enabled);
     void setCharEditorAutoStatCalc(bool enabled);

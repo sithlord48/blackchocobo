@@ -1588,7 +1588,12 @@ trigger showing that tutorial</source>
     <message>
         <source>Fusion is the recommended theme 
  Other themes may contain graphical issues.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fusion es el tema recomendado
+  Otros temas pueden contener problemas gráficos.</translation>
+    </message>
+    <message>
+        <source>Show Placeholders In Materia and Item Selection</source>
+        <translation type="unfinished">Mostrar marcadores de posición en selección de materia y elementos</translation>
     </message>
 </context>
 <context>
