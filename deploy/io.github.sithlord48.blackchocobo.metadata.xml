@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>org.sithlord48.blackchocobo</id>
+	<id>io.github.sithlord48.blackchocobo</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0+</project_license>
 	<name>Black Chocobo</name>
@@ -14,7 +14,7 @@
 			Supports PC (98 + Steam), Emulators, PS3, PSP/ PsVita and Switch versions.
 		</p>
 	</description>
-	<launchable type="desktop-id">blackchocobo.desktop</launchable>
+	<launchable type="desktop-id">io.github.sithlord48.blackchocobo.desktop</launchable>
 	<url type="homepage">https://github.com/sithlord48/blackchocobo</url>
 	<url type="bugtracker">https://github.com/sithlord48/blackchocobo/issues</url>
 	<url type="donation">http://sourceforge.net/p/blackchocobo/donate/</url>
@@ -24,6 +24,6 @@
 		</screenshot>
 	</screenshots>
 	<provides>
-		<id>org.sithlord48.blackchocobo.desktop</id>
+		<id>io.github.sithlord48.blackchocobo.desktop</id>
 	</provides>
 </component>

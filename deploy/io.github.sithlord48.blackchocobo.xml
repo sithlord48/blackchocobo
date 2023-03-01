@@ -2,12 +2,12 @@
   <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
     <mime-type type="application/x-ff7PCSave">
       <comment>FF7 PC Save File</comment>
-      <icon name="/usr/share/pixmaps/blackchocobo.png"/>
+      <icon name="io.github.sithlord48.blackchocobo"/>
       <glob pattern="*.ff7"/>
     </mime-type>
     <mime-type type="application/x-ff7SwitchSave">
       <comment>FF7 Switch Save File</comment>
-      <icon name="/usr/share/pixmaps/blackchocobo.png"/>
+      <icon name="io.github.sithlord48.blackchocobo"/>
       <glob pattern="ff7slot*"/>
     </mime-type>
 </mime-info>
