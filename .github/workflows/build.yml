@@ -167,7 +167,7 @@ jobs:
         cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/translations/*.qm ./appdir/usr/share/ff7tk/translations
         ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
           -e src/blackchocobo \
-          -d deploy/org.sithlord48.blackchocobo.desktop \
+          -d deploy/io.github.sithlord48.blackchocobo.desktop \
           -i deploy/blackchocobo.png \
           --plugin=qt
 
