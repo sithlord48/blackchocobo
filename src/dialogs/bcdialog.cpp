@@ -25,6 +25,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QTextCodec>
+#include <QStorageInfo>
 
 #include <AchievementEditor>
 #include <FF7Save>
@@ -277,14 +278,22 @@ QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, cons
     const QList<QAbstractButton*> buttons = dialog->findChildren<QAbstractButton*>(QString(), Qt::FindChildrenRecursively);
     for(QAbstractButton * btn: buttons)
         btn->setIconSize(iconSize);
-
     dialog->setGeometry(mainRect.x() + ((mainRect.width() - dialogWidth) / 2), mainRect.y() + ((mainRect.height() - dialogHeight) /2), dialogWidth, dialogHeight);
     dialog->setLabelText(QFileDialog::LookIn, QObject::tr("Places"));
 
     QList<QUrl> sideBarUrls;
+#ifdef Q_OS_LINUX
+    const auto drives = QStorageInfo::mountedVolumes().toList();
+    for (const auto &drive : drives) {
+        bool chksubs = QFile::exists("/.flatpak-info") ? drive.subvolume().isEmpty() : true;
+        if (drive.fileSystemType() != "tmpfs" && drive.displayName() != "/boot" && drive.displayName() != "/home" && drive.isValid() && chksubs)
+            sideBarUrls.append(QUrl::fromLocalFile(drive.displayName()));
+    }
+#else
     const QFileInfoList drives = QDir::drives();
     for (const QFileInfo &drive : drives)
         sideBarUrls.append(QUrl::fromLocalFile(drive.path()));
+#endif
     const QStringList SideBarUrls = BCSettings::value(SETTINGS::SIDEBARURLS).toStringList();
     for(const QString &url : SideBarUrls)
         sideBarUrls.append(QUrl::fromLocalFile(url));
