@@ -1,4 +1,4 @@
-IDI_ICON1               ICON    "deploy/blackchocobo.ico"
+IDI_ICON1               ICON    "blackchocobo.ico"
 
 #include <windows.h>
 
