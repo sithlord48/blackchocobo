@@ -7,13 +7,24 @@
 	<developer_name>sithlord48</developer_name>
 	<summary>A Save Editor for Final Fantasy VII</summary>
 	<description>
-		<p>
-			Black Chocobo is a save editor for Final Fantasy VII.
-		</p>
-		<p>
-			Do a lot of things with ff7 saves, Including Convert Region or Format. Start New Game+ and more.
-			Supports PC (98 + Steam), Emulators, PS3, PSP/ PsVita and Switch versions.
-		</p>
+		<p> Black Chocobo is a save editor for Final Fantasy VII.</p>
+		<ul>
+			<li>Open All Kinds Of FF7 Saves ,PC, Psx ,Emulator Formats PS3, PSP, Switch</li>
+			<li>Language support for English , Spanish , French, German, Polish and Japanese</li>
+			<li>Will automatically detect 2012 steam saves and update your metadata.xml</li>
+			<li>Automatic Signing of ps3 and psp / psvita files</li>
+			<li>New Game + from your old saves</li>
+			<li>Import/Export Character stat files</li>
+			<li>Convert FF7 Save Game Formats And Regions</li>
+			<li>Extract Non FF7 Saves From memcard images</li>
+			<li>Slot Management Copy/Paste and Import slots to Saves</li>
+			<li>Edit Chars, Chocobo, Items/Materia</li>
+			<li>Edit: In-Game Options</li>
+			<li>Edit:Quest Progression</li>
+			<li>Set Chars In The PHS pool (bring aerith back or have a cloudless party)</li>
+			<li>Edit your save location</li>
+			<li>Edit Achievements for 2012/Steam versions</li>
+		</ul>
 	</description>
 	<launchable type="desktop-id">io.github.sithlord48.blackchocobo.desktop</launchable>
 	<url type="homepage">https://github.com/sithlord48/blackchocobo</url>
@@ -27,6 +38,19 @@
 	<provides>
 		<id>io.github.sithlord48.blackchocobo.desktop</id>
 	</provides>
+	<categories>
+		<category>Game</category>
+	</categories>
+	<keywords>
+		<keyword translate="no">PSX</keyword>
+		<keyword translate="no">FF7</keyword>
+		<keyword translate="no">Final</keyword>
+		<keyword translate="no">Fantasy</keyword>
+		<keyword translate="no">VII</keyword>
+		<keyword translate="en">Editor</keyword>
+		<keyword translate="en">Save</keyword>
+		<keyword translate="en">Playstation</keyword>
+	</keywords>
 	<content_rating type="oars-1.0" />
 	<releases>
 		<release version="1.13.0" date="2022-08-31" urgency="high"/>
@@ -34,21 +58,22 @@
 		<release version="1.12.0" date="2022-07-31"/>
 		<release version="1.11.1" date="2022-03-15"/>
 		<release version="1.10.0" date="2020-02-08"/>
-		<release version="1.9.91" date="2018-12-29"/>
-		<release version="1.9.90" date="2016-08-25"/>
-		<release version="1.9.83" date="2015-03-25"/>
-		<release version="1.9.82" date="2015-03-25"/>
-		<release version="1.9.80" date="2015-03-25"/>
-		<release version="1.9.71" date="2015-03-25"/>
-		<release version="1.9.51" date="2015-03-25"/>
-		<release version="1.9.6" date="2015-03-25"/>
-		<release version="1.9.5" date="2015-03-25"/>
-		<release version="1.9.4" date="2015-03-25"/>
-		<release version="1.9.3" date="2015-03-25"/>
-		<release version="1.9.2" date="2015-03-25"/>
-		<release version="1.9.1" date="2015-03-25"/>
-		<release version="1.9.0" date="2018-03-25"/>
-		<release version="1.9" date="2018-03-25"/>
+		<release version="1.9.91" date="2018-12-22"/>
+		<release version="1.9.90" date="2016-02-25"/>
+		<release version="1.9.83" date="2014-09-29"/>
+		<release version="1.9.82" date="2014-01-12"/>
+		<release version="1.9.80" date="2013-08-06"/>
+		<release version="1.9.71" date="2012-10-10"/>
+		<release version="1.9.70" date="2012-10-09"/>
+		<release version="1.9.60" date="2012-03-25"/>
+		<release version="1.9.51" date="2011-12-14"/>
+		<release version="1.9.50" date="2011-12-11"/>
+		<release version="1.9.4" date="2011-10-08"/>
+		<release version="1.9.3" date="2011-08-20"/>
+		<release version="1.9.2" date="2011-07-31"/>
+		<release version="1.9.1" date="2011-07-08"/>
+		<release version="1.9.0" date="2011-07-07"/>
+		<release version="1.9" date="2011-07-07"/>
 		<release version="1.8" date="2011-04-03"/>
 		<release version="1.7" date="2010-12-31"/>
 		<release version="1.6" date="2010-11-22"/>
@@ -56,5 +81,7 @@
 		<release version="1.4" date="2010-09-27"/>
 		<release version="1.3" date="2010-07-24"/>
 		<release version="1.2" date="2010-06-20"/>
+		<release version="1.1" date="2010-05-31"/>
+		<release version="1.0" date="2010-05-16"/>
 	</releases>
 </component>
