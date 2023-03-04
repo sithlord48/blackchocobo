@@ -5,6 +5,8 @@ A Save Editor for Final Fantasy 7
 
 [![SourceForge](https://img.shields.io/sourceforge/dm/blackchocobo?label=Download%20Stable%20Release)](https://sourceforge.net/projects/blackchocobo/files/latest/download) [![GitHub All Releases](https://img.shields.io/github/downloads/sithlord48/blackchocobo/total?label=Download%20Continuous%20Release)](https://github.com/sithlord48/blackchocobo/releases/tag/continuous) [![SourceForge](https://img.shields.io/sourceforge/dt/blackchocobo/Samples?label=Download%20Save%20Samples)](https://sourceforge.net/projects/blackchocobo/files/Samples/samples.tar.gz/download)
 
+<a href='https://flathub.org/apps/details/io.github.sithlord48.blackchocobo'><img width='120' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+
 ## Features
  - Supports All Kinds Of FF7 Saves ,PC, Psx ,Emulator Formats PS3, PSP/PsVita , Switch
  - Support for 2012 steam saves metadata.xml
