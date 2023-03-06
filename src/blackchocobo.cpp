@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010-2022 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2010-2023 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -1626,7 +1626,10 @@ void BlackChocobo::update_hexEditor_PSXInfo(void)
 {
     load = true;
 
+    disconnect(saveIcon, nullptr, nullptr, nullptr);
     saveIcon->setAll(ff7->slotIcon(s));
+    connect(saveIcon, &SaveIcon::nextIcon, ui->lblPsxIcon, &QLabel::setPixmap);
+
     ui->comboSlotNumber->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf(QStringLiteral("S")) + 1, 2).toInt() - 1);
     if(ff7->region(s).contains(QStringLiteral("BASCUS-94163")))
         ui->comboSlotRegion->setCurrentIndex(0);
