@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2020 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2020 - 2023 Chris Rizzitello <sithlord48@gmail.com>         //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -286,8 +286,8 @@ QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, cons
     const auto drives = QStorageInfo::mountedVolumes().toList();
     for (const auto &drive : drives) {
         bool chksubs = QFile::exists("/.flatpak-info") ? drive.subvolume().isEmpty() : true;
-        if (drive.fileSystemType() != "tmpfs" && drive.displayName() != "/boot" && drive.displayName() != "/home" && drive.isValid() && chksubs)
-            sideBarUrls.append(QUrl::fromLocalFile(drive.displayName()));
+        if (drive.fileSystemType() != "tmpfs" && drive.displayName() != "/boot" && drive.rootPath() != "/home" && drive.isValid() && chksubs)
+            sideBarUrls.append(QUrl::fromLocalFile(drive.rootPath()));
     }
 #else
     const QFileInfoList drives = QDir::drives();
