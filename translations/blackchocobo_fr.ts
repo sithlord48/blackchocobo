@@ -1431,7 +1431,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation>Chemin pour les fichiers de stats de personnage</translation>
+        <translation type="vanished">Chemin pour les fichiers de stats de personnage</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
@@ -1596,6 +1596,14 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Show Placeholders In Materia and Item Selection</source>
         <translation type="unfinished">Afficher les espaces réservés dans la sélection de materia et d&apos;éléments</translation>
+    </message>
+    <message>
+        <source>Create A Backup when Overwriting a file</source>
+        <translation type="unfinished">Créer une sauvegarde lors de l&apos;écrasement d&apos;un fichier</translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files And Backups</source>
+        <translation type="unfinished">Chemin d&apos;accès aux fichiers de statistiques de personnage et aux sauvegardes</translation>
     </message>
 </context>
 <context>

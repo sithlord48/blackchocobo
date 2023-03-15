@@ -119,6 +119,7 @@ void Options::loadSettings()
     ui->comboAppStyle->setCurrentText(BCSettings::value(SETTINGS::APPSTYLE).toString());
     ui->cbCapItemQty->setChecked(BCSettings::value(SETTINGS::ITEMCAP99).toBool());
     ui->cbShowPlaceholders->setChecked(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS).toBool());
+    ui->cbBackupSave->setChecked(BCSettings::value(SETTINGS::MAKEBACKUPS).toBool());
     adjustSize();
 }
 
@@ -173,6 +174,7 @@ void Options::restoreDefaultSettings()
     ui->comboAppStyle->setCurrentText(QStringLiteral("Fusion"));
     ui->cbCapItemQty->setChecked(false);
     ui->cbShowPlaceholders->setChecked(false);
+    ui->cbBackupSave->setChecked(false);
 }
 
 void Options::initConnections()
@@ -186,6 +188,7 @@ void Options::initConnections()
     connect(ui->comboColorScheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &Options::comboColorScheme_currentIndexChanged);
     connect(ui->comboAppStyle, &QComboBox::textActivated, this, &Options::comboAppStyle_currentTextChanged);
     connect(ui->cb_override_def_save, &QCheckBox::toggled, ui->defaultSaveLayout, &QFrame::setVisible);
+    connect(ui->cbBackupSave, &QCheckBox::toggled, this, &Options::cbButtonsSave_clicked);
 
     connect(ui->btnEditSideBarItems, &QPushButton::clicked, this, [this]{
         BCDialog::editSideBarPaths(this);
@@ -256,4 +259,9 @@ void Options::comboAppStyle_currentTextChanged(const QString &text)
 {
     BCSettings::setValue(SETTINGS::APPSTYLE, text);
     qApp->setStyle(QStyleFactory::create(text));
+}
+
+void Options::cbButtonsSave_clicked(bool checked)
+{
+    BCSettings::setValue(SETTINGS::MAKEBACKUPS, checked);
 }

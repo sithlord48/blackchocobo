@@ -1425,7 +1425,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished">文字スタットファイルのパス</translation>
+        <translation type="obsolete">文字スタットファイルのパス</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
@@ -1586,6 +1586,14 @@ trigger showing that tutorial</source>
     <message>
         <source>Show Placeholders In Materia and Item Selection</source>
         <translation type="unfinished">マテリアとアイテム選択でプレースホルダーを表示</translation>
+    </message>
+    <message>
+        <source>Create A Backup when Overwriting a file</source>
+        <translation type="unfinished">ファイルの上書き時にバックアップを作成する</translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files And Backups</source>
+        <translation type="unfinished">キャラクターの統計ファイルとバックアップのパス</translation>
     </message>
 </context>
 <context>

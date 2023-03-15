@@ -55,4 +55,5 @@ private:
     void cbNativeDialogs_clicked(bool checked);
     void comboColorScheme_currentIndexChanged(int index);
     void comboAppStyle_currentTextChanged(const QString &text);
+    void cbButtonsSave_clicked(bool checked);
 };
