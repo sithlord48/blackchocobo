@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>768</width>
-    <height>611</height>
+    <height>657</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -396,7 +396,7 @@
       <attribute name="title">
        <string>File Options</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_8">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="spacing">
@@ -537,6 +537,19 @@
         </layout>
        </item>
        <item>
+        <widget class="QCheckBox" name="cbBackupSave">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Create A Backup when Overwriting a file</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <layout class="QVBoxLayout" name="verticalLayout_7">
          <property name="spacing">
           <number>2</number>
@@ -544,7 +557,7 @@
          <item>
           <widget class="QLabel" name="label_6">
            <property name="text">
-            <string>Path For Character Stat Files</string>
+            <string>Path For Character Stat Files And Backups</string>
            </property>
           </widget>
          </item>

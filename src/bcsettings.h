@@ -44,6 +44,7 @@ namespace SETTINGS {
     inline const static QString APPSTYLE = QStringLiteral("appStyle");
     inline const static QString ITEMCAP99 = QStringLiteral("alwaysCapItemsAt99");
     inline const static QString SHOWPLACEHOLDERS = QStringLiteral("showPlaceHolders");
+    inline const static QString MAKEBACKUPS = QStringLiteral("createBackups");
 }
 
 class BCSettings : public QObject
@@ -90,7 +91,8 @@ private:
         SETTINGS::COLORSCHEME,
         SETTINGS::APPSTYLE,
         SETTINGS::ITEMCAP99,
-        SETTINGS::SHOWPLACEHOLDERS
+        SETTINGS::SHOWPLACEHOLDERS,
+        SETTINGS::MAKEBACKUPS
     };
     //Theme Colors
     inline static const QColor lightWindow = QColor(252, 252, 252);

@@ -935,6 +935,22 @@ bool BlackChocobo::actionSave_triggered()
 {
     if (_init || ff7->fileName().isEmpty())
         return actionSaveFileAs_triggered();
+
+    if(!ff7->isFileModified())
+        return true;
+
+    if(BCSettings::value(SETTINGS::MAKEBACKUPS, false).toBool()) {
+        auto name = QFileInfo(ff7->fileName()).fileName();
+        auto path = BCSettings::value(SETTINGS::STATFOLDER, QDir::homePath()).toString();
+        QString outfile = QStringLiteral("%1/%2.bak").arg(path, name);
+        int i = 1;
+        while(QFile(outfile).exists()) {
+            outfile = QStringLiteral("%1/%2(%3).bak").arg(path, name, QString::number(i));
+            i++;
+        }
+        QFile::copy(ff7->fileName(), outfile);
+    }
+
     return saveFileFull(ff7->fileName());
 }
 

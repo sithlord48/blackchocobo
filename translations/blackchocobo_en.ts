@@ -1431,7 +1431,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation>Path For Character Stat Files</translation>
+        <translation type="vanished">Path For Character Stat Files</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
@@ -1592,6 +1592,14 @@ trigger showing that tutorial</translation>
     <message>
         <source>Show Placeholders In Materia and Item Selection</source>
         <translation>Show Placeholders In Materia and Item Selection</translation>
+    </message>
+    <message>
+        <source>Create A Backup when Overwriting a file</source>
+        <translation>Create A Backup when Overwriting a file</translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files And Backups</source>
+        <translation>Path For Character Stat Files And Backups</translation>
     </message>
 </context>
 <context>

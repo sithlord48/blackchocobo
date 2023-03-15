@@ -1486,7 +1486,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Path For Character Stat Files</source>
-        <translation type="unfinished">Percorso per i file delle statistiche dei personaggi</translation>
+        <translation type="obsolete">Percorso per i file delle statistiche dei personaggi</translation>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
@@ -1592,6 +1592,14 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
     <message>
         <source>Show Placeholders In Materia and Item Selection</source>
         <translation type="unfinished">Mostra segnaposto nella selezione materia e oggetto</translation>
+    </message>
+    <message>
+        <source>Create A Backup when Overwriting a file</source>
+        <translation type="unfinished">Crea un backup durante la sovrascrittura di un file</translation>
+    </message>
+    <message>
+        <source>Path For Character Stat Files And Backups</source>
+        <translation type="unfinished">Percorso per i file e i backup delle statistiche dei personaggi</translation>
     </message>
 </context>
 <context>
