@@ -1525,7 +1525,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>File Options</source>
-        <translation type="unfinished">ファイルオプション</translation>
+        <translation type="obsolete">ファイルオプション</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
@@ -1533,7 +1533,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation type="unfinished">編集オプション</translation>
+        <translation type="obsolete">編集オプション</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1594,6 +1594,22 @@ trigger showing that tutorial</source>
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation type="unfinished">キャラクターの統計ファイルとバックアップのパス</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">保存</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished">ファイル パス</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="unfinished">編集</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ネイティブ ダイアログはファイル名の提案を提供できません&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

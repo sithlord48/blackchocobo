@@ -1470,7 +1470,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>File Options</source>
-        <translation type="unfinished">Opzioni file</translation>
+        <translation type="obsolete">Opzioni file</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
@@ -1498,7 +1498,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation type="unfinished">Opzioni di modifica</translation>
+        <translation type="obsolete">Opzioni di modifica</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1600,6 +1600,22 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation type="unfinished">Percorso per i file e i backup delle statistiche dei personaggi</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Salva</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished">Percorsi di file</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="unfinished">Modifica</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La finestra di dialogo nativa non è in grado di fornire suggerimenti sui nomi dei file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

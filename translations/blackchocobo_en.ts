@@ -1531,7 +1531,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>File Options</source>
-        <translation>File Options</translation>
+        <translation type="vanished">File Options</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
@@ -1539,7 +1539,7 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation>Editing Options</translation>
+        <translation type="vanished">Editing Options</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1600,6 +1600,22 @@ trigger showing that tutorial</translation>
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation>Path For Character Stat Files And Backups</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Save</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation>Paths</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation>Editing</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

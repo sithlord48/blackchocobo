@@ -1529,7 +1529,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>File Options</source>
-        <translation type="unfinished">Opciones de archivo</translation>
+        <translation type="obsolete">Opciones de archivo</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
@@ -1537,7 +1537,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation type="unfinished">Opciones de edición</translation>
+        <translation type="obsolete">Opciones de edición</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1602,6 +1602,22 @@ trigger showing that tutorial</source>
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation type="unfinished">Ruta para archivos de estadísticas de caracteres y copias de seguridad</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Guardar</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished">rutas de archivos</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="unfinished">Edición</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Native Dialog no puede proporcionar sugerencias de nombres de archivo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
