@@ -35,9 +35,7 @@
 			<image>https://a.fsdn.com/con/app/proj/blackchocobo/screenshots/2020-08-13_1.png</image>
 		</screenshot>
 	</screenshots>
-	<provides>
-		<id>io.github.sithlord48.blackchocobo.desktop</id>
-	</provides>
+	<provides> <id>io.github.sithlord48.blackchocobo.desktop</id> </provides>
 	<categories>
 		<category>Game</category>
 	</categories>
@@ -53,7 +51,22 @@
 	</keywords>
 	<content_rating type="oars-1.0" />
 	<releases>
-		<release version="1.13.0" date="2022-08-31" urgency="high"/>
+		<release version="1.14.0" date="2023-03-16" urgency="high">
+			<description>
+				<p>This stable Release fixes bugs and adds new features.</p>
+				<ul>
+					<li>Update to Qt 6.4</li>
+					<li>Update to ff7tk 0.83.2</li>
+					<li>Better use of palette</li>
+				</ul>
+			</description>
+		<url>https://github.com/sithlord48/blackchocobo/releases/tag/v1.14.0</url>
+		<issues>
+			<issue url="https://github.com/sithlord48/blackchocobo/issues/51">Selected Character Max Button Only works for Cloud</issue>
+			<issue url="https://github.com/sithlord48/blackchocobo/issues/61">Option in Config to enable auto-backups when saving</issue>
+		</issues>
+		</release>
+		<release version="1.13.0" date="2022-08-31"/>
 		<release version="1.12.1" date="2022-08-02"/>
 		<release version="1.12.0" date="2022-07-31"/>
 		<release version="1.11.1" date="2022-03-15"/>
