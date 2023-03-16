@@ -1469,7 +1469,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>File Options</source>
-        <translation>Opcje Plików</translation>
+        <translation type="vanished">Opcje Plików</translation>
     </message>
     <message>
         <source>Default Path For Loading All Saves</source>
@@ -1497,7 +1497,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation>Opcje edycji</translation>
+        <translation type="vanished">Opcje edycji</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1598,6 +1598,22 @@ trigger showing that tutorial</source>
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation type="unfinished">Ścieżka do plików statystyk postaci i kopii zapasowych</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Ratować</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished">Ścieżki plików</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="unfinished">Redagowanie</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Natywne okno dialogowe nie może podać sugestii nazw plików&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

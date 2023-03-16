@@ -1531,7 +1531,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>File Options</source>
-        <translation type="unfinished">Options de fichier</translation>
+        <translation type="obsolete">Options de fichier</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
@@ -1539,7 +1539,7 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Editing Options</source>
-        <translation type="unfinished">Options d&apos;édition</translation>
+        <translation type="obsolete">Options d&apos;édition</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1604,6 +1604,22 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Path For Character Stat Files And Backups</source>
         <translation type="unfinished">Chemin d&apos;accès aux fichiers de statistiques de personnage et aux sauvegardes</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Enregistrer</translation>
+    </message>
+    <message>
+        <source>Paths</source>
+        <translation type="unfinished">Chemins de fichiers</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="unfinished">Édition</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La boîte de dialogue native n&apos;est pas en mesure de fournir des suggestions de noms de fichiers&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

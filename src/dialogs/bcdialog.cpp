@@ -294,6 +294,8 @@ QFileDialog* BCDialog::getFileDialog(QWidget *parent, const QString &title, cons
     for (const QFileInfo &drive : drives)
         sideBarUrls.append(QUrl::fromLocalFile(drive.path()));
 #endif
+    sideBarUrls.append(QUrl::fromLocalFile(QDir::homePath()));
+
     const QStringList SideBarUrls = BCSettings::value(SETTINGS::SIDEBARURLS).toStringList();
     for(const QString &url : SideBarUrls)
         sideBarUrls.append(QUrl::fromLocalFile(url));
