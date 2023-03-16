@@ -279,14 +279,14 @@ void BlackChocobo::initDisplay()
     ui->lbl_battle_love_barret->setScaledContents(true);
     ui->lbl_battle_love_tifa->setScaledContents(true);
     ui->lbl_battle_love_yuffie->setScaledContents(true);
-    ui->lbl_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith));
-    ui->lbl_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret));
-    ui->lbl_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa));
-    ui->lbl_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
-    ui->lbl_battle_love_aeris->setPixmap(FF7Char::instance()->pixmap(FF7Char::Aerith));
-    ui->lbl_battle_love_barret->setPixmap(FF7Char::instance()->pixmap(FF7Char::Barret));
-    ui->lbl_battle_love_tifa->setPixmap(FF7Char::instance()->pixmap(FF7Char::Tifa));
-    ui->lbl_battle_love_yuffie->setPixmap(FF7Char::instance()->pixmap(FF7Char::Yuffie));
+    ui->lbl_love_aeris->setPixmap(FF7Char::pixmap(FF7Char::Aerith));
+    ui->lbl_love_barret->setPixmap(FF7Char::pixmap(FF7Char::Barret));
+    ui->lbl_love_tifa->setPixmap(FF7Char::pixmap(FF7Char::Tifa));
+    ui->lbl_love_yuffie->setPixmap(FF7Char::pixmap(FF7Char::Yuffie));
+    ui->lbl_battle_love_aeris->setPixmap(FF7Char::pixmap(FF7Char::Aerith));
+    ui->lbl_battle_love_barret->setPixmap(FF7Char::pixmap(FF7Char::Barret));
+    ui->lbl_battle_love_tifa->setPixmap(FF7Char::pixmap(FF7Char::Tifa));
+    ui->lbl_battle_love_yuffie->setPixmap(FF7Char::pixmap(FF7Char::Yuffie));
 }
 
 void BlackChocobo::setItemSizes()
@@ -326,13 +326,13 @@ void BlackChocobo::populateCombos()
 
 //World party leader Combo.
     if (ui->comboWorldPartyLeader->count() != 0) {
-        ui->comboWorldPartyLeader->setItemText(0, FF7Char::instance()->defaultName(FF7Char::Cloud));
-        ui->comboWorldPartyLeader->setItemText(1, FF7Char::instance()->defaultName(FF7Char::Tifa));
-        ui->comboWorldPartyLeader->setItemText(2, FF7Char::instance()->defaultName(FF7Char::Cid));
+        ui->comboWorldPartyLeader->setItemText(0, FF7Char::defaultName(FF7Char::Cloud));
+        ui->comboWorldPartyLeader->setItemText(1, FF7Char::defaultName(FF7Char::Tifa));
+        ui->comboWorldPartyLeader->setItemText(2, FF7Char::defaultName(FF7Char::Cid));
     } else {
-        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Cloud), FF7Char::instance()->defaultName(FF7Char::Cloud));
-        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Tifa), FF7Char::instance()->defaultName(FF7Char::Tifa));
-        ui->comboWorldPartyLeader->addItem(FF7Char::instance()->icon(FF7Char::Cid), FF7Char::instance()->defaultName(FF7Char::Cid));
+        ui->comboWorldPartyLeader->addItem(FF7Char::icon(FF7Char::Cloud), FF7Char::defaultName(FF7Char::Cloud));
+        ui->comboWorldPartyLeader->addItem(FF7Char::icon(FF7Char::Tifa), FF7Char::defaultName(FF7Char::Tifa));
+        ui->comboWorldPartyLeader->addItem(FF7Char::icon(FF7Char::Cid), FF7Char::defaultName(FF7Char::Cid));
     }
 }
 
@@ -709,7 +709,7 @@ void BlackChocobo::loadChildWidgetSettings()
     chocoboManager->setAdvancedMode(BCSettings::value(SETTINGS::CHOCOADVANCED, false).toBool());
     locationViewer->setAdvancedMode(BCSettings::value(SETTINGS::LOCVIEWADVANCED, false).toBool());
     ui->tabWidget->setTabEnabled(9, BCSettings::value(SETTINGS::ENABLETEST, false).toBool());
-    if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
+    if (FF7SaveInfo::isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
         setControllerMappingVisible(BCSettings::value(SETTINGS::ALWAYSSHOWCONTROLLERMAP, false).toBool());
     ui->bm_unknown->setVisible(BCSettings::value(SETTINGS::PROGRESSADVANCED, false).toBool());
     ui->sbBhId->setVisible(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
@@ -812,7 +812,7 @@ void BlackChocobo::actionOpenSaveFile_triggered()
             return;//cancel load.
     }
 
-    QString fileName = BCDialog::getOpenFileName(this, tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::instance()->knownTypesFilter());
+    QString fileName = BCDialog::getOpenFileName(this, tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(), FF7SaveInfo::knownTypesFilter());
     if (!fileName.isEmpty())
         loadFileFull(fileName, 0);
 }
@@ -833,8 +833,9 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
         QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName, file.errorString()));
         return;
     }
+    if(!reload)
+        prevFile = ff7->fileName();
 
-    prevFile = ff7->fileName();
     hexEditor->setCursorPosition(0);
     hexCursorPos = 0;
 
@@ -873,12 +874,12 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(),
-                       FF7SaveInfo::instance()->knownTypesFilter());
+                       FF7SaveInfo::knownTypesFilter());
     if (!fileName.isEmpty()) {
         FF7Save *tempSave = new FF7Save();
         if (tempSave->loadFile(fileName)) {
             int fileSlot = 0;
-            if (FF7SaveInfo::instance()->slotCount(tempSave->format()) > 1) {
+            if (FF7SaveInfo::slotCount(tempSave->format()) > 1) {
                 SlotSelect *SSelect = new SlotSelect(tempSave, false, this);
                 fileSlot = SSelect->exec();
                 if (fileSlot == -1) {
@@ -957,18 +958,18 @@ bool BlackChocobo::actionSave_triggered()
 bool BlackChocobo::actionSaveFileAs_triggered()
 {
     QMap<QString, FF7SaveInfo::FORMAT> typeMap;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::SWITCH)] = FF7SaveInfo::FORMAT::SWITCH;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VMC)] = FF7SaveInfo::FORMAT::VMC;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::VGS)] = FF7SaveInfo::FORMAT::VGS;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::DEX)] = FF7SaveInfo::FORMAT::DEX;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSP)] = FF7SaveInfo::FORMAT::PSP;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
-    typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PC)] = FF7SaveInfo::FORMAT::PC;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::SWITCH)] = FF7SaveInfo::FORMAT::SWITCH;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::VMC)] = FF7SaveInfo::FORMAT::VMC;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::VGS)] = FF7SaveInfo::FORMAT::VGS;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::DEX)] = FF7SaveInfo::FORMAT::DEX;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PSP)] = FF7SaveInfo::FORMAT::PSP;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
+    typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
     const QStringList typeKeys = typeMap.keys();
-    QString selectedType = ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN ? FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PC) : typeMap.key(ff7->format(), QString());
+    QString selectedType = ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN ? FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PC) : typeMap.key(ff7->format(), QString());
     QString selectedFile = ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN ? QStringLiteral("save00.ff7") : QFile(ff7->fileName()).fileName();
     QString path;
 
@@ -1343,7 +1344,7 @@ void BlackChocobo::setmenu(bool newgame)
         ui->actionNewGame->setEnabled(1);
     }
 
-    if ( FF7SaveInfo::instance()->slotCount(ff7->format()) > 1) { //more then one slot, or unknown Type
+    if ( FF7SaveInfo::slotCount(ff7->format()) > 1) { //more then one slot, or unknown Type
         ui->actionNextSlot->setEnabled(s != 14);
         ui->actionPreviousSlot->setEnabled(s != 0);
         ui->actionShowSelectionDialog->setEnabled(1);
@@ -1486,10 +1487,10 @@ void BlackChocobo::materia_id_changed(qint8 id)
 void BlackChocobo::CheckGame()
 {
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
-            || ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->isTypePC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
+            || ((!ff7->isFF7(s)) && !FF7SaveInfo::isTypePC(ff7->format()) && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)))) {
         // NOT FF7
         errbox error(this, ff7, s);
-        if (FF7SaveInfo::instance()->slotCount(ff7->format()) == 1)
+        if (FF7SaveInfo::slotCount(ff7->format()) == 1)
             error.setSingleSlot(true);
         switch (error.exec()) {
         case 0://View Anyway..
@@ -1509,10 +1510,10 @@ void BlackChocobo::CheckGame()
 
         case 3://exported Clicked
             QMap<QString, FF7SaveInfo::FORMAT> typeMap;
-            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
-            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
-            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
-            typeMap[FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
+            typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PSX)] = FF7SaveInfo::FORMAT::PSX;
+            typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PS3)] = FF7SaveInfo::FORMAT::PS3;
+            typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PGE)] = FF7SaveInfo::FORMAT::PGE;
+            typeMap[FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PDA)] = FF7SaveInfo::FORMAT::PDA;
             QString selectedType = typeMap.key(FF7SaveInfo::FORMAT::PSX);
             const QStringList typeKeys = typeMap.keys();
 
@@ -1763,7 +1764,7 @@ void BlackChocobo::tabWidget_currentChanged(int index)
         for (int i = 0; i < 16; i++) {
             optionsWidget->setInput(i, ff7->controllerMapping(s, i));
         }
-        if ((!FF7SaveInfo::instance()->isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
+        if ((!FF7SaveInfo::isTypePC(ff7->format()) && ff7->format() != FF7SaveInfo::FORMAT::UNKNOWN)
                 || BCSettings::value(SETTINGS::ALWAYSSHOWCONTROLLERMAP).toBool()) {
             setControllerMappingVisible(true);
             if (optionsWidget->verticalScrollBar()->isVisible()) {
@@ -1791,7 +1792,7 @@ void BlackChocobo::hexTabUpdate(int viewMode)
     ui->lblSlotSize->setVisible(false);
     ui->psxff7Extras->setVisible(false);
     disconnect(hexEditor, &QHexEdit::dataChanged, this, &BlackChocobo::hexEditorChanged);
-    if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+    if (FF7SaveInfo::isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
         hexEditor->setData(ff7->slotFF7Data(s));
     } else {
         ui->psxExtras->setVisible(true);
@@ -1826,12 +1827,12 @@ void BlackChocobo::guirefresh(bool newgame)
     load = true;
     /*~~~~Check for SG type and ff7~~~~*/
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
-            ((!ff7->isFF7(s)) && !FF7SaveInfo::instance()->isTypePC(ff7->format())
+            ((!ff7->isFF7(s)) && !FF7SaveInfo::isTypePC(ff7->format())
              && (ff7->psx_block_type(s) != char(FF7SaveInfo::PSXBLOCKTYPE::BLOCK_EMPTY)) && (ff7->psx_block_type(s) != '\x00'))) {
         CheckGame();//Not FF7! Handled By CheckGame()
     } else {
         //IS FF7 Slot
-        if (FF7SaveInfo::instance()->isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
+        if (FF7SaveInfo::isTypePC(ff7->format()) || ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN) {
             if (ui->comboHexEditor->currentIndex() != 1)
                 ui->comboHexEditor->setCurrentIndex(1);
         }
@@ -2194,13 +2195,13 @@ void BlackChocobo::btnAddAllMateria_clicked()
 void BlackChocobo::locationSelectionChanged(QString fieldName)
 {
     if (!load) {
-        ff7->setMapId(s, FF7Location::instance()->mapID(fieldName).toUShort());
-        ff7->setLocationId(s, FF7Location::instance()->locationID(fieldName).toUShort());
-        ff7->setLocationX(s, FF7Location::instance()->x(fieldName).toShort());
-        ff7->setLocationY(s, FF7Location::instance()->y(fieldName).toShort());
-        ff7->setLocationT(s, FF7Location::instance()->t(fieldName).toUShort());
-        ff7->setLocationD(s, quint8(FF7Location::instance()->d(fieldName).toInt()));
-        ff7->setLocation(s, FF7Location::instance()->locationString(fieldName));
+        ff7->setMapId(s, FF7Location::mapID(fieldName).toUShort());
+        ff7->setLocationId(s, FF7Location::locationID(fieldName).toUShort());
+        ff7->setLocationX(s, FF7Location::x(fieldName).toShort());
+        ff7->setLocationY(s, FF7Location::y(fieldName).toShort());
+        ff7->setLocationT(s, FF7Location::t(fieldName).toUShort());
+        ff7->setLocationD(s, quint8(FF7Location::d(fieldName).toInt()));
+        ff7->setLocation(s, FF7Location::locationString(fieldName));
         statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName), 750);
     }
 }
@@ -3423,7 +3424,7 @@ void BlackChocobo::btnAddAllItems_clicked()
     ui->btnRemoveAllItems->click();
     int itemMax = (BCSettings::value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
     for (int i = 0; i < 320; i++) {
-        if (!FF7Item::instance()->name(i).isEmpty()) {
+        if (!FF7Item::name(i).isEmpty()) {
             if (i < 106)
                 ff7->setItem(s, i, quint16(i), itemMax);
             else // after the block of empty items shift up 23 spots.
@@ -3922,7 +3923,7 @@ void BlackChocobo::comboSlotRegionChanged(int index)
 
 void BlackChocobo::hexEditorChanged(void)
 {
-    if (FF7SaveInfo::instance()->isTypePC(ff7->format())) {
+    if (FF7SaveInfo::isTypePC(ff7->format())) {
         ff7->setSlotFF7Data(s, hexEditor->data());
     } else {
         switch (ui->comboHexEditor->currentIndex()) {

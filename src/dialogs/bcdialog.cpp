@@ -99,34 +99,34 @@ QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const
     } else {
         QObject::connect(dialog, &QFileDialog::filterSelected, [dialog, region](const QString &filter) {
             QString name;
-            if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSX).join(" "))) {
+            if(filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PSX).join(" "))) {
                 dialog->setDefaultSuffix(QString());
                 name = region;
-            } else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PGE).join(" "))) {
+            } else if(filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PGE).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".mcs"));
                 name = region;
-            } else if(filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PDA).join(" "))) {
+            } else if(filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PDA).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".mcb"));
                 name = region;
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PS3).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PS3).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".PSV"));
                 name = region.mid(0, 12).append(QTextCodec::codecForName("Shift-JIS")->fromUnicode(region.mid(12)).toHex().toUpper());
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PC).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PC).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".ff7"));
                 name = QStringLiteral("save00");
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::SWITCH).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::SWITCH).join(" "))) {
                 dialog->setDefaultSuffix(QString());
                 name = QStringLiteral("ff7slot00");
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::PSP).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::PSP).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".VMP"));
                 name = QStringLiteral("SCEVMC0");
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VMC).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::VMC).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".mcr"));
                 name = QStringLiteral("vmcCard");
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::DEX).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::DEX).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".gme"));
                 name = QStringLiteral("dexCard");
-            } else if (filter.contains(FF7SaveInfo::instance()->typeExtension(FF7SaveInfo::FORMAT::VGS).join(" "))) {
+            } else if (filter.contains(FF7SaveInfo::typeExtension(FF7SaveInfo::FORMAT::VGS).join(" "))) {
                 dialog->setDefaultSuffix(QStringLiteral(".vgs"));
                 name = QStringLiteral("vgsCard");
             }

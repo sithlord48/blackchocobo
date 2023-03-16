@@ -231,7 +231,7 @@ void Options::btn_set_load_path_clicked()
 
 void Options::btn_set_default_save_clicked()
 {
-    QString temp = BCDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::instance()->typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).fileName());
+    QString temp = BCDialog::getOpenFileName(this, tr("Select A Default Save Game (Must Be Raw PSX)"), QFileInfo(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).path(), FF7SaveInfo::typeFilter(FF7SaveInfo::FORMAT::PSX), QFile(BCSettings::value(SETTINGS::DEFAULTSAVE).toString()).fileName());
     if(!temp.isEmpty())
         ui->line_default_save->setText(temp);
 }
