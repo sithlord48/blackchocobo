@@ -10,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.13.0.0 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.14.0.0 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
   FIND_PACKAGE(Git)
@@ -50,7 +50,7 @@ add_definitions(-DBC_VERSION="${BC_VERSION}")
 
 set(QT_DEFAULT_MAJOR_VERSION 6 CACHE STRING "" FORCE)
 set(REQUIRED_QT_VERSION 6.2.0)
-set(REQUIRED_FF7TK_VERSION 0.83.0)
+set(REQUIRED_FF7TK_VERSION 0.83.2)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "" FORCE)
