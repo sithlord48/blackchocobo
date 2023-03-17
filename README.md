@@ -3,9 +3,7 @@ A Save Editor for Final Fantasy 7
 
 [![CI Status](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml/badge.svg)](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/993fc5029fd6486eb304d945a500b58f)](https://app.codacy.com/gh/sithlord48/blackchocobo/dashboard)
 
-[![SourceForge](https://img.shields.io/sourceforge/dm/blackchocobo?label=Download%20Stable%20Release)](https://sourceforge.net/projects/blackchocobo/files/latest/download) [![GitHub All Releases](https://img.shields.io/github/downloads/sithlord48/blackchocobo/total?label=Download%20Continuous%20Release)](https://github.com/sithlord48/blackchocobo/releases/tag/continuous) [![SourceForge](https://img.shields.io/sourceforge/dt/blackchocobo/Samples?label=Download%20Save%20Samples)](https://sourceforge.net/projects/blackchocobo/files/Samples/samples.tar.gz/download)
-
-<a href='https://flathub.org/apps/details/io.github.sithlord48.blackchocobo'><img width='120' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+[![Github Releases](https://img.shields.io/sourceforge/dm/blackchocobo?logo=github&label=Download%20Stable%20Release)](https://github.com/sithlord48/blackchocobo/releases/tag/v1.14.0) [![GitHub Continious](https://img.shields.io/github/downloads/sithlord48/blackchocobo/total?logo=github&label=Download%20Continuous%20Release)](https://github.com/sithlord48/blackchocobo/releases/tag/continuous) [![Get From Flathub](https://img.shields.io/flathub/downloads/io.github.sithlord48.blackchocobo?logo=flathub&label=Download%20From%20Flathub)](https://flathub.org/apps/details/io.github.sithlord48.blackchocobo) [![SourceForge](https://img.shields.io/sourceforge/dt/blackchocobo/Samples?label=Download%20Save%20Samples)](https://sourceforge.net/projects/blackchocobo/files/Samples/samples.tar.gz/download)
 
 ## Features
  - Supports All Kinds Of FF7 Saves ,PC, Psx ,Emulator Formats PS3, PSP/PsVita , Switch
