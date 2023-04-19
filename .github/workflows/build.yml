@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.4.2
-    QtKey: "6.4.2"
+    QtVersion: 6.5.1
+    QtKey: "6.5.1"
     PackageGLOB: "Black_Chocobo-*.*"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
@@ -84,7 +84,7 @@ jobs:
           }
         - {
             name: "MacOS"
-            , os: macos-11
+            , os: macos-latest
             , QT_INST_DIR: /Users/runner
             , ff7tkPrefix: /Users/runner/ff7tk
             , ff7tkPackage: ff7tk-continuous-macos.zip
@@ -153,7 +153,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update -y > /dev/null
-        sudo apt-get install -qqq libxkbcommon-x11-0 > /dev/null
+        sudo apt-get install -qqq libxkbcommon-x11-0 libxcb-cursor0 > /dev/null
         make DESTDIR=appdir install
         wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
         wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"

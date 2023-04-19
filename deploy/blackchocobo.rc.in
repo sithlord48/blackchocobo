@@ -1,4 +1,4 @@
-IDI_ICON1               ICON    "blackchocobo.ico"
+IDI_ICON1               ICON    "@CMAKE_CURRENT_SOURCE_DIR@/blackchocobo.ico"
 
 #include <windows.h>
 
@@ -32,7 +32,7 @@ BEGIN
             VALUE "FileDescription",  "@PROJECT_DESCRIPTION@"
             VALUE "FileVersion",      VER_FILEVERSION_STR
             VALUE "InternalName",     "blackchocobo"
-            VALUE "LegalCopyright",   "(C) 2010-2022 Chris Rizzitello"
+            VALUE "LegalCopyright",   "(C) 2010-2023 Chris Rizzitello"
             VALUE "OriginalFilename", "blackchocobo.exe"
             VALUE "ProductName",      "Black Chocobo"
             VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
