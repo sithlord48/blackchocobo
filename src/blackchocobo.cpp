@@ -752,6 +752,8 @@ void BlackChocobo::changeEvent(QEvent *e)
         updateStolenMateria();
         if (ui->psxExtras->isVisible())
             update_hexEditor_PSXInfo();
+    } else {
+        QWidget::changeEvent(e);
     }
 }
 
