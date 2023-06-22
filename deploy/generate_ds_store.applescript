@@ -36,7 +36,7 @@ on run argv
         set toolbar visible to false
         set the bounds to { 400, 100, 1200, 725 }
         set position of item "Black_Chocobo.app" to { 0, 325 }
-        set position of item "Applications" to { 625, 325 }
+        set position of item "Applications" to { 550, 325 }
       end tell
     close
   end tell
