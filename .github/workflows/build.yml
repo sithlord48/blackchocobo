@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.5.1
-    QtKey: "6.5.1"
+    QtVersion: 6.5.3
+    QtKey: "6.5.3"
     PackageGLOB: "Black_Chocobo-*.*"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
@@ -238,7 +238,7 @@ jobs:
       uses: actions/download-artifact@v3
     - name: Deploy Continuous
       if: github.ref == 'refs/heads/master'
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303
       with:
        repo_token: "${{ secrets.DEPLOYTOKEN }}"
        automatic_release_tag: "continuous"
@@ -250,7 +250,7 @@ jobs:
          debian-artifacts/*
     - name: Deploy Release
       if: contains(github.ref, 'tags/v')
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303
       with:
        repo_token: "${{ secrets.DEPLOYTOKEN }}"
        prerelease: false
