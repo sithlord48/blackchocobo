@@ -18,7 +18,7 @@
 #include <QObject>
 #include <QSettings>
 #include <QVariant>
-namespace SETTINGS {
+struct SETTINGS {
     inline const static QString MAINGEOMETRY = QStringLiteral("MainGeometry");
     inline const static QString AUTOGROWTH = QStringLiteral("autochargrowth");
     inline const static QString CHARADVANCED = QStringLiteral("charEditorAdvanced");
@@ -45,7 +45,7 @@ namespace SETTINGS {
     inline const static QString ITEMCAP99 = QStringLiteral("alwaysCapItemsAt99");
     inline const static QString SHOWPLACEHOLDERS = QStringLiteral("showPlaceHolders");
     inline const static QString MAKEBACKUPS = QStringLiteral("createBackups");
-}
+};
 
 class BCSettings : public QObject
 {
