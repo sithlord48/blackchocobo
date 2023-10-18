@@ -21,7 +21,7 @@ void PartyTab::resizeEvent(QResizeEvent *ev)
 {
     if (ev->size() == ev->oldSize())
         return;
-    for (auto button: qAsConst(m_btnChars)) {
+    for (auto button: std::as_const(m_btnChars)) {
         if(button != m_btnChars.at(0))
             button->resize(m_btnChars.at(0)->size());
         button->setIconSize(QSize(button->size().width() - 4 , button->size().height()- 6));
@@ -52,7 +52,7 @@ PartyTab::PartyTab(QWidget *parent)
 
     updateText();
     auto partyLayout = new QHBoxLayout;
-    for (auto combo : qAsConst(m_comboParty))
+    for (auto combo : std::as_const(m_comboParty))
         partyLayout->addWidget(combo);
     m_groupParty->setLayout(partyLayout);
 

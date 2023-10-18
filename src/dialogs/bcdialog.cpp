@@ -158,7 +158,7 @@ void BCDialog::editSideBarPaths(QWidget *parent)
     listWidget.setSelectionMode(QListWidget::SingleSelection);
     listWidget.setDragDropMode(QAbstractItemView::InternalMove);
     QStringList urls = BCSettings::value(SETTINGS::SIDEBARURLS).toStringList();
-    for (const QString &string : qAsConst(urls))
+    for (const QString &string : std::as_const(urls))
         listWidget.addItem(string);
     QPushButton btnAdd(QIcon::fromTheme(QStringLiteral("list-add")), QString(), nullptr);
     btnAdd.setToolTip(QObject::tr("Add a place"));

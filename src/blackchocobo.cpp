@@ -158,7 +158,7 @@ void BlackChocobo::detectTranslations()
             }
         }
     }
-    for (const QString &translation : qAsConst(langList)) {
+    for (const QString &translation : std::as_const(langList)) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(3, 2);
