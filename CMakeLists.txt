@@ -77,6 +77,6 @@ endif()
 
 add_subdirectory(deploy)
 add_subdirectory(icons)
-add_subdirectory(translations)
 add_subdirectory(qhexedit)
 add_subdirectory(src)
+add_subdirectory(translations)

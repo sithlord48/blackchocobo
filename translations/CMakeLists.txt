@@ -16,16 +16,22 @@ set ( blackchocobo_TRS
     blackchocobo_re.ts
 )
 
-set (FF7TK_TRS
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_de.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_en.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_es.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_fr.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_it.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_ja.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_pl.qm
-    ${ff7tk_DIR}/../../../share/ff7tk/translations/ff7tk_re.qm
-)
+if(WIN32 OR APPLE)
+    file(REAL_PATH "${ff7tk_DIR}/../../../" ff7tk_ROOT )
+    find_path(_ff7tk_I18N_PATH NAMES translations PATHS "${ff7tk_ROOT}" PATH_SUFFIXES "/share/ff7tk" NO_DEFAULT_PATH REQUIRED)
+    file(REAL_PATH "${_ff7tk_I18N_PATH}/translations" ff7tk_I18N_PATH)
+
+    set (FF7TK_TRS
+        ${ff7tk_I18N_PATH}/ff7tk_de.qm
+        ${ff7tk_I18N_PATH}/ff7tk_en.qm
+        ${ff7tk_I18N_PATH}/ff7tk_es.qm
+        ${ff7tk_I18N_PATH}/ff7tk_fr.qm
+        ${ff7tk_I18N_PATH}/ff7tk_it.qm
+        ${ff7tk_I18N_PATH}/ff7tk_ja.qm
+        ${ff7tk_I18N_PATH}/ff7tk_pl.qm
+        ${ff7tk_I18N_PATH}/ff7tk_re.qm
+    )
+endif()
 
 qt_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none)
 add_custom_target(app_translations ALL DEPENDS ${TRS})
@@ -37,7 +43,9 @@ elseif(WIN32)
     install(FILES ${FF7TK_TRS} DESTINATION translations)
 elseif(APPLE)
     set(MAC_LANG_PATH Black_Chocobo.app/Contents/MacOS/translations)
-    set(MAC_QT_LANG_PATH ${Qt${QT_DEFAULT_MAJOR_VERSION}_DIR}/../../../translations)
+    file(REAL_PATH "${_qt_bin_dir}/../" QT_ROOT_DIR)
+    find_file(_QT_QM_FILE NAMES qtbase_de.qm PATHS ${QT_ROOT_DIR} PATH_SUFFIXES "translations" "share/qt/translations" REQUIRED)
+    get_filename_component(MAC_QT_LANG_PATH "${_QT_QM_FILE}" DIRECTORY)
     install(FILES ${TRS} DESTINATION ${MAC_LANG_PATH})
     install(FILES ${FF7TK_TRS} DESTINATION ${MAC_LANG_PATH})
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_de.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_de.qm)
