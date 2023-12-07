@@ -106,6 +106,11 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     partyTab->pressCharacterButton(FF7Char::Cloud);
     ff7->setFormat(FF7SaveInfo::FORMAT::UNKNOWN);
     ff7->setFileModified(false, 0);
+
+    //Work around Qt 6.6.1 regression where it won't adjust the columns until after the gui is completely created
+    for(int i=0;i < 3; i++) {
+        itemListView->setColumnWidth(i, itemListView->sizeHintForColumn(i));
+    }
 }
 
 QString BlackChocobo::checkIconTheme()
