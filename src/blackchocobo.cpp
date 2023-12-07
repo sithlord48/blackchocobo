@@ -3426,17 +3426,15 @@ void BlackChocobo::btnAddAllItems_clicked()
 {
     ui->btnRemoveAllItems->click();
     int itemMax = (BCSettings::value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
-    for (int i = 0; i < 320; i++) {
-        if (!FF7Item::name(i).isEmpty()) {
-            if (i < 106)
-                ff7->setItem(s, i, quint16(i), itemMax);
-            else // after the block of empty items shift up 23 spots.
-                ff7->setItem(s, (i - 23), quint16(i), itemMax);
-        } else {
-            ff7->setItem(s, i, 0x1FF, itemMax);   //exclude the test items
-        }
-        if (i > 296)
-            ff7->setItem(s, i, 0x1FF, 0x7F);   //replace the shifted ones w/ empty slots
+    for (int i = 0; i < FF7Item::size(); i++) {
+        if (FF7Item::placeHolderIds().contains(i))
+            continue;
+        if (i <= FF7Item::GuideBook)// Guidebook is the last item before the placeholders.
+            ff7->setItem(s, i, quint16(i), itemMax);
+        else if(i <= FF7Item::HypnoCrown)//HyponoCrown is the last valid ID
+            ff7->setItem(s, (i - FF7Item::placeHolderIds().count()), quint16(i), itemMax);
+        else
+            ff7->setItem(s, i, FF7Item::EmptyItemData);   //replace the shifted ones w/ empty slots
     }
     ff7ItemModel->setItems(ff7->items(s));
     statusBar()->showMessage(tr("All Items Added"), 750);
