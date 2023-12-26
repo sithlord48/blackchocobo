@@ -90,6 +90,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
         QIcon::setFallbackThemeName(QStringLiteral("bc-%1").arg(checkIconTheme()));
     }
     setWindowIcon(QIcon(":/icons/common/blackchocobo"));
+    QApplication::setDesktopFileName(QStringLiteral("io.github.sithlord48.blackchocobo"));
     buffer_materia = FF7Materia::encodeMateria(FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
     setAcceptDrops(true);
     ui->setupUi(this);
