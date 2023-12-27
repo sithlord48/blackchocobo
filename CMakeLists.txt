@@ -10,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 cmake_policy(SET CMP0010 NEW)
 
-project( blackchocobo VERSION 1.14.0.0 DESCRIPTION "Final Fantasy 7 Save Editor")
+project( blackchocobo VERSION 1.15.0.0 DESCRIPTION "Final Fantasy 7 Save Editor")
 # Get the version from git if it's a git repository
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
   FIND_PACKAGE(Git)

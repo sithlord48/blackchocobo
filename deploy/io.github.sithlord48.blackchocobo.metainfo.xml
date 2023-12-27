@@ -51,6 +51,16 @@
 	</keywords>
 	<content_rating type="oars-1.0" />
 	<releases>
+		<release version="1.15.0" date="2023-12-26" urgency="high">
+			<description>
+				<p>This stable Release fixes bugs and adds new features.</p>
+				<ul>
+					<li>Update to Qt 6.6</li>
+					<li>Update to ff7tk 1.0.0</li>
+				</ul>
+			</description>
+		<url>https://github.com/sithlord48/blackchocobo/releases/tag/v1.15.0</url>
+		</release>
 		<release version="1.14.0" date="2023-03-16" urgency="high">
 			<description>
 				<p>This stable Release fixes bugs and adds new features.</p>
