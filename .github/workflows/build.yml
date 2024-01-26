@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.6.0
-    QtKey: "6.6.0"
+    QtVersion: 6.6.1
+    QtKey: "6.6.1"
     PackageGLOB: "Black_Chocobo-*.*"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
@@ -43,7 +43,7 @@ jobs:
              , debArch: amd64
           }
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch --tags --force
@@ -60,9 +60,9 @@ jobs:
         cmake --build build
         cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
     - name: Upload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: debian-artifacts
+        name: debian-artifacts-${{ matrix.config.name }}
         path: blackchocobo*.deb
   main_build:
     name: ${{ matrix.config.name }}
@@ -106,7 +106,7 @@ jobs:
       run: |
         echo "BCVersion=${{ needs.precheck.outputs.version }}" >> $GITHUB_ENV
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - run: git fetch --tags --force
@@ -118,7 +118,7 @@ jobs:
         arch: ${{matrix.config.WIN_ARCH}}
 
     - name: Install Qt
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v3.3.0
       with:
        dir: ${{matrix.config.QT_INST_DIR}}
        version: ${{ env.QtVersion }}
@@ -130,7 +130,7 @@ jobs:
 
     - name: Cache ff7tk
       id: cache-ff7tk
-      uses: actions/cache@v3.0.11
+      uses: actions/cache@v4
       with:
         path: ${{ matrix.config.ff7tkPrefix }}
         key: ${{ runner.os }}${{ matrix.config.WIN_ARCH }}-Qt${{env.QtVersion}}-ff7tk-${{ hashFiles( 'ff7tk*') }}
@@ -172,8 +172,9 @@ jobs:
           --plugin=qt
 
     - name: Upload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
+        name: artifact-${{matrix.config.name}}
         path: |
           ${{github.workspace}}/${{env.PackageGLOB}}
           ${{github.workspace}}/blackchocobo[-_]*.*
@@ -197,11 +198,11 @@ jobs:
            , debArch: armhf
           }
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - run: git fetch --tags --force
-      - uses: uraimo/run-on-arch-action@v2.3.0
+      - uses: uraimo/run-on-arch-action@v2.6.0
         name: Build artifact
         with:
           arch: ${{ matrix.config.arch }}
@@ -222,39 +223,39 @@ jobs:
             cmake --build build --config ${{env.BuildType}} --target package
             cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: container-artifact
+          name: container-artifact-${{matrix.config.name}}-${{matrix.config.arch}}
           path: |
             build/Black_Chocobo[-_]*.*
             build/blackchocobo[-_]*.*
             blackchocobo*.deb
   release_assets:
     name: Release
-    needs: [main_Build, container_build, deb_builder]
+    needs: [main_build, container_build, deb_builder]
     runs-on: ubuntu-latest
     steps:
     - name: Download Files
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Deploy Continuous
       if: github.ref == 'refs/heads/master'
-      uses: marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303
+      uses: crowbarmaster/GH-Automatic-Releases@latest
       with:
        repo_token: "${{ secrets.DEPLOYTOKEN }}"
        automatic_release_tag: "continuous"
        prerelease: false
        title: "Continuous Build"
        files: |
-         artifact/*
-         container-artifact/*
-         debian-artifacts/*
+         artifact-*/*
+         container-artifact-*/*
+         debian-artifacts-*/*
     - name: Deploy Release
       if: contains(github.ref, 'tags/v')
-      uses: marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303
+      uses: crowbarmaster/GH-Automatic-Releases@latest
       with:
        repo_token: "${{ secrets.DEPLOYTOKEN }}"
        prerelease: false
        files: |
-         artifact/*
-         container-artifact/*
-         debian-artifacts/*
+         artifact-*/*
+         container-artifact-*/*
+         debian-artifacts-*/*
