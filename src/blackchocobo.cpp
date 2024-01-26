@@ -446,6 +446,7 @@ void BlackChocobo::init_connections()
     connect(ui->sbSnowCrazyMsec, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbSnowCrazyMsec_valueChanged);
     connect(ui->sbBikeHighScore, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBikeHighScore_valueChanged);
     connect(ui->sbBattlePoints, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBattlePoints_valueChanged);
+    connect(ui->sbBattleSWins, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBattleSWins_valueChanged);
     connect(ui->sbCondorFunds, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorFunds_valueChanged);
     connect(ui->sbCondorWins, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorWins_valueChanged);
     connect(ui->sbCondorLosses, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCondorLosses_valueChanged);
@@ -1618,6 +1619,7 @@ void BlackChocobo::othersUpdate()
     ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s, 2));
 
     ui->sbBikeHighScore->setValue(ff7->bikeHighScore(s));
+    ui->sbBattleSWins->setValue(ff7->specialBattleWins(s));
     ui->sbBattlePoints->setValue(ff7->battlePoints(s));
     ui->cbFlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
     load = false;
@@ -3902,6 +3904,12 @@ void BlackChocobo::sbBattlePoints_valueChanged(int arg1)
 {
     if (!load)
         ff7->setBattlePoints(s, quint16(arg1));
+}
+
+void BlackChocobo::sbBattleSWins_valueChanged(int arg1)
+{
+    if (!load)
+        ff7->setSpecialBattleWins(s, quint8(arg1));
 }
 
 void BlackChocobo::comboHexEditor_currentIndexChanged(int index)
