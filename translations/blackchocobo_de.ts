@@ -1386,6 +1386,18 @@ trigger showing that tutorial</source>
         <translation type="unfinished">Wenn Box ist teilweise überprüft (&quot;-&quot;) wird es
 Trigger, Tutorial zeigt</translation>
     </message>
+    <message>
+        <source>Battle Arena</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Special Battle Wins</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1146</width>
-    <height>1051</height>
+    <width>692</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -656,13 +656,12 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1130</width>
-             <height>796</height>
+             <width>676</width>
+             <height>455</height>
             </rect>
            </property>
            <attribute name="icon">
-            <iconset theme="psxmc">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="psxmc"/>
            </attribute>
            <attribute name="label">
             <string>Field Location</string>
@@ -700,13 +699,12 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>653</width>
-             <height>521</height>
+             <width>535</width>
+             <height>466</height>
             </rect>
            </property>
            <attribute name="icon">
-            <iconset theme="world_map">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="world_map"/>
            </attribute>
            <attribute name="label">
             <string>Worldmap Location</string>
@@ -752,8 +750,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>408</width>
-                 <height>994</height>
+                 <width>229</width>
+                 <height>630</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
@@ -2562,8 +2560,8 @@ location.</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>495</width>
-                  <height>2764</height>
+                  <width>285</width>
+                  <height>1627</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -3227,7 +3225,7 @@ location.</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">
-         <number>3</number>
+         <number>10</number>
         </property>
         <property name="leftMargin">
          <number>3</number>
@@ -3248,6 +3246,12 @@ location.</string>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="title">
              <string>Time Played</string>
             </property>
@@ -3274,6 +3278,12 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_23">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="text">
                   <string>Hour</string>
                  </property>
@@ -3310,6 +3320,12 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_24">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="text">
                   <string>Min</string>
                  </property>
@@ -3343,6 +3359,12 @@ location.</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_12">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="text">
                   <string>Sec</string>
                  </property>
@@ -3374,6 +3396,12 @@ location.</string>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="title">
              <string>Love Points</string>
             </property>
@@ -3660,87 +3688,16 @@ location.</string>
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>0</width>
-              <height>0</height>
+              <height>6</height>
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QFrame" name="frm_bp">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>24</height>
-             </size>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_10">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QLabel" name="label_16">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
-When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena
-Lobby&amp;quot; so you can spend
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Battle Points</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QSpinBox" name="sbBattlePoints">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
-When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena
-Lobby&amp;quot; so you can spend
-them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="specialValueText">
-                <string/>
-               </property>
-               <property name="maximum">
-                <number>65535</number>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
           </item>
           <item>
            <widget class="QFrame" name="frm_steps">
@@ -3802,7 +3759,198 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </widget>
           </item>
           <item>
+           <spacer name="verticalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>6</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Battle Arena</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>6</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frm_bp_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_29">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena
+Lobby&amp;quot; so you can spend
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Battle Points</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="sbBattlePoints">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets
+When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena
+Lobby&amp;quot; so you can spend
+them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="specialValueText">
+                   <string/>
+                  </property>
+                  <property name="maximum">
+                   <number>65535</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frm_bp">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_16">
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="text">
+                   <string>Special Battle Wins</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="sbBattleSWins">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="specialValueText">
+                   <string/>
+                  </property>
+                  <property name="maximum">
+                   <number>255</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
            <widget class="QGroupBox" name="groupBox_39">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="title">
              <string>Countdown Timer</string>
             </property>
@@ -3826,6 +3974,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_188">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="text">
                   <string>Hour</string>
                  </property>
@@ -3865,6 +4019,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_189">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="text">
                   <string>Min</string>
                  </property>
@@ -3904,6 +4064,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <item>
                 <widget class="QLabel" name="label_190">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -3942,39 +4108,23 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </layout>
            </widget>
           </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_117">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>5</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_116">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>5</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_39">
@@ -4007,6 +4157,22 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                <string/>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Preferred</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>25</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QFrame" name="Menu_Box">
@@ -4160,7 +4326,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           <item>
            <widget class="QGroupBox" name="groupBox">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -4921,6 +5087,12 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </item>
              <item>
               <widget class="QGroupBox" name="groupBox_12">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="title">
                 <string>Fort Condor</string>
                </property>
@@ -5148,6 +5320,19 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -6564,8 +6749,8 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1146</width>
-     <height>37</height>
+     <width>692</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -6623,8 +6808,7 @@ Var And Scrolling Synced To Left Table</string>
       <string>&amp;Slot Region</string>
      </property>
      <property name="icon">
-      <iconset theme="globe">
-       <normaloff>.</normaloff>.</iconset>
+      <iconset theme="globe"/>
      </property>
      <addaction name="actionRegionUSA"/>
      <addaction name="separator"/>
@@ -6662,8 +6846,7 @@ Var And Scrolling Synced To Left Table</string>
   </widget>
   <action name="actionQuit">
    <property name="icon">
-    <iconset theme="application-exit">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="application-exit"/>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
@@ -6677,8 +6860,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenSaveFile">
    <property name="icon">
-    <iconset theme="document-open">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-open"/>
    </property>
    <property name="text">
     <string>&amp;Open</string>
@@ -6695,8 +6877,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save-as">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-save-as"/>
    </property>
    <property name="text">
     <string>Sa&amp;ve As</string>
@@ -6710,8 +6891,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset theme="help-about">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="help-about"/>
    </property>
    <property name="text">
     <string>&amp;About</string>
@@ -6731,8 +6911,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="view-list-details">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="view-list-details"/>
    </property>
    <property name="text">
     <string>&amp;Select Slot</string>
@@ -6746,8 +6925,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-copy">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-copy"/>
    </property>
    <property name="text">
     <string>&amp;Copy Current Slot</string>
@@ -6764,8 +6942,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-paste">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-paste"/>
    </property>
    <property name="text">
     <string>&amp;Paste Slot</string>
@@ -6782,8 +6959,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit-clear">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="edit-clear"/>
    </property>
    <property name="text">
     <string>Clea&amp;r Slot</string>
@@ -6800,8 +6976,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-previous">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-previous"/>
    </property>
    <property name="text">
     <string>&amp;Previous Slot</string>
@@ -6818,8 +6993,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="go-next">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="go-next"/>
    </property>
    <property name="text">
     <string>&amp;Next Slot</string>
@@ -6833,8 +7007,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionShowOptions">
    <property name="icon">
-    <iconset theme="configure">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="configure"/>
    </property>
    <property name="text">
     <string>&amp;Configure</string>
@@ -6926,8 +7099,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionNewGame">
    <property name="icon">
-    <iconset theme="document-new">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-new"/>
    </property>
    <property name="text">
     <string>&amp;New Game</string>
@@ -6944,8 +7116,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-new-from-template">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-new-from-template"/>
    </property>
    <property name="text">
     <string>New Game&amp;+ </string>
@@ -6959,8 +7130,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionExportChar">
    <property name="icon">
-    <iconset theme="character-export">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="character-export"/>
    </property>
    <property name="text">
     <string>E&amp;xport Current Character</string>
@@ -6971,8 +7141,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionImportChar">
    <property name="icon">
-    <iconset theme="character-import">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="character-import"/>
    </property>
    <property name="text">
     <string>I&amp;mport Current Character</string>
@@ -6986,8 +7155,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-save"/>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -7004,8 +7172,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="view-refresh">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="view-refresh"/>
    </property>
    <property name="text">
     <string>&amp;Reload</string>
@@ -7030,8 +7197,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionCreateNewMetadata">
    <property name="icon">
-    <iconset theme="folder-sync">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="folder-sync"/>
    </property>
    <property name="text">
     <string>Create Cloud Save &amp;Folder</string>
@@ -7045,8 +7211,7 @@ Var And Scrolling Synced To Left Table</string>
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-import">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-import"/>
    </property>
    <property name="text">
     <string>&amp;Import To Current Slot</string>
@@ -7057,8 +7222,7 @@ Var And Scrolling Synced To Left Table</string>
   </action>
   <action name="actionOpenAchievementFile">
    <property name="icon">
-    <iconset theme="games-highscores">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="games-highscores"/>
    </property>
    <property name="text">
     <string>&amp;Achievement Editor</string>

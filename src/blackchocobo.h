@@ -456,6 +456,7 @@ private slots://try to keep these in the same order as the .cpp file
     void sbSnowCrazyMsec_valueChanged(int value);
     void sbBikeHighScore_valueChanged(int arg1);
     void sbBattlePoints_valueChanged(int arg1);
+    void sbBattleSWins_valueChanged(int arg1);
 
     void phsList_box_allowed_toggled(int row, bool checked);
     void phsList_box_visible_toggled(int row, bool checked);
