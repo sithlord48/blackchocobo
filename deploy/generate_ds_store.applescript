@@ -6,7 +6,7 @@ on run argv
 
     -- wait for the image to finish mounting
     set open_attempts to 0
-    repeat while open_attempts < 4
+    repeat while open_attempts < 5
       try
         open
           delay 1
