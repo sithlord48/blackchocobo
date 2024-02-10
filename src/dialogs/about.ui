@@ -162,7 +162,7 @@
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string notr="true">(C) 2010 - 2022 Chris Rizzitello</string>
+          <string notr="true">(C) 2010 - 2024 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>9</number>
