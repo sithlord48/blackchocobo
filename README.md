@@ -1,4 +1,4 @@
-# Black Chocobo
+# <img src="https://github.com/sithlord48/blackchocobo/blob/master/deploy/blackchocobo.png" width="96" height="96"> Black Chocobo
 A Save Editor for Final Fantasy 7
 
 [![CI Status](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml/badge.svg)](https://github.com/sithlord48/blackchocobo/actions/workflows/build.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/993fc5029fd6486eb304d945a500b58f)](https://app.codacy.com/gh/sithlord48/blackchocobo/dashboard)
