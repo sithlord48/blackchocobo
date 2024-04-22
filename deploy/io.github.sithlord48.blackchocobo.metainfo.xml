@@ -5,26 +5,17 @@
 	<project_license>GPL-3.0+</project_license>
 	<name>Black Chocobo</name>
 	<developer_name>sithlord48</developer_name>
-	<summary>A Save Editor for Final Fantasy VII</summary>
+	<summary>Save editor for Final Fantasy VII</summary>
 	<description>
-		<p> Black Chocobo is a save editor for Final Fantasy VII.</p>
-		<ul>
-			<li>Open All Kinds Of FF7 Saves ,PC, Psx ,Emulator Formats PS3, PSP, Switch</li>
-			<li>Language support for English , Spanish , French, German, Polish and Japanese</li>
-			<li>Will automatically detect 2012 steam saves and update your metadata.xml</li>
-			<li>Automatic Signing of ps3 and psp / psvita files</li>
-			<li>New Game + from your old saves</li>
-			<li>Import/Export Character stat files</li>
-			<li>Convert FF7 Save Game Formats And Regions</li>
-			<li>Extract Non FF7 Saves From memcard images</li>
-			<li>Slot Management Copy/Paste and Import slots to Saves</li>
-			<li>Edit Chars, Chocobo, Items/Materia</li>
-			<li>Edit: In-Game Options</li>
-			<li>Edit:Quest Progression</li>
-			<li>Set Chars In The PHS pool (bring aerith back or have a cloudless party)</li>
-			<li>Edit your save location</li>
-			<li>Edit Achievements for 2012/Steam versions</li>
-		</ul>
+		<p>
+			Supports saves from the PC98, Steam, PC2012, Playstation, Uncompressed Virtual Memory Card Formats, PS3, PSP, PsVita, and Switch Versions of Final Fantasy 7.
+
+			Black Chocobo is a powerful editor with many features. In addtion to standard save editing there are many additonal convenience features. One Example would be the abliity to convert your save to another format so you can continue your adventue on a different platform. Another example is the "New Game + feature.
+		</p>
+
+		<p>
+			This Application requests full system read and write access in order to write to removable media such as USB sticks. It is also needed to write into the Final Fantasy 7 save path if it is not installed inside your home folder. Removing access in your flatpak application settings will not break the applicaion but you will restrict where you are able to read and save your edited files.
+		</p>
 	</description>
 	<launchable type="desktop-id">io.github.sithlord48.blackchocobo.desktop</launchable>
 	<url type="homepage">https://github.com/sithlord48/blackchocobo</url>
@@ -32,7 +23,7 @@
 	<url type="donation">http://sourceforge.net/p/blackchocobo/donate/</url>
 	<screenshots>
 		<screenshot type="default">
-			<image>https://a.fsdn.com/con/app/proj/blackchocobo/screenshots/2020-08-13_1.png</image>
+			<image>https://github.com/sithlord48/blackchocobo/assets/7450820/3343d2df-ca7e-47a4-99db-b6be430ae94e</image>
 		</screenshot>
 	</screenshots>
 	<provides> <id>io.github.sithlord48.blackchocobo.desktop</id> </provides>
@@ -49,6 +40,10 @@
 		<keyword translate="en">Save</keyword>
 		<keyword translate="en">Playstation</keyword>
 	</keywords>
+	<branding>
+		<color type="primary" scheme_preference="light">#4A4D51</color>
+		<color type="primary" scheme_preference="dark">#1B1E20</color>
+	</branding>
 	<content_rating type="oars-1.0" />
 	<releases>
 		<release version="1.15.0" date="2023-12-26" urgency="high">
