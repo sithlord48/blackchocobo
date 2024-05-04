@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.6.1
-    QtKey: "6.6.1"
+    QtVersion: 6.6.3
+    QtKey: "6.6.3"
     PackageGLOB: "Black_Chocobo-*.*"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
