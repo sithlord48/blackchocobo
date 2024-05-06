@@ -46,6 +46,15 @@
 	</branding>
 	<content_rating type="oars-1.0" />
 	<releases>
+		<release version="1.15.1" date="2024-05-06" urgency="low">
+			<description>
+				<p>This stable Release fixes bugs and adds new features.</p>
+				<ul>
+					<li>Add: Editing of Battle Arena special wins</li>
+				</ul>
+			</description>
+		<url>https://github.com/sithlord48/blackchocobo/releases/tag/v1.15.1</url>
+		</release>
 		<release version="1.15.0" date="2023-12-26" urgency="high">
 			<description>
 				<p>This stable Release fixes bugs and adds new features.</p>
