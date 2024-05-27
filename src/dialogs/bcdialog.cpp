@@ -90,6 +90,11 @@ QString BCDialog::getExistingDirectory(QWidget *parent, const QString &title, co
 
 QString BCDialog::getSaveFileName(QWidget  *parent, const QString &region, const QString &title, const QString &path , const QString &nameFilters, QString* chosenType, const QString &initSelection)
 {
+    if(chosenType == nullptr) {
+        QString filter = nameFilters.mid(0, (nameFilters.indexOf(";;") - 2));
+        chosenType = &filter;
+    }
+
     auto dialog = getFileDialog(parent, title, path, nameFilters, initSelection);
     dialog->setFileMode(QFileDialog::AnyFile);
     dialog->setAcceptMode(QFileDialog::AcceptSave);
