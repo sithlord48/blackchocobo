@@ -12,14 +12,6 @@
         <translation>Chocobo Negro </translation>
     </message>
     <message>
-        <source>&amp;About</source>
-        <translation>&amp;Acerca de</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>El editor de partidas guardadas de Final Fantasy VII</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -30,42 +22,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Contribuye con nuestro Proyecto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Newest Features</source>
-        <translation>Características Recientes</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation>Dando méritos donde corresponde</translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation>Varios codigos. Ayuda / Debugger; Windows QA</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation>Clase de Icono PSX y Conversor de texto de japonés para PC</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation>Probadores de fallos</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Probador de fallos principal, para windos/gnome + dentro del juego</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation>Antiguo Probador de Win32</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation>Probador para Mac Os</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation>Probador de Windows</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -88,38 +44,6 @@ p, li { white-space: pre-wrap; }
         <translation>Traducción Alemana:</translation>
     </message>
     <message>
-        <source>Icons Used In this Program</source>
-        <translation>Iconos usados en el programa</translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation>Muchas gracias a:</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation>Gracias por facilitarme el código de Jenova. Este programa usa versiones modificadas de la estructura de datos de guardado y listas de objetos/materia de Jenova. Poder acceder al código fuente ahorro mucho tiempo durante las primeras fases de desarrollo.</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>Gracias por toda la ayuda con Chocobo Negro. Traduciendo, probando, ayudando buscando datos en el mapa de guardado, probando temas, etc. Hace bastante por ayudar.</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation>Gracias por el programa viejo de checksum</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>Gracias por ayudarme a ver la luz de errores estúpidos.</translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Gracias por darme un mejor entendimiento de las funciones de Qt cuando los archivos de ayuda fallaban.</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation>Porque simplemente es maravillosa!</translation>
-    </message>
-    <message>
         <source>Version: %1</source>
         <translation>Versión: %1</translation>
     </message>
@@ -134,14 +58,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Licencia: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;redits</source>
-        <translation>C&amp;réditos</translation>
-    </message>
-    <message>
-        <source>&amp;Thanks</source>
-        <translation>&amp;Gracias</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -168,36 +84,28 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Página del proyecto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Removal of Scale Selection</source>
-        <translation type="unfinished">Eliminación de la selección de escala</translation>
-    </message>
-    <message>
-        <source>Hi-Res Icons</source>
-        <translation type="unfinished">Iconos de alta resolución</translation>
-    </message>
-    <message>
         <source>Polish Translation:</source>
         <translation type="unfinished">Traducción Polaco:</translation>
     </message>
     <message>
-        <source>Contributions By </source>
-        <translation>Contribuciones por </translation>
+        <source>Additonal Credits</source>
+        <translation type="unfinished">Créditos adicionales</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Ver todos los colaboradores&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Colaboradores de código&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished">Predeterminado al tipo de PC, al guardar un tipo desconocido</translation>
-    </message>
-    <message>
-        <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished">Permitir un límite de artículo 99 siempre</translation>
-    </message>
-    <message>
-        <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished">Anteponer la unidad a las barras laterales del cuadro de diálogo del archivo</translation>
+        <source>Icons used In this Program</source>
+        <translation type="unfinished">Iconos usados en el programa</translation>
     </message>
 </context>
 <context>
@@ -1440,10 +1348,6 @@ trigger showing that tutorial</source>
         <translation>Ruta para partidas guardadas de PC (.ff7)</translation>
     </message>
     <message>
-        <source>Path For Character Stat Files</source>
-        <translation type="vanished">Ruta para archivos de stats de personajes</translation>
-    </message>
-    <message>
         <source>Override Builtin New Game Data</source>
         <translation>Saltarse los datos incluídos para Nuevo Juego</translation>
     </message>
@@ -1540,16 +1444,8 @@ trigger showing that tutorial</source>
         <translation type="unfinished">Esquema de color de la aplicación</translation>
     </message>
     <message>
-        <source>File Options</source>
-        <translation type="obsolete">Opciones de archivo</translation>
-    </message>
-    <message>
         <source>Raw Psx Files Only!</source>
         <translation type="unfinished">¡Archivos Psx sin procesar solamente!</translation>
-    </message>
-    <message>
-        <source>Editing Options</source>
-        <translation type="obsolete">Opciones de edición</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1584,18 +1480,8 @@ trigger showing that tutorial</source>
         <translation type="unfinished">Estilo de aplicación</translation>
     </message>
     <message>
-        <source>Item Editor - Always cap quanity at 99</source>
-        <translation type="obsolete">Editor de elementos: siempre limite la cantidad a 99</translation>
-    </message>
-    <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Editor de artículos - Siempre limita la cantidad a 99</translation>
-    </message>
-    <message>
-        <source>Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="obsolete">Cambiar el estilo del widget
-  Se recomienda Fusion. Es posible que otros temas no obedezcan a la paleta de colores o contengan problemas gráficos.</translation>
     </message>
     <message>
         <source>Fusion is the recommended theme 

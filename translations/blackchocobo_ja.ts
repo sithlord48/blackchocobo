@@ -12,56 +12,12 @@
         <translation>黒チョコボ </translation>
     </message>
     <message>
-        <source>&amp;About</source>
-        <translation>バージョン情報(&amp;A)</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>Final Fantasy VII ゲーム セーブ エディター</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;このプロジェクトをサポートしています&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Newest Features</source>
-        <translation>最新の変更点</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation>しかるべきクレジット</translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation>各種コードヘルプ/デバッグ。 Windows QA</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation> バグ テスター</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation> メイン バグ テスター, Win/Gnome + ゲーム全般</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation>Win32 の初期テスター</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation> Mac OS テスター</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation> Windows テスター</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -84,38 +40,6 @@ p, li { white-space: pre-wrap; }
         <translation>ドイツ語翻訳:</translation>
     </message>
     <message>
-        <source>Icons Used In this Program</source>
-        <translation>プログラムの使用アイコン</translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation>大いなる感謝を:</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished">Jenovaにソースを提供していただきありがとうございます。 このプログラムは、Jenovaのsavefile structおよびItem / Materiaリストの修正バージョンを使用します。 ソースコードへのアクセスにより、開発の初期段階で多くの時間が節約されました。</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>彼の支援のすべてに感謝します。翻訳, バグ テスト, セーブマップの調査, テーマのテスト等、彼の支援は多方面に及んでいます。</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation>定番のチェックサム プログラムに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation>ともかく彼女は素晴らしい！</translation>
-    </message>
-    <message>
         <source>Version: %1</source>
         <translation>バージョン：%1</translation>
     </message>
@@ -130,14 +54,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;ライセンス: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;redits</source>
-        <translation type="unfinished">クレジット</translation>
-    </message>
-    <message>
-        <source>&amp;Thanks</source>
-        <translation type="unfinished">ありがとう</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -164,36 +80,28 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;プロジェクト ホーム ページ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Removal of Scale Selection</source>
-        <translation type="unfinished">スケール選択の削除</translation>
-    </message>
-    <message>
-        <source>Hi-Res Icons</source>
-        <translation type="unfinished">高解像度アイコン</translation>
-    </message>
-    <message>
         <source>Polish Translation:</source>
         <translation type="unfinished">ポーランド語翻訳:</translation>
     </message>
     <message>
-        <source>Contributions By </source>
-        <translation type="unfinished">投稿者 </translation>
+        <source>Additonal Credits</source>
+        <translation type="unfinished">追加のプログラマー</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;すべての寄稿者を表示&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;コード貢献者&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished">不明なタイプを保存する場合、デフォルトはPCタイプです</translation>
-    </message>
-    <message>
-        <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished">常にアイテムキャップ99を許可する</translation>
-    </message>
-    <message>
-        <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished">ドライブをファイルダイアログのサイドバーに追加する</translation>
+        <source>Icons used In this Program</source>
+        <translation type="unfinished">プログラムの使用アイコン</translation>
     </message>
 </context>
 <context>
@@ -1436,10 +1344,6 @@ trigger showing that tutorial</source>
         <translation type="unfinished">PC（.ff7）のパスを保存します。</translation>
     </message>
     <message>
-        <source>Path For Character Stat Files</source>
-        <translation type="obsolete">文字スタットファイルのパス</translation>
-    </message>
-    <message>
         <source>Override Builtin New Game Data</source>
         <translation type="unfinished">組み込みの新しいゲームのデータを上書きします</translation>
     </message>
@@ -1536,16 +1440,8 @@ trigger showing that tutorial</source>
         <translation type="unfinished">アプリケーションの配色</translation>
     </message>
     <message>
-        <source>File Options</source>
-        <translation type="obsolete">ファイルオプション</translation>
-    </message>
-    <message>
         <source>Raw Psx Files Only!</source>
         <translation type="unfinished">生のPsxファイルのみ！</translation>
-    </message>
-    <message>
-        <source>Editing Options</source>
-        <translation type="obsolete">編集オプション</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1582,12 +1478,6 @@ trigger showing that tutorial</source>
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">アイテムエディタ-常に数量を99に制限します</translation>
-    </message>
-    <message>
-        <source>Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="obsolete">ウィジェットのスタイルを変更
-  Fusion をお勧めします。他のテーマは、カラー パレットに従わないか、グラフィックの問題を含んでいる可能性があります。</translation>
     </message>
     <message>
         <source>Fusion is the recommended theme 

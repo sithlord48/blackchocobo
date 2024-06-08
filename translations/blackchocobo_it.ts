@@ -12,14 +12,6 @@
         <translation type="unfinished">Chocobo Nero </translation>
     </message>
     <message>
-        <source>&amp;About</source>
-        <translation type="unfinished">S&amp;u</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="unfinished">L&apos;editor di giochi di salvataggio di Final Fantasy VII</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -56,46 +48,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Sostieni questo progetto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Newest Features</source>
-        <translation type="unfinished">Funzionalità più recenti</translation>
-    </message>
-    <message>
-        <source>C&amp;redits</source>
-        <translation type="unfinished">C&amp;rediti</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation type="unfinished">Dare credito dove il credito è dovuto</translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation type="unfinished">Vari codici di aiuto/debug; Controllo qualità di Windows</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation type="unfinished">Psx Icon Class e convertitore di stringhe per PC per il giapponese</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation type="unfinished">Bug tester</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished">Main Bug Tester, per win/gnome e ingame</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation type="unfinished">I primi tester di Win32</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation type="unfinished">Tester Mac OS</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation type="unfinished">Tester di Windows</translation>
-    </message>
-    <message>
         <source>Translators</source>
         <translation type="unfinished">Traduttori</translation>
     </message>
@@ -116,42 +68,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Traduzione tedesca:</translation>
     </message>
     <message>
-        <source>Icons Used In this Program</source>
-        <translation type="unfinished">Icone utilizzate in questo programma</translation>
-    </message>
-    <message>
-        <source>&amp;Thanks</source>
-        <translation type="unfinished">&amp;Grazie</translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation type="unfinished">Un grande ringraziamento a:</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished">Grazie per aver fornito la fonte a Jenova. Questo programma utilizza versioni modificate della struttura del file di salvataggio di Jenova e delle liste Item/Materia. L&apos;accesso al suo codice sorgente ha consentito di risparmiare molto tempo durante le prime fasi di sviluppo.</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation type="unfinished">Grazie per tutto il tuo aiuto con Chocobo Nero. Traduzione, test dei bug, aiuto nella ricerca di dati nella mappa di salvataggio, test dei temi, ecc. Hai fatto molto per aiutare.</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation type="unfinished">Grazie per il vecchio programma di checksum</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation type="unfinished">Grazie per avermi aiutato a vedere la luce di stupidi errori.</translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation type="unfinished">Grazie per aver fornito una migliore comprensione delle funzioni di Qt quando i file della guida non sono riusciti.</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation type="unfinished">Perché è semplicemente fantastica!</translation>
-    </message>
-    <message>
         <source>&amp;Close</source>
         <translation>&amp;Chiudi</translation>
     </message>
@@ -168,36 +84,28 @@ p, li { white-space: pre-wrap; }
         <translation>Qt: %1</translation>
     </message>
     <message>
-        <source>Removal of Scale Selection</source>
-        <translation type="unfinished">Rimozione della selezione della scala</translation>
-    </message>
-    <message>
-        <source>Hi-Res Icons</source>
-        <translation type="unfinished">Icone ad alta risoluzione</translation>
-    </message>
-    <message>
-        <source>Contributions By </source>
-        <translation type="unfinished">Contributi di </translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Visualizza tutti i contributori&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>Polish Translation:</source>
         <translation type="unfinished">Traduzione in polacco:</translation>
     </message>
     <message>
-        <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished">L&apos;impostazione predefinita è Tipo di PC, quando si salva un tipo sconosciuto</translation>
+        <source>Additonal Credits</source>
+        <translation type="unfinished">Crediti aggiuntivi</translation>
     </message>
     <message>
-        <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished">Consenti sempre un limite di articolo 99</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Collaboratori del codice&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished">Anteponi l&apos;unità alle barre laterali della finestra di dialogo dei file</translation>
+        <source>Icons used In this Program</source>
+        <translation type="unfinished">Icone utilizzate in questo programma</translation>
     </message>
 </context>
 <context>
@@ -1481,10 +1389,6 @@ trigger showing that tutorial</translation>
         <translation type="unfinished">Combinazione di colori dell&apos;applicazione</translation>
     </message>
     <message>
-        <source>File Options</source>
-        <translation type="obsolete">Opzioni file</translation>
-    </message>
-    <message>
         <source>Default Path For Loading All Saves</source>
         <translation type="unfinished">Percorso predefinito per il caricamento di tutti i salvataggi</translation>
     </message>
@@ -1497,20 +1401,12 @@ trigger showing that tutorial</translation>
         <translation type="unfinished">Percorso per PC (.ff7) Salva</translation>
     </message>
     <message>
-        <source>Path For Character Stat Files</source>
-        <translation type="obsolete">Percorso per i file delle statistiche dei personaggi</translation>
-    </message>
-    <message>
         <source>Override Builtin New Game Data</source>
         <translation type="unfinished">Sostituisci i nuovi dati di gioco incorporati</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
         <translation type="unfinished">Solo file Psx non elaborati!</translation>
-    </message>
-    <message>
-        <source>Editing Options</source>
-        <translation type="obsolete">Opzioni di modifica</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1588,12 +1484,6 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Editor articolo - Limita sempre la quantità a 99</translation>
-    </message>
-    <message>
-        <source>Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="obsolete">Cambia stile widget
-  Si consiglia Fusion Altri temi potrebbero non rispettare la tavolozza dei colori o contenere problemi grafici.</translation>
     </message>
     <message>
         <source>Fusion is the recommended theme 

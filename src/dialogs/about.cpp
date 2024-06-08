@@ -24,7 +24,7 @@ About::About(QWidget *parent) :
     ui(new Ui::About)
 {
     ui->setupUi(this);
-    setFixedSize(parent->width() * 0.5F, parent->height() * 0.8F);
+    setFixedSize(parent->width() * 0.5F, parent->height() * 0.7F);
     ui->pushButton->setIcon(QIcon::fromTheme("window-close"));
     ui->lbl_icon->setFixedSize(fontMetrics().height() * 6, fontMetrics().height() * 6);
     ui->lbl_icon->setPixmap(QPixmap(":/icons/common/blackchocobo"));
