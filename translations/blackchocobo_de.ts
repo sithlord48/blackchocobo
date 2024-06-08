@@ -12,14 +12,6 @@
         <translation type="unfinished">Schwarzer Chocobo </translation>
     </message>
     <message>
-        <source>&amp;About</source>
-        <translation>&amp;Über</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>Das Final Fantasy VII Spielstandbearbeitungsprogramm</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -30,42 +22,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Unterstützen Sie dieses Projekt&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Newest Features</source>
-        <translation>Neueste Features</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation>Giving Credit Where Credit is Due</translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation type="unfinished">Verschiedene Code-Hilfe / Debug; Windows QA</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation>Fehler-Tester</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Haupt-Fehler-Tester, für win/gnome + ingame</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation>Früher Win32 Tester</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation>Mac Os Tester</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -88,38 +44,6 @@ p, li { white-space: pre-wrap; }
         <translation>Deutsche Übersetzung:</translation>
     </message>
     <message>
-        <source>Icons Used In this Program</source>
-        <translation>Symbole benutzt in diesem Programm</translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation>Ein großes Danke  an:</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished">Vielen Dank, dass Sie Jenova die Quelle zur Verfügung gestellt haben. Dieses Programm verwendet modifizierte Versionen von Jenovas Savefile-Struktur und Item / Materia-Listen. Der Zugriff auf den Quellcode hat in den frühen Entwicklungsphasen viel Zeit gespart.</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation type="unfinished">Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation type="unfinished">Danke Dir für das alte checksum-Programm</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation type="unfinished">Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation type="unfinished">Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation type="unfinished">Weil Sie einfach fantastisch ist!</translation>
-    </message>
-    <message>
         <source>Version: %1</source>
         <translation type="unfinished">Version: %1</translation>
     </message>
@@ -134,14 +58,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;redits</source>
-        <translation type="unfinished">C&amp;redits</translation>
-    </message>
-    <message>
-        <source>&amp;Thanks</source>
-        <translation type="unfinished">&amp;Danke</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -168,36 +84,28 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Projektseite&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Removal of Scale Selection</source>
-        <translation type="unfinished">Entfernung der Skalenauswahl</translation>
-    </message>
-    <message>
-        <source>Hi-Res Icons</source>
-        <translation type="unfinished">Hochauflösende Symbole</translation>
-    </message>
-    <message>
         <source>Polish Translation:</source>
         <translation>Polieren Übersetzung:</translation>
     </message>
     <message>
-        <source>Contributions By </source>
-        <translation type="unfinished">Beiträge von </translation>
+        <source>Additonal Credits</source>
+        <translation type="unfinished">Zusätzliche Credits</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alle Mitwirkenden anzeigen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code-Mitwirkende&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Default to PC type, when saving unknown type</source>
-        <translation type="unfinished">Standardmäßig PC-Typ, wenn unbekannter Typ gespeichert wird</translation>
-    </message>
-    <message>
-        <source>Allow for an item cap 99 always</source>
-        <translation type="unfinished">Planen Sie immer eine Artikelobergrenze von 99 ein</translation>
-    </message>
-    <message>
-        <source>Prepend drive to file dialog sidebars</source>
-        <translation type="unfinished">Laufwerk den Seitenleisten des Dateidialogs voranstellen</translation>
+        <source>Icons used In this Program</source>
+        <translation type="unfinished">Symbole benutzt in diesem Programm</translation>
     </message>
 </context>
 <context>
@@ -1445,10 +1353,6 @@ Trigger, Tutorial zeigt</translation>
         <translation type="unfinished">Pfad für PC (.ff7) Speichert</translation>
     </message>
     <message>
-        <source>Path For Character Stat Files</source>
-        <translation type="obsolete">Pfad für Charakter Stat-Dateien</translation>
-    </message>
-    <message>
         <source>Override Builtin New Game Data</source>
         <translation type="unfinished">Überschreiben Builtin Neue Spieldaten</translation>
     </message>
@@ -1545,16 +1449,8 @@ Trigger, Tutorial zeigt</translation>
         <translation type="unfinished">Anwendungsfarbschema</translation>
     </message>
     <message>
-        <source>File Options</source>
-        <translation type="obsolete">Dateioptionen</translation>
-    </message>
-    <message>
         <source>Raw Psx Files Only!</source>
         <translation type="unfinished">Nur rohe Psx-Dateien!</translation>
-    </message>
-    <message>
-        <source>Editing Options</source>
-        <translation type="obsolete">Bearbeitungsoptionen</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1591,12 +1487,6 @@ Trigger, Tutorial zeigt</translation>
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation type="unfinished">Artikeleditor - Beschränken Sie die Menge immer auf 99</translation>
-    </message>
-    <message>
-        <source>Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="obsolete">Ändern Sie den Widget-Stil
- Fusion wird empfohlen. Andere Themen entsprechen möglicherweise nicht der Farbpalette oder weisen grafische Probleme auf.</translation>
     </message>
     <message>
         <source>Fusion is the recommended theme 

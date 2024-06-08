@@ -12,14 +12,6 @@
         <translation>Black Chocobo </translation>
     </message>
     <message>
-        <source>&amp;About</source>
-        <translation>&amp;About</translation>
-    </message>
-    <message>
-        <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>The Final Fantasy VII Save Game Editor</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -30,42 +22,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/p/blackchocobo/donate&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Support this Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Newest Features</source>
-        <translation>Newest Features</translation>
-    </message>
-    <message>
-        <source>Giving Credit Where Credit is Due</source>
-        <translation>Giving Credit Where Credit is Due</translation>
-    </message>
-    <message>
-        <source>Various code help/debug; Windows QA</source>
-        <translation>Various code help/debug; Windows QA</translation>
-    </message>
-    <message>
-        <source>Psx Icon Class &amp; PC string converter for Japanese</source>
-        <translation>Psx Icon Class &amp; PC string converter for Japanese</translation>
-    </message>
-    <message>
-        <source>Bug Testers</source>
-        <translation>Bug Testers</translation>
-    </message>
-    <message>
-        <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Main Bug Tester, for win/gnome + ingame</translation>
-    </message>
-    <message>
-        <source>Early Win32 Tester</source>
-        <translation>Early Win32 Tester</translation>
-    </message>
-    <message>
-        <source>Mac Os Tester</source>
-        <translation>Mac Os Tester</translation>
-    </message>
-    <message>
-        <source>Windows Tester</source>
-        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -88,38 +44,6 @@ p, li { white-space: pre-wrap; }
         <translation>German Translation:</translation>
     </message>
     <message>
-        <source>Icons Used In this Program</source>
-        <translation>Icons Used In this Program</translation>
-    </message>
-    <message>
-        <source>A Big Thank You  To:</source>
-        <translation>A Big Thank You  To:</translation>
-    </message>
-    <message>
-        <source>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</source>
-        <translation>Thank you for providing the source to Jenova. This program uses modified versions of Jenova&apos;s savefile struct and Item/Materia lists. Access to its source code saved a lot of time during the early stages of development.</translation>
-    </message>
-    <message>
-        <source>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</source>
-        <translation>Thank you for all of your help with Black Chocobo. Translating, bug testing, helping with finding data in the savemap, theme testing, etc. You&apos;ve done a lot to help.</translation>
-    </message>
-    <message>
-        <source>Thank you for the old checksum program</source>
-        <translation>Thank you for the old checksum program</translation>
-    </message>
-    <message>
-        <source>Thank you for helping me see the light of stupid errors.</source>
-        <translation>Thank you for helping me see the light of stupid errors.</translation>
-    </message>
-    <message>
-        <source>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</source>
-        <translation>Thank you for providing a better understanding of Qt&apos;s functions when the help files failed.</translation>
-    </message>
-    <message>
-        <source>Cause she&apos;s just awesome!</source>
-        <translation>Cause she&apos;s just awesome!</translation>
-    </message>
-    <message>
         <source>Version: %1</source>
         <translation>Version: %1</translation>
     </message>
@@ -134,14 +58,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU GPL Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;redits</source>
-        <translation>C&amp;redits</translation>
-    </message>
-    <message>
-        <source>&amp;Thanks</source>
-        <translation>&amp;Thanks</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -168,36 +84,28 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Removal of Scale Selection</source>
-        <translation>Removal of Scale Selection</translation>
-    </message>
-    <message>
-        <source>Hi-Res Icons</source>
-        <translation>Hi-Res Icons</translation>
-    </message>
-    <message>
         <source>Polish Translation:</source>
         <translation>Polish Translation:</translation>
     </message>
     <message>
-        <source>Contributions By </source>
-        <translation>Contributions By </translation>
+        <source>Additonal Credits</source>
+        <translation>Additonal Credits</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;View All Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/sithlord48/blackchocobo/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Code Contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Default to PC type, when saving unknown type</source>
-        <translation>Default to PC type, when saving unknown type</translation>
-    </message>
-    <message>
-        <source>Allow for an item cap 99 always</source>
-        <translation>Allow for an item cap 99 always</translation>
-    </message>
-    <message>
-        <source>Prepend drive to file dialog sidebars</source>
-        <translation>Prepend drive to file dialog sidebars</translation>
+        <source>Icons used In this Program</source>
+        <translation>Icons used In this Program</translation>
     </message>
 </context>
 <context>
@@ -1442,10 +1350,6 @@ trigger showing that tutorial</translation>
         <translation>Path For PC (.ff7) Saves</translation>
     </message>
     <message>
-        <source>Path For Character Stat Files</source>
-        <translation type="vanished">Path For Character Stat Files</translation>
-    </message>
-    <message>
         <source>Override Builtin New Game Data</source>
         <translation>Override Builtin New Game Data</translation>
     </message>
@@ -1542,16 +1446,8 @@ trigger showing that tutorial</translation>
         <translation>Application Color Scheme</translation>
     </message>
     <message>
-        <source>File Options</source>
-        <translation type="vanished">File Options</translation>
-    </message>
-    <message>
         <source>Raw Psx Files Only!</source>
         <translation>Raw Psx Files Only!</translation>
-    </message>
-    <message>
-        <source>Editing Options</source>
-        <translation type="vanished">Editing Options</translation>
     </message>
     <message>
         <source>Show Experimental TestData Tab</source>
@@ -1588,12 +1484,6 @@ trigger showing that tutorial</translation>
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
         <translation>Item Editor - Always Cap Quantity to 99</translation>
-    </message>
-    <message>
-        <source>Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</source>
-        <translation type="vanished">Change Widget Style
- Fusion is recommended Other themes may not obey the color palette or contain graphical issues.</translation>
     </message>
     <message>
         <source>Fusion is the recommended theme 
