@@ -107,10 +107,11 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     ff7->setFormat(FF7SaveInfo::FORMAT::UNKNOWN);
     ff7->setFileModified(false, 0);
 
-    //Work around Qt 6.6.1 regression where it won't adjust the columns until after the gui is completely created
-    for(int i=0;i < 3; i++) {
-        itemListView->setColumnWidth(i, itemListView->sizeHintForColumn(i));
-    }
+//Work around Qt 6.6.1 regression where it won't adjust the columns until after the gui is completely created
+#if QT_VERSION == QT_VERSION_CHECK(6, 6, 1)
+    for(int i=0;i < 3; i++)
+         itemListView->setColumnWidth(i, itemListView->sizeHintForColumn(i));
+#endif
 }
 
 QString BlackChocobo::checkIconTheme()
@@ -228,7 +229,7 @@ void BlackChocobo::initDisplay()
     ui->group_items->layout()->removeWidget(ui->group_item_options);
     ui->group_items->layout()->addWidget(itemListView);
     ui->group_items->layout()->addWidget(ui->group_item_options);
-    ui->group_items->setFixedWidth(itemListView->width() + itemListView->contentsMargins().left() + itemListView->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right());
+    ui->group_items->setFixedWidth(itemListView->width() + itemListView->contentsMargins().left() + itemListView->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right() + 6);
 
     ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
     ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
@@ -297,9 +298,6 @@ void BlackChocobo::initDisplay()
 
 void BlackChocobo::setItemSizes()
 {
-    setStyleSheet(QStringLiteral("QListWidget::indicator, QCheckBox::indicator{width: .75em; height: .75em;}\nQListWidget::item{spacing: 1em}"));
-
-
     ui->groupBox_11->setFixedWidth(375);
     ui->groupBox_18->setFixedWidth(273); //materia table group.
     ui->scrollArea->setFixedWidth(310);
@@ -357,12 +355,13 @@ void BlackChocobo::init_style()
 
     ui->slideWorldY->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-left);}"));
     ui->slideWorldX->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-up);}"));
-    auto cboxes = findChildren<QComboBox*>(QString(), Qt::FindChildrenRecursively);
-    for (auto box : cboxes) {
-        box->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        box->setStyleSheet(QStringLiteral("QComboBox { combobox-popup: 0;}"));
+    if (style()->name() == "fusion") {
+        auto cboxes = findChildren<QComboBox*>(QString(), Qt::FindChildrenRecursively);
+        for (auto box : cboxes) {
+            box->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+            box->setStyleSheet(QStringLiteral("QComboBox { combobox-popup: 0;}"));
+        }
     }
-
 }
 
 void BlackChocobo::init_connections()
