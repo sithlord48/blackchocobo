@@ -1,5 +1,5 @@
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM 1)
-
+option(CLEAN_TRS "Clean Obsolete translations from tr files" FALSE)
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Core
     LinguistTools
@@ -33,7 +33,13 @@ if(WIN32 OR APPLE)
     )
 endif()
 
-qt_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none)
+if(CLEAN_TRS)
+    set(CLEAN_OPTION "-noobsolete")
+else()
+    set(CLEAN_OPTION "")
+endif()
+
+qt_create_translation(TRS ${CMAKE_SOURCE_DIR} ${blackchocobo_TRS} OPTIONS -no-ui-lines -locations none ${CLEAN_OPTION})
 add_custom_target(app_translations ALL DEPENDS ${TRS})
 
 if(UNIX AND NOT APPLE)
