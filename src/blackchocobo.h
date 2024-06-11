@@ -29,6 +29,7 @@ class OptionsWidget;
 class MateriaEditor;
 class QSpacerItem;
 class ItemListView;
+class ItemTab;
 class QHexEdit;
 class ChocoboManager;
 class LocationViewer;
@@ -77,7 +78,8 @@ private:
     MateriaEditor *materia_editor = nullptr;
     QSpacerItem *mat_spacer = nullptr;
     PartyTab *partyTab = nullptr;
-    ItemListView *itemListView = nullptr;
+    ItemTab *itemTab = nullptr;
+    //ItemListView *itemListView = nullptr;
     QHexEdit *hexEditor = nullptr;
     ChocoboManager *chocoboManager = nullptr;
     LocationViewer *locationViewer = nullptr;
@@ -174,10 +176,10 @@ private slots://try to keep these in the same order as the .cpp file
     void charButtonClicked(int charSlot = 0);
     void partyMembersChanged(int partySlot, int id = 0xFF);
     /*PARTY TAB*/
-    void sbGil_valueChanged(double);
-    void sbGp_valueChanged(int);
-    void sbBattles_valueChanged(int);
-    void sbRuns_valueChanged(int);
+    void gilChanged(quint32);
+    void gpChanged(int);
+    void battlesChanged(int);
+    void runsChanged(int);
     /*Chocobo Tab*/
     /* ChocoboManager*/
     void cm_stablesOwnedChanged(qint8);
@@ -370,7 +372,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     //items tab
     void btnAddAllItems_clicked();
-    void btnRemoveAllItems_clicked();
 
     // Materia Tab
     void tblMateria_currentCellChanged(int row);
@@ -475,11 +476,11 @@ private slots://try to keep these in the same order as the .cpp file
     void sbSaveY_valueChanged(int arg1);
     void sbSaveZ_valueChanged(int arg1);
     void cbSubGameWon_toggled(bool checked);
-    void cbMysteryPanties_toggled(bool checked);
-    void cbLetterToDaughter_toggled(bool checked);
-    void cbLetterToWife_toggled(bool checked);
-    void btnSearchFlyers_clicked();
-    void btnSearchKeyItems_clicked();
+    void mysteryPantiesChanged(bool checked);
+    void letterToDaughterChanged(bool checked);
+    void letterToWifeChanged(bool checked);
+    void searchForFlyers();
+    void searchForKeyItems();
     void btnReplay_clicked();
     void linePsxDesc_textChanged(const QString &arg1);
     void cbFlashbackPiano_toggled(bool checked);

@@ -119,32 +119,12 @@ p, li { white-space: pre-wrap; }
         <translation>AP</translation>
     </message>
     <message>
-        <source>Battles</source>
-        <translation>Batallas</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation>Gil</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation>GP</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
         <translation>Stock de Materia del Grupo</translation>
     </message>
     <message>
         <source>Materia</source>
         <translation>Materia</translation>
-    </message>
-    <message>
-        <source>Inventory</source>
-        <translation>Inventario</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation>Elementos Clave</translation>
     </message>
     <message>
         <source>Time Played</source>
@@ -165,10 +145,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia Robada por Yuffie</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation>Octavillas del Paraíso de las Tortugas Coleccionadas</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -365,26 +341,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Arma Diamante / Última / Rubí</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation>Bragas Misterio</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation>Carta a una hija</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation>Carta a una esposa</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation>Añadir el máximo de todos los objetos</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation>Eliminar todos los objetos</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -717,10 +673,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Puntos de batalla</translation>
     </message>
     <message>
-        <source>Money</source>
-        <translation>Dinero</translation>
-    </message>
-    <message>
         <source>Hex Editor</source>
         <translation>Editor Hexadecimal</translation>
     </message>
@@ -835,22 +787,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Items</source>
         <translation type="unfinished">Objetos</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">Escapes</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Buscar &quot;Paraíso de las Tortugas&quot; usando el modo de busqueda de items en la pestaña de Localización</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Buscar &quot;Element Clave&quot; usando el modo de busqueda de items en la pestaña de Localización</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">Elementos Claves Sin Uso</translation>
     </message>
     <message>
         <source>Location</source>
@@ -1095,10 +1031,6 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
         <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">Nuevo Juego&amp;+ </translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
@@ -1249,7 +1181,7 @@ la ubicación en: &amp;quot;Vestíbulo de la arena&amp;quot; para poder gastarlo
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">Paraíso Tortuga</translation>
+        <translation type="unfinished">Paraíso de las Tortugas</translation>
     </message>
     <message>
         <source>KeyItem</source>
@@ -1300,6 +1232,81 @@ trigger showing that tutorial</source>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">Victorias en batallas especiales</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">Nuevo &amp;Juego+</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">Borró todos los elementos</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inventario</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Añadir el máximo de todos los objetos</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Eliminar todos los objetos</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>Gil</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>Dinero</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>Batallas</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>Buscar &quot;Paraíso de las Tortugas&quot; usando el modo de busqueda de items en la pestaña de Localización</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>Octavillas del Paraíso de las Tortugas Coleccionadas</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>Elementos Clave</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>Buscar &quot;Element Clave&quot; usando el modo de busqueda de items en la pestaña de Localización</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>Elementos Claves Sin Uso</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>Bragas Misterio</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>Carta a una hija</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>Carta a una esposa</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>Escapes</translation>
     </message>
 </context>
 <context>

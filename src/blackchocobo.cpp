@@ -60,6 +60,8 @@
 #include <LocationViewer>
 
 #include "widgets/partytab.h"
+#include "widgets/itemtab.h"
+
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 BlackChocobo::BlackChocobo(QWidget *parent)
     : QMainWindow(parent)
@@ -77,6 +79,7 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     , optionsWidget(new OptionsWidget)
     , materia_editor(new MateriaEditor(this))
     , partyTab(new PartyTab)
+    , itemTab(new ItemTab)
     , hexEditor(new QHexEdit)
     , chocoboManager(new ChocoboManager)
     , ff7ItemModel(new FF7ItemModel(this))
@@ -106,12 +109,6 @@ BlackChocobo::BlackChocobo(QWidget *parent)
     partyTab->pressCharacterButton(FF7Char::Cloud);
     ff7->setFormat(FF7SaveInfo::FORMAT::UNKNOWN);
     ff7->setFileModified(false, 0);
-
-//Work around Qt 6.6.1 regression where it won't adjust the columns until after the gui is completely created
-#if QT_VERSION == QT_VERSION_CHECK(6, 6, 1)
-    for(int i=0;i < 3; i++)
-         itemListView->setColumnWidth(i, itemListView->sizeHintForColumn(i));
-#endif
 }
 
 QString BlackChocobo::checkIconTheme()
@@ -200,6 +197,7 @@ void BlackChocobo::initDisplay()
 
     chocoboManager->setContentsMargins(0, 20, 0, 0);
     ui->tabWidget->insertTab(0, partyTab, tr("Party"));
+    ui->tabWidget->insertTab(1, itemTab, tr("Items"));
     ui->tabWidget->insertTab(3, chocoboManager, tr("Chocobo"));
     ui->tabWidget->insertTab(7, optionsWidget, tr("Game Options"));
     ui->tabWidget->setCurrentIndex(0);
@@ -224,15 +222,7 @@ void BlackChocobo::initDisplay()
     ui->group_hexedit->setLayout(hexLayout);
 
 
-    itemListView = new ItemListView(this);
-    itemListView->setModel(ff7ItemModel);
-    ui->group_items->layout()->removeWidget(ui->group_item_options);
-    ui->group_items->layout()->addWidget(itemListView);
-    ui->group_items->layout()->addWidget(ui->group_item_options);
-    ui->group_items->setFixedWidth(itemListView->width() + itemListView->contentsMargins().left() + itemListView->contentsMargins().right() + ui->group_items->contentsMargins().left() + ui->group_items->contentsMargins().right() + 6);
-
-    ui->btnSearchFlyers->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
-    ui->btnSearchKeyItems->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
+    itemTab->itemList()->setModel(ff7ItemModel);
 
     locationViewer = new LocationViewer(this);
     locationViewer->setRegion(QStringLiteral("BASCUS-94163FF7-S00"));
@@ -395,19 +385,12 @@ void BlackChocobo::init_connections()
     connect(ui->actionRegionJPN, &QAction::triggered, this, &BlackChocobo::actionRegionJPN_triggered);
     connect(ui->actionRegionJPNInternational, &QAction::triggered, this, &BlackChocobo::actionRegionJPNInternational_triggered);
     //Buttons
-    connect(ui->btnSearchFlyers, &QPushButton::clicked, this, &BlackChocobo::btnSearchFlyers_clicked);
-    connect(ui->btnSearchKeyItems, &QPushButton::clicked, this, &BlackChocobo::btnSearchKeyItems_clicked);
+
     connect(ui->btnReplay, &QPushButton::clicked, this, &BlackChocobo::btnReplay_clicked);
     connect(ui->btnRemoveAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllMateria_clicked);
     connect(ui->btnRemoveAllStolen, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllStolen_clicked);
-    connect(ui->btnAddAllItems, &QPushButton::clicked, this, &BlackChocobo::btnAddAllItems_clicked);
-    connect(ui->btnRemoveAllItems, &QPushButton::clicked, this, &BlackChocobo::btnRemoveAllItems_clicked);
     connect(ui->btnAddAllMateria, &QPushButton::clicked, this, &BlackChocobo::btnAddAllMateria_clicked);
     //SpinBoxes
-    connect(ui->sbGil, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &BlackChocobo::sbGil_valueChanged);
-    connect(ui->sbGp, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbGp_valueChanged);
-    connect(ui->sbBattles, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbBattles_valueChanged);
-    connect(ui->sbRuns, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbRuns_valueChanged);
     connect(ui->sbCurdisc, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbCurdisc_valueChanged);
     connect(ui->sbLoveYuffie, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveYuffie_valueChanged);
     connect(ui->sbLoveTifa, qOverload<int>(&QSpinBox::valueChanged), this, &BlackChocobo::sbLoveTifa_valueChanged);
@@ -488,9 +471,6 @@ void BlackChocobo::init_connections()
     connect(ui->cbBombingInt, &QCheckBox::stateChanged, this, &BlackChocobo::cbBombingInt_stateChanged);
     connect(ui->cbFlashbackPiano, &QCheckBox::toggled, this, &BlackChocobo::cbFlashbackPiano_toggled);
     connect(ui->cbSubGameWon, &QCheckBox::toggled, this, &BlackChocobo::cbSubGameWon_toggled);
-    connect(ui->cbMysteryPanties, &QCheckBox::toggled, this, &BlackChocobo::cbMysteryPanties_toggled);
-    connect(ui->cbLetterToDaughter, &QCheckBox::toggled, this, &BlackChocobo::cbLetterToDaughter_toggled);
-    connect(ui->cbLetterToWife, &QCheckBox::toggled, this, &BlackChocobo::cbLetterToWife_toggled);
     connect(ui->cbPandorasBox, &QCheckBox::toggled, this, &BlackChocobo::cbPandorasBox_toggled);
     connect(ui->cbVisibleBuggy, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBuggy_toggled);
     connect(ui->cbVisibleBronco, &QCheckBox::toggled, this, &BlackChocobo::cbVisibleBronco_toggled);
@@ -596,6 +576,19 @@ void BlackChocobo::init_connections()
 
     connect(menuList, &MenuListWidget::lockedToggled, this, &BlackChocobo::menuList_box_locked_toggled);
     connect(menuList, &MenuListWidget::visibleToggled, this, &BlackChocobo::menuList_box_visible_toggled);
+
+    connect(itemTab, &ItemTab::addedAllItems, this, [=] { statusBar()->showMessage(tr("All Items Added"), 750);});
+    connect(itemTab, &ItemTab::clearedAllItems, this, [=] { statusBar()->showMessage(tr("Cleared All Items"), 750);});
+
+    connect(itemTab, &ItemTab::gilChanged, this, &BlackChocobo::gilChanged);
+    connect(itemTab, &ItemTab::gpChanged, this, &BlackChocobo::gpChanged);
+    connect(itemTab, &ItemTab::battlesChanged, this, &BlackChocobo::battlesChanged);
+    connect(itemTab, &ItemTab::runsChanged, this, &BlackChocobo::runsChanged);
+    connect(itemTab, &ItemTab::requestFlyerSearch, this, &BlackChocobo::searchForFlyers);
+    connect(itemTab, &ItemTab::requestKeyItemSearch, this, &BlackChocobo::searchForKeyItems);
+    connect(itemTab, &ItemTab::mysteryPantiesChanged, this, &BlackChocobo::mysteryPantiesChanged);
+    connect(itemTab, &ItemTab::daughterLetterChanged, this, &BlackChocobo::letterToDaughterChanged);
+    connect(itemTab, &ItemTab::wifeLetterChanged, this, &BlackChocobo::letterToWifeChanged);
 
     connect(partyTab, &PartyTab::partyChanged, this, &BlackChocobo::partyMembersChanged);
     connect(partyTab, &PartyTab::loadCharacterInSlot, this, &BlackChocobo::charButtonClicked);
@@ -705,8 +698,8 @@ void BlackChocobo::loadChildWidgetSettings()
     QApplication::setAttribute(Qt::AA_DontUseNativeDialogs, !BCSettings::value(SETTINGS::USENATIVEDIALOGS, false).toBool());
     materia_editor->setEditableMateriaCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
     materia_editor->setShowPlaceHolderMateria(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
-    itemListView->setEditableItemCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
-    itemListView->setShowPlaceholderItems(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
+    itemTab->itemList()->setEditableItemCombo(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
+    itemTab->itemList()->setShowPlaceholderItems(BCSettings::value(SETTINGS::SHOWPLACEHOLDERS, false).toBool());
     partyTab->setCharEditorEditableComboBoxes(BCSettings::value(SETTINGS::EDITABLECOMBOS, true).toBool());
     partyTab->setCharEditorAdvancedMode(BCSettings::value(SETTINGS::CHARADVANCED, false).toBool());
     partyTab->setCharEditorAutoLevel(BCSettings::value(SETTINGS::AUTOGROWTH, true).toBool());
@@ -721,9 +714,9 @@ void BlackChocobo::loadChildWidgetSettings()
     ui->sbBhId->setVisible(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
     ui->sbLeaderId->setVisible(BCSettings::value(SETTINGS::WORLDMAPADVANCED, false).toBool());
     if(BCSettings::value(SETTINGS::ITEMCAP99).toBool())
-        itemListView->setMaximumItemQty(99);
+        itemTab->itemList()->setMaximumItemQty(99);
     else
-        itemListView->setMaximumItemQty(127);
+        itemTab->itemList()->setMaximumItemQty(127);
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 BlackChocobo::~BlackChocobo()
@@ -751,6 +744,7 @@ void BlackChocobo::changeEvent(QEvent *e)
     } else if (e->type() == QEvent::LanguageChange) {
         ui->retranslateUi(this);
         ui->tabWidget->setTabText(0, tr("Party"));
+        ui->tabWidget->setTabText(1, tr("Items"));
         ui->tabWidget->setTabText(3, tr("Chocobo"));
         ui->tabWidget->setTabText(7, tr("Game Options"));
         populateCombos();
@@ -1183,17 +1177,15 @@ void BlackChocobo::setRegion(QString region)
 
         ff7->setRegion(s, region);
 
-        if(region == QStringLiteral("NTSC-J") || BCSettings::value(SETTINGS::ITEMCAP99).toBool()) {
-            itemListView->setMaximumItemQty(99);
-        } else {
-            itemListView->setMaximumItemQty(127);
-        }
+        if(region == QStringLiteral("NTSC-J") || BCSettings::value(SETTINGS::ITEMCAP99).toBool())
+            itemTab->itemList()->setMaximumItemQty(99);
+        else
+            itemTab->itemList()->setMaximumItemQty(127);
 
         if(oldRegion.contains(QStringLiteral("01057")))
             ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＦＦ７Ｉ"), QStringLiteral("ＦＦ７")));
-        else if(ff7->region(s).contains(QStringLiteral("01057"))) {
+        else if(ff7->region(s).contains(QStringLiteral("01057")))
             ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＦＦ７"), QStringLiteral("ＦＦ７Ｉ")));
-        }
 
         if(ff7->isJPN(s))
             ui->linePsxDesc->setText(ui->linePsxDesc->text().replace(QStringLiteral("ＳＡＶＥ"), QStringLiteral("セーブ")));
@@ -1727,13 +1719,13 @@ void BlackChocobo::tabWidget_currentChanged(int index)
 
     case 1://Item Tab
         ff7ItemModel->resetItems(ff7->items(s));
-        ui->sbGil->setValue(ff7->gil(s));
-        ui->sbGp->setValue(ff7->gp(s));
-        ui->sbRuns->setValue(ff7->runs(s));
-        ui->sbBattles->setValue(ff7->battles(s));
-        ui->cbMysteryPanties->setChecked(ff7->keyItem(s, FF7Save::MYSTERYPANTIES));
-        ui->cbLetterToDaughter->setChecked(ff7->keyItem(s, FF7Save::LETTERTOADAUGHTER));
-        ui->cbLetterToWife->setChecked(ff7->keyItem(s, FF7Save::LETTERTOAWIFE));
+        itemTab->setGil(ff7->gil(s));
+        itemTab->setGp(ff7->gp(s));
+        itemTab->setBattles(ff7->battles(s));
+        itemTab->setRuns(ff7->runs(s));
+        itemTab->setMysteryPanties(ff7->keyItem(s, FF7Save::MYSTERYPANTIES));
+        itemTab->setDaughterLetter(ff7->keyItem(s, FF7Save::LETTERTOADAUGHTER));
+        itemTab->setWifeLetter(ff7->keyItem(s, FF7Save::LETTERTOAWIFE));
         break;
 
     case 2://Materia
@@ -2109,38 +2101,40 @@ void BlackChocobo::sbSteps_valueChanged(int value)
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void BlackChocobo::sbGil_valueChanged(double value)
+void BlackChocobo::gilChanged(quint32 value)
 {
     if (!load)
-        ff7->setGil(s, quint32(value));
+        ff7->setGil(s, value);
 }
-void BlackChocobo::sbGp_valueChanged(int value)
+
+void BlackChocobo::gpChanged(int value)
 {
     if (!load)
         ff7->setGp(s, value);
 }
-void BlackChocobo::sbBattles_valueChanged(int value)
+
+void BlackChocobo::battlesChanged(int value)
 {
     if (!load)
         ff7->setBattles(s, value);
 }
-void BlackChocobo::sbRuns_valueChanged(int value)
+void BlackChocobo::runsChanged(int value)
 {
     if (!load)
         ff7->setRuns(s, value);
 }
 
-void BlackChocobo::cbMysteryPanties_toggled(bool checked)
+void BlackChocobo::mysteryPantiesChanged(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
 }
-void BlackChocobo::cbLetterToDaughter_toggled(bool checked)
+void BlackChocobo::letterToDaughterChanged(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
 }
-void BlackChocobo::cbLetterToWife_toggled(bool checked)
+void BlackChocobo::letterToWifeChanged(bool checked)
 {
     if (!load)
         ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
@@ -2792,13 +2786,6 @@ void BlackChocobo::btnReplay_clicked()
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void BlackChocobo::btnRemoveAllItems_clicked()
-{
-    for (int i = 0; i < 320; i++)
-        ff7->setItem(s, i, FF7Item::EmptyItemData);
-    ff7ItemModel->setItems(ff7->items(s));
-}
-
 void BlackChocobo::btnRemoveAllMateria_clicked()
 {
     for (int i = 0; i < 200; i++)
@@ -3429,20 +3416,6 @@ void BlackChocobo::worldMapView_customContextMenuRequested(QPoint pos)
 
 void BlackChocobo::btnAddAllItems_clicked()
 {
-    ui->btnRemoveAllItems->click();
-    int itemMax = (BCSettings::value(SETTINGS::ITEMCAP99).toBool() || ff7->region(s) == QStringLiteral("NTSC-J")) ? 99 : 127 ;
-    for (int i = 0; i < FF7Item::size(); i++) {
-        if (FF7Item::placeHolderIds().contains(i))
-            continue;
-        if (i <= FF7Item::GuideBook)// Guidebook is the last item before the placeholders.
-            ff7->setItem(s, i, quint16(i), itemMax);
-        else if(i <= FF7Item::HypnoCrown)//HyponoCrown is the last valid ID
-            ff7->setItem(s, (i - FF7Item::placeHolderIds().count()), quint16(i), itemMax);
-        else
-            ff7->setItem(s, i, FF7Item::EmptyItemData);   //replace the shifted ones w/ empty slots
-    }
-    ff7ItemModel->setItems(ff7->items(s));
-    statusBar()->showMessage(tr("All Items Added"), 750);
 }
 
 void BlackChocobo::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
@@ -4212,14 +4185,14 @@ void BlackChocobo::sbSaveZ_valueChanged(int arg1)
         ff7->setCraterSavePointZ(s, arg1);
 }
 
-void BlackChocobo::btnSearchFlyers_clicked()
+void BlackChocobo::searchForFlyers()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);
     locationViewer->setFilterString(tr("Turtle Paradise"), LocationViewer::ITEM);
 }
 
-void BlackChocobo::btnSearchKeyItems_clicked()
+void BlackChocobo::searchForKeyItems()
 {
     ui->tabWidget->setCurrentIndex(4);
     ui->locationToolBox->setCurrentIndex(0);

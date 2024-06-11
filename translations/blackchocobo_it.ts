@@ -119,70 +119,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Elementi</translation>
     </message>
     <message>
-        <source>Inventory</source>
-        <translation type="unfinished">Inventario</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation type="unfinished">Aggiungi massimo di tutti gli articoli</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation type="unfinished">Cancella tutti gli elementi</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation type="unfinished">I soldi</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation type="unfinished">Gil</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation type="unfinished">GP</translation>
-    </message>
-    <message>
-        <source>Battles</source>
-        <translation type="unfinished">Battaglie</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">Fughe</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">Volantini del la tartaruga felice raccolti</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Cerca &quot;La tartaruga felice&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation type="unfinished">Rarità</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Cerca &quot;Rarità&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">Rarità non utilizzato</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation type="unfinished">Mutandine misteriose</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation type="unfinished">Lettera a una figlia</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation type="unfinished">Lettera a una moglie</translation>
-    </message>
-    <message>
         <source>Materia</source>
         <translation>Materia</translation>
     </message>
@@ -952,10 +888,6 @@ Var e scorrimento sincronizzati alla tabella di sinistra</translation>
         <translation type="unfinished">Salva file di caratteri FF7</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">Nuovo gioco&amp;+</translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Salva file di caratteri FF7</translation>
     </message>
@@ -1301,6 +1233,81 @@ trigger showing that tutorial</translation>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">La battaglia speciale vince</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">Nuovo &amp;gioco+</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">Cancellati tutti gli elementi</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inventario</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Aggiungi massimo di tutti gli articoli</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Cancella tutti gli elementi</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>Gil</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>I soldi</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>Battaglie</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>Cerca &quot;La tartaruga felice&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>Volantini del la tartaruga felice raccolti</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>Rarità</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>Cerca &quot;Rarità&quot; utilizzando la modalità di ricerca degli elementi nella scheda della posizione</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>Rarità non utilizzato</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>Mutandine misteriose</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>Lettera a una figlia</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>Lettera a una moglie</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>Fughe</translation>
     </message>
 </context>
 <context>

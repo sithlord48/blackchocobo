@@ -119,18 +119,6 @@ p, li { white-space: pre-wrap; }
         <translation>AP</translation>
     </message>
     <message>
-        <source>Battles</source>
-        <translation>Battles</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation>Gil</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation>GP</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
         <translation>Party&apos;s Materia Stock</translation>
     </message>
@@ -143,20 +131,8 @@ p, li { white-space: pre-wrap; }
         <translation>Master</translation>
     </message>
     <message>
-        <source>Inventory</source>
-        <translation>Inventory</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation>Key Items</translation>
-    </message>
-    <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Materia Stolen By Yuffie</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation>Turtle Paradise Flyers Collected</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -361,26 +337,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Diamond / Ultimate / Ruby Weapon</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation>Mystery panties</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation>Letter to a Daughter</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation>Letter to a Wife</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation>Add Max Of All Items</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation>Clear All Items</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -713,10 +669,6 @@ Table Entries are Editable</translation>
         <translation>Battle Points</translation>
     </message>
     <message>
-        <source>Money</source>
-        <translation>Money</translation>
-    </message>
-    <message>
         <source>Hex Editor</source>
         <translation>Hex Editor</translation>
     </message>
@@ -835,22 +787,6 @@ Table Entries are Editable</translation>
     <message>
         <source>Items</source>
         <translation>Items</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation>Escapes</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation>Search For &quot;KeyItem&quot; using item search mode on the location tab</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation>Unused KeyItems</translation>
     </message>
     <message>
         <source>Location</source>
@@ -1097,10 +1033,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation>New Game&amp;+ </translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation>Ctrl+Shift+=</translation>
     </message>
@@ -1302,6 +1234,81 @@ trigger showing that tutorial</translation>
     <message>
         <source>Special Battle Wins</source>
         <translation>Special Battle Wins</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation>New &amp;Game+ </translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation>Cleared All Items</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inventory</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Add Max of All Items</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Clear All Items</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>Gil</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>Money</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>Battles</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>Turtle Paradise Flyers Collected</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>KeyItems</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>Search For &quot;KeyItem&quot; using item search mode on the location tab</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>Unused KeyItems</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>Mystery panties</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>Letter to a Daughter</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>Letter to a Wife</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>Escapes</translation>
     </message>
 </context>
 <context>

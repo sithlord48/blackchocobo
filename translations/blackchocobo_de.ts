@@ -65,11 +65,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>ff7tk: %1</source>
-        <translation type="unfinished">ff7tk: %1</translation>
+        <translation>ff7tk: %1</translation>
     </message>
     <message>
         <source>Qt: %1</source>
-        <translation type="unfinished">Qt: %1</translation>
+        <translation>Qt: %1</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -105,7 +105,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Icons used In this Program</source>
-        <translation type="unfinished">Symbole benutzt in diesem Programm</translation>
+        <translation>Symbole benutzt in diesem Programm</translation>
     </message>
 </context>
 <context>
@@ -119,18 +119,6 @@ p, li { white-space: pre-wrap; }
         <translation>AP</translation>
     </message>
     <message>
-        <source>Battles</source>
-        <translation>Anzahl der Kämpfe</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation>Gil</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation>GP</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
         <translation>Materia Vorrat der Truppe</translation>
     </message>
@@ -141,58 +129,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Master</source>
         <translation>Master</translation>
-    </message>
-    <message>
-        <source>Inventory</source>
-        <translation type="unfinished">Inventar</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation type="unfinished">Füge Maximum aller Items hinzu</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation type="unfinished">Setze alle Items zurück</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation type="unfinished">Zahlungsmittel</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">Fluchten</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">Schildkrötenparadies Zettel gesammelt</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Suche nach &quot;Schildkrötenparadies&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation type="unfinished">Schlüsselgegenstände</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Suche nach &quot;KeyItem&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">Ungenutzte KeyItems</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation type="unfinished">Geheimnisvolles Höschen</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation type="unfinished">Brief an die Tochter</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation type="unfinished">Brief an die Ehefrau</translation>
     </message>
     <message>
         <source>Bin</source>
@@ -1040,10 +976,6 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
         <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">Neu Game &amp;+</translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
@@ -1250,7 +1182,7 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished">KeyItem</translation>
+        <translation type="unfinished">Schlüsselelement</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -1305,6 +1237,81 @@ Trigger, Tutorial zeigt</translation>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">Siege in Spezialkämpfen</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">Neues Spiel&amp;+</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">Alle Elemente gelöscht</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inventar</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Füge Maximum aller Items hinzu</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Setze alle Items zurück</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>Gil</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>Zahlungsmittel</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>Anzahl der Kämpfe</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>Suche nach &quot;Schildkrötenparadies&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>Schildkrötenparadies Zettel gesammelt</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>Schlüsselgegenstände</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>Suche nach &quot;Schlüsselelement&quot; mit Punkt-Suchmodus auf der Registerkarte Standort</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>Ungenutzte Schlüsselgegenstände</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>Geheimnisvolles Höschen</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>Brief an die Tochter</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>Brief an die Ehefrau</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>Fluchten</translation>
     </message>
 </context>
 <context>

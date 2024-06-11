@@ -119,32 +119,12 @@ p, li { white-space: pre-wrap; }
         <translation>AP</translation>
     </message>
     <message>
-        <source>Battles</source>
-        <translation>Batailles</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation>Gils</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation>GP</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
         <translation>Matérias de l&apos;équipe</translation>
     </message>
     <message>
         <source>Materia</source>
         <translation>Matéria</translation>
-    </message>
-    <message>
-        <source>Inventory</source>
-        <translation>Inventaire</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation>Elément-clés</translation>
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
@@ -173,10 +153,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Materia Stolen By Yuffie</source>
         <translation>Matérias volées par Youfie</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation>Affiches du Turtle&apos;s Paradise collectées</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -365,26 +341,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Save</source>
         <translation>&amp;Enregistrer</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation>Slips mystère</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation>À ma fille</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation>À ma femme</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation>Ajouter tous les éléments</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation>Supprimer tous les éléments</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -717,10 +673,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Points de combat</translation>
     </message>
     <message>
-        <source>Money</source>
-        <translation>Argent</translation>
-    </message>
-    <message>
         <source>Hex Editor</source>
         <translation>Éditeur hexadécimal</translation>
     </message>
@@ -835,22 +787,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Items</source>
         <translation type="unfinished">Objets</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">Fuites</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Rechercher &quot;Turtle Paradise&quot; en utilisant le champ de recherche d&apos;objet dans l&apos;onglet &quot;Lieu&quot;</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Rechercher les &quot;Éléments-clés&quot; en utilisant le champ de recherche d&apos;objets dans l&apos;onglet &quot;Lieu&quot;</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">Éléments-clés inutilisés</translation>
     </message>
     <message>
         <source>Location</source>
@@ -1097,10 +1033,6 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
         <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">Nouvelle partie &amp;+</translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
@@ -1251,11 +1183,11 @@ sont désactivés dans l&apos;onglet &quot;équipe&quot;.</translation>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">Turtle Paradise</translation>
+        <translation>Turtle Paradise</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished">Élement Clé</translation>
+        <translation type="unfinished">Elément-clé</translation>
     </message>
     <message>
         <source>Game Region</source>
@@ -1302,6 +1234,81 @@ le tutoriel sera affiché directement</translation>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">Victoires des batailles spéciales</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">Nouvelle &amp;partie+</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">Effacé tous les éléments</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inventaire</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Ajouter tous les éléments</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Supprimer tous les éléments</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>Gils</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>Argent</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>Batailles</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>Rechercher &quot;Turtle Paradise&quot; en utilisant le champ de recherche d&apos;objet dans l&apos;onglet &quot;Lieu&quot;</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>Affiches du Turtle&apos;s Paradise collectées</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>Elément-clés</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>Rechercher les &quot;Eléments-clé&quot; en utilisant le champ de recherche d&apos;objets dans l&apos;onglet &quot;Lieu&quot;</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>Éléments-clés inutilisés</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>Slips mystère</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>À ma fille</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>À ma femme</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>Fuites</translation>
     </message>
 </context>
 <context>

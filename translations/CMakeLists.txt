@@ -1,5 +1,5 @@
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM 1)
-option(CLEAN_TRS "Clean Obsolete translations from tr files" FALSE)
+option(CLEAN_TRS "Clean Obsolete translations from tr files" OFF)
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Core
     LinguistTools
@@ -34,7 +34,7 @@ if(WIN32 OR APPLE)
 endif()
 
 if(CLEAN_TRS)
-    set(CLEAN_OPTION "-noobsolete")
+    set(CLEAN_OPTION "-no-obsolete")
 else()
     set(CLEAN_OPTION "")
 endif()
