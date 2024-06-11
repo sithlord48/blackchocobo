@@ -841,7 +841,7 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Show:</source>
-        <translation type="unfinished">Show:</translation>
+        <translation type="unfinished">Anzeigen</translation>
     </message>
     <message>
         <source>PSX Save Data</source>
@@ -913,11 +913,11 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&amp;View</source>
-        <translation type="unfinished">&amp;Aussicht</translation>
+        <translation type="unfinished">&amp;Ansicht</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation type="unfinished">die Einstellungen</translation>
+        <translation>Ein&amp;stellungen</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -945,7 +945,7 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Sa&amp;ve As</source>
-        <translation type="unfinished">Speichern a&amp;ls</translation>
+        <translation type="unfinished">Speichern un&amp;ter</translation>
     </message>
     <message>
         <source>Ctrl+Shift+S</source>
@@ -953,7 +953,7 @@ Sie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;Über</translation>
+        <translation type="unfinished">&amp;Info</translation>
     </message>
     <message>
         <source>&amp;Select Slot</source>
@@ -1296,15 +1296,15 @@ Trigger, Tutorial zeigt</translation>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kampfarena</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anzahl der Siege für den &amp;quot;Spezialkampf&amp;quot;. Die Minispiel-Belohnung richtet sich nach der Anzahl der Siege&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Siege in Spezialkämpfen</translation>
     </message>
 </context>
 <context>

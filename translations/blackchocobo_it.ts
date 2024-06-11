@@ -1292,15 +1292,15 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arena di Battaglia</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numero di vittorie per la &amp;quot;Battaglia Speciale&amp;quot;. La ricompensa del minigioco si basa sul numero di vittorie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">La battaglia speciale vince</translation>
     </message>
 </context>
 <context>

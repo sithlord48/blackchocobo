@@ -1258,7 +1258,7 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Region gry</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1278,28 +1278,29 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zapisz miejsce</translation>
     </message>
     <message>
         <source>Played piano during flashback</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grałem na pianinie podczas retrospekcji</translation>
     </message>
     <message>
         <source>When Box is Partially Checked (&quot;-&quot;) it will
 trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kiedy pole jest częściowo zaznaczone („-”), tak się stanie
+wyzwalacz pokazujący ten samouczek</translation>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arena Bitewna</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Liczba zwycięstw w &amp;quot;Bitwie specjalnej&amp;quot;. Nagroda w mini-grze zależy od liczby zwycięstw.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Specjalne zwycięstwa w bitwach</translation>
     </message>
 </context>
 <context>

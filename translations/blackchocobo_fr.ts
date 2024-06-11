@@ -1293,15 +1293,15 @@ le tutoriel sera affiché directement</translation>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arène de Combat</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre de victoires pour la &amp;quot;Bataille Spéciale&amp;quot;. La récompense du mini-jeu est basée sur le nombre de victoires.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Victoires des batailles spéciales</translation>
     </message>
 </context>
 <context>

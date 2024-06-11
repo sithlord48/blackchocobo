@@ -1253,7 +1253,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Game Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ゲーム地域</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1273,7 +1273,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Save Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存スロット</translation>
     </message>
     <message>
         <source>Played piano during flashback</source>
@@ -1287,15 +1287,15 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">戦闘アリーナ</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;「スペシャルバトル」の勝利数。勝利数に応じてミニゲーム報酬がもらえます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スペシャルバトル勝利</translation>
     </message>
 </context>
 <context>

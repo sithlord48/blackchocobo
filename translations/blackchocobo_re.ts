@@ -1259,7 +1259,7 @@ Var And Scrolling Synced To Left Table</translation>
     </message>
     <message>
         <source>Game Region</source>
-        <translation></translation>
+        <translation>Game Region</translation>
     </message>
     <message>
         <source>US English (NTSC-U)</source>
@@ -1293,15 +1293,15 @@ trigger showing that tutorial</translation>
     </message>
     <message>
         <source>Battle Arena</source>
-        <translation type="unfinished"></translation>
+        <translation>Battle Arena</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation type="unfinished"></translation>
+        <translation>Special Battle Wins</translation>
     </message>
 </context>
 <context>
