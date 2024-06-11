@@ -123,70 +123,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Przedmioty</translation>
     </message>
     <message>
-        <source>Inventory</source>
-        <translation type="unfinished">Inwentarz</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation type="unfinished">Dodaj maksimum wszystkich przedmiotów</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation type="unfinished">Wyczyść wszystkie przedmioty</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation type="unfinished">Pieniądze</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation type="unfinished">Gil</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation type="unfinished">GP</translation>
-    </message>
-    <message>
-        <source>Battles</source>
-        <translation type="unfinished">Bitwy</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">Ucieczki</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">Zebrano ulotki o Żółwim Raju</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Wyszukaj „Żółwi Raj” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation type="unfinished">Kluczowe przedmioty</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">Wyszukaj „Kluczowy Przedmiot” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">Niewykorzystane kluczowe przedmioty</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation type="unfinished">Tajemnicze majtki</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation type="unfinished">List do Córki</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation type="unfinished">List do Żony</translation>
-    </message>
-    <message>
         <source>Materia</source>
         <translation type="unfinished">Materia</translation>
     </message>
@@ -955,10 +891,6 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
         <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">Nowa Gra&amp;+ </translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
@@ -1246,11 +1178,11 @@ Zmienna i przewijanie zsynchronizowane z lewą tabelą</translation>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">Żółwi Raj</translation>
+        <translation type="unfinished">Ulotka z Żółwiowym Rajem</translation>
     </message>
     <message>
         <source>KeyItem</source>
-        <translation type="unfinished">Kluczowy Przedmiot</translation>
+        <translation type="unfinished">Kluczowy Element</translation>
     </message>
     <message>
         <source>Slot</source>
@@ -1301,6 +1233,81 @@ wyzwalacz pokazujący ten samouczek</translation>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">Specjalne zwycięstwa w bitwach</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">Nowa &amp;Gra+</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">Wyczyszczono wszystkie elementy</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>Inwentarz</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>Dodaj maksimum wszystkich przedmiotów</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>Wyczyść wszystkie przedmioty</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation type="unfinished">Gil</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation type="unfinished">Pieniądze</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation type="unfinished">GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation type="unfinished">Bitwy</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation type="unfinished">Wyszukaj „Żółwi Raj” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation type="unfinished">Zebrano ulotki o Żółwim Raju</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation type="unfinished">Kluczowy Przedmiot</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation type="unfinished">Wyszukaj „Kluczowy Przedmiot” za pomocą trybu wyszukiwania przedmiotów na karcie lokalizacji</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation type="unfinished">Niewykorzystane kluczowe przedmioty</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation type="unfinished">Tajemnicze majtki</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation type="unfinished">List do Córki</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation type="unfinished">List do Żony</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation type="unfinished">Ucieczki</translation>
     </message>
 </context>
 <context>

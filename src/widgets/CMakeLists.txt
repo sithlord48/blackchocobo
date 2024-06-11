@@ -1,6 +1,8 @@
 add_library(BCWIDGETS STATIC
     partytab.cpp
     partytab.h
+    itemtab.cpp
+    itemtab.h
 )
 target_include_directories(BCWIDGETS PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(BCWIDGETS PUBLIC

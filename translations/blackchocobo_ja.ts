@@ -115,18 +115,6 @@ p, li { white-space: pre-wrap; }
         <translation>AP</translation>
     </message>
     <message>
-        <source>Battles</source>
-        <translation>バトル回数</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation>ギル</translation>
-    </message>
-    <message>
-        <source>GP</source>
-        <translation>GP</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
         <translation>パーティのストック マテリア</translation>
     </message>
@@ -137,58 +125,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Master</source>
         <translation>MASTER</translation>
-    </message>
-    <message>
-        <source>Inventory</source>
-        <translation type="unfinished">所持アイテム</translation>
-    </message>
-    <message>
-        <source>Add Max Of All Items</source>
-        <translation type="unfinished">すべてのアイテムを最大数追加</translation>
-    </message>
-    <message>
-        <source>Clear All Items</source>
-        <translation type="unfinished">すべてのアイテムを削除</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation type="unfinished">お金</translation>
-    </message>
-    <message>
-        <source>Escapes</source>
-        <translation type="unfinished">脱出</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">&apos;かめ道楽 通信&apos; の閲読</translation>
-    </message>
-    <message>
-        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">場所]タブの[アイテムの検索モードを使用して「タートル・パラダイス」を検索します</translation>
-    </message>
-    <message>
-        <source>Key Items</source>
-        <translation type="unfinished">キーアイテム</translation>
-    </message>
-    <message>
-        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
-        <translation type="unfinished">場所]タブの[アイテムの検索モードを使用して、「キーアイテム」を検索</translation>
-    </message>
-    <message>
-        <source>Unused KeyItems</source>
-        <translation type="unfinished">未使用のキーアイテム</translation>
-    </message>
-    <message>
-        <source>Mystery panties</source>
-        <translation type="unfinished">入手先不明パンツ</translation>
-    </message>
-    <message>
-        <source>Letter to a Daughter</source>
-        <translation type="unfinished">娘への手紙</translation>
-    </message>
-    <message>
-        <source>Letter to a Wife</source>
-        <translation type="unfinished">奥さんへの手紙</translation>
     </message>
     <message>
         <source>Bin</source>
@@ -1032,10 +968,6 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">Ctrl+Shift+N</translation>
     </message>
     <message>
-        <source>New Game&amp;+ </source>
-        <translation type="unfinished">新規ゲーム＋ (&amp;+)</translation>
-    </message>
-    <message>
         <source>Ctrl+Shift+=</source>
         <translation type="unfinished">Ctrl+Shift+=</translation>
     </message>
@@ -1237,7 +1169,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation type="unfinished">タートル・パラダイス</translation>
+        <translation type="unfinished">タートルパラダイス</translation>
     </message>
     <message>
         <source>KeyItem</source>
@@ -1296,6 +1228,81 @@ trigger showing that tutorial</source>
     <message>
         <source>Special Battle Wins</source>
         <translation type="unfinished">スペシャルバトル勝利</translation>
+    </message>
+    <message>
+        <source>New &amp;Game+ </source>
+        <translation type="unfinished">新規ゲーム＋ (&amp;G)</translation>
+    </message>
+    <message>
+        <source>Cleared All Items</source>
+        <translation type="unfinished">すべての項目をクリアしました</translation>
+    </message>
+</context>
+<context>
+    <name>ItemTab</name>
+    <message>
+        <source>Inventory</source>
+        <translation>所持アイテム</translation>
+    </message>
+    <message>
+        <source>Add Max of All Items</source>
+        <translation>すべてのアイテムを最大数追加</translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
+        <translation>すべてのアイテムを削除</translation>
+    </message>
+    <message>
+        <source>Gil</source>
+        <translation>ギル</translation>
+    </message>
+    <message>
+        <source>Money</source>
+        <translation>お金</translation>
+    </message>
+    <message>
+        <source>GP</source>
+        <translation>GP</translation>
+    </message>
+    <message>
+        <source>Battles</source>
+        <translation>バトル回数</translation>
+    </message>
+    <message>
+        <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
+        <translation>場所]タブの[アイテムの検索モードを使用して「タートル・パラダイス」を検索します</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation>&apos;かめ道楽 通信&apos; の閲読</translation>
+    </message>
+    <message>
+        <source>KeyItems</source>
+        <translation>キーアイテム</translation>
+    </message>
+    <message>
+        <source>Search For &quot;KeyItem&quot; using item search mode on the location tab</source>
+        <translation>場所]タブの[アイテムの検索モードを使用して、「キーアイテム」を検索</translation>
+    </message>
+    <message>
+        <source>Unused KeyItems</source>
+        <translation>未使用のキーアイテム</translation>
+    </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation>入手先不明パンツ</translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation>娘への手紙</translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation>奥さんへの手紙</translation>
+    </message>
+    <message>
+        <source>Escapes</source>
+        <translation>脱出</translation>
     </message>
 </context>
 <context>
