@@ -43,8 +43,8 @@ PartyTab::PartyTab(QWidget *parent)
         button->setMinimumSize(118,132);
         button->setIconSize(QSize(112, 128));
         button->setIcon(FF7Char::pixmap(i));
-        connect(button, &QPushButton::clicked, this, [this, i](){
-            Q_EMIT loadCharacterInSlot(i);
+        connect(button, &QPushButton::clicked, this, [this, i] {
+            Q_EMIT requestCharacterSlotLoad(i);
             setCurrentButton(i);
         });
         m_btnChars.append(button);
@@ -74,100 +74,27 @@ PartyTab::PartyTab(QWidget *parent)
     setLayout(mainLayout);
     setMinimumSize(mainLayout->sizeHint());
 
-    connect(m_charEditor, &CharEditor::id_changed, this, &PartyTab::characterIdChanged);
-    connect(m_charEditor, &CharEditor::level_changed, this, &PartyTab::characterLevelChanged);
-    connect(m_charEditor, &CharEditor::str_changed, this, &PartyTab::characterStrChanged);
-    connect(m_charEditor, &CharEditor::vit_changed, this, &PartyTab::characterVitChanged);
-    connect(m_charEditor, &CharEditor::mag_changed, this, &PartyTab::characterMagChanged);
-    connect(m_charEditor, &CharEditor::spi_changed, this, &PartyTab::characterSpiChanged);
-    connect(m_charEditor, &CharEditor::dex_changed, this, &PartyTab::characterDexChanged);
-    connect(m_charEditor, &CharEditor::lck_changed, this, &PartyTab::characterLckChanged);
-    connect(m_charEditor, &CharEditor::strBonus_changed, this, &PartyTab::characterStrBonusChanged);
-    connect(m_charEditor, &CharEditor::vitBonus_changed, this, &PartyTab::characterVitBonusChanged);
-    connect(m_charEditor, &CharEditor::magBonus_changed, this, &PartyTab::characterMagBonusChanged);
-    connect(m_charEditor, &CharEditor::spiBonus_changed, this, &PartyTab::characterSpiBonusChanged);
-    connect(m_charEditor, &CharEditor::dexBonus_changed, this, &PartyTab::characterDexBonusChanged);
-    connect(m_charEditor, &CharEditor::lckBonus_changed, this, &PartyTab::characterLckBonusChanged);
-    connect(m_charEditor, &CharEditor::limitLevel_changed, this, &PartyTab::characterLimitLevelChanged);
-    connect(m_charEditor, &CharEditor::limitBar_changed, this, &PartyTab::characterLimitBarChanged);
-    connect(m_charEditor, &CharEditor::name_changed, this, &PartyTab::characterNameChanged);
-    connect(m_charEditor, &CharEditor::weapon_changed, this, &PartyTab::characterWeaponChanged);
-    connect(m_charEditor, &CharEditor::armor_changed, this, &PartyTab::characterArmorChanged);
-    connect(m_charEditor, &CharEditor::accessory_changed, this, &PartyTab::characterAccessoryChanged);
-    connect(m_charEditor, &CharEditor::curHp_changed, this, &PartyTab::characterCurHpChanged);
-    connect(m_charEditor, &CharEditor::maxHp_changed, this, &PartyTab::characterMaxHpChanged);
-    connect(m_charEditor, &CharEditor::curMp_changed, this, &PartyTab::characterCurMpChanged);
-    connect(m_charEditor, &CharEditor::maxMp_changed, this, &PartyTab::characterMaxMpChanged);
-    connect(m_charEditor, &CharEditor::kills_changed, this, &PartyTab::characterKillsChanged);
-    connect(m_charEditor, &CharEditor::row_changed, this, &PartyTab::characterRowChanged);
-    connect(m_charEditor, &CharEditor::levelProgress_changed, this, &PartyTab::characterLevelProgressChanged);
-    connect(m_charEditor, &CharEditor::sadnessfury_changed, this, &PartyTab::characterSadnessfuryChanged);
-    connect(m_charEditor, &CharEditor::limits_changed, this, &PartyTab::characterLimitsChanged);
-    connect(m_charEditor, &CharEditor::timesused1_changed, this, &PartyTab::characterTimesused1Changed);
-    connect(m_charEditor, &CharEditor::timesused2_changed, this, &PartyTab::characterTimesused2Changed);
-    connect(m_charEditor, &CharEditor::timesused3_changed, this, &PartyTab::characterTimesused3Changed);
-    connect(m_charEditor, &CharEditor::baseHp_changed, this, &PartyTab::characterBaseHpChanged);
-    connect(m_charEditor, &CharEditor::baseMp_changed, this, &PartyTab::characterBaseMpChanged);
-    connect(m_charEditor, &CharEditor::exp_changed, this, &PartyTab::characterExpChanged);
-    connect(m_charEditor, &CharEditor::mslotChanged, this, &PartyTab::characterMslotChanged);
-    connect(m_charEditor, &CharEditor::Materias_changed, this, &PartyTab::characterMateriaChanged);
-    connect(m_charEditor, &CharEditor::expNext_changed, this, &PartyTab::characterExpNextChanged);
-
+    connect(m_charEditor, &CharEditor::idChanged, this, [=](qint8 id) {
+        if(id == FF7Char::Sephiroth || id == FF7Char::YoungCloud)
+            m_btnBoostCharacter->setVisible(false);
+        else
+            m_btnBoostCharacter->setVisible(true);
+    });
 }
 
 void PartyTab::setPartyMembers(int p1, int p2, int p3)
 {
-    if(p1 < 0 || p1 > 11)
+    if ( (p1 < 0) || (p1 > 11))
         p1 = 12;
-    if(p2 < 0 || p2 > 11)
+    if ((p2 < 0) || (p2 > 11))
         p2 = 12;
-    if(p3 < 0 || p3 > 11)
+    if ((p3 < 0) || (p3 > 11))
         p3 = 12;
     blockSignals(true);
     m_comboParty.at(0)->setCurrentIndex(p1);
     m_comboParty.at(1)->setCurrentIndex(p2);
     m_comboParty.at(2)->setCurrentIndex(p3);
     blockSignals(false);
-}
-
-void PartyTab::pressBoostCharacter()
-{
-    Q_EMIT m_btnBoostCharacter->pressed();
-}
-
-void PartyTab::setCharEditorSliderStyle(const QString &sliderStyleSheet)
-{
-    m_charEditor->setSliderStyle(sliderStyleSheet);
-}
-
-void PartyTab::setCharEditorToolBoxStyle(const QString &tabStyle)
-{
-    m_charEditor->setToolBoxStyle(tabStyle);
-}
-
-void PartyTab::setCharEditorEditableComboBoxes(bool editable)
-{
-    m_charEditor->setEditableComboBoxes(editable);
-}
-
-void PartyTab::setCharEditorShowPlaceholderMateria(bool shown)
-{
-    m_charEditor->setShowPlaceholderMateria(shown);
-}
-
-void PartyTab::setCharEditorAdvancedMode(bool adv)
-{
-    m_charEditor->setAdvancedMode(adv);
-}
-
-void PartyTab::setCharEditorAutoLevel(bool enabled)
-{
-    m_charEditor->setAutoLevel(enabled);
-}
-
-void PartyTab::setCharEditorAutoStatCalc(bool enabled)
-{
-    m_charEditor->setAutoStatCalc(enabled);
 }
 
 void PartyTab::setCharacter(const FF7CHAR &charData, const QString &processedName)

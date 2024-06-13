@@ -22,16 +22,12 @@ public:
      */
     void setPartyMembers(int p1, int p2, int p3);
     void pressCharacterButton(int i);
-    void pressBoostCharacter();
+    /**
+     * @brief boostCharacter - Give the current chracter a boost to maximum level
+     */
+    void boostCharacter();
 
-    // Methods to set the CharEditor up
-    void setCharEditorSliderStyle(const QString &sliderStyleSheet);
-    void setCharEditorToolBoxStyle(const QString &tabStyle);
-    void setCharEditorEditableComboBoxes(bool editable);
-    void setCharEditorShowPlaceholderMateria(bool shown);
-    void setCharEditorAdvancedMode(bool adv);
-    void setCharEditorAutoLevel(bool enabled);
-    void setCharEditorAutoStatCalc(bool enabled);
+    CharEditor* characterEditor() { return m_charEditor; }
     void setCharacter(const FF7CHAR &charData, const QString &processedName = QString());
     void setButtonImageToId(int buttonNumber = 0, int id = 0);
     void setButtonImagesToIds(const QList<int> &idList = {0, 1, 2, 3, 4, 5, 6, 7, 8});
@@ -42,47 +38,13 @@ signals:
      * @param id - the id of the new Character in the slot
      */
     void partyChanged(int partySlot, int id);
-    void loadCharacterInSlot(int charSlot);
 
-    //Forwarded from charEditor
-    void characterIdChanged(qint8);
-    void characterLevelChanged(qint8);
-    void characterStrChanged(quint8);
-    void characterVitChanged(quint8);
-    void characterMagChanged(quint8);
-    void characterSpiChanged(quint8);
-    void characterDexChanged(quint8);
-    void characterLckChanged(quint8);
-    void characterStrBonusChanged(quint8);
-    void characterVitBonusChanged(quint8);
-    void characterMagBonusChanged(quint8);
-    void characterSpiBonusChanged(quint8);
-    void characterDexBonusChanged(quint8);
-    void characterLckBonusChanged(quint8);
-    void characterLimitLevelChanged(qint8);
-    void characterLimitBarChanged(quint8);
-    void characterNameChanged(QString);
-    void characterWeaponChanged(quint8);
-    void characterArmorChanged(quint8);
-    void characterAccessoryChanged(quint8);
-    void characterCurHpChanged(quint16);
-    void characterMaxHpChanged(quint16);
-    void characterCurMpChanged(quint16);
-    void characterMaxMpChanged(quint16);
-    void characterKillsChanged(quint16);
-    void characterRowChanged(quint8);
-    void characterLevelProgressChanged(quint8);
-    void characterSadnessfuryChanged(quint8);
-    void characterLimitsChanged(quint16);
-    void characterTimesused1Changed(quint16);
-    void characterTimesused2Changed(quint16);
-    void characterTimesused3Changed(quint16);
-    void characterBaseHpChanged(quint16);
-    void characterBaseMpChanged(quint16);
-    void characterExpChanged(quint32);
-    void characterMslotChanged(int);
-    void characterMateriaChanged(materia);
-    void characterExpNextChanged(quint32);
+    /**
+     * @brief requestCharacterSlotLoad This signal is emitted when the user clicks on a character's icon
+     * The Character Editor will expect the host program to call to setChracter with the new chracter data for new character slot
+     * @param charSlot The character slot that is requested
+     */
+    void requestCharacterSlotLoad(int charSlot);
 
 protected:
     void resizeEvent(QResizeEvent *ev);
@@ -90,7 +52,6 @@ protected:
 
 private:
     void updateText();
-    void boostCharacter();
     void setCurrentButton(int currentButton);
     QGroupBox * m_groupParty;
     QGroupBox * m_groupCharacters;
