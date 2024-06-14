@@ -41,8 +41,8 @@
 		<keyword translate="en">Playstation</keyword>
 	</keywords>
 	<branding>
-		<color type="primary" scheme_preference="light">#4A4D51</color>
-		<color type="primary" scheme_preference="dark">#1B1E20</color>
+		<color type="primary" scheme_preference="light">#deddda</color>
+		<color type="primary" scheme_preference="dark">#5e5c64</color>
 	</branding>
 	<content_rating type="oars-1.0" />
 	<releases>
