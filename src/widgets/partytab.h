@@ -1,3 +1,6 @@
+//  SPDX-FileCopyrightText: 2022 - 2024 Chris Rizzitello <sithlord48@gmail.com>
+//  SPDX-License-Identifier: GPL-3.0-or-later
+
 #pragma once
 
 #include <QWidget>

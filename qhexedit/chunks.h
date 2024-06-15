@@ -1,3 +1,6 @@
+//   SPDX-FileCopyrightText: 2015 Simsys
+//   SPDX-License-Identifier: LGPL-2.1-only
+
 #ifndef CHUNKS_H
 #define CHUNKS_H
 

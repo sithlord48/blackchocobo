@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: MIT
+
 if(UNIX AND NOT APPLE)
     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/blackchocobo.png DESTINATION share/icons/hicolor/512x512/apps/ RENAME io.github.sithlord48.blackchocobo.png)
     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/io.github.sithlord48.blackchocobo.desktop DESTINATION share/applications/)

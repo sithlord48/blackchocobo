@@ -1,3 +1,10 @@
+//   SPDX-FileCopyrightText: 2010 winfried.simon
+//   SPDX-FileCopyrightText: 2015 - 2016, 2018  Simsys
+//   SPDX-FileCopyrightText: 2016 Andrej Kostrov
+//   SPDX-FileCopyrightText: 2019 Victor Kustov <ktrace@yandex.ru>
+//   SPDX-FileCopyrightText: 2019 Niklaus Schiess <takeshix@adversce.com>
+//   SPDX-License-Identifier: LGPL-2.1-only
+
 #ifndef QHEXEDIT_H
 #define QHEXEDIT_H
 
