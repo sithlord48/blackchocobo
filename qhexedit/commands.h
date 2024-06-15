@@ -1,3 +1,9 @@
+//   SPDX-FileCopyrightText: 2011 winfried.simon
+//   SPDX-FileCopyrightText: 2015, 2018 Simsys
+//   SPDX-FileCopyrightText: 2020 ljhcage
+//   SPDX-License-Identifier: LGPL-2.1-only
+
+
 #ifndef COMMANDS_H
 #define COMMANDS_H
 

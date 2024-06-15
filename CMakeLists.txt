@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019 - 2023 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: MIT
+
 cmake_minimum_required( VERSION 3.21 )
 
 set(CMAKE_CXX_STANDARD 17)

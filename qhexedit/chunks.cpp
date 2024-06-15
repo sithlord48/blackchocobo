@@ -1,3 +1,7 @@
+//   SPDX-FileCopyrightText: 2015 - 2016 Simsys
+//   SPDX-FileCopyrightText: 2021 Chris Rizzitello <sithlord48@gmai.com>
+//   SPDX-License-Identifier: LGPL-2.1-only
+
 #include "chunks.h"
 #include <limits.h>
 

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2022 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: MIT
 if(CPACK_GENERATOR MATCHES 7Z|ZIP)
     file(TOUCH ${CPACK_TEMPORARY_INSTALL_DIRECTORY}/settings.ini)
 endif()

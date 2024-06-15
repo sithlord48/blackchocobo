@@ -1,3 +1,15 @@
+//   SPDX-FileCopyrightText: 2010 winfried.simon
+//   SPDX-FileCopyrightText: 2015 - 2016, 2018  Simsys
+//   SPDX-FileCopyrightText: 2016 Andrej Kostrov
+//   SPDX-FileCopyrightText: 2017 Claudio Lanconelli <claudiolanconelli@gmail.com>
+//   SPDX-FileCopyrightText: 2018 - 2020 Victor Kustov <ktrace@yandex.ru>
+//   SPDX-FileCopyrightText: 2019 Iulian Onofrei
+//   SPDX-FileCopyrightText: 2020 Federico Ferri
+//   SPDX-FileCopyrightText: 2020 Niklaus Schiess <takeshix@adversce.com>
+//   SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmail.com>
+//   SPDX-FileCopyrightText: 2021 thinkSJ
+//   SPDX-License-Identifier: LGPL-2.1-only
+
 #include <QApplication>
 #include <QClipboard>
 #include <QKeyEvent>

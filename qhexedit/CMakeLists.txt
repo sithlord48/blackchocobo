@@ -1,3 +1,5 @@
+#    SPDX-FileCopyrightText: Chris Rizzitello <sithlord48@gmail.com>
+#    SPDX-License-Identifier: MIT
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
     Gui
     Widgets

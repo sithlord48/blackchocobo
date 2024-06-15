@@ -1,3 +1,7 @@
+ <!--
+   SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmail.com>
+   SPDX-License-Identifier: MIT
+ -->
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
 	<id>io.github.sithlord48.blackchocobo</id>

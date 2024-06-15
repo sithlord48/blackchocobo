@@ -16,6 +16,13 @@ env:
     debianRequirments: "build-essential git zlib1g-dev cmake qt6-tools-dev qt6-tools-dev-tools qt6-l10n-tools qt6-declarative-dev qt6-base-dev libqt6svg6-dev qt6-base-dev-tools qt6-translations-l10n libqt6core5compat6-dev libgl1-mesa-dev rename wget curl devscripts"
 
 jobs:
+  reuse_compliance_check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@v3
+
   precheck:
     name: Job Info
     runs-on: ubuntu-latest
@@ -31,6 +38,7 @@ jobs:
               VER="continuous"
           fi
           echo "version=$VER" >> $GITHUB_OUTPUT
+
   deb_builder:
     name: debianBuilder-${{matrix.config.name}}
     runs-on: ${{matrix.config.os}}

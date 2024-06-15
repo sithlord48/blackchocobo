@@ -1,3 +1,8 @@
+//   SPDX-FileCopyrightText: 2011 winfried.simon
+//   SPDX-FileCopyrightText: 2015 - 2016 Simsys
+//   SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmai.com>
+//   SPDX-License-Identifier: LGPL-2.1-only
+
 #include "commands.h"
 #include <QUndoCommand>
 

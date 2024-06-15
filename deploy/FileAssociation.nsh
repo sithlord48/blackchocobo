@@ -1,4 +1,7 @@
 /*
+ * SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmail.com>
+ * SPDX-License-Identifier: MIT
+/*
 _____________________________________________________________________________
  
                        File Association

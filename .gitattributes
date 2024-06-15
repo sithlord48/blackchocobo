@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: CC0-1.0
+
 .gitattributes export-ignore
 .gitignore export-ignore
 .github* export-ignore

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: MIT
 set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM 1)
 option(CLEAN_TRS "Clean Obsolete translations from tr files" OFF)
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS
