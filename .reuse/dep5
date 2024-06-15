@@ -83,6 +83,14 @@ Files: src/dialogs/options.ui
 Copyright: 2010 - 2020 Chris Rizzitello <sithlord48@gmail.com>
 License: GPL-3.0-or-later
 
+Files: deploy/io.github.sithlord48.blackchocobo.metainfo.xml
+Copyright: 2020 Chris Rizzitello <sithlord48@gmail.com>
+License: CC0-1.0
+
+Files: deploy/io.github.sithlord48.blackchocobo.xml
+Copyright: 2020 Chris Rizzitello <sithlord48@gmail.com>
+License: CC0-1.0
+
 # Sample paragraph, commented out:
 #
 # Files: src/*
