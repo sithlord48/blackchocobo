@@ -113,7 +113,7 @@ void BlackChocobo::detectTranslations()
     QMap<QString, QTranslator *> app_translations;
     QDir dir (QStringLiteral("%1").arg(BCSettings::value(SETTINGS::LANGPATH).toString()));
     QStringList langList = dir.entryList(nameFilter,QDir::Files, QDir::Name);
-    for (const QString &translation : langList) {
+    for (const QString &translation : std::as_const(langList)) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(13, 2);
@@ -335,7 +335,7 @@ void BlackChocobo::init_style()
     ui->slideWorldX->setStyleSheet(QStringLiteral("::handle{image: url(:/icons/common/map-slide-up);}"));
     if (style()->name() == "fusion") {
         auto cboxes = findChildren<QComboBox*>(QString(), Qt::FindChildrenRecursively);
-        for (auto box : cboxes) {
+        for (auto box : std::as_const(cboxes)) {
             box->view()->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
             box->setStyleSheet(QStringLiteral("QComboBox { combobox-popup: 0;}"));
         }
@@ -717,7 +717,7 @@ void BlackChocobo::changeEvent(QEvent *e)
     if (e->type() == QEvent::PaletteChange) {
         QPalette palette = BCSettings::paletteForSetting();
         QList<QWidget*> widgets = findChildren<QWidget *>(QString(), Qt::FindChildrenRecursively);
-        for (QWidget * widget : widgets)
+        for (QWidget * widget : std::as_const(widgets))
              widget->setPalette(palette);
         hexEditor->setAddressAreaColor(palette.alternateBase().color());
         QIcon::setThemeSearchPaths(QIcon::themeSearchPaths() << QStringLiteral(":/icons"));
@@ -1150,11 +1150,14 @@ void BlackChocobo::changeLanguage(const QVariant &data)
     if(!m_translations.contains(data.toString()))
         detectTranslations();
 
-    for(auto translation : m_translations.value(BCSettings::value(SETTINGS::LANG).toString()))
+    const auto translations = m_translations.value(BCSettings::value(SETTINGS::LANG).toString());
+    for(auto translation : std::as_const(translations))
         QApplication::removeTranslator(translation);
 
     BCSettings::setValue(SETTINGS::LANG, data);
-    for(auto translation : m_translations.value(data.toString()))
+
+    const auto translation_values = m_translations.value(data.toString());
+    for(auto translation : translation_values)
         QApplication::installTranslator(translation);
 }
 
