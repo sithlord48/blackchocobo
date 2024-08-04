@@ -1243,6 +1243,14 @@ trigger showing that tutorial</translation>
         <source>Cleared All Items</source>
         <translation>Cleared All Items</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation>Import Canceled</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation>Error Importing Slot %1</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>

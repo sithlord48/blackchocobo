@@ -1241,6 +1241,14 @@ trigger showing that tutorial</source>
         <source>Cleared All Items</source>
         <translation type="unfinished">Borró todos los elementos</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation type="unfinished">Importación cancelada</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation type="unfinished">Error al importar ranura %1</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>

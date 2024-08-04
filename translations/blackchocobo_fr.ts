@@ -1243,6 +1243,14 @@ le tutoriel sera affiché directement</translation>
         <source>Cleared All Items</source>
         <translation type="unfinished">Effacé tous les éléments</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation type="unfinished">Importation annulée</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation type="unfinished">Erreur lors de l&apos;importation de l&apos;emplacement %1</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>
