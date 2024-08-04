@@ -850,12 +850,18 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
 
     SlotSelect slotselect(ff7, true, this);
     int i = slotselect.exec();
-    if(i == -1) {
-        actionOpenSaveFile_triggered();
-        return;
-    }
 
-    s = i;
+    switch(i) {
+        case SlotSelect::LOAD_NEW: {
+            actionOpenSaveFile_triggered();
+            return;
+        }
+        case SlotSelect::CANCEL: {
+            s = 0;
+            break;
+        }
+        default: s = i;
+    }
     guirefresh();
 }
 
@@ -865,28 +871,36 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
     QString fileName = BCDialog::getOpenFileName(this,
                        tr("Open Final Fantasy 7 Save"), BCSettings::value(SETTINGS::LOADPATH).toString(),
                        FF7SaveInfo::knownTypesFilter());
-    if (!fileName.isEmpty()) {
-        FF7Save *tempSave = new FF7Save();
-        if (tempSave->loadFile(fileName)) {
-            int fileSlot = 0;
-            if (FF7SaveInfo::slotCount(tempSave->format()) > 1) {
-                SlotSelect *SSelect = new SlotSelect(tempSave, false, this);
-                fileSlot = SSelect->exec();
-                if (fileSlot == -1) {
-                    actionImportSlotFromFile_triggered();
-                    return;
-                }
-                ui->statusBar->showMessage(tr("Imported Slot:%2 from %1 -> Slot:%3").arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1)), 2000);
-            } else {
-                ui->statusBar->showMessage(tr("Imported %1 -> Slot:%2").arg(fileName, QString::number(s + 1)), 2000);
-            }
-            ff7->importSlot(s, fileName, fileSlot);
-            guirefresh();
-        } else {
-            ui->statusBar->showMessage(tr("Error Loading File %1").arg(fileName), 2000);
-        }
+    if (fileName.isEmpty())
+        return;
+
+    FF7Save *tempSave = new FF7Save();
+    if (!tempSave->loadFile(fileName)) {
+        ui->statusBar->showMessage(tr("Error Loading File %1").arg(fileName), 2000);
+        return;
     }
-    ff7->setFileModified(true, 0);
+
+    int fileSlot = 0;
+    QString message;
+    if (FF7SaveInfo::slotCount(tempSave->format()) > 1) {
+        SlotSelect *SSelect = new SlotSelect(tempSave, false, this);
+        fileSlot = SSelect->exec();
+        if (fileSlot == SlotSelect::CANCEL) {
+            message = tr("Import Canceled");
+            return;
+        }
+        message = tr("Imported Slot:%2 from %1 -> Slot:%3").arg(fileName, QString::number(fileSlot + 1), QString::number(s + 1));
+    } else {
+        message = tr("Imported %1 -> Slot:%2").arg(fileName, QString::number(s + 1));
+    }
+
+    if (!ff7->importSlot(s, fileName, fileSlot)) {
+        ui->statusBar->showMessage(tr("Error Importing Slot %1").arg(QString::number(s+1)), 2000);
+        return;
+    }
+    ui->statusBar->showMessage(message, 2000);
+    guirefresh();
+    ff7->setFileModified(true, s);
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionImportChar_triggered()
@@ -915,13 +929,15 @@ void BlackChocobo::actionExportChar_triggered()
     QString fileName = BCDialog::getSaveFileName(this, ff7->region(s),
                        tr("Save FF7 Character File"), BCSettings::value(SETTINGS::STATFOLDER).toString(),
                        tr("FF7 Character Stat File(*.char)"));
-    if (!fileName.isEmpty()) {
-        if (ff7->exportCharacter(s, curchar, fileName))
-            ui->statusBar->showMessage(tr("Character Export Successful"), 1000);
-        else
-            ui->statusBar->showMessage(tr("Character Export Failed"), 2000);
-    }
+    if (fileName.isEmpty())
+        return;
+
+    if (ff7->exportCharacter(s, curchar, fileName))
+        ui->statusBar->showMessage(tr("Character Export Successful"), 1000);
+    else
+        ui->statusBar->showMessage(tr("Character Export Failed"), 2000);
 }
+
 bool BlackChocobo::actionSave_triggered()
 {
     if (_init || ff7->fileName().isEmpty())
@@ -1103,7 +1119,12 @@ void BlackChocobo::actionCreateNewMetadata_triggered()
 void BlackChocobo::actionShowSelectionDialog_triggered()
 {
     SlotSelect slotselect(ff7, false, this);
-    s = slotselect.exec();
+    int slot = slotselect.exec();
+    switch(slot) {
+        case SlotSelect::LOAD_NEW:
+        case SlotSelect::CANCEL: return;
+        default: s = slot;
+    };
     guirefresh();
 }
 

@@ -1242,6 +1242,14 @@ wyzwalacz pokazujący ten samouczek</translation>
         <source>Cleared All Items</source>
         <translation type="unfinished">Wyczyszczono wszystkie elementy</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation type="unfinished">Import anulowany</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation type="unfinished">Błąd podczas importowania gniazda %1</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>

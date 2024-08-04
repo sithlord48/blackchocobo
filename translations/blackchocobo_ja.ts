@@ -1237,6 +1237,14 @@ trigger showing that tutorial</source>
         <source>Cleared All Items</source>
         <translation type="unfinished">すべての項目をクリアしました</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation type="unfinished">インポートがキャンセルされました</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation type="unfinished">スロット %1 のインポート中にエラーが発生しました</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>

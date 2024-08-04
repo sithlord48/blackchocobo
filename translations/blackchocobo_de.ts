@@ -1246,6 +1246,14 @@ Trigger, Tutorial zeigt</translation>
         <source>Cleared All Items</source>
         <translation type="unfinished">Alle Elemente gelöscht</translation>
     </message>
+    <message>
+        <source>Import Canceled</source>
+        <translation type="unfinished">Import abgebrochen</translation>
+    </message>
+    <message>
+        <source>Error Importing Slot %1</source>
+        <translation type="unfinished">Fehler beim Importieren des Slots %1</translation>
+    </message>
 </context>
 <context>
     <name>ItemTab</name>
