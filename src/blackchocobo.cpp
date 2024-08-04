@@ -300,7 +300,7 @@ void BlackChocobo::setItemSizes()
     ui->lbl_battle_love_yuffie->setFixedSize(lovePointSize);
 
     materia_editor->setStarsSize(48);
-    guirefresh(0);
+    guirefresh();
 }
 
 void BlackChocobo::populateCombos()
@@ -839,12 +839,12 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
 
     if (ff7->numberOfSlots() == 1 ) {
         s = 0;
-        guirefresh(0);
+        guirefresh();
         return;
     }
 
     if (reload) {
-        guirefresh(0);
+        guirefresh();
         return;
     }
 
@@ -856,7 +856,7 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
     }
 
     s = i;
-    guirefresh(0);
+    guirefresh();
 }
 
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -881,7 +881,7 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
                 ui->statusBar->showMessage(tr("Imported %1 -> Slot:%2").arg(fileName, QString::number(s + 1)), 2000);
             }
             ff7->importSlot(s, fileName, fileSlot);
-            guirefresh(0);
+            guirefresh();
         } else {
             ui->statusBar->showMessage(tr("Error Loading File %1").arg(fileName), 2000);
         }
@@ -1003,7 +1003,7 @@ bool BlackChocobo::saveFileFull(const QString &fileName)
             _init = false;
 
         fileModified(false);
-        guirefresh(0);
+        guirefresh();
         return true;
     }
 
@@ -1024,7 +1024,7 @@ void BlackChocobo::actionNewGame_triggered()
     ui->statusBar->showMessage(tr("New Game Created - Using: %1")
                                .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
     _init = false;
-    guirefresh(1);
+    guirefresh();
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
@@ -1037,7 +1037,7 @@ void BlackChocobo::actionNewGamePlus_triggered()
     ff7->newGamePlus(s, ff7->fileName(), save_name);
     ui->statusBar->showMessage(tr("New Game Plus Created - Using: %1")
                                .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
-    guirefresh(0);
+    guirefresh();
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1046,7 +1046,7 @@ void BlackChocobo::actionNewGamePlus_triggered()
 void BlackChocobo::actionClearSlot_triggered()
 {
     ff7->clearSlot(s);
-    guirefresh(0);
+    guirefresh();
 }
 void BlackChocobo::actionPreviousSlot_triggered()
 {
@@ -1055,7 +1055,7 @@ void BlackChocobo::actionPreviousSlot_triggered()
 
     if (s > 0) {
         s--;
-        guirefresh(0);
+        guirefresh();
     }
 }
 
@@ -1066,7 +1066,7 @@ void BlackChocobo::actionNextSlot_triggered()
 
     if (s < 14) {
         s++;
-        guirefresh(0);
+        guirefresh();
     }
 }
 
@@ -1085,7 +1085,7 @@ void BlackChocobo::actionCopySlot_triggered()
 void BlackChocobo::actionPasteSlot_triggered()
 {
     ff7->pasteSlot(s);
-    guirefresh(0);
+    guirefresh();
 }
 void BlackChocobo::actionShowOptions_triggered()
 {
@@ -1110,7 +1110,7 @@ void BlackChocobo::actionShowSelectionDialog_triggered()
 {
     SlotSelect slotselect(ff7, false, this);
     s = slotselect.exec();
-    guirefresh(0);
+    guirefresh();
 }
 
 void BlackChocobo::actionOpenAchievementFile_triggered()
@@ -1276,7 +1276,7 @@ void BlackChocobo::actionRegionJPNInternational_triggered(bool checked)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
-void BlackChocobo::setmenu(bool newgame)
+void BlackChocobo::setmenu()
 {
     load = true;
     /*~~Disable All Items that are dependent on File Type~~*/
@@ -1315,7 +1315,7 @@ void BlackChocobo::setmenu(bool newgame)
         ui->tabWidget->setTabEnabled(9, BCSettings::value(SETTINGS::ENABLETEST).toBool());
     }
 
-    if (!newgame && !ff7->fileName().isEmpty()) {
+    if (!ff7->fileName().isEmpty()) {
         ui->actionSaveFileAs->setEnabled(1);
         ui->actionReload->setEnabled(1);
     }
@@ -1482,10 +1482,9 @@ void BlackChocobo::CheckGame()
             error.setSingleSlot(true);
         switch (error.exec()) {
         case 0://View Anyway..
-            setmenu(0);
+            setmenu();
             hexTabUpdate(0);
             break;
-
         case 1://Previous Clicked
             s--;
             CheckGame();
@@ -1523,7 +1522,7 @@ void BlackChocobo::CheckGame()
             break;
         }
     } else {
-        guirefresh(0);
+        guirefresh();
     }
 }
 void BlackChocobo::othersUpdate()
@@ -1811,7 +1810,7 @@ void BlackChocobo::setControllerMappingVisible(bool Visible)
     optionsWidget->setControllerMappingVisible(Visible);
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
-void BlackChocobo::guirefresh(bool newgame)
+void BlackChocobo::guirefresh()
 {
     load = true;
     /*~~~~Check for SG type and ff7~~~~*/
@@ -1833,7 +1832,7 @@ void BlackChocobo::guirefresh(bool newgame)
             ff7->clearSlot(s); //fileModified(false);//checking only
         }
         locationViewer->setRegion(ff7->region(s));
-        setmenu(newgame);
+        setmenu();
         tabWidget_currentChanged(ui->tabWidget->currentIndex());
         load = false;
     }
@@ -2785,7 +2784,7 @@ void BlackChocobo::btnRemoveAllStolen_clicked()
 {
     for (int i = 0; i < 48; i++)
         ff7->setStolenMateria(s, i, FF7Materia::EmptyId, FF7Materia::MaxMateriaAp);
-    guirefresh(0);
+    guirefresh();
 }
 
 void BlackChocobo::sbBloveAeris_valueChanged(int value)
@@ -2920,7 +2919,7 @@ void BlackChocobo::comboSlotNumber_currentIndexChanged(int index)
         return;
     if (ff7->isFF7(s)) {
         ff7->setSaveNumber(s, index);
-        guirefresh(0);
+        guirefresh();
     }
 }
 
