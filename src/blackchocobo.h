@@ -137,9 +137,9 @@ private slots://try to keep these in the same order as the .cpp file
     void setOpenFileText(const QString &text);
 
     /*GuiFunctions*/
-    void setmenu(bool newgame);
+    void setmenu(void);
     void materiaupdate(void);
-    void guirefresh(bool newgame);
+    void guirefresh(void);
     void progress_update(void);
     void unknown_refresh(int);
     void set_ntsc_time(void);
