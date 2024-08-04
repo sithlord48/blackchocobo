@@ -1050,24 +1050,18 @@ void BlackChocobo::actionClearSlot_triggered()
 }
 void BlackChocobo::actionPreviousSlot_triggered()
 {
-    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
+    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN || s <= 0)
         return;
-
-    if (s > 0) {
-        s--;
-        guirefresh();
-    }
+    s--;
+    guirefresh();
 }
 
 void BlackChocobo::actionNextSlot_triggered()
 {
-    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN)
+    if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN || s >= 14)
         return;
-
-    if (s < 14) {
-        s++;
-        guirefresh();
-    }
+    s++;
+    guirefresh();
 }
 
 void BlackChocobo::actionAbout_triggered()
