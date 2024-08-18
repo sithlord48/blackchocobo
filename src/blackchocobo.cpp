@@ -1216,7 +1216,7 @@ void BlackChocobo::actionRegionUSA_triggered(bool checked)
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionRegionPALGeneric_triggered(bool checked)
 {
-    if(checked) {
+    if(!load && checked) {
         setRegion(QStringLiteral("PAL-E"));
         ui->actionRegionUSA->setChecked(false);
         ui->actionRegionPALGerman->setChecked(false);
@@ -1852,8 +1852,8 @@ void BlackChocobo::guirefresh()
         locationViewer->setRegion(ff7->region(s));
         setmenu();
         tabWidget_currentChanged(ui->tabWidget->currentIndex());
-        load = false;
     }
+    load = false;
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::set_char_buttons()
 {
@@ -1960,189 +1960,224 @@ void BlackChocobo::partyMembersChanged(int partySlot, int id)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::cm_stablesOwnedChanged(qint8 owned)
 {
-    if (!load)
-        ff7->setStablesOwned(s, owned);
+    if (load)
+        return;
+    ff7->setStablesOwned(s, owned);
 }
 void BlackChocobo::cm_stableMaskChanged(qint8 mask)
 {
-    if (!load)
-        ff7->setStableMask(s, mask);
+    if (load)
+        return;
+    ff7->setStableMask(s, mask);
 }
 void BlackChocobo::cm_stablesOccupiedChanged(qint8 occupied)
 {
-    if (!load)
-        ff7->setStablesOccupied(s, occupied);
+    if (load)
+        return;
+    ff7->setStablesOccupied(s, occupied);
 }
 //set data for stables inside
 void BlackChocobo::cm_nameChanged(int stable, QString text)
 {
-    if (!load)
-        ff7->setChocoName(s, stable, text);
+    if (load)
+        return;
+    ff7->setChocoName(s, stable, text);
 }
 void BlackChocobo::cm_staminaChanged(int stable, quint16 value)
 {
-    if (!load)
-        ff7->setChocoStamina(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoStamina(s, stable, value);
 }
 void BlackChocobo::cm_speedChanged(int stable, quint16 value)
 {
-    if (!load)
-        ff7->setChocoSpeed(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoSpeed(s, stable, value);
 }
 void BlackChocobo::cm_maxspeedChanged(int stable, quint16 value)
 {
-    if (!load)
-        ff7->setChocoMaxSpeed(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoMaxSpeed(s, stable, value);
 }
 void BlackChocobo::cm_sprintChanged(int stable, quint16 value)
 {
-    if (!load)
-        ff7->setChocoSprintSpeed(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoSprintSpeed(s, stable, value);
 }
 void BlackChocobo::cm_maxsprintChanged(int stable, quint16 value)
 {
-    if (!load)
-        ff7->setChocoMaxSprintSpeed(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoMaxSprintSpeed(s, stable, value);
 }
 void BlackChocobo::cm_sexChanged(int stable, quint8 index)
 {
-    if (!load)
-        ff7->setChocoSex(s, stable, index);
+    if (load)
+        return;
+    ff7->setChocoSex(s, stable, index);
 }
 void BlackChocobo::cm_typeChanged(int stable, quint8 index)
 {
-    if (!load)
-        ff7->setChocoType(s, stable, index);
+    if (load)
+        return;
+    ff7->setChocoType(s, stable, index);
 }
 void BlackChocobo::cm_coopChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoCoop(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoCoop(s, stable, value);
 }
 void BlackChocobo::cm_accelChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoAccel(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoAccel(s, stable, value);
 }
 void BlackChocobo::cm_intelChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoIntelligence(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoIntelligence(s, stable, value);
 }
 void BlackChocobo::cm_raceswonChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoRaceswon(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoRaceswon(s, stable, value);
 }
 void BlackChocobo::cm_pcountChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoPCount(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoPCount(s, stable, value);
 }
 void BlackChocobo::cm_personalityChanged(int stable, quint8 value)
 {
-    if (!load)
-        ff7->setChocoPersonality(s, stable, value);
+    if (load)
+        return;
+    ff7->setChocoPersonality(s, stable, value);
 }
 void BlackChocobo::cm_mated_toggled(int stable, bool checked)
 {
-    if (!load)
-        ff7->setChocoCantMate(s, stable, checked);
+    if (load)
+        return;
+    ff7->setChocoCantMate(s, stable, checked);
 }
 void BlackChocobo::cm_ratingChanged(int stable, quint8 rating)
 {
-    if (!load)
-        ff7->setChocoboRating(s, stable, rating);
+    if (load)
+        return;
+    ff7->setChocoboRating(s, stable, rating);
 }
 //set data for pens outside
 void BlackChocobo::cm_pensChanged(int pen, int index)
 {
-    if (!load)
-        ff7->setChocoboPen(s, pen, index);
+    if (load)
+        return;
+    ff7->setChocoboPen(s, pen, index);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void BlackChocobo::sbLoveBarret_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
 }
 void BlackChocobo::sbLoveAeris_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
 }
 void BlackChocobo::sbLoveTifa_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
 }
 void BlackChocobo::sbLoveYuffie_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, false, FF7Save::LOVE_YUFFIE, quint8(value));
 }
 
 void BlackChocobo::sbTimeHour_valueChanged(int value)
 {
-    if (!load)
-        ff7->setTime(s, quint32((value * 3600) + (ui->sbTimeMin->value() * 60) + (ui->sbTimeSec->value())));
+    if (load)
+        return;
+    ff7->setTime(s, quint32((value * 3600) + (ui->sbTimeMin->value() * 60) + (ui->sbTimeSec->value())));
 }
 void BlackChocobo::sbTimeMin_valueChanged(int value)
 {
-    if (!load)
-        ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimeSec->value())));
+    if (load)
+        return;
+    ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimeSec->value())));
 }
 void BlackChocobo::sbTimeSec_valueChanged(int value)
 {
-    if (!load)
-        ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + (ui->sbTimeMin->value() * 60) + (value)));
+    if (load)
+        return;
+    ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + (ui->sbTimeMin->value() * 60) + (value)));
 }
 
 void BlackChocobo::sbSteps_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSteps(s, value);
+    if (load)
+        return;
+    ff7->setSteps(s, value);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void BlackChocobo::gilChanged(quint32 value)
 {
-    if (!load)
-        ff7->setGil(s, value);
+    if (load)
+        return;
+    ff7->setGil(s, value);
 }
 
 void BlackChocobo::gpChanged(int value)
 {
-    if (!load)
-        ff7->setGp(s, value);
+    if (load)
+        return;
+    ff7->setGp(s, value);
 }
 
 void BlackChocobo::battlesChanged(int value)
 {
-    if (!load)
-        ff7->setBattles(s, value);
+    if (load)
+        return;
+    ff7->setBattles(s, value);
 }
 void BlackChocobo::runsChanged(int value)
 {
-    if (!load)
-        ff7->setRuns(s, value);
+    if (load)
+        return;
+    ff7->setRuns(s, value);
 }
 
 void BlackChocobo::mysteryPantiesChanged(bool checked)
 {
-    if (!load)
-        ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
+    if (load)
+        return;
+    ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
 }
 void BlackChocobo::letterToDaughterChanged(bool checked)
 {
-    if (!load)
-        ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
+    if (load)
+        return;
+    ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
 }
 void BlackChocobo::letterToWifeChanged(bool checked)
 {
-    if (!load)
-        ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
+    if (load)
+        return;
+    ff7->setKeyItem(s, FF7Save::LETTERTOAWIFE, checked);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2215,264 +2250,315 @@ void BlackChocobo::locationSelectionChanged(QString fieldName)
 }
 void BlackChocobo::map_id_valueChanged(int value)
 {
-    if (!load)
-        ff7->setMapId(s, quint16(value));
+    if (load)
+        return;
+    ff7->setMapId(s, quint16(value));
 }
 void BlackChocobo::loc_id_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLocationId(s, quint16(value));
+    if (load)
+        return;
+    ff7->setLocationId(s, quint16(value));
 }
 void BlackChocobo::coord_x_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLocationX(s, qint16(value));
+    if (load)
+        return;
+    ff7->setLocationX(s, qint16(value));
 }
 void BlackChocobo::coord_y_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLocationY(s, qint16(value));
+    if (load)
+        return;
+    ff7->setLocationY(s, qint16(value));
 }
 void BlackChocobo::coord_t_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLocationT(s, quint16(value));
+    if (load)
+        return;
+    ff7->setLocationT(s, quint16(value));
 }
 void BlackChocobo::coord_d_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLocationD(s, quint8(value));
+    if (load)
+        return;
+    ff7->setLocationD(s, quint8(value));
 }
 void BlackChocobo::location_textChanged(QString text)
 {
-    if (!load)
-        ff7->setLocation(s, text);
+    if (load)
+        return;
+    ff7->setLocation(s, text);
 }
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::setDialogColorUL(QColor color)
 {
-    if (!load)
-        ff7->setDialogColorUL(s, color);
+    if (load)
+        return;
+    ff7->setDialogColorUL(s, color);
 }
 void BlackChocobo::setDialogColorUR(QColor color)
 {
-    if (!load)
-        ff7->setDialogColorUR(s, color);
+    if (load)
+        return;
+    ff7->setDialogColorUR(s, color);
 }
 void BlackChocobo::setDialogColorLL(QColor color)
 {
-    if (!load)
-        ff7->setDialogColorLL(s, color);
+    if (load)
+        return;
+    ff7->setDialogColorLL(s, color);
 }
 void BlackChocobo::setDialogColorLR(QColor color)
 {
-    if (!load)
-        ff7->setDialogColorLR(s, color);
+    if (load)
+        return;
+    ff7->setDialogColorLR(s, color);
 }
 
 void BlackChocobo::setBattleSpeed(int value)
 {
-    if (!load)
-        ff7->setBattleSpeed(s, value);
+    if (load)
+        return;
+    ff7->setBattleSpeed(s, value);
 }
 void BlackChocobo::setBattleMessageSpeed(int value)
 {
-    if (!load)
-        ff7->setBattleMessageSpeed(s, value);
+    if (load)
+        return;
+    ff7->setBattleMessageSpeed(s, value);
 }
 void BlackChocobo::setFieldMessageSpeed(int value)
 {
-    if (!load)
-        ff7->setMessageSpeed(s, value);
+    if (load)
+        return;
+    ff7->setMessageSpeed(s, value);
 }
 void BlackChocobo::setBattleHelp(bool checked)
 {
-    if (!load)
-        ff7->setBattleHelp(s, checked);
+    if (load)
+        return;
+    ff7->setBattleHelp(s, checked);
 }
 void BlackChocobo::setFieldHelp(bool checked)
 {
-    if (!load)
-        ff7->setFieldHelp(s, checked);
+    if (load)
+        return;
+    ff7->setFieldHelp(s, checked);
 }
 void BlackChocobo::setBattleTargets(bool checked)
 {
-    if (!load)
-        ff7->setBattleTargets(s, checked);
+    if (load)
+        return;
+    ff7->setBattleTargets(s, checked);
 }
 
 void BlackChocobo::setControlMode(int mode)
 {
-    if (!load)
-        ff7->setControlMode(s, mode);
+    if (load)
+        return;
+    ff7->setControlMode(s, mode);
 }
 void BlackChocobo::setSoundMode(int mode)
 {
-    if (!load)
-        ff7->setSoundMode(s, mode);
+    if (load)
+        return;
+    ff7->setSoundMode(s, mode);
 }
 void BlackChocobo::setCursorMode(int mode)
 {
-    if (!load)
-        ff7->setCursorMode(s, mode);
+    if (load)
+        return;
+    ff7->setCursorMode(s, mode);
 }
 void BlackChocobo::setAtbMode(int mode)
 {
-    if (!load)
-        ff7->setAtbMode(s, mode);
+    if (load)
+        return;
+    ff7->setAtbMode(s, mode);
 }
 void BlackChocobo::setCameraMode(int mode)
 {
-    if (!load)
-        ff7->setCameraMode(s, mode);
+    if (load)
+        return;
+    ff7->setCameraMode(s, mode);
 }
 void BlackChocobo::setMagicOrder(int order)
 {
-    if (!load)
-        ff7->setMagicOrder(s, order);
+    if (load)
+        return;
+    ff7->setMagicOrder(s, order);
 }
 
 /*--------GAME PROGRESS-------*/
 void BlackChocobo::sbCurdisc_valueChanged(int value)
 {
-    if (!load)
-        ff7->setDisc(s, value);
+    if (load)
+        return;
+    ff7->setDisc(s, value);
 }
 void BlackChocobo::sbMprogress_valueChanged(int value)
 {
-    if (!load)
-        ff7->setMainProgress(s, value);
+    if (load)
+        return;
+    ff7->setMainProgress(s, value);
 }
 void BlackChocobo::sbTurkschurch_valueChanged(int value)
 {
-    if (!load)
-        ff7->setChurchProgress(s, value);
+    if (load)
+        return;
+    ff7->setChurchProgress(s, value);
 }
 void BlackChocobo::sbDonprog_valueChanged(int value)
 {
-    if (!load)
-        ff7->setDonProgress(s, value);
+    if (load)
+        return;
+    ff7->setDonProgress(s, value);
 }
 void BlackChocobo::cbBm1_1_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 0, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 0, checked);
 }
 void BlackChocobo::cbBm1_2_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 1, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 1, checked);
 }
 void BlackChocobo::cbBm1_3_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 2, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 2, checked);
 }
 void BlackChocobo::cbBm1_4_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 3, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 3, checked);
 }
 void BlackChocobo::cbBm1_5_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 4, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 4, checked);
 }
 void BlackChocobo::cbBm1_6_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 5, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 5, checked);
 }
 void BlackChocobo::cbBm1_7_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 6, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 6, checked);
 }
 void BlackChocobo::cbBm1_8_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress1(s, 7, checked);
+    if (load)
+        return;
+    ff7->setBmProgress1(s, 7, checked);
 }
 void BlackChocobo::cbBm2_1_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 0, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 0, checked);
 }
 void BlackChocobo::cbBm2_2_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 1, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 1, checked);
 }
 void BlackChocobo::cbBm2_3_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 2, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 2, checked);
 }
 void BlackChocobo::cbBm2_4_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 3, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 3, checked);
 }
 void BlackChocobo::cbBm2_5_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 4, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 4, checked);
 }
 void BlackChocobo::cbBm2_6_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 5, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 5, checked);
 }
 void BlackChocobo::cbBm2_7_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 6, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 6, checked);
 }
 void BlackChocobo::cbBm2_8_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress2(s, 7, checked);
+    if (load)
+        return;
+    ff7->setBmProgress2(s, 7, checked);
 }
 void BlackChocobo::cbBm3_1_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 0, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 0, checked);
 }
 void BlackChocobo::cbBm3_2_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 1, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 1, checked);
 }
 void BlackChocobo::cbBm3_3_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 2, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 2, checked);
 }
 void BlackChocobo::cbBm3_4_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 3, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 3, checked);
 }
 void BlackChocobo::cbBm3_5_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 4, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 4, checked);
 }
 void BlackChocobo::cbBm3_6_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 5, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 5, checked);
 }
 void BlackChocobo::cbBm3_7_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 6, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 6, checked);
 }
 void BlackChocobo::cbBm3_8_toggled(bool checked)
 {
-    if (!load)
-        ff7->setBmProgress3(s, 7, checked);
+    if (load)
+        return;
+    ff7->setBmProgress3(s, 7, checked);
 }
 
 void BlackChocobo::cbS7pl_1_toggled(bool checked)
@@ -2678,8 +2764,9 @@ void BlackChocobo::cbS7ts_8_toggled(bool checked)
 
 void BlackChocobo::cbBombingInt_stateChanged(int checked)
 {
-    if (!load)
-        ff7->setStartBombingMission(s, checked);
+    if (load)
+        return;
+    ff7->setStartBombingMission(s, checked);
 }
 
 void BlackChocobo::comboReplay_currentIndexChanged(int index)
@@ -2807,115 +2894,137 @@ void BlackChocobo::btnRemoveAllStolen_clicked()
 
 void BlackChocobo::sbBloveAeris_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
 }
 void BlackChocobo::sbBloveTifa_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
 }
 void BlackChocobo::sbBloveYuffie_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
 }
 void BlackChocobo::sbBloveBarret_valueChanged(int value)
 {
-    if (!load)
-        ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
+    if (load)
+        return;
+    ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
 }
 void BlackChocobo::sbCoster1_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSpeedScore(s, 1, quint16(value));
+    if (load)
+        return;
+    ff7->setSpeedScore(s, 1, quint16(value));
 }
 void BlackChocobo::sbCoster2_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSpeedScore(s, 2, quint16(value));
+    if (load)
+        return;
+    ff7->setSpeedScore(s, 2, quint16(value));
 }
 void BlackChocobo::sbCoster3_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSpeedScore(s, 3, quint16(value));
+    if (load)
+        return;
+    ff7->setSpeedScore(s, 3, quint16(value));
 }
 void BlackChocobo::sbTimerTimeHour_valueChanged(int value)
 {
-    if (!load)
-        ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sbTimerTimeMin->value() * 60) + (ui->sbTimerTimeSec->value())));
+    if (load)
+        return;
+    ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sbTimerTimeMin->value() * 60) + (ui->sbTimerTimeSec->value())));
 }
 void BlackChocobo::sbTimerTimeMin_valueChanged(int value)
 {
-    if (!load)
-        ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimerTimeSec->value())));
+    if (load)
+        return;
+    ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimerTimeSec->value())));
 }
 void BlackChocobo::sbTimerTimeSec_valueChanged(int value)
 {
-    if (!load)
-        ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + (ui->sbTimerTimeMin->value() * 60) + (value)));
+    if (load)
+        return;
+    ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + (ui->sbTimerTimeMin->value() * 60) + (value)));
 }
 void BlackChocobo::sbUweaponHp_valueChanged(int value)
 {
-    if (!load)
-        ff7->setUWeaponHp(s, value);
+    if (load)
+        return;
+    ff7->setUWeaponHp(s, value);
 }
 void BlackChocobo::cbRegVinny_toggled(bool checked)
 {
-    if (!load)
-        ff7->setVincentUnlocked(s, checked);
+    if (load)
+        return;
+    ff7->setVincentUnlocked(s, checked);
 }
 void BlackChocobo::cbRegYuffie_toggled(bool checked)
 {
-    if (!load)
-        ff7->setYuffieUnlocked(s, checked);
+    if (load)
+        return;
+    ff7->setYuffieUnlocked(s, checked);
 }
 void BlackChocobo::cbYuffieForest_toggled(bool checked)
 {
-    if (!load)
-        ff7->setCanFightNinjaInForest(s, checked);
+    if (load)
+        return;
+    ff7->setCanFightNinjaInForest(s, checked);
 }
 
 void BlackChocobo::cbMidgartrain_1_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 0, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 0, checked);
 }
 void BlackChocobo::cbMidgartrain_2_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 1, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 1, checked);
 }
 void BlackChocobo::cbMidgartrain_3_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 2, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 2, checked);
 }
 void BlackChocobo::cbMidgartrain_4_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 3, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 3, checked);
 }
 void BlackChocobo::cbMidgartrain_5_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 4, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 4, checked);
 }
 void BlackChocobo::cbMidgartrain_6_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 5, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 5, checked);
 }
 void BlackChocobo::cbMidgartrain_7_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 6, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 6, checked);
 
 }
 void BlackChocobo::cbMidgartrain_8_toggled(bool checked)
 {
-    if (!load)
-        ff7->setMidgarTrainFlags(s, 7, checked);
+    if (load)
+        return;
+    ff7->setMidgarTrainFlags(s, 7, checked);
 }
 
 void BlackChocobo::cbTutWorldSave_stateChanged(int value)
@@ -2951,13 +3060,15 @@ void BlackChocobo::cbTutSub_toggled(bool checked)
 
 void BlackChocobo::cbRubyDead_toggled(bool checked)
 {
-    if (!load)
-        ff7->setKilledRubyWeapon(s, checked);
+    if (load)
+        return;
+    ff7->setKilledRubyWeapon(s, checked);
 }
 void BlackChocobo::cbEmeraldDead_toggled(bool checked)
 {
-    if (!load)
-        ff7->setKilledEmeraldWeapon(s, checked);
+    if (load)
+        return;
+    ff7->setKilledEmeraldWeapon(s, checked);
 }
 
 void BlackChocobo::comboHighwindBuggy_currentIndexChanged(int index)
@@ -2994,8 +3105,9 @@ void BlackChocobo::cbVisibleBuggy_toggled(bool checked)
 }
 void BlackChocobo::cbVisibleBronco_toggled(bool checked)
 {
-    if (!load)
-        ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
+    if (load)
+        return;
+    ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
 }
 void BlackChocobo::cbVisibleHighwind_toggled(bool checked)
 {
@@ -3103,18 +3215,21 @@ void BlackChocobo::cbVisibleGoldChocobo_toggled(bool checked)
 // Leader's world map stuff. 0
 void BlackChocobo::sbLeaderId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsLeaderID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsLeaderID(s, value);
 }
 void BlackChocobo::sbLeaderAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsLeaderAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsLeaderAngle(s, value);
 }
 void BlackChocobo::sbLeaderZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsLeaderZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsLeaderZ(s, value);
 }
 void BlackChocobo::sbLeaderX_valueChanged(int value)
 {
@@ -3143,18 +3258,21 @@ void BlackChocobo::sbLeaderY_valueChanged(int value)
 //Tiny bronco / chocobo world 1
 void BlackChocobo::sbTcId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsTcID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsTcID(s, value);
 }
 void BlackChocobo::sbTcAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsTcAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsTcAngle(s, value);
 }
 void BlackChocobo::sbTcZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsTcZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsTcZ(s, value);
 }
 void BlackChocobo::sbTcX_valueChanged(int value)
 {
@@ -3182,18 +3300,21 @@ void BlackChocobo::sbTcY_valueChanged(int value)
 //buggy / highwind world 2
 void BlackChocobo::sbBhId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsBhID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsBhID(s, value);
 }
 void BlackChocobo::sbBhAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsBhAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsBhAngle(s, value);
 }
 void BlackChocobo::sbBhZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsBhZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsBhZ(s, value);
 }
 void BlackChocobo::sbBhX_valueChanged(int value)
 {
@@ -3220,18 +3341,21 @@ void BlackChocobo::sbBhY_valueChanged(int value)
 // sub world 3
 void BlackChocobo::sbSubId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsSubID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsSubID(s, value);
 }
 void BlackChocobo::sbSubAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsSubAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsSubAngle(s, value);
 }
 void BlackChocobo::sbSubZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsSubZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsSubZ(s, value);
 }
 void BlackChocobo::sbSubX_valueChanged(int value)
 {
@@ -3259,18 +3383,21 @@ void BlackChocobo::sbSubY_valueChanged(int value)
 //Wild Chocobo 4
 void BlackChocobo::sbWcId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsWchocoID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsWchocoID(s, value);
 }
 void BlackChocobo::sbWcAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsWchocoAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsWchocoAngle(s, value);
 }
 void BlackChocobo::sbWcZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsWchocoZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsWchocoZ(s, value);
 }
 void BlackChocobo::sbWcX_valueChanged(int value)
 {
@@ -3298,18 +3425,21 @@ void BlackChocobo::sbWcY_valueChanged(int value)
 //Ruby world stuff 5
 void BlackChocobo::sbDurwId_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsDurwID(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsDurwID(s, value);
 }
 void BlackChocobo::sbDurwAngle_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsDurwAngle(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsDurwAngle(s, value);
 }
 void BlackChocobo::sbDurwZ_valueChanged(int value)
 {
-    if (!load)
-        ff7->setWorldCoordsDurwZ(s, value);
+    if (load)
+        return;
+    ff7->setWorldCoordsDurwZ(s, value);
 }
 void BlackChocobo::sbDurwX_valueChanged(int value)
 {
@@ -3778,18 +3908,21 @@ void BlackChocobo::Items_Changed(QList<quint16> items)
 }
 void BlackChocobo::sbSnowBegScore_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSnowboardScore(s, 0, quint8(value));
+    if (load)
+        return;
+    ff7->setSnowboardScore(s, 0, quint8(value));
 }
 void BlackChocobo::sbSnowExpScore_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSnowboardScore(s, 1, quint8(value));
+    if (load)
+        return;
+    ff7->setSnowboardScore(s, 1, quint8(value));
 }
 void BlackChocobo::sbSnowCrazyScore_valueChanged(int value)
 {
-    if (!load)
-        ff7->setSnowboardScore(s, 2, quint8(value));
+    if (load)
+        return;
+    ff7->setSnowboardScore(s, 2, quint8(value));
 }
 
 void BlackChocobo::sbSnowBegMin_valueChanged(int value)
@@ -3875,19 +4008,22 @@ void BlackChocobo::sbSnowCrazyMsec_valueChanged(int value)
 }
 void BlackChocobo::sbBikeHighScore_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setBikeHighScore(s, quint16(arg1));
+    if (load)
+        return;
+    ff7->setBikeHighScore(s, quint16(arg1));
 }
 void BlackChocobo::sbBattlePoints_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setBattlePoints(s, quint16(arg1));
+    if (load)
+        return;
+    ff7->setBattlePoints(s, quint16(arg1));
 }
 
 void BlackChocobo::sbBattleSWins_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setSpecialBattleWins(s, quint8(arg1));
+    if (load)
+        return;
+    ff7->setSpecialBattleWins(s, quint8(arg1));
 }
 
 void BlackChocobo::comboHexEditor_currentIndexChanged(int index)
@@ -3933,23 +4069,27 @@ void BlackChocobo::hexEditorChanged(void)
 
 void BlackChocobo::phsList_box_allowed_toggled(int row, bool checked)
 {
-    if (!load)
-        ff7->setPhsAllowed(s, row, !checked);
+    if (load)
+        return;
+    ff7->setPhsAllowed(s, row, !checked);
 }
 void BlackChocobo::phsList_box_visible_toggled(int row, bool checked)
 {
-    if (!load)
-        ff7->setPhsVisible(s, row, checked);
+    if (load)
+        return;
+    ff7->setPhsVisible(s, row, checked);
 }
 void BlackChocobo::menuList_box_locked_toggled(int row, bool checked)
 {
-    if (!load)
-        ff7->setMenuLocked(s, row, checked);
+    if (load)
+        return;
+    ff7->setMenuLocked(s, row, checked);
 }
 void BlackChocobo::menuList_box_visible_toggled(int row, bool checked)
 {
-    if (!load)
-        ff7->setMenuVisible(s, row, checked);
+    if (load)
+        return;
+    ff7->setMenuVisible(s, row, checked);
 }
 
 void BlackChocobo::locationToolBox_currentChanged(int index)
@@ -4089,28 +4229,33 @@ void BlackChocobo::testDataTabWidget_currentChanged(int index)
 
 void BlackChocobo::sbCondorFunds_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCondorFunds(s, quint16(arg1));
+    if (load)
+        return;
+    ff7->setCondorFunds(s, quint16(arg1));
 }
 void BlackChocobo::sbCondorWins_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCondorWins(s, quint8(arg1));
+    if (load)
+        return;
+    ff7->setCondorWins(s, quint8(arg1));
 }
 void BlackChocobo::sbCondorLosses_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCondorLosses(s, quint8(arg1));
+    if (load)
+        return;
+    ff7->setCondorLosses(s, quint8(arg1));
 }
 void BlackChocobo::cbPandorasBox_toggled(bool checked)
 {
-    if (!load)
-        ff7->setSeenPandorasBox(s, checked);
+    if (load)
+        return;
+    ff7->setSeenPandorasBox(s, checked);
 }
 void BlackChocobo::cbSubGameWon_toggled(bool checked)
 {
-    if (!load)
-        ff7->setSubMiniGameVictory(s, checked);
+    if (load)
+        return;
+    ff7->setSubMiniGameVictory(s, checked);
 }
 
 void BlackChocobo::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<quint8> Bit)
@@ -4171,23 +4316,27 @@ void BlackChocobo::fieldItemStateChanged(int boxID, bool checked)
 
 void BlackChocobo::sbSaveMapId_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCraterSavePointMapID(s, arg1);
+    if (load)
+        return;
+    ff7->setCraterSavePointMapID(s, arg1);
 }
 void BlackChocobo::sbSaveX_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCraterSavePointX(s, arg1);
+    if (load)
+        return;
+    ff7->setCraterSavePointX(s, arg1);
 }
 void BlackChocobo::sbSaveY_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCraterSavePointY(s, arg1);
+    if (load)
+        return;
+    ff7->setCraterSavePointY(s, arg1);
 }
 void BlackChocobo::sbSaveZ_valueChanged(int arg1)
 {
-    if (!load)
-        ff7->setCraterSavePointZ(s, arg1);
+    if (load)
+        return;
+    ff7->setCraterSavePointZ(s, arg1);
 }
 
 void BlackChocobo::searchForFlyers()
@@ -4214,12 +4363,14 @@ void BlackChocobo::linePsxDesc_textChanged(const QString &arg1)
 
 void BlackChocobo::cbFlashbackPiano_toggled(bool checked)
 {
-    if (!load)
-        ff7->setPlayedPianoOnFlashback(s, checked);
+    if (load)
+        return;
+    ff7->setPlayedPianoOnFlashback(s, checked);
 }
 
 void BlackChocobo::setButtonMapping(int controlAction, int newButton)
 {
-    if (!load)
-        ff7->setControllerMapping(s, controlAction, newButton);
+    if (load)
+        return;
+    ff7->setControllerMapping(s, controlAction, newButton);
 }
