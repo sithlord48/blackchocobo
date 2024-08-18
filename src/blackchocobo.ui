@@ -1998,668 +1998,670 @@ location.</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_102">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_109">
-          <property name="topMargin">
-           <number>3</number>
-          </property>
-          <item>
-           <widget class="QGroupBox" name="groupBox_13">
-            <property name="title">
-             <string>Global Progress</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_64">
-             <property name="leftMargin">
-              <number>2</number>
+         <widget class="QWidget" name="progress_frame_left" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_109">
+           <property name="topMargin">
+            <number>3</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_13">
+             <property name="title">
+              <string>Global Progress</string>
              </property>
-             <property name="topMargin">
-              <number>2</number>
-             </property>
-             <property name="rightMargin">
-              <number>2</number>
-             </property>
-             <property name="bottomMargin">
-              <number>2</number>
-             </property>
-             <item>
-              <widget class="QLabel" name="label_167">
-               <property name="text">
-                <string>Main Progression</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QSpinBox" name="sbMprogress">
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-               <property name="maximum">
-                <number>2000</number>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_88">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QSpinBox" name="sbCurdisc">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>18</height>
-                </size>
-               </property>
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-               <property name="prefix">
-                <string>Disc  #</string>
-               </property>
-               <property name="minimum">
-                <number>1</number>
-               </property>
-               <property name="maximum">
-                <number>3</number>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_89">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Policy::Fixed</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>35</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox_11">
-            <property name="title">
-             <string>Event Progress</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_60">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
-             </property>
-             <item>
-              <widget class="QScrollArea" name="scrollArea_3">
-               <property name="widgetResizable">
-                <bool>true</bool>
-               </property>
-               <widget class="QWidget" name="scrollAreaWidgetContents_3">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>280</width>
-                  <height>1562</height>
-                 </rect>
+             <layout class="QHBoxLayout" name="horizontalLayout_64">
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_167">
+                <property name="text">
+                 <string>Main Progression</string>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_62">
-                 <property name="leftMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>3</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>3</number>
-                 </property>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_25">
-                   <property name="title">
-                    <string>Bombing Mission Progress</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_106">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cbBombingInt">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="text">
-                       <string>Bombing Mission Start Flag</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_2">
-                      <property name="text">
-                       <string>Elevator Door Open</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_1">
-                      <property name="text">
-                       <string>Elevator On 2nd Floor</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_4">
-                      <property name="text">
-                       <string>1st Door Open</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_5">
-                      <property name="text">
-                       <string>2nd Door Opened</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_3">
-                      <property name="text">
-                       <string>Post Pan NMKIN_5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_7">
-                      <property name="text">
-                       <string>The Bomb Was Set</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_6">
-                      <property name="text">
-                       <string>Jessie Has Been Unstuck</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_8">
-                      <property name="text">
-                       <string>Trigger Game Over (countdown reached 0)</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_40">
-                   <property name="title">
-                    <string>Escape From Reactor </string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_108">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_1">
-                      <property name="text">
-                       <string>Post Pan MD8_2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_2">
-                      <property name="text">
-                       <string>Post Electrical Effect MD8_3</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_36">
-                   <property name="title">
-                    <string>Midgar Train Flags</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_38">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_1">
-                      <property name="text">
-                       <string>Talked to Biggs</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_2">
-                      <property name="text">
-                       <string>Talked to Wedge Twice</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_3">
-                      <property name="text">
-                       <string>Talked to Jessie Before Looking At Map</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_4">
-                      <property name="text">
-                       <string> Played Video on Train?</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_23">
-                   <property name="title">
-                    <string>Sector 7 Trainstation</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_107">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_1">
-                      <property name="text">
-                       <string>Avalanche had meeting after Bombing Mission</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_2">
-                      <property name="text">
-                       <string>Talked To Trainman 3 times</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_3">
-                      <property name="text">
-                       <string>Pair At Station agree</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_4">
-                      <property name="text">
-                       <string>Set To Reactor 5 Mode</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_17">
-                   <property name="title">
-                    <string>Sector 7 Pillar</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_61">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_1">
-                      <property name="text">
-                       <string>Avalanche Has Run To Hideout</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_2">
-                      <property name="text">
-                       <string>Can Show Pillar Pan Video</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_3">
-                      <property name="text">
-                       <string>Barret called us</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_4">
-                      <property name="text">
-                       <string>Post Pillar Pan Video</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_5">
-                      <property name="text">
-                       <string>Talked To soldier two times</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="groupBox_41">
-                   <property name="title">
-                    <string>Sector 7 - Slums Progress</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_117">
-                    <item>
-                     <widget class="QComboBox" name="comboS7Slums">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <item>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Initial Settings</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Destroy the Sector 5 Reactor </string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>The Plate is Falling</string>
-                       </property>
-                      </item>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QGroupBox" name="bm_unknown">
-                   <property name="title">
-                    <string>Unknowns / Unused</string>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_105">
-                    <property name="leftMargin">
-                     <number>3</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>3</number>
-                    </property>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_162">
-                      <item>
-                       <widget class="QLabel" name="label_229">
-                        <property name="text">
-                         <string>ChurchProgress</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="sbTurkschurch"/>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_159">
-                      <item>
-                       <widget class="QLabel" name="label_230">
-                        <property name="text">
-                         <string>DonProgress</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="sbDonprog">
-                        <property name="maximum">
-                         <number>255</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_2">
-                      <property name="text">
-                       <string notr="true">bm1_2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm1_3">
-                      <property name="text">
-                       <string notr="true">bm1_3</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_1">
-                      <property name="text">
-                       <string notr="true">bm2_1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_4">
-                      <property name="text">
-                       <string notr="true">bm2_4</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_5">
-                      <property name="text">
-                       <string notr="true">bm2_5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_6">
-                      <property name="text">
-                       <string notr="true">bm2_6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_7">
-                      <property name="text">
-                       <string notr="true">bm2_7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm2_8">
-                      <property name="text">
-                       <string notr="true">bm2_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_3">
-                      <property name="text">
-                       <string notr="true">bm3_3</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_4">
-                      <property name="text">
-                       <string notr="true">bm3_4</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_5">
-                      <property name="text">
-                       <string notr="true">bm3_5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_6">
-                      <property name="text">
-                       <string notr="true">bm3_6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_7">
-                      <property name="text">
-                       <string notr="true">bm3_7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbBm3_8">
-                      <property name="text">
-                       <string notr="true">bm3_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_5">
-                      <property name="text">
-                       <string notr="true">mt_5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_6">
-                      <property name="text">
-                       <string notr="true">mt_6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_7">
-                      <property name="text">
-                       <string notr="true">mt_7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbMidgartrain_8">
-                      <property name="text">
-                       <string notr="true">mt_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_5">
-                      <property name="text">
-                       <string notr="true">s7ts_5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_6">
-                      <property name="text">
-                       <string notr="true">s7ts_6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_7">
-                      <property name="text">
-                       <string notr="true">s7ts_7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7ts_8">
-                      <property name="text">
-                       <string notr="true">s7ts_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_6">
-                      <property name="text">
-                       <string notr="true">s7pl_6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_7">
-                      <property name="text">
-                       <string notr="true">s7pl_7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="cbS7pl_8">
-                      <property name="text">
-                       <string notr="true">s7pl_8</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
                </widget>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sbMprogress">
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+                <property name="maximum">
+                 <number>2000</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_88">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sbCurdisc">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+                <property name="prefix">
+                 <string>Disc  #</string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>3</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_89">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Policy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>35</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="title">
+              <string>Event Progress</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_60">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <widget class="QScrollArea" name="scrollArea_3">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>373</width>
+                   <height>2055</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_62">
+                  <property name="leftMargin">
+                   <number>3</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>3</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>3</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_25">
+                    <property name="title">
+                     <string>Bombing Mission Progress</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_106">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QCheckBox" name="cbBombingInt">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Bombing Mission Start Flag</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_2">
+                       <property name="text">
+                        <string>Elevator Door Open</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_1">
+                       <property name="text">
+                        <string>Elevator On 2nd Floor</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_4">
+                       <property name="text">
+                        <string>1st Door Open</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_5">
+                       <property name="text">
+                        <string>2nd Door Opened</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_3">
+                       <property name="text">
+                        <string>Post Pan NMKIN_5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_7">
+                       <property name="text">
+                        <string>The Bomb Was Set</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_6">
+                       <property name="text">
+                        <string>Jessie Has Been Unstuck</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_8">
+                       <property name="text">
+                        <string>Trigger Game Over (countdown reached 0)</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_40">
+                    <property name="title">
+                     <string>Escape From Reactor </string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_108">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_1">
+                       <property name="text">
+                        <string>Post Pan MD8_2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_2">
+                       <property name="text">
+                        <string>Post Electrical Effect MD8_3</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_36">
+                    <property name="title">
+                     <string>Midgar Train Flags</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_38">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_1">
+                       <property name="text">
+                        <string>Talked to Biggs</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_2">
+                       <property name="text">
+                        <string>Talked to Wedge Twice</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_3">
+                       <property name="text">
+                        <string>Talked to Jessie Before Looking At Map</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_4">
+                       <property name="text">
+                        <string> Played Video on Train?</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_23">
+                    <property name="title">
+                     <string>Sector 7 Trainstation</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_107">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_1">
+                       <property name="text">
+                        <string>Avalanche had meeting after Bombing Mission</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_2">
+                       <property name="text">
+                        <string>Talked To Trainman 3 times</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_3">
+                       <property name="text">
+                        <string>Pair At Station agree</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_4">
+                       <property name="text">
+                        <string>Set To Reactor 5 Mode</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_17">
+                    <property name="title">
+                     <string>Sector 7 Pillar</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_61">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_1">
+                       <property name="text">
+                        <string>Avalanche Has Run To Hideout</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_2">
+                       <property name="text">
+                        <string>Can Show Pillar Pan Video</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_3">
+                       <property name="text">
+                        <string>Barret called us</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_4">
+                       <property name="text">
+                        <string>Post Pillar Pan Video</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_5">
+                       <property name="text">
+                        <string>Talked To soldier two times</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_41">
+                    <property name="title">
+                     <string>Sector 7 - Slums Progress</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_117">
+                     <item>
+                      <widget class="QComboBox" name="comboS7Slums">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Initial Settings</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Destroy the Sector 5 Reactor </string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>The Plate is Falling</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="bm_unknown">
+                    <property name="title">
+                     <string>Unknowns / Unused</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_105">
+                     <property name="leftMargin">
+                      <number>3</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_162">
+                       <item>
+                        <widget class="QLabel" name="label_229">
+                         <property name="text">
+                          <string>ChurchProgress</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="sbTurkschurch"/>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_159">
+                       <item>
+                        <widget class="QLabel" name="label_230">
+                         <property name="text">
+                          <string>DonProgress</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="sbDonprog">
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_2">
+                       <property name="text">
+                        <string notr="true">bm1_2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm1_3">
+                       <property name="text">
+                        <string notr="true">bm1_3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_1">
+                       <property name="text">
+                        <string notr="true">bm2_1</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_4">
+                       <property name="text">
+                        <string notr="true">bm2_4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_5">
+                       <property name="text">
+                        <string notr="true">bm2_5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_6">
+                       <property name="text">
+                        <string notr="true">bm2_6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_7">
+                       <property name="text">
+                        <string notr="true">bm2_7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm2_8">
+                       <property name="text">
+                        <string notr="true">bm2_8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_3">
+                       <property name="text">
+                        <string notr="true">bm3_3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_4">
+                       <property name="text">
+                        <string notr="true">bm3_4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_5">
+                       <property name="text">
+                        <string notr="true">bm3_5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_6">
+                       <property name="text">
+                        <string notr="true">bm3_6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_7">
+                       <property name="text">
+                        <string notr="true">bm3_7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbBm3_8">
+                       <property name="text">
+                        <string notr="true">bm3_8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_5">
+                       <property name="text">
+                        <string notr="true">mt_5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_6">
+                       <property name="text">
+                        <string notr="true">mt_6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_7">
+                       <property name="text">
+                        <string notr="true">mt_7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbMidgartrain_8">
+                       <property name="text">
+                        <string notr="true">mt_8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_5">
+                       <property name="text">
+                        <string notr="true">s7ts_5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_6">
+                       <property name="text">
+                        <string notr="true">s7ts_6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_7">
+                       <property name="text">
+                        <string notr="true">s7ts_7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7ts_8">
+                       <property name="text">
+                        <string notr="true">s7ts_8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_6">
+                       <property name="text">
+                        <string notr="true">s7pl_6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_7">
+                       <property name="text">
+                        <string notr="true">s7pl_7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QCheckBox" name="cbS7pl_8">
+                       <property name="text">
+                        <string notr="true">s7pl_8</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_118">
