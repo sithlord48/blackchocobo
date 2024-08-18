@@ -358,9 +358,6 @@ private slots://try to keep these in the same order as the .cpp file
     void locationSelectionChanged(QString);
     void location_textChanged(QString);
 
-    //items tab
-    void btnAddAllItems_clicked();
-
     // Materia Tab
     void tblMateria_currentCellChanged(int row);
     void materia_ap_changed(qint32 ap);

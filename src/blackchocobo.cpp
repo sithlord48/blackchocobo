@@ -276,7 +276,7 @@ void BlackChocobo::initDisplay()
 
 void BlackChocobo::setItemSizes()
 {
-    ui->groupBox_11->setFixedWidth(375);
+    ui->progress_frame_left->setFixedWidth(415);
     ui->groupBox_18->setFixedWidth(273); //materia table group.
     ui->scrollArea->setFixedWidth(310);
     ui->scrollAreaWidgetContents->adjustSize();
@@ -305,7 +305,6 @@ void BlackChocobo::setItemSizes()
 
 void BlackChocobo::populateCombos()
 {
-
 //World party leader Combo.
     if (ui->comboWorldPartyLeader->count() != 0) {
         ui->comboWorldPartyLeader->setItemText(0, FF7Char::defaultName(FF7Char::Cloud));
@@ -706,6 +705,7 @@ void BlackChocobo::loadChildWidgetSettings()
     else
         itemTab->itemList()->setMaximumItemQty(127);
 }
+
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 BlackChocobo::~BlackChocobo()
 {
@@ -775,6 +775,7 @@ bool BlackChocobo::saveChanges(void)
     default: return false;
     }
 }
+
 void BlackChocobo::closeEvent(QCloseEvent *e)
 {
     if (ff7->isFileModified()) {
@@ -785,15 +786,18 @@ void BlackChocobo::closeEvent(QCloseEvent *e)
     }
     BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
+
 void BlackChocobo::resizeEvent(QResizeEvent *)
 {
     BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
     fileModified(ff7->isFileModified());
 }
+
 void BlackChocobo::moveEvent(QMoveEvent *)
 {
     BCSettings::setValue(SETTINGS::MAINGEOMETRY, saveGeometry());
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionOpenSaveFile_triggered()
 {
@@ -813,7 +817,6 @@ void BlackChocobo::actionReload_triggered()
         loadFileFull(ff7->fileName(), 1);
 }
 
-/*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::loadFileFull(const QString &fileName, int reload)
 {
     //if called from reload then int reload ==1 (don't call slot select)
@@ -865,7 +868,6 @@ void BlackChocobo::loadFileFull(const QString &fileName, int reload)
     guirefresh();
 }
 
-/*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionImportSlotFromFile_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this,
@@ -902,7 +904,7 @@ void BlackChocobo::actionImportSlotFromFile_triggered()
     guirefresh();
     ff7->setFileModified(true, s);
 }
-/*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionImportChar_triggered()
 {
     QString fileName = BCDialog::getOpenFileName(this, tr("Select FF7 Character Stat File"), BCSettings::value(SETTINGS::STATFOLDER).toString(), tr("FF7 Character Stat File(*.char)"));
@@ -1010,7 +1012,7 @@ bool BlackChocobo::actionSaveFileAs_triggered()
     ui->statusBar->showMessage(tr("Export Failed"), 2000);
     return false;
 }
-/*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
+
 bool BlackChocobo::saveFileFull(const QString &fileName)
 {
     if (ff7->saveFile(fileName, s)) {
@@ -1026,7 +1028,6 @@ bool BlackChocobo::saveFileFull(const QString &fileName)
     QMessageBox::information(this, tr("Save Error"), tr("Failed to save file\n%1").arg(fileName));
     return false;
 }
-/*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 
 void BlackChocobo::actionNewGame_triggered()
 {
@@ -1042,8 +1043,7 @@ void BlackChocobo::actionNewGame_triggered()
     _init = false;
     guirefresh();
 }
-/*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
-/*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
+
 void BlackChocobo::actionNewGamePlus_triggered()
 {
     QString save_name;
@@ -1055,15 +1055,15 @@ void BlackChocobo::actionNewGamePlus_triggered()
                                .arg(save_name.isEmpty() ? tr("Builtin Data") : save_name), 2000);
     guirefresh();
 }
-/*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
 void BlackChocobo::actionClearSlot_triggered()
 {
     ff7->clearSlot(s);
     guirefresh();
 }
+
 void BlackChocobo::actionPreviousSlot_triggered()
 {
     if (ff7->format() == FF7SaveInfo::FORMAT::UNKNOWN || s <= 0)
@@ -1097,6 +1097,7 @@ void BlackChocobo::actionPasteSlot_triggered()
     ff7->pasteSlot(s);
     guirefresh();
 }
+
 void BlackChocobo::actionShowOptions_triggered()
 {
     Options odialog(this);
@@ -1167,7 +1168,7 @@ void BlackChocobo::setOpenFileText(const QString &openFile)
     ui->lbl_fileName->setMaximumWidth(maxWidth);
     ui->lbl_fileName->setText(fontMetrics().elidedText(openFile, Qt::ElideMiddle, maxWidth));
 }
-/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::setRegion(QString region)
 {
     if(!load) {
@@ -1201,6 +1202,7 @@ void BlackChocobo::setRegion(QString region)
     locationViewer->setRegion(ff7->region(s));
 
 }
+
 void BlackChocobo::actionRegionUSA_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1213,7 +1215,7 @@ void BlackChocobo::actionRegionUSA_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionPALGeneric_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1226,7 +1228,7 @@ void BlackChocobo::actionRegionPALGeneric_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionPALGerman_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1239,7 +1241,7 @@ void BlackChocobo::actionRegionPALGerman_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionPALSpanish_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1252,7 +1254,7 @@ void BlackChocobo::actionRegionPALSpanish_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionPALFrench_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1265,7 +1267,7 @@ void BlackChocobo::actionRegionPALFrench_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionJPN_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1278,7 +1280,7 @@ void BlackChocobo::actionRegionJPN_triggered(bool checked)
         ui->actionRegionJPNInternational->setChecked(false);
     }
 }
-/*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::actionRegionJPNInternational_triggered(bool checked)
 {
     if(!load && checked) {
@@ -1293,6 +1295,7 @@ void BlackChocobo::actionRegionJPNInternational_triggered(bool checked)
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
 void BlackChocobo::setmenu()
 {
@@ -1384,6 +1387,7 @@ void BlackChocobo::setmenu()
     }
     load = false;
 }
+
 void BlackChocobo::fileModified(bool changed)
 {
     if (changed)
@@ -1392,6 +1396,7 @@ void BlackChocobo::fileModified(bool changed)
         setOpenFileText(ff7->fileName());
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
+
 void BlackChocobo::set_ntsc_time(void)
 {
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
@@ -1403,6 +1408,7 @@ void BlackChocobo::set_ntsc_time(void)
         load = false;
     }
 }
+
 void BlackChocobo::set_pal_time(void)
 {
     if (BCDialog::fixTimeDialog(this, ff7->isPAL(s)) == QMessageBox::Yes) {
@@ -1414,6 +1420,7 @@ void BlackChocobo::set_pal_time(void)
         load = false;
     }
 }
+
 void BlackChocobo::materiaupdate(void)
 {
     load = true;
@@ -1476,6 +1483,7 @@ void BlackChocobo::materiaupdate(void)
     ui->tblMateria->setCurrentCell(j, 1); //so that right side is set correctly.
     load = false;
 }
+
 void BlackChocobo::materia_ap_changed(qint32 ap)
 {
     if (load)
@@ -1483,6 +1491,7 @@ void BlackChocobo::materia_ap_changed(qint32 ap)
     ff7->setPartyMateria(s, ui->tblMateria->currentRow(), ff7->partyMateriaId(s, ui->tblMateria->currentRow()), ap);
     materiaupdate();
 }
+
 void BlackChocobo::materia_id_changed(qint8 id)
 {
     if (load)
@@ -1490,6 +1499,7 @@ void BlackChocobo::materia_id_changed(qint8 id)
     ff7->setPartyMateria(s, ui->tblMateria->currentRow(), quint8(id), ff7->partyMateriaAp(s, ui->tblMateria->currentRow()));
     materiaupdate();
 }
+
 void BlackChocobo::CheckGame()
 {
     if ((!ff7->isFF7(s) && !ff7->region(s).isEmpty())
@@ -1543,6 +1553,7 @@ void BlackChocobo::CheckGame()
         guirefresh();
     }
 }
+
 void BlackChocobo::othersUpdate()
 {
     load = true;
@@ -1620,6 +1631,7 @@ void BlackChocobo::othersUpdate()
     ui->cbFlashbackPiano->setChecked(ff7->playedPianoOnFlashback(s));
     load = false;
 }
+
 void BlackChocobo::updateStolenMateria()
 {
     for (int mat = 0; mat < 48; mat++) { //materias stolen by yuffie
@@ -1645,6 +1657,7 @@ void BlackChocobo::updateStolenMateria()
         ui->tblMateriaStolen->setRowHeight(mat, fontMetrics().height() + 9);
     }
 }
+
 void BlackChocobo::update_hexEditor_PSXInfo(void)
 {
     load = true;
@@ -1791,6 +1804,7 @@ void BlackChocobo::tabWidget_currentChanged(int index)
     }
     load = false;
 }
+
 void BlackChocobo::hexTabUpdate(int viewMode)
 {
     ui->psxExtras->setVisible(false);
@@ -1827,7 +1841,7 @@ void BlackChocobo::setControllerMappingVisible(bool Visible)
 {
     optionsWidget->setControllerMappingVisible(Visible);
 }
-/*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
+
 void BlackChocobo::guirefresh()
 {
     load = true;
@@ -1854,7 +1868,8 @@ void BlackChocobo::guirefresh()
         tabWidget_currentChanged(ui->tabWidget->currentIndex());
     }
     load = false;
-}/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
+}
+
 void BlackChocobo::set_char_buttons()
 {
     QList<int> ids;
@@ -1862,6 +1877,7 @@ void BlackChocobo::set_char_buttons()
              ids.append(ff7->charID(s,i));
          partyTab->setButtonImagesToIds(ids);
 }
+
 void BlackChocobo::progress_update()
 {
     load = true;
@@ -1964,12 +1980,14 @@ void BlackChocobo::cm_stablesOwnedChanged(qint8 owned)
         return;
     ff7->setStablesOwned(s, owned);
 }
+
 void BlackChocobo::cm_stableMaskChanged(qint8 mask)
 {
     if (load)
         return;
     ff7->setStableMask(s, mask);
 }
+
 void BlackChocobo::cm_stablesOccupiedChanged(qint8 occupied)
 {
     if (load)
@@ -1977,102 +1995,119 @@ void BlackChocobo::cm_stablesOccupiedChanged(qint8 occupied)
     ff7->setStablesOccupied(s, occupied);
 }
 //set data for stables inside
+
 void BlackChocobo::cm_nameChanged(int stable, QString text)
 {
     if (load)
         return;
     ff7->setChocoName(s, stable, text);
 }
+
 void BlackChocobo::cm_staminaChanged(int stable, quint16 value)
 {
     if (load)
         return;
     ff7->setChocoStamina(s, stable, value);
 }
+
 void BlackChocobo::cm_speedChanged(int stable, quint16 value)
 {
     if (load)
         return;
     ff7->setChocoSpeed(s, stable, value);
 }
+
 void BlackChocobo::cm_maxspeedChanged(int stable, quint16 value)
 {
     if (load)
         return;
     ff7->setChocoMaxSpeed(s, stable, value);
 }
+
 void BlackChocobo::cm_sprintChanged(int stable, quint16 value)
 {
     if (load)
         return;
     ff7->setChocoSprintSpeed(s, stable, value);
 }
+
 void BlackChocobo::cm_maxsprintChanged(int stable, quint16 value)
 {
     if (load)
         return;
     ff7->setChocoMaxSprintSpeed(s, stable, value);
 }
+
 void BlackChocobo::cm_sexChanged(int stable, quint8 index)
 {
     if (load)
         return;
     ff7->setChocoSex(s, stable, index);
 }
+
 void BlackChocobo::cm_typeChanged(int stable, quint8 index)
 {
     if (load)
         return;
     ff7->setChocoType(s, stable, index);
 }
+
 void BlackChocobo::cm_coopChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoCoop(s, stable, value);
 }
+
 void BlackChocobo::cm_accelChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoAccel(s, stable, value);
 }
+
 void BlackChocobo::cm_intelChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoIntelligence(s, stable, value);
 }
+
 void BlackChocobo::cm_raceswonChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoRaceswon(s, stable, value);
 }
+
 void BlackChocobo::cm_pcountChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoPCount(s, stable, value);
 }
+
 void BlackChocobo::cm_personalityChanged(int stable, quint8 value)
 {
     if (load)
         return;
     ff7->setChocoPersonality(s, stable, value);
 }
+
 void BlackChocobo::cm_mated_toggled(int stable, bool checked)
 {
     if (load)
         return;
     ff7->setChocoCantMate(s, stable, checked);
 }
+
 void BlackChocobo::cm_ratingChanged(int stable, quint8 rating)
 {
     if (load)
         return;
     ff7->setChocoboRating(s, stable, rating);
 }
+
 //set data for pens outside
 void BlackChocobo::cm_pensChanged(int pen, int index)
 {
@@ -2088,18 +2123,21 @@ void BlackChocobo::sbLoveBarret_valueChanged(int value)
         return;
     ff7->setLove(s, false, FF7Save::LOVE_BARRET, quint8(value));
 }
+
 void BlackChocobo::sbLoveAeris_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLove(s, false, FF7Save::LOVE_AERIS, quint8(value));
 }
+
 void BlackChocobo::sbLoveTifa_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLove(s, false, FF7Save::LOVE_TIFA, quint8(value));
 }
+
 void BlackChocobo::sbLoveYuffie_valueChanged(int value)
 {
     if (load)
@@ -2113,12 +2151,14 @@ void BlackChocobo::sbTimeHour_valueChanged(int value)
         return;
     ff7->setTime(s, quint32((value * 3600) + (ui->sbTimeMin->value() * 60) + (ui->sbTimeSec->value())));
 }
+
 void BlackChocobo::sbTimeMin_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setTime(s, quint32((ui->sbTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimeSec->value())));
 }
+
 void BlackChocobo::sbTimeSec_valueChanged(int value)
 {
     if (load)
@@ -2154,6 +2194,7 @@ void BlackChocobo::battlesChanged(int value)
         return;
     ff7->setBattles(s, value);
 }
+
 void BlackChocobo::runsChanged(int value)
 {
     if (load)
@@ -2167,12 +2208,14 @@ void BlackChocobo::mysteryPantiesChanged(bool checked)
         return;
     ff7->setKeyItem(s, FF7Save::MYSTERYPANTIES, checked);
 }
+
 void BlackChocobo::letterToDaughterChanged(bool checked)
 {
     if (load)
         return;
     ff7->setKeyItem(s, FF7Save::LETTERTOADAUGHTER, checked);
 }
+
 void BlackChocobo::letterToWifeChanged(bool checked)
 {
     if (load)
@@ -2248,42 +2291,49 @@ void BlackChocobo::locationSelectionChanged(QString fieldName)
     ff7->setLocation(s, FF7Location::locationString(fieldName));
     statusBar()->showMessage(tr("Set Save Location: %1").arg(fieldName), 750);
 }
+
 void BlackChocobo::map_id_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setMapId(s, quint16(value));
 }
+
 void BlackChocobo::loc_id_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLocationId(s, quint16(value));
 }
+
 void BlackChocobo::coord_x_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLocationX(s, qint16(value));
 }
+
 void BlackChocobo::coord_y_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLocationY(s, qint16(value));
 }
+
 void BlackChocobo::coord_t_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLocationT(s, quint16(value));
 }
+
 void BlackChocobo::coord_d_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLocationD(s, quint8(value));
 }
+
 void BlackChocobo::location_textChanged(QString text)
 {
     if (load)
@@ -2298,18 +2348,21 @@ void BlackChocobo::setDialogColorUL(QColor color)
         return;
     ff7->setDialogColorUL(s, color);
 }
+
 void BlackChocobo::setDialogColorUR(QColor color)
 {
     if (load)
         return;
     ff7->setDialogColorUR(s, color);
 }
+
 void BlackChocobo::setDialogColorLL(QColor color)
 {
     if (load)
         return;
     ff7->setDialogColorLL(s, color);
 }
+
 void BlackChocobo::setDialogColorLR(QColor color)
 {
     if (load)
@@ -2323,24 +2376,28 @@ void BlackChocobo::setBattleSpeed(int value)
         return;
     ff7->setBattleSpeed(s, value);
 }
+
 void BlackChocobo::setBattleMessageSpeed(int value)
 {
     if (load)
         return;
     ff7->setBattleMessageSpeed(s, value);
 }
+
 void BlackChocobo::setFieldMessageSpeed(int value)
 {
     if (load)
         return;
     ff7->setMessageSpeed(s, value);
 }
+
 void BlackChocobo::setBattleHelp(bool checked)
 {
     if (load)
         return;
     ff7->setBattleHelp(s, checked);
 }
+
 void BlackChocobo::setFieldHelp(bool checked)
 {
     if (load)
@@ -2360,30 +2417,35 @@ void BlackChocobo::setControlMode(int mode)
         return;
     ff7->setControlMode(s, mode);
 }
+
 void BlackChocobo::setSoundMode(int mode)
 {
     if (load)
         return;
     ff7->setSoundMode(s, mode);
 }
+
 void BlackChocobo::setCursorMode(int mode)
 {
     if (load)
         return;
     ff7->setCursorMode(s, mode);
 }
+
 void BlackChocobo::setAtbMode(int mode)
 {
     if (load)
         return;
     ff7->setAtbMode(s, mode);
 }
+
 void BlackChocobo::setCameraMode(int mode)
 {
     if (load)
         return;
     ff7->setCameraMode(s, mode);
 }
+
 void BlackChocobo::setMagicOrder(int order)
 {
     if (load)
@@ -2398,162 +2460,189 @@ void BlackChocobo::sbCurdisc_valueChanged(int value)
         return;
     ff7->setDisc(s, value);
 }
+
 void BlackChocobo::sbMprogress_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setMainProgress(s, value);
 }
+
 void BlackChocobo::sbTurkschurch_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setChurchProgress(s, value);
 }
+
 void BlackChocobo::sbDonprog_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setDonProgress(s, value);
 }
+
 void BlackChocobo::cbBm1_1_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 0, checked);
 }
+
 void BlackChocobo::cbBm1_2_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 1, checked);
 }
+
 void BlackChocobo::cbBm1_3_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 2, checked);
 }
+
 void BlackChocobo::cbBm1_4_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 3, checked);
 }
+
 void BlackChocobo::cbBm1_5_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 4, checked);
 }
+
 void BlackChocobo::cbBm1_6_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 5, checked);
 }
+
 void BlackChocobo::cbBm1_7_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 6, checked);
 }
+
 void BlackChocobo::cbBm1_8_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress1(s, 7, checked);
 }
+
 void BlackChocobo::cbBm2_1_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 0, checked);
 }
+
 void BlackChocobo::cbBm2_2_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 1, checked);
 }
+
 void BlackChocobo::cbBm2_3_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 2, checked);
 }
+
 void BlackChocobo::cbBm2_4_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 3, checked);
 }
+
 void BlackChocobo::cbBm2_5_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 4, checked);
 }
+
 void BlackChocobo::cbBm2_6_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 5, checked);
 }
+
 void BlackChocobo::cbBm2_7_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 6, checked);
 }
+
 void BlackChocobo::cbBm2_8_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress2(s, 7, checked);
 }
+
 void BlackChocobo::cbBm3_1_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 0, checked);
 }
+
 void BlackChocobo::cbBm3_2_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 1, checked);
 }
+
 void BlackChocobo::cbBm3_3_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 2, checked);
 }
+
 void BlackChocobo::cbBm3_4_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 3, checked);
 }
+
 void BlackChocobo::cbBm3_5_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 4, checked);
 }
+
 void BlackChocobo::cbBm3_6_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 5, checked);
 }
+
 void BlackChocobo::cbBm3_7_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setBmProgress3(s, 6, checked);
 }
+
 void BlackChocobo::cbBm3_8_toggled(bool checked)
 {
     if (load)
@@ -2573,6 +2662,7 @@ void BlackChocobo::cbS7pl_1_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_2_toggled(bool checked)
 {
     if (load)
@@ -2585,6 +2675,7 @@ void BlackChocobo::cbS7pl_2_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_3_toggled(bool checked)
 {
     if (load)
@@ -2597,6 +2688,7 @@ void BlackChocobo::cbS7pl_3_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_4_toggled(bool checked)
 {
     if (load)
@@ -2609,6 +2701,7 @@ void BlackChocobo::cbS7pl_4_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_5_toggled(bool checked)
 {
     if (load)
@@ -2621,6 +2714,7 @@ void BlackChocobo::cbS7pl_5_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_6_toggled(bool checked)
 {
     if (load)
@@ -2633,6 +2727,7 @@ void BlackChocobo::cbS7pl_6_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_7_toggled(bool checked)
 {
     if (load)
@@ -2645,6 +2740,7 @@ void BlackChocobo::cbS7pl_7_toggled(bool checked)
     temp[0] = t;
     ff7->setUnknown(s, 26, temp);
 }
+
 void BlackChocobo::cbS7pl_8_toggled(bool checked)
 {
     if (load)
@@ -2791,6 +2887,7 @@ void BlackChocobo::comboReplay_currentIndexChanged(int index)
     else
         ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));
 }
+
 void BlackChocobo::btnReplay_clicked()
 {
     if (ui->comboReplay->currentIndex() == 1) { // bombing mission
@@ -2898,78 +2995,91 @@ void BlackChocobo::sbBloveAeris_valueChanged(int value)
         return;
     ff7->setLove(s, true, FF7Save::LOVE_AERIS, quint8(value));
 }
+
 void BlackChocobo::sbBloveTifa_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLove(s, true, FF7Save::LOVE_TIFA, quint8(value));
 }
+
 void BlackChocobo::sbBloveYuffie_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLove(s, true, FF7Save::LOVE_YUFFIE, quint8(value));
 }
+
 void BlackChocobo::sbBloveBarret_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setLove(s, true, FF7Save::LOVE_BARRET, quint8(value));
 }
+
 void BlackChocobo::sbCoster1_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setSpeedScore(s, 1, quint16(value));
 }
+
 void BlackChocobo::sbCoster2_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setSpeedScore(s, 2, quint16(value));
 }
+
 void BlackChocobo::sbCoster3_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setSpeedScore(s, 3, quint16(value));
 }
+
 void BlackChocobo::sbTimerTimeHour_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setCountdownTimer(s, quint32((value * 3600) + (ui->sbTimerTimeMin->value() * 60) + (ui->sbTimerTimeSec->value())));
 }
+
 void BlackChocobo::sbTimerTimeMin_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + ((value * 60)) + (ui->sbTimerTimeSec->value())));
 }
+
 void BlackChocobo::sbTimerTimeSec_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setCountdownTimer(s, quint32((ui->sbTimerTimeHour->value() * 3600) + (ui->sbTimerTimeMin->value() * 60) + (value)));
 }
+
 void BlackChocobo::sbUweaponHp_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setUWeaponHp(s, value);
 }
+
 void BlackChocobo::cbRegVinny_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setVincentUnlocked(s, checked);
 }
+
 void BlackChocobo::cbRegYuffie_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setYuffieUnlocked(s, checked);
 }
+
 void BlackChocobo::cbYuffieForest_toggled(bool checked)
 {
     if (load)
@@ -2983,36 +3093,42 @@ void BlackChocobo::cbMidgartrain_1_toggled(bool checked)
         return;
     ff7->setMidgarTrainFlags(s, 0, checked);
 }
+
 void BlackChocobo::cbMidgartrain_2_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setMidgarTrainFlags(s, 1, checked);
 }
+
 void BlackChocobo::cbMidgartrain_3_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setMidgarTrainFlags(s, 2, checked);
 }
+
 void BlackChocobo::cbMidgartrain_4_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setMidgarTrainFlags(s, 3, checked);
 }
+
 void BlackChocobo::cbMidgartrain_5_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setMidgarTrainFlags(s, 4, checked);
 }
+
 void BlackChocobo::cbMidgartrain_6_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setMidgarTrainFlags(s, 5, checked);
 }
+
 void BlackChocobo::cbMidgartrain_7_toggled(bool checked)
 {
     if (load)
@@ -3020,6 +3136,7 @@ void BlackChocobo::cbMidgartrain_7_toggled(bool checked)
     ff7->setMidgarTrainFlags(s, 6, checked);
 
 }
+
 void BlackChocobo::cbMidgartrain_8_toggled(bool checked)
 {
     if (load)
@@ -3064,6 +3181,7 @@ void BlackChocobo::cbRubyDead_toggled(bool checked)
         return;
     ff7->setKilledRubyWeapon(s, checked);
 }
+
 void BlackChocobo::cbEmeraldDead_toggled(bool checked)
 {
     if (load)
@@ -3082,6 +3200,7 @@ void BlackChocobo::comboHighwindBuggy_currentIndexChanged(int index)
         default: break;
     }
 }
+
 void BlackChocobo::cbVisibleBuggy_toggled(bool checked)
 {
     if (load)
@@ -3103,12 +3222,14 @@ void BlackChocobo::cbVisibleBuggy_toggled(bool checked)
         }
     }
 }
+
 void BlackChocobo::cbVisibleBronco_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setWorldVehicle(s, FF7Save::WVEHCILE_TBRONCO, checked);
 }
+
 void BlackChocobo::cbVisibleHighwind_toggled(bool checked)
 {
     if (load)
@@ -3131,6 +3252,7 @@ void BlackChocobo::cbVisibleHighwind_toggled(bool checked)
         }
     }
 }
+
 void BlackChocobo::cbVisibleWildChocobo_toggled(bool checked)
 {
     if (!load)
@@ -3150,6 +3272,7 @@ void BlackChocobo::cbVisibleWildChocobo_toggled(bool checked)
     ui->cbVisibleGoldChocobo->setEnabled(checked);
 
 }
+
 void BlackChocobo::cbVisibleYellowChocobo_toggled(bool checked)
 {
     if (load)
@@ -3162,6 +3285,7 @@ void BlackChocobo::cbVisibleYellowChocobo_toggled(bool checked)
         ui->cbVisibleGoldChocobo->setChecked(false);
     }
 }
+
 void BlackChocobo::cbVisibleGreenChocobo_toggled(bool checked)
 {
     if (load)
@@ -3174,6 +3298,7 @@ void BlackChocobo::cbVisibleGreenChocobo_toggled(bool checked)
         ui->cbVisibleGoldChocobo->setChecked(false);
     }
 }
+
 void BlackChocobo::cbVisibleBlueChocobo_toggled(bool checked)
 {
     if (load)
@@ -3219,18 +3344,21 @@ void BlackChocobo::sbLeaderId_valueChanged(int value)
         return;
     ff7->setWorldCoordsLeaderID(s, value);
 }
+
 void BlackChocobo::sbLeaderAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsLeaderAngle(s, value);
 }
+
 void BlackChocobo::sbLeaderZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsLeaderZ(s, value);
 }
+
 void BlackChocobo::sbLeaderX_valueChanged(int value)
 {
     if (load)
@@ -3262,18 +3390,21 @@ void BlackChocobo::sbTcId_valueChanged(int value)
         return;
     ff7->setWorldCoordsTcID(s, value);
 }
+
 void BlackChocobo::sbTcAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsTcAngle(s, value);
 }
+
 void BlackChocobo::sbTcZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsTcZ(s, value);
 }
+
 void BlackChocobo::sbTcX_valueChanged(int value)
 {
     if (load)
@@ -3285,6 +3416,7 @@ void BlackChocobo::sbTcX_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::sbTcY_valueChanged(int value)
 {
     if (load)
@@ -3304,18 +3436,21 @@ void BlackChocobo::sbBhId_valueChanged(int value)
         return;
     ff7->setWorldCoordsBhID(s, value);
 }
+
 void BlackChocobo::sbBhAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsBhAngle(s, value);
 }
+
 void BlackChocobo::sbBhZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsBhZ(s, value);
 }
+
 void BlackChocobo::sbBhX_valueChanged(int value)
 {
     if (load)
@@ -3327,6 +3462,7 @@ void BlackChocobo::sbBhX_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::sbBhY_valueChanged(int value)
 {
     if (load)
@@ -3339,24 +3475,28 @@ void BlackChocobo::sbBhY_valueChanged(int value)
     }
 }
 // sub world 3
+
 void BlackChocobo::sbSubId_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsSubID(s, value);
 }
+
 void BlackChocobo::sbSubAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsSubAngle(s, value);
 }
+
 void BlackChocobo::sbSubZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsSubZ(s, value);
 }
+
 void BlackChocobo::sbSubX_valueChanged(int value)
 {
     if (load)
@@ -3368,6 +3508,7 @@ void BlackChocobo::sbSubX_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::sbSubY_valueChanged(int value)
 {
     if (load)
@@ -3387,18 +3528,21 @@ void BlackChocobo::sbWcId_valueChanged(int value)
         return;
     ff7->setWorldCoordsWchocoID(s, value);
 }
+
 void BlackChocobo::sbWcAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsWchocoAngle(s, value);
 }
+
 void BlackChocobo::sbWcZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsWchocoZ(s, value);
 }
+
 void BlackChocobo::sbWcX_valueChanged(int value)
 {
     if (load)
@@ -3410,6 +3554,7 @@ void BlackChocobo::sbWcX_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::sbWcY_valueChanged(int value)
 {
     if (load)
@@ -3429,18 +3574,21 @@ void BlackChocobo::sbDurwId_valueChanged(int value)
         return;
     ff7->setWorldCoordsDurwID(s, value);
 }
+
 void BlackChocobo::sbDurwAngle_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsDurwAngle(s, value);
 }
+
 void BlackChocobo::sbDurwZ_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setWorldCoordsDurwZ(s, value);
 }
+
 void BlackChocobo::sbDurwX_valueChanged(int value)
 {
     if (load)
@@ -3452,6 +3600,7 @@ void BlackChocobo::sbDurwX_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::sbDurwY_valueChanged(int value)
 {
     if (load)
@@ -3463,6 +3612,7 @@ void BlackChocobo::sbDurwY_valueChanged(int value)
         load = false;
     }
 }
+
 void BlackChocobo::comboMapControls_currentIndexChanged(int index)
 {
     load = true;
@@ -3548,10 +3698,6 @@ void BlackChocobo::worldMapView_customContextMenuRequested(QPoint pos)
         return;
     }
 }//End Of Map Context Menu
-
-void BlackChocobo::btnAddAllItems_clicked()
-{
-}
 
 void BlackChocobo::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {
@@ -3738,145 +3884,179 @@ void BlackChocobo::char_materia_changed(materia mat)
 {
     ff7->setCharMateria(s, curchar, mslotsel, mat);
 }
+
 void BlackChocobo::char_accessory_changed(quint8 accessory)
 {
     ff7->setCharAccessory(s, curchar, accessory);
 }
+
 void BlackChocobo::char_armor_changed(quint8 armor)
 {
     ff7->setCharArmor(s, curchar, armor);
 }
+
 void BlackChocobo::char_baseHp_changed(quint16 hp)
 {
     ff7->setCharBaseHp(s, curchar, hp);
 }
+
 void BlackChocobo::char_baseMp_changed(quint16 mp)
 {
     ff7->setCharBaseMp(s, curchar, mp);
 }
+
 void BlackChocobo::char_curHp_changed(quint16 hp)
 {
     ff7->setCharCurrentHp(s, curchar, hp);
     if (curchar == ff7->party(s, 0))
         ff7->setDescCurHP(s, hp);
 }
+
 void BlackChocobo::char_curMp_changed(quint16 mp)
 {
     ff7->setCharCurrentMp(s, curchar, mp);
     if (curchar == ff7->party(s, 0))
         ff7->setDescCurMP(s, mp);
 }
+
 void BlackChocobo::char_id_changed(qint8 id)
 {
     ff7->setCharID(s, curchar, id);
     partyTab->setButtonImageToId(curchar, id);
 }
+
 void BlackChocobo::char_level_changed(qint8 level)
 {
     ff7->setCharLevel(s, curchar, level);
     if (curchar == ff7->party(s, 0))
         ff7->setDescLevel(s, level);
 }
+
 void BlackChocobo::char_str_changed(quint8 str)
 {
     ff7->setCharStr(s, curchar, str);
 }
+
 void BlackChocobo::char_vit_changed(quint8 vit)
 {
     ff7->setCharVit(s, curchar, vit);
 }
+
 void BlackChocobo::char_mag_changed(quint8 mag)
 {
     ff7->setCharMag(s, curchar, mag);
 }
+
 void BlackChocobo::char_spi_changed(quint8 spi)
 {
     ff7->setCharSpi(s, curchar, spi);
 }
+
 void BlackChocobo::char_dex_changed(quint8 dex)
 {
     ff7->setCharDex(s, curchar, dex);
 }
+
 void BlackChocobo::char_lck_changed(quint8 lck)
 {
     ff7->setCharLck(s, curchar, lck);
 }
+
 void BlackChocobo::char_strBonus_changed(quint8 value)
 {
     ff7->setCharStrBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_vitBonus_changed(quint8 value)
 {
     ff7->setCharVitBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_magBonus_changed(quint8 value)
 {
     ff7->setCharMagBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_spiBonus_changed(quint8 value)
 {
     ff7->setCharSpiBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_dexBonus_changed(quint8 value)
 {
     ff7->setCharDexBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_lckBonus_changed(quint8 value)
 {
     ff7->setCharLckBonus(s, curchar, value);
 }
+
 void BlackChocobo::char_limitLevel_changed(qint8 value)
 {
     ff7->setCharLimitLevel(s, curchar, value);
 }
+
 void BlackChocobo::char_limitBar_changed(quint8 value)
 {
     ff7->setCharLimitBar(s, curchar, value);
 }
+
 void BlackChocobo::char_weapon_changed(quint8 value)
 {
     ff7->setCharWeapon(s, curchar, value);
 }
+
 void BlackChocobo::char_kills_changed(quint16 value)
 {
     ff7->setCharKills(s, curchar, value);
 }
+
 void BlackChocobo::char_row_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 1, value);
 }
+
 void BlackChocobo::char_levelProgress_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 2, value);
 }
+
 void BlackChocobo::char_sadnessfury_changed(quint8 value)
 {
     ff7->setCharFlag(s, curchar, 0, value);
 }
+
 void BlackChocobo::char_limits_changed(quint16 value)
 {
     ff7->setCharLimits(s, curchar, value);
 }
+
 void BlackChocobo::char_timesused1_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 1, value);
 }
+
 void BlackChocobo::char_timeused2_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 2, value);
 }
+
 void BlackChocobo::char_timeused3_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s, curchar, 3, value);
 }
+
 void BlackChocobo::char_exp_changed(quint32 value)
 {
     ff7->setCharCurrentExp(s, curchar, value);
 }
+
 void BlackChocobo::char_expNext_changed(quint32 value)
 {
     ff7->setCharNextExp(s, curchar, value);
 }
+
 void BlackChocobo::char_mslot_changed(int slot)
 {
     mslotsel = slot;
@@ -3895,6 +4075,7 @@ void BlackChocobo::char_maxHp_changed(quint16 value)
     if (curchar == ff7->party(s, 0))
         ff7->setDescMaxHP(s, value);
 }
+
 void BlackChocobo::char_maxMp_changed(quint16 value)
 {
     ff7->setCharMaxMp(s, curchar, value);
@@ -3906,18 +4087,21 @@ void BlackChocobo::Items_Changed(QList<quint16> items)
 {
     ff7->setItems(s, items);
 }
+
 void BlackChocobo::sbSnowBegScore_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setSnowboardScore(s, 0, quint8(value));
 }
+
 void BlackChocobo::sbSnowExpScore_valueChanged(int value)
 {
     if (load)
         return;
     ff7->setSnowboardScore(s, 1, quint8(value));
 }
+
 void BlackChocobo::sbSnowCrazyScore_valueChanged(int value)
 {
     if (load)
@@ -4006,12 +4190,14 @@ void BlackChocobo::sbSnowCrazyMsec_valueChanged(int value)
     time.replace(4, 3, QString("%1").arg(value, 3, 10, QChar('0')));
     ff7->setSnowboardTime(s, 2, time);
 }
+
 void BlackChocobo::sbBikeHighScore_valueChanged(int arg1)
 {
     if (load)
         return;
     ff7->setBikeHighScore(s, quint16(arg1));
 }
+
 void BlackChocobo::sbBattlePoints_valueChanged(int arg1)
 {
     if (load)
@@ -4073,18 +4259,21 @@ void BlackChocobo::phsList_box_allowed_toggled(int row, bool checked)
         return;
     ff7->setPhsAllowed(s, row, !checked);
 }
+
 void BlackChocobo::phsList_box_visible_toggled(int row, bool checked)
 {
     if (load)
         return;
     ff7->setPhsVisible(s, row, checked);
 }
+
 void BlackChocobo::menuList_box_locked_toggled(int row, bool checked)
 {
     if (load)
         return;
     ff7->setMenuLocked(s, row, checked);
 }
+
 void BlackChocobo::menuList_box_visible_toggled(int row, bool checked)
 {
     if (load)
@@ -4190,7 +4379,6 @@ void BlackChocobo::locationToolBox_currentChanged(int index)
 
 void BlackChocobo::testDataTabWidget_currentChanged(int index)
 {
-
     switch (index) {
     case 0:
         load = true;
@@ -4233,24 +4421,28 @@ void BlackChocobo::sbCondorFunds_valueChanged(int arg1)
         return;
     ff7->setCondorFunds(s, quint16(arg1));
 }
+
 void BlackChocobo::sbCondorWins_valueChanged(int arg1)
 {
     if (load)
         return;
     ff7->setCondorWins(s, quint8(arg1));
 }
+
 void BlackChocobo::sbCondorLosses_valueChanged(int arg1)
 {
     if (load)
         return;
     ff7->setCondorLosses(s, quint8(arg1));
 }
+
 void BlackChocobo::cbPandorasBox_toggled(bool checked)
 {
     if (load)
         return;
     ff7->setSeenPandorasBox(s, checked);
 }
+
 void BlackChocobo::cbSubGameWon_toggled(bool checked)
 {
     if (load)
@@ -4268,6 +4460,7 @@ void BlackChocobo::connectFieldItem(quint8 boxID, QList<quint16>Offset, QList<qu
     fieldItemOffset->append(Offset);
     fieldItemBit->append(Bit);
 }
+
 void BlackChocobo::checkFieldItem(int boxID)
 {
     //Will always be called in numerical Order
@@ -4294,6 +4487,7 @@ void BlackChocobo::checkFieldItem(int boxID)
         locationViewer->setFieldItemChecked(boxID, checked);
     }
 }
+
 void BlackChocobo::fieldItemStateChanged(int boxID, bool checked)
 {
     fieldItemOffsetList offsetList = fieldItemOffset->at(boxID);
@@ -4320,18 +4514,21 @@ void BlackChocobo::sbSaveMapId_valueChanged(int arg1)
         return;
     ff7->setCraterSavePointMapID(s, arg1);
 }
+
 void BlackChocobo::sbSaveX_valueChanged(int arg1)
 {
     if (load)
         return;
     ff7->setCraterSavePointX(s, arg1);
 }
+
 void BlackChocobo::sbSaveY_valueChanged(int arg1)
 {
     if (load)
         return;
     ff7->setCraterSavePointY(s, arg1);
 }
+
 void BlackChocobo::sbSaveZ_valueChanged(int arg1)
 {
     if (load)
