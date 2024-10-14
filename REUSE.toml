@@ -1,0 +1,140 @@
+# SPDX-FileCopyrightText: 2024 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-License-Identifier: CC0-1.0
+
+
+version = 1
+SPDX-PackageName = "blackchocobo"
+SPDX-PackageSupplier = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/sithlord48/blackchocobo"
+
+[[annotations]]
+path = ".github/**"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "translations/**.ts"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "deploy/blackchocobo.icns"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "deploy/blackchocobo.ico"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "deploy/blackchocobo.png"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "deploy/dmg_background.png"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "deploy/dmg_icon.icns"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/common/world_map.png"
+precedence = "override"
+SPDX-FileCopyrightText = "Team Avalanche"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/common/psxmc.png"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/common/dialog-**.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Kde Breeze Icons"
+SPDX-License-Identifier = "LGPL-2.1-only"
+
+[[annotations]]
+path = "icons/common/window-close.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Kde Breeze Icons"
+SPDX-License-Identifier = "LGPL-2.1-only"
+
+[[annotations]]
+path = "icons/common/map-**.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Tangoish"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/common/blackchocobo.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/bc-**/**/**/**.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Kde Breeze Icons"
+SPDX-License-Identifier = "LGPL-2.1-only"
+
+[[annotations]]
+path = "icons/bc-**/**/**/character-**.svg"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = "icons/bc-**/index.theme"
+precedence = "override"
+SPDX-FileCopyrightText = "Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "LGPL-2.1-only"
+
+[[annotations]]
+path = "qhexedit/license.txt"
+precedence = "override"
+SPDX-FileCopyrightText = "FSF"
+SPDX-License-Identifier = "LGPL-2.1-only"
+
+[[annotations]]
+path = "src/blackchocobo.ui"
+precedence = "override"
+SPDX-FileCopyrightText = "2010 - 2024 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "src/dialogs/about.ui"
+precedence = "override"
+SPDX-FileCopyrightText = "2010 - 2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "src/dialogs/options.ui"
+precedence = "override"
+SPDX-FileCopyrightText = "2010 - 2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "deploy/io.github.sithlord48.blackchocobo.metainfo.xml"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "deploy/io.github.sithlord48.blackchocobo.xml"
+precedence = "override"
+SPDX-FileCopyrightText = "2020 Chris Rizzitello <sithlord48@gmail.com>"
+SPDX-License-Identifier = "CC0-1.0"
