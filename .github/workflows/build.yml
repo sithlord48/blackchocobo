@@ -51,10 +51,9 @@ jobs:
              , debArch: amd64
           }
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - run: git fetch --tags --force
+    - name: Checkout
+      uses: sithlord48/fancy-checkout@v1.0.0
+
     - name: Install Dependencies
       run: |
         sudo apt-get update -y > /dev/null
@@ -114,10 +113,8 @@ jobs:
       run: |
         echo "BCVersion=${{ needs.precheck.outputs.version }}" >> $GITHUB_ENV
 
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - run: git fetch --tags --force
+    - name: Checkout
+      uses: sithlord48/fancy-checkout@v1.0.0
 
     - name: Env Script (Windows)
       uses: ilammy/msvc-dev-cmd@v1
@@ -206,9 +203,8 @@ jobs:
            , debArch: armhf
           }
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: sithlord48/fancy-checkout@v1.0.0
       - run: git fetch --tags --force
       - uses: uraimo/run-on-arch-action@v2.7.1
         name: Build artifact
