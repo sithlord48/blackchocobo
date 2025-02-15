@@ -64,7 +64,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: sithlord48/fancy-checkout@v1.0.0
+      uses: sithlord48/fancy-checkout@v1
 
     - name: Install Dependencies
       run: |
