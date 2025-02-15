@@ -102,6 +102,18 @@ jobs:
            , install_ff7tk: "sudo tar -xf ff7tk-continuous-linux_x86_64.tar.gz --one-top-level=/opt/ff7tk"
            , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr"
            , installBC: ""
+           , arch: "x86_64"
+          }
+        - {
+           name: "Linux-arm"
+           , os: ubuntu-24.04-arm
+           , QT_INST_DIR: /opt
+           , ff7tkPrefix: /opt/ff7tk
+           , ff7tkPackage: ff7tk-continuous-linux_aarch64.tar.gz
+           , install_ff7tk: "sudo tar -xf ff7tk-continuous-linux_aarch64.tar.gz --one-top-level=/opt/ff7tk"
+           , extraCMakeConfig: "-DCMAKE_INSTALL_PREFIX=/usr"
+           , installBC: ""
+           , arch: "aarch64"
           }
         - {
             name: "MacOS"
@@ -176,17 +188,24 @@ jobs:
           sudo apt-get update -y > /dev/null
           sudo apt-get install -qqq libxkbcommon-x11-0 libxcb-cursor0 > /dev/null
           make DESTDIR=appdir install
-          wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
-          wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage"
+          wget -qc "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-${{ matrix.config.arch }}.AppImage"
+          wget -qc "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-${{ matrix.config.arch }}.AppImage"
           chmod a+x linuxdeploy*.AppImage
-          export VERSION="${{env.BCVersion}}"
-          export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib
-          export PATH=$PATH:/opt/Qt/${{env.QtVersion}}/gcc_64/libexec
           mkdir -p ./appdir/usr/share/ff7tk/translations
           mkdir -p ./appdir/usr/plugins/iconengines
-          cp /opt/Qt/${{ env.QtVersion }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
+          export VERSION="${{env.BCVersion}}"
+          export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${{ matrix.config.ff7tkPrefix }}/lib
+
+          if [[ "${{ matrix.config.arch }}" == "x86_64" ]]; then
+              export PATH=$PATH:/opt/Qt/${{env.QtVersion}}/gcc_64/libexec
+              cp /opt/Qt/${{ env.QtVersion }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
+          else
+              export PATH=$PATH:/opt/Qt/${{env.QtVersion}}/gcc_arm64/libexec
+              cp /opt/Qt/${{ env.QtVersion }}/gcc_arm64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
+          fi
+
           cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/translations/*.qm ./appdir/usr/share/ff7tk/translations
-          ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
+          ./linuxdeploy-${{matrix.config.arch}}.AppImage --appdir=appdir  --output appimage \
             -e src/blackchocobo \
             -d deploy/io.github.sithlord48.blackchocobo.desktop \
             -i deploy/blackchocobo.png \
