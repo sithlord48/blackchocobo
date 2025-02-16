@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.6.3
-    QtKey: "6.6.3"
+    QtVersion: 6.8.2
+    QtKey: "6.8.2"
     PackageGLOB: "Black_Chocobo-*.*"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
@@ -88,7 +88,7 @@ jobs:
         config:
         - {
            name: "Linux-amd64"
-           , os: ubuntu-20.04
+           , os: ubuntu-22.04
            , QT_INST_DIR: /opt
            , ff7tkPrefix: /opt/ff7tk
            , ff7tkPackage: ff7tk-continuous-linux_X86_64.tar.gz
