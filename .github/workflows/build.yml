@@ -190,55 +190,10 @@ jobs:
         path: |
           ${{github.workspace}}/${{env.PackageGLOB}}
           ${{github.workspace}}/blackchocobo[-_]*.*
-  container_build:
-    # The host should always be linux
-    runs-on: ubuntu-latest
-    name: Linux-${{matrix.config.arch}}-${{matrix.config.name}}
-    needs: precheck
-    strategy:
-      fail-fast: false
-      matrix:
-        config:
-        - {
-           name: "jammy"
-           , arch: armv7, distro: ubuntu22.04
-           , debArch: armhf
-          }
-    steps:
-      - name: Checkout
-        uses: sithlord48/fancy-checkout@v1.0.0
-      - run: git fetch --tags --force
-      - uses: uraimo/run-on-arch-action@v2.8.1
-        name: Build artifact
-        with:
-          arch: ${{ matrix.config.arch }}
-          distro: ${{ matrix.config.distro }}
-          githubToken: ${{ github.token }}
-          setup: mkdir -p "${PWD}/artifacts"
-          dockerRunArgs: --volume "${PWD}/artifacts:/artifacts"
-          shell: /bin/sh
-          install: |
-            apt-get update -y > /dev/null
-            apt-get install -qqq ${{env.debianRequirments}} > /dev/null
-          run: |
-            curl --retry 5 --retry-max-time 120 -s https://api.github.com/repos/sithlord48/ff7tk/releases/latest | awk -F\" '/browser_download_url.*_${{matrix.config.debArch}}*[.deb]/{print $(NF-1)}' | wget -i -
-            apt -y -f install ./libff7tk*.deb
-            rm libff7tk*.deb
-            git config --global --add safe.directory /home/runner/work/blackchocobo/blackchocobo
-            ${{env.cmakeConfigure}} -DCPACK_PACKAGE_VERSION="${{ needs.precheck.outputs.version }}" -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}~${{matrix.config.name}}
-            cmake --build build --config ${{env.BuildType}} --target package
-            cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: container-artifact-${{matrix.config.name}}-${{matrix.config.arch}}
-          path: |
-            build/Black_Chocobo[-_]*.*
-            build/blackchocobo[-_]*.*
-            blackchocobo*.deb
+
   release_assets:
     name: Release
-    needs: [main_build, container_build, deb_builder]
+    needs: [main_build, deb_builder]
     runs-on: ubuntu-latest
     steps:
     - name: Download Files
@@ -253,7 +208,6 @@ jobs:
        title: "Continuous Build"
        files: |
          artifact-*/*
-         container-artifact-*/*
          debian-artifacts-*/*
     - name: Deploy Release
       if: contains(github.ref, 'tags/v')
@@ -263,5 +217,4 @@ jobs:
        prerelease: false
        files: |
          artifact-*/*
-         container-artifact-*/*
          debian-artifacts-*/*
