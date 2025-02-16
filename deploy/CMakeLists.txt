@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 Chris Rizzitello <sithlord48@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2025 Chris Rizzitello <sithlord48@gmail.com>
 # SPDX-License-Identifier: MIT
 
 if(UNIX AND NOT APPLE)
@@ -28,10 +28,13 @@ set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/COPYING.txt")
 set(CPACK_PACKAGE_NAME "Black_Chocobo")
 set(CPACK_PACKAGE_VENDOR "sithlord48")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/sithlord48/blackchocobo")
-if(NOT CPACK_PACKAGE_VERSION)
-    set(CPACK_PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
-endif()
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY ${CMAKE_PROJECT_DESCRIPTION})
+set(CPACK_PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
+
+if(NOT PACKAGE_VERSION_LABEL)
+    set (PACKAGE_VERSION_LABEL "${CPACK_PACKAGE_VERSION}")
+endif()
+
 
 set(CPACK_DEBIAN_PACKAGE_NAME "blackchocobo")
 set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
