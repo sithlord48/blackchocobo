@@ -49,11 +49,11 @@ jobs:
         config:
         - name: jammy
           os: ubuntu-22.04
-          debArch: amd64
+          debArch: x86_64
 
         - name: jammy
           os: ubuntu-22.04-arm
-          debArch: arm64
+          debArch: aarch64
 
     steps:
     - name: Checkout
@@ -63,12 +63,12 @@ jobs:
       run: |
         sudo apt-get update -y > /dev/null
         sudo apt-get install -qqq ${{env.debianRequirments}} > /dev/null
-        curl -s https://api.github.com/repos/sithlord48/ff7tk/releases/latest | awk -F\" '/browser_download_url.*${{matrix.config.debArch}}*[.deb]/{print $(NF-1)}' | wget -i -
+        curl -s https://api.github.com/repos/sithlord48/ff7tk/releases/latest | awk -F\" '/browser_download_url.*${{matrix.config.name}}-${{matrix.config.debArch}}*[.deb]/{print $(NF-1)}' | wget -i -
         sudo apt -y -qqq install ./libff7tk*.deb
         rm libff7tk*.deb
     - name: Build
       run: |
-        ${{env.cmakeConfigure}} -DCMAKE_INSTALL_PREFIX=/usr -DCPACK_PACKAGE_VERSION="${{ needs.precheck.outputs.version }}" -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}}~${{matrix.config.name}} -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+        ${{env.cmakeConfigure}} -DCMAKE_INSTALL_PREFIX=/usr -DPACKAGE_VERSION_LABEL="${{ needs.precheck.outputs.version }}" -DCPACK_DEBIAN_PACKAGE_RELEASE=${{github.run_attempt}} -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
         cmake --build build --target package
         mv build/[Bb]lack*[Cc]hocobo[-_]*.* .
         cpack -G DEB -C ${{env.BuildType}} --config build/CPackConfig.cmake
