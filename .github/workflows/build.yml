@@ -164,13 +164,13 @@ jobs:
 
 
     - name: Configure
-      run: cmake -S. -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release -DCPACK_PACKAGE_LABEL="${{env.BCVersion}}" -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
+      run: cmake -S. -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release -DPACKAGE_VERSION_LABEL="${{env.BCVersion}}" -Dff7tk_DIR=${{matrix.config.ff7tkPrefix}}/lib/cmake/ff7tk ${{matrix.config.extraCMakeConfig}}
 
     - name: Build Black_Chocobo
       id: main_build
       shell: bash
       run: |
-        if [[ "${{github.runner.os}}" != "linux" ]]; then
+        if [ $RUNNER_OS != "Linux" ]; then
           cmake --build . --config ${{env.BuildType}} --target package
         else
           sudo apt-get update -y > /dev/null
@@ -186,7 +186,7 @@ jobs:
           mkdir -p ./appdir/usr/plugins/iconengines
           cp /opt/Qt/${{ env.QtVersion }}/gcc_64/plugins/iconengines/libqsvgicon.so ./appdir/usr/plugins/iconengines/libqsvgicon.so
           cp ${{matrix.config.ff7tkPrefix}}/share/ff7tk/translations/*.qm ./appdir/usr/share/ff7tk/translations
-            ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
+          ./linuxdeploy-x86_64.AppImage --appdir=appdir  --output appimage \
             -e src/blackchocobo \
             -d deploy/io.github.sithlord48.blackchocobo.desktop \
             -i deploy/blackchocobo.png \
