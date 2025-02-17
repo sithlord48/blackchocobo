@@ -75,11 +75,12 @@ if(APPLE)
       MACOSX_BUNDLE_SHORT_VERSION_STRING ${BC_VERSION}
     )
     target_compile_options(${BIN_NAME} PRIVATE -stdlib=libc++)
-    add_custom_command(
-        TARGET ${BIN_NAME} POST_BUILD
-        COMMAND ${PLATFORMDEPLOYQT} ${BIN_NAME}.app
-    )
     install(TARGETS ${BIN_NAME} BUNDLE DESTINATION .)
+    install(CODE "execute_process(COMMAND
+      ${PLATFORMDEPLOYQT}
+      \"\${CMAKE_INSTALL_PREFIX}/Black_Chocobo.app\"
+      -timestamp -codesign=-
+    )")
 elseif(UNIX AND NOT APPLE)
     install(TARGETS ${BIN_NAME} RUNTIME DESTINATION bin)
     install(FILES ${PROJECT_SOURCE_DIR}/COPYING.txt DESTINATION share/licenses/blackchocobo/ RENAME LICENSE)
