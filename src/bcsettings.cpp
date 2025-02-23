@@ -93,7 +93,7 @@ void BCSettings::setValue(const QString &setting, const QVariant &value)
     else
         instance()->settings->setValue(setting, value);
     instance()->settings->sync();
-    emit instance()->settingsChanged();
+    Q_EMIT instance()->settingsChanged();
 }
 
 QVariant BCSettings::value(const QString &setting, const QVariant &defaultValue)
