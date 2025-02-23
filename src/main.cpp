@@ -28,14 +28,15 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(icons);
 
     QApplication a(argc, argv);
-#if !defined (Q_OS_LINUX)
     if (BCSettings::value(SETTINGS::APPSTYLE).isNull())
         BCSettings::setValue(SETTINGS::APPSTYLE, QStringLiteral("Fusion"));
-#endif
+
 #if defined(Q_OS_WIN)
-    QSettings settings(QStringLiteral("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize"), QSettings::NativeFormat);
-    int theme = settings.value(QStringLiteral("AppsUseLightTheme"), 0).toInt() + 1;
-    BCSettings::setValue(SETTINGS::COLORSCHEME, theme);
+    if (BCSettings::value(SETTINGS::COLORSCHEME).isNull()) {
+        QSettings settings(QStringLiteral("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize"), QSettings::NativeFormat);
+        int theme = settings.value(QStringLiteral("AppsUseLightTheme"), 0).toInt() + 1;
+        BCSettings::setValue(SETTINGS::COLORSCHEME, theme);
+    }
 #endif
     a.setStyle(QStyleFactory::create(BCSettings::value(SETTINGS::APPSTYLE, a.style()->name()).toString()));
     a.setPalette(BCSettings::paletteForSetting());
