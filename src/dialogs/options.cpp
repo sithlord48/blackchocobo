@@ -188,6 +188,11 @@ void Options::initConnections()
 
 void Options::updateText()
 {
+    // Setting the title causes a random crash with 6.8+
+    // Until its known why setting the title crashes don't do it on 6.8+
+#if QT_VERSION < QT_VERSION_CHECK(6, 8, 0)
+    setWindowTitle(tr("Options"));
+#endif
     ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setToolTip(tr("Reset values to defaults"));
     ui->buttonBox->button(QDialogButtonBox::Reset)->setToolTip(tr("Reset values to stored settings"));
     ui->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(tr("Close and save changes"));

@@ -19,9 +19,6 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
-  <property name="windowTitle">
-   <string>Options</string>
-  </property>
   <property name="windowIcon">
    <iconset theme="configure">
     <normaloff>.</normaloff>.</iconset>
