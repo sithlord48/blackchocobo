@@ -29,6 +29,7 @@
 	<provides> <id>io.github.sithlord48.blackchocobo.desktop</id> </provides>
 	<categories>
 		<category>Game</category>
+		<category>Utility</category>
 	</categories>
 	<keywords>
 		<keyword translate="no">PSX</keyword>
