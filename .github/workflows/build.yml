@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [ master ]
 env:
-    QtVersion: 6.8.2
-    QtKey: "6.8.2"
+    QtVersion: 6.9.1
+    QtKey: "6.9.1"
     BuildType: Release
     cmakeConfigure: "cmake -S. -Bbuild -DQT_DEFAULT_MAJOR_VERSION=6 -DCMAKE_BUILD_TYPE=Release"
     debianRequirments: "build-essential git zlib1g-dev cmake qt6-tools-dev qt6-tools-dev-tools qt6-l10n-tools qt6-declarative-dev qt6-base-dev libqt6svg6-dev qt6-base-dev-tools qt6-translations-l10n libqt6core5compat6-dev libgl1-mesa-dev rename wget curl devscripts"
@@ -114,7 +114,7 @@ jobs:
           }
         - {
             name: "Windows-x64", WIN_ARCH: "x64"
-            , os: windows-2019
+            , os: windows-2022
             , QT_INST_DIR: "C:/"
             , ff7tkPrefix: "C:/ff7tk"
             , ff7tkPackage: ff7tk-continuous-win64.7z
