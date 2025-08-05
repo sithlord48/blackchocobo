@@ -953,7 +953,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>New &amp;Game+ </source>
-        <translation>新&amp;游戏+ </translation>
+        <translation>新&amp;存档+ </translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
