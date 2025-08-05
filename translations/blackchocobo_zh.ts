@@ -73,7 +73,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation>关于黑陆行鸟</translation>
+        <translation>关于黑色陆行鸟</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -89,7 +89,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>黑陆行鸟 </translation>
+        <translation>黑色陆行鸟 </translation>
     </message>
     <message>
         <source>ff7tk: %1</source>
@@ -152,15 +152,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>1st</source>
-        <translation>1st</translation>
+        <translation>第一名</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation>2nd</translation>
+        <translation>第二名</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation>3rd</translation>
+        <translation>第三名</translation>
     </message>
     <message>
         <source>Bin</source>
@@ -188,7 +188,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Sub</source>
-        <translation>Sub</translation>
+        <translation>潜水艇</translation>
     </message>
     <message>
         <source>X: </source>
@@ -333,19 +333,19 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation>过山车射击高分</translation>
+        <translation>过山车射击游戏最高分</translation>
     </message>
     <message>
         <source>New Game Plus Created - Using: %1</source>
-        <translation>新游戏+已创建 - 使用：%1</translation>
+        <translation>新存档+已创建 - 使用：%1</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>黑陆行鸟</translation>
+        <translation>黑色陆行鸟</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation>黑陆行鸟</translation>
+        <translation>黑色陆行鸟</translation>
     </message>
     <message>
         <source>Apply Selected Replay </source>
@@ -377,7 +377,7 @@ them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
     </message>
     <message>
         <source>Turtle Paradise</source>
-        <translation>龟乐园</translation>
+        <translation>海龟天堂</translation>
     </message>
     <message>
         <source>Buggy / Highwind</source>
@@ -518,7 +518,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Have Won the Submarine Game</source>
-        <translation>已赢得潜艇游戏</translation>
+        <translation>已赢得潜水艇小游戏</translation>
     </message>
     <message>
         <source>Party leader</source>
@@ -566,7 +566,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation>科尔德堡</translation>
+        <translation>秃鹰堡垒</translation>
     </message>
     <message>
         <source>German (PAL)</source>
@@ -582,7 +582,7 @@ trigger showing that tutorial</source>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translation>已和威奇交谈两次</translation>
+        <translation>已和威吉交谈两次</translation>
     </message>
     <message>
         <source>Place &amp;Wild Chocobo</source>
@@ -674,7 +674,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Special Battle Wins</source>
-        <translation>特殊战斗胜利</translation>
+        <translation>特殊战斗胜利次数</translation>
     </message>
     <message>
         <source>UK English (PAL)</source>
@@ -695,7 +695,7 @@ location.</source>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation>迷你飞空艇</translation>
+        <translation>飞机</translation>
     </message>
     <message>
         <source>Cleared All Items</source>
@@ -787,7 +787,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>New Game Created - Using: %1</source>
-        <translation>新游戏已创建 - 使用：%1</translation>
+        <translation>新存档已创建 - 使用：%1</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
@@ -795,7 +795,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Place &amp;Tiny Bronco/Chocobo</source>
-        <translation>放置&amp;迷你飞空艇/陆行鸟</translation>
+        <translation>放置&amp;飞机/陆行鸟</translation>
     </message>
     <message>
         <source>All Materia Added!</source>
@@ -843,11 +843,11 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Tiny Bronco / Chocobo</source>
-        <translation>迷你飞空艇 / 陆行鸟</translation>
+        <translation>飞机 / 陆行鸟</translation>
     </message>
     <message>
         <source>Played piano during flashback</source>
-        <translation>闪回中弹奏了钢琴</translation>
+        <translation>回忆中弹奏了钢琴</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of wins for the &amp;quot;Special Battle&amp;quot;. Mini-Game Reward is based on number of wins.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -997,7 +997,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>G-Bike High Score</source>
-        <translation>G-Bike高分</translation>
+        <translation>G型摩托最高分</translation>
     </message>
     <message>
         <source>&amp;Reload</source>
@@ -1067,7 +1067,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>&amp;New Game</source>
-        <translation>&amp;新游戏</translation>
+        <translation>&amp;新存档</translation>
     </message>
     <message>
         <source>Builtin Data</source>
@@ -1075,7 +1075,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Set Replay Mission below to set the game back to that mission. This will automatically set your save location and disc # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE when using this feature; I cannot promise that you will be able to play from any replay until the end of the game, or that any given replay will work in your save. This feature is still under development.</source>
-        <translation>在下方设置重玩任务，将游戏恢复到该任务。这将自动设置你的存档位置、光盘号以及任务进度变量。使用此功能时，请勿覆盖你当前的存档；我无法保证你能够从任何重玩任务一直玩到游戏结束，或者任何给定的重玩任务都能在你的存档中正常工作。此功能仍在开发中。</translation>
+        <translation>在下方设置重玩任务，将游戏恢复到该任务。这将自动设置你的存档位置、光盘号以及任务进度变量。使用此功能时，请勿覆盖你当前的存档；我无法保证你能够从任何的重玩任务一直玩到游戏结束，或许所有的重玩任务都能在你的存档中正常工作。此功能仍在开发中。</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
@@ -1147,7 +1147,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
-        <translation>克劳德的闪回</translation>
+        <translation>克劳德的回忆</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
@@ -1191,7 +1191,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Save Point Location In North Crater</source>
-        <translation>北之大空洞存档点位置</translation>
+        <translation>大空洞存档点位置</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown reached 0)</source>
@@ -1235,7 +1235,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>高风</translation>
+        <translation>飞空艇</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
@@ -1247,7 +1247,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">钻石/究极/红宝石 武器</translation>
     </message>
     <message>
         <source>Disc  #</source>
@@ -1319,7 +1319,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Turtle Paradise Flyers Collected</source>
-        <translation>已收集的龟乐园传单</translation>
+        <translation>已收集的海龟天堂传单</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
@@ -1327,7 +1327,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Search for &quot;Turtle Paradise&quot; using item search mode on the location tab</source>
-        <translation>在位置标签页使用物品搜索模式搜索“龟乐园”</translation>
+        <translation>在位置标签页使用物品搜索模式搜索“海龟天堂”</translation>
     </message>
 </context>
 <context>
@@ -1341,7 +1341,7 @@ Var And Scrolling Synced To Left Table</source>
     <name>Options</name>
     <message>
         <source>Save</source>
-        <translation>保存</translation>
+        <translation>存档</translation>
     </message>
     <message>
         <source>CharEditor - Simulate Leveling Up / Down</source>
@@ -1361,7 +1361,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Override Builtin New Game Data</source>
-        <translation>覆盖内置新游戏数据</translation>
+        <translation>覆盖内置新存档数据</translation>
     </message>
     <message>
         <source>Item Editor - Always Cap Quantity to 99</source>
@@ -1385,7 +1385,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>World Map Viewer- Show int SpinBoxes for Leader ID and buggy ID</source>
-        <translation>世界地图查看器 - 显示Leader ID和buggy ID的整数微调框</translation>
+        <translation>世界地图查看器 - 显示队长ID和越野车ID的整数微调框</translation>
     </message>
     <message>
         <source>Editable Combo for Materia and Items</source>
@@ -1409,7 +1409,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Edit Places</source>
-        <translation>编辑地点</translation>
+        <translation>存档文件夹</translation>
     </message>
     <message>
         <source>PAL-DE</source>
@@ -1425,7 +1425,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Field Location - Show Map/X/Y/T/D</source>
-        <translation>野外位置 - 显示地图/X/Y/T/D</translation>
+        <translation>野外位置 - 显示地图/X/Y/T/D坐标值</translation>
     </message>
     <message>
         <source>Light Theme</source>
@@ -1445,7 +1445,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>New Game Default Region </source>
-        <translation>新游戏默认区域</translation>
+        <translation>新存档默认区域</translation>
     </message>
     <message>
         <source>Raw Psx Files Only!</source>
@@ -1487,7 +1487,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Use Native File Dialogs</source>
-        <translation>使用原生文件对话框</translation>
+        <translation>使用系统默认位置</translation>
     </message>
     <message>
         <source>Options - Always Show Controller Mapping </source>
@@ -1515,7 +1515,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Path For Character Stat Files And Backups</source>
-        <translation>角色状态文件和备份的路径</translation>
+        <translation>角色状态文件和备份路径</translation>
     </message>
     <message>
         <source>Dark Theme</source>
@@ -1594,7 +1594,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Edit Places</source>
-        <translation>编辑地点</translation>
+        <translation>存档文件夹</translation>
     </message>
     <message>
         <source>Failed To Save File</source>
@@ -1736,7 +1736,7 @@ File:%1</source>
     </message>
     <message numerus="yes">
         <source>
- Game Uses %n Save Block(s)</source>
+ 游戏使用 %n 个存档块(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
