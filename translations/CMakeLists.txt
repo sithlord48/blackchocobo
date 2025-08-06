@@ -16,7 +16,8 @@ set ( blackchocobo_TRS
     blackchocobo_ja.ts
     blackchocobo_pl.ts
     blackchocobo_re.ts
-    blackchocobo_zh.ts
+    blackchocobo_zh_CN.ts
+    blackchocobo_zh_TW.ts
 )
 
 if(WIN32 OR APPLE)
@@ -33,7 +34,8 @@ if(WIN32 OR APPLE)
         ${ff7tk_I18N_PATH}/ff7tk_ja.qm
         ${ff7tk_I18N_PATH}/ff7tk_pl.qm
         ${ff7tk_I18N_PATH}/ff7tk_re.qm
-        ${ff7tk_I18N_PATH}/ff7tk_zh.qm
+        ${ff7tk_I18N_PATH}/ff7tk_zh_CN.qm
+        ${ff7tk_I18N_PATH}/ff7tk_zh_TW.qm
     )
 endif()
 
@@ -65,5 +67,6 @@ elseif(APPLE)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_it.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_it.qm)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_ja.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_ja.qm)
     install(FILES ${MAC_QT_LANG_PATH}/qtbase_pl.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_pl.qm)
-    install(FILES ${MAC_QT_LANG_PATH}/qtbase_zh_CN.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_zh.qm)
+    install(FILES ${MAC_QT_LANG_PATH}/qtbase_zh_CN.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_zh_CN.qm)
+    install(FILES ${MAC_QT_LANG_PATH}/qtbase_zh_TW.qm DESTINATION ${MAC_LANG_PATH} RENAME qt_zh_TW.qm)
 endif()
