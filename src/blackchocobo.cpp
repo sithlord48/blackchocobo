@@ -116,7 +116,7 @@ void BlackChocobo::detectTranslations()
     for (const QString &translation : std::as_const(langList)) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(13, 2);
+        QString lang = translation.mid(13, translation.lastIndexOf('.') - 13);
         app_translations.insert(lang, translator);
         bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang) {
@@ -153,7 +153,7 @@ void BlackChocobo::detectTranslations()
     for (const QString &translation : std::as_const(langList)) {
         QTranslator *translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(3, 2);
+        QString lang = translation.mid(3, translation.lastIndexOf('.') - 3);
         qt_translations.insert(lang, translator);
         bool currentLang = (BCSettings::value(SETTINGS::LANG, QStringLiteral("en")).toString() == lang);
         if (currentLang)

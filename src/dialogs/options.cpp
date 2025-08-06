@@ -30,7 +30,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
     for (const QString &translation : langList) {
         auto translator = new QTranslator;
         std::ignore = translator->load(translation, dir.absolutePath());
-        QString lang = translation.mid(13, 2);
+        QString lang = translation.mid(13, translation.lastIndexOf('.') - 13);
         ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
     }
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::value(SETTINGS::LANG, QStringLiteral("en"))));
