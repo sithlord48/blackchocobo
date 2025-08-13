@@ -1108,7 +1108,7 @@ void BlackChocobo::actionShowOptions_triggered()
     if (odialog.exec()) {
         loadChildWidgetSettings();
     }
-    disconnect(&odialog, nullptr, nullptr, nullptr);
+    odialog.deleteLater();
 }
 
 void BlackChocobo::actionCreateNewMetadata_triggered()
