@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2011 Chris Rizzitello <sithlord48@gmail.com>
 # SPDX-License-Identifier: MIT
 [Desktop Entry]
-Categories=Game;
+Categories=Game;Utility;
 Exec=blackchocobo
 GenericName=FF7 Save Game Editor
 GenericName[de]=FF7 Spielstand-Bearbeitungsprogramm
