@@ -18,6 +18,7 @@ Options::Options(QWidget *parent) : QDialog(parent)
   , ui(new Ui::Options)
 {
     ui->setupUi(this);
+    ui->comboLanguage->clear();
     int fmh = fontMetrics().height();
     QSize iconSize(fmh, fmh);
     updateText();
@@ -26,12 +27,14 @@ Options::Options(QWidget *parent) : QDialog(parent)
          btn->setIconSize(iconSize);
 
     QDir dir (BCSettings::value(SETTINGS::LANGPATH).toString());
-    QStringList langList = dir.entryList(QStringList("blackchocobo_*.qm"), QDir::Files, QDir::Name);
+    const QStringList langList = dir.entryList(QStringList("blackchocobo_*.qm"), QDir::Files, QDir::Name);
     for (const QString &translation : langList) {
-        auto translator = new QTranslator;
+        auto translator = new QTranslator(this);
         std::ignore = translator->load(translation, dir.absolutePath());
         QString lang = translation.mid(13, translation.lastIndexOf('.') - 13);
-        ui->comboLanguage->addItem(translator->translate("MainWindow", "TRANSLATE TO YOUR LANGUAGE NAME"), lang);
+        QString langString = translator->translate("Options", "TRANSLATE TO YOUR LANGUAGE NAME");
+        ui->comboLanguage->addItem(langString, lang);
+        translator->deleteLater();
     }
     ui->comboLanguage->setCurrentIndex(ui->comboLanguage->findData(BCSettings::value(SETTINGS::LANG, QStringLiteral("en"))));
     ui->comboLanguage->setVisible(ui->comboLanguage->count());
