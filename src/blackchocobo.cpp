@@ -131,7 +131,7 @@ void BlackChocobo::detectTranslations()
     dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
     langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
     if (langList.isEmpty()) {
-        dir.setPath(QStringLiteral("%1/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
+        dir.setPath(QStringLiteral("%1/../Resources/%2").arg(QCoreApplication::applicationDirPath(), QStringLiteral("translations")));
         langList = dir.entryList(nameFilter, QDir::Files, QDir::Name);
         if (langList.isEmpty()) {
             dir.setPath(QStringLiteral("%1/../share/qt/translations").arg(QCoreApplication::applicationDirPath()));
