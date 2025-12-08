@@ -1319,13 +1319,6 @@ trigger showing that tutorial</translation>
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
-    <message>
-        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>Italiano</translation>
-    </message>
-</context>
-<context>
     <name>Options</name>
     <message>
         <source>Options</source>
@@ -1533,6 +1526,10 @@ Seleziona una posizione per salvare i file delle statistiche del personaggio</tr
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La finestra di dialogo nativa non è in grado di fornire suggerimenti sui nomi dei file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>Italiano</translation>
     </message>
 </context>
 <context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja" sourcelanguage="en_US">
+<TS version="2.1" language="ja_JP" sourcelanguage="en_US">
 <context>
     <name>About</name>
     <message>
@@ -1314,13 +1314,6 @@ trigger showing that tutorial</source>
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
-    <message>
-        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>日本語</translation>
-    </message>
-</context>
-<context>
     <name>Options</name>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
@@ -1527,6 +1520,10 @@ trigger showing that tutorial</source>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ネイティブ ダイアログはファイル名の提案を提供できません&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>日本語</translation>
     </message>
 </context>
 <context>

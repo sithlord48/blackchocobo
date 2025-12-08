@@ -1332,13 +1332,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
-    <message>
-        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>简体中文</translation>
-    </message>
-</context>
-<context>
     <name>Options</name>
     <message>
         <source>Save</source>
@@ -1551,6 +1544,10 @@ Var And Scrolling Synced To Left Table</source>
  Other themes may contain graphical issues.</source>
         <translation>推荐使用 Fusion 主题。
 其他主题可能存在图形问题。</translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>简体中文</translation>
     </message>
 </context>
 <context>

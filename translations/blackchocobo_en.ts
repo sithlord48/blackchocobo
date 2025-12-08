@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en">
+<TS version="2.1" language="en_US">
 <context>
     <name>About</name>
     <message>
@@ -1320,13 +1320,6 @@ trigger showing that tutorial</translation>
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
-    <message>
-        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>English</translation>
-    </message>
-</context>
-<context>
     <name>Options</name>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
@@ -1533,6 +1526,10 @@ trigger showing that tutorial</translation>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>English</translation>
     </message>
 </context>
 <context>

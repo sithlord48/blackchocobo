@@ -1319,13 +1319,6 @@ wyzwalacz pokazujący ten samouczek</translation>
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
-    <message>
-        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
-        <translation>TŁUMACZ NA NAZWĘ JĘZYKA</translation>
-    </message>
-</context>
-<context>
     <name>Options</name>
     <message>
         <source>Options</source>
@@ -1532,6 +1525,10 @@ wyzwalacz pokazujący ten samouczek</translation>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Native Dialog is unable to provide filename suggestions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Natywne okno dialogowe nie może podać sugestii nazw plików&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>TRANSLATE TO YOUR LANGUAGE NAME</source>
+        <translation>TŁUMACZ NA NAZWĘ JĘZYKA</translation>
     </message>
 </context>
 <context>
