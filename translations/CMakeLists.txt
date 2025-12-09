@@ -16,6 +16,8 @@ set ( blackchocobo_TRS
     blackchocobo_ja.ts
     blackchocobo_pl.ts
     blackchocobo_re.ts
+    blackchocobo_zh_CN.ts
+    blackchocobo_zh_TW.ts
 )
 
 if(WIN32 OR APPLE)
@@ -32,6 +34,8 @@ if(WIN32 OR APPLE)
         ${ff7tk_I18N_PATH}/ff7tk_ja.qm
         ${ff7tk_I18N_PATH}/ff7tk_pl.qm
         ${ff7tk_I18N_PATH}/ff7tk_re.qm
+        ${ff7tk_I18N_PATH}/ff7tk_zh_CN.qm
+        ${ff7tk_I18N_PATH}/ff7tk_zh_TW.qm
     )
 endif()
 
