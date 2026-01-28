@@ -64,7 +64,11 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: sithlord48/fancy-checkout@v1
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+        fetch-tags: true
+        set-safe-directory: true
 
     - name: Install Dependencies
       run: |
