@@ -2953,6 +2953,11 @@ void BlackChocobo::btnReplay_clicked()
         ui->cbBombingInt->setChecked(false);
         locationViewer->setMapId(1);
         locationViewer->setLocationId(496);
+        // reset the play and after date chase
+        QByteArray temp = ff7->unknown(s, 22);
+        temp[1] = 0; // 0xCE8
+        temp[2] = 0; // 0xCE9
+        ff7->setUnknown(s, 22, temp);
         statusBar()->showMessage(tr("Progression Reset Complete"), 750);
     }
 
