@@ -27,3 +27,9 @@ A Save Editor for Final Fantasy 7
  - [Qt](https://www.qt.io) (6.2.0+)
  - [CMake](https://cmake.org) (3.21+)
  - [ff7tk](https://github.com/sithlord48/ff7tk)
+
+## One last thing
+
+Any use of this project's code by GitHub Copilot, past or present, is done
+without our permission.  We do not consent to GitHub's use of this project's
+code in Copilot.
